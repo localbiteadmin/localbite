@@ -1,0 +1,1096 @@
+{
+  "city": "Barcelona",
+  "country": "Spain",
+  "city_slug": "barcelona-spain",
+  "built": "2026-03-22",
+  "source_recency": "2025-2026 only",
+  "pipeline": "localbite-middle-path-v4",
+  "confidence_tiers": {
+    "auto_approved": 24,
+    "reviewed_kept": 34,
+    "user_removed": 0,
+    "auto_rejected": 43,
+    "concentration_cap_applied": 0,
+    "final_count": 52,
+    "removed_at_export": 6
+  },
+  "sources": [
+    {
+      "id": "src-bfe",
+      "publication": "Barcelona Food Experience",
+      "writer": "Maria",
+      "url": "https://www.barcelonafoodexperience.com/blog/best-restaurants-in-barcelona-right-now",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2026-02-24"
+    },
+    {
+      "id": "src-infatuation",
+      "publication": "The Infatuation Barcelona",
+      "writer": "Isabelle Kliger",
+      "url": "https://www.theinfatuation.com/barcelona/guides/best-new-barcelona-restaurants-hit-list",
+      "language": "en",
+      "source_type": "secondary",
+      "article_date": "2025-05-20"
+    },
+    {
+      "id": "src-repsol",
+      "publication": "Guía Repsol",
+      "writer": "Lourdes López",
+      "url": "https://www.guiarepsol.com/es/comer/nuestros-favoritos/aperturas-restaurantes-barcelona/",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2026-01-23"
+    },
+    {
+      "id": "src-newbcnpost",
+      "publication": "The New Barcelona Post",
+      "writer": "Anna Torrents",
+      "url": "https://www.thenewbarcelonapost.cat/els-grans-restaurants-del-2025-i-els-que-vindran/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2026-01-11"
+    },
+    {
+      "id": "src-timeout-es",
+      "publication": "Time Out Barcelona (ES)",
+      "writer": "Ricard Martín",
+      "url": "https://www.timeout.es/barcelona/es/comer-y-beber/los-50-mejores-restaurantes-de-barcelona",
+      "language": "es",
+      "source_type": "secondary",
+      "article_date": "2026-03-18"
+    },
+    {
+      "id": "src-beteve",
+      "publication": "Beteve.cat",
+      "writer": "Carmen Cortés Vidal",
+      "url": "https://beteve.cat/estils-de-vida/guia-slow-food-barcelona-2026/",
+      "language": "ca",
+      "source_type": "primary",
+      "article_date": "2025-11-05"
+    },
+    {
+      "id": "src-ara",
+      "publication": "Ara.cat (Mengem)",
+      "writer": "Rosa Rodón",
+      "url": "https://en.ara.cat/food/the-best-restaurants-that-have-opened-in-recent-months-in-barcelona_1_5318659.html",
+      "language": "ca",
+      "source_type": "primary",
+      "article_date": "2025-03-17"
+    },
+    {
+      "id": "src-elnacional",
+      "publication": "ElNacional.cat",
+      "writer": "Oriol Foix",
+      "url": "https://www.elnacional.cat/ca/gourmeteria/llistes/on-menjar-barcelona-mwc-5-restaurants_1369586_102.html",
+      "language": "ca",
+      "source_type": "primary",
+      "article_date": "2025-02-27"
+    },
+    {
+      "id": "src-fancynancista",
+      "publication": "Fancy Nancista",
+      "writer": "Nancy",
+      "url": "https://www.fancynancista.com/where-i-actually-eat-stay-unwind-in-barcelona-an-expats-guide/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2026-01-12"
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Arraval",
+      "name_variants": [],
+      "neighbourhood": "El Raval",
+      "cuisine": "Catalan multicultural",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": "samosas de cordero and macarrones con butifarra",
+      "quote": "Combines traditional Catalan cooking with international influences, offering dishes ranging from escudella to samosas and fried pizza — a culinary crossroads in the heart of the Raval.",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-repsol",
+        "src-newbcnpost"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+primary",
+      "flagged": false
+    },
+    {
+      "name": "Bar Super",
+      "name_variants": [],
+      "neighbourhood": "Sant Pere",
+      "cuisine": "Market / natural wine bar",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": "cured horsemeat cecina",
+      "quote": "Bar Brutal's sister restaurant serving up wine bar small plates in a retro-like setting near Santa Caterina market — veal sweetbreads in chicken jus and a superb natural wine list.",
+      "language_pool": "both",
+      "source_count": 3,
+      "sources": [
+        "src-infatuation",
+        "src-beteve",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "secondary+primary+secondary",
+      "flagged": false
+    },
+    {
+      "name": "Berbena",
+      "name_variants": [],
+      "neighbourhood": "Gràcia",
+      "cuisine": "Modern Catalan seasonal",
+      "opening_year": null,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "One of those places where everything comes together to perfection. The menu changes often, the ingredients are seasonal and very local — a Slow Food Cargols award winner.",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-bfe",
+        "src-beteve"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+primary",
+      "flagged": false
+    },
+    {
+      "name": "Bornès",
+      "name_variants": [],
+      "neighbourhood": "El Born",
+      "cuisine": "Updated Catalan",
+      "opening_year": 2025,
+      "price_level": 2,
+      "signature_dish": "fricandó de ternera",
+      "quote": "Updates iconic Catalan dishes from north to south — from the clotxa of Terres de l'Ebre to the trinxat of Cerdanya. Fricandó with seasonal mushrooms and squab cooked 14 hours low-temperature are standouts.",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-repsol",
+        "src-newbcnpost"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+primary",
+      "flagged": false
+    },
+    {
+      "name": "Contracorrent Bar and Bistro",
+      "name_variants": [
+        "Contracorrent Bar",
+        "Contracorrent Bistro",
+        "Contracorrent Bistró"
+      ],
+      "neighbourhood": "Gràcia",
+      "cuisine": "Italian-influenced bistro",
+      "opening_year": null,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "Run with a lot of passion and care by an Italian duo. Expect a one-of-a-kind experience where passion for food meets expertly chosen wines — a Slow Food Cargols award winner with a winning lunch menu.",
+      "language_pool": "both",
+      "source_count": 4,
+      "sources": [
+        "src-bfe",
+        "src-ara",
+        "src-beteve",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+primary",
+      "flagged": false
+    },
+    {
+      "name": "Direkte",
+      "name_variants": [
+        "Direkte Bokeria"
+      ],
+      "neighbourhood": "Eixample",
+      "cuisine": "Creative Catalan counter",
+      "opening_year": 2025,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "Arnau Muñío's direct and irreverent menu with ambition and inventiveness at Carrer París — a gastro counter uniting the Japanese concept of chef working in front of the diner. Slow Food 2026 guide.",
+      "language_pool": "both",
+      "source_count": 3,
+      "sources": [
+        "src-newbcnpost",
+        "src-beteve",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+primary+secondary",
+      "flagged": false
+    },
+    {
+      "name": "El Rectangle",
+      "name_variants": [],
+      "neighbourhood": "Sant Antoni",
+      "cuisine": "Modern bistro",
+      "opening_year": 2025,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "Has quickly become a favourite among chefs and locals. The food is young and exciting, with an open kitchen counter — young talented chefs who succeed in realising their projects.",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-bfe",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false
+    },
+    {
+      "name": "Fishølogy",
+      "name_variants": [
+        "Fishology"
+      ],
+      "neighbourhood": "Eixample Esquerra",
+      "cuisine": "Seafood nose-to-tail",
+      "opening_year": 2025,
+      "price_level": 4,
+      "signature_dish": null,
+      "quote": "Stands out as a special spot, paying homage to age-old fish cooking methods with a nose-to-tail philosophy applied to seafood — Michelin-starred and Slow Food Cargols award winner.",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-bfe",
+        "src-beteve"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+primary",
+      "flagged": false
+    },
+    {
+      "name": "Franca",
+      "name_variants": [],
+      "neighbourhood": "Eixample Dreta",
+      "cuisine": "Modern Catalan",
+      "opening_year": 2025,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "Takes Catalan dishes and reworks them in thrilling, modern ways — reinventing tradition without losing respect for it. Three young chefs from high-end restaurants. Slow Food 2026 guide.",
+      "language_pool": "both",
+      "source_count": 4,
+      "sources": [
+        "src-bfe",
+        "src-newbcnpost",
+        "src-beteve",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+primary",
+      "flagged": false
+    },
+    {
+      "name": "Pompa",
+      "name_variants": [],
+      "neighbourhood": "Gràcia",
+      "cuisine": "Seasonal Mediterranean",
+      "opening_year": 2025,
+      "price_level": 3,
+      "signature_dish": "hake pil-pil with cheeks",
+      "quote": "A small wine-centric restaurant with an elaborate menu of seasonal dishes — hake pil-pil made with cheeks instead of tails from a two-burner stove. Slow Food 2026 guide.",
+      "language_pool": "both",
+      "source_count": 3,
+      "sources": [
+        "src-infatuation",
+        "src-newbcnpost",
+        "src-beteve"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "secondary+primary",
+      "flagged": false
+    },
+    {
+      "name": "Seis Cuarenta",
+      "name_variants": [
+        "Cervecería Seis Cuarenta",
+        "Cerveseria 640"
+      ],
+      "neighbourhood": "Sarrià-Sant Gervasi",
+      "cuisine": "Tapas brasserie",
+      "opening_year": 2025,
+      "price_level": 2,
+      "signature_dish": "ostras Gillardeau and cubanito",
+      "quote": "Eugeni de Diego's tavern at Diagonal 640 — Gillardeau oysters, seafood salpicón, huevos rellenos, and the signature cubanito sandwich. The casual arm of Colmado Wilmot, open 8am to midnight.",
+      "language_pool": "both",
+      "source_count": 3,
+      "sources": [
+        "src-infatuation",
+        "src-repsol",
+        "src-newbcnpost"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "secondary+primary",
+      "flagged": false
+    },
+    {
+      "name": "Suru Bar",
+      "name_variants": [
+        "Suru"
+      ],
+      "neighbourhood": "Eixample Esquerra",
+      "cuisine": "Creative wine bar",
+      "opening_year": 2025,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "Young, dedicated team and a menu that changes often — unusual ingredients and combinations that surprise. Slow Food 2026 guide new addition.",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-bfe",
+        "src-beteve"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+primary",
+      "flagged": false
+    },
+    {
+      "name": "Taberna Nardi",
+      "name_variants": [],
+      "neighbourhood": "El Born",
+      "cuisine": "Seafood tapas",
+      "opening_year": 2025,
+      "price_level": 2,
+      "signature_dish": "char-grilled red tuna neck and zamburiñas",
+      "quote": "The irreverent little sister of Bar Pimentel — fresh market product served daily in shared preparations including red tuna carpaccio on soft brioche and zamburiñas with candied cherries.",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-infatuation",
+        "src-repsol"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "secondary+primary",
+      "flagged": false
+    },
+    {
+      "name": "Atipical",
+      "name_variants": [
+        "Atipical Casa de Menjars"
+      ],
+      "neighbourhood": "Poblenou",
+      "cuisine": "Italian bistro",
+      "opening_year": 2025,
+      "price_level": 2,
+      "signature_dish": null,
+      "quote": "Chef Matteo Bertozzi's creative cooking with technique and sensitivity, and one of the season's best-conceived lunch menus at very adjusted prices in Poblenou.",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-newbcnpost",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false
+    },
+    {
+      "name": "Casa Fiero",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "1970s Catalan bistro",
+      "opening_year": 2025,
+      "price_level": 3,
+      "signature_dish": "gratinated macaroni with three meats",
+      "quote": "A 1970s Catalan diner throwback that takes the city's Catalan grandma food trend and switches it up — gratinated macaroni stuffed with three cuts of meat. One of 2025's best openings.",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "src-infatuation",
+        "src-newbcnpost"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "secondary+primary",
+      "flagged": false
+    },
+    {
+      "name": "Finorri",
+      "name_variants": [],
+      "neighbourhood": "Barri Gòtic",
+      "cuisine": "Modern Catalan",
+      "opening_year": 2025,
+      "price_level": 3,
+      "signature_dish": "rice with seafood and crispy socarrat",
+      "quote": "A great date-night destination in the Gothic Quarter — rice bursting with fresh seafood and crispy socarrat alongside Cantabrian anchovies. Bridges territory and popular dishes with elegance.",
+      "language_pool": "en",
+      "source_count": 3,
+      "sources": [
+        "src-infatuation",
+        "src-newbcnpost",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "secondary+primary+secondary",
+      "flagged": false
+    },
+    {
+      "name": "Lora",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "Middle Eastern",
+      "opening_year": 2025,
+      "price_level": 3,
+      "signature_dish": "pomegranate-glazed lamb shoulder",
+      "quote": "Special occasion-coded Middle Eastern eatery at SLS Barcelona — fattoush salad that crunches and bursts with freshness, plus a pomegranate-glazed lamb shoulder. Notable brunch program.",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "src-infatuation",
+        "src-newbcnpost"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "secondary+primary",
+      "flagged": false
+    },
+    {
+      "name": "Glug",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "Wine bar / modern bistro",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": "onion soup with Comté buttons and macaroni croquette",
+      "quote": "A genuine place where you can see the personalities of its owners Beatrice Casella and Ivan Garcia through their cooking and wine selections — onion soup with Comté buttons is legendary. Slow Food Cargols award.",
+      "language_pool": "ca",
+      "source_count": 3,
+      "sources": [
+        "src-ara",
+        "src-beteve",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+primary+secondary",
+      "flagged": false
+    },
+    {
+      "name": "La Sosenga",
+      "name_variants": [],
+      "neighbourhood": "Barri Gòtic",
+      "cuisine": "Traditional Catalan",
+      "opening_year": null,
+      "price_level": 1,
+      "signature_dish": "beans with black trumpet mushrooms and Iberian pork jowl",
+      "quote": "A Catalan kitchen rooted in territory with certain medieval airs — monthly seven-course tasting menu for €35. Slow Food Cargols award winner.",
+      "language_pool": "ca",
+      "source_count": 2,
+      "sources": [
+        "src-beteve",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false
+    },
+    {
+      "name": "Margarit",
+      "name_variants": [],
+      "neighbourhood": "Poble Sec",
+      "cuisine": "Greek Mediterranean",
+      "opening_year": 2025,
+      "price_level": 3,
+      "signature_dish": "tarama with brined cod roe",
+      "quote": "The cuisine is honest, made by people who know their stuff — quite elaborate without being sophisticated. Greek roots adapted with personal layers, imaginative twists, and a commendable wine selection.",
+      "language_pool": "ca",
+      "source_count": 2,
+      "sources": [
+        "src-ara",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false
+    },
+    {
+      "name": "Rasoterra",
+      "name_variants": [],
+      "neighbourhood": "Barri Gòtic",
+      "cuisine": "Vegetarian km-0",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": null,
+      "quote": "Emblematic restaurant in green revolution with its own kitchen garden and zero-km ingredients in the Gothic Quarter. Slow Food Cargols award winner.",
+      "language_pool": "ca",
+      "source_count": 2,
+      "sources": [
+        "src-beteve",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false
+    },
+    {
+      "name": "Xavier Pellicer",
+      "name_variants": [
+        "Restaurant Xavier Pellicer"
+      ],
+      "neighbourhood": "Eixample",
+      "cuisine": "Eco-Catalan",
+      "opening_year": null,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "Redefinitions of classic Catalan dishes lightened with a touch of genius — one Michelin star, committed to organic and local produce. Slow Food Cargols award winner.",
+      "language_pool": "ca",
+      "source_count": 2,
+      "sources": [
+        "src-beteve",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false
+    },
+    {
+      "name": "Espai Puntal",
+      "name_variants": [
+        "Bar Puntal"
+      ],
+      "neighbourhood": "Sant Pere",
+      "cuisine": "Seasonal small plates",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": null,
+      "quote": "A fair business without excessive profit ambitions — seasonal small plates at Plaça de Sant Cugat with 100% produce from small producers. Slow Food Cargols award winner.",
+      "language_pool": "ca",
+      "source_count": 2,
+      "sources": [
+        "src-beteve",
+        "src-timeout-es"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false
+    },
+    {
+      "name": "Âme",
+      "name_variants": [],
+      "neighbourhood": "Eixample Esquerra",
+      "cuisine": "French-Mediterranean",
+      "opening_year": null,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "Mixes French technique with Mediterranean flavors in a way that feels welcoming and never formal — a tasting menu that feels like a special night without being intimidating.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-bfe"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Besta",
+      "name_variants": [],
+      "neighbourhood": "Eixample Esquerra",
+      "cuisine": "Creative seafood",
+      "opening_year": null,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "Focuses heavily on seafood, but not in a traditional way. The dishes are creative without being complicated — reliable, consistently good, with a strong wine list.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-bfe"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Maleducat",
+      "name_variants": [],
+      "neighbourhood": "Sant Antoni",
+      "cuisine": "Modern Catalan",
+      "opening_year": null,
+      "price_level": 3,
+      "signature_dish": "arroz seco with pig trotter carpaccio and shrimp tartare",
+      "quote": "Vibrant hotspot led by a young team. Their creative dishes, rooted in local traditions and seasonal ingredients, capture the energy of Barcelona right now.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-bfe"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Ona",
+      "name_variants": [
+        "Table by Ona"
+      ],
+      "neighbourhood": "Poblenou",
+      "cuisine": "Omakase",
+      "opening_year": null,
+      "price_level": 4,
+      "signature_dish": null,
+      "quote": "Small and intimate, with only six seats. The menu changes constantly depending on what is available that week — one of the most memorable tasting menus in the city.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-bfe"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Suto",
+      "name_variants": [],
+      "neighbourhood": "Sants-Montjuïc",
+      "cuisine": "Japanese seafood omakase",
+      "opening_year": null,
+      "price_level": 4,
+      "signature_dish": null,
+      "quote": "Has a Michelin star. Focus is on seasonal seafood and an interesting omakase that feels personal and warm.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-bfe"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Fonda Pepa",
+      "name_variants": [],
+      "neighbourhood": "Gràcia",
+      "cuisine": "Catalan-Mexican",
+      "opening_year": null,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "Unique gastro bar. Their menu is a fusion of Catalan classics, sprinkled with Mexican-inspired surprises that always delight.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-bfe"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Can Fisher",
+      "name_variants": [],
+      "neighbourhood": "Poblenou",
+      "cuisine": "Seafood",
+      "opening_year": null,
+      "price_level": 3,
+      "signature_dish": "grilled clams and red prawns",
+      "quote": "Offers a delightful seafood experience with stunning sea views. Fresh seafood, grilled delights, and a variety of rice dishes in Poblenou.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-bfe"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Mercado Central Taberna",
+      "name_variants": [],
+      "neighbourhood": "Poble Sec",
+      "cuisine": "Peruvian ceviche",
+      "opening_year": 2025,
+      "price_level": 2,
+      "signature_dish": "ceviche carretillero",
+      "quote": "Barcelona's first dedicated ceviche bar. The kitchen revives rare Peruvian ceviches like the carretillero (street version with chicharrón) and the apaltado, rarely found outside Lima.",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-repsol"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Mineral",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "Creative Catalan",
+      "opening_year": 2026,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "Cuina radicalment personal — a small space with direct service and a radically personal menu from Oliver Peña and Cristina Losada. Very new opening (late February 2026).",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-newbcnpost"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": true
+    },
+    {
+      "name": "Fukamura",
+      "name_variants": [],
+      "neighbourhood": "Eixample Dreta",
+      "cuisine": "Japanese omakase",
+      "opening_year": 2025,
+      "price_level": 4,
+      "signature_dish": null,
+      "quote": "Precision omakase with a ceremonial approach — six-seat counter by Chef Daisuke Fukamura emphasising seasonal ingredients and refined Japanese technique.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-newbcnpost"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Ultramarinos Marín",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "Charcuterie / bar",
+      "opening_year": 2025,
+      "price_level": 2,
+      "signature_dish": null,
+      "quote": "Hybrid bar, workshop, and charcuterie temple — celebrated as a standout of Barcelona's 2025 restaurant scene connecting the curated charcuterie trend.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-newbcnpost"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "La Palma de Bellafila",
+      "name_variants": [
+        "Bellafila"
+      ],
+      "neighbourhood": "Barri Gòtic",
+      "cuisine": "Mediterranean",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": null,
+      "quote": "One of the best meals I have had this year, courtesy of chef Jordi Parramon. The space is very pretty and allows you to have a romantic date — shareable Mediterranean cuisine using local products.",
+      "language_pool": "ca",
+      "source_count": 1,
+      "sources": [
+        "src-ara"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Mezz",
+      "name_variants": [],
+      "neighbourhood": "Gràcia",
+      "cuisine": "French-inspired modern",
+      "opening_year": 2025,
+      "price_level": 2,
+      "signature_dish": null,
+      "quote": "What chef Cristina Ojeda Martínez has created is refreshing, modern, and tailored to our palate. A place to keep coming back to for its French-inspired modern cuisine and natural wines.",
+      "language_pool": "ca",
+      "source_count": 1,
+      "sources": [
+        "src-ara"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Pepi House",
+      "name_variants": [],
+      "neighbourhood": "Sant Martí",
+      "cuisine": "Traditional tapas",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": "bomba and cod liver",
+      "quote": "Traditional tapas, made their way and at a good price. Here they bring all their knowledge to serve a much less gentrified neighborhood in the Clot area.",
+      "language_pool": "ca",
+      "source_count": 1,
+      "sources": [
+        "src-ara"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Malparit",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "Grilled meats / bar",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": "capipota",
+      "quote": "Grilled meats and lots of quality animal protein. They make a capipota to dip bread in, and they are just right with the right amount of spice.",
+      "language_pool": "ca",
+      "source_count": 1,
+      "sources": [
+        "src-ara"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Granja Elena",
+      "name_variants": [],
+      "neighbourhood": "Sants-Montjuïc",
+      "cuisine": "Neighbourhood haute cuisine",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": null,
+      "quote": "Family-run for nearly 50 years by chef Borja Sierra near Passeig de la Zona Franca, offering neighbourhood haute cuisine for under €30 per person.",
+      "language_pool": "ca",
+      "source_count": 1,
+      "sources": [
+        "src-elnacional"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Bar Iberia",
+      "name_variants": [],
+      "neighbourhood": "Sants-Montjuïc",
+      "cuisine": "Traditional Catalan",
+      "opening_year": null,
+      "price_level": 1,
+      "signature_dish": null,
+      "quote": "Traditional bar run by brothers Francisco and Longinos Álvarez in Sants-Montjuïc serving classic Catalan cuisine in a traditional neighbourhood bar atmosphere.",
+      "language_pool": "ca",
+      "source_count": 1,
+      "sources": [
+        "src-elnacional"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "El Xampanyet",
+      "name_variants": [],
+      "neighbourhood": "El Born",
+      "cuisine": "Traditional tapas",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": "anchovies with in-house cava",
+      "quote": "The room is always buzzing, the cava is made in-house, and the food consistently delivers — a classic El Born tapas bar since 1929 with no reservations.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-fancynancista"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Doppietta",
+      "name_variants": [],
+      "neighbourhood": "Sant Antoni",
+      "cuisine": "Italian",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": null,
+      "quote": "Everything tasted genuinely authentic. It is the kind of place you leave already planning your next visit — Italian pasta, starters, and Aperol spritzes done right.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-fancynancista"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Pho Hanoi",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "Vietnamese",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": "Bún Huế and classic pho",
+      "quote": "This is the most authentic Vietnamese food I have found in Barcelona so far. Simple, comforting, dependable — the Bún Huế is exceptional.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-fancynancista"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Ali Ocakbasi",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "Turkish",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": null,
+      "quote": "When I am craving real Turkish flavors, this is where I go. Ideal for ordering multiple dishes and sharing — grilled meats, dips, tea, and dessert.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-fancynancista"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Kim BBQ",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "Korean BBQ",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": null,
+      "quote": "When I am in the mood for Korean food and do not want to think too hard, this is where I land — solid Korean barbecue in Eixample.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-fancynancista"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Seoul Nadri",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "Korean KBBQ",
+      "opening_year": null,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "Definitely one of the more authentic KBBQ experiences in Barcelona. Reminded me of KTown in Los Angeles.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-fancynancista"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Akira Hand Roll Bar",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "Japanese sushi",
+      "opening_year": null,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "Simply the best and most authentic sushi and handrolls in Barcelona. A bit fancy, but worth the money — arrive 15 minutes before opening.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-fancynancista"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Yoi Yoi Gion",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "Japanese udon",
+      "opening_year": null,
+      "price_level": 3,
+      "signature_dish": null,
+      "quote": "When I want to treat myself a little, this is where I go. Worth it for the handmade udon noodles — upscale Japanese in Eixample.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-fancynancista"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Tamarindo",
+      "name_variants": [],
+      "neighbourhood": "Eixample",
+      "cuisine": "Mexican",
+      "opening_year": null,
+      "price_level": 2,
+      "signature_dish": "tacos and nachos",
+      "quote": "Never lets me down. Generous cocktails, tacos and nachos always win, and the evening naturally turns into something fun and long.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-fancynancista"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "flagged": false
+    },
+    {
+      "name": "Mundial Bar",
+      "name_variants": [],
+      "neighbourhood": "El Born",
+      "cuisine": "Seafood bar",
+      "opening_year": 2025,
+      "price_level": 1,
+      "signature_dish": "vinegar-marinated dogfish adobo",
+      "quote": "The group that co-owns Paradiso has turned this old literary haunt into a full-on seafood bar where dinner for two costs €50 and wine flows at €3 a glass.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-infatuation"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary",
+      "flagged": false
+    },
+    {
+      "name": "Al Grano Bistro",
+      "name_variants": [
+        "Algrano Bistró"
+      ],
+      "neighbourhood": "Eixample",
+      "cuisine": "Italian",
+      "opening_year": null,
+      "price_level": 3,
+      "signature_dish": "wild boar pappardelle",
+      "quote": "The perfect spot for date night with pasta — where expat Italians celebrate birthdays eating linguine with smoked butter and Mediterranean red tuna.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-infatuation"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary",
+      "flagged": false
+    },
+    {
+      "name": "Chambacú",
+      "name_variants": [],
+      "neighbourhood": "Sarrià-Sant Gervasi",
+      "cuisine": "Colombian",
+      "opening_year": 2025,
+      "price_level": 3,
+      "signature_dish": "pescado a la talla cooked in banana leaf",
+      "quote": "Barcelona's hottest new Colombian restaurant offers two tasting menus that spotlight Indigenous recipes fused with Spanish colonial and African flavors — pescado a la talla cooked in banana leaf.",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-infatuation"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary",
+      "flagged": false
+    }
+  ]
+}
