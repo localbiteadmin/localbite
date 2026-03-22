@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LocalBite — Restaurant recommendations from local writers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --terra: #C4622D;
+    --terra-light: #F0DDD3;
+    --terra-dark: #8B4220;
+    --cream: #FAF6F1;
+    --warm-white: #FFFCF9;
+    --charcoal: #2C2420;
+    --mid: #6B5E57;
+    --muted: #9E8E86;
+    --border: #E8DDD7;
+    --card-bg: #FFFFFF;
+    --both-pool: #2D6A4F;
+    --both-pool-bg: #D8F3DC;
+    --fr-pool: #1E4D8C;
+    --fr-pool-bg: #DBEAFE;
+    --ar-pool: #6B3F8C;
+    --ar-pool-bg: #EDE9FE;
+    --radius: 10px;
+    --radius-sm: 6px;
+    --shadow: 0 1px 3px rgba(44,36,32,0.08), 0 4px 12px rgba(44,36,32,0.05);
+    --shadow-hover: 0 2px 8px rgba(44,36,32,0.12), 0 8px 24px rgba(44,36,32,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    gap: 16px;
+  }
+
+  .brand {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--charcoal);
+    letter-spacing: -0.3px;
+    flex-shrink: 0;
+  }
+
+  .brand span { color: var(--terra); }
+
+  .tagline {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 300;
+    display: none;
+  }
+
+  .city-select-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .city-select {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--charcoal);
+    background: var(--cream);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 7px 12px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.15s;
+    min-width: 160px;
+  }
+
+  .city-select:focus { border-color: var(--terra); }
+
+  /* ── CITY HERO ── */
+  .city-hero {
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px 16px;
+  }
+
+  .city-hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .city-name {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--charcoal);
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+
+  .city-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+  }
+
+  .city-meta-item {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .city-meta-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  .both-pool-explainer {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--both-pool);
+    background: var(--both-pool-bg);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  /* ── FILTERS ── */
+  .filters-bar {
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 24px;
+    position: sticky;
+    top: 60px;
+    z-index: 90;
+  }
+
+  .filters-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .filter-select {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--charcoal);
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 5px 12px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.15s, background 0.15s;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%239E8E86' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 28px;
+  }
+
+  .filter-select:focus, .filter-select:hover { border-color: var(--terra); }
+  .filter-select.active { border-color: var(--terra); background-color: var(--terra-light); }
+
+  .filter-clear {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--terra);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 4px;
+    font-weight: 500;
+    display: none;
+  }
+
+  .filter-clear.visible { display: block; }
+
+  .results-count {
+    font-size: 12px;
+    color: var(--muted);
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 24px 48px;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+  }
+
+  .card.both-pool { border-left: 3px solid var(--both-pool); }
+  .card.fr-pool { border-left: 3px solid var(--fr-pool); }
+  .card.ar-pool { border-left: 3px solid var(--ar-pool); }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+
+  .card-name {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--charcoal);
+    letter-spacing: -0.2px;
+    line-height: 1.2;
+  }
+
+  .card-name-arabic {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 2px;
+    font-weight: 300;
+    direction: rtl;
+  }
+
+  .pool-badge {
+    font-size: 10px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .pool-badge.both { background: var(--both-pool-bg); color: var(--both-pool); }
+  .pool-badge.fr { background: var(--fr-pool-bg); color: var(--fr-pool); }
+  .pool-badge.ar { background: var(--ar-pool-bg); color: var(--ar-pool); }
+  .pool-badge.en { background: #FEF3C7; color: #92400E; }
+
+  .card-meta {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .card-meta-sep { color: var(--border); }
+
+  .price-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--terra);
+    opacity: 0.4;
+    margin: 0 1px;
+    vertical-align: middle;
+  }
+
+  .price-dot.active { opacity: 1; }
+
+  .card-quote {
+    font-size: 13px;
+    color: var(--mid);
+    line-height: 1.6;
+    font-style: italic;
+    border-left: 2px solid var(--terra-light);
+    padding-left: 10px;
+    margin-bottom: 12px;
+    flex: 1;
+  }
+
+  .quote-lang {
+    font-size: 10px;
+    color: var(--muted);
+    font-style: normal;
+    font-weight: 500;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .card-dish {
+    font-size: 12px;
+    color: var(--terra-dark);
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .card-dish::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--terra);
+    flex-shrink: 0;
+  }
+
+  .card-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .card-attribution {
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .card-writer {
+    font-weight: 500;
+    color: var(--mid);
+  }
+
+  .card-source-link {
+    font-size: 11px;
+    color: var(--terra);
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .card-source-link:hover { text-decoration: underline; }
+
+  .writer-profile-toggle {
+    font-size: 11px;
+    color: var(--terra);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 2px;
+  }
+
+  .writer-profile-toggle:hover { text-decoration: underline; }
+
+  .writer-profile-content {
+    font-size: 12px;
+    color: var(--mid);
+    line-height: 1.55;
+    background: var(--cream);
+    border-radius: var(--radius-sm);
+    padding: 8px 10px;
+    margin-top: 6px;
+    display: none;
+  }
+
+  .writer-profile-content.open { display: block; }
+
+  .all-sources {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .source-chip {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1px 7px;
+    font-size: 10px;
+  }
+
+  /* ── LOADING / EMPTY ── */
+  .loading {
+    text-align: center;
+    padding: 60px 24px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .loading-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--terra);
+    margin: 0 3px;
+    animation: bounce 1.2s infinite;
+  }
+
+  .loading-dot:nth-child(2) { animation-delay: 0.2s; }
+  .loading-dot:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes bounce {
+    0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+    40% { transform: translateY(-6px); opacity: 1; }
+  }
+
+  .empty {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    border-top: 1px solid var(--border);
+    padding: 20px 24px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    background: var(--warm-white);
+  }
+
+  .site-footer a { color: var(--terra); text-decoration: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .tagline { display: block; }
+  }
+
+  @media (max-width: 600px) {
+    .cards-grid { grid-template-columns: 1fr; }
+    .site-header { padding: 0 16px; }
+    .filters-bar { padding: 10px 16px; }
+    .main { padding: 16px 16px 40px; }
+    .city-hero { padding: 16px; }
+    .city-name { font-size: 26px; }
+    .header-inner { height: 52px; }
+    .filters-bar { top: 52px; }
+    .results-count { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div>
+      <div class="brand">Local<span>Bite</span></div>
+      <div class="tagline">Restaurants from local writers</div>
+    </div>
+    <div class="city-select-wrap">
+      <select class="city-select" id="city-select" aria-label="Select city">
+        <option value="">Loading cities…</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<div class="city-hero" id="city-hero" style="display:none">
+  <div class="city-hero-inner">
+    <div class="city-name" id="city-name"></div>
+    <div class="city-meta" id="city-meta"></div>
+    <div id="both-pool-note" style="display:none" class="both-pool-explainer">
+      ✦ Green border = confirmed by writers in two languages independently
+    </div>
+  </div>
+</div>
+
+<div class="filters-bar" id="filters-bar" style="display:none">
+  <div class="filters-inner">
+    <select class="filter-select" id="f-neighbourhood" aria-label="Filter by neighbourhood">
+      <option value="">All neighbourhoods</option>
+    </select>
+    <select class="filter-select" id="f-cuisine" aria-label="Filter by cuisine">
+      <option value="">All cuisines</option>
+    </select>
+    <select class="filter-select" id="f-price" aria-label="Filter by price">
+      <option value="">Any price</option>
+      <option value="1">Budget</option>
+      <option value="2">Mid-range</option>
+      <option value="3">Higher-end</option>
+      <option value="4">Special occasion</option>
+    </select>
+    <select class="filter-select" id="f-pool" aria-label="Filter by language pool">
+      <option value="">All sources</option>
+      <option value="both">Two-language confirmed</option>
+      <option value="en">English sources</option>
+      <option value="fr">French sources</option>
+      <option value="ar">Arabic sources</option>
+      <option value="es">Spanish sources</option>
+      <option value="ca">Catalan sources</option>
+    </select>
+    <button class="filter-clear" id="filter-clear">Clear filters</button>
+    <span class="results-count" id="results-count"></span>
+  </div>
+</div>
+
+<main class="main" id="main">
+  <div class="loading" id="loading">
+    <div style="margin-bottom:12px">
+      <span class="loading-dot"></span>
+      <span class="loading-dot"></span>
+      <span class="loading-dot"></span>
+    </div>
+    Loading city packs…
+  </div>
+  <div class="cards-grid" id="cards-grid" style="display:none"></div>
+  <div class="empty" id="empty" style="display:none">No restaurants match these filters.</div>
+</main>
+
+<footer class="site-footer">
+  Every restaurant on LocalBite was explicitly named in a fetched source article — not inferred. &nbsp;·&nbsp;
+  Sources linked on each card. &nbsp;·&nbsp;
+  <a href="https://github.com/localbiteadmin/localbite" target="_blank" rel="noopener">GitHub</a>
+</footer>
+
+<script>
+const BASE = 'https://localbiteadmin.github.io/localbite/';
+const INDEX = BASE + 'localbite-index.json';
+
+let allRestaurants = [];
+let currentSources = {};
+let currentCity = null;
+
+// ── HELPERS ──
+function priceSymbol(level, currency) {
+  if (!level) return '';
+  const sym = (currency === 'MAD') ? 'MAD' : '€';
+  if (currency === 'MAD') {
+    const labels = ['','<100','100–250','250–500','>500'];
+    return labels[level] ? labels[level] + ' MAD' : '';
+  }
+  return '€'.repeat(level);
+}
+
+function poolLabel(pool) {
+  const map = {
+    both: 'EN + Local',
+    en: 'English',
+    fr: 'French',
+    ar: 'Arabic',
+    es: 'Spanish',
+    ca: 'Catalan'
+  };
+  return map[pool] || pool;
+}
+
+function poolClass(pool) {
+  if (pool === 'both') return 'both';
+  if (pool === 'fr') return 'fr';
+  if (pool === 'ar') return 'ar';
+  return 'en';
+}
+
+function escHtml(str) {
+  if (!str) return '';
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── LOAD INDEX ──
+async function loadIndex() {
+  try {
+    const res = await fetch(INDEX);
+    if (!res.ok) throw new Error('Index not found');
+    const data = await res.json();
+    populateCitySelect(data.cities);
+    // Auto-load first city
+    if (data.cities && data.cities.length > 0) {
+      const first = data.cities[0];
+      document.getElementById('city-select').value = first.file || first.city_slug;
+      loadCity(first);
+    }
+  } catch(e) {
+    document.getElementById('loading').innerHTML =
+      '<p style="color:#C4622D">Could not load city index. Please try refreshing.</p>';
+  }
+}
+
+function populateCitySelect(cities) {
+  const sel = document.getElementById('city-select');
+  sel.innerHTML = cities.map(c =>
+    `<option value="${escHtml(c.file || c.city_slug)}" data-slug="${escHtml(c.city_slug)}">${escHtml(c.emoji || '')} ${escHtml(c.name)}, ${escHtml(c.country)}</option>`
+  ).join('');
+
+  sel.addEventListener('change', function() {
+    const city = cities.find(c => (c.file || c.city_slug) === this.value);
+    if (city) loadCity(city);
+  });
+}
+
+// ── LOAD CITY ──
+async function loadCity(cityMeta) {
+  currentCity = cityMeta;
+  allRestaurants = [];
+  currentSources = {};
+
+  // Show loading
+  document.getElementById('cards-grid').style.display = 'none';
+  document.getElementById('empty').style.display = 'none';
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('city-hero').style.display = 'none';
+  document.getElementById('filters-bar').style.display = 'none';
+
+  try {
+    const url = BASE + (cityMeta.file || ('localbite-' + cityMeta.city_slug + '-2025-2026.json'));
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('City pack not found');
+    const data = await res.json();
+
+    allRestaurants = data.restaurants || [];
+    currentSources = {};
+    (data.sources || []).forEach(s => { currentSources[s.id] = s; });
+
+    renderHero(data, cityMeta);
+    buildFilters(allRestaurants, data);
+    resetFilters();
+    renderCards(allRestaurants, data);
+
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('city-hero').style.display = 'block';
+    document.getElementById('filters-bar').style.display = 'block';
+    document.getElementById('cards-grid').style.display = 'grid';
+
+  } catch(e) {
+    document.getElementById('loading').innerHTML =
+      `<p style="color:#C4622D">Could not load ${escHtml(cityMeta.name)} data. Please try again.</p>`;
+  }
+}
+
+// ── RENDER HERO ──
+function renderHero(data, meta) {
+  document.getElementById('city-name').textContent =
+    (meta.emoji ? meta.emoji + ' ' : '') + data.city + ', ' + data.country;
+
+  const hasBothPool = (data.restaurants || []).some(r =>
+    r.language_pool === 'both' || r.language_pool === 'both-pool');
+
+  const sourceCount = (data.sources || []).length;
+  const restCount = (data.restaurants || []).length;
+  const pipeline = data.pipeline || '';
+
+  document.getElementById('city-meta').innerHTML = `
+    <span class="city-meta-item">${restCount} restaurant${restCount !== 1 ? 's' : ''}</span>
+    <span class="city-meta-dot"></span>
+    <span class="city-meta-item">${sourceCount} source${sourceCount !== 1 ? 's' : ''}</span>
+    <span class="city-meta-dot"></span>
+    <span class="city-meta-item">2025–2026 articles only</span>
+    <span class="city-meta-dot"></span>
+    <span class="city-meta-item">Pipeline ${escHtml(pipeline.replace('localbite-middle-path-','v'))}</span>
+  `;
+
+  const note = document.getElementById('both-pool-note');
+  note.style.display = hasBothPool ? 'inline-flex' : 'none';
+}
+
+// ── BUILD FILTERS ──
+function buildFilters(restaurants, data) {
+  const currency = (data.restaurants && data.restaurants[0] && data.restaurants[0].price_currency) || '€';
+
+  // Neighbourhoods
+  const nbs = [...new Set(restaurants.map(r => r.neighbourhood).filter(Boolean))].sort();
+  const nbSel = document.getElementById('f-neighbourhood');
+  nbSel.innerHTML = '<option value="">All neighbourhoods</option>' +
+    nbs.map(n => `<option value="${escHtml(n)}">${escHtml(n)}</option>`).join('');
+
+  // Cuisines
+  const cuisines = [...new Set(restaurants.map(r => r.cuisine).filter(Boolean))].sort();
+  const cuiSel = document.getElementById('f-cuisine');
+  cuiSel.innerHTML = '<option value="">All cuisines</option>' +
+    cuisines.map(c => `<option value="${escHtml(c)}">${escHtml(c)}</option>`).join('');
+
+  // Price labels based on currency
+  const priceSel = document.getElementById('f-price');
+  if (currency === 'MAD') {
+    priceSel.innerHTML = `
+      <option value="">Any price</option>
+      <option value="1">Under 100 MAD (~€9)</option>
+      <option value="2">100–250 MAD (~€9–22)</option>
+      <option value="3">250–500 MAD (~€22–45)</option>
+      <option value="4">Over 500 MAD (~€45+)</option>
+    `;
+  } else {
+    priceSel.innerHTML = `
+      <option value="">Any price</option>
+      <option value="1">€ — Budget</option>
+      <option value="2">€€ — Mid-range</option>
+      <option value="3">€€€ — Higher-end</option>
+      <option value="4">€€€€ — Special occasion</option>
+    `;
+  }
+
+  // Pool filter — only show pools that exist
+  const pools = [...new Set(restaurants.map(r => r.language_pool))];
+  const poolSel = document.getElementById('f-pool');
+  const poolOptions = [
+    ['', 'All sources'],
+    ['both', 'Two-language confirmed'],
+    ['en', 'English sources'],
+    ['fr', 'French sources'],
+    ['ar', 'Arabic sources'],
+    ['es', 'Spanish sources'],
+    ['ca', 'Catalan sources'],
+  ];
+  poolSel.innerHTML = poolOptions
+    .filter(([v]) => v === '' || pools.includes(v) || pools.includes('both'))
+    .map(([v, l]) => `<option value="${v}">${escHtml(l)}</option>`)
+    .join('');
+}
+
+// ── FILTERS ──
+function resetFilters() {
+  ['f-neighbourhood','f-cuisine','f-price','f-pool'].forEach(id => {
+    document.getElementById(id).value = '';
+    document.getElementById(id).classList.remove('active');
+  });
+  document.getElementById('filter-clear').classList.remove('visible');
+}
+
+function getFilters() {
+  return {
+    neighbourhood: document.getElementById('f-neighbourhood').value,
+    cuisine: document.getElementById('f-cuisine').value,
+    price: document.getElementById('f-price').value,
+    pool: document.getElementById('f-pool').value,
+  };
+}
+
+function applyFilters() {
+  const f = getFilters();
+  const hasFilter = Object.values(f).some(v => v !== '');
+  document.getElementById('filter-clear').classList.toggle('visible', hasFilter);
+
+  ['f-neighbourhood','f-cuisine','f-price','f-pool'].forEach(id => {
+    const el = document.getElementById(id);
+    el.classList.toggle('active', el.value !== '');
+  });
+
+  const filtered = allRestaurants.filter(r => {
+    if (f.neighbourhood && r.neighbourhood !== f.neighbourhood) return false;
+    if (f.cuisine && r.cuisine !== f.cuisine) return false;
+    if (f.price && String(r.price_level) !== f.price) return false;
+    if (f.pool) {
+      const pool = r.language_pool || '';
+      if (f.pool === 'both' && pool !== 'both' && pool !== 'both-pool') return false;
+      if (f.pool !== 'both' && pool !== f.pool) return false;
+    }
+    return true;
+  });
+
+  renderCards(filtered, null);
+}
+
+['f-neighbourhood','f-cuisine','f-price','f-pool'].forEach(id => {
+  document.getElementById(id).addEventListener('change', applyFilters);
+});
+
+document.getElementById('filter-clear').addEventListener('click', () => {
+  resetFilters();
+  renderCards(allRestaurants, null);
+});
+
+// ── RENDER CARDS ──
+function renderCards(restaurants, data) {
+  const grid = document.getElementById('cards-grid');
+  const empty = document.getElementById('empty');
+  const count = document.getElementById('results-count');
+
+  count.textContent = `${restaurants.length} restaurant${restaurants.length !== 1 ? 's' : ''}`;
+
+  if (restaurants.length === 0) {
+    grid.innerHTML = '';
+    grid.style.display = 'none';
+    empty.style.display = 'block';
+    return;
+  }
+
+  empty.style.display = 'none';
+  grid.style.display = 'grid';
+
+  // Sort: both-pool first, then by source count desc
+  const sorted = [...restaurants].sort((a, b) => {
+    const aPool = (a.language_pool === 'both' || a.language_pool === 'both-pool') ? 0 : 1;
+    const bPool = (b.language_pool === 'both' || b.language_pool === 'both-pool') ? 0 : 1;
+    if (aPool !== bPool) return aPool - bPool;
+    return (b.source_count || 0) - (a.source_count || 0);
+  });
+
+  grid.innerHTML = sorted.map(r => cardHTML(r)).join('');
+
+  // Writer profile toggles
+  grid.querySelectorAll('.writer-profile-toggle').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      const isOpen = content.classList.toggle('open');
+      this.textContent = isOpen ? 'Hide writer profile ↑' : 'About this writer ↓';
+    });
+  });
+}
+
+function cardHTML(r) {
+  const pool = r.language_pool || 'en';
+  const isBoth = pool === 'both' || pool === 'both-pool';
+  const cardClass = isBoth ? 'both-pool' : (pool === 'fr' ? 'fr-pool' : (pool === 'ar' ? 'ar-pool' : ''));
+  const currency = r.price_currency || '€';
+
+  // Price dots
+  let priceDots = '';
+  if (r.price_level) {
+    for (let i = 1; i <= 4; i++) {
+      priceDots += `<span class="price-dot${i <= r.price_level ? ' active' : ''}"></span>`;
+    }
+  }
+
+  // Price text
+  const priceText = r.price_level ? priceSymbol(r.price_level, currency) : '';
+
+  // Meta line
+  const metaParts = [
+    r.neighbourhood,
+    r.cuisine,
+    priceText
+  ].filter(Boolean);
+
+  // Primary source
+  const primarySourceId = r.sources && r.sources[0];
+  const primarySource = primarySourceId && currentSources[primarySourceId];
+
+  // Quote
+  const quote = r.quote || '';
+  const quoteLang = r.quote_language && r.quote_language !== 'original'
+    ? `<span class="quote-lang">${escHtml(r.quote_language)}</span>` : '';
+
+  // Writer profile
+  const writerProfile = primarySource && primarySource.writer_profile
+    ? `<button class="writer-profile-toggle">About this writer ↓</button>
+       <div class="writer-profile-content">${escHtml(primarySource.writer_profile)}</div>`
+    : '';
+
+  // All sources chips
+  const sourceChips = r.sources && r.sources.length > 1
+    ? `<div class="all-sources">${r.sources.map(id => {
+        const s = currentSources[id];
+        return s ? `<span class="source-chip">${escHtml(s.publication)}</span>` : '';
+      }).join('')}</div>` : '';
+
+  // Source link
+  const sourceUrl = primarySource ? primarySource.url : '#';
+  const sourceLabel = primarySource
+    ? `${escHtml(primarySource.writer || primarySource.publication)} · ${escHtml(primarySource.publication)}`
+    : '';
+
+  // Pool badge
+  const badgeLabel = isBoth ? 'Two languages' : poolLabel(pool);
+
+  // Name arabic
+  const arabicName = r.name_arabic
+    ? `<div class="card-name-arabic">${escHtml(r.name_arabic)}</div>` : '';
+
+  // Signature dish
+  const dish = r.signature_dish
+    ? `<div class="card-dish">${escHtml(r.signature_dish)}</div>` : '';
+
+  return `
+    <article class="card ${cardClass}">
+      <div class="card-top">
+        <div>
+          <div class="card-name">${escHtml(r.name)}</div>
+          ${arabicName}
+        </div>
+        <span class="pool-badge ${poolClass(pool)}">${escHtml(badgeLabel)}</span>
+      </div>
+      <div class="card-meta">
+        ${metaParts.map(p => `<span>${escHtml(p)}</span>`).join('<span class="card-meta-sep"> · </span>')}
+      </div>
+      <blockquote class="card-quote">
+        ${escHtml(quote)}${quoteLang}
+      </blockquote>
+      ${dish}
+      <div class="card-footer">
+        <div class="card-attribution">
+          <span class="card-writer">${sourceLabel}</span>
+          <a class="card-source-link" href="${escHtml(sourceUrl)}" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+        ${sourceChips}
+        ${writerProfile}
+      </div>
+    </article>
+  `;
+}
+
+// ── INIT ──
+loadIndex();
+</script>
+</body>
+</html>
