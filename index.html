@@ -642,7 +642,7 @@ async function loadIndex() {
 function populateCitySelect(cities) {
   const sel = document.getElementById('city-select');
   sel.innerHTML = cities.map(c =>
-    `<option value="${escHtml(c.file || c.city_slug)}" data-slug="${escHtml(c.city_slug)}">${escHtml(c.emoji || '')} ${escHtml(c.name)}, ${escHtml(c.country)}</option>`
+    `<option value="${escHtml(c.file || c.city_slug)}" data-slug="${escHtml(c.city_slug)}">${escHtml(c.emoji || '')} ${escHtml(c.name || c.city)}, ${escHtml(c.country)}</option>`
   ).join('');
 
   sel.addEventListener('change', function() {
