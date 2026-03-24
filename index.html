@@ -407,6 +407,11 @@
     transition: box-shadow 0.2s, transform 0.2s;
     display: flex;
     flex-direction: column;
+    overflow: visible;
+  }
+
+  .card-top {
+    overflow: visible;
   }
 
   .card:hover { box-shadow: var(--shadow-hover); transform: translateY(-1px); }
@@ -465,7 +470,7 @@
   .badge-tooltip {
     display: none;
     position: absolute;
-    top: calc(100% + 6px);
+    bottom: calc(100% + 6px);
     right: 0;
     background: var(--charcoal);
     color: #fff;
@@ -474,8 +479,8 @@
     line-height: 1.5;
     padding: 8px 12px;
     border-radius: var(--radius-sm);
-    width: 220px;
-    z-index: 200;
+    width: 200px;
+    z-index: 300;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     cursor: default;
   }
@@ -483,10 +488,10 @@
   .badge-tooltip::before {
     content: '';
     position: absolute;
-    bottom: 100%;
+    top: 100%;
     right: 12px;
     border: 5px solid transparent;
-    border-bottom-color: var(--charcoal);
+    border-top-color: var(--charcoal);
   }
 
   .card-meta {
