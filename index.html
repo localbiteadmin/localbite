@@ -69,21 +69,15 @@
     color: var(--charcoal);
     letter-spacing: -0.3px;
     flex-shrink: 0;
+    cursor: pointer;
   }
 
   .brand span { color: var(--terra); }
 
-  .tagline {
-    font-size: 12px;
-    color: var(--muted);
-    font-weight: 300;
-    display: none;
-  }
-
-  .city-select-wrap {
+  .header-right {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
   }
 
   .city-select {
@@ -102,6 +96,22 @@
   }
 
   .city-select:focus { border-color: var(--terra); }
+
+  .credits-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 6px 11px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .credits-btn:hover { color: var(--terra); border-color: var(--terra); }
 
   /* ── CITY HERO ── */
   .city-hero {
@@ -132,11 +142,7 @@
     flex-wrap: wrap;
   }
 
-  .city-meta-item {
-    font-size: 12px;
-    color: var(--muted);
-    font-weight: 400;
-  }
+  .city-meta-item { font-size: 12px; color: var(--muted); }
 
   .city-meta-dot {
     width: 3px;
@@ -146,7 +152,7 @@
     flex-shrink: 0;
   }
 
-  .both-pool-explainer {
+  .both-pool-banner {
     margin-top: 10px;
     font-size: 12px;
     color: var(--both-pool);
@@ -154,12 +160,153 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 4px 10px;
+    padding: 5px 12px;
     border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .both-pool-banner:hover .tooltip { display: block; }
+
+  .tooltip {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 0;
+    background: var(--charcoal);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    width: 280px;
+    z-index: 200;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
+
+  .tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    border: 6px solid transparent;
+    border-top-color: var(--charcoal);
+  }
+
+  /* ── SOURCE CREDITS PANEL ── */
+  .credits-panel {
+    display: none;
+    background: var(--warm-white);
+    border-bottom: 2px solid var(--terra-light);
+  }
+
+  .credits-panel.open { display: block; }
+
+  .credits-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px;
+  }
+
+  .credits-title {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .credits-close {
+    font-size: 12px;
+    color: var(--muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 500;
   }
 
-  /* ── FILTERS ── */
+  .credits-close:hover { color: var(--terra); }
+
+  .credits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+  }
+
+  .credit-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+  }
+
+  .credit-pub {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--charcoal);
+    margin-bottom: 2px;
+  }
+
+  .credit-writer {
+    font-size: 12px;
+    color: var(--mid);
+    margin-bottom: 4px;
+  }
+
+  .credit-meta {
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .credit-lang {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1px 7px;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .credit-type {
+    font-size: 10px;
+    color: var(--terra);
+    font-weight: 500;
+  }
+
+  .credit-profile {
+    font-size: 11px;
+    color: var(--mid);
+    line-height: 1.5;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid var(--border);
+  }
+
+  .credit-link {
+    font-size: 11px;
+    color: var(--terra);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  .credit-link:hover { text-decoration: underline; }
+
+  /* ── SEARCH + FILTERS ── */
   .filters-bar {
     background: var(--warm-white);
     border-bottom: 1px solid var(--border);
@@ -177,6 +324,22 @@
     flex-wrap: wrap;
     align-items: center;
   }
+
+  .search-input {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--charcoal);
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 5px 14px;
+    outline: none;
+    transition: border-color 0.15s;
+    width: 180px;
+  }
+
+  .search-input:focus { border-color: var(--terra); }
+  .search-input::placeholder { color: var(--muted); }
 
   .filter-select {
     font-family: 'DM Sans', sans-serif;
@@ -221,7 +384,7 @@
     white-space: nowrap;
   }
 
-  /* ── MAIN CONTENT ── */
+  /* ── MAIN ── */
   .main {
     max-width: 1200px;
     margin: 0 auto;
@@ -244,14 +407,9 @@
     transition: box-shadow 0.2s, transform 0.2s;
     display: flex;
     flex-direction: column;
-    gap: 0;
   }
 
-  .card:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-1px);
-  }
-
+  .card:hover { box-shadow: var(--shadow-hover); transform: translateY(-1px); }
   .card.both-pool { border-left: 3px solid var(--both-pool); }
   .card.fr-pool { border-left: 3px solid var(--fr-pool); }
   .card.ar-pool { border-left: 3px solid var(--ar-pool); }
@@ -288,12 +446,48 @@
     border-radius: 12px;
     white-space: nowrap;
     flex-shrink: 0;
+    position: relative;
+    cursor: default;
   }
 
-  .pool-badge.both { background: var(--both-pool-bg); color: var(--both-pool); }
+  .pool-badge.both {
+    background: var(--both-pool-bg);
+    color: var(--both-pool);
+    cursor: help;
+  }
+
   .pool-badge.fr { background: var(--fr-pool-bg); color: var(--fr-pool); }
   .pool-badge.ar { background: var(--ar-pool-bg); color: var(--ar-pool); }
   .pool-badge.en { background: #FEF3C7; color: #92400E; }
+
+  .pool-badge.both:hover .badge-tooltip { display: block; }
+
+  .badge-tooltip {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: var(--charcoal);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    width: 220px;
+    z-index: 200;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    cursor: default;
+  }
+
+  .badge-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 12px;
+    border: 5px solid transparent;
+    border-bottom-color: var(--charcoal);
+  }
 
   .card-meta {
     font-size: 11px;
@@ -306,19 +500,6 @@
   }
 
   .card-meta-sep { color: var(--border); }
-
-  .price-dot {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--terra);
-    opacity: 0.4;
-    margin: 0 1px;
-    vertical-align: middle;
-  }
-
-  .price-dot.active { opacity: 1; }
 
   .card-quote {
     font-size: 13px;
@@ -379,17 +560,13 @@
     gap: 4px;
   }
 
-  .card-writer {
-    font-weight: 500;
-    color: var(--mid);
-  }
+  .card-writer { font-weight: 500; color: var(--mid); }
 
   .card-source-link {
     font-size: 11px;
     color: var(--terra);
     text-decoration: none;
     font-weight: 500;
-    white-space: nowrap;
   }
 
   .card-source-link:hover { text-decoration: underline; }
@@ -480,26 +657,32 @@
     font-size: 11px;
     color: var(--muted);
     background: var(--warm-white);
+    line-height: 2;
   }
 
   .site-footer a { color: var(--terra); text-decoration: none; }
+  .site-footer a:hover { text-decoration: underline; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .cards-grid { grid-template-columns: repeat(2, 1fr); }
-    .tagline { display: block; }
   }
 
   @media (max-width: 600px) {
     .cards-grid { grid-template-columns: 1fr; }
     .site-header { padding: 0 16px; }
-    .filters-bar { padding: 10px 16px; }
+    .filters-bar { padding: 10px 16px; overflow-x: auto; }
+    .filters-inner { flex-wrap: nowrap; min-width: max-content; }
+    .results-count { display: none; }
     .main { padding: 16px 16px 40px; }
     .city-hero { padding: 16px; }
     .city-name { font-size: 26px; }
     .header-inner { height: 52px; }
     .filters-bar { top: 52px; }
-    .results-count { display: none; }
+    .credits-btn { display: none; }
+    .search-input { width: 140px; }
+    .credits-grid { grid-template-columns: 1fr; }
+    .tooltip { width: 220px; }
   }
 </style>
 </head>
@@ -507,13 +690,11 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <div>
-      <div class="brand">Local<span>Bite</span></div>
-      <div class="tagline">Restaurants from local writers</div>
-    </div>
-    <div class="city-select-wrap">
+    <div class="brand" onclick="window.scrollTo({top:0,behavior:'smooth'})">Local<span>Bite</span></div>
+    <div class="header-right">
+      <button class="credits-btn" id="credits-btn">Sources ↓</button>
       <select class="city-select" id="city-select" aria-label="Select city">
-        <option value="">Loading cities…</option>
+        <option value="">Loading…</option>
       </select>
     </div>
   </div>
@@ -523,14 +704,26 @@
   <div class="city-hero-inner">
     <div class="city-name" id="city-name"></div>
     <div class="city-meta" id="city-meta"></div>
-    <div id="both-pool-note" style="display:none" class="both-pool-explainer">
-      ✦ Green border = confirmed by writers in two languages independently
+    <button id="both-pool-note" style="display:none" class="both-pool-banner">
+      ✦ Green border = confirmed in two languages
+      <span class="tooltip">This restaurant was independently recommended by writers from two different language communities — for example an English food writer and a French or Spanish food writer both named it. This cross-language confirmation is the strongest signal of quality on LocalBite.</span>
+    </button>
+  </div>
+</div>
+
+<div class="credits-panel" id="credits-panel">
+  <div class="credits-inner">
+    <div class="credits-title">
+      Sources for this city pack
+      <button class="credits-close" id="credits-close">Close ✕</button>
     </div>
+    <div class="credits-grid" id="credits-grid"></div>
   </div>
 </div>
 
 <div class="filters-bar" id="filters-bar" style="display:none">
   <div class="filters-inner">
+    <input class="search-input" id="search-input" type="search" placeholder="Search restaurants…" aria-label="Search restaurants">
     <select class="filter-select" id="f-neighbourhood" aria-label="Filter by neighbourhood">
       <option value="">All neighbourhoods</option>
     </select>
@@ -539,21 +732,11 @@
     </select>
     <select class="filter-select" id="f-price" aria-label="Filter by price">
       <option value="">Any price</option>
-      <option value="1">Budget</option>
-      <option value="2">Mid-range</option>
-      <option value="3">Higher-end</option>
-      <option value="4">Special occasion</option>
     </select>
-    <select class="filter-select" id="f-pool" aria-label="Filter by language pool">
-      <option value="">All sources</option>
-      <option value="both">Two-language confirmed</option>
-      <option value="en">English sources</option>
-      <option value="fr">French sources</option>
-      <option value="ar">Arabic sources</option>
-      <option value="es">Spanish sources</option>
-      <option value="ca">Catalan sources</option>
+    <select class="filter-select" id="f-pool" aria-label="Filter by source language">
+      <option value="">Source language</option>
     </select>
-    <button class="filter-clear" id="filter-clear">Clear filters</button>
+    <button class="filter-clear" id="filter-clear">Clear all</button>
     <span class="results-count" id="results-count"></span>
   </div>
 </div>
@@ -572,9 +755,11 @@
 </main>
 
 <footer class="site-footer">
-  Every restaurant on LocalBite was explicitly named in a fetched source article — not inferred. &nbsp;·&nbsp;
-  Sources linked on each card. &nbsp;·&nbsp;
-  <a href="https://github.com/localbiteadmin/localbite" target="_blank" rel="noopener">GitHub</a>
+  Every restaurant on LocalBite was explicitly named in a fetched source article — not inferred.
+  <br>
+  Sources are linked on every card · Data covers 2025–2026 articles only
+  <br>
+  <a href="https://github.com/localbiteadmin/localbite" target="_blank" rel="noopener">View on GitHub</a>
 </footer>
 
 <script>
@@ -583,41 +768,70 @@ const INDEX = BASE + 'localbite-index.json';
 
 let allRestaurants = [];
 let currentSources = {};
-let currentCity = null;
+let currentCityData = null;
 
-// ── HELPERS ──
+function escHtml(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
 function priceSymbol(level, currency) {
   if (!level) return '';
-  const sym = (currency === 'MAD') ? 'MAD' : '€';
   if (currency === 'MAD') {
-    const labels = ['','<100','100–250','250–500','>500'];
-    return labels[level] ? labels[level] + ' MAD' : '';
+    const labels = ['','<100 MAD','100–250 MAD','250–500 MAD','>500 MAD'];
+    return labels[level] || '';
   }
   return '€'.repeat(level);
 }
 
 function poolLabel(pool) {
-  const map = {
-    both: 'EN + Local',
-    en: 'English',
-    fr: 'French',
-    ar: 'Arabic',
-    es: 'Spanish',
-    ca: 'Catalan'
-  };
+  const map = { both:'EN + Local', 'both-pool':'EN + Local', en:'English', fr:'French', ar:'Arabic', es:'Spanish', ca:'Catalan' };
   return map[pool] || pool;
 }
 
 function poolClass(pool) {
-  if (pool === 'both') return 'both';
+  if (pool === 'both' || pool === 'both-pool') return 'both';
   if (pool === 'fr') return 'fr';
   if (pool === 'ar') return 'ar';
   return 'en';
 }
 
-function escHtml(str) {
-  if (!str) return '';
-  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+function langLabel(code) {
+  const map = { en:'EN', fr:'FR', ar:'AR', es:'ES', ca:'CA', pt:'PT' };
+  return map[code] || code.toUpperCase();
+}
+
+// ── CREDITS PANEL ──
+document.getElementById('credits-btn').addEventListener('click', function() {
+  const panel = document.getElementById('credits-panel');
+  const isOpen = panel.classList.toggle('open');
+  this.textContent = isOpen ? 'Sources ↑' : 'Sources ↓';
+});
+
+document.getElementById('credits-close').addEventListener('click', function() {
+  document.getElementById('credits-panel').classList.remove('open');
+  document.getElementById('credits-btn').textContent = 'Sources ↓';
+});
+
+function renderCredits(sources) {
+  const grid = document.getElementById('credits-grid');
+  if (!sources || sources.length === 0) {
+    grid.innerHTML = '<p style="color:var(--muted);font-size:13px">No source information available.</p>';
+    return;
+  }
+  grid.innerHTML = sources.map(s => `
+    <div class="credit-card">
+      <div class="credit-pub">${escHtml(s.publication)}</div>
+      ${s.writer ? `<div class="credit-writer">by ${escHtml(s.writer)}</div>` : ''}
+      <div class="credit-meta">
+        <span class="credit-lang">${escHtml(langLabel(s.language))}</span>
+        <span class="credit-type">${escHtml(s.source_type || 'primary')}</span>
+        ${s.article_date ? `<span>${escHtml(s.article_date)}</span>` : ''}
+      </div>
+      ${s.writer_profile ? `<div class="credit-profile">${escHtml(s.writer_profile)}</div>` : ''}
+      ${s.url ? `<a class="credit-link" href="${escHtml(s.url)}" target="_blank" rel="noopener">Read article ↗</a>` : ''}
+    </div>
+  `).join('');
 }
 
 // ── LOAD INDEX ──
@@ -626,25 +840,22 @@ async function loadIndex() {
     const res = await fetch(INDEX);
     if (!res.ok) throw new Error('Index not found');
     const data = await res.json();
-    populateCitySelect(data.cities);
-    // Auto-load first city
+    populateCitySelect(data.cities || []);
     if (data.cities && data.cities.length > 0) {
-      const first = data.cities[0];
-      document.getElementById('city-select').value = first.file || first.city_slug;
-      loadCity(first);
+      document.getElementById('city-select').value = data.cities[0].file || data.cities[0].city_slug;
+      loadCity(data.cities[0]);
     }
   } catch(e) {
     document.getElementById('loading').innerHTML =
-      '<p style="color:#C4622D">Could not load city index. Please try refreshing.</p>';
+      '<p style="color:var(--terra)">Could not load city index. Please refresh.</p>';
   }
 }
 
 function populateCitySelect(cities) {
   const sel = document.getElementById('city-select');
   sel.innerHTML = cities.map(c =>
-    `<option value="${escHtml(c.file || c.city_slug)}" data-slug="${escHtml(c.city_slug)}">${escHtml(c.emoji || '')} ${escHtml(c.name || c.city)}, ${escHtml(c.country)}</option>`
+    `<option value="${escHtml(c.file || c.city_slug)}">${escHtml(c.emoji||'')} ${escHtml(c.name||c.city)}, ${escHtml(c.country)}</option>`
   ).join('');
-
   sel.addEventListener('change', function() {
     const city = cities.find(c => (c.file || c.city_slug) === this.value);
     if (city) loadCity(city);
@@ -652,32 +863,34 @@ function populateCitySelect(cities) {
 }
 
 // ── LOAD CITY ──
-async function loadCity(cityMeta) {
-  currentCity = cityMeta;
+async function loadCity(meta) {
   allRestaurants = [];
   currentSources = {};
+  currentCityData = null;
 
-  // Show loading
   document.getElementById('cards-grid').style.display = 'none';
   document.getElementById('empty').style.display = 'none';
   document.getElementById('loading').style.display = 'block';
   document.getElementById('city-hero').style.display = 'none';
   document.getElementById('filters-bar').style.display = 'none';
+  document.getElementById('credits-panel').classList.remove('open');
+  document.getElementById('credits-btn').textContent = 'Sources ↓';
 
   try {
-    const url = BASE + (cityMeta.file || ('localbite-' + cityMeta.city_slug + '-2025-2026.json'));
+    const url = BASE + (meta.file || ('localbite-' + (meta.city_slug||meta.slug) + '-2025-2026.json'));
     const res = await fetch(url);
-    if (!res.ok) throw new Error('City pack not found');
+    if (!res.ok) throw new Error('Not found');
     const data = await res.json();
 
+    currentCityData = data;
     allRestaurants = data.restaurants || [];
-    currentSources = {};
     (data.sources || []).forEach(s => { currentSources[s.id] = s; });
 
-    renderHero(data, cityMeta);
+    renderHero(data, meta);
     buildFilters(allRestaurants, data);
     resetFilters();
-    renderCards(allRestaurants, data);
+    renderCards(allRestaurants);
+    renderCredits(data.sources || []);
 
     document.getElementById('loading').style.display = 'none';
     document.getElementById('city-hero').style.display = 'block';
@@ -686,176 +899,162 @@ async function loadCity(cityMeta) {
 
   } catch(e) {
     document.getElementById('loading').innerHTML =
-      `<p style="color:#C4622D">Could not load ${escHtml(cityMeta.name)} data. Please try again.</p>`;
+      `<p style="color:var(--terra)">Could not load ${escHtml(meta.name||meta.city)} data. Please try again.</p>`;
   }
 }
 
-// ── RENDER HERO ──
+// ── HERO ──
 function renderHero(data, meta) {
+  const emoji = meta.emoji || '';
   document.getElementById('city-name').textContent =
-    (meta.emoji ? meta.emoji + ' ' : '') + data.city + ', ' + data.country;
+    (emoji ? emoji + ' ' : '') + (data.city||meta.city||'') + ', ' + (data.country||meta.country||'');
 
-  const hasBothPool = (data.restaurants || []).some(r =>
-    r.language_pool === 'both' || r.language_pool === 'both-pool');
-
-  const sourceCount = (data.sources || []).length;
-  const restCount = (data.restaurants || []).length;
-  const pipeline = data.pipeline || '';
+  const restCount = allRestaurants.length;
+  const srcCount = (data.sources||[]).length;
+  const pipeline = (data.pipeline||'').replace('localbite-middle-path-','v');
 
   document.getElementById('city-meta').innerHTML = `
-    <span class="city-meta-item">${restCount} restaurant${restCount !== 1 ? 's' : ''}</span>
+    <span class="city-meta-item">${restCount} restaurant${restCount!==1?'s':''}</span>
     <span class="city-meta-dot"></span>
-    <span class="city-meta-item">${sourceCount} source${sourceCount !== 1 ? 's' : ''}</span>
+    <span class="city-meta-item">${srcCount} source${srcCount!==1?'s':''}</span>
     <span class="city-meta-dot"></span>
-    <span class="city-meta-item">2025–2026 articles only</span>
-    <span class="city-meta-dot"></span>
-    <span class="city-meta-item">Pipeline ${escHtml(pipeline.replace('localbite-middle-path-','v'))}</span>
+    <span class="city-meta-item">2025–2026 only</span>
+    ${pipeline ? `<span class="city-meta-dot"></span><span class="city-meta-item">Pipeline ${escHtml(pipeline)}</span>` : ''}
   `;
 
-  const note = document.getElementById('both-pool-note');
-  note.style.display = hasBothPool ? 'inline-flex' : 'none';
-}
-
-// ── BUILD FILTERS ──
-function buildFilters(restaurants, data) {
-  const currency = (data.restaurants && data.restaurants[0] && data.restaurants[0].price_currency) || '€';
-
-  // Neighbourhoods
-  const nbs = [...new Set(restaurants.map(r => r.neighbourhood).filter(Boolean))].sort();
-  const nbSel = document.getElementById('f-neighbourhood');
-  nbSel.innerHTML = '<option value="">All neighbourhoods</option>' +
-    nbs.map(n => `<option value="${escHtml(n)}">${escHtml(n)}</option>`).join('');
-
-  // Cuisines
-  const cuisines = [...new Set(restaurants.map(r => r.cuisine).filter(Boolean))].sort();
-  const cuiSel = document.getElementById('f-cuisine');
-  cuiSel.innerHTML = '<option value="">All cuisines</option>' +
-    cuisines.map(c => `<option value="${escHtml(c)}">${escHtml(c)}</option>`).join('');
-
-  // Price labels based on currency
-  const priceSel = document.getElementById('f-price');
-  if (currency === 'MAD') {
-    priceSel.innerHTML = `
-      <option value="">Any price</option>
-      <option value="1">Under 100 MAD (~€9)</option>
-      <option value="2">100–250 MAD (~€9–22)</option>
-      <option value="3">250–500 MAD (~€22–45)</option>
-      <option value="4">Over 500 MAD (~€45+)</option>
-    `;
-  } else {
-    priceSel.innerHTML = `
-      <option value="">Any price</option>
-      <option value="1">€ — Budget</option>
-      <option value="2">€€ — Mid-range</option>
-      <option value="3">€€€ — Higher-end</option>
-      <option value="4">€€€€ — Special occasion</option>
-    `;
-  }
-
-  // Pool filter — only show pools that exist
-  const pools = [...new Set(restaurants.map(r => r.language_pool))];
-  const poolSel = document.getElementById('f-pool');
-  const poolOptions = [
-    ['', 'All sources'],
-    ['both', 'Two-language confirmed'],
-    ['en', 'English sources'],
-    ['fr', 'French sources'],
-    ['ar', 'Arabic sources'],
-    ['es', 'Spanish sources'],
-    ['ca', 'Catalan sources'],
-  ];
-  poolSel.innerHTML = poolOptions
-    .filter(([v]) => v === '' || pools.includes(v) || pools.includes('both'))
-    .map(([v, l]) => `<option value="${v}">${escHtml(l)}</option>`)
-    .join('');
+  const hasBoth = allRestaurants.some(r => r.language_pool==='both'||r.language_pool==='both-pool');
+  document.getElementById('both-pool-note').style.display = hasBoth ? 'inline-flex' : 'none';
 }
 
 // ── FILTERS ──
+function buildFilters(restaurants, data) {
+  const currency = (restaurants[0] && restaurants[0].price_currency) || '€';
+
+  const nbs = [...new Set(restaurants.map(r=>r.neighbourhood).filter(Boolean))].sort();
+  document.getElementById('f-neighbourhood').innerHTML =
+    '<option value="">All neighbourhoods</option>' +
+    nbs.map(n=>`<option value="${escHtml(n)}">${escHtml(n)}</option>`).join('');
+
+  const cuisines = [...new Set(restaurants.map(r=>r.cuisine).filter(Boolean))].sort();
+  const cuiSel = document.getElementById('f-cuisine');
+  if (cuisines.length > 0) {
+    cuiSel.style.display = '';
+    cuiSel.innerHTML = '<option value="">All cuisines</option>' +
+      cuisines.map(c=>`<option value="${escHtml(c)}">${escHtml(c)}</option>`).join('');
+  } else {
+    cuiSel.style.display = 'none';
+  }
+
+  document.getElementById('f-price').innerHTML = currency === 'MAD'
+    ? `<option value="">Any price</option>
+       <option value="1">Under 100 MAD (~€9)</option>
+       <option value="2">100–250 MAD (~€9–22)</option>
+       <option value="3">250–500 MAD (~€22–45)</option>
+       <option value="4">Over 500 MAD (~€45+)</option>`
+    : `<option value="">Any price</option>
+       <option value="1">€ Budget</option>
+       <option value="2">€€ Mid-range</option>
+       <option value="3">€€€ Higher-end</option>
+       <option value="4">€€€€ Special occasion</option>`;
+
+  const pools = [...new Set(restaurants.map(r=>r.language_pool).filter(Boolean))];
+  const poolOptions = [
+    ['','Source language'],
+    ['both','Two languages confirmed'],
+    ['en','English sources'],
+    ['fr','French sources'],
+    ['ar','Arabic sources'],
+    ['es','Spanish sources'],
+    ['ca','Catalan sources'],
+  ].filter(([v]) => v==='' || pools.some(p => v==='both' ? (p==='both'||p==='both-pool') : p===v));
+
+  document.getElementById('f-pool').innerHTML =
+    poolOptions.map(([v,l])=>`<option value="${v}">${escHtml(l)}</option>`).join('');
+}
+
 function resetFilters() {
+  document.getElementById('search-input').value = '';
   ['f-neighbourhood','f-cuisine','f-price','f-pool'].forEach(id => {
-    document.getElementById(id).value = '';
-    document.getElementById(id).classList.remove('active');
+    const el = document.getElementById(id);
+    if (el) { el.value = ''; el.classList.remove('active'); }
   });
   document.getElementById('filter-clear').classList.remove('visible');
 }
 
-function getFilters() {
-  return {
-    neighbourhood: document.getElementById('f-neighbourhood').value,
-    cuisine: document.getElementById('f-cuisine').value,
-    price: document.getElementById('f-price').value,
-    pool: document.getElementById('f-pool').value,
-  };
-}
+function getFilteredRestaurants() {
+  const q = document.getElementById('search-input').value.trim().toLowerCase();
+  const nb = document.getElementById('f-neighbourhood').value;
+  const cui = document.getElementById('f-cuisine').value;
+  const price = document.getElementById('f-price').value;
+  const pool = document.getElementById('f-pool').value;
+  const hasFilter = q || nb || cui || price || pool;
 
-function applyFilters() {
-  const f = getFilters();
-  const hasFilter = Object.values(f).some(v => v !== '');
-  document.getElementById('filter-clear').classList.toggle('visible', hasFilter);
-
+  document.getElementById('filter-clear').classList.toggle('visible', !!hasFilter);
   ['f-neighbourhood','f-cuisine','f-price','f-pool'].forEach(id => {
     const el = document.getElementById(id);
-    el.classList.toggle('active', el.value !== '');
+    if (el) el.classList.toggle('active', !!el.value);
   });
 
-  const filtered = allRestaurants.filter(r => {
-    if (f.neighbourhood && r.neighbourhood !== f.neighbourhood) return false;
-    if (f.cuisine && r.cuisine !== f.cuisine) return false;
-    if (f.price && String(r.price_level) !== f.price) return false;
-    if (f.pool) {
-      const pool = r.language_pool || '';
-      if (f.pool === 'both' && pool !== 'both' && pool !== 'both-pool') return false;
-      if (f.pool !== 'both' && pool !== f.pool) return false;
+  return allRestaurants.filter(r => {
+    if (nb && r.neighbourhood !== nb) return false;
+    if (cui && r.cuisine !== cui) return false;
+    if (price && String(r.price_level) !== price) return false;
+    if (pool) {
+      const p = r.language_pool || '';
+      if (pool === 'both' && p !== 'both' && p !== 'both-pool') return false;
+      if (pool !== 'both' && p !== pool) return false;
+    }
+    if (q) {
+      const hay = [r.name, r.neighbourhood, r.cuisine, r.quote, r.signature_dish]
+        .filter(Boolean).join(' ').toLowerCase();
+      if (!hay.includes(q)) return false;
     }
     return true;
   });
-
-  renderCards(filtered, null);
 }
 
+function applyFilters() {
+  renderCards(getFilteredRestaurants());
+}
+
+document.getElementById('search-input').addEventListener('input', applyFilters);
 ['f-neighbourhood','f-cuisine','f-price','f-pool'].forEach(id => {
-  document.getElementById(id).addEventListener('change', applyFilters);
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('change', applyFilters);
 });
 
 document.getElementById('filter-clear').addEventListener('click', () => {
   resetFilters();
-  renderCards(allRestaurants, null);
+  renderCards(allRestaurants);
 });
 
 // ── RENDER CARDS ──
-function renderCards(restaurants, data) {
+function renderCards(restaurants) {
   const grid = document.getElementById('cards-grid');
   const empty = document.getElementById('empty');
-  const count = document.getElementById('results-count');
-
-  count.textContent = `${restaurants.length} restaurant${restaurants.length !== 1 ? 's' : ''}`;
+  document.getElementById('results-count').textContent =
+    `${restaurants.length} restaurant${restaurants.length!==1?'s':''}`;
 
   if (restaurants.length === 0) {
-    grid.innerHTML = '';
-    grid.style.display = 'none';
-    empty.style.display = 'block';
+    grid.innerHTML = ''; grid.style.display = 'none'; empty.style.display = 'block';
     return;
   }
+  empty.style.display = 'none'; grid.style.display = 'grid';
 
-  empty.style.display = 'none';
-  grid.style.display = 'grid';
-
-  // Sort: both-pool first, then by source count desc
-  const sorted = [...restaurants].sort((a, b) => {
-    const aPool = (a.language_pool === 'both' || a.language_pool === 'both-pool') ? 0 : 1;
-    const bPool = (b.language_pool === 'both' || b.language_pool === 'both-pool') ? 0 : 1;
-    if (aPool !== bPool) return aPool - bPool;
-    return (b.source_count || 0) - (a.source_count || 0);
+  const sorted = [...restaurants].sort((a,b) => {
+    const ap = (a.language_pool==='both'||a.language_pool==='both-pool') ? 0 : 1;
+    const bp = (b.language_pool==='both'||b.language_pool==='both-pool') ? 0 : 1;
+    if (ap !== bp) return ap - bp;
+    return (b.source_count||0) - (a.source_count||0);
   });
 
   grid.innerHTML = sorted.map(r => cardHTML(r)).join('');
 
-  // Writer profile toggles
   grid.querySelectorAll('.writer-profile-toggle').forEach(btn => {
     btn.addEventListener('click', function() {
       const content = this.nextElementSibling;
       const isOpen = content.classList.toggle('open');
-      this.textContent = isOpen ? 'Hide writer profile ↑' : 'About this writer ↓';
+      this.textContent = isOpen ? 'Hide writer ↑' : 'About this writer ↓';
     });
   });
 }
@@ -863,85 +1062,54 @@ function renderCards(restaurants, data) {
 function cardHTML(r) {
   const pool = r.language_pool || 'en';
   const isBoth = pool === 'both' || pool === 'both-pool';
-  const cardClass = isBoth ? 'both-pool' : (pool === 'fr' ? 'fr-pool' : (pool === 'ar' ? 'ar-pool' : ''));
+  const cardClass = isBoth ? 'both-pool' : (pool==='fr'?'fr-pool':(pool==='ar'?'ar-pool':''));
   const currency = r.price_currency || '€';
 
-  // Price dots
-  let priceDots = '';
-  if (r.price_level) {
-    for (let i = 1; i <= 4; i++) {
-      priceDots += `<span class="price-dot${i <= r.price_level ? ' active' : ''}"></span>`;
-    }
-  }
+  const metaParts = [r.neighbourhood, r.cuisine, r.price_level ? priceSymbol(r.price_level, currency) : null].filter(Boolean);
 
-  // Price text
-  const priceText = r.price_level ? priceSymbol(r.price_level, currency) : '';
-
-  // Meta line
-  const metaParts = [
-    r.neighbourhood,
-    r.cuisine,
-    priceText
-  ].filter(Boolean);
-
-  // Primary source
-  const primarySourceId = r.sources && r.sources[0];
-  const primarySource = primarySourceId && currentSources[primarySourceId];
-
-  // Quote
-  const quote = r.quote || '';
-  const quoteLang = r.quote_language && r.quote_language !== 'original'
-    ? `<span class="quote-lang">${escHtml(r.quote_language)}</span>` : '';
-
-  // Writer profile
-  const writerProfile = primarySource && primarySource.writer_profile
-    ? `<button class="writer-profile-toggle">About this writer ↓</button>
-       <div class="writer-profile-content">${escHtml(primarySource.writer_profile)}</div>`
+  const primaryId = r.sources && r.sources[0];
+  const primarySrc = primaryId && currentSources[primaryId];
+  const sourceUrl = primarySrc ? primarySrc.url : '#';
+  const writerLabel = primarySrc
+    ? (primarySrc.writer ? primarySrc.writer + ' · ' + primarySrc.publication : primarySrc.publication)
     : '';
 
-  // All sources chips
+  const quoteLangLabel = r.quote_language && r.quote_language !== 'original'
+    ? `<span class="quote-lang">${escHtml(r.quote_language)}</span>` : '';
+
+  const writerProfile = primarySrc && primarySrc.writer_profile
+    ? `<button class="writer-profile-toggle">About this writer ↓</button>
+       <div class="writer-profile-content">${escHtml(primarySrc.writer_profile)}</div>`
+    : '';
+
   const sourceChips = r.sources && r.sources.length > 1
     ? `<div class="all-sources">${r.sources.map(id => {
         const s = currentSources[id];
         return s ? `<span class="source-chip">${escHtml(s.publication)}</span>` : '';
       }).join('')}</div>` : '';
 
-  // Source link
-  const sourceUrl = primarySource ? primarySource.url : '#';
-  const sourceLabel = primarySource
-    ? `${escHtml(primarySource.writer || primarySource.publication)} · ${escHtml(primarySource.publication)}`
-    : '';
-
-  // Pool badge
   const badgeLabel = isBoth ? 'Two languages' : poolLabel(pool);
-
-  // Name arabic
-  const arabicName = r.name_arabic
-    ? `<div class="card-name-arabic">${escHtml(r.name_arabic)}</div>` : '';
-
-  // Signature dish
-  const dish = r.signature_dish
-    ? `<div class="card-dish">${escHtml(r.signature_dish)}</div>` : '';
+  const badgeTooltip = isBoth
+    ? `<span class="badge-tooltip">Independently recommended by writers in two different languages — the strongest confidence signal on LocalBite.</span>`
+    : '';
 
   return `
     <article class="card ${cardClass}">
       <div class="card-top">
         <div>
           <div class="card-name">${escHtml(r.name)}</div>
-          ${arabicName}
+          ${r.name_arabic ? `<div class="card-name-arabic">${escHtml(r.name_arabic)}</div>` : ''}
         </div>
-        <span class="pool-badge ${poolClass(pool)}">${escHtml(badgeLabel)}</span>
+        <span class="pool-badge ${poolClass(pool)}">${escHtml(badgeLabel)}${badgeTooltip}</span>
       </div>
       <div class="card-meta">
-        ${metaParts.map(p => `<span>${escHtml(p)}</span>`).join('<span class="card-meta-sep"> · </span>')}
+        ${metaParts.map(p=>`<span>${escHtml(p)}</span>`).join('<span class="card-meta-sep"> · </span>')}
       </div>
-      <blockquote class="card-quote">
-        ${escHtml(quote)}${quoteLang}
-      </blockquote>
-      ${dish}
+      <blockquote class="card-quote">${escHtml(r.quote||'')}${quoteLangLabel}</blockquote>
+      ${r.signature_dish ? `<div class="card-dish">${escHtml(r.signature_dish)}</div>` : ''}
       <div class="card-footer">
         <div class="card-attribution">
-          <span class="card-writer">${sourceLabel}</span>
+          <span class="card-writer">${escHtml(writerLabel)}</span>
           <a class="card-source-link" href="${escHtml(sourceUrl)}" target="_blank" rel="noopener">Source ↗</a>
         </div>
         ${sourceChips}
@@ -951,7 +1119,6 @@ function cardHTML(r) {
   `;
 }
 
-// ── INIT ──
 loadIndex();
 </script>
 </body>
