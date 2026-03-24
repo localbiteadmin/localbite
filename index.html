@@ -1116,10 +1116,16 @@ function applyFilters() {
   renderCards(getFilteredRestaurants());
 }
 
-document.getElementById('search-input').addEventListener('input', applyFilters);
+document.getElementById('search-input').addEventListener('input', function() {
+  applyFilters();
+  maybeUpdateMap();
+});
 ['f-neighbourhood','f-cuisine','f-price','f-pool'].forEach(id => {
   const el = document.getElementById(id);
-  if (el) el.addEventListener('change', applyFilters);
+  if (el) el.addEventListener('change', function() {
+    applyFilters();
+    maybeUpdateMap();
+  });
 });
 
 document.getElementById('filter-clear').addEventListener('click', () => {
@@ -1305,6 +1311,13 @@ function setView(view) {
   }
 }
 
+// Update map when filters applied in map view
+function maybeUpdateMap() {
+  if (currentView === 'map' && leafletMap) {
+    updateMap(getFilteredRestaurants());
+  }
+}
+
 function initMap() {
   if (leafletMap) {
     leafletMap.invalidateSize();
@@ -1471,14 +1484,8 @@ function updateMap(restaurants) {
 
 // Hook map updates into filter changes
 const _origApplyFilters = applyFilters;
-// Override renderCards to also update map
+// Update map when filters change - hook into applyFilters instead of redefining renderCards
 const _origRenderCards = renderCards;
-function renderCards(restaurants) {
-  _origRenderCards(restaurants);
-  if (currentView === 'map' && leafletMap) {
-    updateMap(restaurants);
-  }
-}
 
 // Reset map when switching cities
 function resetMap() {
@@ -1524,4 +1531,3 @@ document.addEventListener('mouseout', function(e) {
 </script>
 </body>
 </html>
-
