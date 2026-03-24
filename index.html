@@ -465,33 +465,21 @@
   .pool-badge.ar { background: var(--ar-pool-bg); color: var(--ar-pool); }
   .pool-badge.en { background: #FEF3C7; color: #92400E; }
 
-  .pool-badge.both:hover .badge-tooltip { display: block; }
-
-  .badge-tooltip {
+  #global-tooltip {
     display: none;
-    position: absolute;
-    bottom: calc(100% + 6px);
-    right: 0;
+    position: fixed;
     background: var(--charcoal);
     color: #fff;
-    font-size: 11px;
+    font-size: 12px;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     line-height: 1.5;
     padding: 8px 12px;
     border-radius: var(--radius-sm);
     width: 200px;
-    z-index: 300;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    cursor: default;
-  }
-
-  .badge-tooltip::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    right: 12px;
-    border: 5px solid transparent;
-    border-top-color: var(--charcoal);
+    z-index: 9999;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    pointer-events: none;
   }
 
   .card-meta {
@@ -1094,9 +1082,7 @@ function cardHTML(r) {
       }).join('')}</div>` : '';
 
   const badgeLabel = isBoth ? 'Two languages' : poolLabel(pool);
-  const badgeTooltip = isBoth
-    ? `<span class="badge-tooltip">Confirmed by writers in two languages.</span>`
-    : '';
+  const badgeTooltip = '';
 
   return `
     <article class="card ${cardClass}">
@@ -1125,6 +1111,27 @@ function cardHTML(r) {
 }
 
 loadIndex();
+
+// ── GLOBAL BADGE TOOLTIP ──
+const globalTip = document.createElement('div');
+globalTip.id = 'global-tooltip';
+globalTip.textContent = 'Confirmed by writers in two languages.';
+document.body.appendChild(globalTip);
+
+document.addEventListener('mouseover', function(e) {
+  const badge = e.target.closest('.pool-badge.both');
+  if (badge) {
+    const rect = badge.getBoundingClientRect();
+    globalTip.style.display = 'block';
+    globalTip.style.left = Math.min(rect.right - 200, window.innerWidth - 210) + 'px';
+    globalTip.style.top = (rect.top - globalTip.offsetHeight - 8 + window.scrollY) + 'px';
+  }
+});
+
+document.addEventListener('mouseout', function(e) {
+  const badge = e.target.closest('.pool-badge.both');
+  if (badge) globalTip.style.display = 'none';
+});
 </script>
 </body>
 </html>
