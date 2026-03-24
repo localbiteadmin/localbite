@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
 <style>
   :root {
     --terra: #C4622D;
@@ -642,7 +643,104 @@
     font-size: 14px;
   }
 
-  /* ── FOOTER ── */
+  /* ── MAP VIEW ── */
+  .view-toggle {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .view-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream);
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .view-btn.active {
+    background: var(--charcoal);
+    color: #fff;
+    border-color: var(--charcoal);
+  }
+
+  .map-container { display: none; }
+  .map-container.visible { display: block; }
+
+  .map-caveat {
+    background: #FEF3C7;
+    border: 1px solid #F6D860;
+    border-radius: var(--radius-sm);
+    padding: 8px 14px;
+    font-size: 12px;
+    color: #7A4F00;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  #map {
+    height: 520px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    z-index: 1;
+  }
+
+  .leaflet-popup-content {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    max-width: 240px;
+  }
+
+  .popup-neighbourhood {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .popup-restaurant {
+    padding: 4px 0;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 1.4;
+  }
+
+  .popup-restaurant:last-child { border-bottom: none; }
+
+  .popup-name {
+    font-weight: 500;
+    color: var(--charcoal);
+    font-size: 12px;
+  }
+
+  .popup-meta {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .popup-both {
+    display: inline-block;
+    background: var(--both-pool-bg);
+    color: var(--both-pool);
+    font-size: 9px;
+    font-weight: 500;
+    padding: 1px 5px;
+    border-radius: 8px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+
+  @media (max-width: 600px) {
+    #map { height: 380px; }
+  }
+
   .site-footer {
     border-top: 1px solid var(--border);
     padding: 20px 24px;
@@ -731,6 +829,10 @@
     </select>
     <button class="filter-clear" id="filter-clear">Clear all</button>
     <span class="results-count" id="results-count"></span>
+    <div class="view-toggle" style="margin-left:auto">
+      <button class="view-btn active" id="btn-list">☰ List</button>
+      <button class="view-btn" id="btn-map">⊙ Map</button>
+    </div>
   </div>
 </div>
 
@@ -745,6 +847,10 @@
   </div>
   <div class="cards-grid" id="cards-grid" style="display:none"></div>
   <div class="empty" id="empty" style="display:none">No restaurants match these filters.</div>
+  <div class="map-container" id="map-container">
+    <div class="map-caveat">⚠ Pins show approximate neighbourhood centres — not exact restaurant locations. Use the source links on each card for precise addresses.</div>
+    <div id="map"></div>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -1109,6 +1215,285 @@ function cardHTML(r) {
     </article>
   `;
 }
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+// ── NEIGHBOURHOOD CENTROIDS ──
+const CENTROIDS = {
+  // Barcelona
+  'Eixample': [41.3947, 2.1635],
+  'Eixample Dreta': [41.3972, 2.1678],
+  'Eixample Esquerra': [41.3910, 2.1562],
+  'Gràcia': [41.4034, 2.1547],
+  'El Born': [41.3851, 2.1833],
+  'Barceloneta': [41.3795, 2.1897],
+  'Poble Sec': [41.3724, 2.1589],
+  'Sant Pere': [41.3864, 2.1793],
+  'El Raval': [41.3803, 2.1685],
+  'Sarrià': [41.4014, 2.1186],
+  'Sarrià-Sant Gervasi': [41.4100, 2.1386],
+  'Poblenou': [41.4014, 2.2019],
+  'Sant Antoni': [41.3793, 2.1587],
+  'Barri Gòtic': [41.3833, 2.1765],
+  'Sants-Montjuïc': [41.3701, 2.1492],
+  'Vila Olímpica': [41.3880, 2.1980],
+  'Sant Martí': [41.4101, 2.1994],
+  'Clot': [41.4121, 2.1864],
+  // Valencia
+  'El Carmen': [39.4764, -0.3798],
+  'Ruzafa': [39.4627, -0.3736],
+  'Eixample Valencia': [39.4649, -0.3756],
+  'Benimaclet': [39.4863, -0.3596],
+  'Cabanyal': [39.4694, -0.3285],
+  'Patraix': [39.4559, -0.3893],
+  'Quatre Carreres': [39.4524, -0.3714],
+  'Campanar': [39.4842, -0.3936],
+  'Extramurs': [39.4700, -0.3900],
+  'Algirós': [39.4762, -0.3561],
+  'Poblats Marítims': [39.4694, -0.3285],
+  'La Saïdia': [39.4842, -0.3736],
+  'Jesús': [39.4559, -0.3736],
+  'Camins al Grau': [39.4694, -0.3561],
+  // Fes
+  'Fes el-Bali': [34.0642, -4.9753],
+  'Fes el-Jdid': [34.0585, -4.9882],
+  'Ville Nouvelle': [34.0371, -5.0003],
+  // Marrakesh
+  'Medina': [31.6295, -7.9811],
+  'Jemaa el-Fna': [31.6258, -7.9891],
+  'Gueliz': [31.6364, -8.0121],
+  'Hivernage': [31.6218, -8.0079],
+  'Mellah': [31.6229, -7.9817],
+  'Palmeraie': [31.6600, -8.0100],
+};
+
+// City centre fallbacks
+const CITY_CENTRES = {
+  'Barcelona': [41.3874, 2.1686],
+  'Valencia': [39.4699, -0.3763],
+  'Fes': [34.0433, -5.0033],
+  'Marrakesh': [31.6295, -8.0000],
+};
+
+let leafletMap = null;
+let mapMarkers = [];
+let currentView = 'list';
+
+// ── VIEW TOGGLE ──
+document.getElementById('btn-list').addEventListener('click', function() {
+  setView('list');
+});
+document.getElementById('btn-map').addEventListener('click', function() {
+  setView('map');
+});
+
+function setView(view) {
+  currentView = view;
+  const isList = view === 'list';
+  document.getElementById('btn-list').classList.toggle('active', isList);
+  document.getElementById('btn-map').classList.toggle('active', !isList);
+  document.getElementById('cards-grid').style.display = isList ? 'grid' : 'none';
+  document.getElementById('empty').style.display = 'none';
+  document.getElementById('map-container').classList.toggle('visible', !isList);
+
+  if (!isList) {
+    setTimeout(() => {
+      initMap();
+      updateMap(getFilteredRestaurants());
+    }, 50);
+  }
+}
+
+function initMap() {
+  if (leafletMap) {
+    leafletMap.invalidateSize();
+    return;
+  }
+  const cityName = currentCityData ? currentCityData.city : 'Barcelona';
+  const centre = CITY_CENTRES[cityName] || [40.0, 0.0];
+  const zoom = ['Fes','Marrakesh'].includes(cityName) ? 14 : 13;
+
+  leafletMap = L.map('map').setView(centre, zoom);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+    maxZoom: 19
+  }).addTo(leafletMap);
+}
+
+function updateMap(restaurants) {
+  if (!leafletMap) return;
+
+  // Clear existing markers
+  mapMarkers.forEach(m => leafletMap.removeLayer(m));
+  mapMarkers = [];
+
+  if (!restaurants || restaurants.length === 0) return;
+
+  const cityName = currentCityData ? currentCityData.city : 'Barcelona';
+
+  // Separate restaurants into those with real coords and those needing centroids
+  const withCoords = restaurants.filter(r => r.lat && r.lng);
+  const withoutCoords = restaurants.filter(r => !r.lat || !r.lng);
+
+  // Check if any real coordinates exist in this city pack
+  const hasRealCoords = withCoords.length > 0;
+
+  // Update caveat based on coordinate quality
+  const caveatEl = document.querySelector('.map-caveat');
+  if (caveatEl) {
+    if (hasRealCoords && withoutCoords.length === 0) {
+      caveatEl.textContent = '✓ Pins show verified restaurant locations from OpenStreetMap.';
+      caveatEl.style.background = '#D8F3DC';
+      caveatEl.style.borderColor = '#2D6A4F';
+      caveatEl.style.color = '#2D6A4F';
+    } else if (hasRealCoords && withoutCoords.length > 0) {
+      caveatEl.textContent = `✓ ${withCoords.length} pins show verified locations · ${withoutCoords.length} show approximate neighbourhood centres.`;
+      caveatEl.style.background = '#FEF3C7';
+      caveatEl.style.borderColor = '#F6D860';
+      caveatEl.style.color = '#7A4F00';
+    } else {
+      caveatEl.textContent = '⚠ Pins show approximate neighbourhood centres — not exact restaurant locations. Use source links on each card for precise addresses.';
+      caveatEl.style.background = '#FEF3C7';
+      caveatEl.style.borderColor = '#F6D860';
+      caveatEl.style.color = '#7A4F00';
+    }
+  }
+
+  // Place individual pins for restaurants with real coordinates
+  withCoords.forEach(r => {
+    const isBoth = r.language_pool === 'both' || r.language_pool === 'both-pool';
+    const colour = isBoth ? '#2D6A4F' : '#C4622D';
+    const markerHtml = `<div style="
+      width:28px;height:28px;border-radius:50% 50% 50% 0;
+      background:${colour};border:2px solid white;
+      transform:rotate(-45deg);
+      box-shadow:0 2px 6px rgba(0,0,0,0.3);
+    "></div>`;
+
+    const icon = L.divIcon({
+      html: markerHtml,
+      className: '',
+      iconSize: [28, 28],
+      iconAnchor: [14, 28],
+      popupAnchor: [0, -30]
+    });
+
+    const price = r.price_level
+      ? (r.price_currency === 'MAD'
+          ? ['','<100','100–250','250–500','>500'][r.price_level] + ' MAD'
+          : '€'.repeat(r.price_level))
+      : '';
+
+    const confidence = r.geo_confidence === 'high' ? '' :
+      '<div style="font-size:10px;color:#9E8E86;margin-top:4px;font-style:italic">Location may be approximate</div>';
+
+    const popupContent = `
+      <div style="font-family:'DM Sans',sans-serif">
+        <div style="font-weight:500;font-size:13px;margin-bottom:3px">${r.name}${isBoth ? '<span style="background:#D8F3DC;color:#2D6A4F;font-size:9px;font-weight:500;padding:1px 5px;border-radius:8px;margin-left:5px">Two languages</span>' : ''}</div>
+        <div style="font-size:11px;color:#6B5E57">${[r.neighbourhood, r.cuisine, price].filter(Boolean).join(' · ')}</div>
+        ${confidence}
+      </div>`;
+
+    const marker = L.marker([r.lat, r.lng], { icon })
+      .addTo(leafletMap)
+      .bindPopup(popupContent, { maxWidth: 240 });
+
+    mapMarkers.push(marker);
+  });
+
+  // Group restaurants without coords by neighbourhood for centroid pins
+  if (withoutCoords.length > 0) {
+    const groups = {};
+    withoutCoords.forEach(r => {
+      const nb = r.neighbourhood || 'Unknown';
+      if (!groups[nb]) groups[nb] = [];
+      groups[nb].push(r);
+    });
+
+    Object.entries(groups).forEach(([nb, rests]) => {
+      let coords = CENTROIDS[nb];
+      if (!coords) {
+        const base = CITY_CENTRES[cityName] || [40.0, 0.0];
+        coords = [
+          base[0] + (Math.random() - 0.5) * 0.008,
+          base[1] + (Math.random() - 0.5) * 0.008
+        ];
+      }
+
+      const hasBoth = rests.some(r => r.language_pool === 'both' || r.language_pool === 'both-pool');
+      const colour = hasBoth ? '#2D6A4F' : '#C4622D';
+
+      // Dashed border to indicate approximate location
+      const markerHtml = `<div style="
+        width:28px;height:28px;border-radius:50%;
+        background:${colour};opacity:0.7;
+        border:2px dashed white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.2);
+      "></div>`;
+
+      const icon = L.divIcon({
+        html: markerHtml,
+        className: '',
+        iconSize: [28, 28],
+        iconAnchor: [14, 14],
+        popupAnchor: [0, -16]
+      });
+
+      const popupContent = `
+        <div style="font-family:'DM Sans',sans-serif">
+          <div style="font-weight:500;font-size:13px;margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid #E8DDD7">${nb} (${rests.length} restaurant${rests.length!==1?'s':''})</div>
+          ${rests.map(r => {
+            const isBoth = r.language_pool === 'both' || r.language_pool === 'both-pool';
+            const price = r.price_level ? (r.price_currency === 'MAD' ? ['','<100','100–250','250–500','>500'][r.price_level]+' MAD' : '€'.repeat(r.price_level)) : '';
+            return `<div style="padding:3px 0;border-bottom:1px solid #f5f5f5">
+              <div style="font-weight:500;font-size:12px">${r.name}${isBoth ? '<span style="background:#D8F3DC;color:#2D6A4F;font-size:9px;padding:1px 5px;border-radius:8px;margin-left:4px">Two languages</span>' : ''}</div>
+              <div style="font-size:11px;color:#9E8E86">${[r.cuisine, price].filter(Boolean).join(' · ')}</div>
+            </div>`;
+          }).join('')}
+          <div style="font-size:10px;color:#9E8E86;margin-top:5px;font-style:italic">⚠ Approximate location</div>
+        </div>`;
+
+      const marker = L.marker(coords, { icon })
+        .addTo(leafletMap)
+        .bindPopup(popupContent, { maxWidth: 260 });
+
+      mapMarkers.push(marker);
+    });
+  }
+
+  // Fit map to all markers
+  if (mapMarkers.length > 0) {
+    const group = L.featureGroup(mapMarkers);
+    leafletMap.fitBounds(group.getBounds().pad(0.15));
+  }
+}
+
+// Hook map updates into filter changes
+const _origApplyFilters = applyFilters;
+// Override renderCards to also update map
+const _origRenderCards = renderCards;
+function renderCards(restaurants) {
+  _origRenderCards(restaurants);
+  if (currentView === 'map' && leafletMap) {
+    updateMap(restaurants);
+  }
+}
+
+// Reset map when switching cities
+function resetMap() {
+  if (leafletMap) {
+    leafletMap.remove();
+    leafletMap = null;
+  }
+  mapMarkers = [];
+  setView('list');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const sel = document.getElementById('city-select');
+  if (sel) sel.addEventListener('change', resetMap);
+});
 
 loadIndex();
 

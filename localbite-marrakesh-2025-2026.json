@@ -79,10 +79,18 @@
       "quote_language": "original + translated from French",
       "language_pool": "both",
       "source_count": 3,
-      "sources": ["src-timeout-en", "src-marrakechinmorocco-en", "src-nosvoyagesheureux-fr"],
+      "sources": [
+        "src-timeout-en",
+        "src-marrakechinmorocco-en",
+        "src-nosvoyagesheureux-fr"
+      ],
       "confidence_tier": "A",
       "source_type_combination": "primary+primary+secondary",
-      "flagged": false
+      "flagged": false,
+      "lat": 31.6286777,
+      "lng": -7.9874376,
+      "geo_source": "nominatim",
+      "geo_confidence": "0.0001"
     },
     {
       "name": "Dar Yacout",
@@ -98,15 +106,26 @@
       "quote_language": "original",
       "language_pool": "both",
       "source_count": 3,
-      "sources": ["src-timeout-en", "src-marrakechinmorocco-en", "src-nosvoyagesheureux-fr"],
+      "sources": [
+        "src-timeout-en",
+        "src-marrakechinmorocco-en",
+        "src-nosvoyagesheureux-fr"
+      ],
       "confidence_tier": "A",
       "source_type_combination": "primary+primary+secondary",
-      "flagged": "⚠ riad"
+      "flagged": "⚠ riad",
+      "lat": 31.6365673,
+      "lng": -7.9934804,
+      "geo_source": "nominatim",
+      "geo_confidence": "0.0001"
     },
     {
       "name": "Dardar Rooftop",
       "name_arabic": null,
-      "name_variants": ["Dar Dar Rooftop", "Dardar Rooftop Cocktails & Eat"],
+      "name_variants": [
+        "Dar Dar Rooftop",
+        "Dardar Rooftop Cocktails & Eat"
+      ],
       "neighbourhood": "Medina",
       "cuisine": "Contemporary Moroccan with International",
       "opening_year": 2025,
@@ -117,15 +136,24 @@
       "quote_language": "translated from French",
       "language_pool": "both",
       "source_count": 2,
-      "sources": ["src-luxeinfinity-fr", "src-marrakechinmorocco-en"],
+      "sources": [
+        "src-luxeinfinity-fr",
+        "src-marrakechinmorocco-en"
+      ],
       "confidence_tier": "A",
       "source_type_combination": "primary+primary",
-      "flagged": false
+      "flagged": false,
+      "lat": 31.62240,
+      "lng": -7.98635,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "La Grande Table Marocaine",
       "name_arabic": "الطاولة الكبيرة المغربية",
-      "name_variants": ["La Grande Table Marocaine Royal Mansour Marrakech"],
+      "name_variants": [
+        "La Grande Table Marocaine Royal Mansour Marrakech"
+      ],
       "neighbourhood": null,
       "cuisine": "Moroccan Fine Dining",
       "opening_year": null,
@@ -136,10 +164,17 @@
       "quote_language": "original + translated from French",
       "language_pool": "both",
       "source_count": 2,
-      "sources": ["src-nosvoyagesheureux-fr", "src-misskonfidentielle-fr"],
+      "sources": [
+        "src-nosvoyagesheureux-fr",
+        "src-misskonfidentielle-fr"
+      ],
       "confidence_tier": "A",
       "source_type_combination": "primary+primary",
-      "flagged": "⚠ riad"
+      "flagged": "⚠ riad",
+      "lat": null,
+      "lng": null,
+      "geo_source": "nominatim",
+      "geo_confidence": null
     },
     {
       "name": "Sahbi Sahbi",
@@ -155,10 +190,16 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-timeout-en"],
+      "sources": [
+        "src-timeout-en"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary",
-      "flagged": false
+      "flagged": false,
+      "lat": 31.62547,
+      "lng": -7.99796,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Farmers",
@@ -174,10 +215,16 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-timeout-en"],
+      "sources": [
+        "src-timeout-en"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary",
-      "flagged": false
+      "flagged": false,
+      "lat": 31.63546,
+      "lng": -8.01515,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Mizaan",
@@ -193,15 +240,24 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-timeout-en"],
+      "sources": [
+        "src-timeout-en"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary",
-      "flagged": false
+      "flagged": false,
+      "lat": 31.63039,
+      "lng": -8.00472,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "+61",
       "name_arabic": null,
-      "name_variants": ["Plus 61", "Plus61"],
+      "name_variants": [
+        "Plus 61",
+        "Plus61"
+      ],
       "neighbourhood": "Gueliz",
       "cuisine": "Medi-Moroccan Fusion",
       "opening_year": null,
@@ -212,15 +268,24 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-timeout-en"],
+      "sources": [
+        "src-timeout-en"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary",
-      "flagged": false
+      "flagged": false,
+      "lat": 31.63529,
+      "lng": -8.01549,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Amal Centre",
       "name_arabic": "جمعية أمل",
-      "name_variants": ["Amal Women's Training Center", "Association Amal"],
+      "name_variants": [
+        "Amal Women's Training Center",
+        "Association Amal"
+      ],
       "neighbourhood": "Gueliz",
       "cuisine": "Traditional Moroccan Home-cooking",
       "opening_year": null,
@@ -231,15 +296,23 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-timeout-en"],
+      "sources": [
+        "src-timeout-en"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary",
-      "flagged": false
+      "flagged": false,
+      "lat": 31.63919,
+      "lng": -8.01382,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Comptoir Darna",
       "name_arabic": null,
-      "name_variants": ["Comptoir"],
+      "name_variants": [
+        "Comptoir"
+      ],
       "neighbourhood": "Hivernage",
       "cuisine": "Moroccan with International",
       "opening_year": null,
@@ -250,15 +323,23 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-marrakechinmorocco-en"],
+      "sources": [
+        "src-marrakechinmorocco-en"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary",
-      "flagged": false
+      "flagged": false,
+      "lat": 31.6237194,
+      "lng": -8.0031039,
+      "geo_source": "nominatim",
+      "geo_confidence": "0.0001"
     },
     {
       "name": "Le Foundouk",
       "name_arabic": null,
-      "name_variants": ["Le Foundouk Restaurant-Bar"],
+      "name_variants": [
+        "Le Foundouk Restaurant-Bar"
+      ],
       "neighbourhood": "Medina",
       "cuisine": "Moroccan and International Fusion",
       "opening_year": null,
@@ -269,10 +350,16 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-marrakechinmorocco-en"],
+      "sources": [
+        "src-marrakechinmorocco-en"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary",
-      "flagged": false
+      "flagged": false,
+      "lat": 31.631923,
+      "lng": -7.9848998,
+      "geo_source": "nominatim",
+      "geo_confidence": "0.0001"
     },
     {
       "name": "Palais Soleiman",
@@ -288,15 +375,23 @@
       "quote_language": "translated from French",
       "language_pool": "fr",
       "source_count": 1,
-      "sources": ["src-nosvoyagesheureux-fr"],
+      "sources": [
+        "src-nosvoyagesheureux-fr"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary",
-      "flagged": "⚠ riad"
+      "flagged": "⚠ riad",
+      "lat": 31.64376,
+      "lng": -7.99231,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "SABO",
       "name_arabic": null,
-      "name_variants": ["Sabo at Selman Marrakech"],
+      "name_variants": [
+        "Sabo at Selman Marrakech"
+      ],
       "neighbourhood": null,
       "cuisine": "French-Moroccan Fine Dining",
       "opening_year": 2025,
@@ -307,15 +402,23 @@
       "quote_language": "translated from French",
       "language_pool": "fr",
       "source_count": 1,
-      "sources": ["src-nosvoyagesheureux-fr"],
+      "sources": [
+        "src-nosvoyagesheureux-fr"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary",
-      "flagged": "⚠ riad"
+      "flagged": "⚠ riad",
+      "lat": null,
+      "lng": null,
+      "geo_source": "nominatim",
+      "geo_confidence": null
     },
     {
       "name": "Sesamo",
       "name_arabic": null,
-      "name_variants": ["Sesamo Royal Mansour"],
+      "name_variants": [
+        "Sesamo Royal Mansour"
+      ],
       "neighbourhood": null,
       "cuisine": "Italian Fine Dining",
       "opening_year": null,
@@ -326,10 +429,16 @@
       "quote_language": "translated from French",
       "language_pool": "fr",
       "source_count": 1,
-      "sources": ["src-misskonfidentielle-fr"],
+      "sources": [
+        "src-misskonfidentielle-fr"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary",
-      "flagged": "⚠ riad"
+      "flagged": "⚠ riad",
+      "lat": 31.625647,
+      "lng": -7.99820,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     }
   ]
 }

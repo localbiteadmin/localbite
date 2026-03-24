@@ -45,7 +45,10 @@
     {
       "name": "Café Clock",
       "name_arabic": null,
-      "name_variants": ["Cafe Clock", "Clock Café"],
+      "name_variants": [
+        "Cafe Clock",
+        "Clock Café"
+      ],
       "neighbourhood": "Fes el-Bali",
       "cuisine": "Moroccan fusion",
       "opening_year": null,
@@ -56,14 +59,24 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 2,
-      "sources": ["src-anitas-feast", "src-sainsburys-magazine"],
+      "sources": [
+        "src-anitas-feast",
+        "src-sainsburys-magazine"
+      ],
       "confidence_tier": "A",
-      "flagged": false
+      "flagged": false,
+      "lat": 34.0623369,
+      "lng": -4.9831172,
+      "geo_source": "nominatim",
+      "geo_confidence": "0.0001"
     },
     {
       "name": "Ishq Restaurant",
       "name_arabic": null,
-      "name_variants": ["Ishq", "Restaurant Ishq"],
+      "name_variants": [
+        "Ishq",
+        "Restaurant Ishq"
+      ],
       "neighbourhood": "Fes el-Bali",
       "cuisine": "Moroccan fusion / fine dining / bistronomique",
       "opening_year": 2023,
@@ -75,15 +88,24 @@
       "quote_language": "original + translated from French",
       "language_pool": "both",
       "source_count": 2,
-      "sources": ["src-anitas-feast", "src-maroclovers-fr"],
+      "sources": [
+        "src-anitas-feast",
+        "src-maroclovers-fr"
+      ],
       "confidence_tier": "A",
       "flagged": false,
-      "merge_note": "Both-pool merge: EN (Anita's Feast Feb 2025) + FR (MarocLovers Sep 2025). Opened October 2023 per MarocLovers."
+      "merge_note": "Both-pool merge: EN (Anita's Feast Feb 2025) + FR (MarocLovers Sep 2025). Opened October 2023 per MarocLovers.",
+      "lat": 34.06411,
+      "lng": -4.98232,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Bistro Laaroussa",
       "name_arabic": null,
-      "name_variants": ["Bistrot Laaroussa"],
+      "name_variants": [
+        "Bistrot Laaroussa"
+      ],
       "neighbourhood": "Fes el-Bali",
       "cuisine": "Moroccan / Mediterranean",
       "opening_year": null,
@@ -94,14 +116,22 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-anitas-feast"],
+      "sources": [
+        "src-anitas-feast"
+      ],
       "confidence_tier": "B",
-      "flagged": false
+      "flagged": false,
+      "lat": 34.06350,
+      "lng": -4.97923,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "The Ruined Garden",
       "name_arabic": null,
-      "name_variants": ["Ruined Garden"],
+      "name_variants": [
+        "Ruined Garden"
+      ],
       "neighbourhood": "Fes el-Bali",
       "cuisine": "Modern Moroccan",
       "opening_year": null,
@@ -112,14 +142,22 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-anitas-feast"],
+      "sources": [
+        "src-anitas-feast"
+      ],
       "confidence_tier": "B",
-      "flagged": false
+      "flagged": false,
+      "lat": 34.0620951,
+      "lng": -4.9774646,
+      "geo_source": "nominatim",
+      "geo_confidence": "0.0001"
     },
     {
       "name": "Restaurant Almandar",
       "name_arabic": null,
-      "name_variants": ["Almandar"],
+      "name_variants": [
+        "Almandar"
+      ],
       "neighbourhood": "Fes el-Bali",
       "cuisine": "Moroccan",
       "opening_year": null,
@@ -130,14 +168,23 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-anitas-feast"],
+      "sources": [
+        "src-anitas-feast"
+      ],
       "confidence_tier": "B",
-      "flagged": false
+      "flagged": false,
+      "lat": 34.05983,
+      "lng": -4.97246,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Restaurant Gayza",
       "name_arabic": null,
-      "name_variants": ["Gayza", "Restaurant Gayza Riad Fès Relais & Châteaux"],
+      "name_variants": [
+        "Gayza",
+        "Restaurant Gayza Riad Fès Relais & Châteaux"
+      ],
       "neighbourhood": "Fes el-Bali",
       "cuisine": "Moroccan gastronomic / traditional",
       "opening_year": null,
@@ -149,15 +196,24 @@
       "quote_language": "translated from French",
       "language_pool": "fr",
       "source_count": 1,
-      "sources": ["src-maroclovers-fr"],
+      "sources": [
+        "src-maroclovers-fr"
+      ],
       "confidence_tier": "B",
       "flagged": true,
-      "flag_reason": "Hotel restaurant (Riad Relais & Châteaux Fès / Riad Fès hotel). However: named chef Lalla Abida, 5 specific dish details, independent reviewer paid own bill."
+      "flag_reason": "Hotel restaurant (Riad Relais & Châteaux Fès / Riad Fès hotel). However: named chef Lalla Abida, 5 specific dish details, independent reviewer paid own bill.",
+      "lat": null,
+      "lng": null,
+      "geo_source": "nominatim",
+      "geo_confidence": null
     },
     {
       "name": "Café-restaurant Moulay Idriss",
       "name_arabic": null,
-      "name_variants": ["Moulay Idriss", "Café Moulay Idriss"],
+      "name_variants": [
+        "Moulay Idriss",
+        "Café Moulay Idriss"
+      ],
       "neighbourhood": "Fes el-Bali",
       "cuisine": "Traditional Moroccan",
       "opening_year": null,
@@ -169,14 +225,22 @@
       "quote_language": "translated from French",
       "language_pool": "fr",
       "source_count": 1,
-      "sources": ["src-maroclovers-fr"],
+      "sources": [
+        "src-maroclovers-fr"
+      ],
       "confidence_tier": "B",
-      "flagged": false
+      "flagged": false,
+      "lat": 34.06179,
+      "lng": -4.97979,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Restaurant Benyamna",
       "name_arabic": null,
-      "name_variants": ["Benyamna"],
+      "name_variants": [
+        "Benyamna"
+      ],
       "neighbourhood": "Fes el-Bali",
       "cuisine": "Traditional Moroccan / home cooking",
       "opening_year": null,
@@ -188,14 +252,23 @@
       "quote_language": "translated from French",
       "language_pool": "fr",
       "source_count": 1,
-      "sources": ["src-maroclovers-fr"],
+      "sources": [
+        "src-maroclovers-fr"
+      ],
       "confidence_tier": "B",
-      "flagged": false
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": "nominatim",
+      "geo_confidence": null
     },
     {
       "name": "Restaurant La Morille Dar Diafa",
       "name_arabic": null,
-      "name_variants": ["La Morille", "La morille Dar Diafa"],
+      "name_variants": [
+        "La Morille",
+        "La morille Dar Diafa"
+      ],
       "neighbourhood": "Fes el-Jdid",
       "cuisine": "Traditional Moroccan / Fassi",
       "opening_year": null,
@@ -207,14 +280,24 @@
       "quote_language": "translated from French",
       "language_pool": "fr",
       "source_count": 1,
-      "sources": ["src-maroclovers-fr"],
+      "sources": [
+        "src-maroclovers-fr"
+      ],
       "confidence_tier": "B",
-      "flagged": false
+      "flagged": false,
+      "lat": 34.06718,
+      "lng": -4.97155,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Restaurant L'Amandier",
       "name_arabic": null,
-      "name_variants": ["L'Amandier", "L'Amandier au Palais Faraj", "Restaurant L'Amandier Palais Faraj"],
+      "name_variants": [
+        "L'Amandier",
+        "L'Amandier au Palais Faraj",
+        "Restaurant L'Amandier Palais Faraj"
+      ],
       "neighbourhood": "Fes el-Bali",
       "cuisine": "Moroccan creative / gastronomic",
       "opening_year": null,
@@ -225,10 +308,16 @@
       "quote_language": "translated from French",
       "language_pool": "fr",
       "source_count": 1,
-      "sources": ["src-maroclovers-fr"],
+      "sources": [
+        "src-maroclovers-fr"
+      ],
       "confidence_tier": "B",
       "flagged": true,
-      "flag_reason": "Hotel restaurant within Palais Faraj Suites & Spa. However: named chef Mohammed Achoual, 5 specific dishes, named local producers — strong editorial detail."
+      "flag_reason": "Hotel restaurant within Palais Faraj Suites & Spa. However: named chef Mohammed Achoual, 5 specific dishes, named local producers — strong editorial detail.",
+      "lat": 34.057051,
+      "lng": -4.97620,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     }
   ]
 }
