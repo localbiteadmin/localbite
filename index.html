@@ -1121,10 +1121,14 @@ document.body.appendChild(globalTip);
 document.addEventListener('mouseover', function(e) {
   const badge = e.target.closest('.pool-badge.both');
   if (badge) {
-    const rect = badge.getBoundingClientRect();
     globalTip.style.display = 'block';
-    globalTip.style.left = Math.min(rect.right - 200, window.innerWidth - 210) + 'px';
-    globalTip.style.top = (rect.top - globalTip.offsetHeight - 8 + window.scrollY) + 'px';
+    const rect = badge.getBoundingClientRect();
+    const tipH = globalTip.offsetHeight || 36;
+    const tipW = globalTip.offsetWidth || 200;
+    const left = Math.max(8, Math.min(rect.right - tipW, window.innerWidth - tipW - 8));
+    const top = rect.top - tipH - 8;
+    globalTip.style.left = left + 'px';
+    globalTip.style.top = top + 'px';
   }
 });
 
