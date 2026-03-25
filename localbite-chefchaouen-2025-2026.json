@@ -1,0 +1,571 @@
+{
+  "city": "Chefchaouen",
+  "country": "Morocco",
+  "city_slug": "chefchaouen-morocco",
+  "built": "2026-03-25",
+  "source_recency": "2025-2026 only",
+  "pipeline": "localbite-middle-path-v5",
+  "confidence_tiers": {
+    "auto_approved": 11,
+    "reviewed_kept": 6,
+    "user_removed": 0,
+    "auto_rejected": 2,
+    "concentration_cap_applied": 0
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "publication": "Maroc Nomades",
+      "writer": "Omar Nomades",
+      "writer_profile": "Omar Nomades is the pen name behind a French-language travel blog focused on Morocco, publishing itineraries and local food guides for Francophone visitors. The site targets independent travellers seeking off-the-beaten-path experiences in Moroccan cities and villages. The Chefchaouen piece was published in April 2025.",
+      "url": "https://marocnomades.com/decouvrir-chefchaouen/",
+      "language": "fr",
+      "source_type": "secondary",
+      "article_date": "2025-04-09"
+    },
+    {
+      "id": "S2",
+      "publication": "Sir Driver Tours",
+      "writer": null,
+      "writer_profile": "Sir Driver Tours is an English-language tour operator blog written anonymously by a tour guide, publishing destination guides and restaurant roundups for international visitors to Morocco. The site covers practical logistics alongside food recommendations. The Chefchaouen restaurant article was published in June 2025.",
+      "url": "https://sirdrivertours.com/best-restaurants-in-chefchaouen/",
+      "language": "en",
+      "source_type": "secondary",
+      "article_date": "2025-06-03"
+    },
+    {
+      "id": "S3",
+      "publication": "Chauen.info",
+      "writer": null,
+      "writer_profile": "Chauen.info is an English-language local-oriented guide to Chefchaouen, written anonymously by someone who has lived in the city for ten years. The site publishes practical advice aimed at long-stay visitors and expats alongside general tourists, giving it a more grounded local perspective than typical travel blogs. The restaurant guide was last updated in January 2026.",
+      "url": "https://chauen.info/en/best-restaurants-chefchaouen/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2026-01-11"
+    },
+    {
+      "id": "S4",
+      "publication": "Rediscovering Emily",
+      "writer": "Emily",
+      "writer_profile": "Emily is the documented first-name persona behind Rediscovering Emily, an English-language personal travel blog chronicling solo travel across Europe, Africa, and the Middle East. Her writing combines practical travel tips with personal narrative. The Chefchaouen travel guide was published in October 2025.",
+      "url": "https://www.rediscovering-emily.com/blog/travel-guide-chefchaouen",
+      "language": "en",
+      "source_type": "secondary",
+      "article_date": "2025-10-16"
+    },
+    {
+      "id": "S5",
+      "publication": "Travel Morocco Today",
+      "writer": "@girlwiththepassport",
+      "writer_profile": "@girlwiththepassport is the pseudonym of a Morocco-resident English-language blogger who publishes detailed first-person restaurant reviews and travel guides on Travel Morocco Today. Writing from the perspective of a long-term resident rather than a passing tourist, the blog provides granular price detail and repeat-visit observations. The Chefchaouen restaurant article was published in March 2025.",
+      "url": "https://travelmoroccotoday.com/best-restaurants-in-chefchaouen/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2025-03-13"
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Bab Ssour",
+      "name_arabic": null,
+      "name_variants": [
+        "Beldi Bab Ssour",
+        "Bab Ssour"
+      ],
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "MAD",
+      "signature_dish": "Harira soup (7 MAD), chickpeas in cinnamon sauce, bissara, couscous (Fridays only)",
+      "quote": "If there is one place you have to try authentic Moroccan food, it's Bab Ssour — a restaurant with two floors that is unassuming when you enter, but it's popular for a reason.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 5,
+      "sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false,
+      "lat": 35.1672127,
+      "lng": -5.2635075,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bab Ssour"
+    },
+    {
+      "name": "El Cielo",
+      "name_arabic": null,
+      "name_variants": [
+        "El Cielo"
+      ],
+      "neighbourhood": "Medina",
+      "cuisine": "Mediterranean/Middle Eastern fusion",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "MAD",
+      "signature_dish": "Mezze platter (110 MAD) with falafel, hummus, baba ganoush, tabbuli, lebneh, fattoush, tahini",
+      "quote": "It feels like you're entering this fantastic garden oasis filled with culinary delights — bamboo garden with tranquil ponds.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 4,
+      "sources": [
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false,
+      "lat": 35.1693523,
+      "lng": -5.2584572,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "el cielo"
+    },
+    {
+      "name": "Cafe Clock",
+      "name_arabic": null,
+      "name_variants": [
+        "Cafe Clock",
+        "Café Clock"
+      ],
+      "neighbourhood": "Medina",
+      "cuisine": "Modern Moroccan fusion",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "MAD",
+      "signature_dish": "Berber Omelet, camel burger, spiced cappuccino (25 MAD)",
+      "quote": "Eating here is one of the reasons I keep visiting Chefchaouen — I always order the Berber Omelet and a spiced cappuccino with cocoa powder and cinnamon for 25 Dirhams.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 3,
+      "sources": [
+        "S2",
+        "S3",
+        "S5"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false,
+      "lat": 35.1695635,
+      "lng": -5.2630997,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Cafe Clock"
+    },
+    {
+      "name": "Assaada",
+      "name_arabic": null,
+      "name_variants": [
+        "Assaada",
+        "Restaurant Assaada",
+        "Al Saada"
+      ],
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "MAD",
+      "signature_dish": "Vegetarian couscous (40 MAD with drink)",
+      "quote": "The couscous was cooked pretty well and came with lots of veggies — great value at 40 Dirhams for a plate and a drink.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 3,
+      "sources": [
+        "S2",
+        "S4",
+        "S5"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false,
+      "lat": 35.1684874,
+      "lng": -5.264631,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Assaada"
+    },
+    {
+      "name": "Sofia",
+      "name_arabic": null,
+      "name_variants": [
+        "Sofia",
+        "Cafe Restaurant Sofia",
+        "Sofie's"
+      ],
+      "neighbourhood": "Place Uta el-Hammam",
+      "cuisine": "Moroccan",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "MAD",
+      "signature_dish": "Vegetable tagine",
+      "quote": "Sofia's quite literally served me the best vegetable tagine of my life. It was the single best thing I had in Morocco, period.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "S2",
+        "S5"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false,
+      "lat": 35.1691701,
+      "lng": -5.261228,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Sofía"
+    },
+    {
+      "name": "Lecheria Venezia",
+      "name_arabic": null,
+      "name_variants": [
+        "Lecheria Venezia"
+      ],
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan breakfast",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "MAD",
+      "signature_dish": "Moroccan breakfast: harsha, msemen, amlou, honey, jam, cheese, orange juice, mint tea (35 MAD)",
+      "quote": "I really liked the harsha and msemen — generous portions of fresh harsha, msemen, amlou, honey, jam, cheese, orange juice, and mint tea for 35 Dirhams.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "S2",
+        "S5"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false,
+      "lat": 35.16861,
+      "lng": -5.26345,
+      "geo_source": "manual",
+      "geo_confidence": "high"
+    },
+    {
+      "name": "Restaurant Jbaria",
+      "name_arabic": null,
+      "name_variants": [
+        "Restaurant Jbaria",
+        "Jbaria"
+      ],
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "MAD",
+      "signature_dish": "Bissara (15 MAD)",
+      "quote": "I was really impressed by the quality of the bread at Jbaria — the bissara comes in quite large portions at just 15 MAD.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "S2",
+        "S5"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false,
+      "lat": 35.16836,
+      "lng": -5.26417,
+      "geo_source": "manual",
+      "geo_confidence": "high"
+    },
+    {
+      "name": "Restaurant DarCom",
+      "name_arabic": null,
+      "name_variants": [
+        "Restaurant DarCom",
+        "DarCom"
+      ],
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "MAD",
+      "signature_dish": "Vegetable couscous with caramelized onions and peanuts",
+      "quote": "The vegetable couscous came with sweet, caramelized onions and peanuts — the bright blue walls and brick archways make it feel like a Moroccan palace.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "S2",
+        "S5"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false,
+      "lat": 35.1681038,
+      "lng": -5.2626904,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Restaurant Darcom"
+    },
+    {
+      "name": "La Fuente Restaurant",
+      "name_arabic": null,
+      "name_variants": [
+        "La Fuente",
+        "La Fuente Restaurant"
+      ],
+      "neighbourhood": "Place Uta el-Hammam",
+      "cuisine": "Moroccan",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "MAD",
+      "signature_dish": "Vegetarian tajine (35 MAD), bissara (15 MAD)",
+      "quote": "I am really glad I did eat here — the soup quality surprised me and it's very local with informal atmosphere despite being on the main square.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "S2",
+        "S5"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false,
+      "lat": 35.16939,
+      "lng": -5.26150,
+      "geo_source": "manual",
+      "geo_confidence": "high"
+    },
+    {
+      "name": "Chez Hicham",
+      "name_arabic": null,
+      "name_variants": [
+        "Chez Hicham"
+      ],
+      "neighbourhood": "Place Uta el-Hammam",
+      "cuisine": "Moroccan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "MAD",
+      "signature_dish": "Chicken skewers",
+      "quote": "Fast and friendly service which is rare when dining at a restaurant right on the main square — the chicken skewers are popular with tour groups.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "S2",
+        "S5"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false,
+      "lat": 35.16922,
+      "lng": -5.26161,
+      "geo_source": "manual",
+      "geo_confidence": "high"
+    },
+    {
+      "name": "Restaurant Lala Mesouda",
+      "name_arabic": null,
+      "name_variants": [
+        "Restaurant Lala Mesouda",
+        "Lala Mesouda"
+      ],
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "MAD",
+      "signature_dish": "Zalouk (eggplant with tomatoes), Sferjal (lamb tagine with quinoa)",
+      "quote": "Eating at Lala Mesouda is like enjoying some delicious Moroccan home cooking — the Zalouk is a mouthwatering eggplant and tomato dish I keep coming back for.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "S2",
+        "S5"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "flagged": false,
+      "lat": 35.1699748,
+      "lng": -5.2622107,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Lala Mesouda"
+    },
+    {
+      "name": "Molino Garden",
+      "name_arabic": null,
+      "name_variants": [
+        "Molino Garden"
+      ],
+      "neighbourhood": null,
+      "cuisine": "Mediterranean fusion",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "MAD",
+      "signature_dish": "Mezze platter (110 MAD), lamb kefta plate (115 MAD)",
+      "quote": "Produce comes from local gardens in the Rif valley. The garden atmosphere provides a refuge from the medina's hustle.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "S3"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary only",
+      "flagged": false,
+      "lat": 35.1694508,
+      "lng": -5.2585094,
+      "geo_source": "nominatim",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Hotel Molino Garden"
+    },
+    {
+      "name": "Morisco",
+      "name_arabic": null,
+      "name_variants": [
+        "Morisco",
+        "Restaurant Morisco"
+      ],
+      "neighbourhood": "Place Uta el-Hammam",
+      "cuisine": "Moroccan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "MAD",
+      "signature_dish": "Ftour Beldi (traditional breakfast with eggs, local goat cheese, olives, honey, bread)",
+      "quote": "Morisco serves the best Ftour Beldi on the plaza: rural breakfast with eggs, local goat cheese, olives, honey, and bread.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "S3"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary only",
+      "flagged": false,
+      "lat": 35.1689226,
+      "lng": -5.2624056,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Restaurant Morisco"
+    },
+    {
+      "name": "Casa Aladdin",
+      "name_arabic": null,
+      "name_variants": [
+        "Aladdin",
+        "Casa Aladdin",
+        "La Lampe Magique Casa Aladdin"
+      ],
+      "neighbourhood": "Place Uta el-Hammam",
+      "cuisine": "Moroccan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "MAD",
+      "signature_dish": "Tagines",
+      "quote": "Aladdin attracts with its Game of Thrones style decoration with brass lamps and carpets — visual drama that enhances the dining experience.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "S3"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary only",
+      "flagged": false,
+      "lat": 35.16921,
+      "lng": -5.26183,
+      "geo_source": "manual",
+      "geo_confidence": "high"
+    },
+    {
+      "name": "Bilmos",
+      "name_arabic": null,
+      "name_variants": [
+        "Bilmos"
+      ],
+      "neighbourhood": "Place Uta el-Hammam",
+      "cuisine": "Moroccan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "MAD",
+      "signature_dish": "Gluten-free tagines, salads",
+      "quote": "Bilmos is the only restaurant verified with real protocols against cross-contamination. The gluten-free menu is physically separated.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "S3"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary only",
+      "flagged": false,
+      "lat": 35.16887,
+      "lng": -5.26259,
+      "geo_source": "manual",
+      "geo_confidence": "high"
+    },
+    {
+      "name": "Hamsa",
+      "name_arabic": null,
+      "name_variants": [
+        "Hamsa"
+      ],
+      "neighbourhood": "Place Uta el-Hammam",
+      "cuisine": "Moroccan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "MAD",
+      "signature_dish": "Shakshuka (vegan version available)",
+      "quote": "Hamsa offers homemade family recipes with clearly identified vegetarian options. The Shakshuka can be prepared without eggs.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "S3"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary only",
+      "flagged": false,
+      "lat": 35.168724,
+      "lng": -5.262709,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Hamsa"
+    },
+    {
+      "name": "Restaurant Triana",
+      "name_arabic": null,
+      "name_variants": [
+        "Triana",
+        "Restaurant Triana"
+      ],
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan and Spanish fusion",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "MAD",
+      "signature_dish": null,
+      "quote": "Restaurant Triana offers a meal with a view and live music, blending Moroccan and Spanish dishes, named after Seville's Triana district.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary only",
+      "flagged": false,
+      "lat": 35.1682542,
+      "lng": -5.2605218,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Triana"
+    }
+  ]
+}

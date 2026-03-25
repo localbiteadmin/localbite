@@ -13,7 +13,7 @@
       "both_pool_count": 14,
       "source_count": 9,
       "description": "52 restaurants from 9 named sources across English, Spanish, and Catalan",
-      "file": "localbite-barcelona-2025-2026.json",
+      "file": "./localbite-barcelona-2025-2026.json",
       "status": "complete"
     },
     {
@@ -26,7 +26,7 @@
       "both_pool_count": 5,
       "source_count": 5,
       "description": "62 restaurants from 5 named sources across English and Spanish",
-      "file": "localbite-valencia-2025-2026.json",
+      "file": "./localbite-valencia-2025-2026.json",
       "status": "complete"
     },
     {
@@ -39,7 +39,7 @@
       "both_pool_count": 1,
       "source_count": 3,
       "description": "10 restaurants from 3 named sources across English and French",
-      "file": "localbite-fes-2025-2026.json",
+      "file": "./localbite-fes-2025-2026.json",
       "status": "complete",
       "notes": "Thin source pool — Arabic-language sources not found via search. Methodology case study."
     },
@@ -53,7 +53,7 @@
       "both_pool_count": 4,
       "source_count": 5,
       "description": "14 restaurants from 5 named sources across English and French",
-      "file": "localbite-marrakesh-2025-2026.json",
+      "file": "./localbite-marrakesh-2025-2026.json",
       "status": "complete",
       "notes": "Arabic-language sources not found via search or direct Jina fetch. First v5 pipeline run."
     },
@@ -67,8 +67,36 @@
       "both_pool_count": null,
       "source_count": null,
       "description": "Not yet run — prompt ready at localbite-prompt-v4-lisbon.txt",
-      "file": "localbite-lisbon-2025-2026.json",
+      "file": "./localbite-lisbon-2025-2026.json",
       "status": "pending"
+    },
+    {
+      "city": "Rabat",
+      "country": "Morocco",
+      "city_slug": "rabat-morocco",
+      "pipeline": "localbite-middle-path-v5",
+      "built": "2026-03-25",
+      "restaurant_count": 10,
+      "both_pool_count": 0,
+      "source_count": 3,
+      "description": "10 restaurants from 3 named sources across English and French",
+      "file": "localbite-rabat-2025-2026.json",
+      "status": "complete",
+      "notes": "Zero both-pool entries. Thin source pool — single blogger dominated, concentration cap applied. NatGeo secondary + TelQuel primary (1 entry) + Maroclovers primary."
+    },
+    {
+      "city": "Chefchaouen",
+      "country": "Morocco",
+      "city_slug": "chefchaouen-morocco",
+      "pipeline": "localbite-middle-path-v5",
+      "built": "2026-03-25",
+      "restaurant_count": 17,
+      "both_pool_count": 1,
+      "source_count": 5,
+      "description": "17 restaurants from 5 named sources, all English tourist-facing",
+      "file": "localbite-chefchaouen-2025-2026.json",
+      "status": "complete",
+      "notes": "All sources tourist-facing — no local food critics in Chefchaouen. Bab Ssour confirmed by 5 sources including FR+EN both-pool. Nominatim v3 achieved 65% geocoding hit rate with zero false positives."
     }
   ]
 }
