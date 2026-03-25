@@ -323,16 +323,7 @@
     display: flex;
     gap: 8px;
     align-items: center;
-  }
-
-  .filters-scroll {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    flex: 1;
-    overflow-x: auto;
-    min-width: 0;
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: wrap;
   }
 
   .search-input {
@@ -772,19 +763,43 @@
     .cards-grid { grid-template-columns: 1fr; }
     .site-header { padding: 0 16px; }
     .filters-bar { padding: 8px 16px; }
-    .filters-scroll { gap: 6px; }
+    .filters-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      grid-template-rows: auto auto;
+      gap: 6px;
+      max-width: none;
+    }
+    /* Row 1: search | view toggle */
+    .search-input {
+      grid-column: 1 / 3;
+      grid-row: 1;
+      width: auto;
+    }
+    .view-toggle {
+      grid-column: 3;
+      grid-row: 1;
+      flex-shrink: 0;
+    }
+    /* Row 2: neighbourhood | price | source language */
+    #f-neighbourhood { grid-column: 1; grid-row: 2; }
+    #f-price { grid-column: 2; grid-row: 2; }
+    #f-pool { grid-column: 3; grid-row: 2; }
+    /* Hide on mobile */
+    #f-cuisine { display: none; }
+    .filter-clear { display: none; }
     .results-count { display: none; }
+    /* Desktop-only layout overrides */
     .main { padding: 16px 16px 40px; }
     .city-hero { padding: 16px; }
     .city-name { font-size: 26px; }
     .header-inner { height: 52px; }
     .filters-bar { top: 52px; }
     .credits-btn { display: none; }
-    .search-input { width: 100px; }
     .credits-grid { grid-template-columns: 1fr; }
     .tooltip { width: 220px; }
-    .view-toggle { flex-shrink: 0; }
     .view-btn { padding: 5px 8px; font-size: 11px; }
+    .filter-select { font-size: 12px; padding: 5px 6px; padding-right: 20px; }
   }
 </style>
 </head>
@@ -825,23 +840,21 @@
 
 <div class="filters-bar" id="filters-bar" style="display:none">
   <div class="filters-inner">
-    <div class="filters-scroll">
-      <input class="search-input" id="search-input" type="search" placeholder="Search restaurants…" aria-label="Search restaurants">
-      <select class="filter-select" id="f-neighbourhood" aria-label="Filter by neighbourhood">
-        <option value="">All neighbourhoods</option>
-      </select>
-      <select class="filter-select" id="f-cuisine" aria-label="Filter by cuisine">
-        <option value="">All cuisines</option>
-      </select>
-      <select class="filter-select" id="f-price" aria-label="Filter by price">
-        <option value="">Any price</option>
-      </select>
-      <select class="filter-select" id="f-pool" aria-label="Filter by source language">
-        <option value="">Source language</option>
-      </select>
-      <button class="filter-clear" id="filter-clear">Clear all</button>
-      <span class="results-count" id="results-count"></span>
-    </div>
+    <input class="search-input" id="search-input" type="search" placeholder="Search restaurants…" aria-label="Search restaurants">
+    <select class="filter-select" id="f-neighbourhood" aria-label="Filter by neighbourhood">
+      <option value="">All neighbourhoods</option>
+    </select>
+    <select class="filter-select" id="f-cuisine" aria-label="Filter by cuisine">
+      <option value="">All cuisines</option>
+    </select>
+    <select class="filter-select" id="f-price" aria-label="Filter by price">
+      <option value="">Any price</option>
+    </select>
+    <select class="filter-select" id="f-pool" aria-label="Filter by source language">
+      <option value="">Source language</option>
+    </select>
+    <button class="filter-clear" id="filter-clear">Clear all</button>
+    <span class="results-count" id="results-count"></span>
     <div class="view-toggle">
       <button class="view-btn active" id="btn-list">☰ List</button>
       <button class="view-btn" id="btn-map">⊙ Map</button>
