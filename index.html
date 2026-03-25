@@ -610,7 +610,30 @@
     font-size: 10px;
   }
 
-  /* Mobile row wrappers — flat on desktop */
+  .city-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .hero-sources-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--terra);
+    background: none;
+    border: 1px solid var(--terra-light);
+    border-radius: 20px;
+    padding: 4px 12px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .hero-sources-btn:hover {
+    background: var(--terra-light);
+  }
   .mobile-row-1, .mobile-row-2 {
     display: contents;
   }
@@ -836,10 +859,13 @@
   <div class="city-hero-inner">
     <div class="city-name" id="city-name"></div>
     <div class="city-meta" id="city-meta"></div>
-    <button id="both-pool-note" style="display:none" class="both-pool-banner">
-      ✦ Green border = confirmed in two languages
-      <span class="tooltip">This restaurant was independently recommended by writers from two different language communities — for example an English food writer and a French or Spanish food writer both named it. This cross-language confirmation is the strongest signal of quality on LocalBite.</span>
-    </button>
+    <div class="city-hero-actions">
+      <button id="both-pool-note" style="display:none" class="both-pool-banner">
+        ✦ Green border = confirmed in two languages
+        <span class="tooltip">This restaurant was independently recommended by writers from two different language communities — for example an English food writer and a French or Spanish food writer both named it. This cross-language confirmation is the strongest signal of quality on LocalBite.</span>
+      </button>
+      <button class="hero-sources-btn" id="hero-sources-btn">Sources ↓</button>
+    </div>
   </div>
 </div>
 
@@ -947,16 +973,33 @@ function langLabel(code) {
 }
 
 // ── CREDITS PANEL ──
-document.getElementById('credits-btn').addEventListener('click', function() {
+function openCredits() {
   const panel = document.getElementById('credits-panel');
-  const isOpen = panel.classList.toggle('open');
-  this.textContent = isOpen ? 'Sources ↑' : 'Sources ↓';
-});
+  panel.classList.add('open');
+  document.getElementById('credits-btn').textContent = 'Sources ↑';
+  document.getElementById('hero-sources-btn').textContent = 'Sources ↑';
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
 
-document.getElementById('credits-close').addEventListener('click', function() {
+function closeCredits() {
   document.getElementById('credits-panel').classList.remove('open');
   document.getElementById('credits-btn').textContent = 'Sources ↓';
+  document.getElementById('hero-sources-btn').textContent = 'Sources ↓';
+}
+
+document.getElementById('credits-btn').addEventListener('click', function() {
+  const panel = document.getElementById('credits-panel');
+  if (panel.classList.contains('open')) closeCredits();
+  else openCredits();
 });
+
+document.getElementById('hero-sources-btn').addEventListener('click', function() {
+  const panel = document.getElementById('credits-panel');
+  if (panel.classList.contains('open')) closeCredits();
+  else openCredits();
+});
+
+document.getElementById('credits-close').addEventListener('click', closeCredits);
 
 function renderCredits(sources) {
   const grid = document.getElementById('credits-grid');
@@ -1020,6 +1063,7 @@ async function loadCity(meta) {
   document.getElementById('filters-bar').style.display = 'none';
   document.getElementById('credits-panel').classList.remove('open');
   document.getElementById('credits-btn').textContent = 'Sources ↓';
+  document.getElementById('hero-sources-btn').textContent = 'Sources ↓';
 
   try {
     const url = BASE + (meta.file || ('localbite-' + (meta.city_slug||meta.slug) + '-2025-2026.json'));
