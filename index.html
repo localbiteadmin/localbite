@@ -610,7 +610,12 @@
     font-size: 10px;
   }
 
-  /* ── LOADING / EMPTY ── */
+  /* Mobile row wrappers — flat on desktop */
+  .mobile-row-1, .mobile-row-2 {
+    display: contents;
+  }
+
+  .desktop-only { display: inline-block; }
   .loading {
     text-align: center;
     padding: 60px 24px;
@@ -769,32 +774,37 @@
       gap: 6px;
       max-width: none;
     }
-    /* Row 1: search stretches, toggle on right */
+    /* Row 1: full-width search + toggle pinned right */
+    .mobile-row-1 {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      width: 100%;
+    }
     .search-input {
       flex: 1;
       width: auto;
       min-width: 0;
-      order: 1;
     }
-    .view-toggle {
-      order: 2;
-      flex-shrink: 0;
+    .view-toggle { flex-shrink: 0; }
+    /* Row 2: three equal filters */
+    .mobile-row-2 {
+      display: flex;
+      gap: 6px;
+      width: 100%;
     }
-    /* Wrap after view-toggle to create row 2 */
-    .filters-inner {
-      flex-wrap: wrap;
-      flex-direction: row;
-      align-items: center;
+    .mobile-row-2 .filter-select {
+      flex: 1;
+      min-width: 0;
+      font-size: 12px;
+      padding: 5px 4px;
+      padding-right: 16px;
     }
-    /* Row 2 filters each take ~33% width */
-    #f-neighbourhood { order: 3; flex: 1 1 30%; min-width: 0; }
-    #f-price         { order: 4; flex: 1 1 28%; min-width: 0; }
-    #f-pool          { order: 5; flex: 1 1 28%; min-width: 0; }
-    /* Hide on mobile */
+    /* Hide desktop-only elements on mobile */
     #f-cuisine { display: none; }
+    .desktop-only { display: none; }
     .filter-clear { display: none; }
     .results-count { display: none; }
-    .filter-select { font-size: 12px; padding: 5px 4px; padding-right: 18px; }
     .view-btn { padding: 5px 8px; font-size: 11px; }
     /* Other mobile overrides */
     .main { padding: 16px 16px 40px; }
@@ -845,25 +855,30 @@
 
 <div class="filters-bar" id="filters-bar" style="display:none">
   <div class="filters-inner">
-    <input class="search-input" id="search-input" type="search" placeholder="Search restaurants…" aria-label="Search restaurants">
-    <select class="filter-select" id="f-neighbourhood" aria-label="Filter by neighbourhood">
-      <option value="">All neighbourhoods</option>
-    </select>
-    <select class="filter-select" id="f-cuisine" aria-label="Filter by cuisine">
+    <div class="mobile-row-1">
+      <input class="search-input" id="search-input" type="search" placeholder="Search restaurants…" aria-label="Search restaurants">
+      <div class="view-toggle">
+        <button class="view-btn active" id="btn-list">☰ List</button>
+        <button class="view-btn" id="btn-map">⊙ Map</button>
+      </div>
+    </div>
+    <div class="mobile-row-2">
+      <select class="filter-select" id="f-neighbourhood" aria-label="Filter by neighbourhood">
+        <option value="">All areas</option>
+      </select>
+      <select class="filter-select" id="f-price" aria-label="Filter by price">
+        <option value="">Any price</option>
+      </select>
+      <select class="filter-select" id="f-pool" aria-label="Filter by source language">
+        <option value="">Language</option>
+      </select>
+    </div>
+    <!-- Desktop-only elements -->
+    <select class="filter-select desktop-only" id="f-cuisine" aria-label="Filter by cuisine">
       <option value="">All cuisines</option>
-    </select>
-    <select class="filter-select" id="f-price" aria-label="Filter by price">
-      <option value="">Any price</option>
-    </select>
-    <select class="filter-select" id="f-pool" aria-label="Filter by source language">
-      <option value="">Source language</option>
     </select>
     <button class="filter-clear" id="filter-clear">Clear all</button>
     <span class="results-count" id="results-count"></span>
-    <div class="view-toggle">
-      <button class="view-btn active" id="btn-list">☰ List</button>
-      <button class="view-btn" id="btn-map">⊙ Map</button>
-    </div>
   </div>
 </div>
 
