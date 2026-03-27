@@ -26,6 +26,8 @@
     --fr-pool-bg: #DBEAFE;
     --ar-pool: #6B3F8C;
     --ar-pool-bg: #EDE9FE;
+    --pt-pool: #8B2500;
+    --pt-pool-bg: #FDECD8;
     --radius: 10px;
     --radius-sm: 6px;
     --shadow: 0 1px 3px rgba(44,36,32,0.08), 0 4px 12px rgba(44,36,32,0.05);
@@ -419,6 +421,7 @@
   .card.both-pool { border-left: 3px solid var(--both-pool); }
   .card.fr-pool { border-left: 3px solid var(--fr-pool); }
   .card.ar-pool { border-left: 3px solid var(--ar-pool); }
+  .card.pt-pool { border-left: 3px solid var(--pt-pool); }
 
   .card-top {
     display: flex;
@@ -464,6 +467,7 @@
 
   .pool-badge.fr { background: var(--fr-pool-bg); color: var(--fr-pool); }
   .pool-badge.ar { background: var(--ar-pool-bg); color: var(--ar-pool); }
+  .pool-badge.pt { background: var(--pt-pool-bg); color: var(--pt-pool); }
   .pool-badge.en { background: #FEF3C7; color: #92400E; }
 
   #global-tooltip {
@@ -954,7 +958,7 @@ function priceSymbol(level, currency) {
 }
 
 function poolLabel(pool) {
-  const map = { both:'EN + Local', 'both-pool':'EN + Local', en:'English', fr:'French', ar:'Arabic', es:'Spanish', ca:'Catalan' };
+  const map = { both:'EN + Local', 'both-pool':'EN + Local', en:'English', fr:'French', ar:'Arabic', es:'Spanish', ca:'Catalan', pt:'Portuguese' };
   return map[pool] || pool;
 }
 
@@ -962,6 +966,7 @@ function poolClass(pool) {
   if (pool === 'both' || pool === 'both-pool') return 'both';
   if (pool === 'fr') return 'fr';
   if (pool === 'ar') return 'ar';
+  if (pool === 'pt') return 'pt';
   return 'en';
 }
 
@@ -1153,6 +1158,7 @@ function buildFilters(restaurants, data) {
     ['ar','Arabic sources'],
     ['es','Spanish sources'],
     ['ca','Catalan sources'],
+    ['pt','Portuguese sources'],
   ].filter(([v]) => v==='' || pools.some(p => v==='both' ? (p==='both'||p==='both-pool') : p===v));
 
   document.getElementById('f-pool').innerHTML =
@@ -1255,7 +1261,7 @@ function renderCards(restaurants) {
 function cardHTML(r) {
   const pool = r.language_pool || 'en';
   const isBoth = pool === 'both' || pool === 'both-pool';
-  const cardClass = isBoth ? 'both-pool' : (pool==='fr'?'fr-pool':(pool==='ar'?'ar-pool':''));
+  const cardClass = isBoth ? 'both-pool' : (pool==='fr'?'fr-pool':(pool==='ar'?'ar-pool':(pool==='pt'?'pt-pool':'')));
   const currency = r.price_currency || '€';
 
   const metaParts = [r.neighbourhood, r.cuisine, r.price_level ? priceSymbol(r.price_level, currency) : null].filter(Boolean);
@@ -1368,6 +1374,9 @@ const CITY_CENTRES = {
   'Valencia': [39.4699, -0.3763],
   'Fes': [34.0433, -5.0033],
   'Marrakesh': [31.6295, -8.0000],
+  'Rabat': [33.9716, -6.8498],
+  'Chefchaouen': [35.1688, -5.2636],
+  'Lisbon': [38.7223, -9.1393],
 };
 
 let leafletMap = null;
@@ -1614,3 +1623,4 @@ document.addEventListener('mouseout', function(e) {
 </script>
 </body>
 </html>
+
