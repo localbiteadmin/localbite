@@ -26,6 +26,8 @@
     --fr-pool-bg: #DBEAFE;
     --ar-pool: #6B3F8C;
     --ar-pool-bg: #EDE9FE;
+    --pt-pool: #8B2500;
+    --pt-pool-bg: #FDECD8;
     --radius: 10px;
     --radius-sm: 6px;
     --shadow: 0 1px 3px rgba(44,36,32,0.08), 0 4px 12px rgba(44,36,32,0.05);
@@ -323,16 +325,7 @@
     display: flex;
     gap: 8px;
     align-items: center;
-  }
-
-  .filters-scroll {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    flex: 1;
-    overflow-x: auto;
-    min-width: 0;
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: wrap;
   }
 
   .search-input {
@@ -428,6 +421,7 @@
   .card.both-pool { border-left: 3px solid var(--both-pool); }
   .card.fr-pool { border-left: 3px solid var(--fr-pool); }
   .card.ar-pool { border-left: 3px solid var(--ar-pool); }
+  .card.pt-pool { border-left: 3px solid var(--pt-pool); }
 
   .card-top {
     display: flex;
@@ -473,6 +467,7 @@
 
   .pool-badge.fr { background: var(--fr-pool-bg); color: var(--fr-pool); }
   .pool-badge.ar { background: var(--ar-pool-bg); color: var(--ar-pool); }
+  .pool-badge.pt { background: var(--pt-pool-bg); color: var(--pt-pool); }
   .pool-badge.en { background: #FEF3C7; color: #92400E; }
 
   #global-tooltip {
@@ -619,7 +614,35 @@
     font-size: 10px;
   }
 
-  /* ── LOADING / EMPTY ── */
+  .city-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .hero-sources-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--terra);
+    background: none;
+    border: 1px solid var(--terra-light);
+    border-radius: 20px;
+    padding: 4px 12px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .hero-sources-btn:hover {
+    background: var(--terra-light);
+  }
+  .mobile-row-1, .mobile-row-2 {
+    display: contents;
+  }
+
+  .desktop-only { display: inline-block; }
   .loading {
     text-align: center;
     padding: 60px 24px;
@@ -772,19 +795,53 @@
     .cards-grid { grid-template-columns: 1fr; }
     .site-header { padding: 0 16px; }
     .filters-bar { padding: 8px 16px; }
-    .filters-scroll { gap: 6px; }
+    .filters-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-width: none;
+    }
+    /* Row 1: full-width search + toggle pinned right */
+    .mobile-row-1 {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      width: 100%;
+    }
+    .search-input {
+      flex: 1;
+      width: auto;
+      min-width: 0;
+    }
+    .view-toggle { flex-shrink: 0; }
+    /* Row 2: three equal filters */
+    .mobile-row-2 {
+      display: flex;
+      gap: 6px;
+      width: 100%;
+    }
+    .mobile-row-2 .filter-select {
+      flex: 1;
+      min-width: 0;
+      font-size: 12px;
+      padding: 5px 4px;
+      padding-right: 16px;
+    }
+    /* Hide desktop-only elements on mobile */
+    #f-cuisine { display: none; }
+    .desktop-only { display: none; }
+    .filter-clear { display: none; }
     .results-count { display: none; }
+    .view-btn { padding: 5px 8px; font-size: 11px; }
+    /* Other mobile overrides */
     .main { padding: 16px 16px 40px; }
     .city-hero { padding: 16px; }
     .city-name { font-size: 26px; }
     .header-inner { height: 52px; }
     .filters-bar { top: 52px; }
     .credits-btn { display: none; }
-    .search-input { width: 100px; }
     .credits-grid { grid-template-columns: 1fr; }
     .tooltip { width: 220px; }
-    .view-toggle { flex-shrink: 0; }
-    .view-btn { padding: 5px 8px; font-size: 11px; }
   }
 </style>
 </head>
@@ -806,10 +863,13 @@
   <div class="city-hero-inner">
     <div class="city-name" id="city-name"></div>
     <div class="city-meta" id="city-meta"></div>
-    <button id="both-pool-note" style="display:none" class="both-pool-banner">
-      ✦ Green border = confirmed in two languages
-      <span class="tooltip">This restaurant was independently recommended by writers from two different language communities — for example an English food writer and a French or Spanish food writer both named it. This cross-language confirmation is the strongest signal of quality on LocalBite.</span>
-    </button>
+    <div class="city-hero-actions">
+      <button id="both-pool-note" style="display:none" class="both-pool-banner">
+        ✦ Green border = confirmed in two languages
+        <span class="tooltip">This restaurant was independently recommended by writers from two different language communities — for example an English food writer and a French or Spanish food writer both named it. This cross-language confirmation is the strongest signal of quality on LocalBite.</span>
+      </button>
+      <button class="hero-sources-btn" id="hero-sources-btn">Sources ↓</button>
+    </div>
   </div>
 </div>
 
@@ -825,27 +885,30 @@
 
 <div class="filters-bar" id="filters-bar" style="display:none">
   <div class="filters-inner">
-    <div class="filters-scroll">
+    <div class="mobile-row-1">
       <input class="search-input" id="search-input" type="search" placeholder="Search restaurants…" aria-label="Search restaurants">
+      <div class="view-toggle">
+        <button class="view-btn active" id="btn-list">☰ List</button>
+        <button class="view-btn" id="btn-map">⊙ Map</button>
+      </div>
+    </div>
+    <div class="mobile-row-2">
       <select class="filter-select" id="f-neighbourhood" aria-label="Filter by neighbourhood">
-        <option value="">All neighbourhoods</option>
-      </select>
-      <select class="filter-select" id="f-cuisine" aria-label="Filter by cuisine">
-        <option value="">All cuisines</option>
+        <option value="">All areas</option>
       </select>
       <select class="filter-select" id="f-price" aria-label="Filter by price">
         <option value="">Any price</option>
       </select>
       <select class="filter-select" id="f-pool" aria-label="Filter by source language">
-        <option value="">Source language</option>
+        <option value="">Language</option>
       </select>
-      <button class="filter-clear" id="filter-clear">Clear all</button>
-      <span class="results-count" id="results-count"></span>
     </div>
-    <div class="view-toggle">
-      <button class="view-btn active" id="btn-list">☰ List</button>
-      <button class="view-btn" id="btn-map">⊙ Map</button>
-    </div>
+    <!-- Desktop-only elements -->
+    <select class="filter-select desktop-only" id="f-cuisine" aria-label="Filter by cuisine">
+      <option value="">All cuisines</option>
+    </select>
+    <button class="filter-clear" id="filter-clear">Clear all</button>
+    <span class="results-count" id="results-count"></span>
   </div>
 </div>
 
@@ -870,8 +933,6 @@
   Every restaurant on LocalBite was explicitly named in a fetched source article — not inferred.
   <br>
   Sources are linked on every card · Data covers 2025–2026 articles only
-  <br>
-  <a href="https://github.com/localbiteadmin/localbite" target="_blank" rel="noopener">View on GitHub</a>
 </footer>
 
 <script>
@@ -897,7 +958,7 @@ function priceSymbol(level, currency) {
 }
 
 function poolLabel(pool) {
-  const map = { both:'EN + Local', 'both-pool':'EN + Local', en:'English', fr:'French', ar:'Arabic', es:'Spanish', ca:'Catalan' };
+  const map = { both:'EN + Local', 'both-pool':'EN + Local', en:'English', fr:'French', ar:'Arabic', es:'Spanish', ca:'Catalan', pt:'Portuguese' };
   return map[pool] || pool;
 }
 
@@ -905,6 +966,7 @@ function poolClass(pool) {
   if (pool === 'both' || pool === 'both-pool') return 'both';
   if (pool === 'fr') return 'fr';
   if (pool === 'ar') return 'ar';
+  if (pool === 'pt') return 'pt';
   return 'en';
 }
 
@@ -914,16 +976,33 @@ function langLabel(code) {
 }
 
 // ── CREDITS PANEL ──
-document.getElementById('credits-btn').addEventListener('click', function() {
+function openCredits() {
   const panel = document.getElementById('credits-panel');
-  const isOpen = panel.classList.toggle('open');
-  this.textContent = isOpen ? 'Sources ↑' : 'Sources ↓';
-});
+  panel.classList.add('open');
+  document.getElementById('credits-btn').textContent = 'Sources ↑';
+  document.getElementById('hero-sources-btn').textContent = 'Sources ↑';
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
 
-document.getElementById('credits-close').addEventListener('click', function() {
+function closeCredits() {
   document.getElementById('credits-panel').classList.remove('open');
   document.getElementById('credits-btn').textContent = 'Sources ↓';
+  document.getElementById('hero-sources-btn').textContent = 'Sources ↓';
+}
+
+document.getElementById('credits-btn').addEventListener('click', function() {
+  const panel = document.getElementById('credits-panel');
+  if (panel.classList.contains('open')) closeCredits();
+  else openCredits();
 });
+
+document.getElementById('hero-sources-btn').addEventListener('click', function() {
+  const panel = document.getElementById('credits-panel');
+  if (panel.classList.contains('open')) closeCredits();
+  else openCredits();
+});
+
+document.getElementById('credits-close').addEventListener('click', closeCredits);
 
 function renderCredits(sources) {
   const grid = document.getElementById('credits-grid');
@@ -987,6 +1066,7 @@ async function loadCity(meta) {
   document.getElementById('filters-bar').style.display = 'none';
   document.getElementById('credits-panel').classList.remove('open');
   document.getElementById('credits-btn').textContent = 'Sources ↓';
+  document.getElementById('hero-sources-btn').textContent = 'Sources ↓';
 
   try {
     const url = BASE + (meta.file || ('localbite-' + (meta.city_slug||meta.slug) + '-2025-2026.json'));
@@ -1078,6 +1158,7 @@ function buildFilters(restaurants, data) {
     ['ar','Arabic sources'],
     ['es','Spanish sources'],
     ['ca','Catalan sources'],
+    ['pt','Portuguese sources'],
   ].filter(([v]) => v==='' || pools.some(p => v==='both' ? (p==='both'||p==='both-pool') : p===v));
 
   document.getElementById('f-pool').innerHTML =
@@ -1180,7 +1261,7 @@ function renderCards(restaurants) {
 function cardHTML(r) {
   const pool = r.language_pool || 'en';
   const isBoth = pool === 'both' || pool === 'both-pool';
-  const cardClass = isBoth ? 'both-pool' : (pool==='fr'?'fr-pool':(pool==='ar'?'ar-pool':''));
+  const cardClass = isBoth ? 'both-pool' : (pool==='fr'?'fr-pool':(pool==='ar'?'ar-pool':(pool==='pt'?'pt-pool':'')));
   const currency = r.price_currency || '€';
 
   const metaParts = [r.neighbourhood, r.cuisine, r.price_level ? priceSymbol(r.price_level, currency) : null].filter(Boolean);
@@ -1238,6 +1319,15 @@ function cardHTML(r) {
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
+
+// ── GEO CONFIDENCE HELPERS ──
+function isHighConfidence(r) {
+  return r.geo_confidence === 'high' || r.geo_confidence === 'verified';
+}
+function isMediumConfidence(r) {
+  return !!(r.lat && r.lng && !isHighConfidence(r));
+}
+
 // ── NEIGHBOURHOOD CENTROIDS ──
 const CENTROIDS = {
   // Barcelona
@@ -1293,6 +1383,9 @@ const CITY_CENTRES = {
   'Valencia': [39.4699, -0.3763],
   'Fes': [34.0433, -5.0033],
   'Marrakesh': [31.6295, -8.0000],
+  'Rabat': [33.9716, -6.8498],
+  'Chefchaouen': [35.1688, -5.2636],
+  'Lisbon': [38.7223, -9.1393],
 };
 
 let leafletMap = null;
@@ -1362,12 +1455,12 @@ function updateMap(restaurants) {
   const caveatEl = document.querySelector('.map-caveat');
   if (caveatEl) {
     if (hasRealCoords && withoutCoords.length === 0) {
-      caveatEl.textContent = '✓ Pins show verified restaurant locations from OpenStreetMap.';
+      const hc = withCoords.filter(r => isHighConfidence(r)).length; const mc = withCoords.filter(r => isMediumConfidence(r)).length; caveatEl.textContent = `✓ ${hc} verified locations (solid pins) · ${mc} approximate (hollow pins)`;
       caveatEl.style.background = '#D8F3DC';
       caveatEl.style.borderColor = '#2D6A4F';
       caveatEl.style.color = '#2D6A4F';
     } else if (hasRealCoords && withoutCoords.length > 0) {
-      caveatEl.textContent = `✓ ${withCoords.length} pins show verified locations · ${withoutCoords.length} show approximate neighbourhood centres.`;
+      const hc2 = withCoords.filter(r => isHighConfidence(r)).length; const mc2 = withCoords.filter(r => isMediumConfidence(r)).length; caveatEl.textContent = `✓ ${hc2} verified (solid pins) · ${mc2} approximate (hollow pins) · ${withoutCoords.length} neighbourhood centres`;
       caveatEl.style.background = '#FEF3C7';
       caveatEl.style.borderColor = '#F6D860';
       caveatEl.style.color = '#7A4F00';
@@ -1383,12 +1476,10 @@ function updateMap(restaurants) {
   withCoords.forEach(r => {
     const isBoth = r.language_pool === 'both' || r.language_pool === 'both-pool';
     const colour = isBoth ? '#2D6A4F' : '#C4622D';
-    const markerHtml = `<div style="
-      width:28px;height:28px;border-radius:50% 50% 50% 0;
-      background:${colour};border:2px solid white;
-      transform:rotate(-45deg);
-      box-shadow:0 2px 6px rgba(0,0,0,0.3);
-    "></div>`;
+    const highConf = isHighConfidence(r);
+    const markerHtml = highConf
+      ? `<div style="width:28px;height:28px;border-radius:50% 50% 50% 0;background:${colour};border:2px solid white;transform:rotate(-45deg);box-shadow:0 2px 6px rgba(0,0,0,0.3);"></div>`
+      : `<div style="width:28px;height:28px;border-radius:50% 50% 50% 0;background:white;border:2.5px dashed ${colour};transform:rotate(-45deg);box-shadow:0 1px 4px rgba(0,0,0,0.15);"></div>`;
 
     const icon = L.divIcon({
       html: markerHtml,
@@ -1404,8 +1495,8 @@ function updateMap(restaurants) {
           : '€'.repeat(r.price_level))
       : '';
 
-    const confidence = r.geo_confidence === 'high' ? '' :
-      '<div style="font-size:10px;color:#9E8E86;margin-top:4px;font-style:italic">Location may be approximate</div>';
+    const confidence = isHighConfidence(r) ? '' :
+      '<div style="font-size:10px;color:#9E8E86;margin-top:4px;font-style:italic">Neighbourhood location — search by name to navigate</div>';
 
     const popupContent = `
       <div style="font-family:'DM Sans',sans-serif">
