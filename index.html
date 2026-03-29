@@ -26,8 +26,6 @@
     --fr-pool-bg: #DBEAFE;
     --ar-pool: #6B3F8C;
     --ar-pool-bg: #EDE9FE;
-    --pt-pool: #8B2500;
-    --pt-pool-bg: #FDECD8;
     --radius: 10px;
     --radius-sm: 6px;
     --shadow: 0 1px 3px rgba(44,36,32,0.08), 0 4px 12px rgba(44,36,32,0.05);
@@ -325,7 +323,16 @@
     display: flex;
     gap: 8px;
     align-items: center;
-    flex-wrap: wrap;
+  }
+
+  .filters-scroll {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex: 1;
+    overflow-x: auto;
+    min-width: 0;
+    -webkit-overflow-scrolling: touch;
   }
 
   .search-input {
@@ -421,7 +428,6 @@
   .card.both-pool { border-left: 3px solid var(--both-pool); }
   .card.fr-pool { border-left: 3px solid var(--fr-pool); }
   .card.ar-pool { border-left: 3px solid var(--ar-pool); }
-  .card.pt-pool { border-left: 3px solid var(--pt-pool); }
 
   .card-top {
     display: flex;
@@ -467,7 +473,6 @@
 
   .pool-badge.fr { background: var(--fr-pool-bg); color: var(--fr-pool); }
   .pool-badge.ar { background: var(--ar-pool-bg); color: var(--ar-pool); }
-  .pool-badge.pt { background: var(--pt-pool-bg); color: var(--pt-pool); }
   .pool-badge.en { background: #FEF3C7; color: #92400E; }
 
   #global-tooltip {
@@ -614,35 +619,7 @@
     font-size: 10px;
   }
 
-  .city-hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-  }
-
-  .hero-sources-btn {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--terra);
-    background: none;
-    border: 1px solid var(--terra-light);
-    border-radius: 20px;
-    padding: 4px 12px;
-    cursor: pointer;
-    transition: background 0.15s;
-  }
-
-  .hero-sources-btn:hover {
-    background: var(--terra-light);
-  }
-  .mobile-row-1, .mobile-row-2 {
-    display: contents;
-  }
-
-  .desktop-only { display: inline-block; }
+  /* ── LOADING / EMPTY ── */
   .loading {
     text-align: center;
     padding: 60px 24px;
@@ -795,53 +772,19 @@
     .cards-grid { grid-template-columns: 1fr; }
     .site-header { padding: 0 16px; }
     .filters-bar { padding: 8px 16px; }
-    .filters-inner {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      max-width: none;
-    }
-    /* Row 1: full-width search + toggle pinned right */
-    .mobile-row-1 {
-      display: flex;
-      gap: 6px;
-      align-items: center;
-      width: 100%;
-    }
-    .search-input {
-      flex: 1;
-      width: auto;
-      min-width: 0;
-    }
-    .view-toggle { flex-shrink: 0; }
-    /* Row 2: three equal filters */
-    .mobile-row-2 {
-      display: flex;
-      gap: 6px;
-      width: 100%;
-    }
-    .mobile-row-2 .filter-select {
-      flex: 1;
-      min-width: 0;
-      font-size: 12px;
-      padding: 5px 4px;
-      padding-right: 16px;
-    }
-    /* Hide desktop-only elements on mobile */
-    #f-cuisine { display: none; }
-    .desktop-only { display: none; }
-    .filter-clear { display: none; }
+    .filters-scroll { gap: 6px; }
     .results-count { display: none; }
-    .view-btn { padding: 5px 8px; font-size: 11px; }
-    /* Other mobile overrides */
     .main { padding: 16px 16px 40px; }
     .city-hero { padding: 16px; }
     .city-name { font-size: 26px; }
     .header-inner { height: 52px; }
     .filters-bar { top: 52px; }
     .credits-btn { display: none; }
+    .search-input { width: 100px; }
     .credits-grid { grid-template-columns: 1fr; }
     .tooltip { width: 220px; }
+    .view-toggle { flex-shrink: 0; }
+    .view-btn { padding: 5px 8px; font-size: 11px; }
   }
 </style>
 </head>
@@ -863,13 +806,10 @@
   <div class="city-hero-inner">
     <div class="city-name" id="city-name"></div>
     <div class="city-meta" id="city-meta"></div>
-    <div class="city-hero-actions">
-      <button id="both-pool-note" style="display:none" class="both-pool-banner">
-        ✦ Green border = confirmed in two languages
-        <span class="tooltip">This restaurant was independently recommended by writers from two different language communities — for example an English food writer and a French or Spanish food writer both named it. This cross-language confirmation is the strongest signal of quality on LocalBite.</span>
-      </button>
-      <button class="hero-sources-btn" id="hero-sources-btn">Sources ↓</button>
-    </div>
+    <button id="both-pool-note" style="display:none" class="both-pool-banner">
+      ✦ Green border = confirmed in two languages
+      <span class="tooltip">This restaurant was independently recommended by writers from two different language communities — for example an English food writer and a French or Spanish food writer both named it. This cross-language confirmation is the strongest signal of quality on LocalBite.</span>
+    </button>
   </div>
 </div>
 
@@ -885,30 +825,27 @@
 
 <div class="filters-bar" id="filters-bar" style="display:none">
   <div class="filters-inner">
-    <div class="mobile-row-1">
+    <div class="filters-scroll">
       <input class="search-input" id="search-input" type="search" placeholder="Search restaurants…" aria-label="Search restaurants">
-      <div class="view-toggle">
-        <button class="view-btn active" id="btn-list">☰ List</button>
-        <button class="view-btn" id="btn-map">⊙ Map</button>
-      </div>
-    </div>
-    <div class="mobile-row-2">
       <select class="filter-select" id="f-neighbourhood" aria-label="Filter by neighbourhood">
-        <option value="">All areas</option>
+        <option value="">All neighbourhoods</option>
+      </select>
+      <select class="filter-select" id="f-cuisine" aria-label="Filter by cuisine">
+        <option value="">All cuisines</option>
       </select>
       <select class="filter-select" id="f-price" aria-label="Filter by price">
         <option value="">Any price</option>
       </select>
       <select class="filter-select" id="f-pool" aria-label="Filter by source language">
-        <option value="">Language</option>
+        <option value="">Source language</option>
       </select>
+      <button class="filter-clear" id="filter-clear">Clear all</button>
+      <span class="results-count" id="results-count"></span>
     </div>
-    <!-- Desktop-only elements -->
-    <select class="filter-select desktop-only" id="f-cuisine" aria-label="Filter by cuisine">
-      <option value="">All cuisines</option>
-    </select>
-    <button class="filter-clear" id="filter-clear">Clear all</button>
-    <span class="results-count" id="results-count"></span>
+    <div class="view-toggle">
+      <button class="view-btn active" id="btn-list">☰ List</button>
+      <button class="view-btn" id="btn-map">⊙ Map</button>
+    </div>
   </div>
 </div>
 
@@ -933,6 +870,8 @@
   Every restaurant on LocalBite was explicitly named in a fetched source article — not inferred.
   <br>
   Sources are linked on every card · Data covers 2025–2026 articles only
+  <br>
+  <a href="https://github.com/localbiteadmin/localbite" target="_blank" rel="noopener">View on GitHub</a>
 </footer>
 
 <script>
@@ -958,7 +897,7 @@ function priceSymbol(level, currency) {
 }
 
 function poolLabel(pool) {
-  const map = { both:'EN + Local', 'both-pool':'EN + Local', en:'English', fr:'French', ar:'Arabic', es:'Spanish', ca:'Catalan', pt:'Portuguese' };
+  const map = { both:'EN + Local', 'both-pool':'EN + Local', en:'English', fr:'French', ar:'Arabic', es:'Spanish', ca:'Catalan' };
   return map[pool] || pool;
 }
 
@@ -966,7 +905,6 @@ function poolClass(pool) {
   if (pool === 'both' || pool === 'both-pool') return 'both';
   if (pool === 'fr') return 'fr';
   if (pool === 'ar') return 'ar';
-  if (pool === 'pt') return 'pt';
   return 'en';
 }
 
@@ -976,33 +914,16 @@ function langLabel(code) {
 }
 
 // ── CREDITS PANEL ──
-function openCredits() {
-  const panel = document.getElementById('credits-panel');
-  panel.classList.add('open');
-  document.getElementById('credits-btn').textContent = 'Sources ↑';
-  document.getElementById('hero-sources-btn').textContent = 'Sources ↑';
-  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-function closeCredits() {
-  document.getElementById('credits-panel').classList.remove('open');
-  document.getElementById('credits-btn').textContent = 'Sources ↓';
-  document.getElementById('hero-sources-btn').textContent = 'Sources ↓';
-}
-
 document.getElementById('credits-btn').addEventListener('click', function() {
   const panel = document.getElementById('credits-panel');
-  if (panel.classList.contains('open')) closeCredits();
-  else openCredits();
+  const isOpen = panel.classList.toggle('open');
+  this.textContent = isOpen ? 'Sources ↑' : 'Sources ↓';
 });
 
-document.getElementById('hero-sources-btn').addEventListener('click', function() {
-  const panel = document.getElementById('credits-panel');
-  if (panel.classList.contains('open')) closeCredits();
-  else openCredits();
+document.getElementById('credits-close').addEventListener('click', function() {
+  document.getElementById('credits-panel').classList.remove('open');
+  document.getElementById('credits-btn').textContent = 'Sources ↓';
 });
-
-document.getElementById('credits-close').addEventListener('click', closeCredits);
 
 function renderCredits(sources) {
   const grid = document.getElementById('credits-grid');
@@ -1066,7 +987,6 @@ async function loadCity(meta) {
   document.getElementById('filters-bar').style.display = 'none';
   document.getElementById('credits-panel').classList.remove('open');
   document.getElementById('credits-btn').textContent = 'Sources ↓';
-  document.getElementById('hero-sources-btn').textContent = 'Sources ↓';
 
   try {
     const url = BASE + (meta.file || ('localbite-' + (meta.city_slug||meta.slug) + '-2025-2026.json'));
@@ -1158,7 +1078,6 @@ function buildFilters(restaurants, data) {
     ['ar','Arabic sources'],
     ['es','Spanish sources'],
     ['ca','Catalan sources'],
-    ['pt','Portuguese sources'],
   ].filter(([v]) => v==='' || pools.some(p => v==='both' ? (p==='both'||p==='both-pool') : p===v));
 
   document.getElementById('f-pool').innerHTML =
@@ -1261,7 +1180,7 @@ function renderCards(restaurants) {
 function cardHTML(r) {
   const pool = r.language_pool || 'en';
   const isBoth = pool === 'both' || pool === 'both-pool';
-  const cardClass = isBoth ? 'both-pool' : (pool==='fr'?'fr-pool':(pool==='ar'?'ar-pool':(pool==='pt'?'pt-pool':'')));
+  const cardClass = isBoth ? 'both-pool' : (pool==='fr'?'fr-pool':(pool==='ar'?'ar-pool':''));
   const currency = r.price_currency || '€';
 
   const metaParts = [r.neighbourhood, r.cuisine, r.price_level ? priceSymbol(r.price_level, currency) : null].filter(Boolean);
@@ -1374,9 +1293,6 @@ const CITY_CENTRES = {
   'Valencia': [39.4699, -0.3763],
   'Fes': [34.0433, -5.0033],
   'Marrakesh': [31.6295, -8.0000],
-  'Rabat': [33.9716, -6.8498],
-  'Chefchaouen': [35.1688, -5.2636],
-  'Lisbon': [38.7223, -9.1393],
 };
 
 let leafletMap = null;
@@ -1623,4 +1539,3 @@ document.addEventListener('mouseout', function(e) {
 </script>
 </body>
 </html>
-

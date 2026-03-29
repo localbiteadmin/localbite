@@ -119,15 +119,20 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 3,
-      "sources": ["src-culinary-backstreets", "src-the-guardian-2025", "src-ola-daniela"],
+      "sources": [
+        "src-culinary-backstreets",
+        "src-the-guardian-2025",
+        "src-ola-daniela"
+      ],
       "confidence_tier": "A",
       "source_type_combination": "primary-en + secondary-en + primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.6973967,
+      "lng": -9.1937118,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Canalha"
     },
     {
       "name": "Pigmeu",
@@ -142,15 +147,19 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 2,
-      "sources": ["src-culinary-backstreets", "src-the-guardian-2025"],
+      "sources": [
+        "src-culinary-backstreets",
+        "src-the-guardian-2025"
+      ],
       "confidence_tier": "A",
       "source_type_combination": "primary-en + secondary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.719897,
+      "lng": -9.1647741,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pigmeu - de Tudo um Porco"
     },
     {
       "name": "Lamina",
@@ -165,15 +174,18 @@
       "quote_language": "translated from Portuguese",
       "language_pool": "pt",
       "source_count": 1,
-      "sources": ["src-mesa-marcada"],
+      "sources": [
+        "src-mesa-marcada"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.73543,
+      "lng": -9.14643,
+      "geo_source": "manual",
+      "geo_confidence": "verified",
+      "geo_matched_name": "Mina, Amadora, Portugal"
     },
     {
       "name": "Henrique Sá Pessoa",
@@ -188,15 +200,18 @@
       "quote_language": "translated from Portuguese",
       "language_pool": "pt",
       "source_count": 1,
-      "sources": ["src-mesa-marcada"],
+      "sources": [
+        "src-mesa-marcada"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.723528,
+      "lng": -9.1559084,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Henrique Sá Pessoa"
     },
     {
       "name": "Yōso",
@@ -211,15 +226,17 @@
       "quote_language": "translated from Portuguese",
       "language_pool": "pt",
       "source_count": 1,
-      "sources": ["src-mesa-marcada"],
+      "sources": [
+        "src-mesa-marcada"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.70591,
+      "lng": -9.17059,
+      "geo_source": "manual",
+      "geo_confidence": "verified"
     },
     {
       "name": "Parra Wine Bistro",
@@ -234,15 +251,18 @@
       "quote_language": "translated from Portuguese",
       "language_pool": "pt",
       "source_count": 1,
-      "sources": ["src-mesa-marcada"],
+      "sources": [
+        "src-mesa-marcada"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.70837,
+      "lng": -9.1545,
+      "geo_source": "here",
+      "geo_confidence": "high",
+      "geo_matched_name": "Parra Wine Bistrô"
     },
     {
       "name": "A Mesa do CAM",
@@ -257,15 +277,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-culinary-backstreets"],
+      "sources": [
+        "src-culinary-backstreets"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7358198,
+      "lng": -9.1539237,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "A Mesa do CAM"
     },
     {
       "name": "Belmiro",
@@ -280,15 +303,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-culinary-backstreets"],
+      "sources": [
+        "src-culinary-backstreets"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.72358,
+      "lng": -9.13752,
+      "geo_source": "manual",
+      "geo_confidence": "verified",
+      "geo_matched_name": "Rua Belmiro da Silva Neves"
     },
     {
       "name": "O Primo do Queijo",
@@ -303,15 +329,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-culinary-backstreets"],
+      "sources": [
+        "src-culinary-backstreets"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.72542,
+      "lng": -9.13358,
+      "geo_source": "here",
+      "geo_confidence": "high",
+      "geo_matched_name": "O Primo do Queijo"
     },
     {
       "name": "Sabores de Goa",
@@ -326,15 +355,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-culinary-backstreets"],
+      "sources": [
+        "src-culinary-backstreets"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7272065,
+      "lng": -9.1339806,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Sabores de Goa"
     },
     {
       "name": "Patuá",
@@ -349,15 +381,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-culinary-backstreets"],
+      "sources": [
+        "src-culinary-backstreets"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7234403,
+      "lng": -9.1318201,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Patuá"
     },
     {
       "name": "Juliana Penteado Pastry",
@@ -372,15 +407,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-culinary-backstreets"],
+      "sources": [
+        "src-culinary-backstreets"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.71121,
+      "lng": -9.15283,
+      "geo_source": "here",
+      "geo_confidence": "high",
+      "geo_matched_name": "Juliana Penteado Pastry - São Bento"
     },
     {
       "name": "Bichomau",
@@ -395,15 +433,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-culinary-backstreets"],
+      "sources": [
+        "src-culinary-backstreets"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.71647,
+      "lng": -9.16233,
+      "geo_source": "here",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bicho Mau"
     },
     {
       "name": "Tati",
@@ -418,15 +459,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-culinary-backstreets"],
+      "sources": [
+        "src-culinary-backstreets"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7313929,
+      "lng": -9.1294693,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Tati"
     },
     {
       "name": "Taberna Albricoque",
@@ -441,15 +485,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-the-guardian-2025"],
+      "sources": [
+        "src-the-guardian-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7139196,
+      "lng": -9.1235672,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Taberna Albricoque"
     },
     {
       "name": "Batata Doce",
@@ -464,15 +511,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-the-guardian-2025"],
+      "sources": [
+        "src-the-guardian-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7076824,
+      "lng": -9.1584183,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Batata Doce"
     },
     {
       "name": "Zuari",
@@ -487,15 +537,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-the-guardian-2025"],
+      "sources": [
+        "src-the-guardian-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7075524,
+      "lng": -9.1584783,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Zuari"
     },
     {
       "name": "Mãe – Cozinha com Amor",
@@ -510,15 +563,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-the-guardian-2025"],
+      "sources": [
+        "src-the-guardian-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.73396,
+      "lng": -9.14121,
+      "geo_source": "here",
+      "geo_confidence": "high",
+      "geo_matched_name": "Mãe Cozinha Com Amor"
     },
     {
       "name": "Prado",
@@ -533,15 +589,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-the-guardian-2025"],
+      "sources": [
+        "src-the-guardian-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7105632,
+      "lng": -9.1350244,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Prado"
     },
     {
       "name": "Garum Fish & Wine Bar",
@@ -556,15 +615,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-the-guardian-2025"],
+      "sources": [
+        "src-the-guardian-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7157465,
+      "lng": -9.1309358,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Garum Fish & Wine Bar"
     },
     {
       "name": "Petisco Saloio",
@@ -579,19 +641,24 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-the-guardian-2025"],
+      "sources": [
+        "src-the-guardian-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.74075,
+      "lng": -9.14428,
+      "geo_source": "here",
+      "geo_confidence": "high",
+      "geo_matched_name": "Petisco Saloio"
     },
     {
       "name": "Taberna (Bairro do Avillez)",
-      "name_variants": ["Taberna Bairro do Avillez"],
+      "name_variants": [
+        "Taberna Bairro do Avillez"
+      ],
       "neighbourhood": "Chiado",
       "cuisine": "Portuguese charcuterie and casual snacks",
       "opening_year": null,
@@ -602,15 +669,17 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-the-guardian-2025"],
+      "sources": [
+        "src-the-guardian-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "secondary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.71240,
+      "lng": -9.14231,
+      "geo_source": "manual",
+      "geo_confidence": "verified"
     },
     {
       "name": "Café des Épices",
@@ -625,15 +694,18 @@
       "quote_language": "translated from Portuguese",
       "language_pool": "pt",
       "source_count": 1,
-      "sources": ["src-observador-2025"],
+      "sources": [
+        "src-observador-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.74215,
+      "lng": -9.10223,
+      "geo_source": "manual",
+      "geo_confidence": "verified",
+      "geo_matched_name": "Via Café"
     },
     {
       "name": "Quack Shack",
@@ -648,15 +720,18 @@
       "quote_language": "translated from Portuguese",
       "language_pool": "pt",
       "source_count": 1,
-      "sources": ["src-observador-2025"],
+      "sources": [
+        "src-observador-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.75433,
+      "lng": -9.14352,
+      "geo_source": "here",
+      "geo_confidence": "high",
+      "geo_matched_name": "Quack Shack"
     },
     {
       "name": "Broto",
@@ -671,15 +746,17 @@
       "quote_language": "translated from Portuguese",
       "language_pool": "pt",
       "source_count": 1,
-      "sources": ["src-observador-2025"],
+      "sources": [
+        "src-observador-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.71182,
+      "lng": -9.14190,
+      "geo_source": "manual",
+      "geo_confidence": "verified"
     },
     {
       "name": "Barbela",
@@ -694,15 +771,18 @@
       "quote_language": "translated from Portuguese",
       "language_pool": "pt",
       "source_count": 1,
-      "sources": ["src-observador-2025"],
+      "sources": [
+        "src-observador-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.70695,
+      "lng": -9.1578,
+      "geo_source": "here",
+      "geo_confidence": "high",
+      "geo_matched_name": "Barbela C.P.M."
     },
     {
       "name": "Maída",
@@ -717,15 +797,18 @@
       "quote_language": "translated from Portuguese",
       "language_pool": "pt",
       "source_count": 1,
-      "sources": ["src-observador-2025"],
+      "sources": [
+        "src-observador-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.70883,
+      "lng": -9.14863,
+      "geo_source": "here",
+      "geo_confidence": "high",
+      "geo_matched_name": "Maida"
     },
     {
       "name": "JNcQUOI Fish",
@@ -740,15 +823,18 @@
       "quote_language": "translated from Portuguese",
       "language_pool": "pt",
       "source_count": 1,
-      "sources": ["src-observador-2025"],
+      "sources": [
+        "src-observador-2025"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.73303,
+      "lng": -9.17027,
+      "geo_source": "here",
+      "geo_confidence": "high",
+      "geo_matched_name": "Jncquoi Fish"
     },
     {
       "name": "Ultimo Porto",
@@ -763,15 +849,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-ola-daniela"],
+      "sources": [
+        "src-ola-daniela"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7012514,
+      "lng": -9.1626002,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Último Porto"
     },
     {
       "name": "O Velho Eurico",
@@ -786,15 +875,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-ola-daniela"],
+      "sources": [
+        "src-ola-daniela"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7127312,
+      "lng": -9.1353899,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "O Velho Eurico"
     },
     {
       "name": "Taberna Sal Grosso",
@@ -809,15 +901,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-ola-daniela"],
+      "sources": [
+        "src-ola-daniela"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7136566,
+      "lng": -9.1244766,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Taberna Sal Grosso"
     },
     {
       "name": "Taberna da Rua das Flores",
@@ -832,15 +927,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-ola-daniela"],
+      "sources": [
+        "src-ola-daniela"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7101395,
+      "lng": -9.1435869,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Taberna Da Rua das Flores"
     },
     {
       "name": "Cervejaria Ramiro",
@@ -855,15 +953,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-ola-daniela"],
+      "sources": [
+        "src-ola-daniela"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7201981,
+      "lng": -9.1357063,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Cervejaria Ramiro"
     },
     {
       "name": "BouBou's",
@@ -878,15 +979,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-ola-daniela"],
+      "sources": [
+        "src-ola-daniela"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7171024,
+      "lng": -9.150771,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Boubou's"
     },
     {
       "name": "Rosetta's",
@@ -901,15 +1005,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-ola-daniela"],
+      "sources": [
+        "src-ola-daniela"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7117417,
+      "lng": -9.1455116,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Rosetta's"
     },
     {
       "name": "Solar dos Nunes",
@@ -924,15 +1031,18 @@
       "quote_language": "original",
       "language_pool": "en",
       "source_count": 1,
-      "sources": ["src-ola-daniela"],
+      "sources": [
+        "src-ola-daniela"
+      ],
       "confidence_tier": "B",
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 38.7054663,
+      "lng": -9.1804785,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Solar dos Nunes"
     }
   ]
 }
