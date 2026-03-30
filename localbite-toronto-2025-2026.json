@@ -122,7 +122,11 @@
       ],
       "confidence_tier": "A",
       "source_type_combination": "legacy+independent",
-      "flagged": false
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "name": "Arbequina",
@@ -143,7 +147,12 @@
       ],
       "confidence_tier": "A",
       "source_type_combination": "legacy+independent",
-      "flagged": false
+      "flagged": false,
+      "lat": 43.6487903,
+      "lng": -79.4498359,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Arbequina"
     },
     {
       "name": "Belle Isle",
@@ -164,7 +173,11 @@
       ],
       "confidence_tier": "A",
       "source_type_combination": "legacy+independent",
-      "flagged": false
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "name": "Bisteccheria Sammarco",
@@ -187,7 +200,11 @@
       ],
       "confidence_tier": "A",
       "source_type_combination": "legacy+independent",
-      "flagged": false
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "name": "Liliana",
@@ -208,7 +225,12 @@
       ],
       "confidence_tier": "A",
       "source_type_combination": "legacy+independent",
-      "flagged": false
+      "flagged": false,
+      "lat": 43.6427555,
+      "lng": -79.4265855,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Liliana"
     },
     {
       "name": "Louf",
@@ -231,7 +253,12 @@
       ],
       "confidence_tier": "A",
       "source_type_combination": "legacy+independent",
-      "flagged": false
+      "flagged": false,
+      "lat": 43.6775282,
+      "lng": -79.4070323,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Louf Toronto"
     },
     {
       "name": "The Lunch Lady of Saigon",
@@ -256,7 +283,11 @@
       ],
       "confidence_tier": "A",
       "source_type_combination": "legacy+independent",
-      "flagged": false
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "name": "PUNCH",
@@ -279,7 +310,11 @@
       ],
       "confidence_tier": "A",
       "source_type_combination": "legacy+independent",
-      "flagged": false
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "name": "Tono by Akira Back",
@@ -303,7 +338,11 @@
       ],
       "confidence_tier": "A",
       "source_type_combination": "legacy+independent",
-      "flagged": false
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "name": "Akin",
@@ -326,7 +365,11 @@
       ],
       "confidence_tier": "A",
       "source_type_combination": "legacy+legacy",
-      "flagged": false
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "name": "Radici Project",
@@ -348,10 +391,11 @@
       "confidence_tier": "A",
       "source_type_combination": "legacy+legacy",
       "flagged": false,
-      "lat": 43.65553,
-      "lng": -79.41353,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.7220824,
+      "lng": -79.4168555,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Toronto Little Free Pantries Project"
     },
     {
       "name": "Ricky + Olivia",
@@ -376,10 +420,11 @@
       "confidence_tier": "A",
       "source_type_combination": "legacy+legacy",
       "flagged": false,
-      "lat": 43.66142,
-      "lng": -79.33955,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.6613004,
+      "lng": -79.3395637,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Ricky + Oliver"
     },
     {
       "name": "Alo",
@@ -399,7 +444,12 @@
       ],
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
-      "flagged": false
+      "flagged": false,
+      "lat": 43.6485014,
+      "lng": -79.3959394,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Alo"
     },
     {
       "name": "Bar Eugenie",
@@ -468,10 +518,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.64882,
-      "lng": -79.37326,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.6484744,
+      "lng": -79.3733173,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "The Berczy Tavern"
     },
     {
       "name": "Casa 73",
@@ -492,10 +543,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.64178,
-      "lng": -79.37751,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.6416949,
+      "lng": -79.3781058,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Casa 73"
     },
     {
       "name": "Cassius Cucina Contemporanea",
@@ -564,10 +616,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.64978,
-      "lng": -79.37797,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.6496249,
+      "lng": -79.3779095,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Convivium Dining Community"
     },
     {
       "name": "The Cottage Cheese",
@@ -588,10 +641,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.65639,
-      "lng": -79.40284,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.6561828,
+      "lng": -79.4028475,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "The Cottage Cheese"
     },
     {
       "name": "DaNico",
@@ -611,7 +665,11 @@
       ],
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
-      "flagged": false
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "name": "The Frederick",
@@ -632,10 +690,11 @@
       "confidence_tier": "B",
       "source_type_combination": "independent+none",
       "flagged": false,
-      "lat": 43.65125,
-      "lng": -79.37924,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.6486267,
+      "lng": -79.368285,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Frederick St / The Esplanade"
     },
     {
       "name": "Golden Horseshoe Barbecue",
@@ -656,10 +715,11 @@
       "confidence_tier": "B",
       "source_type_combination": "independent+none",
       "flagged": false,
-      "lat": 43.67173,
-      "lng": -79.4213,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.6715175,
+      "lng": -79.421286,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Golden Horseshoe Barbecue"
     },
     {
       "name": "Hawker",
@@ -680,10 +740,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.6565,
-      "lng": -79.40257,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.8382856,
+      "lng": -79.5243019,
+      "geo_source": "nominatim",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Hawker Road"
     },
     {
       "name": "Henry's Restaurant",
@@ -704,10 +765,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.64513,
-      "lng": -79.41581,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.7730184,
+      "lng": -79.3330817,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Lara's Restaurant"
     },
     {
       "name": "Ju-Raku",
@@ -751,7 +813,12 @@
       ],
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
-      "flagged": false
+      "flagged": false,
+      "lat": 43.6514652,
+      "lng": -79.4754414,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Lyla's House"
     },
     {
       "name": "Makilala",
@@ -772,10 +839,11 @@
       "confidence_tier": "B",
       "source_type_combination": "independent+none",
       "flagged": false,
-      "lat": 43.65274,
-      "lng": -79.3752,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.6523701,
+      "lng": -79.3752239,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Makilala"
     },
     {
       "name": "Morrellina's",
@@ -795,7 +863,11 @@
       ],
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
-      "flagged": false
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "name": "N.L. Ginzburg",
@@ -864,10 +936,11 @@
       "confidence_tier": "B",
       "source_type_combination": "independent+none",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 43.6364716,
+      "lng": -79.4370391,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "The Originals Dining Lounge"
     },
     {
       "name": "Petros82",
@@ -912,10 +985,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.60088,
-      "lng": -79.50444,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.6007694,
+      "lng": -79.5045098,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pinky Swear"
     },
     {
       "name": "Queens Harbour",
@@ -936,10 +1010,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.63874,
-      "lng": -79.38503,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.6387028,
+      "lng": -79.3850583,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Queens Harbour"
     },
     {
       "name": "Rayah",
@@ -960,10 +1035,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.66516,
-      "lng": -79.36789,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.6649485,
+      "lng": -79.3680766,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Rayah"
     },
     {
       "name": "Stefano's Diner",
@@ -984,10 +1060,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.64943,
-      "lng": -79.4244,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.7144139,
+      "lng": -79.4002194,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Uncle Betty's Diner"
     },
     {
       "name": "Stop Restaurant",
@@ -1008,10 +1085,11 @@
       "confidence_tier": "B",
       "source_type_combination": "independent+none",
       "flagged": false,
-      "lat": 43.65094,
-      "lng": -79.45053,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.6508431,
+      "lng": -79.4506319,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Stop"
     },
     {
       "name": "Sushi Kiwami",
@@ -1031,7 +1109,12 @@
       ],
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
-      "flagged": false
+      "flagged": false,
+      "lat": 43.6664232,
+      "lng": -79.385006,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Sushi Kiwami"
     },
     {
       "name": "Sushi Yugen",
@@ -1051,7 +1134,11 @@
       ],
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
-      "flagged": false
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "name": "Taverne Bernhardt's",
@@ -1074,10 +1161,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.64707,
-      "lng": -79.42391,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.740721,
+      "lng": -79.4056897,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Miller Tavern"
     },
     {
       "name": "Vinny Restaurant + Vinyl Bar",
@@ -1097,7 +1185,11 @@
       ],
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
-      "flagged": false
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "name": "Yan Dining Room",
@@ -1118,10 +1210,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.65513,
-      "lng": -79.38685,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.7706119,
+      "lng": -79.3314924,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Yan Yu Chinese Dining"
     },
     {
       "name": "Zia's Place",
@@ -1142,10 +1235,11 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.64967,
-      "lng": -79.43324,
-      "geo_source": "manual",
-      "geo_confidence": "high"
+      "lat": 43.7176628,
+      "lng": -79.3758351,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Burkebrook Place"
     }
   ]
 }
