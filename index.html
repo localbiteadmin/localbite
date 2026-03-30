@@ -954,16 +954,17 @@ function priceSymbol(level, currency) {
     const labels = ['','<100 MAD','100–250 MAD','250–500 MAD','>500 MAD'];
     return labels[level] || '';
   }
-  return '€'.repeat(level);
+  const sym = currency === 'CAD' ? '$' : '€';
+  return sym.repeat(level);
 }
 
 function poolLabel(pool) {
-  const map = { both:'EN + Local', 'both-pool':'EN + Local', en:'English', fr:'French', ar:'Arabic', es:'Spanish', ca:'Catalan', pt:'Portuguese' };
+  const map = { both:'EN + Local', 'both-pool':'EN + Local', 'multi-source':'EN + Local', en:'English', fr:'French', ar:'Arabic', es:'Spanish', ca:'Catalan', pt:'Portuguese' };
   return map[pool] || pool;
 }
 
 function poolClass(pool) {
-  if (pool === 'both' || pool === 'both-pool') return 'both';
+  if (pool === 'both' || pool === 'both-pool' || pool === 'multi-source') return 'both';
   if (pool === 'fr') return 'fr';
   if (pool === 'ar') return 'ar';
   if (pool === 'pt') return 'pt';
@@ -1014,11 +1015,6 @@ function renderCredits(sources) {
     <div class="credit-card">
       <div class="credit-pub">${escHtml(s.publication)}</div>
       ${s.writer ? `<div class="credit-writer">by ${escHtml(s.writer)}</div>` : ''}
-      <div class="credit-meta">
-        <span class="credit-lang">${escHtml(langLabel(s.language))}</span>
-        <span class="credit-type">${escHtml(s.source_type || 'primary')}</span>
-        ${s.article_date ? `<span>${escHtml(s.article_date)}</span>` : ''}
-      </div>
       ${s.writer_profile ? `<div class="credit-profile">${escHtml(s.writer_profile)}</div>` : ''}
       ${s.url ? `<a class="credit-link" href="${escHtml(s.url)}" target="_blank" rel="noopener">Read article ↗</a>` : ''}
     </div>
@@ -1114,7 +1110,7 @@ function renderHero(data, meta) {
     ${pipeline ? `<span class="city-meta-dot"></span><span class="city-meta-item">Pipeline ${escHtml(pipeline)}</span>` : ''}
   `;
 
-  const hasBoth = allRestaurants.some(r => r.language_pool==='both'||r.language_pool==='both-pool');
+  const hasBoth = allRestaurants.some(r => r.language_pool==='both'||r.language_pool==='both-pool'||r.language_pool==='multi-source');
   document.getElementById('both-pool-note').style.display = hasBoth ? 'inline-flex' : 'none';
 }
 
@@ -1137,6 +1133,7 @@ function buildFilters(restaurants, data) {
     cuiSel.style.display = 'none';
   }
 
+  const priceSym = currency === 'CAD' ? '$' : '€';
   document.getElementById('f-price').innerHTML = currency === 'MAD'
     ? `<option value="">Any price</option>
        <option value="1">Under 100 MAD (~€9)</option>
@@ -1144,10 +1141,10 @@ function buildFilters(restaurants, data) {
        <option value="3">250–500 MAD (~€22–45)</option>
        <option value="4">Over 500 MAD (~€45+)</option>`
     : `<option value="">Any price</option>
-       <option value="1">€ Budget</option>
-       <option value="2">€€ Mid-range</option>
-       <option value="3">€€€ Higher-end</option>
-       <option value="4">€€€€ Special occasion</option>`;
+       <option value="1">${priceSym} Budget</option>
+       <option value="2">${priceSym}${priceSym} Mid-range</option>
+       <option value="3">${priceSym}${priceSym}${priceSym} Higher-end</option>
+       <option value="4">${priceSym}${priceSym}${priceSym}${priceSym} Special occasion</option>`;
 
   const pools = [...new Set(restaurants.map(r=>r.language_pool).filter(Boolean))];
   const poolOptions = [
@@ -1159,7 +1156,7 @@ function buildFilters(restaurants, data) {
     ['es','Spanish sources'],
     ['ca','Catalan sources'],
     ['pt','Portuguese sources'],
-  ].filter(([v]) => v==='' || pools.some(p => v==='both' ? (p==='both'||p==='both-pool') : p===v));
+  ].filter(([v]) => v==='' || pools.some(p => v==='both' ? (p==='both'||p==='both-pool'||p==='multi-source') : p===v));
 
   document.getElementById('f-pool').innerHTML =
     poolOptions.map(([v,l])=>`<option value="${v}">${escHtml(l)}</option>`).join('');
@@ -1194,7 +1191,7 @@ function getFilteredRestaurants() {
     if (price && String(r.price_level) !== price) return false;
     if (pool) {
       const p = r.language_pool || '';
-      if (pool === 'both' && p !== 'both' && p !== 'both-pool') return false;
+      if (pool === 'both' && p !== 'both' && p !== 'both-pool' && p !== 'multi-source') return false;
       if (pool !== 'both' && p !== pool) return false;
     }
     if (q) {
@@ -1241,8 +1238,8 @@ function renderCards(restaurants) {
   if (currentView === 'list') grid.style.display = 'grid';
 
   const sorted = [...restaurants].sort((a,b) => {
-    const ap = (a.language_pool==='both'||a.language_pool==='both-pool') ? 0 : 1;
-    const bp = (b.language_pool==='both'||b.language_pool==='both-pool') ? 0 : 1;
+    const ap = (a.language_pool==='both'||a.language_pool==='both-pool'||a.language_pool==='multi-source') ? 0 : 1;
+    const bp = (b.language_pool==='both'||b.language_pool==='both-pool'||b.language_pool==='multi-source') ? 0 : 1;
     if (ap !== bp) return ap - bp;
     return (b.source_count||0) - (a.source_count||0);
   });
@@ -1260,7 +1257,7 @@ function renderCards(restaurants) {
 
 function cardHTML(r) {
   const pool = r.language_pool || 'en';
-  const isBoth = pool === 'both' || pool === 'both-pool';
+  const isBoth = pool === 'both' || pool === 'both-pool' || pool === 'multi-source';
   const cardClass = isBoth ? 'both-pool' : (pool==='fr'?'fr-pool':(pool==='ar'?'ar-pool':(pool==='pt'?'pt-pool':'')));
   const currency = r.price_currency || '€';
 
@@ -1497,7 +1494,7 @@ function updateMap(restaurants) {
 
   // Place individual pins for restaurants with real coordinates
   withCoords.forEach(r => {
-    const isBoth = r.language_pool === 'both' || r.language_pool === 'both-pool';
+    const isBoth = r.language_pool === 'both' || r.language_pool === 'both-pool' || r.language_pool === 'multi-source';
     const colour = isBoth ? '#2D6A4F' : '#C4622D';
     const highConf = isHighConfidence(r);
     const markerHtml = highConf
@@ -1515,7 +1512,7 @@ function updateMap(restaurants) {
     const price = r.price_level
       ? (r.price_currency === 'MAD'
           ? ['','<100','100–250','250–500','>500'][r.price_level] + ' MAD'
-          : '€'.repeat(r.price_level))
+          : (r.price_currency === 'CAD' ? '$' : '€').repeat(r.price_level))
       : '';
 
     const confidence = isHighConfidence(r) ? '' :
@@ -1554,7 +1551,7 @@ function updateMap(restaurants) {
         ];
       }
 
-      const hasBoth = rests.some(r => r.language_pool === 'both' || r.language_pool === 'both-pool');
+      const hasBoth = rests.some(r => r.language_pool === 'both' || r.language_pool === 'both-pool' || r.language_pool === 'multi-source');
       const colour = hasBoth ? '#2D6A4F' : '#C4622D';
 
       // Dashed border to indicate approximate location
@@ -1577,8 +1574,8 @@ function updateMap(restaurants) {
         <div style="font-family:'DM Sans',sans-serif">
           <div style="font-weight:500;font-size:13px;margin-bottom:4px;padding-bottom:4px;border-bottom:1px solid #E8DDD7">${nb} (${rests.length} restaurant${rests.length!==1?'s':''})</div>
           ${rests.map(r => {
-            const isBoth = r.language_pool === 'both' || r.language_pool === 'both-pool';
-            const price = r.price_level ? (r.price_currency === 'MAD' ? ['','<100','100–250','250–500','>500'][r.price_level]+' MAD' : '€'.repeat(r.price_level)) : '';
+            const isBoth = r.language_pool === 'both' || r.language_pool === 'both-pool' || r.language_pool === 'multi-source';
+            const price = r.price_level ? (r.price_currency === 'MAD' ? ['','<100','100–250','250–500','>500'][r.price_level]+' MAD' : (r.price_currency === 'CAD' ? '$' : '€').repeat(r.price_level)) : '';
             return `<div style="padding:3px 0;border-bottom:1px solid #f5f5f5">
               <div style="font-weight:500;font-size:12px">${r.name}${isBoth ? '<span style="background:#D8F3DC;color:#2D6A4F;font-size:9px;padding:1px 5px;border-radius:8px;margin-left:4px">Two languages</span>' : ''}</div>
               <div style="font-size:11px;color:#9E8E86">${[r.cuisine, price].filter(Boolean).join(' · ')}</div>
