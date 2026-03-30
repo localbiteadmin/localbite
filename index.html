@@ -1291,7 +1291,7 @@ function cardHTML(r) {
         return s ? `<span class="source-chip">${escHtml(s.publication)}</span>` : '';
       }).join('')}</div>` : '';
 
-  const badgeLabel = isBoth ? 'Two languages' : poolLabel(pool);
+  const badgeLabel = pool === 'multi-source' ? '' : (isBoth ? 'Two languages' : poolLabel(pool));
   const badgeTooltip = '';
 
   return `
@@ -1301,7 +1301,7 @@ function cardHTML(r) {
           <div class="card-name">${escHtml(r.name)}</div>
           ${r.name_arabic ? `<div class="card-name-arabic">${escHtml(r.name_arabic)}</div>` : ''}
         </div>
-        <span class="pool-badge ${poolClass(pool)}">${escHtml(badgeLabel)}${badgeTooltip}</span>
+        ${badgeLabel ? `<span class="pool-badge ${poolClass(pool)}">${escHtml(badgeLabel)}${badgeTooltip}</span>` : ''}
       </div>
       <div class="card-meta">
         ${metaParts.map(p=>`<span>${escHtml(p)}</span>`).join('<span class="card-meta-sep"> · </span>')}
