@@ -1147,19 +1147,26 @@ function buildFilters(restaurants, data) {
        <option value="4">${priceSym}${priceSym}${priceSym}${priceSym} Special occasion</option>`;
 
   const pools = [...new Set(restaurants.map(r=>r.language_pool).filter(Boolean))];
-  const poolOptions = [
-    ['','Source language'],
-    ['both','Two languages confirmed'],
-    ['en','English sources'],
-    ['fr','French sources'],
-    ['ar','Arabic sources'],
-    ['es','Spanish sources'],
-    ['ca','Catalan sources'],
-    ['pt','Portuguese sources'],
-  ].filter(([v]) => v==='' || pools.some(p => v==='both' ? (p==='both'||p==='both-pool'||p==='multi-source') : p===v));
-
-  document.getElementById('f-pool').innerHTML =
-    poolOptions.map(([v,l])=>`<option value="${v}">${escHtml(l)}</option>`).join('');
+  const isMonolingual = pools.every(p => p === 'en' || p === 'multi-source');
+  const poolSel = document.getElementById('f-pool');
+  if (isMonolingual) {
+    poolSel.style.display = 'none';
+    poolSel.value = '';
+  } else {
+    poolSel.style.display = '';
+    const poolOptions = [
+      ['','Source language'],
+      ['both','Two languages confirmed'],
+      ['en','English sources'],
+      ['fr','French sources'],
+      ['ar','Arabic sources'],
+      ['es','Spanish sources'],
+      ['ca','Catalan sources'],
+      ['pt','Portuguese sources'],
+    ].filter(([v]) => v==='' || pools.some(p => v==='both' ? (p==='both'||p==='both-pool'||p==='multi-source') : p===v));
+    poolSel.innerHTML =
+      poolOptions.map(([v,l])=>`<option value="${v}">${escHtml(l)}</option>`).join('');
+  }
 }
 
 function resetFilters() {
@@ -1192,7 +1199,7 @@ function getFilteredRestaurants() {
     if (pool) {
       const p = r.language_pool || '';
       if (pool === 'both' && p !== 'both' && p !== 'both-pool' && p !== 'multi-source') return false;
-      if (pool !== 'both' && p !== pool) return false;
+      if (pool !== 'both' && p !== pool && !(pool === 'en' && p === 'multi-source')) return false;
     }
     if (q) {
       const hay = [r.name, r.neighbourhood, r.cuisine, r.quote, r.signature_dish]
