@@ -258,11 +258,11 @@
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": 38.70837,
-      "lng": -9.1545,
-      "geo_source": "here",
+      "lat": 38.70854,
+      "lng": -9.15456,
+      "geo_source": "manual",
       "geo_confidence": "high",
-      "geo_matched_name": "Parra Wine Bistrô"
+      "geo_matched_name": null
     },
     {
       "name": "A Mesa do CAM",
@@ -336,11 +336,11 @@
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": 38.72542,
-      "lng": -9.13358,
-      "geo_source": "here",
+      "lat": 38.72558,
+      "lng": -9.13353,
+      "geo_source": "manual",
       "geo_confidence": "high",
-      "geo_matched_name": "O Primo do Queijo"
+      "geo_matched_name": null
     },
     {
       "name": "Sabores de Goa",
@@ -414,11 +414,11 @@
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": 38.71121,
-      "lng": -9.15283,
-      "geo_source": "here",
+      "lat": 38.71139,
+      "lng": -9.15272,
+      "geo_source": "manual",
       "geo_confidence": "high",
-      "geo_matched_name": "Juliana Penteado Pastry - São Bento"
+      "geo_matched_name": null
     },
     {
       "name": "Bichomau",
@@ -440,11 +440,11 @@
       "source_type_combination": "primary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": 38.71647,
-      "lng": -9.16233,
-      "geo_source": "here",
+      "lat": 38.71662,
+      "lng": -9.16229,
+      "geo_source": "manual",
       "geo_confidence": "high",
-      "geo_matched_name": "Bicho Mau"
+      "geo_matched_name": null
     },
     {
       "name": "Tati",
@@ -570,11 +570,11 @@
       "source_type_combination": "secondary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": 38.73396,
-      "lng": -9.14121,
-      "geo_source": "here",
+      "lat": 38.73432,
+      "lng": -9.14108,
+      "geo_source": "manual",
       "geo_confidence": "high",
-      "geo_matched_name": "Mãe Cozinha Com Amor"
+      "geo_matched_name": null
     },
     {
       "name": "Prado",
@@ -648,11 +648,11 @@
       "source_type_combination": "secondary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": 38.74075,
-      "lng": -9.14428,
-      "geo_source": "here",
+      "lat": 38.73424,
+      "lng": -9.1411,
+      "geo_source": "manual",
       "geo_confidence": "high",
-      "geo_matched_name": "Petisco Saloio"
+      "geo_matched_name": null
     },
     {
       "name": "Taberna (Bairro do Avillez)",
@@ -676,7 +676,7 @@
       "source_type_combination": "secondary-en",
       "flagged": false,
       "coi_flagged": false,
-      "lat": 38.71240,
+      "lat": 38.7124,
       "lng": -9.14231,
       "geo_source": "manual",
       "geo_confidence": "verified"
@@ -727,11 +727,11 @@
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": 38.75433,
-      "lng": -9.14352,
-      "geo_source": "here",
+      "lat": 38.75454,
+      "lng": -9.14348,
+      "geo_source": "manual",
       "geo_confidence": "high",
-      "geo_matched_name": "Quack Shack"
+      "geo_matched_name": null
     },
     {
       "name": "Broto",
@@ -754,7 +754,7 @@
       "flagged": false,
       "coi_flagged": false,
       "lat": 38.71182,
-      "lng": -9.14190,
+      "lng": -9.1419,
       "geo_source": "manual",
       "geo_confidence": "verified"
     },
@@ -778,11 +778,11 @@
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": 38.70695,
-      "lng": -9.1578,
-      "geo_source": "here",
+      "lat": 38.70714,
+      "lng": -9.15775,
+      "geo_source": "manual",
       "geo_confidence": "high",
-      "geo_matched_name": "Barbela C.P.M."
+      "geo_matched_name": null
     },
     {
       "name": "Maída",
@@ -804,11 +804,11 @@
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": 38.70883,
-      "lng": -9.14863,
-      "geo_source": "here",
+      "lat": 38.70906,
+      "lng": -9.14856,
+      "geo_source": "manual",
       "geo_confidence": "high",
-      "geo_matched_name": "Maida"
+      "geo_matched_name": null
     },
     {
       "name": "JNcQUOI Fish",
@@ -830,11 +830,11 @@
       "source_type_combination": "primary-pt",
       "flagged": false,
       "coi_flagged": false,
-      "lat": 38.73303,
-      "lng": -9.17027,
-      "geo_source": "here",
+      "lat": 38.72154,
+      "lng": -9.14741,
+      "geo_source": "manual",
       "geo_confidence": "high",
-      "geo_matched_name": "Jncquoi Fish"
+      "geo_matched_name": null
     },
     {
       "name": "Ultimo Porto",
