@@ -98,6 +98,19 @@
       "file": "localbite-chefchaouen-2025-2026.json",
       "status": "complete",
       "notes": "All sources tourist-facing — no local food critics in Chefchaouen. Bab Ssour confirmed by 5 sources including FR+EN both-pool. Nominatim v3 achieved 65% geocoding hit rate with zero false positives."
+    },
+    {
+      "city": "Toronto",
+      "country": "Canada",
+      "city_slug": "toronto-canada",
+      "pipeline": "localbite-middle-path-v5",
+      "built": "2026-03-30",
+      "restaurant_count": 45,
+      "both_pool_count": 12,
+      "source_count": 8,
+      "description": "45 restaurants from 8 named sources, all English",
+      "file": "localbite-toronto-2025-2026.json",
+      "status": "complete"
     }
   ]
 }

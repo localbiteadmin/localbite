@@ -1,0 +1,59 @@
+LOCALBITE TORONTO — PHASE 1 SEARCH PLAN
+Generated: 2026-03-29
+Total queries: 24
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ANGLE A — City-wide best restaurants EN (4 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+A1: "best restaurants Toronto 2025 food writer critic guide"
+A2: "Toronto best restaurants 2026 editorial list named author"
+A3: "where to eat Toronto 2025 food critic recommended"
+A4: "Toronto restaurant guide 2026 independent editorial review"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ANGLE B — Neighbourhood-specific EN (4 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+B1: "best restaurants King West Queen West Toronto 2025 food writer"
+B2: "Scarborough restaurant guide 2025 2026 food writer critic"
+B3: "Danforth east end Toronto best restaurants 2025 writer review"
+B4: "Annex Yorkville Toronto restaurant recommendations 2025 critic"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ANGLE C — Writer-first (3 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+C1: "Corey Mintz Toronto restaurant recommendations 2025 2026"
+C2: "Natalia Manzocco Toronto restaurant reviews 2025"
+C3: "Amy Pataki Toronto restaurant reviews 2025 2026 freelance"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ANGLE D — Cuisine and community (3 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+D1: "best Chinese restaurants Toronto 2025 food critic review"
+D2: "best South Asian Caribbean restaurants Toronto 2025 editorial"
+D3: "Toronto diverse cuisine community restaurants 2025 food writer"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ANGLE E — Independent blog discovery (3 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+E1: "Toronto food blog independent restaurant review 2025 named writer"
+E2: "Toronto restaurant personal blog review 2025 honest opinion"
+E3: "madamemarie.co Toronto restaurant reviews 2025 2026"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ANGLE F — Forum and community recommendations (2 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+F1: "Toronto where to eat reddit 2025 2026 local recommendations"
+F2: "Toronto food community recommendations best restaurants 2025"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ANGLE G — Recent openings and new restaurants 2025-2026 (2 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+G1: "best new restaurants Toronto 2025 opening food writer editorial"
+G2: "Toronto new restaurant openings 2026 must try food critic"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ANGLE H — Awards and recognition (3 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+H1: "Michelin Guide Toronto 2025 starred restaurants list"
+H2: "Canada's 100 Best Restaurants 2025 Toronto entries"
+H3: "Toronto Life best restaurants annual list 2025"
