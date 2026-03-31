@@ -499,6 +499,18 @@
 
   .card-meta-sep { color: var(--border); }
 
+  .distance-badge {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #4A90E2;
+    background: #EBF4FF;
+    border-radius: 10px;
+    padding: 2px 8px;
+    margin-left: 6px;
+    white-space: nowrap;
+  }
+
   .card-quote {
     font-size: 13px;
     color: var(--mid);
@@ -701,6 +713,35 @@
     border-color: var(--charcoal);
   }
 
+  #find-me-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 10px;
+    z-index: 1000;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: var(--cream);
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    display: none;
+  }
+
+  #find-me-btn.active {
+    background: var(--charcoal);
+    color: #fff;
+    border-color: var(--charcoal);
+  }
+
+  #find-me-btn.loading {
+    opacity: 0.6;
+    cursor: default;
+  }
+
   .map-container { display: none; }
   .map-container.visible { display: block; }
 
@@ -716,6 +757,7 @@
   }
 
   #map {
+    position: relative;
     height: 520px;
     border-radius: var(--radius);
     border: 1px solid var(--border);
@@ -925,7 +967,9 @@
   <div class="empty" id="empty" style="display:none">No restaurants match these filters.</div>
   <div class="map-container" id="map-container">
     <div class="map-caveat">⚠ Pins show approximate neighbourhood centres — not exact restaurant locations. Use the source links on each card for precise addresses.</div>
-    <div id="map"></div>
+    <div id="map">
+      <button id="find-me-btn" title="Sort by distance from my location">◎ Near me</button>
+    </div>
   </div>
 </main>
 
@@ -974,6 +1018,36 @@ function poolClass(pool) {
 function langLabel(code) {
   const map = { en:'EN', fr:'FR', ar:'AR', es:'ES', ca:'CA', pt:'PT' };
   return map[code] || code.toUpperCase();
+}
+
+function showToast(message, durationMs = 4000) {
+  const existing = document.getElementById('localbite-toast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.id = 'localbite-toast';
+  toast.textContent = message;
+  toast.style.cssText = `
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--charcoal);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 10px 18px;
+    border-radius: 20px;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.4s;
+  `;
+  document.body.appendChild(toast);
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    setTimeout(() => toast.remove(), 400);
+  }, durationMs);
 }
 
 // ── CREDITS PANEL ──
@@ -1054,6 +1128,14 @@ async function loadCity(meta) {
   allRestaurants = [];
   currentSources = {};
   currentCityData = null;
+  proximityMode = false;
+  userLatLng = null;
+  userLocationMarker = null;
+  const findMeBtn = document.getElementById('find-me-btn');
+  if (findMeBtn) {
+    findMeBtn.classList.remove('active', 'loading');
+    findMeBtn.textContent = '◎ Near me';
+  }
 
   document.getElementById('cards-grid').style.display = 'none';
   document.getElementById('empty').style.display = 'none';
@@ -1244,7 +1326,20 @@ function renderCards(restaurants) {
   empty.style.display = 'none';
   if (currentView === 'list') grid.style.display = 'grid';
 
-  const sorted = [...restaurants].sort((a,b) => {
+  const sorted = [...restaurants].sort((a, b) => {
+    if (proximityMode && userLatLng) {
+      const aHasCoords = a.lat != null && a.lng != null;
+      const bHasCoords = b.lat != null && b.lng != null;
+
+      if (aHasCoords && !bHasCoords) return -1;
+      if (!aHasCoords && bHasCoords) return 1;
+      if (!aHasCoords && !bHasCoords) return 0;
+
+      const aDist = haversineKm(userLatLng.lat, userLatLng.lng, a.lat, a.lng);
+      const bDist = haversineKm(userLatLng.lat, userLatLng.lng, b.lat, b.lng);
+      return aDist - bDist;
+    }
+
     const ap = (a.language_pool==='both'||a.language_pool==='both-pool'||a.language_pool==='multi-source') ? 0 : 1;
     const bp = (b.language_pool==='both'||b.language_pool==='both-pool'||b.language_pool==='multi-source') ? 0 : 1;
     if (ap !== bp) return ap - bp;
@@ -1267,6 +1362,13 @@ function cardHTML(r) {
   const isBoth = pool === 'both' || pool === 'both-pool' || pool === 'multi-source';
   const cardClass = isBoth ? 'both-pool' : (pool==='fr'?'fr-pool':(pool==='ar'?'ar-pool':(pool==='pt'?'pt-pool':'')));
   const currency = r.price_currency || '€';
+
+  let distanceBadge = '';
+  if (proximityMode && userLatLng && r.lat != null && r.lng != null) {
+    const km = haversineKm(userLatLng.lat, userLatLng.lng, r.lat, r.lng);
+    const distStr = km < 1 ? `${Math.round(km * 1000)}m` : `${km.toFixed(1)}km`;
+    distanceBadge = `<span class="distance-badge">${distStr}</span>`;
+  }
 
   const metaParts = [r.neighbourhood, r.cuisine, r.price_level ? priceSymbol(r.price_level, currency) : null].filter(Boolean);
 
@@ -1304,7 +1406,7 @@ function cardHTML(r) {
         ${badgeLabel ? `<span class="pool-badge ${poolClass(pool)}">${escHtml(badgeLabel)}${badgeTooltip}</span>` : ''}
       </div>
       <div class="card-meta">
-        ${metaParts.map(p=>`<span>${escHtml(p)}</span>`).join('<span class="card-meta-sep"> · </span>')}
+        ${metaParts.map(p=>`<span>${escHtml(p)}</span>`).join('<span class="card-meta-sep"> · </span>')}${distanceBadge}
       </div>
       <blockquote class="card-quote">${escHtml(r.quote||'')}${quoteLangLabel}</blockquote>
       ${r.signature_dish ? `<div class="card-dish">${escHtml(r.signature_dish)}</div>` : ''}
@@ -1415,9 +1517,40 @@ const CITY_CENTRES = {
   'Toronto': [43.6532, -79.3832],
 };
 
+const CITY_BOUNDS = {
+  'Barcelona':    { minLat: 41.32, maxLat: 41.47, minLng: 2.05,  maxLng: 2.23  },
+  'Valencia':     { minLat: 39.42, maxLat: 39.53, minLng: -0.43, maxLng: -0.31 },
+  'Lisbon':       { minLat: 38.69, maxLat: 38.80, minLng: -9.23, maxLng: -9.09 },
+  'Fes':          { minLat: 33.97, maxLat: 34.08, minLng: -5.03, maxLng: -4.95 },
+  'Marrakesh':    { minLat: 31.60, maxLat: 31.66, minLng: -8.03, maxLng: -7.96 },
+  'Rabat':        { minLat: 33.96, maxLat: 34.04, minLng: -6.88, maxLng: -6.80 },
+  'Chefchaouen':  { minLat: 35.16, maxLat: 35.18, minLng: -5.27, maxLng: -5.25 },
+  'Toronto':      { minLat: 43.58, maxLat: 43.86, minLng: -79.64, maxLng: -79.12 },
+};
+
+function isWithinCityBounds(lat, lng, cityName) {
+  const bounds = CITY_BOUNDS[cityName];
+  if (!bounds) return true;
+  return lat >= bounds.minLat && lat <= bounds.maxLat &&
+         lng >= bounds.minLng && lng <= bounds.maxLng;
+}
+
+function haversineKm(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+            Math.sin(dLng/2) * Math.sin(dLng/2);
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
 let leafletMap = null;
 let mapMarkers = [];
 let currentView = 'list';
+let userLocationMarker = null;
+let proximityMode = false;
+let userLatLng = null;
 
 // ── VIEW TOGGLE ──
 document.getElementById('btn-list').addEventListener('click', function() {
@@ -1436,6 +1569,11 @@ function setView(view) {
   document.getElementById('empty').style.display = 'none';
   document.getElementById('map-container').classList.toggle('visible', !isList);
 
+  const findMeBtn = document.getElementById('find-me-btn');
+  if (findMeBtn) {
+    findMeBtn.style.display = view === 'map' ? 'block' : 'none';
+  }
+
   if (!isList) {
     setTimeout(() => {
       initMap();
@@ -1443,6 +1581,83 @@ function setView(view) {
     }, 50);
   }
 }
+
+function handleFindMe() {
+  const btn = document.getElementById('find-me-btn');
+
+  if (proximityMode) {
+    proximityMode = false;
+    userLatLng = null;
+    btn.classList.remove('active');
+    btn.textContent = '◎ Near me';
+    if (userLocationMarker && leafletMap) {
+      leafletMap.removeLayer(userLocationMarker);
+      userLocationMarker = null;
+    }
+    renderCards(getFilteredRestaurants());
+    return;
+  }
+
+  if (btn.classList.contains('loading')) return;
+
+  btn.classList.add('loading');
+  btn.textContent = '◎ Locating…';
+
+  if (!navigator.geolocation) {
+    showToast('Geolocation is not supported by your browser.');
+    btn.classList.remove('loading');
+    btn.textContent = '◎ Near me';
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const { latitude: lat, longitude: lng } = position.coords;
+      const cityName = currentCityData ? currentCityData.city : null;
+
+      if (userLocationMarker && leafletMap) {
+        leafletMap.removeLayer(userLocationMarker);
+      }
+      userLocationMarker = L.circleMarker([lat, lng], {
+        radius: 8,
+        fillColor: '#4A90E2',
+        fillOpacity: 1,
+        color: '#fff',
+        weight: 2
+      }).addTo(leafletMap);
+
+      const inCity = cityName && isWithinCityBounds(lat, lng, cityName);
+      if (!inCity) showToast('Showing distances from your current location.');
+
+      userLatLng = { lat, lng };
+      proximityMode = true;
+      btn.classList.remove('loading');
+      btn.classList.add('active');
+      btn.textContent = '◎ Near me ✕';
+
+      renderCards(getFilteredRestaurants());
+      if (inCity) leafletMap.setView([lat, lng], 14);
+      if (userLocationMarker && leafletMap) {
+        leafletMap.removeLayer(userLocationMarker);
+      }
+      const blueDotHtml = '<div style="width:16px;height:16px;border-radius:50%;background:#4A90E2;border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);"></div>';
+      const blueDotIcon = L.divIcon({ html: blueDotHtml, className: '', iconSize: [16,16], iconAnchor: [8,8] });
+      userLocationMarker = L.marker([lat, lng], { icon: blueDotIcon, zIndexOffset: 9999 }).addTo(leafletMap);
+    },
+    (error) => {
+      btn.classList.remove('loading');
+      btn.textContent = '◎ Near me';
+      if (error.code === error.PERMISSION_DENIED) {
+        showToast('Location access denied. Enable it in your browser settings.');
+      } else {
+        showToast('Could not get your location. Please try again.');
+      }
+    },
+    { timeout: 10000, maximumAge: 60000 }
+  );
+}
+
+document.getElementById('find-me-btn').addEventListener('click', handleFindMe);
 
 function initMap() {
   if (leafletMap) {
@@ -1602,7 +1817,7 @@ function updateMap(restaurants) {
   // Fit map to all markers
   if (mapMarkers.length > 0) {
     const group = L.featureGroup(mapMarkers);
-    leafletMap.fitBounds(group.getBounds().pad(0.15));
+    if (!proximityMode) leafletMap.fitBounds(group.getBounds().pad(0.15));
   }
 }
 
