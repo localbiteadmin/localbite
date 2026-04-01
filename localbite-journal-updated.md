@@ -1045,3 +1045,106 @@ Full fetch audit results:
 - [ ] Add post-run QA script to Claude Code workflow — re-fetch all sources after each city run
 - [ ] Policy decision: sources that become inaccessible after pipeline run — add note to viewer Sources panel or accept as known limitation
 
+## Session — 2026-03-31 (Toronto Geocoding Fixes)
+
+### Overview
+
+Toronto geocoding audit and fixes completed. 20 restaurants had incorrect or missing coordinates — a combination of Nominatim/Photon false matches and new restaurants not yet in OpenStreetMap. All fixable restaurants corrected via manual Google Maps lookup.
+
+---
+
+### Geocoding Audit Results
+
+**Bounding box check:** No restaurants outside Toronto bounding box (43.58–43.86, -79.64 to -79.12) after initial fixes. However 7 restaurants were found north of Eglinton Avenue (lat > 43.706) with neighbourhood mismatches — indicating in-city false positives that bounding box validation cannot catch.
+
+**Round 1 — Null coordinates (12 restaurants):**
+
+| Restaurant | Neighbourhood | Outcome |
+|-----------|---------------|---------|
+| Alebrije | Little Italy (College St) | ✅ Fixed |
+| Belle Isle | Little India (Gerrard) | ✅ Fixed |
+| Bisteccheria Sammarco | St. Lawrence | ✅ Fixed |
+| The Lunch Lady of Saigon | Ossington | ✅ Fixed |
+| PUNCH | Entertainment District | ✅ Fixed |
+| Tono by Akira Back | Yorkville | ✅ Fixed |
+| Akin | Downtown Core | ✅ Fixed |
+| DaNico | Little Italy (College St) | ✅ Fixed |
+| Morrellina's | Annex | ✅ Fixed |
+| Oro Luxury Dining | Little Italy (College St) | ❌ Not found — left as null |
+| Sushi Yugen | Financial District | ✅ Fixed |
+| Vinny Restaurant + Vinyl Bar | King West | ✅ Fixed |
+
+**Round 1 — Wrong coordinates (3 restaurants):**
+
+| Restaurant | Wrong Location | Outcome |
+|-----------|---------------|---------|
+| Hawker | North York (Nominatim false match) | ✅ Fixed |
+| Henry's Restaurant | North York (Photon false match) | ✅ Fixed |
+| Yan Dining Room | North York/Scarborough (Photon false match) | ✅ Fixed |
+
+**Round 2 — In-city false positives north of Eglinton (7 found, 5 fixed):**
+
+| Restaurant | Issue | Outcome |
+|-----------|-------|---------|
+| Radici Project | Geocoded to north of Eglinton, listed as Little Italy | ✅ Fixed |
+| Stefano's Diner | Geocoded north of Eglinton, listed as Dundas West | ✅ Fixed |
+| Taverne Bernhardt's | Geocoded north of Eglinton, listed as Ossington | ✅ Fixed |
+| Zia's Place | Geocoded north of Eglinton, listed as Little Portugal | ✅ Fixed |
+| Petros82 | Geocoded to York Mills Rd location, listed as North York | ✅ Fixed — corrected to Adelaide St downtown location |
+| Ju-Raku | North of Eglinton, listed as North York | ✅ Correct — legitimately in North York |
+| NOPO Korean Bistro | North of Eglinton, listed as Yorkville | ✅ Coordinates correct — neighbourhood corrected to North York |
+
+---
+
+### Final Geocoding State — Toronto
+
+| Category | Count |
+|----------|-------|
+| Valid downtown coordinates | 43 |
+| Null (Oro Luxury Dining — not found) | 1 |
+| Legitimately in North York (Ju-Raku, NOPO, Petros82) | 3 |
+| **Total restaurants** | **45** |
+
+---
+
+### Key Findings
+
+1. **Bounding box validation catches out-of-city false positives but not in-city ones.** 7 restaurants were geocoded to wrong Toronto locations that were still within the bounding box. The only way to catch these is cross-referencing coordinates against neighbourhood expectations — a manual step.
+
+2. **Photon false matches are as common as Nominatim false matches.** Henry's Restaurant and Yan Dining Room were both Photon matches to wrong North York locations. Photon is not meaningfully more accurate than Nominatim for new or ambiguous restaurant names.
+
+3. **New restaurants (2025 openings) are systematically underrepresented in OSM.** Most of the 12 null-coordinate restaurants were 2025 openings. This is structural — OSM lags behind new openings by months or years. For any city with recent restaurant data, manual geocoding will always be needed for a significant portion of the pack.
+
+4. **Neighbourhood field in JSON is not always reliable for geocoding validation.** NOPO Korean Bistro was listed as "Yorkville" but is actually in North York — a pipeline extraction error. Cross-referencing neighbourhood against coordinates revealed the discrepancy.
+
+5. **Oro Luxury Dining could not be found** — may have closed or rebranded before or shortly after the pipeline run. Left as null with neighbourhood centroid fallback in the viewer.
+
+---
+
+### Toronto Restaurant Count Discrepancy — Resolved
+
+Search log reported 46 restaurants in the final file; JSON contains 45. Investigation found:
+- 4 user removals at review stage: Beso by Patria, Don Alfonso 1890, Mhel, MSSM ✅ confirmed
+- 1 additional missing restaurant: The Ballyhoo Public House (Tier B, Foodism summer 2025) — confirmed permanently closed. Correctly excluded. Not a pipeline error.
+- confidence_tiers metadata slightly off (reviewed_kept: 34 should be 33) — minor documentation issue, not corrected.
+
+---
+
+### Files Updated
+
+| File | Change |
+|------|--------|
+| `localbite-toronto-2025-2026.json` | 20 geocoding fixes across 2 rounds; NOPO neighbourhood corrected |
+
+---
+
+### Outstanding Items
+
+- [ ] Oro Luxury Dining — permanently closed or rebranded? Remove from pack in Toronto v2 if confirmed closed
+- [ ] Toronto supplementary run — NOW Toronto (Keema Lesesne), Foodism (Betty Binon), Madame Marie summer 2025 all now fetchable; up to 29 restaurants potentially recoverable
+- [ ] Toronto initial map zoom too wide — fitBounds zooms to fit all pins across Greater Toronto area; consider tighter default zoom
+- [ ] Update localbite-index.json — Chefchaouen restaurant count needs correcting from 17 to 12
+- [ ] Barcelona both-pool audit against corrected definition (same-publisher cross-language editions do not qualify)
+- [ ] Add fetch quality gate to pipeline prompt before next city run
+- [ ] Add post-run QA script to Claude Code workflow
+- [ ] Chefchaouen v2 — find named sources to replace anonymous S2 and S3
