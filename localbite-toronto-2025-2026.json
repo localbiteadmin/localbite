@@ -391,10 +391,10 @@
       "confidence_tier": "A",
       "source_type_combination": "legacy+legacy",
       "flagged": false,
-      "lat": 43.7220824,
-      "lng": -79.4168555,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
+      "lat": 43.65557,
+      "lng": -79.41357,
+      "geo_source": "manual",
+      "geo_confidence": "high",
       "geo_matched_name": "Toronto Little Free Pantries Project"
     },
     {
@@ -896,7 +896,7 @@
     {
       "name": "NOPO Korean Bistro",
       "name_variants": [],
-      "neighbourhood": "Yorkville",
+      "neighbourhood": "North York",
       "cuisine": "Korean",
       "opening_year": 2025,
       "price_level": 2,
@@ -961,8 +961,8 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.74766,
-      "lng": -79.39095,
+      "lat": 43.64767,
+      "lng": -79.39099,
       "geo_source": "manual",
       "geo_confidence": "high"
     },
@@ -1060,10 +1060,10 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.7144139,
-      "lng": -79.4002194,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
+      "lat": 43.64934,
+      "lng": -79.42445,
+      "geo_source": "manual",
+      "geo_confidence": "high",
       "geo_matched_name": "Uncle Betty's Diner"
     },
     {
@@ -1161,10 +1161,10 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.740721,
-      "lng": -79.4056897,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
+      "lat": 43.64709,
+      "lng": -79.42399,
+      "geo_source": "manual",
+      "geo_confidence": "high",
       "geo_matched_name": "Miller Tavern"
     },
     {
@@ -1235,10 +1235,10 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy+none",
       "flagged": false,
-      "lat": 43.7176628,
-      "lng": -79.3758351,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
+      "lat": 43.64971,
+      "lng": -79.43322,
+      "geo_source": "manual",
+      "geo_confidence": "high",
       "geo_matched_name": "Burkebrook Place"
     }
   ]
