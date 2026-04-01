@@ -1,0 +1,9 @@
+.DS_Store
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+w800*/
+h600*/
+tiles/
