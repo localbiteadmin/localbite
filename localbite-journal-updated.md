@@ -1148,3 +1148,128 @@ Search log reported 46 restaurants in the final file; JSON contains 45. Investig
 - [ ] Add fetch quality gate to pipeline prompt before next city run
 - [ ] Add post-run QA script to Claude Code workflow
 - [ ] Chefchaouen v2 — find named sources to replace anonymous S2 and S3
+
+## Session — 2026-04-02 (Toronto Supplementary Run + Source Profile Fixes)
+
+### Overview
+
+Toronto supplementary pass completed. Three sources that failed or partially fetched during the original pipeline run (2026-03-30) were re-fetched and extracted manually. 10 restaurants added, 3 permanently closed restaurants removed during geocoding, 4 writer profiles cleaned of internal pipeline notes.
+
+Final Toronto pack: 52 restaurants (up from 45 original).
+
+---
+
+### Supplementary Run — Sources Re-fetched
+
+| Source | Writer | Original failure | Status today | New restaurants added |
+|--------|--------|-----------------|-------------|----------------------|
+| NOW Toronto (Caribbean guide) | Keema Lesesne | Fetch failed (840 chars) | ✅ Fully accessible | 7 (after removing 1 established restaurant, 3 permanently closed) |
+| Foodism CA (winter 2026) | Betty Binon | Partial fetch (3,847 chars) | ✅ Fully accessible | 0 — excluded due to Foodism concentration cap |
+| Madame Marie (summer 2025) | Mme. M. | Partial fetch (2,847 chars) | ✅ Fully accessible | 3 (after removing 3 permanently closed) |
+
+---
+
+### Foodism Concentration Cap — Decision Documented
+
+Foodism already had 24 single-source entries in the 45-restaurant pack (53% — well over the 30% cap). The cap should have fired during the original pipeline run but did not. Adding 5 more Foodism single-source entries from the Betty Binon article would have worsened the concentration to 58%. Decision: exclude all Foodism additions from this supplementary pass. Document as known issue for Toronto v2.
+
+Note: the 30% cap was designed for multilingual cities to prevent one language dominating. For single-language cities like Toronto, Foodism's dominance may reflect the structural reality of Toronto food writing. This warrants reconsideration in v2 — either a higher cap for single-language cities or a publisher-level cap rather than a source-level cap.
+
+---
+
+### Restaurants Added (10 initial, 3 removed as permanently closed)
+
+**NOW Toronto — Keema Lesesne:**
+
+| Restaurant | Neighbourhood | Cuisine | Status |
+|-----------|--------------|---------|--------|
+| Chubby's Jamaican Kitchen | Entertainment District | Jamaican | ✅ Added |
+| Mona's Roti | Scarborough | Trinidadian | ✅ Added |
+| Taste of Life Restaurant and Lounge | Etobicoke | St. Vincent Caribbean | ❌ Permanently closed |
+| Simone's Caribbean Restaurant | Greektown (Danforth) | Jamaican | ✅ Added |
+| Tropical Nights | Scarborough | Guyanese fusion | ❌ Permanently closed |
+| 9 Mile | Bloor West Village | Jamaican | ✅ Added |
+| Old Nassau | Weston | Bahamian | ✅ Added |
+| Patois | Dundas West | Asian Caribbean | ❌ Excluded — established restaurant, not a 2025-2026 opening |
+
+**Madame Marie — summer 2025:**
+
+| Restaurant | Neighbourhood | Cuisine | Status |
+|-----------|--------------|---------|--------|
+| Occhiolino | Annex | Italian pasta | ✅ Added |
+| Tutto Panino | Roncesvalles | Italian sandwiches | ✅ Added |
+| Harlem | Queen West | Soul food | ❌ Permanently closed |
+
+**Also excluded from Madame Marie (no dish specifics):** Dopamina, Ayla, Bonito's, Casa Morales, Ariete e Toro
+
+**Also excluded from Foodism (no dish specifics or chain):** Cassette, Chon Modern Thai Cuisine, Bar Filo, Hello Nori (chain), Mandy's (chain)
+
+---
+
+### Geocoding — Supplementary Restaurants
+
+All 7 added restaurants geocoded manually via Google Maps. All coordinates verified within Toronto bounding box.
+
+---
+
+### Writer Profile Fixes
+
+Four writer profiles contained internal pipeline notes (fetch quality, tier assignments) visible to users in the Sources panel. All cleaned:
+
+| Source | Note removed |
+|--------|-------------|
+| foodism-winter-new-2026 | "fetch was partial (3,847 chars); restaurants auto-rejected at Tier C" |
+| madamemarie-summer-2025 | "fetch was partial (2,847 chars); auto-rejected at Tier C; Four corroborated by Foodism qualified as Tier A" |
+| nowtoronto-caribbean-2025 | "fetch failed (840 chars); all 8 restaurants auto-rejected at Tier C" |
+| nowtoronto-michelin-2025 | Geographic exclusion note |
+
+**Going forward:** pipeline prompt must be updated to never include fetch quality, tier assignments, or rejection notes in the `writer_profile` field — this field is user-facing.
+
+---
+
+### Toronto Pack — Final State
+
+| Metric | Original | After supplementary |
+|--------|---------|-------------------|
+| Restaurants | 45 | 52 |
+| Sources | 8 | 8 (no new sources added) |
+| NOW Toronto restaurants | 0 | 7 |
+| Madame Marie summer restaurants | 4 (corroborated) | 7 |
+| Geocoded | 43 | 50 |
+| Null coordinates | 2 | 2 (Oro Luxury Dining + 1) |
+
+---
+
+### Key Findings
+
+1. **3 of 10 supplementary restaurants were permanently closed.** Caribbean dining spots in particular have high turnover. For any supplementary pass, manual verification of open/closed status is essential before adding to the pack.
+
+2. **Patois exclusion confirmed.** Patois at 794 Dundas St W is an established restaurant that opened well before 2025. Its inclusion in Keema Lesesne's 2025 Caribana guide was as a recommendation, not a new opening. Correctly excluded.
+
+3. **Foodism concentration is a structural problem for Toronto.** With 24 of 45 original restaurants from Foodism sources, the pack is over-reliant on a single publisher. This is partly a pipeline failure (cap didn't fire) and partly structural (Foodism is the most prolific Toronto food publisher). Toronto v2 should actively seek to diversify sources and apply the cap correctly.
+
+4. **Writer profiles must never contain pipeline internals.** The pipeline wrote fetch quality notes and tier rejection counts into user-facing writer profiles. This is a prompt quality failure. Add explicit instruction to v6 prompt: writer_profile field is user-facing — no pipeline notes, no fetch data, no tier information.
+
+5. **Mobile Safari caching.** Changes to GitHub Pages JSON files may not appear on mobile Safari for several minutes due to aggressive caching. Private browsing tab is the reliable workaround for immediate verification.
+
+---
+
+### Files Updated
+
+| File | Change |
+|------|--------|
+| `localbite-toronto-2025-2026.json` | +7 restaurants, -3 permanently closed, geocoding, writer profile fixes |
+
+---
+
+### Outstanding Items
+
+- [ ] Toronto v2 — address Foodism concentration (24/52 single-source entries from one publisher)
+- [ ] Toronto v2 — find additional independent sources to diversify pack
+- [ ] Reconsider concentration cap rules for single-language cities
+- [ ] Add prompt instruction: writer_profile is user-facing — no pipeline notes ever
+- [ ] Check other city packs for pipeline notes in writer_profile fields
+- [ ] Update localbite-index.json — Toronto restaurant count now 52
+- [ ] Barcelona both-pool audit against corrected definition
+- [ ] Add fetch quality gate to pipeline prompt before next city run
+- [ ] Chefchaouen v2 — find named sources to replace anonymous S2 and S3
