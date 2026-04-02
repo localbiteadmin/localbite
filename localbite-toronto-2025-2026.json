@@ -1262,10 +1262,10 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy_institutional",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 43.64551,
+      "lng": -79.40064,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Mona's Roti",
@@ -1288,36 +1288,10 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy_institutional",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
-    },
-    {
-      "name": "Taste of Life Restaurant and Lounge",
-      "name_variants": [
-        "Taste of Life"
-      ],
-      "neighbourhood": "Etobicoke",
-      "cuisine": "St. Vincent Caribbean",
-      "opening_year": null,
-      "price_level": 2,
-      "price_currency": "CAD",
-      "signature_dish": "Red Belly coconut slices; stewed turkey with plantain; Vincy-style wings",
-      "quote": "Taste the flavours of the small island of St. Vincent — Red Belly coconut slices, stewed turkey with plantain, pie peas, or Vincy-style wings; opens your tastebuds to one of the overlooked islands of the Caribbean.",
-      "quote_language": "original",
-      "language_pool": "en",
-      "source_count": 1,
-      "sources": [
-        "nowtoronto-caribbean-2025"
-      ],
-      "confidence_tier": "B",
-      "source_type_combination": "legacy_institutional",
-      "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 43.7917,
+      "lng": -79.25091,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Simone's Caribbean Restaurant",
@@ -1340,34 +1314,10 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy_institutional",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
-    },
-    {
-      "name": "Tropical Nights",
-      "name_variants": [],
-      "neighbourhood": "Scarborough",
-      "cuisine": "Guyanese fusion",
-      "opening_year": null,
-      "price_level": 2,
-      "price_currency": "CAD",
-      "signature_dish": "Fried rice; curry dishes",
-      "quote": "A Guyanese gem in Scarborough offering a fusion of European, East Indian, Chinese, African, and Amerindian flavours introduced in the Caribbean — from fried rice to curry dishes with the most diverse flavours.",
-      "quote_language": "original",
-      "language_pool": "en",
-      "source_count": 1,
-      "sources": [
-        "nowtoronto-caribbean-2025"
-      ],
-      "confidence_tier": "B",
-      "source_type_combination": "legacy_institutional",
-      "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 43.67896,
+      "lng": -79.34651,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "9 Mile",
@@ -1390,10 +1340,10 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy_institutional",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 43.6585,
+      "lng": -79.44349,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Old Nassau",
@@ -1414,10 +1364,10 @@
       "confidence_tier": "B",
       "source_type_combination": "legacy_institutional",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 43.70203,
+      "lng": -79.52149,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Occhiolino",
@@ -1438,10 +1388,10 @@
       "confidence_tier": "B",
       "source_type_combination": "independent_freelance",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 43.65722,
+      "lng": -79.40754,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     },
     {
       "name": "Tutto Panino",
@@ -1462,34 +1412,10 @@
       "confidence_tier": "B",
       "source_type_combination": "independent_freelance",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
-    },
-    {
-      "name": "Harlem",
-      "name_variants": [],
-      "neighbourhood": "Queen West",
-      "cuisine": "Soul Food",
-      "opening_year": 2025,
-      "price_level": 2,
-      "price_currency": "CAD",
-      "signature_dish": "Catfish",
-      "quote": "A triumphant return to Queen West, Harlem blends soul food, art, and live music into a space that's as much a cultural institution as a restaurant — whether you're there for the catfish, the jazz, or the sense of community, Harlem delivers with feeling.",
-      "quote_language": "original",
-      "language_pool": "en",
-      "source_count": 1,
-      "sources": [
-        "madamemarie-summer-2025"
-      ],
-      "confidence_tier": "B",
-      "source_type_combination": "independent_freelance",
-      "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 43.64297,
+      "lng": -79.44237,
+      "geo_source": "manual",
+      "geo_confidence": "high"
     }
   ]
 }
