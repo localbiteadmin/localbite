@@ -1,0 +1,123 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city.
+Part 2 is the pipeline engine — do not modify it.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Valencia
+COUNTRY: Spain
+CITY_SLUG: valencia-spain
+CITY_TYPE: european_major
+
+LANGUAGE_PRIMARY: Spanish / Valencian (Catalan dialect)
+LANGUAGE_CODES: EN / ES / VAL
+SEARCH_LANGUAGES: English, Spanish, Valencian
+
+CONTENT_WINDOW: 2023–2026
+
+SEARCH_ANGLE_EXAMPLES:
+- "best restaurants Valencia Spain food writer guide 2024"
+- "mejores restaurantes Valencia guía gastronómica periodista 2025"
+- "millors restaurants València guia gastronomica recomanació 2023"
+- "where to eat Valencia neighbourhood food writer 2026"
+- "crítica gastronómica Valencia restaurantes independiente 2024"
+
+SOURCE_EXAMPLES:
+Primary EN:
+- The Infatuation (David Neimanis — EN, confirmed active 2025)
+- Amsterdam Foodie (Vicky Hampton — EN, confirmed active 2025)
+- Devour Tours blog — NOTE: previously found to carry 2017 content
+  labelled as "updated 2025". Do not accept without verifying
+  article date from fetched text.
+
+Primary ES:
+- Bonviveur (Yolanda Galiana — ES, confirmed active 2026)
+- Grupo Gastro Trinquet (Albert Padilla — ES, confirmed active 2025)
+- GastroSpain (Irene Sánchez & Julián Acebes — ES, confirmed 2025
+  but covers Comunitat Valenciana not Valencia city only — geographic
+  filter required at extraction stage)
+- Las Provincias (local newspaper food section — ES, named writers)
+- Levante-EMV (local newspaper food section — ES, named writers;
+  paywalled in previous runs — attempt fetch, log if blocked)
+- Valencia Plaza (local news food section — ES, named writers)
+- ElDiario.es Valencia (Cristina Hernán — ES, low return rate in
+  previous run; deprioritise but include if good content found)
+
+Primary VAL (Valencian):
+- El Temps (Valencian language weekly — culture and food coverage)
+- Saó (Valencian language magazine — regional culture)
+- La Veu del País Valencià (named writers in Valencian)
+
+NOTE: Valencia Secreta (Álvaro Llagunes) was active in previous
+runs — confirm still publishing 2025-2026 content.
+
+DIRECT_FETCH_SOURCES:
+[Leave blank — no pre-verified independent sources with confirmed
+active URLs for Valencia. Rely on Phase 1 searches.]
+
+KNOWN_COMMERCIAL_CONFLICTS:
+- Time Out Valencia — part of Time Out group operating food markets
+  in other cities; disclose if used, flag ⚠ coi
+
+SECONDARY_SOURCES: Time Out Valencia, The Infatuation (treat as
+  secondary for Valencia — limited local knowledge), Condé Nast
+  Traveller, Lonely Planet, Michelin Guide Spain, Guía Repsol
+  (national rankings section only — city guides are primary)
+
+SIBLING EDITION NOTE:
+Valencian (Val) and Spanish (ES) sources from the same publisher
+do NOT qualify as independent sources for both-pool. Verify
+editorial independence before treating as separate pools.
+Valencian-language sources from independent regional publishers
+(not Spanish national media with Valencian editions) qualify as
+a genuinely independent language pool.
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+- yelp.com (aggregator — reject)
+- tripadvisor.com (aggregator — reject)
+- opentable.com (booking site — reject)
+- devourtours.com (check date carefully — "updated" labels are
+  unreliable; verify from fetched article text)
+- gastro-spain.com (covers Comunitat Valenciana not Valencia city
+  — geographic filter required, expect many out-of-city entries)
+
+PRICE_CURRENCY: EUR
+PRICE_LEVELS:
+- 1 = under €20pp
+- 2 = €20–40pp
+- 3 = €40–80pp
+- 4 = over €80pp
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Ciutat Vella, El Carmen, Barri del Mercat, La Xerea, El Pilar,
+La Seu, Ruzafa (Russafa), Eixample, Pla del Remei, Gran Via,
+El Botànic, Extramurs, Campanar, Benimaclet, Algirós, Quatre
+Carreres, Jesús, Patraix, La Saïdia, Poblats Marítims, Cabanyal,
+Malvarrosa, Natzaret, El Grau, Orriols, Torrefiel, Trinitat,
+Sant Antoni, Exposició, Arrancapins, Montolivet, En Corts,
+L'Olivereta, Safranar, Vara de Quart, Marxalenes
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Alicante, Dénia, Gandia, Sagunto, Morella, Altea, Torrevieja,
+Castelló de la Plana, Alfafara, Carcaixent, San Antonio de
+Benagéber, Alzira, or any location described as "outside Valencia",
+"Costa Blanca", "Costa Azahar", "Comunitat Valenciana" without
+being within Valencia city proper, or "day trip from Valencia".
+NOTE: GastroSpain and similar regional guides include restaurants
+across the Comunitat Valenciana — auto-exclude anything not
+explicitly stated as being in Valencia city.
+
+SINGLE_LANGUAGE_CITY: NO
+RIAD_RULE: NOT_APPLICABLE
+
+PROXIMITY_RADIUS_KM: 20
+  [Default for european_major. Override if needed.]
+
+OUTPUT_RAW: ./localbite-valencia-raw.json
+OUTPUT_FINAL: ./localbite-valencia-2023-2026.json
+OUTPUT_WORKING: ./localbite-valencia-working.json
+OUTPUT_SEARCH_LOG: ./localbite-valencia-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-valencia-search-plan.txt
+OUTPUT_FAILED_SOURCES: ./localbite-valencia-failed-sources.txt
+OUTPUT_AUDIT: ./localbite-valencia-audit.txt

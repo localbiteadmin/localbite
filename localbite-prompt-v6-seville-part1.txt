@@ -1,0 +1,119 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city.
+Part 2 is the pipeline engine — do not modify it.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Seville
+COUNTRY: Spain
+CITY_SLUG: seville-spain
+CITY_TYPE: european_major
+
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: EN / ES
+SEARCH_LANGUAGES: English, Spanish
+
+CONTENT_WINDOW: 2023–2026
+
+SEARCH_ANGLE_EXAMPLES:
+- "best restaurants Seville Spain food writer guide 2024"
+- "mejores restaurantes Sevilla guía gastronómica periodista 2025"
+- "donde comer Sevilla recomendaciones critica gastronomica 2023"
+- "tapas bares Sevilla escritor gastronomia local 2026"
+- "Seville food guide local writer neighbourhood restaurants 2024"
+
+SOURCE_EXAMPLES:
+Primary EN:
+- Spanish Sabores (Lauren Aloise — EN expat food blogger, longtime
+  Seville resident; previously confirmed as high-quality source)
+- Devour Seville / Devour Tours (EN walking tour company blog —
+  treat with caution; verify date from fetched text; treat as
+  secondary given commercial tour operator relationship)
+- Culinary Backstreets (EN — independent food writing platform,
+  Seville coverage by named writers)
+- The Infatuation (if Seville coverage exists — treat as secondary)
+
+Primary ES:
+- Sevilla Secreta (sevillasecreta.co — ES, confirmed local Seville
+  publication writing for locals, not tourists; previously found
+  72% non-overlap with English sources — high priority source)
+- ABC de Sevilla (named food journalists — ES, major regional paper)
+- El Correo de Andalucía (named food writers — ES, local paper)
+- Guía Repsol (ES — city guide section, not national rankings)
+- Diario de Sevilla (named food writers — ES, local paper)
+- El Independiente de Granada / Andalucía (regional food coverage)
+
+CRITICAL NOTE — FABRICATION RISK:
+The original Seville sessions (March 2026) produced fabricated
+source attributions when the pipeline used search snippets as
+proxies for article content. The v6 fetch discipline and
+traceability check rules directly address this. Never extract
+a restaurant from a source unless you have fetched the full
+article text and the restaurant name appears in that text.
+Spanish Sabores, Devour Tours, Sevilla Secreta, and Guía Repsol
+were all involved in prior fabrication incidents — treat each
+as a new source requiring fresh fetch verification.
+
+DIRECT_FETCH_SOURCES:
+- https://sevillasecreta.co/category/restaurantes/ (Sevilla Secreta
+  — ES, confirmed local publication; high priority)
+- https://www.spanishsabores.com/category/seville/ (Spanish Sabores
+  — EN, Lauren Aloise; confirmed local knowledge)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+- Devour Tours — commercial tour operator that also publishes
+  restaurant recommendations; disclose in writer profile,
+  flag ⚠ coi, treat as secondary
+- Any publication that operates restaurant reservations or
+  receives advertising from reviewed restaurants — flag if found
+
+SECONDARY_SOURCES: Time Out Sevilla, The Infatuation, Condé Nast
+  Traveller, Lonely Planet, Michelin Guide Spain, Guía Repsol
+  (national rankings only — city guide is primary),
+  Devour Tours / Devour Seville (commercial tour operator)
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+- yelp.com (aggregator — reject)
+- tripadvisor.com (aggregator — reject)
+- opentable.com (booking site — reject)
+- devourtours.com / devourseville.com (secondary — commercial COI;
+  fetch and include but cap at 20 restaurants, flag ⚠ coi)
+
+PRICE_CURRENCY: EUR
+PRICE_LEVELS:
+- 1 = under €15pp
+- 2 = €15–35pp
+- 3 = €35–70pp
+- 4 = over €70pp
+NOTE: Seville is generally more affordable than Barcelona or Madrid.
+Price levels set lower to reflect local market.
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Casco Antiguo, Triana, Santa Cruz, El Arenal, La Macarena,
+Los Remedios, Nervión, San Pablo-Santa Justa, Cerro-Amate,
+Bellavista-La Palmera, Heliópolis, Sevilla Este, Torreblanca,
+El Porvenir, Pino Montano, Palmete, La Barzola, Rochelambert,
+Sur, Norte, Este, Oeste (all within the municipal boundary of
+Seville / Sevilla)
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Dos Hermanas, Alcalá de Guadaíra, Coria del Río, La Rinconada,
+Santiponce, Mairena del Aljarafe, Bormujos, Tomares, or any
+location described as "outside Seville", "near Seville",
+"greater Seville area", "Andalucía" without being within
+Seville city proper, or "day trip from Seville".
+
+SINGLE_LANGUAGE_CITY: NO
+RIAD_RULE: NOT_APPLICABLE
+
+PROXIMITY_RADIUS_KM: 20
+  [Default for european_major. Override if needed.]
+
+OUTPUT_RAW: ./localbite-seville-raw.json
+OUTPUT_FINAL: ./localbite-seville-2023-2026.json
+OUTPUT_WORKING: ./localbite-seville-working.json
+OUTPUT_SEARCH_LOG: ./localbite-seville-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-seville-search-plan.txt
+OUTPUT_FAILED_SOURCES: ./localbite-seville-failed-sources.txt
+OUTPUT_AUDIT: ./localbite-seville-audit.txt

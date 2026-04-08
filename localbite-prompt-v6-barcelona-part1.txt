@@ -1,0 +1,117 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city.
+Part 2 is the pipeline engine — do not modify it.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Barcelona
+COUNTRY: Spain
+CITY_SLUG: barcelona-spain
+CITY_TYPE: european_major
+
+LANGUAGE_PRIMARY: Spanish / Catalan
+LANGUAGE_CODES: EN / ES / CA
+SEARCH_LANGUAGES: English, Spanish, Catalan
+
+CONTENT_WINDOW: 2023–2026
+
+SEARCH_ANGLE_EXAMPLES:
+- "best restaurants Barcelona food writer guide 2024"
+- "mejores restaurantes Barcelona guía gastronómica periodista 2025"
+- "millors restaurants Barcelona guia gastronomica recomanacio 2023"
+- "on menjar El Born Barcelona recomanacio gastronomica 2026"
+- "food critic Barcelona restaurant recommendations independent 2024"
+
+SOURCE_EXAMPLES:
+Primary EN (named local voices):
+- Barcelona Food Experience (Maria / various — active, EN expat blog)
+- The New Barcelona Post (Anna Torrents — EN local journalism)
+- Fancy Nancista (Nancy — EN expat, active 2025-2026)
+- The Infatuation (Isabelle Kliger — EN, treat as secondary)
+
+Primary ES:
+- Guía Repsol (Lourdes López and others — ES, major food guide)
+- Time Out Barcelona ES (Ricard Martín — ES, treat as secondary)
+- El Comidista / El País (named food journalists — ES)
+- Gastronosfera (named writers — ES food criticism)
+
+Primary CA:
+- Beteve.cat (Carmen Cortés Vidal — CA, Slow Food Barcelona guide)
+- Ara.cat Mengem (Rosa Rodón — CA, major Catalan newspaper food section)
+- ElNacional.cat (Oriol Foix — CA, Catalan news food section)
+- NacióDigital gastronomia (named CA writers)
+
+NOTE from v4 run: Ara.cat rejected previously for no byline on
+fetched article — check for named author before accepting.
+ElNacional.cat returning 403 as of April 2026 — attempt fetch
+but do not rely on it; if blocked, skip and log.
+Fancy Nancista skews heavily toward Asian restaurants in Eixample
+— note editorial narrowness if selected, limit to 20 restaurants.
+
+DIRECT_FETCH_SOURCES:
+- https://beteve.cat/estils-de-vida/ (Beteve.cat — CA, Slow Food
+  guide; confirmed active in v4 run)
+- https://www.barcelonafoodexperience.com (Barcelona Food Experience
+  — EN; confirmed active in v4 run)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+- Time Out Barcelona — operates Time Out Market Barcelona food hall;
+  disclose in writer profile, flag ⚠ coi, include as secondary
+
+SECONDARY_SOURCES: Time Out Barcelona, Time Out Barcelona ES,
+  Time Out Barcelona CA, The Infatuation, Condé Nast Traveller,
+  Lonely Planet, Michelin Guide Spain, Guía Repsol (national awards
+  section — accept Repsol city guides as primary, national rankings
+  as secondary)
+
+SIBLING EDITION NOTE:
+Time Out Barcelona publishes ES and CA editions. In the v4 run
+these were confirmed to share the same editorial team and restaurant
+list. They do NOT qualify as independent sources for both-pool.
+Treat all Time Out Barcelona editions (EN/ES/CA) as a single
+secondary source regardless of language.
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+- yelp.com (aggregator — reject)
+- tripadvisor.com (aggregator — reject)
+- opentable.com (booking site — reject)
+- timeout.com/barcelona (secondary — fetch but cap at 30 entries)
+- elnacional.cat (returning 403 as of April 2026 — attempt, log
+  if blocked, do not retry more than once)
+
+PRICE_CURRENCY: EUR
+PRICE_LEVELS:
+- 1 = under €20pp
+- 2 = €20–40pp
+- 3 = €40–80pp
+- 4 = over €80pp
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Eixample, Eixample Dreta, Eixample Esquerra, Gràcia, Vila de Gràcia,
+Camp de l'Arpa, El Raval, El Born, El Barri Gòtic, Sant Pere,
+Santa Caterina, Poblenou, Sant Antoni, Poble Sec, Sants,
+Sarrià-Sant Gervasi, Les Corts, Horta-Guinardó, Sant Andreu,
+Sant Martí, Nou Barris, Barceloneta, Montjuïc, Clot, Glòries,
+22@ District, Diagonal Mar, Fort Pienc, La Sagrada Família,
+Dreta de l'Eixample, Esquerra de l'Eixample
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Sitges, L'Hospitalet de Llobregat, Badalona, Terrassa, Sabadell,
+Cornellà, Sant Boi, Gavà, Castelldefels, or any location described
+as "outside Barcelona", "near Barcelona", "greater Barcelona area",
+or "day trip from Barcelona"
+
+SINGLE_LANGUAGE_CITY: NO
+RIAD_RULE: NOT_APPLICABLE
+
+PROXIMITY_RADIUS_KM: 20
+  [Default for european_major. Override if needed.]
+
+OUTPUT_RAW: ./localbite-barcelona-raw.json
+OUTPUT_FINAL: ./localbite-barcelona-2023-2026.json
+OUTPUT_WORKING: ./localbite-barcelona-working.json
+OUTPUT_SEARCH_LOG: ./localbite-barcelona-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-barcelona-search-plan.txt
+OUTPUT_FAILED_SOURCES: ./localbite-barcelona-failed-sources.txt
+OUTPUT_AUDIT: ./localbite-barcelona-audit.txt
