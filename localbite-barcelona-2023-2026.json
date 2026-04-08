@@ -189,23 +189,28 @@
       "cuisine": "Modern Mediterranean",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "It's modern Barcelona, and always fun — seasonal, locally-sourced ingredients with frequently changing menu and open kitchen concept.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.396421,
+      "lng": 2.1565457,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Berbena"
     },
     {
       "id": "r002",
@@ -215,23 +220,28 @@
       "cuisine": "French-Mediterranean tasting menu",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "It feels like a special night without being intimidating — French technique with Mediterranean flavors in a calm setting.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3918486,
+      "lng": 2.1573697,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "name_variants": [],
+      "geo_matched_name": "Hotel América Barcelona"
     },
     {
       "id": "r003",
@@ -241,14 +251,20 @@
       "cuisine": "Creative seafood",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-01", "src-05"],
+      "sources": [
+        "src-01",
+        "src-05"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-02-24",
       "quote": "It's reliable, creative, and consistently good — non-traditional seafood focus with strong wine selection.",
       "quote_language": "EN",
-      "language_pool": ["EN", "ES"],
+      "language_pool": [
+        "EN",
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -267,14 +283,18 @@
       "cuisine": "Contemporary natural wine bar",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "It feels a bit mysterious since it's not so easy to find — young team with frequently changing menu and diverse natural wine pairings.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -293,14 +313,20 @@
       "cuisine": "Modern Catalan",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-01", "src-05"],
+      "sources": [
+        "src-01",
+        "src-05"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-02-24",
       "quote": "It feels local and very current at the same time — reworked traditional Catalan dishes in contemporary style.",
       "quote_language": "EN",
-      "language_pool": ["EN", "ES"],
+      "language_pool": [
+        "EN",
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -309,7 +335,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "name_variants": []
+      "name_variants": [],
+      "geo_matched_name": "Barcelona-Estació de França"
     },
     {
       "id": "r006",
@@ -319,14 +346,18 @@
       "cuisine": "Contemporary creative",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "It's all about talented cooking while being thrilling and approachable — young, exciting cuisine with counter seating recommended.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -345,23 +376,28 @@
       "cuisine": "Meat-focused gastrobar",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "It has a very clear identity and executes it perfectly — Chef Dani Lechuga's quality-focused establishment emphasizing technique.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.4029445,
+      "lng": 2.1771469,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Bardeni el meatbar - Caldeni"
     },
     {
       "id": "r008",
@@ -371,23 +407,28 @@
       "cuisine": "Creative seasonal",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "It captures the energy of Barcelona right now — young team creating locally-inspired, seasonal dishes in vibrant Sant Antoni setting.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.377259,
+      "lng": 2.1615867,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Maleducat"
     },
     {
       "id": "r009",
@@ -397,14 +438,18 @@
       "cuisine": "Mediterranean-Japanese omakase",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "It's very different from most places in the city — intimate setting combining Mediterranean and Japanese influences with confident cooking.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -423,14 +468,18 @@
       "cuisine": "Italian-Mediterranean natural wine bistro",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "The unique but still down-to-earth dishes, and the fun wines — two locations run by chefs Niko and Anna featuring natural wines.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -449,14 +498,18 @@
       "cuisine": "North-East Asian",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "The comforting dishes, and the inviting atmosphere where you don't really want to leave — bento-style lunch and tapas-style dinner with natural wines.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -475,23 +528,28 @@
       "cuisine": "Natural wine bar with food",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "Their range of interesting wines, the atmosphere, and the fun food — self-described living room with natural wines and vinyl record player.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3985624,
+      "lng": 2.1467132,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "name_variants": [],
+      "geo_matched_name": "Cosme Vins Licors i Cava"
     },
     {
       "id": "r014",
@@ -501,14 +559,18 @@
       "cuisine": "Seasonal seafood omakase (1 Michelin star)",
       "price_level": 4,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "It's a solemn experience but still warm and friendly — limited seating, monthly reservations that fill rapidly, one Michelin star.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -527,14 +589,18 @@
       "cuisine": "Nose-to-tail seafood (1 Michelin star)",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "The innovative concept, the delightful surprises on the menu, and the skilled yet welcoming team — nose-to-tail fish philosophy, one Michelin star.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -543,7 +609,9 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "name_variants": ["Fishølogy"]
+      "name_variants": [
+        "Fishølogy"
+      ]
     },
     {
       "id": "r016",
@@ -553,23 +621,28 @@
       "cuisine": "Catalan-Mexican fusion gastrobar",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "It always manages to surprise, and the flavors here are so unique — casual gastro bar by chefs Pedro and Francisco with vintage decor.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.402044,
+      "lng": 2.1621698,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Fonda Pepa"
     },
     {
       "id": "r017",
@@ -579,23 +652,28 @@
       "cuisine": "Seafood tapas bar",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "It's such a casual spot and the dishes are so straight-forward, which all makes it perfect — casual bar de toda la vida style seafood.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3971462,
+      "lng": 2.1730758,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Lluritu 3"
     },
     {
       "id": "r018",
@@ -605,23 +683,30 @@
       "cuisine": "Seafood tapas (traditional)",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-01", "src-02"],
+      "sources": [
+        "src-01",
+        "src-02"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-02-24",
       "quote": "It feels like real Barcelona — multi-decade institution, daily menu on blackboard, highly authentic, no reservations accepted.",
       "quote_language": "EN",
-      "language_pool": ["EN", "CA"],
+      "language_pool": [
+        "EN",
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3792983,
+      "lng": 2.1891943,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "La Cova Fumada"
     },
     {
       "id": "r019",
@@ -631,23 +716,28 @@
       "cuisine": "Seafood and paella",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "The location, the quality and variety of the seafood and the paella — beachside with sea views and grilled specialties.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3946058,
+      "lng": 2.2062439,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Can Fisher"
     },
     {
       "id": "r020",
@@ -657,14 +747,18 @@
       "cuisine": "Innovative seafood-centric Spanish (2 Michelin stars)",
       "price_level": 4,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-24",
       "quote": "The traditional flair to the dishes, and the wonderful wines — Arts Hotel setting with beachfront views, two Michelin stars.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -683,14 +777,18 @@
       "cuisine": "Tapas",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "High-quality tapas adjacent to a Michelin-starred restaurant, with vinyl records and terrace seating and a consistently appealing crowd.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -709,23 +807,28 @@
       "cuisine": "All-day tapas bar",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Famous tortilla with soft caramelized onion in a vintage aesthetic; advance booking required at this popular all-day spot.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3977401,
+      "lng": 2.1523249,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Bar Bocata"
     },
     {
       "id": "r024",
@@ -735,14 +838,18 @@
       "cuisine": "Tapas (Fonda Pepa team)",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Informal spot with classical dishes enhanced through chef technique — mussels include a surprise element.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -761,14 +868,18 @@
       "cuisine": "Tapas",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Comforting tapas made with good quality ingredients in an underrated neighbourhood location with a charming aesthetic.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -787,23 +898,28 @@
       "cuisine": "Tapas and natural wine",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Tasty tapas made with great ingredients and good wines in a fun atmosphere — booking essential at this recent arrival.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3975354,
+      "lng": 2.1569575,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Tangana"
     },
     {
       "id": "r028",
@@ -813,23 +929,30 @@
       "cuisine": "Tapas (renovated Modernist bar)",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01", "src-08"],
+      "sources": [
+        "src-01",
+        "src-08"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-02-27",
       "quote": "Excellent tapas and other dishes to share with quality wine pairings — signature truffle bikini sandwich in Modernist setting.",
       "quote_language": "EN",
-      "language_pool": ["EN", "ES"],
+      "language_pool": [
+        "EN",
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": "coi",
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3629394,
+      "lng": 2.1373301,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Bar Alegría"
     },
     {
       "id": "r029",
@@ -839,23 +962,28 @@
       "cuisine": "Traditional tapas (since 1945)",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Operating since 1945, serving identical four tapas continuously with excellent house vermouth — a true Gothic Quarter classic.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": 1945,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3804049,
+      "lng": 2.1805946,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "La Plata"
     },
     {
       "id": "r033",
@@ -865,23 +993,28 @@
       "cuisine": "Traditional tapas bodega",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Authentic food made with excellent quality ingredients — casual oyster bar entrance, larger dining room for groups, specialty Arroz de Pluma Ibérica.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3844728,
+      "lng": 2.1817735,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Bodega La Puntual"
     },
     {
       "id": "r034",
@@ -891,23 +1024,28 @@
       "cuisine": "Casual tapas",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Great casual tapas, and inexpensive too — Zaragoza-rooted establishment; no reservations, early arrival advised.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.4304816,
+      "lng": 2.1712169,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "La Esquinica"
     },
     {
       "id": "r036",
@@ -917,14 +1055,18 @@
       "cuisine": "Tapas bar (evening DJ)",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Funky tapas spot with Madrid-reminiscent atmosphere, cool vibe, and evening DJ performances plus cocktails.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -933,7 +1075,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "name_variants": []
+      "name_variants": [],
+      "geo_matched_name": "Jardins de Remedios Varo"
     },
     {
       "id": "r037",
@@ -943,14 +1086,18 @@
       "cuisine": "Northern Spanish tapas",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Wonderfully charming safe haven for northern Spanish cuisine lovers; excellent cider via clever dispenser system.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -969,23 +1116,28 @@
       "cuisine": "Galician seafood",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Unassuming exterior concealing huge portions and really good food — specialty is octopus; great for group sharing.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.386641,
+      "lng": 2.1527975,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "O Retorno"
     },
     {
       "id": "r041",
@@ -995,23 +1147,30 @@
       "cuisine": "Tapas bar (Carles Abellán)",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01", "src-02"],
+      "sources": [
+        "src-01",
+        "src-02"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-02-27",
       "quote": "Chef-led establishment with shareable menu; signature truffle bikini sandwich — 20 years of Barcelona institution status.",
       "quote_language": "EN",
-      "language_pool": ["EN", "CA"],
+      "language_pool": [
+        "EN",
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3908686,
+      "lng": 2.1674705,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Tapas 24"
     },
     {
       "id": "r042",
@@ -1021,23 +1180,28 @@
       "cuisine": "Traditional sandwiches and tapas",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Intentionally old-school with professional bowtie-wearing staff; specialties bocata de calamares, Antxón chistorra sandwich, excellent patatas bravas.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3972943,
+      "lng": 2.1609117,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Entrepanes Díaz"
     },
     {
       "id": "r043",
@@ -1047,23 +1211,30 @@
       "cuisine": "Seafood tapas",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-01", "src-02"],
+      "sources": [
+        "src-01",
+        "src-02"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-02-27",
       "quote": "Very good seafood quality with obscure Ibérico cuts and market-fresh scallops and oysters — hidden private dining room, advance booking required.",
       "quote_language": "EN",
-      "language_pool": ["EN", "CA"],
+      "language_pool": [
+        "EN",
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3791405,
+      "lng": 2.173138,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Bar Cañete"
     },
     {
       "id": "r044",
@@ -1073,23 +1244,28 @@
       "cuisine": "Market tapas",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Delightful tapas in perpetually busy market location — proprietor Quim frequently visible, popular among professional chefs for early lunch.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3819517,
+      "lng": 2.1721675,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "El Quim De La Boqueria"
     },
     {
       "id": "r045",
@@ -1099,23 +1275,28 @@
       "cuisine": "Traditional bodega tapas",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Wine straight from the barrel and tasty tapas in an authentic 1950s-era Barceloneta neighbourhood gem.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.379349,
+      "lng": 2.190017,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "name_variants": [],
+      "geo_matched_name": "L'Electricitat"
     },
     {
       "id": "r046",
@@ -1125,23 +1306,31 @@
       "cuisine": "Traditional tapas bodega",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Classic with perpetual crowds; salmon tapa remains signature — glass of cava or wine culture with limited seating, standing room standard.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": ["Quimet y Quimet", "Quimet & Quimet"]
+      "lat": 41.3739942,
+      "lng": 2.1655692,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [
+        "Quimet y Quimet",
+        "Quimet & Quimet"
+      ],
+      "geo_matched_name": "Quimet i Quimet"
     },
     {
       "id": "r048",
@@ -1151,23 +1340,28 @@
       "cuisine": "Seafood tapas",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Everything is delicious with friendly and funny waiters — seafood-focused classic with queue formation common.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3961542,
+      "lng": 2.1489229,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Cal Pep"
     },
     {
       "id": "r049",
@@ -1177,23 +1371,28 @@
       "cuisine": "Market seafood counter",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Fantastic dishes and excellent wines in a non-touristy market atmosphere — counter seating only, advance booking required.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3875857,
+      "lng": 2.1602716,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "name_variants": [],
+      "geo_matched_name": "La Maroteca, Restaurant de Peix Salvatge"
     },
     {
       "id": "r050",
@@ -1203,23 +1402,30 @@
       "cuisine": "Andalucian-Catalan tapas",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01", "src-02"],
+      "sources": [
+        "src-01",
+        "src-02"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-02-27",
       "quote": "Innovative, yet down-to-earth dishes perfect for sharing — Andalucian-influenced venue respecting Catalan roots, taped wall specials, mandatory reservations.",
       "quote_language": "EN",
-      "language_pool": ["EN", "CA"],
+      "language_pool": [
+        "EN",
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.4052021,
+      "lng": 2.2023483,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Casa Fino"
     },
     {
       "id": "r051",
@@ -1229,23 +1435,28 @@
       "cuisine": "Michelin-starred gastrobar",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Next-level dishes to share with attractive décor and terrace — Michelin-starred, early arrival recommended for privacy.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3862444,
+      "lng": 2.1618234,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Mont Bar"
     },
     {
       "id": "r053",
@@ -1255,23 +1466,28 @@
       "cuisine": "Tapas bar (in-house beer)",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Standing-room dominant service with solomillo con foie really worth it — in-house beer brewing in Barceloneta classic.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3818636,
+      "lng": 2.1872472,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "El Vaso de Oro"
     },
     {
       "id": "r054",
@@ -1281,23 +1497,28 @@
       "cuisine": "Bodega wine bar",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Old bodega filling with evening crowds enjoying caña or glass of wine with cured meats or cheeses — great atmosphere.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3992157,
+      "lng": 2.1546399,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Bar Bodega Quimet"
     },
     {
       "id": "r055",
@@ -1307,23 +1528,28 @@
       "cuisine": "Gourmet tapas",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Gourmet style tapas in friendly laid-back atmosphere; notable dishes include duck/foie canelón and gorgonzola/pear croqueta.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3979417,
+      "lng": 2.1546769,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Antunez"
     },
     {
       "id": "r056",
@@ -1333,23 +1559,28 @@
       "cuisine": "Creative tapas wine bar",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-01"],
+      "sources": [
+        "src-01"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-02-27",
       "quote": "Tiny venue where cool kids hang out serving tapas made with creative twist featuring cool and fun wines.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3990612,
+      "lng": 2.1968513,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "name_variants": [],
+      "geo_matched_name": "Extra"
     },
     {
       "id": "r060",
@@ -1359,23 +1590,28 @@
       "cuisine": "Contemporary Catalan (1 Michelin star)",
       "price_level": 4,
       "price_currency": "EUR",
-      "sources": ["src-02"],
+      "sources": [
+        "src-02"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-03-25",
       "quote": "Chef Oriol Ivern: 'It's a very simple recipe about product and minimal intervention' — one Michelin star, 25 years of refined tasting menus.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": "Rockfish fillets with mollusk mayonnaise and white miso",
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3944846,
+      "lng": 2.1480516,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Restaurant Hisop"
     },
     {
       "id": "r061",
@@ -1385,23 +1621,29 @@
       "cuisine": "Seafood and fish",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-02", "src-09"],
+      "sources": [
+        "src-02",
+        "src-09"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-04-06",
       "quote": "Seafood and fish platters at affordable prices near Cinema Phenomena — a reliable neighbourhood lunch spot in Camp de l'Arpa.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3988047,
+      "lng": 2.1542335,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "name_variants": [],
+      "geo_matched_name": "Bar - Restaurant San Miguel"
     },
     {
       "id": "r062",
@@ -1411,14 +1653,20 @@
       "cuisine": "Japanese omakase",
       "price_level": 4,
       "price_currency": "EUR",
-      "sources": ["src-02", "src-05"],
+      "sources": [
+        "src-02",
+        "src-05"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-04-06",
       "quote": "Japanese omakase menu near Cinema Phenomena — ceremonial, precise cooking listed among Barcelona's best sushi and omakase venues.",
       "quote_language": "CA",
-      "language_pool": ["CA", "ES"],
+      "language_pool": [
+        "CA",
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1437,23 +1685,28 @@
       "cuisine": "Neapolitan pizza",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-02"],
+      "sources": [
+        "src-02"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-04-06",
       "quote": "Ranked best pizza in Europe 2023 and among top-50 worldwide excluding Italy — wood-fired Neapolitan pizza near Cinema Phenomena.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3971753,
+      "lng": 2.1649105,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Sartoria Panatieri"
     },
     {
       "id": "r064",
@@ -1463,14 +1716,18 @@
       "cuisine": "Catalan cuisine and wine",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-02"],
+      "sources": [
+        "src-02"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-04-06",
       "quote": "Catalan cuisine and wine near Filmoteca — a Raval restaurant with strong local character recommended for pre/post cinema dining.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1489,23 +1746,28 @@
       "cuisine": "Traditional Catalan",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-02"],
+      "sources": [
+        "src-02"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-04-06",
       "quote": "Traditional Catalan restaurant near Filmoteca in the Raval — long-established institution serving classic Catalan dishes.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3792715,
+      "lng": 2.1695103,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Casa Leopoldo"
     },
     {
       "id": "r066",
@@ -1515,23 +1777,28 @@
       "cuisine": "Contemporary Catalan",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-02"],
+      "sources": [
+        "src-02"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-04-06",
       "quote": "Contemporary Catalan cuisine on the Rambla del Raval — recommended near the Filmoteca for its refined approach to traditional recipes.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3781976,
+      "lng": 2.1704377,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Suculent"
     },
     {
       "id": "r067",
@@ -1541,23 +1808,30 @@
       "cuisine": "Japanese-Mediterranean fusion",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-02", "src-06"],
+      "sources": [
+        "src-02",
+        "src-06"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-04-06",
       "quote": "A Barcelona perspective on contemporary Japan: close, aesthetic, fresh, and sincere — gyozas, tiraditos, kimchi croquettes and matcha tiramisu.",
       "quote_language": "CA",
-      "language_pool": ["CA", "ES"],
+      "language_pool": [
+        "CA",
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3895741,
+      "lng": 2.1798565,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Sophie Kai"
     },
     {
       "id": "r068",
@@ -1567,14 +1841,18 @@
       "cuisine": "Contemporary Mediterranean",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-02"],
+      "sources": [
+        "src-02"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-04-06",
       "quote": "Contemporary cuisine with panoramic garden views in Teatre Grec area — traditional stews and weekend rice menu overlooking Montjuïc.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1593,23 +1871,28 @@
       "cuisine": "Asian-Catalan fusion",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-02"],
+      "sources": [
+        "src-02"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-04-06",
       "quote": "Asian and Catalan fusion near Montjuïc cultural venues — creative cross-cultural cooking in a Poble Sec location.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3722776,
+      "lng": 2.1594142,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Casa Xica"
     },
     {
       "id": "r070",
@@ -1619,23 +1902,28 @@
       "cuisine": "Greek-Mediterranean",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-02"],
+      "sources": [
+        "src-02"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-04-06",
       "quote": "Greek and Mediterranean cooking near Montjuïc cultural venues — a neighbourhood dining option near the Teatre Grec.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3723023,
+      "lng": 2.1629951,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Margarit"
     },
     {
       "id": "r071",
@@ -1645,23 +1933,28 @@
       "cuisine": "Bar-grill (charcuterie and grilled meats)",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-03"],
+      "sources": [
+        "src-03"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2024-12-30",
       "quote": "Paula Mourenza: 'Cured fish citrusy, fresh, umami-forward and grilled leg of lamb butter-tender inside, crispy exterior' — run by chefs Borja Garcia and Adria Castro.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": "Cured fish and grilled leg of lamb",
       "opening_year": null,
       "open_status_check": true,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.396684,
+      "lng": 2.1527708,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Ultramarinos Marin"
     },
     {
       "id": "r072",
@@ -1671,23 +1964,28 @@
       "cuisine": "Vegetarian/plant-based",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-03"],
+      "sources": [
+        "src-03"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2024-12-30",
       "quote": "Paula Mourenza: 'Sweet roasted pumpkin elevated with acorn Yagi Miso demi-glace, chestnut cream, Jerusalem artichoke, and coriander flowers' — Venezuelan chefs Juan and Aquiles Martini.",
       "quote_language": "EN",
-      "language_pool": ["EN"],
+      "language_pool": [
+        "EN"
+      ],
       "signature_dish": "Sweet roasted pumpkin with acorn Yagi Miso demi-glace and chestnut cream",
       "opening_year": null,
       "open_status_check": true,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3962525,
+      "lng": 2.1712885,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Fat Veggies"
     },
     {
       "id": "r073",
@@ -1697,14 +1995,18 @@
       "cuisine": "Castilian-Leonese",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-04"],
+      "sources": [
+        "src-04"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2024-12-21",
       "quote": "Eric Morgado: Tributes Castilian-Leonese traditions with modern touches; daily menu €16, weekend menu €27 with torreznos and bacalao alongside carpaccios.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -1723,14 +2025,18 @@
       "cuisine": "Tapas and croquetes",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-04"],
+      "sources": [
+        "src-04"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2024-12-21",
       "quote": "Eric Morgado: Award-winning, recently honoured with the Barcelona Restauració prize; 12+ croqueta varieties including traditional chicken, Iberian ham, and gorgonzola-walnut.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -1739,7 +2045,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "name_variants": []
+      "name_variants": [],
+      "geo_matched_name": "La Bodegueta del Mercat"
     },
     {
       "id": "r075",
@@ -1749,14 +2056,18 @@
       "cuisine": "Traditional tapas and Josper grill",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-04"],
+      "sources": [
+        "src-04"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2024-12-21",
       "quote": "Eric Morgado: Occupies the century-old Plaza Masadas; combines classic tapas with Josper oven-cooked dishes including hamburgers and caracoles a la llauna.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -1775,14 +2086,18 @@
       "cuisine": "Rice dishes and Mediterranean",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-04"],
+      "sources": [
+        "src-04"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2024-12-21",
       "quote": "Eric Morgado: Rice restaurant reflecting Mediterranean essence, sourcing from the Ebro Delta; signature preparations include senyoret, black rice, and fideuà.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -1801,14 +2116,18 @@
       "cuisine": "Traditional home cooking (Michelin Solete)",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-04"],
+      "sources": [
+        "src-04"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2024-12-21",
       "quote": "Eric Morgado: Led by Chef Fran Guillén and Alexandra Salas; Michelin Solete award, weekday lunch menu €17.50, famous potato salad Fridays, braised veal and artisanal bread.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -1827,7 +2146,9 @@
       "cuisine": "Contemporary European tasting menu",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-05"],
+      "sources": [
+        "src-05"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
@@ -1835,7 +2156,9 @@
       "note": "Address not specified in source",
       "quote": "Anna Torrents: Ingenious, technical, sensitive cooking by Matteo Bertozzi; one of the most thoughtfully designed lunch menus in the city.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1854,23 +2177,29 @@
       "cuisine": "Creative small plates",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-05", "src-07"],
+      "sources": [
+        "src-05",
+        "src-07"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-01-11",
       "quote": "Anna Torrents: Liberated, criterion-driven cooking by Carles Pérez de Rozas; short but sublime menu, perfect for couples seeking quality.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.4005903,
+      "lng": 2.1538788,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "name_variants": [],
+      "geo_matched_name": "bio pompas"
     },
     {
       "id": "r080",
@@ -1880,23 +2209,28 @@
       "cuisine": "Contemporary Catalan",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-05"],
+      "sources": [
+        "src-05"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-01-11",
       "quote": "Anna Torrents: Chef Arnau Muñío relocated from La Boqueria; now full-service restaurant with direct, irreverent carte.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3814374,
+      "lng": 2.1720836,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Direkte"
     },
     {
       "id": "r081",
@@ -1906,14 +2240,19 @@
       "cuisine": "Contemporary Catalan with international influences",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-05", "src-07"],
+      "sources": [
+        "src-05",
+        "src-07"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-01-11",
       "quote": "Anna Torrents: 'Tradición inventada' combining Catalan tradition with urban spice and stews by chef Álex López — Catalan sea and mountain cuisine reinterpreted with personality.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1922,7 +2261,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "name_variants": []
+      "name_variants": [],
+      "geo_matched_name": "el Raval"
     },
     {
       "id": "r082",
@@ -1932,14 +2272,18 @@
       "cuisine": "Contemporary Catalan",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-05"],
+      "sources": [
+        "src-05"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-01-11",
       "quote": "Anna Torrents: Bridge between territory and popular dishes with elegant restraint — a rare quality dining option close to La Rambla.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1958,23 +2302,30 @@
       "cuisine": "Updated traditional Catalan",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-05", "src-02"],
+      "sources": [
+        "src-05",
+        "src-02"
+      ],
       "source_count": 2,
       "source_type_combination": "multi-source",
       "confidence_tier": "A",
       "article_date": "2026-01-11",
       "quote": "Anna Torrents: Updated Catalan cooking with imaginative cocktails and neighbourhood character — from the Arcano restaurant team.",
       "quote_language": "ES",
-      "language_pool": ["ES", "CA"],
+      "language_pool": [
+        "ES",
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3844766,
+      "lng": 2.180301,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Bornēs"
     },
     {
       "id": "r084",
@@ -1984,23 +2335,28 @@
       "cuisine": "Plant-based fine dining (botanical)",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-05"],
+      "sources": [
+        "src-05"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-01-11",
       "quote": "Anna Torrents: Small, elegant restaurant with botanical haute cuisine by Argentine chef Máximo Cabrera; wood-fired oven, fermentation, natural wines.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3840215,
+      "lng": 2.1814732,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Fronda Pasaje BCN"
     },
     {
       "id": "r085",
@@ -2010,14 +2366,18 @@
       "cuisine": "Middle Eastern",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-07"],
+      "sources": [
+        "src-07"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2025-12-29",
       "quote": "Stefania Talento: Simple, delicate and elegant Middle Eastern cuisine — you can dine for under €30, increasingly rare in Barcelona.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2036,23 +2396,28 @@
       "cuisine": "Traditional Catalan",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-07"],
+      "sources": [
+        "src-07"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2025-12-29",
       "quote": "Stefania Talento: Honest cooking, delicious dishes, charming team and accessible prices — traditional Catalan fare at its most unpretentious.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3961005,
+      "lng": 2.1906673,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "name_variants": [],
+      "geo_matched_name": "Fischer"
     },
     {
       "id": "r087",
@@ -2062,14 +2427,18 @@
       "cuisine": "Natural wine bar (Portuguese-influenced)",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-07"],
+      "sources": [
+        "src-07"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2025-12-29",
       "quote": "Stefania Talento: Natural wine bar working with ten house wines produced near Lisbon; Portuguese-influenced cuisine in Gràcia setting.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2088,14 +2457,18 @@
       "cuisine": "Burgers and fish and chips",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-07"],
+      "sources": [
+        "src-07"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2025-12-29",
       "quote": "Stefania Talento: Burgers and fish and chips from Antonia's Burger creators — superior quality at reasonable prices in Poblenou.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2114,14 +2487,18 @@
       "cuisine": "Traditional bar (fork breakfasts)",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-07"],
+      "sources": [
+        "src-07"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2025-12-29",
       "quote": "Stefania Talento: Historic bar now serving morning fork breakfasts — flautade tortilla francesa highly recommended.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2130,7 +2507,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "name_variants": []
+      "name_variants": [],
+      "geo_matched_name": "Plaça de Veracruz"
     },
     {
       "id": "r090",
@@ -2140,23 +2518,28 @@
       "cuisine": "Traditional bodega",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-07"],
+      "sources": [
+        "src-07"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2025-12-29",
       "quote": "Stefania Talento: New ownership maintains castizo soul while improving dish quality — traditional Gràcia bodega.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.4080783,
+      "lng": 2.1582624,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Bodega Manolo"
     },
     {
       "id": "r092",
@@ -2166,23 +2549,28 @@
       "cuisine": "Modern Catalan (tapas and sharing)",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-08"],
+      "sources": [
+        "src-08"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-03-28",
       "quote": "Lourdes López: Artur Martínez reinvents traditional Catalan recipes; minimal intervention, small producer, biodynamic wines — goffre-style trinxat and rectangular brochettes.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": "Goffre-style trinxat with truffle-dusted cabbage",
       "opening_year": null,
       "open_status_check": false,
       "flagged": "coi",
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3905438,
+      "lng": 2.1791837,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "name_variants": [],
+      "geo_matched_name": "True Artisan Cafe"
     },
     {
       "id": "r093",
@@ -2192,23 +2580,28 @@
       "cuisine": "Marine-focused gastro bar",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-08"],
+      "sources": [
+        "src-08"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-03-28",
       "quote": "Lourdes López: Ten-seat bar; roasted peppers with gochujang sauce, aged serviola with pickled zucchini, seared lemon fish — cures fish in-house, chef Óscar Álvarez.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": "Aged serviola with pickled zucchini",
       "opening_year": null,
       "open_status_check": false,
       "flagged": "coi",
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3996974,
+      "lng": 2.1505717,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "name_variants": [],
+      "geo_matched_name": "Barra Alta"
     },
     {
       "id": "r094",
@@ -2218,14 +2611,18 @@
       "cuisine": "Nikkei (Japanese-Peruvian omakase)",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-08"],
+      "sources": [
+        "src-08"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-03-28",
       "quote": "Lourdes López: Ten-seat intimate bar; corvina ceviche with tiger's milk, ají charapita temaki with sea urchin, carabinero nigiri with rocoto paste — chef Omar Malpartida.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": "Corvina ceviche with tiger's milk",
       "opening_year": null,
       "open_status_check": false,
@@ -2234,7 +2631,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "name_variants": []
+      "name_variants": [],
+      "geo_matched_name": "Carrer de la Barra de Ferro"
     },
     {
       "id": "r095",
@@ -2244,14 +2642,18 @@
       "cuisine": "Contemporary refined (2 Michelin stars)",
       "price_level": 4,
       "price_currency": "EUR",
-      "sources": ["src-09"],
+      "sources": [
+        "src-09"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2024-12-31",
       "quote": "Jordi Tubella: Two Michelin stars; chef Rafa Bedoya blends Andalusian and Catalan culinary traditions in a 10-course tasting menu at Hotel Casa Fuster.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -2270,23 +2672,28 @@
       "cuisine": "Contemporary tasting menu",
       "price_level": 4,
       "price_currency": "EUR",
-      "sources": ["src-09"],
+      "sources": [
+        "src-09"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2024-12-31",
       "quote": "Jordi Tubella: Spectacular tasting menus consistently ranked among Barcelona's finest — run by Yordi Martínez, sommelier Lara Cerlinique, and cook Philip.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3889189,
+      "lng": 2.1699137,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "name_variants": [],
+      "geo_matched_name": "Tastet espai gastronómic"
     },
     {
       "id": "r097",
@@ -2296,23 +2703,28 @@
       "cuisine": "Traditional bodega (65 years)",
       "price_level": 1,
       "price_currency": "EUR",
-      "sources": ["src-09"],
+      "sources": [
+        "src-09"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2024-12-31",
       "quote": "Jordi Tubella: Traditional establishment operating for 65 years — what began as modest wine distribution evolved into beloved neighbourhood bodega.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.4083681,
+      "lng": 2.1597307,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Bodega Casas"
     },
     {
       "id": "r098",
@@ -2322,14 +2734,18 @@
       "cuisine": "Contemporary creative",
       "price_level": 4,
       "price_currency": "EUR",
-      "sources": ["src-09"],
+      "sources": [
+        "src-09"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2024-12-31",
       "quote": "Jordi Tubella: Thoughtful simplicity over forced complexity; collaborates with local producers, makes house botifarra and natural wines, recovers heritage ingredients.",
       "quote_language": "CA",
-      "language_pool": ["CA"],
+      "language_pool": [
+        "CA"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -2348,23 +2764,28 @@
       "cuisine": "Medieval-inspired Catalan",
       "price_level": 3,
       "price_currency": "EUR",
-      "sources": ["src-06"],
+      "sources": [
+        "src-06"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-03-19",
       "quote": "P. Ribot: Chef Nicolás Limarino incorporates subtle nods to the medieval recipe book — almonds, game meats, mushrooms, aged wines; brioche de butifarra with truffle.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3850046,
+      "lng": 2.1786227,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Arcano Restaurant Barcelona"
     },
     {
       "id": "r100",
@@ -2374,23 +2795,28 @@
       "cuisine": "Market cuisine",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-06"],
+      "sources": [
+        "src-06"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-03-19",
       "quote": "P. Ribot: More than half a century of history; Alfonso Domínguez's kitchen faithful to market cuisine — zamburiñas with foie, octopus over coals, seasonal fish.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3817361,
+      "lng": 2.171352,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "name_variants": [],
+      "geo_matched_name": "Kiosko universal"
     },
     {
       "id": "r101",
@@ -2400,23 +2826,28 @@
       "cuisine": "Tapas and sushi bar",
       "price_level": 2,
       "price_currency": "EUR",
-      "sources": ["src-06"],
+      "sources": [
+        "src-06"
+      ],
       "source_count": 1,
       "source_type_combination": "single",
       "confidence_tier": "B",
       "article_date": "2026-03-19",
       "quote": "P. Ribot: High ceilings, large windows, foosball table; by Grupo Tragaluz — chicken and Iberian jamón croquettes, steak tartare, Iberian loin biquini sandwich, garlic shrimp.",
       "quote_language": "ES",
-      "language_pool": ["ES"],
+      "language_pool": [
+        "ES"
+      ],
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "name_variants": []
+      "lat": 41.3759781,
+      "lng": 2.1892578,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "name_variants": [],
+      "geo_matched_name": "Perlazul Tapas & Grill Barceloneta"
     }
   ]
 }
