@@ -1045,6 +1045,100 @@ Full fetch audit results:
 - [ ] Add post-run QA script to Claude Code workflow — re-fetch all sources after each city run
 - [ ] Policy decision: sources that become inaccessible after pipeline run — add note to viewer Sources panel or accept as known limitation
 
+
+## Session — 2026-04-01 (Cross-City QA Audit + Chefchaouen Cleanup)
+
+### Overview
+
+Full QA audit conducted across all 7 live cities (35 sources). Fetch status checked for all sources. Attribution integrity issues identified and documented. Chefchaouen anonymous-only restaurants removed. Toronto geocoding errors fixed in two rounds.
+
+---
+
+### Cross-City QA Audit — Fetch Status
+
+All 35 sources across 7 cities re-fetched to check current accessibility.
+
+| City | Source | Status | Restaurants in Pack |
+|------|--------|--------|---------------------|
+| Barcelona | Oriol Foix / El Nacional | ❌ 403 Forbidden | 2 (Granja Elena, Bar Iberia) |
+| Valencia | Albert Padilla / Grupo Gastro Trinquet | ⚠ Timeout (possibly transient) | 19 of 62 |
+| Lisbon | Célia Pedroso / The Guardian | ❌ Permanent scraper block | 10 of 36 |
+| Lisbon | Carolina Sobral / Observador.pt | ❌ 402 Paywall | 6 of 36 |
+| Lisbon | Daniela Sunde-Brown / Ola Daniela | ❌ 415 Error | 9 of 36 |
+| Marrakesh | Nessrine Ben Moussa / Marrakech in Morocco | ❌ 403 Forbidden | 5 of 14 |
+| Rabat | Farah Nadifi / Telquel.ma | ❌ 403 Forbidden | 1 of 10 |
+| Chefchaouen | Sir Driver Tours (S2) | ❌ Robots/Timeout | 11 of 17 (all corroborated) |
+| Chefchaouen | Chauen.info (S3) | ❌ 403 Forbidden | 8 of 17 (3 corroborated, 5 anon-only) |
+| All others | — | ✅ Accessible | — |
+
+**Key finding:** These sources contributed restaurants at pipeline time — the failures are happening now, after the fact. The original fetches were successful. The sources are now inaccessible due to paywalls going up, sites blocking scrapers, or sites going down.
+
+**Attribution policy decision:** Sources should remain in the Sources panel because they did contribute restaurants and attribution was accurate at time of ingestion. The issue is source link stability, not attribution integrity. Added to known issues for future monitoring.
+
+**Lisbon exposure:** 25 of 36 restaurants (69%) come from sources now inaccessible. These are validly sourced but users cannot click through to verify. Documented as known limitation.
+
+---
+
+### Confidence Tier Summary — All Cities
+
+| City | Tier A | Tier B Kept | User Removed | Tier C Rejected | Cap Applied | Final Pack |
+|------|--------|-------------|--------------|-----------------|-------------|------------|
+| Barcelona | 24 | 34 | 0 | 43 | 0 | 52 |
+| Valencia | — | — | — | — | — | 62 (no confidence_tiers block — early pipeline) |
+| Lisbon | 2 | 33 | 0 | 1 | 0 | 36 |
+| Fes | 2 | 8 | 0 | 9 | 7 | 10 |
+| Marrakesh | 4 | 10 | 3 | 7 | 3 | 14 |
+| Rabat | 1 | 9 | 0 | 7 | 5 | 10 |
+| Chefchaouen | 11 | 6 | 0 | 2 | 0 | 17→12 |
+| Toronto | 12 | 34 | 4 | 33 | 4 | 45→52 |
+
+**Notable:** Valencia has no confidence_tiers block — built with early pipeline version before tier tracking was implemented. Data quality gap for 62 restaurants.
+
+---
+
+### Chefchaouen Cleanup — Anonymous Sources
+
+**Issue identified:** Sources S2 (Sir Driver Tours) and S3 (Chauen.info) have no named writer. Both violate LocalBite's core named-writer editorial rule. Both are now inaccessible (403/timeout).
+
+**Analysis:**
+- 5 restaurants existed only in S3 (Chauen.info) with no named-source corroboration: Molino Garden, Morisco, Casa Aladdin, Bilmos, Hamsa
+- 11 restaurants from S2/S3 were corroborated by named sources (S1 Omar Nomades, S4 Emily, S5 @girlwiththepassport) and retained
+
+**Action taken:** 5 anonymous-only restaurants removed from `localbite-chefchaouen-2025-2026.json`. Pack reduced from 17 to 12.
+
+**Decision on S2 and S3 sources:** Left in sources array because removing them would artificially deflate source_count for 8 restaurants (dropping them from multi-source to single-source). Flagged as known issue for Chefchaouen v2.
+
+**Chefchaouen v2 action required:** Find named sources to replace S2 and S3. The pack currently has two anonymous sources that should not have passed the named-writer rule. A v2 run should find Chefchaouen-based food writers or travel writers with clear bylines.
+
+---
+
+### Files Updated This Session
+
+| File | Change |
+|------|--------|
+| `localbite-chefchaouen-2025-2026.json` | 5 anonymous-only restaurants removed (17→12) |
+| `localbite-toronto-2025-2026.json` | 20 geocoding fixes across 2 rounds (see Session — 2026-03-31 Toronto Geocoding Fixes for detail) |
+| `localbite-journal-updated.md` | Session entries added |
+| `.gitignore` | Image file patterns added to stop tile files cluttering GitHub Desktop |
+| `localbite-proximity-spec.md` | Committed to repo |
+
+---
+
+### Outstanding Items (as of end of session)
+
+- [ ] Update `localbite-index.json` — Toronto count 45→52 (after supplementary run), Chefchaouen 17→12
+- [ ] Toronto supplementary run — NOW Toronto, Foodism Betty Binon, Madame Marie summer 2025 now fetchable
+- [ ] Barcelona both-pool audit (14 entries) against corrected definition
+- [ ] Check all city packs for pipeline notes in writer profiles (Toronto cleaned this session)
+- [ ] Add fetch quality gate to pipeline prompt before next city run
+- [ ] Chefchaouen v2 — find named sources to replace S2 and S3
+- [ ] Toronto v2 — Foodism concentration (53% of pack)
+- [ ] Initial map zoom too wide for Toronto
+
+---
+
+
+
 ## Session — 2026-03-31 (Toronto Geocoding Fixes)
 
 ### Overview
