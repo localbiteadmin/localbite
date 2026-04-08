@@ -1,0 +1,64 @@
+# LocalBite Barcelona v6 — Audit Log
+# Pipeline date: 2026-04-08
+
+## TRACEABILITY CHECK
+All 101 restaurants confirmed traceable to specific source URL and fetched article text.
+No removals required for traceability failure.
+
+## AUTO-REJECTED (TIER C) — Quality failures
+
+| Restaurant | Reason | Source | Confidence note |
+|---|---|---|---|
+| Ona | Quote under 15 words (13 words): "It's one of the most memorable tasting menus in the city" — no specific detail; address also unconfirmable | src-01 (BFE) | Low confidence |
+| Morro Fi | Quote 7 words: "It captures everyday Barcelona at its best" — well under minimum; multiple locations, neighbourhood null | src-01 (BFE) | Low confidence |
+| Tapeo | Quote 9 words: "Interesting options with well-known classics and interesting twists" — no specific detail | src-01 (BFE) | Low confidence |
+| Paco Meralgo | Quote 14 words, no specific detail: "Good quality tapas in a neighbourhood sometimes lacking strong restaurants" | src-01 (BFE) | Low confidence |
+| Bambarol | Quote lacks specific detail (no dish name, chef, price, year): "Young and enthusiastic ownership with menu with a little twist" | src-01 (BFE) | Low confidence |
+| Bar Remei | Quote 11 words: "Small neighbourhood bar where tortilla and bikini were absolutely delicious" | src-07 (InOut) | Low confidence |
+
+## AUTO-REJECTED (TIER C) — Source concentration cap
+
+BFE (src-01) single-source Tier B entries exceeded 30% of total (Tier A + Tier B) pool.
+Cap applied: removed lowest-confidence BFE single-source entries until within threshold.
+
+| Restaurant | Reason | Source | Confidence note |
+|---|---|---|---|
+| Bar Anita | BFE concentration cap; quote references Pantea Group but no specific dish detail | src-01 (BFE) | Lowest-confidence group |
+| El Maravillas | BFE concentration cap; 14-word quote, no specific dish name | src-01 (BFE) | Lowest-confidence group |
+| Rabbit's Bar | BFE concentration cap; counter seating detail only, no dish description | src-01 (BFE) | Lowest-confidence group |
+| Can Maño | BFE concentration cap; porron drinking culture mentioned but basic | src-01 (BFE) | Lowest-confidence group |
+| Casa Inés | BFE concentration cap; vague description, no specific dishes | src-01 (BFE) | Lowest-confidence group |
+| Bar Omar | BFE concentration cap; generic seasonal tapas description | src-01 (BFE) | Lowest-confidence group |
+| Bar Mut | BFE concentration cap; 17-word quote, no dish name | src-01 (BFE) | Lowest-confidence group |
+| La Bombeta | BFE concentration cap; 13-word quote, basic Barceloneta description | src-01 (BFE) | Lowest-confidence group |
+| Can Paixano | BFE concentration cap; tourist-heavy venue, basic cava description | src-01 (BFE) | Lowest-confidence group |
+
+## AUTO-REMOVED (Recommended Tier B) — None triggered
+No Tier B entries triggered recommended removal criteria (not a restaurant, chain, COI, closed).
+Note: open_status_check: true applied to all pre-2025 sourced restaurants (src-03 CB, src-04 Gastronosfera, src-09 ElNacional).
+
+## PUBLISHER CONCENTRATION REPORT
+- BFE (src-01) initially contributed ~42 single-source Tier B entries = ~44% of pool
+- Concentration cap applied: 9 entries auto-rejected, bringing BFE share to ~28% (27/96)
+- TNBP (src-05 + src-06) treated as single source; 2 writers from same publisher
+
+## COI REPORT
+- Guía Repsol (src-08, Lourdes López) — ⚠ coi — Repsol operates Spain's foremost restaurant award system with commercial ties to hospitality industry
+- All other sources: no commercial conflicts identified
+
+## GEOGRAPHIC BOUNDARY CHECKS
+- Hernández (Sant Boi de Llobregat) from src-08 — EXCLUDED (outside boundary, in GEOGRAPHIC_BOUNDARY_EXCLUDE equivalent)
+- All other entries confirmed within Barcelona boundary
+
+## OPEN_STATUS_CHECK
+Restaurants from pre-2025 sources (article_date 2023/2024) flagged:
+- src-03 (Culinary Backstreets, Dec 2024): r071 Ultramarinos Marín, r072 Fat Veggies
+- src-04 (Gastronosfera, Dec 2024): r073-r077 (5 restaurants)
+- src-09 (ElNacional.cat, Dec 2024): r095-r098 (4 restaurants)
+Total open_status_check: 11 restaurants
+
+## PHASE 2 FETCH SUMMARY
+Sources fetched successfully (3,000+ chars): 9/9
+Sources retried: 0
+Sources failed after retry: 0
+Total restaurants lost to permanent failures: 0

@@ -1,0 +1,116 @@
+# LocalBite Barcelona v6 — Search Plan
+# Written: 2026-04-08
+
+## PHASE 0 RESULTS
+- Successfully fetched: Beteve.cat (Carmen Cortés Vidal, CA), Barcelona Food Experience (Maria, EN)
+- Failed: None permanently
+- Writers confirmed for Phase 1: Carmen Cortés Vidal (Beteve.cat, CA), Maria (Barcelona Food Experience, EN)
+
+---
+
+## PART A — NEIGHBOURHOOD COVERAGE
+
+All neighbourhoods from GEOGRAPHIC_BOUNDARY_INCLUDE must appear in at least one query.
+Languages: English (EN), Spanish (ES), Catalan (CA)
+
+Neighbourhood groups (adjacent/overlapping):
+
+GROUP 1: Eixample (Eixample Dreta, Eixample Esquerra, La Sagrada Família, Dreta de l'Eixample, Esquerra de l'Eixample)
+- A1-EN: "best restaurants Eixample Barcelona food guide 2024"
+- A1-ES: "mejores restaurantes Eixample Barcelona recomendaciones gastronomía 2025"
+- A1-CA: "millors restaurants Eixample Barcelona recomanació gastronòmica 2024"
+
+GROUP 2: Gràcia (Vila de Gràcia)
+- A2-EN: "best places to eat Gràcia Barcelona food critic recommendations"
+- A2-ES: "dónde comer Gràcia Barcelona guía gastronómica periodista 2025"
+- A2-CA: "on menjar Gràcia Barcelona recomanació gastronomica 2026"
+
+GROUP 3: El Born / El Barri Gòtic / Sant Pere / Santa Caterina
+- A3-EN: "best restaurants El Born Gothic Quarter Barcelona food guide"
+- A3-ES: "mejores restaurantes El Born Barrio Gótico Barcelona guía 2024"
+- A3-CA: "millors restaurants El Born Barri Gòtic Barcelona periodista gastronomia"
+
+GROUP 4: El Raval
+- A4-EN: "best restaurants El Raval Barcelona food writer recommendations 2025"
+- A4-ES: "mejores restaurantes Raval Barcelona crítica gastronómica 2024"
+- A4-CA: "restaurants Raval Barcelona recomanació periodista gastronomia"
+
+GROUP 5: Poble Sec / Montjuïc
+- A5-EN: "best restaurants Poble Sec Barcelona food guide 2025"
+- A5-ES: "mejores restaurantes Poble Sec Montjuïc Barcelona recomendaciones"
+- A5-CA: "millors restaurants Poble Sec Montjuïc Barcelona recomanació 2024"
+
+GROUP 6: Sant Antoni / Fort Pienc
+- A6-EN: "best restaurants Sant Antoni Barcelona neighborhood guide food"
+- A6-ES: "mejores restaurantes Sant Antoni Barcelona guía gastronómica periodista"
+- A6-CA: "restaurants Sant Antoni Fort Pienc Barcelona recomanació gastronomica 2025"
+
+GROUP 7: Poblenou / 22@ / Diagonal Mar / Glòries / Clot
+- A7-EN: "best restaurants Poblenou Barcelona food guide 2024 2025"
+- A7-ES: "mejores restaurantes Poblenou Barcelona guía gastronomía 2025"
+- A7-CA: "millors restaurants Poblenou Clot Barcelona recomanació gastronomica"
+
+GROUP 8: Barceloneta
+- A8-EN: "best seafood restaurants Barceloneta Barcelona food critic guide"
+- A8-ES: "mejores restaurantes Barceloneta Barcelona mariscos recomendaciones"
+- A8-CA: "restaurants Barceloneta Barcelona recomanació gastronomica periodista"
+
+GROUP 9: Sants / Les Corts
+- A9-EN: "best restaurants Sants Les Corts Barcelona food recommendations 2025"
+- A9-ES: "mejores restaurantes Sants Barcelona periodista gastronómico guía"
+- A9-CA: "millors restaurants Sants Les Corts Barcelona recomanació gastronomica"
+
+GROUP 10: Sarrià-Sant Gervasi
+- A10-EN: "best restaurants Sarrià Sant Gervasi Barcelona food guide"
+- A10-ES: "mejores restaurantes Sarrià Barcelona gastronomía 2024 2025"
+- A10-CA: "restaurants Sarrià Sant Gervasi Barcelona recomanació periodista"
+
+GROUP 11: Horta-Guinardó / Camp de l'Arpa
+- A11-EN: "best restaurants Horta Guinardó Camp de l'Arpa Barcelona food"
+- A11-ES: "mejores restaurantes Horta Guinardó Barcelona recomendaciones gastronomía"
+- A11-CA: "restaurants Horta Guinardó Camp Arpa Barcelona recomanació gastronomica"
+
+GROUP 12: Sant Andreu / Nou Barris / Sant Martí
+- A12-EN: "best restaurants Sant Andreu Nou Barris Barcelona food guide 2024"
+- A12-ES: "mejores restaurantes Sant Andreu Nou Barris Barcelona gastronomía"
+- A12-CA: "restaurants Sant Andreu Nou Barris Sant Martí Barcelona recomanació"
+
+---
+
+## PART B — CROSS-CUTTING ANGLES
+
+Cross-1 — City-wide (3 queries):
+- B1a: "best restaurants Barcelona food writer guide 2024"
+- B1b: "mejores restaurantes Barcelona guía gastronómica periodista 2025"
+- B1c: "millors restaurants Barcelona guia gastronomica recomanacio 2026"
+
+Cross-2 — Writer-first (3 queries):
+- B2a: "Carmen Cortés Vidal Barcelona gastronomia restaurants recomanació"
+- B2b: "Maria Barcelona food experience restaurant recommendations blog"
+- B2c: "food critic Barcelona independent restaurant guide writer 2025"
+
+Cross-3 — Recent openings 2024–2026 (2 queries):
+- B3a: "new restaurant openings Barcelona 2025 2026 food journalist"
+- B3b: "nuevas aperturas restaurantes Barcelona 2025 crítica gastronómica"
+
+Cross-4 — Older coverage 2023–2024 (2 queries):
+- B4a: "best restaurants Barcelona 2023 food writer named journalist"
+- B4b: "guía restaurantes Barcelona 2023 periodista gastronómica recomendaciones"
+
+Cross-5 — Awards and recognition (2 queries):
+- B5a: "Michelin Bib Gourmand Barcelona 2025 restaurant recommendations food critic"
+- B5b: "premios gastronomía Barcelona 2024 2025 mejores restaurantes periodista"
+
+Cross-6 — Forum and community (2 queries):
+- B6a: "Barcelona restaurant recommendations local food enthusiast forum 2025"
+- B6b: "dónde comer Barcelona foro local recomendaciones gastronómicas 2024"
+
+Cross-7 — Cuisine diversity (2 queries):
+- B7a: "Barcelona Japanese Catalan fusion restaurant food critic 2024 2025"
+- B7b: "restaurantes internacionales Barcelona recomendación periodista gastronomia 2025"
+
+---
+
+## STOPPING RULE
+If last 8 consecutive queries return no new candidates: stop and proceed to Step 3.
+Soft ceiling: 55 queries.
