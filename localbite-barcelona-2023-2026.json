@@ -198,9 +198,7 @@
       "article_date": "2026-02-24",
       "quote": "It's modern Barcelona, and always fun — seasonal, locally-sourced ingredients with frequently changing menu and open kitchen concept.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -229,9 +227,7 @@
       "article_date": "2026-02-24",
       "quote": "It feels like a special night without being intimidating — French technique with Mediterranean flavors in a calm setting.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -261,10 +257,7 @@
       "article_date": "2026-02-24",
       "quote": "It's reliable, creative, and consistently good — non-traditional seafood focus with strong wine selection.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN",
-        "ES"
-      ],
+      "language_pool": "both",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -292,9 +285,7 @@
       "article_date": "2026-02-24",
       "quote": "It feels a bit mysterious since it's not so easy to find — young team with frequently changing menu and diverse natural wine pairings.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -323,10 +314,7 @@
       "article_date": "2026-02-24",
       "quote": "It feels local and very current at the same time — reworked traditional Catalan dishes in contemporary style.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN",
-        "ES"
-      ],
+      "language_pool": "both",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -355,9 +343,7 @@
       "article_date": "2026-02-24",
       "quote": "It's all about talented cooking while being thrilling and approachable — young, exciting cuisine with counter seating recommended.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -385,9 +371,7 @@
       "article_date": "2026-02-24",
       "quote": "It has a very clear identity and executes it perfectly — Chef Dani Lechuga's quality-focused establishment emphasizing technique.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -416,9 +400,7 @@
       "article_date": "2026-02-24",
       "quote": "It captures the energy of Barcelona right now — young team creating locally-inspired, seasonal dishes in vibrant Sant Antoni setting.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -447,9 +429,7 @@
       "article_date": "2026-02-24",
       "quote": "It's very different from most places in the city — intimate setting combining Mediterranean and Japanese influences with confident cooking.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -477,9 +457,7 @@
       "article_date": "2026-02-24",
       "quote": "The unique but still down-to-earth dishes, and the fun wines — two locations run by chefs Niko and Anna featuring natural wines.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -507,9 +485,7 @@
       "article_date": "2026-02-24",
       "quote": "The comforting dishes, and the inviting atmosphere where you don't really want to leave — bento-style lunch and tapas-style dinner with natural wines.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -537,9 +513,7 @@
       "article_date": "2026-02-24",
       "quote": "Their range of interesting wines, the atmosphere, and the fun food — self-described living room with natural wines and vinyl record player.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -568,9 +542,7 @@
       "article_date": "2026-02-24",
       "quote": "It's a solemn experience but still warm and friendly — limited seating, monthly reservations that fill rapidly, one Michelin star.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -598,9 +570,7 @@
       "article_date": "2026-02-24",
       "quote": "The innovative concept, the delightful surprises on the menu, and the skilled yet welcoming team — nose-to-tail fish philosophy, one Michelin star.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -630,9 +600,7 @@
       "article_date": "2026-02-24",
       "quote": "It always manages to surprise, and the flavors here are so unique — casual gastro bar by chefs Pedro and Francisco with vintage decor.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -661,9 +629,7 @@
       "article_date": "2026-02-24",
       "quote": "It's such a casual spot and the dishes are so straight-forward, which all makes it perfect — casual bar de toda la vida style seafood.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -693,10 +659,7 @@
       "article_date": "2026-02-24",
       "quote": "It feels like real Barcelona — multi-decade institution, daily menu on blackboard, highly authentic, no reservations accepted.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN",
-        "CA"
-      ],
+      "language_pool": "both",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -725,9 +688,7 @@
       "article_date": "2026-02-24",
       "quote": "The location, the quality and variety of the seafood and the paella — beachside with sea views and grilled specialties.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -756,9 +717,7 @@
       "article_date": "2026-02-24",
       "quote": "The traditional flair to the dishes, and the wonderful wines — Arts Hotel setting with beachfront views, two Michelin stars.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -786,9 +745,7 @@
       "article_date": "2026-02-27",
       "quote": "High-quality tapas adjacent to a Michelin-starred restaurant, with vinyl records and terrace seating and a consistently appealing crowd.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -816,9 +773,7 @@
       "article_date": "2026-02-27",
       "quote": "Famous tortilla with soft caramelized onion in a vintage aesthetic; advance booking required at this popular all-day spot.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -847,9 +802,7 @@
       "article_date": "2026-02-27",
       "quote": "Informal spot with classical dishes enhanced through chef technique — mussels include a surprise element.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -877,9 +830,7 @@
       "article_date": "2026-02-27",
       "quote": "Comforting tapas made with good quality ingredients in an underrated neighbourhood location with a charming aesthetic.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -907,9 +858,7 @@
       "article_date": "2026-02-27",
       "quote": "Tasty tapas made with great ingredients and good wines in a fun atmosphere — booking essential at this recent arrival.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -939,10 +888,7 @@
       "article_date": "2026-02-27",
       "quote": "Excellent tapas and other dishes to share with quality wine pairings — signature truffle bikini sandwich in Modernist setting.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN",
-        "ES"
-      ],
+      "language_pool": "both",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -971,9 +917,7 @@
       "article_date": "2026-02-27",
       "quote": "Operating since 1945, serving identical four tapas continuously with excellent house vermouth — a true Gothic Quarter classic.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": 1945,
       "open_status_check": false,
@@ -1002,9 +946,7 @@
       "article_date": "2026-02-27",
       "quote": "Authentic food made with excellent quality ingredients — casual oyster bar entrance, larger dining room for groups, specialty Arroz de Pluma Ibérica.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1033,9 +975,7 @@
       "article_date": "2026-02-27",
       "quote": "Great casual tapas, and inexpensive too — Zaragoza-rooted establishment; no reservations, early arrival advised.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1064,9 +1004,7 @@
       "article_date": "2026-02-27",
       "quote": "Funky tapas spot with Madrid-reminiscent atmosphere, cool vibe, and evening DJ performances plus cocktails.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1095,9 +1033,7 @@
       "article_date": "2026-02-27",
       "quote": "Wonderfully charming safe haven for northern Spanish cuisine lovers; excellent cider via clever dispenser system.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1125,9 +1061,7 @@
       "article_date": "2026-02-27",
       "quote": "Unassuming exterior concealing huge portions and really good food — specialty is octopus; great for group sharing.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1157,10 +1091,7 @@
       "article_date": "2026-02-27",
       "quote": "Chef-led establishment with shareable menu; signature truffle bikini sandwich — 20 years of Barcelona institution status.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN",
-        "CA"
-      ],
+      "language_pool": "both",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1189,9 +1120,7 @@
       "article_date": "2026-02-27",
       "quote": "Intentionally old-school with professional bowtie-wearing staff; specialties bocata de calamares, Antxón chistorra sandwich, excellent patatas bravas.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1221,10 +1150,7 @@
       "article_date": "2026-02-27",
       "quote": "Very good seafood quality with obscure Ibérico cuts and market-fresh scallops and oysters — hidden private dining room, advance booking required.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN",
-        "CA"
-      ],
+      "language_pool": "both",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1253,9 +1179,7 @@
       "article_date": "2026-02-27",
       "quote": "Delightful tapas in perpetually busy market location — proprietor Quim frequently visible, popular among professional chefs for early lunch.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1284,9 +1208,7 @@
       "article_date": "2026-02-27",
       "quote": "Wine straight from the barrel and tasty tapas in an authentic 1950s-era Barceloneta neighbourhood gem.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1315,9 +1237,7 @@
       "article_date": "2026-02-27",
       "quote": "Classic with perpetual crowds; salmon tapa remains signature — glass of cava or wine culture with limited seating, standing room standard.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1349,9 +1269,7 @@
       "article_date": "2026-02-27",
       "quote": "Everything is delicious with friendly and funny waiters — seafood-focused classic with queue formation common.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1380,9 +1298,7 @@
       "article_date": "2026-02-27",
       "quote": "Fantastic dishes and excellent wines in a non-touristy market atmosphere — counter seating only, advance booking required.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1412,10 +1328,7 @@
       "article_date": "2026-02-27",
       "quote": "Innovative, yet down-to-earth dishes perfect for sharing — Andalucian-influenced venue respecting Catalan roots, taped wall specials, mandatory reservations.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN",
-        "CA"
-      ],
+      "language_pool": "both",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1444,9 +1357,7 @@
       "article_date": "2026-02-27",
       "quote": "Next-level dishes to share with attractive décor and terrace — Michelin-starred, early arrival recommended for privacy.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1475,9 +1386,7 @@
       "article_date": "2026-02-27",
       "quote": "Standing-room dominant service with solomillo con foie really worth it — in-house beer brewing in Barceloneta classic.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1506,9 +1415,7 @@
       "article_date": "2026-02-27",
       "quote": "Old bodega filling with evening crowds enjoying caña or glass of wine with cured meats or cheeses — great atmosphere.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1537,9 +1444,7 @@
       "article_date": "2026-02-27",
       "quote": "Gourmet style tapas in friendly laid-back atmosphere; notable dishes include duck/foie canelón and gorgonzola/pear croqueta.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1568,9 +1473,7 @@
       "article_date": "2026-02-27",
       "quote": "Tiny venue where cool kids hang out serving tapas made with creative twist featuring cool and fun wines.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1599,9 +1502,7 @@
       "article_date": "2026-03-25",
       "quote": "Chef Oriol Ivern: 'It's a very simple recipe about product and minimal intervention' — one Michelin star, 25 years of refined tasting menus.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": "Rockfish fillets with mollusk mayonnaise and white miso",
       "opening_year": null,
       "open_status_check": false,
@@ -1631,9 +1532,7 @@
       "article_date": "2026-04-06",
       "quote": "Seafood and fish platters at affordable prices near Cinema Phenomena — a reliable neighbourhood lunch spot in Camp de l'Arpa.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1663,10 +1562,7 @@
       "article_date": "2026-04-06",
       "quote": "Japanese omakase menu near Cinema Phenomena — ceremonial, precise cooking listed among Barcelona's best sushi and omakase venues.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA",
-        "ES"
-      ],
+      "language_pool": "both",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1694,9 +1590,7 @@
       "article_date": "2026-04-06",
       "quote": "Ranked best pizza in Europe 2023 and among top-50 worldwide excluding Italy — wood-fired Neapolitan pizza near Cinema Phenomena.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1725,9 +1619,7 @@
       "article_date": "2026-04-06",
       "quote": "Catalan cuisine and wine near Filmoteca — a Raval restaurant with strong local character recommended for pre/post cinema dining.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1755,9 +1647,7 @@
       "article_date": "2026-04-06",
       "quote": "Traditional Catalan restaurant near Filmoteca in the Raval — long-established institution serving classic Catalan dishes.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1786,9 +1676,7 @@
       "article_date": "2026-04-06",
       "quote": "Contemporary Catalan cuisine on the Rambla del Raval — recommended near the Filmoteca for its refined approach to traditional recipes.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1818,10 +1706,7 @@
       "article_date": "2026-04-06",
       "quote": "A Barcelona perspective on contemporary Japan: close, aesthetic, fresh, and sincere — gyozas, tiraditos, kimchi croquettes and matcha tiramisu.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA",
-        "ES"
-      ],
+      "language_pool": "both",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1850,9 +1735,7 @@
       "article_date": "2026-04-06",
       "quote": "Contemporary cuisine with panoramic garden views in Teatre Grec area — traditional stews and weekend rice menu overlooking Montjuïc.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1880,9 +1763,7 @@
       "article_date": "2026-04-06",
       "quote": "Asian and Catalan fusion near Montjuïc cultural venues — creative cross-cultural cooking in a Poble Sec location.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1911,9 +1792,7 @@
       "article_date": "2026-04-06",
       "quote": "Greek and Mediterranean cooking near Montjuïc cultural venues — a neighbourhood dining option near the Teatre Grec.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -1942,9 +1821,7 @@
       "article_date": "2024-12-30",
       "quote": "Paula Mourenza: 'Cured fish citrusy, fresh, umami-forward and grilled leg of lamb butter-tender inside, crispy exterior' — run by chefs Borja Garcia and Adria Castro.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": "Cured fish and grilled leg of lamb",
       "opening_year": null,
       "open_status_check": true,
@@ -1973,9 +1850,7 @@
       "article_date": "2024-12-30",
       "quote": "Paula Mourenza: 'Sweet roasted pumpkin elevated with acorn Yagi Miso demi-glace, chestnut cream, Jerusalem artichoke, and coriander flowers' — Venezuelan chefs Juan and Aquiles Martini.",
       "quote_language": "EN",
-      "language_pool": [
-        "EN"
-      ],
+      "language_pool": "en",
       "signature_dish": "Sweet roasted pumpkin with acorn Yagi Miso demi-glace and chestnut cream",
       "opening_year": null,
       "open_status_check": true,
@@ -2004,9 +1879,7 @@
       "article_date": "2024-12-21",
       "quote": "Eric Morgado: Tributes Castilian-Leonese traditions with modern touches; daily menu €16, weekend menu €27 with torreznos and bacalao alongside carpaccios.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -2034,9 +1907,7 @@
       "article_date": "2024-12-21",
       "quote": "Eric Morgado: Award-winning, recently honoured with the Barcelona Restauració prize; 12+ croqueta varieties including traditional chicken, Iberian ham, and gorgonzola-walnut.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -2065,9 +1936,7 @@
       "article_date": "2024-12-21",
       "quote": "Eric Morgado: Occupies the century-old Plaza Masadas; combines classic tapas with Josper oven-cooked dishes including hamburgers and caracoles a la llauna.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -2095,9 +1964,7 @@
       "article_date": "2024-12-21",
       "quote": "Eric Morgado: Rice restaurant reflecting Mediterranean essence, sourcing from the Ebro Delta; signature preparations include senyoret, black rice, and fideuà.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -2125,9 +1992,7 @@
       "article_date": "2024-12-21",
       "quote": "Eric Morgado: Led by Chef Fran Guillén and Alexandra Salas; Michelin Solete award, weekday lunch menu €17.50, famous potato salad Fridays, braised veal and artisanal bread.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -2156,9 +2021,7 @@
       "note": "Address not specified in source",
       "quote": "Anna Torrents: Ingenious, technical, sensitive cooking by Matteo Bertozzi; one of the most thoughtfully designed lunch menus in the city.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2187,9 +2050,7 @@
       "article_date": "2026-01-11",
       "quote": "Anna Torrents: Liberated, criterion-driven cooking by Carles Pérez de Rozas; short but sublime menu, perfect for couples seeking quality.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2218,9 +2079,7 @@
       "article_date": "2026-01-11",
       "quote": "Anna Torrents: Chef Arnau Muñío relocated from La Boqueria; now full-service restaurant with direct, irreverent carte.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2250,9 +2109,7 @@
       "article_date": "2026-01-11",
       "quote": "Anna Torrents: 'Tradición inventada' combining Catalan tradition with urban spice and stews by chef Álex López — Catalan sea and mountain cuisine reinterpreted with personality.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2281,9 +2138,7 @@
       "article_date": "2026-01-11",
       "quote": "Anna Torrents: Bridge between territory and popular dishes with elegant restraint — a rare quality dining option close to La Rambla.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2312,10 +2167,7 @@
       "article_date": "2026-01-11",
       "quote": "Anna Torrents: Updated Catalan cooking with imaginative cocktails and neighbourhood character — from the Arcano restaurant team.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES",
-        "CA"
-      ],
+      "language_pool": "both",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2344,9 +2196,7 @@
       "article_date": "2026-01-11",
       "quote": "Anna Torrents: Small, elegant restaurant with botanical haute cuisine by Argentine chef Máximo Cabrera; wood-fired oven, fermentation, natural wines.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2375,9 +2225,7 @@
       "article_date": "2025-12-29",
       "quote": "Stefania Talento: Simple, delicate and elegant Middle Eastern cuisine — you can dine for under €30, increasingly rare in Barcelona.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2405,9 +2253,7 @@
       "article_date": "2025-12-29",
       "quote": "Stefania Talento: Honest cooking, delicious dishes, charming team and accessible prices — traditional Catalan fare at its most unpretentious.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2436,9 +2282,7 @@
       "article_date": "2025-12-29",
       "quote": "Stefania Talento: Natural wine bar working with ten house wines produced near Lisbon; Portuguese-influenced cuisine in Gràcia setting.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2466,9 +2310,7 @@
       "article_date": "2025-12-29",
       "quote": "Stefania Talento: Burgers and fish and chips from Antonia's Burger creators — superior quality at reasonable prices in Poblenou.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2496,9 +2338,7 @@
       "article_date": "2025-12-29",
       "quote": "Stefania Talento: Historic bar now serving morning fork breakfasts — flautade tortilla francesa highly recommended.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2527,9 +2367,7 @@
       "article_date": "2025-12-29",
       "quote": "Stefania Talento: New ownership maintains castizo soul while improving dish quality — traditional Gràcia bodega.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2558,9 +2396,7 @@
       "article_date": "2026-03-28",
       "quote": "Lourdes López: Artur Martínez reinvents traditional Catalan recipes; minimal intervention, small producer, biodynamic wines — goffre-style trinxat and rectangular brochettes.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": "Goffre-style trinxat with truffle-dusted cabbage",
       "opening_year": null,
       "open_status_check": false,
@@ -2589,9 +2425,7 @@
       "article_date": "2026-03-28",
       "quote": "Lourdes López: Ten-seat bar; roasted peppers with gochujang sauce, aged serviola with pickled zucchini, seared lemon fish — cures fish in-house, chef Óscar Álvarez.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": "Aged serviola with pickled zucchini",
       "opening_year": null,
       "open_status_check": false,
@@ -2620,9 +2454,7 @@
       "article_date": "2026-03-28",
       "quote": "Lourdes López: Ten-seat intimate bar; corvina ceviche with tiger's milk, ají charapita temaki with sea urchin, carabinero nigiri with rocoto paste — chef Omar Malpartida.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": "Corvina ceviche with tiger's milk",
       "opening_year": null,
       "open_status_check": false,
@@ -2651,9 +2483,7 @@
       "article_date": "2024-12-31",
       "quote": "Jordi Tubella: Two Michelin stars; chef Rafa Bedoya blends Andalusian and Catalan culinary traditions in a 10-course tasting menu at Hotel Casa Fuster.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -2681,9 +2511,7 @@
       "article_date": "2024-12-31",
       "quote": "Jordi Tubella: Spectacular tasting menus consistently ranked among Barcelona's finest — run by Yordi Martínez, sommelier Lara Cerlinique, and cook Philip.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -2712,9 +2540,7 @@
       "article_date": "2024-12-31",
       "quote": "Jordi Tubella: Traditional establishment operating for 65 years — what began as modest wine distribution evolved into beloved neighbourhood bodega.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -2743,9 +2569,7 @@
       "article_date": "2024-12-31",
       "quote": "Jordi Tubella: Thoughtful simplicity over forced complexity; collaborates with local producers, makes house botifarra and natural wines, recovers heritage ingredients.",
       "quote_language": "CA",
-      "language_pool": [
-        "CA"
-      ],
+      "language_pool": "ca",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": true,
@@ -2773,9 +2597,7 @@
       "article_date": "2026-03-19",
       "quote": "P. Ribot: Chef Nicolás Limarino incorporates subtle nods to the medieval recipe book — almonds, game meats, mushrooms, aged wines; brioche de butifarra with truffle.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2804,9 +2626,7 @@
       "article_date": "2026-03-19",
       "quote": "P. Ribot: More than half a century of history; Alfonso Domínguez's kitchen faithful to market cuisine — zamburiñas with foie, octopus over coals, seasonal fish.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
@@ -2835,9 +2655,7 @@
       "article_date": "2026-03-19",
       "quote": "P. Ribot: High ceilings, large windows, foosball table; by Grupo Tragaluz — chicken and Iberian jamón croquettes, steak tartare, Iberian loin biquini sandwich, garlic shrimp.",
       "quote_language": "ES",
-      "language_pool": [
-        "ES"
-      ],
+      "language_pool": "es",
       "signature_dish": null,
       "opening_year": null,
       "open_status_check": false,
