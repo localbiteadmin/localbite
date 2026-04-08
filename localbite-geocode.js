@@ -406,8 +406,9 @@ async function geocodeAll() {
   }
 
   // Write output
-  const outFile = file.replace('.json', '-geocoded.json');
-  fs.writeFileSync(outFile, JSON.stringify(data, null, 2));
+  const backupFile = file.replace('.json', '-geocoded-backup.json');
+  fs.writeFileSync(backupFile, JSON.stringify(data, null, 2));
+  fs.writeFileSync(file, JSON.stringify(data, null, 2));
 
   // Summary
   const total = data.restaurants.length;
@@ -427,7 +428,7 @@ async function geocodeAll() {
   console.log(`──────────────────────────────────────────────`);
   console.log(`Total found:         ${found}/${total} (${hitRate}%)`);
   console.log(`Manual needed:       ${stats.not_found}`);
-  console.log(`\nOutput: ${outFile}`);
+  console.log(`\nUpdated ${file} in place. Backup at ${backupFile}`);
 
   // Separate medium confidence from not-found for three-tier output
   const mediumFound = data.restaurants.filter(r => r.lat && r.geo_confidence === 'medium');
