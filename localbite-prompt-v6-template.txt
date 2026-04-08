@@ -9,6 +9,18 @@ COUNTRY: [COUNTRY]
 CITY_SLUG: [city-country]
 CITY_TYPE: [european_major | european_minor | moroccan_medina |
   north_american_major | other]
+  NOTE: CITY_TYPE is currently a metadata field. It affects only the
+  PROXIMITY_RADIUS_KM default and does not change pipeline search behaviour,
+  tier logic, or diversity gate rules. Full CITY_TYPE-driven automation is
+  a planned post-batch feature (localbite-viewer-update.js). Definitions:
+    european_major:       Large city, rich multilingual food writing scene
+                          (Barcelona, Lisbon, Valencia, Madrid)
+    european_minor:       Smaller city, thinner food writing scene
+                          (Porto, Bologna, Lyon)
+    moroccan_medina:      North African medina city, Arabic/FR/EN writing
+                          (Fes, Marrakesh, Rabat, Chefchaouen)
+    north_american_major: Large EN-dominant city (Toronto, NYC, Montreal)
+    other:                Any city not fitting above — use 20km proximity
 
 LANGUAGE_PRIMARY: [Primary language of food writing in this city]
 LANGUAGE_CODES: [EN | ES | CA | PT | FR | AR — list all relevant]
@@ -32,7 +44,12 @@ examples where relevant.]
 
 SOURCE_EXAMPLES:
 [List known publications for this city by tier. For a new city
-this may be sparse — that is fine. Do not invent sources.]
+this may be sparse — that is fine. Do not invent sources.
+Cap: maximum 4 publications per language tier. More than this
+anchors the pipeline on known sources and reduces discovery of
+genuinely independent voices. The pipeline treats these as
+examples and starting points, not as an exhaustive list to search
+for by name.]
 Primary (named local voices):
 - [Publication — writer or coverage notes if known]
 Secondary (national/international):
@@ -256,10 +273,19 @@ TOTAL QUERY COUNT:
 
 STOPPING RULE:
 If the last 8 consecutive queries have all returned sources
-already in the candidate pool or no qualifying sources at all,
-stop searching and proceed to Step 3 — even if not all angles
-are complete. Log: [stopping-rule] triggered after [N] queries —
-last 8 queries yielded no new candidates.
+already in the candidate pool or no qualifying NEW SOURCES at all
+(a query surfacing known sources but no new ones counts as
+yielding nothing new), stop searching and proceed to Step 3 —
+even if not all neighbourhood queries or angles are complete.
+Log: [stopping-rule] triggered after [N] queries — last 8 queries
+yielded no new candidates.
+
+The stopping rule takes precedence over neighbourhood completeness.
+For well-documented cities (european_major), the source pool
+typically saturates after 30–40 queries — the stopping rule will
+fire before all neighbourhood combinations are exhausted, and this
+is correct behaviour. For thin-source cities (moroccan_medina,
+european_minor), the stopping rule may not fire until much later.
 
 Soft ceiling: 55 queries. If approaching 55 without triggering
 the stopping rule, complete the current angle and stop.
@@ -334,10 +360,15 @@ Store as writer_profile in the sources array.
 
 PUBLISHER CONCENTRATION CHECK:
 After selecting sources, check: does any single publisher
-contribute 2+ articles or 50%+ of either language pool?
-If yes: log [publisher-concentration] flag, note the publisher,
-and attempt 3–4 supplementary searches targeting independent
-sources from a different publisher before proceeding.
+contribute 2+ articles (regardless of whether different writers
+authored them) or 50%+ of either language pool?
+IMPORTANT: A publication with two different writers is still one
+publisher. "The New Barcelona Post / Anna Torrents" and "The New
+Barcelona Post / P. Ribot" are TWO ARTICLES from ONE publisher —
+this triggers the concentration flag even though the writers differ.
+If yes: log [publisher-concentration] flag, note the publisher and
+article count, and attempt 3–4 supplementary searches targeting
+independent sources from a different publisher before proceeding.
 If no independent alternative found after supplementary searches,
 document and proceed — this is a structural characteristic of
 the city's food writing landscape, not a pipeline failure.
@@ -345,7 +376,9 @@ the city's food writing landscape, not a pipeline failure.
 DIVERSITY GATE:
 For bilingual/multilingual cities:
 ✓ At least 1 EN primary source
-✓ At least 1 [local language] primary source
+✓ At least 1 primary source from EACH local language pool listed
+  in LANGUAGE_CODES (e.g. for Barcelona EN/ES/CA: need at least
+  one ES primary AND one CA primary, not just one or the other)
 ✓ No more than 2 secondary sources in total
 
 For single-language cities:
@@ -353,8 +386,15 @@ For single-language cities:
 ✓ At least 1 independent/freelance source
 ✓ No more than 2 secondary sources in total
 
-If gate not met after 30 searches, run up to 8 additional
-targeted searches. Report which criteria were not met.
+If gate not met after completing all planned neighbourhood and
+cross-cutting queries (or after the stopping rule fires), run up
+to 8 additional targeted searches specifically targeting the
+missing language pool or source tier. Report which criteria were
+not met and what supplementary searches were attempted.
+If gate still not met after 8 supplementary searches: document
+as a structural characteristic of this city's food writing
+landscape, proceed with what was found, and flag in the
+DIVERSITY GATE section of the final summary.
 
 Select 6–12 sources. For each state: publication, writer,
 URL, language, article date, source type, writer profile,
@@ -553,20 +593,27 @@ recommendations made (even if zero). Flag:
   publication, or writer has disclosed personal relationship)
 - Hotel or riad restaurant with atmosphere-only quote, no
   specific dish detail (see RIAD_RULE if applicable)
-- open_status_check: true entries from 2023–2024 sources where
-  the restaurant shows signs it may have closed (search for
-  [name] + city + "closed" before flagging)
+- open_status_check: true entries from 2023–2024 sources — flag
+  these for post-pipeline verification but do NOT run closure
+  searches during the pipeline. Closure verification happens at
+  Stage 2 of the definition of done, not here. Simply ensure
+  open_status_check: true is set on all restaurants from pre-2025
+  sources so they can be identified for later verification.
 
-AUTO-APPLY REMOVALS (new in v6):
+AUTO-APPLY AND RECOMMENDED REMOVALS:
 Apply all Tier C rejections automatically — do not present
-these in the review table.
-Apply all recommended Tier B removals automatically — do not
-present these in the review table either.
-Log every auto-applied removal to OUTPUT_AUDIT with:
-  Restaurant name | Tier | Reason | Source | Confidence note
-The human review table shows ONLY Tier B entries that did NOT
-trigger a recommended removal. This is the final quality check,
-not a re-review of the entire dataset.
+these in the review table. Log every Tier C removal to
+OUTPUT_AUDIT: Restaurant name | Tier | Reason | Source
+
+For Tier B recommended removals: DO NOT auto-apply during the
+first batch run. Instead, present them clearly in the review
+table marked with ⚠ rec-remove and the reason, so the human
+can validate that the recommended removal logic is working
+correctly. Once the logic has been validated across 2–3 city
+runs, auto-apply can be enabled by changing this instruction.
+
+Log all recommended removals to OUTPUT_AUDIT regardless of
+whether they are auto-applied or presented for human review.
 
 STEP 4 — Review table
 Show only: Tier A entries + Tier B entries with NO recommended
@@ -631,12 +678,12 @@ JSON structure — FILE 2 (final):
       "url": "string",
       "language": "en/es/ca/pt/fr/ar",
       "source_type": "primary or secondary",
-      "source_tier": "legacy_institutional / independent_freelance /
-        secondary [for single-language cities only]",
+      "source_tier": "primary / secondary — for single-language cities
+        use: legacy_institutional / independent_freelance / secondary",
       "article_date": "YYYY-MM-DD or undated",
       "fetch_status": "good / partial / failed",
       "fetch_chars": [number],
-      "retry_attempted": true/false,
+      "retries_attempted": 0/1/2,
       "commercial_conflict": true/false,
       "commercial_conflict_note": "string or null",
       "publisher_concentration_flag": true/false,
@@ -673,15 +720,26 @@ JSON structure — FILE 2 (final):
 }
 
 ════════════════════════════════════════
-FINAL SUMMARY (mandatory, present before review table)
+FINAL SUMMARY (mandatory, present immediately before review table)
 ════════════════════════════════════════
+
+TOKEN AND PERFORMANCE METRICS (record from session banner NOW,
+before scrolling — this data is lost if you scroll past it):
+- Tokens used: [Xk tokens from completion banner]
+- Tool uses: [X tool uses from completion banner]
+- Run time: [X minutes from completion banner]
+- Queries run: [total from search log]
+- Stopping rule fired: yes/no — at query [N]
 
 PIPELINE METRICS:
 - Raw count / final count
 - Both-pool count and entries (strict definition applied)
-- Tier A / Tier B kept / auto-removed / user-removed /
+- Tier A / Tier B kept / recommended-for-removal / user-removed /
   Tier C auto-rejected / concentration cap applied
 - open_status_check flagged: [count] — from [N] pre-2025 sources
+NOTE: Final count here excludes user removals since the review
+table has not yet been presented. User removal count will be
+added to OUTPUT_AUDIT after the review is complete.
 
 SOURCES TABLE:
 Publication | Writer | Language | Type | Date | Fetch | COI | Found via
