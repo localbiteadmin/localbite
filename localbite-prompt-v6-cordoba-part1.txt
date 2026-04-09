@@ -1,0 +1,119 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city.
+Part 2 is the pipeline engine — do not modify it.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Córdoba
+COUNTRY: Spain
+CITY_SLUG: cordoba-spain
+CITY_TYPE: european_major
+
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: EN / ES
+SEARCH_LANGUAGES: English, Spanish
+
+CONTENT_WINDOW: 2023–2026
+
+SEARCH_ANGLE_EXAMPLES:
+- "best restaurants Córdoba Spain food writer guide 2024"
+- "mejores restaurantes Córdoba guía gastronómica periodista 2025"
+- "donde comer Córdoba recomendaciones critica gastronomica 2023"
+- "tabernas Córdoba escritor gastronomia local 2026"
+- "Córdoba food guide local writer neighbourhood restaurants 2024"
+- "salmorejo rabo de toro restaurantes Córdoba auténticos 2025"
+- "restaurantes Córdoba San Basilio Judería Ribera barrios 2024"
+
+SOURCE_EXAMPLES:
+Primary EN:
+- Culinary Backstreets (EN — independent food writing platform,
+  Córdoba coverage by named writers if available)
+- The Infatuation (if Córdoba coverage exists — treat as secondary)
+- Spanish food travel writers covering Andalucía (named authors only)
+
+Primary ES:
+- CosasDeCome (Pepe Monforte — ES, covers all Andalucía including
+  Córdoba; check cordoba.cosasdecome.es or sevilla.cosasdecome.es
+  Córdoba category; highest priority ES source)
+- Guía Repsol (ES — city guide section; ⚠ COI flag required)
+- ABC de Córdoba (named food journalists — ES, major regional paper;
+  check abc.es/cordoba/gastronomia/)
+- Cordopolis (local digital newspaper — ES, named writers)
+- Qué.es Córdoba (local digital media — ES)
+- El Día de Córdoba (local newspaper — ES, named food journalists)
+
+NOTE: No "Córdoba Secreta" equivalent found — CosasDeCome is
+the primary local ES source. The Judería area is heavily tourist-
+facing; prioritise sources covering San Basilio, Ribera,
+and residential neighbourhoods over tourist-trap roundups.
+
+DIRECT_FETCH_SOURCES:
+- https://sevilla.cosasdecome.es/category/cordoba/ (CosasDeCome
+  Córdoba coverage — ES, Pepe Monforte; highest priority)
+- https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurantes-cordoba/
+  (Guía Repsol Córdoba city guide — ⚠ COI, fetch and flag)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+- Guía Repsol — commercial guide that also sells dining experiences
+  and awards "Soles Repsol"; flag ⚠ coi on all entries, include
+  but disclose
+- Any publication receiving advertising from reviewed restaurants
+
+SECONDARY_SOURCES: Time Out Córdoba (if exists), The Infatuation,
+  Condé Nast Traveller, Lonely Planet, Michelin Guide Spain,
+  Guía Repsol (national rankings section only — city guide is
+  primary but ⚠ coi)
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+- yelp.com (aggregator — reject)
+- tripadvisor.com (aggregator — reject)
+- opentable.com (booking site — reject)
+- thefork.es (aggregator — reject)
+- cordovista.com (tourist guide with no named food critic — reject)
+- circuitogastronomico.com (Córdoba Argentina, not Spain — reject)
+
+PRICE_CURRENCY: EUR
+PRICE_LEVELS:
+- 1 = under €15pp
+- 2 = €15–35pp
+- 3 = €35–70pp
+- 4 = over €70pp
+NOTE: Córdoba is more affordable than Barcelona or Madrid.
+Fine dining exists (Noor, Choco — both Michelin starred) but the
+bulk of the market is €1–2 tabernas and neighbourhood restaurants.
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Centro Histórico, Judería, Santa Marina, San Basilio, Ribera,
+San Andrés, El Salvador, San Nicolás, Almagro, Ollerías,
+Fátima, Campo de la Verdad, Miraflores, Parque Figueroa,
+Cañero, Sector Sur, Poniente Sur, Levante, Brillante,
+Huerta de la Reina, Turruñuelos, Valdepasillas, Zumbacón,
+Vistalegre-Castillo, Avenida de América, Cerro Muriano
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Medina Azahara (archaeological site outside city), Almodóvar del
+Río, Montilla, Aguilar de la Frontera, Lucena, Priego de Córdoba,
+Cabra, or any location described as "Córdoba province",
+"Córdoba comarca", "Campiña cordobesa", "Subbética cordobesa",
+"day trip from Córdoba", or "outside Córdoba city".
+NOTE: Cordovista.com results are for Córdoba Argentina, not Spain
+— auto-reject any source from Argentina.
+
+SIBLING EDITION NOTE:
+No Catalan or regional language issue for Córdoba — ES and EN
+only. Standard both-pool definition applies.
+
+SINGLE_LANGUAGE_CITY: NO
+RIAD_RULE: NOT_APPLICABLE
+
+PROXIMITY_RADIUS_KM: 18
+  [Smaller than Seville/Barcelona — Córdoba is more compact.]
+
+OUTPUT_RAW: ./localbite-cordoba-raw.json
+OUTPUT_FINAL: ./localbite-cordoba-2023-2026.json
+OUTPUT_WORKING: ./localbite-cordoba-working.json
+OUTPUT_SEARCH_LOG: ./localbite-cordoba-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-cordoba-search-plan.txt
+OUTPUT_FAILED_SOURCES: ./localbite-cordoba-failed-sources.txt
+OUTPUT_AUDIT: ./localbite-cordoba-audit.txt

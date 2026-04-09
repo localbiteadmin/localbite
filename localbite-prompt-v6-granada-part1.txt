@@ -1,0 +1,135 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city.
+Part 2 is the pipeline engine — do not modify it.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Granada
+COUNTRY: Spain
+CITY_SLUG: granada-spain
+CITY_TYPE: european_major
+
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: EN / ES
+SEARCH_LANGUAGES: English, Spanish
+
+CONTENT_WINDOW: 2023–2026
+
+SEARCH_ANGLE_EXAMPLES:
+- "best restaurants Granada Spain food writer guide 2024"
+- "mejores restaurantes Granada guía gastronómica periodista 2025"
+- "donde comer Granada recomendaciones critica gastronomica 2023"
+- "tapas bares Granada escritor gastronomia local 2026"
+- "Granada food guide local writer neighbourhood restaurants 2024"
+- "restaurantes Granada Albayzín Realejo Zaidín barrios 2025"
+- "El Gocho Gourmet restaurantes Granada 2025"
+
+SOURCE_EXAMPLES:
+Primary EN:
+- Culinary Backstreets (EN — independent food writing platform,
+  check for Granada coverage by named writers)
+- The Infatuation (if Granada coverage exists — treat as secondary)
+- Devour Granada / Devour Tours (EN — commercial COI, treat as
+  secondary; verify date from fetched text)
+
+Primary ES:
+- El Gocho Gourmet / Alfonso Campos (ES — Granada-based food
+  critic; published two editions of "50 mejores restaurantes de
+  Granada" with Ayuntamiento backing; now writing for GranadaDigital;
+  HIGHEST PRIORITY ES SOURCE — this is the Sevilla Secreta
+  equivalent for Granada; search for his articles on
+  granadadigital.es and his guide at elgochogourmetgrx Instagram)
+- GranadaDigital gastronomía section (ES — local digital paper;
+  now publishing El Gocho Gourmet content weekly; named writers)
+- Ideal Granada (ES — local newspaper; named food journalists;
+  check ideal.es/granada/gastronomia/)
+- Guía Repsol (ES — city guide section; ⚠ COI flag required)
+- CosasDeCome (Pepe Monforte — covers all Andalucía including
+  Granada; check sevilla.cosasdecome.es Andalucía coverage)
+
+NOTE: "Granada Secreta" exists as a tour company, not a food
+publication — do not use. El Gocho Gourmet is the genuine
+local-for-locals ES source equivalent.
+
+IMPORTANT — FREE TAPAS CULTURE:
+Granada has a strong free tapas tradition — bars serve a free
+tapa with every drink. Many "best tapas in Granada" articles
+are tourist-facing roundups of the free tapa bars near the
+Alhambra. Prioritise sources that cover the full restaurant
+scene including Albayzín, Realejo, Zaidín, and Beiro — not
+just the tourist centre around Plaza Nueva and Navas.
+
+DIRECT_FETCH_SOURCES:
+- https://www.granadadigital.es/seccion/gastronomia/ (GranadaDigital
+  gastronomy section — ES, includes El Gocho Gourmet content)
+- https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurantes-granada/
+  (Guía Repsol Granada — ⚠ COI, fetch and flag)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+- Guía Repsol — commercial guide awarding "Soles Repsol"; flag
+  ⚠ coi, include but disclose
+- Devour Granada / Devour Tours — commercial tour operator
+  publishing restaurant recommendations; flag ⚠ coi, treat as
+  secondary, cap at 20 restaurants
+- Any publication receiving advertising from reviewed restaurants
+
+SECONDARY_SOURCES: The Infatuation, Condé Nast Traveller,
+  Lonely Planet, Michelin Guide Spain, Guía Repsol (national
+  rankings only — city guide is primary but ⚠ coi),
+  Devour Granada (commercial COI)
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+- yelp.com (aggregator — reject)
+- tripadvisor.com (aggregator — reject)
+- opentable.com (booking site — reject)
+- grxexperience.atenasgranada.com ("Granada Secreta" — tour
+  company, not a food publication — reject)
+- andalucia360travel.com (generic tourist guide — reject)
+- barcelo.com (hotel chain tourist content — reject)
+- hoteles.com (hotel booking site content — reject)
+
+PRICE_CURRENCY: EUR
+PRICE_LEVELS:
+- 1 = under €12pp (free tapas culture — budget dining very common)
+- 2 = €12–30pp
+- 3 = €30–60pp
+- 4 = over €60pp
+NOTE: Granada is significantly more affordable than Barcelona,
+with strong free tapas culture. Price level 1 is genuinely
+common and meaningful here, not just budget tourism.
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Centro, Albayzín, Realejo, Zaidín, Beiro, Ronda, Genil,
+Chana, Norte, Almanjáyar, La Paz, Cartuja, Arabial,
+Camino de Ronda, Sacromonte, Alhambra (restaurants near but
+not inside the monument — note: restaurant inside Alhambra
+grounds is tourist-facing, deprioritise)
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Motril (coast), Guadix, Baza, Loja, Alhama de Granada,
+Lanjarón, Órgiva, or any location described as "Granada
+province", "Costa Tropical de Granada", "Alpujarras",
+"Sierra Nevada" (ski resort), "day trip from Granada", or
+outside Granada city municipal boundary.
+NOTE: Guard against Alhambra-adjacent restaurants that exist
+primarily to serve tourists — prioritise sources covering
+local neighbourhood restaurants in Albayzín, Realejo, Zaidín.
+
+SIBLING EDITION NOTE:
+No Catalan or regional language issue for Granada — ES and EN
+only. Standard both-pool definition applies.
+
+SINGLE_LANGUAGE_CITY: NO
+RIAD_RULE: NOT_APPLICABLE
+
+PROXIMITY_RADIUS_KM: 18
+  [Córdoba-sized city — more compact than Seville.]
+
+OUTPUT_RAW: ./localbite-granada-raw.json
+OUTPUT_FINAL: ./localbite-granada-2023-2026.json
+OUTPUT_WORKING: ./localbite-granada-working.json
+OUTPUT_SEARCH_LOG: ./localbite-granada-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-granada-search-plan.txt
+OUTPUT_FAILED_SOURCES: ./localbite-granada-failed-sources.txt
+OUTPUT_AUDIT: ./localbite-granada-audit.txt

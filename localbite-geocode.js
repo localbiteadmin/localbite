@@ -40,6 +40,8 @@ const CITY_BOXES = {
   'Edinburgh':    { latMin: 55.9,  latMax: 56.0,  lngMin: -3.3,  lngMax: -3.1 },
   'Tel Aviv':     { latMin: 32.0,  latMax: 32.2,  lngMin: 34.7,  lngMax: 34.9 },
   'Toronto':      { latMin: 43.58, latMax: 43.86, lngMin: -79.64, lngMax: -79.11 },
+  'Córdoba':      { latMin: 37.82, latMax: 37.96, lngMin: -4.87, lngMax: -4.68 },
+  'Granada':      { latMin: 37.14, latMax: 37.25, lngMin: -3.65, lngMax: -3.55 },
 };
 
 const COUNTRY_BOXES = {
