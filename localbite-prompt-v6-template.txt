@@ -636,6 +636,15 @@ STEP 4 — Review table
 Show only: Tier A entries + Tier B entries with NO recommended
 removal triggered.
 
+AUTO-REMOVAL RULE — NULL NEIGHBOURHOOD:
+Any Tier B entry where neighbourhood is null AND source_count is 1
+is automatically recommended for removal. Add to recommended
+removals list and log to OUTPUT_AUDIT with reason:
+"No neighbourhood recorded; single source only — location
+unverifiable within city boundary."
+Exception: retain if quote contains an explicit Valencia/city
+district reference that confirms city location.
+
 Sort: both-pool first → multi-source → single-source alphabetical.
 
 Columns:

@@ -102,7 +102,8 @@ function httpGet(url, headers = {}, useHttp = false) {
 // Called after nameIsPlausible passes — a second gate before accepting a match.
 
 const NON_RESTAURANT_PATTERNS = [
-  /^Carrer (de |d'|dels? |de les )/i,   // streets (Catalan)
+  /^Carrer (de |d'|dels? |de les |via |del |major|nou|vell)/i,   // streets (Catalan)
+  /^Carrer [A-Z]/i,   // Carrer + capitalised word (catches Via Augusta, etc.)
   /^Calle (de |del |de la |de los )/i,  // streets (Spanish)
   /^Rua (de |do |da |dos |das )/i,      // streets (Portuguese)
   /^Rue (de |du |des |de la )/i,        // streets (French)
