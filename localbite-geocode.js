@@ -104,6 +104,27 @@ function httpGet(url, headers = {}, useHttp = false) {
 const NON_RESTAURANT_PATTERNS = [
   /^Carrer (de |d'|dels? |de les |via |del |major|nou|vell)/i,   // streets (Catalan)
   /^Carrer [A-Z]/i,   // Carrer + capitalised word (catches Via Augusta, etc.)
+  /^Puente (de |del |de la )/i,       // bridges (Spanish)
+  /^Pont (de |del |d')/i,             // bridges (Catalan)
+  /^Castillo (de |del |de la )/i,     // castles (Spanish)
+  /^Castell (de |del |d')/i,          // castles (Catalan)
+  /^Centro [Dd]eportivo/i,            // sports centres
+  /^Polideportivo/i,                   // sports centres
+  /^Arroyo (de |del |de la )/i,       // waterways/streams
+  /^Ribeira (de |do |da )/i,          // waterways (Portuguese)
+  /^Parque (de |del |de la )/i,       // parks (Spanish)
+  /^Jardín (de |del |de la )/i,       // gardens (Spanish)
+  /^Jardines (de |del |de la )/i,     // gardens (Spanish plural)
+  /^Palacio (de |del |de la )/i,      // palaces
+  /^Palau (de |del |d')/i,            // palaces (Catalan)
+  /^Torre (de |del |de la )/i,        // towers (often landmarks)
+  /^Iglesia (de |del |de la )/i,      // churches
+  /^Catedral/i,                        // cathedrals
+  /^Basílica/i,                        // basilicas
+  /^Convento (de |del |de la )/i,     // convents
+  /^Museo (de |del |de la )/i,        // museums (Spanish)
+  /^Mercat (de |del |d')/i,           // markets as buildings (Catalan)
+  /^Mercado (de |del |de la )/i,      // markets as buildings (Spanish)
   /^Calle (de |del |de la |de los )/i,  // streets (Spanish)
   /^Rua (de |do |da |dos |das )/i,      // streets (Portuguese)
   /^Rue (de |du |des |de la )/i,        // streets (French)
