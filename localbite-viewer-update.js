@@ -136,7 +136,7 @@ function insertCentroids(html, city, newEntries) {
     if (!centroidsMatch) throw new Error('Could not locate CENTROIDS block');
 
     const insertion = `\n  // ${city}\n` + newEntries.map(e =>
-      `  '${e.name}': [${e.lat.toFixed(4)}, ${e.lng.toFixed(4)}],`
+      `  '${e.name.replace(/'/g, '\u2019')}': [${e.lat.toFixed(4)}, ${e.lng.toFixed(4)}],`
     ).join('\n') + '\n';
 
     html = html.replace(
