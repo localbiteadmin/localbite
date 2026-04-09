@@ -1,0 +1,43 @@
+{
+  "combination": 1,
+  "city": "Seville",
+  "country": "Spain",
+  "total": 61,
+  "found": 56,
+  "hit_rate_pct": 92,
+  "nominatim": 41,
+  "here": 0,
+  "photon": 15,
+  "already": 0,
+  "not_found": 5,
+  "high_confidence": 39,
+  "medium_confidence": 17,
+  "verify_recommended": 17,
+  "manual_required": 5,
+  "not_found_names": [
+    "Eterno",
+    "Casa Orzáez",
+    "Salpicón",
+    "Marabunda",
+    "Keycha Placer Ibérico"
+  ],
+  "medium_names": [
+    "El Eslava",
+    "Sr. Cangrejo",
+    "ENEKO Basque Sevilla",
+    "Don Jorge",
+    "Las Golondrinas Centro",
+    "María Trifulca",
+    "La Casa del Tigre",
+    "La Vicenta",
+    "La Bernarda",
+    "La Taberna del Arenal",
+    "Bar Amarra",
+    "La Reserva de Joaquín Márquez",
+    "Besana Tapas Sevilla",
+    "Athenea Bar",
+    "Bar La Paradita",
+    "Brasería La Tremenda",
+    "Bodega Dos de Mayo"
+  ]
+}

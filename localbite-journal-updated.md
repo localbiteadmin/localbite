@@ -2058,7 +2058,7 @@ All items deliberately deferred until after first batch processing experience.
 - [ ] **Item F** — batch orchestration script
 - [ ] **Domain name** — localbite.app or getlocalbite.com
 - [ ] **Analytics** — Plausible or Fathom before sharing widely
-
+-  39 of 47 Valencia restaurants show article_date: undated — spread across all 5 sources (Ojo al Plato 18, The Infatuation 15, Amsterdam Foodie 12, Grupo Gastro Trinquet 7, Bonviveur 3). Pipeline did not successfully extract dates from fetched article text. Address in Valencia v2 rebuild — do not fix manually.
 ---
 
 

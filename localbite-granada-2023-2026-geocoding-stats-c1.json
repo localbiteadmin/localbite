@@ -1,0 +1,25 @@
+{
+  "combination": 1,
+  "city": "Granada",
+  "country": "Spain",
+  "total": 15,
+  "found": 15,
+  "hit_rate_pct": 100,
+  "nominatim": 11,
+  "here": 0,
+  "photon": 4,
+  "already": 0,
+  "not_found": 0,
+  "high_confidence": 10,
+  "medium_confidence": 5,
+  "verify_recommended": 5,
+  "manual_required": 0,
+  "not_found_names": [],
+  "medium_names": [
+    "Bar Avila Tapas",
+    "Casa de Vinos La Brujidera",
+    "La Barra de San Remo",
+    "La Trastienda",
+    "Tajine Elvira"
+  ]
+}

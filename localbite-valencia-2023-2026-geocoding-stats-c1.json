@@ -1,0 +1,37 @@
+{
+  "combination": 1,
+  "city": "Valencia",
+  "country": "Spain",
+  "total": 47,
+  "found": 38,
+  "hit_rate_pct": 81,
+  "nominatim": 33,
+  "here": 0,
+  "photon": 5,
+  "already": 0,
+  "not_found": 9,
+  "high_confidence": 31,
+  "medium_confidence": 7,
+  "verify_recommended": 7,
+  "manual_required": 9,
+  "not_found_names": [
+    "La Salita",
+    "Casa Montaña",
+    "Fierro",
+    "Fraula",
+    "Kaido Sushi Bar",
+    "Cocleque",
+    "Casa Baldo 1915",
+    "Mundua",
+    "Informal"
+  ],
+  "medium_names": [
+    "Timoteo Gastrobar",
+    "Augusta",
+    "2 Estaciones",
+    "Ampar",
+    "Arrosseria Pierpaolo",
+    "Bodega Anyora",
+    "Noble"
+  ]
+}

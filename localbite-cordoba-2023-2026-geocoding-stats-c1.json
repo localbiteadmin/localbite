@@ -1,0 +1,29 @@
+{
+  "combination": 1,
+  "city": "Córdoba",
+  "country": "Spain",
+  "total": 35,
+  "found": 30,
+  "hit_rate_pct": 86,
+  "nominatim": 27,
+  "here": 0,
+  "photon": 3,
+  "already": 0,
+  "not_found": 5,
+  "high_confidence": 27,
+  "medium_confidence": 3,
+  "verify_recommended": 3,
+  "manual_required": 5,
+  "not_found_names": [
+    "La Casa de Manolete Bistró",
+    "La Taberna del Río",
+    "Casa Salvador-Dmerkado",
+    "La Tinaja",
+    "La Lianta de Quini"
+  ],
+  "medium_names": [
+    "Terra Olea",
+    "La Ermita de la Candelaria",
+    "Taberna San Miguel Casa El Pisto"
+  ]
+}
