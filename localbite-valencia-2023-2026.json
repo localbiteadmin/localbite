@@ -153,7 +153,7 @@
       "name_variants": [
         "La Saleta"
       ],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Contemporary Valencian",
       "opening_year": null,
       "price_level": 4,
@@ -273,7 +273,7 @@
         "Canalla Bistró",
         "Canalla Bistro by Ricard Camarena"
       ],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "International fusion",
       "opening_year": null,
       "price_level": 3,
@@ -304,7 +304,7 @@
       "name_variants": [
         "Nozomi Sushi Bar"
       ],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Japanese / Sushi",
       "opening_year": null,
       "price_level": 4,
@@ -332,7 +332,7 @@
     {
       "name": "Saiti",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Contemporary Valencian / Rice",
       "opening_year": null,
       "price_level": 3,
@@ -360,7 +360,7 @@
     {
       "name": "Flama",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Grilled / Brasa",
       "opening_year": null,
       "price_level": 3,
@@ -416,7 +416,7 @@
     {
       "name": "La Tasqueta del Mercat",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Modern Spanish",
       "opening_year": null,
       "price_level": 1,
@@ -444,7 +444,7 @@
     {
       "name": "Fierro",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Argentine-Mediterranean fusion",
       "opening_year": null,
       "price_level": 4,
@@ -499,7 +499,7 @@
     {
       "name": "Fraula",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Market-driven",
       "opening_year": null,
       "price_level": 4,
@@ -526,7 +526,7 @@
     {
       "name": "Kaido Sushi Bar",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Japanese / Omakase",
       "opening_year": null,
       "price_level": 4,
@@ -662,7 +662,7 @@
     {
       "name": "Casa Roberto",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Paella / Valencian rice",
       "opening_year": null,
       "price_level": 2,
@@ -689,7 +689,7 @@
     {
       "name": "Taberna Pare Pere",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Tapas / Seafood",
       "opening_year": null,
       "price_level": 2,
@@ -745,7 +745,7 @@
       "name_variants": [
         "El Rodamon de Ruzafa"
       ],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Modern tapas / Fusion",
       "opening_year": null,
       "price_level": 2,
@@ -825,7 +825,7 @@
     {
       "name": "La Cantina de Ruzafa",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Valencian almuerzo / Sandwiches",
       "opening_year": null,
       "price_level": 1,
@@ -910,7 +910,7 @@
     {
       "name": "Goya Gallery",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Seafood / Rice",
       "opening_year": null,
       "price_level": 3,
@@ -1128,7 +1128,7 @@
       "name_variants": [
         "Dos Estaciones"
       ],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Contemporary Mediterranean / Bistro",
       "opening_year": null,
       "price_level": 2,
@@ -1155,7 +1155,7 @@
     {
       "name": "Ampar",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Contemporary Mediterranean / Creative",
       "opening_year": null,
       "price_level": 3,
@@ -1181,7 +1181,7 @@
     {
       "name": "Habitual",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Contemporary Mediterranean",
       "opening_year": null,
       "price_level": 2,
@@ -1208,7 +1208,7 @@
     {
       "name": "Ultramarinos Huerta",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Modern tapas / Deli",
       "opening_year": null,
       "price_level": 2,
@@ -1237,7 +1237,7 @@
       "name_variants": [
         "Mundua Taberna"
       ],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Fusion / Intercultural",
       "opening_year": null,
       "price_level": 3,
@@ -1397,7 +1397,7 @@
     {
       "name": "Noble",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Traditional Valencian / Contemporary",
       "opening_year": 2024,
       "price_level": 3,
@@ -1423,7 +1423,7 @@
     {
       "name": "Informal",
       "name_variants": [],
-      "neighbourhood": "Eixample",
+      "neighbourhood": "Eixample Valencia",
       "cuisine": "Contemporary seafood",
       "opening_year": 2024,
       "price_level": 3,
