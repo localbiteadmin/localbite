@@ -1,0 +1,68 @@
+LOCALBITE V6 — SEVILLE SEARCH LOG
+City: Seville, Spain
+Pipeline run: 2026-04-09
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[phase-0] FETCHED sevillasecreta.co/category/restaurantes/ → FAILED: bot challenge / JavaScript verification (~250 chars)
+[phase-0] FETCHED spanishsabores.com/category/seville/ → Category archive loaded; writer Lauren Aloise confirmed; 24 article titles visible (~18,000 chars)
+[phase-0] FETCHED spanishsabores.com/eating-in-seville/ → SUCCESS: full article April 25, 2024; Lauren Aloise; 24 restaurants; ~12,000 chars
+[phase-0] FETCHED sevillasecreta.co/restaurantes-sevilla/ → SUCCESS: Nov 30, 2023 / updated Jun 5, 2024; Ariana Buenafuente; 6 restaurants; ~8,000 chars
+[phase-0] FETCHED sevillasecreta.co/tag/restaurantes/ → Archive page; 10 article titles incl. Ispal, Cañabota, Bar Juan Carlos, Jester; no dates
+[phase-0] FETCHED sevillasecreta.co/50-restaurantes-... → FAILED: bot challenge
+[phase-0] FETCHED sevillasecreta.co/mejores-restaurantes-sevilla/ → FAILED: article from 2018 (outside window)
+[phase-0] FETCHED sevillasecreta.co/ispal-canabota-... → FAILED: bot challenge
+[phase-0] FETCHED sevillasecreta.co/ruta-gastronomica-san-pablo-y-santa-justa → FAILED: bot challenge
+[phase-0] FETCHED sevillasecreta.co/mejores-bares-tapear-san-lorenzo → FAILED: bot challenge
+[phase-0] FETCHED sevillasecreta.co/restaurantes-agosto-sevilla → FAILED: bot challenge
+
+[phase-1-A1-EN] "best restaurants Casco Antiguo Santa Cruz Seville food guide 2024" → Multiple candidates: willflyforfood.net, eatingeurope.com, devourtours.com, burnessie.co.uk
+[phase-1-C1a] "best restaurants Seville Spain food writer guide 2024" → Carlee Alexandria (Feb 2024), Spanish Sabores, Eating Europe, Roam and Thrive
+[phase-1-A1-ES] "mejores restaurantes casco antiguo Santa Cruz Sevilla guía 2024" → No new editorial sources; aggregators and restaurant sites
+[phase-1-C1b] "mejores restaurantes Sevilla guía gastronómica periodista 2025" → CosasDeCome Michelin article (Nov 25, 2025; Ángeles Peiteado); Sevilla Secreta 50-restaurant list found
+[phase-1-A2-EN] "Triana Seville restaurants food guide local writer 2024" → Devour Tours Triana article; Roam and Thrive
+[phase-1-A2-ES] "mejores restaurantes Triana Sevilla guía gastronómica 2024" → CosasDeCome Triana/Remedios article (Jan 3, 2026; Pepe Monforte); Sevilla Secreta Triana article; Guía Repsol Triana
+[phase-1-A3-EN] "La Macarena Seville neighbourhood restaurants food 2024 guide" → No new primary sources
+[phase-1-A3-ES] "restaurantes La Macarena Sevilla recomendaciones guía local 2024" → CosasDeCome Macarena/Pío XII (May 8, 2025); Sevilla Secreta mejores-restaurantes-macarena (blocked)
+[phase-1-C1c] "donde comer Sevilla recomendaciones critica gastronomica 2023" → The Objective (Jul 28, 2023; Brenda Alonso); NatGeo Viajes (Jun 2023); CosasDeCome bar guide
+[phase-1-C3a] "new restaurant openings Seville 2025 2026 food guide writer" → Shawn Hennessey/Bitesize Sevilla (Dec 14, 2025); Sevilla Secreta EN openings (blocked)
+[phase-1-C3b] "nuevos restaurantes abiertos Sevilla 2025 2026 aperturas gastronomía" → CosasDeCome new openings Jan 2025 (Carmen Ibáñez); Guía Repsol Leartá
+[phase-1-A5-EN] "Nervión Seville restaurants dining guide food writer 2024" → CosasDeCome Nervión found (Feb 9, 2026; Pepe Monforte)
+[phase-1-A5-ES] "restaurantes Nervión Sevilla guía gastronomía donde comer 2024" → CosasDeCome Nervión confirmed (50 restaurants)
+[phase-1-C2a] "Lauren Aloise Seville food guide restaurants 2024 2025" → Confirmed COI: Lauren Aloise is co-founder of Devour Tours
+[phase-1-C2b] "Culinary Backstreets Seville Spain restaurants food writing 2023 2024" → No Seville-specific Culinary Backstreets coverage found
+[phase-1-C2c] "Ariana Buenafuente Sevilla restaurantes crítica gastronómica 2024" → Confirmed as Sevilla Secreta redactora
+[phase-1-C5a] "Seville restaurants Michelin star Repsol recognition 2024 2025 guide" → No new sources; confirmed Abantal, Cañabota, Sr. Cangrejo, Tribeca, Sobretablas, Jaylu, Lalola for Repsol
+[phase-1-C5b] "restaurantes premiados Sevilla Michelin Repsol sol guía 2024 2025 crítica" → CosasDeCome Michelin article confirmed; El Español Repsol article found
+[phase-1-A6-ES] "San Pablo Santa Justa Seville restaurants barrio de moda gastronomía 2024" → Sevilla Secreta San Pablo article (bot-blocked; confirmed 2020 article outside window)
+[phase-1-C7b] "restaurantes japoneses asiáticos cocina internacional Sevilla 2024 guía" → CosasDeCome Japanese restaurants article found (18 restaurants)
+[phase-1-C7a] "Seville restaurants Japanese Korean fusion international 2024 food guide" → No new primary sources with editors
+[phase-1-A4-EN] "Los Remedios Seville restaurants bars food guide local 2024" → No new primary sources
+[phase-1-C4a] "Seville restaurant guide food writer 2023 independent local journalist" → Shawn Hennessey background confirmed; azahar-sevilla.com has 300-restaurant database
+[phase-1-C4b] "mejores restaurantes Sevilla 2023 guía local periodista gastronomía" → NatGeo Viajes Jun 2023 confirmed
+[phase-1-C6a] "Seville restaurants forum recommendations locals expats 2024 2025" → Rick Steves forum; no new editorial sources
+[phase-1-A7-ES] "Heliópolis Bellavista Palmera Sevilla restaurantes donde comer 2024" → No editorial sources; aggregators only
+[phase-1-A10-ES] "Sevilla Este Pino Montano norte Sevilla restaurantes tapas 2024" → CosasDeCome Pino Montano (Jul 29, 2025; Pepe Monforte) found
+[phase-1-C6b] "tapas bares Sevilla escritor gastronomia local 2025 crítica" → CosasDeCome wine bars survey (Feb 2025; 70 expert panel) confirmed
+[phase-1-A8-ES] "El Porvenir sur Sevilla restaurantes gastronomía Sobretablas barrio 2024" → CosasDeCome El Porvenir found (Aug 2022 — outside window); Guía Repsol Sobretablas
+[phase-1-C4a-v2] "ABC Sevilla gastronomía restaurantes recomendados periodista 2024 2025" → ABC Gurmé Sevilla section (Isabel Aguilar journalist) confirmed but no fetchable article found
+[phase-1-C4b-v2] "Correo Andalucía Diario Sevilla restaurantes crítica gastronómica 2024" → No fetchable articles from these publications found
+[phase-1-C2a-v2] "Lauren Aloise Spanish Sabores Seville vegetarian tapas best food 2024 2025" → Confirmed: Lauren Aloise co-founded Devour Tours (COI flag applies)
+[phase-1-NatGeo] FETCHED viajes.nationalgeographic.com.es/gastronomia/restaurantes-que-hay-que-probar-sevilla-este-2023 → SUCCESS: Jun 10, 2023; no byline; 13 restaurants; ~8,000 chars
+[phase-1-NatGeo2] FETCHED viajes.nationalgeographic.com.es/gastronomia/ocho-restaurantes-rincones-gastro-centro-sevilla → SUCCESS: Feb 15, 2025; Mari Carmen Duarte; 8 restaurants; ~6,000 chars
+[phase-1-CosasDeCome-Triana] FETCHED sevilla.cosasdecome.es/donde-comer-muy-bien-en-triana-y-los-remedios/ → SUCCESS: Jan 3, 2026; Pepe Monforte; 10 restaurants; ~5,000 chars
+[phase-1-CosasDeCome-Triana-tapas] FETCHED sevilla.cosasdecome.es/tapear-muy-bien-en-triana-y-los-remedios/ → SUCCESS: Apr 7, 2024; Pepe Monforte; 10 bars; ~4,000 chars
+[phase-1-CosasDeCome-Macarena] FETCHED sevilla.cosasdecome.es/donde-comer-muy-bien-en-la-zona-de-la-macarena/ → SUCCESS: May 8, 2025; no byline; 10 restaurants; ~4,000 chars
+[phase-1-CosasDeCome-Nervión] FETCHED sevilla.cosasdecome.es/donde-comer-muy-bien-en-nervion/ → SUCCESS: Feb 9, 2026; Pepe Monforte; 10 restaurants; ~4,000 chars
+[phase-1-CosasDeCome-WineBars] FETCHED sevilla.cosasdecome.es/las-mejores-tabernas-y-bares-de-vinos-de-sevilla/ → SUCCESS: Feb 2025; no individual byline (70-expert survey); 10 bars
+[phase-1-CosasDeCome-Michelin] FETCHED sevilla.cosasdecome.es/los-restaurantes-recomendados-por-la-guia-michelin-en-la-provincia-de-sevilla/ → SUCCESS: Nov 25, 2025; Ángeles Peiteado; 10 restaurants
+[phase-1-CosasDeCome-PinoMontano] FETCHED sevilla.cosasdecome.es/donde-comer-muy-bien-en-pino-montano-y-san-jeronimo/ → SUCCESS: Jul 29, 2025; Pepe Monforte; 10 restaurants
+[phase-1-CosasDeCome-Openings] FETCHED sevilla.cosasdecome.es/tres-aperturas-en-sevilla-que-dan-la-bienvenida-al-2025/ → SUCCESS: Jan 10, 2025; Carmen Ibáñez; 3 restaurants
+[phase-1-ShawnH-Openings] FETCHED shawnhennessey.substack.com/p/my-top-sevilla-restaurant-openings-ed8 → SUCCESS: Dec 14, 2025; Shawn Hennessey; 7 restaurants
+[phase-1-ShawnH-Sevilla-Tapas] FETCHED shawnhennessey.substack.com/p/sevilla-tapas → PARTIAL: Jan 1, 2025; intro post only; restaurant list paywalled
+[phase-1-ShawnH-NonCorporate] FETCHED shawnhennessey.substack.com/p/non-corporate-tapas-bars-and-restaurants → SUCCESS: Jul 14, 2025; Shawn Hennessey; essay — restaurant list paywalled
+[phase-1-ShawnH-MarchWrap] FETCHED shawnhennessey.substack.com/p/march-2026-wrap-up → PARTIAL: Mar 29, 2026; Shawn Hennessey; intro only — restaurant reviews paywalled
+[phase-1-DevourTours] FETCHED devourtours.com/blog/where-to-eat-in-seville-santa-cruz-neighborhood/ → SUCCESS: pub 2015 / updated Feb 18, 2026; Emma Fajcz; 7 restaurants; COI flagged
+[phase-1-TheObjective] FETCHED theobjective.com/lifestyle/2023-07-28/donde-comer-sevilla-restaurantes/ → SUCCESS: Jul 28, 2023; Brenda Alonso; 16 restaurants; ~6,000 chars
+
+STOPPING CRITERIA: Last 8 searches (neighbourhood groups 7-11, forum queries, ABC/Correo searches) yielded no new primary editorial sources. Stopping at 38 queries. Below soft ceiling of 55.
+

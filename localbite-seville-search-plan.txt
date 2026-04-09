@@ -1,0 +1,96 @@
+LOCALBITE V6 — SEVILLE SEARCH PLAN
+Pipeline run: 2026-04-09
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PHASE 0 RESULTS:
+- Spanish Sabores (Lauren Aloise) — /eating-in-seville/ — Apr 25, 2024 — SUCCESS
+- Sevilla Secreta (Ariana Buenafuente) — /restaurantes-sevilla/ — Nov 2023/Jun 2024 — SUCCESS (partial bot blocks on sub-articles)
+- Writers for Phase 1: Lauren Aloise, Ariana Buenafuente, Culinary Backstreets
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART A — NEIGHBOURHOOD QUERIES (22 total: 11 groups × 2 languages)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Group 1: Casco Antiguo / Santa Cruz / El Arenal
+  A1-EN: best restaurants Casco Antiguo Santa Cruz Seville food guide 2024
+  A1-ES: mejores restaurantes casco antiguo Santa Cruz Sevilla guía 2024
+
+Group 2: Triana
+  A2-EN: Triana Seville restaurants food guide local writer 2024
+  A2-ES: mejores restaurantes Triana Sevilla guía gastronómica 2024
+
+Group 3: La Macarena
+  A3-EN: La Macarena Seville neighbourhood restaurants food 2024
+  A3-ES: restaurantes La Macarena Sevilla recomendaciones 2024
+
+Group 4: Los Remedios
+  A4-EN: Los Remedios Seville restaurants bars food guide 2024
+  A4-ES: restaurantes bares Los Remedios Sevilla donde comer 2024
+
+Group 5: Nervión
+  A5-EN: Nervión Seville restaurants dining guide 2024
+  A5-ES: restaurantes Nervión Sevilla guía gastronomía 2024
+
+Group 6: San Pablo-Santa Justa
+  A6-EN: San Pablo Santa Justa Seville restaurants food scene 2024
+  A6-ES: restaurantes San Pablo Santa Justa Sevilla barrio de moda 2024
+
+Group 7: Cerro-Amate / Bellavista-La Palmera / Heliópolis
+  A7-EN: Heliópolis Bellavista Seville restaurants neighbourhood guide 2024
+  A7-ES: restaurantes Heliópolis Bellavista Palmera Sevilla comer 2024
+
+Group 8: El Porvenir / Sur
+  A8-EN: El Porvenir south Seville restaurants food guide 2024
+  A8-ES: restaurantes El Porvenir barrio sur Sevilla gastronomía 2024
+
+Group 9: Sevilla Este / Torreblanca
+  A9-EN: Sevilla Este Torreblanca restaurants food local 2024
+  A9-ES: restaurantes Sevilla Este Torreblanca donde comer 2024
+
+Group 10: Pino Montano / Norte
+  A10-EN: Pino Montano north Seville restaurants food 2024
+  A10-ES: restaurantes Pino Montano barrio norte Sevilla 2024
+
+Group 11: Palmete / La Barzola / Rochelambert / Oeste
+  A11-EN: Palmete Rochelambert Seville restaurants guide 2024
+  A11-ES: restaurantes Palmete Barzola Rochelambert Sevilla oeste 2024
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART B — CROSS-CUTTING QUERIES (14 total)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cross-1 City-wide (3 queries):
+  C1a: best restaurants Seville Spain food writer guide 2024
+  C1b: mejores restaurantes Sevilla guía gastronómica periodista 2025
+  C1c: donde comer Sevilla recomendaciones critica gastronomica 2023
+
+Cross-2 Writer-first (3 queries):
+  C2a: Lauren Aloise Seville food guide restaurants 2024 2025
+  C2b: Culinary Backstreets Seville Spain restaurants food writing 2024
+  C2c: Ariana Buenafuente Sevilla restaurantes crítica gastronómica 2024
+
+Cross-3 Recent openings 2024–2026 (2 queries):
+  C3a: new restaurant openings Seville 2025 2026 food guide
+  C3b: nuevos restaurantes abiertos Sevilla 2025 2026 aperturas
+
+Cross-4 Older coverage 2023–2024 (2 queries):
+  C4a: Seville restaurant guide food writer 2023 independent
+  C4b: mejores restaurantes Sevilla 2023 guía local periodista gastronomía
+
+Cross-5 Awards and recognition (2 queries):
+  C5a: Seville restaurants Michelin star Repsol recognition 2024 2025
+  C5b: restaurantes premiados Sevilla Michelin Repsol sol guía 2024 2025
+
+Cross-6 Forum and community (2 queries):
+  C6a: Seville restaurants recommendations locals food forum 2024
+  C6b: foro recomendaciones restaurantes Sevilla locales 2024
+
+Cross-7 Cuisine diversity (2 queries):
+  C7a: Japanese Korean Asian fusion restaurants Seville Spain 2024 food guide
+  C7b: restaurantes internacionales cocina asiática japonesa Sevilla 2024
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TOTAL TARGET: 36 queries
+STOPPING RULE: If last 8 consecutive queries yield no new sources, stop
+SOFT CEILING: 55 queries maximum
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

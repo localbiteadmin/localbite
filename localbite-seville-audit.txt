@@ -1,0 +1,113 @@
+LOCALBITE V6 — SEVILLE AUDIT LOG
+Pipeline run: 2026-04-09
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PHASE 0 — DIRECT FETCH RESULTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+sevillasecreta.co/category/restaurantes/ — FAILED: bot challenge / JavaScript verification
+spanishsabores.com/eating-in-seville/ — SUCCESS: Lauren Aloise; Apr 25, 2024; 24 restaurants
+sevillasecreta.co/restaurantes-sevilla/ — SUCCESS: Ariana Buenafuente; Nov 30, 2023; 6 restaurants
+sevillasecreta.co/restaurantes/ — SUCCESS (different path): Ariana Buenafuente; Aug 6, 2024; 7 restaurants
+
+PHASE 1 — COI FLAGS
+━━━━━━━━━━━━━━━━━━━
+[coi-check] Spanish Sabores — commercial conflict: YES — Lauren Aloise co-founded Devour Tours food tour company; treated as secondary source, capped at 20 restaurants
+[coi-check] CosasDeCome Sevilla — commercial conflict: NO
+[coi-check] Sevilla Secreta — commercial conflict: NO
+[coi-check] The Objective — commercial conflict: NO
+[coi-check] NatGeo Viajes — commercial conflict: NO
+[coi-check] Shawn Hennessey / Bitesize Sevilla — commercial conflict: NO (explicit no-ads, no free meals policy)
+
+PHASE 1 — SOURCES REJECTED (quality rules)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NatGeo Viajes Jun 2023 — No named author/byline → REJECTED
+CosasDeCome Macarena/Pío XII (May 8, 2025) — No named author/byline → REJECTED
+CosasDeCome Wine Bars survey (Feb 2025) — Survey format, no individual author → REJECTED
+sevillasecreta.co/50-restaurantes-... — Bot-blocked; content unverifiable → FAILED
+sevillasecreta.co/ruta-gastronomica-san-pablo-santa-justa/ — Confirmed 2020 article; outside 2023–2026 window → REJECTED
+sevillasecreta.co/mejores-restaurantes-sevilla/ — 2018 article; outside window → REJECTED
+CosasDeCome El Porvenir (Aug 2022) — Outside 2023–2026 window → REJECTED
+Devour Tours Santa Cruz — Published 2015 (updated Feb 2026); primary date outside window; secondary/COI — REJECTED (decided to drop entirely)
+Olive Magazine Seville — Published 2018; outside window → REJECTED
+
+PHASE 2 — TRACEABILITY CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+All 73 raw entries passed traceability check — each entry traced to specific URL and fetched text sentence.
+
+PHASE 3 — AUTO-REMOVALS (NULL NEIGHBOURHOOD + SINGLE SOURCE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Rule: Any Tier B entry where neighbourhood is null AND source_count is 1 → auto-remove.
+
+1. Barra Baja — No neighbourhood recorded; single source only (Sevilla Secreta agosto) — location unverifiable within city boundary.
+2. Amorío — No neighbourhood recorded; single source only (Shawn Hennessey) — location unverifiable within city boundary.
+3. Raíces — No neighbourhood recorded; single source only (Shawn Hennessey) — location unverifiable within city boundary.
+
+PHASE 3 — CONCENTRATION CAP (CosasDeCome)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CosasDeCome Sevilla contributed 25 single-source Tier B entries out of ~60 total (42%) — exceeds 30% cap.
+Auto-rejected lowest-confidence CosasDeCome single-source Tier B entries (10 total) until within 30% cap:
+- Bar El Rincón de León — no signature dish, no writer quote, Nervión
+- Bar Galindo – El Cangrejo — no signature dish, no writer quote, Nervión
+- Casa Consuelo — no signature dish, no writer quote, Nervión
+- Restaurante Bar Belvedere — no signature dish, no writer quote, Nervión
+- Restaurante La Peña — no signature dish, no writer quote, Nervión
+- Bar Los Catetos (Bar Guadiamar) — no signature dish, no writer quote, Pino Montano
+- Bodeguita Er'080 — no signature dish, no writer quote, Pino Montano
+- Bodeguita Barbiana Triana — no signature dish, no writer quote, Triana
+- Atípico (Pino Montano) — burger bar, not traditional restaurant, no writer quote
+- La Casa del Cordero – La Mesa de Concha — minimal quote, no specific detail beyond dish name
+Remaining CosasDeCome single-source Tier B: 15 entries / ~50 total = 30% ✓
+
+PHASE 3 — TIER C AUTO-REJECTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Barra Baja — null neighbourhood, single source → auto-removed (see above)
+2. Amorío — null neighbourhood, single source → auto-removed (see above)
+3. Raíces — null neighbourhood, single source → auto-removed (see above)
+4. Bar El Rincón de León — concentration cap → auto-rejected
+5. Bar Galindo – El Cangrejo — concentration cap → auto-rejected
+6. Casa Consuelo — concentration cap → auto-rejected
+7. Restaurante Bar Belvedere — concentration cap → auto-rejected
+8. Restaurante La Peña — concentration cap → auto-rejected
+9. Bar Los Catetos (Bar Guadiamar) — concentration cap → auto-rejected
+10. Bodeguita Er'080 — concentration cap → auto-rejected
+11. Bodeguita Barbiana Triana — concentration cap → auto-rejected
+12. Atípico (Pino Montano) — concentration cap → auto-rejected
+13. La Casa del Cordero – La Mesa de Concha — concentration cap → auto-rejected
+
+PHASE 3 — DEDUPLICATION MERGES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Bar Amarra: CosasDeCome Triana/Remedios (Jan 2026) + CosasDeCome Triana tapas (Apr 2024) → same publisher → merged to 1 CosasDeCome source entry (kept Jan 2026 as primary)
+- La Montanera: CosasDeCome Triana/Remedios + CosasDeCome Triana tapas → same publisher → merged to 1 source
+- Castizo: Sevilla Secreta (Nov 2023) + NatGeo Viajes 2025 (Feb 2025) → 2 sources, different publishers → MERGED, Tier A
+- De la O: CosasDeCome Triana/Remedios + Sevilla Secreta agosto → 2 sources, different publishers → MERGED, Tier A
+- Eterno: Sevilla Secreta agosto + Shawn Hennessey → 2 sources, EN+ES different publishers → MERGED, Tier A (both-pool)
+- El Eslava: The Objective + Spanish Sabores → 2 sources, different publishers → MERGED, Tier A (both-pool, COI flag on Sabores)
+- Las Golondrinas: Spanish Sabores + CosasDeCome Triana tapas → 2 sources, EN+ES → MERGED, Tier A (both-pool, COI flag)
+- Casa Morales: Sevilla Secreta + Spanish Sabores → 2 sources, different publishers → MERGED, Tier A (both-pool, COI flag)
+- Bodeguita Romero: Spanish Sabores (as "Bodeguita Romero") — kept as distinct from "Bodeguita Antonio Romero" in Sevilla Secreta (different location: Calle Harinas vs Calle Antonia Díaz — these are two branches of a family business, kept separate)
+
+Total before dedup: 73 entries
+Total after dedup + auto-removals + concentration cap: 50 entries
+Total Tier A: 8 entries
+Total Tier B: 42 entries
+Total recommended for removal (null neighbourhood): 3 entries (already removed from active pool)
+Total concentration cap removed: 10 entries
+
+OPEN STATUS CHECK FLAGGED: 18 entries (sources dated 2023 or 2024 — verify still open)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Note: open_status_check = true flagged for post-pipeline verification. No closure searches run (per pipeline rules).
+
+
+PHASE 4 — USER REVIEW REMOVALS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Sal Gorda | Tier B | user-removed | Spanish Sabores (COI source) — removed at user review
+Petit Comité | Tier B | user-removed | Spanish Sabores (COI source) — removed at user review
+Mechela Restaurante | Tier B | user-removed | Spanish Sabores (COI source) — removed at user review
+La Moneda | Tier B | user-removed | Spanish Sabores (COI source) — removed at user review
+ConTenedor | Tier B | user-removed | Spanish Sabores (COI source) — removed at user review
+
+PHASE 4 — OUTPUT FINAL
+━━━━━━━━━━━━━━━━━━━━━━━
+File written: localbite-seville-2023-2026.json
+Total restaurants: 61 (7 Tier A + 54 Tier B)
+Duplicate entry removed: Eslava (duplicate of El Eslava, Tier A)
