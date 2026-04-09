@@ -81,6 +81,10 @@ KNOWN_PROBLEMATIC_URLS:
   unreliable; verify from fetched article text)
 - gastro-spain.com (covers Comunitat Valenciana not Valencia city
   — geographic filter required, expect many out-of-city entries)
+- lasprovincias.es (paywall — HTTP 400 in all previous runs; attempt
+  fetch but expect failure, log and move on)
+- levante-emv.com (paywall — HTTP 400 in all previous runs; attempt
+  fetch but expect failure, log and move on)
 
 PRICE_CURRENCY: EUR
 PRICE_LEVELS:
