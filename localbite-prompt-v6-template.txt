@@ -508,6 +508,23 @@ Map to canonical forms from GEOGRAPHIC_BOUNDARY_INCLUDE.
 Use null if neighbourhood cannot be determined from article text.
 Do not invent neighbourhoods not in GEOGRAPHIC_BOUNDARY_INCLUDE.
 
+LANGUAGE_POOL FIELD:
+Set language_pool as a plain string — never a list or array.
+Rules:
+  "both"         → restaurant appears in sources from 2+ different
+                   language pools (e.g. EN + ES, EN + CA, ES + CA).
+                   Same-publisher cross-language editions do NOT qualify.
+  "en"           → English-language sources only
+  "es"           → Spanish-language sources only
+  "ca"           → Catalan-language sources only
+  "pt"           → Portuguese-language sources only
+  "fr"           → French-language sources only
+  "ar"           → Arabic-language sources only
+  "multi-source" → SINGLE_LANGUAGE_CITY only: appears in 2+ independent
+                   sources in the same language
+Calculate this field in Phase 3 after all sources are merged.
+Never write ["en", "es"] or any bracket/list form — always a string.
+
 GEOGRAPHIC BOUNDARY:
 ✗ Auto-exclude anything in GEOGRAPHIC_BOUNDARY_EXCLUDE
 ✗ Flag any restaurant whose location description is ambiguous
