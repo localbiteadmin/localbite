@@ -1,0 +1,498 @@
+{
+  "registry_version": "1.0",
+  "last_updated": "2026-04-09",
+  "notes": "Seeded from all city runs through April 2026. Add new publications after each city run. last_verified = date URL was confirmed accessible in a pipeline run.",
+
+  "cities": {
+
+    "barcelona-spain": {
+      "city": "Barcelona",
+      "country": "Spain",
+      "languages": ["en", "es", "ca"],
+      "primary_en": [
+        {
+          "publication": "Barcelona Food Experience",
+          "writer": "Maria",
+          "url": "https://www.barcelonafoodexperience.com",
+          "notes": "Long-term resident blogger. Two articles used in v6 run (Feb 2026 + Sept 2025). High yield, broad neighbourhood coverage. Confirmed active 2026.",
+          "last_verified": "2026-04-08",
+          "type": "primary",
+          "use_as_direct_fetch": true
+        },
+        {
+          "publication": "The New Barcelona Post",
+          "writer": "Anna Torrents",
+          "url": "https://www.thenewbarcelonapost.com",
+          "notes": "EN-language Barcelona-focused publication. Two articles used in v6 run (Torrents EN + Ribot ES). Same publisher, different language editions — count as one publisher for concentration check.",
+          "last_verified": "2026-04-08",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Culinary Backstreets",
+          "writer": "Paula Mourenza",
+          "url": "https://culinarybackstreets.com/cities-2/barcelona/",
+          "notes": "Barcelona-based food writer. Dec 2024 article (open_status_check flag applies). High quality, neighbourhood-specific coverage.",
+          "last_verified": "2026-04-08",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Fancy Nancista",
+          "writer": "Nancy",
+          "url": "https://fancynancista.com",
+          "notes": "Skews heavily toward Asian restaurants in Eixample. Narrow editorial focus — use with awareness of this bias. Confirmed active Jan 2026.",
+          "last_verified": "2026-04-08",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "The Infatuation",
+          "writer": "Isabelle Kliger",
+          "url": "https://www.theinfatuation.com/barcelona",
+          "notes": "Secondary source. Good for cross-validation. Use Hit List URL (May 2025), not main guide (published 2022). Pattern: always verify article date from fetched text.",
+          "last_verified": "2026-03-22",
+          "type": "secondary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "primary_es": [
+        {
+          "publication": "Guía Repsol",
+          "writer": "Lourdes López",
+          "url": "https://www.guiarepsol.com/es/comer/nuestros-favoritos/",
+          "notes": "⚠ COI: Repsol operates restaurant guides commercially. Flag all entries with ⚠ coi. JS-rendered — Jina fetch may fail; try article URL directly. High quality when accessible.",
+          "last_verified": "2026-04-08",
+          "type": "primary",
+          "coi": true,
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Gastronosfera",
+          "writer": "Eric Morgado",
+          "url": "https://www.gastronosfera.com",
+          "notes": "Barcelona-focused ES food writer. Dec 2024 articles (open_status_check applies). Good Sant Andreu neighbourhood coverage — underrepresented area.",
+          "last_verified": "2026-04-08",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "In and Out Barcelona",
+          "writer": "Stefania Talento",
+          "url": "https://www.inandoutbarcelona.com",
+          "notes": "ES-language Barcelona guide. Dec 2024 article. Confirmed active.",
+          "last_verified": "2026-04-08",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Time Out Barcelona ES",
+          "writer": "Ricard Martín",
+          "url": "https://www.timeout.com/barcelona/es/restaurantes",
+          "notes": "Secondary source. Quotes consistently under 15 words — only useful for cross-validation, not as primary. CA and EN editions are same-publisher — count all Time Out Barcelona editions as one secondary source.",
+          "last_verified": "2026-04-08",
+          "type": "secondary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "primary_ca": [
+        {
+          "publication": "Beteve.cat",
+          "writer": "Carmen Cortés Vidal",
+          "url": "https://beteve.cat/gastronomia/",
+          "notes": "Catalan public broadcaster food section. Slow Food Barcelona guide is a key annual source. Critical for CA-language both-pool signal. Confirmed active Nov 2025.",
+          "last_verified": "2026-04-08",
+          "type": "primary",
+          "use_as_direct_fetch": true
+        },
+        {
+          "publication": "Ara.cat Mengem",
+          "writer": "Rosa Rodón",
+          "url": "https://www.ara.cat/mengem/",
+          "notes": "Major Catalan newspaper food section. Confirmed accessible Mar 2025. Named author required — check byline before accepting.",
+          "last_verified": "2026-03-22",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "ElNacional.cat",
+          "writer": "Oriol Foix",
+          "url": "https://www.elnacional.cat/gastronomia/",
+          "notes": "Was returning 403 in QA audit (Apr 2026) but fetched successfully in v6 run (Apr 2026). Treat as intermittently accessible. Try direct article URL.",
+          "last_verified": "2026-04-08",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "known_problematic": [
+        {
+          "publication": "Infobae España",
+          "url": "https://www.infobae.com/espana/",
+          "reason": "HTTP 451 — geo-blocked"
+        },
+        {
+          "publication": "Devour Tours",
+          "url": "https://devourtours.com/blog/",
+          "reason": "CMS 'updated' dates are unreliable — article content may be years old. Always verify article date from fetched text, not metadata."
+        }
+      ]
+    },
+
+    "valencia-spain": {
+      "city": "Valencia",
+      "country": "Spain",
+      "languages": ["en", "es"],
+      "primary_en": [
+        {
+          "publication": "The Infatuation",
+          "writer": "David Neimanis",
+          "url": "https://www.theinfatuation.com/valencia/guides/best-restaurants-valencia-spain",
+          "notes": "2025-08-01 article. Good coverage, skews casual/tapas. Confirmed accessible.",
+          "last_verified": "2026-03-21",
+          "type": "secondary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Amsterdam Foodie",
+          "writer": "Vicky Hampton",
+          "url": "https://www.amsterdamfoodie.nl/food-travel/valencia-restaurants/",
+          "notes": "Professional food writer (WSET Level 3, Guardian/NYT contributor). Visitor perspective not local. High character count (38,847 chars) — most detailed EN source in v3 run. Nov 2025.",
+          "last_verified": "2026-03-21",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "primary_es": [
+        {
+          "publication": "Bonviveur",
+          "writer": "Yolanda Galiana",
+          "url": "https://bonviveur.com/es/noticias/mejores-restaurantes-valencia",
+          "notes": "Michelin-starred restaurants only — skews high-end, limited dataset diversity. Feb 2026. Useful for fine dining tier.",
+          "last_verified": "2026-03-21",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Grupo Gastro Trinquet",
+          "writer": "Albert Padilla",
+          "url": "https://grupogastrotrinquet.com/blog/mejores-restaurantes-valencia/",
+          "notes": "Valencia-focused ES food writer. Feb 2025. Good mid-range coverage.",
+          "last_verified": "2026-03-21",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Valencia Secreta",
+          "writer": "Álvaro Llagunes",
+          "url": "https://valenciasecreta.com/restaurantes-valencia/",
+          "notes": "Strong local ES source. Filter to Valencian/Spanish/Mediterranean food only — covers many cuisine types. Updated Jul 2025 but underlying content may be older.",
+          "last_verified": "2026-03-21",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "GastroSpain",
+          "writer": "Irene Sánchez & Julián Acebes",
+          "url": "https://www.gastro-spain.com/mejores-restaurantes-comunidad-valenciana-2025",
+          "notes": "⚠ Regional not city — covers Comunitat Valenciana. 5 of 10 entries in v3 run were outside Valencia city. Apply geographic filter strictly.",
+          "last_verified": "2026-03-21",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Gastroagencia",
+          "writer": "Gastroagencia editorial team",
+          "url": "https://gastroagencia.es/blog/donde-ir-de-tapas-en-valencia/",
+          "notes": "No named individual author — editorial team credit. Check whether named author rule applies or treat as borderline.",
+          "last_verified": "2026-03-21",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Hello Valencia",
+          "writer": "Hello Valencia editorial team",
+          "url": "https://www.hellovalencia.es/tapas-valencia/",
+          "notes": "Longest-running local city guide (est. 2000). Strong ES local source. No named individual author — same caveat as Gastroagencia.",
+          "last_verified": "2026-03-21",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "known_problematic": [
+        {
+          "publication": "Las Provincias",
+          "url": "https://www.lasprovincias.es/gastronomia/",
+          "reason": "Paywall — HTTP 400 in all runs. Main local Valencia newspaper. Worth retrying with direct article URL."
+        },
+        {
+          "publication": "Levante-EMV",
+          "url": "https://www.levante-emv.com/gastronomia/",
+          "reason": "Paywall — HTTP 400 in all runs. Second major local Valencia newspaper. Worth retrying."
+        },
+        {
+          "publication": "El Comidista (El País)",
+          "url": "https://elpais.com/gastronomia/el-comidista/2025-04-08/donde-comer-arroz-en-valencia-11-restaurantes-recomendados-por-expertos-locales.html",
+          "reason": "Blocked from crawling in all runs. Direct Jina fetch worth retrying — URL is known."
+        },
+        {
+          "publication": "Devour Tours",
+          "url": "https://devourtours.com/blog/tapas-bars-in-valencia/",
+          "reason": "Listed as 'updated October 2025' but fetched content dated August 2017. Do not use — article content is not from 2025."
+        }
+      ]
+    },
+
+    "lisbon-portugal": {
+      "city": "Lisbon",
+      "country": "Portugal",
+      "languages": ["en", "pt"],
+      "primary_en": [
+        {
+          "publication": "Time Out Lisboa EN",
+          "writer": "Various",
+          "url": "https://www.timeout.com/lisbon/restaurants",
+          "notes": "Secondary. Strong cross-validation signal but same publisher as Time Out PT — count as one publisher. Multiple qualifying articles in 2025-2026.",
+          "last_verified": "2026-03-27",
+          "type": "secondary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "World of Mouth",
+          "writer": "Various",
+          "url": "https://www.worldofmouth.com/lisbon",
+          "notes": "EN-language Lisbon food guide. Strategy A source.",
+          "last_verified": "2026-03-27",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "primary_pt": [
+        {
+          "publication": "Mesa Marcada (Público)",
+          "writer": "Miguel Pires",
+          "url": "https://www.publico.pt/mesa-marcada",
+          "notes": "⚠ Most important independent PT food critic. Was NOT found by Strategy A searches — only by Strategy C direct fetch. Always include as Phase 0 direct fetch for Lisbon runs.",
+          "last_verified": "2026-03-27",
+          "type": "primary",
+          "use_as_direct_fetch": true
+        },
+        {
+          "publication": "Observador",
+          "writer": "Various",
+          "url": "https://observador.pt/seccao/lifestyle/gastronomia/",
+          "notes": "PT food section. Strategy C Phase 0 source. Named author required.",
+          "last_verified": "2026-03-27",
+          "type": "primary",
+          "use_as_direct_fetch": true
+        },
+        {
+          "publication": "Visão SE7E",
+          "writer": "Various",
+          "url": "https://visao.pt/se7e/gastronomia/",
+          "notes": "PT lifestyle magazine food section. Strategy B source.",
+          "last_verified": "2026-03-27",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "known_problematic": [
+        {
+          "publication": "3 of 5 Lisbon sources (QA audit Apr 2026)",
+          "reason": "3 of the 5 sources in the official Lisbon pack were inaccessible as of April 2026 QA audit. Lisbon v2 should find alternative URLs or replacement sources."
+        }
+      ]
+    },
+
+    "fes-morocco": {
+      "city": "Fes",
+      "country": "Morocco",
+      "languages": ["en", "fr"],
+      "primary_en": [
+        {
+          "publication": "Anita's Feast",
+          "writer": "Anita",
+          "url": "https://www.anitasfeast.com",
+          "notes": "EN food blogger covering Fes. Primary source in v4 run. 2025 article.",
+          "last_verified": "2026-03-22",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Sainsbury's Magazine",
+          "writer": "Leah Hyslop",
+          "url": "https://www.sainsburysmagazine.co.uk",
+          "notes": "UK food publication. 2025 Fes feature. Visitor perspective.",
+          "last_verified": "2026-03-22",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "primary_fr": [
+        {
+          "publication": "MarocLovers",
+          "writer": "Myriam",
+          "url": "https://www.maroclovers.com",
+          "notes": "FR Morocco travel blog. High yield but hit concentration cap (7 entries removed). Use with concentration cap in mind.",
+          "last_verified": "2026-03-22",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "known_problematic": [
+        {
+          "publication": "Arabic-language food press (general)",
+          "reason": "Structural gap confirmed — accessible Arabic food writing about specific Fes restaurants does not exist in a form the pipeline can reach. Hespress returned political content. Goud.ma gastronomie returned 404. 8 additional targeted searches found nothing. Requires direct writer relationships, not pipeline automation."
+        }
+      ]
+    },
+
+    "marrakesh-morocco": {
+      "city": "Marrakesh",
+      "country": "Morocco",
+      "languages": ["en", "fr"],
+      "primary_en": [
+        {
+          "publication": "Marrakech in Morocco",
+          "writer": "Nessrine Ben Moussa",
+          "url": "https://www.marrakechinmorocco.com",
+          "notes": "Long-term Moroccan resident writer. Best local EN voice in the pack. High quality, specific dish detail.",
+          "last_verified": "2026-03-22",
+          "type": "primary",
+          "use_as_direct_fetch": true
+        },
+        {
+          "publication": "Time Out Marrakech",
+          "writer": "Paula Hardy & Sally Kirby",
+          "url": "https://www.timeout.com/marrakech",
+          "notes": "Secondary. 5 of 8 EN-only entries in v5 run came from here — above ideal concentration. Cap to 30% of EN pool.",
+          "last_verified": "2026-03-22",
+          "type": "secondary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "primary_fr": [
+        {
+          "publication": "Nos Voyages Heureux",
+          "writer": "Jean Mayol",
+          "url": "https://www.nosvoyagesheureux.fr",
+          "notes": "French travel writer. Visitor perspective (not Moroccan resident). Good detail.",
+          "last_verified": "2026-03-22",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Luxe Infinity Maroc",
+          "writer": "Gérard Flamme",
+          "url": "https://www.luxe-infinity-maroc.com",
+          "notes": "French writer covering luxury Morocco. Skews high-end.",
+          "last_verified": "2026-03-22",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Miss Konfidentielle",
+          "writer": "Valérie Desforges",
+          "url": "https://www.misskonfidentielle.com",
+          "notes": "French lifestyle blogger. Morocco coverage includes Marrakesh restaurants.",
+          "last_verified": "2026-03-22",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ]
+    },
+
+    "chefchaouen-morocco": {
+      "city": "Chefchaouen",
+      "country": "Morocco",
+      "languages": ["en"],
+      "primary_en": [
+        {
+          "publication": "chauen.info",
+          "writer": "chauen.info editorial",
+          "url": "https://www.chauen.info",
+          "notes": "10-year Chefchaouen-specific local guide. Closest to a local voice in the pack. 2025. Anonymous editorial — borderline named-author rule.",
+          "last_verified": "2026-03-25",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Rediscovering Emily",
+          "writer": "Emily",
+          "url": "https://www.rediscoveringemily.com",
+          "notes": "EN travel blogger. Morocco-resident. 2025 Chefchaouen piece.",
+          "last_verified": "2026-03-25",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "known_problematic": [
+        {
+          "publication": "Anonymous sources S2 and S3 (original pack)",
+          "reason": "5 restaurants removed April 2026 — sourced from anonymous editorial content. Chefchaouen v2 should find named replacements."
+        }
+      ]
+    },
+
+    "toronto-canada": {
+      "city": "Toronto",
+      "country": "Canada",
+      "languages": ["en"],
+      "primary_en": [
+        {
+          "publication": "Toronto Life",
+          "writer": "Various",
+          "url": "https://torontolife.com/food/",
+          "notes": "Legacy institutional — major Toronto magazine. High authority. Named author required.",
+          "last_verified": "2026-03-30",
+          "type": "primary",
+          "use_as_direct_fetch": true
+        },
+        {
+          "publication": "NOW Toronto",
+          "writer": "Various",
+          "url": "https://nowtoronto.com/food/",
+          "notes": "Independent alt-weekly. Good neighbourhood and Caribbean coverage — added 7 restaurants in supplementary run. Named author required.",
+          "last_verified": "2026-04-02",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Madame Marie",
+          "writer": "Marie",
+          "url": "https://www.madamemarie.ca",
+          "notes": "Independent food blogger. Good Italian Toronto coverage. Added in supplementary run.",
+          "last_verified": "2026-04-02",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Foodism Toronto",
+          "writer": "Various",
+          "url": "https://foodism.to",
+          "notes": "⚠ Concentration risk — contributed 53% of Toronto pack in v1 run. Apply strict 30% cap. High quality but dominates if unchecked.",
+          "last_verified": "2026-03-30",
+          "type": "secondary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "The Toronto Star",
+          "writer": "Various",
+          "url": "https://www.thestar.com/life/food/",
+          "notes": "Legacy institutional. May be paywalled — try direct article URL.",
+          "last_verified": "2026-03-30",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Eater Toronto",
+          "writer": "Various",
+          "url": "https://toronto.eater.com",
+          "notes": "Secondary. Good for cross-validation and new openings coverage.",
+          "last_verified": "2026-03-30",
+          "type": "secondary",
+          "use_as_direct_fetch": false
+        }
+      ]
+    }
+  }
+}
