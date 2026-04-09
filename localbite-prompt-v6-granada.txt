@@ -1,0 +1,941 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city.
+Part 2 is the pipeline engine — do not modify it.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Granada
+COUNTRY: Spain
+CITY_SLUG: granada-spain
+CITY_TYPE: european_major
+
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: EN / ES
+SEARCH_LANGUAGES: English, Spanish
+
+CONTENT_WINDOW: 2023–2026
+
+SEARCH_ANGLE_EXAMPLES:
+- "best restaurants Granada Spain food writer guide 2024"
+- "mejores restaurantes Granada guía gastronómica periodista 2025"
+- "donde comer Granada recomendaciones critica gastronomica 2023"
+- "tapas bares Granada escritor gastronomia local 2026"
+- "Granada food guide local writer neighbourhood restaurants 2024"
+- "restaurantes Granada Albayzín Realejo Zaidín barrios 2025"
+- "El Gocho Gourmet restaurantes Granada 2025"
+
+SOURCE_EXAMPLES:
+Primary EN:
+- Culinary Backstreets (EN — independent food writing platform,
+  check for Granada coverage by named writers)
+- The Infatuation (if Granada coverage exists — treat as secondary)
+- Devour Granada / Devour Tours (EN — commercial COI, treat as
+  secondary; verify date from fetched text)
+
+Primary ES:
+- El Gocho Gourmet / Alfonso Campos (ES — Granada-based food
+  critic; published two editions of "50 mejores restaurantes de
+  Granada" with Ayuntamiento backing; now writing for GranadaDigital;
+  HIGHEST PRIORITY ES SOURCE — this is the Sevilla Secreta
+  equivalent for Granada; search for his articles on
+  granadadigital.es and his guide at elgochogourmetgrx Instagram)
+- GranadaDigital gastronomía section (ES — local digital paper;
+  now publishing El Gocho Gourmet content weekly; named writers)
+- Ideal Granada (ES — local newspaper; named food journalists;
+  check ideal.es/granada/gastronomia/)
+- Guía Repsol (ES — city guide section; ⚠ COI flag required)
+- CosasDeCome (Pepe Monforte — covers all Andalucía including
+  Granada; check sevilla.cosasdecome.es Andalucía coverage)
+
+NOTE: "Granada Secreta" exists as a tour company, not a food
+publication — do not use. El Gocho Gourmet is the genuine
+local-for-locals ES source equivalent.
+
+IMPORTANT — FREE TAPAS CULTURE:
+Granada has a strong free tapas tradition — bars serve a free
+tapa with every drink. Many "best tapas in Granada" articles
+are tourist-facing roundups of the free tapa bars near the
+Alhambra. Prioritise sources that cover the full restaurant
+scene including Albayzín, Realejo, Zaidín, and Beiro — not
+just the tourist centre around Plaza Nueva and Navas.
+
+DIRECT_FETCH_SOURCES:
+- https://www.granadadigital.es/seccion/gastronomia/ (GranadaDigital
+  gastronomy section — ES, includes El Gocho Gourmet content)
+- https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurantes-granada/
+  (Guía Repsol Granada — ⚠ COI, fetch and flag)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+- Guía Repsol — commercial guide awarding "Soles Repsol"; flag
+  ⚠ coi, include but disclose
+- Devour Granada / Devour Tours — commercial tour operator
+  publishing restaurant recommendations; flag ⚠ coi, treat as
+  secondary, cap at 20 restaurants
+- Any publication receiving advertising from reviewed restaurants
+
+SECONDARY_SOURCES: The Infatuation, Condé Nast Traveller,
+  Lonely Planet, Michelin Guide Spain, Guía Repsol (national
+  rankings only — city guide is primary but ⚠ coi),
+  Devour Granada (commercial COI)
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+- yelp.com (aggregator — reject)
+- tripadvisor.com (aggregator — reject)
+- opentable.com (booking site — reject)
+- grxexperience.atenasgranada.com ("Granada Secreta" — tour
+  company, not a food publication — reject)
+- andalucia360travel.com (generic tourist guide — reject)
+- barcelo.com (hotel chain tourist content — reject)
+- hoteles.com (hotel booking site content — reject)
+
+PRICE_CURRENCY: EUR
+PRICE_LEVELS:
+- 1 = under €12pp (free tapas culture — budget dining very common)
+- 2 = €12–30pp
+- 3 = €30–60pp
+- 4 = over €60pp
+NOTE: Granada is significantly more affordable than Barcelona,
+with strong free tapas culture. Price level 1 is genuinely
+common and meaningful here, not just budget tourism.
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Centro, Albayzín, Realejo, Zaidín, Beiro, Ronda, Genil,
+Chana, Norte, Almanjáyar, La Paz, Cartuja, Arabial,
+Camino de Ronda, Sacromonte, Alhambra (restaurants near but
+not inside the monument — note: restaurant inside Alhambra
+grounds is tourist-facing, deprioritise)
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Motril (coast), Guadix, Baza, Loja, Alhama de Granada,
+Lanjarón, Órgiva, or any location described as "Granada
+province", "Costa Tropical de Granada", "Alpujarras",
+"Sierra Nevada" (ski resort), "day trip from Granada", or
+outside Granada city municipal boundary.
+NOTE: Guard against Alhambra-adjacent restaurants that exist
+primarily to serve tourists — prioritise sources covering
+local neighbourhood restaurants in Albayzín, Realejo, Zaidín.
+
+SIBLING EDITION NOTE:
+No Catalan or regional language issue for Granada — ES and EN
+only. Standard both-pool definition applies.
+
+SINGLE_LANGUAGE_CITY: NO
+RIAD_RULE: NOT_APPLICABLE
+
+PROXIMITY_RADIUS_KM: 18
+  [Córdoba-sized city — more compact than Seville.]
+
+OUTPUT_RAW: ./localbite-granada-raw.json
+OUTPUT_FINAL: ./localbite-granada-2023-2026.json
+OUTPUT_WORKING: ./localbite-granada-working.json
+OUTPUT_SEARCH_LOG: ./localbite-granada-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-granada-search-plan.txt
+OUTPUT_FAILED_SOURCES: ./localbite-granada-failed-sources.txt
+OUTPUT_AUDIT: ./localbite-granada-audit.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city.
+Part 2 is the pipeline engine — do not modify it.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: [CITY NAME]
+COUNTRY: [COUNTRY]
+CITY_SLUG: [city-country]
+CITY_TYPE: [european_major | european_minor | moroccan_medina |
+  north_american_major | other]
+  NOTE: CITY_TYPE is currently a metadata field. It affects only the
+  PROXIMITY_RADIUS_KM default and does not change pipeline search behaviour,
+  tier logic, or diversity gate rules. Full CITY_TYPE-driven automation is
+  a planned post-batch feature (localbite-viewer-update.js). Definitions:
+    european_major:       Large city, rich multilingual food writing scene
+                          (Barcelona, Lisbon, Valencia, Madrid)
+    european_minor:       Smaller city, thinner food writing scene
+                          (Porto, Bologna, Lyon)
+    moroccan_medina:      North African medina city, Arabic/FR/EN writing
+                          (Fes, Marrakesh, Rabat, Chefchaouen)
+    north_american_major: Large EN-dominant city (Toronto, NYC, Montreal)
+    other:                Any city not fitting above — use 20km proximity
+
+LANGUAGE_PRIMARY: [Primary language of food writing in this city]
+LANGUAGE_CODES: [EN | ES | CA | PT | FR | AR — list all relevant]
+SEARCH_LANGUAGES: [List languages for searches, e.g. "English, Spanish,
+  Catalan". For single-language cities note: "English only — do not
+  spend searches on other languages"]
+
+CONTENT_WINDOW: 2023–2026
+  [Accept articles published or substantially updated 2023–2026.
+  Always verify date from fetched article text, not CMS metadata.
+  Articles from 2023–2024 require extra verification that the
+  restaurant is still open — flag in article_date field.]
+
+SEARCH_ANGLE_EXAMPLES:
+[3–5 example queries in the primary language(s) of this city.
+Vary year terms. Include neighbourhood-level and writer-first
+examples where relevant.]
+- "[example query 1]"
+- "[example query 2]"
+- "[example query 3]"
+
+SOURCE_EXAMPLES:
+[List known publications for this city by tier. For a new city
+this may be sparse — that is fine. Do not invent sources.
+Cap: maximum 4 publications per language tier. More than this
+anchors the pipeline on known sources and reduces discovery of
+genuinely independent voices. The pipeline treats these as
+examples and starting points, not as an exhaustive list to search
+for by name.]
+Primary (named local voices):
+- [Publication — writer or coverage notes if known]
+Secondary (national/international):
+- [Publication]
+
+DIRECT_FETCH_SOURCES:
+[List 0–3 URLs to fetch directly before any searches. Only include
+URLs you have verified exist and are likely to return qualifying
+2023–2026 content. Leave empty if unknown — the pipeline will
+discover sources via searches.]
+[If none: leave this section blank]
+
+KNOWN_COMMERCIAL_CONFLICTS:
+[List any publications known to have commercial relationships with
+dining industry — operates a food market, accepts restaurant
+advertising in reviews, etc. Leave blank if none known.]
+[If none: leave this section blank]
+
+SECONDARY_SOURCES: [Comma-separated list of publications treated
+  as secondary regardless of how they describe themselves.
+  Always include: Condé Nast Traveller, Lonely Planet, Time Out,
+  Michelin Guide, national "best of" lists]
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+- yelp.com (aggregator — reject)
+- tripadvisor.com (aggregator — reject)
+- opentable.com (booking site — reject)
+- zomato.com (aggregator — reject)
+[Add any city-specific problematic URLs below]
+
+PRICE_CURRENCY: [EUR | CAD | MAD | GBP | etc.]
+PRICE_LEVELS:
+[Set 4 levels appropriate to city cost. Examples:
+  European: 1=under €20pp, 2=€20–40pp, 3=€40–80pp, 4=over €80pp
+  Morocco:  1=under 100MAD, 2=100–250MAD, 3=250–500MAD, 4=over 500MAD
+  Toronto:  1=under $40CAD, 2=$40–80CAD, 3=$80–150CAD, 4=over $150CAD]
+- 1 = [range]
+- 2 = [range]
+- 3 = [range]
+- 4 = [range]
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+[List canonical neighbourhood names for this city. These become
+the valid values for the neighbourhood field in extracted restaurants.
+For cities with amalgamated boundaries, note which areas are
+unconditionally included.]
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+[List nearby cities, suburbs, day-trip destinations that must be
+excluded even if mentioned in qualifying articles. Be specific.]
+
+SINGLE_LANGUAGE_CITY: [YES | NO]
+  [If YES: add note that multi-source signal is defined by editorial
+  tier (legacy+independent) not language pool, and language_pool
+  field should be "multi-source" not "both".]
+
+RIAD_RULE: [APPLY | NOT_APPLICABLE]
+  [Apply for Moroccan cities only. Riad hotel restaurants are flagged
+  automatically; include only if quote contains specific dish detail
+  and writer explicitly recommends dining there.]
+
+PROXIMITY_RADIUS_KM: [number]
+  [Radius in km used by the proximity feature to detect whether a
+  user is physically in this city. Defaults by CITY_TYPE:
+    european_major:       20
+    european_minor:       15
+    moroccan_medina:      25
+    north_american_major: 35
+    other:                20
+  Override if the city's geography requires a different value.
+  Example: a city with large administrative boundaries but a compact
+  dining scene should use a smaller radius than the default.]
+
+OUTPUT_RAW: ./localbite-[city-slug]-raw.json
+OUTPUT_FINAL: ./localbite-[city-slug]-2023-2026.json
+OUTPUT_WORKING: ./localbite-[city-slug]-working.json
+OUTPUT_SEARCH_LOG: ./localbite-[city-slug]-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-[city-slug]-search-plan.txt
+OUTPUT_FAILED_SOURCES: ./localbite-[city-slug]-failed-sources.txt
+OUTPUT_AUDIT: ./localbite-[city-slug]-audit.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 2 — PIPELINE ENGINE
+Do not change this section between cities.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+I am building a LocalBite city pack for [CITY], [COUNTRY].
+I want restaurant recommendations from named local food writers
+from articles published or substantially updated in 2023, 2024,
+2025, or 2026. Use the variables defined in Part 1 throughout.
+
+Run the full pipeline automatically. Do not stop for individual
+approvals. Pause only once at the end for a single bulk review.
+
+CONTENT WINDOW NOTE:
+Articles from 2023–2024 are acceptable but require extra care:
+- Flag any restaurant from a pre-2025 source with article_date
+  recorded as the actual publication date
+- Add open_status_check: true for all pre-2025-sourced restaurants
+  so a verification pass can be run before the city goes live
+- Do not reject a source solely because it is from 2023 or 2024
+  if it is otherwise the strongest available source for this city
+
+WRITER PROFILE RULE — MANDATORY:
+The writer_profile field is USER-FACING. It appears in the LocalBite
+Sources panel. Never include in writer_profile:
+✗ Fetch quality or character counts
+✗ Tier assignments or confidence scores
+✗ Rejection reasons or pipeline notes
+✗ Internal pipeline terminology
+✓ Write 2–3 natural sentences covering: who the writer is,
+  their connection to this city, and their editorial stance.
+
+════════════════════════════════════════
+OUTPUT SIZE MANAGEMENT
+════════════════════════════════════════
+
+To prevent token limit errors:
+- Extract and write one source at a time to OUTPUT_WORKING
+- Never hold all sources in memory simultaneously
+- If any single fetch returns over 500,000 characters, truncate
+  to the first 50,000 characters and note truncation
+- For secondary sources, extract a maximum of 30 restaurants
+
+════════════════════════════════════════
+SEARCH RULES — apply to all phases
+════════════════════════════════════════
+
+✗ Do not use the site: operator in any search query
+✗ Do not search for a specific publication by name
+✗ Do not repeat a query already in OUTPUT_SEARCH_LOG
+✓ Use open queries describing the type of content you want
+✓ Use SEARCH_ANGLE_EXAMPLES as starting points
+✓ Vary language across searches using SEARCH_LANGUAGES
+✓ Vary year terms — some queries with years, some without
+✓ Include queries going back to 2023 — do not limit to 2025–2026
+
+════════════════════════════════════════
+SEARCH LOG
+════════════════════════════════════════
+
+After every search or Jina fetch, immediately append one line
+to OUTPUT_SEARCH_LOG:
+[phase] "[exact query or URL]" → [one sentence on results]
+
+Do this in real time. Do not reconstruct from memory at the end.
+
+════════════════════════════════════════
+PHASE 0 — DIRECT FETCH OF KNOWN SOURCES
+════════════════════════════════════════
+
+[Skip this phase entirely if DIRECT_FETCH_SOURCES is blank.]
+
+For each URL in DIRECT_FETCH_SOURCES:
+1. Fetch via https://r.jina.ai/[URL]
+2. Confirm: returns 2,000+ characters of genuine food content?
+3. Confirm: at least one article or review dated 2023–2026?
+4. If both pass: add to candidate pool as pre-verified source.
+   Note writer name for use in Phase 1 writer-first queries.
+   Log: [phase-0] FETCHED [publication] — [date] — [chars] chars
+5. If either fails: log reason and skip.
+   Log: [phase-0] FAILED [publication] — [reason]
+
+After Phase 0 report:
+PHASE 0 RESULTS:
+- Successfully fetched: [list]
+- Failed: [list with reasons]
+- Writers confirmed for Phase 1: [list]
+
+Proceed to Phase 1.
+
+════════════════════════════════════════
+PHASE 1 — SOURCE SELECTION
+════════════════════════════════════════
+
+STEP 1 — Write search plan
+
+Before running any searches, write a plan to OUTPUT_SEARCH_PLAN.
+
+The search plan has two parts:
+
+PART A — NEIGHBOURHOOD COVERAGE (non-negotiable)
+Run one search query per neighbourhood or neighbourhood group
+listed in GEOGRAPHIC_BOUNDARY_INCLUDE. Adjacent neighbourhoods
+with overlapping food writing scenes may be grouped into one
+query (e.g. "Corktown and Distillery District Toronto restaurants
+food writer" covers both). Every neighbourhood must appear in at
+least one query — do not skip any.
+
+Run neighbourhood queries in all relevant SEARCH_LANGUAGES.
+For a bilingual city: run each neighbourhood in both languages
+(2 queries per neighbourhood or group). For a trilingual city:
+run in all 3 languages (3 queries per neighbourhood or group).
+For a single-language city: 1 query per neighbourhood or group.
+
+PART B — CROSS-CUTTING ANGLES (run after all neighbourhood queries)
+These angles cover what neighbourhood queries miss:
+
+  Cross-1 — City-wide: 3 queries (vary language and year terms)
+  Cross-2 — Writer-first: 3 queries (use any names from Phase 0;
+    vary language; include one query per language pool)
+  Cross-3 — Recent openings 2024–2026: 2 queries
+  Cross-4 — Older coverage 2023–2024: 2 queries (explicitly
+    search for "best restaurants [city] 2023" and "2024" — do
+    not skip; established sources from these years are valid)
+  Cross-5 — Awards and recognition: 2 queries (Michelin, local
+    guides, annual best-of lists)
+  Cross-6 — Forum and community: 2 queries
+  Cross-7 — Cuisine diversity (for cities with significant
+    non-mainstream food communities): 2 queries if applicable,
+    0 if not
+
+TOTAL QUERY COUNT:
+  Small city (≤5 neighbourhoods, e.g. Fes, Chefchaouen):
+    ~5–15 neighbourhood queries + 14 cross-cutting = ~20–30 total
+  Medium city (5–15 neighbourhoods, e.g. Lisbon, Rabat, Valencia):
+    ~15–30 neighbourhood queries + 14 cross-cutting = ~30–45 total
+  Large city (15+ neighbourhoods, e.g. Toronto, Barcelona):
+    ~20–40 neighbourhood queries + 14 cross-cutting = ~35–55 total
+
+STOPPING RULE:
+If the last 8 consecutive queries have all returned sources
+already in the candidate pool or no qualifying NEW SOURCES at all
+(a query surfacing known sources but no new ones counts as
+yielding nothing new), stop searching and proceed to Step 3 —
+even if not all neighbourhood queries or angles are complete.
+Log: [stopping-rule] triggered after [N] queries — last 8 queries
+yielded no new candidates.
+
+The stopping rule takes precedence over neighbourhood completeness.
+For well-documented cities (european_major), the source pool
+typically saturates after 30–40 queries — the stopping rule will
+fire before all neighbourhood combinations are exhausted, and this
+is correct behaviour. For thin-source cities (moroccan_medina,
+european_minor), the stopping rule may not fire until much later.
+
+Soft ceiling: 55 queries. If approaching 55 without triggering
+the stopping rule, complete the current angle and stop.
+Do not exceed 55 under any circumstances — context window risk.
+
+QUERY RULES:
+✗ Each query must be meaningfully distinct from all previous
+✗ Do not repeat any query already in OUTPUT_SEARCH_LOG
+✓ Vary year terms across queries (some with years, some without)
+✓ Vary language across queries using all SEARCH_LANGUAGES
+✓ Neighbourhood queries should name the neighbourhood explicitly
+
+Write the full plan before running any queries.
+
+STEP 2 — Execute search plan
+
+Run all planned queries in order: neighbourhood queries first
+(Part A), then cross-cutting angles (Part B). Log each query
+immediately after running. Apply stopping rule if triggered.
+Do not skip Part A neighbourhood queries for any reason —
+these are the foundation of geographic coverage.
+
+STEP 3 — Evaluate candidates
+
+For each candidate found via search, run a quick verification
+fetch via Jina to confirm:
+- Publication date is 2023–2026 (check article text, not
+  CMS metadata or "updated" label — these are unreliable)
+- Named author present
+- Article is specifically about this city's restaurants
+- Page returns 2,000+ chars confirming genuine article content
+
+If under 2,000 chars or no date visible: reject without using
+a full fetch slot.
+
+SOURCE QUALITY RULES:
+✓ Named author, 2023–2026 date, restaurant guide for this city,
+  editorial independence, no obvious advertorial framing
+✓ Independent blogger with evidence of local residency or regular
+  city coverage
+✓ Freelance food writer with documented city coverage
+✓ Local press journalist writing a food guide for this city
+✗ No named author — reject regardless of publication credibility
+✗ Pre-2023 date (verify from fetched text, not updated label)
+✗ Booking sites, hotel sites, sponsored content
+✗ Covers whole country or region not this city specifically
+✗ KNOWN_PROBLEMATIC_URLS
+✗ Social media primary sources without fetchable articles
+✗ Articles that read as promotional or lack specific critical detail
+
+CONFLICT OF INTEREST CHECK (mandatory for every source):
+For every candidate that passes quality rules, log:
+[coi-check] [publication] — commercial conflict: YES/NO
+If YES: describe the conflict. Include in writer_profile and
+flag ⚠ coi in review table. Do not reject — flag and include.
+Sources with commercial conflicts count toward secondary cap.
+
+SIBLING EDITION CHECK (mandatory when applicable):
+If a publication has editions in multiple languages:
+Log: [sibling-check] [publication] [LANG1] and [LANG2] —
+independently produced: YES/NO — evidence: [specific evidence,
+e.g. different authors, different article dates, separate URLs]
+Same-publisher cross-language editions do NOT qualify as
+independent agreement for both-pool. Both may be included as
+sources but cannot create a both-pool entry between themselves.
+
+WRITER PROFILE (mandatory for every accepted source):
+Write 2–3 sentences covering who the writer is, their
+connection to this city, and their editorial stance.
+This is USER-FACING — no pipeline notes, no fetch data.
+Store as writer_profile in the sources array.
+
+PUBLISHER CONCENTRATION CHECK:
+After selecting sources, check: does any single publisher
+contribute 2+ articles (regardless of whether different writers
+authored them) or 50%+ of either language pool?
+IMPORTANT: A publication with two different writers is still one
+publisher. "The New Barcelona Post / Anna Torrents" and "The New
+Barcelona Post / P. Ribot" are TWO ARTICLES from ONE publisher —
+this triggers the concentration flag even though the writers differ.
+If yes: log [publisher-concentration] flag, note the publisher and
+article count, and attempt 3–4 supplementary searches targeting
+independent sources from a different publisher before proceeding.
+If no independent alternative found after supplementary searches,
+document and proceed — this is a structural characteristic of
+the city's food writing landscape, not a pipeline failure.
+
+DIVERSITY GATE:
+For bilingual/multilingual cities:
+✓ At least 1 EN primary source
+✓ At least 1 primary source from EACH local language pool listed
+  in LANGUAGE_CODES (e.g. for Barcelona EN/ES/CA: need at least
+  one ES primary AND one CA primary, not just one or the other)
+✓ No more than 2 secondary sources in total
+
+For single-language cities:
+✓ At least 2 legacy/institutional sources
+✓ At least 1 independent/freelance source
+✓ No more than 2 secondary sources in total
+
+If gate not met after completing all planned neighbourhood and
+cross-cutting queries (or after the stopping rule fires), run up
+to 8 additional targeted searches specifically targeting the
+missing language pool or source tier. Report which criteria were
+not met and what supplementary searches were attempted.
+If gate still not met after 8 supplementary searches: document
+as a structural characteristic of this city's food writing
+landscape, proceed with what was found, and flag in the
+DIVERSITY GATE section of the final summary.
+
+Select 6–12 sources. For each state: publication, writer,
+URL, language, article date, source type, writer profile,
+COI status, one sentence on why it passes.
+
+Do not stop for approval. Proceed to Phase 2.
+
+════════════════════════════════════════
+PHASE 2 — FETCH AND EXTRACT (with retry)
+════════════════════════════════════════
+
+FETCH PROTOCOL:
+Fetch all sources via Jina (https://r.jina.ai/[URL]).
+Send all Jina requests in parallel. Then process extractions
+one source at a time in the order they return.
+
+TWO-TIER RETRY RULE (new in v6):
+If any fetch returns under 3,000 characters:
+
+  RETRY 1 — Transient failure check:
+  1. Wait 30 seconds
+  2. Retry the same URL via Jina
+  3. If now 3,000+ chars: proceed with extraction normally.
+     Log: [retry-1-success] [publication] — recovered after 30s
+
+  RETRY 2 — Extended wait (if Retry 1 still under 3,000 chars):
+  1. Wait 60 seconds
+  2. Retry the same URL via Jina one final time
+  3. If now 3,000+ chars: proceed with extraction normally.
+     Log: [retry-2-success] [publication] — recovered after 60s
+
+  FINAL FAILURE (if still under 3,000 chars after both retries):
+  - Mark as fetch_status: "failed"
+  - Log to OUTPUT_FAILED_SOURCES:
+      URL | chars attempt 1 | chars retry 1 | chars retry 2 |
+      outcome: permanent failure
+  - Do not extract restaurants from this source
+  - Continue to next source
+  - Source remains in sources array with fetch_status: "failed"
+    and fetch_chars recording the final char count
+  - writer_profile must still be written from search snippet
+    knowledge — do not include fetch failure notes in this field
+
+END-OF-PHASE FAILED SOURCES REPORT:
+After all sources are processed, before proceeding to
+traceability check, output:
+
+FAILED SOURCES SUMMARY:
+- Sources recovered by Retry 1 (30s): [list]
+- Sources recovered by Retry 2 (60s): [list]
+- Sources failed after both retries: [list with char counts]
+- Total restaurants lost to permanent failures: [estimate]
+
+If OUTPUT_FAILED_SOURCES is non-empty: the operator should
+inspect these URLs after the pipeline completes. Permanent
+failures are likely paywalls or scraper blocks. No further
+automated action is taken — this is a known limitation.
+
+For each source, follow this sequence:
+1. Confirm fetch received and char count
+2. If under 3,000 chars: apply two-tier retry rule above
+3. If 3,000+ chars (initial or after retry): extract restaurants
+4. Write to OUTPUT_WORKING (append)
+5. Confirm write succeeded
+6. Move to next source
+
+For each source report:
+- Publication and writer
+- Characters returned (attempt 1 / retry 1 / retry 2)
+- Fetch quality: good (3,000+) / partial (1,000–3,000) /
+  failed (under 1,000 after all retries)
+- Retries attempted: 0 / 1 / 2
+- Outcome: success / recovered-retry-1 / recovered-retry-2 /
+  failed
+- Restaurants extracted (count, or 0 if failed)
+- Written to working file: yes / no
+
+EXTRACTION RULES:
+✓ Only include restaurants explicitly named in fetched text
+✓ Extract: name, neighbourhood (canonical from
+  GEOGRAPHIC_BOUNDARY_INCLUDE), price level, signature dish
+  if mentioned, quote (writer's words, minimum 15 words with
+  at least 1 specific detail), cuisine type, opening year if
+  mentioned, article_date (from fetched text not metadata)
+✗ Do not use training knowledge to add any detail
+✗ Do not include if only evidence is a list title or header
+✗ Secondary sources: maximum 30 restaurants
+
+QUOTE QUALITY RULE:
+Valid quote = at least 15 words AND at least one specific detail
+(dish name, chef name, physical description, price, year, or
+neighbourhood).
+Under 15 words or no specific detail → low-confidence flag.
+Secondary source entries → must have TWO specific details or
+→ low-confidence.
+
+ARTICLE DATE FIELD:
+Record the date found in fetched article text as article_date.
+If no date visible in fetched text, record as "undated".
+Do not use CMS metadata, "updated" labels, or URL patterns.
+If article_date is 2023 or 2024, set open_status_check: true
+on every restaurant extracted from that source.
+
+NAME NORMALISATION:
+If the same restaurant appears under multiple spellings, merge
+into one entry using the most complete name. Record all variants
+in name_variants. Report all merges at end of phase.
+
+NEIGHBOURHOOD STANDARDISATION:
+Map to canonical forms from GEOGRAPHIC_BOUNDARY_INCLUDE.
+Use null if neighbourhood cannot be determined from article text.
+Do not invent neighbourhoods not in GEOGRAPHIC_BOUNDARY_INCLUDE.
+
+LANGUAGE_POOL FIELD:
+Set language_pool as a plain string — never a list or array.
+Rules:
+  "both"         → restaurant appears in sources from 2+ different
+                   language pools (e.g. EN + ES, EN + CA, ES + CA).
+                   Same-publisher cross-language editions do NOT qualify.
+  "en"           → English-language sources only
+  "es"           → Spanish-language sources only
+  "ca"           → Catalan-language sources only
+  "pt"           → Portuguese-language sources only
+  "fr"           → French-language sources only
+  "ar"           → Arabic-language sources only
+  "multi-source" → SINGLE_LANGUAGE_CITY only: appears in 2+ independent
+                   sources in the same language
+Calculate this field in Phase 3 after all sources are merged.
+Never write ["en", "es"] or any bracket/list form — always a string.
+
+GEOGRAPHIC BOUNDARY:
+✗ Auto-exclude anything in GEOGRAPHIC_BOUNDARY_EXCLUDE
+✗ Flag any restaurant whose location description is ambiguous
+
+RIAD RULE (apply only if RIAD_RULE: APPLY in Part 1):
+Flag any hotel or riad restaurant with ⚠ riad.
+Include only if: quote contains specific dish detail AND writer
+explicitly recommends the restaurant for food, not atmosphere.
+Remove if quote is atmosphere-only with no dish specificity.
+
+TRACEABILITY CHECK (mandatory before proceeding to Phase 3):
+After all sources are extracted, verify:
+For every restaurant in OUTPUT_WORKING, can you identify the
+specific source URL it came from and the sentence in the fetched
+text where its name appeared?
+If any restaurant cannot be traced to a specific fetched
+sentence: remove it and log the removal in OUTPUT_AUDIT.
+This check prevents fabrication. Do not skip it.
+
+════════════════════════════════════════
+PHASE 3 — ASSEMBLE, SCORE, AND REVIEW
+════════════════════════════════════════
+
+Read OUTPUT_WORKING as input.
+
+STEP 1 — Deduplicate and merge
+Combine all entries. Match on normalised name.
+Report: total before dedup / total after / merges made.
+
+STEP 2 — Assign confidence tier
+
+BOTH-POOL DEFINITION (v6 — strict):
+A restaurant qualifies as both-pool ONLY if it appears in:
+- At least one source in language pool A, AND
+- At least one source in language pool B, AND
+- The two sources are from DIFFERENT publishers with no shared
+  ownership, brand relationship, or licensing arrangement.
+Same-publisher cross-language editions (e.g. Time Out EN + Time
+Out ES, Time Out EN + Time Out PT) do NOT qualify as both-pool
+even if they have different editorial teams or different authors.
+
+TIER A — Auto-approve:
+- 2 or more independent sources, OR
+- Both-pool (using strict definition above)
+
+For single-language cities (SINGLE_LANGUAGE_CITY: YES):
+- Tier A = at least one legacy/institutional source AND at least
+  one independent/freelance source (record as "multi-source")
+- Single-tier two-source entries are strong but not Tier A
+
+TIER B — Review recommended:
+- Single primary or independent source, good fetch quality,
+  quote ≥15 words with ≥1 specific detail
+- Secondary single source, good fetch quality, quote ≥15 words
+  with ≥2 specific details
+
+TIER C — Auto-reject:
+- Failed fetch, single source (partial fetches that didn't
+  meet retry threshold are treated as failed for this purpose)
+- Quote under 15 words or no specific details
+- Secondary single-source with fewer than 2 specific details
+- Outside GEOGRAPHIC_BOUNDARY_INCLUDE
+- Low-confidence flag from extraction
+- Any entry from KNOWN_PROBLEMATIC_URLS
+- Failed traceability check
+
+SOURCE CONCENTRATION CAP:
+If any single source contributes more than 30% of total
+(Tier A + Tier B) entries as single-source Tier B:
+Auto-reject lowest-confidence entries from that source until
+within cap. Report in AUTO-REJECTED section.
+Note: this cap operates at source level. The publisher
+concentration check in Phase 1 operates at publisher level.
+Both apply independently.
+
+STEP 3 — Recommended removals (mandatory)
+Review every Tier B entry. State how many reviewed and how many
+recommendations made (even if zero). Flag:
+- Not a restaurant (bar-only, café-only, bakery without seating,
+  market stall without table service)
+- Chain with no local significance
+- Conflict of interest (restaurant is advertiser of source
+  publication, or writer has disclosed personal relationship)
+- Hotel or riad restaurant with atmosphere-only quote, no
+  specific dish detail (see RIAD_RULE if applicable)
+- open_status_check: true entries from 2023–2024 sources — flag
+  these for post-pipeline verification but do NOT run closure
+  searches during the pipeline. Closure verification happens at
+  Stage 2 of the definition of done, not here. Simply ensure
+  open_status_check: true is set on all restaurants from pre-2025
+  sources so they can be identified for later verification.
+
+AUTO-APPLY AND RECOMMENDED REMOVALS:
+Apply all Tier C rejections automatically — do not present
+these in the review table. Log every Tier C removal to
+OUTPUT_AUDIT: Restaurant name | Tier | Reason | Source
+
+For Tier B recommended removals: DO NOT auto-apply during the
+first batch run. Instead, present them clearly in the review
+table marked with ⚠ rec-remove and the reason, so the human
+can validate that the recommended removal logic is working
+correctly. Once the logic has been validated across 2–3 city
+runs, auto-apply can be enabled by changing this instruction.
+
+Log all recommended removals to OUTPUT_AUDIT regardless of
+whether they are auto-applied or presented for human review.
+
+STEP 4 — Review table
+Show only: Tier A entries + Tier B entries with NO recommended
+removal triggered.
+
+AUTO-REMOVAL RULE — NULL NEIGHBOURHOOD:
+Any Tier B entry where neighbourhood is null AND source_count is 1
+is automatically recommended for removal. Add to recommended
+removals list and log to OUTPUT_AUDIT with reason:
+"No neighbourhood recorded; single source only — location
+unverifiable within city boundary."
+Exception: retain if quote contains an explicit Valencia/city
+district reference that confirms city location.
+
+Sort: both-pool first → multi-source → single-source alphabetical.
+
+Columns:
+# | Name | Neighbourhood | Cuisine | Price | Pool | Sources |
+Tier | Source combo | ⚠
+
+After table — mandatory, must not be skipped:
+
+---
+AUTO-REJECTED (Tier C) — [N] entries — see OUTPUT_AUDIT for detail
+AUTO-REMOVED (recommended Tier B) — [N] entries — see OUTPUT_AUDIT
+
+COI FLAGS
+[List any ⚠ coi sources and their conflict description]
+
+PUBLISHER CONCENTRATION
+[List any publishers flagged and resolution]
+
+"Enter numbers to remove from the remaining Tier B entries,
+or press Enter to accept all.
+Type keep [number] to retain a flagged entry with justification."
+---
+
+STEP 5 — Export
+
+Write OUTPUT_AUDIT now with all auto-rejections and auto-removals
+documented (format: restaurant name | tier | reason | source).
+
+Write FILE 1 (raw) to OUTPUT_RAW — all Tier A and Tier B entries
+before any removals (including auto-removed). This file is the
+complete unfiltered record.
+
+Apply user removals. Write FILE 2 (final) to OUTPUT_FINAL.
+
+JSON structure — FILE 2 (final):
+{
+  "city": "[CITY]",
+  "country": "[COUNTRY]",
+  "city_slug": "[CITY_SLUG]",
+  "built": "[today's date]",
+  "source_recency": "2023-2026",
+  "pipeline": "localbite-v6",
+  "confidence_tiers": {
+    "auto_approved": [count],
+    "reviewed_kept": [count],
+    "auto_removed": [count],
+    "user_removed": [count],
+    "auto_rejected": [count],
+    "concentration_cap_applied": [count]
+  },
+  "sources": [
+    {
+      "id": "src-slug",
+      "publication": "string",
+      "writer": "string or null",
+      "writer_profile": "2–3 sentence user-facing profile",
+      "url": "string",
+      "language": "en/es/ca/pt/fr/ar",
+      "source_type": "primary or secondary",
+      "source_tier": "primary / secondary — for single-language cities
+        use: legacy_institutional / independent_freelance / secondary",
+      "article_date": "YYYY-MM-DD or undated",
+      "fetch_status": "good / partial / failed",
+      "fetch_chars": [number],
+      "retries_attempted": 0/1/2,
+      "commercial_conflict": true/false,
+      "commercial_conflict_note": "string or null",
+      "publisher_concentration_flag": true/false,
+      "found_via": "phase-0 / angle-X"
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "string",
+      "name_variants": [],
+      "neighbourhood": "canonical form or null",
+      "cuisine": "string or null",
+      "opening_year": "number or null",
+      "price_level": "number or null",
+      "price_currency": "[PRICE_CURRENCY]",
+      "signature_dish": "string or null",
+      "quote": "string",
+      "quote_language": "original or translated from [language]",
+      "language_pool": "both / en / es / ca / pt / fr / ar /
+        multi-source",
+      "source_count": "number",
+      "sources": ["src-ids"],
+      "confidence_tier": "A or B",
+      "source_type_combination": "string",
+      "article_date": "YYYY-MM-DD or undated",
+      "open_status_check": true/false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
+    }
+  ]
+}
+
+════════════════════════════════════════
+FINAL SUMMARY (mandatory, present immediately before review table)
+════════════════════════════════════════
+
+TOKEN AND PERFORMANCE METRICS (record from session banner NOW,
+before scrolling — this data is lost if you scroll past it):
+- Tokens used: [Xk tokens from completion banner]
+- Tool uses: [X tool uses from completion banner]
+- Run time: [X minutes from completion banner]
+- Queries run: [total from search log]
+- Stopping rule fired: yes/no — at query [N]
+
+PIPELINE METRICS:
+- Raw count / final count
+- Both-pool count and entries (strict definition applied)
+- Tier A / Tier B kept / recommended-for-removal / user-removed /
+  Tier C auto-rejected / concentration cap applied
+- open_status_check flagged: [count] — from [N] pre-2025 sources
+NOTE: Final count here excludes user removals since the review
+table has not yet been presented. User removal count will be
+added to OUTPUT_AUDIT after the review is complete.
+
+SOURCES TABLE:
+Publication | Writer | Language | Type | Date | Fetch | COI | Found via
+
+WRITER PROFILES: [one profile per source]
+
+FETCH QA SUMMARY:
+- Sources fetched successfully (3,000+ chars): [count]
+- Sources retried: [count]
+- Sources failed after retry: [count]
+- Failed sources logged to OUTPUT_FAILED_SOURCES: [list]
+
+PUBLISHER CONCENTRATION REPORT:
+- Publishers contributing 2+ articles: [list]
+- Flags triggered: [list]
+- Resolved by supplementary search: yes/no
+
+COI REPORT:
+- Sources with commercial conflicts: [list with description]
+
+AUDIT SUMMARY:
+- Auto-rejections (Tier C): [count] — see OUTPUT_AUDIT
+- Auto-removals (recommended Tier B): [count] — see OUTPUT_AUDIT
+
+════════════════════════════════════════
+SEARCH TRANSPARENCY
+════════════════════════════════════════
+
+Read OUTPUT_SEARCH_LOG and include full contents as final
+section under heading "Search log".
+
+════════════════════════════════════════
+START
+════════════════════════════════════════
+
+[If DIRECT_FETCH_SOURCES is populated: start Phase 0 now.]
+[If DIRECT_FETCH_SOURCES is blank: start Phase 1 Step 1 now.]
+Run all the way through to the review table without stopping.

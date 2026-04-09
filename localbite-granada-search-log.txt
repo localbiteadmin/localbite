@@ -1,0 +1,60 @@
+# LocalBite Granada — Search Log
+# Pipeline: localbite-v6 | Date: 2026-04-09
+# City: Granada, Spain | Languages: EN / ES
+
+# Phase 0 — Direct Fetch
+[phase-0] "https://www.granadadigital.es/seccion/gastronomia/" → 404; alternate /gastronomia/ → 28,500 chars general news index, no food guide content
+[phase-0] "https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurantes-granada/" → 404; alternate URL also 404 or empty Granada results
+[phase-0] "https://www.granadadigital.es/?s=mejores+restaurantes+granada+gocho+gourmet" → 4,200 chars; confirmed 3 El Gocho Gourmet article headlines on site
+[phase-0] search: "El Gocho Gourmet mejores restaurantes Granada segunda edición" → confirmed article URLs; Alfonso Campos named critic; second edition July 2025
+[phase-0] search: "Guía Repsol soles Granada restaurantes 2024 2025" → Soles: María de la O 2024; 9 Soletes capital 2024; COI flagged
+
+# Phase 1 — Neighbourhood Queries (Part A)
+[phase-1/N01-ES] "restaurantes Centro Granada barrio gastronomía recomendaciones" → General tourist results, directories; no qualifying named-author editorial source
+[phase-1/N02-EN] "Centro Granada restaurants food writer guide neighbourhood" → Hot Dinners 48h guide (later rejected: no date/author); Edible Reading (later rejected: anon author); Spanish Sabores (Lauren Aloise, updated 2024)
+[phase-1/N03-ES] "mejores restaurantes Realejo Granada barrio judío dónde comer escritor" → La Alacena de las Monjas (Michelin), Damasqueros mentioned; no new qualifying source
+[phase-1/N04-ES] "restaurantes Albayzín Granada recomendaciones 2024 2025 crítica" → Restaurants listed: Estrellas de San Nicolás, Las Tomasas, El Trillo; flamencogranada.com/Jardines de Zoraya (commercial, COI)
+[phase-1/N05-EN] "Albayzín Granada restaurants food writer recommendation local 2024" → Spanish Sabores again; lovegranada.com (later: no author); devourtours.com (COI)
+[phase-1/N06-ES] "restaurantes Zaidín Granada gastronomía crítica dónde comer 2025" → Directories, delivery apps; no qualifying editorial source
+[phase-1/N07-ES] "restaurantes Beiro Ronda Genil Camino de Ronda Granada dónde comer" → Paginas Amarillas, hostel blogs; no qualifying editorial source
+[phase-1/N08-EN] "Sacromonte Albayzín Granada eating food guide local writer tapas 2023 2024" → Spanish Sabores confirmed Lauren Aloise; Spain by Hanne (rejected: checked, thin content); lovegranada.com (no author)
+[phase-1/N09-ES] "restaurantes Chana Norte Almanjáyar La Paz Granada barrio gastronomía" → cervezasalhambra.com brand content; granadablog.es (no author); no qualifying editorial source
+[phase-1/N10-ES] "restaurantes Cartuja Arabial zona universitaria Granada dónde comer" → Student directories, UGR cafeteria; no qualifying editorial source
+[phase-1/N11-ES] "Sacromonte Granada restaurantes bares gastronomía recomendaciones" → granadainfo.com (institutional), no qualifying editorial source
+
+# Phase 1 — Cross-Cutting Angles (Part B)
+[phase-1/C01-ES] "mejores restaurantes Granada 2025 guía gastronómica local escritor" → Flamencogranada.com (commercial), Guía Michelin; no new qualifying editorial source
+[phase-1/C02-EN] "best restaurants Granada Spain 2024 food writer guide independent" → Spanish Sabores, Hot Dinners, Edible Reading, The Next Crossing (CAPTCHA blocked), James Dimitri (NEW)
+[phase-1/C03-ES] "donde comer Granada recomendaciones critica gastronomica 2023 2024" → Same pattern, no new qualifying source
+[phase-1/C04-ES] "Alfonso Campos El Gocho Gourmet restaurantes Granada" → Confirmed columnista page URL; found Perromedio review article + terrazas article
+[phase-1/C05-ES] "Ideal Granada gastronomía mejores restaurantes periodista 2024 2025" → Ideal.es not in results; no qualifying source found
+[phase-1/C06-EN] "Culinary Backstreets Granada food writer 2023 2024 2025" → CONFIRMED: Culinary Backstreets does not cover Granada
+[phase-1/C07-ES] "nuevos restaurantes Granada abiertos 2024 2025 novedades" → TheFork, directories; Faralá (Michelin star 2026) mentioned; no new editorial source
+[phase-1/C08-EN] "new restaurant openings Granada Spain 2024 2025 chef" → Devour Tours (Emma Fajcz, Dec 2025 update, COI); Edible Reading again; no new primary source
+[phase-1/C09-ES] "mejores restaurantes Granada 2023 guía recomendaciones" → Michelin 2023 (9 Granada restaurants); no new named editorial source
+[phase-1/C10-EN] "where to eat Granada Spain locals recommend reddit forum 2024" → James Dimitri (CONFIRMED Feb 2025); Andalucia In My Pocket (2021, rejected)
+[phase-1/C11-EN] "Granada tapas free tapa tradition neighbourhood bars food writer guide 2024" → Will Fly for Food (2019, rejected); foodlovertour.com (no author); lovegranada.com tapas bars (no author)
+[phase-1/C12-ES] "restaurante árabe marroquí Granada recomendaciones crítica gastronomía local" → Directories only; Arrayanes, Palacio Andaluz Almona mentioned; no named editorial source
+[phase-1/C13-ES] "Soles Repsol Granada restaurantes premiados 2024 2025" → Confirmed: Michelin 2025 ceremony held in Granada; Soles list exists; Michelin is secondary COI
+[phase-1/C14-ES] "restaurantes Granada estrella Michelin sol Repsol reconocimiento 2023 2024 2025" → GranadaDigital article on 10 Michelin-recommended restaurants 2025 (no named individual author); Faralá gets star 2026
+[phase-1/C15-ES] "CosasDeCome Pepe Monforte Granada gastronomía restaurantes" → CosasDeCome covers Cádiz/Seville primarily; no Granada content
+[phase-1/C16-EN] "best restaurants Granada Spain 2024 food writer guide named author" → España Guide/Patricia Palacios (2020 article, rejected: pre-2023); Andalucia Lovers/Fanny (NEW, Feb 2025)
+[phase-1/C17-ES] "granadadigital.es gocho gourmet restaurante reseña recomendación 2025" → No new articles found beyond Perromedio and Tres Terrazas; croqueta article is institutional byline
+[phase-1/C18-EN] "ahoragranada.com gastronomía restaurantes recomendaciones periodista 2024 2025" → No qualifying source found
+
+[stopping-rule] triggered after ~40 queries — last 8+ searches yielded no new qualifying candidates (C14-C18 and prior): España Guide pre-2023, ideal.es not found, Chana/Cartuja directories, Culinary Backstreets confirmed absent, CosasDeCome no Granada content
+
+# Phase 2 — Source Verification Fetches
+[phase-2/fetch] "https://r.jina.ai/https://www.granadadigital.es/gocho-gourmet-esencia-cocina-andaluza-pleno-corazon-granada-rabo-toro-perromedio/" → 3,200 chars; GOOD; date 2025-08-28; author: Gocho Gourmet; 1 restaurant Perromedio; quote quality ✓
+[phase-2/fetch] "https://r.jina.ai/https://www.granadadigital.es/terrazas-granada-buen-tiempo/" → 3,000 chars; GOOD; date 2025-09-18; author: Gocho Gourmet; 3 restaurants (Kiosko Las Titas, La Barra de San Remo, Taberna Mítico Bar)
+[phase-2/fetch] "https://r.jina.ai/https://spanishsabores.com/granada-gastro-guide-where-to-eat-in-granada/" → 4,000 chars; GOOD; date 2023-07-12; author: Lauren Aloise (from site context); 15 restaurants; table format
+[phase-2/fetch] "https://r.jina.ai/https://ediblereading.com/2023/09/22/city-guide-granada-2023/" → 4,000+ chars; GOOD content but REJECTED: anonymous author
+[phase-2/fetch] "https://r.jina.ai/https://www.hot-dinners.com/Features/Travel/granada-guide-best-restaurants-bars-hotel-andalucia-spain-travel" → returned content; REJECTED: no date, no author
+[phase-2/fetch] "https://r.jina.ai/https://jamesdimitri.co.uk/2025/02/18/how-to-eat-well-in-granada/" → 3,200 chars; GOOD; date 2025-02-18; author: James Dimitri ✓; 10 establishments
+[phase-2/fetch] "https://r.jina.ai/https://devourtours.com/blog/best-restaurants-in-granada/" → 3,500 chars; GOOD; date updated 2025-12-22; author: Emma Fajcz ✓; 4 restaurants; ⚠ coi (Devour Tours); excluded per secondary cap (3rd secondary would exceed limit)
+[phase-2/fetch] "https://r.jina.ai/https://andalucialovers.com/en/best-restaurants-granada-where-eat-reviews/" → 3,000 chars; GOOD; date 2025-02-04; author: Fanny ✓ (partial name, team member); 6 restaurants
+[phase-2/fetch] "https://r.jina.ai/https://www.granadadigital.es/diez-establecimientos-granada-reciben-placa-restaurante-recomendado-guia-michelin-espana-2025/" → 3,000 chars; GOOD for data; REJECTED as source: institutional byline (Gabinete); useful for restaurant name cross-referencing only
+[phase-2/coi-check] GranadaDigital/Alfonso Campos — commercial conflict: NO (editorial column articles, not the sponsored guide itself)
+[phase-2/coi-check] James Dimitri — commercial conflict: NO (independent food/travel writer)
+[phase-2/coi-check] Spanish Sabores/Lauren Aloise — commercial conflict: YES (co-founder Devour Tours food tour operator) → ⚠ coi; treat as secondary
+[phase-2/coi-check] Andalucia Lovers/Fanny — commercial conflict: NO ("no sponsoring, trips actually made" stated on site)

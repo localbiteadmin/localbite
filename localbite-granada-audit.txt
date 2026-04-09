@@ -1,0 +1,66 @@
+# LocalBite Granada — Audit Log
+# Pipeline: localbite-v6 | Date: 2026-04-09
+# Format: Restaurant name | Tier | Reason | Source
+
+# ══════════════════════════════════════════
+# REJECTED SOURCES (Phase 1 evaluation)
+# ══════════════════════════════════════════
+[source-rejected] Edible Reading | anonymous author (site policy: anonymous restaurant reviewer) | pipeline rule: no named author → reject regardless of publication credibility
+[source-rejected] Hot Dinners (48h Granada guide) | no publication date and no named author visible in article | pipeline rule: no named author, no verifiable date → reject
+[source-rejected] Will Fly for Food (Granada tapas guide) | publication date October 2019 | outside content window (pre-2023)
+[source-rejected] viajarcomerytapear.com (tapas por el Centro y Realejo) | no publication date, no named author | pipeline rule: no named author → reject
+[source-rejected] lovegranada.com (Best Restaurants in Granada) | no named author | pipeline rule: no named author → reject
+[source-rejected] Andalucia In My Pocket (Granada food tour) | publication date June 2021 | outside content window (pre-2023)
+[source-rejected] España Guide / Patricia Palacios | publication date March 2020 | outside content window (pre-2023)
+[source-rejected] The Next Crossing | blocked by CAPTCHA during Jina fetch | permanent failure — cannot verify date or author
+[source-rejected] Devour Tours / Emma Fajcz | valid source (named author, updated Dec 2025, ⚠ coi) but excluded: would be third secondary source; diversity gate caps secondary sources at 2 total | restaurants from this source (La Auténtica Carmela, Restaurante Chikito, Arrayanes, Mirador de Morayma) are NOT in final dataset
+[source-rejected] GranadaDigital institutional article (Michelin 2025 plaque) | author listed as "Gabinete" (institutional press office), not a named individual | pipeline rule: no named individual author → not usable as extraction source (used for cross-reference only)
+
+# ══════════════════════════════════════════
+# CONCENTRATION CAP AUTO-REMOVAL (Phase 3 Step 2)
+# ══════════════════════════════════════════
+Restaurante Más Que Vinos | Tier B (pre-removal) | Auto-removed: Spanish Sabores contributed 6 single-source Tier B entries; 30% cap = 5; lowest-confidence entry (vague quote: "top-ingredient tapas, artisanal cheese") auto-rejected to bring within cap | src-spanish-sabores
+
+# ══════════════════════════════════════════
+# AUTO-REJECTIONS — TIER C (Phase 3 Step 2)
+# ══════════════════════════════════════════
+Rincón de Rodri | Tier C | Quote under 15 words for primary source ("grilled chiperones (baby squid)"); null neighbourhood | src-james-dimitri
+Los Manueles | Tier C | Quote under 15 words for primary source ("giant albondigas (meatballs)"); restaurant chain with multiple locations | src-james-dimitri
+Bar Provincias | Tier C | No quote present; null neighbourhood | src-james-dimitri
+Bar Futbol | Tier C | Café-only (churros); quote under 15 words | src-james-dimitri
+Nito's Pub | Tier C | Bar-only (cocktail bar, no food service noted); quote under 15 words | src-james-dimitri
+Heladería Los Italianos | Tier C | Not a restaurant (gelateria/ice cream shop only) | src-spanish-sabores
+Pastelería López-Mezquita | Tier C | Not a restaurant (pastry shop without table service) | src-spanish-sabores
+Taberna La Tana | Tier C | Secondary single source with only 1 specific detail ("local Granada wines"); fails secondary 2-detail rule | src-spanish-sabores
+Om Kalsum | Tier C | Secondary single source with only 1 specific detail ("Moroccan-inspired free tapa"); fails secondary 2-detail rule | src-spanish-sabores
+El Trillo | Tier C | Secondary single source with 0 specific dish details ("beautifully presented dishes" — vague); fails secondary 2-detail rule | src-spanish-sabores
+Caféteria d'Sano | Tier C | Breakfast café-only; secondary single source with only 1 detail ("tostadas"); fails secondary 2-detail rule | src-andalucia-lovers
+
+# ══════════════════════════════════════════
+# RECOMMENDED REMOVALS — TIER B (not auto-applied per pipeline rules)
+# ══════════════════════════════════════════
+# Presented in review table with ⚠ rec-remove for human validation
+Gran Café Bib-Rambla | Tier A (2 sources) | ⚠ rec-remove: café-only establishment (churros and drinks); not a restaurant with table meal service | src-james-dimitri + src-spanish-sabores
+Taberna Mítico Bar | Tier B | ⚠ rec-remove: low-confidence quote ("ese aura de clásico" — no specific dish or cuisine detail); single primary source | src-gocho-gourmet
+Versos Sueltos | Tier B | ⚠ rec-remove: secondary single source; quote contains only price (€49) and cuisine type — no specific dish detail; fails enhanced secondary quality standard | src-andalucia-lovers
+
+# ══════════════════════════════════════════
+# TRACEABILITY CHECK — RESULTS
+# ══════════════════════════════════════════
+All 29 pre-dedup restaurant entries traced to specific fetched URLs and content.
+5 merge operations confirmed: Bar Avila Tapas, Bodegas Castañeda, Bar Los Diamantes, Café 4 Gatos, Gran Café Bib-Rambla.
+No entries removed for traceability failure.
+
+# ══════════════════════════════════════════
+# USER REMOVALS (Phase 3 Step 5 — review session)
+# ══════════════════════════════════════════
+Gran Café Bib-Rambla | Tier A | User removed (#5 in review table) | Reason: café-only establishment (churros and drinks); not a full-service restaurant | src-james-dimitri + src-spanish-sabores
+Taberna Mítico Bar | Tier B | User removed (post-pipeline review) | Reason: quote is atmosphere-only with no specific dish detail (rec-remove flag confirmed) | src-gocho-gourmet
+Versos Sueltos | Tier B | User removed (post-pipeline review) | Reason: quote contains only price and cuisine type — no specific dish detail (rec-remove flag confirmed) | src-andalucia-lovers
+
+# ══════════════════════════════════════════
+# OPEN STATUS CHECK FLAGGED
+# ══════════════════════════════════════════
+The following restaurants are from src-spanish-sabores (article date 2023-07-12, updated 2024-04-25 — pre-2025 source):
+open_status_check: true → Tajine Elvira, La Trastienda, Taberna Catavinos, La Botillería, Casa de Vinos La Brujidera
+(Tier C rejections from same source also flagged in working file but not carried to final output)

@@ -1,0 +1,73 @@
+# LocalBite Granada — Search Plan
+# Pipeline: localbite-v6 | Date: 2026-04-09
+# Languages: EN (pool A) / ES (pool B)
+# Neighbourhoods from GEOGRAPHIC_BOUNDARY_INCLUDE:
+#   Centro, Albayzín, Realejo, Zaidín, Beiro, Ronda, Genil,
+#   Chana, Norte, Almanjáyar, La Paz, Cartuja, Arabial,
+#   Camino de Ronda, Sacromonte, Alhambra (restaurant-adjacent)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART A — NEIGHBOURHOOD QUERIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Adjacent groupings where food writing scenes overlap:
+ - Centro + Realejo (historic centre + Jewish quarter — densely covered)
+ - Albayzín + Sacromonte (hillside barrios — often covered together)
+ - Zaidín + Beiro (southern residential — local everyday dining)
+ - Ronda + Genil + Camino de Ronda (southern belt)
+ - Chana + Norte + Almanjáyar + La Paz (northwest, thin coverage)
+ - Cartuja + Arabial (north/northwest, university zone)
+ - Alhambra (restaurant-adjacent, tourist-facing — deprioritise)
+
+N01-ES: "restaurantes Centro Granada barrio gastronomía recomendaciones"
+N02-EN: "Centro Granada restaurants food writer guide neighbourhood"
+N03-ES: "mejores restaurantes Realejo Granada barrio judío dónde comer"
+N04-EN: "Realejo Granada best restaurants local food guide 2024"
+N05-ES: "restaurantes Albayzín Granada recomendaciones dónde comer 2024 2025"
+N06-EN: "Albayzín Granada restaurants food writer recommendation local"
+N07-ES: "Sacromonte Granada restaurantes bares gastronomía recomendaciones"
+N08-EN: "Sacromonte Granada eating food guide local writer"
+N09-ES: "restaurantes Zaidín Granada gastronomía crítica locales 2024 2025"
+N10-EN: "Zaidín Granada restaurants neighbourhood local food"
+N11-ES: "restaurantes Beiro Granada dónde comer recomendaciones barrio"
+N12-ES: "restaurantes Ronda Granada Genil barrio dónde comer escritor gastronómico"
+N13-EN: "Ronda Genil Granada restaurants food guide recommendations"
+N14-ES: "restaurantes Chana Norte Granada barrio gastronomía locales"
+N15-ES: "Cartuja Arabial Granada restaurantes dónde comer universitarios zona norte"
+N16-ES: "Camino de Ronda Granada restaurantes bares locales recomendaciones"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART B — CROSS-CUTTING ANGLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cross-1 (City-wide, 3 queries):
+C01-ES: "mejores restaurantes Granada 2025 guía gastronómica local"
+C02-EN: "best restaurants Granada Spain 2024 food writer guide"
+C03-ES: "donde comer Granada recomendaciones critica gastronomica 2023 2024"
+
+Cross-2 (Writer-first, 3 queries):
+C04-ES: "Alfonso Campos El Gocho Gourmet restaurantes Granada crítica"
+C05-ES: "Ideal Granada gastronomía mejores restaurantes periodista 2024 2025"
+C06-EN: "Culinary Backstreets Granada food writer 2023 2024 2025"
+
+Cross-3 (Recent openings 2024–2026, 2 queries):
+C07-ES: "nuevos restaurantes Granada abiertos 2024 2025 2026"
+C08-EN: "new restaurant openings Granada Spain 2024 2025"
+
+Cross-4 (Older coverage 2023–2024, 2 queries):
+C09-ES: "mejores restaurantes Granada 2023 guía recomendaciones"
+C10-EN: "best restaurants Granada Spain 2023 food guide"
+
+Cross-5 (Awards/recognition, 2 queries):
+C11-ES: "Soles Repsol Granada restaurantes premiados 2024 2025"
+C12-ES: "restaurantes Granada estrella Michelin sol Repsol reconocimiento 2023 2024 2025"
+
+Cross-6 (Forum/community, 2 queries):
+C13-EN: "where to eat Granada Spain locals recommend reddit forum 2024"
+C14-ES: "foro donde comer Granada recomendaciones locales 2024 2025"
+
+Cross-7 (Cuisine diversity, 2 queries — applicable: Moroccan/Arab food community present in Granada due to proximity):
+C15-ES: "restaurante árabe marroquí Granada recomendaciones gastronomía local"
+C16-EN: "Granada tapas free tapa tradition bars food writer neighbourhood guide"
+
+TOTAL PLANNED: 16 neighbourhood + 16 cross-cutting = 32 queries
+STOPPING RULE: if last 8 consecutive yield no new sources, stop early.

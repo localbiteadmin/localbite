@@ -1,0 +1,2 @@
+# LocalBite Granada — Failed Sources Log
+# Pipeline: localbite-v6 | Date: 2026-04-09
