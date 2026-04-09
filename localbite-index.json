@@ -123,6 +123,18 @@
       "source_count": 10,
       "file": "localbite-seville-2023-2026.json",
       "status": "complete"
+    },
+    {
+      "city": "Córdoba",
+      "country": "Spain",
+      "city_slug": "cordoba-spain",
+      "pipeline": "localbite-v6",
+      "built": "2026-04-09",
+      "restaurant_count": 35,
+      "both_pool_count": 17,
+      "source_count": 9,
+      "file": "localbite-cordoba-2023-2026.json",
+      "status": "complete"
     }
   ]
 }

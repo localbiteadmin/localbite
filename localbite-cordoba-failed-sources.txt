@@ -1,0 +1,26 @@
+LOCALBITE V6 — CÓRDOBA FAILED SOURCES
+Generated: 2026-04-09
+
+PHASE 0 FAILURES:
+1. https://sevilla.cosasdecome.es/category/cordoba/ — 404 error; CosasDeCome has no Córdoba category page
+2. https://cordoba.cosasdecome.es/ — 400 error; subdomain does not exist
+3. https://www.cosasdecome.es/cordoba/ — 404 error; no content at this path
+
+CAPTCHA / BLOCKED:
+4. https://premiosgurmecordoba.es/ — CAPTCHA verification blocked access; no content extractable
+5. https://guide.michelin.com/us/en/andalucia/cordoba/restaurants — JavaScript/bot protection blocked access
+
+HTTP ERROR:
+6. https://www.eldebate.com/espana/la-voz-de-cordoba/sociedad/20260303/estos-son-25-restaurantes-cordoba-mejor-valorados-clientes_390769.html — 451 error (geographic restriction)
+
+SOURCES REJECTED AFTER REVIEW (not failures but not qualifying):
+7. circuitogastronomico.com — Córdoba Argentina content, not Spain
+8. cordovista.com — tourist guide, no named food critic
+9. tripadvisor.com — aggregator platform
+10. yelp.com — aggregator platform
+11. thefork.es — booking platform
+12. opentable.com — booking platform
+13. gastronomistas.com — KNOWN_PROBLEMATIC_URL (per pipeline spec, returns 1.6MB pages)
+14. orangedonuttours.com — commercial tour operator, COI
+15. devourtours.com — commercial tour operator
+16. www.travelsforstars.com/blog/2024/01/11/noor-cordoba — no named author identified

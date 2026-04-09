@@ -1,0 +1,119 @@
+LOCALBITE V6 — CÓRDOBA AUDIT LOG
+Generated: 2026-04-09
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 0 — DIRECT FETCH RESULTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FAILED FETCHES (Phase 0):
+- https://sevilla.cosasdecome.es/category/cordoba/ → 404 error; CosasDeCome has no Córdoba category
+- https://cordoba.cosasdecome.es/ → 400 error; domain does not exist
+- https://www.cosasdecome.es/cordoba/ → 404 error; no content
+
+REJECTED DIRECT FETCH SOURCE:
+- https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurantes-cordoba/ → article dated 2022 (outside 2023–2026 content window); also ⚠ COI (Guía Repsol awards Soles to reviewed restaurants and sells dining experiences). Source rejected as a standalone source; individual restaurants from Repsol confirmed by independent ES sources are accepted via those sources.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AUTO-REJECTED SOURCES (not qualifying)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. circuitogastronomico.com — KNOWN_PROBLEMATIC: Córdoba Argentina results, not Spain. Auto-reject per pipeline rules.
+2. tripadvisor.com — aggregator; auto-reject per pipeline rules
+3. cordovista.com — tourist guide with no named food critic; auto-reject per pipeline rules
+4. wanderlog.com — aggregator; auto-reject
+5. gastroranking.es — aggregator; auto-reject
+6. orangedonuttours.com — commercial tour operator (Orange Donut Tours); reject
+7. premiosgurmecordoba.es — CAPTCHA-blocked, no content extractable; reject (failed fetch)
+8. elviajemehizoami.com — no named author; reject
+9. travelsforstars.com — no named author on Noor review; reject
+10. eatingwithziggy.com (Ziggy) — personal blogger, no editorial affiliation, insufficient credentials for primary source; reject as standalone
+11. devourtours.com — commercial tour operator (Devour Tours) with commercial conflict; reject
+12. cometeelmundo.net (Henar Sánchez) — content confirmed (Dec 2024, named author) but Henar Sánchez verified as travel blogger without dedicated food journalism credentials; deprioritised in favour of stronger ES sources
+13. eldebate.com article (451 error) — one URL returned 451 geo-restriction error; content retrieved from other eldebate URLs
+14. perfil.com — Argentine publication; results for Córdoba Argentina, not Spain; reject
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AUTO-REJECTED RESTAURANTS (Tier C)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TOTAL AUTO-REJECTED: 0 Tier C restaurant entries (all extractions passed traceability check)
+
+Note: The following were considered but not extracted as restaurants:
+- Kàran Bistró (Pozoblanco) — GEOGRAPHIC_BOUNDARY_EXCLUDE (provincial location)
+- Alma Ezequiel Montilla (Puente Genil) — GEOGRAPHIC_BOUNDARY_EXCLUDE (provincial location)
+- La Taberna de Cuatro Caminos (Almodóvar del Río) — GEOGRAPHIC_BOUNDARY_EXCLUDE (provincial location)
+- Confitería Solano (Aguilar de la Frontera) — GEOGRAPHIC_BOUNDARY_EXCLUDE
+- Pastelería Cubero (Cabra) — GEOGRAPHIC_BOUNDARY_EXCLUDE
+- Convento de Santa Clara de la Columna (Belalcázar) — GEOGRAPHIC_BOUNDARY_EXCLUDE
+- Sol Zapatilla (Montoro) — GEOGRAPHIC_BOUNDARY_EXCLUDE (Córdoba province, not city)
+- Tres Culturas (Lucena) — GEOGRAPHIC_BOUNDARY_EXCLUDE
+- Ditaly — chain restaurant (Italian group), no local significance
+- Cielito Lindo — Mexican chain, no local food critic primary mention
+- La Siesta — insufficient specific quote (<15 words with no specific detail)
+- La Sastrería — insufficient quote (mentioned only in list context)
+- La Tranquera — insufficient quote, Argentinian fusion concept
+- Asador Central — mentioned only in list context, no qualifying quote
+- El Rincón de Carmen — mentioned only in list context in multiple sources; no qualifying standalone quote
+- La Furgo — rejected; mentioned as food truck-inspired international concept with no qualifying primary source quote
+- Marengo Brasserie — mentioned only in awards roundup without qualifying restaurant description
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RECOMMENDED REMOVALS (Tier B — flagged)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠ rec-remove: Mercado Victoria — This is a gastronomy market with multiple independent stalls, not a single restaurant. Per pipeline rules, market venues without a single named chef or menu should be flagged. However, it is a standalone venue with a name, fixed address, and curated experience. Flagging for user review.
+
+⚠ open_status_check ONLY (not rec-remove): El Churrasco, Taberna El Nº 10, Casa Rubio, Garum 2.1, Los Berengueles, Taberna El Abanico, Taberna Góngora — sourced from 2023 articles (The Objective, Brenda Alonso) and require verification before city goes live. These are all well-established venues corroborated by newer sources where possible.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+COI REPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠ COI FLAG: Guía Repsol — commercial guide that awards Soles Repsol to reviewed restaurants and sells dining experiences. Any Repsol-sourced restaurant data was cross-verified against independent sources before inclusion. No restaurant appears in the final output solely on the basis of Repsol data.
+
+Note: Several restaurants in the final output hold Repsol distinctions (La Cuchara de San Lorenzo, Terra Olea, Taberna La Montillana, Amaltea, Casa Salvador-Dmerkado, La Casa de Manolete Bistró, La Ermita de la Candelaria). These awards are noted as contextual information; the restaurants were selected on the basis of independent editorial sources, not Repsol nominations.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PUBLISHER CONCENTRATION REPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cordópolis (eldiario.es): Two articles from the same publication used (Juan Velasco Nov 2025, Alfonso Alba Nov 2025). Both have named, different journalists. No entry in the final output is solely sourced from Cordópolis — all Cordópolis-sourced entries are corroborated by at least one other publisher. Publisher concentration flag set to TRUE on both Cordópolis source entries. No concentration cap needed.
+
+The Objective: One article (Brenda Alonso, Aug 2023) contributes single-source Tier B entries for Taberna El Abanico and Taberna Góngora. These are established venues with open_status_check flagged.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TRACEABILITY CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+All 35 extracted restaurants (pre-dedup) traced to specific source URLs and article text. After deduplication: 33 unique restaurants. After geographic exclusions: 33 (all within city boundary). After removing non-qualifying entities: 32 restaurant entries proceed to scoring.
+
+Note: "La Taberna de Almodóvar" deduplicated from two extraction entries (initially listed as multi-source in both Centro Histórico and Santa Marina contexts). The Michelin/Cordopolis sources place it in the Santa Marina neighbourhood. Canonical neighbourhood: Santa Marina.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+USER REVIEW — 2026-04-09
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+User decision: Accept all (no removals)
+
+Tier B entries kept (9):
+- Bodegas Mezquita Céspedes (ES primary, open_status_check)
+- Casa Salvador-Dmerkado (ES primary)
+- La Taberna del Río (EN primary)
+- La Tinaja (EN primary)
+- Taberna San Miguel Casa El Pisto (EN primary)
+- La Maceta (EN primary)
+- La Lianta de Quini (EN secondary)
+- Taberna El Abanico (ES primary, open_status_check)
+- Taberna Góngora (ES primary, open_status_check)
+
+rec-remove override:
+- Mercado Victoria (#26, Tier A) — flagged ⚠ rec-remove (gastromarket, not single restaurant). User accepted. Entry restored to final output with flagged: true and flag_note recorded. auto_removed count corrected to 0.
+
+FINAL COUNTS:
+- auto_approved: 27
+- reviewed_kept: 9
+- auto_removed: 0
+- user_removed: 0
+- auto_rejected: 0
+- concentration_cap_applied: 0
+- TOTAL in final output: 36

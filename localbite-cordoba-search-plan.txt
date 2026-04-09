@@ -1,0 +1,43 @@
+LOCALBITE V6 — CÓRDOBA SEARCH PLAN
+Generated: 2026-04-09
+
+PHASE 0 — DIRECT FETCHES
+P0-1: https://sevilla.cosasdecome.es/category/cordoba/ → 404 FAILED
+P0-2: https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurantes-cordoba/ → FETCHED, date 2022 (outside window), ⚠ COI — keep as candidate but note date issue
+P0-3: https://cordoba.cosasdecome.es/ → 400 FAILED
+P0-4: https://www.cosasdecome.es/cordoba/ → 404 FAILED
+P0-5: https://sevilla.cosasdecome.es/?s=cordoba → minimal results, not qualifying
+
+PHASE 1 — SEARCH PLAN
+
+PART A — NEIGHBOURHOOD COVERAGE
+A-1: Centro Histórico / Judería restaurants Córdoba Spain food 2024 (EN)
+A-2: restaurantes Judería Córdoba comer bien reseña 2024 (ES)
+A-3: San Basilio neighbourhood eating Córdoba local guide (EN)
+A-4: restaurantes San Basilio Córdoba recomendaciones gastronomía (ES)
+A-5: Ribera Córdoba riverside restaurants food writer review (EN)
+A-6: comer Ribera Córdoba restaurantes Ronda Isasa zona (ES)
+A-7: Santa Marina San Andrés El Salvador restaurants Córdoba local (EN)
+A-8: restaurantes Santa Marina Ollerías barrio Córdoba 2024 2025 (ES)
+A-9: Brillante Vistalegre Campo Verdad restaurants Córdoba neighbourhood (EN)
+A-10: comer Brillante Córdoba barrios residenciales restaurantes (ES)
+
+PART B — CROSS-CUTTING ANGLES
+Cross-1 (city-wide EN): best restaurants Córdoba Spain food writer guide 2024
+Cross-2 (city-wide ES): donde comer Córdoba 2025 critica gastronomica
+Cross-3 (city-wide ES 2026): mejores restaurantes Córdoba 2026 recomendaciones
+Cross-4 (writer-first): Paco Morales Noor Córdoba food journalist review
+Cross-5 (writer-first): chef Choco Córdoba Michelin star restaurant review 2024
+Cross-6 (writer-first): Córdoba food critic gastronomia escritor local reseña
+Cross-7 (recent openings): nuevos restaurantes Córdoba 2025 aperturas
+Cross-8 (recent openings): new restaurant openings Córdoba Spain 2024 2025
+Cross-9 (older 2023): restaurantes Córdoba 2023 guia mejores comer
+Cross-10 (older 2023): Córdoba Spain restaurants review 2023 travel food
+Cross-11 (awards): restaurantes Córdoba Michelin Repsol sol estrella 2024 2025
+Cross-12 (awards): premios gastronomia Córdoba 2025 restaurantes galardonados
+Cross-13 (forum/community): Córdoba food forum reddit recommendations locals eat
+Cross-14 (forum/community): Córdoba mejores sitios comer foro recomendaciones locales
+Cross-15 (cuisine diversity): salmorejo rabo de toro taberna Córdoba auténticos restaurantes recomendados
+Cross-16 (cuisine diversity): vegetarian organic restaurants Córdoba contemporary cuisine
+
+TOTAL PLANNED: 26 queries (well under 55 ceiling)
