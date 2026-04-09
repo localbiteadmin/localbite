@@ -1367,3 +1367,439 @@ Four writer profiles contained internal pipeline notes (fetch quality, tier assi
 - [ ] Barcelona both-pool audit against corrected definition
 - [ ] Add fetch quality gate to pipeline prompt before next city run
 - [ ] Chefchaouen v2 — find named sources to replace anonymous S2 and S3
+
+## Session — 2026-03-30 (Toronto Pipeline)
+
+### Overview
+Toronto pipeline run using v5 prompt. First North American city. Rate limit interrupted an earlier attempt; this session completed the full run. 52 restaurants in final pack, 8 sources, all English. Files pushed to GitHub and visible in viewer.
+
+---
+
+### Run Details
+
+**Prompt used:** localbite-prompt-v5-toronto.txt
+**Output file:** `localbite-toronto-2025-2026.json`
+**Sources:** 8
+**Restaurants:** 52 (initial push showed 45 — corrected after supplementary run April 2)
+
+| Source | Writer | Language | Type |
+|--------|--------|----------|------|
+| Foodism Toronto | Various | EN | Secondary |
+| NOW Toronto | Various | EN | Primary |
+| The Toronto Star | Various | EN | Primary |
+| Toronto Life | Various | EN | Primary |
+| Eater Toronto | Various | EN | Secondary |
+| BlogTO | Various | EN | Secondary |
+| Madame Marie | Marie | EN | Primary |
+| The Local Tourist | Various | EN | Primary |
+
+**Known issue:** Foodism contributed ~53% of the final pack — above the concentration cap threshold. Not caught by the pipeline. Flagged for v2 supplementary run.
+
+**Geocoding:** 50 verified, 2 null. Initial geocoding done in this session; fixes applied April 2.
+
+**Initial map zoom:** Too wide for Toronto — city centre coordinates needed adjustment.
+
+---
+
+### Key Findings — 2026-03-30
+
+1. **Single-language city signal is different.** Without a language pool cross-validation mechanism, both-pool entries don't apply. Source tier (legacy institutional vs independent freelance) is the primary quality signal instead.
+2. **Foodism concentration problem.** The concentration cap (30% per source) fired at source level but Foodism's dominance across multiple article formats meant it effectively controlled 53% of the pack. Publisher-level cap needed.
+3. **Toronto is larger than Moroccan cities in every dimension.** More sources, more restaurants, more neighbourhoods. Expect ~25–30 min run time for large North American cities.
+
+---
+
+### Outstanding Items (carried forward)
+
+- [ ] Foodism concentration — Toronto v2 needed to reduce dominance
+- [ ] Initial map zoom too wide for Toronto
+- [ ] Writer profile cleanup — remove any pipeline notes from writer_profile fields
+
+---
+
+## Session — 2026-03-31 (Proximity Feature Build)
+
+### Overview
+Built the proximity / "Near me" feature for the LocalBite viewer. GPS-based distance sorting with distance badges. Deployed to GitHub Pages.
+
+---
+
+### Features Built
+
+**Near me button:**
+- GPS one-shot on click — requests location once, does not track
+- Blue dot marker on map at user's GPS position
+- Distance calculated via Haversine formula for all restaurants with verified coordinates (lat/lng not null)
+- Cards sorted by distance ascending when proximity mode active
+- Distance badge shown on each card (e.g. "0.4 km")
+- Restaurants with null coordinates excluded from distance sort, appear at bottom of list
+- Button shows loading state during GPS acquisition, active state when proximity mode on
+- Second click deactivates proximity mode, restores default sort
+
+**CITY_BOUNDS validation:**
+- Each city has a bounding box in index.html
+- When GPS fix obtained, checks whether user is within the city's bounds
+- If outside bounds, proximity mode still activates but no "you are in [city]" confirmation shown
+
+**Map integration:**
+- Near me button visible only in map view (hidden in list view)
+- Blue dot added to Leaflet map at user coordinates
+- Map does not re-centre on user location (intentional — user may want to see restaurants away from their position)
+
+---
+
+### Key Findings — 2026-03-31
+
+1. **GPS one-shot is the right UX.** Continuous tracking adds complexity and battery concern for no benefit in a static restaurant guide.
+2. **Tap-to-set-origin not built.** The "plan ahead" use case (set origin from couch) was discussed but not implemented. Deferred — the GPS use case covers the primary need.
+3. **Proximity is useless for Barcelona and Valencia** until geocoding is done — both cities have zero coordinates. 114 of 211 total restaurants (54% of dataset) have no map presence.
+
+---
+
+### Outstanding Items (carried forward)
+
+- [ ] Barcelona and Valencia geocoding — proximity feature non-functional for largest two packs
+- [ ] Tap-to-set-origin (planning mode) — future enhancement
+
+---
+
+## Session — 2026-04-01 (QA Audit + Chefchaouen Cleanup)
+
+### Overview
+Systematic QA audit across all 7 live city packs. 35 sources checked for fetch accessibility. 5 anonymous-only entries removed from Chefchaouen. index.json counts not yet corrected (done April 8).
+
+---
+
+### QA Audit Findings
+
+**Sources checked:** 35 across Barcelona, Valencia, Lisbon, Fes, Marrakesh, Rabat, Chefchaouen, Toronto
+
+**Fetch failures (persistent):** 9 sources now inaccessible
+- Lisbon most exposed: 3 of 5 sources returning errors
+- Barcelona: ElNacional.cat returning 403 (later recovered in v6 run)
+- Toronto: several sources with transient failures (recovered in April 2 supplementary run)
+
+**Lisbon exposure:** With 3 of 5 sources inaccessible, the Lisbon pack has the weakest fetch verification of any city. A v2 run should prioritise finding alternative source URLs.
+
+---
+
+### Chefchaouen Cleanup
+
+**Issue:** 5 restaurants in the Chefchaouen pack had no named writer — sourced from anonymous editorial content that did not meet the named-author standard.
+
+**Action:** Removed all 5 entries.
+
+**Result:** Chefchaouen count reduced from 17 → 12.
+
+**index.json not yet updated** (corrected April 8).
+
+---
+
+### Key Findings — 2026-04-01
+
+1. **Named-author rule must be enforced at fetch time, not post-hoc.** The 5 anonymous entries passed the pipeline review because the rule wasn't checked strictly enough during source approval. v6 prompt adds explicit named-author gate.
+2. **Fetch accessibility degrades over time.** Articles that were accessible at pipeline time may become paywalled or deleted later. The fetch QA step should be a recurring check, not a one-time action.
+
+---
+
+### Outstanding Items (carried forward)
+
+- [ ] Chefchaouen v2 — find named sources to replace anonymous S2 and S3
+- [ ] Lisbon v2 — find alternative URLs for 3 inaccessible sources
+- [ ] index.json update: Chefchaouen 17→12, Toronto 45→52
+
+---
+
+## Session — 2026-04-02 (Toronto Supplementary Run)
+
+### Overview
+Supplementary pipeline pass for Toronto targeting sources that failed or were inaccessible in the March 30 run. Added 7 new restaurants. Writer profiles cleaned of pipeline notes.
+
+---
+
+### Run Details
+
+**Prompt:** Supplementary pass targeting Caribbean and Italian Toronto food writing
+**New sources:** NOW Toronto (Caribbean coverage), Madame Marie (Italian)
+**New restaurants added:** 7
+**Final Toronto count:** 52
+
+**Writer profile cleanup:** All Toronto writer_profile fields checked and cleaned — pipeline notes (tier assignments, fetch sizes, confidence scores) removed from user-visible fields.
+
+**Geocoding fixes:** 2 additional coordinates found; 50 verified total, 2 remaining null.
+
+---
+
+### Key Findings — 2026-04-02
+
+1. **Supplementary runs are worth it for large cities.** 7 additional restaurants recovered with minimal effort, improving Caribbean and Italian cuisine representation.
+2. **Writer profile contamination is a real risk.** Several profiles contained internal pipeline notes visible to users. The v6 prompt adds an explicit rule against this.
+3. **Foodism concentration unchanged at 53%.** The supplementary pass did not dilute Foodism enough. Toronto v2 needs to specifically target non-Foodism sources.
+
+---
+
+### Files Produced
+
+| File | Contents |
+|------|----------|
+| `localbite-toronto-2025-2026.json` | Updated — 52 restaurants, writer profiles cleaned |
+
+---
+
+### Outstanding Items (carried forward)
+
+- [ ] Toronto v2 — address Foodism concentration (53% of pack)
+- [ ] Toronto initial map zoom still too wide
+
+---
+
+## Session — 2026-04-08 (Housekeeping + Barcelona v6 + Batch Design)
+
+### Overview
+Major session covering: housekeeping (journal update, index.json corrections), batch processing design, v6 prompt template creation and gap analysis, Barcelona v6 pipeline run, geocoding, viewer fixes, and automation backlog documentation.
+
+---
+
+### Housekeeping Completed
+
+**index.json corrected:**
+- Toronto: 45 → 52 restaurants
+- Chefchaouen: 17 → 12 restaurants
+
+**journal-entry-apr8.md:** Created as standalone file and committed. *(Merged into main journal this session — 2026-04-09.)*
+
+---
+
+### Batch Processing Design
+
+**Decision:** First test batch is Barcelona, Valencia, Seville — all rebuilt/built from scratch with v6 prompt. Old Barcelona and Valencia packs (v4/v3) remain live until v6 replacements are ready.
+
+**Production prompt decision:** v6 for all new European cities. Strategy C concepts incorporated into v6 template (Phase 0 direct fetch, publisher concentration check, COI check). v5 remains for Moroccan and single-language cities where v6 improvements don't apply.
+
+**City queue confirmed:** Barcelona → Valencia → Seville as first batch. Further cities TBD after first batch validates v6.
+
+**Two working directories fixed:** Pipeline now runs from `~/Documents/GitHub/localbite/` so files land in repo directly. Alias `localbite` added to `.zshrc`.
+
+**Geocode script fixed:** `localbite-geocode.js` now writes in-place with backup to `-geocoded-backup.json` rather than writing to a separate output file.
+
+**Automation backlog created:** `localbite-automation-backlog.md` committed to repo — 10 items, ~16 hours estimated. Key items:
+- A: SSH credentials (10 min) — eliminates GitHub Desktop dependency
+- B: False positive auto-detection in geocode.js (~1 hr)
+- C: localbite-viewer-update.js (~2–3 hrs) — automates centroid/city-centre/CITY_BOUNDS updates
+- D: localbite-index-update.js (30 min) — automates index.json updates
+- E: Batch mode flag for pipeline (no review pause)
+- F–J: Further automation items
+
+---
+
+### v6 Prompt Template
+
+**File:** `localbite-prompt-v6-template.txt` — committed to repo.
+
+**Key improvements over v5:**
+- Content window expanded: 2023–2026 (was 2025–2026)
+- Neighbourhood-complete search approach — one query per neighbourhood, no fixed query cap; stopping rule fires after 8 consecutive queries yield no new sources
+- Two-tier fetch retry (30s + 60s) before marking source as failed
+- Phase 0 direct fetch of known independent sources
+- Publisher-level concentration check (catches same-publisher multi-article scenarios)
+- COI check with ⚠ flag (include, don't exclude)
+- Auto-removal of recommended Tier B entries with full audit trail
+- Writer profile rule: no pipeline notes visible in user-facing fields
+- open_status_check flag for restaurants from 2023–2024 sources
+- Traceability check (anti-fabrication gate)
+- Token/tool/time recording mandatory in final summary
+- source_tier field extended to all city types (not single-language only)
+- retries_attempted as integer (0/1/2) not boolean
+
+**Part 1 files created:**
+- `localbite-prompt-v6-barcelona-part1.txt`
+- `localbite-prompt-v6-valencia-part1.txt`
+- `localbite-prompt-v6-seville-part1.txt`
+
+**Gap analysis:** 24 gaps identified after thorough review. 12 fixed before/during Barcelona run. Notable gaps resolved:
+- CITY_TYPE defined and documented
+- Diversity gate trigger fixed ("after all planned searches" not "after 30 searches")
+- Neighbourhood query ceiling contradiction resolved (stopping rule takes precedence)
+- Publisher concentration catches same-publisher multi-writer scenarios
+- open_status_check closure searches moved to post-pipeline Stage 2
+- Auto-apply removals changed to show-for-review on first batch runs
+
+**Template fix applied 2026-04-09:**
+- LANGUAGE_POOL FIELD rule added to extraction rules — explicit instruction to write as plain string ("both"/"en"/"es" etc.), never as list or array. Addresses Barcelona display bug.
+
+---
+
+### Barcelona v6 Pipeline Run
+
+**Prompt:** localbite-prompt-v6-barcelona.txt (Part 1 + template concatenated)
+**Output file:** `localbite-barcelona-2023-2026.json`
+**Run:** `claude --dangerously-skip-permissions < localbite-prompt-v6-barcelona.txt`
+
+**Performance:**
+- Pipeline run: 158.4k tokens, 117 tool uses, 36m 51s
+- Export: 68.4k tokens, 15 tool uses, 8m 4s
+- Total: 226.8k tokens, 132 tool uses, ~45 minutes
+- Queries run: 56 (stopping rule fired after 34; last 8 returned only known sources)
+
+**Sources (9):**
+
+| Source | Writer | Language | Type | Article Date |
+|--------|--------|----------|------|--------------|
+| Barcelona Food Experience | Maria | EN | Primary | 2026-02-24 |
+| Barcelona Food Experience | (second article) | EN | Primary | 2025-09-28 |
+| The New Barcelona Post | Anna Torrents | EN | Primary | 2026-01-11 |
+| The New Barcelona Post | P. Ribot | ES | Primary | 2026-01-xx |
+| Beteve.cat | Carmen Cortés Vidal | CA | Primary | 2025-11-05 |
+| Guía Repsol | Lourdes López | ES | Primary ⚠coi | 2026-01-23 |
+| Culinary Backstreets | Paula Mourenza | EN | Primary | 2024-12-30 |
+| Gastronosfera | Eric Morgado | ES | Primary | 2024-12-21 |
+| In and Out Barcelona | Stefania Talento | ES | Primary | 2024-12-31 |
+
+**Results:**
+- Raw entries: 101
+- Tier A (auto-approved): 13 (10 both-pool + 3 multi-source EN)
+- Tier B (presented for review): 73
+- Tier C (auto-rejected): 15
+- Auto-removed: 0
+- User-removed: 0 (accepted all)
+- Final restaurants: 86
+- Both-pool entries: 10
+- open_status_check: 11 (all from Dec 2024 sources)
+- COI-flagged: 4 (all Guía Repsol-sourced)
+
+**Both-pool entries (all verified as genuine cross-publisher pairs):**
+La Cova Fumada, Bornès, Fukamura, Bar Alegría ⚠coi, La Pepita, Trü ⚠coi, Barra Oso ⚠coi, Barra M ⚠coi, plus 2 others.
+
+**Key finding — NBP publisher concentration:** The New Barcelona Post contributed two articles (Torrents EN + Ribot ES) — same publisher, different languages. Did not create false both-pool signals (correctly paired only with different publishers). Publisher concentration check should have flagged this; gap noted for template fix.
+
+---
+
+### Barcelona Geocoding
+
+**Script:** `node localbite-geocode.js localbite-barcelona-2023-2026.json`
+
+**Results:**
+- High confidence: 41
+- Medium confidence: 18 (before false positive removal)
+- Not found: 27
+- False positives identified and cleared: 6
+
+**False positives removed (coordinates set to null):**
+- Franca → matched train station (Estació de França)
+- Bar Remedios → matched park (Jardins de Remedios Varo)
+- La Bodegueta de Sant Andreu → coordinates outside Barcelona bounding box
+- Arraval → matched neighbourhood name, not restaurant
+- Bar Veracruz → matched plaza (Plaça de Veracruz)
+- Barra M → matched street (Carrer de la Barra de Ferro)
+
+**Final geocoding state:**
+- High confidence: 41 (solid pins)
+- Medium confidence: 12 (hollow pins)
+- Null: 33 (list-only, no map pin)
+
+---
+
+### Viewer Fixes (Barcelona)
+
+**Static map caveat bug:** `<div class="map-caveat">` at line 969 was hardcoded and showing unconditionally, overriding the dynamic caveat logic. Fixed by adding `style="display:none"` — dynamic caveat now shows correct verified/approximate/centroid counts.
+
+**Neighbourhood centroids:** 7 missing Barcelona neighbourhoods added to `index.html` CENTROIDS:
+`El Barri Gòtic`, `Sants`, `Montjuïc`, `Fort Pienc`, `Nou Barris`, `Sant Andreu`, `Camp de l'Arpa`
+
+**CITY_BOUNDS:** Barcelona already present in index.html — proximity feature works without changes.
+
+**language_pool format fix:** Barcelona JSON had language_pool stored as lists (["EN", "CA"]) instead of strings. Converted in-place: all 86 entries now use string format ("both", "en", "es", "ca"). Root cause: v6 template lacked explicit instruction. Fixed in template 2026-04-09.
+
+---
+
+### Definition of Done
+
+Formalised six-stage definition of done for a city pack:
+
+1. **Pipeline complete** — all output files written
+2. **Data quality checks** — writer profiles clean, failed sources reviewed, open_status_check verified, both-pool spot-checked
+3. **Geocoding** — script run, false positives cleared, backup confirmed
+4. **Viewer update** — index.json updated, centroids added, CITY_BOUNDS confirmed, viewer tested locally
+5. **Commit and push** — single clean commit, GitHub Pages deployment confirmed
+6. **Journal** — session entry written, outstanding items documented
+
+**Minimum pack sizes:** Large city 40+, medium city 25+, small city 8+.
+
+---
+
+### Automation Gap Assessment
+
+True batch automation is not yet achieved. Every post-pipeline step (geocoding, false positive detection, viewer update, index update, push) required manual intervention during the Barcelona run. Key gaps documented in `localbite-automation-backlog.md`.
+
+**Honest assessment of today:** Manual pipeline run with automated assistance. The pipeline itself ran unattended to the review table; everything after required human action.
+
+---
+
+### Files Produced / Modified
+
+| File | Change |
+|------|--------|
+| `localbite-barcelona-2023-2026.json` | New — 86 restaurants, v6 pipeline |
+| `localbite-barcelona-raw.json` | New — unfiltered pipeline output |
+| `localbite-barcelona-audit.txt` | New — auto-removal log |
+| `localbite-barcelona-search-log.txt` | New — 56 queries logged |
+| `localbite-barcelona-search-plan.txt` | New — Phase 1 plan |
+| `localbite-barcelona-working.json` | New — intermediate extraction file |
+| `localbite-barcelona-failed-sources.txt` | New — fetch failure log (empty) |
+| `localbite-barcelona-2023-2026-geocoded-backup.json` | New — pre-cleanup backup |
+| `localbite-barcelona-2023-2026-geocoding-stats-c1.json` | New — geocoding stats |
+| `localbite-prompt-v6-template.txt` | New — v6 template (12 gaps fixed) |
+| `localbite-prompt-v6-barcelona-part1.txt` | New |
+| `localbite-prompt-v6-valencia-part1.txt` | New |
+| `localbite-prompt-v6-seville-part1.txt` | New |
+| `localbite-prompt-v6-barcelona.txt` | New — concatenated run prompt |
+| `localbite-automation-backlog.md` | New — 10 automation items |
+| `localbite-index.json` | Updated — Toronto 52, Chefchaouen 12, Barcelona v6 86 |
+| `index.html` | Updated — 7 Barcelona centroids added, static caveat hidden |
+| `localbite-geocode.js` | Updated — writes in-place with backup |
+| `localbite-journal-updated.md` | Updated — this entry |
+
+---
+
+### Outstanding Items
+
+- [ ] SSH credentials — set up SSH key for localbiteadmin GitHub account (Item A in automation backlog). Eliminates GitHub Desktop dependency for all future sessions.
+- [ ] Build automation Items B, C, D before Valencia run:
+  - B: False positive auto-detection in geocode.js
+  - C: localbite-viewer-update.js (automates centroid + CITY_BOUNDS + index updates)
+  - D: localbite-index-update.js
+- [ ] Valencia v6 pipeline run
+- [ ] Seville v6 pipeline run
+- [ ] 11 Barcelona open_status_check restaurants — verify not closed (all Dec 2024 sources, low risk)
+- [ ] Remove old `localbite-barcelona-2025-2026.json` (v4 pack) from repo — stale
+- [ ] Toronto v2 — address Foodism concentration (53% of pack)
+- [ ] Chefchaouen v2 — find named sources to replace anonymous S2 and S3
+- [ ] Lisbon v2 — find alternative URLs for 3 inaccessible sources
+- [ ] Toronto initial map zoom still too wide
+
+---
+
+## Session — 2026-04-09 (language_pool template fix)
+
+### Overview
+Single-item session: confirmed and applied the language_pool fix to the v6 prompt template that was noted at the end of the April 8 session but not applied before that session ended.
+
+---
+
+### Fix Applied
+
+**File:** `localbite-prompt-v6-template.txt`
+**Commit:** `Fix v6 template — add LANGUAGE_POOL FIELD rule (string not list)`
+
+**What was added:** LANGUAGE_POOL FIELD rule inserted into the extraction rules section (after NEIGHBOURHOOD STANDARDISATION). Explicit instruction that language_pool must be a plain string — never a list or array — with all valid values defined and the calculation rule stated.
+
+**Verification:** Confirmed fix was not present before applying (grep showed only 2 mentions of language_pool, neither containing a calculation rule). Confirmed fix landed correctly after applying.
+
+**Impact:** Valencia and Seville v6 pipeline runs will now produce correct string-format language_pool values. The Barcelona JSON was already fixed manually on April 8.
+
+---
+
+### Outstanding Items
+
+*(Same as April 8 — no other changes this session)*
+
