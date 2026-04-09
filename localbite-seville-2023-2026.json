@@ -1556,11 +1556,11 @@
       "article_date": "2025-07-29",
       "open_status_check": false,
       "flagged": false,
-      "lat": 38.2612258,
-      "lng": -5.6857308,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
-      "geo_matched_name": "Bar La Paradita"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "name": "Brasería La Tremenda",
