@@ -1803,3 +1803,262 @@ Single-item session: confirmed and applied the language_pool fix to the v6 promp
 
 *(Same as April 8 — no other changes this session)*
 
+## Session — 2026-04-09 (Batch Processing Design — Valencia, Seville, Córdoba, Granada)
+
+### Overview
+
+Major session covering batch processing design, automation implementation, four city pipeline runs (Valencia v6, Seville v6, Córdoba v6, Granada v6), viewer bug fixes, and product backlog creation. 10 cities now live.
+
+---
+
+### Automation Items Built
+
+All pre-batch automation items completed this session:
+
+| Item | What | Effort |
+|------|------|--------|
+| A — SSH credentials | `ssh-keygen` + GitHub key + remote URL change. Terminal push now works permanently, no GitHub Desktop needed. | 10 min |
+| B — False positive detection | Added `isNonRestaurantEntity()` to `localbite-geocode.js` — 62 patterns covering streets, squares, parks, bridges, castles, churches, hospitals, museums etc. in EN/ES/CA/PT/FR. Wired into Nominatim and Photon result acceptance. | 1 hr |
+| C — localbite-viewer-update.js | New script — reads neighbourhood list from city JSON, geocodes each via Nominatim, adds missing centroids to `index.html` CENTROIDS, checks and adds city to CITY_BOUNDS. | 2 hrs |
+| D — localbite-index-update.js | New script — reads city JSON and updates `localbite-index.json` automatically with correct counts, pipeline version, built date, filename. | 30 min |
+| I — Publication registry | `localbite-publication-registry.json` created — all known publications across 8 cities with `use_as_direct_fetch`, COI flags, concentration warnings, `last_verified` dates, `known_problematic` sections. | 30 min |
+| — — localbite-commit.sh | Shell script — stages all city output files and pushes in one command. `bash localbite-commit.sh seville` | 10 min |
+| — — localbite-post-pipeline.sh | Shell script — chains geocoding, viewer update, index update, and commit. `bash localbite-post-pipeline.sh seville` is the full post-pipeline sequence. | 30 min |
+
+**Additional fixes:**
+- `localbite-geocode.js` fixed to write in-place with backup (was writing to separate `-geocoded.json` file)
+- `localbite-viewer-update.js` apostrophe fix — neighbourhood names with apostrophes (Camp de l'Arpa) now use curly apostrophe (U+2019) to avoid breaking JavaScript string delimiters
+- `localbite-viewer-update.js` out-of-bounds validation added as Step 1b — automatically nulls coordinates outside city bounding box after geocoding
+- Carrer pattern in `localbite-geocode.js` extended — now catches `Carrer Via Augusta` and similar (was only matching `Carrer de/d'/dels/de les`)
+- 20 additional false positive patterns added after Seville run: bridges (Puente/Pont), castles (Castillo/Castell), sports centres, waterways (Arroyo/Ribeira), palaces, towers, churches, cathedrals, convents, museums, markets
+
+---
+
+### v6 Template Fixes
+
+Two fixes applied to `localbite-prompt-v6-template.txt`:
+
+1. **LANGUAGE_POOL FIELD rule added** — explicit instruction that `language_pool` must be a plain string ("both"/"en"/"es" etc.), never a list or array. Addresses the Barcelona display bug where the pipeline wrote `["EN", "CA"]` instead of `"both"`.
+
+2. **NULL NEIGHBOURHOOD auto-removal rule added** — any Tier B entry with `neighbourhood: null` and `source_count: 1` is automatically recommended for removal. This rule fired correctly in Seville (3 auto-removed before review table) and prevented 5 manual Valencia removals from recurring.
+
+---
+
+### Product Backlog
+
+`localbite-product-backlog.md` created and committed — 16 items covering:
+- User suggestions: article date/title in source display, list↔map cross-navigation, list view sort and layout improvements
+- Additional suggestions: closure detection, photo integration, opening hours, address field, source freshness decay, writer profile enrichment, "new this month" filter, user saves, shareable packs, feedback mechanism, analytics, custom domain, SEO
+
+All items deliberately deferred until after first batch processing experience.
+
+---
+
+### Valencia v6 Pipeline Run
+
+**Prompt:** `localbite-prompt-v6-valencia.txt` (Part 1 + template)
+**Output file:** `localbite-valencia-2023-2026.json`
+**Run time:** ~32 minutes
+
+**Sources (7):**
+
+| Publication | Writer | Language | Type | Date |
+|-------------|--------|----------|------|------|
+| The Infatuation | David Neimanis | EN | Secondary | 2025-08-01 |
+| Amsterdam Foodie | Vicky Hampton | EN | Primary | 2025-11-17 |
+| Bonviveur | Yolanda Galiana | ES | Primary | 2026-02-13 |
+| Grupo Gastro Trinquet | Albert Padilla | ES | Primary | 2025-02-18 |
+| Ojo al Plato (Eixample) | Various | ES | Primary | 2025 |
+| Ojo al Plato (Poblats Marítims) | Various | ES | Primary | 2025 |
+| Valencia Plaza | Various | ES | Primary | 2025 |
+
+**New sources vs v3:** Ojo al Plato (neighbourhood-specific Valencia guide — two articles) and Valencia Plaza. Both ES local sources not found in previous runs.
+
+**Results:**
+- Raw: 53 → Final: 47 (6 user-removed: 5 null-neighbourhood + Riff partial fetch)
+- Both-pool: 10
+- Geocoded: 33/47 (70%)
+- Valencian language gap confirmed as structural — no named VAL food publications found
+
+**Viewer fix required:** Valencia restaurants with neighbourhood "Eixample" were showing pins in Barcelona — the CENTROIDS object is a flat global namespace and Barcelona's Eixample centroid (lat 41.39) was matching Valencia's entries. Fixed by renaming 21 Valencia restaurants' neighbourhood from "Eixample" to "Eixample Valencia" in the JSON.
+
+---
+
+### Seville v6 Pipeline Run
+
+**Prompt:** `localbite-prompt-v6-seville.txt`
+**Output file:** `localbite-seville-2023-2026.json`
+**Run time:** ~31 minutes
+
+**Sources (10):**
+
+| Publication | Writer | Language | Type | Date |
+|-------------|--------|----------|------|------|
+| CosasDeCome Sevilla | Pepe Monforte | ES | Primary | 2023–2026 (4 articles) |
+| Sevilla Secreta | Ariana Buenafuente | ES | Primary | 2025–2026 |
+| The Objective | Brenda Alonso | ES | Primary | 2023 |
+| Viajes NatGeo España | Mari Carmen Duarte | ES | Secondary | 2024 |
+| Bitesize Sevilla | Shawn Hennessey | EN | Primary | 2025 |
+| Spanish Sabores | Lauren Aloise | EN | Secondary ⚠coi | 2025 |
+
+**Results:**
+- Raw: 66 → Final: 61 (5 user-removed: modern tapas COI entries)
+- Both-pool: 5
+- Auto-removed (null neighbourhood): 3 ✅ (rule working)
+- Geocoded: 46/61 (75%)
+- 21 open_status_check flagged (from 2023–2024 sources)
+
+**Key finding:** Bitesize Sevilla (Shawn Hennessey) is a genuine independent EN Seville resident writer — best EN source in the pack with no COI. Spanish Sabores COI concentration (10 entries, all ⚠coi) remains the main weakness.
+
+**Geocoding bug:** Bar La Paradita geocoded to Extremadura (lat 38.26, lng -5.69) — Photon false positive. Nulled manually. The out-of-bounds validation step added to post-pipeline script would have caught this automatically.
+
+---
+
+### Córdoba v6 Pipeline Run
+
+**Prompt:** `localbite-prompt-v6-cordoba.txt`
+**Output file:** `localbite-cordoba-2023-2026.json`
+**Run time:** ~29 minutes | 130.2k tokens | 78 tool uses
+
+**Sources (9):**
+
+| Publication | Writer | Language | Type | Date |
+|-------------|--------|----------|------|------|
+| AndyHayler.com | Andy Hayler | EN | Primary | 2024-06-01 |
+| Spain by Hanne | Hanne Olsen | EN | Primary | 2025-12-09 |
+| Piccavey | Molly (Piccavey) | EN | Primary | 2026-01-18 |
+| Cordópolis (elDiario.es) | Juan Velasco | ES | Primary | 2025-11-26 |
+| Cordópolis (elDiario.es) | Alfonso Alba | ES | Primary | 2025-11-25 |
+| La Voz de Córdoba | M. Ángeles Ramírez | ES | Primary | 2026-02-19 |
+| The Objective | Brenda Alonso | ES | Primary | 2023-08-25 |
+| Yendo por la Vida | Txema Aguado | ES | Primary | 2024-01-24 |
+| Andalucía Lovers | Morgane Mazelier | EN | Secondary | 2024-11-11 |
+
+**Phase 0 note:** CosasDeCome failed at all URL variants (404/400). Guía Repsol fetched but article date was 2022 — outside content window, rejected.
+
+**Results:**
+- Raw: 36 → Final: 35 (0 user-removed, 1 auto-removed: Mercado Victoria gastromarket)
+- Both-pool: 14 (41% of pack — highest rate of any city)
+- Geocoded: 29/35 (83%)
+- 8 open_status_check flagged (from 2023–2024 sources)
+
+**Key finding:** Córdoba is the strongest pack quality of any city to date. 14 both-pool entries reflects a consistent, independent EN and ES food writing consensus around the same restaurants — Noor, Choco, Bar Santos, Bodegas Campos, La Cuchara de San Lorenzo among the most confirmed.
+
+**Geocoding issues:**
+- Terra Olea matched "La Terracita del Carmen" — nulled
+- Fuensanta centroid geocoded to province (38.02, -4.30) not city barrio — corrected to (37.87, -4.78)
+
+**Post-pipeline:** `bash localbite-post-pipeline.sh cordoba` ran automatically — geocoding, viewer update, index update, commit all in one command.
+
+---
+
+### Granada v6 Pipeline Run
+
+**Prompt:** `localbite-prompt-v6-granada.txt`
+**Output file:** `localbite-granada-2023-2026.json`
+**Run time:** ~31 minutes
+
+**Sources (4):**
+
+| Publication | Writer | Language | Type | Date |
+|-------------|--------|----------|------|------|
+| GranadaDigital | Alfonso Campos (El Gocho Gourmet) | ES | Primary | 2025-08-28 |
+| jamesdimitri.co.uk | James Dimitri | EN | Primary | 2025-02-18 |
+| Spanish Sabores | Lauren Aloise | EN | Secondary ⚠coi | 2023-07-12 |
+| Andalucia Lovers | Fanny | EN | Secondary | 2025-02-04 |
+
+**Results:**
+- Raw: 34 → 29 (5 merges) → Final: 15 (3 user-removed: Gran Café Bib-Rambla, Taberna Mítico Bar, Versos Sueltos)
+- Both-pool: 0 (structural — EN and ES sources cover different restaurants entirely)
+- Geocoded: 11/15 (73%)
+- 5 open_status_check flagged (Spanish Sabores 2023 source)
+
+**Key finding:** Granada is a structurally thin-source city. El Gocho Gourmet (Alfonso Campos) only has 2 published review articles on GranadaDigital — his column launched April 2025. A v2 run in 2–3 months will produce a substantially richer pack. Culinary Backstreets confirmed absent. CosasDeCome does not cover Granada.
+
+**Geocoding issues:** 3 false positives nulled (Bar Avila Tapas → "Bar Tapas D-Auto", La Barra de San Remo → "Edificio San Remo", Tajine Elvira → "Crepería Elvira81"). JSON trailing comma bug caught and fixed by script.
+
+**Post-pipeline:** `bash localbite-post-pipeline.sh granada` ran automatically.
+
+---
+
+### Viewer Bugs Found and Fixed
+
+| Bug | Cause | Fix |
+|-----|-------|-----|
+| App not loading on mobile | `Camp de l'Arpa` apostrophe broke JS CENTROIDS object | Curly apostrophe (U+2019) used; viewer-update.js patched to prevent recurrence |
+| Valencia pins appearing in Barcelona | Flat CENTROIDS namespace — "Eixample" key matched Barcelona centroid | 21 Valencia restaurants renamed to "Eixample Valencia" in JSON |
+| Seville hollow pin far north of city | Bar La Paradita geocoded to Extremadura | Coordinates nulled |
+| Fuensanta centroid wrong | viewer-update.js geocoded "Fuensanta" to rural province | Corrected to city barrio coordinates |
+
+**Structural issue identified:** CENTROIDS is a flat global namespace — neighbourhood names shared across cities collide. Long-term fix: city-scoped centroids (nested by city slug). This will affect every future city with common neighbourhood names (Eixample, Gràcia, Centro, etc.).
+
+---
+
+### Pipeline Performance — All Cities
+
+| Metric | Valencia v6 | Seville v6 | Córdoba v6 | Granada v6 |
+|--------|-------------|------------|------------|------------|
+| Sources | 7 | 10 | 9 | 4 |
+| Both-pool | 10 | 5 | 14 | 0 |
+| Final restaurants | 47 | 61 | 35 | 15 |
+| Geocoded | 33/47 (70%) | 46/61 (75%) | 29/35 (83%) | 11/15 (73%) |
+| Run time | ~32 min | ~31 min | ~29 min | ~31 min |
+| Auto-removed (null nb) | 0 | 3 ✅ | 0 | 0 |
+| User removed | 6 | 5 | 0 | 3 |
+
+---
+
+### Files Produced / Modified
+
+| File | Change |
+|------|--------|
+| `localbite-valencia-2023-2026.json` | New — 47 restaurants, v6 |
+| `localbite-valencia-raw.json` | New |
+| `localbite-seville-2023-2026.json` | New — 61 restaurants, v6 |
+| `localbite-seville-raw.json` | New |
+| `localbite-cordoba-2023-2026.json` | New — 35 restaurants, v6 |
+| `localbite-cordoba-raw.json` | New |
+| `localbite-granada-2023-2026.json` | New — 15 restaurants, v6 |
+| `localbite-granada-raw.json` | New |
+| `localbite-prompt-v6-template.txt` | Updated — language_pool rule + null-neighbourhood rule |
+| `localbite-prompt-v6-valencia-part1.txt` | Updated — Las Provincias/Levante-EMV added to known_problematic |
+| `localbite-prompt-v6-cordoba-part1.txt` | New |
+| `localbite-prompt-v6-granada-part1.txt` | New |
+| `localbite-prompt-v6-seville.txt` | New (concatenated prompt) |
+| `localbite-prompt-v6-cordoba.txt` | New (concatenated prompt) |
+| `localbite-prompt-v6-granada.txt` | New (concatenated prompt) |
+| `localbite-geocode.js` | Updated — 62 false positive patterns, Córdoba/Granada CITY_BOUNDS, Carrer extension |
+| `localbite-viewer-update.js` | Updated — apostrophe fix, out-of-bounds validation step |
+| `localbite-index-update.js` | New script |
+| `localbite-commit.sh` | New script |
+| `localbite-post-pipeline.sh` | New script |
+| `localbite-publication-registry.json` | New — 8 cities seeded; Seville added |
+| `localbite-product-backlog.md` | New — 16 items |
+| `localbite-automation-backlog.md` | Existing — items B/C/D/I now complete |
+| `localbite-index.json` | Updated — Valencia, Seville, Córdoba, Granada added |
+| `index.html` | Updated — centroids for all 4 new cities, Camp de l'Arpa apostrophe fix, Fuensanta correction, static caveat hidden |
+
+---
+
+### Outstanding Items
+
+- [ ] **Fix CENTROIDS flat namespace collision** — city-scoped centroids needed before next batch. Active bug risk.
+- [ ] **Add missing geocoding patterns** — `Edificio`, `Crepería` (name mismatch), building suffixes
+- [ ] **Manual check CosasDeCome for Córdoba coverage** — cosasdecome.es
+- [ ] **Add Córdoba and Granada to publication registry**
+- [ ] **Viewer: article date + title in source display** (user suggestion — now deferred period over)
+- [ ] **Viewer: list view sort by neighbourhood/price/recommended** (user suggestion)
+- [ ] **Viewer: list↔map cross-navigation** (user suggestion — Option B first)
+- [ ] **Fix trailing comma JSON bug** in pipeline output
+- [ ] **Granada v2** — wait 2–3 months for El Gocho Gourmet archive to grow
+- [ ] **Seville v2** — find second independent EN Seville resident writer; address 21 open_status_check restaurants
+- [ ] **Córdoba v2** — attempt CosasDeCome once URL clarified; try ABC de Córdoba, El Día de Córdoba
+- [ ] **Next batch cities** — Porto, Málaga, or first non-Spanish city
+- [ ] **Item G** — open_status_check verification script (40+ flagged across Barcelona/Seville/Córdoba)
+- [ ] **Item F** — batch orchestration script
+- [ ] **Domain name** — localbite.app or getlocalbite.com
+- [ ] **Analytics** — Plausible or Fathom before sharing widely
+
+---
+
+
