@@ -2,13 +2,15 @@
   "registry_version": "1.0",
   "last_updated": "2026-04-09",
   "notes": "Seeded from all city runs through April 2026. Add new publications after each city run. last_verified = date URL was confirmed accessible in a pipeline run.",
-
   "cities": {
-
     "barcelona-spain": {
       "city": "Barcelona",
       "country": "Spain",
-      "languages": ["en", "es", "ca"],
+      "languages": [
+        "en",
+        "es",
+        "ca"
+      ],
       "primary_en": [
         {
           "publication": "Barcelona Food Experience",
@@ -137,11 +139,13 @@
         }
       ]
     },
-
     "valencia-spain": {
       "city": "Valencia",
       "country": "Spain",
-      "languages": ["en", "es"],
+      "languages": [
+        "en",
+        "es"
+      ],
       "primary_en": [
         {
           "publication": "The Infatuation",
@@ -241,11 +245,13 @@
         }
       ]
     },
-
     "lisbon-portugal": {
       "city": "Lisbon",
       "country": "Portugal",
-      "languages": ["en", "pt"],
+      "languages": [
+        "en",
+        "pt"
+      ],
       "primary_en": [
         {
           "publication": "Time Out Lisboa EN",
@@ -302,11 +308,13 @@
         }
       ]
     },
-
     "fes-morocco": {
       "city": "Fes",
       "country": "Morocco",
-      "languages": ["en", "fr"],
+      "languages": [
+        "en",
+        "fr"
+      ],
       "primary_en": [
         {
           "publication": "Anita's Feast",
@@ -345,11 +353,13 @@
         }
       ]
     },
-
     "marrakesh-morocco": {
       "city": "Marrakesh",
       "country": "Morocco",
-      "languages": ["en", "fr"],
+      "languages": [
+        "en",
+        "fr"
+      ],
       "primary_en": [
         {
           "publication": "Marrakech in Morocco",
@@ -400,11 +410,12 @@
         }
       ]
     },
-
     "chefchaouen-morocco": {
       "city": "Chefchaouen",
       "country": "Morocco",
-      "languages": ["en"],
+      "languages": [
+        "en"
+      ],
       "primary_en": [
         {
           "publication": "chauen.info",
@@ -432,11 +443,12 @@
         }
       ]
     },
-
     "toronto-canada": {
       "city": "Toronto",
       "country": "Canada",
-      "languages": ["en"],
+      "languages": [
+        "en"
+      ],
       "primary_en": [
         {
           "publication": "Toronto Life",
@@ -492,6 +504,106 @@
           "type": "secondary",
           "use_as_direct_fetch": false
         }
+      ]
+    },
+    "seville-spain": {
+      "city": "Seville",
+      "country": "Spain",
+      "languages": [
+        "en",
+        "es"
+      ],
+      "primary_en": [
+        {
+          "publication": "Bitesize Sevilla",
+          "writer": "Shawn Hennessey",
+          "url": "https://www.bitizesevilla.com",
+          "notes": "Independent EN resident food writer. Seville-based. 2025 article. Best independent EN voice in the pack — no COI. High priority for future runs.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": true
+        },
+        {
+          "publication": "Spanish Sabores",
+          "writer": "Lauren Aloise",
+          "url": "https://www.spanishsabores.com/category/seville/",
+          "notes": "⚠ COI: Lauren Aloise is co-founder of Devour Tours, a commercial food tour operator in Seville. Treat as secondary. Entries carry ⚠ coi flag. Genuine local knowledge but commercial conflict must be disclosed. Cap at 30% of EN pool.",
+          "last_verified": "2026-04-09",
+          "type": "secondary",
+          "coi": true,
+          "use_as_direct_fetch": true
+        },
+        {
+          "publication": "Culinary Backstreets",
+          "writer": "Various (named writers)",
+          "url": "https://culinarybackstreets.com/cities-2/seville/",
+          "notes": "Independent food writing platform. Seville coverage by named writers. Not used in v6 run — worth attempting in v2.",
+          "last_verified": null,
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "primary_es": [
+        {
+          "publication": "CosasDeCome Sevilla",
+          "writer": "Pepe Monforte",
+          "url": "https://www.cosasdecome.es/sevilla/",
+          "notes": "Best ES local source in the pack. Pepe Monforte is a local food awards panel judge. 4 articles used in v6 run (2023-2026). High yield, strong local knowledge, covers all neighbourhoods including outer areas (Pino Montano, Nervión). Apply concentration cap — 4 articles risks over-representation.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": true
+        },
+        {
+          "publication": "Sevilla Secreta",
+          "writer": "Ariana Buenafuente",
+          "url": "https://sevillasecreta.co/category/restaurantes/",
+          "notes": "Confirmed local ES publication writing for Seville residents not tourists. Previously found 72% non-overlap with EN sources. 2 articles used in v6 run. High priority — always include as Phase 0 direct fetch.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": true
+        },
+        {
+          "publication": "The Objective",
+          "writer": "Brenda Alonso",
+          "url": "https://theobjective.com/gastronomia/",
+          "notes": "ES independent journalism platform. Named writer. Used in v6 run. Good quality.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "primary_fr_or_other": [
+        {
+          "publication": "Viajes NatGeo España",
+          "writer": "Mari Carmen Duarte",
+          "url": "https://viajes.nationalgeographic.com.es/gastronomia/",
+          "notes": "ES-language National Geographic travel section. Named writer. Secondary source — national publication not Seville-specific. Good for cross-validation.",
+          "last_verified": "2026-04-09",
+          "type": "secondary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "known_problematic": [
+        {
+          "publication": "Devour Tours / Devour Seville",
+          "url": "https://devourtours.com/blog/",
+          "reason": "Commercial tour operator. COI — treat as secondary, cap at 20 restaurants, flag ⚠ coi. Co-founded by Lauren Aloise (Spanish Sabores)."
+        },
+        {
+          "publication": "ABC de Sevilla",
+          "url": "https://www.abcdesevilla.es/gastronomia/",
+          "reason": "Major regional newspaper. Not used in v6 run — worth attempting in v2 with named writer search."
+        },
+        {
+          "publication": "El Correo de Andalucía",
+          "url": "https://elcorreoweb.es/gastronomia/",
+          "reason": "Local Seville newspaper. Not used in v6 run — worth attempting in v2."
+        }
+      ],
+      "outstanding_v2": [
+        "Find second independent EN Seville resident food writer — reduces COI concentration in EN pool",
+        "21 open_status_check restaurants need closure verification before sharing widely",
+        "Attempt ABC de Sevilla and El Correo de Andalucía with named writer searches"
       ]
     }
   }
