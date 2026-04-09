@@ -113,11 +113,11 @@
       "article_date": "2025-02-18",
       "open_status_check": false,
       "flagged": false,
-      "lat": 37.1898124,
-      "lng": -3.6097943,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
-      "geo_matched_name": "Bar Tapas D-Auto"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "name": "Bar Los Diamantes",
@@ -345,11 +345,11 @@
       "article_date": "2025-09-18",
       "open_status_check": false,
       "flagged": false,
-      "lat": 37.1590092,
-      "lng": -3.5840616,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
-      "geo_matched_name": "Edificio San Remo"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "name": "La Botillería",
@@ -511,11 +511,11 @@
       "article_date": "2023-07-12",
       "open_status_check": true,
       "flagged": false,
-      "lat": 37.1801163,
-      "lng": -3.5990769,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
-      "geo_matched_name": "Crepería Elvira81"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     }
   ]
 }
