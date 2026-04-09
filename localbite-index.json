@@ -41,7 +41,7 @@
       "description": "10 restaurants from 3 named sources across English and French",
       "file": "./localbite-fes-2025-2026.json",
       "status": "complete",
-      "notes": "Thin source pool \u2014 Arabic-language sources not found via search. Methodology case study."
+      "notes": "Thin source pool — Arabic-language sources not found via search. Methodology case study."
     },
     {
       "city": "Marrakesh",
@@ -66,10 +66,10 @@
       "restaurant_count": 36,
       "both_pool_count": 0,
       "source_count": 5,
-      "description": "36 restaurants from 5 independent sources \u2014 Strategy C methodology",
+      "description": "36 restaurants from 5 independent sources — Strategy C methodology",
       "file": "localbite-lisbon-2025-2026.json",
       "status": "complete",
-      "notes": "Strategy C pack \u2014 all independent sources, no commercial conflicts. Both-pool zero is structural: independent EN and PT critics cover different restaurant segments. Geocoding pending."
+      "notes": "Strategy C pack — all independent sources, no commercial conflicts. Both-pool zero is structural: independent EN and PT critics cover different restaurant segments. Geocoding pending."
     },
     {
       "city": "Rabat",
@@ -83,7 +83,7 @@
       "description": "10 restaurants from 3 named sources across English and French",
       "file": "localbite-rabat-2025-2026.json",
       "status": "complete",
-      "notes": "Zero both-pool entries. Thin source pool \u2014 single blogger dominated, concentration cap applied. NatGeo secondary + TelQuel primary (1 entry) + Maroclovers primary."
+      "notes": "Zero both-pool entries. Thin source pool — single blogger dominated, concentration cap applied. NatGeo secondary + TelQuel primary (1 entry) + Maroclovers primary."
     },
     {
       "city": "Chefchaouen",
@@ -97,7 +97,7 @@
       "description": "17 restaurants from 5 named sources, all English tourist-facing",
       "file": "localbite-chefchaouen-2025-2026.json",
       "status": "complete",
-      "notes": "All sources tourist-facing \u2014 no local food critics in Chefchaouen. Bab Ssour confirmed by 5 sources including FR+EN both-pool. Nominatim v3 achieved 65% geocoding hit rate with zero false positives."
+      "notes": "All sources tourist-facing — no local food critics in Chefchaouen. Bab Ssour confirmed by 5 sources including FR+EN both-pool. Nominatim v3 achieved 65% geocoding hit rate with zero false positives."
     },
     {
       "city": "Toronto",

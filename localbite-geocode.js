@@ -95,6 +95,77 @@ function httpGet(url, headers = {}, useHttp = false) {
 }
 
 
+
+// ── NON-RESTAURANT ENTITY DETECTION ──
+// Catches false positives where Nominatim/Photon matched a street, park,
+// plaza, station, or other non-restaurant entity instead of the restaurant.
+// Called after nameIsPlausible passes — a second gate before accepting a match.
+
+const NON_RESTAURANT_PATTERNS = [
+  /^Carrer (de |d'|dels? |de les )/i,   // streets (Catalan)
+  /^Calle (de |del |de la |de los )/i,  // streets (Spanish)
+  /^Rua (de |do |da |dos |das )/i,      // streets (Portuguese)
+  /^Rue (de |du |des |de la )/i,        // streets (French)
+  /^Plaça (de |del |de la |d')/i,       // squares (Catalan)
+  /^Plaza (de |del |de la |de los )/i,  // squares (Spanish)
+  /^Praça (de |do |da )/i,              // squares (Portuguese)
+  /^Place (de |du |des |de la )/i,      // squares (French)
+  /^Jardins? (de |del |d')/i,           // parks/gardens (Catalan/Spanish)
+  /^Parque (de |do |da )/i,             // parks (Spanish/Portuguese)
+  /^Parc (de |du |des )/i,              // parks (French/Catalan)
+  /^Avinguda (de |del |d')/i,           // avenues (Catalan)
+  /^Avenida (de |do |da )/i,            // avenues (Spanish/Portuguese)
+  /^Passeig (de |del |d')/i,            // promenades (Catalan)
+  /^Paseo (de |del )/i,                 // promenades (Spanish)
+  /\bEstació\b/i,                      // train/metro stations (Catalan)
+  /\bEstación\b/i,                     // stations (Spanish)
+  /\bEstação\b/i,                      // stations (Portuguese)
+  /\bStation\b/i,                      // stations (English)
+  /\bAirport\b/i,                      // airports
+  /\bAeroport\b/i,                     // airports (Catalan/French)
+  /\bAeropuerto\b/i,                   // airports (Spanish)
+  /\bUniversitat\b/i,                  // universities (Catalan)
+  /\bUniversidad\b/i,                  // universities (Spanish)
+  /\bUniversidade\b/i,                 // universities (Portuguese)
+  /\bUniversity\b/i,                   // universities (English)
+  /\bHospital\b/i,                     // hospitals
+  /\bMuseu\b/i,                        // museums (Catalan/Portuguese)
+  /\bMuseo\b/i,                        // museums (Spanish)
+  /\bMusée\b/i,                        // museums (French)
+  /\bMetro\b/i,                        // metro stations
+  /\bSubway\b/i,                       // subway stations
+  /^Line \d/i,                          // metro/train lines
+];
+
+/**
+ * Returns true if the matched name looks like a non-restaurant entity.
+ * Used as a post-filter after nameIsPlausible passes.
+ * @param {string} matchedName - The name returned by the geocoding service
+ * @param {string} neighbourhood - The restaurant's neighbourhood field
+ * @returns {boolean} true = likely a false positive, reject this match
+ */
+function isNonRestaurantEntity(matchedName, neighbourhood) {
+  if (!matchedName) return false;
+
+  // Check against non-restaurant patterns
+  for (const pattern of NON_RESTAURANT_PATTERNS) {
+    if (pattern.test(matchedName)) return true;
+  }
+
+  // Check if matched name is just the neighbourhood name itself
+  // (pure neighbourhood-name false positive, e.g. "Arraval" → "el Raval")
+  if (neighbourhood) {
+    const normalize = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const normMatch = normalize(matchedName);
+    const normNb = normalize(neighbourhood);
+    if (normMatch === normNb || normNb.includes(normMatch) && normMatch.length > 3) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 // ── NAME SIMILARITY CHECK ──
 // Returns true if matched name shares meaningful words with restaurant name
 function nameIsPlausible(restaurantName, matchedName) {
@@ -157,10 +228,15 @@ async function queryNominatim(name, nb, city, country) {
             continue;
           }
           const best = inBounds.find(r => r.class === 'amenity') || inBounds[0];
+          const nomName1 = best.display_name.split(',')[0];
+          if (isNonRestaurantEntity(nomName1, nb)) {
+            console.log(`  ✗ Nominatim non-restaurant entity: "${nomName1}" — auto-nulled`);
+            continue;
+          }
           return {
             lat: parseFloat(best.lat), lng: parseFloat(best.lon),
             source: 'nominatim', confidence: best.class === 'amenity' ? 'high' : 'medium',
-            matched_name: best.display_name.split(',')[0], query: q
+            matched_name: nomName1, query: q
           };
         }
         continue;
@@ -175,10 +251,15 @@ async function queryNominatim(name, nb, city, country) {
       }
 
       const best = inBounds.find(r => r.class === 'amenity') || inBounds[0];
+      const nomName2 = best.display_name.split(',')[0];
+      if (isNonRestaurantEntity(nomName2, nb)) {
+        console.log(`  ✗ Nominatim non-restaurant entity: "${nomName2}" — auto-nulled`);
+        continue;
+      }
       return {
         lat: parseFloat(best.lat), lng: parseFloat(best.lon),
         source: 'nominatim', confidence: best.class === 'amenity' ? 'high' : 'medium',
-        matched_name: best.display_name.split(',')[0], query: q
+        matched_name: nomName2, query: q
       };
     } catch(e) {
       console.error(`  Nominatim error: ${e.message}`);
@@ -317,6 +398,10 @@ async function queryPhoton(name, nb, city, country) {
       // Name similarity check — reject if matched name unrelated to restaurant
       if (photonName && !nameIsPlausible(name, photonName)) {
         console.log(`  ✗ Photon name mismatch: "${photonName}" vs "${name}" — rejected`);
+        continue;
+      }
+      if (isNonRestaurantEntity(photonName, nb)) {
+        console.log(`  ✗ Photon non-restaurant entity: "${photonName}" — auto-nulled`);
         continue;
       }
 
