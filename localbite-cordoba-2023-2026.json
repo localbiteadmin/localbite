@@ -635,10 +635,10 @@
       "article_date": "2025-11-26",
       "open_status_check": false,
       "flagged": false,
-      "lat": 37.8947596,
-      "lng": -4.7747632,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
       "geo_matched_name": "La Terracita del Carmen"
     },
     {
