@@ -1,0 +1,102 @@
+LOCALBITE SEARCH PLAN — Valencia, Spain
+Generated: 2026-04-09
+Pipeline: localbite-v6
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
+
+Neighbourhood groups (11 groups from GEOGRAPHIC_BOUNDARY_INCLUDE):
+
+GROUP 1: Ciutat Vella / El Carmen / Barri del Mercat / La Xerea / El Pilar / La Seu (Old City core)
+  A-01 [EN]  "best restaurants El Carmen Valencia food writer guide"
+  A-02 [ES]  "mejores restaurantes Ciutat Vella Carmen Valencia recomendaciones periodista"
+  A-03 [VAL] "millors restaurants El Carme Barri del Mercat València recomanació"
+
+GROUP 2: Ruzafa (Russafa) / Eixample / Pla del Remei / Gran Via
+  A-04 [EN]  "restaurants Ruzafa Valencia neighbourhood guide food writer 2024"
+  A-05 [ES]  "dónde comer Russafa Eixample Valencia guía gastronómica 2025"
+  A-06 [VAL] "on menjar Russafa Eixample València guia gastronomica 2024"
+
+GROUP 3: El Botànic / Extramurs / Arrancapins / Vara de Quart
+  A-07 [EN]  "El Botanic Valencia restaurants food guide writer"
+  A-08 [ES]  "restaurantes Botànic Extramurs Valencia recomendaciones crítica 2025"
+  A-09 [VAL] "restaurants Botànic Extramurs València recomanació 2024"
+
+GROUP 4: Campanar / Marxalenes / Exposició
+  A-10 [EN]  "Campanar Valencia restaurants food writer local guide"
+  A-11 [ES]  "restaurantes Campanar Marxalenes Valencia guía 2024 2025"
+  A-12 [VAL] "restaurants Campanar Marxalenes València recomanació periodista"
+
+GROUP 5: Benimaclet
+  A-13 [EN]  "Benimaclet Valencia restaurants food writer neighbourhood 2024"
+  A-14 [ES]  "dónde comer Benimaclet Valencia crítica gastronómica 2025"
+  A-15 [VAL] "on menjar Benimaclet València gastronomia recomanació"
+
+GROUP 6: Algirós / En Corts / Montolivet
+  A-16 [EN]  "Algiros Valencia restaurants guide food writer"
+  A-17 [ES]  "restaurantes Algirós Montolivet Valencia recomendaciones 2024"
+  A-18 [VAL] "restaurants Algirós Valencia periodista gastronomia"
+
+GROUP 7: Quatre Carreres / Jesús / Patraix
+  A-19 [EN]  "Quatre Carreres Patraix Valencia restaurants food writer"
+  A-20 [ES]  "restaurantes Jesús Patraix Valencia guía gastronómica 2025"
+  A-21 [VAL] "restaurants Quatre Carreres Jesús Patraix València recomanació"
+
+GROUP 8: La Saïdia / Torrefiel / Trinitat / Orriols
+  A-22 [EN]  "La Saidia Valencia restaurants food writer local guide"
+  A-23 [ES]  "restaurantes La Saïdia Torrefiel Valencia recomendaciones periodista 2025"
+  A-24 [VAL] "restaurants La Saïdia Torrefiel Trinitat València recomanació"
+
+GROUP 9: Poblats Marítims / Cabanyal / Malvarrosa / Natzaret / El Grau
+  A-25 [EN]  "Cabanyal Valencia restaurants food writer 2024 2025"
+  A-26 [ES]  "dónde comer Cabanyal Malvarrosa Valencia guía gastronómica crítica 2025"
+  A-27 [VAL] "on menjar Cabanyal Malvarrosa Natzaret Grau València recomanació"
+
+GROUP 10: L'Olivereta / Safranar
+  A-28 [EN]  "Olivereta Safranar Valencia restaurants food writer"
+  A-29 [ES]  "restaurantes Olivereta Safranar Valencia recomendaciones 2024"
+  A-30 [VAL] "restaurants Olivereta Safranar València recomanació"
+
+GROUP 11: Sant Antoni
+  A-31 [EN]  "Sant Antoni Valencia restaurants neighbourhood food guide"
+  A-32 [ES]  "restaurantes Sant Antoni Valencia guía gastronómica 2025"
+  A-33 [VAL] "restaurants Sant Antoni València recomanació periodista"
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
+
+Cross-1 — City-wide (3 queries):
+  B-01 [EN]  "best restaurants Valencia Spain food writer guide 2024"
+  B-02 [ES]  "mejores restaurantes Valencia guía gastronómica periodista 2025"
+  B-03 [VAL] "millors restaurants València guia gastronomica recomanació 2023"
+
+Cross-2 — Writer-first (3 queries):
+  B-04 [EN]  "Valencia Spain restaurant guide food writer local blogger 2025"
+  B-05 [ES]  "crítica gastronómica Valencia restaurantes independiente periodista 2025"
+  B-06 [VAL] "crítica gastronomica Valencia periodista independent 2024"
+
+Cross-3 — Recent openings 2024–2026 (2 queries):
+  B-07 [EN]  "new restaurants Valencia Spain opening 2024 2025 2026 food writer"
+  B-08 [ES]  "nuevos restaurantes Valencia apertura 2024 2025 recomendación"
+
+Cross-4 — Older coverage 2023–2024 (2 queries):
+  B-09 [EN]  "best restaurants Valencia Spain 2023 food writer guide"
+  B-10 [ES]  "mejores restaurantes Valencia 2023 2024 guía gastronómica"
+
+Cross-5 — Awards and recognition (2 queries):
+  B-11 [EN]  "Valencia restaurant Michelin star guide recognition 2024 2025"
+  B-12 [ES]  "restaurantes Valencia Michelin Repsol premios gastronomía 2024 2025"
+
+Cross-6 — Forum and community (2 queries):
+  B-13 [EN]  "where to eat Valencia Spain local recommendations 2024 2025"
+  B-14 [ES]  "dónde comer Valencia 2025 recomendación local blogger gastronómico"
+
+Cross-7 — Cuisine diversity (2 queries — applicable given Valencia's rice/paella culture and immigrant communities):
+  B-15 [EN]  "Valencia paella rice dish restaurant food writer authentic local 2024"
+  B-16 [ES]  "restaurantes arrocería Valencia auténtico recomendación periodista 2025"
+
+TOTAL PLANNED: 33 neighbourhood + 16 cross-cutting = 49 queries (within 55 soft ceiling)
+
+Stopping rule: If last 8 consecutive queries yield no new candidates, stop early.

@@ -1,0 +1,35 @@
+LOCALBITE AUDIT LOG — Valencia, Spain
+Pipeline: localbite-v6
+════════════════════════════════════════
+Format: Restaurant name | Tier | Reason | Source
+
+AUTO-REJECTED (Tier C):
+La Fábrica de Hielo | C | Cultural venue / bar, not a restaurant | src-amsterdamfoodie
+Ubik Café | C | Café with no substantive food recommendation | src-amsterdamfoodie
+Café Artysana | C | Café with no food-specific recommendation | src-amsterdamfoodie
+Restaurante Maremar | C | Location (Playa de Pinedo) outside GEOGRAPHIC_BOUNDARY_INCLUDE | src-amsterdamfoodie
+
+RECOMMENDED REMOVALS (Tier B — rec-remove, presented for human review):
+Emiliano Bodega | B | Source explicitly notes "still in consolidation phase" — no stable quality signal | src-ojoalplato-poblats
+El Cabanyal Restaurant | B | Name ambiguity with the neighbourhood name; single source only | src-ojoalplato-poblats
+Riff | B | Quote derived from partial fetch (bonviveur 3,500 chars); lacks specific dish or scene detail | src-bonviveur
+
+USER REMOVALS (applied 2026-04-09):
+Barbaric | user-removed | No neighbourhood recorded; generic natural-wine bar framing
+Acapulco Bar | user-removed | No neighbourhood recorded; Mexican restaurant outside core Valencian focus
+Askua | user-removed | No neighbourhood recorded; steakhouse without local cuisine anchor
+Forastera | user-removed | No neighbourhood recorded; generic seasonal framing
+L'Alquimista | user-removed | No neighbourhood recorded; Italian fresh pasta without local anchor
+Riff | user-removed | Flagged (⚠ rec-remove): quote from partial fetch (3,500 chars), lacks specific dish or scene detail
+
+TRACEABILITY CHECKS PASSED:
+All 49 post-dedup restaurants traced to specific fetched source text. No fabricated entries detected.
+
+TIER CORRECTIONS APPLIED:
+Fierro: upgraded B → A (2 independent ES sources: bonviveur + grupogastrotrinquet)
+Fraula: upgraded B → A (2 independent ES sources: bonviveur + grupogastrotrinquet)
+Kaido Sushi Bar: upgraded B → A (2 independent ES sources: bonviveur + grupogastrotrinquet)
+Lienzo: upgraded B → A (2 independent ES sources: bonviveur + grupogastrotrinquet)
+Cocleque: upgraded B → A (2 independent ES sources: ojoalplato-poblats + valenciaplaza)
+Xaruga: upgraded B → A (2 independent ES sources: ojoalplato-poblats + valenciaplaza)
+Noble: source corrected — ojoalplato-eixample did not mention Noble; single source (valenciaplaza) confirmed → Tier B retained

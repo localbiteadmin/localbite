@@ -1,0 +1,4 @@
+LOCALBITE FAILED SOURCES — Valencia, Spain
+Pipeline: localbite-v6
+════════════════════════════════════════
+Format: URL | attempt-1 chars | retry-1 chars | retry-2 chars | outcome

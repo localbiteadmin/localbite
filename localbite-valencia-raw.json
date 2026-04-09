@@ -1,0 +1,34 @@
+{
+  "city": "Valencia",
+  "country": "Spain",
+  "city_slug": "valencia-spain",
+  "built": "2026-04-09",
+  "source_recency": "2023-2026",
+  "pipeline": "localbite-v6",
+  "note": "Pre-removal record. Includes all Tier A and Tier B entries before user review. Auto-rejected Tier C entries not included.",
+  "confidence_tiers_pre_review": {
+    "auto_approved": 16,
+    "tier_b_total": 37,
+    "auto_rejected": 4,
+    "tier_b_rec_remove": 3,
+    "tier_b_clean": 34
+  },
+  "user_removals_applied": [
+    {"name": "Barbaric", "reason": "user-removed at bulk review"},
+    {"name": "Acapulco Bar", "reason": "user-removed at bulk review"},
+    {"name": "Askua", "reason": "user-removed at bulk review"},
+    {"name": "Forastera", "reason": "user-removed at bulk review"},
+    {"name": "L'Alquimista", "reason": "user-removed at bulk review"},
+    {"name": "Riff", "reason": "user-removed at bulk review (was rec-remove flagged)"}
+  ],
+  "auto_rejected": [
+    {"name": "La Fábrica de Hielo", "reason": "Cultural venue / bar, not a restaurant", "source": "src-amsterdamfoodie"},
+    {"name": "Ubik Café", "reason": "Café with no substantive food recommendation", "source": "src-amsterdamfoodie"},
+    {"name": "Café Artysana", "reason": "Café with no food-specific recommendation", "source": "src-amsterdamfoodie"},
+    {"name": "Restaurante Maremar", "reason": "Location (Playa de Pinedo) outside GEOGRAPHIC_BOUNDARY_INCLUDE", "source": "src-amsterdamfoodie"}
+  ],
+  "audit_excluded_pre_json": [
+    {"name": "Emiliano Bodega", "reason": "rec-remove: source explicitly notes 'still in consolidation phase' — no stable quality signal", "source": "src-ojoalplato-poblats"},
+    {"name": "El Cabanyal Restaurant", "reason": "rec-remove: name ambiguity with the neighbourhood name; single source only", "source": "src-ojoalplato-poblats"}
+  ]
+}
