@@ -53,16 +53,64 @@ console.log();
 // ── Read index.html ──
 let html = fs.readFileSync(indexPath, 'utf8');
 
-// ── Parse existing CENTROIDS entries ──
-// Finds the CENTROIDS object and extracts all existing keys
+// ── Extract the CENTROIDS block as a string ──
+// Returns { block, blockStart, blockEnd } where block is the content
+// between "const CENTROIDS = {" and its closing "};", and blockStart/blockEnd
+// are the indices in the full html string.
+// Throws if CENTROIDS cannot be found.
+function extractCentroidsBlock(html) {
+  const openMarker = 'const CENTROIDS = {';
+  const openIdx = html.indexOf(openMarker);
+  if (openIdx === -1) throw new Error('Could not find "const CENTROIDS = {" in index.html');
+
+  // Find the matching closing }; by scanning from after the opening {
+  // We track brace depth so we find the CENTROIDS }; not some inner one.
+  let depth = 0;
+  let i = openIdx + openMarker.length - 1; // position of the opening {
+  const len = html.length;
+
+  while (i < len) {
+    const ch = html[i];
+    if (ch === '{') depth++;
+    else if (ch === '}') {
+      depth--;
+      if (depth === 0) {
+        // Found the closing }. Check it's followed by ; (possibly with whitespace)
+        let j = i + 1;
+        while (j < len && html[j] === ' ') j++;
+        if (html[j] === ';') {
+          return {
+            blockStart: openIdx,
+            blockEnd: j + 1,           // index after the ;
+            innerStart: openIdx + openMarker.length,
+            innerEnd: i,               // index of the closing }
+            inner: html.slice(openIdx + openMarker.length, i)
+          };
+        }
+      }
+    }
+    i++;
+  }
+  throw new Error('Could not find closing }; for CENTROIDS block');
+}
+
+// ── Parse existing CENTROIDS keys ──
+// BUG FIX 1: The original regex  ['"]([^'"]+)['"]\s*:  stops at apostrophes
+// inside key names (e.g. "Camp de l'Arpa" was read as just "Camp de l").
+// New approach: match EITHER 'single-quoted key' OR "double-quoted key"
+// separately, so an apostrophe inside a double-quoted key is allowed.
 function getExistingCentroids(html) {
-  const match = html.match(/const CENTROIDS\s*=\s*\{([\s\S]*?)\};/);
-  if (!match) throw new Error('Could not find CENTROIDS object in index.html');
-  const block = match[1];
+  const { inner } = extractCentroidsBlock(html);
   const keys = [];
-  const keyPattern = /['"]([^'"]+)['"]\s*:/g;
+  // Match 'single-quoted key': no apostrophes allowed inside
+  const singleQuoted = /\s*'([^']+)'\s*:/g;
+  // Match "double-quoted key": apostrophes allowed inside
+  const doubleQuoted = /\s*"([^"]+)"\s*:/g;
   let m;
-  while ((m = keyPattern.exec(block)) !== null) {
+  while ((m = singleQuoted.exec(inner)) !== null) {
+    if (!m[1].startsWith('//')) keys.push(m[1]);
+  }
+  while ((m = doubleQuoted.exec(inner)) !== null) {
     if (!m[1].startsWith('//')) keys.push(m[1]);
   }
   return keys;
@@ -85,7 +133,6 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 function nominatimFetch(query) {
   return new Promise((resolve, reject) => {
-    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=3&addressdetails=1`;
     const options = {
       hostname: 'nominatim.openstreetmap.org',
       path: `/search?q=${encodeURIComponent(query)}&format=json&limit=3&addressdetails=1`,
@@ -103,7 +150,6 @@ function nominatimFetch(query) {
 }
 
 async function geocodeNeighbourhood(nb, city, country) {
-  // Try specific query first, then broader
   const queries = [
     `${nb}, ${city}, ${country}`,
     `${nb} neighbourhood ${city}`,
@@ -115,59 +161,63 @@ async function geocodeNeighbourhood(nb, city, country) {
       const r = results[0];
       return { lat: parseFloat(r.lat), lng: parseFloat(r.lon), query: q };
     }
-    await sleep(1100); // Nominatim rate limit: 1 req/sec
+    await sleep(1100);
   }
   return null;
 }
 
 // ── Insert new centroids into the CENTROIDS block ──
+// BUG FIX 2: The original function searched the ENTIRE html string for the
+// city comment "// CityName" and for the closing "};". Both patterns also
+// appear inside CITY_BOUNDS (city names) and elsewhere, causing centroid
+// entries to be written into the wrong objects.
+//
+// New approach: extract the CENTROIDS block first (using extractCentroidsBlock),
+// make all modifications within that isolated string, then substitute the
+// modified block back into the full html. The CITY_BOUNDS object is never
+// touched because we never run a regex against the full file.
 function insertCentroids(html, city, newEntries) {
-  // Find the city comment block and insert after last entry for that city,
-  // or before the next city comment block
+  const { blockStart, blockEnd, inner } = extractCentroidsBlock(html);
+
+  // Format new entry lines.
+  // Use double quotes when the name contains an apostrophe, single quotes otherwise.
+  const newLines = newEntries.map(e => {
+    const hasApostrophe = e.name.includes("'");
+    const q = hasApostrophe ? '"' : "'";
+    return `  ${q}${e.name}${q}: [${e.lat.toFixed(4)}, ${e.lng.toFixed(4)}],`;
+  }).join('\n');
+
   const cityComment = `// ${city}`;
-  const idx = html.indexOf(cityComment);
 
-  if (idx === -1) {
-    // City section doesn't exist — find the closing of CENTROIDS and insert before it
-    // Insert before the first city comment in CENTROIDS that isn't this city,
-    // or before the closing };
-    // Strategy: insert at the end of the CENTROIDS block before };
-    const centroidsMatch = html.match(/(const CENTROIDS\s*=\s*\{[\s\S]*?)(\};)/);
-    if (!centroidsMatch) throw new Error('Could not locate CENTROIDS block');
+  let newInner;
 
-    const insertion = `\n  // ${city}\n` + newEntries.map(e =>
-      `  '${e.name.replace(/'/g, '\u2019')}': [${e.lat.toFixed(4)}, ${e.lng.toFixed(4)}],`
-    ).join('\n') + '\n';
+  if (inner.includes(cityComment)) {
+    // City section already exists — find the next city comment and insert before it.
+    const afterComment = inner.indexOf(cityComment) + cityComment.length;
+    const nextComment  = inner.indexOf('\n  //', afterComment);
 
-    html = html.replace(
-      centroidsMatch[0],
-      centroidsMatch[1] + insertion + centroidsMatch[2]
-    );
-    console.log(`  Created new city section for ${city} in CENTROIDS`);
-  } else {
-    // City section exists — find the next city comment and insert before it
-    const afterCityComment = idx + cityComment.length;
-    const nextCityCommentIdx = html.indexOf('\n  //', afterCityComment);
-
-    const insertion = '\n' + newEntries.map(e =>
-      `  '${e.name}': [${e.lat.toFixed(4)}, ${e.lng.toFixed(4)}],`
-    ).join('\n');
-
-    if (nextCityCommentIdx === -1) {
-      // This is the last city — insert before closing };
-      const closingIdx = html.lastIndexOf('};', html.indexOf('function ', afterCityComment));
-      html = html.slice(0, closingIdx) + insertion + '\n' + html.slice(closingIdx);
+    if (nextComment === -1) {
+      // This is the last city section — append before the final whitespace.
+      newInner = inner.trimEnd() + '\n' + newLines + '\n';
     } else {
-      html = html.slice(0, nextCityCommentIdx) + insertion + html.slice(nextCityCommentIdx);
+      newInner = inner.slice(0, nextComment) + '\n' + newLines + inner.slice(nextComment);
     }
+    console.log(`  Added ${newEntries.length} centroid(s) to existing ${city} section`);
+  } else {
+    // No city section yet — append a new section before the end of the block.
+    newInner = inner.trimEnd() + `\n\n  ${cityComment}\n` + newLines + '\n';
+    console.log(`  Created new ${city} section in CENTROIDS`);
   }
-  return html;
+
+  // Reconstruct: everything before CENTROIDS block + new block + everything after.
+  const newBlock = 'const CENTROIDS = {' + newInner + '}';
+  const newHtml  = html.slice(0, blockStart) + newBlock + html.slice(blockEnd - 1);
+  // Note: blockEnd includes the ';' so we keep it: html.slice(blockEnd - 1) starts at ';'
+  return newHtml;
 }
 
 // ── Add city to CITY_BOUNDS if missing ──
 function insertCityBounds(html, city, cityData) {
-  // Use the bounding box from CITY_BOXES in geocode.js if we can find it,
-  // otherwise derive from the restaurant coordinates in the city JSON
   const coords = cityData.restaurants
     .filter(r => r.lat && r.lng)
     .map(r => ({ lat: r.lat, lng: r.lng }));
@@ -187,7 +237,6 @@ function insertCityBounds(html, city, cityData) {
 
   const newEntry = `  '${city}':      { minLat: ${minLat.toFixed(2)}, maxLat: ${maxLat.toFixed(2)}, minLng: ${minLng.toFixed(2)},  maxLng: ${maxLng.toFixed(2)}  },`;
 
-  // Find CITY_BOUNDS closing }; and insert before it
   const boundsMatch = html.match(/(const CITY_BOUNDS\s*=\s*\{[\s\S]*?)(\};)/);
   if (!boundsMatch) {
     console.log('  WARNING: Could not find CITY_BOUNDS in index.html — add manually.');
@@ -229,7 +278,7 @@ async function main() {
 
     for (const nb of missing) {
       process.stdout.write(`  Geocoding "${nb}"... `);
-      await sleep(1100); // rate limit
+      await sleep(1100);
       const result = await geocodeNeighbourhood(nb, city, country);
       if (result) {
         console.log(`✓ [${result.lat.toFixed(4)}, ${result.lng.toFixed(4)}]`);
