@@ -1,0 +1,28 @@
+{
+  "combination": 1,
+  "city": "Málaga",
+  "country": "Spain",
+  "total": 23,
+  "found": 20,
+  "hit_rate_pct": 87,
+  "nominatim": 16,
+  "here": 0,
+  "photon": 4,
+  "already": 0,
+  "not_found": 3,
+  "high_confidence": 16,
+  "medium_confidence": 4,
+  "verify_recommended": 4,
+  "manual_required": 3,
+  "not_found_names": [
+    "Mesón Mariano",
+    "Da Saveria",
+    "La Antxoeta"
+  ],
+  "medium_names": [
+    "El Tapeo de Cervantes",
+    "Taberna Uvedoble",
+    "Balausta",
+    "Verum – el Asador de Malaga"
+  ]
+}

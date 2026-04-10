@@ -309,11 +309,11 @@
       "confidence_tier": "B",
       "source_type_combination": "primary EN ×1",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 36.7047766,
+      "lng": -4.4357779,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Andino Gastrobar"
     },
     {
       "name": "Balausta",
@@ -334,11 +334,11 @@
       "confidence_tier": "B",
       "source_type_combination": "primary EN ×1",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 36.6894915,
+      "lng": -4.4458169,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Niño del Balaustre"
     },
     {
       "name": "Beluga",
@@ -384,11 +384,11 @@
       "confidence_tier": "B",
       "source_type_combination": "primary EN ×1",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 36.7203776,
+      "lng": -4.3621698,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Cortijo de Pepe"
     },
     {
       "name": "Da Saveria",
@@ -608,11 +608,11 @@
       "confidence_tier": "B",
       "source_type_combination": "primary EN ×1",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 36.612647,
+      "lng": -4.5015764,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Los Mellizos"
     },
     {
       "name": "Verum – el Asador de Malaga",
@@ -635,11 +635,11 @@
       "confidence_tier": "B",
       "source_type_combination": "primary EN ×1",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 36.7379469,
+      "lng": -4.3807385,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "El Lagar de Verum"
     },
     {
       "name": "EME de Mariano",
