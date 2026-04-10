@@ -1,0 +1,502 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Málaga
+COUNTRY: Spain
+CITY_SLUG: malaga-spain
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: ES
+SEARCH_LANGUAGES: English, Spanish
+
+YEAR_RANGE: 2023-2026
+
+SEARCH_ANGLE_EXAMPLES:
+- "best restaurants Málaga Spain food writer local guide 2026"
+- "mejores restaurantes Málaga España guia gastronomica 2026"
+- "food writers Málaga Spain local guide recommendations 2025"
+- "críticos gastronómicos Málaga España escritores locales 2025"
+- "restaurantes Centro Histórico Málaga recomendaciones guia local 2026"
+- "restaurantes Soho Málaga barrio gastronómico 2025"
+
+SOURCE_EXAMPLES:
+- Spanish food media: Guía Repsol, Gastronostrum, Diario Sur,
+  La Opinión de Málaga, El Comidista (El País), SUR en inglés,
+  Malagaes.com, Disfrutando Málaga, Malagueños
+- English food media: Time Out Málaga (EN edition), The Guardian,
+  Eater, Condé Nast Traveller, The Local Spain
+- Local food bloggers writing in Spanish or English with
+  documented Málaga residency or regular coverage
+- Expat food writers based in Málaga
+
+DIRECT_FETCH_SOURCES:
+These sources are fetched directly in Phase 0 before any searches.
+They are known high-quality independent sources identified during
+city variable preparation.
+- https://gastronostrum.com — Gastronostrum (ES independent food
+  publication covering Andalucía; check for Málaga content dated
+  2023–2026)
+- https://www.disfrutandomalaga.com — Disfrutando Málaga (local ES
+  food and culture guide; check for 2023–2026 restaurant content)
+- https://culinarybackstreets.com/cities-category/malaga/ —
+  Culinary Backstreets Málaga (EN independent food writing platform;
+  check for 2023–2026 content)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+- Time Out Málaga — operates Time Out Market Málaga in the city
+  centre. Disclose in writer profile. INCLUDE with ⚠ coi flag —
+  do NOT exclude.
+
+SECONDARY_SOURCES: Condé Nast Traveller, Lonely Planet,
+  Time Out (EN edition), The Guardian, The Local Spain
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Centro Histórico, Soho (Arte), La Malagueta, El Perchel,
+Cruz de Humilladero, Capuchinos, El Molinillo, Churriana,
+Teatinos, El Ejido, La Goleta,
+Pedregalejo (CONDITIONAL: include only if the writer explicitly
+describes it as part of the Málaga dining scene or Málaga
+restaurant recommendations),
+El Palo (CONDITIONAL: same rule as Pedregalejo — include only
+if writer explicitly frames as Málaga dining)
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Marbella, Torremolinos, Benalmádena, Fuengirola, Nerja,
+Antequera, Ronda, or any location described as "outside Málaga",
+"day trip from Málaga", "near Málaga", Costa del Sol (as a
+general region not within Málaga city), or another Andalucían
+city. Exclude Sevilla, Granada, Córdoba entirely.
+
+KNOWN_PROBLEMATIC_URLS:
+(none identified — update if failures occur during pipeline)
+
+PRICE_CURRENCY: EUR (Euro)
+PRICE_LEVELS:
+- 1 = under €15 pp (budget / bar de tapas)
+- 2 = €15–40 pp (mid-range)
+- 3 = €40–80 pp (upscale)
+- 4 = over €80 pp (fine dining)
+
+OUTPUT_RAW: ./localbite-malaga-raw.json
+OUTPUT_FINAL: ./localbite-malaga-2023-2026.json
+OUTPUT_WORKING: ./localbite-malaga-working.json
+OUTPUT_SEARCH_LOG: ./localbite-malaga-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-malaga-search-plan.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 2 — PIPELINE ENGINE
+Do not change this section between cities
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+I am building a LocalBite city pack for Málaga, Spain. I want
+restaurant recommendations from named food writers from articles
+published in 2023, 2024, 2025, or 2026. Use the variables defined
+in Part 1 throughout this pipeline.
+
+Run the full pipeline automatically. Do not stop for individual
+approvals. Pause only once at the end for a single bulk review.
+
+════════════════════════════════════════
+OUTPUT SIZE MANAGEMENT
+════════════════════════════════════════
+
+To prevent token limit errors:
+- Extract and write one source at a time to
+  ./localbite-malaga-working.json
+- Never hold all sources in memory simultaneously
+- If any single fetch returns over 500,000 characters, truncate
+  to the first 50,000 characters and note truncation
+- For secondary sources, extract a maximum of 30 restaurants
+
+════════════════════════════════════════
+SEARCH RULES — apply to all phases
+════════════════════════════════════════
+
+✗ Do not use the site: operator in any search query
+✗ Do not search for a specific publication by name
+✗ Do not repeat a query already in the search log — check
+  ./localbite-malaga-search-log.txt before each search
+✓ Use open queries describing the type of content you want
+✓ Vary language — use English and Spanish searches
+
+════════════════════════════════════════
+SEARCH LOG
+════════════════════════════════════════
+
+After every search or fetch, immediately append one line to
+./localbite-malaga-search-log.txt:
+[phase] "[action]" → [one sentence on what was found]
+
+════════════════════════════════════════
+PHASE 0 — DIRECT FETCH OF KNOWN SOURCES
+════════════════════════════════════════
+
+Before writing the search plan or running any searches, directly
+fetch each URL listed in DIRECT_FETCH_SOURCES via Jina.
+
+For each URL:
+1. Fetch via https://r.jina.ai/[URL]
+2. Check: does it return 2,000+ characters of genuine food content?
+3. Check: is at least one article or review dated 2023–2026
+   accessible?
+4. If both checks pass:
+   - Add to candidate pool as pre-verified source
+   - Note the writer name(s) for use in Phase 1B queries
+   - Log: [phase-0] FETCHED [publication] — [date of most recent
+     content] — [quality: good/partial] — writer: [name]
+5. If either check fails:
+   - Log: [phase-0] FAILED [publication] — [reason]
+   - Skip — do not force into candidate pool
+
+After all Phase 0 fetches, report:
+- Sources successfully pre-verified: [list with writers]
+- Sources failed or pre-2023: [list with reasons]
+- Writer names confirmed for Phase 1B: [list]
+
+Proceed immediately to Phase 1 Step 1.
+
+════════════════════════════════════════
+PHASE 1 — SOURCE SELECTION
+════════════════════════════════════════
+
+STEP 1 — Write search plan
+Write a plan to ./localbite-malaga-search-plan.txt covering
+exactly 30 queries across these angles with the specified counts.
+Incorporate any writer names confirmed in Phase 0 into Angle E
+writer-first queries.
+
+Angle A — City-wide EN (4 queries)
+Angle B — City-wide ES (5 queries)
+Angle C — Per-neighbourhood EN (4 queries)
+  Focus: Centro Histórico (2 queries) and Soho (2 queries)
+Angle D — Per-neighbourhood ES (4 queries)
+  Focus: Centro Histórico, Soho, El Perchel, Pedregalejo/El Palo
+Angle E — Writer-first (4 queries)
+  First 1-2 queries MUST use writer names from Phase 0 if found
+  Remaining queries use open writer-type patterns
+  Must include at least 2 Spanish-language writer queries
+Angle F — Forum and community (3 queries)
+  Include at least 1 Spanish-language forum query
+Angle G — Recent openings (2 queries)
+  1 EN + 1 ES
+Angle H — Awards and recognition (2 queries)
+  1 EN + 1 ES — open queries not naming specific publications
+Angle I — Publication-specific (2 queries)
+  Target food media by category not by name
+
+Total must equal exactly 30. Write all 30 before running any.
+
+STEP 2 — Execute search plan
+Run all 30 searches in order. Log each after it runs.
+
+STEP 3 — Evaluate candidates
+For each candidate run a quick verification fetch via Jina:
+- Publication date 2023–2026 (from article text not metadata)
+- Named author present
+- Article specifically about Málaga restaurants
+- Page returns over 2,000 chars
+
+FETCH DISCIPLINE — mandatory:
+Every source must have a full Jina fetch recorded BEFORE any
+restaurants are extracted. Search snippets must never substitute
+for fetching. Log: "[source] — FETCHED [date]" before extraction.
+
+SIBLING EDITION CHECK — mandatory logged step:
+For any publication with multiple language editions, log a
+discrete entry:
+[sibling-check] [publication] — EN and ES independently produced:
+YES/NO — evidence: [specific evidence: different authors, different
+URLs, different dates, licensing model]
+This must appear as an explicit log entry, not just implied.
+
+CONFLICT OF INTEREST CHECK — mandatory for every source:
+For every source that passes initial verification, explicitly check
+whether the publication has commercial relationships with the dining
+industry. Cross-reference KNOWN_COMMERCIAL_CONFLICTS.
+Log: [coi-check] [publication] — commercial conflict: YES/NO
+If YES: INCLUDE with ⚠ coi flag — do NOT exclude. Note the
+conflict and disclose in writer profile.
+
+SOURCE QUALITY RULES:
+✓ Accept: named author, 2023–2026 date, specific restaurant guide,
+  editorial independence
+✓ Accept: local blogger with Málaga residency or regular coverage
+✓ Accept: sources with commercial conflicts — INCLUDE with ⚠ coi
+  flag, never exclude on COI grounds alone
+✗ Reject: no named author
+✗ Reject: article dated before 2023
+✗ Reject: article not specifically about Málaga restaurants
+✗ Reject: aggregator or PR-generated content without named writer
+✗ Reject: Jina fetch returns under 2,000 chars
+
+SOURCE CAPS:
+- Primary sources (named critic, independent publication): no cap
+- Secondary sources (Condé Nast, Lonely Planet, Time Out EN
+  edition, The Guardian, The Local Spain): maximum 2 in final
+  candidate pool
+- Sources with commercial conflicts: count toward secondary cap
+  even if locally produced
+
+════════════════════════════════════════
+PHASE 1B — WRITER-FIRST SUPPLEMENT
+════════════════════════════════════════
+
+After completing and logging all 30 Phase 1 queries, run 4–6
+additional writer-first queries targeting independent critics
+not yet in the candidate pool.
+
+Use writer names found in Phase 0 and Phase 1. Include at least
+2 Spanish-language queries. Log all as [phase-1b].
+
+If all queries return sources already in candidate pool:
+note "Phase 1B added no new candidates" and proceed.
+
+If new candidates found: verify via Jina before including.
+Apply same quality rules as Phase 1.
+
+Total queries: 30 (Phase 1) + 4–6 (Phase 1B) = 34–36.
+
+════════════════════════════════════════
+PHASE 2 — FETCH AND EXTRACT
+════════════════════════════════════════
+
+Process each verified source. For each source:
+
+1. Fetch full article via https://r.jina.ai/[URL]
+2. Log: [source] — FETCHED [date found in article text]
+3. Extract all restaurant mentions with:
+   - name (exact as written)
+   - neighbourhood (as written — normalise in Phase 3)
+   - cuisine type
+   - price level (1–4 using PRICE_LEVELS)
+   - signature dish or standout detail
+   - direct quote (minimum 15 words, from article text only)
+   - source ID
+
+4. Write extracted entries immediately to OUTPUT_WORKING.
+   Do not hold in memory — write one source at a time.
+
+EXTRACTION RULES:
+✓ Extract only restaurants explicitly named in article text
+✓ Quotes must be from fetched article text — never paraphrase
+  as a quote or invent supporting detail
+✓ For secondary sources: extract maximum 30 restaurants
+✗ Do not extract bars, cafés, or shops unless article explicitly
+  describes them as restaurant recommendations
+✗ Do not extract hotel restaurants unless article includes
+  specific dish detail (not just "atmospheric" or "lovely setting")
+
+PEDREGALEJO / EL PALO RULE:
+Extract entries from these coastal barrios only if the article
+explicitly frames them as Málaga dining recommendations. If the
+article treats them as separate beach resort destinations,
+flag and exclude.
+
+════════════════════════════════════════
+PHASE 3 — ASSEMBLE, SCORE, AND REVIEW
+════════════════════════════════════════
+
+Read ./localbite-malaga-working.json as input.
+
+STEP 1 — Deduplicate and merge
+Combine all entries. Report merge count.
+
+STEP 2 — Assign confidence tier
+
+TIER A — Auto-approve:
+- 2 or more independent sources, OR
+- Both-pool: ≥1 EN source AND ≥1 ES source, editorially
+  independent AND from different publishers.
+  NOTE: Same-publisher cross-language editions (e.g. Time Out EN
+  and Time Out ES) do NOT qualify as independent agreement and
+  do NOT produce a both-pool entry.
+
+TIER B — Review recommended:
+Primary single-source:
+- Good fetch AND quote ≥15 words AND ≥1 specific detail
+
+Secondary or conflicted single-source:
+- Good fetch AND quote ≥15 words AND ≥2 specific details
+
+TIER C — Auto-reject:
+- Partial/failed fetch, single source
+- Quote under 15 words or no specific details
+- Outside geographic boundary
+
+STEP 2B — PUBLISHER CONCENTRATION CHECK
+After tier assignment:
+
+For each unique publisher count:
+- Total articles from this publisher in Tier A + Tier B
+- Percentage of each language pool held by this publisher
+
+If any publisher holds 2+ articles OR 50%+ of either language
+pool's sources:
+- Flag: [publisher-concentration] [publisher] — [X] articles,
+  [Y]% of [language] pool
+- Check whether diversity gate ES requirement (2 distinct
+  publishers) is met
+- If not met: run up to 4 supplementary searches for an
+  independent ES source from a different publisher
+- If still not met after 4 searches: document as structural
+  characteristic and proceed
+
+Report:
+PUBLISHER CONCENTRATION
+[Publisher]: [X] articles, [Y]% of [language] pool →
+flagged / not flagged / resolved
+
+SOURCE CONCENTRATION CAP (article-level):
+If any single article exceeds 30% of total Tier A + Tier B
+single-source entries, rank and auto-reject lowest until cap met.
+
+STEP 3 — Recommended removals (mandatory)
+Review every Tier B entry. Flag:
+- Not a restaurant
+- Chain with no local significance
+- Conflict of interest without sufficient editorial detail
+
+STEP 4 — Review table
+Show Tier A and Tier B only.
+Sort: both-pool → multi-source → single-source alphabetical.
+
+Columns:
+# | Name | Neighbourhood | Cuisine | Price | Pool | Sources |
+Tier | Source combo | ⚠
+
+Use ⚠ coi for any restaurant from a source with a commercial
+conflict. Add footer note: "⚠ coi = source has commercial
+relationship with dining industry — see writer profiles"
+
+After table — mandatory:
+
+---
+AUTO-REJECTED (Tier C): [N] entries
+
+SOURCE CONCENTRATION CAP (article-level):
+[Source]: cap applied / not needed
+
+PUBLISHER CONCENTRATION:
+[Publisher]: [X] articles, [Y]% of [language] pool →
+flagged / resolved / structural
+
+CONFLICT OF INTEREST:
+[Source]: [conflict description] → disclosed in writer profile
+
+RECOMMENDED REMOVALS:
+I reviewed [N] Tier B entries. I recommend removing [N].
+
+"Enter numbers to remove, or press Enter to accept."
+---
+
+STEP 5 — Export
+Write FILE 1 (raw) to ./localbite-malaga-raw.json.
+Apply removals. Write FILE 2 (final) to
+./localbite-malaga-2023-2026.json.
+
+JSON structure:
+{
+  "city": "Málaga",
+  "country": "Spain",
+  "city_slug": "malaga-spain",
+  "built": "[today's date]",
+  "source_recency": "2023-2026",
+  "pipeline": "localbite-strategy-c-v6",
+  "confidence_tiers": {
+    "auto_approved": [count],
+    "reviewed_kept": [count],
+    "user_removed": [count],
+    "auto_rejected": [count],
+    "concentration_cap_applied": [count]
+  },
+  "sources": [
+    {
+      "id": "src-slug",
+      "publication": "string",
+      "writer": "string or null",
+      "writer_profile": "2-3 sentence profile including any commercial conflict disclosure",
+      "url": "string",
+      "language": "en/es",
+      "source_type": "primary or secondary",
+      "article_date": "YYYY-MM-DD",
+      "found_via": "phase-0 / angle-X / phase-1b",
+      "commercial_conflict": true or false,
+      "commercial_conflict_note": "string or null",
+      "publisher_concentration_flag": true or false
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "string",
+      "name_variants": [],
+      "neighbourhood": "canonical form or null",
+      "cuisine": "string or null",
+      "opening_year": "number or null",
+      "price_level": "number or null",
+      "price_currency": "EUR",
+      "signature_dish": "string or null",
+      "quote": "string",
+      "quote_language": "original or translated from Spanish",
+      "language_pool": "both / en / es",
+      "source_count": "number",
+      "sources": ["src-ids"],
+      "confidence_tier": "A or B",
+      "source_type_combination": "string",
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
+    }
+  ]
+}
+
+Final summary must include:
+
+PIPELINE METRICS:
+- Raw count / final count / removed count
+- Both-pool count and entries
+- Tier A / Tier B kept / Tier C rejected
+- Concentration cap applied count
+- Pedregalejo / El Palo entries included (count)
+
+SOURCES TABLE:
+Publication | Writer | Language | Type | Date | Found via | COI
+
+WRITER PROFILES for each source including COI disclosure
+
+PHASE 0 REPORT:
+- Sources directly fetched: [list]
+- Sources failed: [list with reasons]
+- Phase 0 sources in final pack: [list]
+
+PHASE 1B REPORT:
+- Additional queries run: [count]
+- New candidates found: [count]
+- Phase 1B sources in final pack: [list]
+
+PUBLISHER CONCENTRATION REPORT:
+- Publishers with 2+ articles: [list]
+- Flags triggered: [list]
+
+CONFLICT OF INTEREST REPORT:
+- Sources with commercial conflicts: [list]
+- Conflicts disclosed: confirmed
+
+TOKEN AND PERFORMANCE METRICS:
+- Tool uses: [from completion banner]
+- Tokens: [from completion banner]
+- Run time: [from completion banner]
+
+════════════════════════════════════════
+SEARCH TRANSPARENCY
+════════════════════════════════════════
+
+Read ./localbite-malaga-search-log.txt and include full contents
+as final section under heading "Search log".
+
+Please start Phase 0 now — fetch each DIRECT_FETCH_SOURCE via
+Jina, verify content quality and date, compile the writer
+candidate list, then proceed through all phases to the review
+table without stopping.
