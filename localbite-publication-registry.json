@@ -1,6 +1,6 @@
 {
   "registry_version": "1.0",
-  "last_updated": "2026-04-09",
+  "last_updated": "2026-04-10",
   "notes": "Seeded from all city runs through April 2026. Add new publications after each city run. last_verified = date URL was confirmed accessible in a pipeline run.",
   "cities": {
     "barcelona-spain": {
@@ -604,6 +604,221 @@
         "Find second independent EN Seville resident food writer — reduces COI concentration in EN pool",
         "21 open_status_check restaurants need closure verification before sharing widely",
         "Attempt ABC de Sevilla and El Correo de Andalucía with named writer searches"
+      ]
+    },
+    "cordoba-spain": {
+      "city": "Córdoba",
+      "country": "Spain",
+      "languages": [
+        "en",
+        "es"
+      ],
+      "primary_en": [
+        {
+          "publication": "AndyHayler.com",
+          "writer": "Andy Hayler",
+          "url": "https://www.andyhayler.com/city/cordoba",
+          "notes": "Independent EN fine dining critic. Global coverage, deep research. 2024 article used in v6 run. High quality, slightly skews fine dining.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Spain by Hanne",
+          "writer": "Hanne Olsen",
+          "url": "https://spainbyhanne.com/cordoba/",
+          "notes": "Independent EN travel and food writer, Spain-based. 2025 article. Good neighbourhood coverage.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Piccavey",
+          "writer": "Molly Piccavey",
+          "url": "https://piccavey.com/eating-in-cordoba/",
+          "notes": "Independent EN food and travel writer, Spain-based. 2026 article. Solid local knowledge.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Andalucia Lovers",
+          "writer": "Morgane Mazelier",
+          "url": "https://www.andalucia-lovers.com/cordoba/restaurants/",
+          "notes": "EN secondary source. Named writer. 2024 article. Good coverage but treat as secondary.",
+          "last_verified": "2026-04-09",
+          "type": "secondary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "primary_es": [
+        {
+          "publication": "Cordópolis (elDiario.es)",
+          "writer": "Juan Velasco / Alfonso Alba",
+          "url": "https://cordopolis.eldiario.es/gastronomia/",
+          "notes": "Best ES local source for Córdoba. Local news site food section, two articles used in v6 (Juan Velasco 2025-11-26, Alfonso Alba 2025-11-25). High yield, genuinely local voice. Priority source for v2.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": true
+        },
+        {
+          "publication": "La Voz de Córdoba",
+          "writer": "M. Ángeles Ramírez",
+          "url": "https://www.lavozdeCordoba.es/gastronomia/",
+          "notes": "Local Córdoba newspaper food section. Named writer. 2026 article used in v6.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "The Objective",
+          "writer": "Brenda Alonso",
+          "url": "https://theobjective.com/gastronomia/",
+          "notes": "ES independent journalism platform. Named writer. 2023 article used in v6. Good quality but older content.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Yendo por la Vida",
+          "writer": "Txema Aguado",
+          "url": "https://yendoporlavida.com/cordoba/",
+          "notes": "ES food and travel blog, named writer. 2024 article used in v6.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "known_problematic": [
+        {
+          "publication": "CosasDeCome",
+          "url": "https://cosasdecome.es",
+          "reason": "Confirmed: covers Cádiz and Sevilla provinces ONLY. No Córdoba section exists. Do not attempt."
+        },
+        {
+          "publication": "Guía Repsol",
+          "url": "https://www.guiarepsol.com/es/comer/",
+          "reason": "Fetched in v6 Phase 0 but article date was 2022 — outside content window. Retry in v2 with fresh URL."
+        }
+      ],
+      "outstanding_v2": [
+        "Attempt ABC de Córdoba (abccordoba.es) with named writer search",
+        "Attempt El Día de Córdoba (eldiadecordoba.es) with named writer search",
+        "Retry Guía Repsol with 2025-2026 article URL",
+        "8 open_status_check restaurants need closure verification"
+      ]
+    },
+    "granada-spain": {
+      "city": "Granada",
+      "country": "Spain",
+      "languages": [
+        "en",
+        "es"
+      ],
+      "primary_en": [
+        {
+          "publication": "jamesdimitri.co.uk",
+          "writer": "James Dimitri",
+          "url": "https://www.jamesdimitri.co.uk/granada/",
+          "notes": "Independent EN food and travel writer. 2025 article used in v6. Good quality.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Spanish Sabores",
+          "writer": "Lauren Aloise",
+          "url": "https://www.spanishsabores.com/category/granada/",
+          "notes": "⚠ COI: Lauren Aloise is co-founder of Devour Tours, a commercial food tour operator. Treat as secondary. 2023 article used in v6. Cap at 30% of EN pool.",
+          "last_verified": "2026-04-09",
+          "type": "secondary",
+          "coi": true,
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Andalucia Lovers",
+          "writer": "Fanny",
+          "url": "https://www.andalucia-lovers.com/granada/restaurants/",
+          "notes": "EN secondary source. Named writer. 2025 article used in v6.",
+          "last_verified": "2026-04-09",
+          "type": "secondary",
+          "use_as_direct_fetch": false
+        },
+        {
+          "publication": "Culinary Backstreets",
+          "writer": "Various",
+          "url": "https://culinarybackstreets.com/cities-2/granada/",
+          "notes": "Confirmed absent — no Granada coverage exists on this platform as of v6 run.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "primary_es": [
+        {
+          "publication": "GranadaDigital (El Gocho Gourmet column)",
+          "writer": "Alfonso Campos",
+          "url": "https://www.granadadigital.es/tag/el-gocho-gourmet/",
+          "notes": "Best ES local source for Granada. Alfonso Campos is a 25-year-old Granada-trained food critic backed by the Ayuntamiento. Column launched April 2025 — only 2 articles published at time of v6 run. Archive grows weekly. HIGH PRIORITY for v2 in 2-3 months. Direct fetch.",
+          "last_verified": "2026-04-09",
+          "type": "primary",
+          "use_as_direct_fetch": true
+        }
+      ],
+      "known_problematic": [
+        {
+          "publication": "CosasDeCome",
+          "url": "https://cosasdecome.es",
+          "reason": "Confirmed: does not cover Granada. Cádiz and Sevilla only."
+        }
+      ],
+      "outstanding_v2": [
+        "Wait 2-3 months for El Gocho Gourmet archive to grow (6+ articles needed)",
+        "Search for additional independent ES Granada food writers",
+        "5 open_status_check restaurants need closure verification (Spanish Sabores 2023 source)",
+        "Granada v2 estimated ready: July 2026"
+      ]
+    },
+    "rabat-morocco": {
+      "city": "Rabat",
+      "country": "Morocco",
+      "languages": [
+        "en",
+        "fr",
+        "ar"
+      ],
+      "primary_en": [
+        {
+          "publication": "Culinary Backstreets",
+          "writer": "Various named writers",
+          "url": "https://culinarybackstreets.com/cities-2/rabat/",
+          "notes": "Used in v5 run. Independent EN food writing platform with Rabat coverage.",
+          "last_verified": "2026-03-25",
+          "type": "primary",
+          "use_as_direct_fetch": true
+        }
+      ],
+      "primary_fr": [
+        {
+          "publication": "Le Desk / Tel Quel",
+          "writer": "Various",
+          "url": "https://ledesk.ma/",
+          "notes": "French-language Moroccan press. Worth attempting for FR food coverage in v2.",
+          "last_verified": null,
+          "type": "primary",
+          "use_as_direct_fetch": false
+        }
+      ],
+      "known_problematic": [
+        {
+          "publication": "Arabic food press",
+          "url": null,
+          "reason": "Arabic-language Rabat food writing pipeline has not yet found reliable named sources. Structural gap — same as Fes and Marrakesh."
+        }
+      ],
+      "outstanding_v2": [
+        "Find additional EN and FR named food writers covering Rabat",
+        "Attempt Arabic-language sources directly via Jina"
       ]
     }
   }
