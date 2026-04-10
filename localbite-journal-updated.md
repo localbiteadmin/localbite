@@ -2061,4 +2061,74 @@ All items deliberately deferred until after first batch processing experience.
 -  39 of 47 Valencia restaurants show article_date: undated — spread across all 5 sources (Ojo al Plato 18, The Infatuation 15, Amsterdam Foodie 12, Grupo Gastro Trinquet 7, Bonviveur 3). Pipeline did not successfully extract dates from fetched article text. Address in Valencia v2 rebuild — do not fix manually.
 ---
 
+## Session — 2026-04-10 (CENTROIDS Fix Attempt + Registry Update)
+
+### Overview
+One goal session: fix the CENTROIDS flat namespace collision identified in the April 9 batch session. The fix was attempted but ultimately reverted after `insertCentroids` corrupted CITY_BOUNDS for Rabat, Chefchaouen, and Lisbon. Site restored to clean state. Publication registry updated with Córdoba, Granada, and Rabat.
+
+---
+
+### CENTROIDS Fix — Attempted and Reverted
+
+**Problem:** `CENTROIDS` in `index.html` is a flat global namespace — neighbourhood names shared across cities cause wrong map pins. `CENTROIDS['Eixample']` matched Barcelona's coordinates for Valencia restaurants. `CENTROIDS['Medina']` is ambiguous across Fes, Marrakesh, Rabat, and Chefchaouen.
+
+**Approach attempted:** Restructure `CENTROIDS` from flat `{ 'neighbourhood': [lat, lng] }` to nested `{ 'City': { 'neighbourhood': [lat, lng] } }`. Update the single lookup in `index.html` to `(CENTROIDS[cityName] || {})[nb]`. Update `localbite-viewer-update.js` to read and write the nested structure.
+
+**What went wrong:** The `insertCentroids` function in `localbite-viewer-update.js` uses a regex to find a city's block by name. That regex matched city names inside `CITY_BOUNDS` (which also contains city names) instead of only inside `CENTROIDS`. This caused centroid entries to be inserted into `CITY_BOUNDS` entries for Rabat, Chefchaouen, and Lisbon, corrupting the object and breaking the app.
+
+**Secondary problem:** Writing JavaScript regex strings via Python heredocs produced persistent quote-escaping errors requiring iterative patching, which introduced additional corruption.
+
+**Resolution:** Restored `index.html` and `localbite-viewer-update.js` to commit `a922ef5` (last clean state before any CENTROIDS work). Site loading correctly confirmed after restore and push.
+
+**Commits made and then reverted:**
+- `26e3f77` — Fix CENTROIDS namespace (corrupted)
+- `b701599` — Add Rabat/Chefchaouen/Lisbon blocks, repair CITY_BOUNDS (still corrupted)
+- `b8a11a9` — Revert to clean state ✅
+
+**Key lesson:** The CENTROIDS fix must be done as complete file rewrites delivered as downloads, not as iterative Python patches via Terminal heredocs. The next attempt should write the entire corrected `localbite-viewer-update.js` as a single downloadable file.
+
+---
+
+### Publication Registry — Updated
+
+**Item 4 (CosasDeCome/Córdoba check):** Confirmed definitively — CosasDeCome covers Cádiz and Sevilla provinces only. No Córdoba section exists and no Córdoba restaurant content is published. Closed permanently.
+
+**Item 3 (Registry update):** Córdoba, Granada, and Rabat added to `localbite-publication-registry.json`. Registry now covers all 11 live cities.
+
+| City | Key sources added |
+|------|------------------|
+| Córdoba | Cordópolis/elDiario.es (Juan Velasco, Alfonso Alba), La Voz de Córdoba, AndyHayler.com, Spain by Hanne, Piccavey, Andalucía Lovers, The Objective, Yendo por la Vida |
+| Granada | GranadaDigital/El Gocho Gourmet (Alfonso Campos), James Dimitri, Spanish Sabores ⚠coi, Andalucia Lovers, Culinary Backstreets (confirmed absent) |
+| Rabat | Culinary Backstreets, Le Desk/Tel Quel (FR, not yet attempted) |
+
+---
+
+### Files Modified
+
+| File | Change |
+|------|--------|
+| `index.html` | Reverted to a922ef5 — CENTROIDS fix abandoned pending redesign |
+| `localbite-viewer-update.js` | Reverted to a922ef5 — CENTROIDS fix abandoned pending redesign |
+| `localbite-publication-registry.json` | Updated — Córdoba, Granada, Rabat added (11 cities total) |
+
+---
+
+### Outstanding Items
+
+- [ ] **CENTROIDS fix** — redo as complete file download, not iterative patches. `insertCentroids` must scope its regex to only search within the CENTROIDS block. Next conversation: LocalBite — CENTROIDS Fix.
+- [ ] **Missing geocoding patterns** — `Edificio`, `Crepería` (name mismatch)
+- [ ] **Trailing comma JSON bug** in pipeline output
+- [ ] **Porto and Málaga scoping questions** — Gaia inclusion for Porto; Pedregalejo/El Palo + strategy for Málaga
+- [ ] **Part 1 files** for Porto and Málaga
+- [ ] **Viewer: article date + title in source display**
+- [ ] **Viewer: list view sort**
+- [ ] **Viewer: list ↔ map cross-navigation**
+- [ ] **Granada v2** — July 2026 (El Gocho Gourmet archive)
+- [ ] **Seville v2** — second EN writer; 21 open_status_check restaurants
+- [ ] **Córdoba v2** — ABC de Córdoba, El Día de Córdoba
+- [ ] **Item G** — open_status_check verification script
+- [ ] **Item F** — batch orchestration script
+- [ ] **Domain name**
+- [ ] **Analytics**
+
 
