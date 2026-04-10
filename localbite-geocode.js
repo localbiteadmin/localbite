@@ -202,7 +202,8 @@ function nameIsPlausible(restaurantName, matchedName) {
   if (mName.includes(rName) || rName.includes(mName)) return true;
   const stopWords = new Set(['the','a','an','de','da','do','das','dos',
     'of','in','at','le','la','les','el','los','and','e','y',
-    'restaurant','cafe','bar','bistro','taberna','tasca']);
+    'restaurant','cafe','bar','bistro','taberna','tasca',
+    'edificio','creperia','creperie']);
   const rWords = rName.split(' ').filter(w => w.length > 2 && !stopWords.has(w));
   const mWords = mName.split(' ').filter(w => w.length > 2 && !stopWords.has(w));
   for (const rw of rWords) {
