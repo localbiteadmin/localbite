@@ -54,16 +54,23 @@ console.log();
 let html = fs.readFileSync(indexPath, 'utf8');
 
 // ── Parse existing CENTROIDS entries ──
-// Finds the CENTROIDS object and extracts all existing keys
-function getExistingCentroids(html) {
-  const match = html.match(/const CENTROIDS\s*=\s*\{([\s\S]*?)\};/);
-  if (!match) throw new Error('Could not find CENTROIDS object in index.html');
+// Returns neighbourhood keys already present for this specific city
+function getExistingCentroids(html, city) {
+  const safeCity = city.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  // Match 'CityName': { ... }, — handles both quote styles
+  const cityPattern = new RegExp(
+    "['\"]" + safeCity + "['\"]\\s*:\\s*\\{([\\s\\S]*?)\\},"
+  );
+  const match = html.match(cityPattern);
+  if (!match) return []; // City not yet in CENTROIDS — fine
   const block = match[1];
   const keys = [];
-  const keyPattern = /['"]([^'"]+)['"]\s*:/g;
+  // Handle both: 'Key' and "Key with apostrophe's"
+  const keyPattern = /(?:'([^']+)'|"([^"]+)")\s*:/g;
   let m;
   while ((m = keyPattern.exec(block)) !== null) {
-    if (!m[1].startsWith('//')) keys.push(m[1]);
+    const key = m[1] !== undefined ? m[1] : m[2];
+    if (key && !key.startsWith('//')) keys.push(key);
   }
   return keys;
 }
@@ -121,92 +128,38 @@ async function geocodeNeighbourhood(nb, city, country) {
 }
 
 // ── Insert new centroids into the CENTROIDS block ──
+// Nested structure: CENTROIDS = { 'City': { 'nb': [lat, lng] } }
 function insertCentroids(html, city, newEntries) {
-  // Find the city comment block and insert after last entry for that city,
-  // or before the next city comment block
-  const cityComment = `// ${city}`;
-  const idx = html.indexOf(cityComment);
-
-  if (idx === -1) {
-    // City section doesn't exist — find the closing of CENTROIDS and insert before it
-    // Insert before the first city comment in CENTROIDS that isn't this city,
-    // or before the closing };
-    // Strategy: insert at the end of the CENTROIDS block before };
-    const centroidsMatch = html.match(/(const CENTROIDS\s*=\s*\{[\s\S]*?)(\};)/);
-    if (!centroidsMatch) throw new Error('Could not locate CENTROIDS block');
-
-    const insertion = `\n  // ${city}\n` + newEntries.map(e =>
-      `  '${e.name.replace(/'/g, '\u2019')}': [${e.lat.toFixed(4)}, ${e.lng.toFixed(4)}],`
-    ).join('\n') + '\n';
-
-    html = html.replace(
-      centroidsMatch[0],
-      centroidsMatch[1] + insertion + centroidsMatch[2]
-    );
-    console.log(`  Created new city section for ${city} in CENTROIDS`);
-  } else {
-    // City section exists — find the next city comment and insert before it
-    const afterCityComment = idx + cityComment.length;
-    const nextCityCommentIdx = html.indexOf('\n  //', afterCityComment);
-
-    const insertion = '\n' + newEntries.map(e =>
-      `  '${e.name}': [${e.lat.toFixed(4)}, ${e.lng.toFixed(4)}],`
-    ).join('\n');
-
-    if (nextCityCommentIdx === -1) {
-      // This is the last city — insert before closing };
-      const closingIdx = html.lastIndexOf('};', html.indexOf('function ', afterCityComment));
-      html = html.slice(0, closingIdx) + insertion + '\n' + html.slice(closingIdx);
-    } else {
-      html = html.slice(0, nextCityCommentIdx) + insertion + html.slice(nextCityCommentIdx);
-    }
-  }
-  return html;
-}
-
-// ── Add city to CITY_BOUNDS if missing ──
-function insertCityBounds(html, city, cityData) {
-  // Use the bounding box from CITY_BOXES in geocode.js if we can find it,
-  // otherwise derive from the restaurant coordinates in the city JSON
-  const coords = cityData.restaurants
-    .filter(r => r.lat && r.lng)
-    .map(r => ({ lat: r.lat, lng: r.lng }));
-
-  let minLat, maxLat, minLng, maxLng;
-
-  if (coords.length > 0) {
-    minLat = Math.min(...coords.map(c => c.lat)) - 0.05;
-    maxLat = Math.max(...coords.map(c => c.lat)) + 0.05;
-    minLng = Math.min(...coords.map(c => c.lng)) - 0.05;
-    maxLng = Math.max(...coords.map(c => c.lng)) + 0.05;
-  } else {
-    console.log(`  WARNING: No geocoded restaurants to derive CITY_BOUNDS from.`);
-    console.log(`  Add ${city} to CITY_BOUNDS manually in index.html.`);
-    return html;
-  }
-
-  const newEntry = `  '${city}':      { minLat: ${minLat.toFixed(2)}, maxLat: ${maxLat.toFixed(2)}, minLng: ${minLng.toFixed(2)},  maxLng: ${maxLng.toFixed(2)}  },`;
-
-  // Find CITY_BOUNDS closing }; and insert before it
-  const boundsMatch = html.match(/(const CITY_BOUNDS\s*=\s*\{[\s\S]*?)(\};)/);
-  if (!boundsMatch) {
-    console.log('  WARNING: Could not find CITY_BOUNDS in index.html — add manually.');
-    return html;
-  }
-
-  html = html.replace(
-    boundsMatch[0],
-    boundsMatch[1] + newEntry + '\n' + boundsMatch[2]
+  const safeCity = city.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const cityBlockRx = new RegExp(
+    "(['\"]" + safeCity + "['\"]\\s*:\\s*\\{)([\\s\\S]*?)(\\},)"
   );
-  console.log(`  Added ${city} to CITY_BOUNDS: lat ${minLat.toFixed(2)}–${maxLat.toFixed(2)}, lng ${minLng.toFixed(2)}–${maxLng.toFixed(2)}`);
+  const entryLines = newEntries.map(e => {
+    // Use double quotes when name contains apostrophe, single quotes otherwise
+    const q = e.name.includes("'") ? '"' : "'";
+    return '    ' + q + e.name + q + ': [' + e.lat.toFixed(4) + ', ' + e.lng.toFixed(4) + '],';
+  }).join('\n');
+
+  if (cityBlockRx.test(html)) {
+    // Append inside existing city block
+    html = html.replace(cityBlockRx, '$1$2' + entryLines + '\n  $3');
+    console.log('  Added ' + newEntries.length + ' centroid(s) to existing ' + city + ' block');
+  } else {
+    // Create new city block before the closing }; of CENTROIDS
+    const centroidsEnd = html.indexOf('\n};', html.indexOf('const CENTROIDS'));
+    if (centroidsEnd === -1) throw new Error('Cannot find end of CENTROIDS block');
+    const block = "\n  '" + city + "': {\n" + entryLines + '\n  },';
+    html = html.slice(0, centroidsEnd) + block + html.slice(centroidsEnd);
+    console.log('  Created new city block for ' + city + ' in CENTROIDS');
+  }
   return html;
 }
 
-// ── MAIN ──
+
 async function main() {
   let existingCentroids, existingBounds;
   try {
-    existingCentroids = getExistingCentroids(html);
+    existingCentroids = getExistingCentroids(html, city);
     existingBounds    = getExistingCityBounds(html);
   } catch (e) {
     console.error(`ERROR: ${e.message}`);
