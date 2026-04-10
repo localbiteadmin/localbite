@@ -2131,4 +2131,106 @@ One goal session: fix the CENTROIDS flat namespace collision identified in the A
 - [ ] **Domain name**
 - [ ] **Analytics**
 
+## Session — 2026-04-10 (Centroids Fix + Pipeline Hardening)
+
+### Overview
+
+Four outstanding items resolved in a single session. No pipeline runs. All work was infrastructure and bug fixes. Site stable throughout — no corruption incidents.
+
+**Session goal:** Fix CENTROIDS bug (carried over from morning session), add missing geocoding patterns, fix trailing comma JSON bug, fix year range hardcoding in shell scripts.
+
+---
+
+### Fix 1 — CENTROIDS (index.html + localbite-viewer-update.js)
+
+**Problem:** Two bugs in the centroids system:
+
+1. `getExistingCentroids` used a regex `['"]([^'"]+)['"]\s*:` that stopped at apostrophes inside key names. `"Camp de l'Arpa"` was read as `"Camp de l"` — causing it to be geocoded and re-added on every run.
+
+2. `insertCentroids` searched the entire `index.html` for the city name and closing `};`. Both patterns also appear inside `CITY_BOUNDS`, causing centroid entries to be written into `CITY_BOUNDS` instead of `CENTROIDS`. This was the root cause of all corruption in the morning session.
+
+3. Missing centroid sections: Rabat (4 neighbourhoods), Chefchaouen (2), Lisbon (24), and 4 Toronto neighbourhoods (Bloor West Village, Greektown (Danforth), Scarborough, Weston).
+
+**Approach:** Delivered as two separate files rather than iterative patches:
+
+- `localbite-centroids-patch.py` — standalone Python script that appends missing city sections to `index.html` in the existing flat format. Pure string append, no regex, no structural change.
+- `localbite-viewer-update.js` — complete replacement file with two targeted fixes: (1) separate single-quoted and double-quoted key patterns in `getExistingCentroids`; (2) `insertCentroids` now uses brace-depth extraction to isolate the CENTROIDS block before making any modifications — `CITY_BOUNDS` is structurally unreachable.
+
+**Verification:** All 11 cities passed `✓ All neighbourhood centroids already present` before committing. CITY_BOUNDS integrity confirmed. Revert path confirmed before committing.
+
+**Commit:** `1b0f8e7` — Fix centroids — add Rabat/Chefchaouen/Lisbon/Toronto entries; fix apostrophe key matching and CENTROIDS-scoped insertion
+
+---
+
+### Fix 2 — Geocoding false positive patterns
+
+**Problem:** `Edificio` and `Crepería` were slipping through `nameIsPlausible` as valid name matches. A restaurant named "La Barra de San Remo" was matching "Edificio San Remo" because "San Remo" appeared in both names and "Edificio" wasn't filtered. Same pattern for "Crepería Elvira81" matching "Tajine Elvira". Both were documented in the Granada geocoding issues (journal line 1978).
+
+**Fix:** Added `edificio`, `creperia`, `creperie` to the `stopWords` set in `nameIsPlausible` in `localbite-geocode.js`. These are generic establishment-type words that should not count as meaningful name matches on their own.
+
+**Commit:** `f361cd9` — Add Edificio and Crepería to geocoding stopWords — prevents name-mismatch false positives
+
+---
+
+### Fix 3 — Post-pipeline script hardening
+
+**Problem:** Three issues found in `localbite-post-pipeline.sh` and `localbite-commit.sh`:
+
+1. Both scripts hardcoded `2023-2026` in filenames — silently skipping Morocco, Toronto, and Lisbon files which use `2025-2026`.
+2. No JSON validation step — trailing comma bugs could pass silently into geocoding. Journal noted "caught and fixed by script" for Granada but no such script existed in the codebase.
+3. The pipeline had no fast-fail mechanism for malformed JSON output.
+
+**Fix:**
+- Both scripts now auto-detect year range: try `2023-2026` first, fall back to `2025-2026`, error if neither exists.
+- `localbite-post-pipeline.sh` now runs a Step 0 JSON validation using `node -e JSON.parse()` before geocoding. Catches trailing commas, empty files, and any other malformed output. Exits with clear error message and halts pipeline via `set -e`.
+
+**Tests run before committing:**
+- Year range detection verified for Seville (→ 2023-2026) and Toronto (→ 2025-2026)
+- Valid JSON (Seville, 61 restaurants) → passes
+- Trailing comma JSON → caught, pipeline halted
+- Empty file → caught, pipeline halted
+- `set -e` propagation confirmed — node exit code 1 halts shell script
+
+**Commit:** `c6170a9` — Fix post-pipeline scripts — auto-detect year range, add JSON validation step before geocoding
+
+---
+
+### Key Findings — 2026-04-10
+
+1. **Deliver fixes as complete files, not iterative patches.** The morning session failed because iterative Python heredoc patches introduced quote-escaping errors that compounded. Delivering `localbite-viewer-update.js` as a complete replacement file and `localbite-centroids-patch.py` as a standalone script eliminated this failure mode entirely.
+
+2. **Verify revert path before committing.** Checking `git status` and `git log` before each commit confirmed the revert command and guaranteed it would work. This discipline should be standard for all infrastructure changes.
+
+3. **"Caught by script" in journal entries needs a citation.** The Granada journal entry said the trailing comma was "caught and fixed by script" but no such script existed. Journal entries should name the specific script or note "fixed manually" to avoid false confidence in automation coverage.
+
+4. **Both shell scripts were broken for non-Spanish cities.** `localbite-commit.sh` would have silently skipped the final JSON for any Morocco, Toronto, or Lisbon run. This had not yet caused a visible failure because those cities were committed manually, but would have caused a silent omission on the next automated run.
+
+---
+
+### Files Modified
+
+| File | Change |
+|------|--------|
+| `index.html` | Added Rabat, Chefchaouen, Lisbon, Toronto centroid sections; removed stale curly-apostrophe Camp de l'Arpa duplicate |
+| `localbite-viewer-update.js` | Fixed apostrophe key matching; fixed CENTROIDS-scoped insertion |
+| `localbite-geocode.js` | Added Edificio, Crepería, Crêperie to stopWords |
+| `localbite-post-pipeline.sh` | Auto-detect year range; added Step 0 JSON validation |
+| `localbite-commit.sh` | Auto-detect year range for JSON and backup filenames |
+
+---
+
+### Outstanding Items
+
+- [ ] Porto and Málaga — scoping questions (Gaia inclusion for Porto; Pedregalejo/El Palo + strategy for Málaga), Part 1 files, CITY_BOUNDS entries
+- [ ] Barcelona both-pool audit — 14 entries against corrected same-publisher definition
+- [ ] REVIEW_MODE: BRIEF — prompt addition (saves 3–5 min per city run)
+- [ ] Viewer: article date + title in source display
+- [ ] Viewer: list view sort by neighbourhood/price/recommended
+- [ ] Viewer: list ↔ map cross-navigation (Option B first)
+- [ ] Item G — open_status_check verification script (40+ flagged across Barcelona, Seville, Córdoba)
+- [ ] Granada v2 — July 2026 (El Gocho Gourmet archive)
+- [ ] Seville v2 — second independent EN writer; 21 open_status_check restaurants
+- [ ] Item F — batch orchestration script
+- [ ] Domain name
+- [ ] Analytics
 
