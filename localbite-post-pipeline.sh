@@ -11,14 +11,35 @@ if [ -z "$1" ]; then
 fi
 
 CITY=$1
-FILE="localbite-${CITY}-2023-2026.json"
 
-if [ ! -f "$FILE" ]; then
-  echo "ERROR: ${FILE} not found — has the pipeline finished?"
+# Auto-detect year range — Spanish cities use 2023-2026, others use 2025-2026
+if [ -f "localbite-${CITY}-2023-2026.json" ]; then
+  YEAR_RANGE="2023-2026"
+elif [ -f "localbite-${CITY}-2025-2026.json" ]; then
+  YEAR_RANGE="2025-2026"
+else
+  echo "ERROR: No city JSON found for ${CITY} — has the pipeline finished?"
   exit 1
 fi
+FILE="localbite-${CITY}-${YEAR_RANGE}.json"
+echo "Using: ${FILE}"
 
 echo "=== Post-pipeline: ${CITY} ==="
+echo ""
+
+echo "Step 0 — JSON validation..."
+node -e "
+  const fs = require('fs');
+  const raw = fs.readFileSync('${FILE}', 'utf8');
+  try {
+    const data = JSON.parse(raw);
+    console.log('✓ JSON valid — ' + data.restaurants.length + ' restaurants');
+  } catch(e) {
+    console.error('ERROR: Invalid JSON in ${FILE}');
+    console.error(e.message);
+    process.exit(1);
+  }
+"
 echo ""
 
 echo "Step 1 — Geocoding..."
