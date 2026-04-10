@@ -1,0 +1,38 @@
+{
+  "combination": 1,
+  "city": "Porto",
+  "country": "Portugal",
+  "total": 53,
+  "found": 49,
+  "hit_rate_pct": 92,
+  "nominatim": 39,
+  "here": 0,
+  "photon": 10,
+  "already": 0,
+  "not_found": 4,
+  "high_confidence": 36,
+  "medium_confidence": 13,
+  "verify_recommended": 13,
+  "manual_required": 4,
+  "not_found_names": [
+    "Kaigi",
+    "Bếp Việt",
+    "Urraca",
+    "Éon"
+  ],
+  "medium_names": [
+    "Vinha",
+    "Mira Mira",
+    "Farro",
+    "Vinhas d'Alho",
+    "Barro",
+    "Ikebana Izakaya",
+    "A Casa Guedes",
+    "Sol e Sombra Bifanas",
+    "Taberna do Largo",
+    "Bistro Severo",
+    "Bistrô by Vila Foz",
+    "ODE Porto Wine House",
+    "Marisqueira Lusíadas"
+  ]
+}

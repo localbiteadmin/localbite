@@ -224,11 +224,11 @@
       ],
       "confidence_tier": "B",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 41.1504842,
+      "lng": -8.6516803,
+      "geo_source": "nominatim",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Largo de Mira"
     },
     {
       "name": "Kaigi",
@@ -326,11 +326,11 @@
       ],
       "confidence_tier": "B",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 41.1642018,
+      "lng": -8.5089492,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Bairro do Farrobo"
     },
     {
       "name": "A Certain Café",
@@ -685,11 +685,11 @@
       ],
       "confidence_tier": "B",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 41.1694259,
+      "lng": -8.674334,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Caminho das Vinhas"
     },
     {
       "name": "Casa Expresso",
@@ -837,11 +837,11 @@
       ],
       "confidence_tier": "B",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 41.1924785,
+      "lng": -8.6464309,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Travessa das Barrosas"
     },
     {
       "name": "Urraca",
@@ -1144,11 +1144,11 @@
       ],
       "confidence_tier": "B",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 41.1591893,
+      "lng": -8.6107362,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Casa dos Acessórios Pinto & Guedes"
     },
     {
       "name": "O Forno do Leitão do Zé",
@@ -1299,11 +1299,11 @@
       ],
       "confidence_tier": "B",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 41.1897897,
+      "lng": -8.6364003,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Viva Bistro"
     },
     {
       "name": "Éon",
@@ -1455,11 +1455,11 @@
       ],
       "confidence_tier": "B",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 41.1499063,
+      "lng": -8.6138334,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Agarrafeira Wine House"
     },
     {
       "name": "Marisqueira Lusíadas",
@@ -1482,11 +1482,11 @@
       ],
       "confidence_tier": "B",
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 41.1526662,
+      "lng": -8.6291051,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Marisqueira do Porto"
     },
     {
       "name": "O Gaveto",
