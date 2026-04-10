@@ -260,7 +260,8 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "geo_confidence": null
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "name": "Taberna Uvedoble",
@@ -384,8 +385,8 @@
       "confidence_tier": "B",
       "source_type_combination": "primary EN ×1",
       "flagged": false,
-      "lat": 36.7203776,
-      "lng": -4.3621698,
+      "lat": 36.7228951,
+      "lng": -4.4178237,
       "geo_source": "nominatim",
       "geo_confidence": "high",
       "geo_matched_name": "Cortijo de Pepe"
@@ -412,7 +413,8 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "geo_confidence": null
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "name": "El Cabra",
@@ -483,11 +485,11 @@
       "confidence_tier": "B",
       "source_type_combination": "primary EN ×1",
       "flagged": false,
-      "lat": 36.7168885,
-      "lng": -4.3480936,
-      "geo_source": "nominatim",
-      "geo_confidence": "high",
-      "geo_matched_name": "El Tintero"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "name": "Kaleja",
@@ -608,11 +610,11 @@
       "confidence_tier": "B",
       "source_type_combination": "primary EN ×1",
       "flagged": false,
-      "lat": 36.612647,
-      "lng": -4.5015764,
+      "lat": 36.7188113,
+      "lng": -4.4209792,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Los Mellizos"
+      "geo_matched_name": "Los Mellizos Málaga"
     },
     {
       "name": "Verum – el Asador de Malaga",
@@ -635,11 +637,11 @@
       "confidence_tier": "B",
       "source_type_combination": "primary EN ×1",
       "flagged": false,
-      "lat": 36.7379469,
-      "lng": -4.3807385,
+      "lat": 36.7326778,
+      "lng": -4.4163563,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "El Lagar de Verum"
+      "geo_matched_name": "Asador de Pollos El Rubén"
     },
     {
       "name": "EME de Mariano",
@@ -693,7 +695,8 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "geo_confidence": null
+      "geo_confidence": null,
+      "geo_matched_name": null
     }
   ]
 }
