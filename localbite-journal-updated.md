@@ -2234,3 +2234,333 @@ Four outstanding items resolved in a single session. No pipeline runs. All work 
 - [ ] Domain name
 - [ ] Analytics
 
+
+## Session — 2026-04-10 (Porto and Málaga — v6 batch + geocoding + viewer)
+
+### Overview
+
+First two-city staggered batch run. Porto and Málaga run simultaneously using a staggered start: Porto launched first, Málaga started when Porto entered Phase 2. Both cities used the new v6 prompt (Strategy C with two prompt fixes applied). No rate limit interruptions. Both runs completed cleanly on the 5x plan. Session also covered geocoding for both cities, viewer updates, and index updates to get both cities live.
+
+**Session goals:**
+- Build and run v6 prompts for Porto and Málaga
+- Apply both prompt fixes from Lisbon session (COI: "INCLUDE with ⚠ coi flag — do NOT exclude"; both-pool: same-publisher cross-language editions do not qualify)
+- Test staggered two-city batch approach on 5x plan
+- Establish standard post-run report format
+- Geocode both cities
+- Get both cities live in the viewer
+
+---
+
+### Prerequisites Completed This Session
+
+| Item | Status |
+|------|--------|
+| Add Porto and Málaga CITY_BOUNDS to localbite-geocode.js | ✓ Done — Málaga added (Porto was already present) |
+| Build localbite-prompt-v6-porto.txt | ✓ Done |
+| Build localbite-prompt-v6-malaga.txt | ✓ Done |
+| Commit all prerequisite files before running | ✓ Done — commit 6b8363d |
+
+---
+
+### Run 1 — Porto
+
+**Prompt used:** localbite-prompt-v6-porto.txt (Strategy C v6)
+**Output file:** `localbite-porto-2023-2026.json`
+**Year range:** 2023–2026
+**Run time:** ~35 minutes
+**Tokens:** Not captured — completion banner scrolled past (see outstanding items)
+
+| Metric | Value |
+|--------|-------|
+| Phase 0 sources attempted | 3 |
+| Phase 0 sources passed | 2 (Mesa Marcada ✓, Culinary Backstreets ✓, Observador ✗ 404) |
+| Phase 1 queries | 30 |
+| Phase 1B queries | 5 |
+| Sources in final pool | 10 |
+| Raw candidates | 60 |
+| Tier A (auto-approved: 2+ independent sources) | 7 |
+| Tier B (review recommended: single source) | 53 |
+| Tier C (auto-rejected) | 0 |
+| Concentration cap removals | 0 |
+| User removals | 7 |
+| Final restaurants | 53 |
+| Both-pool entries | 2 (Antiqvvm, Cafeína) |
+| Gaia entries (neighbourhood_gaia flag) | 2 (Mira Mira, Vinha) |
+
+**Sources:**
+
+| Publication | Writer | Language | Type | Date |
+|------------|--------|----------|------|------|
+| Culinary Backstreets (×3 articles) | Rafael Tonon, Cláudia Brandão | EN | Primary ★ | 2023–2025 |
+| Portoalities | Sara Riobom | EN | Primary | 2026-04-03 |
+| Go Ask A Local | Leonor Tito | EN | Primary | 2023-02-03 |
+| Star Wine List | António Lopes | EN | Primary | 2026-01-01 |
+| Olive Magazine | Crossley/Kendrick/Salter/Rowe | EN | Secondary | 2026-03-16 |
+| Time Out Porto EN | Rafael Tonon | EN | Secondary ⚠coi | 2025-03-17 |
+| Visão | Florbela Alves, Lucília Monteiro | PT | Primary | 2024-10-04 |
+| NCultura | Sara Costa | PT | Primary | 2023-06-07 |
+
+★ Publisher concentration flag — 3 articles from Culinary Backstreets (37.5% of EN pool). No removals triggered — 3 separate articles spanning 2023–2025, 2 writers, no COI.
+
+**Both-pool entries:**
+- Antiqvvm: NCultura 2023 (PT primary) + Star Wine List 2026 (EN primary) — different publishers, genuine both-pool
+- Cafeína: NCultura 2023 (PT primary) + Time Out Porto EN 2025 (EN secondary ⚠coi) — different publishers, COI flagged but does not disqualify
+
+**User removals at review table (7):** Belos Aires Praia (Aguda beach, outside boundary), Blss U (hotel, no dish detail), Cantina 32 (décor-only quote), Cibû (Leça da Palmeira, outside boundary), L'Egoïste (hotel, no dish detail), The Yeatman (hotel, no dish detail), Vila Foz (hotel, no dish detail)
+
+**Novel source found:** Star Wine List (António Lopes) — found via Phase 1B writer-first supplement, not in SOURCE_EXAMPLES
+
+---
+
+### Run 2 — Málaga
+
+**Prompt used:** localbite-prompt-v6-malaga.txt (Strategy C v6)
+**Output file:** `localbite-malaga-2023-2026.json`
+**Year range:** 2023–2026
+**Run time:** ~28 minutes
+**Tokens:** Not captured — completion banner scrolled past (see outstanding items)
+
+| Metric | Value |
+|--------|-------|
+| Phase 0 sources attempted | 3 |
+| Phase 0 sources passed | 0 (all three failed — see findings below) |
+| Phase 1 queries | 30 |
+| Phase 1B queries | 6 |
+| Sources in final pool | 6 |
+| Raw candidates | 38 |
+| Tier A (auto-approved: 2+ independent sources) | 7 |
+| Tier B (review recommended: single source) | 19 |
+| Tier C (auto-rejected) | 12 |
+| Concentration cap removals | 4 |
+| User removals | 3 |
+| Final restaurants | 23 |
+| Both-pool entries | 0 (structural — see findings) |
+| Pedregalejo/El Palo entries | 2 (El Cabra, El Tintero — conditional rule satisfied) |
+
+**Sources:**
+
+| Publication | Writer | Language | Type | Date |
+|------------|--------|----------|------|------|
+| Spanish Sabores | Lauren Aloise | EN | Primary | 2023-07-12 |
+| My Little World of Travelling | Cristina | EN | Primary (local, borderline) | 2024-03-19 |
+| Andalucia Lovers | Clara | EN | Primary | 2025-01-15 |
+| Euro Weekly News | Jehane Newton | EN | Secondary | 2025-04-28 |
+| El Español Málaga | Ángel Recio / Rocío Gaspar | ES | Primary ★ | 2024-12-13 |
+| El Español Málaga | Andrea Jiménez / Carlos Navarro | ES | Primary ★ | 2025-10-31 |
+
+★ Publisher concentration flag — El Español holds 100% of ES pool. Documented as structural characteristic — no alternative ES publisher found after 4+ supplementary searches.
+
+**Concentration cap:** Andalucia Lovers contributed 48% of Tier B single-source entries — cap triggered, 4 removed (Pez Lola, La Farola de Orellana, MIMO Vegan, Comparte Gastrobar)
+
+**User removals at review table (3):** La Proa de Teatinos (Teatinos suburb, outside core scene), Ta-Kumi Málaga (location uncertainty Málaga vs Marbella), Terraza de las Flores (atmosphere-only quote)
+
+**Geographic boundary:** 3 Marbella restaurants correctly excluded from El Español / Carlos Navarro article (Edge, Nosso, The One)
+
+**Novel source found:** Andalucia Lovers (Clara) — found via Phase 1B, not in SOURCE_EXAMPLES
+
+---
+
+### Pipeline Performance
+
+| Metric | Porto v6 | Málaga v6 | Lisbon C v5 | Chefchaouen v5 |
+|--------|----------|-----------|-------------|----------------|
+| Queries | 35 | 36 | 30+sup | 30 |
+| Sources | 10 | 6 | 5 | 5 |
+| Both-pool | 2 | 0 | 0 | 1 |
+| Final restaurants | 53 | 23 | 36 | 17 |
+| Tool uses | NC | NC | 85 | 96 |
+| Tokens | NC | NC | 137.7k | 116.5k |
+| Run time | ~35 min | ~28 min | — | 21m 54s |
+
+---
+
+### Geocoding — Porto
+
+**Script:** localbite-geocode.js v7 (Nominatim → Photon → manual)
+**Runs required:** 3 (first run used wrong v2 geocoder; second run had no bounding box; third run clean)
+
+| Metric | Value |
+|--------|-------|
+| Nominatim found | 39 (74%) |
+| Photon added | 10 (19%) |
+| Total automated | 49 (92%) |
+| False positives nulled | 8 |
+| Final geocoded | 41 (77%) |
+| Null / approximate pins | 12 (23%) |
+
+**False positives nulled (8):**
+
+| Restaurant | Matched name | Reason |
+|------------|-------------|--------|
+| Mira Mira | Largo de Mira | A square, not a restaurant |
+| Farro | Bairro do Farrobo | A neighbourhood, not a restaurant |
+| Vinhas d'Alho | Caminho das Vinhas | A road, not a restaurant |
+| Barro | Travessa das Barrosas | A street, not a restaurant |
+| A Casa Guedes | Casa dos Acessórios Pinto & Guedes | A shop, not a restaurant |
+| Bistro Severo | Viva Bistro | Wrong restaurant entirely |
+| ODE Porto Wine House | Agarrafeira Wine House | Wrong business entirely |
+| Marisqueira Lusíadas | Marisqueira do Porto | Wrong restaurant |
+
+**Not found by geocoder (4):** Kaigi, Bếp Việt, Urraca, Éon
+
+**Issues encountered:**
+- First run used wrong geocoder (v2 with Foursquare instead of v7) — reset and re-ran
+- City/country fields nested under `meta` in v6 JSON structure instead of top-level — geocoder updated to check `data.meta.city` as fallback
+- Bounding box not firing on first run due to meta structure issue — fixed before clean run
+
+---
+
+### Geocoding — Málaga
+
+**Script:** localbite-geocode.js v7 (Nominatim → Photon → manual)
+**Runs required:** 3 (first two runs had no bounding box active; third run clean with bounding box)
+
+| Metric | Value |
+|--------|-------|
+| Nominatim found | 15 (65%) |
+| Photon added | 4 (17%) |
+| Total automated | 19 (83%) |
+| False positives nulled | 3 |
+| Final geocoded | 16 (70%) |
+| Null / approximate pins | 7 (30%) |
+
+**False positives nulled (3):**
+
+| Restaurant | Matched name | Reason |
+|------------|-------------|--------|
+| Balausta | Niño del Balaustre | Wrong name entirely |
+| Verum – el Asador de Malaga | Asador de Pollos El Rubén | Wrong restaurant entirely |
+| Andino Gastrobar | Andino Gastrobar | Coordinates outside Centro Histórico — suspicious location |
+
+**Not found by geocoder (4):** Mesón Mariano, Da Saveria, El Tintero (bounding box too tight — east limit -4.35 excluded El Palo at -4.34), La Antxoeta
+
+**Issues encountered:**
+- Málaga bounding box missing from geocoder CITY_BOXES — added via sed
+- East boundary too tight — El Tintero (El Palo, -4.34°W) excluded by -4.35 limit — widened to -4.33 for future runs
+- Same meta structure issue as Porto — already fixed in geocoder before Málaga run
+
+---
+
+### Geocoding Summary
+
+| Metric | Porto | Málaga | Total |
+|--------|-------|--------|-------|
+| Restaurants | 53 | 23 | 76 |
+| Final geocoded | 41 (77%) | 16 (70%) | 57 (75%) |
+| Approximate / null | 12 (23%) | 7 (30%) | 19 (25%) |
+| False positives caught and nulled | 8 | 3 | 11 |
+| Geocoder runs needed | 3 | 3 | — |
+
+---
+
+### Viewer Updates
+
+Both cities added to the viewer and index in this session:
+
+| Update | Commit |
+|--------|--------|
+| Porto and Málaga added to localbite-index.json (13 cities total) | 784bc9d |
+| Porto and Málaga neighbourhood centroids added to index.html | 784bc9d |
+| Complete Porto neighbourhood variant coverage (40 entries) | 68b918f |
+| Málaga neighbourhood centroids | 68b918f |
+| Porto geocoded JSON pushed | e518ecb |
+| Málaga geocoded JSON pushed | d0ee045, ee18b9a |
+| Geocoder updated (meta structure fix + Málaga bounds) | ee18b9a |
+
+**Geocoder fixes committed this session:**
+1. `data.city || (data.meta && data.meta.city)` — handles v6 JSON meta structure
+2. `data.country || (data.meta && data.meta.country)` — same
+3. Málaga added to CITY_BOXES: `{ latMin: 36.68, latMax: 36.76, lngMin: -4.48, lngMax: -4.33 }`
+
+**Definition of done — clarified this session:**
+A city is not done until: pipeline complete → geocoding complete → viewer renders correctly on mobile. Porto and Málaga meet this standard as of end of session.
+
+---
+
+### Key Findings — 2026-04-10
+
+1. **Staggered two-city batch works on 5x plan.** Porto started first, Málaga launched when Porto entered Phase 2. No rate limit interruptions. Total wall-clock time approximately 45 minutes for both cities. Validated — use staggered start for all future two-city batches.
+
+2. **Both v6 prompt fixes fired correctly.** COI check logged "INCLUDE with ⚠ coi flag — do NOT exclude" for Time Out Porto. Sibling edition check correctly blocked Time Out EN + Time Out PT from counting as both-pool. Publisher independence requirement applied correctly in both cities.
+
+3. **Mesa Marcada is blocked by Jina byline rendering.** Mesa Marcada passed Phase 0 quality check but individual article bylines are not exposed in Jina-rendered output. Two Porto articles rejected at Phase 1 for failing the named-author rule. Highest-value Jina failure in the project to date — Mesa Marcada is Portugal's strongest independent food platform. Firecrawl test recommended before next PT city run.
+
+4. **Málaga Phase 0 complete failure — known risk for smaller cities.** All three Phase 0 sources failed: Gastronostrum and Disfrutando Málaga block Jina (400/422), Culinary Backstreets has no Málaga content. Pipeline correctly fell back to Phase 1 searches. Remove all three from future Málaga prompts.
+
+5. **Observador 404 is a confirmed persistent failure.** Third consecutive failure (Lisbon A, Lisbon C, Porto). Remove from all PT city prompts permanently.
+
+6. **Both-pool zero for Málaga is structural, not a failure.** EN and ES sources cover different restaurant segments — same finding as Lisbon. 23 restaurants from 6 independent sources is a credible pack for Málaga's size.
+
+7. **v6 JSON structure changed — city/country nested under meta.** All v6 city packs have city and country under `data.meta` not at top level. Geocoder updated to handle both structures. Future v7 prompt should standardise back to top-level fields to match v5 schema and avoid this workaround.
+
+8. **neighbourhood_gaia boolean field added to Porto JSON schema.** Allows the viewer to handle Gaia entries distinctly. 2 entries flagged: Mira Mira and Vinha (both CB, WOW district, explicitly framed as Porto dining).
+
+9. **Token capture procedure must be mandatory from next session.** Both completion banners were missed. Going forward: read and record completion banner before scrolling. Format: `Tokens: [X]k in / [Y]k out | Tool uses: [N] | Duration: [Xm Ys]`.
+
+10. **Standard post-run report format established.** Full run report produced as `localbite-run-report-porto-malaga-v1.1.md` and committed to GitHub. All future city batch sessions must produce a run report before the git commit. Report format version: 1.1.
+
+11. **Geocoding requires multiple runs for new cities.** Both cities required 3 geocoding runs each due to: wrong geocoder version, missing bounding box, and meta structure issues. Future sessions: verify geocoder version and bounding box presence before running.
+
+12. **Map pin language inconsistency identified.** Cards say "Neighbourhood location", map popups say "Approximate location". Standardise to "Approximate location" in a future viewer update.
+
+13. **--dangerously-skip-permissions is the standard Claude Code launch command.** Eliminates approval prompts that slow pipeline execution. Add to pipeline readme.
+
+---
+
+### Decisions Made
+
+- **Staggered batch approach validated** — standard for all future two-city sessions on 5x plan
+- **v6 prompt is the new standard** for European city runs — both fixes confirmed working
+- **Observador removed** from all future PT city prompts permanently
+- **Gastronostrum and Disfrutando Málaga removed** from future Málaga prompts
+- **Culinary Backstreets Málaga removed** from future Málaga prompts (no content)
+- **Run report format v1.1 is the standard** — produce before every git commit
+- **Firecrawl test on Mesa Marcada** — recommended before next PT city run
+- **5x plan sufficient** for two-city staggered batches — upgrade to 20x if moving to three-city batches
+- **Definition of done** — a city is not complete until pipeline + geocoding + mobile viewer check all pass
+- **No manual geocoding lookups** — accept null coordinates for unresolved restaurants; viewer handles gracefully with neighbourhood centroids
+
+---
+
+### Files Produced
+
+| File | Contents |
+|------|----------|
+| `localbite-porto-2023-2026.json` | 53 restaurants — geocoded (41/53) |
+| `localbite-porto-raw.json` | 60 restaurants — pre-removal |
+| `localbite-porto-working.json` | Intermediate extraction |
+| `localbite-porto-search-log.txt` | 73-line search log |
+| `localbite-porto-search-plan.txt` | 30-query search plan |
+| `localbite-porto-2023-2026-geocoded-backup.json` | Pre-geocoding backup |
+| `localbite-porto-2023-2026-geocoding-stats-c1.json` | Geocoding stats |
+| `localbite-malaga-2023-2026.json` | 23 restaurants — geocoded (16/23) |
+| `localbite-malaga-raw.json` | 38 restaurants — pre-removal |
+| `localbite-malaga-working.json` | Intermediate extraction |
+| `localbite-malaga-search-log.txt` | 47-line search log |
+| `localbite-malaga-search-plan.txt` | 30-query search plan |
+| `localbite-malaga-2023-2026-geocoded-backup.json` | Pre-geocoding backup |
+| `localbite-malaga-2023-2026-geocoding-stats-c1.json` | Geocoding stats |
+| `localbite-prompt-v6-porto.txt` | v6 prompt used for Porto |
+| `localbite-prompt-v6-malaga.txt` | v6 prompt used for Málaga |
+| `localbite-geocode.js` | Updated — meta structure fix + Málaga bounds |
+| `localbite-index.json` | Updated — 13 cities including Porto and Málaga |
+| `index.html` | Updated — Porto and Málaga centroids + bounds |
+| `localbite-run-report-porto-malaga-v1.1.md` | Full batch run report |
+
+---
+
+### Outstanding Items
+
+- [ ] Token counts not captured for Porto or Málaga — implement mandatory token capture procedure before next session (read completion banner before scrolling)
+- [ ] Add `--dangerously-skip-permissions` to pipeline readme as standard Claude Code launch command
+- [ ] Test Firecrawl on Mesa Marcada Porto article — confirm whether bylines are JS-rendered (if yes, integrate as Phase 0 fallback for all PT cities)
+- [ ] Fix v7 prompt JSON schema — standardise city/country back to top-level fields (currently under meta) to match v5 schema and avoid geocoder workaround
+- [ ] Standardise map pin language — use "Approximate location" consistently (currently "Neighbourhood location" on cards, "Approximate location" in map popups)
+- [ ] Audit Barcelona both-pool count (14 entries) — may include same-publisher cross-language pairs that don't qualify under corrected definition
+- [ ] Geocode Barcelona (52 restaurants) and Valencia (62 restaurants) — carried from previous sessions
+- [ ] Geocode Lisbon — carried from previous sessions
+- [ ] Push Rabat and Chefchaouen JSON files to GitHub — carried from previous sessions
+- [ ] mysibarita (@Héctor y Elena, Málaga) — Instagram-only ES food account — add to direct outreach list for future Málaga v7 refresh
+- [ ] Consider Guía Repsol and Academia Gastronómica (Ignacio Luque) for Málaga v7 — best articles dated 2021, evaluate widening year range
+
+---
