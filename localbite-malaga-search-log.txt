@@ -1,0 +1,46 @@
+[phase-0] FAILED gastronostrum.com — Jina returns HTTP 422 on all URL variants (root, /malaga/, /tag/malaga/); site likely blocks Jina reader
+[phase-0] FAILED disfrutandomalaga.com — Jina returns HTTP 400 on all URL variants (www root, no-www /restaurantes/); site likely blocks Jina reader
+[phase-0] FAILED culinarybackstreets.com/malaga — Jina returns 404 on category URL; /tag/malaga/ page returns "no new stories" — no content available
+[angle-A] "best restaurants Málaga Spain food writer local guide 2026" → returned multiple travel blogs; top candidates: mylittleworldoftravelling.com (Cristina, local), andalucialovers.com, dinewithjp.com
+[angle-A] "top places to eat Málaga Spain independent food critic 2025 recommendations" → ediblereading.com 2024, willflyforfood.net, Michelin guide editorial article
+[angle-A] "Málaga Spain restaurant guide named author 2024 hidden gems" → ediblereading.com top result; Lauren Aloise (spanishsabores.com) confirmed; chriscurry.co.uk 24-hours piece
+[angle-A] "where to eat Málaga Spain local food expert picks 2023 2024" → spanishsabores.com prominent; willflyforfood.net; fooddrinkdestinations.com
+[angle-B] "mejores restaurantes Málaga España guia gastronomica critico 2026" → academiagastronomica.com Ignacio Luque; elespanol.com Málaga gastronomy coverage; Michelin ES guide
+[angle-B] "donde comer Málaga España recomendaciones escritor gastronomico 2025" → Ignacio Luque (academiagastronomica.com); Carlos Navarro chef/advisor (elespanol.com 2025); Guía Repsol chefs piece
+[angle-B] "guia restaurantes Málaga 2024 opinion gastronomica experto local" → Guía Macarfi 2024 (elespanol.com); Academia Gastronómica premios 2024; OAD casual rankings
+[angle-B] "los mejores restaurantes malaga 2023 critica gastronomica periodista" → Academia Gastronómica premios 2023; theobjective.com 2023 ES piece; guiarepsol.com 2023
+[angle-B] "restaurantes imprescindibles malaga españa recomendacion periodista gastronomia 2025" → Rocío Gaspar (elespanol.com 2024); National Geographic ES Málaga feature; malagasecreta.com
+[angle-C] "best restaurants Centro Histórico Málaga old town food guide 2025" → spanishsabores.com historic centre; foodnerdrockstar.com Málaga article; mylittleworldoftravelling.com
+[angle-C] "where to eat historic centre Málaga Spain critic recommendations 2024" → ediblereading.com 2024; spanishsabores.com; hot-dinners.com 48-hours piece confirmed
+[angle-C] "Soho Málaga restaurants arts quarter dining guide 2025 food writer" → thevivalavita.com local guide to Soho; visitanddo.com; no strong new named-author sources
+[angle-C] "best places eat Soho district Málaga Spain independent guide 2024" → ediblereading.com; spanishsabores.com; nomadspicks.com
+[angle-D] "restaurantes Centro Histórico Málaga barrio casco antiguo mejores 2025" → malagaguia.com/donde-comer-en-malaga-centro/; Ignacio Luque (academiagastronomica.com); cristinebedforhotel.com
+[angle-D] "mejores restaurantes Soho Málaga barrio de las artes gastronomia 2024" → malagatop.com Soho piece; Ignacio Luque Soho recommendations; salir.com Soho guide
+[angle-D] "restaurantes El Perchel Málaga guia gastronomica recomendacion 2024" → no strong named-author sources in El Perchel; Ignacio Luque general; Repsol 2024 list
+[angle-D] "mejores restaurantes Pedregalejo El Palo Málaga playa recomendacion 2025" → guiarepsol.com Pedregalejo specific article; dondecomerenmalaga.es; restaurant LUME blog
+[angle-E] "food writer based in Málaga Spain restaurant blog personal recommendations 2025" → Cristina (mylittleworldoftravelling.com) confirmed local; travel-gourmet.com March 2025 piece; feedspot list of food blogs
+[angle-E] "independent food blogger Málaga Spain English restaurant recommendations 2024" → ediblereading.com 2024 (Paul Bobo + Owen Morgan mentioned); gourmetgorro.blogspot.com updated 2024
+[angle-E] "critico gastronomico malaga españa blog personal restaurantes recomendaciones 2025" → Ignacio Luque (academiagastronomica.com) repeatedly confirmed; thefoodiestudies.com; uncovercity.com
+[angle-E] "escritor gastronomico malaga andalucia local recomendaciones restaurantes 2024" → Ignacio Luque + Guía Macarfi (elespanol.com); no new named independent ES writers
+[angle-F] "Málaga Spain best restaurants forum discussion locals recommend 2024 2025" → ediblereading.com; spanishsabores.com; no unique forum-only sources with named critics
+[angle-F] "where eat Málaga Spain traveller forum community advice independent restaurants 2025" → fodors.com trip report 2025; mumsnet; timeout.com; no named critics from forum results
+[angle-F] "foro malaga donde comer restaurantes recomendaciones locales 2024 2025" → solaga.es survey of 100 locals; malagatop.com; Tripadvisor forums; no named independent critics
+[angle-G] "new restaurant openings Málaga Spain 2024 2025 food critic review" → ediblereading.com; gourmetgorro.blogspot.com updated 2024; Repsol new openings coverage
+[angle-G] "nuevos restaurantes malaga 2024 2025 apertura critica gastronomica" → elespanol.com new Repsol 2026 openings; Ronda 14 (Peruvian) and Aire Gastrobar as new entries; infobae.com best openings 2025
+[angle-H] "Málaga Spain restaurant awards recognition notable dining 2024 2025" → Michelin 2024/2025 awards coverage; Palodú new star 2026; Blossom new star 2025
+[angle-H] "premios gastronomicos malaga españa restaurantes reconocidos 2024 2025" → academiagastronomica.com premios 2024 and 2025; revistaurbanity.com awards coverage
+[angle-I] "Málaga Spain independent food publication restaurant critic guide 2024 2025" → ediblereading.com confirmed independent; euroweeklynews.com 2025; theolivepress.es Michelin 2025 coverage
+[angle-I] "revista gastronomica andalucia malaga restaurantes mejores critica 2024 2025" → academiagastronomica.com; revistaurbanity.com; no new independent ES publications found
+[phase-1b] "Málaga Gastronómica blog restaurantes recomendaciones 2024 2025" → no standalone blog found; OAD casual rankings on neo2.com (no named author)
+[phase-1b] "blog gastronomico malaga donde comer critica personal instagram 2024" → mysibarita (@Héctor y Elena) confirmed primarily Instagram; comerbienmalaga Instagram; no fetchable web articles
+[phase-1b] "Héctor Medina gastronomia malaga restaurantes recomendaciones" → mysibarita.com returns 400; primarily Instagram with 4,804 followers; no standalone blog article available
+[phase-1b] "living4malaga restaurantes malaga recomendaciones guia 2024 2025" → living4malaga.com/eat-malaga/ fetched — author unnamed → rejected; andalucialovers.com confirmed new candidate (Clara, Jan 2025)
+[phase-1b] "escritor gastronomico malaga blog español recomendaciones restaurantes 2024 2025 critica personal" → El Español Christopher Manchado article (Feb 2025) same publisher; no new ES publishers found
+[phase-1b] "periodista gastronomia malaga articulo restaurantes recomendados 2024 2025 publicacion independiente" → search confirms andalucialovers.com explicitly states editorial independence; El Español remains dominant ES source; no new independent ES publisher identified after 4+ supplementary searches — documented as structural characteristic
+[coi-check] SpanishSabores (Lauren Aloise) — commercial conflict: NO — independent food blog, no dining industry commercial relationships identified
+[coi-check] My Little World of Travelling (Cristina) — commercial conflict: NO — personal travel/food blog, local Málaga writer
+[coi-check] El Español Málaga (Ángel Recio / Rocío Gaspar) — commercial conflict: NO — general news publication, editorial journalism
+[coi-check] El Español Málaga (Andrea Jiménez Troyano / Carlos Navarro) — commercial conflict: NO — general news publication, editorial journalism
+[coi-check] Euro Weekly News (Jehane Newton) — commercial conflict: NO — regional English-language newspaper, no dining industry commercial relationship identified
+[coi-check] Andalucia Lovers (Clara) — commercial conflict: NO — explicitly states visits anonymously and pays own bills; editorial independence confirmed
+[sibling-check] Andalucia Lovers — EN (andalucialovers.com/en/) and ES (andalucialovers.com/es/) editions exist on same domain — EN and ES independently produced: UNKNOWN — same site, same author likely, translated content likely — treating as single publisher; only EN version used; same-publisher cross-language editions do NOT qualify as independent agreement

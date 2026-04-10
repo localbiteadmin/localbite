@@ -1,0 +1,72 @@
+# LocalBite Porto — Search Log
+# Pipeline: localbite-strategy-c-v6
+# Built: 2026-04-10
+# Format: [phase] "action" → result
+
+[phase-0] FETCHED Mesa Marcada (mesamarcada.com) — April 9, 2026 — quality: good — writers: Miguel Pires, Cristiana Beltrão, Cláudia Lima Carvalho, Daniel Rocha e Silva, Rafael Tonon — Porto content confirmed (Cafeína, Stramuntana)
+[phase-0] FAILED Observador (observador.pt/seccao/lifestyle/gastronomia/) — reason: 404 error; multiple alternative URL patterns also 404 (tag/restaurantes-porto/, topico/restaurantes/, especiais/os-melhores-restaurantes-do-porto/)
+[phase-0] FETCHED Culinary Backstreets Porto (culinarybackstreets.com/tag/porto/) — most recent: May 2025 (Oficina dos Rissóis by Rafael Tonon) — quality: good — writers confirmed: Rafael Tonon (May 2025), Cláudia Brandão (Jan 2024)
+
+[phase-1] A1 "best restaurants Porto Portugal local food guide recommendations 2025" → Returned Portoalities, Lonely Planet, TripAdvisor, Will Fly for Food, Adventures of Cricket, Ola Daniela
+[phase-1] A2 "Porto Portugal dining guide food writer recommendations 2024 2025" → Returned The Sauce (substack), Atlas Porto, Adventures of Cricket, Luxury Editor, Time Out Porto EN
+[phase-1] A3 "where to eat Porto Portugal independent food critic guide 2025 2026" → Returned Where In Rio and Beyond, Hungry Pursuit, Pragmatic Travelers; no strong new independent critics
+[phase-1] A4 "Porto Portugal best places to eat neighborhood guide honest review 2023 2024" → Returned Go Ask A Local, Olive Magazine, Adventures of Cricket, Portoalities
+[phase-1] B1 "melhores restaurantes Porto Portugal guia gastronómico 2025" → Returned restaurantesporto.pt, Time Out PT, Michelin Guide, Vota.org; Casa Expresso named as 2025 top tasca
+[phase-1] B2 "onde comer no Porto Portugal recomendações crítico gastronómico 2025 2026" → Returned catshostels.com, TheFork, MAGG; Casa da Ribeira and Exuberante highlighted
+[phase-1] B3 "guia restaurantes Porto Portugal crítica gastronómica independente 2024" → Returned Porto Restaurantes (restaurantesporto.pt), Time Out PT, New In Porto (NiT); Rita Magro, Rafaela Ferreira as rising chefs
+[phase-1] B4 "melhores restaurantes Porto 2023 2024 jornalista gastronomia" → Returned Porto Secreto, New In Porto (NiT), NCultura, Visão — strong PT candidates
+[phase-1] B5 "restaurantes imperdíveis Porto Portugal escritor gastronómico recomendações 2025" → Returned restaurantesporto.pt, Time Out PT; limited new independent writers found
+[phase-1] C1 "best restaurants Ribeira Porto Portugal waterfront food guide recommendations" → Portoalities (Ribeira tourist trap guide) prominent; Culture Trip, Eating Europe, Visitar Porto
+[phase-1] C2 "where to eat Ribeira Porto local guide food writer honest 2024 2025" → Portoalities repeated; Go Ask A Local; THL Journal (The Halfway Living) Porto 2025
+[phase-1] C3 "best restaurants Bonfim Porto Portugal neighbourhood food recommendations 2024 2025" → Portoalities Bonfim guide; Where Goes Rose (Bonfim neighbourhood); Lonely Planet
+[phase-1] C4 "Bonfim Porto dining guide local food writer recommendations 2023 2025" → Portoalities Bonfim; Food Drink Destinations; Where Goes Rose
+[phase-1] D1 "melhores restaurantes Ribeira Porto recomendações guia local 2024 2025" → Porto Encanta (oportoencanta.com, Aug 2024); Portugal de Norte a Sul; restaurantesporto.pt
+[phase-1] D2 "onde comer Ribeira Porto Portugal crítica gastronómica 2023 2025" → Portugal de Norte a Sul; restaurantesporto.pt; Time Out PT
+[phase-1] D3 "melhores restaurantes Bonfim Porto guia gastronómico 2024 2025" → Time Out PT Bonfim; Portoalities; restaurantesporto.pt
+[phase-1] D4 "restaurantes Cedofeita Foz do Douro Porto recomendações escritor gastronómico 2024 2025" → New In Porto (NiT Cedofeita); restaurantesporto.pt; Time Out PT Cedofeita
+[phase-1] E1 "Miguel Pires Porto restaurantes recomendações crítico gastronomia" → Mesa Marcada homepage + Michelin 2025/2026 analysis articles confirmed; Cozinha das Flores Porto in 2025 top list
+[phase-1] E2 "Rafael Tonon Porto restaurants food writing recommendations guide" → Confirmed Rafael Tonon on Time Out Porto EN team AND Fine Dining Lovers profile; CB Best Bites 2023 Porto URL found
+[phase-1] E3 "crítico gastronómico independente Porto Portugal melhores restaurantes 2025" → restaurantesporto.pt; MAGG voting; New In Porto; no strong new independent critics
+[phase-1] E4 "blogueiro gastronomia Porto Portugal recomendações restaurantes escritor local 2024 2025" → New In Porto, Saber Viver, Dig-In; limited named bloggers
+[phase-1] F1 "Porto Portugal restaurants recommendations locals forum honest 2024 2025" → Fodors forum; Adventures of Cricket; Go Ask A Local; Atlas Porto
+[phase-1] F2 "best local restaurants Porto expat recommendations community guide 2025" → Go Ask A Local prominent; Portoalities; Where In Rio and Beyond
+[phase-1] F3 "fórum recomendações restaurantes Porto Portugal moradores opinião honesta 2024" → Porto Secreto (melhores restaurantes 2024); Pumpkin.pt; restaurantesporto.pt
+[phase-1] G1 "new restaurant openings Porto Portugal 2024 2025 best recent" → New In Porto (5 melhores 2024); Visão Porto new openings; MAGG Porto restaurants; Wine Tourism Portugal blog
+[phase-1] G2 "novos restaurantes Porto Portugal aberturas 2024 2025 melhores" → New In Porto; Visão Porto (7 novos, Oct 2024); Viaje Comigo (Dec 2024); Porto Secreto novos restaurantes
+[phase-1] H1 "best restaurants Porto Portugal award recognition food guide 2024 2025" → Michelin Guide EN; Luxury Editor Porto 2024; Atlas Porto 2024; All About Portugal awards
+[phase-1] H2 "prémios gastronomia Porto Portugal melhores restaurantes reconhecidos 2024 2025" → Revista de Vinhos; Mesa Marcada Prémios; Público/Fugas; MAGG TheFork Awards; Cozinha das Flores #8 in MM 2025 top 10
+[phase-1] I1 "independent food media Porto Portugal restaurant guide journalist recommendations 2024 2025" → The Sauce (Substack, writer living in Porto); Olive Magazine; Portugal News restaurant reviews
+[phase-1] I2 "revista gastronomia Portugal Porto melhores restaurantes crítica independente 2025" → Mesa Marcada; Público/Fugas La Liste; restaurantesporto.pt
+
+[sibling-check] Time Out Porto — EN (timeout.com/porto) and PT (timeout.pt/porto) independently produced: YES — evidence: different authors (EN: Rafael Tonon; PT: separate Portuguese editorial), different domain URLs, different article content, different bylines. NOTE: same parent publisher — cross-language editions do NOT qualify for both-pool per pipeline rules.
+
+[coi-check] Culinary Backstreets — commercial conflict: NO
+[coi-check] Portoalities — commercial conflict: NO
+[coi-check] Go Ask A Local — commercial conflict: NO
+[coi-check] Visão — commercial conflict: NO
+[coi-check] NCultura — commercial conflict: NO
+[coi-check] Olive Magazine — commercial conflict: NO
+[coi-check] Time Out Porto EN — commercial conflict: YES — operates Time Out Market Porto (food hall at Mercado Bom Sucesso); disclosed per KNOWN_COMMERCIAL_CONFLICTS — INCLUDE with ⚠ coi flag; counts toward secondary cap
+
+[fetch-verify] CB Best Bites 2023 Porto — FETCHED Dec 13, 2023 — Rafael Tonon — 9 restaurants — quality: good
+[fetch-verify] CB A Regaleira — FETCHED Jan 25, 2024 — Cláudia Brandão — 1 restaurant — quality: good
+[fetch-verify] CB Oficina dos Rissóis — FETCHED May 6, 2025 — Rafael Tonon — 1 restaurant — quality: good
+[fetch-verify] Portoalities Best Restaurants in Ribeira — FETCHED Apr 3, 2026 — Sara Riobom — 12 restaurants — quality: good
+[fetch-verify] Go Ask A Local — FETCHED Feb 3, 2023 — Leonor Tito (Porto native) — 20+ mentions — quality: good
+[fetch-verify] Visão 7 novos restaurantes Porto — FETCHED Oct 4, 2024 — Florbela Alves & Lucília Monteiro — 7 restaurants — quality: good
+[fetch-verify] NCultura 10 melhores restaurantes Porto 2023 — FETCHED Jun 7, 2023 — Sara Costa — 10 restaurants — quality: good
+[fetch-verify] Olive Magazine Porto — FETCHED Mar 16, 2026 — Alex Crossley, Keith Kendrick, Helen Salter, Laura Rowe — 27 restaurants — quality: good — SECONDARY (UK food media)
+[fetch-verify] Time Out Porto EN — FETCHED Mar 17, 2025 — Rafael Tonon — 30 restaurants — quality: good — SECONDARY + ⚠ coi
+
+[phase-1] REJECTED The Sauce Substack — no named author (anonymous "food and wine writer living in Porto")
+[phase-1] REJECTED Porto Secreto melhores-restaurantes-do-ano-porto — main article dated Dec 27, 2022, outside 2023-2026 range
+[phase-1] REJECTED Mesa Marcada Cafeína article — no named author visible
+[phase-1] REJECTED Mesa Marcada Le Monument article — no named author visible
+
+[phase-1b] "Miguel Pires guia restaurantes Porto recomendações 2024 2025" → Only Mesa Marcada homepage/Michelin analysis articles; no specific Porto restaurant guide by Miguel Pires found with extractable content; Mesa Marcada already in pipeline via Phase 0
+[phase-1b] "Cristiana Beltrão restaurantes Porto crítica gastronómica 2024 2025" → Only Mesa Marcada homepage returned; no specific Porto article by Cristiana Beltrão found
+[phase-1b] "wine with spirit Porto restaurantes recomendações guia 2024 2025" → Star Wine List (starwinelist.com/wine-guide/the-best-wine-restaurants-and-wine-bars-in-porto) — António Lopes (local ambassador), 12 Porto wine restaurants/bars, 2026 — new candidate
+[phase-1b] "escritora gastronómica Porto Portugal blogue resenhas restaurantes independente 2024 2025" → O Tascólogo (tasca focus), CaréComida (Fábio Fiúza) — no Porto-specific named-author guides found beyond pool
+[phase-1b] "Eater Porto Portugal restaurant guide food writer 2023 2024 2025" → No Eater Porto guide found; no new candidates
+[fetch-verify] Star Wine List Porto — FETCHED 2026 (no explicit date) — António Lopes (Local Ambassador) — 12 wine restaurants/bars — quality: good — PRIMARY (wine-focused; limited restaurant extraction applicable)
+[phase-1b] RESULT: Phase 1B added 1 new candidate (Star Wine List / António Lopes); PT pool has no additional critics identified — structural characteristic of Porto independent PT food critic landscape

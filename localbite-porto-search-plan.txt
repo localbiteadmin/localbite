@@ -1,0 +1,77 @@
+# LocalBite Porto — Search Plan
+# Pipeline: localbite-strategy-c-v6
+# Total queries: 30
+# Built: 2026-04-10
+
+# Phase 0 writers confirmed: Miguel Pires (Mesa Marcada), Rafael Tonon (Culinary Backstreets), Cláudia Brandão (Culinary Backstreets)
+
+# ─────────────────────────────────────────
+# ANGLE A — City-wide English (4 queries)
+# ─────────────────────────────────────────
+A1. best restaurants Porto Portugal local food guide recommendations 2025
+A2. Porto Portugal dining guide food writer recommendations 2024 2025
+A3. where to eat Porto Portugal independent food critic guide 2025 2026
+A4. Porto Portugal best places to eat neighborhood guide honest review 2023 2024
+
+# ─────────────────────────────────────────
+# ANGLE B — City-wide Portuguese (5 queries)
+# ─────────────────────────────────────────
+B1. melhores restaurantes Porto Portugal guia gastronómico 2025
+B2. onde comer no Porto Portugal recomendações crítico gastronómico 2025 2026
+B3. guia restaurantes Porto Portugal crítica gastronómica independente 2024
+B4. melhores restaurantes Porto 2023 2024 jornalista gastronomia
+B5. restaurantes imperdíveis Porto Portugal escritor gastronómico recomendações 2025
+
+# ─────────────────────────────────────────
+# ANGLE C — Per-neighbourhood English (4 queries)
+# ─────────────────────────────────────────
+C1. best restaurants Ribeira Porto Portugal waterfront food guide recommendations
+C2. where to eat Ribeira Porto local guide food writer honest 2024 2025
+C3. best restaurants Bonfim Porto Portugal neighbourhood food recommendations 2024 2025
+C4. Bonfim Porto dining guide local food writer recommendations 2023 2025
+
+# ─────────────────────────────────────────
+# ANGLE D — Per-neighbourhood Portuguese (4 queries)
+# ─────────────────────────────────────────
+D1. melhores restaurantes Ribeira Porto recomendações guia local 2024 2025
+D2. onde comer Ribeira Porto Portugal crítica gastronómica 2023 2025
+D3. melhores restaurantes Bonfim Porto guia gastronómico 2024 2025
+D4. restaurantes Cedofeita Foz do Douro Porto recomendações escritor gastronómico 2024 2025
+
+# ─────────────────────────────────────────
+# ANGLE E — Writer-first (4 queries)
+# (first 2 use Phase 0 writers; last 2 open writer-type in PT)
+# ─────────────────────────────────────────
+E1. Miguel Pires Porto restaurantes recomendações crítico gastronomia
+E2. Rafael Tonon Porto restaurants food writing recommendations guide
+E3. crítico gastronómico independente Porto Portugal melhores restaurantes 2025
+E4. blogueiro gastronomia Porto Portugal recomendações restaurantes escritor local 2024 2025
+
+# ─────────────────────────────────────────
+# ANGLE F — Forum and community (3 queries)
+# ─────────────────────────────────────────
+F1. Porto Portugal restaurants recommendations locals forum honest 2024 2025
+F2. best local restaurants Porto expat recommendations community guide 2025
+F3. fórum recomendações restaurantes Porto Portugal moradores opinião honesta 2024
+
+# ─────────────────────────────────────────
+# ANGLE G — Recent openings (2 queries)
+# ─────────────────────────────────────────
+G1. new restaurant openings Porto Portugal 2024 2025 best recent
+G2. novos restaurantes Porto Portugal aberturas 2024 2025 melhores
+
+# ─────────────────────────────────────────
+# ANGLE H — Awards and recognition (2 queries)
+# ─────────────────────────────────────────
+H1. best restaurants Porto Portugal award recognition food guide 2024 2025
+H2. prémios gastronomia Porto Portugal melhores restaurantes reconhecidos 2024 2025
+
+# ─────────────────────────────────────────
+# ANGLE I — Publication-specific by category (2 queries)
+# ─────────────────────────────────────────
+I1. independent food media Porto Portugal restaurant guide journalist recommendations 2024 2025
+I2. revista gastronomia Portugal Porto melhores restaurantes crítica independente 2025
+
+# ─────────────────────────────────────────
+# TOTAL: 30 queries
+# ─────────────────────────────────────────

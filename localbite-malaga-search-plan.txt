@@ -1,0 +1,71 @@
+LOCALBITE SEARCH PLAN — MÁLAGA, SPAIN
+Generated: 2026-04-10
+Phase 0 writer names confirmed: NONE (all three Phase 0 sources failed to load)
+
+Total queries: 30
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ANGLE A — City-wide English (4 queries)
+────────────────────────────────────────
+A1. "best restaurants Málaga Spain food writer local guide 2026"
+A2. "top places to eat Málaga Spain independent food critic 2025 recommendations"
+A3. "Málaga Spain restaurant guide named author 2024 hidden gems"
+A4. "where to eat Málaga Spain local food expert picks 2023 2024"
+
+ANGLE B — City-wide Spanish (5 queries)
+────────────────────────────────────────
+B1. "mejores restaurantes Málaga España guia gastronomica critico 2026"
+B2. "donde comer Málaga España recomendaciones escritor gastronomico 2025"
+B3. "guia restaurantes Málaga 2024 opinion gastronomica experto local"
+B4. "los mejores restaurantes malaga 2023 critica gastronomica periodista"
+B5. "restaurantes imprescindibles malaga españa recomendacion periodista gastronomia 2025"
+
+ANGLE C — Per-neighbourhood English (4 queries)
+────────────────────────────────────────────────
+C1. "best restaurants Centro Histórico Málaga old town food guide 2025"
+C2. "where to eat historic centre Málaga Spain critic recommendations 2024"
+C3. "Soho Málaga restaurants arts quarter dining guide 2025 food writer"
+C4. "best places eat Soho district Málaga Spain independent guide 2024"
+
+ANGLE D — Per-neighbourhood Spanish (4 queries)
+────────────────────────────────────────────────
+D1. "restaurantes Centro Histórico Málaga barrio casco antiguo mejores 2025"
+D2. "mejores restaurantes Soho Málaga barrio de las artes gastronomia 2024"
+D3. "restaurantes El Perchel Málaga guia gastronomica recomendacion 2024"
+D4. "mejores restaurantes Pedregalejo El Palo Málaga playa recomendacion 2025"
+
+ANGLE E — Writer-first (4 queries)
+[No Phase 0 writer names confirmed; using open writer-type patterns; 2 Spanish required]
+────────────────────────────────────────────────────────────────────────────────────────
+E1. "food writer based in Málaga Spain restaurant blog personal recommendations 2025"
+E2. "independent food blogger Málaga Spain English restaurant recommendations 2024"
+E3. "critico gastronomico malaga españa blog personal restaurantes recomendaciones 2025"
+E4. "escritor gastronomico malaga andalucia local recomendaciones restaurantes 2024"
+
+ANGLE F — Forum and community (3 queries)
+[At least 1 Spanish-language]
+───────────────────────────────────────────
+F1. "Málaga Spain best restaurants forum discussion locals recommend 2024 2025"
+F2. "where eat Málaga Spain traveller forum community advice independent restaurants 2025"
+F3. "foro malaga donde comer restaurantes recomendaciones locales 2024 2025"
+
+ANGLE G — Recent openings (2 queries)
+[1 EN + 1 ES]
+─────────────────────────────────────────
+G1. "new restaurant openings Málaga Spain 2024 2025 food critic review"
+G2. "nuevos restaurantes malaga 2024 2025 apertura critica gastronomica"
+
+ANGLE H — Awards and recognition (2 queries)
+[1 EN + 1 ES — no specific publication names]
+───────────────────────────────────────────────────
+H1. "Málaga Spain restaurant awards recognition notable dining 2024 2025"
+H2. "premios gastronomicos malaga españa restaurantes reconocidos 2024 2025"
+
+ANGLE I — Publication-specific (2 queries)
+[Food media by category, not by name]
+──────────────────────────────────────────
+I1. "Málaga Spain independent food publication restaurant critic guide 2024 2025"
+I2. "revista gastronomica andalucia malaga restaurantes mejores critica 2024 2025"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TOTAL: 30 queries across 9 angles
