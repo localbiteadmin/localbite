@@ -36,6 +36,7 @@ const CITY_BOXES = {
   'Valencia':     { latMin: 39.2,  latMax: 39.7,  lngMin: -0.6,  lngMax: -0.1 },
   'Lisbon':       { latMin: 38.6,  latMax: 38.9,  lngMin: -9.3,  lngMax: -9.0 },
   'Porto':        { latMin: 41.1,  latMax: 41.3,  lngMin: -8.8,  lngMax: -8.5 },
+  'Málaga':       { latMin: 36.68, latMax: 36.76, lngMin: -4.48, lngMax: -4.35 },
   'Copenhagen':   { latMin: 55.6,  latMax: 55.8,  lngMin: 12.4,  lngMax: 12.7 },
   'Edinburgh':    { latMin: 55.9,  latMax: 56.0,  lngMin: -3.3,  lngMax: -3.1 },
   'Tel Aviv':     { latMin: 32.0,  latMax: 32.2,  lngMin: 34.7,  lngMax: 34.9 },
