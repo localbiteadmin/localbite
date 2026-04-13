@@ -1,0 +1,109 @@
+LOCALBITE LISBON — SEARCH PLAN v6
+Generated: 2026-04-13
+Pipeline: localbite-v6
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 0 SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FETCHED: Mesa Marcada — ~85,000 chars — April 2026 — Miguel Pires, Cristiana Beltrão confirmed
+FETCHED: Culinary Backstreets Lisbon — ~85,000 chars — 2024-2026 — Célia Pedroso, Austin Bush confirmed
+FAILED:  Observador gastronomia section — 404 error — section homepage not resolving
+
+Writers confirmed for Phase 1B: Miguel Pires, Cristiana Beltrão, Célia Pedroso, Austin Bush
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART A — NEIGHBOURHOOD QUERIES (bilingual: EN + PT)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Lisbon is a multilingual-european city (LANGUAGE_CODES: PT, EN).
+Each neighbourhood group gets 2 queries — one EN, one PT.
+
+Group 1: Alfama + Mouraria
+  A1a [EN]: "best restaurants Alfama Mouraria Lisbon food writer guide"
+  A1b [PT]: "restaurantes Alfama Mouraria Lisboa recomendações guia"
+
+Group 2: Bairro Alto + Chiado
+  A2a [EN]: "best restaurants Bairro Alto Chiado Lisbon food guide"
+  A2b [PT]: "restaurantes Bairro Alto Chiado Lisboa guia gastronomico"
+
+Group 3: Baixa + Intendente
+  A3a [EN]: "restaurants Baixa Intendente Lisbon guide 2025"
+  A3b [PT]: "restaurantes Baixa Intendente Lisboa onde comer 2025"
+
+Group 4: Arroios
+  A4a [EN]: "Arroios Lisbon restaurants food writer 2024 2025"
+  A4b [PT]: "restaurantes Arroios Lisboa guia gastronomia"
+
+Group 5: Avenidas Novas
+  A5a [EN]: "Avenidas Novas Lisbon restaurants food guide"
+  A5b [PT]: "restaurantes Avenidas Novas Lisboa recomendações"
+
+Group 6: Belém + Alcântara
+  A6a [EN]: "best restaurants Belem Alcantara Lisbon guide"
+  A6b [PT]: "restaurantes Belém Alcântara Lisboa guia gastronomia"
+
+Group 7: Santos + Príncipe Real
+  A7a [EN]: "Santos Principe Real Lisbon restaurants food writer"
+  A7b [PT]: "restaurantes Santos Príncipe Real Lisboa guia"
+
+Group 8: Campo de Ourique + Estrela + Lapa
+  A8a [EN]: "Campo de Ourique Estrela Lapa Lisbon restaurants guide"
+  A8b [PT]: "restaurantes Campo de Ourique Estrela Lapa Lisboa"
+
+Group 9: Alvalade
+  A9a [EN]: "Alvalade Lisbon restaurants food guide 2025"
+  A9b [PT]: "restaurantes Alvalade Lisboa guia gastronomia"
+
+Group 10: Beato + Marvila
+  A10a [EN]: "Beato Marvila Lisbon restaurants food writer guide"
+  A10b [PT]: "restaurantes Beato Marvila Lisboa guia 2025"
+
+Group 11: Parque das Nações
+  A11a [EN]: "Parque das Nacoes Lisbon restaurants food guide"
+  A11b [PT]: "restaurantes Parque das Nações Lisboa recomendações"
+
+Group 12: Almada (conditional)
+  A12a [EN]: "Almada Lisbon dining scene restaurants food writer 2025"
+  A12b [PT]: "restaurantes Almada cena gastronómica Lisboa 2025"
+
+TOTAL PART A: 24 queries
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART B — CROSS-CUTTING ANGLES (14 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cross-1 — City-wide (3 queries):
+  B1a [EN 2026]: "best restaurants Lisbon Portugal food writer local guide 2026"
+  B1b [PT 2025]: "melhores restaurantes Lisboa Portugal guia gastronomico 2025"
+  B1c [EN no year]: "local food writers Lisbon restaurant recommendations independent"
+
+Cross-2 — Writer-first (3 queries):
+  B2a: "Miguel Pires food writer Lisbon restaurant reviews"
+  B2b: "Célia Pedroso Lisbon food guide restaurants recommendations"
+  B2c [PT]: "críticos gastronomia Lisboa Portugal escritores locais 2025"
+
+Cross-3 — Recent openings 2024–2026 (2 queries):
+  B3a [EN]: "new restaurant openings Lisbon 2025 2026 food writer"
+  B3b [PT]: "novos restaurantes Lisboa 2025 2026 abertos guia"
+
+Cross-4 — Older coverage 2023–2024 (2 queries):
+  B4a [EN]: "best restaurants Lisbon 2023 food writer guide"
+  B4b [PT]: "melhores restaurantes Lisboa 2024 guia gastronomia"
+
+Cross-5 — Awards and recognition (2 queries):
+  B5a [EN]: "Michelin guide Lisbon restaurants 2024 2025"
+  B5b [PT]: "prémios gastronomia Lisboa melhores restaurantes 2025"
+
+Cross-6 — Forum and community (2 queries):
+  B6a [EN]: "Lisbon restaurants recommendations food lovers local 2025"
+  B6b [PT]: "Lisboa restaurantes recomendações escritor gastronomia independente"
+
+Cross-7 — Cuisine diversity (2 queries — Lisbon has significant African/Brazilian diaspora food scene):
+  B7a [EN]: "African food Lisbon restaurants Cape Verdean Angolan food writer"
+  B7b [PT]: "restaurantes africanos brasileiros Lisboa guia gastronomia escritor"
+
+TOTAL PART B: 14 queries
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GRAND TOTAL: 38 queries planned
+Within medium-city range (30–45). Stopping rule applies after 8 consecutive zero-yield queries.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

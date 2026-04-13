@@ -1,0 +1,111 @@
+LOCALBITE LISBON — OUTPUT AUDIT
+Generated: 2026-04-13
+Pipeline: localbite-v6
+Phase: 3 (post-dedup)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIER C — AUTO-EXCLUDED (8 entries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Rule: null neighbourhood + single source = auto rec-remove; outside geographic boundary; bar not restaurant.
+
+C1  As Bifanas do Afonso
+    Source: src-timeout-en (secondary, COI)
+    Neighbourhood: null (no neighbourhood identified in source)
+    Reason: null neighbourhood + single source → auto Tier C
+
+C2  Bom Bom Bom
+    Source: src-ola-daniela
+    Neighbourhood: null (Graça — not in GEOGRAPHIC_BOUNDARY_INCLUDE)
+    Reason: (a) bar not restaurant — source describes as "vinyl bar in Graça with seasonal snacks"; (b) null neighbourhood
+
+C3  Familjen
+    Source: src-timeout-en (secondary, COI)
+    Neighbourhood: null (no neighbourhood identified in source)
+    Reason: null neighbourhood + single source → auto Tier C
+
+C4  Petisco Saloio
+    Source: src-culinary-backstreets (primary, COI)
+    Neighbourhood: null (source provides no neighbourhood)
+    Reason: null neighbourhood + single source → auto Tier C
+
+C5  Sala de Corte
+    Source: src-timeout-en (secondary, COI)
+    Neighbourhood: null (no neighbourhood identified in source)
+    Reason: null neighbourhood + single source → auto Tier C
+
+C6  Santa Joana
+    Source: src-infatuation (primary)
+    Neighbourhood: null (no neighbourhood identified in source)
+    Reason: null neighbourhood + single source → auto Tier C
+
+C7  Taberna do Mar (= A Taberna do Mar)
+    Sources: src-ola-daniela + src-infatuation (merged as same restaurant)
+    Neighbourhood: null (Graça — confirmed outside GEOGRAPHIC_BOUNDARY_INCLUDE by both sources)
+    Reason: outside geographic boundary confirmed by 2 independent sources; Graça not in GEOGRAPHIC_BOUNDARY_INCLUDE
+
+C8  Tasca Pete
+    Source: src-infatuation (primary)
+    Neighbourhood: null (Graça/Penha de França — not in GEOGRAPHIC_BOUNDARY_INCLUDE)
+    Reason: null neighbourhood (outside boundary) + single source → auto Tier C
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIER B — RECOMMENDED REMOVALS (5 entries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Rule: source concentration cap (Ola Daniela 20/55 = 36.4% → cap at 30% = max 15 Ola Daniela single-source Tier B) + operational flag.
+5 entries flagged rec-remove. User must approve or override before inclusion in OUTPUT_FINAL.
+
+R1  BouBou's
+    Source: src-ola-daniela (primary, no COI)
+    Neighbourhood: Príncipe Real
+    Reason: OPERATIONAL FLAG — chef Louise Bourrat departed April 2026 per Mesa Marcada reporting.
+    Concept likely changed; entry written for original concept only.
+    Action: verify current restaurant concept and chef before any inclusion.
+
+R2  Brilhante
+    Source: src-ola-daniela (primary, no COI)
+    Neighbourhood: Santos
+    Reason: SOURCE CONCENTRATION CAP — Ola Daniela contributes 20 single-source Tier B entries
+    exceeding the 30% cap (36.4% of total A+B=55). Brilhante selected as weakest of 5 removals:
+    weakest specificity among Santos area entries (no named dish, no chef, no year).
+
+R3  Hachi Kare-Ya
+    Source: src-ola-daniela (primary, no COI)
+    Neighbourhood: Arroios
+    Reason: SOURCE CONCENTRATION CAP — single-concept (Japanese curry specialist), thinnest
+    local context of the Arroios entries. Open_status_check: true (Nov 2024 article).
+
+R4  Kefi Greek Bistro
+    Source: src-ola-daniela (primary, no COI)
+    Neighbourhood: Estrela
+    Reason: SOURCE CONCENTRATION CAP — weakest Lisbon-specific content; description reads as
+    generic Greek Mediterranean bistro without named chef, chef credentials, or distinctive dish.
+    Open_status_check: true (Nov 2024 article).
+
+R5  Zula Bistro
+    Source: src-ola-daniela (primary, no COI)
+    Neighbourhood: Santos
+    Reason: SOURCE CONCENTRATION CAP — generic Middle Eastern description (hummus, grilled meats,
+    mezze) without named chef, named dish with specific preparation, or other distinguishing detail.
+    Open_status_check: true (Nov 2024 article).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SPECIAL FLAGS (Tier A entries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SEM (Alfama, Nordic fine dining) — Tier A, 2 sources (Infatuation 2023 + Time Out 2026)
+FLAG: Time Out article (2026-02-11) describes "one of its last nights hosted Douglas McMaster
+himself" — strong signal that SEM closed in early 2026. Verify current operational status.
+If confirmed closed: move to Tier C before OUTPUT_FINAL.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FAILED / EXCLUDED SOURCES (for record)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Observador.pt (gastronomia section): 404 in Phase 0 — excluded before candidate evaluation
+- Público/Fugas: HTTP 451 (GDPR geo-block) — permanently inaccessible via Jina
+- The Guardian (Célia Pedroso, 2025-04-14): HTTP 451 — blocked
+- Evasões.pt: Jina returns navigation/listing page instead of article body — excluded
+- Lisboa Secreta: JavaScript challenge error + out-of-window article (2021) — excluded
+- etaste.pt: bot security screen blocks Jina — excluded
+- Visão (visão.pt): paywalled; article credited to Culinary Backstreets (not independent) — excluded
+- Nomadic Foodist (Chris Kretzer): author visited Lisbon one month only; no documented residency or regular coverage — independence standard not met
+- Onde Vamos Jantar (specific article): dated December 2018 — outside 2023–2026 content window

@@ -1,0 +1,1068 @@
+{
+  "pipeline": "localbite-v6",
+  "city": "Lisbon",
+  "country": "Portugal",
+  "generated": "2026-04-13",
+  "phase": "final",
+  "content_window": "2023-2026",
+  "total_restaurants": 48,
+  "counts": {
+    "tier_a": 11,
+    "tier_b": 37,
+    "both_pool_entries": 1
+  },
+  "removed_from_raw": [
+    {
+      "name": "SEM",
+      "reason": "Likely closed: Time Out Feb 2026 describes 'last nights'"
+    },
+    {
+      "name": "Ponto Final",
+      "reason": "User decision: Almada conditional excluded"
+    },
+    {
+      "name": "BouBou's",
+      "reason": "Chef Louise Bourrat departed April 2026"
+    },
+    {
+      "name": "Brilhante",
+      "reason": "Source concentration cap (Ola Daniela)"
+    },
+    {
+      "name": "Hachi Kare-Ya",
+      "reason": "Source concentration cap (Ola Daniela)"
+    },
+    {
+      "name": "Kefi Greek Bistro",
+      "reason": "Source concentration cap (Ola Daniela)"
+    },
+    {
+      "name": "Zula Bistro",
+      "reason": "Source concentration cap (Ola Daniela)"
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-mesa-marcada",
+      "publication": "Mesa Marcada",
+      "writer": "Miguel Pires",
+      "url": "https://mesamarcada.com",
+      "language": "pt",
+      "source_type": "primary",
+      "article_date": "2025-03-08",
+      "commercial_conflict": false,
+      "writer_profile": "Miguel Pires is Portugal's most prominent independent food critic, the founding editor of Mesa Marcada since 2009 and organiser of the annual Mesa Marcada Awards — the country's most widely followed restaurant prizes. Based in Lisbon, he writes for Público's Fugas supplement and international outlets including Eater, and is the author of Lisboa à Mesa, a Lisbon restaurant guide published in three languages."
+    },
+    {
+      "id": "src-culinary-backstreets",
+      "publication": "Culinary Backstreets",
+      "writer": "Célia Pedroso / Austin Bush",
+      "url": "https://culinarybackstreets.com/city-guides/lisbon/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2026-01-30",
+      "commercial_conflict": true,
+      "commercial_conflict_note": "Culinary Backstreets sells food tours in Lisbon; Célia Pedroso co-founded Eat Drink Walk food tours, now operating under CB brand.",
+      "writer_profile": "Célia Pedroso is a Lisbon-based freelance journalist, co-author of the Gourmand Award-winning book Eat Portugal, and Lisbon bureau chief of Culinary Backstreets. She writes about food and travel for The Guardian and Eater, and appeared on Netflix's Somebody Feed Phil. Austin Bush is a contributor and food writer who reports for CB on Lisbon's neighbourhood food scenes."
+    },
+    {
+      "id": "src-ola-daniela",
+      "publication": "Ola Daniela",
+      "writer": "Daniela Sunde-Brown",
+      "url": "https://oladaniela.com/food-guide-lisbon/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2024-11-30",
+      "commercial_conflict": false,
+      "writer_profile": "Daniela Sunde-Brown is an Australian food and travel writer who has lived in Lisbon since 2018. Her independent website Ola Daniela focuses on where locals eat in the city, with a particular interest in traditional tascas and neighbourhood restaurants that avoid the tourist circuit."
+    },
+    {
+      "id": "src-infatuation",
+      "publication": "The Infatuation",
+      "writer": "Rita Geraldes",
+      "url": "https://www.theinfatuation.com/lisbon/guides/best-restaurants-lisbon-portugal",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2023-07-24",
+      "commercial_conflict": false,
+      "writer_profile": "Rita Geraldes is a food writer covering Lisbon for The Infatuation, the New York-based restaurant guide known for its opinionated, non-advertorial reviews. Her Lisbon guide emphasises restaurants across price points with a focus on what the experience actually feels like rather than prestige alone."
+    },
+    {
+      "id": "src-nit",
+      "publication": "NiT",
+      "writer": "Eva Reimão / Catarina Simões",
+      "url": "https://www.nit.pt/comida/restaurantes/ja-sabemos-quais-sao-os-169-melhores-restaurantes-de-lisboa",
+      "language": "pt",
+      "source_type": "primary",
+      "article_date": "2025-07-04",
+      "commercial_conflict": false,
+      "writer_profile": "NiT is a Portuguese digital lifestyle and food publication that runs its own annual restaurant awards (Prémios NiT) and publishes results of the Câmara de Lisboa's formal restaurant evaluation programme, Lisboa à Prova. Eva Reimão and Catarina Simões cover the Lisbon restaurant scene for NiT with a focus on new openings and annual recognition."
+    },
+    {
+      "id": "src-timeout-en",
+      "publication": "Time Out Lisbon (EN)",
+      "writer": "Time Out editorial team",
+      "url": "https://www.timeout.com/lisbon/restaurants/the-best-lisbon-restaurants",
+      "language": "en",
+      "source_type": "secondary",
+      "article_date": "2026-02-11",
+      "commercial_conflict": true,
+      "commercial_conflict_note": "Time Out operates Time Out Market Lisboa at Mercado da Ribeira — commercial conflict of interest."
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Bar Alimentar",
+      "neighbourhood": "Príncipe Real",
+      "cuisine": "Contemporary share plates",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "A",
+      "sources": [
+        "src-ola-daniela",
+        "src-infatuation"
+      ],
+      "open_status_check": true,
+      "quote": "Collaboration between the chef behind Tricky's and bartenders from Imprensa cocktail bar — modern share plates combining Italian and Portuguese flavours in a minimalist Príncipe Real space that feels like an after-party.",
+      "signature_dish": "whipped cod with caramelised onion cannoli; fava beans vignarola",
+      "lat": 38.7142033,
+      "lng": -9.1530757,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bar alimentar"
+    },
+    {
+      "id": 2,
+      "name": "Belcanto",
+      "neighbourhood": "Chiado",
+      "cuisine": "Fine dining Portuguese",
+      "price_level": 4,
+      "language_pool": "en",
+      "confidence_tier": "A",
+      "sources": [
+        "src-infatuation",
+        "src-timeout-en"
+      ],
+      "open_status_check": false,
+      "quote": "José Avillez's crown jewel — two Michelin stars and ranked 25th on the World's 50 Best list, with Classics and Landscapes tasting menus from €235 that showcase Portuguese ingredients at their most elevated.",
+      "signature_dish": "Classics and Landscapes tasting menus; lobster with white beans, marrow and caviar",
+      "lat": 38.7100607,
+      "lng": -9.1414882,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Belcanto"
+    },
+    {
+      "id": 3,
+      "name": "Canalha",
+      "neighbourhood": "Belém",
+      "cuisine": "Contemporary Portuguese",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "A",
+      "sources": [
+        "src-culinary-backstreets",
+        "src-ola-daniela",
+        "src-infatuation"
+      ],
+      "open_status_check": false,
+      "quote": "Phenomenal shareable plates without any pretentiousness — smoked eel, two-year-aged tuna tiradito, and the prato do dia make this produce-driven bistro in Belém the restaurant Lisbon needed. Chef João Rodrigues left the Michelin-starred Feitoria to open this more accessible, market-driven spot.",
+      "signature_dish": "smoked eel; two-year-aged tuna tiradito",
+      "lat": 38.6973967,
+      "lng": -9.1937118,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Canalha"
+    },
+    {
+      "id": 4,
+      "name": "Cervejaria Ramiro",
+      "neighbourhood": "Intendente",
+      "cuisine": "Portuguese seafood",
+      "price_level": 3,
+      "language_pool": "en",
+      "confidence_tier": "A",
+      "sources": [
+        "src-culinary-backstreets",
+        "src-ola-daniela",
+        "src-infatuation",
+        "src-timeout-en"
+      ],
+      "open_status_check": false,
+      "quote": "Temple of seafood — a beer hall with fresh seafood arriving daily, where oysters, spider crab, perfectly-cooked prawns, and a famous prego steak sandwich are the pillars of a Lisbon institution since the 1950s.",
+      "signature_dish": "prego do lombo; gambas à guilho; santola (spider crab)",
+      "lat": 38.7201981,
+      "lng": -9.1357063,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Cervejaria Ramiro"
+    },
+    {
+      "id": 5,
+      "name": "O Velho Eurico",
+      "neighbourhood": "Mouraria",
+      "cuisine": "Traditional Portuguese",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "A",
+      "sources": [
+        "src-culinary-backstreets",
+        "src-ola-daniela",
+        "src-infatuation",
+        "src-timeout-en"
+      ],
+      "open_status_check": false,
+      "quote": "Family-run neo-tasca behind Rossio opened by chef Zé Paulo Rocha in 2019 — menu scribbled on slate featuring octopus lagareiro, piglet empanada, and leite-creme. One of Lisbon's hardest reservations and the template for a generation of Lisbon restaurants.",
+      "signature_dish": "octopus lagareiro; piglet empanada; leite-creme",
+      "lat": 38.7127312,
+      "lng": -9.1353899,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "O Velho Eurico"
+    },
+    {
+      "id": 6,
+      "name": "Pigmeu",
+      "neighbourhood": "Campo de Ourique",
+      "cuisine": "Modern Portuguese (nose-to-tail)",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "A",
+      "sources": [
+        "src-culinary-backstreets",
+        "src-ola-daniela"
+      ],
+      "open_status_check": false,
+      "quote": "Chef-owner Miguel Peres orders half a pig weekly and uses every part — liver on toast is the signature petisco in this compact Campo de Ourique spot dedicated to Alentejo pork and natural wines. Michelin Bib Gourmand.",
+      "signature_dish": "liver on toast; Alentejo pork preparations",
+      "lat": 38.719897,
+      "lng": -9.1647741,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pigmeu - de Tudo um Porco"
+    },
+    {
+      "id": 7,
+      "name": "Prado",
+      "neighbourhood": "Mouraria",
+      "cuisine": "Contemporary Portuguese",
+      "price_level": 3,
+      "language_pool": "en",
+      "confidence_tier": "A",
+      "sources": [
+        "src-culinary-backstreets",
+        "src-infatuation",
+        "src-timeout-en"
+      ],
+      "open_status_check": false,
+      "quote": "Farm-to-table pioneer in Lisbon serving small plates built around seasonal ingredients from small producers — chef António Galapito's cockles with spinach and coriander, beef tartare with dried cabbage, and smoked eel with caramelised onion rice.",
+      "signature_dish": "cockles with spinach and coriander; beef tartare with dried cabbage",
+      "lat": 38.7105632,
+      "lng": -9.1350244,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Prado"
+    },
+    {
+      "id": 8,
+      "name": "Taberna Sal Grosso",
+      "neighbourhood": "Alfama",
+      "cuisine": "Portuguese petiscos",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "A",
+      "sources": [
+        "src-culinary-backstreets",
+        "src-ola-daniela"
+      ],
+      "open_status_check": false,
+      "quote": "Small tavern in Alfama with chalkboard menu, excellent natural wines, and prices that still feel fair despite the fame — tuna, fried quail, cod tongue with pea purée, and shrimp with garlic.",
+      "signature_dish": "cod tongue with pea purée; fried quail; shrimp with garlic",
+      "lat": 38.7136951,
+      "lng": -9.1244357,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Taberna Sal Grosso"
+    },
+    {
+      "id": 9,
+      "name": "Ultimo Porto",
+      "neighbourhood": "Santos",
+      "cuisine": "Portuguese seafood / grilled fish",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "A",
+      "sources": [
+        "src-ola-daniela",
+        "src-infatuation"
+      ],
+      "open_status_check": true,
+      "quote": "Best grilled fish in Lisbon — an unusual waterfront restaurant jammed up against the docks in Santos, where chocos trinchados, red mullet, and the tomato-and-onion salad are reason enough to make the trip.",
+      "signature_dish": "grilled fish; chocos trinchados; red mullet",
+      "lat": 38.7012514,
+      "lng": -9.1626002,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Último Porto"
+    },
+    {
+      "id": 10,
+      "name": "Vibe",
+      "neighbourhood": "Chiado",
+      "cuisine": "Contemporary fine dining",
+      "price_level": 4,
+      "language_pool": "both",
+      "confidence_tier": "A",
+      "both_pool": true,
+      "sources": [
+        "src-ola-daniela",
+        "src-nit"
+      ],
+      "open_status_check": false,
+      "quote": "Chef Mattia Stanchieri's Michelin-recommended restaurant in Chiado with no fixed menu — customers choose by course count (5 or 7), with a Thai-influenced chapter that signals an ambition beyond borders. Não há ementa tradicional.",
+      "signature_dish": null
+    },
+    {
+      "id": 11,
+      "name": "ZunZum Gastrobar",
+      "neighbourhood": "Alfama",
+      "cuisine": "Contemporary Portuguese",
+      "price_level": 3,
+      "language_pool": "en",
+      "confidence_tier": "A",
+      "sources": [
+        "src-ola-daniela",
+        "src-timeout-en"
+      ],
+      "open_status_check": false,
+      "quote": "Chef Marlene Vieira — former MasterChef Portugal judge — runs this relaxed fine dining restaurant near the cruise terminal, with shellfish rice, filhós with cockles in garlicky sauce, a famous francesinha, and a roast beef sandwich.",
+      "signature_dish": "shellfish rice; filhós with cockles; francesinha",
+      "lat": 38.7117878,
+      "lng": -9.1243535,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Zunzum Gastrobar"
+    },
+    {
+      "id": 12,
+      "name": "À Costa",
+      "neighbourhood": "Alcântara",
+      "cuisine": "Contemporary Portuguese seafood",
+      "price_level": 3,
+      "language_pool": "pt",
+      "confidence_tier": "B",
+      "sources": [
+        "src-nit"
+      ],
+      "open_status_check": false,
+      "quote": "Chef Olivier da Costa juntou o lingueirão, o berbigão, a amêijoa e outros tesouros do mar português num restaurante de doca com vista para o Tejo, distinguido Melhor Abertura do Ano nos TheFork Awards 2024.",
+      "signature_dish": "razor clams; Portuguese shellfish",
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
+    },
+    {
+      "id": 13,
+      "name": "Acarajé da Carol",
+      "neighbourhood": "Bairro Alto",
+      "cuisine": "Brazilian (Bahian)",
+      "price_level": 1,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-culinary-backstreets"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": false,
+      "quote": "The only place in Portugal selling authentic Bahian acarajé: fluffy white cloud of ground black-eyed peas transformed, somehow, into a crispy red fritter — Carol Alves de Brito's tiny counter is the real thing.",
+      "signature_dish": "acarajé (Bahian black-eyed pea fritter)",
+      "lat": 38.7120961,
+      "lng": -9.1454077,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Acarajé do Carol"
+    },
+    {
+      "id": 14,
+      "name": "Afonso dos Leitões",
+      "neighbourhood": "Campo de Ourique",
+      "cuisine": "Regional Portuguese",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-culinary-backstreets"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": false,
+      "quote": "Negrais-style suckling pig is the reason to visit this Campo de Ourique specialist — slow-roasted until the skin crisps and the meat falls from the bone.",
+      "signature_dish": "leitão à Negrais (suckling pig)",
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
+    },
+    {
+      "id": 15,
+      "name": "Antiga Camponesa",
+      "neighbourhood": "Bairro Alto",
+      "cuisine": "Contemporary Portuguese",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-culinary-backstreets"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": true,
+      "quote": "Portuguese gastronomy at its core but not afraid to go in slightly different, smart, subtle, delicious directions — chef André Magalhães brings the same intellectual approach here as at Taberna da Rua das Flores.",
+      "signature_dish": null,
+      "lat": 38.71069,
+      "lng": -9.1464057,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "A Camponesa"
+    },
+    {
+      "id": 16,
+      "name": "Arkhe",
+      "neighbourhood": "Chiado",
+      "cuisine": "Vegetarian fine dining",
+      "price_level": 3,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-timeout-en"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": false,
+      "quote": "Michelin-starred vegetarian tasting menu in Chiado — chef João Ricardo Alves serves seasonal dishes like focaccia with smoked butter, cauliflower with green apple and hazelnut, earned a star in 2025.",
+      "signature_dish": "cauliflower with green apple and hazelnut"
+    },
+    {
+      "id": 17,
+      "name": "Bichomau",
+      "neighbourhood": "Campo de Ourique",
+      "cuisine": "Modern Portuguese / Asian-influenced",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-culinary-backstreets"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": false,
+      "quote": "Cook-owner Tomás Rocha puts product first — shokupan with raw violet shrimp is the kind of precise, ingredient-led dish this small Campo de Ourique kitchen produces with quiet confidence.",
+      "signature_dish": "shokupan with raw violet shrimp"
+    },
+    {
+      "id": 18,
+      "name": "Café Tati",
+      "neighbourhood": "Santos",
+      "cuisine": "Contemporary Portuguese",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-culinary-backstreets"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": false,
+      "quote": "A breath of fresh air at Cais do Sodré since 2011 — relaxed meals, organic wines, and occasional live music in a warm space that never feels precious or tourist-facing.",
+      "signature_dish": null,
+      "lat": 38.7313929,
+      "lng": -9.1294693,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Tati"
+    },
+    {
+      "id": 19,
+      "name": "Capsule Neo Bistro",
+      "neighbourhood": "Baixa",
+      "cuisine": "Contemporary fusion",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-infatuation"
+      ],
+      "open_status_check": true,
+      "quote": "Low-key fancy without torching your credit card — katsu chicken sandwich and crispy potato pancakes make this Baixa bistro one of Lisbon's most pleasant surprises for a casual lunch.",
+      "signature_dish": "katsu chicken sandwich; crispy potato pancakes"
+    },
+    {
+      "id": 20,
+      "name": "Carvoaria Jacto",
+      "neighbourhood": "Arroios",
+      "cuisine": "Portuguese steakhouse",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Steak institution since 1953 in the Anjos area of Arroios — charcoal-grilled meat served at long communal tables, unchanged and unapologetic.",
+      "signature_dish": "charcoal-grilled steak",
+      "lat": 38.7231596,
+      "lng": -9.1326127,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "A Carvoaria"
+    },
+    {
+      "id": 21,
+      "name": "Casa de Angola",
+      "neighbourhood": "Mouraria",
+      "cuisine": "Angolan",
+      "price_level": 1,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-culinary-backstreets"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": true,
+      "quote": "Serving muamba — Angola's iconic national dish — since 1970 in Mouraria. Kitaba (roasted jinguba peanuts ground with a pinch of jindungo pepper and salt) is as simple as it is delicious; Paulo Soares keeps the soul of Angolan cooking alive in this Mouraria community institution.",
+      "signature_dish": "muamba de galinha (Angolan chicken stew with palm oil); kitaba (roasted peanut paste)",
+      "lat": 38.7220517,
+      "lng": -9.1547224,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Casa de Angola"
+    },
+    {
+      "id": 22,
+      "name": "Corrupio",
+      "neighbourhood": "Santos",
+      "cuisine": "Contemporary Portuguese",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Central bar, excellent octopus salad, and a rotating menu of small plates at Cais do Sodré — casual enough to drop in without a booking, serious enough to make you stay longer than planned.",
+      "signature_dish": "octopus salad",
+      "lat": 38.7077949,
+      "lng": -9.1471539,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Corrupio"
+    },
+    {
+      "id": 23,
+      "name": "Dom Feijão",
+      "neighbourhood": "Alvalade",
+      "cuisine": "Traditional Portuguese grill",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-timeout-en"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": false,
+      "quote": "Near Avenida de Roma in Alvalade — fish stew, octopus lagareiro-style, excellent grilled meats and fish, and lamprey from Alto Minho in season, with cozido à portuguesa on Wednesdays and Saturdays.",
+      "signature_dish": "cozido à portuguesa (Wed/Sat); lamprey from Alto Minho",
+      "lat": 38.7471673,
+      "lng": -9.1390266,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Dom Feijão"
+    },
+    {
+      "id": 24,
+      "name": "Encanto",
+      "neighbourhood": "Chiado",
+      "cuisine": "Vegetarian fine dining",
+      "price_level": 4,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-infatuation"
+      ],
+      "open_status_check": true,
+      "quote": "Fine dining without the fuss — Jerusalem artichokes, fire-kissed sweet potatoes, and a meatless cozido at José Avillez's Chiado restaurant that earned a Michelin Green Star for sustainable cuisine.",
+      "signature_dish": "meatless cozido; fire-kissed sweet potatoes",
+      "lat": 38.7099386,
+      "lng": -9.1414711,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Encanto"
+    },
+    {
+      "id": 25,
+      "name": "Essencial",
+      "neighbourhood": "Bairro Alto",
+      "cuisine": "Fine dining Portuguese",
+      "price_level": 4,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-infatuation"
+      ],
+      "open_status_check": true,
+      "quote": "Feels more like having dinner inside someone's house in Bairro Alto — oven-baked rice with scarlet shrimp, turbot with caviar, and pigeon foie gras in an intimate 30-seat room with no sign outside.",
+      "signature_dish": "oven-baked rice with scarlet shrimp; turbot with caviar",
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
+    },
+    {
+      "id": 26,
+      "name": "Galeto",
+      "neighbourhood": "Avenidas Novas",
+      "cuisine": "International / Brazilian",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-culinary-backstreets"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": false,
+      "quote": "American diner-style snack bar on Avenida da República serving club sandwiches, burgers, and Brazilian feijoada — a Lisbon institution that has barely changed since 1966.",
+      "signature_dish": "Brazilian feijoada; club sandwiches",
+      "lat": 38.7356929,
+      "lng": -9.1449084,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Galeto"
+    },
+    {
+      "id": 27,
+      "name": "Gancho",
+      "neighbourhood": "Alfama",
+      "cuisine": "Modern Portuguese-French-Italian",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-timeout-en"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": false,
+      "quote": "Chef Louise Bourrat's new venture in Alfama — chicken-cabidela arancini, beef tartare à Brás, and pointed cabbage with spicy sauce in a vibrant neo-tasca setting where two cultures meet without apology.",
+      "signature_dish": "chicken-cabidela arancini; beef tartare à Brás"
+    },
+    {
+      "id": 28,
+      "name": "Guelra",
+      "neighbourhood": "Belém",
+      "cuisine": "Fish-focused diner",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Fish-focused diner in Belém where bacalhau prepared three ways is the centrepiece, alongside a short menu of Portuguese coastal fish treated with minimal interference.",
+      "signature_dish": "bacalhau three ways",
+      "lat": 38.6971813,
+      "lng": -9.2023683,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Guelra"
+    },
+    {
+      "id": 29,
+      "name": "Gunpowder",
+      "neighbourhood": "Chiado",
+      "cuisine": "West Coast Indian (Goan-influenced)",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-culinary-backstreets"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": true,
+      "quote": "Squid tossed in garlic, kokum, peppers and onions — bright, spicy and perfectly seasoned — chef Nirmat Save's cooking is among the most distinctive non-Portuguese food in Lisbon.",
+      "signature_dish": "squid with garlic, kokum and peppers",
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
+    },
+    {
+      "id": 30,
+      "name": "Imperial de Campo de Ourique",
+      "neighbourhood": "Campo de Ourique",
+      "cuisine": "Traditional Portuguese tasca",
+      "price_level": 1,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-culinary-backstreets"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": false,
+      "quote": "Warm welcomes from owner João Gomes and hearty traditional dishes prepared by his wife Adelaide — grelhados, pratos de tacho, and the kind of cooking that makes this a real neighbourhood anchor in Campo de Ourique.",
+      "signature_dish": null,
+      "lat": 38.719144,
+      "lng": -9.1682732,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Imperial de Campo de Ourique"
+    },
+    {
+      "id": 31,
+      "name": "O Frade",
+      "neighbourhood": "Belém",
+      "cuisine": "Contemporary Portuguese",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Michelin Bib Gourmand in Belém, known for its arrozes — rice dishes cooked to order using ingredients from small producers, with a focused wine list and a relaxed atmosphere.",
+      "signature_dish": "rice dishes (arrozes)",
+      "lat": 38.6978772,
+      "lng": -9.199268,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "O Frade"
+    },
+    {
+      "id": 32,
+      "name": "O Maravilhas",
+      "neighbourhood": "Alcântara",
+      "cuisine": "Traditional Portuguese",
+      "price_level": 1,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-infatuation"
+      ],
+      "open_status_check": true,
+      "quote": "Traditional Portuguese spot in Alcântara with big portions — scrambled eggs with farinheira, cod fritters, fried green beans, and serradura dessert at prices that feel like a throwback.",
+      "signature_dish": "scrambled eggs with farinheira; serradura",
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
+    },
+    {
+      "id": 33,
+      "name": "O Tachadas",
+      "neighbourhood": "Santos",
+      "cuisine": "Portuguese steakhouse",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "T-bone steaks hacked on a chopping block and served on the bone in a Santos neighbourhood joint that plays it completely straight — no frills, just very good beef.",
+      "signature_dish": "T-bone steak",
+      "lat": 38.7076686,
+      "lng": -9.1561987,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "O Tachadas"
+    },
+    {
+      "id": 34,
+      "name": "Obra",
+      "neighbourhood": "Santos",
+      "cuisine": "Contemporary Portuguese",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Prawn brioche — a sandwich stuffed with creamy camarão — is the dish everyone orders first at this Santos spot, where the kitchen keeps things simple and ingredient-led.",
+      "signature_dish": "prawn brioche",
+      "lat": 38.709032,
+      "lng": -9.152428,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "A Obra"
+    },
+    {
+      "id": 35,
+      "name": "Pap'Açôrda",
+      "neighbourhood": "Santos",
+      "cuisine": "Traditional Portuguese",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-infatuation"
+      ],
+      "open_status_check": true,
+      "quote": "Synonymous with Lisbon nightlife — peixinhos da horta, ameijoas à bulhão pato, and açorda at Cais do Sodré, in a restaurant that has managed to stay genuinely good despite decades of fame.",
+      "signature_dish": "açorda; ameijoas à bulhão pato",
+      "lat": 38.706737,
+      "lng": -9.1460606,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pap'Açorda"
+    },
+    {
+      "id": 36,
+      "name": "Rosetta",
+      "neighbourhood": "Bairro Alto",
+      "cuisine": "Contemporary share plates",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Tiny produce-driven share-plate restaurant in Bairro Alto with grilled peaches with burrata, clams with beurre blanc, and a daily menu that changes with the market.",
+      "signature_dish": "grilled peaches with burrata; clams with beurre blanc",
+      "lat": 38.7117417,
+      "lng": -9.1455116,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Rosetta's"
+    },
+    {
+      "id": 37,
+      "name": "Ryoshi",
+      "neighbourhood": "Santos",
+      "cuisine": "Japanese",
+      "price_level": 3,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-timeout-en"
+      ],
+      "commercial_conflict_flag": true,
+      "open_status_check": false,
+      "quote": "Dark, sultry Cais do Sodré restaurant with inventive dishes — mackerel on silky tofu, grilled eel with seasoned rice and egg yolk, fried dough — and a soundtrack of electronic dance music that suits the mood.",
+      "signature_dish": "mackerel on tofu; grilled eel with rice and egg yolk",
+      "lat": 38.7088839,
+      "lng": -9.1493646,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Ryoshi Lisboa"
+    },
+    {
+      "id": 38,
+      "name": "Sem Palavras",
+      "neighbourhood": "Alvalade",
+      "cuisine": "Traditional Portuguese",
+      "price_level": 1,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-infatuation"
+      ],
+      "open_status_check": true,
+      "quote": "Traditional beer house inside Mercado de Alvalade — farinheira with scrambled eggs, clams with coriander and garlic, and cod dishes served at communal tables among local shoppers and market vendors.",
+      "signature_dish": "farinheira with scrambled eggs; clams with coriander",
+      "lat": 38.7559966,
+      "lng": -9.1394162,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Sem Palavras"
+    },
+    {
+      "id": 39,
+      "name": "Skizzo",
+      "neighbourhood": "Lapa",
+      "cuisine": "Contemporary share plates",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-infatuation"
+      ],
+      "open_status_check": true,
+      "quote": "Ticks all the boxes of how to open a hip Lisbon restaurant — flatbread with arugula and stracciatella, buttery-charred scallops, and lobster à guilho in a Lapa space with smart design and easy prices.",
+      "signature_dish": "lobster à guilho; charred scallops"
+    },
+    {
+      "id": 40,
+      "name": "Solar dos Nunes",
+      "neighbourhood": "Alcântara",
+      "cuisine": "Traditional Portuguese",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Institution open since 1988 in Alcântara serving traditional Portuguese and Alentejo cooking — the menu was designed to take you on a journey through regional flavours, with fresh ingredients and generous portions.",
+      "signature_dish": null,
+      "lat": 38.7054663,
+      "lng": -9.1804785,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Solar dos Nunes"
+    },
+    {
+      "id": 41,
+      "name": "Taberna Albricoque",
+      "neighbourhood": "Alfama",
+      "cuisine": "Contemporary Portuguese (Algarvian-influenced)",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Algarve-inspired cockle pastries and a short menu of southern Portuguese dishes served in a warm, informal setting near Santa Apolónia station — a neighbourhood restaurant that has quietly become a must.",
+      "signature_dish": "cockle pastries (Algarvian-style)",
+      "lat": 38.7139196,
+      "lng": -9.1235672,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Taberna Albricoque"
+    },
+    {
+      "id": 42,
+      "name": "Taberna da Rua das Flores",
+      "neighbourhood": "Chiado",
+      "cuisine": "Contemporary Portuguese",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Modern tavern movement pioneer in Chiado — chef André Magalhães opened this small, celebrated spot that launched a generation of Lisbon neo-tascas, with top-quality local produce and a short daily menu.",
+      "signature_dish": null,
+      "lat": 38.7101395,
+      "lng": -9.1435869,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Taberna Da Rua das Flores"
+    },
+    {
+      "id": 43,
+      "name": "Tico Tico",
+      "neighbourhood": "Alvalade",
+      "cuisine": "Traditional Portuguese",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-infatuation"
+      ],
+      "open_status_check": true,
+      "quote": "Slightly off the tourist radar in Alvalade — meat croquettes, lamprey rice, polvo à lagareiro, Portuguese feijoada, and prego sandwich in one of the most traditional beer and seafood restaurants in the city.",
+      "signature_dish": "lamprey rice; polvo à lagareiro",
+      "lat": 38.7544937,
+      "lng": -9.1390741,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Tico TIco"
+    },
+    {
+      "id": 44,
+      "name": "Tozzi",
+      "neighbourhood": "Avenidas Novas",
+      "cuisine": "Pizza (Neapolitan-influenced)",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Long-fermented pizza crusts near Saldanha — the dough rests for 48 hours before baking, producing a light, blistered base that stands out in Lisbon's growing pizza scene.",
+      "signature_dish": "long-fermented pizza",
+      "lat": 38.732975,
+      "lng": -9.1500436,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Tozzi - Forneria Moderna"
+    },
+    {
+      "id": 45,
+      "name": "Vida de Tasca",
+      "neighbourhood": "Alvalade",
+      "cuisine": "Contemporary Portuguese tasca",
+      "price_level": 2,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Chef Leonor Godinho's 2024 opening in Alvalade — peak tasca energy with paper tablecloths, a handwritten daily menu, and a kitchen that treats simple ingredients with serious skill.",
+      "signature_dish": null
+    },
+    {
+      "id": 46,
+      "name": "Yōso",
+      "neighbourhood": "Alcântara",
+      "cuisine": "Japanese omakase",
+      "price_level": 4,
+      "language_pool": "pt",
+      "confidence_tier": "B",
+      "sources": [
+        "src-mesa-marcada"
+      ],
+      "open_status_check": false,
+      "quote": "Meio escondido, próximo do Palácio das Necessidades, em Alcântara, o Yōso é um dos mais recentes exemplos de alta cozinha japonesa em Lisboa — restaurante de apenas 22 lugares com um único menu omakase com peixes da costa portuguesa, vieiras de Hokkaido e wasabi fresco.",
+      "signature_dish": "omakase with Portuguese coastal fish, Hokkaido scallops, fresh wasabi"
+    },
+    {
+      "id": 47,
+      "name": "Zé da Mouraria",
+      "neighbourhood": "Mouraria",
+      "cuisine": "Traditional Portuguese",
+      "price_level": 1,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Lunch-only Mouraria spot where family-sized portions arrive on frying pans — only open weekday lunchtimes and always packed with construction workers and neighbourhood regulars.",
+      "signature_dish": null,
+      "lat": 38.7161038,
+      "lng": -9.1349389,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Zé da Mouraria"
+    },
+    {
+      "id": 48,
+      "name": "Zé dos Cornos",
+      "neighbourhood": "Mouraria",
+      "cuisine": "Traditional Portuguese",
+      "price_level": 1,
+      "language_pool": "en",
+      "confidence_tier": "B",
+      "sources": [
+        "src-ola-daniela"
+      ],
+      "open_status_check": true,
+      "quote": "Charcoal-grilled ribs and paper tablecloths in Mouraria — old-school, cash-only, and reliably excellent in a neighbourhood that has seen a lot of change around it.",
+      "signature_dish": "charcoal-grilled ribs",
+      "lat": 38.7141386,
+      "lng": -9.1361732,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Restaurante Zé Dos Cornos"
+    }
+  ],
+  "city_slug": "lisbon-portugal",
+  "built": "2026-04-13"
+}

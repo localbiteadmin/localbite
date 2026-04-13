@@ -1,0 +1,35 @@
+{
+  "combination": 1,
+  "city": "Lisbon",
+  "country": "Portugal",
+  "total": 48,
+  "found": 40,
+  "hit_rate_pct": 83,
+  "nominatim": 37,
+  "here": 0,
+  "photon": 3,
+  "already": 0,
+  "not_found": 8,
+  "high_confidence": 34,
+  "medium_confidence": 6,
+  "verify_recommended": 6,
+  "manual_required": 8,
+  "not_found_names": [
+    "Vibe",
+    "Arkhe",
+    "Bichomau",
+    "Capsule Neo Bistro",
+    "Gancho",
+    "Skizzo",
+    "Vida de Tasca",
+    "Yōso"
+  ],
+  "medium_names": [
+    "À Costa",
+    "Acarajé da Carol",
+    "Café Tati",
+    "Essencial",
+    "Gunpowder",
+    "O Maravilhas"
+  ]
+}
