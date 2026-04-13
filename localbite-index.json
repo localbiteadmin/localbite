@@ -106,11 +106,12 @@
       "pipeline": "localbite-v6",
       "built": "2026-04-13",
       "restaurant_count": 34,
-      "both_pool_count": 3,
+      "both_pool_count": 0,
       "source_count": 7,
-      "description": "52 restaurants from 8 named sources, all English. Supplementary pass 2026-04-02 added 7 Caribbean and Italian restaurants from NOW Toronto and Madame Marie.",
+      "description": "34 restaurants from 5 active sources, all English. Sources: Madame Marie fall + summer 2025, Toronto Life Michelin 2025, The Curious Creature, Canada's 100 Best. v6 fresh run; Toronto Life annual list 403-blocked.",
       "file": "localbite-toronto-2023-2026.json",
-      "status": "complete"
+      "status": "complete",
+      "multi_source_count": 3
     },
     {
       "city": "Seville",
