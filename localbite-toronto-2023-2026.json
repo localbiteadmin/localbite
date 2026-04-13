@@ -943,11 +943,11 @@
       "opening_year": 2025,
       "open_status_check": false,
       "flagged": false,
-      "lat": 43.7792944,
-      "lng": -79.363841,
-      "geo_source": "nominatim",
-      "geo_confidence": "high",
-      "geo_matched_name": "Dental Office Dr. Ayla Goral"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "id": "r031",
@@ -1003,11 +1003,11 @@
       "opening_year": 2024,
       "open_status_check": true,
       "flagged": false,
-      "lat": 43.6475702,
-      "lng": -79.4027106,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
-      "geo_matched_name": "Bovine Sex Club"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "id": "r011",
@@ -1192,11 +1192,11 @@
       "opening_year": 2024,
       "open_status_check": true,
       "flagged": false,
-      "lat": 43.7040768,
-      "lng": -79.3886527,
-      "geo_source": "nominatim",
-      "geo_confidence": "high",
-      "geo_matched_name": "Daphne’s Antioch Café Breakfast & Lunch"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "id": "r026",
@@ -1223,11 +1223,11 @@
       "opening_year": 2024,
       "open_status_check": true,
       "flagged": false,
-      "lat": 43.6782932,
-      "lng": -79.3489107,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
-      "geo_matched_name": "Estiatorio Soulas"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "id": "r027",
@@ -1283,11 +1283,11 @@
       "opening_year": 2025,
       "open_status_check": false,
       "flagged": false,
-      "lat": 43.6464544,
-      "lng": -79.4071343,
-      "geo_source": "nominatim",
-      "geo_confidence": "high",
-      "geo_matched_name": "Harlem Underground"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "name": "Hawker",
@@ -1420,11 +1420,11 @@
       "opening_year": 2025,
       "open_status_check": false,
       "flagged": false,
-      "lat": 43.7040768,
-      "lng": -79.3886527,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
-      "geo_matched_name": "Daphne’s Antioch Café Breakfast & Lunch"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "name": "Makilala",
@@ -1606,11 +1606,11 @@
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": 43.6743587,
-      "lng": -79.3966575,
-      "geo_source": "nominatim",
-      "geo_confidence": "high",
-      "geo_matched_name": "Osteria Giulia"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "name": "Petros82",
@@ -1866,11 +1866,11 @@
       "opening_year": null,
       "open_status_check": false,
       "flagged": false,
-      "lat": 43.7080623,
-      "lng": -79.3758606,
-      "geo_source": "photon",
-      "geo_confidence": "medium",
-      "geo_matched_name": "Just Chicken Portuguese BBQ"
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
     },
     {
       "name": "The Berczy Tavern",
