@@ -1,0 +1,154 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Toronto
+COUNTRY: Canada
+CITY_SLUG: toronto-canada
+CITY_TYPE: single-language
+LANGUAGE_PRIMARY: English
+LANGUAGE_CODES: EN
+SEARCH_LANGUAGES: English
+
+YEAR_RANGE: 2023-2026
+
+SEARCH_ANGLE_EXAMPLES:
+- "best new restaurants Toronto Canada food writer local guide 2026"
+- "Toronto restaurant recommendations food critic independent guide 2025"
+- "best restaurants Toronto neighbourhood guide local writer 2026"
+- "new restaurant openings Toronto 2025 food journalist review"
+- "best restaurants Kensington Market Toronto food writer 2026"
+- "best restaurants Little Portugal Toronto food guide 2025"
+- "best restaurants Scarborough Toronto food writer 2026"
+- "best restaurants East End Toronto food critic recommendations 2025"
+
+SOURCE_EXAMPLES:
+- Toronto food media: Toronto Life, Foodism CA, NOW Toronto,
+  The Globe and Mail food section, Toronto Star food section,
+  blogTO food, Eat North, Local Love TO, Post City Toronto,
+  The Walrus food writing
+- Independent food writers and bloggers based in Toronto:
+  Sherman Chan (Chowtimes), 10tation, TO Food Guide,
+  Dished Toronto, The Merry Widow, Madame Marie (madamemarie.co)
+- National Canadian food media with strong Toronto coverage:
+  Maclean's food, enRoute magazine food section
+
+DIRECT_FETCH_SOURCES:
+These sources are fetched directly in Phase 0 before any searches.
+Known high-quality independent Toronto sources confirmed working
+in the previous Toronto pipeline run.
+- https://www.torontolife.com/food/ — Toronto Life food section
+  (EN independent city magazine; strong named-critic track record;
+  check for 2024–2026 restaurant content)
+- https://nowtoronto.com/food-and-drink/ — NOW Toronto food section
+  (EN independent alternative weekly; confirmed active 2025;
+  writers include Keema Lesesne, Raymond Cua)
+- https://madamemarie.co — Madame Marie / Mme. M.
+  (EN independent Toronto food blogger; confirmed active 2025;
+  seasonal Toronto restaurant guides)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+- blogTO — operates commercial event listings and sponsored content
+  alongside editorial. Check individual articles for named author
+  and editorial independence before accepting.
+- enRoute — Air Canada's in-flight magazine. Travel-adjacent
+  publication; count as secondary source.
+
+SECONDARY_SOURCES: Condé Nast Traveller, Lonely Planet,
+  enRoute (Air Canada), The Globe and Mail (national coverage),
+  Toronto Star (general news — food section acceptable if named critic)
+
+KNOWN_PROBLEMATIC_URLS:
+- yelp.com, tripadvisor.com, opentable.com — aggregators, exclude
+- blogto.com — check carefully for named author; reject if no byline
+
+PUBLISHER_CONCENTRATION_WARNING:
+- Foodism CA — held 53% of the previous Toronto pack (24 of 45
+  restaurants from Foodism sources). The publisher concentration
+  cap MUST fire if Foodism exceeds 30% of Tier A + Tier B entries.
+  Actively seek non-Foodism sources. Foodism articles are acceptable
+  but must not dominate. Maximum 2 Foodism articles in final pool.
+
+KNOWN_SOURCES_TO_DEPRIORITISE:
+- Foodism CA — strong publication but over-represented in previous
+  run. Accept maximum 2 Foodism articles. Prioritise other publishers.
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Downtown Core, Entertainment District, King West, Queen West,
+Ossington, Dundas West, Little Portugal, Little Italy (College St),
+Kensington Market, Chinatown, Annex, Yorkville, Rosedale,
+Leslieville, Riverside, Distillery District, Corktown,
+St. Lawrence Market area, Greektown (Danforth), Little India
+(Gerrard), Bloor West Village, Roncesvalles, Junction,
+Weston, Etobicoke (if writer explicitly frames as Toronto dining),
+Scarborough (if writer explicitly frames as Toronto dining),
+North York (if writer explicitly frames as Toronto dining),
+East York
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Mississauga, Brampton, Markham, Richmond Hill, Oakville, Burlington,
+Hamilton, or any location described as "outside Toronto", "day trip
+from Toronto", "near Toronto", Greater Toronto Area as a region
+distinct from Toronto proper. Exclude any restaurant explicitly
+described as being in another Ontario city.
+
+PRICE_CURRENCY: CAD (Canadian Dollar)
+PRICE_LEVELS:
+- 1 = under CAD $20 pp (budget / casual)
+- 2 = CAD $20–50 pp (mid-range)
+- 3 = CAD $50–100 pp (upscale)
+- 4 = over CAD $100 pp (fine dining)
+
+OUTPUT_RAW: ./localbite-toronto-raw.json
+OUTPUT_FINAL: ./localbite-toronto-2023-2026.json
+OUTPUT_WORKING: ./localbite-toronto-working.json
+OUTPUT_SEARCH_LOG: ./localbite-toronto-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-toronto-search-plan.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 2 — PIPELINE ENGINE
+Concatenate localbite-prompt-v6-template.txt after this file
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IMPORTANT CONTEXT — PREVIOUS TORONTO RUN:
+A previous Toronto pipeline run (v5, March 2026) produced 52
+restaurants from 8 sources. This is a FRESH run — do not reference
+or reuse the previous output. Find sources independently. The previous
+run's sources are listed below only to inform Phase 0 and Phase 1B
+writer-first queries.
+
+Previous sources confirmed working:
+- Foodism CA / Taylor Newlands (EN) — best-restaurants guide 2026
+- Foodism CA / Betty Binon (EN) — best-new-restaurants 2026
+- Foodism CA / Sherman Chong (EN) — best-new-restaurants summer 2025
+- Madame Marie / Mme. M. (EN) — fall 2025, summer 2025, restaurant review
+- NOW Toronto / Keema Lesesne (EN) — Caribbean dining guide 2025
+- NOW Toronto / Raymond Cua (EN) — Michelin guide 2025
+
+Previous run known issues:
+- Foodism dominated at 53% of pack — publisher concentration cap
+  did not fire correctly. This run MUST apply the cap strictly.
+- No both-pool possible (single-language city) — multi-source
+  entries are the cross-validation signal. Actively seek sources
+  that overlap with each other.
+- Writer profiles contained pipeline internals — writer_profile
+  field is user-facing, never include fetch quality or tier data.
+
+Writer names confirmed for Phase 1B from previous run:
+Taylor Newlands, Betty Binon, Sherman Chong, Mme. M., Keema Lesesne,
+Raymond Cua
+
+Goal for this run: diversify beyond Foodism. Actively seek Toronto
+Life, NOW Toronto (non-Michelin coverage), blogTO (if named author),
+Eat North, Local Love TO, Toronto Star food section, Globe and Mail
+food section. Target minimum 3 non-Foodism primary sources.
+
+SINGLE-LANGUAGE CITY NOTES:
+Toronto is a single-language (EN) city. The both-pool metric does
+not apply. Cross-validation signal comes from multi-source entries
+(same restaurant appearing in 2+ independent sources). Tier A is
+assigned to restaurants appearing in 2+ independent sources.
+language_pool for all entries should be "en".
+
+[APPEND localbite-prompt-v6-template.txt HERE]

@@ -1,0 +1,126 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Lisbon
+COUNTRY: Portugal
+CITY_SLUG: lisbon-portugal
+CITY_TYPE: multilingual-european
+LANGUAGE_PRIMARY: Portuguese
+LANGUAGE_CODES: PT
+SEARCH_LANGUAGES: English, Portuguese
+
+YEAR_RANGE: 2023-2026
+
+SEARCH_ANGLE_EXAMPLES:
+- "best restaurants Lisbon Portugal food writer local guide 2026"
+- "melhores restaurantes Lisboa Portugal guia gastronomico 2026"
+- "food writers Lisbon Portugal local guide recommendations 2025"
+- "críticos gastronomia Lisboa Portugal escritores locais 2025"
+- "restaurantes Mouraria Lisboa recomendações guia local 2026"
+- "restaurantes Bairro Alto Lisboa guia gastronómico 2025"
+- "restaurantes Intendente Lisboa onde comer 2025"
+- "restaurantes Marvila Lisboa guia 2026"
+
+SOURCE_EXAMPLES:
+- Portuguese food media: Mesa Marcada (Miguel Pires), Observador
+  gastronomia, Público/Fugas, Sábado, Evasões, Visão, Wine with Spirit,
+  Boa Cama Boa Mesa (Expresso supplement), Jornal de Notícias,
+  Time Out Lisboa (PT edition)
+- English food media: Culinary Backstreets, The Guardian, Eater,
+  Condé Nast Traveller, The Telegraph, Ola Daniela
+- Local food bloggers writing in Portuguese or English with
+  documented Lisbon residency or regular coverage
+- Expat food writers based in Lisbon
+
+DIRECT_FETCH_SOURCES:
+These sources are fetched directly in Phase 0 before any searches.
+They are known high-quality independent sources confirmed working
+in the previous Lisbon pipeline run.
+- https://mesamarcada.com — Mesa Marcada / Miguel Pires (PT
+  independent food critic; confirmed active March 2026; check for
+  Lisbon-specific content 2023–2026)
+- https://culinarybackstreets.com/city-guides/lisbon/ — Culinary
+  Backstreets Lisbon (EN independent food writing platform;
+  confirmed active January 2026; multiple named writers)
+- https://observador.pt/seccao/lifestyle/gastronomia/ — Observador
+  gastronomia section (PT independent digital newspaper; confirmed
+  active September 2025; writer Carolina Sobral)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+- Time Out Lisboa — operates Time Out Market Lisboa at Mercado da
+  Ribeira. Disclose in writer profile. Do not reject —
+  INCLUDE with ⚠ coi flag.
+
+SECONDARY_SOURCES: Condé Nast Traveller, Lonely Planet,
+  Time Out (EN edition), The Guardian, The Telegraph
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+- Observador individual article URLs with paywall — use section
+  homepage https://observador.pt/seccao/lifestyle/gastronomia/
+  for Phase 0 fetch, not individual article URLs
+
+KNOWN_SOURCES_TO_EXCLUDE:
+- Observador individual article URLs — paywall blocks extraction
+  at article level; section homepage fetch works for discovery only
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Alfama, Mouraria, Bairro Alto, Chiado, Baixa, Intendente, Arroios,
+Avenidas Novas, Belém, Alcântara, Santos, Príncipe Real, Campo de
+Ourique, Estrela, Lapa, Alvalade, Beato, Marvila, Parque das Nações,
+Almada (CONDITIONAL: include only if the writer explicitly describes
+it as part of the Lisbon dining scene — same rule as Gaia for Porto)
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Sintra, Cascais, Estoril, Setúbal, Évora, Porto, Algarve, or any
+location described as "day trip from Lisbon", "outside Lisbon",
+"near Lisbon", or another Portuguese city. Exclude Porto entirely.
+
+PRICE_CURRENCY: EUR (Euro)
+PRICE_LEVELS:
+- 1 = under €15 pp (budget / tasca / taberna)
+- 2 = €15–40 pp (mid-range)
+- 3 = €40–80 pp (upscale)
+- 4 = over €80 pp (fine dining)
+
+OUTPUT_RAW: ./localbite-lisbon-raw.json
+OUTPUT_FINAL: ./localbite-lisbon-2023-2026.json
+OUTPUT_WORKING: ./localbite-lisbon-working.json
+OUTPUT_SEARCH_LOG: ./localbite-lisbon-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-lisbon-search-plan.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 2 — PIPELINE ENGINE
+Concatenate localbite-prompt-v6-template.txt after this file
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IMPORTANT CONTEXT — PREVIOUS LISBON RUN:
+A previous Lisbon pipeline run (v5, Strategy C, March 2026) produced
+36 restaurants from 5 sources. This is a FRESH run — do not reference
+or reuse the previous output. Find sources independently. The previous
+run's sources are listed below only to inform Phase 0 and Phase 1B
+writer-first queries.
+
+Previous sources confirmed working:
+- Mesa Marcada / Miguel Pires (PT) — mesamarcada.com — ✓ fetchable
+- Culinary Backstreets / Célia Pedroso, Austin Bush (EN) — ✓ fetchable
+- The Guardian / Célia Pedroso (EN) — secondary — ✓ fetchable
+- Ola Daniela / Daniela Sunde-Brown (EN) — ✓ fetchable
+- Observador / Carolina Sobral (PT) — section homepage fetchable,
+  individual articles paywalled
+
+Previous sources that failed or were inaccessible:
+- Observador individual article URLs — paywall
+- Any source returning under 2,000 chars via Jina
+
+Writer names confirmed for Phase 1B from previous run:
+Miguel Pires, Célia Pedroso, Carolina Sobral, Daniela Sunde-Brown
+
+Goal for this run: find at least 2 new PT sources not in the previous
+run, and expand the restaurant count beyond 36. The previous run had
+a structurally thin PT pool — actively seek additional PT voices in
+Phase 1B.
+
+[APPEND localbite-prompt-v6-template.txt HERE]
