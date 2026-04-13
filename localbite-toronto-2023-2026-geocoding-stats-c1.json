@@ -1,0 +1,35 @@
+{
+  "combination": 1,
+  "city": "Toronto",
+  "country": "Canada",
+  "total": 66,
+  "found": 58,
+  "hit_rate_pct": 88,
+  "nominatim": 5,
+  "here": 0,
+  "photon": 5,
+  "already": 48,
+  "not_found": 8,
+  "high_confidence": 52,
+  "medium_confidence": 6,
+  "verify_recommended": 6,
+  "manual_required": 8,
+  "not_found_names": [
+    "Aera",
+    "Animl Steakhouse and Cocktail Den",
+    "Bernhardt's",
+    "Bonito's",
+    "Casa Morales",
+    "Frenchy Bar et Brasserie",
+    "Linny's",
+    "Mott 32"
+  ],
+  "medium_names": [
+    "Oro Luxury Dining",
+    "Ricky + Olivia",
+    "Blue Bovine",
+    "Estiatorio Milos Toronto",
+    "Lunch Lady",
+    "Takja BBQ"
+  ]
+}
