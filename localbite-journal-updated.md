@@ -2564,3 +2564,285 @@ A city is not done until: pipeline complete → geocoding complete → viewer re
 - [ ] Consider Guía Repsol and Academia Gastronómica (Ignacio Luque) for Málaga v7 — best articles dated 2021, evaluate widening year range
 
 ---
+
+## Session — 2026-04-13 (Technical Debt Clearance + Lisbon v6 + Toronto v5/v6 Merge)
+
+### Overview
+
+Full-day session covering: technical debt clearance (pipeline readme, map pin language, v6 template fixes), discovery that the geocoding backlog was already clear, Lisbon v6 pipeline run, Toronto v6 pipeline run, Toronto v5/v6 merge, CENTROIDS namespace collision fix, and extensive false positive geocoding cleanup for both cities.
+
+**Session goals:**
+1. Clear technical debt items (pipeline readme, map pin language, template fixes)
+2. Geocode outstanding cities (Lisbon, Valencia, Seville, Córdoba, Granada)
+3. Run Lisbon and Toronto v6 pipelines
+4. Get both cities live and rendering correctly on mobile
+
+---
+
+### Technical Debt Items Completed
+
+| Item | Action | Commit |
+|------|--------|--------|
+| `--dangerously-skip-permissions` + token capture procedure | Added to pipeline readme with benchmark guidance | 02efdb7 |
+| Map pin language | "Neighbourhood location" → "Approximate location" (index.html line 1878) | 02efdb7 |
+| Pre-geocode check script | `localbite-pre-geocode-check.sh` created and committed | 02efdb7 |
+| v6 template — REVIEW_MODE: BRIEF | Inserted after opening paragraph (line 148) | 2585b74 |
+| v6 template — JSON STRUCTURE RULE | Inserted after JSON schema block (line 756) | 2585b74 |
+
+**Notable finding — v6 JSON schema:** The v6 template already had `city` and `country` at top level. The meta-nesting issue was introduced at pipeline runtime, not in the template. The JSON STRUCTURE RULE note was added to make the instruction explicit and prevent future drift.
+
+---
+
+### Geocoding Backlog — Already Clear
+
+A fleet-wide audit revealed all cities were already geocoded from previous sessions. The journal's outstanding items list was stale on this point.
+
+| City | Geocoded | Null | Status |
+|------|----------|------|--------|
+| Barcelona v6 | 53/86 | 33 | ✅ Done (April 8) |
+| Valencia v6 | 33/47 | 14 | ✅ Done (April 9) |
+| Seville | 45/61 | 16 | ✅ Done (April 9) |
+| Córdoba | 29/35 | 6 | ✅ Done (April 9) |
+| Granada | 12/15 | 3 | ✅ Done (April 9) |
+| Toronto | 51/52 | 1 | ✅ Done (March 31) |
+| Lisbon | 36/36 | 0 | ✅ Done (March 29, HERE coords replaced) |
+| Porto | 41/53 | 12 | ✅ Done (April 10) |
+| Málaga | 16/23 | 7 | ✅ Done (April 10) |
+
+---
+
+### Lisbon v6 Pipeline Run
+
+**Prompt:** `localbite-prompt-v6-lisbon.txt` (Part 1 + template)
+**Output file:** `localbite-lisbon-2023-2026.json`
+**Token count:** Not captured — completion banner scrolled past
+**Context limit hit:** Yes — mid-Phase 2. Recovered with `/compact` + Phase 3 instruction
+
+**Sources (6):**
+
+| Publication | Writer | Language | Type | Date | Found via |
+|------------|--------|----------|------|------|-----------|
+| Mesa Marcada | Miguel Pires | PT | Primary | 2025-03-08 | Phase 0 ✓ |
+| Culinary Backstreets | Célia Pedroso / Austin Bush | EN | Primary ⚠coi | 2026-01-30 | Phase 0 ✓ |
+| Ola Daniela | Daniela Sunde-Brown | EN | Primary | 2024-11-30 | Phase 1 |
+| The Infatuation | Rita Geraldes | EN | Primary | 2023-07-24 | Phase 1 |
+| NiT | Eva Reimão / Catarina Simões | PT | Primary | 2025-07-04 | Phase 1 — new discovery |
+| Time Out Lisbon EN | Editorial team | EN | Secondary ⚠coi | 2026-02-11 | Phase 1 |
+
+**Results:**
+
+| Metric | v5 (March 2026) | v6 (April 2026) |
+|--------|----------------|----------------|
+| Restaurants | 36 | 48 |
+| Sources | 5 | 6 |
+| Both-pool | 0 | 1 (Vibe) |
+| Geocoded | 36/36 (100%) | 35/48 (73%) |
+| Tier A | 2 | 11 |
+| PT pool restaurants | 10 | 2 |
+| open_status_check | 0 | 27 |
+
+**Both-pool entry:** Vibe (Chiado) — Ola Daniela EN + NiT PT, different publishers ✓
+
+**User removals (7):** BouBou's (chef departure April 2026), Brilhante, Hachi Kare-Ya, Kefi Greek Bistro, Zula Bistro (concentration cap × 5), SEM ("last nights" closure signal), Ponto Final (Almada conditional not satisfied)
+
+**Geocoding — false positives nulled (5):**
+- Afonso dos Leitões → outside bounding box (lat 38.876)
+- Essencial → beauty salon
+- Gunpowder → gunpowder factory
+- O Maravilhas → street square
+- À Costa → motorway
+
+**Post-geocoding state:** 35/48 (73%) — 13 null (8 not found + 5 false positives)
+
+**PT pool regression noted:** v5 had 10 PT-pool restaurants; v6 has only 2. Observador 404 and Público/Fugas 451 permanently blocked both major PT sources. NiT adds 1 PT entry only (ratings-style quotes mostly scored Tier C). This is a structural limitation of the current Jina-accessible PT landscape.
+
+**JSON structure fix:** Pipeline output had `city_slug` and `built` missing (used `generated` instead). Fixed manually before index update.
+
+**CENTROIDS collision fix:** Lisbon's `Baixa` centroid (38.7101, -9.1370) was being overwritten by Porto's `Baixa` centroid (41.1460, -8.6110) in the flat CENTROIDS namespace. Fixed by:
+1. Renaming Lisbon restaurant neighbourhood from "Baixa" → "Baixa (Lisboa)"
+2. Adding `'Baixa (Lisboa)': [38.7101, -9.1370]` to CENTROIDS
+3. Keeping Porto's `'Baixa'` key unchanged
+
+---
+
+### Toronto v6 Pipeline Run
+
+**Prompt:** `localbite-prompt-v6-toronto.txt` (Part 1 + template)
+**Output file:** `localbite-toronto-2023-2026.json` (v6 only, later merged)
+**Token count:** Not captured
+**API 500 errors:** Multiple mid-run. Session cleared with `/clear` and restarted cleanly.
+
+**Phase 0:** Toronto Life (403), NOW Toronto (CAPTCHA) — both blocked. Only Madame Marie passed.
+
+**Sources (7 in v6 run):**
+- Madame Marie ×2 (fall + summer 2025) ✓
+- Toronto Life Michelin 2025 ✓
+- The Curious Creature / Erin Nicole Davis ✓ — new discovery
+- Canada's 100 Best Restaurants 2025 ✓ (secondary)
+- Toronto Life Best New Restaurants 2025 ✓
+- NOW Toronto / Keema Lesesne (undated)
+
+**Results (v6 standalone):** 34 restaurants, 3 Tier A, 31 Tier B, 7/34 (21%) geocoded
+
+**Geocoding regression analysis:** v5 achieved 98% geocoding via 33 manual lookups. v6 achieved only 21% because: (1) no manual lookups policy, (2) v6 pack dominated by 2024–2025 new openings not yet in OSM, (3) v5 Foodism articles covered established restaurants with OSM presence for years.
+
+---
+
+### Toronto v5/v6 Merge
+
+**Decision:** Rather than replacing v5 with the weaker v6 standalone, merge both packs into a single canonical pack combining v5's geocoding and source depth with v6's new sources and Foodism cap enforcement.
+
+**Merge script:** `localbite-toronto-merge.js` — written and committed to repo.
+
+**Merge logic:**
+- v5 base: 52 restaurants → 47 after Foodism cap removals (5 removed)
+- 14 overlap restaurants: v5 entry kept, v6 sources merged in
+- 19 v6-only restaurants added
+- Sources deduped: Madame Marie publication name mismatch fixed post-merge
+- Output: 66 restaurants, 12 sources
+
+**Foodism cap removals (5):** Taverne Bernhardt's, Yan Dining Room, Lyla, Morrellina's, Sushi Yugen — all had quotes at or below 15-word minimum.
+
+**Overlap source merges (14):** Akin, Arbequina, Bisteccheria Sammarco (v6: "Sammarco" — name variant resolved), Bar Prima, DaNico, Liliana, louf, Bar Eugenie, Golden Horseshoe Barbecue, N.L. Ginzburg, Occhiolino, Tutto Panino, Zia's Place, The Frederick — all gained additional source IDs from v6.
+
+**Final merged pack results:**
+
+| Metric | v5 | v6 standalone | Merged |
+|--------|----|----|--------|
+| Restaurants | 52 | 34 | 66 |
+| Sources | 8 | 7 | 12 |
+| Geocoded | 51/52 (98%) | 7/34 (21%) | 50/66 (76%)* |
+| Multi-source | 12 | 3 | 22 |
+| Foodism single-source % | 53% | 0% | 24% |
+| open_status_check | 0 | 9 | 7 |
+
+*After false positive nulling
+
+**False positives nulled in merged pack (8):** Ayla (dentist), Blue Bovine (Bovine Sex Club), Daphne (wrong café), Estiatorio Milos (wrong restaurant), Harlem (Harlem Underground), Lunch Lady (wrong café), Osteria Giulia (wrong location), Takja BBQ (wrong business)
+
+**Index fix:** `both_pool_count` was incorrectly set to 22 by index-update script (counted multi-source as both-pool). Fixed to `both_pool_count: 0`, `multi_source_count: 22`.
+
+**v5 files retained:** `localbite-toronto-2025-2026.json` and `localbite-lisbon-2025-2026.json` kept as archived references — not removed from repo.
+
+---
+
+### Pipeline Source Failures — Permanent
+
+| Source | City | Failure | Action |
+|--------|------|---------|--------|
+| Observador | Lisbon | 404 — 4th consecutive failure | Remove from all PT prompts permanently |
+| Público/Fugas | Lisbon | 451 blocked | Add to KNOWN_PROBLEMATIC_URLS for PT cities |
+| Toronto Life | Toronto | 451/403 on all URL patterns | Firecrawl test recommended |
+| NOW Toronto | Toronto | CAPTCHA block | Firecrawl test recommended |
+
+---
+
+### Commits This Session
+
+| Commit | Description |
+|--------|-------------|
+| 02efdb7 | Pipeline readme, map pin fix, pre-geocode check script |
+| 2585b74 | v6 template — REVIEW_MODE BRIEF + JSON STRUCTURE RULE |
+| efc4419 | Lisbon and Toronto v6 pipeline prompts |
+| 88aabbc | Lisbon v6 pipeline run + geocoding + viewer (48 restaurants) |
+| b20b08f | Fix missing null coordinate fields in Lisbon JSON |
+| a5be8af | Fix Baixa CENTROIDS collision between Lisbon and Porto |
+| a9b891f | Toronto merged pack (66 restaurants) — post-pipeline commit |
+| 02f9a7d | Null 8 Toronto false positive coordinates; fix index both_pool count |
+| 069d941 | Toronto merge script, geocoding stats, fleet summary |
+
+---
+
+### Key Findings — 2026-04-13
+
+1. **The geocoding backlog was already clear.** All 9 non-new cities had been geocoded in previous sessions. The journal's outstanding items list was significantly stale. Future sessions should verify current state before planning work.
+
+2. **v5 Toronto's 98% geocoding rate was achieved by 33 manual lookups, not automation.** Nominatim + Photon only found 18 restaurants. The "no manual lookups" policy adopted after March 31 is what caused the v6 geocoding regression, not the geocoder itself. For flagship cities like Toronto, a manual lookup exception policy is warranted.
+
+3. **NiT (Eva Reimão) is the strongest new Lisbon PT source discovery.** Previously unknown to the pipeline, NiT's 169 melhores restaurantes Lisboa (July 2025) was found via Phase 1 search. It's ratings-style with thin quotes so most entries scored Tier C, but it produced the first Lisbon both-pool entry (Vibe).
+
+4. **Lisbon PT pool regressed from v5 to v6.** v5 had 10 PT-pool restaurants; v6 has 2. Observador (404) and Público/Fugas (451) are both permanently blocked. The Lisbon PT food writing landscape is now structurally inaccessible via Jina. A Firecrawl test or direct source outreach is needed before Lisbon v3.
+
+5. **Toronto Life is the highest-value blocked source in the fleet.** 451/403 on all URL patterns tried. As Toronto's flagship food publication its absence structurally limits any Toronto pipeline run. Firecrawl test is the recommended next step before Toronto v3.
+
+6. **Madame Marie publication name inconsistency caused source dedup failure.** v5 stored "Madame Marie (madamemarie.co)", v6 stored "Madame Marie". String comparison failed, producing 5 Madame Marie source entries. Fixed post-merge with a remapping script. Future pipelines should normalise publication names against a registry at extraction time.
+
+7. **CENTROIDS flat namespace collision between Lisbon and Porto Baixa.** Porto's `'Baixa'` centroid (41.1460, -8.6110) overwrote Lisbon's (38.7101, -9.1370), causing Lisbon restaurants with neighbourhood "Baixa" to pin in Porto. Fixed by renaming Lisbon's neighbourhood to "Baixa (Lisboa)" in the JSON and adding a matching CENTROIDS key. This pattern will recur for any neighbourhood name shared between cities — Centro Histórico, Medina, Chiado, etc.
+
+8. **The v5/v6 merge approach is replicable.** The `localbite-toronto-merge.js` script handles: Foodism cap enforcement, name variant resolution, source dedup with publication name normalisation, overlap source merging, and v6-only restaurant appending. Can be adapted for future city merges with minimal changes.
+
+9. **API 500 errors interrupted Toronto pipeline mid-run.** Clearing the session with `/clear` and restarting recovered the run cleanly. The restart correctly detected existing output files and rewrote the search plan. No data was lost.
+
+10. **open_status_check is now a significant fleet-wide concern.** Seville has 29 restaurants (48% of pack) from 2023 sources unverified for closure. Barcelona has 11 from December 2024. A systematic open_status_check pass is needed before either city is widely shared.
+
+11. **Token capture procedure still being missed.** Both Lisbon and Toronto completion banners were not captured. The procedure is documented in the pipeline readme but needs to become instinctive. Suggestion: set a phone reminder to "read banner" before touching the keyboard after a pipeline completes.
+
+---
+
+### Decisions Made
+
+- **Lisbon v6 is the canonical Lisbon pack** — supersedes v5 for all future viewer references
+- **Toronto merged pack (v5v6-merge) is canonical** — v5 and v6 standalone files retained as archives
+- **Observador removed** from all future PT city prompts permanently
+- **Público/Fugas added** to KNOWN_PROBLEMATIC_URLS for all PT cities
+- **No manual lookups policy has a Toronto exception** — for flagship cities where geocoding rate falls below 50%, manual lookups are warranted
+- **Firecrawl tests recommended** for Toronto Life and Mesa Marcada before next EN/PT city runs
+- **CENTROIDS collision pattern documented** — any neighbourhood name shared between cities must use city-prefixed keys (e.g. "Baixa (Lisboa)" vs "Baixa")
+- **v5 archive files retained** — `localbite-toronto-2025-2026.json` and `localbite-lisbon-2025-2026.json` kept as reference
+
+---
+
+### Files Produced / Modified
+
+| File | Change |
+|------|--------|
+| `localbite-pipeline-readme.md` | New — comprehensive pipeline guide with --dangerously-skip-permissions, token capture, benchmark guidance |
+| `localbite-pre-geocode-check.sh` | New — pre-geocoding verification script |
+| `localbite-prompt-v6-template.txt` | Updated — REVIEW_MODE BRIEF + JSON STRUCTURE RULE |
+| `localbite-prompt-v6-lisbon-part1.txt` | New |
+| `localbite-prompt-v6-lisbon.txt` | New |
+| `localbite-prompt-v6-toronto-part1.txt` | New |
+| `localbite-prompt-v6-toronto.txt` | New |
+| `localbite-lisbon-2023-2026.json` | New — 48 restaurants, v6 |
+| `localbite-lisbon-raw.json` | New |
+| `localbite-lisbon-audit.txt` | New |
+| `localbite-lisbon-search-log.txt` | New |
+| `localbite-lisbon-search-plan.txt` | New |
+| `localbite-lisbon-2023-2026-geocoded-backup.json` | New |
+| `localbite-lisbon-2023-2026-geocoding-stats-c1.json` | New |
+| `localbite-toronto-2023-2026.json` | New — 66 restaurants, v5v6-merge |
+| `localbite-toronto-merge.js` | New — merge script |
+| `localbite-toronto-2023-2026-geocoding-stats-c1.json` | New |
+| `localbite-fleet-summary-2026-04-13.md` | New — comprehensive 13-city fleet summary |
+| `index.html` | Updated — Baixa (Lisboa) centroid added; Arroios + Mouraria centroids added for Lisbon |
+| `localbite-index.json` | Updated — Lisbon 48 restaurants v6; Toronto 66 restaurants v5v6-merge |
+
+---
+
+### Outstanding Items
+
+- [ ] **Token capture** — both Lisbon and Toronto completion banners missed again. Phone reminder recommended before next pipeline run.
+- [ ] **Seville open_status_check** — 29 restaurants (48% of pack) from 2023 sources. Highest data quality risk in fleet. Verify before widely sharing.
+- [ ] **Barcelona open_status_check** — 11 restaurants from December 2024 (16 months old). Verify closures.
+- [ ] **Córdoba and Granada open_status_check** — 13 restaurants combined.
+- [ ] **Firecrawl test — Toronto Life** — highest-value blocked EN source. Test before Toronto v3.
+- [ ] **Firecrawl test — Mesa Marcada** — highest-value blocked PT source. Test before Lisbon v3 or any PT city run.
+- [ ] **Lisbon PT pool** — only 2 PT-pool restaurants in v6. Observador and Público/Fugas both blocked. Research alternative PT sources (Sábado, Evasões, Visão direct URLs) before Lisbon v3.
+- [ ] **CENTROIDS namespace audit** — identify all neighbourhood names shared between cities (Centro Histórico, Medina, Chiado, El Carmen etc.) and add city-prefixed variants to prevent future collisions.
+- [ ] **Delete stale Barcelona v4 pack** — `localbite-barcelona-2025-2026.json` (52 restaurants) superseded by v6 (86 restaurants). Remove from repo.
+- [ ] **Lisbon v6 PT pool regression** — document in Lisbon research summary for v3 planning.
+- [ ] **Toronto v3 planning** — target: Toronto Life (via Firecrawl), Globe and Mail food section, Eat North as primary new sources.
+- [ ] **Valencia v2** — 39/47 restaurants have `article_date: undated`. Address in v2 rebuild.
+- [ ] **Add `--dangerously-skip-permissions` to pipeline readme** ✅ Done this session.
+- [ ] **Standardise map pin language** ✅ Done this session.
+
+## Addendum — 2026-04-13 (late session items)
+
+### Additional outstanding items agreed after initial journal entry
+
+- [ ] **Token capture — programmatic** — add `localbite-run-metrics.log` append instruction to v6 template; create log file. Replaces manual banner-reading procedure entirely. Priority 1 next session.
+- [ ] **Article title feature — all three pieces** — (1) viewer: show article date in Sources panel; (2) template: add `article_title` extraction rule; (3) backfill: run `localbite-backfill-titles.js` across all 13 live cities. Script built and ready. Priority 2 next session.
+- [ ] **Pipeline readme — manual pre-fetch workaround** — document the browser copy → pbpaste → local file approach for 451/403 blocked sources. Priority 3 next session.
+- [ ] **Firecrawl test — revised scope** — targeted Jina fallback only (not replacement). Test 3 URLs: Mesa Marcada article (JS bylines), Toronto Life article (403 bypass), Gastronostrum (422 bypass). Decision rule: 2 of 3 succeed → integrate as v7 fallback; 0-1 succeed → use manual pre-fetch instead. Free tier (500 lifetime credits) sufficient at 2-3 credits per city. Priority 4 next session.
+- [ ] **Toronto source URLs** — Toronto Life Michelin URL corrected to `torontolife.com/food/toronto-michelin-guide-2025/`. Curious Creature article confirmed dead (404) — flagged with `url_status: dead`. Both committed (cd35d31).
+- [ ] **Toronto source accessibility audit** — 10 of 12 sources confirmed accessible in browser. Foodism × 3 and Madame Marie × 3 fully accessible. NOW Toronto × 2, Toronto Life Best New, Canada's 100 Best also accessible. Toronto Life Michelin (dead) and Curious Creature (dead) flagged.
