@@ -1,59 +1,58 @@
-LOCALBITE TORONTO — PHASE 1 SEARCH PLAN
-Generated: 2026-03-29
-Total queries: 24
+LOCALBITE TORONTO — PHASE 1 SEARCH PLAN (v6 FRESH RUN)
+Generated: 2026-04-13
+Total queries planned: 30 (14 neighbourhood + 16 cross-cutting)
+Goal: diversify beyond Foodism CA — target Toronto Life, NOW Toronto,
+Eat North, Local Love TO, Globe and Mail, independent blogs.
+Publisher cap: max 2 Foodism articles in final pool.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ANGLE A — City-wide best restaurants EN (4 queries)
+PART A — NEIGHBOURHOOD QUERIES (EN, 1 per group)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-A1: "best restaurants Toronto 2025 food writer critic guide"
-A2: "Toronto best restaurants 2026 editorial list named author"
-A3: "where to eat Toronto 2025 food critic recommended"
-A4: "Toronto restaurant guide 2026 independent editorial review"
+N1: "best restaurants Downtown Core Entertainment District Toronto food writer 2025"
+N2: "best restaurants King West Queen West Toronto food critic 2025 2026"
+N3: "Ossington Dundas West Toronto restaurants food writer recommendations 2025"
+N4: "Little Portugal Little Italy College Street Toronto restaurants guide 2026"
+N5: "Kensington Market Chinatown Toronto best restaurants food critic 2025"
+N6: "Annex Yorkville Rosedale Toronto restaurants food writer 2025 2026"
+N7: "Leslieville Riverside Toronto restaurant recommendations food writer 2025"
+N8: "Distillery District Corktown St Lawrence Market Toronto restaurants 2025 writer"
+N9: "Greektown Danforth East York Toronto best restaurants food critic 2025"
+N10: "Little India Gerrard Toronto restaurant guide writer 2025 2026"
+N11: "Bloor West Village Roncesvalles Junction Toronto restaurants food writer 2025"
+N12: "Etobicoke Toronto dining restaurant guide food writer 2025"
+N13: "Scarborough Toronto best restaurants food writer named author 2025 2026"
+N14: "North York Toronto restaurant recommendations food writer 2026"
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ANGLE B — Neighbourhood-specific EN (4 queries)
+PART B — CROSS-CUTTING ANGLES
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-B1: "best restaurants King West Queen West Toronto 2025 food writer"
-B2: "Scarborough restaurant guide 2025 2026 food writer critic"
-B3: "Danforth east end Toronto best restaurants 2025 writer review"
-B4: "Annex Yorkville Toronto restaurant recommendations 2025 critic"
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ANGLE C — Writer-first (3 queries)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-C1: "Corey Mintz Toronto restaurant recommendations 2025 2026"
-C2: "Natalia Manzocco Toronto restaurant reviews 2025"
-C3: "Amy Pataki Toronto restaurant reviews 2025 2026 freelance"
+Cross-1 (City-wide, 3 queries):
+C1a: "best restaurants Toronto 2026 food writer editorial guide"
+C1b: "Toronto where to eat 2025 local food critic recommendations"
+C1c: "best new restaurants Toronto 2025 named writer annual list"
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ANGLE D — Cuisine and community (3 queries)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-D1: "best Chinese restaurants Toronto 2025 food critic review"
-D2: "best South Asian Caribbean restaurants Toronto 2025 editorial"
-D3: "Toronto diverse cuisine community restaurants 2025 food writer"
+Cross-2 (Writer-first, 3 queries — Mme. M., Taylor Newlands, Betty Binon from Phase 0 + prev run):
+C2a: "Mme M madamemarie Toronto restaurant guide best 2025 2026"
+C2b: "Taylor Newlands Toronto restaurant recommendations Foodism 2026"
+C2c: "Liza Agrba Toronto Life best restaurants 2025"
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ANGLE E — Independent blog discovery (3 queries)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-E1: "Toronto food blog independent restaurant review 2025 named writer"
-E2: "Toronto restaurant personal blog review 2025 honest opinion"
-E3: "madamemarie.co Toronto restaurant reviews 2025 2026"
+Cross-3 (Recent openings 2024-2026, 2 queries):
+C3a: "Toronto new restaurant openings 2025 must try food journalist"
+C3b: "best new restaurants Toronto opened 2026 food writer critic"
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ANGLE F — Forum and community recommendations (2 queries)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-F1: "Toronto where to eat reddit 2025 2026 local recommendations"
-F2: "Toronto food community recommendations best restaurants 2025"
+Cross-4 (Older coverage 2023-2024, 2 queries):
+C4a: "best restaurants Toronto 2023 food writer editorial"
+C4b: "Toronto restaurant guide 2024 named critic independent review"
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ANGLE G — Recent openings and new restaurants 2025-2026 (2 queries)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-G1: "best new restaurants Toronto 2025 opening food writer editorial"
-G2: "Toronto new restaurant openings 2026 must try food critic"
+Cross-5 (Awards and recognition, 2 queries):
+C5a: "Michelin Guide Toronto 2025 starred restaurants food writer reaction"
+C5b: "Canada 100 best restaurants 2025 2026 Toronto entries critic"
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ANGLE H — Awards and recognition (3 queries)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-H1: "Michelin Guide Toronto 2025 starred restaurants list"
-H2: "Canada's 100 Best Restaurants 2025 Toronto entries"
-H3: "Toronto Life best restaurants annual list 2025"
+Cross-6 (Forum and community, 2 queries):
+C6a: "Toronto restaurant recommendations local guide 2025 not tourist"
+C6b: "where locals eat Toronto food community guide 2025 2026"
+
+Cross-7 (Cuisine diversity, 2 queries):
+C7a: "best Caribbean South Asian Ethiopian restaurants Toronto food writer 2025"
+C7b: "Toronto diverse neighbourhood dining guide critic 2025 community food"
