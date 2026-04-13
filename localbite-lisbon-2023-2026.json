@@ -321,7 +321,11 @@
       ],
       "open_status_check": false,
       "quote": "Chef Mattia Stanchieri's Michelin-recommended restaurant in Chiado with no fixed menu — customers choose by course count (5 or 7), with a Thai-influenced chapter that signals an ambition beyond borders. Não há ementa tradicional.",
-      "signature_dish": null
+      "signature_dish": null,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "id": 11,
@@ -441,7 +445,11 @@
       "commercial_conflict_flag": true,
       "open_status_check": false,
       "quote": "Michelin-starred vegetarian tasting menu in Chiado — chef João Ricardo Alves serves seasonal dishes like focaccia with smoked butter, cauliflower with green apple and hazelnut, earned a star in 2025.",
-      "signature_dish": "cauliflower with green apple and hazelnut"
+      "signature_dish": "cauliflower with green apple and hazelnut",
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "id": 17,
@@ -457,7 +465,11 @@
       "commercial_conflict_flag": true,
       "open_status_check": false,
       "quote": "Cook-owner Tomás Rocha puts product first — shokupan with raw violet shrimp is the kind of precise, ingredient-led dish this small Campo de Ourique kitchen produces with quiet confidence.",
-      "signature_dish": "shokupan with raw violet shrimp"
+      "signature_dish": "shokupan with raw violet shrimp",
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "id": 18,
@@ -493,7 +505,11 @@
       ],
       "open_status_check": true,
       "quote": "Low-key fancy without torching your credit card — katsu chicken sandwich and crispy potato pancakes make this Baixa bistro one of Lisbon's most pleasant surprises for a casual lunch.",
-      "signature_dish": "katsu chicken sandwich; crispy potato pancakes"
+      "signature_dish": "katsu chicken sandwich; crispy potato pancakes",
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "id": 20,
@@ -652,7 +668,11 @@
       "commercial_conflict_flag": true,
       "open_status_check": false,
       "quote": "Chef Louise Bourrat's new venture in Alfama — chicken-cabidela arancini, beef tartare à Brás, and pointed cabbage with spicy sauce in a vibrant neo-tasca setting where two cultures meet without apology.",
-      "signature_dish": "chicken-cabidela arancini; beef tartare à Brás"
+      "signature_dish": "chicken-cabidela arancini; beef tartare à Brás",
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "id": 28,
@@ -890,7 +910,11 @@
       ],
       "open_status_check": true,
       "quote": "Ticks all the boxes of how to open a hip Lisbon restaurant — flatbread with arugula and stracciatella, buttery-charred scallops, and lobster à guilho in a Lapa space with smart design and easy prices.",
-      "signature_dish": "lobster à guilho; charred scallops"
+      "signature_dish": "lobster à guilho; charred scallops",
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "id": 40,
@@ -1005,7 +1029,11 @@
       ],
       "open_status_check": true,
       "quote": "Chef Leonor Godinho's 2024 opening in Alvalade — peak tasca energy with paper tablecloths, a handwritten daily menu, and a kitchen that treats simple ingredients with serious skill.",
-      "signature_dish": null
+      "signature_dish": null,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "id": 46,
@@ -1020,7 +1048,11 @@
       ],
       "open_status_check": false,
       "quote": "Meio escondido, próximo do Palácio das Necessidades, em Alcântara, o Yōso é um dos mais recentes exemplos de alta cozinha japonesa em Lisboa — restaurante de apenas 22 lugares com um único menu omakase com peixes da costa portuguesa, vieiras de Hokkaido e wasabi fresco.",
-      "signature_dish": "omakase with Portuguese coastal fish, Hokkaido scallops, fresh wasabi"
+      "signature_dish": "omakase with Portuguese coastal fish, Hokkaido scallops, fresh wasabi",
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
     },
     {
       "id": 47,
