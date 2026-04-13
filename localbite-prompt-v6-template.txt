@@ -145,6 +145,16 @@ from articles published or substantially updated in 2023, 2024,
 Run the full pipeline automatically. Do not stop for individual
 approvals. Pause only once at the end for a single bulk review.
 
+REVIEW_MODE: BRIEF
+In BRIEF mode, the review table and summary sections are condensed:
+- Review table: show only # | Name | Neighbourhood | Cuisine | Pool | Tier | ⚠
+  (omit Price, Sources, Source type combo columns)
+- Auto-rejected section: show total count and reasons only — no individual entries
+- Publisher concentration report: one line per publisher flagged
+- Phase 0/1B reports: one line each (count + outcome)
+- Recommended removals: list only, no extended explanation
+- Search log: include in full (not condensed)
+- Token/performance metrics: include in full
 CONTENT WINDOW NOTE:
 Articles from 2023–2024 are acceptable but require extra care:
 - Flag any restaurant from a pre-2025 source with article_date
@@ -745,6 +755,11 @@ JSON structure — FILE 2 (final):
   ]
 }
 
+JSON STRUCTURE RULE:
+Output "city", "country", "city_slug", "built", "source_recency", and "pipeline"
+as top-level fields — NOT nested under "meta" or any other parent key.
+The geocoding script reads data.city directly. If these fields are nested,
+the bounding box validation will not fire and geocoding will produce false positives.
 ════════════════════════════════════════
 FINAL SUMMARY (mandatory, present immediately before review table)
 ════════════════════════════════════════
