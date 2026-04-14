@@ -772,6 +772,22 @@ before scrolling — this data is lost if you scroll past it):
 - Queries run: [total from search log]
 - Stopping rule fired: yes/no — at query [N]
 
+METRICS LOG — mandatory final action before exiting:
+After recording the metrics above, run this node command to append
+one line to localbite-run-metrics.log:
+
+node -e "
+const fs = require('fs');
+const city = '[CITY]';
+const date = '[TODAY]';
+const line = city + ' | ' + date + ' | tokens: [Xk in / Xk out] | tools: [N] | time: [Xm Ys] | restaurants: [final count] | sources: [source count]\n';
+fs.appendFileSync('localbite-run-metrics.log', line);
+console.log('Logged:', line.trim());
+"
+
+Replace bracketed values with actuals from the banner above.
+If the banner has scrolled away use values from PIPELINE METRICS.
+
 PIPELINE METRICS:
 - Raw count / final count
 - Both-pool count and entries (strict definition applied)

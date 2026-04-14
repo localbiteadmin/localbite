@@ -1,0 +1,8 @@
+# LocalBite pipeline run metrics log
+# Format: City | Date | tokens | tools | time | restaurants | sources
+# Backfill from journal:
+Chefchaouen | 2026-03-25 | tokens: 116.5k | tools: 96 | time: 21m 54s | restaurants: 12 | sources: 5
+Marrakesh | 2026-03-22 | tokens: 127.4k | tools: ~90 | time: 19m | restaurants: 14 | sources: 5
+Barcelona v6 | 2026-04-08 | tokens: not captured | tools: not captured | time: not captured | restaurants: 86 | sources: 9
+Lisbon v6 | 2026-04-13 | tokens: not captured | tools: not captured | time: not captured | restaurants: 48 | sources: 6
+Toronto v5v6-merge | 2026-04-13 | tokens: not captured | tools: not captured | time: not captured | restaurants: 66 | sources: 12
