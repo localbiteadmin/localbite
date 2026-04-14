@@ -3172,3 +3172,299 @@ Future pipeline runs will append automatically via the node command in the templ
 *Session duration: approximately 3 hours including extended fetch strategy research*
 *Commits: e47ddc2, 5e6f199, c305c98, 29adc61, 6f687f0*
 *Fleet: 13 cities, 480 restaurants — unchanged*
+
+
+## Addendum — 2026-04-14 (product development planning)
+
+### Bottom Sheet and Cross-Navigation — Planning Complete
+
+Extended product planning session covering two backlog items: List ↔ Map cross-navigation and List view sort/layout improvements. Full build plan produced and scripted, ready to execute in next session.
+
+---
+
+### Architecture Decision — Vanilla JS retained
+
+Framework migration considered and rejected. Decision: stay in vanilla JS for the bottom sheet build. Key factors:
+
+- `cardHTML(r)` is already a standalone named function — the architectural foundation the sheet relies on exists
+- Deployment simplicity (no build step, direct GitHub Pages push) is a genuine asset worth preserving
+- The bottom sheet is buildable in vanilla JS without state management becoming unworkable
+- Migration trigger defined: if viewer reaches 2,500 lines OR a state synchronisation bug takes more than one hour to diagnose, migrate to React at that point
+
+---
+
+### Bottom Sheet — Decisions Made
+
+**Interaction model confirmed:**
+- Individual restaurant pins (teardrop) — sheet only, popup removed
+- Centroid group pins (circle) — popup only, unchanged
+- Tap-to-dismiss: overlay tap + X button + Escape key
+- Multiple pin taps — Option A: close sheet, reopen after 280ms CSS transition delay
+- List to map navigation deferred to follow-on task
+
+**18 risks assessed. Critical mitigations built into the build script:**
+- Filters visible in map view — closeSheet() added to applyFilters() — HIGH
+- maybeUpdateMap() destroys markers while sheet open — covered by same fix — HIGH
+- Body scroll lock iOS jump — overflow:hidden with documented upgrade path — MEDIUM
+- dvh unit support — CSS cascade fallback 80vh then 80dvh — LOW
+- Rapid pin tap race condition — sheetOpenTimeout with clearTimeout — LOW
+- Existing bug found and fixed: filter-clear handler missing maybeUpdateMap() call
+
+**Z-index confirmed safe:**
+- Sheet overlay: z-index 1000
+- Sheet: z-index 1001
+- Existing toasts: z-index 9999 (appear above sheet correctly)
+- Filters bar: z-index 90 (behind overlay when sheet open — correct)
+
+---
+
+### Build Script — Committed
+
+localbite-sheet-build.py committed at ac27203. Single Python script applying 10 targeted changes to index.html. All 10 target strings confirmed unique before scripting. Safe to run.
+
+| Change | What |
+|--------|------|
+| 1 | HTML: sheet overlay and bottom sheet elements |
+| 2 | CSS: all sheet styles (overlay, sheet, handle, close, content) |
+| 3 | JS: state variables + openSheet() + closeSheet() + dismiss handlers |
+| 4 | JS: marker click opens sheet, removes bindPopup() from individual pins |
+| 5 | JS: applyFilters() closes sheet before filter change |
+| 6 | JS: filter-clear closes sheet + fixes missing maybeUpdateMap() bug |
+| 7 | JS: resetMap() closes sheet first |
+| 8 | JS: view toggle handlers close sheet |
+| 9 | JS: handleFindMe() toggle-off closes sheet |
+| 10 | JS: handleFindMe() toggle-on closes sheet |
+
+---
+
+### Mobile Test Matrix — 16 Tests
+
+To run immediately after script execution:
+
+| Test | Expected |
+|------|----------|
+| Tap individual pin | Sheet slides up |
+| Tap X button | Sheet slides down |
+| Tap overlay | Sheet slides down |
+| Tap second pin while sheet open | Sheet closes, reopens 280ms later |
+| Rapid tap three pins | Only last pin's sheet opens |
+| Tap centroid pin | Popup only, no sheet |
+| Change filter while sheet open | Sheet closes, map updates |
+| Clear filters while sheet open | Sheet closes, map updates |
+| Activate proximity while sheet open | Sheet closes |
+| Deactivate proximity while sheet open | Sheet closes |
+| Switch city while sheet open | Sheet closes |
+| Switch to list while sheet open | Sheet closes |
+| Sheet content scrollable | Tall cards scroll inside sheet |
+| Sheet height on iOS | Does not extend behind address bar (dvh) |
+| Toast appears above sheet | z-index correct |
+| Filters bar behind overlay | Cannot change filters while sheet open |
+
+---
+
+### Null Neighbourhood Audit — Completed
+
+Fleet-wide: 25 null neighbourhood restaurants out of 682 total (4%). By city: Valencia 20, Marrakesh 3, Barcelona 1, Rabat 1. Valencia's 20 are the known data quality issue (v2 rebuild on backlog). 4% is well within manageable threshold — neighbourhood sort and grouped layout are both viable without waiting for data cleanup.
+
+---
+
+### Product Backlog Updates
+
+**Cross-navigation (Item 2):** Option D (bottom sheet) selected. Options B and C skipped — building a stopgap 2 cities before the 15+ city threshold is wasted effort. Bottom sheet is the right architecture for mobile-first map experience.
+
+**Sort and layout (Item 3):** Recommended build order after bottom sheet:
+1. "Most recommended" sort label — 30 min, renames current default to user-facing language
+2. Neighbourhood sort dropdown — 1 hour, data supports it (4% null)
+3. Compact card mode — 2-3 hours, highest impact for large packs (Barcelona 86, Toronto 66)
+4. Grouped by neighbourhood — after Valencia v2 cleans null problem
+
+**Price tier tooltip added to backlog:** Add tooltip to price indicator in viewer: "Price tier based on writer's description at time of article." Small viewer change, sets correct user expectation.
+
+---
+
+### Price Data — Clarification Documented
+
+Price levels (1-4) are extracted by Claude Code from source article text during pipeline runs. Three confidence tiers: explicit price mention (highest), relative descriptor such as "affordable" or "upscale" (medium), inference from signals such as cuisine type and neighbourhood (lowest). No price_confidence field exists in the JSON. Fine dining (level 4) and clear budget spots (level 1) are most reliable. Mid-range band (levels 2-3) least reliable — prose descriptions rarely distinguish €25pp from €40pp precisely. No legal concern — price is a fact, not copyrightable, and we present it as a relative signal from a dated source, not a verified current price.
+
+---
+
+### Outstanding Items — Updated Priority Order
+
+**Next session: LocalBite — Bottom Sheet and Cross-Navigation**
+
+Priority 1 — Bottom sheet build:
+- Run python3 localbite-sheet-build.py (committed at ac27203)
+- Mobile test all 16 items in test matrix
+- Fix any mobile-specific issues
+
+Priority 2 — Sort improvements (if time permits):
+- "Most recommended" label for default sort — 30 min
+- Neighbourhood sort dropdown — 1 hour
+
+Deferred from this session:
+- [ ] CENTROIDS namespace audit — shared neighbourhood names across cities
+- [ ] Seville open_status_check — 29 restaurants, highest data quality risk in fleet
+- [ ] Barcelona open_status_check — 11 restaurants, 16 months old
+- [ ] Cordoba and Granada open_status_check — 13 restaurants combined
+- [ ] Delete stale Barcelona v4 pack — localbite-barcelona-2025-2026.json
+- [ ] Valencia v2 — undated sources
+- [ ] Lisbon PT pool — find Sabado, Evasoes, Visao as replacements
+- [ ] Fes v6 upgrade — oldest pipeline in fleet (v4)
+- [ ] Article title backfill — deferred pending better extraction approach
+- [ ] Price tier tooltip — small viewer change, low priority
+- [ ] Jina/Elastic watch — monitor if Elastic moves r.jina.ai behind subscription
+
+---
+
+*Addendum covers product planning work done after main session tasks were complete*
+*Build script committed: ac27203*
+*No city data changed, no restaurant count changes*
+*Fleet: 13 cities, 480 restaurants — unchanged*
+
+
+## Addendum — 2026-04-14 (product development planning)
+
+### Bottom Sheet and Cross-Navigation — Planning Complete
+
+Extended product planning session covering two backlog items: List ↔ Map cross-navigation and List view sort/layout improvements. Full build plan produced and scripted, ready to execute in next session.
+
+---
+
+### Architecture Decision — Vanilla JS retained
+
+Framework migration considered and rejected. Decision: stay in vanilla JS for the bottom sheet build. Key factors:
+
+- `cardHTML(r)` is already a standalone named function — the architectural foundation the sheet relies on exists
+- Deployment simplicity (no build step, direct GitHub Pages push) is a genuine asset worth preserving
+- The bottom sheet is buildable in vanilla JS without state management becoming unworkable
+- Migration trigger defined: if viewer reaches 2,500 lines OR a state synchronisation bug takes more than one hour to diagnose, migrate to React at that point
+
+---
+
+### Bottom Sheet — Decisions Made
+
+**Interaction model confirmed:**
+- Individual restaurant pins (teardrop) — sheet only, popup removed
+- Centroid group pins (circle) — popup only, unchanged
+- Tap-to-dismiss: overlay tap + X button + Escape key
+- Multiple pin taps — Option A: close sheet, reopen after 280ms CSS transition delay
+- List to map navigation deferred to follow-on task
+
+**18 risks assessed. Critical mitigations built into the build script:**
+- Filters visible in map view — closeSheet() added to applyFilters() — HIGH
+- maybeUpdateMap() destroys markers while sheet open — covered by same fix — HIGH
+- Body scroll lock iOS jump — overflow:hidden with documented upgrade path — MEDIUM
+- dvh unit support — CSS cascade fallback 80vh then 80dvh — LOW
+- Rapid pin tap race condition — sheetOpenTimeout with clearTimeout — LOW
+- Existing bug found and fixed: filter-clear handler missing maybeUpdateMap() call
+
+**Z-index confirmed safe:**
+- Sheet overlay: z-index 1000
+- Sheet: z-index 1001
+- Existing toasts: z-index 9999 (appear above sheet correctly)
+- Filters bar: z-index 90 (behind overlay when sheet open — correct)
+
+---
+
+### Build Script — Committed
+
+localbite-sheet-build.py committed at ac27203. Single Python script applying 10 targeted changes to index.html. All 10 target strings confirmed unique before scripting. Safe to run.
+
+| Change | What |
+|--------|------|
+| 1 | HTML: sheet overlay and bottom sheet elements |
+| 2 | CSS: all sheet styles (overlay, sheet, handle, close, content) |
+| 3 | JS: state variables + openSheet() + closeSheet() + dismiss handlers |
+| 4 | JS: marker click opens sheet, removes bindPopup() from individual pins |
+| 5 | JS: applyFilters() closes sheet before filter change |
+| 6 | JS: filter-clear closes sheet + fixes missing maybeUpdateMap() bug |
+| 7 | JS: resetMap() closes sheet first |
+| 8 | JS: view toggle handlers close sheet |
+| 9 | JS: handleFindMe() toggle-off closes sheet |
+| 10 | JS: handleFindMe() toggle-on closes sheet |
+
+---
+
+### Mobile Test Matrix — 16 Tests
+
+To run immediately after script execution:
+
+| Test | Expected |
+|------|----------|
+| Tap individual pin | Sheet slides up |
+| Tap X button | Sheet slides down |
+| Tap overlay | Sheet slides down |
+| Tap second pin while sheet open | Sheet closes, reopens 280ms later |
+| Rapid tap three pins | Only last pin's sheet opens |
+| Tap centroid pin | Popup only, no sheet |
+| Change filter while sheet open | Sheet closes, map updates |
+| Clear filters while sheet open | Sheet closes, map updates |
+| Activate proximity while sheet open | Sheet closes |
+| Deactivate proximity while sheet open | Sheet closes |
+| Switch city while sheet open | Sheet closes |
+| Switch to list while sheet open | Sheet closes |
+| Sheet content scrollable | Tall cards scroll inside sheet |
+| Sheet height on iOS | Does not extend behind address bar (dvh) |
+| Toast appears above sheet | z-index correct |
+| Filters bar behind overlay | Cannot change filters while sheet open |
+
+---
+
+### Null Neighbourhood Audit — Completed
+
+Fleet-wide: 25 null neighbourhood restaurants out of 682 total (4%). By city: Valencia 20, Marrakesh 3, Barcelona 1, Rabat 1. Valencia's 20 are the known data quality issue (v2 rebuild on backlog). 4% is well within manageable threshold — neighbourhood sort and grouped layout are both viable without waiting for data cleanup.
+
+---
+
+### Product Backlog Updates
+
+**Cross-navigation (Item 2):** Option D (bottom sheet) selected. Options B and C skipped — building a stopgap 2 cities before the 15+ city threshold is wasted effort. Bottom sheet is the right architecture for mobile-first map experience.
+
+**Sort and layout (Item 3):** Recommended build order after bottom sheet:
+1. "Most recommended" sort label — 30 min, renames current default to user-facing language
+2. Neighbourhood sort dropdown — 1 hour, data supports it (4% null)
+3. Compact card mode — 2-3 hours, highest impact for large packs (Barcelona 86, Toronto 66)
+4. Grouped by neighbourhood — after Valencia v2 cleans null problem
+
+**Price tier tooltip added to backlog:** Add tooltip to price indicator in viewer: "Price tier based on writer's description at time of article." Small viewer change, sets correct user expectation.
+
+---
+
+### Price Data — Clarification Documented
+
+Price levels (1-4) are extracted by Claude Code from source article text during pipeline runs. Three confidence tiers: explicit price mention (highest), relative descriptor such as "affordable" or "upscale" (medium), inference from signals such as cuisine type and neighbourhood (lowest). No price_confidence field exists in the JSON. Fine dining (level 4) and clear budget spots (level 1) are most reliable. Mid-range band (levels 2-3) least reliable — prose descriptions rarely distinguish €25pp from €40pp precisely. No legal concern — price is a fact, not copyrightable, and we present it as a relative signal from a dated source, not a verified current price.
+
+---
+
+### Outstanding Items — Updated Priority Order
+
+**Next session: LocalBite — Bottom Sheet and Cross-Navigation**
+
+Priority 1 — Bottom sheet build:
+- Run python3 localbite-sheet-build.py (committed at ac27203)
+- Mobile test all 16 items in test matrix
+- Fix any mobile-specific issues
+
+Priority 2 — Sort improvements (if time permits):
+- "Most recommended" label for default sort — 30 min
+- Neighbourhood sort dropdown — 1 hour
+
+Deferred from this session:
+- [ ] CENTROIDS namespace audit — shared neighbourhood names across cities
+- [ ] Seville open_status_check — 29 restaurants, highest data quality risk in fleet
+- [ ] Barcelona open_status_check — 11 restaurants, 16 months old
+- [ ] Cordoba and Granada open_status_check — 13 restaurants combined
+- [ ] Delete stale Barcelona v4 pack — localbite-barcelona-2025-2026.json
+- [ ] Valencia v2 — undated sources
+- [ ] Lisbon PT pool — find Sabado, Evasoes, Visao as replacements
+- [ ] Fes v6 upgrade — oldest pipeline in fleet (v4)
+- [ ] Article title backfill — deferred pending better extraction approach
+- [ ] Price tier tooltip — small viewer change, low priority
+- [ ] Jina/Elastic watch — monitor if Elastic moves r.jina.ai behind subscription
+
+---
+
+*Addendum covers product planning work done after main session tasks were complete*
+*Build script committed: ac27203*
+*No city data changed, no restaurant count changes*
+*Fleet: 13 cities, 480 restaurants — unchanged*
