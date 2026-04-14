@@ -2846,3 +2846,329 @@ A fleet-wide audit revealed all cities were already geocoded from previous sessi
 - [ ] **Firecrawl test — revised scope** — targeted Jina fallback only (not replacement). Test 3 URLs: Mesa Marcada article (JS bylines), Toronto Life article (403 bypass), Gastronostrum (422 bypass). Decision rule: 2 of 3 succeed → integrate as v7 fallback; 0-1 succeed → use manual pre-fetch instead. Free tier (500 lifetime credits) sufficient at 2-3 credits per city. Priority 4 next session.
 - [ ] **Toronto source URLs** — Toronto Life Michelin URL corrected to `torontolife.com/food/toronto-michelin-guide-2025/`. Curious Creature article confirmed dead (404) — flagged with `url_status: dead`. Both committed (cd35d31).
 - [ ] **Toronto source accessibility audit** — 10 of 12 sources confirmed accessible in browser. Foodism × 3 and Madame Marie × 3 fully accessible. NOW Toronto × 2, Toronto Life Best New, Canada's 100 Best also accessible. Toronto Life Michelin (dead) and Curious Creature (dead) flagged.
+
+
+
+## Session — 2026-04-14 (Article Titles, Token Capture, Fetch Strategy Review)
+
+### Overview
+
+Primarily a maintenance and tooling session. Six tasks completed across token capture, viewer improvements, template updates, pipeline documentation, and fetch strategy research. One significant task (article title backfill) deferred after careful analysis. Major finding: Jina renders JavaScript — the Mesa Marcada byline problem is a CMS configuration issue, not a Jina limitation.
+
+---
+
+### Tasks Completed
+
+| Task | Commit | Notes |
+|------|--------|-------|
+| Token capture — `localbite-run-metrics.log` | e47ddc2 | Template patched + log file created with backfill from journal |
+| Viewer — article date + title in Sources panel | 5e6f199 | Two new CSS classes, two formatter functions, graceful null handling |
+| Template — `article_title` extraction rule | c305c98 | Added to sources JSON schema and extraction rules (all article dates) |
+| Backfill script — committed, live run deferred | 29adc61 | See decision below |
+| Pipeline readme — pre-fetch, Wayback, Jina note | 6f687f0 | Also fixed stale Mesa Marcada Firecrawl note |
+| RSS test for Mesa Marcada | no commit | 200 OK, feed accessible, but bylines show "Mesa Marcada" not individual writer names — CMS config issue, not a fetch limitation |
+
+---
+
+### Key Decisions Made
+
+**1. Backfill script deferred — live run not executed**
+
+`localbite-backfill-titles.js` was built and committed but not run against live city JSONs. The dry-run revealed that `<title>` tag extraction produces unreliable results for a curated food app:
+
+- HTML entities not decoded (`&mdash;`, `&#039;` etc.) would display raw in the viewer
+- Bot-blocked pages return junk titles (`"Attention Required!"`, `"Just a moment..."`, `"Access Denied"`)
+- Some sources return the site name rather than the article title (`"Ojoalplato"`, `"TOP 2025"`)
+- No amount of script fixes fully solves the structural problem — `<title>` tags are designed for browser tabs and SEO, not for human-readable article attribution
+
+Decision: titles will accumulate naturally as cities rebuild on v6. The template now extracts `article_title` correctly from fetched article text (Claude Code has full context and identifies headlines accurately). The backfill script remains as reference for future use if a cleaner approach emerges.
+
+**2. Firecrawl, Playwright, Crawl4AI all rejected**
+
+Exhaustive review of all Jina alternatives conducted. Key findings:
+
+- Jina renders JavaScript — it uses a headless browser. The Mesa Marcada byline problem is not a JS rendering issue. Bylines don't appear because Mesa Marcada's CMS publishes some articles under the site account ("Mesa Marcada") rather than individual writer accounts. This is unfixable via any fetch tool.
+- Playwright: awkward Claude Code integration (subprocess architecture), stealth patching needed for major publishers, not worth the dependency for LocalBite's scale
+- Crawl4AI: Python (wrong language for LocalBite's Node.js pipeline), supply chain security incident in v0.8.5 (PyPI compromise requiring emergency hotfix), active development instability
+- Firecrawl: credit-limited free tier, external dependency, architecturally awkward with Claude Code
+- Manual pre-fetch: solves any source accessible in a browser, zero dependencies, 3-5 minutes per source, already documented in pipeline readme
+
+**3. Jina acquired by Elastic (October 2025)**
+
+Discovered during research. Elastic completed acquisition of Jina AI in October 2025 and has stated intention to continue the open-source community approach while integrating into Elasticsearch commercial offerings. No immediate impact on LocalBite — `r.jina.ai` free endpoint continues to operate. Long-term watch item: if Elastic moves Jina behind an Elasticsearch subscription, the pipeline would need a new fetch mechanism.
+
+**4. Wayback Machine added as fallback for 404 sources**
+
+One-line instruction added to pipeline readme. For sources that return 404 (article moved or deleted), the pipeline can retry via `https://r.jina.ai/https://web.archive.org/web/2026/[URL]`. Known use case: The Curious Creature Toronto article (confirmed dead post-pipeline).
+
+**5. Mesa Marcada RSS confirmed accessible but bylines unreliable**
+
+`https://mesamarcada.com/feed` — 200 OK, well-structured WordPress RSS. Articles posted under individual authors show `<dc:creator>Miguel Pires</dc:creator>`. Articles posted under the site account show `<dc:creator>Mesa Marcada</dc:creator>`. The inconsistency is a CMS publishing workflow issue. RSS is useful for `article_title` backfill (titles are clean) but not reliable for byline attribution.
+
+---
+
+### Viewer Changes
+
+Sources panel now displays:
+
+```
+[Publication name]
+by [Writer name]
+"[Article title]"          ← new, italic, shown if article_title present
+Published [Mon YYYY]       ← new, shown if article_date present
+[Writer profile]
+Read article ↗
+```
+
+Date formatter handles:
+- Standard `YYYY-MM-DD` → "Jan 2026"
+- Multi-date strings (takes first date) → "Mar 2025"
+- `"undated"` → null → shows nothing
+- Missing field → null → shows nothing
+
+Title formatter:
+- Present and non-empty → shown in curly quotes
+- Null or empty → shows nothing
+- Displays for all sources regardless of article date (correct — `article_title` is not date-dependent)
+
+Both fields degrade gracefully for cities not yet backfilled — shows nothing, which is the current state for all 13 cities.
+
+---
+
+### Template Changes
+
+`localbite-prompt-v6-template.txt` now includes:
+
+1. `article_title` in sources JSON schema: `"string or null — article headline as published"`
+2. `article_title` in extraction rules alongside `article_date`: `"article_title (from page h1 or title tag — null if not found)"` — applies to all articles regardless of date
+3. Metrics log instruction (from April 13 session, committed today): append to `localbite-run-metrics.log` as final action
+
+---
+
+### Pipeline Readme Changes
+
+Three new sections added to `localbite-pipeline-readme.md`:
+
+1. **Workaround for 451/403 blocked sources** — manual pre-fetch procedure (Cmd+A, Cmd+C, pbpaste > file, PREFETCHED_SOURCES in Part 1)
+2. **Wayback Machine fallback** — retry instruction for 404 sources, known use case for The Curious Creature
+3. **Note on Jina and bot detection** — clarifies that Jina deliberately does not bypass bot detection (stated policy), does render JavaScript, and documents alternatives evaluated and rejected
+
+Also fixed stale note in Limitations section: Mesa Marcada entry previously said "Firecrawl test recommended" — updated to reflect current understanding and pre-fetch workaround approach.
+
+---
+
+### Run Metrics Log — Backfill
+
+`localbite-run-metrics.log` created and backfilled with known runs from journal:
+
+```
+Chefchaouen | 2026-03-25 | tokens: 116.5k | tools: 96 | time: 21m 54s | restaurants: 12 | sources: 5
+Marrakesh | 2026-03-22 | tokens: 127.4k | tools: ~90 | time: 19m | restaurants: 14 | sources: 5
+Barcelona v6 | 2026-04-08 | tokens: not captured | ...
+Lisbon v6 | 2026-04-13 | tokens: not captured | ...
+Toronto v5v6-merge | 2026-04-13 | tokens: not captured | ...
+```
+
+Future pipeline runs will append automatically via the node command in the template.
+
+---
+
+### Files Produced / Modified
+
+| File | Change |
+|------|--------|
+| `localbite-prompt-v6-template.txt` | `article_title` schema field + extraction rule + metrics log instruction |
+| `localbite-run-metrics.log` | New — programmatic token/metrics capture log |
+| `index.html` | Sources panel: `article_title` + `article_date` display + CSS + formatter functions |
+| `localbite-backfill-titles.js` | New — article title backfill script (reference, not run) |
+| `localbite-pipeline-readme.md` | Pre-fetch workaround + Wayback fallback + Jina note + Mesa Marcada fix |
+
+---
+
+### Outstanding Items
+
+- [ ] **CENTROIDS namespace audit** — Centro Histórico, Medina, El Carmen, Chiado shared between cities. Baixa (Lisboa) fixed April 13 — audit for remaining collisions.
+- [ ] **Seville open_status_check** — 29 restaurants (48% of pack), some from 2023 sources. Highest data quality risk in fleet. Verify before widely sharing.
+- [ ] **Barcelona open_status_check** — 11 restaurants, sources from December 2024 (16 months old). Verify closures.
+- [ ] **Córdoba and Granada open_status_check** — 13 restaurants combined.
+- [ ] **Delete stale Barcelona v4 pack** — `localbite-barcelona-2025-2026.json` superseded by v6.
+- [ ] **Valencia v2** — 39/47 restaurants have `article_date: undated`. Fix in v2 rebuild.
+- [ ] **Lisbon PT pool** — only 2 PT-pool restaurants in v6. Find PT sources (Sábado, Evasões, Visão) for v3.
+- [ ] **Fes v6 upgrade** — oldest pipeline in fleet (v4).
+- [ ] **Article title backfill** — deferred. Will accumulate naturally as cities rebuild on v6. Revisit if a reliable extraction method emerges (not `<title>` tag scraping).
+- [ ] **Jina/Elastic watch** — monitor whether Elastic moves `r.jina.ai` behind a subscription. If so, manual pre-fetch becomes the default fetch mechanism for all blocked sources.
+
+---
+
+### Decisions Not Made / Carried Forward
+
+- **Seville open_status_check verification** — highest priority data quality task, deferred due to session focus on tooling
+- **Toronto v3** — target Toronto Life (pre-fetch workaround now documented), Globe and Mail food section, Eat North
+
+---
+
+*Session duration: approximately 3 hours including extended fetch strategy research*
+*Commits: e47ddc2, 5e6f199, c305c98, 29adc61, 6f687f0*
+*Fleet: 13 cities, 480 restaurants — unchanged*
+
+## Session — 2026-04-14 (Article Titles, Token Capture, Fetch Strategy Review)
+
+### Overview
+
+Primarily a maintenance and tooling session. Six tasks completed across token capture, viewer improvements, template updates, pipeline documentation, and fetch strategy research. One significant task (article title backfill) deferred after careful analysis. Major finding: Jina renders JavaScript — the Mesa Marcada byline problem is a CMS configuration issue, not a Jina limitation.
+
+---
+
+### Tasks Completed
+
+| Task | Commit | Notes |
+|------|--------|-------|
+| Token capture — `localbite-run-metrics.log` | e47ddc2 | Template patched + log file created with backfill from journal |
+| Viewer — article date + title in Sources panel | 5e6f199 | Two new CSS classes, two formatter functions, graceful null handling |
+| Template — `article_title` extraction rule | c305c98 | Added to sources JSON schema and extraction rules (all article dates) |
+| Backfill script — committed, live run deferred | 29adc61 | See decision below |
+| Pipeline readme — pre-fetch, Wayback, Jina note | 6f687f0 | Also fixed stale Mesa Marcada Firecrawl note |
+| RSS test for Mesa Marcada | no commit | 200 OK, feed accessible, but bylines show "Mesa Marcada" not individual writer names — CMS config issue, not a fetch limitation |
+
+---
+
+### Key Decisions Made
+
+**1. Backfill script deferred — live run not executed**
+
+`localbite-backfill-titles.js` was built and committed but not run against live city JSONs. The dry-run revealed that `<title>` tag extraction produces unreliable results for a curated food app:
+
+- HTML entities not decoded (`&mdash;`, `&#039;` etc.) would display raw in the viewer
+- Bot-blocked pages return junk titles (`"Attention Required!"`, `"Just a moment..."`, `"Access Denied"`)
+- Some sources return the site name rather than the article title (`"Ojoalplato"`, `"TOP 2025"`)
+- No amount of script fixes fully solves the structural problem — `<title>` tags are designed for browser tabs and SEO, not for human-readable article attribution
+
+Decision: titles will accumulate naturally as cities rebuild on v6. The template now extracts `article_title` correctly from fetched article text (Claude Code has full context and identifies headlines accurately). The backfill script remains as reference for future use if a cleaner approach emerges.
+
+**2. Firecrawl, Playwright, Crawl4AI all rejected**
+
+Exhaustive review of all Jina alternatives conducted. Key findings:
+
+- Jina renders JavaScript — it uses a headless browser. The Mesa Marcada byline problem is not a JS rendering issue. Bylines don't appear because Mesa Marcada's CMS publishes some articles under the site account ("Mesa Marcada") rather than individual writer accounts. This is unfixable via any fetch tool.
+- Playwright: awkward Claude Code integration (subprocess architecture), stealth patching needed for major publishers, not worth the dependency for LocalBite's scale
+- Crawl4AI: Python (wrong language for LocalBite's Node.js pipeline), supply chain security incident in v0.8.5 (PyPI compromise requiring emergency hotfix), active development instability
+- Firecrawl: credit-limited free tier, external dependency, architecturally awkward with Claude Code
+- Manual pre-fetch: solves any source accessible in a browser, zero dependencies, 3-5 minutes per source, already documented in pipeline readme
+
+**3. Jina acquired by Elastic (October 2025)**
+
+Discovered during research. Elastic completed acquisition of Jina AI in October 2025 and has stated intention to continue the open-source community approach while integrating into Elasticsearch commercial offerings. No immediate impact on LocalBite — `r.jina.ai` free endpoint continues to operate. Long-term watch item: if Elastic moves Jina behind an Elasticsearch subscription, the pipeline would need a new fetch mechanism.
+
+**4. Wayback Machine added as fallback for 404 sources**
+
+One-line instruction added to pipeline readme. For sources that return 404 (article moved or deleted), the pipeline can retry via `https://r.jina.ai/https://web.archive.org/web/2026/[URL]`. Known use case: The Curious Creature Toronto article (confirmed dead post-pipeline).
+
+**5. Mesa Marcada RSS confirmed accessible but bylines unreliable**
+
+`https://mesamarcada.com/feed` — 200 OK, well-structured WordPress RSS. Articles posted under individual authors show `<dc:creator>Miguel Pires</dc:creator>`. Articles posted under the site account show `<dc:creator>Mesa Marcada</dc:creator>`. The inconsistency is a CMS publishing workflow issue. RSS is useful for `article_title` backfill (titles are clean) but not reliable for byline attribution.
+
+---
+
+### Viewer Changes
+
+Sources panel now displays:
+
+```
+[Publication name]
+by [Writer name]
+"[Article title]"          ← new, italic, shown if article_title present
+Published [Mon YYYY]       ← new, shown if article_date present
+[Writer profile]
+Read article ↗
+```
+
+Date formatter handles:
+- Standard `YYYY-MM-DD` → "Jan 2026"
+- Multi-date strings (takes first date) → "Mar 2025"
+- `"undated"` → null → shows nothing
+- Missing field → null → shows nothing
+
+Title formatter:
+- Present and non-empty → shown in curly quotes
+- Null or empty → shows nothing
+- Displays for all sources regardless of article date (correct — `article_title` is not date-dependent)
+
+Both fields degrade gracefully for cities not yet backfilled — shows nothing, which is the current state for all 13 cities.
+
+---
+
+### Template Changes
+
+`localbite-prompt-v6-template.txt` now includes:
+
+1. `article_title` in sources JSON schema: `"string or null — article headline as published"`
+2. `article_title` in extraction rules alongside `article_date`: `"article_title (from page h1 or title tag — null if not found)"` — applies to all articles regardless of date
+3. Metrics log instruction (from April 13 session, committed today): append to `localbite-run-metrics.log` as final action
+
+---
+
+### Pipeline Readme Changes
+
+Three new sections added to `localbite-pipeline-readme.md`:
+
+1. **Workaround for 451/403 blocked sources** — manual pre-fetch procedure (Cmd+A, Cmd+C, pbpaste > file, PREFETCHED_SOURCES in Part 1)
+2. **Wayback Machine fallback** — retry instruction for 404 sources, known use case for The Curious Creature
+3. **Note on Jina and bot detection** — clarifies that Jina deliberately does not bypass bot detection (stated policy), does render JavaScript, and documents alternatives evaluated and rejected
+
+Also fixed stale note in Limitations section: Mesa Marcada entry previously said "Firecrawl test recommended" — updated to reflect current understanding and pre-fetch workaround approach.
+
+---
+
+### Run Metrics Log — Backfill
+
+`localbite-run-metrics.log` created and backfilled with known runs from journal:
+
+```
+Chefchaouen | 2026-03-25 | tokens: 116.5k | tools: 96 | time: 21m 54s | restaurants: 12 | sources: 5
+Marrakesh | 2026-03-22 | tokens: 127.4k | tools: ~90 | time: 19m | restaurants: 14 | sources: 5
+Barcelona v6 | 2026-04-08 | tokens: not captured | ...
+Lisbon v6 | 2026-04-13 | tokens: not captured | ...
+Toronto v5v6-merge | 2026-04-13 | tokens: not captured | ...
+```
+
+Future pipeline runs will append automatically via the node command in the template.
+
+---
+
+### Files Produced / Modified
+
+| File | Change |
+|------|--------|
+| `localbite-prompt-v6-template.txt` | `article_title` schema field + extraction rule + metrics log instruction |
+| `localbite-run-metrics.log` | New — programmatic token/metrics capture log |
+| `index.html` | Sources panel: `article_title` + `article_date` display + CSS + formatter functions |
+| `localbite-backfill-titles.js` | New — article title backfill script (reference, not run) |
+| `localbite-pipeline-readme.md` | Pre-fetch workaround + Wayback fallback + Jina note + Mesa Marcada fix |
+
+---
+
+### Outstanding Items
+
+- [ ] **CENTROIDS namespace audit** — Centro Histórico, Medina, El Carmen, Chiado shared between cities. Baixa (Lisboa) fixed April 13 — audit for remaining collisions.
+- [ ] **Seville open_status_check** — 29 restaurants (48% of pack), some from 2023 sources. Highest data quality risk in fleet. Verify before widely sharing.
+- [ ] **Barcelona open_status_check** — 11 restaurants, sources from December 2024 (16 months old). Verify closures.
+- [ ] **Córdoba and Granada open_status_check** — 13 restaurants combined.
+- [ ] **Delete stale Barcelona v4 pack** — `localbite-barcelona-2025-2026.json` superseded by v6.
+- [ ] **Valencia v2** — 39/47 restaurants have `article_date: undated`. Fix in v2 rebuild.
+- [ ] **Lisbon PT pool** — only 2 PT-pool restaurants in v6. Find PT sources (Sábado, Evasões, Visão) for v3.
+- [ ] **Fes v6 upgrade** — oldest pipeline in fleet (v4).
+- [ ] **Article title backfill** — deferred. Will accumulate naturally as cities rebuild on v6. Revisit if a reliable extraction method emerges (not `<title>` tag scraping).
+- [ ] **Jina/Elastic watch** — monitor whether Elastic moves `r.jina.ai` behind a subscription. If so, manual pre-fetch becomes the default fetch mechanism for all blocked sources.
+
+---
+
+### Decisions Not Made / Carried Forward
+
+- **Seville open_status_check verification** — highest priority data quality task, deferred due to session focus on tooling
+- **Toronto v3** — target Toronto Life (pre-fetch workaround now documented), Globe and Mail food section, Eat North
+
+---
+
+*Session duration: approximately 3 hours including extended fetch strategy research*
+*Commits: e47ddc2, 5e6f199, c305c98, 29adc61, 6f687f0*
+*Fleet: 13 cities, 480 restaurants — unchanged*
