@@ -488,7 +488,8 @@ EXTRACTION RULES:
   GEOGRAPHIC_BOUNDARY_INCLUDE), price level, signature dish
   if mentioned, quote (writer's words, minimum 15 words with
   at least 1 specific detail), cuisine type, opening year if
-  mentioned, article_date (from fetched text not metadata)
+  mentioned, article_date (from fetched text not metadata),
+  article_title (from page h1 or title tag — null if not found)
 ✗ Do not use training knowledge to add any detail
 ✗ Do not include if only evidence is a list title or header
 ✗ Secondary sources: maximum 30 restaurants
@@ -717,6 +718,7 @@ JSON structure — FILE 2 (final):
       "source_tier": "primary / secondary — for single-language cities
         use: legacy_institutional / independent_freelance / secondary",
       "article_date": "YYYY-MM-DD or undated",
+      "article_title": "string or null — article headline as published",
       "fetch_status": "good / partial / failed",
       "fetch_chars": [number],
       "retries_attempted": 0/1/2,
