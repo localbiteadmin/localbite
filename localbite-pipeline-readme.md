@@ -170,7 +170,7 @@ The script uses Nominatim → Photon. No API key required. Bounding box validati
 - Guía Repsol and similar JS-rendered sites often fail to fetch. Use their article URL rather than a search results page.
 - Paywalled sources (Substack paid, newspaper subscriptions) will fail silently with short content.
 - New restaurant openings (2024–2025) are systematically underrepresented in OSM — expect 20–30% null coordinates for recent-opening-heavy packs.
-- Mesa Marcada (Portugal) — strong independent food platform but Jina does not expose article-level bylines. Blocked at Phase 1 named-author rule. Known gap — Firecrawl test recommended before next PT city run.
+- Mesa Marcada (Portugal) — strong independent food platform. Jina renders the page but bylines are not consistently exposed. Use the manual pre-fetch workaround for future PT city runs requiring Mesa Marcada content.
 
 ---
 
@@ -187,3 +187,98 @@ The script uses Nominatim → Photon. No API key required. Bounding box validati
 **"city: undefined"** — The geocoder can't read the city name. Check whether the JSON has `city` at top level or under `meta`. The geocoder handles both, but confirm the fix is in the version running.
 
 **Very few restaurants extracted** — Check the fetch quality reported in Phase 2. If it says `partial`, the article may be behind a paywall or JS-rendered.
+
+
+---
+
+## Workaround for 451/403 blocked sources
+
+Some high-value sources return 451 or 403 to Jina but load fine in
+a real browser. Use this manual pre-fetch approach — it takes 3-5
+minutes per source and requires no tools or accounts.
+
+When to use:
+- Source returns 451 (legal/geo block) or 403 (bot detection) to Jina
+- Source loads fine in your browser
+- Source is important enough to justify the manual step
+
+When NOT to use:
+- Source returns 404 (article deleted — no workaround exists)
+- Source is behind a paywall you do not subscribe to
+- Source is blocked in your browser too
+
+Procedure:
+
+1. Open the article URL in Safari or Chrome
+2. Wait for the page to fully load
+3. Select all: Cmd+A, then copy: Cmd+C
+4. Paste to a local file in your terminal:
+   pbpaste > localbite-prefetch-[source-slug].txt
+
+5. In the pipeline Part 1, add a PREFETCHED_SOURCES section:
+
+   PREFETCHED_SOURCES:
+   localbite-prefetch-toronto-life-bnr-2025.txt
+     - Toronto Life Best New Restaurants 2025
+     - writer: Liza Agrba, Caroline Aksich, Erin Hershberg
+     - article_date: 2025-05-12
+     - url: https://torontolife.com/food/these-are-torontos-best-new-restaurants-of-2025/
+
+6. In Phase 0, add this instruction:
+   For PREFETCHED_SOURCES: read the local .txt file using the
+   Read tool. Do not attempt a Jina fetch. Treat as a successful
+   Phase 0 fetch. Log as:
+   [phase-0] PREFETCHED [publication] -- [date] -- [quality]
+
+Known sources requiring this workaround:
+- Toronto Life (all articles) -- 403 to Jina, accessible in browser
+- The Guardian travel articles -- 451 to Jina, accessible in browser
+- Publico/Fugas -- 451 to Jina, accessible in browser
+
+Permanently inaccessible (no workaround):
+- Observador -- 404 on all URLs, articles deleted. Remove from all
+  PT city prompts permanently.
+
+---
+
+## Wayback Machine fallback for moved or deleted articles
+
+When a source URL returns 404, try the Wayback Machine before
+giving up. Add this to the Phase 2 fetch sequence in the prompt:
+
+  If Jina returns 404 for a source URL, retry once using:
+  https://r.jina.ai/https://web.archive.org/web/2026/[ORIGINAL_URL]
+  If Wayback also fails, mark as failed and continue.
+  Log: [phase-2] WAYBACK [publication] -- [result]
+
+To test manually from terminal:
+  curl "https://r.jina.ai/https://web.archive.org/web/2026/[URL]" | head -c 2000
+
+Known use case in the fleet:
+- The Curious Creature (Toronto) -- article deleted post-pipeline.
+  Try: https://web.archive.org/web/2025/https://thecuriouscreature.com/best-new-restaurants-toronto-2024/
+
+Limitations:
+- Very recent content (under 30 days) may not be archived yet
+- Paywall articles are archived in blocked form
+- Works best for articles from 2023-2025 that have since moved
+
+---
+
+## Note on Jina and bot detection
+
+Jina deliberately does not bypass bot detection -- this is their
+stated policy. Upgrading to a paid Jina API key does NOT grant
+access to blocked sites. The 403/451 failures are permanent for
+those sources regardless of Jina tier.
+
+Jina does render JavaScript (pages are fetched via a headless
+browser), so JS-rendered content is generally accessible. The
+failures are specifically bot-detection blocks and legal/geo
+restrictions, not JS rendering limitations.
+
+Alternatives evaluated and rejected for LocalBite's use case:
+Firecrawl (credit-limited), Playwright (Node integration issues,
+stealth patching needed), Crawl4AI (Python env, supply chain
+incident in v0.8.5). Manual pre-fetch is the correct approach
+at LocalBite's current scale.
