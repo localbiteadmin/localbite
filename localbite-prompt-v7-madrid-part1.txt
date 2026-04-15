@@ -1,0 +1,385 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Madrid
+COUNTRY: Spain
+CITY_SLUG: madrid-spain
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: ES
+SEARCH_LANGUAGES: English, Spanish
+
+YEAR_RANGE: 2023-2026
+
+SEARCH_ANGLE_EXAMPLES:
+- "best restaurants Madrid Spain food writer local guide 2026"
+- "mejores restaurantes Madrid España guia gastronomica periodista 2026"
+- "restaurantes Malasaña Madrid 2025 recomendaciones gastronomia"
+- "food critic Madrid restaurant recommendations 2025 2026"
+
+SOURCE_EXAMPLES:
+- Spanish food media: El Comidista (El País), Metrópoli (El Mundo),
+  Guía Repsol, Time Out Madrid ES, ABC Gastro, El Español/Magas,
+  Con Mucha Gula, Gastronosfera, 7 Caníbales
+- English food media: Time Out Madrid EN, The Infatuation Madrid,
+  Condé Nast Traveller, Epicurean Ways
+- Local food bloggers writing in Spanish or English with documented
+  Madrid residency or regular coverage
+- Expat food writers based in Madrid
+
+DIRECT_FETCH_SOURCES:
+These sources are fetched directly in Phase 0 before any searches.
+Identified from public sources during city variable preparation —
+not from any prior pipeline run.
+- https://elcomidista.elpais.com/ — El Comidista (ES independent
+  food section of El País, named writers, active 2026)
+- https://www.guiarepsol.com/es/restaurantes/madrid/ — Guía Repsol
+  Madrid (ES primary, named critics, active 2026)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+- Time Out Madrid — operates Time Out Market Madrid. Disclose in
+  writer profile. Do not reject — flag transparently.
+
+SECONDARY_SOURCES: Condé Nast Traveller, Lonely Planet, Time Out
+  (EN edition), The Guardian
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Centro (Sol, Austrias, Palacio), La Latina, Lavapiés, Malasaña,
+Chueca, Salamanca, Chamberí, Retiro, Arganzuela, Carabanchel,
+Usera, Vallecas, Moncloa-Aravaca, Tetuán, Hortaleza, Chamartín,
+Ibiza, Huertas, Embajadores, Ópera, Ponzano
+
+NEIGHBOURHOOD_TIERS:
+Neighbourhood queries target 6 specific named areas across
+3 tiers. Use exactly these areas in the angles specified.
+
+  Tier 1 — Central/tourist
+  Well-covered by city-wide queries but worth one dedicated
+  pair each for neighbourhood-specialist sources.
+    · Malasaña
+    · La Latina
+
+  Tier 2 — Residential mid-range
+  Strong local ES food press coverage, underrepresented in
+  EN guides. Highest potential for cross-language both-pool
+  validation — local ES critics write about these areas;
+  EN guides rarely do.
+    · Chamberí (includes Ponzano street area)
+    · Salamanca (includes Ibiza and Retiro border)
+
+  Tier 3 — Emerging
+  Confirmed active dining scenes rarely covered in any
+  mainstream food press, EN or ES.
+    · Carabanchel
+    · Usera
+
+NAMED_AWARDS:
+Use these names explicitly in awards queries. Identified
+from public sources — not from any prior pipeline run.
+- Premios de la Academia Madrileña de Gastronomía (annual,
+  independent body, not commercial)
+- Soles Repsol / Guía Repsol (Spain's primary dining guide,
+  annual ratings)
+- Premios Metrópoli (annual, Metrópoli/El Mundo newspaper —
+  Madrid's most prominent food journalism awards)
+
+LOCAL_FOOD_VOCABULARY:
+Vocabulary that appears in locally-produced ES food content
+but rarely in EN or tourist-facing guides. Use in
+vocabulary-specific queries only — not in generic queries.
+- taberna, tasca, tasquita — casual neighbourhood restaurant
+- guiso, cocido, vermú, tapeo — Madrid culinary register
+- casa de comidas — traditional family-run restaurant
+- barra — bar-format dining distinctive to Madrid
+- menú del día, menú de mercado — market-driven lunch menus
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Getafe, Alcalá de Henares, Alcobendas, Pozuelo de Alarcón,
+Majadahonda, Las Rozas, or any location described as "outside
+Madrid", "near Madrid", "Madrid region" without being in the
+city proper, or another Spanish city.
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+
+PRICE_CURRENCY: EUR (Euro)
+PRICE_LEVELS:
+- 1 = under €20 pp (budget / taberna / menú del día)
+- 2 = €20–45 pp (mid-range)
+- 3 = €45–90 pp (upscale)
+- 4 = over €90 pp (fine dining)
+
+SEARCH_RESULTS_PER_QUERY: 30
+(v7 change from v6 default of 10 — captures sources sitting
+at positions 11–30 that the standard template misses)
+
+OUTPUT_RAW: ./localbite-madrid-v7-raw.json
+OUTPUT_FINAL: ./localbite-madrid-v7-2023-2026.json
+OUTPUT_WORKING: ./localbite-madrid-v7-working.json
+OUTPUT_SEARCH_LOG: ./localbite-madrid-v7-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-madrid-v7-search-plan.txt
+OUTPUT_AUDIT: ./localbite-madrid-v7-audit.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TEST CONTEXT — v7 TEST CONDITION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This is the v7 test run for the Madrid v6 vs v7 search
+quality test. Run second, after v6 is complete.
+Use a fresh Claude Code session — do not continue from
+the v6 session.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PRIOR KNOWLEDGE EXCLUSION — MANDATORY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This is a first pipeline run on Madrid. You must not use
+training knowledge of specific food writers, publications,
+or restaurants prominent in Madrid to populate any Phase 1
+search query.
+
+Permitted in queries — from Part 1 variables only:
+  ✓ Neighbourhood names from GEOGRAPHIC_BOUNDARY_INCLUDE
+  ✓ Award names from NAMED_AWARDS
+  ✓ Vocabulary from LOCAL_FOOD_VOCABULARY
+  ✓ Source category descriptions from SOURCE_EXAMPLES
+    (categories only — e.g. "Spanish food media" or
+    "independent food blogger Madrid")
+
+Prohibited in Phase 1 queries:
+  ✗ Specific writer names not provided in Part 1
+  ✗ Specific publication names beyond SOURCE_EXAMPLES
+  ✗ Specific restaurant names
+  ✗ Any training knowledge about Madrid's food scene,
+    notable chefs, or prominent venues
+
+Phase 0 DIRECT_FETCH_SOURCES are exempt — they are
+provided explicitly in Part 1 for direct fetching only.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SEARCH PLAN — v7 ANGLE DISTRIBUTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Write exactly 32 pre-written queries (angles A–N), then
+3 responsive Phase 1B queries (angle O) after Phase 0.
+Grand total: 35 queries.
+
+MANDATORY VERIFICATION STEP — BEFORE ANY SEARCHES RUN:
+
+After writing the search plan to OUTPUT_SEARCH_PLAN, run
+the prior knowledge check script:
+
+  python3 localbite-prior-knowledge-check.py \
+    localbite-madrid-v7-search-plan.txt
+
+This script checks every query for proper nouns and named
+entities not present in Part 1 variables.
+
+If the script exits with code 2 (definite violations):
+  - Do NOT proceed to searches
+  - Rewrite the flagged queries to remove named entities
+  - Re-run the check until exit code is 0 or 1
+  - Log: [prior-knowledge-check] VIOLATIONS FOUND — rewrote
+    queries [list labels] before proceeding
+
+If the script exits with code 1 (review flags only):
+  - Inspect each flagged term
+  - If the term is a generic food/writing term → proceed
+  - If the term is a named entity not in Part 1 → rewrite
+  - Log: [prior-knowledge-check] REVIEW FLAGS — inspected,
+    [N] terms permitted, [N] queries rewritten
+
+If the script exits with code 0 (all clear):
+  - Log: [prior-knowledge-check] PASSED — all queries clean
+  - Proceed to Phase 1 searches immediately
+
+Each query must be meaningfully distinct from all others.
+Do not repeat phrasing, neighbourhood names, or source
+categories across queries within the same angle.
+
+────────────────────────────────────────
+A — City-wide EN (2 queries)
+────────────────────────────────────────
+Generic broad discovery in English.
+A1 — editorial guide register ("best restaurants Madrid
+     food writer guide 2026")
+A2 — personal recommendation register ("where to eat
+     Madrid local recommendations food critic 2025")
+
+────────────────────────────────────────
+B — City-wide ES (3 queries)
+────────────────────────────────────────
+Generic broad discovery in Spanish. Meaningfully different
+registers across all three:
+B1 — formal food criticism register
+B2 — casual neighbourhood recommendation register
+B3 — food journalism / press guide register
+
+────────────────────────────────────────
+C — Neighbourhood EN, Tier 1 central (2 queries)
+────────────────────────────────────────
+Targets: Malasaña (C1) and La Latina (C2).
+One query per area. English only.
+
+────────────────────────────────────────
+D — Neighbourhood ES, Tier 1 central (2 queries)
+────────────────────────────────────────
+Targets: Malasaña (D1) and La Latina (D2).
+Same areas as C, Spanish only.
+
+────────────────────────────────────────
+E — Neighbourhood EN, Tier 2 residential (2 queries)
+────────────────────────────────────────
+Targets: Chamberí (E1) and Salamanca (E2).
+One query per area. English only.
+These areas have strong ES food press coverage but are
+underrepresented in EN guides — highest overlap potential
+for cross-language both-pool validation.
+
+────────────────────────────────────────
+F — Neighbourhood ES, Tier 2 residential (2 queries)
+────────────────────────────────────────
+Targets: Chamberí (F1) and Salamanca (F2).
+Same areas as E, Spanish only.
+
+────────────────────────────────────────
+G — Neighbourhood EN, Tier 3 emerging (2 queries)
+────────────────────────────────────────
+Targets: Carabanchel (G1) and Usera (G2).
+One query per area. English only.
+These areas are rarely covered in mainstream food press.
+
+────────────────────────────────────────
+H — Neighbourhood ES, Tier 3 emerging (2 queries)
+────────────────────────────────────────
+Targets: Carabanchel (H1) and Usera (H2).
+Same areas as G, Spanish only.
+
+────────────────────────────────────────
+I — Generic writer-first (4 queries)
+────────────────────────────────────────
+Discovery queries for independent voices. Do not name
+specific writers — these are open discovery queries.
+I1 — EN, independent food writers / bloggers Madrid
+I2 — EN, food journalists with named bylines Madrid
+I3 — ES, food critics writing for press Madrid
+I4 — ES, independent food bloggers local focus Madrid
+
+────────────────────────────────────────
+J — Named awards (3 queries)
+────────────────────────────────────────
+Use award names from NAMED_AWARDS. One query per award.
+Target articles about results and winners — not the
+award body or ceremony itself.
+J1 — Premios de la Academia Madrileña de Gastronomía
+J2 — Soles Repsol / Guía Repsol Madrid results
+J3 — Premios Metrópoli winners and recognition
+
+────────────────────────────────────────
+K — Recent openings (2 queries)
+────────────────────────────────────────
+1 EN + 1 ES. Target 2025 and 2026 openings specifically.
+
+────────────────────────────────────────
+L — Vocabulary-specific ES (2 queries)
+────────────────────────────────────────
+Use vocabulary from LOCAL_FOOD_VOCABULARY. Target the
+casual neighbourhood register that city-wide queries miss.
+L1 — taberna / tasca / tasquita register
+L2 — casa de comidas / vermú / tapeo register
+
+────────────────────────────────────────
+M — Cuisine and community EN (2 queries)
+────────────────────────────────────────
+Target food communities whose writing is not captured
+by generic city-wide queries.
+M1 — Chinese and Latin American food writing for Usera
+M2 — International and immigrant cuisine food writing
+     for Madrid broadly
+
+────────────────────────────────────────
+N — Publication-category ES (2 queries)
+────────────────────────────────────────
+Target categories of ES food publication. Do not name
+specific publications — use category descriptors only.
+N1 — independent food magazine / revista gastronómica
+N2 — newspaper gastronomy supplement / suplemento
+
+────────────────────────────────────────
+O — Cross-validation Phase 1B (3 queries)
+────────────────────────────────────────
+DO NOT write these queries now.
+
+After Phase 0 direct fetches confirm sources, identify
+the 3 most-mentioned restaurant names across those
+sources. Then run 3 queries naming those restaurants
+to find additional sources covering them independently.
+Format: "[restaurant name] Madrid recomendacion critica"
+Log each as: [phase-1b-crossval] "[query]" → [result]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUERY COUNT SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+A   City-wide EN                        2
+B   City-wide ES                        3
+C   Neighbourhood EN — Tier 1 central   2   Malasaña, La Latina
+D   Neighbourhood ES — Tier 1 central   2   Malasaña, La Latina
+E   Neighbourhood EN — Tier 2 resid.    2   Chamberí, Salamanca
+F   Neighbourhood ES — Tier 2 resid.    2   Chamberí, Salamanca
+G   Neighbourhood EN — Tier 3 emerg.    2   Carabanchel, Usera
+H   Neighbourhood ES — Tier 3 emerg.    2   Carabanchel, Usera
+I   Generic writer-first                4
+J   Named awards                        3
+K   Recent openings                     2
+L   Vocabulary-specific ES              2
+M   Cuisine and community EN            2
+N   Publication-category ES             2
+                                       ──
+    Pre-written total (A–N):           32
+
+O   Cross-validation Phase 1B           3   post Phase 0
+                                       ──
+    Grand total:                       35
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHANGES VS v6 SUMMARISED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Queries:         35 total vs v6's 30 (+5)
+Results/query:   30 vs v6's 10 (+20)
+New angles:      Vocabulary-specific ES (L),
+                 Cuisine/community EN (M),
+                 Cross-validation Phase 1B (O)
+Expanded:        Neighbourhood queries now cover 6
+                 named areas across 3 tiers vs v6's
+                 2–3 unnamed areas
+Removed:         Forum/community queries (0 vs v6's 3)
+Reduced:         City-wide generic (5 vs v6's 9),
+                 Generic writer-first (4 vs v6's 4 — unchanged
+                 but now includes ES-specific queries),
+                 Generic publication (0 vs v6's 2,
+                 replaced by named awards)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 1 PAUSE INSTRUCTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After completing all pre-written queries (A–N) and the
+Phase 1B cross-validation queries (O), PAUSE before
+any fetching and report:
+
+PHASE 1 SOURCE REPORT:
+1. Total candidate sources identified: [N]
+2. Sources selected for fetching:
+   [publication | writer | language | URL | found via angle]
+3. Sources rejected at Phase 1: [publication | reason]
+4. Queries returning no usable candidates: [list]
+5. Sources found at positions 11–30 (would have been
+   missed at 10 results per query): [list with position]
+6. Cross-validation queries:
+   [query | restaurant targeted | source found / not found]
+
+Wait for instruction before proceeding to Phase 2.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

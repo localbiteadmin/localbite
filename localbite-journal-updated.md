@@ -1,3 +1,4 @@
+
 # LocalBite Research Journal
 
 ---
@@ -3468,3 +3469,647 @@ Deferred from this session:
 *Build script committed: ac27203*
 *No city data changed, no restaurant count changes*
 *Fleet: 13 cities, 480 restaurants — unchanged*
+
+
+## Session — 2026-04-15 (Bottom Sheet and Cross-Navigation)
+
+### Overview
+
+Viewer feature session. Built and deployed the mobile bottom sheet for individual restaurant map pins. This completes the cross-navigation backlog item — the bottom sheet is the cross-navigation solution for mobile map view, as decided in the April 14 planning session.
+
+Two bugs found and fixed during testing. All 16 mobile test matrix items passed or confirmed as working as intended. Fleet and city data unchanged.
+
+---
+
+### What Was Built
+
+**Mobile bottom sheet for restaurant map pins.**
+
+Individual restaurant pins (teardrop markers) now open a bottom sheet showing the full restaurant card when tapped, instead of a Leaflet popup. The sheet slides up from the bottom of the screen with a CSS transition, displays the card content including quote, cuisine, neighbourhood, price, sources panel, and both-pool badge, and dismisses via the X button, the Escape key, or tapping empty map space.
+
+Centroid group pins (dashed circle markers) are unchanged — they still show a Leaflet popup listing all restaurants at that approximate location.
+
+---
+
+### Commits
+
+| Commit | Description |
+|--------|-------------|
+| `a739e26` | feat: add mobile bottom sheet for restaurant map pins |
+| `dfe5455` | fix: move sheet dismiss listeners inside DOMContentLoaded |
+| `93211f4` | fix: replace full-screen overlay with map-container click dismissal |
+| `70b342e` | chore: remove pre-sheet backup file |
+| `1b6fad7` | chore: remove fix scripts and stray conversation file from repo |
+
+---
+
+### Build Process
+
+The build script `localbite-sheet-build.py` (committed at `ac27203` in the April 14 planning session) applied 10 targeted string replacements to `index.html`. All 10 succeeded on first run (+3,757 chars added). Pre-flight diagnostic confirmed all anchor strings were unique and unambiguous in the current file before running.
+
+**Key pre-flight findings:**
+- `bindPopup` appeared at two locations (lines 1925 and 1984) — confirmed the script's anchor uniquely targeted the individual marker at `maxWidth: 240`, not the centroid marker at `maxWidth: 260`. Safe to run.
+- Sheet code (`openSheet`, `closeSheet`, `sheet-overlay`) confirmed absent before script ran — no partial previous application.
+- File at 2,047 lines — below the 2,500-line migration trigger.
+
+---
+
+### Bugs Found and Fixed
+
+**Bug 1 — Sheet dismiss listeners attached before DOM ready**
+
+Root cause: Change 3 in the build script inserted the sheet dismiss event listeners (`sheet-close`, `sheet-overlay`, `keydown`) at the JS block level, executing immediately when the parser reaches them. The sheet HTML elements are inserted at the end of `<body>` by Change 1 — after the script block. So `document.getElementById('sheet-close')` returned `null`, `.addEventListener` on `null` threw a TypeError, and the entire script block halted before `DOMContentLoaded` and `loadIndex()` fired.
+
+Symptom: page stuck on "loading city packs" — the fetch never ran.
+
+Fix: moved the three dismiss listeners inside the existing `DOMContentLoaded` block, which already contained the city selector listener. All three elements are guaranteed to exist by the time `DOMContentLoaded` fires.
+
+Commit: `dfe5455`
+
+---
+
+**Bug 2 — Full-screen overlay blocked all UI controls**
+
+Root cause: the original sheet design used a full-screen overlay (`position: fixed; inset: 0`) at z-index 1000 to provide a tappable dark backdrop for dismissal. This overlay sat above the header (z-index 100), the filters bar (z-index 90), and the map itself. Any tap on those elements was intercepted by the overlay instead.
+
+Symptoms observed during Gate 2 testing:
+- Filter clear button required two taps when sheet open (first tap closed sheet via overlay, second tap hit button)
+- City selector required two taps when sheet open (same reason)
+- Switching between pins required two taps (first tap closed sheet, second tap opened new restaurant)
+- Near me button inaccessible when sheet open (overlay covered it)
+
+Fix: removed the overlay element entirely. Dismissal is now handled by:
+1. X button on the sheet itself (unchanged)
+2. Escape key (unchanged)
+3. Click listener on `#map-container` — fires `closeSheet()` only when `e.target === this` (i.e. a click on empty map space, not on a pin or other child element)
+
+This means all header controls, filter controls, city selector, and map pins remain fully accessible regardless of sheet state. Pins are single-tap to switch restaurants.
+
+Commit: `93211f4`
+
+---
+
+### Test Results — Mobile Test Matrix
+
+All 16 tests run against the live GitHub Pages deployment on both desktop Safari and iPhone.
+
+**Gate 1 — Core open/close (all pass)**
+
+| Test | Result |
+|------|--------|
+| Tap individual pin | ✅ Sheet slides up |
+| Tap X button | ✅ Sheet slides down |
+| Tap empty map space | ✅ Sheet slides down |
+
+**Gate 2 — State transitions (all pass)**
+
+| Test | Result |
+|------|--------|
+| Change filter while sheet open | ✅ Sheet closes, map updates |
+| Clear filters while sheet open | ✅ Single tap, sheet closes |
+| Switch to list while sheet open | ✅ Sheet closes |
+| Switch city while sheet open | ✅ Single tap, city changes |
+| Tap second pin while sheet open | ✅ Single tap switches restaurant |
+| Near me while sheet open | ✅ Working as intended — see note |
+
+**Gate 3 — iOS rendering (all pass)**
+
+| Test | Result |
+|------|--------|
+| Sheet content scrollable | ✅ No scroll needed — cards fit within sheet |
+| Sheet height on iOS | ✅ Clears Safari address bar (80dvh working) |
+| Map visible above sheet | ✅ Correct — sheet does not fill full viewport |
+| Sheet feels responsive | ✅ Smooth transition on mobile |
+
+---
+
+### Decisions Made
+
+**Near me button covered by sheet — accepted as correct behaviour.**
+The Near me button is in the bottom-right of the map. The sheet slides up over the map area when open, covering the button. This is consistent with how Google Maps and Apple Maps handle bottom sheets — map controls are inaccessible while a sheet is open, and users close the sheet first. Not a bug. If the Near me button needs to be permanently accessible, the fix would be to move it to the filters bar — deferred to future backlog.
+
+**Full-screen overlay removed permanently.**
+The map-container click listener is cleaner architecture than an overlay for this use case. An overlay made sense when the sheet needed to block all background interaction (e.g. a modal dialog), but a map bottom sheet should not block the map or controls. Decision recorded: do not reintroduce a full-screen overlay for the sheet.
+
+**Rapid pin switching — accepted.**
+Tapping a second pin while a sheet is open produces two visual steps: sheet closes (280ms transition), then reopens with the new restaurant. This is the `sheetOpenTimeout` mechanism working correctly — the delay matches the CSS transition duration so the animations don't overlap. Feels natural on device. Not a bug.
+
+**2,500-line migration trigger — monitored.**
+File is now approximately 2,175 lines after the sheet additions. The agreed React migration trigger is 2,500 lines. Approximately 2–4 more features before the trigger is reached.
+
+---
+
+### Architecture Notes
+
+The bottom sheet relies on `cardHTML(r)` being a standalone named function — confirmed in the April 14 planning session as the key architectural precondition. The sheet calls `cardHTML(r)` to render the restaurant card inside the sheet content div, then reattaches the writer profile toggle event listener. This pattern will need updating if `cardHTML` gains additional interactive elements in future.
+
+The `writer-profile-toggle` reattachment inside `openSheet()` is the one place where the sheet has explicit knowledge of card internals. If the card gains new interactive elements, `openSheet()` must be updated to reattach their listeners too. This is documented in a comment in the code.
+
+---
+
+### Files Changed
+
+| File | Change |
+|------|--------|
+| `index.html` | Bottom sheet HTML, CSS, JS — net +128 lines after fixes |
+
+---
+
+### Outstanding Items — Updated
+
+**Completed this session:**
+- [x] Bottom sheet for restaurant map pins
+- [x] Cross-navigation (resolved by bottom sheet — Option D confirmed correct)
+
+**Carry forward (priority order):**
+- [ ] **Sort — "Most recommended" label** — rename default sort to user-facing language. 30 min. Low risk.
+- [ ] **Sort — Neighbourhood sort dropdown** — group cards by neighbourhood with section headers. 60 min. Medium risk (null neighbourhood handling, list-only behaviour).
+- [ ] **CENTROIDS namespace audit** — Centro Histórico, Medina, El Carmen shared between cities. Baixa (Lisboa) fixed April 13 — audit for remaining collisions.
+- [ ] **Seville open_status_check** — 29 restaurants (48% of pack), some from 2023 sources. Highest data quality risk in fleet.
+- [ ] **Barcelona open_status_check** — 11 restaurants, sources from December 2024 (16 months old).
+- [ ] **Córdoba and Granada open_status_check** — 13 restaurants combined.
+- [ ] **Delete stale Barcelona v4 pack** — `localbite-barcelona-2025-2026.json` superseded by v6.
+- [ ] **Valencia v2** — 39/47 restaurants have `article_date: undated`.
+- [ ] **Lisbon PT pool** — only 2 PT-pool restaurants in v6.
+- [ ] **Fes v6 upgrade** — oldest pipeline in fleet (v4).
+- [ ] **Price tier tooltip** — small viewer change, low priority.
+- [ ] **Jina/Elastic watch** — monitor `r.jina.ai` endpoint status.
+
+---
+
+*Session duration: approximately 2.5 hours*
+*Commits: a739e26, dfe5455, 93211f4, 70b342e, 1b6fad7*
+*Fleet: 13 cities, 480 restaurants — unchanged*
+*index.html: ~2,175 lines (migration trigger at 2,500)*
+
+
+---
+
+## Session — 2026-04-15 (Search Quality Analysis + Madrid Test Design)
+
+### Overview
+
+No city data changes this session. Work focused on three areas:
+(1) documentation of v7 extraction quality improvements, (2) deep
+analysis of search composition across the fleet with a revised query
+template, and (3) design of a controlled v6 vs v7 test on Madrid.
+Bottom sheet feature was built and committed earlier in this session
+(commits dfe5455, 93211f4 — see compact summary below).
+
+**Fleet at session start:** 13 cities, 480 restaurants — unchanged.
+**index.html:** ~2,175 lines (migration trigger at 2,500).
+
+---
+
+### Bottom Sheet — Built and Live (earlier this session)
+
+Bottom sheet for mobile map pins built and deployed. Teardrop pins
+now open a full restaurant card sliding up from the bottom (Google
+Maps pattern) rather than a Leaflet popup. Centroid group pins
+unchanged.
+
+**Commits:**
+- a739e26 — feat: bottom sheet
+- dfe5455 — fix: move dismiss listeners inside DOMContentLoaded
+- 93211f4 — fix: remove full-screen overlay, use map-container click
+- 70b342e — cleanup
+- 1b6fad7 — remove stray files
+
+**Gate tests:** All passed. Near-me button covered by open sheet
+accepted as correct behaviour (consistent with Google Maps pattern).
+
+---
+
+### v7 Extraction Quality Improvements — Design Document
+
+Quality review identified training knowledge contamination in
+Valencia city pack: La Salita listed as "1 Michelin star" and
+Ricard Camarena as "2 Michelin stars" despite neither being in
+source articles. Three additional extraction quality issues
+identified across the fleet.
+
+**Design document produced:** `localbite-v7-extraction-quality.md`
+
+Three agreed prompt changes for v7 template (implementation deferred
+to next city run — Seville v2 is the natural first candidate):
+
+1. **Signature dish constraint** — add `dishes_mentioned` array;
+   `signature_dish` only if article explicitly singles one dish out.
+   Never select from dishes_mentioned — the article must do the
+   selecting.
+
+2. **Cuisine tightening** — use article's own language when no
+   standard category fits; null if article silent on cuisine; never
+   use training knowledge.
+
+3. **Mention quality test** — before extracting, confirm source text
+   contains specific positive language beyond naming the restaurant.
+   Incidental mentions → skip and log. Test on source text, not
+   extracted quote.
+
+**Rejected gates:** Self-verification (model cannot grade own
+extractions reliably), full anchoring for all fields (cuisine
+consistency breaks), grammatical subject test (penalises personal
+food writing).
+
+**Existing city packs:** Do not rebuild retroactively. Fix Valencia
+Michelin fields manually (30-min targeted audit). Barcelona: audit
+top 10 highest-profile restaurants before next share.
+
+**Viewer change required after v7 pipeline runs:** Display
+`dishes_mentioned` when `signature_dish` is null (~30-45 min).
+
+---
+
+### Product Backlog — Updated
+
+`localbite-product-backlog.md` updated. Key changes:
+- Status changed from "Parked" to "Active"
+- Items 1 and 2 (Option D) marked complete
+- Item 17 added: v7 Pipeline — Extraction Quality Improvements
+- Prioritisation section updated
+- Full consolidated backlog replacing scattered journal entries
+
+---
+
+### Search Quality Analysis — Cross-City Assessment
+
+Systematic analysis of search composition across the fleet based on
+actual search logs (Barcelona, Toronto, Marrakesh, Chefchaouen, Fes,
+Lisbon A/B/C). Key findings:
+
+**Compositional problems confirmed:**
+- City-wide generic queries redundant with each other above 2 per
+  language — confirmed by Strategy A search log (Q1-Q4 return same
+  sources)
+- Named-writer queries (Strategy B evidence) find sources that 30
+  generic queries in Strategy A missed entirely — highest-confidence
+  addition to any search plan
+- Forum queries: confirmed 0% success rate across all cities, all
+  runs — eliminated from v7 template
+- Neighbourhood queries covering only 2-4 areas in cities with 18-21
+  defined neighbourhoods; tourist-facing central areas over-covered,
+  emerging residential areas receive zero dedicated queries
+- Results per query capped at 10: value zone is positions 11-30 for
+  food writing queries — currently being missed entirely
+
+**Structural finding (not fixable by search):** Genuinely independent
+EN and PT critics in Lisbon cover different restaurant segments.
+This was confirmed across three strategy tests. More searches will
+not increase Lisbon both-pool entries — the signal is low because
+the city's food press is genuinely segmented by audience.
+
+**Document produced:** `localbite-search-quality-analysis.md`
+
+---
+
+### Revised v7 Search Composition
+
+**Four tests established for query addition:**
+1. Compositional distinctiveness — does it go somewhere new?
+2. Source population — do qualifying accessible sources exist?
+3. Overlap potential — does the source create multi-source entries?
+4. Novelty — will it find sources not already found?
+
+**Key principle:** Named-writer and named-publication queries belong
+in Phase 0 (direct fetch of known sources) for rebuilds, not Phase 1
+search queries. Phase 1 is for discovery. Phase 0 is for retrieval.
+
+**Revised composition for well-documented European city (35 queries,
+30 results/query, Max 5x — vs v6's 30 queries, 10 results/query):**
+
+| Angle | v6 | v7 | Rationale |
+|-------|----|----|-----------|
+| City-wide generic EN | 4 | 2 | Redundant above 2 |
+| City-wide generic local | 5 | 3 | Redundant above 3 |
+| Neighbourhood Tier 1 central EN | 2 | 2 | Keep — named areas |
+| Neighbourhood Tier 1 central local | 2 | 2 | Keep — named areas |
+| Neighbourhood Tier 2 residential EN | 0 | 2 | New — highest overlap potential |
+| Neighbourhood Tier 2 residential local | 0 | 2 | New — highest overlap potential |
+| Neighbourhood Tier 3 emerging EN | 0 | 2 | New — underrepresented |
+| Neighbourhood Tier 3 emerging local | 0 | 2 | New — underrepresented |
+| Generic writer-first | 4 | 4 | Keep unchanged |
+| Named awards (city-specific) | 0 | 3 | New — named beats generic |
+| Generic awards | 2 | 0 | Absorbed into named |
+| Recent openings | 2 | 2 | Keep unchanged |
+| Vocabulary-specific local language | 0 | 2 | New — untested but compositionally distinct |
+| Cuisine and community EN | 0 | 2 | New — community writing missed by generic |
+| Publication-category local | 0 | 2 | New — category not named outlet |
+| Cross-validation Phase 1B (post-Phase 0) | 0 | 3 | New — responsive, hunts overlap |
+| Forum | 3 | 0 | Eliminated — 0% success rate |
+| Generic publication | 2 | 0 | Eliminated — redundant with city-wide |
+| **Total** | **30** | **35** | +5 from Max 5x headroom |
+
+**Neighbourhood coverage:** Neighbourhoods now named explicitly in
+Part 1 across three tiers. Leaving selection to the pipeline risks
+defaulting to tourist-facing areas already saturated by city-wide
+queries. For Madrid specifically: Tier 1 = Malasaña, La Latina;
+Tier 2 = Chamberí, Salamanca; Tier 3 = Carabanchel, Usera.
+
+---
+
+### Madrid Test Design — v6 vs v7
+
+**Test city:** Madrid. First pipeline run — no prior pipeline
+knowledge. Clean apples-to-apples comparison.
+
+**Why Madrid:** No prior history (no contamination), rich bilingual
+food writing scene (results will be meaningful), genuinely both-
+pool-capable (EN + ES independent press), adds a high-value city to
+the fleet regardless of which version wins.
+
+**Files produced:**
+- `localbite-prompt-v6-madrid-part1.txt` — control Part 1 (standard
+  v6 variables, no modifications)
+- `localbite-prompt-v7-madrid-part1.txt` — test Part 1 (revised
+  composition, 30 results/query, named awards, vocabulary, tiered
+  neighbourhood coverage with named areas, prior knowledge exclusion
+  instruction)
+- `localbite-prior-knowledge-check.py` — automated check script
+- `localbite-madrid-test-runbook.md` — step-by-step procedure
+
+**Madrid Part 1 variables confirmed (from public research):**
+- Named awards: Premios de la Academia Madrileña de Gastronomía,
+  Soles Repsol / Guía Repsol, Premios Metrópoli
+- Tier 1 central: Malasaña, La Latina
+- Tier 2 residential: Chamberí, Salamanca
+- Tier 3 emerging: Carabanchel, Usera
+- Local vocabulary: taberna, tasca, guiso, cocido, vermú, tapeo,
+  casa de comidas, barra, menú del día
+- Phase 0 sources: El Comidista (elcomidista.elpais.com),
+  Guía Repsol (guiarepsol.com/es/restaurantes/madrid/)
+- Known COI: Time Out Madrid operates Time Out Market Madrid
+- Known problematic URL: gastronomistas.com
+
+**Prior knowledge check script:** Runs automatically after the
+search plan is written, before any searches execute. Checks each
+query for proper nouns and named entities not in Part 1 variables.
+Exit codes: 0 = clean, 1 = review needed, 2 = violations found
+(pipeline must rewrite flagged queries and recheck). Catches writer
+name patterns (First Last format), restaurant name patterns (quoted
+short capitalised terms), and attribution patterns. Does not catch
+conceptual leakage — only named entity leakage.
+
+**Test sequence:**
+1. v6 Madrid — Phase 1 only → record source list → PAUSE
+2. v7 Madrid — Phase 1 only (prior knowledge check runs
+   automatically) → record source list → PAUSE
+3. Compare Phase 1 source lists — primary metric
+4. If Phase 1 passes (v7 finds ≥2 exclusive new sources): proceed
+   to full runs for both, compare final packs
+
+**Success criteria:**
+- Phase 1 pass: v7 finds ≥2 sources not found by v6, ≥1 genuine
+  independent voice (primary source, named author, not aggregator)
+- Full pack pass: v7 produces ≥10% more multi-source entries than v6
+
+**Run instructions:** Both runs same day. v6 first, v7 second.
+Fresh Claude Code session for each. Concatenate Part 1 with
+v6 template Part 2 to build full runnable prompts.
+
+---
+
+### Key Decisions This Session
+
+- v7 prompt changes deferred to Seville v2 (next natural city run)
+- Phase 0 = retrieval of known sources; Phase 1 = discovery of
+  unknown sources. Named-writer queries belong in Phase 0 for
+  rebuilds, not Phase 1.
+- Forum queries eliminated from v7 — 0% success rate, no exception
+- 30 results per query — value zone confirmed at positions 11-30;
+  positions 31+ dominated by noise; 100 results not justified
+- Neighbourhood queries must name specific areas in Part 1 — not
+  left to pipeline discretion
+- Prior knowledge exclusion enforced programmatically via check
+  script, not by human inspection after the fact
+- Madrid test is the validation vehicle — the winning version
+  becomes the live Madrid city pack
+
+---
+
+### Files Produced or Updated This Session
+
+| File | Change |
+|------|--------|
+| `localbite-v7-extraction-quality.md` | New — full design document |
+| `localbite-product-backlog.md` | Updated — Item 17, status active, items 1+2 complete |
+| `localbite-search-quality-analysis.md` | New — cross-city search quality assessment |
+| `localbite-prompt-v6-madrid-part1.txt` | New — Madrid v6 control Part 1 |
+| `localbite-prompt-v7-madrid-part1.txt` | New — Madrid v7 test Part 1 |
+| `localbite-prior-knowledge-check.py` | New — automated prior knowledge check script |
+| `localbite-madrid-test-runbook.md` | New — step-by-step test procedure |
+
+---
+
+### Outstanding Items
+
+**Immediate — Madrid test:**
+- [ ] Copy all Madrid test files to ~/localbite
+- [ ] Concatenate Part 1 files with v6 template to build full prompts
+- [ ] Run v6 Madrid Phase 1 → record source list → PAUSE
+- [ ] Run v7 Madrid Phase 1 → prior knowledge check auto-runs →
+      record source list → PAUSE
+- [ ] Compare Phase 1 source lists
+- [ ] If Phase 1 passes: run both to completion, compare packs
+
+**Pipeline — priority order:**
+- [ ] v7 prompt changes — implement on Seville v2
+- [ ] Seville open_status_check — 29 restaurants (48%), highest risk
+- [ ] Barcelona open_status_check + targeted Michelin audit
+- [ ] Córdoba and Granada open_status_check — 13 combined
+- [ ] Valencia v2 rebuild — undated sources, v7 prompt, fix Michelin
+- [ ] Lisbon PT pool — find Sábado, Evasões, Visão replacements
+- [ ] Fes v6 upgrade — oldest in fleet (v4)
+- [ ] CENTROIDS namespace audit
+- [ ] Delete stale Barcelona v4 pack
+
+**Viewer — priority order:**
+- [ ] Analytics — highest-priority unbuilt item
+- [ ] Sort — "Most recommended" label — 30 min
+- [ ] Sort — Neighbourhood sort dropdown — 60 min
+- [ ] List-to-map navigation — 60–90 min
+- [ ] Compact card mode — 2–3 hours
+- [ ] Price tier tooltip — 20 min
+- [ ] dishes_mentioned display when signature_dish null — after v7
+
+**Infrastructure:**
+- [ ] Custom domain
+- [ ] Jina/Elastic watch
+
+---
+
+*Session focus: pipeline research and test design — no city data changes*
+*Fleet: 13 cities, 480 restaurants — unchanged*
+*index.html: ~2,175 lines (migration trigger at 2,500)*
+
+
+## Session — 2026-04-15 (Bottom Sheet and Cross-Navigation)
+
+### Overview
+
+Viewer feature session. Built and deployed the mobile bottom sheet for individual restaurant map pins. This completes the cross-navigation backlog item — the bottom sheet is the cross-navigation solution for mobile map view, as decided in the April 14 planning session.
+
+Two bugs found and fixed during testing. All 16 mobile test matrix items passed or confirmed as working as intended. Fleet and city data unchanged.
+
+---
+
+### What Was Built
+
+**Mobile bottom sheet for restaurant map pins.**
+
+Individual restaurant pins (teardrop markers) now open a bottom sheet showing the full restaurant card when tapped, instead of a Leaflet popup. The sheet slides up from the bottom of the screen with a CSS transition, displays the card content including quote, cuisine, neighbourhood, price, sources panel, and both-pool badge, and dismisses via the X button, the Escape key, or tapping empty map space.
+
+Centroid group pins (dashed circle markers) are unchanged — they still show a Leaflet popup listing all restaurants at that approximate location.
+
+---
+
+### Commits
+
+| Commit | Description |
+|--------|-------------|
+| `a739e26` | feat: add mobile bottom sheet for restaurant map pins |
+| `dfe5455` | fix: move sheet dismiss listeners inside DOMContentLoaded |
+| `93211f4` | fix: replace full-screen overlay with map-container click dismissal |
+| `70b342e` | chore: remove pre-sheet backup file |
+| `1b6fad7` | chore: remove fix scripts and stray conversation file from repo |
+
+---
+
+### Build Process
+
+The build script `localbite-sheet-build.py` (committed at `ac27203` in the April 14 planning session) applied 10 targeted string replacements to `index.html`. All 10 succeeded on first run (+3,757 chars added). Pre-flight diagnostic confirmed all anchor strings were unique and unambiguous in the current file before running.
+
+**Key pre-flight findings:**
+- `bindPopup` appeared at two locations (lines 1925 and 1984) — confirmed the script's anchor uniquely targeted the individual marker at `maxWidth: 240`, not the centroid marker at `maxWidth: 260`. Safe to run.
+- Sheet code (`openSheet`, `closeSheet`, `sheet-overlay`) confirmed absent before script ran — no partial previous application.
+- File at 2,047 lines — below the 2,500-line migration trigger.
+
+---
+
+### Bugs Found and Fixed
+
+**Bug 1 — Sheet dismiss listeners attached before DOM ready**
+
+Root cause: Change 3 in the build script inserted the sheet dismiss event listeners (`sheet-close`, `sheet-overlay`, `keydown`) at the JS block level, executing immediately when the parser reaches them. The sheet HTML elements are inserted at the end of `<body>` by Change 1 — after the script block. So `document.getElementById('sheet-close')` returned `null`, `.addEventListener` on `null` threw a TypeError, and the entire script block halted before `DOMContentLoaded` and `loadIndex()` fired.
+
+Symptom: page stuck on "loading city packs" — the fetch never ran.
+
+Fix: moved the three dismiss listeners inside the existing `DOMContentLoaded` block, which already contained the city selector listener. All three elements are guaranteed to exist by the time `DOMContentLoaded` fires.
+
+Commit: `dfe5455`
+
+---
+
+**Bug 2 — Full-screen overlay blocked all UI controls**
+
+Root cause: the original sheet design used a full-screen overlay (`position: fixed; inset: 0`) at z-index 1000 to provide a tappable dark backdrop for dismissal. This overlay sat above the header (z-index 100), the filters bar (z-index 90), and the map itself. Any tap on those elements was intercepted by the overlay instead.
+
+Symptoms observed during Gate 2 testing:
+- Filter clear button required two taps when sheet open (first tap closed sheet via overlay, second tap hit button)
+- City selector required two taps when sheet open (same reason)
+- Switching between pins required two taps (first tap closed sheet, second tap opened new restaurant)
+- Near me button inaccessible when sheet open (overlay covered it)
+
+Fix: removed the overlay element entirely. Dismissal is now handled by:
+1. X button on the sheet itself (unchanged)
+2. Escape key (unchanged)
+3. Click listener on `#map-container` — fires `closeSheet()` only when `e.target === this` (i.e. a click on empty map space, not on a pin or other child element)
+
+This means all header controls, filter controls, city selector, and map pins remain fully accessible regardless of sheet state. Pins are single-tap to switch restaurants.
+
+Commit: `93211f4`
+
+---
+
+### Test Results — Mobile Test Matrix
+
+All 16 tests run against the live GitHub Pages deployment on both desktop Safari and iPhone.
+
+**Gate 1 — Core open/close (all pass)**
+
+| Test | Result |
+|------|--------|
+| Tap individual pin | ✅ Sheet slides up |
+| Tap X button | ✅ Sheet slides down |
+| Tap empty map space | ✅ Sheet slides down |
+
+**Gate 2 — State transitions (all pass)**
+
+| Test | Result |
+|------|--------|
+| Change filter while sheet open | ✅ Sheet closes, map updates |
+| Clear filters while sheet open | ✅ Single tap, sheet closes |
+| Switch to list while sheet open | ✅ Sheet closes |
+| Switch city while sheet open | ✅ Single tap, city changes |
+| Tap second pin while sheet open | ✅ Single tap switches restaurant |
+| Near me while sheet open | ✅ Working as intended — see note |
+
+**Gate 3 — iOS rendering (all pass)**
+
+| Test | Result |
+|------|--------|
+| Sheet content scrollable | ✅ No scroll needed — cards fit within sheet |
+| Sheet height on iOS | ✅ Clears Safari address bar (80dvh working) |
+| Map visible above sheet | ✅ Correct — sheet does not fill full viewport |
+| Sheet feels responsive | ✅ Smooth transition on mobile |
+
+---
+
+### Decisions Made
+
+**Near me button covered by sheet — accepted as correct behaviour.**
+The Near me button is in the bottom-right of the map. The sheet slides up over the map area when open, covering the button. This is consistent with how Google Maps and Apple Maps handle bottom sheets — map controls are inaccessible while a sheet is open, and users close the sheet first. Not a bug. If the Near me button needs to be permanently accessible, the fix would be to move it to the filters bar — deferred to future backlog.
+
+**Full-screen overlay removed permanently.**
+The map-container click listener is cleaner architecture than an overlay for this use case. An overlay made sense when the sheet needed to block all background interaction (e.g. a modal dialog), but a map bottom sheet should not block the map or controls. Decision recorded: do not reintroduce a full-screen overlay for the sheet.
+
+**Rapid pin switching — accepted.**
+Tapping a second pin while a sheet is open produces two visual steps: sheet closes (280ms transition), then reopens with the new restaurant. This is the `sheetOpenTimeout` mechanism working correctly — the delay matches the CSS transition duration so the animations don't overlap. Feels natural on device. Not a bug.
+
+**2,500-line migration trigger — monitored.**
+File is now approximately 2,175 lines after the sheet additions. The agreed React migration trigger is 2,500 lines. Approximately 2–4 more features before the trigger is reached.
+
+---
+
+### Architecture Notes
+
+The bottom sheet relies on `cardHTML(r)` being a standalone named function — confirmed in the April 14 planning session as the key architectural precondition. The sheet calls `cardHTML(r)` to render the restaurant card inside the sheet content div, then reattaches the writer profile toggle event listener. This pattern will need updating if `cardHTML` gains additional interactive elements in future.
+
+The `writer-profile-toggle` reattachment inside `openSheet()` is the one place where the sheet has explicit knowledge of card internals. If the card gains new interactive elements, `openSheet()` must be updated to reattach their listeners too. This is documented in a comment in the code.
+
+---
+
+### Files Changed
+
+| File | Change |
+|------|--------|
+| `index.html` | Bottom sheet HTML, CSS, JS — net +128 lines after fixes |
+
+---
+
+### Outstanding Items — Updated
+
+**Completed this session:**
+- [x] Bottom sheet for restaurant map pins
+- [x] Cross-navigation (resolved by bottom sheet — Option D confirmed correct)
+
+**Carry forward (priority order):**
+- [ ] **Sort — "Most recommended" label** — rename default sort to user-facing language. 30 min. Low risk.
+- [ ] **Sort — Neighbourhood sort dropdown** — group cards by neighbourhood with section headers. 60 min. Medium risk (null neighbourhood handling, list-only behaviour).
+- [ ] **CENTROIDS namespace audit** — Centro Histórico, Medina, El Carmen shared between cities. Baixa (Lisboa) fixed April 13 — audit for remaining collisions.
+- [ ] **Seville open_status_check** — 29 restaurants (48% of pack), some from 2023 sources. Highest data quality risk in fleet.
+- [ ] **Barcelona open_status_check** — 11 restaurants, sources from December 2024 (16 months old).
+- [ ] **Córdoba and Granada open_status_check** — 13 restaurants combined.
+- [ ] **Delete stale Barcelona v4 pack** — `localbite-barcelona-2025-2026.json` superseded by v6.
+- [ ] **Valencia v2** — 39/47 restaurants have `article_date: undated`.
+- [ ] **Lisbon PT pool** — only 2 PT-pool restaurants in v6.
+- [ ] **Fes v6 upgrade** — oldest pipeline in fleet (v4).
+- [ ] **Price tier tooltip** — small viewer change, low priority.
+- [ ] **Jina/Elastic watch** — monitor `r.jina.ai` endpoint status.
+
+---
+
+*Session duration: approximately 2.5 hours*
+*Commits: a739e26, dfe5455, 93211f4, 70b342e, 1b6fad7*
+*Fleet: 13 cities, 480 restaurants — unchanged*
+*index.html: ~2,175 lines (migration trigger at 2,500)*

@@ -1,90 +1,49 @@
 # LocalBite — Product Backlog
 ## Created: 2026-04-09
-## Status: Parked — revisit after first batch processing experience
+## Last updated: 2026-04-15
+## Status: Active — batch processing complete, 13 cities live
 
 ---
 
 ## Context
 
-These items were identified during the April 9 session. Deliberately deferred
-until after batch processing is validated and more cities are live. User
-feedback and analytics data should inform prioritisation before any of these
-are built.
+Items identified during the April 9 session and expanded through subsequent
+sessions. Batch processing is complete and validated — 13 cities, 480
+restaurants live. User feedback and analytics data should still inform
+prioritisation before building viewer features.
+
+### Completed since April 9
+- Item 1 (viewer part) — article date and title display in sources panel ✅ (April 14)
+- Item 1 (pipeline part) — article_title extraction in v6 template ✅ (April 14)
+- Item 2 (Option D) — bottom sheet for map pins ✅ (April 15)
 
 ---
 
 ## USER-INITIATED IDEAS
 
-### 1. Article date and title in source display
+### 1. Article date and title in source display ✅ COMPLETE
 
-**Current state:** Sources panel shows publication name and writer only.
+**Current state:** Sources panel now shows publication name, writer, article
+title (when available), and article date (when available).
 
-**Proposed:** Each source shows the article title and date alongside the
-publication and writer name. Example:
-> *Barcelona Food Experience — Maria*
-> *"The Best New Restaurants in Barcelona Right Now" — Feb 2026*
-
-**Why it matters:** Direct trust signal — readers can see exactly which
-article a recommendation came from and how recent it is, then click through
-to verify.
-
-**Two pieces of work:**
-- **Viewer change** — display `article_date` from existing JSON. Low effort.
-  Pre-v6 cities may show "undated" — handle gracefully.
-- **Pipeline change** — add `article_title` field to v6 template. Extract
-  from fetched page `<h1>` or first heading. Jina returns this reliably.
-  Small prompt addition, applies to future cities only.
-
-**Effort:** Viewer change ~2 hours. Pipeline change ~30 minutes.
-**Dependency:** None — article_date already in v6 JSON.
+**Completed:** April 14. article_date display live for all cities. article_title
+in v6 template — accumulates naturally as cities rebuild. Backfill script
+built but deferred (unreliable title tag extraction).
 
 ---
 
-### 2. List ↔ Map cross-navigation
+### 2. List ↔ Map cross-navigation — PARTIALLY COMPLETE
 
-**Current state:** List view and map view are separate modes with no
-connection between them.
+**Current state:** Bottom sheet (Option D) built and live April 15. Tapping a
+map pin slides up a full restaurant card from the bottom. All gate tests passed.
 
-**Proposed:** A restaurant in list view should be viewable on the map, and
-a pin on the map should show the full card details.
+**Remaining:** List-to-map direction — tapping a card in list view to show
+that restaurant's pin on the map. Deferred. Architecture is ready (bottom sheet
+exists). Estimated effort: 60–90 min.
 
-**Options evaluated:**
-
-**Option A — Split view (side by side)**
-List left, map right simultaneously. Clicking a card highlights the pin;
-clicking a pin highlights and scrolls to the card.
-- Best for desktop, unusable on mobile
-- Requires significant layout restructure
-- Most powerful — no mode switching
-
-**Option B — Linked toggle with scroll-to** ← Recommended now
-Keep current toggle but make views aware of each other. Clicking a list card
-switches to map and centres on that pin. Clicking a map pin switches to list
-and scrolls to that card with a brief highlight.
-- Works on mobile and desktop
-- Minimal layout change, builds on existing architecture
-- Mode switch is slightly jarring but fast
-
-**Option C — Expanded map pin popups**
-Map pin popups show full card content — quote, price, cuisine, source
-credits, article link. Map becomes self-contained.
-- Clean on mobile, no mode switching needed
-- Pin popups currently show minimal info — expanding is straightforward
-- Risk: popups get crowded on dense city maps
-- Good middle ground before investing in Option D
-
-**Option D — Bottom sheet / hover panel** ← Recommended later
-Tapping a pin slides up a card from the bottom (mobile) or opens a side
-panel (desktop). The Google Maps pattern — already familiar to users.
-- Best mobile UX of any option
-- Most build effort — needs responsive layout logic
-- Gold standard when map is the primary experience
-
-**Recommendation:** Build Option B now (low effort, fixes core problem).
-Build Option D when map is a first-class experience — probably after 15+
-cities live.
-
-**Effort:** Option B ~3 hours. Option D ~1–2 days.
+**Options evaluated:** A (split view), B (linked toggle), C (expanded popups),
+D (bottom sheet). Option D selected and built. Option B (list→map direction)
+remains as follow-on.
 
 ---
 
@@ -141,7 +100,9 @@ Becomes more valuable as the dataset ages — a 2023 article recommendation
 has a real chance of being closed by the time someone reads it.
 
 **Effort:** 2–3 hours. **Priority:** Build after 200+ flagged restaurants
-across cities.
+across cities. Note: Seville currently has 29 open_status_check entries
+(48% of pack) from 2023 sources — approaching the threshold where this
+script becomes essential.
 
 ---
 
@@ -285,24 +246,80 @@ data (schema.org/Restaurant) would also enable rich results in Google.
 
 ---
 
-## PRIORITISATION (when ready to revisit)
+### 17. v7 Pipeline — Extraction quality improvements
+
+**Added:** April 15, 2026
+**Design document:** `localbite-v7-extraction-quality.md`
+**Category:** Pipeline / Data quality
+
+**Problem identified:** Training knowledge contamination found in Valencia
+city pack — La Salita listed as "1 Michelin star" and Ricard Camarena as
+"2 Michelin stars" despite neither being mentioned in the source articles.
+Three additional extraction issues identified:
+- Incidental restaurant mentions extracted as genuine recommendations
+- Signature dish selected editorially by pipeline rather than by writer
+- Cuisine labels invented from training knowledge when articles are ambiguous
+
+**Three agreed prompt changes for v7 template:**
+
+**Change 1 — Signature dish constraint** (~25 min)
+Add `dishes_mentioned` array: all dish names explicitly in article text.
+Set `signature_dish` only if the article itself singles one dish out.
+Never select from dishes_mentioned — the article must do the selecting.
+Requires schema addition: `dishes_mentioned` array field.
+
+**Change 2 — Cuisine instruction tightening** (~20 min)
+Standard category used when article maps clearly. Article's own language
+used when it doesn't map cleanly. Null if article has no cuisine description.
+Never use training knowledge for cuisine if article is silent on it.
+
+**Change 3 — Mention quality test on source text** (~25 min)
+Before extracting, confirm source text contains specific positive language:
+a dish praised, an experience described, or a specific quality named.
+Incidental mentions (passing reference, no evaluative content) → skip and log.
+Test applied to source text, not the extracted quote.
+
+**Viewer change required:** Display `dishes_mentioned` when `signature_dish`
+is null — ~30–45 min. Separate task, not blocking.
+
+**Total implementation time:** ~80 min prompt changes + one test run + 45 min
+viewer update = ~3 hours total.
+
+**Implementation trigger:** Next new city run or next city rebuild.
+Seville v2 is the natural first candidate.
+
+**Existing city packs:** Do not rebuild retroactively. Fix Valencia
+specifically — manually null Michelin fields not in source articles (30 min
+targeted audit). Barcelona: audit top 10 highest-profile restaurants before
+next share.
+
+**Known remaining limitations after v7:**
+- Training knowledge contamination for famous restaurants — reduced not
+  eliminated (fundamental architectural limitation)
+- Partial fetch truncation loses tail-of-article content
+- Casual local restaurants structurally absent from food press sources
+- Paraphrase strips writer voice — accepted copyright trade-off
+
+---
+
+## PRIORITISATION (updated April 15)
 
 ### Do first (low effort, high impact):
-- Analytics (14) — informs everything else
-- Article date display in viewer (1, viewer part) — existing data, quick win
+- Analytics (14) — informs everything else ← still not done
 - "New this month" filter (10) — existing data, quick win
 - Feedback mechanism (13) — data quality, low effort
+- List-to-map direction (2, Option B follow-on) — architecture ready, 60–90 min
 
 ### Do second (medium effort, clear value):
 - Custom domain (15)
-- List sort by neighbourhood/price/recommended (3)
-- Linked toggle navigation (2, Option B)
-- Article title in pipeline (1, pipeline part)
+- v7 extraction quality prompt changes (17) — implement on next city run
+- List sort by neighbourhood/recommended (3) — neighbourhood sort ~1 hr
+- Price tier tooltip — small viewer change, sets correct user expectation
 
 ### Do later (higher effort or needs more data):
 - Compact card mode (3)
-- Expanded map popups or bottom sheet (2, Options C/D)
-- Closure detection script (4)
+- Closure detection script (4) — more urgent as open_status_check count grows
+- dishes_mentioned viewer display (17, viewer part) — after v7 pipeline runs
 - Writer profile enrichment (9)
 - Address field (7)
 
@@ -318,6 +335,12 @@ data (schema.org/Restaurant) would also enable rich results in Google.
 
 ## Notes
 
-- All items deferred until after first batch processing experience
-- Analytics should be added before sharing the viewer URL widely
-- User feedback from real usage should drive prioritisation when the time comes
+- Analytics (14) remains the highest-priority unbuilt item — all viewer
+  decisions are currently made without data
+- Bottom sheet (item 2, Option D) built and live April 15
+- v7 extraction quality (item 17) should be implemented on the next city
+  run — Seville v2 is the natural trigger
+- Seville open_status_check (29 restaurants, 48% of pack, some from 2023)
+  is the most urgent data quality issue in the fleet — not in this backlog
+  but tracked in the pipeline journal outstanding items
+- User feedback from real usage should continue to drive viewer prioritisation
