@@ -1,0 +1,92 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Madrid
+COUNTRY: Spain
+CITY_SLUG: madrid-spain
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: ES
+SEARCH_LANGUAGES: English, Spanish
+
+YEAR_RANGE: 2023-2026
+
+SEARCH_ANGLE_EXAMPLES:
+- "best restaurants Madrid Spain food writer local guide 2026"
+- "mejores restaurantes Madrid España guia gastronomica periodista 2026"
+- "restaurantes Malasaña Madrid 2025 recomendaciones gastronomia"
+- "food critic Madrid restaurant recommendations 2025 2026"
+
+SOURCE_EXAMPLES:
+- Spanish food media: El Comidista (El País), Metrópoli (El Mundo),
+  Guía Repsol, Time Out Madrid ES, ABC Gastro, El Español/Magas,
+  Con Mucha Gula, Gastronosfera, 7 Caníbales
+- English food media: Time Out Madrid EN, The Infatuation Madrid,
+  Condé Nast Traveller, Epicurean Ways
+- Local food bloggers writing in Spanish or English with documented
+  Madrid residency or regular coverage
+- Expat food writers based in Madrid
+
+DIRECT_FETCH_SOURCES:
+These sources are fetched directly in Phase 0 before any searches.
+They are known high-quality independent sources identified during
+city variable preparation.
+- https://elcomidista.elpais.com/ — El Comidista (ES independent
+  food section of El País, named writers, active 2026)
+- https://www.guiarepsol.com/es/restaurantes/madrid/ — Guía Repsol
+  Madrid (ES primary, named critics, active 2026)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+- Time Out Madrid — operates Time Out Market Madrid. Disclose in
+  writer profile. Do not reject — flag transparently.
+
+SECONDARY_SOURCES: Condé Nast Traveller, Lonely Planet, Time Out
+  (EN edition), The Guardian
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Centro (Sol, Austrias, Palacio), La Latina, Lavapiés, Malasaña,
+Chueca, Salamanca, Chamberí, Retiro, Arganzuela, Carabanchel,
+Usera, Vallecas, Moncloa-Aravaca, Tetuán, Hortaleza, Chamartín,
+Ibiza, Huertas, Embajadores, Ópera, Ponzano
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Getafe, Alcalá de Henares, Alcobendas, Pozuelo de Alarcón,
+Majadahonda, Las Rozas, or any location described as "outside
+Madrid", "near Madrid", "Madrid region" without being in the
+city proper, or another Spanish city.
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+
+PRICE_CURRENCY: EUR (Euro)
+PRICE_LEVELS:
+- 1 = under €20 pp (budget / taberna / menú del día)
+- 2 = €20–45 pp (mid-range)
+- 3 = €45–90 pp (upscale)
+- 4 = over €90 pp (fine dining)
+
+OUTPUT_RAW: ./localbite-madrid-raw.json
+OUTPUT_FINAL: ./localbite-madrid-2023-2026.json
+OUTPUT_WORKING: ./localbite-madrid-working.json
+OUTPUT_SEARCH_LOG: ./localbite-madrid-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-madrid-search-plan.txt
+OUTPUT_AUDIT: ./localbite-madrid-audit.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TEST CONTEXT — v6 CONTROL
+This is the v6 control run for the Madrid v6 vs v7 search
+quality test. Run this first. Record Phase 1 source list
+before proceeding to Phase 2. Do not proceed to Phase 2
+until instructed.
+
+IMPORTANT: After Phase 1 completes and the source list is
+presented, PAUSE and report:
+- Total sources found: [N]
+- Sources selected for fetching: [list with publication,
+  writer, language, URL, found_via angle]
+- Sources rejected: [list with reason]
+- Queries that returned no usable candidates: [list]
+
+Wait for instruction before proceeding to Phase 2.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
