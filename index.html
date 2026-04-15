@@ -1824,11 +1824,7 @@ function closeSheet() {
   document.body.style.overflow = '';
 }
 
-document.getElementById('sheet-close').addEventListener('click', closeSheet);
-document.getElementById('sheet-overlay').addEventListener('click', closeSheet);
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape' && selectedRestaurant) closeSheet();
-});
+// Sheet dismiss listeners attached after DOM ready (elements are at end of body)
 
 // ── VIEW TOGGLE ──
 document.getElementById('btn-list').addEventListener('click', function() {
@@ -2135,6 +2131,11 @@ function resetMap() {
 document.addEventListener('DOMContentLoaded', function() {
   const sel = document.getElementById('city-select');
   if (sel) sel.addEventListener('change', resetMap);
+  document.getElementById('sheet-close').addEventListener('click', closeSheet);
+  document.getElementById('sheet-overlay').addEventListener('click', closeSheet);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && selectedRestaurant) closeSheet();
+  });
 });
 
 loadIndex();
