@@ -1,0 +1,50 @@
+=== MADRID v7 SEARCH LOG ===
+Pipeline: localbite-v7
+Date: 2026-04-16
+
+[phase-0] FETCHED El Comidista (elcomidista.elpais.com) — 2026-04-16 — 47,000 chars — writers: Mikel López Iturriaga, Mònica Escudero, Rubén Galdón, Claudia Polo et al — homepage, recipe-heavy, writers confirmed for Phase 1
+[phase-0] FAILED Guía Repsol (/es/restaurantes/madrid/) — 404 error, ~1,200 chars
+[phase-0] WAYBACK RETRY Guía Repsol — FAILED (HTTP 451)
+[phase-0] FALLBACK Guía Repsol (/es/comer/) — 2,000+ chars, 2025–2026 content, no named individual author — FAILED on source quality rule
+[phase-0] FETCHED Spanish Sabores (spanishsabores.com/madrid-gastro-guide) — July 5 2023 — 45,000 chars — Lauren Aloise confirmed (single-author rule applied) — 40+ restaurants extracted
+
+[A-1] EN Malasaña 2024 — "best restaurants Malasaña Madrid food guide local writers 2024" — 10 results — no new qualifying sources (HanSo Café already in SS; other results aggregators or no named author)
+[A-2] ES Malasaña 2025 — "restaurantes Malasaña Madrid recomendaciones gastrónomo crítico 2025" — 10 results — eldiario.es Somos Madrid identified → fetched, qualified as src-eldiario-casas
+[A-3] EN La Latina 2025 — "best tapas restaurants La Latina Madrid food writer recommendations 2025" — 10 results — no new qualifying sources (Will Fly for Food 2020 too old; others aggregators)
+[A-4] ES La Latina 2023–2024 — "mejores tabernas La Latina Madrid guía gastronómica 2023 2024" — 10 results — no new qualifying sources (security blocks on Con Mucha Gula, Con El Morro Fino)
+[A-5] EN Chamberí/Ponzano 2025–2026 — "restaurants Chamberí Ponzano street Madrid dining guide 2025 2026" — 10 results — The Making of Madrid (Felicity Hughes) identified → fetched → Usera article used (src-making-of-madrid); no Chamberí article with named author found
+[A-6] ES Chamberí/Ponzano 2023–2024 — "mejores restaurantes Chamberí Ponzano Madrid crítica gastronómica 2023 2024" — 10 results — GastroMadrid Chamberí article (Julián Acebes, Jan 2024) identified → fetched → qualified as src-gastromadrid-chamberi
+[A-7] EN Salamanca neighbourhood 2025 — "restaurants Salamanca neighbourhood Madrid dining guide food writer 2025" — 10 results — The Infatuation Salamanca (Lori Zaino, Jul 2025) identified → fetched → qualified as src-infatuation-salamanca [Note: Infatuation main Madrid guide (Jan 2022) rejected as PRE-2023]
+[A-8] ES Salamanca neighbourhood 2024 — "restaurantes barrio Salamanca Madrid reseña gastronómica 2024" — 10 results — GastroMadrid Salamanca article (Irene S., Jan 2024) identified → fetched → qualified as src-gastromadrid-salamanca
+[A-9] EN Carabanchel 2024–2025 — "Carabanchel Madrid restaurants food scene guide 2024 2025" — 10 results — no qualifying sources (no named-author articles with restaurant-level descriptions found)
+[A-10] ES Carabanchel 2023–2024 — "restaurantes Carabanchel Madrid gastronomía recomendaciones 2023 2024" — 10 results — no qualifying sources
+[A-11] EN Usera 2025 — "Usera Madrid food guide restaurants Asian community 2025" — 10 results — The Making of Madrid Usera article confirmed as primary target
+[A-12] ES Usera 2024–2025 — "restaurantes Usera Madrid barrio chino gastronomía reseña 2024 2025" — 10 results — no named-author ES source for Usera found
+
+[B-1] EN city-wide 2024 — "best restaurants Madrid Spain food writer local guide 2024" — 10 results — no new qualifying sources
+[B-2] EN city-wide 2025–2026 — "where to eat Madrid personal recommendations local favourite 2025 2026" — 10 results — no new qualifying sources
+[B-3] ES formal 2023–2024 — "crítica gastronómica mejores restaurantes Madrid guía periodista 2023 2024" — 10 results — The Objective article (Mara Sánchez, Oct 2023) identified → fetched → qualified as src-the-objective
+[B-4] ES casual 2025 — "recomendaciones gastronómicas Madrid barrio taberna tasca 2025" — 10 results — no new qualifying sources
+[B-5] ES press 2026 — "guía restaurantes Madrid periodismo gastronómico prensa 2026" — 10 results — Gastroactitud (José Carlos Capel, Jan 2026) identified → fetched → qualified as src-gastroactitud-tasqueria; About page 404 but byline confirmed in article
+[B-6] EN writer-first 2025 — "food writer journalist Madrid restaurant recommendations guide 2025" — 10 results — no new qualifying sources
+[B-7] ES journalist 2024 — "periodista gastronómico Madrid restaurante recomendación columna 2024" — 10 results — no new qualifying sources
+[B-8] ES awards 2024–2025 — "Premios Academia Madrileña Gastronomía 2024 2025 ganadores restaurantes" — 10 results — no qualifying editorial source found (awards lists without named critics)
+[B-9] ES Repsol 2025–2026 — "Soles Repsol Madrid 2025 2026 restaurantes premiados" — 10 results — Guía Repsol confirmed inaccessible (no named individual authors on restaurant pages)
+[B-10] ES Metrópoli 2024–2025 — "Premios Metrópoli Madrid gastronomía 2024 2025 ganadores restaurantes" — 10 results — no qualifying source found with article-level byline
+[B-11] EN new openings 2025–2026 — "new restaurant openings Madrid 2025 2026 food guide" — 10 results — no new qualifying sources
+[B-12] ES new openings 2025–2026 — "nuevos restaurantes Madrid apertura 2025 2026 guía gastronómica" — 10 results — no new qualifying sources
+[B-13] ES taberna/tasca 2024 — "taberna tasca Madrid recomendaciones vermú tapeo barrio 2024" — 10 results — no new qualifying sources
+[B-14] ES casa de comidas 2023–2025 — "casa de comidas menú del día menú mercado Madrid guía 2023 2025" — 10 results — eldiario.es Somos Madrid article confirmed as primary result
+[B-15] ES casquería 2024 — "cocina madrileña casquería cocido barra restaurante crítica Madrid 2024" — 10 results — no new qualifying sources (7 Caníbales Saddle review found: no byline + 2,847 chars — failed on both counts)
+[B-16] ES/EN international 2025 — "restaurante peruano asiático Lavapiés Usera Madrid reseña 2025" — 10 results — no new qualifying sources
+[B-17] ES revista 2024–2025 — "revista gastronómica independiente Madrid restaurantes guía 2024 2025" — 10 results — DOD Magazine security-blocked (380 chars)
+[B-18] ES newspaper supplement 2023–2024 — "suplemento gastronomía periódico Madrid restaurantes recomendaciones 2023 2024" — 10 results — The Objective article confirmed via this angle
+
+[phase-1b-crossval] "Saddle Madrid restaurant recomendacion critica" — 7 Caníbales review (no byline), laGastrolista, Gastroactitud — no new qualifying sources
+[phase-1b-crossval] "El Invernadero Rodrigo de la Calle Madrid recomendacion critica" — Gastroactitud reviews (no byline in some), Guía Repsol (no named author) — no new qualifying sources
+[phase-1b-crossval] "Tripea Madrid restaurante recomendacion critica" — Gastroactitud José Carlos Capel article found but cross-referenced → already identified as src-gastroactitud-tasqueria — no new qualifying sources
+
+[stopping-rule] Applied at query 30 of 30. Last 8 consecutive queries (B-11 through phase-1b-crossval) returned 0 new qualifying sources. Pipeline halted at planned ceiling.
+
+TOTAL QUERIES EXECUTED: 30 (Part A: 12, Part B: 18) + 3 Phase 1B cross-validation = 33
+QUALIFYING SOURCES FOUND: 8

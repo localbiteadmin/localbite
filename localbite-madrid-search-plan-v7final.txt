@@ -1,0 +1,121 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+=== MADRID v7 SEARCH PLAN ===
+Date: 2026-04-16
+Pipeline: localbite-v7
+
+PHASE 0 RESULTS:
+- El Comidista (elcomidista.elpais.com): FETCHED — 47,000 chars, dates 2023–2026 confirmed
+  Writers confirmed: Mikel López Iturriaga, Mònica Escudero, Rubén Galdón, Claudia Polo, Miriam García, Julia Laich, Anna Mayer, Leti Rodríguez, Laura Caorsi
+- Guía Repsol (/es/restaurantes/madrid/): FAILED 404 → WAYBACK: FAILED 451
+  Fallback (/es/comer/): 2,000+ chars, 2025–2026 content — PARTIAL but no individual named author → FAILED on author rule
+- Spanish Sabores (spanishsabores.com/madrid-gastro-guide): FETCHED — 45,000 chars, July 5 2023 confirmed
+  [single-author-confirmed] Spanish Sabores — About page confirms Lauren Aloise as sole author. Article-level byline not required.
+  [coi-check] Spanish Sabores — commercial conflict: YES — Lauren Aloise co-founded Devour Tours, a Madrid food tour operator
+
+Writers confirmed for Phase 1: Mikel López Iturriaga, Mònica Escudero (El Comidista / El País), Lauren Aloise (Spanish Sabores)
+
+YEAR DISTRIBUTION CHECK:
+[year-distribution-check] PASSED — 13 queries reference 2023-2024, 14 queries reference 2025-2026, 3 queries have no year term.
+
+=== PART A — NEIGHBOURHOOD COVERAGE ===
+
+TIER 1 — Central/tourist (1 EN + 1 ES per area)
+
+A-1  [EN, Malasaña, 2024]
+     "best restaurants Malasaña Madrid food guide local writers 2024"
+
+A-2  [ES, Malasaña, 2025]
+     "restaurantes Malasaña Madrid recomendaciones gastrónomo crítico 2025"
+
+A-3  [EN, La Latina, 2025]
+     "best tapas restaurants La Latina Madrid food writer recommendations 2025"
+
+A-4  [ES, La Latina, 2023–2024]
+     "mejores tabernas La Latina Madrid guía gastronómica 2023 2024"
+
+TIER 2 — Residential mid-range (1 EN + 1 ES per area)
+
+A-5  [EN, Chamberí/Ponzano, 2025–2026]
+     "restaurants Chamberí Ponzano street Madrid dining guide 2025 2026"
+
+A-6  [ES, Chamberí/Ponzano, 2023–2024]
+     "mejores restaurantes Chamberí Ponzano Madrid crítica gastronómica 2023 2024"
+
+A-7  [EN, Salamanca neighbourhood, 2025]
+     "restaurants Salamanca neighbourhood Madrid dining guide food writer 2025"
+
+A-8  [ES, Salamanca neighbourhood, 2024]
+     "restaurantes barrio Salamanca Madrid reseña gastronómica 2024"
+
+TIER 3 — Emerging (1 EN + 1 ES per area)
+
+A-9  [EN, Carabanchel, 2024–2025]
+     "Carabanchel Madrid restaurants food scene guide 2024 2025"
+
+A-10 [ES, Carabanchel, 2023–2024]
+     "restaurantes Carabanchel Madrid gastronomía recomendaciones 2023 2024"
+
+A-11 [EN, Usera, 2025]
+     "Usera Madrid food guide restaurants Asian community 2025"
+
+A-12 [ES, Usera, 2024–2025]
+     "restaurantes Usera Madrid barrio chino gastronomía reseña 2024 2025"
+
+=== PART B — CROSS-CUTTING ANGLES ===
+
+Cross-1 — City-wide EN (2)
+B-1  [EN, 2024]
+     "best restaurants Madrid Spain food writer local guide 2024"
+B-2  [EN, 2025–2026]
+     "where to eat Madrid personal recommendations local favourite 2025 2026"
+
+Cross-2 — City-wide ES (3)
+B-3  [ES formal, 2023–2024]
+     "crítica gastronómica mejores restaurantes Madrid guía periodista 2023 2024"
+B-4  [ES casual, 2025]
+     "recomendaciones gastronómicas Madrid barrio taberna tasca 2025"
+B-5  [ES press, 2026]
+     "guía restaurantes Madrid periodismo gastronómico prensa 2026"
+
+Cross-3 — Generic writer-first (2)
+B-6  [EN, 2025]
+     "food writer journalist Madrid restaurant recommendations guide 2025"
+B-7  [ES, 2024]
+     "periodista gastronómico Madrid restaurante recomendación columna 2024"
+
+Cross-4 — Named awards (3)
+B-8  [ES, awards, 2024–2025]
+     "Premios Academia Madrileña Gastronomía 2024 2025 ganadores restaurantes"
+B-9  [ES, Repsol, 2025–2026]
+     "Soles Repsol Madrid 2025 2026 restaurantes premiados"
+B-10 [ES, Metrópoli, 2024–2025]
+     "Premios Metrópoli Madrid gastronomía 2024 2025 ganadores restaurantes"
+
+Cross-5 — Recent openings 2025–2026 (2)
+B-11 [EN, 2025–2026]
+     "new restaurant openings Madrid 2025 2026 food guide"
+B-12 [ES, 2025–2026]
+     "nuevos restaurantes Madrid apertura 2025 2026 guía gastronómica"
+
+Cross-6 — Vocabulary-specific ES (2)
+B-13 [ES, 2024]
+     "taberna tasca Madrid recomendaciones vermú tapeo barrio 2024"
+B-14 [ES, 2023–2025]
+     "casa de comidas menú del día menú mercado Madrid guía 2023 2025"
+
+Cross-7 — Cuisine and community (2)
+B-15 [ES, cocina madrileña, 2024]
+     "cocina madrileña casquería cocido barra restaurante crítica Madrid 2024"
+B-16 [ES/EN, international, 2025]
+     "restaurante peruano asiático Lavapiés Usera Madrid reseña 2025"
+
+Cross-8 — Publication-category ES (2)
+B-17 [ES, revista, 2024–2025]
+     "revista gastronómica independiente Madrid restaurantes guía 2024 2025"
+B-18 [ES, newspaper supplement, 2023–2024]
+     "suplemento gastronomía periódico Madrid restaurantes recomendaciones 2023 2024"
+
+TOTAL PLANNED QUERIES: 30 (Part A: 12, Part B: 18)
+SOFT CEILING: 55 — well within limit
+STOPPING RULE: applies if last 8 consecutive queries return no new qualifying sources

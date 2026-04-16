@@ -1,0 +1,207 @@
+=== MADRID v7 AUDIT FILE ===
+Pipeline: localbite-v7
+Date: 2026-04-16
+Author: LocalBite pipeline
+
+════════════════════════════════════════
+SECTION 1 — PHASE 0 OUTCOMES
+════════════════════════════════════════
+
+[phase-0] FETCHED El Comidista — 47,000 chars, 2023–2026 dates confirmed, writers confirmed for Phase 1
+[phase-0] FAILED Guía Repsol (/es/restaurantes/madrid/) — 404 error
+[phase-0] WAYBACK RETRY Guía Repsol — FAILED (HTTP 451, blocked)
+[phase-0] FALLBACK Guía Repsol (/es/comer/) — 2,000+ chars, no individual named author → FAILED on source quality rule
+[phase-0] FETCHED Spanish Sabores — 45,000 chars, July 5 2023, Lauren Aloise confirmed
+[single-author-confirmed] Spanish Sabores — About page confirms Lauren Aloise as sole author. Article-level byline not required.
+[coi-check] Spanish Sabores — commercial conflict: YES — Lauren Aloise co-founded Devour Tours, a Madrid food tour operator
+
+════════════════════════════════════════
+SECTION 2 — SOURCE SELECTION DECISIONS
+════════════════════════════════════════
+
+SOURCES ACCEPTED:
+1. src-spanish-sabores — Spanish Sabores (Lauren Aloise, July 5 2023, EN secondary, ⚠ COI)
+2. src-gastromadrid-chamberi — GastroMadrid Chamberí (Julián Acebes, Jan 19 2024, ES primary)
+3. src-gastromadrid-salamanca — GastroMadrid Salamanca (Irene S., Jan 23 2024, ES primary) [publisher-concentration]
+4. src-eldiario-casas — eldiario.es Somos Madrid (Carlos Osorio, Nov 8 2025, ES primary)
+5. src-making-of-madrid — The Making of Madrid (Felicity Hughes, Aug 18 2025, EN primary)
+6. src-the-objective — The Objective (Mara Sánchez, Oct 12 2023, ES primary — multi-city article, Madrid restaurants only extracted)
+7. src-gastroactitud-tasqueria — Gastroactitud (José Carlos Capel, Jan 29 2026, ES primary)
+8. src-infatuation-salamanca — The Infatuation Salamanca (Lori Zaino, Jul 22 2025, EN primary)
+
+[single-author-confirmed] The Making of Madrid — About page confirms Felicity Hughes as sole author (Lonely Planet author). Article-level byline not required.
+[coi-check] GastroMadrid Chamberí — commercial conflict: NO
+[coi-check] GastroMadrid Salamanca — commercial conflict: NO
+[coi-check] eldiario.es — commercial conflict: NO
+[coi-check] The Making of Madrid — commercial conflict: NO
+[coi-check] The Objective — commercial conflict: NO
+[coi-check] Gastroactitud — commercial conflict: NO
+[coi-check] The Infatuation — commercial conflict: NO
+
+[publisher-concentration] GastroMadrid (elblogdegastromadrid.com) contributes 2 articles (Chamberí by Julián Acebes, Salamanca by Irene S.) — 2 different authors, same publication — 50% of ES primary pool. Supplementary searches conducted (30+ queries) with no better independent alternative found. Documented as structural characteristic of the Madrid ES food writing landscape.
+
+[sibling-check] Not applicable — no publications with bilingual editions in source set. The Making of Madrid (EN) and GastroMadrid (ES) are independent publications.
+
+SOURCES REJECTED AT EVALUATION STAGE:
+- The Infatuation Madrid main guide (theinfatuation.com/madrid/guides/best-madrid-restaurants) — article date January 21, 2022 — PRE-2023, outside YEAR_RANGE
+- Will Fly for Food (willflyforfood.net/madrid-food-guide/) — article date July 5, 2020 — PRE-2023
+- Guía Repsol — no individual named authors found in any accessible article
+- Con Mucha Gula (conmuchagula.com) — security block, unable to fetch (380 chars returned)
+- DOD Magazine (dodmagazine.es) — security block, unable to fetch
+- Con El Morro Fino (conelmorrofino.com) — security block, unable to fetch
+- La Gastronoma (lagastronoma.com) — no named author found in article text
+- Tapas Magazine Usera (tapasmagazine.es) — no named author found in article text
+- The World's 50 Best Madrid (theworlds50best.com) — no named article author; only 3,847 chars returned (partial)
+- GastroMadrid 2023 guide (elblogdegastromadrid.com/guia-restaurantes-y-bares-recomendados-madrid-2023) — named author (Julián Acebes) but 100+ restaurants with no individual descriptions — all quotes under 15 words, not extraction-quality
+- Gastroactitud traditional cuisine article (Feb 26, 2024) — no named author found
+- 7 Caníbales Saddle review — no article-level byline; character count 2,847 (below 3,000 threshold)
+
+════════════════════════════════════════
+SECTION 3 — PHASE 1B CROSS-VALIDATION
+════════════════════════════════════════
+
+Top 3 most-mentioned restaurants from Phase 0 + Phase 1 sources:
+1. Saddle (appeared in GastroMadrid Chamberí, The Infatuation, 7 Caníbales)
+2. El Invernadero (appeared in GastroMadrid Chamberí, The Objective, Gastroactitud)
+3. Tripea (appeared in GastroMadrid Chamberí, search results repeatedly)
+
+[phase-1b-crossval] "Saddle Madrid restaurant recomendacion critica" → found 7 Caníbales review (no byline), laGastrolista review, Gastroactitud link — no new qualifying sources
+[phase-1b-crossval] "El Invernadero Rodrigo de la Calle Madrid recomendacion critica" → found Gastroactitud reviews (author not bylined), Guía Repsol — no new qualifying sources
+[phase-1b-crossval] "Tripea Madrid restaurante recomendacion critica" → found Gastroactitud review (José Carlos Capel article found separately) — no new qualifying sources beyond already identified
+
+Phase 1B result: 0 new qualifying sources found.
+
+════════════════════════════════════════
+SECTION 4 — DEDUPLICATION AND MERGES
+════════════════════════════════════════
+
+Total raw entries: 111
+Merges performed: 7
+
+MERGES:
+1. La Sanabresa — Spanish Sabores (EN) + eldiario.es (ES) → BOTH-POOL | merged name: La Sanabresa | neighbourhood: Huertas | best quote: eldiario.es (17 words, specific dishes conejo al ajillo / pollo en pepitoria)
+2. Saddle — GastroMadrid Chamberí (ES) + Infatuation Salamanca (EN) → BOTH-POOL | neighbourhood: Chamberí | best quote: GastroMadrid (18 words, 1 Michelin + 2 Repsol + 1,400 wine references)
+3. El Paraguas — GastroMadrid Salamanca (ES) + Infatuation Salamanca (EN) → BOTH-POOL | neighbourhood: Salamanca | best quote: GastroMadrid (22 words, dos décadas / 2 Soles Repsol)
+4. Treze — GastroMadrid Salamanca (ES) + Infatuation Salamanca (EN, TreZe) → BOTH-POOL | neighbourhood: Salamanca | best quote: GastroMadrid (20 words, elegancia contemporánea / caza / productos de mercado)
+5. El Invernadero — GastroMadrid Chamberí (ES) + The Objective (ES) → multi-source ES | neighbourhood: Chamberí | best quote: GastroMadrid (22 words, gastrobotánica / Michelin / Estrella Verde)
+6. Verdejo — GastroMadrid Salamanca (ES, "Verdejo") + The Objective (ES, "Taberna Verdejo") → multi-source ES | neighbourhood: Salamanca | best quote: GastroMadrid (25 words, escabeches / Marian Reguera / 6 mesas)
+7. Casa Dani — Spanish Sabores (EN) + Infatuation Salamanca (EN) → multi-source EN | neighbourhood: Salamanca | best quote: Infatuation (26 words, Mercado de la Paz / tortilla de patata / regulars)
+
+Total after dedup: 104 unique entries
+
+NAME NORMALISATION NOTES:
+- "TreZe" (Infatuation) = "Treze" (GastroMadrid Salamanca) — same restaurant in Salamanca, merged
+- "Taberna Verdejo" (The Objective) = "Verdejo" (GastroMadrid Salamanca) — same restaurant at General Díaz Porlier 59, merged
+- "La Tasquería de Javi Estévez" (GastroMadrid Salamanca) ≠ "La Barra de la Tasquería" (Gastroactitud) — different venues (original Michelin restaurant vs. casual bar sibling), KEPT SEPARATE
+- "Trèsde" (The Objective, Cava Alta 17, La Latina) ≠ "Treze" (Salamanca) — different restaurants, KEPT SEPARATE
+- "Restaurante Bammbao" (Making of Madrid) = "Bammbao" (referenced in searches) — same restaurant in Usera
+
+════════════════════════════════════════
+SECTION 5 — BOTH-POOL VERIFICATION
+════════════════════════════════════════
+
+BOTH-POOL ENTRIES (strict definition applied — different publishers, different language pools):
+
+1. La Sanabresa — EN: Spanish Sabores (Lauren Aloise) / ES: eldiario.es (Carlos Osorio) — confirmed different publishers ✓
+2. Saddle — EN: The Infatuation (Lori Zaino) / ES: GastroMadrid (Julián Acebes) — confirmed different publishers ✓
+3. El Paraguas — EN: The Infatuation (Lori Zaino) / ES: GastroMadrid (Irene S.) — confirmed different publishers ✓
+4. Treze — EN: The Infatuation (Lori Zaino) / ES: GastroMadrid (Irene S.) — confirmed different publishers ✓
+
+Both-pool count: 4 (meets ≥4 requirement)
+
+════════════════════════════════════════
+SECTION 6 — CONFIDENCE TIER ASSIGNMENTS
+════════════════════════════════════════
+
+TIER A (auto-approve): 7 entries
+BOTH-POOL (4): La Sanabresa, Saddle, El Paraguas, Treze
+MULTI-SOURCE (3): El Invernadero, Verdejo/Taberna Verdejo, Casa Dani
+
+TIER B (review): 77 entries (before concentration cap)
+[See Section 7 for concentration cap auto-rejections]
+
+TIER C (auto-reject): 19 entries
+[See Section 8 for full list]
+
+════════════════════════════════════════
+SECTION 7 — PUBLISHER CONCENTRATION CAP
+════════════════════════════════════════
+
+GastroMadrid single-source Tier B: 38 entries
+Total Tier A + Tier B: 94 entries
+30% cap = 28.2 → max 28 GastroMadrid single-source Tier B entries allowed
+Required auto-rejections: 10
+
+[concentration-cap] GastroMadrid — auto-rejecting 10 lowest-confidence entries
+
+AUTO-REJECTED (concentration cap):
+1. Arahy (Salamanca) — generic quote, no specific dishes
+2. La Bistroteca (Salamanca) — "referente en hamburguesas" generic, no specific dishes
+3. Restaurante Carbón (Salamanca) — generic "enfoque en productos de calidad", no specific dishes
+4. Bar Manero (Salamanca) — "tapeo Made in Spain", no specific dishes
+5. Haroma (Salamanca) — "bistró urbano en Belle Époque", no specific dishes
+6. Noi Restaurante (Salamanca) — generic "recetas auténticas" without specific dishes; chef name (Gianni Pinto) also credited to Matteo in same article
+7. La Gaditana (Salamanca) — generic "pedazo de Cádiz en corazón de Madrid", no specific dishes
+8. Kabuki Madrid (Salamanca) — "dos décadas de excelencia", no specific dishes
+9. Tepic (Salamanca) — "joya mexicana que se aleja de clichés", no specific dishes
+10. Ricardo Sanz Wellington (Salamanca) — "templo culinario", no specific dishes in description
+
+After cap: GastroMadrid contributes 28 single-source Tier B entries (16 Chamberí + 12 Salamanca = 28 = 29.8% of 94). Within cap ✓
+
+════════════════════════════════════════
+SECTION 8 — TIER C AUTO-REJECTIONS (all)
+════════════════════════════════════════
+
+Concentration cap (10): Arahy, La Bistroteca, Restaurante Carbón, Bar Manero, Haroma, Noi Restaurante, La Gaditana, Kabuki Madrid, Tepic, Ricardo Sanz Wellington
+
+Quote quality (short / no specific detail):
+11. DSTAgE — quote "Chef Diego Guerrero's contemporary restaurant on Calle Regueros" — 9 words from actual fetch → under 15 words → Tier C
+12. Trèsde (The Objective) — "propuestas que merecen muchísimo la pena" — description is journalist recommendation without specific dish detail → low confidence
+
+Geographic boundary: none
+
+Traceability failures: none
+
+Summary: 12 Tier C auto-rejections
+(Note: Concentration cap rejections = 10; Quote quality = 2; Total = 12)
+
+════════════════════════════════════════
+SECTION 9 — RECOMMENDED REMOVALS (Tier B)
+════════════════════════════════════════
+
+Bar-only / café-only / bakery:
+1. La Venencia (Spanish Sabores) — sherry bar only; no food beyond simple tapas
+2. Palo Cortado (Spanish Sabores) — sherry/wine bar only
+3. Chocolatería San Ginés (Spanish Sabores) — churros/chocolate café, not a restaurant
+4. HanSo Café (Spanish Sabores) — café-only
+5. Bar Alonso (The Objective) — bar recommendation specifically for draft beer, not food
+6. Bocanada (The Objective) — natural wine bar; no food details
+7. La Fisna (Spanish Sabores) — wine bar; no food details in description
+
+Bakery:
+8. San Francisco de Quito (Making of Madrid) — South American bakery in Usera
+
+Null neighbourhood + single source:
+9. La Barra de la Tasquería (Gastroactitud) — neighbourhood: null, source_count: 1 → AUTO-REMOVAL per null neighbourhood rule. (Note: José Carlos Capel review is high quality; address not confirmed in fetch)
+
+Borderline (flag for user review):
+10. Sanlúcar (Spanish Sabores) — listed as Andalusian sherry wines / Iberian pork bar; may be bar-only
+
+Total recommended removals: 10
+
+open_status_check entries in Tier B (2023-sourced restaurants):
+- All Spanish Sabores single-source entries (~18): open_status_check: true
+- Ugo Chan (The Objective, Oct 2023): open_status_check: true
+Total open_status_check in review table: ~19 entries
+
+════════════════════════════════════════
+SECTION 10 — STRUCTURAL CHARACTERISTICS
+════════════════════════════════════════
+
+1. Publisher concentration: GastroMadrid (elblogdegastromadrid.com) is the dominant ES food blog covering Madrid by neighbourhood. No independent alternative ES blog with named authors and restaurant-level descriptions found despite 30+ queries. Multiple competing ES sources (Con Mucha Gula, 7 Caníbales, Con El Morro Fino, DOD Magazine) were blocked by security checks and could not be fetched.
+
+2. open_status_check rate: Approximately 19 of ~70 final entries (27%) have open_status_check: true — above the ≤15% fleet readiness target. Root cause: Spanish Sabores (July 2023) is the sole comprehensive EN source covering central Madrid restaurants and has no 2024/2025 updated equivalent. Recommend geocoding + closure verification pass before go-live.
+
+3. Usera coverage: Exclusively from one EN source (The Making of Madrid, Felicity Hughes, 2025). No ES source covering Usera specifically was found with a named author. Bamboo/Lao Tou/Helaotai recommendations are all from one English-language perspective.
+
+4. Both-pool limited to Salamanca restaurants: The 4 both-pool entries are all from the Salamanca neighbourhood (Saddle, El Paraguas, Treze) + Huertas (La Sanabresa). No both-pool entries in La Latina, Malasaña, or Chamberí — these are covered by single-language sources only.

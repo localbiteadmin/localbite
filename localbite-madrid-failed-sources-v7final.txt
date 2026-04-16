@@ -1,0 +1,78 @@
+=== MADRID v7 FAILED SOURCES ===
+Pipeline: localbite-v7
+Date: 2026-04-16
+
+════════════════════════════════════════
+FETCH FAILURES
+════════════════════════════════════════
+
+1. Guía Repsol (guiarepsol.com/es/restaurantes/madrid/)
+   Reason: 404 error on primary URL
+   Wayback retry: HTTP 451 (blocked)
+   Fallback (/es/comer/): 2,000+ chars fetched but no individual named author found on any page — all restaurant content attributed to "Redacción". FAILED on author rule.
+
+2. Con Mucha Gula (conmuchagula.com)
+   Reason: Security block — 380 chars returned (Cloudflare/bot protection). Tried twice with different URL patterns. Unable to fetch.
+
+3. DOD Magazine (dodmagazine.es)
+   Reason: Security block — under 400 chars returned. Unable to fetch.
+
+4. Con El Morro Fino (conelmorrofino.com)
+   Reason: Security block — under 400 chars returned. Unable to fetch.
+
+════════════════════════════════════════
+AUTHOR RULE FAILURES
+════════════════════════════════════════
+
+5. La Gastronoma (lagastronoma.com)
+   Reason: No named author found in article text.
+
+6. Tapas Magazine Usera (tapasmagazine.es)
+   Reason: No named author found in article text.
+
+7. The World's 50 Best Madrid (theworlds50best.com)
+   Reason: No named article author AND only 3,847 chars returned (below 3,000 threshold). Dual failure.
+
+8. Gastroactitud traditional cuisine article (gastroactitud.com, Feb 26 2024)
+   Reason: No named author found in article text. (Separate article from the accepted Jan 2026 Capel article.)
+
+9. 7 Caníbales — Saddle review (7canibales.com)
+   Reason: Multi-author publication (Xagullo, Luchini Solano, Abraham Rivera confirmed on homepage) → single-author-site rule does not apply. Specific Saddle review article: no article-level byline found AND only 2,847 chars (below 3,000 threshold). Dual failure.
+
+════════════════════════════════════════
+DATE RANGE FAILURES (outside 2023–2026)
+════════════════════════════════════════
+
+10. The Infatuation — main Madrid guide (theinfatuation.com/madrid/guides/best-madrid-restaurants)
+    Article date: January 21, 2022 — PRE-2023. Rejected.
+    Resolution: The Infatuation Salamanca neighbourhood page (Jul 22 2025) accepted separately as src-infatuation-salamanca.
+
+11. Will Fly for Food — Madrid food guide (willflyforfood.net/madrid-food-guide/)
+    Article date: July 5, 2020 — PRE-2023. Rejected.
+
+════════════════════════════════════════
+QUOTE QUALITY FAILURES (Tier C)
+════════════════════════════════════════
+
+12. DSTAgE (from Spanish Sabores)
+    Quote: "Chef Diego Guerrero's contemporary restaurant on Calle Regueros" — 9 words, under 15-word threshold. Auto-rejected Tier C.
+
+13. Trèsde (from The Objective)
+    Quote: "Propuestas que merecen muchísimo la pena" — no specific dish, chef name, or physical detail. Auto-rejected Tier C.
+
+════════════════════════════════════════
+PUBLISHER CONCENTRATION CAP (auto-rejected)
+════════════════════════════════════════
+
+GastroMadrid (elblogdegastromadrid.com) exceeded 30% cap. 10 lowest-confidence single-source Tier B entries auto-rejected:
+
+14. Arahy (Salamanca) — generic quote, no specific dishes
+15. La Bistroteca (Salamanca) — "referente en hamburguesas" — generic, no specific dishes
+16. Restaurante Carbón (Salamanca) — generic "enfoque en productos de calidad"
+17. Bar Manero (Salamanca) — "tapeo Made in Spain" — no specific dishes
+18. Haroma (Salamanca) — "bistró urbano en Belle Époque" — no specific dishes
+19. Noi Restaurante (Salamanca) — generic "recetas auténticas"; chef attribution conflict
+20. La Gaditana (Salamanca) — generic "pedazo de Cádiz" — no specific dishes
+21. Kabuki Madrid (Salamanca) — "dos décadas de excelencia" — no specific dishes
+22. Tepic (Salamanca) — "joya mexicana que se aleja de clichés" — no specific dishes
+23. Ricardo Sanz Wellington (Salamanca) — "templo culinario" — no specific dishes

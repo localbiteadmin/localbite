@@ -1,0 +1,2996 @@
+{
+  "city": "Madrid",
+  "country": "Spain",
+  "pipeline": "localbite-v7",
+  "pack_date": "2026-04-16",
+  "restaurant_count_pre_removal": 92,
+  "restaurant_count_final": 82,
+  "both_pool_count": 4,
+  "sources": [
+    {
+      "id": "src-spanish-sabores",
+      "publication": "Spanish Sabores",
+      "writer": "Lauren Aloise",
+      "writer_profile": "Lauren Aloise is an American food writer based in Madrid who has spent over a decade eating her way through the city's markets, bars, and neighbourhood restaurants. Her Madrid gastro guide covers everything from iconic historic bars to contemporary openings across central Madrid.",
+      "url": "https://spanishsabores.com/madrid-gastro-guide-where-to-eat-in-madrid/",
+      "language": "en",
+      "source_type": "secondary",
+      "article_date": "2023-07-05",
+      "commercial_conflict": true,
+      "commercial_conflict_note": "Lauren Aloise co-founded Devour Tours, a Madrid food tour operator"
+    },
+    {
+      "id": "src-gastromadrid-chamberi",
+      "publication": "GastroMadrid (elblogdegastromadrid.com)",
+      "writer": "Julián Acebes",
+      "writer_profile": "Julián Acebes is a Madrid-based food blogger and gastronomic writer who has been documenting the city's restaurant scene at elblogdegastromadrid.com for over a decade. His neighbourhood deep-dives offer thorough, locally informed recommendations for Madrid's most dynamic barrios.",
+      "url": "https://www.elblogdegastromadrid.com/25-restaurantes-imprescindibles-barrio-chamberi-madrid-2024",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2024-01-19",
+      "commercial_conflict": false,
+      "publisher_concentration_flag": true
+    },
+    {
+      "id": "src-gastromadrid-salamanca",
+      "publication": "GastroMadrid (elblogdegastromadrid.com)",
+      "writer": "Irene S.",
+      "writer_profile": "Irene S. writes for elblogdegastromadrid.com with a focus on Madrid's upmarket Salamanca neighbourhood, covering everything from long-standing Basque tabernas to modern fine dining. Her guides reflect an insider's perspective on one of Madrid's most food-rich barrios.",
+      "url": "https://www.elblogdegastromadrid.com/25-restaurantes-y-bares-imprescindibles-barrio-salamanca-madrid-2024",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2024-01-23",
+      "commercial_conflict": false,
+      "publisher_concentration_flag": true
+    },
+    {
+      "id": "src-eldiario-casas",
+      "publication": "eldiario.es / Somos Madrid",
+      "writer": "Carlos Osorio",
+      "writer_profile": "Carlos Osorio writes about food and culture for eldiario.es's Somos Madrid section, with a particular interest in Madrid's traditional casas de comidas and neighbourhood gastronomy. His work documents the city's most enduring dining institutions and the people keeping them alive.",
+      "url": "https://www.eldiario.es/madrid/somos/caminando-por-madrid/casas-comidas-sobreviven-madrid-15-negocios-clasicos-3-nuevas-recomendaciones_132_12735813.html",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2025-11-08",
+      "commercial_conflict": false
+    },
+    {
+      "id": "src-making-of-madrid",
+      "publication": "The Making of Madrid",
+      "writer": "Felicity Hughes",
+      "writer_profile": "Felicity Hughes is a Lonely Planet author and long-term Madrid resident who writes about the city's food scene at The Making of Madrid. Her Usera food guide is one of the only English-language resources covering Madrid's diverse Chinese, South American, and Ecuadorian communities in depth.",
+      "url": "https://www.themakingofmadrid.com/2025/08/18/a-foodies-guide-to-usera-madrids-hidden-culinary-paradise/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2025-08-18",
+      "commercial_conflict": false
+    },
+    {
+      "id": "src-the-objective",
+      "publication": "The Objective",
+      "writer": "Mara Sánchez (featuring Raquel Castillo, Tatiana Ferrandis, Alexandra Sumasi)",
+      "writer_profile": "The Objective is an independent Spanish digital newspaper. This feature article presents personal restaurant recommendations from three food journalists — Raquel Castillo, Tatiana Ferrandis, and Alexandra Sumasi — covering their favourite addresses across Spain including Madrid.",
+      "url": "https://theobjective.com/gastronomia/2023-10-12/restaurantes-recomendados-periodistas-gastronomicas/",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2023-10-12",
+      "commercial_conflict": false
+    },
+    {
+      "id": "src-gastroactitud-tasqueria",
+      "publication": "Gastroactitud",
+      "writer": "José Carlos Capel",
+      "writer_profile": "José Carlos Capel is one of Spain's most respected food critics, founder of the Madrid Fusión gastronomy congress, and longtime food writer for El País. His Gastroactitud platform features authoritative reviews of Spain's most significant contemporary restaurants.",
+      "url": "https://www.gastroactitud.com/restaurante/la-barra-de-la-tasqueria-madrid/",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2026-01-29",
+      "commercial_conflict": false
+    },
+    {
+      "id": "src-infatuation-salamanca",
+      "publication": "The Infatuation",
+      "writer": "Lori Zaino",
+      "writer_profile": "Lori Zaino is a Madrid-based food and travel writer whose work appears in The Infatuation and other international publications. Her Salamanca neighbourhood guide provides up-to-date, independently written recommendations for one of Madrid's most restaurant-dense barrios.",
+      "url": "https://www.theinfatuation.com/madrid/neighborhoods/salamanca",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2025-07-22",
+      "commercial_conflict": false
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "madrid-la-sanabresa",
+      "name": "La Sanabresa",
+      "name_variants": null,
+      "neighbourhood": "Huertas",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / casa de comidas",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "conejo al ajillo",
+        "pollo en pepitoria",
+        "cocido"
+      ],
+      "signature_dish": null,
+      "quote": "Cooking since 1964 at Calle Amor de Dios 12 — classic conejo al ajillo, pollo en pepitoria, and cocido in a quintessential Madrid casa de comidas in Huertas.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas",
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08",
+        "2023-07-05"
+      ],
+      "pool": "both",
+      "tier": "A",
+      "both_pool": true,
+      "multi_source": false,
+      "source_count": 2,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-saddle",
+      "name": "Saddle",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Contemporary Spanish / fine dining",
+      "price_level": 4,
+      "dishes_mentioned": [
+        "seasonal tasting menu"
+      ],
+      "signature_dish": null,
+      "quote": "Clásico contemporáneo con 1 Estrella Michelin y 2 Soles Repsol — más de 1,400 referencias de vino y cocina clásica española actualizada en Chamberí.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi",
+        "src-infatuation-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19",
+        "2025-07-22"
+      ],
+      "pool": "both",
+      "tier": "A",
+      "both_pool": true,
+      "multi_source": false,
+      "source_count": 2,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-el-paraguas",
+      "name": "El Paraguas",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Asturian / traditional Spanish",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "Asturian cuisine",
+        "fabada"
+      ],
+      "signature_dish": null,
+      "quote": "Insignia de la cocina asturiana que cumple dos décadas de historia en 2024 — pilar esencial del barrio Salamanca y 2 Soles Repsol.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca",
+        "src-infatuation-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23",
+        "2025-07-22"
+      ],
+      "pool": "both",
+      "tier": "A",
+      "both_pool": true,
+      "multi_source": false,
+      "source_count": 2,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-treze",
+      "name": "Treze",
+      "name_variants": [
+        "TreZe"
+      ],
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Contemporary Spanish / game",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "game",
+        "caza",
+        "seasonal products"
+      ],
+      "signature_dish": null,
+      "quote": "Un rincón de elegancia contemporánea con propuesta gastronómica centrada en productos de mercado, especialmente caza — en el barrio de Salamanca.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca",
+        "src-infatuation-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23",
+        "2025-07-22"
+      ],
+      "pool": "both",
+      "tier": "A",
+      "both_pool": true,
+      "multi_source": false,
+      "source_count": 2,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-el-invernadero",
+      "name": "El Invernadero",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Vegetarian / gastrobotánica",
+      "price_level": 4,
+      "dishes_mentioned": [
+        "vegetable tasting menu",
+        "seasonal vegetables",
+        "gastrobotánica"
+      ],
+      "signature_dish": null,
+      "quote": "Obra maestra de Rodrigo de la Calle, destaca como el referente de la gastrobotánica con una cocina vegetal creativa y evolutiva — 1 Estrella Michelin y Estrella Verde.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi",
+        "src-the-objective"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19",
+        "2023-10-12"
+      ],
+      "pool": "es",
+      "tier": "A",
+      "both_pool": false,
+      "multi_source": true,
+      "source_count": 2,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-verdejo",
+      "name": "Verdejo",
+      "name_variants": [
+        "Taberna Verdejo"
+      ],
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / escabeches / game",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "escabeches",
+        "game",
+        "caza"
+      ],
+      "signature_dish": "escabeches",
+      "quote": "Desde 2013, Marian Reguera deleita con escabeches y obras maestras de caza en una taberna con solo seis mesas en General Díaz Porlier, Salamanca.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca",
+        "src-the-objective"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23",
+        "2023-10-12"
+      ],
+      "pool": "es",
+      "tier": "A",
+      "both_pool": false,
+      "multi_source": true,
+      "source_count": 2,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-casa-dani",
+      "name": "Casa Dani",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Spanish / market restaurant",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "tortilla española",
+        "menú del día",
+        "tortilla de patata"
+      ],
+      "signature_dish": "tortilla de patata",
+      "quote": "Casa Dani is a stall in Mercado de la Paz that's always full of regulars — after trying their tortilla de patata you'll understand why.",
+      "quote_language": "en",
+      "sources": [
+        "src-infatuation-salamanca",
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-infatuation-salamanca",
+      "article_dates": [
+        "2025-07-22",
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "A",
+      "both_pool": false,
+      "multi_source": true,
+      "source_count": 2,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-amazonico",
+      "name": "Amazónico",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Brazilian steakhouse",
+      "price_level": 4,
+      "dishes_mentioned": [
+        "cuts of meat"
+      ],
+      "signature_dish": null,
+      "quote": "Amazónico is a Brazilian steakhouse in Salamanca that's sort of like a very upscale Rainforest Cafe — go here for great cuts of meat.",
+      "quote_language": "en",
+      "sources": [
+        "src-infatuation-salamanca"
+      ],
+      "primary_source": "src-infatuation-salamanca",
+      "article_dates": [
+        "2025-07-22"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-amos",
+      "name": "Amós",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Cantabrian / contemporary",
+      "price_level": 4,
+      "dishes_mentioned": [
+        "Cantabrian cuisine",
+        "tasting menu"
+      ],
+      "signature_dish": null,
+      "quote": "La experiencia culinaria es un viaje a la esencia cántabra, anclado en la tradición, el sabor y la calidad — chef Jesús Sánchez trae su genio gastronómico a Madrid.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-angelita",
+      "name": "Angelita",
+      "name_variants": null,
+      "neighbourhood": "Centro",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Wine bar / creative tapas",
+      "price_level": 2,
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "My favorite wine bar in Madrid on Calle Reina — the wine list changes regularly and the food is consistently good.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-bacira",
+      "name": "Bacira",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Mediterranean-Japanese-Nikkei fusion",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "creative shareable plates",
+        "nikkei"
+      ],
+      "signature_dish": null,
+      "quote": "Fusiona con maestría la tradición mediterránea, la japonesa y la nikkei con platos creativos para compartir en un ambiente industrial-clásico en Chamberí.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-badila",
+      "name": "Badila",
+      "name_variants": null,
+      "neighbourhood": "Lavapiés",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Contemporary Spanish / casa de comidas",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "modern casa de comidas"
+      ],
+      "signature_dish": null,
+      "quote": "New establishment at Calle San Pedro Mártir 6 in Lavapiés modernizing the casa de comidas concept — contemporary take on traditional Madrid dining.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-banibanoo",
+      "name": "Banibanoo",
+      "name_variants": [
+        "BaniBanoo"
+      ],
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Iranian / Persian",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "Iranian cuisine",
+        "Persian cuisine"
+      ],
+      "signature_dish": null,
+      "quote": "BaniBanoo is an Iranian and Persian spot in Salamanca that's only open for breakfast and lunch.",
+      "quote_language": "en",
+      "sources": [
+        "src-infatuation-salamanca"
+      ],
+      "primary_source": "src-infatuation-salamanca",
+      "article_dates": [
+        "2025-07-22"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-bar-la-campana",
+      "name": "Bar La Campana",
+      "name_variants": null,
+      "neighbourhood": "La Latina",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Spanish / bocadillos",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "bocadillo de calamares"
+      ],
+      "signature_dish": "bocadillo de calamares",
+      "quote": "Madrid's best calamari sandwich — the bocadillo de calamares here on Calle Botoneras draws a crowd every day.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-bing-huo-bar",
+      "name": "Bing Huo Bar",
+      "name_variants": null,
+      "neighbourhood": "Usera",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Chinese / hand-pulled noodles",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "hand-torn flat noodles"
+      ],
+      "signature_dish": "hand-torn flat noodles",
+      "quote": "Known for hand-torn flat noodles at Calle Antonio Salvador in Usera — generous portions of this Northern Chinese specialty rarely found in Madrid.",
+      "quote_language": "en",
+      "sources": [
+        "src-making-of-madrid"
+      ],
+      "primary_source": "src-making-of-madrid",
+      "article_dates": [
+        "2025-08-18"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-bogota",
+      "name": "Bogotá",
+      "name_variants": null,
+      "neighbourhood": "Chueca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "classic Spanish dishes"
+      ],
+      "signature_dish": null,
+      "quote": "Operating since 1964 at Calle Belén 20 in Chueca — both modern and classic Spanish dishes in a long-established neighbourhood casa de comidas.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-casa-blazquez-los-torreznos",
+      "name": "Casa Blázquez Los Torreznos",
+      "name_variants": null,
+      "neighbourhood": "Retiro",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / torreznos",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "torreznos",
+        "Spanish home cooking"
+      ],
+      "signature_dish": "torreznos",
+      "quote": "Casa de comidas más tranquila at Calle Fernán González 47 near Retiro — classical music, torreznos and unfussy traditional Madrid cooking.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-casa-campiello",
+      "name": "Casa Campiello",
+      "name_variants": null,
+      "neighbourhood": "La Latina",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / cocido",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "cocido madrileño"
+      ],
+      "signature_dish": "cocido madrileño",
+      "quote": "Features cocido madrileño mid-week at Calle Toledo 122 in La Latina — a genuine casa de comidas in one of Madrid's most traditional streets.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-casa-fidel",
+      "name": "Casa Fidel",
+      "name_variants": null,
+      "neighbourhood": "Malasaña",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / casa de comidas",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "traditional comida casera"
+      ],
+      "signature_dish": null,
+      "quote": "Young entrepreneurs reviving the casa de comidas tradition at Calle Escorial 6 in Malasaña — affordable daily menus with home-cooked Madrid recipes.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-casa-gerardo",
+      "name": "Casa Gerardo",
+      "name_variants": null,
+      "neighbourhood": "La Latina",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Spanish / cheese",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "Spanish cheese selections"
+      ],
+      "signature_dish": null,
+      "quote": "Spanish cheese selections on Calle Calatrava in La Latina — a neighbourhood taberna focused on quality Spanish cheeses.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-casa-gonzalez",
+      "name": "Casa González",
+      "name_variants": null,
+      "neighbourhood": "Huertas",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Deli / wine bar / tapas",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "wine",
+        "cheese",
+        "charcuterie"
+      ],
+      "signature_dish": null,
+      "quote": "Deli and tapas bar on Calle León in Huertas with excellent wine and cheese tastings — a beloved neighbourhood institution.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-casa-labra",
+      "name": "Casa Labra",
+      "name_variants": null,
+      "neighbourhood": "Centro",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Spanish / bacalao",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "vermouth",
+        "salt cod croquettes",
+        "soldadito de bacalao"
+      ],
+      "signature_dish": "soldadito de bacalao",
+      "quote": "Historic bar known for vermouth and salt cod croquettes on Calle Tetuán, operating since 1860 — a Madrid institution.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-casa-lucas",
+      "name": "Casa Lucas",
+      "name_variants": null,
+      "neighbourhood": "La Latina",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Spanish tapas / pintxos",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "pintxos",
+        "cold tapas",
+        "hot tapas",
+        "raciones"
+      ],
+      "signature_dish": null,
+      "quote": "A tiny restaurant on Cava Baja serving pintxos, cold and hot tapas and raciones — appears in Le Routard and Lonely Planet, perfect for a tapas lunch.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-casa-mundi",
+      "name": "Casa Mundi",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "judías de Ávila",
+        "calamares en tinta"
+      ],
+      "signature_dish": null,
+      "quote": "Operating since 1984 at Calle Donoso Cortés 14 in Chamberí — features judías de Ávila and calamares en tinta alongside classic casquería.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-casa-revuelta",
+      "name": "Casa Revuelta",
+      "name_variants": null,
+      "neighbourhood": "La Latina",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Spanish / bacalao",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "bacalao rebozado",
+        "soldadito de bacalao",
+        "cod fritters"
+      ],
+      "signature_dish": "bacalao rebozado",
+      "quote": "The best place in town to try cod fritters — a small bar near the Plaza Mayor with a barra always full of locals.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-casa-ricardo",
+      "name": "Casa Ricardo",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / casquería",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "rabo de toro",
+        "casquería"
+      ],
+      "signature_dish": "guiso de rabo de toro",
+      "quote": "Open since 1935 at Fernando el Católico 31 in Chamberí — deleitosas opciones de casquería and the outstanding guiso de rabo de toro.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-casa-toni",
+      "name": "Casa Toni",
+      "name_variants": null,
+      "neighbourhood": "Centro",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Spanish / casquería",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "organ meats",
+        "fried eggplant",
+        "berenjena frita"
+      ],
+      "signature_dish": null,
+      "quote": "Traditional organ meats and fried eggplant on Calle de la Cruz — a classic Centro tapas bar serving authentic casquería.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-celso-y-manolo",
+      "name": "Celso y Manolo",
+      "name_variants": null,
+      "neighbourhood": "Chueca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Spanish / organic",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "beefsteak tomato salad",
+        "organic produce"
+      ],
+      "signature_dish": null,
+      "quote": "Organic cuisine with a standout beefsteak tomato salad on Calle Libertad in Chueca — a neighbourhood staple with quality produce.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-cilindro",
+      "name": "Cilindro",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Peruvian / Spanish",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "Peruvian dishes",
+        "wine by the glass"
+      ],
+      "signature_dish": null,
+      "quote": "Cilindro offers fantastic price-to-quality Peruvian dishes in Salamanca and €3 wines-by-the-glass.",
+      "quote_language": "en",
+      "sources": [
+        "src-infatuation-salamanca"
+      ],
+      "primary_source": "src-infatuation-salamanca",
+      "article_dates": [
+        "2025-07-22"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-el-anciano-rey-de-los-vinos",
+      "name": "El Anciano Rey de los Vinos",
+      "name_variants": null,
+      "neighbourhood": "Centro",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "rabo de toro",
+        "huevos rotos"
+      ],
+      "signature_dish": null,
+      "quote": "Bull tail and broken eggs on Calle Bailén — a historic wine tavern near the Palacio Real with a loyal local following.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-el-bierzo",
+      "name": "El Bierzo",
+      "name_variants": null,
+      "neighbourhood": "Chueca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / casa de comidas",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "platos caseros"
+      ],
+      "signature_dish": null,
+      "quote": "Serving since 1971 at Calle Barbieri 16 in Chueca with an amplia carta de platos caseros — a faithful neighbourhood institution.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-el-gran-asador-lecanda",
+      "name": "El Gran Asador Lecanda",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Basque / parrilla",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "parrilla donostiarra",
+        "seafood grilled"
+      ],
+      "signature_dish": "parrilla donostiarra",
+      "quote": "Su parrilla donostiarra, impregnada de humo de encina, se convierte en un altar para el mar — asador vasco en el barrio de Salamanca.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-el-neru",
+      "name": "El Ñeru",
+      "name_variants": null,
+      "neighbourhood": "Centro",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Asturian",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "fabada asturiana",
+        "bean stew"
+      ],
+      "signature_dish": "fabada asturiana",
+      "quote": "Asturian bean stew specialties on Calle Bordadores — one of the best places in central Madrid for authentic fabada and sidra.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-el-pimiento-verde",
+      "name": "El Pimiento Verde",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Basque / traditional Spanish",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "Basque cuisine"
+      ],
+      "signature_dish": null,
+      "quote": "Ha sido un faro de autenticidad desde su llegada a Madrid en 1998 en la calle Lagasca — referente de la cocina vasca en el barrio de Salamanca.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-el-rincon-de-jaen",
+      "name": "El Rincón de Jaén",
+      "name_variants": [
+        "El Rincón de Jaén I"
+      ],
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Andalusian tapas / seafood",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "jamon",
+        "pescato frito",
+        "gambas",
+        "coquinas"
+      ],
+      "signature_dish": null,
+      "quote": "El Rincón de Jaén I is one of two tapas bars in Salamanca — head here for jamon, pescato frito, gambas, and seasonal coquinas.",
+      "quote_language": "en",
+      "sources": [
+        "src-infatuation-salamanca"
+      ],
+      "primary_source": "src-infatuation-salamanca",
+      "article_dates": [
+        "2025-07-22"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-el-sobrino-de-botin",
+      "name": "El Sobrino de Botín",
+      "name_variants": null,
+      "neighbourhood": "La Latina",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / asador",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "roasted suckling pig",
+        "cochinillo asado",
+        "cordero asado"
+      ],
+      "signature_dish": "cochinillo asado",
+      "quote": "The oldest restaurant in the world according to the Guinness Book of Records, specializing in suckling pig cooked in the original wood-fired oven on Calle Cuchilleros.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-fanaticos-del-sabor",
+      "name": "Fanáticos del Sabor",
+      "name_variants": null,
+      "neighbourhood": "Usera",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Ecuadorian / South American",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "Ecuadorian cuisine"
+      ],
+      "signature_dish": null,
+      "quote": "Ecuadorian restaurant in Usera offering incredible value — under €10 for a hearty lunch with authentic recipes from Ecuador.",
+      "quote_language": "en",
+      "sources": [
+        "src-making-of-madrid"
+      ],
+      "primary_source": "src-making-of-madrid",
+      "article_dates": [
+        "2025-08-18"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-fismuler",
+      "name": "Fismuler",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Contemporary Spanish / Nordic influence",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "seasonal products"
+      ],
+      "signature_dish": null,
+      "quote": "Fusiona la gastronomía con un interiorismo de carácter casual-industrial, donde Patxi Zumárraga propone una cocina de inspiración regional con toques vascos y navarros.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-gaudium",
+      "name": "Gaudium",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / innovative",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "solomillo de cerdo con cacao y azafrán"
+      ],
+      "signature_dish": "solomillo de cerdo con cacao y azafrán",
+      "quote": "Cuyo nombre en latín significa placer de los sentidos — cocina tradicional con toques innovadores como solomillo de cerdo con cacao y azafrán en Chamberí.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-haramboure",
+      "name": "Haramboure",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Basque / contemporary",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "nécora a la brasa",
+        "guiso seasonal"
+      ],
+      "signature_dish": null,
+      "quote": "Ofrece alta cocina en un formato accesible con platos estacionales como la nécora a la brasa o el guiso — cocina vasca de chef Patxi Zumárraga en Salamanca.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-helaotai",
+      "name": "Helaotai",
+      "name_variants": null,
+      "neighbourhood": "Usera",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Chinese / noodles",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "noodle soups",
+        "dumplings",
+        "potstickers"
+      ],
+      "signature_dish": "potsticker dumplings",
+      "quote": "Specializes in noodle soups and dumplings at Calle Dolores Barrancó in Usera — the potsticker dumplings have a perfectly crispy bottom, outstanding value.",
+      "quote_language": "en",
+      "sources": [
+        "src-making-of-madrid"
+      ],
+      "primary_source": "src-making-of-madrid",
+      "article_dates": [
+        "2025-08-18"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-kappo",
+      "name": "Kappo",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Japanese / omakase",
+      "price_level": 4,
+      "dishes_mentioned": [
+        "menú Omakase",
+        "aged fish"
+      ],
+      "signature_dish": null,
+      "quote": "La palabra Kappo significa cocinar — menú Omakase de 15 a 20 platos con pescado madurado entre 3 y 26 días en Chamberí.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-kitchen-154",
+      "name": "Kitchen 154",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Korean BBQ",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "Korean BBQ Ribs"
+      ],
+      "signature_dish": "Korean BBQ Ribs",
+      "quote": "Donde la autenticidad y el sabor sin artificios reinan — Korean BBQ Ribs, costillas de cerdo cocinadas durante 12 horas en Chamberí.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-la-bien-aparecida",
+      "name": "La Bien Aparecida",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Cantabrian / contemporary",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "Cantabrian cuisine"
+      ],
+      "signature_dish": null,
+      "quote": "Trae a la capital la esencia de Cantabria con un enfoque moderno en dos plantas de elegancia y luminosidad en el barrio de Salamanca.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-la-casa-del-abuelo",
+      "name": "La Casa del Abuelo",
+      "name_variants": null,
+      "neighbourhood": "Centro",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Spanish tapas",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "gambas al ajillo"
+      ],
+      "signature_dish": "gambas al ajillo",
+      "quote": "Famous for garlic shrimp — this iconic Centro bar has been serving gambas al ajillo since 1906 on Calle de la Victoria.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-la-nieta",
+      "name": "La Nieta",
+      "name_variants": null,
+      "neighbourhood": "Chueca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Segovian / traditional Spanish",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "cochinillo asado",
+        "ponche segoviano"
+      ],
+      "signature_dish": "cochinillo asado",
+      "quote": "Segovian restaurant since 1985 at Calle Libertad 25 specializing in cochinillo asado and the traditional ponche segoviano dessert.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-la-rebonita",
+      "name": "La Rebonita",
+      "name_variants": null,
+      "neighbourhood": "Lavapiés",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Mexican",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "Mexican casual dining"
+      ],
+      "signature_dish": null,
+      "quote": "Mexican casual dining on Calle Olmo in Lavapiés — an affordable neighbourhood spot for tacos and quesadillas.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-la-tasqueria-de-javi-estevez",
+      "name": "La Tasquería de Javi Estévez",
+      "name_variants": [
+        "La Tasquería"
+      ],
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Contemporary Spanish / casquería",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "casquería",
+        "offal",
+        "sweetbreads",
+        "tripe"
+      ],
+      "signature_dish": null,
+      "quote": "Fusiona la casquería con la alta cocina en un ambiente desenfadado liderado por el chef Javi Estévez — 1 Estrella Michelin en Salamanca.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-lakasa",
+      "name": "Lakasa",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / market cuisine",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "game",
+        "seasonal market products"
+      ],
+      "signature_dish": null,
+      "quote": "Querido por todo el barrio — ofrece cocina tradicional actualizada, basada en productos de mercado, con especialidades de caza en temporada en Chamberí.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-lambuzo",
+      "name": "Lambuzo",
+      "name_variants": null,
+      "neighbourhood": "La Latina",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Southern Spanish / Andalusian tapas",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "Southern Spanish tapas"
+      ],
+      "signature_dish": null,
+      "quote": "Southern Spanish tapas on Calle de las Conchas in La Latina — a popular spot for Andalusian-influenced bites.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-lana",
+      "name": "Lana",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Argentine grill",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "ojo de bife",
+        "entraña",
+        "parrilla argentina"
+      ],
+      "signature_dish": null,
+      "quote": "Templo argentino donde la parrilla es la estrella — cortes emblemáticos como ojo de bife y entraña de ganado premium en Ponzano 59, Chamberí. Premio Academia Madrileña de Gastronomía 2025.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-las-tortillas-de-gabino",
+      "name": "Las Tortillas de Gabino",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Spanish / tortillas",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "tortilla española",
+        "Velazqueña"
+      ],
+      "signature_dish": "tortilla Velazqueña",
+      "quote": "Rinde homenaje al legendario cocinero de La Ancha con la emblemática Velazqueña — una de las tortillas más premiadas de Madrid, con Michelin Bib Gourmand.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-lua",
+      "name": "Lúa",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Galician / contemporary",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "pulpo a feira",
+        "tarta líquida de Santiago"
+      ],
+      "signature_dish": null,
+      "quote": "Chef Manuel Domínguez dirige una cocina moderna con esencias celtas, resaltando ingredientes de temporada — Pulpo a feira y Tarta líquida de Santiago en Chamberí.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-macareno",
+      "name": "Macareno",
+      "name_variants": null,
+      "neighbourhood": "Malasaña",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Contemporary Spanish / casa de comidas",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "traditional dining reinvented"
+      ],
+      "signature_dish": null,
+      "quote": "Contemporary take on traditional dining at Calle San Vicente Ferrer 44 in Malasaña — a modern reinterpretation of the classic Madrid casa de comidas.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-matteo-cucina-italiana",
+      "name": "Matteo Cucina Italiana",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Italian",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "spaghetti aglio olio con scampi"
+      ],
+      "signature_dish": "spaghetti aglio olio con scampi",
+      "quote": "El chef Gianni Pinto recorre Italia de norte a sur con una carta que rescata sabores tradicionales — imprescindible en Salamanca, apreciado tanto por locales como por visitantes.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-meson-del-champinon",
+      "name": "Mesón del Champiñón",
+      "name_variants": null,
+      "neighbourhood": "La Latina",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Spanish tapas",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "grilled mushrooms stuffed with chorizo"
+      ],
+      "signature_dish": "grilled mushrooms stuffed with chorizo",
+      "quote": "Grilled mushrooms stuffed with chorizo — a classic La Latina tapa bar on Cava de San Miguel with long-standing local following.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-pilar-akaneya",
+      "name": "Pilar Akaneya",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Japanese / sumibiyaki",
+      "price_level": 4,
+      "dishes_mentioned": [
+        "Kobe beef",
+        "sumibiyaki"
+      ],
+      "signature_dish": null,
+      "quote": "Primer sumibiyaki de Madrid con carnes Kobe certificadas y carbón vegetal Kishū Binchōtan de Wakayama para la parrilla auténtica japonesa en Chamberí.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-pollos-sukao-al-carbon",
+      "name": "Pollos Sukao al Carbón",
+      "name_variants": null,
+      "neighbourhood": "Usera",
+      "lat": null,
+      "lng": null,
+      "cuisine": "South American / grilled chicken",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "empanadas",
+        "charcoal-grilled chicken"
+      ],
+      "signature_dish": "charcoal-grilled chicken",
+      "quote": "Features excellent empanadas and charcoal-grilled chicken in Usera — affordable South American comfort food in Madrid's most diverse neighbourhood.",
+      "quote_language": "en",
+      "sources": [
+        "src-making-of-madrid"
+      ],
+      "primary_source": "src-making-of-madrid",
+      "article_dates": [
+        "2025-08-18"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-quevedo",
+      "name": "Quevedo",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / casa de comidas",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "menú del día",
+        "Madrid-style recipes"
+      ],
+      "signature_dish": null,
+      "quote": "Un sitio alegre y bullicioso en Calle Quevedo 7 — aperitivos y menú del día con una amplia selección de recetas madrileñas tradicionales a buen precio.",
+      "quote_language": "es",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-quimbaya-by-edwin-rodriguez",
+      "name": "Quimbaya by Edwin Rodríguez",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Colombian / fine dining",
+      "price_level": 4,
+      "dishes_mentioned": [
+        "menú degustación Memorias"
+      ],
+      "signature_dish": "menú degustación Memorias",
+      "quote": "Menú degustación Memorias explora las diversas regiones colombianas en solo 8 mesas — 1 Estrella Michelin y 1 Sol Repsol en Chamberí.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-ramon-freixa",
+      "name": "Ramón Freixa",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Contemporary Catalan-Spanish / fine dining",
+      "price_level": 4,
+      "dishes_mentioned": [
+        "tasting menu"
+      ],
+      "signature_dish": null,
+      "quote": "Con 2 estrellas Michelin y 3 Soles Repsol, el restaurante encabeza la escena culinaria madrileña con secuencias que entrelazan tradición y vanguardia en Salamanca.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-restaurante-bammbao",
+      "name": "Restaurante Bammbao",
+      "name_variants": [
+        "Bammbao"
+      ],
+      "neighbourhood": "Usera",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Chinese-Japanese fusion / Asian street food",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "ebi fry",
+        "lingote de oro",
+        "Asian street food"
+      ],
+      "signature_dish": null,
+      "quote": "Currently my top recommendation in Usera — this Chinese-Japanese fusion restaurant is led by young owner Wukun Xu, meticulous about detail with outstanding Asian street food.",
+      "quote_language": "en",
+      "sources": [
+        "src-making-of-madrid"
+      ],
+      "primary_source": "src-making-of-madrid",
+      "article_dates": [
+        "2025-08-18"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-restaurante-etiope-nuria",
+      "name": "Restaurante Etíope Nuria",
+      "name_variants": null,
+      "neighbourhood": "Malasaña",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Ethiopian",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "Ethiopian cuisine"
+      ],
+      "signature_dish": null,
+      "quote": "Ethiopian cuisine on Calle Manuela Malasaña — one of Madrid's few Ethiopian restaurants, with authentic injera and stews.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-restaurante-lao-tou",
+      "name": "Restaurante Lao Tou",
+      "name_variants": [
+        "Lao Tou"
+      ],
+      "neighbourhood": "Usera",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Chinese / Wenzhou",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "fish head soup",
+        "eggplant"
+      ],
+      "signature_dish": "fish head soup",
+      "quote": "Famous for fish head soup at Calle Nicolás Sánchez 35 in Usera — the slightly spicy eggplant is exceptional, will transport you to Wenzhou without leaving Madrid.",
+      "quote_language": "en",
+      "sources": [
+        "src-making-of-madrid"
+      ],
+      "primary_source": "src-making-of-madrid",
+      "article_dates": [
+        "2025-08-18"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-sala-de-despiece",
+      "name": "Sala de Despiece",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Contemporary tapas",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "creative tapas"
+      ],
+      "signature_dish": null,
+      "quote": "Templo gastronómico que redefine el tapeo tradicional en apenas 50 metros cuadrados — menú escrito a mano y servidor con soplete para caramelizar platos en Chamberí.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-santerra",
+      "name": "Santerra",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "La Mancha / contemporary",
+      "price_level": 4,
+      "dishes_mentioned": [
+        "manchega cuisine"
+      ],
+      "signature_dish": null,
+      "quote": "Destaca como la joya de la alta cocina manchega en la capital, galardonado con una estrella Michelin en 2024 en el barrio de Salamanca.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-sisapo",
+      "name": "Sisapo",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Contemporary Spanish-Asian-South American fusion",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "fusion tasting menu"
+      ],
+      "signature_dish": null,
+      "quote": "Homenaje al antiguo municipio romano — chef Alejandro Aguirre mezcla sabores españoles, asiáticos y sudamericanos con técnica e innovación en Chamberí.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-smoked-room",
+      "name": "Smoked Room",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Contemporary / smoke-focused",
+      "price_level": 4,
+      "dishes_mentioned": [
+        "menú degustación Todo es humo"
+      ],
+      "signature_dish": "menú Todo es humo",
+      "quote": "Exclusivo restaurante con menú degustación 'Todo es humo' para máximo 14 comensales por servicio — experiencia íntima en Chamberí con 1 Estrella Michelin.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-soy-kitchen",
+      "name": "Soy Kitchen",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Asian fusion",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "dim sum",
+        "Asian-Mediterranean fusion"
+      ],
+      "signature_dish": "dim sum",
+      "quote": "Chef Yong Ping Zhang presenta fusión asiática con adictivos Dim Sum e influencias mediterráneo-latinoamericanas usando ingredientes premium españoles en Chamberí.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-streetxo",
+      "name": "StreetXO",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Asian street food fusion",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "Asian street food",
+        "creative cocktails"
+      ],
+      "signature_dish": null,
+      "quote": "La joya callejera del renombrado Dabiz Muñoz encuentra su hogar en la tercera planta de El Corte Inglés en Salamanca — ambiente de mercado asiático.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-surtopia",
+      "name": "Surtopía",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Andalusian / seafood",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "manzanilla",
+        "pescados frescos",
+        "mariscos"
+      ],
+      "signature_dish": null,
+      "quote": "Fusiona la esencia de la manzanilla con pescados frescos de Cádiz, mariscos de Almería e ibéricos de Huelva en el barrio de Salamanca.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-taberna-almeria",
+      "name": "Taberna Almería",
+      "name_variants": null,
+      "neighbourhood": "La Latina",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Spanish tapas",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "toasted bread",
+        "montaditos"
+      ],
+      "signature_dish": null,
+      "quote": "Toasted bread topped with simple appetizers on Calle de las Aguas in La Latina — a no-frills neighbourhood taberna.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-taberna-andaluza-sacromonte",
+      "name": "Taberna Andaluza Sacromonte",
+      "name_variants": null,
+      "neighbourhood": "Usera",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Andalusian / tapas",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "quality wines",
+        "creative tapas"
+      ],
+      "signature_dish": null,
+      "quote": "Offers quality wines and creative tapas near Usera Metro at Calle Mercedes Manjón 3 — an Andalusian establishment blending Spanish with Asian and Mexican influences.",
+      "quote_language": "en",
+      "sources": [
+        "src-making-of-madrid"
+      ],
+      "primary_source": "src-making-of-madrid",
+      "article_dates": [
+        "2025-08-18"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-taberna-de-antonio-sanchez",
+      "name": "Taberna de Antonio Sánchez",
+      "name_variants": null,
+      "neighbourhood": "Embajadores",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / taberna",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "callos",
+        "caracoles",
+        "cocido",
+        "oreja"
+      ],
+      "signature_dish": null,
+      "quote": "Madrid's oldest tavern operating since 1787 at Calle Mesón de Paredes 13 — serves callos, caracoles, cocido and oreja in a space unchanged for centuries.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-taberna-mariano",
+      "name": "Taberna Mariano",
+      "name_variants": null,
+      "neighbourhood": "Huertas",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / taberna",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "Spanish home cooking"
+      ],
+      "signature_dish": null,
+      "quote": "Known for manteles de cuadros rojos y blancos at Calle Lope de Vega 25 in Huertas — traditional Spanish cooking in an old-school taberna setting.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-taberna-pedraza",
+      "name": "Taberna Pedraza",
+      "name_variants": null,
+      "neighbourhood": "Salamanca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / tortilla / cocido",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "Cocido Madrileño",
+        "Tortilla de Betanzos"
+      ],
+      "signature_dish": "Tortilla de Betanzos",
+      "quote": "Destaca por su mítico Cocido y la afamada Tortilla de Betanzos, contando con un contador desde 2014 en el barrio de Salamanca.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-salamanca"
+      ],
+      "primary_source": "src-gastromadrid-salamanca",
+      "article_dates": [
+        "2024-01-23"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-taberneros",
+      "name": "Taberneros",
+      "name_variants": null,
+      "neighbourhood": "Centro",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Wine bar / Middle Eastern tapas",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "Middle Eastern-influenced tapas"
+      ],
+      "signature_dish": null,
+      "quote": "Wine list with Middle Eastern-influenced tapas on Calle Santiago — an interesting combination rarely found in central Madrid.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-takos-al-pastor",
+      "name": "Takos Al Pastor",
+      "name_variants": null,
+      "neighbourhood": "Centro",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Mexican / tacos",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "tacos al pastor"
+      ],
+      "signature_dish": "tacos al pastor",
+      "quote": "Casual Mexican tacos on Calle Salud in central Madrid — a popular spot for authentic pastor-style tacos among locals.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true
+    },
+    {
+      "id": "madrid-tienda-de-vinos-el-comunista",
+      "name": "Tienda de Vinos El Comunista",
+      "name_variants": [
+        "El Comunista"
+      ],
+      "neighbourhood": "Chueca",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / wine tavern",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "cocina casera",
+        "traditional Spanish"
+      ],
+      "signature_dish": null,
+      "quote": "Family-run since 1888 at Calle Augusto Figueroa 35 in Chueca — cocina casera in a space that rebosa autenticidad, one of Madrid's oldest surviving wine taverns.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-tripea",
+      "name": "Tripea",
+      "name_variants": null,
+      "neighbourhood": "Chamberí",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Peruvian-Asian / chifa-nikkei",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "Peruvian-Asian fusion",
+        "menú degustación"
+      ],
+      "signature_dish": null,
+      "quote": "Roberto Martínez Foronda mezcla cocina chifa y nikkei en el Mercado de Vallehermoso — Bib Gourmand de la Guía Michelin y un Sol Repsol, reservas con semanas de antelación.",
+      "quote_language": "es",
+      "sources": [
+        "src-gastromadrid-chamberi"
+      ],
+      "primary_source": "src-gastromadrid-chamberi",
+      "article_dates": [
+        "2024-01-19"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-ugo-chan",
+      "name": "Ugo Chan",
+      "name_variants": null,
+      "neighbourhood": "Chamartín",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Japanese-Spanish fusion",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "bocados originales",
+        "japano-española fusion"
+      ],
+      "signature_dish": null,
+      "quote": "Bocados originales, muy bien resueltos — Raquel Castillo recommends this cocina de fusión japo-española at Félix Boix 6 in Chamartín.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-the-objective"
+      ],
+      "primary_source": "src-the-objective",
+      "article_dates": [
+        "2023-10-12"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-viuda-de-vacas",
+      "name": "Viuda de Vacas",
+      "name_variants": null,
+      "neighbourhood": "La Latina",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / casa de comidas",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "callos",
+        "menestra de cordero",
+        "codornices"
+      ],
+      "signature_dish": null,
+      "quote": "Operating desde 1902 at Calle del Águila 2 — specialties include callos, menestra de cordero, and codornices in an authentic La Latina casa de comidas.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-eldiario-casas"
+      ],
+      "primary_source": "src-eldiario-casas",
+      "article_dates": [
+        "2025-11-08"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false
+    },
+    {
+      "id": "madrid-bar-alonso",
+      "name": "Bar Alonso",
+      "name_variants": null,
+      "neighbourhood": "Chamartín",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Traditional Spanish / bar",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "cerveza bien tirada"
+      ],
+      "signature_dish": null,
+      "quote": "La cerveza mejor tirada de todo Madrid — Tatiana Ferrandis singles out this bar at Virgen de Lluc 20 for the perfectly poured draft beer.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-the-objective"
+      ],
+      "primary_source": "src-the-objective",
+      "article_dates": [
+        "2023-10-12"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false,
+      "user_removed": true,
+      "removal_reason": "bar-only — no food beyond draft beer"
+    },
+    {
+      "id": "madrid-bocanada",
+      "name": "Bocanada",
+      "name_variants": null,
+      "neighbourhood": "Huertas",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Natural wine bar",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "natural wines",
+        "small producers"
+      ],
+      "signature_dish": null,
+      "quote": "Etiquetas de vinos naturales y de pequeños productores — Tatiana Ferrandis recommends Bocanada at Calle del León 5 for its exceptional natural wine selection.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-the-objective"
+      ],
+      "primary_source": "src-the-objective",
+      "article_dates": [
+        "2023-10-12"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": false,
+      "user_removed": true,
+      "removal_reason": "bar-only — wine bar, no food details"
+    },
+    {
+      "id": "madrid-chocolateria-san-gines",
+      "name": "Chocolatería San Ginés",
+      "name_variants": null,
+      "neighbourhood": "Centro",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Churros / café",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "churros",
+        "chocolate"
+      ],
+      "signature_dish": "churros con chocolate",
+      "quote": "All-day churros and thick chocolate on Pasadizo de San Ginés — open 24 hours, a Madrid institution since 1894.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true,
+      "user_removed": true,
+      "removal_reason": "café/churros-only — not a restaurant"
+    },
+    {
+      "id": "madrid-hanso-cafe",
+      "name": "HanSo Café",
+      "name_variants": null,
+      "neighbourhood": "Malasaña",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Café / pastries",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "coffee",
+        "pastries",
+        "breakfast toasts"
+      ],
+      "signature_dish": null,
+      "quote": "Coffee, homemade pastries, and breakfast toasts on Calle Pez in Malasaña — a popular neighbourhood café with excellent quality.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true,
+      "user_removed": true,
+      "removal_reason": "café-only — not a restaurant"
+    },
+    {
+      "id": "madrid-la-barra-de-la-tasqueria",
+      "name": "La Barra de la Tasquería",
+      "name_variants": null,
+      "neighbourhood": null,
+      "lat": null,
+      "lng": null,
+      "cuisine": "Contemporary Spanish / casquería",
+      "price_level": 3,
+      "dishes_mentioned": [
+        "steak tartar con fuagrás",
+        "sándwich de lengua y queso comté",
+        "orejas confitadas",
+        "mollejas de cordero con vieira y yema",
+        "sesos a la mantequilla negra con alcaparras",
+        "callos con pata morro y estómago",
+        "flan de huevo"
+      ],
+      "signature_dish": null,
+      "quote": "Esencia de taberna con alma de restaurante — José Carlos Capel rates 6.5/7, praising callos con pata, morro y estómago as entre los más fiables de la capital, Jan 2026.",
+      "quote_language": "en (translated from es)",
+      "sources": [
+        "src-gastroactitud-tasqueria"
+      ],
+      "primary_source": "src-gastroactitud-tasqueria",
+      "article_dates": [
+        "2026-01-29"
+      ],
+      "pool": "es",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false,
+      "user_removed": true,
+      "removal_reason": "null neighbourhood — address not confirmed in fetch"
+    },
+    {
+      "id": "madrid-la-fisna",
+      "name": "La Fisna",
+      "name_variants": null,
+      "neighbourhood": "Lavapiés",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Wine bar",
+      "price_level": 2,
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Wine bar and shop on Calle Amparo in Lavapiés — a go-to destination for natural wine lovers in Madrid.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true,
+      "user_removed": true,
+      "removal_reason": "bar-only — wine bar, no food details"
+    },
+    {
+      "id": "madrid-la-venencia",
+      "name": "La Venencia",
+      "name_variants": null,
+      "neighbourhood": "Huertas",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Sherry bar",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "sherry",
+        "jerez"
+      ],
+      "signature_dish": null,
+      "quote": "Historic 70-year-old sherry bar on Calle Echegaray — a Hemingway haunt serving only sherry and simple tapas, completely unchanged.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true,
+      "user_removed": true,
+      "removal_reason": "bar-only — sherry bar, no food"
+    },
+    {
+      "id": "madrid-palo-cortado",
+      "name": "Palo Cortado",
+      "name_variants": null,
+      "neighbourhood": "Centro",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Sherry bar / tapas",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "sherry wine",
+        "manzanilla",
+        "palo cortado"
+      ],
+      "signature_dish": null,
+      "quote": "Sherry wine specialization with guided tastings on Calle Unión — a compact bar near the Palacio Real dedicated entirely to Jerez wines.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true,
+      "user_removed": true,
+      "removal_reason": "bar-only — sherry bar"
+    },
+    {
+      "id": "madrid-san-francisco-de-quito",
+      "name": "San Francisco de Quito",
+      "name_variants": null,
+      "neighbourhood": "Usera",
+      "lat": null,
+      "lng": null,
+      "cuisine": "South American / bakery-café",
+      "price_level": 1,
+      "dishes_mentioned": [
+        "tres leches cake"
+      ],
+      "signature_dish": "tres leches",
+      "quote": "South American bakery at Calle Antonio Salvador 68 in Usera with an exceptional tres leches cake — a neighbourhood institution for the Latin American community.",
+      "quote_language": "en",
+      "sources": [
+        "src-making-of-madrid"
+      ],
+      "primary_source": "src-making-of-madrid",
+      "article_dates": [
+        "2025-08-18"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": false,
+      "coi_flag": false,
+      "user_removed": true,
+      "removal_reason": "bakery/café — not a restaurant"
+    },
+    {
+      "id": "madrid-sanlucar",
+      "name": "Sanlúcar",
+      "name_variants": null,
+      "neighbourhood": "La Latina",
+      "lat": null,
+      "lng": null,
+      "cuisine": "Andalusian / sherry",
+      "price_level": 2,
+      "dishes_mentioned": [
+        "Andalusian sherry wines",
+        "Iberian pork"
+      ],
+      "signature_dish": null,
+      "quote": "Andalusian sherry wines and Iberian pork on Calle San Isidro Labrador — a small La Latina bar specializing in manzanilla and fino.",
+      "quote_language": "en",
+      "sources": [
+        "src-spanish-sabores"
+      ],
+      "primary_source": "src-spanish-sabores",
+      "article_dates": [
+        "2023-07-05"
+      ],
+      "pool": "en",
+      "tier": "B",
+      "both_pool": false,
+      "multi_source": false,
+      "source_count": 1,
+      "open_status_check": true,
+      "coi_flag": true,
+      "user_removed": true,
+      "removal_reason": "borderline bar — sherry/wine focus"
+    }
+  ]
+}
