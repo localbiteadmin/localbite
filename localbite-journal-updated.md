@@ -4113,3 +4113,315 @@ The `writer-profile-toggle` reattachment inside `openSheet()` is the one place w
 *Commits: a739e26, dfe5455, 93211f4, 70b342e, 1b6fad7*
 *Fleet: 13 cities, 480 restaurants — unchanged*
 *index.html: ~2,175 lines (migration trigger at 2,500)*
+
+## Session — 2026-04-16 (Madrid v6 vs v7 Search Quality Test)
+
+### Overview
+
+First run of the Madrid v6 vs v7 apples-to-apples search quality test. Both pipelines run to completion on a city with no prior LocalBite history. Primary goal: determine whether v7 search composition changes produce meaningfully better results than v6, specifically more restaurants confirmed by multiple independent sources (both-pool).
+
+---
+
+### Run Details
+
+**v6 Control**
+- Prompt: `localbite-prompt-v6-madrid.txt`
+- Searches run: 38
+- Sources confirmed: 5 (of 7 selected — El Comidista and GastroMadrid failed at Phase 2)
+- Raw entries: 61
+- User removals: 2 (La Venencia, Angelita — non-restaurants)
+- Final restaurants: 59
+- Tier A: 11 | Tier B: 48 | Tier C: 0
+- Both-pool: 6
+- Open status check: 9
+- Run time: ~28 minutes (Phase 2+3 combined)
+- Output: `localbite-madrid-2023-2026-v6.json`
+
+**v7 Test**
+- Prompt: `localbite-prompt-v7-madrid.txt`
+- Searches run: 35 (32 pre-written + 3 Phase 1B cross-validation)
+- Sources confirmed: 5 (of 6 selected — Spanish Sabores rejected at Phase 2, no article-level byline)
+- Raw entries: 67
+- User removals: 0 (pipeline recommended 6 removals, all accepted)
+- Final restaurants: 60
+- Tier A: 11 | Tier B: 49 | Tier C: 0
+- Both-pool: 0
+- Open status check: 6
+- Run time: ~38 minutes (Phase 1+2+3 combined)
+- Output: `localbite-madrid-2023-2026-v7.json`
+
+---
+
+### Comparison Table
+
+| Metric | v6 | v7 |
+|--------|----|----|
+| Searches run | 38 | 35 |
+| Sources confirmed | 5 | 5 |
+| Sources failed/rejected | 2 | 1 |
+| Raw entries | 61 | 67 |
+| Final restaurants | 59 | 60 |
+| Tier A | 11 | 11 |
+| Tier B | 48 | 49 |
+| Both-pool | 6 | 0 |
+| Open status check | 9 | 6 |
+| New restaurants vs v6 | — | 15 |
+
+---
+
+### Key Findings
+
+**1. 30-results-per-query instruction did not carry through — and cannot.**
+The v7 template specified 30 results per query. The pipeline wrote a search plan with no mention of result depth and ran all searches at the default of 10. Post-run grep of the search plan file confirmed zero references to result depth. A direct test in Claude Code confirmed the web search tool has a hard cap of 10 results per query regardless of instruction. This is a tool limitation, not a prompt compliance failure. The 30-results-per-query change must be permanently removed from the v7 template. The pipeline's Phase 1 report claiming sources were found at "positions 11-15" was fabricated — it ran at 10 results like v6 and estimated positions it could not have observed.
+
+**2. v7 found 15 restaurants entirely absent from v6.**
+All 15 are 2025-2026 ES-language openings not covered in English-language media. These came from Con El Morro Fino and La Gastrónoma — both ES primary sources not found by v6. This is a genuine composition improvement.
+
+**3. v7 lost all 6 both-pool entries.**
+The Spanish Sabores rejection at Phase 2 (no article-level byline) removed the bridge between the EN and ES source pools. Without Spanish Sabores, the EN sources (Epicurean Ways, The Infatuation, Time Out) and ES sources (Con El Morro Fino, La Gastrónoma) covered largely non-overlapping restaurant sets — established institutions vs new openings. Zero both-pool is a direct consequence of this structural mismatch, not a pipeline failure.
+
+**4. Prior knowledge check script worked correctly.**
+The automated check ran, flagged 18 terms for review, confirmed all were permitted generic terms, and allowed the pipeline to proceed. Zero violations detected. The script is functioning as designed.
+
+**5. The Infatuation Madrid is a genuine v7 addition.**
+Not found by v6. Found via composition change (A2 city-wide query returning different results). Lori Zaino, named author, 2024 date — qualifies cleanly.
+
+**6. Con El Morro Fino was Cloudflare-blocked in v6, accessible in v7.**
+Same URL, different session, different result. Jina fetch reliability varies between runs — this is not a v7 improvement, it's fetch variance.
+
+**7. Time Out concentration exceeded cap in v7.**
+17 of 49 Tier B entries (34.7%) from Time Out EN (secondary, COI). Pipeline flagged it as advisory. Accepted without removal per test runbook rules. A second strong ES guide for established restaurants would reduce this concentration and improve both-pool potential.
+
+**8. Spanish Sabores single-author rule needs clarifying.**
+Lauren Aloise is the sole author of Spanish Sabores. The pipeline rejected it because her name doesn't appear as a byline in article text — only on the About page. For single-author personal sites where the entire site is demonstrably one person's work, About page authorship should be sufficient. This is a rule refinement, not a rule change. To be added to v7 template.
+
+**9. Tool limitation discovered: web search hard cap of 10 results.**
+Directly tested in Claude Code with explicit instruction to return 30 results. Tool returned 10 and stated "the WebSearch tool returns a maximum of 10 results per query." This closes the results-depth discussion permanently. v7b as originally conceived is not viable.
+
+---
+
+### Process Findings
+
+**Claude Code permission prompts:** First file write triggered permission prompt. Selected option 2 (allow all this session). Add `--dangerously-skip-permissions` flag to all future pipeline launches to bypass entirely.
+
+**Token capture:** Completion banners did not show token counts in most phases. Only run times captured. Programmatic token tracking to stats JSON file remains on the backlog.
+
+**Year range distribution:** Searches skewed heavily toward 2025-2026 despite YEAR_RANGE: 2023-2026. Instruction needed in v7 template to distribute queries across the full year range.
+
+**Audit file:** v7 pipeline did not produce a localbite-madrid-audit-v7.txt file. Audit file instruction must be more explicit in v7 template.
+
+**Dictation:** Mac F5 key activates/deactivates dictation. Useful for reducing typing during long sessions.
+
+---
+
+### Key Decisions
+
+1. **30-results-per-query removed permanently from v7 template.** Tool hard cap of 10 results. Not achievable via prompt instruction.
+2. **v7b not needed.** The depth change is not implementable. v7 composition changes are the valid test.
+3. **Spanish Sabores single-author rule to be added to v7 template.** About page byline sufficient for personal single-author sites.
+4. **Both v6 and v7 Madrid packs committed to repo** as test artifacts, not live city packs. Madrid is not being added to the fleet from this run — a clean v7 run would be needed for a live pack.
+5. **v7 composition changes are validated** — named awards, vocabulary queries, emerging neighbourhood tiers, cross-validation Phase 1B all worked as designed.
+
+---
+
+### v7 Template Fixes Required
+
+1. Remove 30-results-per-query instruction entirely
+2. Add explicit statement: "The web search tool returns a maximum of 10 results per query. This is a hard tool limit. Do not reference result positions beyond 10."
+3. Make audit file instruction mandatory and explicit
+4. Add year range distribution instruction: queries must be distributed across the full YEAR_RANGE, not concentrated in the most recent year
+5. Add single-author site rule: for personal sites where the entire site is one person's work, About page byline confirmation is sufficient — article-level byline not required
+6. Add `--dangerously-skip-permissions` to session startup instructions
+7. Add self-confirmation pattern for mandatory instructions
+
+---
+
+### Files Produced or Updated
+
+| File | Status |
+|------|--------|
+| `localbite-madrid-2023-2026-v6.json` | New — v6 control pack (59 restaurants) |
+| `localbite-madrid-2023-2026-v7.json` | New — v7 test pack (60 restaurants) |
+| `localbite-madrid-raw-v6.json` | New — v6 raw extraction (61 entries) |
+| `localbite-madrid-audit-v6.txt` | New — v6 audit log |
+| `localbite-madrid-search-log-v6.txt` | New — v6 search log |
+| `localbite-madrid-search-log-v7.txt` | New — v7 search log |
+| `localbite-madrid-search-plan-v6.txt` | New — v6 search plan |
+| `localbite-madrid-search-plan-v7.txt` | New — v7 search plan |
+| `localbite-madrid-working-v6.json` | New — v6 working file |
+| `localbite-madrid-working-v7.json` | New — v7 working file |
+| `localbite-madrid-test-runbook.md` | Existing — used as written |
+| `localbite-run-metrics.log` | New — programmatic run metrics |
+
+All committed at cd349a1.
+
+---
+
+### Outstanding Items
+
+- [ ] **FIRST TASK NEXT SESSION — Implement programmatic token/run time tracking in v7 template.** At pipeline completion, the pipeline must automatically write stats to `localbite-run-metrics.log`: `{city, date, pipeline, tokens, tool_uses, run_time_seconds, sources_confirmed, final_entries, both_pool}`. Same pattern as geocoding stats JSON. This eliminates manual banner capture permanently and removes a recurring gap that has affected the majority of pipeline runs to date.
+- [ ] Update v7 template with 7 fixes listed above
+- [ ] Update global instructions: add `--dangerously-skip-permissions` flag
+- [ ] Update global instructions: add year range distribution instruction
+- [ ] Run clean v7 Madrid pipeline (with template fixes) to produce live city pack
+- [ ] Decide whether Madrid should be added to the fleet
+- [ ] Update product backlog with session findings
+- [ ] Add Wayback Machine 404 fallback to project knowledge (confirmed implemented per April 15 journal but not in current project files)
+
+*Fleet: 13 cities live. Madrid test artifacts in repo — not live. index.html line count not checked this session.*
+
+## Session — 2026-04-16 (Madrid v6 vs v7 Search Quality Test)
+
+### Overview
+
+First run of the Madrid v6 vs v7 apples-to-apples search quality test. Both pipelines run to completion on a city with no prior LocalBite history. Primary goal: determine whether v7 search composition changes produce meaningfully better results than v6, specifically more restaurants confirmed by multiple independent sources (both-pool).
+
+---
+
+### Run Details
+
+**v6 Control**
+- Prompt: `localbite-prompt-v6-madrid.txt`
+- Searches run: 38
+- Sources confirmed: 5 (of 7 selected — El Comidista and GastroMadrid failed at Phase 2)
+- Raw entries: 61
+- User removals: 2 (La Venencia, Angelita — non-restaurants)
+- Final restaurants: 59
+- Tier A: 11 | Tier B: 48 | Tier C: 0
+- Both-pool: 6
+- Open status check: 9
+- Run time: ~28 minutes (Phase 2+3 combined)
+- Output: `localbite-madrid-2023-2026-v6.json`
+
+**v7 Test**
+- Prompt: `localbite-prompt-v7-madrid.txt`
+- Searches run: 35 (32 pre-written + 3 Phase 1B cross-validation)
+- Sources confirmed: 5 (of 6 selected — Spanish Sabores rejected at Phase 2, no article-level byline)
+- Raw entries: 67
+- User removals: 0 (pipeline recommended 6 removals, all accepted)
+- Final restaurants: 60
+- Tier A: 11 | Tier B: 49 | Tier C: 0
+- Both-pool: 0
+- Open status check: 6
+- Run time: ~38 minutes (Phase 1+2+3 combined)
+- Output: `localbite-madrid-2023-2026-v7.json`
+
+---
+
+### Comparison Table
+
+| Metric | v6 | v7 |
+|--------|----|----|
+| Searches run | 38 | 35 |
+| Sources confirmed | 5 | 5 |
+| Sources failed/rejected | 2 | 1 |
+| Raw entries | 61 | 67 |
+| Final restaurants | 59 | 60 |
+| Tier A | 11 | 11 |
+| Tier B | 48 | 49 |
+| Both-pool | 6 | 0 |
+| Open status check | 9 | 6 |
+| New restaurants vs v6 | — | 15 |
+
+---
+
+### Key Findings
+
+**1. 30-results-per-query instruction did not carry through — and cannot.**
+The v7 template specified 30 results per query. The pipeline wrote a search plan with no mention of result depth and ran all searches at the default of 10. Post-run grep of the search plan file confirmed zero references to result depth. A direct test in Claude Code confirmed the web search tool has a hard cap of 10 results per query regardless of instruction. This is a tool limitation, not a prompt compliance failure. The 30-results-per-query change must be permanently removed from the v7 template. The pipeline's Phase 1 report claiming sources were found at "positions 11-15" was fabricated — it ran at 10 results like v6 and estimated positions it could not have observed.
+
+**2. v7 found 15 restaurants entirely absent from v6.**
+All 15 are 2025-2026 ES-language openings not covered in English-language media. These came from Con El Morro Fino and La Gastrónoma — both ES primary sources not found by v6. This is a genuine composition improvement.
+
+**3. v7 lost all 6 both-pool entries.**
+The Spanish Sabores rejection at Phase 2 (no article-level byline) removed the bridge between the EN and ES source pools. Without Spanish Sabores, the EN sources (Epicurean Ways, The Infatuation, Time Out) and ES sources (Con El Morro Fino, La Gastrónoma) covered largely non-overlapping restaurant sets — established institutions vs new openings. Zero both-pool is a direct consequence of this structural mismatch, not a pipeline failure.
+
+**4. Prior knowledge check script worked correctly.**
+The automated check ran, flagged 18 terms for review, confirmed all were permitted generic terms, and allowed the pipeline to proceed. Zero violations detected. The script is functioning as designed.
+
+**5. The Infatuation Madrid is a genuine v7 addition.**
+Not found by v6. Found via composition change (A2 city-wide query returning different results). Lori Zaino, named author, 2024 date — qualifies cleanly.
+
+**6. Con El Morro Fino was Cloudflare-blocked in v6, accessible in v7.**
+Same URL, different session, different result. Jina fetch reliability varies between runs — this is not a v7 improvement, it's fetch variance.
+
+**7. Time Out concentration exceeded cap in v7.**
+17 of 49 Tier B entries (34.7%) from Time Out EN (secondary, COI). Pipeline flagged it as advisory. Accepted without removal per test runbook rules. A second strong ES guide for established restaurants would reduce this concentration and improve both-pool potential.
+
+**8. Spanish Sabores single-author rule needs clarifying.**
+Lauren Aloise is the sole author of Spanish Sabores. The pipeline rejected it because her name doesn't appear as a byline in article text — only on the About page. For single-author personal sites where the entire site is demonstrably one person's work, About page authorship should be sufficient. This is a rule refinement, not a rule change. To be added to v7 template.
+
+**9. Tool limitation discovered: web search hard cap of 10 results.**
+Directly tested in Claude Code with explicit instruction to return 30 results. Tool returned 10 and stated "the WebSearch tool returns a maximum of 10 results per query." This closes the results-depth discussion permanently. v7b as originally conceived is not viable.
+
+---
+
+### Process Findings
+
+**Claude Code permission prompts:** First file write triggered permission prompt. Selected option 2 (allow all this session). Add `--dangerously-skip-permissions` flag to all future pipeline launches to bypass entirely.
+
+**Token capture:** Completion banners did not show token counts in most phases. Only run times captured. Programmatic token tracking to stats JSON file remains on the backlog.
+
+**Year range distribution:** Searches skewed heavily toward 2025-2026 despite YEAR_RANGE: 2023-2026. Instruction needed in v7 template to distribute queries across the full year range.
+
+**Audit file:** v7 pipeline did not produce a localbite-madrid-audit-v7.txt file. Audit file instruction must be more explicit in v7 template.
+
+**Dictation:** Mac F5 key activates/deactivates dictation. Useful for reducing typing during long sessions.
+
+---
+
+### Key Decisions
+
+1. **30-results-per-query removed permanently from v7 template.** Tool hard cap of 10 results. Not achievable via prompt instruction.
+2. **v7b not needed.** The depth change is not implementable. v7 composition changes are the valid test.
+3. **Spanish Sabores single-author rule to be added to v7 template.** About page byline sufficient for personal single-author sites.
+4. **Both v6 and v7 Madrid packs committed to repo** as test artifacts, not live city packs. Madrid is not being added to the fleet from this run — a clean v7 run would be needed for a live pack.
+5. **v7 composition changes are validated** — named awards, vocabulary queries, emerging neighbourhood tiers, cross-validation Phase 1B all worked as designed.
+
+---
+
+### v7 Template Fixes Required
+
+1. Remove 30-results-per-query instruction entirely
+2. Add explicit statement: "The web search tool returns a maximum of 10 results per query. This is a hard tool limit. Do not reference result positions beyond 10."
+3. Make audit file instruction mandatory and explicit
+4. Add year range distribution instruction: queries must be distributed across the full YEAR_RANGE, not concentrated in the most recent year
+5. Add single-author site rule: for personal sites where the entire site is one person's work, About page byline confirmation is sufficient — article-level byline not required
+6. Add `--dangerously-skip-permissions` to session startup instructions
+7. Add self-confirmation pattern for mandatory instructions
+
+---
+
+### Files Produced or Updated
+
+| File | Status |
+|------|--------|
+| `localbite-madrid-2023-2026-v6.json` | New — v6 control pack (59 restaurants) |
+| `localbite-madrid-2023-2026-v7.json` | New — v7 test pack (60 restaurants) |
+| `localbite-madrid-raw-v6.json` | New — v6 raw extraction (61 entries) |
+| `localbite-madrid-audit-v6.txt` | New — v6 audit log |
+| `localbite-madrid-search-log-v6.txt` | New — v6 search log |
+| `localbite-madrid-search-log-v7.txt` | New — v7 search log |
+| `localbite-madrid-search-plan-v6.txt` | New — v6 search plan |
+| `localbite-madrid-search-plan-v7.txt` | New — v7 search plan |
+| `localbite-madrid-working-v6.json` | New — v6 working file |
+| `localbite-madrid-working-v7.json` | New — v7 working file |
+| `localbite-madrid-test-runbook.md` | Existing — used as written |
+| `localbite-run-metrics.log` | New — programmatic run metrics |
+
+All committed at cd349a1.
+
+---
+
+### Outstanding Items
+
+- [ ] **FIRST TASK NEXT SESSION — Implement programmatic token/run time tracking in v7 template.** At pipeline completion, the pipeline must automatically write stats to `localbite-run-metrics.log`: `{city, date, pipeline, tokens, tool_uses, run_time_seconds, sources_confirmed, final_entries, both_pool}`. Same pattern as geocoding stats JSON. This eliminates manual banner capture permanently and removes a recurring gap that has affected the majority of pipeline runs to date.
+- [ ] Update v7 template with 7 fixes listed above
+- [ ] Update global instructions: add `--dangerously-skip-permissions` flag
+- [ ] Update global instructions: add year range distribution instruction
+- [ ] Run clean v7 Madrid pipeline (with template fixes) to produce live city pack
+- [ ] Decide whether Madrid should be added to the fleet
+- [ ] Update product backlog with session findings
+- [ ] Add Wayback Machine 404 fallback to project knowledge (confirmed implemented per April 15 journal but not in current project files)
+
+*Fleet: 13 cities live. Madrid test artifacts in repo — not live. index.html line count not checked this session.*
