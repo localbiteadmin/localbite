@@ -4425,3 +4425,299 @@ All committed at cd349a1.
 - [ ] Add Wayback Machine 404 fallback to project knowledge (confirmed implemented per April 15 journal but not in current project files)
 
 *Fleet: 13 cities live. Madrid test artifacts in repo — not live. index.html line count not checked this session.*
+
+## Session — 2026-04-16 Addendum (Madrid v7 Final Run + Template Fixes)
+
+### Overview
+
+Continuation of the April 16 Madrid test session. Following the v6 vs v7 comparison, produced a fixed v7 template incorporating all lessons learned, then ran the fixed template on Madrid to produce a candidate live city pack. Three Claude Code pipeline runs total in this session: v6 control, v7 test, v7 final.
+
+---
+
+### Fixed v7 Template — Changes Applied
+
+Seven changes from the original v6 template engine:
+
+1. **Removed 30-results-per-query instruction** — confirmed tool hard cap of 10 results. Replaced with explicit statement prohibiting fabricated position reporting.
+2. **Replaced forum queries with cross-validation Phase 1B** — 3 responsive queries targeting most-mentioned restaurants from Phase 0 sources.
+3. **Single-author site byline rule** — About page authorship sufficient for personal sites where entire site is demonstrably one person's work. Must be logged explicitly.
+4. **Year range distribution — structural enforcement** — queries must be distributed across full YEAR_RANGE. Specific rules by angle size. Self-check required before running searches.
+5. **Mandatory audit file** — explicit instruction with write confirmation required before reporting run complete.
+6. **Programmatic stats capture** — node command reads final JSON and search log automatically. Writes to localbite-run-metrics.log. Tokens/tool_uses/run_time set to null (not capturable programmatically). First confirmed working run this session.
+7. **Self-confirmation pattern** — first line of search plan must confirm mandatory requirements before any searches run.
+
+Three additional fixes applied after v7 final run revealed further problems:
+
+8. **Mandatory Phase 1 pause strengthened** — "PHASE 1 COMPLETE — AWAITING INSTRUCTION" must be written to terminal. Pipeline must wait for user to type PROCEED. No sources may be added after Phase 1 under any circumstances.
+9. **Quote quality rule — auto-reject at extraction** — under-15-word quotes must be auto-rejected at extraction time, not flagged and passed through.
+10. **Full name required for named author** — initials-only bylines (e.g. "Irene S.") do not qualify. First name AND surname required.
+
+Validation criteria removed from Madrid Part 1 — success tests belong in post-run journal assessment, not in the prompt where the pipeline can read and optimise toward them.
+
+---
+
+### v7 Final Run — Madrid
+
+**Sources confirmed (8):**
+
+| Publication | Writer | Lang | Type | Date |
+|-------------|--------|------|------|------|
+| Spanish Sabores | Lauren Aloise | EN | primary ⚠ coi | 2023-07-05 |
+| GastroMadrid Chamberí | Julián Acebes | ES | primary | 2024-01-19 |
+| GastroMadrid Salamanca | Irene S. | ES | primary* | 2024-01-23 |
+| eldiario.es | Carlos Osorio | ES | primary | 2025-11-08 |
+| The Making of Madrid | Felicity Hughes | EN | primary | 2025-08-18 |
+| The Objective | Mara Sánchez | ES | primary | 2023-10-12 |
+| Gastroactitud | José Carlos Capel | ES | primary | 2026-01-29 |
+| The Infatuation Salamanca | Lori Zaino | EN | primary | 2025-07-22 |
+
+*GastroMadrid Salamanca — "Irene S." is initials-only, not a full name. Would be rejected under the new named-author rule (fix #10). Accepted in this run as the rule was not yet in the template.
+
+**8th source note:** The Infatuation Salamanca was added mid-run after the pipeline read the validation success criteria and optimised toward the both-pool target. The source is legitimate and the both-pool entries are genuine, but the process was compromised by target contamination. Accepted — don't penalise restaurants for a prompt design error. Fixed in template by removing validation criteria from Part 1.
+
+**Results:**
+
+| Metric | v6 Madrid | v7 Madrid (fixed) |
+|--------|-----------|-------------------|
+| Sources confirmed | 5 | 8 |
+| Both-pool | 6 | 4 |
+| Final restaurants | 59 | 82 |
+| ES primaries | 4 | 5 |
+| EN primaries | 2 | 3 |
+| Tier A | 11 | 7 |
+| open_status_check | 9 (15%) | 56 (68%) |
+| Run time | ~28 min | ~40 min |
+
+**Both-pool entries (4):** La Sanabresa, Saddle, El Paraguas, Treze
+
+**Neighbourhood coverage:** 12 neighbourhoods — Chamberí 21, Salamanca 20, La Latina 10, Centro 8, Usera 7, Chueca 5, Huertas 3, Malasaña 3, Lavapiés 2, Retiro 1, Embajadores 1, Chamartín 1
+
+**Pool split:** EN 32 / ES 46 / both 4
+
+---
+
+### Template Compliance Assessment
+
+| Check | Result |
+|-------|--------|
+| Self-confirmation line in search plan | ✓ PASS |
+| Year distribution balanced | ✓ PASS (14 queries 2023-2024, 11 queries 2025-2026) |
+| No fabricated position reporting | ✓ PASS |
+| Cross-validation Phase 1B ran | ✓ PASS (3 queries) |
+| Audit file written | ✓ PASS |
+| Programmatic stats capture | ✓ PASS — first confirmed working run |
+| Single-author byline rule applied | ✓ PASS |
+| Wayback Machine retry attempted | ✓ PASS |
+| Phase 1 pause respected | ✗ FAIL — pipeline proceeded without pausing |
+| Quote quality auto-reject | ✗ FAIL — Treze (13 words) flagged but not auto-rejected |
+
+---
+
+### Fleet Readiness Assessment
+
+Madrid v7 final pack is **NOT fleet-ready** in current state.
+
+- Both-pool ≥ 4: ✓ PASS (4)
+- Final restaurants ≥ 50: ✓ PASS (82)
+- open_status_check ≤ 15%: ✗ FAIL (68% — 56 of 82 restaurants)
+
+Root cause of open_status_check failure: GastroMadrid (Jan 2024) is the dominant ES primary for Chamberí and Salamanca. Spanish Sabores (July 2023) is the only comprehensive EN source for central Madrid. No 2025+ equivalents exist for either. Every restaurant from these four pre-2025 sources requires closure verification.
+
+Required before go-live:
+1. Geocoding pass (Nominatim + Photon)
+2. open_status_check verification for 56 restaurants
+3. GastroMadrid Salamanca "Irene S." — verify full name or remove source
+
+---
+
+### Key Decisions
+
+1. **v7 template is the standard** for all future city runs. v6 template superseded.
+2. **Madrid v7 final pack committed to repo** as candidate live pack — not yet live. Requires geocoding and open_status_check pass.
+3. **Validation criteria must never appear in pipeline prompts** — they belong in post-run journal assessment only.
+4. **Programmatic stats capture confirmed working** — eliminates manual banner capture permanently.
+5. **"Irene S." initials-only byline** — would be rejected under new named-author rule. Flag for review before Madrid goes live.
+6. **Phase 1 pause enforcement** — template fix written but not yet tested. Must be verified on next city run.
+
+---
+
+### Files Produced or Updated
+
+| File | Status |
+|------|--------|
+| `localbite-prompt-v7-template.txt` | Updated — 10 fixes applied |
+| `localbite-prompt-v7-madrid-part1-final.txt` | Updated — validation criteria removed |
+| `localbite-prompt-v7-madrid-final.txt` | Updated — rebuilt from fixed parts |
+| `localbite-madrid-2023-2026-v7final.json` | New — 82 restaurants |
+| `localbite-madrid-raw-v7final.json` | New — 92 restaurants pre-removal |
+| `localbite-madrid-search-log-v7final.txt` | New — 33 queries logged |
+| `localbite-madrid-search-plan-v7final.txt` | New |
+| `localbite-madrid-audit-v7final.txt` | New |
+| `localbite-madrid-working-v7final.json` | New |
+| `localbite-madrid-failed-sources-v7final.txt` | New |
+| `localbite-run-metrics.log` | Updated — metrics appended |
+
+Committed at 9a89a67.
+
+---
+
+### Outstanding Items
+
+- [ ] **FIRST TASK NEXT SESSION — Verify Phase 1 pause enforcement** on next city run. Template fix written (fix #8) but not tested. This is the highest-priority unverified template change.
+- [ ] Madrid geocoding pass before go-live
+- [ ] Madrid open_status_check verification — 56 restaurants
+- [ ] Madrid "Irene S." — verify full name or remove GastroMadrid Salamanca source
+- [ ] Update global instructions: add `--dangerously-skip-permissions` flag to session startup
+- [ ] Update global instructions: add year range distribution instruction
+- [ ] Decide on Seville v2 as next city run — natural v7 template test on a new city with no prior knowledge contamination
+- [ ] Update product backlog with session findings
+
+*Fleet: 13 cities live. Madrid candidate pack in repo — not yet live. index.html line count not checked this session.*
+
+## Session — 2026-04-16 Addendum (Madrid v7 Final Run + Template Fixes)
+
+### Overview
+
+Continuation of the April 16 Madrid test session. Following the v6 vs v7 comparison, produced a fixed v7 template incorporating all lessons learned, then ran the fixed template on Madrid to produce a candidate live city pack. Three Claude Code pipeline runs total in this session: v6 control, v7 test, v7 final.
+
+---
+
+### Fixed v7 Template — Changes Applied
+
+Seven changes from the original v6 template engine:
+
+1. **Removed 30-results-per-query instruction** — confirmed tool hard cap of 10 results. Replaced with explicit statement prohibiting fabricated position reporting.
+2. **Replaced forum queries with cross-validation Phase 1B** — 3 responsive queries targeting most-mentioned restaurants from Phase 0 sources.
+3. **Single-author site byline rule** — About page authorship sufficient for personal sites where entire site is demonstrably one person's work. Must be logged explicitly.
+4. **Year range distribution — structural enforcement** — queries must be distributed across full YEAR_RANGE. Specific rules by angle size. Self-check required before running searches.
+5. **Mandatory audit file** — explicit instruction with write confirmation required before reporting run complete.
+6. **Programmatic stats capture** — node command reads final JSON and search log automatically. Writes to localbite-run-metrics.log. Tokens/tool_uses/run_time set to null (not capturable programmatically). First confirmed working run this session.
+7. **Self-confirmation pattern** — first line of search plan must confirm mandatory requirements before any searches run.
+
+Three additional fixes applied after v7 final run revealed further problems:
+
+8. **Mandatory Phase 1 pause strengthened** — "PHASE 1 COMPLETE — AWAITING INSTRUCTION" must be written to terminal. Pipeline must wait for user to type PROCEED. No sources may be added after Phase 1 under any circumstances.
+9. **Quote quality rule — auto-reject at extraction** — under-15-word quotes must be auto-rejected at extraction time, not flagged and passed through.
+10. **Full name required for named author** — initials-only bylines (e.g. "Irene S.") do not qualify. First name AND surname required.
+
+Validation criteria removed from Madrid Part 1 — success tests belong in post-run journal assessment, not in the prompt where the pipeline can read and optimise toward them.
+
+---
+
+### v7 Final Run — Madrid
+
+**Sources confirmed (8):**
+
+| Publication | Writer | Lang | Type | Date |
+|-------------|--------|------|------|------|
+| Spanish Sabores | Lauren Aloise | EN | primary ⚠ coi | 2023-07-05 |
+| GastroMadrid Chamberí | Julián Acebes | ES | primary | 2024-01-19 |
+| GastroMadrid Salamanca | Irene S. | ES | primary* | 2024-01-23 |
+| eldiario.es | Carlos Osorio | ES | primary | 2025-11-08 |
+| The Making of Madrid | Felicity Hughes | EN | primary | 2025-08-18 |
+| The Objective | Mara Sánchez | ES | primary | 2023-10-12 |
+| Gastroactitud | José Carlos Capel | ES | primary | 2026-01-29 |
+| The Infatuation Salamanca | Lori Zaino | EN | primary | 2025-07-22 |
+
+*GastroMadrid Salamanca — "Irene S." is initials-only, not a full name. Would be rejected under the new named-author rule (fix #10). Accepted in this run as the rule was not yet in the template.
+
+**8th source note:** The Infatuation Salamanca was added mid-run after the pipeline read the validation success criteria and optimised toward the both-pool target. The source is legitimate and the both-pool entries are genuine, but the process was compromised by target contamination. Accepted — don't penalise restaurants for a prompt design error. Fixed in template by removing validation criteria from Part 1.
+
+**Results:**
+
+| Metric | v6 Madrid | v7 Madrid (fixed) |
+|--------|-----------|-------------------|
+| Sources confirmed | 5 | 8 |
+| Both-pool | 6 | 4 |
+| Final restaurants | 59 | 82 |
+| ES primaries | 4 | 5 |
+| EN primaries | 2 | 3 |
+| Tier A | 11 | 7 |
+| open_status_check | 9 (15%) | 56 (68%) |
+| Run time | ~28 min | ~40 min |
+
+**Both-pool entries (4):** La Sanabresa, Saddle, El Paraguas, Treze
+
+**Neighbourhood coverage:** 12 neighbourhoods — Chamberí 21, Salamanca 20, La Latina 10, Centro 8, Usera 7, Chueca 5, Huertas 3, Malasaña 3, Lavapiés 2, Retiro 1, Embajadores 1, Chamartín 1
+
+**Pool split:** EN 32 / ES 46 / both 4
+
+---
+
+### Template Compliance Assessment
+
+| Check | Result |
+|-------|--------|
+| Self-confirmation line in search plan | ✓ PASS |
+| Year distribution balanced | ✓ PASS (14 queries 2023-2024, 11 queries 2025-2026) |
+| No fabricated position reporting | ✓ PASS |
+| Cross-validation Phase 1B ran | ✓ PASS (3 queries) |
+| Audit file written | ✓ PASS |
+| Programmatic stats capture | ✓ PASS — first confirmed working run |
+| Single-author byline rule applied | ✓ PASS |
+| Wayback Machine retry attempted | ✓ PASS |
+| Phase 1 pause respected | ✗ FAIL — pipeline proceeded without pausing |
+| Quote quality auto-reject | ✗ FAIL — Treze (13 words) flagged but not auto-rejected |
+
+---
+
+### Fleet Readiness Assessment
+
+Madrid v7 final pack is **NOT fleet-ready** in current state.
+
+- Both-pool ≥ 4: ✓ PASS (4)
+- Final restaurants ≥ 50: ✓ PASS (82)
+- open_status_check ≤ 15%: ✗ FAIL (68% — 56 of 82 restaurants)
+
+Root cause of open_status_check failure: GastroMadrid (Jan 2024) is the dominant ES primary for Chamberí and Salamanca. Spanish Sabores (July 2023) is the only comprehensive EN source for central Madrid. No 2025+ equivalents exist for either. Every restaurant from these four pre-2025 sources requires closure verification.
+
+Required before go-live:
+1. Geocoding pass (Nominatim + Photon)
+2. open_status_check verification for 56 restaurants
+3. GastroMadrid Salamanca "Irene S." — verify full name or remove source
+
+---
+
+### Key Decisions
+
+1. **v7 template is the standard** for all future city runs. v6 template superseded.
+2. **Madrid v7 final pack committed to repo** as candidate live pack — not yet live. Requires geocoding and open_status_check pass.
+3. **Validation criteria must never appear in pipeline prompts** — they belong in post-run journal assessment only.
+4. **Programmatic stats capture confirmed working** — eliminates manual banner capture permanently.
+5. **"Irene S." initials-only byline** — would be rejected under new named-author rule. Flag for review before Madrid goes live.
+6. **Phase 1 pause enforcement** — template fix written but not yet tested. Must be verified on next city run.
+
+---
+
+### Files Produced or Updated
+
+| File | Status |
+|------|--------|
+| `localbite-prompt-v7-template.txt` | Updated — 10 fixes applied |
+| `localbite-prompt-v7-madrid-part1-final.txt` | Updated — validation criteria removed |
+| `localbite-prompt-v7-madrid-final.txt` | Updated — rebuilt from fixed parts |
+| `localbite-madrid-2023-2026-v7final.json` | New — 82 restaurants |
+| `localbite-madrid-raw-v7final.json` | New — 92 restaurants pre-removal |
+| `localbite-madrid-search-log-v7final.txt` | New — 33 queries logged |
+| `localbite-madrid-search-plan-v7final.txt` | New |
+| `localbite-madrid-audit-v7final.txt` | New |
+| `localbite-madrid-working-v7final.json` | New |
+| `localbite-madrid-failed-sources-v7final.txt` | New |
+| `localbite-run-metrics.log` | Updated — metrics appended |
+
+Committed at 9a89a67.
+
+---
+
+### Outstanding Items
+
+- [ ] **FIRST TASK NEXT SESSION — Verify Phase 1 pause enforcement** on next city run. Template fix written (fix #8) but not tested. This is the highest-priority unverified template change.
+- [ ] Madrid geocoding pass before go-live
+- [ ] Madrid open_status_check verification — 56 restaurants
+- [ ] Madrid "Irene S." — verify full name or remove GastroMadrid Salamanca source
+- [ ] Update global instructions: add `--dangerously-skip-permissions` flag to session startup
+- [ ] Update global instructions: add year range distribution instruction
+- [ ] Decide on Seville v2 as next city run — natural v7 template test on a new city with no prior knowledge contamination
+- [ ] Update product backlog with session findings
+
+*Fleet: 13 cities live. Madrid candidate pack in repo — not yet live. index.html line count not checked this session.*
