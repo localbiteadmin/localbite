@@ -1,0 +1,173 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Madrid
+COUNTRY: Spain
+CITY_SLUG: madrid-spain
+CITY_TYPE: european_major
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: ES
+SEARCH_LANGUAGES: English, Spanish
+
+YEAR_RANGE: 2023-2026
+
+SINGLE_LANGUAGE_CITY: NO
+RIAD_RULE: NOT_APPLICABLE
+PROXIMITY_RADIUS_KM: 20
+
+SEARCH_ANGLE_EXAMPLES:
+- "best restaurants Madrid Spain food writer local guide 2024"
+- "mejores restaurantes Madrid España guía gastronómica periodista 2023"
+- "restaurantes Chamberí Madrid 2025 recomendaciones gastronomía"
+- "food critic Madrid restaurant recommendations 2026"
+- "taberna tasca Madrid barrio recomendaciones 2024 2025"
+
+SOURCE_EXAMPLES:
+- Spanish food media: El Comidista (El País), Metrópoli (El Mundo),
+  Guía Repsol, Time Out Madrid ES, ABC Gastro, El Español/Magas,
+  Con Mucha Gula, Gastronosfera, 7 Caníbales
+- English food media: Time Out Madrid EN, The Infatuation Madrid,
+  Condé Nast Traveller, Epicurean Ways
+- Local food bloggers writing in Spanish or English with documented
+  Madrid residency or regular coverage
+- Expat food writers based in Madrid
+
+DIRECT_FETCH_SOURCES:
+These sources are fetched directly in Phase 0 before any searches.
+- https://elcomidista.elpais.com/ — El Comidista (ES independent
+  food section of El País, named writers Mikel López Iturriaga
+  et al., active 2026)
+- https://www.guiarepsol.com/es/restaurantes/madrid/ — Guía Repsol
+  Madrid (ES primary, named critics, active 2026). If 404, retry
+  https://www.guiarepsol.com/es/comer/
+- https://spanishsabores.com/madrid-gastro-guide-where-to-eat-in-madrid/
+  — Spanish Sabores (Lauren Aloise, sole author confirmed on About page —
+  apply single-author site byline rule. Note: Lauren Aloise co-founded
+  Devour Tours — flag ⚠ coi in writer profile. Treat as primary with
+  COI flag, not as secondary.)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+- Time Out Madrid — operates Time Out Market Madrid food hall.
+  Disclose in writer profile. Do not reject — flag ⚠ coi.
+- Spanish Sabores — Lauren Aloise co-founded Devour Tours, a Madrid
+  food tour operator. Content on Spanish Sabores appears editorially
+  independent. Flag ⚠ coi in writer profile. Counts toward secondary
+  cap per COI rule.
+
+SECONDARY_SOURCES: Condé Nast Traveller, Lonely Planet, Time Out
+  (EN edition), The Guardian, Michelin Guide
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+- yelp.com (aggregator — reject)
+- tripadvisor.com (aggregator — reject)
+- opentable.com (booking site — reject)
+- esmadrid.com (tourism board — reject)
+- thefork.com (booking site — reject)
+
+PRICE_CURRENCY: EUR (Euro)
+PRICE_LEVELS:
+- 1 = under €20 pp (budget / taberna / menú del día)
+- 2 = €20–45 pp (mid-range)
+- 3 = €45–90 pp (upscale)
+- 4 = over €90 pp (fine dining)
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Centro (Sol, Austrias, Palacio), La Latina, Lavapiés, Malasaña,
+Chueca, Salamanca, Chamberí, Retiro, Arganzuela, Carabanchel,
+Usera, Vallecas, Moncloa-Aravaca, Tetuán, Hortaleza, Chamartín,
+Ibiza, Huertas, Embajadores, Ópera, Ponzano
+
+NEIGHBOURHOOD_TIERS:
+Neighbourhood queries target 6 specific named areas across
+3 tiers. Use exactly these areas in the angles specified.
+
+  Tier 1 — Central/tourist (2 areas)
+  Well-covered by city-wide queries but worth one dedicated
+  pair each for neighbourhood-specialist sources.
+    · Malasaña
+    · La Latina
+
+  Tier 2 — Residential mid-range (2 areas)
+  Strong local ES food press coverage, underrepresented in
+  EN guides. Highest potential for cross-language both-pool
+  validation.
+    · Chamberí (includes Ponzano street area)
+    · Salamanca (includes Ibiza and Retiro border)
+
+  Tier 3 — Emerging (2 areas)
+  Confirmed active dining scenes rarely covered in mainstream
+  food press, EN or ES.
+    · Carabanchel
+    · Usera
+
+NAMED_AWARDS:
+Use these award names explicitly in awards queries.
+- Premios de la Academia Madrileña de Gastronomía (annual,
+  independent body, not commercial)
+- Soles Repsol / Guía Repsol (Spain's primary dining guide,
+  annual ratings)
+- Premios Metrópoli (annual, Metrópoli/El Mundo newspaper)
+
+LOCAL_FOOD_VOCABULARY:
+Vocabulary that appears in locally-produced ES food content
+but rarely in EN or tourist-facing guides.
+- taberna, tasca, tasquita — casual neighbourhood restaurant
+- guiso, cocido, vermú, tapeo — Madrid culinary register
+- casa de comidas — traditional family-run restaurant
+- barra — bar-format dining distinctive to Madrid
+- menú del día, menú de mercado — market-driven lunch menus
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Getafe, Alcalá de Henares, Alcobendas, Pozuelo de Alarcón,
+Majadahonda, Las Rozas, or any location described as "outside
+Madrid", "near Madrid", "Madrid region" without being in the
+city proper, or another Spanish city. Salamanca city (Castile-León)
+is NOT the same as Madrid's Salamanca neighbourhood — exclude
+any restaurant that is in Salamanca city, not Madrid.
+
+OUTPUT_RAW: ./localbite-madrid-raw.json
+OUTPUT_FINAL: ./localbite-madrid-2023-2026.json
+OUTPUT_WORKING: ./localbite-madrid-working.json
+OUTPUT_SEARCH_LOG: ./localbite-madrid-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-madrid-search-plan.txt
+OUTPUT_FAILED_SOURCES: ./localbite-madrid-failed-sources.txt
+OUTPUT_AUDIT: ./localbite-madrid-audit.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VALIDATION RUN CONTEXT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This is the fixed v7 validation run for Madrid.
+Purpose: validate the fixed v7 template and produce a
+candidate live Madrid city pack.
+
+This run is assessed on three independent tests:
+
+Test 1 — Template compliance:
+- Self-confirmation line present in search plan file
+- Year distribution balanced across 2023-2026
+- No references to result positions beyond 10
+- Cross-validation Phase 1B runs after main searches
+- Audit file produced and confirmed written
+- Stats written to localbite-run-metrics.log
+- Single-author byline rule applied to Spanish Sabores
+
+Test 2 — Pack quality:
+- Both-pool count ≥ 4
+- Final restaurants ≥ 50
+- At least 2 genuine ES primaries confirmed
+- At least 2 genuine EN primaries confirmed
+- Time Out concentration ≤ 30% of Tier B
+- Audit file complete
+
+Test 3 — Fleet readiness (assessed after run):
+- Both-pool count ≥ 4
+- open_status_check entries ≤ 15% of final pack
+- No geographic boundary violations
+
+Report against all three tests in the final summary.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

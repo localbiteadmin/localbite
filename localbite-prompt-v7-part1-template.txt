@@ -1,0 +1,167 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES (v7 template)
+Change only this section for each new city.
+Part 2 is the pipeline engine — do not modify it.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: [CITY NAME]
+COUNTRY: [COUNTRY]
+CITY_SLUG: [city-country]
+CITY_TYPE: [european_major | european_minor | moroccan_medina |
+  north_american_major | other]
+
+LANGUAGE_PRIMARY: [Primary language of food writing in this city]
+LANGUAGE_CODES: [EN | ES | CA | PT | FR | AR — list all relevant]
+SEARCH_LANGUAGES: [List languages for searches]
+
+YEAR_RANGE: 2023-2026
+
+SINGLE_LANGUAGE_CITY: [YES | NO]
+RIAD_RULE: [APPLY | NOT_APPLICABLE]
+PROXIMITY_RADIUS_KM: [number — default by CITY_TYPE:
+  european_major: 20, european_minor: 15,
+  moroccan_medina: 25, north_american_major: 35, other: 20]
+
+SEARCH_ANGLE_EXAMPLES:
+[5 example queries in the primary language(s) of this city.
+MANDATORY: distribute year terms — include at least 2 examples
+referencing 2023-2024 and at least 2 referencing 2025-2026.
+Include neighbourhood-level and writer-first examples.]
+- "[example query — 2023 or 2024]"
+- "[example query — 2025 or 2026]"
+- "[example query — neighbourhood level]"
+- "[example query — writer-first]"
+- "[example query — local language]"
+
+SOURCE_EXAMPLES:
+[List known publications for this city by tier.
+Cap: maximum 4 publications per language tier.
+Do not invent sources — leave sparse if city is new.]
+Primary (named local voices):
+- [Publication — writer or coverage notes if known]
+Secondary (national/international):
+- [Publication]
+
+DIRECT_FETCH_SOURCES:
+[List 0–3 URLs to fetch directly before any searches.
+Only include URLs verified to exist and return qualifying
+2023–2026 content. Leave blank if unknown.
+For personal single-author sites: note "apply single-author
+site byline rule" and confirm About page authorship.]
+[If none: leave this section blank]
+
+KNOWN_COMMERCIAL_CONFLICTS:
+[List publications known to have commercial relationships with
+the dining industry. Leave blank if none known.]
+[If none: leave this section blank]
+
+SECONDARY_SOURCES: [Always include: Condé Nast Traveller,
+  Lonely Planet, Time Out, Michelin Guide. Add city-specific
+  national best-of lists below.]
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+- yelp.com (aggregator — reject)
+- tripadvisor.com (aggregator — reject)
+- opentable.com (booking site — reject)
+- zomato.com (aggregator — reject)
+[Add any city-specific problematic URLs below]
+
+PRICE_CURRENCY: [EUR | CAD | MAD | GBP | etc.]
+PRICE_LEVELS:
+- 1 = [range — budget]
+- 2 = [range — mid-range]
+- 3 = [range — upscale]
+- 4 = [range — fine dining]
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+[List canonical neighbourhood names for this city.
+These become the valid values for the neighbourhood field.]
+
+NEIGHBOURHOOD_TIERS:
+[For well-documented cities with 10+ neighbourhoods, define
+3 tiers of 2 areas each (6 areas total). The pipeline runs
+one EN + one local language query per area.
+Leave blank for smaller cities — pipeline will use
+GEOGRAPHIC_BOUNDARY_INCLUDE directly.]
+
+  Tier 1 — Central/tourist (2 areas)
+  [Areas well-covered by city-wide queries — include for
+  neighbourhood-specialist sources only]
+    · [Area name]
+    · [Area name]
+
+  Tier 2 — Residential mid-range (2 areas)
+  [Areas with strong local food press but underrepresented
+  in EN guides — highest both-pool potential]
+    · [Area name]
+    · [Area name]
+
+  Tier 3 — Emerging (2 areas)
+  [Areas with active dining scenes rarely covered in
+  mainstream food press]
+    · [Area name]
+    · [Area name]
+
+NAMED_AWARDS:
+[List 2-3 city-specific food awards. Research before running.
+These are used verbatim in Phase 1 named-award queries.
+Leave blank if no city-specific awards identified — pipeline
+will use generic award queries instead.]
+- [Award name — description]
+- [Award name — description]
+- [Award name — description]
+
+LOCAL_FOOD_VOCABULARY:
+[List 4-6 local food vocabulary terms used in the primary
+language for casual/neighbourhood dining. These appear in
+locally-produced content but rarely in EN or tourist guides.
+Used in vocabulary-specific queries only.
+Leave blank if primary language is English.]
+- [term] — [meaning]
+- [term] — [meaning]
+- [term] — [meaning]
+- [term] — [meaning]
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+[List nearby cities, suburbs, day-trip destinations to exclude.
+Be specific — name exact cities and regions.]
+
+OUTPUT_RAW: ./localbite-[city-slug]-raw.json
+OUTPUT_FINAL: ./localbite-[city-slug]-2023-2026.json
+OUTPUT_WORKING: ./localbite-[city-slug]-working.json
+OUTPUT_SEARCH_LOG: ./localbite-[city-slug]-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-[city-slug]-search-plan.txt
+OUTPUT_FAILED_SOURCES: ./localbite-[city-slug]-failed-sources.txt
+OUTPUT_AUDIT: ./localbite-[city-slug]-audit.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CHECKLIST — complete before running pipeline
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ ] CITY, COUNTRY, CITY_SLUG filled in
+[ ] CITY_TYPE set
+[ ] YEAR_RANGE confirmed (default: 2023-2026)
+[ ] SEARCH_ANGLE_EXAMPLES include year distribution
+    (2023-2024 AND 2025-2026 examples present)
+[ ] DIRECT_FETCH_SOURCES verified to exist and return content
+[ ] NEIGHBOURHOOD_TIERS defined (or confirmed not needed)
+[ ] NAMED_AWARDS researched and populated (or confirmed blank)
+[ ] LOCAL_FOOD_VOCABULARY populated (or confirmed EN-only city)
+[ ] GEOGRAPHIC_BOUNDARY_EXCLUDE covers all nearby cities
+[ ] OUTPUT_* filenames updated with correct city-slug
+[ ] localbite-prior-knowledge-check.py present in working directory
+[ ] localbite-run-metrics.log exists (create if not)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SESSION STARTUP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Launch Claude Code with permissions bypass:
+  claude --dangerously-skip-permissions < localbite-prompt-v7-[city-slug].txt
+
+This bypasses all file write permission prompts automatically.
+Do not launch without this flag — permission prompts will
+interrupt the pipeline mid-run.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
