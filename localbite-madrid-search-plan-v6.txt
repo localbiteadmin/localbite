@@ -1,0 +1,90 @@
+LOCALBITE MADRID — v6 CONTROL — SEARCH PLAN
+Generated: 2026-04-16
+
+════════════════════════════════════════
+PHASE 0 OUTCOME
+════════════════════════════════════════
+FETCHED   El Comidista (El País) — 2026-04-16 — ~45,000 chars
+FAILED    Guía Repsol Madrid — 404 page returned
+
+Writers confirmed: Mikel López Iturriaga, Claudia Polo, Rubén Galdón, Mònica Escudero
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
+Madrid is bilingual (ES primary, EN secondary).
+Each neighbourhood group runs in both ES and EN = 2 queries per group.
+
+Neighbourhood groups:
+  G1  — Centro (Sol, Austrias, Palacio, Ópera)
+  G2  — La Latina + Embajadores
+  G3  — Lavapiés + Arganzuela
+  G4  — Malasaña
+  G5  — Chueca + Huertas
+  G6  — Salamanca + Ibiza
+  G7  — Chamberí + Ponzano
+  G8  — Retiro
+  G9  — Carabanchel + Usera + Vallecas (southern districts)
+  G10 — Moncloa-Aravaca
+  G11 — Tetuán + Hortaleza + Chamartín (northern districts)
+
+Neighbourhood queries (22 total):
+  N-01  [ES] restaurantes Centro Madrid Sol Austrias crítica gastronómica 2025 2026
+  N-02  [EN] best restaurants Centro Madrid Sol Austrias food writer guide 2025 2026
+  N-03  [ES] mejores restaurantes La Latina Embajadores Madrid guía gastronomía
+  N-04  [EN] La Latina Embajadores Madrid restaurants food writer recommendation
+  N-05  [ES] restaurantes Lavapiés Arganzuela Madrid recomendaciones gastronomía 2025
+  N-06  [EN] Lavapiés Madrid restaurants food writer local guide 2024 2025
+  N-07  [ES] restaurantes Malasaña Madrid guía gastronómica periodista 2025 2026
+  N-08  [EN] Malasaña Madrid best restaurants food critic review
+  N-09  [ES] restaurantes Chueca Huertas Madrid crítica gastronómica 2024 2025
+  N-10  [EN] Chueca Huertas Madrid restaurants food writer guide 2025
+  N-11  [ES] restaurantes Salamanca Ibiza Madrid recomendaciones gastronomía 2025
+  N-12  [EN] Salamanca district Madrid restaurants food writer guide 2025 2026
+  N-13  [ES] restaurantes Chamberí Ponzano Madrid crítica gastronómica 2025 2026
+  N-14  [EN] Chamberí Ponzano Madrid best restaurants food writer 2024 2025
+  N-15  [ES] restaurantes barrio Retiro Madrid recomendaciones gastronómica
+  N-16  [EN] Retiro neighbourhood Madrid restaurants food writer recommendation
+  N-17  [ES] restaurantes Carabanchel Usera Vallecas Madrid guía gastronomía 2025
+  N-18  [EN] Carabanchel Usera Madrid restaurants food writer guide diversity
+  N-19  [ES] restaurantes Moncloa-Aravaca Madrid crítica gastronómica recomendación
+  N-20  [EN] Moncloa Madrid restaurants food writer local guide
+  N-21  [ES] restaurantes Tetuán Hortaleza Chamartín Madrid guía gastronómica 2025
+  N-22  [EN] Tetuán Chamartín north Madrid restaurants food writer 2025 2026
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
+
+Cross-1 — City-wide (3 queries):
+  X-01  [ES] mejores restaurantes Madrid España guía gastronómica periodista 2026
+  X-02  [EN] best restaurants Madrid Spain food writer local guide 2025
+  X-03  [EN] food critic Madrid restaurant recommendations 2023 2024
+
+Cross-2 — Writer-first (3 queries, using Phase 0 confirmed names):
+  X-04  [ES] Mikel López Iturriaga restaurantes Madrid recomendaciones 2025 2026
+  X-05  [ES] El Comidista restaurantes Madrid guía 2025 gastronomía
+  X-06  [EN] Madrid food blogger writer restaurant guide Spanish local 2025 2026
+
+Cross-3 — Recent openings 2024–2026 (2 queries):
+  X-07  [ES] nuevos restaurantes Madrid aperturas 2024 2025 crítica gastronómica
+  X-08  [EN] new restaurant openings Madrid 2025 2026 food writer review
+
+Cross-4 — Older coverage 2023–2024 (2 queries):
+  X-09  [ES] mejores restaurantes Madrid 2023 guía gastronómica recomendaciones
+  X-10  [EN] best restaurants Madrid 2024 food writer guide recommendations
+
+Cross-5 — Awards and recognition (2 queries):
+  X-11  [ES] restaurantes Madrid Michelin estrella guía Repsol soles 2024 2025
+  X-12  [EN] Madrid Michelin starred restaurants food writer guide 2025 2026
+
+Cross-6 — Forum and community (2 queries):
+  X-13  [EN] Madrid restaurants expat food recommendations local forum 2025
+  X-14  [ES] foro gastronomía Madrid recomendaciones restaurantes 2025 comunidad
+
+Cross-7 — Cuisine diversity (2 queries — Madrid has significant Asian, Latin American communities):
+  X-15  [ES] restaurantes chinos peruanos asiáticos Madrid Usera recomendaciones 2025
+  X-16  [EN] Asian Latin American immigrant cuisine Madrid food writer guide diversity
+
+TOTAL PLANNED: 22 neighbourhood + 16 cross-cutting = 38 queries
+Soft ceiling: 55. Stopping rule: 8 consecutive queries with no new candidates.

@@ -1,0 +1,134 @@
+LOCALBITE MADRID v7 — SEARCH PLAN
+Generated: 2026-04-16
+City: Madrid, Spain
+Pipeline: localbite-v7
+Total pre-written queries: 32 (A–N)
+Phase 1B cross-validation queries: 3 (O) — written after Phase 0
+
+════════════════════════════════════════
+PHASE 0 SUMMARY (before search plan)
+════════════════════════════════════════
+
+[phase-0] FETCHED El Comidista (elcomidista.elpais.com) — Apr 15, 2026 — ~28,000 chars — active, named writers confirmed (Mikel López Iturriaga, Mònica Escudero, Rubén Galdón, Claudia Polo, Myrto Kalle), homepage is Spain-wide content
+[phase-0] FAILED Guía Repsol /es/restaurantes/madrid/ — 404 error
+[phase-0] FETCHED Guía Repsol (guiarepsol.com/es/comer/) — Apr 2026 — ~95,000 chars — Madrid restaurants present (Sushi Pop, Sacha), Soles Repsol 2025-2026 content confirmed
+
+Writers confirmed for Phase 1 use: Mikel López Iturriaga, Mònica Escudero, Rubén Galdón (El Comidista)
+
+════════════════════════════════════════
+QUERY PLAN — A THROUGH N (32 pre-written queries)
+════════════════════════════════════════
+
+── A — City-wide EN (2 queries) ──────────────────────────────────────
+
+A1: best restaurants Madrid food writer guide 2026
+A2: where to eat Madrid local recommendations food critic 2025
+
+── B — City-wide ES (3 queries) ──────────────────────────────────────
+
+B1: mejores restaurantes Madrid crítica gastronómica 2026
+B2: dónde comer en Madrid recomendaciones barrio vecinos 2025
+B3: guía gastronómica Madrid periodismo alimentario 2024 2025
+
+── C — Neighbourhood EN, Tier 1 central (2 queries) ──────────────────
+Targets: Malasaña (C1), La Latina (C2)
+
+C1: best restaurants Malasaña Madrid food guide 2025 2026
+C2: where to eat La Latina Madrid neighbourhood food recommendations 2024 2025
+
+── D — Neighbourhood ES, Tier 1 central (2 queries) ──────────────────
+Targets: Malasaña (D1), La Latina (D2)
+
+D1: restaurantes Malasaña Madrid recomendaciones gastronomía 2025
+D2: mejores bares restaurantes La Latina Madrid guía local 2024 2025
+
+── E — Neighbourhood EN, Tier 2 residential (2 queries) ──────────────
+Targets: Chamberí (E1), Salamanca (E2)
+
+E1: best restaurants Chamberí Madrid food writer recommendations 2025
+E2: where to eat Salamanca Madrid neighbourhood dining guide 2024 2025
+
+── F — Neighbourhood ES, Tier 2 residential (2 queries) ──────────────
+Targets: Chamberí (F1), Salamanca (F2)
+
+F1: restaurantes Chamberí Ponzano Madrid crítica gastronómica 2025
+F2: mejores restaurantes Salamanca Madrid periodismo gastronómico 2024 2025
+
+── G — Neighbourhood EN, Tier 3 emerging (2 queries) ─────────────────
+Targets: Carabanchel (G1), Usera (G2)
+
+G1: best restaurants Carabanchel Madrid emerging neighbourhood food 2024 2025
+G2: where to eat Usera Madrid food guide neighbourhood recommendations 2025
+
+── H — Neighbourhood ES, Tier 3 emerging (2 queries) ─────────────────
+Targets: Carabanchel (H1), Usera (H2)
+
+H1: restaurantes Carabanchel Madrid guía gastronómica barrio emergente 2024 2025
+H2: mejores restaurantes Usera Madrid gastronomía asiática barrio 2025
+
+── I — Generic writer-first (4 queries) ──────────────────────────────
+
+I1: independent food writer blogger Madrid restaurant reviews English 2025
+I2: food journalist named byline Madrid restaurant guide editorial 2024 2025
+I3: crítico gastronómico Madrid prensa restaurantes recomendaciones 2025
+I4: blogger gastronómico independiente Madrid barrios locales 2024 2025
+
+── J — Named awards (3 queries) ──────────────────────────────────────
+Award names from NAMED_AWARDS only
+
+J1: Premios Academia Madrileña Gastronomía ganadores restaurantes 2024 2025
+J2: Soles Repsol Guía Repsol Madrid restaurantes resultados 2025 2026
+J3: Premios Metrópoli Madrid ganadores reconocimiento restaurantes 2024 2025
+
+── K — Recent openings (2 queries) ───────────────────────────────────
+
+K1: new restaurant openings Madrid 2025 2026 food guide review
+K2: nuevas aperturas restaurantes Madrid 2025 2026 guía gastronomía
+
+── L — Vocabulary-specific ES (2 queries) ────────────────────────────
+Vocabulary from LOCAL_FOOD_VOCABULARY only
+
+L1: taberna tasca tasquita Madrid recomendaciones gastronomía 2024 2025
+L2: casa de comidas vermú tapeo Madrid barrio crítica 2025
+
+── M — Cuisine and community EN (2 queries) ──────────────────────────
+
+M1: Chinese food Usera Madrid food writer recommendations restaurant guide 2024 2025
+M2: international immigrant cuisine Madrid food writing recommendations 2025 2026
+
+── N — Publication-category ES (2 queries) ───────────────────────────
+Category descriptors only — no specific publication names
+
+N1: revista gastronómica independiente Madrid restaurantes recomendaciones 2025
+N2: suplemento gastronomía periódico Madrid restaurantes crítica 2024 2025
+
+════════════════════════════════════════
+QUERY COUNT SUMMARY
+════════════════════════════════════════
+
+A   City-wide EN                        2
+B   City-wide ES                        3
+C   Neighbourhood EN — Tier 1 central   2   Malasaña, La Latina
+D   Neighbourhood ES — Tier 1 central   2   Malasaña, La Latina
+E   Neighbourhood EN — Tier 2 resid.    2   Chamberí, Salamanca
+F   Neighbourhood ES — Tier 2 resid.    2   Chamberí, Salamanca
+G   Neighbourhood EN — Tier 3 emerg.    2   Carabanchel, Usera
+H   Neighbourhood ES — Tier 3 emerg.    2   Carabanchel, Usera
+I   Generic writer-first                4
+J   Named awards                        3
+K   Recent openings                     2
+L   Vocabulary-specific ES              2
+M   Cuisine and community EN            2
+N   Publication-category ES             2
+                                       ──
+    Pre-written total (A–N):           32
+
+O   Cross-validation Phase 1B           3   written after Phase 0
+                                       ──
+    Grand total:                       35
+
+════════════════════════════════════════
+O — Cross-validation Phase 1B (written after Phase 0)
+════════════════════════════════════════
+
+[To be written after Phase 0 direct fetches confirm 3 most-mentioned restaurants]

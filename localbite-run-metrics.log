@@ -6,3 +6,5 @@ Marrakesh | 2026-03-22 | tokens: 127.4k | tools: ~90 | time: 19m | restaurants: 
 Barcelona v6 | 2026-04-08 | tokens: not captured | tools: not captured | time: not captured | restaurants: 86 | sources: 9
 Lisbon v6 | 2026-04-13 | tokens: not captured | tools: not captured | time: not captured | restaurants: 48 | sources: 6
 Toronto v5v6-merge | 2026-04-13 | tokens: not captured | tools: not captured | time: not captured | restaurants: 66 | sources: 12
+{"city":"madrid-spain","date":"2026-04-16","pipeline":"localbite-v6","run_type":"control","sources_confirmed":5,"sources_failed":2,"searches_run":38,"raw_entries":61,"user_removals":2,"final_entries":59,"tier_a":11,"tier_b":48,"tier_c":0,"both_pool":6,"multi_source_same_pool":5,"open_status_check":9}
+{"city":"madrid-spain","date":"2026-04-16","pipeline":"localbite-v7","run_type":"test","sources_confirmed":5,"sources_failed":1,"searches_run":35,"raw_entries":67,"dedup_merges":1,"recommended_removals":6,"user_removals":0,"final_entries":60,"tier_a":11,"tier_b":49,"tier_c":0,"both_pool":0,"multi_source_same_pool":11,"open_status_check":6}

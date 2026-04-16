@@ -1,0 +1,93 @@
+LOCALBITE MADRID — v6 CONTROL — AUDIT LOG
+Generated: 2026-04-16
+Pipeline: localbite-v6
+City slug: madrid-spain
+
+════════════════════════════════════════
+FAILED SOURCES (PHASE 2)
+════════════════════════════════════════
+
+src-comidista | El Comidista (El País)
+  URL: https://elcomidista.elpais.com/
+  Reason: Homepage on fetch date (2026-04-16) showed non-Madrid general content
+          (rural restaurant article, recipe content). No Madrid restaurant guide
+          accessible. 45,000 chars returned, 0 extractable entries.
+
+src-gastromadrid | GastroMadrid (elblogdegastromadrid.com)
+  URL: https://www.elblogdegastromadrid.com/guia-restaurantes-y-bares-recomendados-madrid-2023
+  Reason: 2023 guide returned 122-name directory index with no descriptions,
+          neighbourhood data, or quotes. Per extraction rules, listing evidence
+          alone does not meet inclusion threshold. 0 extractable entries.
+
+════════════════════════════════════════
+REJECTED SOURCES (PHASE 1)
+════════════════════════════════════════
+
+Con El Morro Fino (conelmorrofino.com)
+  Reason: Cloudflare CAPTCHA — <200 chars returned; under 2,000-char threshold.
+
+Con Mucha Gula (conmuchagula.com)
+  Reason: Cloudflare CAPTCHA — no named author confirmed; under 2,000-char threshold.
+
+The Infatuation Madrid (theinfatuation.com/madrid/guides/best-madrid-restaurants)
+  Reason: Article dated 2022-01-21, outside the 2023–2026 content window.
+
+Gastroactitud (gastroactitud.com)
+  Reason: No named author on any fetched article page.
+
+Guía Repsol Madrid (guiarepsol.com/es/restaurantes/madrid/)
+  Reason: Phase 0 direct fetch returned 404 page; no restaurant content.
+
+════════════════════════════════════════
+AUTO-REJECTIONS (TIER C)
+════════════════════════════════════════
+
+None.
+
+════════════════════════════════════════
+USER-APPROVED REMOVALS
+════════════════════════════════════════
+
+La Venencia | Huertas | Sherry bar
+  Sources: src-epicurean (Paul Richardson), src-spanishsabores (Lauren Aloise)
+  Tier: A | Pool: en
+  Reason: Not a restaurant. Sherry bar serving barrel sherry and simple bar tapas
+          only; no kitchen, no restaurant service. Removed on user instruction.
+
+Angelita | Chueca | Wine bar / gastrobar
+  Sources: src-timeout (Gorka Elorrieta), src-spanishsabores (Lauren Aloise)
+  Tier: A | Pool: en
+  Reason: Not a restaurant. Reviewer describes explicitly as "my favorite wine bar
+          in Madrid." Removed on user instruction.
+
+════════════════════════════════════════
+FLAGS CARRIED INTO FINAL OUTPUT
+════════════════════════════════════════
+
+Corral de la Morería | — | Alta cocina / flamenco tablao | Tier B | en
+  Note: Primarily a flamenco show venue. Michelin-starred Gargantúa tasting menu
+        by chef David García retained. User did not request removal.
+
+open_status_check: true — 9 entries from Spanish Sabores (article date 2023-07-05).
+  Verify current open status before publication:
+    Casa Dani, Celso y Manolo, El Cogollo de la Descarga, El Ñeru,
+    El Sobrino de Botín, La Rebonita, La Sanabresa, Lambuzo, Tandoori Station
+
+Source concentration note: Time Out Madrid (secondary, COI) touches 29/61 raw entries
+  (17 Time Out-only Tier B entries in final output). No pipeline cap triggered;
+  noted for v6 vs v7 comparison analysis.
+
+════════════════════════════════════════
+SUMMARY
+════════════════════════════════════════
+
+Total raw entries:              61
+Auto-rejections (Tier C):        0
+User-approved removals:          2
+Final entries:                  59
+  Tier A:                       11
+  Tier B:                       48
+Both-pool (Tier A):              6  (Cebo, El Invernadero, Haramboure, La Tasquería, Lana, VelascoAbellà)
+Multi-source same pool (Tier A): 5  (DiverXO, La Tasquita de Enfrente, OSA, Sacha, Saddle)
+Sources confirmed:               5
+Sources failed:                  2

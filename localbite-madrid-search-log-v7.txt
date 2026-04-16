@@ -1,0 +1,65 @@
+LOCALBITE MADRID v7 — SEARCH LOG
+Started: 2026-04-16
+Pipeline: localbite-v7
+
+[phase-0] FETCHED El Comidista (elcomidista.elpais.com) — Apr 15, 2026 — ~28,000 chars — active, named writers confirmed (Mikel López Iturriaga, Mònica Escudero, Rubén Galdón, Claudia Polo, Myrto Kalle), homepage Spain-wide content
+[phase-0] FAILED Guía Repsol (guiarepsol.com/es/restaurantes/madrid/) — 404 error
+[phase-0] FETCHED Guía Repsol (guiarepsol.com/es/comer/) — Apr 2026 — ~95,000 chars — Madrid restaurants present (Sushi Pop, Sacha), Soles Repsol 2025-2026 confirmed
+
+[prior-knowledge-check] REVIEW FLAGS — inspected, 18 terms permitted (generic food/journalism vocabulary, generic Spanish terms, Phase 0 log lines), 0 queries rewritten
+
+[A1] "best restaurants Madrid food writer guide 2026" → tourist guides dominated; esmadrid.com, timeout.com/madrid returned
+[A2] "where to eat Madrid local recommendations food critic 2025" → timeout.com/madrid (Gorka Elorrieta "30 Best by Local Critics"), spanishsabores.com, theinfatuation.com/madrid all returned
+[B1] "mejores restaurantes Madrid crítica gastronómica 2026" → timeout.es/madrid multiple articles, dodmagazine.es "50 mejores 2026" returned
+[B2] "dónde comer en Madrid recomendaciones barrio vecinos 2025" → madridsecreto.co "50 imprescindibles 2024", gastroactitud.com, huleymantel.com returned
+[B3] "guía gastronómica Madrid periodismo alimentario 2024 2025" → academiamadrilenadegastronomia.org (awards), elblogdegastromadrid.com (GastroMadrid), conelmorrofino.com returned
+[C1] "best restaurants Malasaña Madrid food guide 2025 2026" → theinfatuation.com/madrid confirmed; hollyhitstheroad.com, chasinglenscapes.com returned
+[C2] "where to eat La Latina Madrid neighbourhood food recommendations 2024 2025" → hollyhitstheroad.com, spanishsabores.com, theinfatuation.com/madrid/neighborhoods/barrio-de-la-latina returned
+[D1] "restaurantes Malasaña Madrid recomendaciones gastronomía 2025" → elblogdegastromadrid.com "10 imprescindibles Malasaña 2024", timeout.es, elespanol.com/madrid returned
+[D2] "mejores bares restaurantes La Latina Madrid guía local 2024 2025" → unbuendiaenmadrid.com "25 mejores La Latina", viajarcomerytapear.com, timeout.es returned
+[E1] "best restaurants Chamberí Madrid food writer recommendations 2025" → worldofmouth.app "11 Best Local Restaurants", theinfatuation.com, esmadrid.com returned
+[E2] "where to eat Salamanca Madrid neighbourhood dining guide 2024 2025" → theinfatuation.com/madrid/neighborhoods/salamanca, spanishsabores.com confirmed
+[F1] "restaurantes Chamberí Ponzano Madrid crítica gastronómica 2025" → esmadrid.com Ponzano feature, guide.michelin.com Chamberí, timeout.es returned
+[F2] "mejores restaurantes Salamanca Madrid periodismo gastronómico 2024 2025" → elblogdegastromadrid.com "25 imprescindibles Salamanca 2024", theobjective.com "Soy de Salamanca..." (WRONG CITY — Salamanca city not neighbourhood), kartia.es returned
+[G1] "best restaurants Carabanchel Madrid emerging neighbourhood food 2024 2025" → theworlds50best.com "insiders guide", esmadrid.com Carabanchel returned
+[G2] "where to eat Usera Madrid food guide neighbourhood recommendations 2025" → themakingofmadrid.com "Foodie's Guide Usera" Aug 2025, fringemadrid.com, spanishsabores.com returned
+[H1] "restaurantes Carabanchel Madrid guía gastronómica barrio emergente 2024 2025" → guiarepsol.com "Ruta Carabanchel", gastroeconomy.com, theobjective.com/gastronomia "Repsol 2025 Madrid" returned
+[H2] "mejores restaurantes Usera Madrid gastronomía asiática barrio 2025" → tapasmagazine.es "Usera barrio cool" Mar 2025, theobjective.com "mejores chinos Usera" Jan 2025, madridsecreto.co "chinos Usera" returned
+[I1] "independent food writer blogger Madrid restaurant reviews English 2025" → epicureanways.com "Paul Richardson's Guide to Eating in Madrid" returned; feedspot top 20 Madrid food blogs referenced
+[I2] "food journalist named byline Madrid restaurant guide editorial 2024 2025" → scheckeats.substack.com "Madrid restaurant guide" Jul 2025, spanishsabores.com, timeout.com/madrid confirmed
+[I3] "crítico gastronómico Madrid prensa restaurantes recomendaciones 2025" → conelmorrofino.com confirmed, vozpopuli.com/gastropoli confirmed, elblogdegastromadrid.com confirmed
+[I4] "blogger gastronómico independiente Madrid barrios locales 2024 2025" → elblogdegastromadrid.com, teveoenmadrid.com, sitedicenquecomi.es (Yolanda Marcos), conelmorrofino.com confirmed
+[J1] "Premios Academia Madrileña Gastronomía ganadores restaurantes 2024 2025" → conmuchagula.com "IX Premios" (Pabú winner 2025), hola.com/cocina, vozpopuli.com/gastropoli returned; 2025 winners: Pabú, Lana, Barrera, La Catapa, Taberna Laredo; 2024 winners: Cuenllas, La Buena Vida
+[J2] "Soles Repsol Guía Repsol Madrid restaurantes resultados 2025 2026" → guiarepsol.com Soles 2026 listado confirmed, elindependiente.com "nuevos Soles Madrid 2026", vozpopuli.com/gastropoli Soles 2026 guide returned
+[J3] "Premios Metrópoli Madrid ganadores reconocimiento restaurantes 2024 2025" → conmuchagula.com "Premios Metrópoli 2024", excelenciasgourmet.com, gastroystyle.com returned; 2025 winner: Gofio; 2024 winner: Toki
+[K1] "new restaurant openings Madrid 2025 2026 food guide review" → theworlds50best.com "27 new restaurants 2026", esmadrid.com new openings, timeout.com/madrid returned
+[K2] "nuevas aperturas restaurantes Madrid 2025 2026 guía gastronomía" → lagastronoma.com "Nuevos restaurantes Madrid 2026", elespanol.com/cocinillas "aperturas 2026", gastroeconomy.com returned
+[L1] "taberna tasca tasquita Madrid recomendaciones gastronomía 2024 2025" → gastroactitud.com "La Tasquita de Enfrente" critique, elblogdegastromadrid.com "50 mejores 2025/La Tasquita", complicidadgastronomica.es review confirmed
+[L2] "casa de comidas vermú tapeo Madrid barrio crítica 2025" → eatandlovemadrid.es "20 bares vermut Madrid", hola.com/cocina "tabernas vermú 2025", huleymantel.com returned
+[M1] "Chinese food Usera Madrid food writer recommendations restaurant guide 2024 2025" → themakingofmadrid.com confirmed (Aug 2025), tapasmagazine.es EN "mejores chinos Madrid", holachina.com returned
+[M2] "international immigrant cuisine Madrid food writing recommendations 2025 2026" → spanishsabores.com confirmed, themakingofmadrid.com "Madrid for Foodies" Jan 2025, nationalgeographic.com "Madrid ultimate food destination" Mar 2026 returned
+[N1] "revista gastronómica independiente Madrid restaurantes recomendaciones 2025" → elblogdegastromadrid.com, conelmorrofino.com, conmuchagula.com, 7canibales.com, sibaritamagazine.com confirmed
+[N2] "suplemento gastronomía periódico Madrid restaurantes crítica 2024 2025" → conelmorrofino.com, elblogdegastromadrid.com, gastroactitud.com confirmed
+
+[phase-1b-crossval] "Pabú Madrid recomendacion critica" → gastroactitud.com "Crítica Pabú", conelmorrofino.com "Pabú espectacular cocina", Tapas Magazine/Forbes "Mejor Restaurante Nuevo 2024" referenced
+[phase-1b-crossval] "Gofio Madrid recomendacion critica" → observaciongastronomica.com "GOFIO enero 2025" (no named author), dimeunrestaurante.com, comerviajarynadamas.com, cenandoconpablo.es returned
+[phase-1b-crossval] "Sacha Madrid restaurante recomendacion critica gastronomica" → theworlds50best.com/discovery "Sacha Madrid", dimeunrestaurante.com, comerviajarynadamas.com, encuinarte.com returned
+
+[coi-check] Epicurean Ways (Paul Richardson) — commercial conflict: NO
+[coi-check] The Infatuation Madrid (Lori Zaino) — commercial conflict: NO
+[coi-check] Spanish Sabores (Lauren Aloise) — commercial conflict: YES — co-founder of Devour Tours, award-winning food tour operator based in Madrid with 100,000+ guests
+[coi-check] Time Out Madrid EN (Gorka Elorrieta) — commercial conflict: YES — Time Out operates Time Out Market Madrid
+[coi-check] Con El Morro Fino (David/Sandra) — commercial conflict: NO — independent Madrid food magazine
+[coi-check] La Gastrónoma (Mapi Hermida) — commercial conflict: NO — independent food publication
+
+[sibling-check] Time Out Madrid EN (timeout.com) and Time Out Madrid ES (timeout.es) — independently produced: uncertain — different article URLs, different dates, but same parent publisher — NOT treated as cross-language independent agreement for both-pool purposes
+
+SOURCES REJECTED AT PHASE 1 (failed verification):
+- elblogdegastromadrid.com (GastroMadrid) — no named author on any article fetched
+- themakingofmadrid.com — no named author confirmed
+- tapasmagazine.es — no named author on fetched article
+- gastroactitud.com — no named author on any article fetched
+- conmuchagula.com — CAPTCHA blocked + no named author in accessible content
+- theobjective.com/salamanca — correct author (Brenda Alonso) but wrong city (Salamanca city in Castile, not Madrid Salamanca neighbourhood)
+- 7canibales.com — homepage confirms named writers but all specific Madrid articles fetched had no named author byline or were outside date window (2019)
+- observaciongastronomica.com — no named author

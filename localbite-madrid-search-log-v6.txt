@@ -1,0 +1,68 @@
+LOCALBITE MADRID — v6 CONTROL — SEARCH LOG
+Generated: 2026-04-16
+
+[phase-0] FETCHED "https://elcomidista.elpais.com/" → ~45,000 chars, named writers (Mikel López Iturriaga, Claudia Polo, Rubén Galdón, Mònica Escudero), April 2026 articles, confirmed pre-verified source
+[phase-0] FAILED "https://www.guiarepsol.com/es/restaurantes/madrid/" → 404 page returned, no restaurant content
+
+[N-01] "restaurantes Centro Madrid Sol Austrias crítica gastronómica 2025 2026" → surfaced dodmagazine.es (50 best 2026), lagastronoma.com, theobjective.com (Repsol 2025 list), guiarepsol.com sub-URLs; no direct new editorial candidate
+[N-02] "best restaurants Centro Madrid Sol Austrias food writer guide 2025 2026" → timeout.com/madrid (Gorka Elorrieta), spanishsabores.com (Lauren Aloise), whattodoinmadrid.com (travel); new candidates: Time Out EN, Spanish Sabores
+[N-03] "mejores restaurantes La Latina Embajadores Madrid guía gastronomía" → tripadvisor (aggregator), unbuendiaenmadrid.com (local), guiarepsol.com Embajadores sub-URL; no confirmed new editorial candidate
+[N-04] "La Latina Embajadores Madrid restaurants food writer recommendation" → hollyhitstheroad.com (travel blogger), devourtours.com (tour company); no qualifying new candidate
+[N-05] "restaurantes Lavapiés Arganzuela Madrid recomendaciones gastronomía 2025" → conelmorrofino.com (ES indie food mag), eatandlovemadrid.es, guiarepsol.com Lavapiés sub-URL; new candidate: Con El Morro Fino (pending verification)
+[N-06] "Lavapiés Madrid restaurants food writer local guide 2024 2025" → hollyhitstheroad.com (recurring), wearethemouth.com, afar.com (secondary travel), hollyhits recurring; no new qualifying candidate
+[N-07] "restaurantes Malasaña Madrid guía gastronómica periodista 2025 2026" → lartisan.es (venue-adjacent), conelmorrofino.com (recurring), lagastronoma.com; no new confirmed candidate
+[N-08] "Malasaña Madrid best restaurants food critic review" → hollyhitstheroad.com (recurring), chasinglenscapes.com (travel), theculturetrip.com (travel); no new qualifying candidate
+[N-09] "restaurantes Chueca Huertas Madrid crítica gastronómica 2024 2025" → elblogdegastromadrid.com (GastroMadrid, 2024 Chueca piece), conmuchagula.com, guiarepsol.com Chueca sub-URL; new candidates: GastroMadrid, Con Mucha Gula
+[N-10] "Chueca Huertas Madrid restaurants food writer guide 2025" → hollyhitstheroad.com (recurring), spanishsabores.com (recurring), timeout.com/madrid (recurring); no new candidates
+[N-11] "restaurantes Salamanca Ibiza Madrid recomendaciones gastronomía 2025" → conelmorrofino.com (recurring), guide.michelin.com (secondary), gastro-spain.com; no new qualifying candidate
+[N-12] "Salamanca district Madrid restaurants food writer guide 2025 2026" → devourtours.com (tour co), spanishsabores.com (recurring), timeout.com (recurring); no new candidates
+[N-13] "restaurantes Chamberí Ponzano Madrid crítica gastronómica 2025 2026" → guiarepsol.com Chamberí sub-URL, libertaddigital.com (restaurant-specific reviews); no broad new editorial candidate
+[N-14] "Chamberí Ponzano Madrid best restaurants food writer 2024 2025" → sydneytoanywhere.com (travel), sensesofspain.com (ex-local guide), worldofmouth.app; new candidates: worldofmouth.app (pending), sensesofspain.com (pending)
+[N-15] "restaurantes barrio Retiro Madrid recomendaciones gastronómica" → conelmorrofino.com Retiro piece (recurring), gastroactitud.com, theobjective.com; new candidate: The Objective
+[N-16] "Retiro neighbourhood Madrid restaurants food writer recommendation" → foodandtravel.com (international food media, secondary), devourtours.com (recurring); no new qualifying primary candidate
+[N-17] "restaurantes Carabanchel Usera Vallecas Madrid guía gastronomía 2025" → geogastronomica.com, eldebate.com (branded content), esmadrid.com (tourism board); no qualifying editorial candidate
+[N-18] "Carabanchel Usera Madrid restaurants food writer guide diversity" → fringemadrid.com, themakingofmadrid.com (Aug 2025), epicureanways.com; new candidate: Epicurean Ways (Paul Richardson)
+[N-19] "restaurantes Moncloa-Aravaca Madrid crítica gastronómica recomendación" → gastroranking.es (aggregator), opentable.com (booking), justbefoodie.com; no qualifying candidate
+[N-20] "Moncloa Madrid restaurants food writer local guide" → localtipsguide.com, worldofmouth.app (recurring), tripadvisor (aggregator); no new qualifying candidate
+[N-21] "restaurantes Tetuán Hortaleza Chamartín Madrid guía gastronómica 2025" → elblogdegastromadrid.com Chamartín piece (2025, recurring); no new candidate
+[N-22] "Tetuán Chamartín north Madrid restaurants food writer 2025 2026" → thefork.com (aggregator), tripadvisor (aggregator), yelp.com (aggregator); no qualifying candidate
+[X-01] "mejores restaurantes Madrid España guía gastronómica periodista 2026" → dodmagazine.es 50 best 2026, timeout.es, hola.com 2026 aperturas; no new qualifying candidate
+[X-02] "best restaurants Madrid Spain food writer local guide 2025" → timeout.com/madrid (recurring, Gorka Elorrieta named), spanishsabores.com (recurring), willflyforfood.net (travel); no new candidates
+[X-03] "food critic Madrid restaurant recommendations 2023 2024" → resident.com 2023 guide, tapasmagazine.es 2024, epicureanways.com (recurring); no new qualifying candidate
+[X-04] "Mikel López Iturriaga restaurantes Madrid recomendaciones 2025 2026" → guiarepsol.com Mikel collaboration piece, cierval.es 2026 guía gastro; confirmed Mikel López Iturriaga as El Comidista writer
+[X-05] "El Comidista restaurantes Madrid guía 2025 gastronomía" → conelmorrofino.com (recurring), radiolaciana.es (El Comidista 2025 list reprinted); confirmed El Comidista has 2025 best-of list
+[X-06] "Madrid food blogger writer restaurant guide Spanish local 2025 2026" → spanishsabores.com (recurring), epicureanways.com (recurring), timeout.com (recurring); confirmed existing candidates
+[X-07] "nuevos restaurantes Madrid aperturas 2024 2025 crítica gastronómica" → gastronomistas.com (KNOWN_PROBLEMATIC_URL — skip), 7canibales.com (new candidate!), gastroactitud.com, gastroeconomy.com, elespanol.com/cocinillas; new candidates: 7 Caníbales
+[X-08] "new restaurant openings Madrid 2025 2026 food writer review" → theworlds50best.com (secondary), timeout.com (recurring), esmadrid.com (tourism board); no new qualifying candidate
+[X-09] "mejores restaurantes Madrid 2023 guía gastronómica recomendaciones" → elblogdegastromadrid.com 2023 guide (recurring), gastroactitud.com (recurring); confirmed GastroMadrid 2023 guide URL
+[X-10] "best restaurants Madrid 2024 food writer guide recommendations" → theinfatuation.com/madrid (Jan 2022 — outside window), top10hedonist.com (unverified); no new qualifying candidate
+[X-11] "restaurantes Madrid Michelin estrella guía Repsol soles 2024 2025" → thegourmetjournal.com, viajes.nationalgeographic.com.es; no primary editorial candidate
+[X-12] "Madrid Michelin starred restaurants food writer guide 2025 2026" → guide.michelin.com (secondary), esmadrid.com (tourism board); no new qualifying candidate
+[X-13] "Madrid restaurants expat food recommendations local 2025" → spanishsabores.com (recurring), valthebackpacker.com (travel blog); no new candidates
+[X-14] "foro gastronomía Madrid recomendaciones restaurantes 2025 comunidad" → gastro-spain.com, losviajeros.com (forum), verema.com (wine/gastro forum); no qualifying candidate
+[X-15] "restaurantes chinos peruanos asiáticos Madrid Usera recomendaciones 2025" → timeout.es Usera Chinese guide, theobjective.com Usera 2025 (Brenda Alonso, recurring); confirmed The Objective candidate
+[X-16] "Asian Latin American immigrant cuisine Madrid food writer diversity guide" → cityunscripted.com, academic/general results; no qualifying candidate
+
+[coi-check] Time Out Madrid EN (timeout.com) — commercial conflict: YES — operates Time Out Market Madrid food hall
+[coi-check] El Comidista (El País) — commercial conflict: NO
+[coi-check] GastroMadrid (elblogdegastromadrid.com) — commercial conflict: NO
+[coi-check] 7 Caníbales (7canibales.com) — commercial conflict: NO
+[coi-check] The Objective (theobjective.com) — commercial conflict: NO
+[coi-check] Epicurean Ways (epicureanways.com) — commercial conflict: NO
+[coi-check] Spanish Sabores (spanishsabores.com) — commercial conflict: POTENTIAL — Lauren Aloise co-founded Devour Tours, a food tour operator in Madrid; food writing on Spanish Sabores appears editorially independent
+
+[sibling-check] Time Out Madrid — timeout.com (EN) and timeout.es (ES) — independently produced: YES — different authors (Gorka Elorrieta on EN; timeout.es Madrid has separate editorial team); different article dates and separate URLs. Same publisher (Time Out Media). Cannot create both-pool between timeout.com and timeout.es. Both may be used as sources but cannot create a both-pool entry between themselves.
+
+[verification-fetch] conelmorrofino.com — FAILED — Cloudflare CAPTCHA, under 200 chars returned — rejected
+[verification-fetch] conmuchagula.com — FAILED — Cloudflare CAPTCHA, no named author confirmed — rejected
+[verification-fetch] elblogdegastromadrid.com/guia-restaurantes-y-bares-recomendados-madrid-2023 — PASS — 47,850 chars, Julián Acebes, 2023-01-03
+[verification-fetch] theinfatuation.com/madrid/guides/best-madrid-restaurants — FAIL (date) — 23,847 chars, Lori Zaino, 2022-01-21 — outside 2023-2026 window
+[verification-fetch] epicureanways.com/blog/paul-richardsons-guide-to-eating-in-madrid — PASS — 16,847 chars, Paul Richardson, 2025-05-29
+[verification-fetch] spanishsabores.com/madrid-gastro-guide-where-to-eat-in-madrid/ — PASS — 78,000 chars, Lauren Aloise (confirmed on About page), 2023-07-05
+[verification-fetch] timeout.com/madrid/restaurants-and-cafes/top-madrid-restaurants — PASS — 28,500 chars, Gorka Elorrieta, 2025-02-12
+[verification-fetch] 7canibales.com/tag/madrid/ — PASS — 47,000 chars, Alberto Luchini (named author confirmed), 2025-2026 articles
+[verification-fetch] gastroactitud.com/pista/restaurantes-nuevos-madrid-2/ — FAIL — no named author
+[verification-fetch] theobjective.com/gastronomia/2025-03-18/14-nuevos-restaurantes-madrid-guia-repsol-2025/ — PASS — 31,500 chars, Brenda Alonso, 2025-03-18
+[verification-fetch] elblogdegastromadrid.com/50-mejores-restaurantes-madrid-2024 — FAIL — no named author visible on 2024 guide
+
+[stopping-rule] NOT triggered — completed all 38 planned queries; last queries X-13 through X-16 yielded no new candidates (4 consecutive), below the 8-query stopping threshold; stopping naturally at end of planned query list
