@@ -1,6 +1,6 @@
 # LocalBite — Product Backlog
 ## Created: 2026-04-09
-## Last updated: 2026-04-15
+## Last updated: 2026-04-16
 ## Status: Active — batch processing complete, 13 cities live
 
 ---
@@ -302,10 +302,108 @@ next share.
 
 ---
 
-## PRIORITISATION (updated April 15)
+### 18. Claude Code Custom Skill: `/localbite` pipeline invocation
+
+**Added:** April 16, 2026
+**Category:** Pipeline infrastructure
+**Effort:** 1–2 hours
+
+Create a Claude Code Custom Skill that invokes the LocalBite v7 pipeline
+with a single slash command, eliminating the need to locate and load the
+correct prompt file each session.
+
+The skill encodes: phase sequence, output envelope format, commit steps,
+and mandatory pause points. City passed as an argument.
+
+Evidence: Pipeline run 20+ times across 15+ cities. Prompt file loading is
+a recurring manual step that has caused session failures.
+
+---
+
+### 19. Claude Code Hook: PostToolUse JSON validation
+
+**Added:** April 16, 2026
+**Category:** Pipeline infrastructure
+**Effort:** 30 minutes
+
+PostToolUse hook that automatically validates JSON structure after every
+Write or Edit to a pipeline output file. Catches structural errors (missing
+top-level fields, wrong envelope format) before they cause downstream
+geocoding failures.
+
+The geocoding script reads `data.city` directly — if the JSON is nested
+under `meta` or any other key, geocoding silently produces false positives.
+
+Evidence: At least one geocoding session produced false positives due to
+JSON structural issues. Bounding box validation is the downstream dependency.
+
+---
+
+### 20. Claude Code Hook: PreRun pre-flight check
+
+**Added:** April 16, 2026
+**Category:** Pipeline resilience
+**Effort:** 1 hour
+
+Pre-flight check before any pipeline starts, detecting common failure
+conditions in 30 seconds:
+- git remote reachable and credentials present
+- target city exists in CITY_BOXES in geocoding script
+- output directory writable
+- test Jina fetch to verify sources not blocked
+
+Evidence: Multiple sessions lost to git auth failures, missing CITY_BOXES
+entries (Toronto 59% geocoding hit rate), and blocked sources discovered
+mid-run. Pre-flight alone would have saved several failed sessions.
+
+---
+
+### 21. Checkpoint files for rate-limit recovery
+
+**Added:** April 16, 2026
+**Category:** Pipeline resilience
+**Effort:** 2–3 hours (requires template change)
+
+Write a checkpoint file after each pipeline phase so rate-limit
+interruptions resume from the correct phase rather than restarting
+from Phase 0.
+
+Format: `.localbite-checkpoint-{city-slug}.json` — phase completed,
+sources confirmed, raw restaurants extracted, next step.
+
+Evidence: At least 4 sessions lost to Anthropic rate limits or API 500s
+mid-pipeline. Toronto v5 produced no outputs due to rate limit interruption.
+On Max 5x plan this is less urgent but still valuable for very long runs.
+
+---
+
+### 22. Programmatic token capture from session-meta JSON
+
+**Added:** April 16, 2026
+**Category:** Pipeline metrics
+**Effort:** 30 minutes
+
+Update the metrics node command in the v7 template to read token data
+from `~/.claude/usage-data/session-meta/[UUID].json` instead of relying
+on manual banner capture.
+
+The session-meta JSON contains: `input_tokens`, `output_tokens`,
+`duration_minutes`, `tool_counts` — exactly the fields currently null in
+`localbite-run-metrics.log`.
+
+Evidence: Token data missed in majority of pipeline runs. Session-meta JSON
+confirmed to contain required fields (verified April 16, 2026). Session UUID
+available from `--resume` line printed on exit.
+
+**First task next session:** Implement this before Madrid geocoding run.
+
+---
+
+## PRIORITISATION (updated April 16)
 
 ### Do first (low effort, high impact):
 - Analytics (14) — informs everything else ← still not done
+- Programmatic token capture (22) — 30 min, closes recurring gap ← next session
 - "New this month" filter (10) — existing data, quick win
 - Feedback mechanism (13) — data quality, low effort
 - List-to-map direction (2, Option B follow-on) — architecture ready, 60–90 min
@@ -315,6 +413,8 @@ next share.
 - v7 extraction quality prompt changes (17) — implement on next city run
 - List sort by neighbourhood/recommended (3) — neighbourhood sort ~1 hr
 - Price tier tooltip — small viewer change, sets correct user expectation
+- PreRun pre-flight hook (20) — saves sessions, 1 hour
+- Custom Skill /localbite (18) — eliminates prompt loading friction, 1–2 hours
 
 ### Do later (higher effort or needs more data):
 - Compact card mode (3)
@@ -322,6 +422,8 @@ next share.
 - dishes_mentioned viewer display (17, viewer part) — after v7 pipeline runs
 - Writer profile enrichment (9)
 - Address field (7)
+- PostToolUse JSON validation hook (19) — 30 min, low urgency on Max 5x
+- Checkpoint files (21) — less urgent on Max 5x, valuable for very long runs
 
 ### Do when scale justifies (significant effort):
 - Photo integration (5)
@@ -340,7 +442,6 @@ next share.
 - Bottom sheet (item 2, Option D) built and live April 15
 - v7 extraction quality (item 17) should be implemented on the next city
   run — Seville v2 is the natural trigger
-- Seville open_status_check (29 restaurants, 48% of pack, some from 2023)
-  is the most urgent data quality issue in the fleet — not in this backlog
-  but tracked in the pipeline journal outstanding items
+- Madrid candidate pack in repo — geocoding next session, then publish
+- Seville v2 is the next city run after Madrid geocoding
 - User feedback from real usage should continue to drive viewer prioritisation
