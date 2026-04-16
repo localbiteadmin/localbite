@@ -445,3 +445,30 @@ available from `--resume` line printed on exit.
 - Madrid candidate pack in repo — geocoding next session, then publish
 - Seville v2 is the next city run after Madrid geocoding
 - User feedback from real usage should continue to drive viewer prioritisation
+
+---
+
+### 23. Brave Search MCP server — 20 results per query — BLOCKED (ToS)
+
+**Added:** April 16, 2026
+**Status:** Permanently blocked — ToS violation. Same outcome as HERE geocoding API.
+**Category:** Pipeline infrastructure
+
+The Brave Search MCP server exposes a count parameter (1-20, default 10)
+that would double results per query. However the Brave Search API ToS
+explicitly prohibits storing, caching, or creating a database of search
+results — other than transient storage required for operation.
+
+The LocalBite pipeline stores search results in the search log file and
+working JSON files. That is a direct ToS violation under the standard plan.
+Storage rights require a separate enterprise plan with custom terms.
+
+Confirmed from Brave's own ToS and FAQ: "If you would like to store the API
+results in part or whole, you will need to subscribe to a plan that explicitly
+grants storage rights." This issue has also been flagged in the official
+Brave Search MCP server GitHub repository by other developers.
+
+The built-in Claude Code web search tool carries no equivalent storage
+restriction and remains the correct tool for the LocalBite pipeline.
+The 10-results-per-query hard cap is a known limitation with no viable
+workaround under current Brave ToS.
