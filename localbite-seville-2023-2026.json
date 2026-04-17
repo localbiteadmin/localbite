@@ -107,17 +107,17 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Triana y Los Remedios son dos barrios contiguos, una de las zonas de la ciudad donde se concentran m\u00e1s bares y restaurantes de calidad.",
+      "quote": "Triana y Los Remedios son dos barrios contiguos, una de las zonas de la ciudad donde se concentran más bares y restaurantes de calidad.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-triana-remedios"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3773452,
+      "lng": -5.9984398,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r002",
@@ -137,14 +137,14 @@
       "sources": [
         "src-cosasdecome-triana-remedios"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3830711,
+      "lng": -6.0025467,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r003",
-      "name": "Arrocer\u00eda Criaito",
+      "name": "Arrocería Criaito",
       "name_variants": [],
       "neighbourhood": "Triana",
       "cuisine": "Rice dishes",
@@ -160,10 +160,10 @@
       "sources": [
         "src-cosasdecome-triana-remedios"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3855302,
+      "lng": -6.0033555,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r004",
@@ -175,18 +175,18 @@
       "price_level": 2,
       "price_currency": "EUR",
       "dishes_mentioned": [],
-      "signature_dish": "Caz\u00f3n en tomate",
-      "quote": "Signature caz\u00f3n en tomate; featured in CosasDeCome's guide to quality eating in Triana and Los Remedios.",
+      "signature_dish": "Cazón en tomate",
+      "quote": "Signature cazón en tomate; featured in CosasDeCome's guide to quality eating in Triana and Los Remedios.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-triana-remedios"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3850699,
+      "lng": -6.0061783,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r005",
@@ -199,17 +199,17 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Located next to the Puente de la Expiraci\u00f3n with views of the Guadalquivir; listed by Pepe Monforte among the finest restaurants of Triana and Los Remedios.",
+      "quote": "Located next to the Puente de la Expiración with views of the Guadalquivir; listed by Pepe Monforte among the finest restaurants of Triana and Los Remedios.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-triana-remedios"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3859587,
+      "lng": -5.9984227,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r006",
@@ -222,21 +222,21 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Listed in CosasDeCome's guide to quality eating in Triana and Los Remedios by director Pepe Monforte; price range \u20ac20\u201330.",
+      "quote": "Listed in CosasDeCome's guide to quality eating in Triana and Los Remedios by director Pepe Monforte; price range €20–30.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-triana-remedios"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.384961,
+      "lng": -6.005021,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r007",
-      "name": "La Casa del Cordero \u2013 La Mesa de Concha",
+      "name": "La Casa del Cordero – La Mesa de Concha",
       "name_variants": [],
       "neighbourhood": "Triana",
       "cuisine": "Spanish",
@@ -252,10 +252,10 @@
       "sources": [
         "src-cosasdecome-triana-remedios"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3792819,
+      "lng": -6.0010539,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r008",
@@ -275,14 +275,14 @@
       "sources": [
         "src-cosasdecome-triana-remedios"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3765261,
+      "lng": -5.9960754,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r009",
-      "name": "La Reserva de Joaqu\u00edn M\u00e1rquez",
+      "name": "La Reserva de Joaquín Márquez",
       "name_variants": [],
       "neighbourhood": "Triana",
       "cuisine": "Spanish",
@@ -314,21 +314,21 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Price range \u20ac50+; five reader recommendations; listed among the finest restaurants of Triana and Los Remedios by Pepe Monforte.",
+      "quote": "Price range €50+; five reader recommendations; listed among the finest restaurants of Triana and Los Remedios by Pepe Monforte.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-triana-remedios"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3794303,
+      "lng": -6.0080549,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r011",
-      "name": "Alfarer\u00eda 21",
+      "name": "Alfarería 21",
       "name_variants": [],
       "neighbourhood": "Triana",
       "cuisine": "Spanish tapas",
@@ -344,10 +344,10 @@
       "sources": [
         "src-cosasdecome-triana-tapas"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3847758,
+      "lng": -6.0049524,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r012",
@@ -367,10 +367,10 @@
       "sources": [
         "src-cosasdecome-triana-tapas"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3809306,
+      "lng": -6.0116173,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r013",
@@ -390,10 +390,10 @@
       "sources": [
         "src-cosasdecome-triana-tapas"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.38072,
+      "lng": -6.0037352,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r014",
@@ -406,17 +406,17 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Seven reader recommendations \u2014 highest rated bar in the CosasDeCome guide to tapas in Triana and Los Remedios.",
+      "quote": "Seven reader recommendations — highest rated bar in the CosasDeCome guide to tapas in Triana and Los Remedios.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-triana-tapas"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3848669,
+      "lng": -6.0055122,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r015",
@@ -436,10 +436,10 @@
       "sources": [
         "src-cosasdecome-triana-tapas"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.4491707,
+      "lng": -5.9321246,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r016",
@@ -459,69 +459,69 @@
       "sources": [
         "src-cosasdecome-triana-tapas"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3866263,
+      "lng": -6.0047586,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r017",
       "name": "D Culto",
       "name_variants": [],
-      "neighbourhood": "Nervi\u00f3n",
+      "neighbourhood": "Nervión",
       "cuisine": "Spanish fine dining",
       "opening_year": null,
       "price_level": 3,
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Price range \u20ac40\u201350; listed among the top restaurants of Nervi\u00f3n by Pepe Monforte, who describes the area as one of the most animated dining zones in Seville.",
+      "quote": "Price range €40–50; listed among the top restaurants of Nervión by Pepe Monforte, who describes the area as one of the most animated dining zones in Seville.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-nervion"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3844199,
+      "lng": -5.9789224,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r018",
       "name": "Iki",
       "name_variants": [],
-      "neighbourhood": "Nervi\u00f3n",
+      "neighbourhood": "Nervión",
       "cuisine": "Japanese",
       "opening_year": null,
       "price_level": 4,
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Price range \u20ac50+; listed among the top restaurants of Nervi\u00f3n by Pepe Monforte; open daily except Sundays.",
+      "quote": "Price range €50+; listed among the top restaurants of Nervión by Pepe Monforte; open daily except Sundays.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-nervion"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3864335,
+      "lng": -5.9727068,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r019",
-      "name": "Keycha Placer Ib\u00e9rico",
+      "name": "Keycha Placer Ibérico",
       "name_variants": [],
-      "neighbourhood": "Nervi\u00f3n",
+      "neighbourhood": "Nervión",
       "cuisine": "Iberian pork specialist",
       "opening_year": null,
       "price_level": 3,
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Price range \u20ac40\u201350; listed among the top restaurants of Nervi\u00f3n in Pepe Monforte's February 2026 CosasDeCome guide.",
+      "quote": "Price range €40–50; listed among the top restaurants of Nervión in Pepe Monforte's February 2026 CosasDeCome guide.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
@@ -537,47 +537,47 @@
       "id": "r020",
       "name": "Puerta Caleta",
       "name_variants": [],
-      "neighbourhood": "Nervi\u00f3n",
+      "neighbourhood": "Nervión",
       "cuisine": "Spanish",
       "opening_year": null,
       "price_level": 1,
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Price range \u20ac20\u201330; listed in CosasDeCome's 50-restaurant guide to quality dining in Nervi\u00f3n by Pepe Monforte.",
+      "quote": "Price range €20–30; listed in CosasDeCome's 50-restaurant guide to quality dining in Nervión by Pepe Monforte.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-nervion"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3803004,
+      "lng": -5.9787535,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r021",
       "name": "Restaurante Mara",
       "name_variants": [],
-      "neighbourhood": "Nervi\u00f3n",
+      "neighbourhood": "Nervión",
       "cuisine": "Spanish",
       "opening_year": null,
       "price_level": 2,
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Price range \u20ac30\u201340; daily service; listed in Pepe Monforte's February 2026 guide to the best restaurants in Nervi\u00f3n.",
+      "quote": "Price range €30–40; daily service; listed in Pepe Monforte's February 2026 guide to the best restaurants in Nervión.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-nervion"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3655765,
+      "lng": -5.9828939,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r022",
@@ -597,10 +597,10 @@
       "sources": [
         "src-cosasdecome-pino-montano"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.4256511,
+      "lng": -5.9696787,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r023",
@@ -613,21 +613,21 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": "Tostada pringa con queso",
-      "quote": "Signature tostada pringa con queso; listed in Pepe Monforte's guide to Pino Montano and San Jer\u00f3nimo as a neighbourhood dining spot.",
+      "quote": "Signature tostada pringa con queso; listed in Pepe Monforte's guide to Pino Montano and San Jerónimo as a neighbourhood dining spot.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-pino-montano"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3832105,
+      "lng": -5.9901835,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r024",
-      "name": "Mes\u00f3n Las Torres",
+      "name": "Mesón Las Torres",
       "name_variants": [],
       "neighbourhood": "Pino Montano",
       "cuisine": "Spanish",
@@ -636,17 +636,17 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": "Ensaladilla de pulpo",
-      "quote": "Signature ensaladilla de pulpo (octopus salad); listed in CosasDeCome's guide to Pino Montano and San Jer\u00f3nimo by Pepe Monforte.",
+      "quote": "Signature ensaladilla de pulpo (octopus salad); listed in CosasDeCome's guide to Pino Montano and San Jerónimo by Pepe Monforte.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-pino-montano"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.4271301,
+      "lng": -5.9764425,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r025",
@@ -659,21 +659,21 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": "Menudo",
-      "quote": "Signature menudo (tripe stew); listed in CosasDeCome's guide to dining in Pino Montano and San Jer\u00f3nimo.",
+      "quote": "Signature menudo (tripe stew); listed in CosasDeCome's guide to dining in Pino Montano and San Jerónimo.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-cosasdecome-pino-montano"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3976001,
+      "lng": -5.9969473,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r026",
-      "name": "Braser\u00eda La Tremenda",
+      "name": "Brasería La Tremenda",
       "name_variants": [],
       "neighbourhood": "Pino Montano",
       "cuisine": "Grilled meats",
@@ -682,7 +682,7 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Listed in CosasDeCome's guide to dining in Pino Montano and San Jer\u00f3nimo by Pepe Monforte; serves lunch and dinner daily except Wednesdays.",
+      "quote": "Listed in CosasDeCome's guide to dining in Pino Montano and San Jerónimo by Pepe Monforte; serves lunch and dinner daily except Wednesdays.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
@@ -705,7 +705,7 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": "Tosta of Almadraba tuna with mustard mayo and truffle",
-      "quote": "Brioche with Iberian pork jowl and roasted red mullet; green asparagus C\u00e1diz-style carbonara; AC/DC band members dined here; part of Ovejas Negras group with chef Crist\u00f3bal Rosales.",
+      "quote": "Brioche with Iberian pork jowl and roasted red mullet; green asparagus Cádiz-style carbonara; AC/DC band members dined here; part of Ovejas Negras group with chef Cristóbal Rosales.",
       "quote_language": "translated from es",
       "language_pool": "both",
       "source_count": 2,
@@ -713,10 +713,10 @@
         "src-sevillasecreta-restaurantes",
         "src-natgeo-2025"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3890218,
+      "lng": -5.9990362,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r028",
@@ -729,17 +729,17 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Historic bar on the seafaring Garc\u00eda de Vinuesa street in the Arenal district, noted for high foot traffic and signed barrel from Danny Ocean.",
+      "quote": "Historic bar on the seafaring García de Vinuesa street in the Arenal district, noted for high foot traffic and signed barrel from Danny Ocean.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-sevillasecreta-restaurantes"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3865275,
+      "lng": -5.9946141,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r029",
@@ -759,14 +759,14 @@
       "sources": [
         "src-sevillasecreta-restaurantes"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3856492,
+      "lng": -5.9972722,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r030",
-      "name": "Mar\u00eda Trifulca",
+      "name": "María Trifulca",
       "name_variants": [],
       "neighbourhood": "Triana",
       "cuisine": "Seafood / upscale",
@@ -775,17 +775,17 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Refined views to the Guadalquivir and Seville's monumental riverside make it an excellent draw; Georgina Rodr\u00edguez and Cristiano Ronaldo filmed Netflix docuseries at this Triana riverfront restaurant.",
+      "quote": "Refined views to the Guadalquivir and Seville's monumental riverside make it an excellent draw; Georgina Rodríguez and Cristiano Ronaldo filmed Netflix docuseries at this Triana riverfront restaurant.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-sevillasecreta-restaurantes"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.374771,
+      "lng": -5.9887943,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r031",
@@ -805,10 +805,10 @@
       "sources": [
         "src-sevillasecreta-agosto"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3934331,
+      "lng": -5.993629,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r032",
@@ -852,10 +852,10 @@
       "sources": [
         "src-sevillasecreta-agosto"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3702294,
+      "lng": -5.9893282,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r034",
@@ -868,7 +868,7 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Listed by Sevilla Secreta as open in August; located at c/ Jes\u00fas del Gran Poder, 31 in La Macarena.",
+      "quote": "Listed by Sevilla Secreta as open in August; located at c/ Jesús del Gran Poder, 31 in La Macarena.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
@@ -891,40 +891,40 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Listed by Sevilla Secreta as open in August; located at c/ Santa Vicenta Mar\u00eda, 7.",
+      "quote": "Listed by Sevilla Secreta as open in August; located at c/ Santa Vicenta María, 7.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-sevillasecreta-agosto"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.393366,
+      "lng": -5.9976305,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r036",
       "name": "Tradevo",
       "name_variants": [],
-      "neighbourhood": "Nervi\u00f3n",
+      "neighbourhood": "Nervión",
       "cuisine": "Modern Mediterranean tapas",
       "opening_year": null,
       "price_level": 2,
       "price_currency": "EUR",
       "dishes_mentioned": [],
-      "signature_dish": "Tataki de presa ib\u00e9rica con mojo pic\u00f3n, alcachofas rellenas de rabo de toro",
-      "quote": "Tradition meets evolution; signature tataki de presa ib\u00e9rica con mojo pic\u00f3n and alcachofas rellenas de rabo de toro, with two locations in Nervi\u00f3n and Centro.",
+      "signature_dish": "Tataki de presa ibérica con mojo picón, alcachofas rellenas de rabo de toro",
+      "quote": "Tradition meets evolution; signature tataki de presa ibérica con mojo picón and alcachofas rellenas de rabo de toro, with two locations in Nervión and Centro.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-theobjective"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3899936,
+      "lng": -5.9914951,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r037",
@@ -944,10 +944,10 @@
       "sources": [
         "src-theobjective"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.4172353,
+      "lng": -6.0046134,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r038",
@@ -959,18 +959,18 @@
       "price_level": 2,
       "price_currency": "EUR",
       "dishes_mentioned": [],
-      "signature_dish": "Bacalao a la vizca\u00edna, txulet\u00f3n de buey",
-      "quote": "Basque restaurant in Seville; signature bacalao a la vizca\u00edna and txulet\u00f3n de buey; located on Calle Albareda, 22.",
+      "signature_dish": "Bacalao a la vizcaína, txuletón de buey",
+      "quote": "Basque restaurant in Seville; signature bacalao a la vizcaína and txuletón de buey; located on Calle Albareda, 22.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-theobjective"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3896541,
+      "lng": -5.9960303,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r039",
@@ -982,18 +982,18 @@
       "price_level": 1,
       "price_currency": "EUR",
       "dishes_mentioned": [],
-      "signature_dish": "Croquetas de choco y alioli negro, carrill\u00f3n de cerdo ib\u00e9rico",
-      "quote": "Uno de los restaurantes m\u00e1s populares de Sevilla; signature croquetas de choco y alioli negro and carrill\u00f3n de cerdo ib\u00e9rico in San Lorenzo.",
+      "signature_dish": "Croquetas de choco y alioli negro, carrillón de cerdo ibérico",
+      "quote": "Uno de los restaurantes más populares de Sevilla; signature croquetas de choco y alioli negro and carrillón de cerdo ibérico in San Lorenzo.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-theobjective"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3975489,
+      "lng": -5.9969243,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r040",
@@ -1005,41 +1005,41 @@
       "price_level": 1,
       "price_currency": "EUR",
       "dishes_mentioned": [],
-      "signature_dish": "Gambas al ajillo, secreto ib\u00e9rico a la parrilla con chimichurri",
-      "quote": "Acogedor restaurante que rinde homenaje a la rica tradici\u00f3n culinaria de Andaluc\u00eda; signature gambas al ajillo and secreto ib\u00e9rico with chimichurri; on Paseo de las Delicias.",
+      "signature_dish": "Gambas al ajillo, secreto ibérico a la parrilla con chimichurri",
+      "quote": "Acogedor restaurante que rinde homenaje a la rica tradición culinaria de Andalucía; signature gambas al ajillo and secreto ibérico with chimichurri; on Paseo de las Delicias.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-theobjective"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3820506,
+      "lng": -5.9954541,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r041",
       "name": "Depikofino",
       "name_variants": [],
-      "neighbourhood": "Nervi\u00f3n",
+      "neighbourhood": "Nervión",
       "cuisine": "Fusion",
       "opening_year": null,
       "price_level": 2,
       "price_currency": "EUR",
       "dishes_mentioned": [],
-      "signature_dish": "Tartar de at\u00fan con aguacate y soja",
-      "quote": "Fusion restaurant on Avenida Eduardo Dato in Nervi\u00f3n; signature tartar de at\u00fan con aguacate y soja.",
+      "signature_dish": "Tartar de atún con aguacate y soja",
+      "quote": "Fusion restaurant on Avenida Eduardo Dato in Nervión; signature tartar de atún con aguacate y soja.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-theobjective"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3841836,
+      "lng": -5.9786739,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r042",
@@ -1059,14 +1059,14 @@
       "sources": [
         "src-theobjective"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3694352,
+      "lng": -6.040766,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r043",
-      "name": "Torres y Garc\u00eda",
+      "name": "Torres y García",
       "name_variants": [],
       "neighbourhood": "El Arenal",
       "cuisine": "Contemporary innovative",
@@ -1074,18 +1074,18 @@
       "price_level": 2,
       "price_currency": "EUR",
       "dishes_mentioned": [],
-      "signature_dish": "Carrillera ib\u00e9rica con parmentier trufado, tartar de langostinos",
-      "quote": "La tradici\u00f3n se mezcla con la modernidad en cada plato; signature carrillera ib\u00e9rica con parmentier trufado and tartar de langostinos; on Calle Harinas, 2.",
+      "signature_dish": "Carrillera ibérica con parmentier trufado, tartar de langostinos",
+      "quote": "La tradición se mezcla con la modernidad en cada plato; signature carrillera ibérica con parmentier trufado and tartar de langostinos; on Calle Harinas, 2.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-theobjective"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3874391,
+      "lng": -5.9955786,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r044",
@@ -1097,18 +1097,18 @@
       "price_level": 2,
       "price_currency": "EUR",
       "dishes_mentioned": [],
-      "signature_dish": "Rabo de toro, carrillada al Pedro Xim\u00e9nez",
-      "quote": "Un lugar con encanto e historia near Plaza de Toros; signature rabo de toro and carrillada al Pedro Xim\u00e9nez.",
+      "signature_dish": "Rabo de toro, carrillada al Pedro Ximénez",
+      "quote": "Un lugar con encanto e historia near Plaza de Toros; signature rabo de toro and carrillada al Pedro Ximénez.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-theobjective"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.387544,
+      "lng": -5.995928,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r045",
@@ -1128,10 +1128,10 @@
       "sources": [
         "src-natgeo-2025"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3838263,
+      "lng": -5.993168,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r046",
@@ -1151,10 +1151,10 @@
       "sources": [
         "src-natgeo-2025"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3847766,
+      "lng": -5.9963309,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r047",
@@ -1174,10 +1174,10 @@
       "sources": [
         "src-natgeo-2025"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.392943,
+      "lng": -5.9888255,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r048",
@@ -1190,21 +1190,21 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": "Hake tempura with green sauce, foie cuajada with citronella, goxua with caramel ice cream",
-      "quote": "Sus ra\u00edces culinarias pero con el producto al que est\u00e1 acostumbrada la ciudad; Basque roots using local Andalusian products; hake tempura with green sauce, farm egg yolk with wheat stew.",
+      "quote": "Sus raíces culinarias pero con el producto al que está acostumbrada la ciudad; Basque roots using local Andalusian products; hake tempura with green sauce, farm egg yolk with wheat stew.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-natgeo-2025"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.4044696,
+      "lng": -5.9974819,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r049",
-      "name": "Casa Orz\u00e1ez",
+      "name": "Casa Orzáez",
       "name_variants": [],
       "neighbourhood": "Triana",
       "cuisine": "Slow food / sustainable Spanish",
@@ -1213,17 +1213,17 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": "Artisanal cheese, garbanzos stew, beef round with wheat and vegetables",
-      "quote": "Una oda a la gastronom\u00eda; four siblings run this slow-food restaurant with family-made artisanal cheeses, fermented products, and garbanzos stew on Calle Betis in Triana.",
+      "quote": "Una oda a la gastronomía; four siblings run this slow-food restaurant with family-made artisanal cheeses, fermented products, and garbanzos stew on Calle Betis in Triana.",
       "quote_language": "translated from es",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-natgeo-2025"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.388654,
+      "lng": -5.9944781,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r050",
@@ -1236,17 +1236,17 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": null,
-      "quote": "Great traditional food and service, as always; opened April 2025 next to the Encarnaci\u00f3n Market.",
+      "quote": "Great traditional food and service, as always; opened April 2025 next to the Encarnación Market.",
       "quote_language": "original",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-shawnhennessey"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3939435,
+      "lng": -5.9915255,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r051",
@@ -1266,14 +1266,14 @@
       "sources": [
         "src-shawnhennessey"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.385718,
+      "lng": -6.0031675,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r052",
-      "name": "Salpic\u00f3n",
+      "name": "Salpicón",
       "name_variants": [],
       "neighbourhood": "Santa Cruz",
       "cuisine": "Tapas / elevated montaditos",
@@ -1296,7 +1296,7 @@
     },
     {
       "id": "r053",
-      "name": "Amor\u00edo",
+      "name": "Amorío",
       "name_variants": [],
       "neighbourhood": null,
       "cuisine": "Sherry-focused cuisine",
@@ -1312,10 +1312,10 @@
       "sources": [
         "src-shawnhennessey"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3972176,
+      "lng": -5.9253897,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r054",
@@ -1335,14 +1335,14 @@
       "sources": [
         "src-shawnhennessey"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.4119794,
+      "lng": -5.9884454,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r055",
-      "name": "Ra\u00edces",
+      "name": "Raíces",
       "name_variants": [],
       "neighbourhood": null,
       "cuisine": "Peruvian / Nikkei",
@@ -1351,7 +1351,7 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": "Pisco sours",
-      "quote": "The best pisco sours in town; Peruvian chef Daniel C\u00e1rdenas offering both nikkei and novoandina cuisines; reopened December 2025.",
+      "quote": "The best pisco sours in town; Peruvian chef Daniel Cárdenas offering both nikkei and novoandina cuisines; reopened December 2025.",
       "quote_language": "original",
       "language_pool": "es",
       "source_count": 1,
@@ -1381,10 +1381,10 @@
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3975489,
+      "lng": -5.9969243,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r057",
@@ -1404,10 +1404,10 @@
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3951266,
+      "lng": -5.997103,
+      "geo_source": "photon",
+      "geo_confidence": "medium"
     },
     {
       "id": "r058",
@@ -1420,17 +1420,17 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": "Seasonal changing menu",
-      "quote": "You can instantly tell there is true passion in the kitchen; modern tapas bar on Calle Jes\u00fas del Gran Poder with a seasonal changing menu.",
+      "quote": "You can instantly tell there is true passion in the kitchen; modern tapas bar on Calle Jesús del Gran Poder with a seasonal changing menu.",
       "quote_language": "original",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3890105,
+      "lng": -5.9988499,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r059",
@@ -1450,10 +1450,10 @@
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3883192,
+      "lng": -5.9993984,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r060",
@@ -1473,14 +1473,14 @@
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.390407,
+      "lng": -5.9915336,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r061",
-      "name": "Petit Comit\u00e9",
+      "name": "Petit Comité",
       "name_variants": [],
       "neighbourhood": "Casco Antiguo",
       "cuisine": "Modern tapas",
@@ -1496,10 +1496,10 @@
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.384592,
+      "lng": -5.9966713,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r062",
@@ -1519,10 +1519,10 @@
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3913903,
+      "lng": -5.9994874,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r063",
@@ -1542,10 +1542,10 @@
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3852685,
+      "lng": -5.9945999,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r064",
@@ -1557,18 +1557,18 @@
       "price_level": 1,
       "price_currency": "EUR",
       "dishes_mentioned": [],
-      "signature_dish": "Pring\u00e1 sandwiches, spinach and chickpeas, secreto and presa pork cuts",
-      "quote": "One of Seville's best classic tapas bars; signature pring\u00e1 sandwiches, spinach and chickpeas, and secreto and presa pork cuts on Calle Harinas.",
+      "signature_dish": "Pringá sandwiches, spinach and chickpeas, secreto and presa pork cuts",
+      "quote": "One of Seville's best classic tapas bars; signature pringá sandwiches, spinach and chickpeas, and secreto and presa pork cuts on Calle Harinas.",
       "quote_language": "original",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3870689,
+      "lng": -5.9956598,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r065",
@@ -1588,10 +1588,10 @@
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.39842,
+      "lng": -5.9879244,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r066",
@@ -1611,33 +1611,33 @@
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3841049,
+      "lng": -6.0056032,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r067",
       "name": "Casa Moreno",
       "name_variants": [],
       "neighbourhood": "El Arenal",
-      "cuisine": "Abacer\u00eda / traditional bar",
+      "cuisine": "Abacería / traditional bar",
       "opening_year": null,
       "price_level": 1,
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": "Montaditos",
-      "quote": "One of Seville's many abacer\u00edas (part grocery store, part bar); easy to brush off as a tiny store from the outside but a Seville institution on Calle Gamazo.",
+      "quote": "One of Seville's many abacerías (part grocery store, part bar); easy to brush off as a tiny store from the outside but a Seville institution on Calle Gamazo.",
       "quote_language": "original",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3874426,
+      "lng": -5.9959209,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r068",
@@ -1650,21 +1650,21 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": "Espinacas con garbanzos",
-      "quote": "The oldest bar in Seville, founded in 1670 \u2014 El Rinconcillo is a can't-miss; espinacas con garbanzos a signature dish.",
+      "quote": "The oldest bar in Seville, founded in 1670 — El Rinconcillo is a can't-miss; espinacas con garbanzos a signature dish.",
       "quote_language": "original",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3933406,
+      "lng": -5.9882942,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r069",
-      "name": "Freidur\u00eda La Isla",
+      "name": "Freiduría La Isla",
       "name_variants": [],
       "neighbourhood": "El Arenal",
       "cuisine": "Fried fish",
@@ -1672,18 +1672,18 @@
       "price_level": 1,
       "price_currency": "EUR",
       "dishes_mentioned": [],
-      "signature_dish": "Fried fish, calamares del campo, caz\u00f3n",
-      "quote": "Seville is famous for fried fish, and my favorite comes from La Isla; signature calamares del campo and caz\u00f3n on Calle Garc\u00eda de Vinuesa.",
+      "signature_dish": "Fried fish, calamares del campo, cazón",
+      "quote": "Seville is famous for fried fish, and my favorite comes from La Isla; signature calamares del campo and cazón on Calle García de Vinuesa.",
       "quote_language": "original",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3864809,
+      "lng": -5.9947082,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r070",
@@ -1703,10 +1703,10 @@
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.4039965,
+      "lng": -5.980645,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r071",
@@ -1726,10 +1726,10 @@
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.4083317,
+      "lng": -6.0009486,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r072",
@@ -1741,22 +1741,22 @@
       "price_level": 1,
       "price_currency": "EUR",
       "dishes_mentioned": [],
-      "signature_dish": "Montadito de pring\u00e1",
-      "quote": "One of the most classic bars on the border of the Santa Cruz neighborhood; signature montadito de pring\u00e1.",
+      "signature_dish": "Montadito de pringá",
+      "quote": "One of the most classic bars on the border of the Santa Cruz neighborhood; signature montadito de pringá.",
       "quote_language": "original",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3860394,
+      "lng": -5.9907674,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     },
     {
       "id": "r073",
-      "name": "Taberna \u00c1guilas",
+      "name": "Taberna Águilas",
       "name_variants": [],
       "neighbourhood": "Casco Antiguo",
       "cuisine": "Traditional tapas",
@@ -1765,17 +1765,17 @@
       "price_currency": "EUR",
       "dishes_mentioned": [],
       "signature_dish": "Salmorejo, montaditos",
-      "quote": "One of Seville's most traditional small tapas bars; signature salmorejo and montaditos on Calle \u00c1guilas.",
+      "quote": "One of Seville's most traditional small tapas bars; signature salmorejo and montaditos on Calle Águilas.",
       "quote_language": "original",
       "language_pool": "es",
       "source_count": 1,
       "sources": [
         "src-spanishsabores"
       ],
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null
+      "lat": 37.3898131,
+      "lng": -5.9890436,
+      "geo_source": "nominatim",
+      "geo_confidence": "high"
     }
   ]
 }
