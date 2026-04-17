@@ -353,7 +353,13 @@ Report after Phase 1B:
 - New qualifying sources found: [list]
 - Sources already known: [count]
 
-Proceed to Phase 2.
+PHASE 1 COMPLETE — AWAITING INSTRUCTION
+
+Present the confirmed source list and STOP. Do not proceed to Phase 2 automatically.
+Wait for explicit instruction "PROCEED" before continuing to Phase 2.
+
+This pause allows review of source selection before extraction begins.
+Only proceed to Phase 2 after receiving "PROCEED" instruction.
 
 ════════════════════════════════════════
 PHASE 2 — FETCH AND EXTRACT (with retry)
@@ -705,8 +711,38 @@ attempt to fill them from the banner — leave as null.
 
 node -e "
 const fs = require('fs');
+const path = require('path');
+const os = require('os');
+const path = require('path');
+const os = require('os');
 
 // Read final JSON to extract counts programmatically
+
+// Extract session data from most recent session-meta JSON file
+let sessionData = { input_tokens: null, output_tokens: null, duration_minutes: null, tool_counts: null };
+try {
+  const sessionMetaDir = path.join(os.homedir(), ".claude", "usage-data", "session-meta");
+  if (fs.existsSync(sessionMetaDir)) {
+    const files = fs.readdirSync(sessionMetaDir)
+      .filter(f => f.endsWith(".json"))
+      .map(f => ({
+        name: f,
+        path: path.join(sessionMetaDir, f),
+        mtime: fs.statSync(path.join(sessionMetaDir, f)).mtime
+      }))
+      .sort((a, b) => b.mtime - a.mtime);
+    
+    if (files.length > 0) {
+      const mostRecent = JSON.parse(fs.readFileSync(files[0].path, "utf8"));
+      sessionData = mostRecent;
+    }
+  }
+} catch (err) {
+  console.log("Could not read session-meta data:", err.message);
+}
+
+const totalToolUses = sessionData.tool_counts ?
+  Object.values(sessionData.tool_counts).reduce((sum, count) => sum + count, 0) : null;
 let finalData = {restaurants: [], sources: []};
 try {
   finalData = JSON.parse(fs.readFileSync('[OUTPUT_FINAL]', 'utf8'));
@@ -742,9 +778,9 @@ const e = {
   tier_c: 0,
   searches_run: searchesRun,
   open_status_check: openCheck,
-  tokens: null,
-  tool_uses: null,
-  run_time_seconds: null
+  tokens: sessionData.input_tokens && sessionData.output_tokens ? sessionData.input_tokens + sessionData.output_tokens : null,
+  tool_uses: totalToolUses || null,
+  run_time_seconds: sessionData.duration_minutes ? Math.round(sessionData.duration_minutes * 60) : null
 };
 
 fs.appendFileSync('localbite-run-metrics.log', JSON.stringify(e) + '\n');
