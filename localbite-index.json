@@ -39,7 +39,7 @@
       "both_pool_count": 4,
       "source_count": 8,
       "description": "82 restaurants from 8 named sources across English and Spanish. First v7 pipeline run with programmatic token capture.",
-      "file": "localbite-madrid-2023-2026-v7final.json",
+      "file": "localbite-madrid-2023-2026-v7final-fixed.json",
       "status": "complete",
       "notes": "Geocoded 93% automated (76/82). False positives removed. Phase 1 pause enforcement fix unverified."
     },
