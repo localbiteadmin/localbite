@@ -1,7 +1,7 @@
 {
   "project": "LocalBite",
   "description": "Curated restaurant packs built from named food writers, 2025-2026 sources only",
-  "last_updated": "2026-04-17-rollback",
+  "last_updated": "2026-04-17",
   "cities": [
     {
       "city": "Barcelona",
@@ -176,6 +176,20 @@
       "file": "localbite-malaga-2023-2026.json",
       "status": "complete",
       "notes": "All Phase 0 sources failed (Jina blocked or no content). El Español Málaga holds 100% of ES pool — structural characteristic. Pedregalejo and El Palo included conditionally (2 entries)."
+    },
+    {
+      "city": "Madrid",
+      "country": "Spain",
+      "city_slug": "madrid-spain",
+      "pipeline": "localbite-v7",
+      "built": "2026-04-17",
+      "restaurant_count": 31,
+      "both_pool_count": 1,
+      "source_count": 7,
+      "description": "31 restaurants from 7 named sources across English and Spanish. 1 both-pool entry (Angelita Madrid). José Carlos Capel included.",
+      "file": "localbite-madrid-2023-2026-v7rebuild.json",
+      "status": "complete",
+      "notes": "v7 clean rebuild. 87% geocoding success. Publisher concentration cap applied (21 entries removed from gastromadrid-blog)."
     }
   ]
 }
