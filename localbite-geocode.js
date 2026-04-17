@@ -44,6 +44,8 @@ const CITY_BOXES = {
   'Granada':      { latMin: 37.14, latMax: 37.25, lngMin: -3.65, lngMax: -3.55 },
   'Málaga':       { latMin: 36.68, latMax: 36.76, lngMin: -4.48, lngMax: -4.33 },
   'Madrid':        { latMin: 40.35, latMax: 40.50, lngMin: -3.75, lngMax: -3.60 },
+  'Seville':       { latMin: 37.30, latMax: 37.45, lngMin: -6.05, lngMax: -5.90 },
+  'Seville':       { latMin: 37.30, latMax: 37.45, lngMin: -6.05, lngMax: -5.90 },
 };
 
 const COUNTRY_BOXES = {

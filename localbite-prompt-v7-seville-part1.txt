@@ -1,0 +1,47 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Seville
+COUNTRY: Spain
+CITY_SLUG: seville-spain
+PACK_DATE: 2026-04-17
+PIPELINE: localbite-v7
+
+YEAR_RANGE: 2023-2026
+
+PRIMARY_LANGUAGE: Spanish (ES)
+SECONDARY_LANGUAGE: English (EN)
+
+TIER_1_NEIGHBOURHOODS: 
+Triana, Santa Cruz, Centro, El Arenal
+
+TIER_2_NEIGHBOURHOODS:
+Macarena, Nervión
+
+EMERGING_NEIGHBOURHOODS:
+Alameda, Feria, San Julián, Porvenir
+
+NAMED_AWARDS:
+Premios Gastronomía Andaluza, Soles Repsol, Premio ABC Sevilla
+
+LOCAL_FOOD_VOCABULARY:
+tapeo, taberna, casquería, montadito
+
+DIRECT_FETCH_SOURCES:
+- ABC Sevilla (Gastronomía section) — https://sevilla.abc.es/estilo/gastronomia/
+- Diario de Sevilla (Gastronomía) — https://www.diariodesevilla.es/ocio/gastronomia/
+- Time Out Seville — https://www.timeout.com/seville/restaurants
+
+COMMERCIAL_CONFLICTS_NOTED:
+Time Out operates food markets in several Spanish cities. Flag with ⚠ coi in writer profile if Time Out Seville source is included.
+
+CONCENTRATION_CAP: 30%
+
+OUTPUT_SEARCH_PLAN: ./localbite-seville-search-plan.txt
+OUTPUT_SEARCH_LOG: ./localbite-seville-search-log.txt
+OUTPUT_RAW: ./localbite-seville-raw.json
+OUTPUT_WORKING: ./localbite-seville-working.json
+OUTPUT_FINAL: ./localbite-seville-2023-2026.json
+OUTPUT_AUDIT: ./localbite-seville-audit.txt
