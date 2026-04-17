@@ -1314,8 +1314,8 @@
       "name": "El Sobrino de Botín",
       "name_variants": null,
       "neighbourhood": "La Latina",
-      "lat": 40.2855997,
-      "lng": -3.8023894,
+      "lat": null,
+      "lng": null,
       "cuisine": "Traditional Spanish / asador",
       "price_level": 3,
       "dishes_mentioned": [
