@@ -20,7 +20,12 @@
       "writer": "Pepe Monforte",
       "url": "https://sevilla.cosasdecome.es/donde-comer-muy-bien-en-triana-y-los-remedios/",
       "language": "es",
-      "local": true
+      "local": true,
+      "writer_profile": "Local Seville food writer for CosasDeCome Sevilla, covering the city's dining scene with focus on traditional and contemporary Spanish cuisine.",
+      "writers": [
+        "Pepe Monforte"
+      ],
+      "commercial_conflict": false
     },
     {
       "id": "src-cosasdecome-triana-tapas",
@@ -28,7 +33,12 @@
       "writer": "Pepe Monforte",
       "url": "https://sevilla.cosasdecome.es/tapear-muy-bien-en-triana-y-los-remedios/",
       "language": "es",
-      "local": true
+      "local": true,
+      "writer_profile": "Local Seville food writer for CosasDeCome Sevilla, covering the city's dining scene with focus on traditional and contemporary Spanish cuisine.",
+      "writers": [
+        "Pepe Monforte"
+      ],
+      "commercial_conflict": false
     },
     {
       "id": "src-cosasdecome-nervion",
@@ -36,7 +46,12 @@
       "writer": "Pepe Monforte",
       "url": "https://sevilla.cosasdecome.es/donde-comer-muy-bien-en-nervion/",
       "language": "es",
-      "local": true
+      "local": true,
+      "writer_profile": "Local Seville food writer for CosasDeCome Sevilla, covering the city's dining scene with focus on traditional and contemporary Spanish cuisine.",
+      "writers": [
+        "Pepe Monforte"
+      ],
+      "commercial_conflict": false
     },
     {
       "id": "src-cosasdecome-pino-montano",
@@ -44,7 +59,12 @@
       "writer": "Pepe Monforte",
       "url": "https://sevilla.cosasdecome.es/donde-comer-muy-bien-en-pino-montano-y-san-jeronimo/",
       "language": "es",
-      "local": true
+      "local": true,
+      "writer_profile": "Local Seville food writer for CosasDeCome Sevilla, covering the city's dining scene with focus on traditional and contemporary Spanish cuisine.",
+      "writers": [
+        "Pepe Monforte"
+      ],
+      "commercial_conflict": false
     },
     {
       "id": "src-sevillasecreta-restaurantes",
@@ -52,7 +72,12 @@
       "writer": "Ariana Buenafuente",
       "url": "https://sevillasecreta.co/restaurantes-sevilla/",
       "language": "es",
-      "local": true
+      "local": true,
+      "writer_profile": "Seville-based writer for Sevilla Secreta, documenting local restaurants and hidden gems across the city.",
+      "writers": [
+        "Ariana Buenafuente"
+      ],
+      "commercial_conflict": false
     },
     {
       "id": "src-sevillasecreta-agosto",
@@ -60,7 +85,12 @@
       "writer": "Ariana Buenafuente",
       "url": "https://sevillasecreta.co/restaurantes/",
       "language": "es",
-      "local": true
+      "local": true,
+      "writer_profile": "Seville-based writer for Sevilla Secreta, documenting local restaurants and hidden gems across the city.",
+      "writers": [
+        "Ariana Buenafuente"
+      ],
+      "commercial_conflict": false
     },
     {
       "id": "src-theobjective",
@@ -68,7 +98,12 @@
       "writer": "Brenda Alonso",
       "url": "https://theobjective.com/lifestyle/2023-07-28/donde-comer-sevilla-restaurantes/",
       "language": "es",
-      "local": true
+      "local": true,
+      "writer_profile": "Food writer for Unknown, covering Seville's restaurant scene.",
+      "writers": [
+        "Brenda Alonso"
+      ],
+      "commercial_conflict": false
     },
     {
       "id": "src-natgeo-2025",
@@ -76,7 +111,12 @@
       "writer": "Mari Carmen Duarte",
       "url": "https://viajes.nationalgeographic.com.es/gastronomia/ocho-restaurantes-rincones-gastro-centro-sevilla-que-merecen-pena_22008",
       "language": "es",
-      "local": true
+      "local": true,
+      "writer_profile": "Food writer for Unknown, covering Seville's restaurant scene.",
+      "writers": [
+        "Mari Carmen Duarte"
+      ],
+      "commercial_conflict": false
     },
     {
       "id": "src-shawnhennessey",
@@ -84,7 +124,12 @@
       "writer": "Shawn Hennessey",
       "url": "https://shawnhennessey.substack.com/p/my-top-sevilla-restaurant-openings-ed8",
       "language": "es",
-      "local": true
+      "local": true,
+      "writer_profile": "Food writer for Unknown, covering Seville's restaurant scene.",
+      "writers": [
+        "Shawn Hennessey"
+      ],
+      "commercial_conflict": false
     },
     {
       "id": "src-spanishsabores",
@@ -92,7 +137,12 @@
       "writer": "Lauren Aloise",
       "url": "https://www.spanishsabores.com/eating-in-seville/",
       "language": "es",
-      "local": true
+      "local": true,
+      "writer_profile": "American food writer based in Spain, author at Spanish Sabores, specializing in Spanish cuisine and local dining recommendations.",
+      "writers": [
+        "Lauren Aloise"
+      ],
+      "commercial_conflict": false
     }
   ],
   "restaurants": [
