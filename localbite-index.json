@@ -1,7 +1,7 @@
 {
   "project": "LocalBite",
   "description": "Curated restaurant packs built from named food writers, 2025-2026 sources only",
-  "last_updated": "2026-04-17",
+  "last_updated": "2026-04-17-2",
   "cities": [
     {
       "city": "Barcelona",
@@ -34,14 +34,14 @@
       "country": "Spain",
       "city_slug": "madrid-spain",
       "pipeline": "localbite-v7",
-      "built": "2026-04-16",
+      "built": "2026-04-17-fixed",
       "restaurant_count": 82,
       "both_pool_count": 4,
       "source_count": 8,
       "description": "82 restaurants from 8 named sources across English and Spanish. First v7 pipeline run with programmatic token capture.",
       "file": "localbite-madrid-2023-2026-v7final.json",
       "status": "complete",
-      "notes": "Geocoded 93% automated (76/82). open_status_check: 68% from pre-2025 sources. Phase 1 pause enforcement fix unverified."
+      "notes": "Geocoded 93% automated (76/82). False positives removed. Phase 1 pause enforcement fix unverified."
     },
     {
       "city": "Fes",
