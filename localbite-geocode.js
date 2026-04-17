@@ -43,6 +43,7 @@ const CITY_BOXES = {
   'Córdoba':      { latMin: 37.82, latMax: 37.96, lngMin: -4.87, lngMax: -4.68 },
   'Granada':      { latMin: 37.14, latMax: 37.25, lngMin: -3.65, lngMax: -3.55 },
   'Málaga':       { latMin: 36.68, latMax: 36.76, lngMin: -4.48, lngMax: -4.33 },
+  'Madrid':        { latMin: 40.35, latMax: 40.50, lngMin: -3.75, lngMax: -3.60 },
 };
 
 const COUNTRY_BOXES = {
