@@ -1,0 +1,47 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Madrid
+COUNTRY: Spain
+CITY_SLUG: madrid-spain
+PACK_DATE: 2026-04-17
+PIPELINE: localbite-v7
+
+YEAR_RANGE: 2023-2026
+
+PRIMARY_LANGUAGE: Spanish (ES)
+SECONDARY_LANGUAGE: English (EN)
+
+TIER_1_NEIGHBOURHOODS: 
+Malasaña, Chueca, La Latina, Huertas
+
+TIER_2_NEIGHBOURHOODS:
+Chamberí, Salamanca, Centro
+
+EMERGING_NEIGHBOURHOODS:
+Lavapiés, Embajadores, Usera
+
+NAMED_AWARDS:
+Premios Gastronomía Madrid, Soles Repsol, Premio Time Out Madrid
+
+LOCAL_FOOD_VOCABULARY:
+tapeo, taberna, gastrobar, mercado
+
+DIRECT_FETCH_SOURCES:
+- GastroMadrid — https://gastromadrid.com/
+- Time Out Madrid — https://www.timeout.com/madrid/restaurants
+- El País Gastro — https://elpais.com/gastronomia/
+
+COMMERCIAL_CONFLICTS_NOTED:
+Time Out operates food markets in several cities including Madrid. Flag with ⚠ coi in writer profile if Time Out Madrid source is included.
+
+CONCENTRATION_CAP: 30%
+
+OUTPUT_SEARCH_PLAN: ./localbite-madrid-search-plan.txt
+OUTPUT_SEARCH_LOG: ./localbite-madrid-search-log.txt
+OUTPUT_RAW: ./localbite-madrid-raw.json
+OUTPUT_WORKING: ./localbite-madrid-working.json
+OUTPUT_FINAL: ./localbite-madrid-2023-2026-v7rebuild.json
+OUTPUT_AUDIT: ./localbite-madrid-audit.txt
