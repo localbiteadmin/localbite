@@ -9,7 +9,7 @@
   "tier_a_count": 6,
   "tier_b_count": 25,
   "both_pool_count": 1,
-  "sources_used": [
+  "sources": [
     {
       "id": "gastromadrid-blog",
       "publication": "GastroMadrid (El Blog de GastroMadrid)",
