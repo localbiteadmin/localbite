@@ -1,0 +1,1212 @@
+{
+  "city": "Madrid",
+  "country": "Spain",
+  "city_slug": "madrid-spain",
+  "pipeline": "localbite-v7",
+  "pack_date": "2026-04-17",
+  "year_range": "2023-2026",
+  "total_entries": 31,
+  "tier_a_count": 6,
+  "tier_b_count": 25,
+  "both_pool_count": 1,
+  "sources_used": [
+    {
+      "id": "gastromadrid-blog",
+      "publication": "GastroMadrid (El Blog de GastroMadrid)",
+      "writers": [
+        "Julián Acebes",
+        "Irene S."
+      ],
+      "writer_profile": "GastroMadrid is Madrid's dedicated gastronomy magazine and blog, with Julián Acebes as its lead writer. The publication produces in-depth neighbourhood-by-neighbourhood guides to the capital's restaurant scene, combining practical recommendations with editorial context. Its Barrio guides are among the most cited Spanish-language food references for Madrid.",
+      "url": "https://www.elblogdegastromadrid.com/",
+      "language": "es",
+      "commercial_conflict": false
+    },
+    {
+      "id": "gastronomistas",
+      "publication": "Gastronomistas",
+      "writers": [
+        "Javier Sánchez",
+        "Cristina Barbero"
+      ],
+      "writer_profile": "Gastronomistas is a Madrid-based food journalism team whose writers cover the capital's restaurant scene with a critical eye. Javier Sánchez and Cristina Barbero contribute restaurant recommendations, annual best-of round-ups, and neighbourhood guides, with a focus on new openings and international cuisine arriving in the city.",
+      "url": "https://www.gastronomistas.com/",
+      "language": "es",
+      "commercial_conflict": false
+    },
+    {
+      "id": "marie-claire-es",
+      "publication": "Marie Claire España",
+      "writers": [
+        "Lucía Gavela"
+      ],
+      "writer_profile": "Lucía Gavela is a food and lifestyle writer at Marie Claire España, covering the Madrid restaurant scene with a focus on innovative and design-conscious openings. Her restaurant recommendations highlight spaces that blend creative cooking with a strong aesthetic sensibility.",
+      "url": "https://www.marie-claire.es/gastro/restaurantes-nada-tipicos-madrid.html",
+      "language": "es",
+      "commercial_conflict": false
+    },
+    {
+      "id": "gastroactitud",
+      "publication": "Gastroactitud",
+      "writers": [
+        "José Carlos Capel"
+      ],
+      "writer_profile": "José Carlos Capel is one of Spain's most distinguished food critics, who spent 35 years as the gastronomy critic for El País and is the founder and president of Madrid Fusión, the world-renowned annual gastronomy congress. His Gastroactitud platform publishes rigorous, detail-rich individual restaurant reviews from across Spain, with extensive Madrid coverage.",
+      "url": "https://www.gastroactitud.com/",
+      "language": "es",
+      "commercial_conflict": false
+    },
+    {
+      "id": "timeout-madrid-en",
+      "publication": "Time Out Madrid",
+      "writers": [
+        "Marta Bac"
+      ],
+      "writer_profile": "Marta Bac is the Editorial Director of Time Out Madrid, where she oversees the publication's restaurant coverage and curates its annual lists of the city's best dining options. Her writing reflects a broad knowledge of Madrid's dining landscape, from neighbourhood classics to notable new openings. Note: Time Out operates food markets in several cities including Madrid, which represents a potential commercial conflict of interest.",
+      "url": "https://www.timeout.com/madrid/restaurants/best-restaurants-in-madrid",
+      "language": "en",
+      "commercial_conflict": true,
+      "commercial_conflict_note": "Time Out Group operates food markets in Madrid; commercial interests may influence recommendations."
+    },
+    {
+      "id": "spanish-sabores",
+      "publication": "Spanish Sabores",
+      "writers": [
+        "Lauren Aloise"
+      ],
+      "writer_profile": "Lauren Aloise is a trained chef and longtime Madrid resident who founded Spanish Sabores to document her experience eating through the Spanish capital. She is also co-founder of Devour Tours, a food tour company with operations in Madrid. Her writing draws on deep local knowledge and years of personal dining experience across the city's neighbourhoods. Note: as a tour operator, some recommendations may reflect commercial considerations.",
+      "url": "https://spanishsabores.com/madrid-gastro-guide-where-to-eat-in-madrid/",
+      "language": "en",
+      "commercial_conflict": true,
+      "commercial_conflict_note": "Lauren Aloise is co-founder of Devour Tours, a food tour operator in Madrid."
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Angelita Madrid",
+      "name_variants": [
+        "Angelita"
+      ],
+      "neighbourhood": "Chueca",
+      "cuisine": "Wine bar / contemporary Spanish",
+      "opening_year": 2016,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "hyper-seasonal dishes",
+        "traditional recipes with a modern twist"
+      ],
+      "signature_dish": null,
+      "quote": "Wine bar directed by sommeliers David Villalón and Rubén Moreiro featuring more than five hundred wine references with daily-changing menus blending traditional and modern cuisine",
+      "quote_language": "translated from es",
+      "article_date": "undated",
+      "open_status_check": true,
+      "confidence_tier": "A",
+      "both_pool": true,
+      "source_count": 4,
+      "sources": [
+        "gastromadrid-blog",
+        "gastronomistas",
+        "timeout-madrid-en",
+        "spanish-sabores"
+      ],
+      "publications": [
+        "GastroMadrid",
+        "Gastronomistas",
+        "Time Out Madrid ⚠coi",
+        "Spanish Sabores ⚠coi"
+      ],
+      "writers": [
+        "Julián Acebes",
+        "Javier Sánchez / Cristina Barbero",
+        "Marta Bac ⚠coi",
+        "Lauren Aloise ⚠coi"
+      ],
+      "lat": 40.4203519,
+      "lng": -3.7003729,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Angelita"
+    },
+    {
+      "name": "Chispa Bistró",
+      "name_variants": [],
+      "neighbourhood": "Chueca",
+      "cuisine": "Asian-Mediterranean fusion",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "cogollo con curry verde y tomate",
+        "paloma",
+        "roastrami"
+      ],
+      "signature_dish": null,
+      "quote": "Chefs Juan D'Onofrio and Gabriel Sodré blend Asia and Mediterranean cuisine; featuring cogollo con curry verde y tomate alongside pigeon and roastrami dishes",
+      "quote_language": "translated from es",
+      "article_date": "2023-06-25",
+      "open_status_check": true,
+      "confidence_tier": "A",
+      "both_pool": false,
+      "source_count": 2,
+      "sources": [
+        "gastromadrid-blog",
+        "gastronomistas"
+      ],
+      "publications": [
+        "GastroMadrid",
+        "Gastronomistas"
+      ],
+      "writers": [
+        "Julián Acebes",
+        "Javier Sánchez / Cristina Barbero"
+      ],
+      "lat": 40.4201745,
+      "lng": -3.6955599,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Chispa"
+    },
+    {
+      "name": "Gioia",
+      "name_variants": [],
+      "neighbourhood": "Chueca",
+      "cuisine": "Modern Italian",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "ravioli filled with burrata and lime topped with red shrimp tartar",
+        "black truffle tagliatelle",
+        "tiramisu",
+        "vitel toné de wagyu",
+        "tallarines hechos a mano con trufa fresca",
+        "panacotta de haba tonka"
+      ],
+      "signature_dish": null,
+      "quote": "Chef Davide Bonato presents ravioli filled with burrata and lime topped with red shrimp tartar and black truffle tagliatelle with exceptional tiramisu",
+      "quote_language": "translated from es",
+      "article_date": "2023-06-25",
+      "open_status_check": true,
+      "confidence_tier": "A",
+      "both_pool": false,
+      "source_count": 2,
+      "sources": [
+        "gastromadrid-blog",
+        "gastronomistas"
+      ],
+      "publications": [
+        "GastroMadrid",
+        "Gastronomistas"
+      ],
+      "writers": [
+        "Julián Acebes",
+        "Javier Sánchez / Cristina Barbero"
+      ],
+      "lat": 40.4221287,
+      "lng": -3.6984045,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Gioia"
+    },
+    {
+      "name": "Roostiq",
+      "name_variants": [],
+      "neighbourhood": "Chueca",
+      "cuisine": "Fire-based cooking / organic",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "beef carpaccio",
+        "Neapolitan wood-fired pizzas",
+        "espinacas a la brasa con huevo a la plancha y vinagreta de bacon"
+      ],
+      "signature_dish": null,
+      "quote": "Fire-focused restaurant serving beef carpaccio and Neapolitan wood-fired pizzas using organic products from their farm and greenhouse",
+      "quote_language": "translated from es",
+      "article_date": "2023-06-25",
+      "open_status_check": true,
+      "confidence_tier": "A",
+      "both_pool": false,
+      "source_count": 2,
+      "sources": [
+        "gastromadrid-blog",
+        "gastronomistas"
+      ],
+      "publications": [
+        "GastroMadrid",
+        "Gastronomistas"
+      ],
+      "writers": [
+        "Julián Acebes",
+        "Javier Sánchez / Cristina Barbero"
+      ],
+      "lat": 40.4219999,
+      "lng": -3.6962812,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Roostiq"
+    },
+    {
+      "name": "La Barra de la Tasquería",
+      "name_variants": [],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Contemporary casquería / bistro",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "orejas confitadas a la salsa de patatas bravas",
+        "mollejas de cordero con vieiras",
+        "sesos a la mantequilla negra con alcaparras",
+        "croquetas de jamón",
+        "steak tartare brioche"
+      ],
+      "signature_dish": "orejas confitadas a la salsa de patatas bravas",
+      "quote": "Esencia de taberna con alma de restaurante — serving orejas confitadas a la salsa de patatas bravas, mollejas de cordero, and sesos a la mantequilla negra con alcaparras",
+      "quote_language": "original",
+      "article_date": "2026-01-29",
+      "open_status_check": false,
+      "confidence_tier": "A",
+      "both_pool": false,
+      "source_count": 2,
+      "sources": [
+        "marie-claire-es",
+        "gastroactitud"
+      ],
+      "publications": [
+        "Marie Claire España",
+        "Gastroactitud"
+      ],
+      "writers": [
+        "Lucía Gavela",
+        "José Carlos Capel"
+      ],
+      "lat": 40.4454499,
+      "lng": -3.6955596,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "La Tasquería"
+    },
+    {
+      "name": "La Tasquería",
+      "name_variants": [
+        "La Tasquería de Javi Estévez"
+      ],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Offal / casquería",
+      "opening_year": 2015,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "rabitos de cerdo-anguila",
+        "manitas-cigalas",
+        "tendones de ternera-berberechos"
+      ],
+      "signature_dish": null,
+      "quote": "Cocinamos incluso para gente que no le gusta la casquería. Realizamos un recorrido por diferentes partes de los animales. Chef Estévez fuses offal with haute cuisine transforming sweetbreads, brains, and suckling pig head into appetizing creations",
+      "quote_language": "original",
+      "article_date": "2024-04-11",
+      "open_status_check": true,
+      "confidence_tier": "A",
+      "both_pool": false,
+      "source_count": 2,
+      "sources": [
+        "gastromadrid-blog",
+        "gastroactitud"
+      ],
+      "publications": [
+        "GastroMadrid",
+        "Gastroactitud"
+      ],
+      "writers": [
+        "Julián Acebes",
+        "José Carlos Capel"
+      ],
+      "lat": 40.4454499,
+      "lng": -3.6955596,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Tasquería"
+    },
+    {
+      "name": "Carmencita Brunch",
+      "name_variants": [
+        "Carmencita"
+      ],
+      "neighbourhood": "Malasaña",
+      "cuisine": "Brunch / American",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "huevos benedictinos con salmón",
+        "huevos benedictinos con aguacate",
+        "huevos benedictinos con cochinita pibil",
+        "huevos benedictinos con jamón ibérico"
+      ],
+      "signature_dish": "huevos benedictinos",
+      "quote": "Un pionero en Madrid que lleva más de una década ofreciendo el auténtico brunch americano, specializing in eggs benedict with creative variations including salmón, aguacate, cochinita pibil and jamón ibérico",
+      "quote_language": "original",
+      "article_date": "2024-11-05",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ],
+      "lat": 40.4118776,
+      "lng": -3.7099514,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Carmencita Brunch"
+    },
+    {
+      "name": "La Ardosa",
+      "name_variants": [],
+      "neighbourhood": "Malasaña",
+      "cuisine": "Traditional Spanish taberna",
+      "opening_year": 1892,
+      "price_level": 1,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "tortilla de patatas",
+        "canapés",
+        "salazones",
+        "vermut de grifo"
+      ],
+      "signature_dish": "tortilla de patatas",
+      "quote": "Historic 1892 tavern preserving classic Madrid atmosphere with impecable selección de cervezas including the oldest Guinness tap in Spain, legendary potato omelette",
+      "quote_language": "translated from es",
+      "article_date": "2024-11-05",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ],
+      "lat": 40.4237686,
+      "lng": -3.7017746,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bodega de la Ardosa"
+    },
+    {
+      "name": "La Tasquita de Enfrente",
+      "name_variants": [],
+      "neighbourhood": "Malasaña",
+      "cuisine": "Market-driven contemporary Spanish",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Intimate restaurant with only eight tables and market-driven cuisine earning dos Soles Repsol through exceptional seasonal ingredients in the heart of Malasaña",
+      "quote_language": "translated from es",
+      "article_date": "2024-11-05",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ],
+      "lat": 40.421321,
+      "lng": -3.7035291,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Tasquita de Enfrente"
+    },
+    {
+      "name": "Toki",
+      "name_variants": [],
+      "neighbourhood": "Chueca",
+      "cuisine": "Japanese omakase",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "nigiri",
+        "pez limón",
+        "cigala",
+        "salmonete",
+        "chicharro",
+        "salmón",
+        "atún de Balfegó"
+      ],
+      "signature_dish": null,
+      "quote": "Pure Japanese cuisine at 8-seat counter offering only tasting menus at €109-139; Michelin star awarded in 2024; chef Tadayoshi Teddy Motoa guides diners through history and evolution of Japanese cuisine",
+      "quote_language": "translated from es",
+      "article_date": "2023-12-29",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastronomistas"
+      ],
+      "publications": [
+        "Gastronomistas"
+      ],
+      "writers": [
+        "Javier Sánchez / Cristina Barbero"
+      ]
+    },
+    {
+      "name": "Aredna",
+      "name_variants": [],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Lebanese",
+      "opening_year": 2024,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "hummus",
+        "arayes"
+      ],
+      "signature_dish": null,
+      "quote": "Contemporary Lebanese restaurant emphasizing seasonal ingredients and regional flavors, offering shareable plates like hummus variations and meat-filled arayes — €35 average",
+      "quote_language": "translated from es",
+      "article_date": "2024-12-20",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastronomistas"
+      ],
+      "publications": [
+        "Gastronomistas"
+      ],
+      "writers": [
+        "Javier Sánchez / Cristina Barbero"
+      ],
+      "lat": 40.4265744,
+      "lng": -3.7007642,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Aredna"
+    },
+    {
+      "name": "Coque",
+      "name_variants": [],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Contemporary Spanish (2 Michelin stars)",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "Guarda menu",
+        "seasonal ingredients from agrolab"
+      ],
+      "signature_dish": null,
+      "quote": "Chef Mario Sandoval directs this 1,100 square metre space divided into bar, wine cellar, kitchen, and dining room; the Guarda menu showcases seasonal ingredients researched in their agrolab, emphasizing sustainability — 2 Michelin stars, 1 Green Michelin star",
+      "quote_language": "translated from es",
+      "article_date": "2024-01-19",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ],
+      "lat": 40.4306865,
+      "lng": -3.6905135,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Coque"
+    },
+    {
+      "name": "El Invernadero",
+      "name_variants": [],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Gastrobotánica / vegetable haute cuisine",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "Vegetalia menu",
+        "Gastrobotánica menu"
+      ],
+      "signature_dish": null,
+      "quote": "Rodrigo de la Calle's masterpiece positions vegetables as protagonists in propuesta fina, sabrosa y técnica — tasting menus include Vegetalia and Gastrobotánica versions with vegan options",
+      "quote_language": "original",
+      "article_date": "2024-01-19",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ],
+      "lat": 40.4445956,
+      "lng": -3.6989602,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "El Invernadero Rodrigo de la Calle"
+    },
+    {
+      "name": "Kappo",
+      "name_variants": [],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Authentic Japanese (kappo)",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "fish aged 3–26 days",
+        "Omakase menu 15–20 courses"
+      ],
+      "signature_dish": null,
+      "quote": "Chef Mario Payán operates this authentic kappo space with 12-seat sushi counter; Omakase menu of 15–20 courses featuring fish aged 3–26 days, reflecting seasonal mastery and technical honesty",
+      "quote_language": "translated from es",
+      "article_date": "2024-01-19",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ]
+    },
+    {
+      "name": "Lana",
+      "name_variants": [],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Argentine parrilla",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "Aberdeen Angus",
+        "Wagyu",
+        "Hereford",
+        "Vaca Gallega"
+      ],
+      "signature_dish": null,
+      "quote": "Brothers Martín and Joaquín Narváiz direct this Argentine grill temple where la brasa es la estrella indiscutible — quality cuts including Aberdeen Angus, Wagyu, Hereford and Vaca Gallega paired with curated Argentine wines",
+      "quote_language": "original",
+      "article_date": "2024-01-19",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ],
+      "lat": 40.4412867,
+      "lng": -3.6992035,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Restaurante Lana"
+    },
+    {
+      "name": "Las Tortillas de Gabino",
+      "name_variants": [],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Spanish tortillas / traditional",
+      "opening_year": 1930,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "Velazqueña omelette (7 variants)",
+        "flan de queso brie"
+      ],
+      "signature_dish": "Velazqueña omelette",
+      "quote": "Two brothers honor their grandfather's 1930s founding with carta respaldada por un Bib Gourmand Michelin — the iconic Velazqueña omelette in seven variants alongside flan de queso brie",
+      "quote_language": "original",
+      "article_date": "2024-01-19",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ],
+      "lat": 40.4338765,
+      "lng": -3.6940077,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Las Tortillas de Gabino"
+    },
+    {
+      "name": "Pilar Akaneya",
+      "name_variants": [],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Japanese sumibiyaki",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "certified Kobe beef",
+        "Kishū Binchōtan charcoal preparation"
+      ],
+      "signature_dish": null,
+      "quote": "Madrid's first sumibiyaki restaurant using certified Kobe beef and Kishū Binchōtan charcoal from Wakayama; minimalist Japanese architecture creates un oasis de calma — voted Best Madrid Restaurant by TripAdvisor Travellers' Choice",
+      "quote_language": "original",
+      "article_date": "2024-01-19",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ],
+      "lat": 40.4405888,
+      "lng": -3.6949541,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pilar Akaneya"
+    },
+    {
+      "name": "Quimbaya by Edwin Rodríguez",
+      "name_variants": [
+        "Quimbaya"
+      ],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Colombian contemporary (1 Michelin star)",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "Memorias tasting menu"
+      ],
+      "signature_dish": null,
+      "quote": "Chef Edwin Rodríguez offers the Memorias tasting menu exploring Colombian regions with contemporary creativity — only 8 tables with views into the kitchen; 1 Michelin star, 1 Repsol sun",
+      "quote_language": "translated from es",
+      "article_date": "2024-01-19",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ]
+    },
+    {
+      "name": "Saddle Madrid",
+      "name_variants": [
+        "Saddle"
+      ],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Contemporary classic Spanish (1 Michelin star)",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "seasonal dishes",
+        "1400+ wine references"
+      ],
+      "signature_dish": null,
+      "quote": "Defined by respeto al producto y maestría en combinación de técnicas clásicas y actuales — 1 Michelin star, 2 Repsol suns, intimate private rooms and 1,400+ wine references across two floors",
+      "quote_language": "original",
+      "article_date": "2024-01-19",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ],
+      "lat": 40.427537,
+      "lng": -3.6911125,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Saddle"
+    },
+    {
+      "name": "Sala de Despiece",
+      "name_variants": [],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Spanish tapas / contemporary",
+      "opening_year": 2013,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "steak tartare served atop bone marrow",
+        "seared tuna belly tacos",
+        "beetroot carpaccio with goat cheese"
+      ],
+      "signature_dish": "steak tartare over bone marrow",
+      "quote": "Chef Javier Bonet transforms 50 square metres into a butcher-shop aesthetic offering platos originales con mejores materias primas; private Mesa de Despiece room for 12 guests",
+      "quote_language": "original",
+      "article_date": "2024-01-19",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ],
+      "lat": 40.4379178,
+      "lng": -3.6994954,
+      "geo_source": "nominatim",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Sala de Despiece"
+    },
+    {
+      "name": "Smoked Room",
+      "name_variants": [],
+      "neighbourhood": "Chamberí",
+      "cuisine": "Smoked / Japanese-influenced (2 Michelin stars)",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "Todo es humo tasting menu"
+      ],
+      "signature_dish": null,
+      "quote": "Clandestine-style restaurant within Hyatt Regency Hesperia Madrid featuring two tables and Japanese-style bar seating; Todo es humo tasting menu serves maximum 14 guests — 2 Michelin stars",
+      "quote_language": "translated from es",
+      "article_date": "2024-01-19",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Julián Acebes"
+      ],
+      "lat": 40.41936,
+      "lng": -3.6978541,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "room00 Gran Via Hostel"
+    },
+    {
+      "name": "Amós",
+      "name_variants": [],
+      "neighbourhood": "Salamanca",
+      "cuisine": "Cantabrian contemporary",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "bocarte over painted sardine with Pasiega butter",
+        "coastal anchovy"
+      ],
+      "signature_dish": null,
+      "quote": "Culmination of gastronomic genius Jesús Sánchez featuring bocarte over painted sardine with Pasiega butter and coastal anchovy — chef holds three Michelin stars at his Cenador location and won the 2022 National Gastronomy Prize",
+      "quote_language": "translated from es",
+      "article_date": "2024-01-23",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Irene S."
+      ],
+      "lat": 40.3896725,
+      "lng": -3.6642582,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Colegio de Educación Infantil y Primaria Amos Acero"
+    },
+    {
+      "name": "El Paraguas",
+      "name_variants": [],
+      "neighbourhood": "Salamanca",
+      "cuisine": "Asturian",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "verdina beans with partridge and morel mushrooms stuffed with foie"
+      ],
+      "signature_dish": "verdinas con perdiz y rebozuelos rellenos de foie",
+      "quote": "Twenty-year institution offering Asturian cuisine essence, featuring iconic verdina beans with partridge and morel mushrooms stuffed with foie representing quality and authenticity",
+      "quote_language": "translated from es",
+      "article_date": "2024-01-23",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Irene S."
+      ],
+      "lat": 40.423765,
+      "lng": -3.6856638,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "El Paraguas"
+    },
+    {
+      "name": "Haramboure",
+      "name_variants": [],
+      "neighbourhood": "Salamanca",
+      "cuisine": "Basque-French",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "bream",
+        "hake",
+        "scorpionfish",
+        "lobsters",
+        "scampi",
+        "grilled spider crab"
+      ],
+      "signature_dish": null,
+      "quote": "Chef Patxi Zumárraga's solo project featuring Cantabrian finest products: bream, hake, scorpionfish, lobsters and scampi arriving fresh, with accessible haute cuisine including seasonal grilled spider crab",
+      "quote_language": "translated from es",
+      "article_date": "2024-01-23",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Irene S."
+      ],
+      "lat": 40.4339449,
+      "lng": -3.6859003,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Restaurante Haramboure"
+    },
+    {
+      "name": "Noi Restaurante",
+      "name_variants": [
+        "NOI",
+        "Restaurante NOI Gianni Pinto"
+      ],
+      "neighbourhood": "Salamanca",
+      "cuisine": "Italian (authentic)",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "orecchiette with cuttlefish ragù",
+        "Sicilian caponata",
+        "vitello tonnato"
+      ],
+      "signature_dish": null,
+      "quote": "El Pradal group featuring Gianni Pinto's authentic reproducible-at-home recipes, from orecchiette with cuttlefish ragù to Sicilian caponata and vitello tonnato, representing 1970s Italian pop style",
+      "quote_language": "translated from es",
+      "article_date": "2024-01-23",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Irene S."
+      ],
+      "lat": 40.4220139,
+      "lng": -3.6906004,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "NOI"
+    },
+    {
+      "name": "Ramón Freixa",
+      "name_variants": [
+        "Ramón Freixa Madrid"
+      ],
+      "neighbourhood": "Salamanca",
+      "cuisine": "Contemporary Spanish (2 Michelin stars)",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "tasting menus balancing boldness and sensibility"
+      ],
+      "signature_dish": null,
+      "quote": "Two Michelin-starred restaurant deploying culinary art near Hotel Único Madrid, offering tasting menus balancing boldness and sensibility, exploring flavor authenticity in each bite — 2 stars, 3 Repsol soles",
+      "quote_language": "translated from es",
+      "article_date": "2024-01-23",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Irene S."
+      ],
+      "lat": 40.4285126,
+      "lng": -3.6862596,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Ramón Freixa"
+    },
+    {
+      "name": "Santerra",
+      "name_variants": [],
+      "neighbourhood": "Salamanca",
+      "cuisine": "La Mancha regional Spanish (1 Michelin star)",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "Monte Bajo tasting menus"
+      ],
+      "signature_dish": null,
+      "quote": "Chef Miguel Carretero elevates moorland cuisine to gourmet experience, fusing tradition and innovation, offering Monte Bajo tasting menus with extensive wine cellar — 1 Michelin star 2024",
+      "quote_language": "translated from es",
+      "article_date": "2024-01-23",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Irene S."
+      ],
+      "lat": 40.4289799,
+      "lng": -3.6782141,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Santerra"
+    },
+    {
+      "name": "Taberna Pedraza",
+      "name_variants": [],
+      "neighbourhood": "Salamanca",
+      "cuisine": "Traditional Spanish",
+      "opening_year": 2014,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "tortilla",
+        "blood pigeon grilled",
+        "Pasiega quesada"
+      ],
+      "signature_dish": "tortilla",
+      "quote": "Santiago and Carmen Pedraza's charming corner conquering with classics including incomparable tortilla and blood pigeon grilled, closing with Pasiega quesada",
+      "quote_language": "translated from es",
+      "article_date": "2024-01-23",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Irene S."
+      ],
+      "lat": 40.4221408,
+      "lng": -3.6908645,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Taberna Pedraza"
+    },
+    {
+      "name": "Tepic",
+      "name_variants": [],
+      "neighbourhood": "Salamanca",
+      "cuisine": "Mexican",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "tacos",
+        "enchiladas",
+        "Yucatecan panuchos",
+        "calabash flower",
+        "jícama",
+        "huitlacoche"
+      ],
+      "signature_dish": null,
+      "quote": "Authentic Mexican gem avoiding clichés and folklore, offering elaborate delicious cuisine: tacos, enchiladas, Yucatecan panuchos and soups featuring calabash flower, jícama and huitlacoche ingredients — Michelin Bib Gourmand",
+      "quote_language": "translated from es",
+      "article_date": "2024-01-23",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastromadrid-blog"
+      ],
+      "publications": [
+        "GastroMadrid"
+      ],
+      "writers": [
+        "Irene S."
+      ],
+      "lat": 40.4278349,
+      "lng": -3.6878943,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Tepic"
+    },
+    {
+      "name": "Triperito",
+      "name_variants": [],
+      "neighbourhood": "Salamanca",
+      "cuisine": "Peruvian / Chifa street food",
+      "opening_year": 2024,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "ceviches",
+        "tiraditos",
+        "arroces"
+      ],
+      "signature_dish": null,
+      "quote": "Roberto Martínez Foronda's street food concept at Mercado de la Paz featuring ceviches, tiraditos, and rice dishes in a ten-seat market stall designed for quick service before returning to work — €45 average",
+      "quote_language": "translated from es",
+      "article_date": "2024-12-20",
+      "open_status_check": true,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "gastronomistas"
+      ],
+      "publications": [
+        "Gastronomistas"
+      ],
+      "writers": [
+        "Javier Sánchez / Cristina Barbero"
+      ]
+    },
+    {
+      "name": "The Library",
+      "name_variants": [],
+      "neighbourhood": "Salamanca",
+      "cuisine": "Wine bar / gastronómico",
+      "opening_year": 2024,
+      "price_level": 4,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Wine bar gastronómico by chef Sandro Silva and Marta Seco featuring over 3,500 wine references and a private club; winner of TheFork's People's Choice Award 2024",
+      "quote_language": "translated from es",
+      "article_date": "2025-12-29",
+      "open_status_check": false,
+      "confidence_tier": "B",
+      "both_pool": false,
+      "source_count": 1,
+      "sources": [
+        "marie-claire-es"
+      ],
+      "publications": [
+        "Marie Claire España"
+      ],
+      "writers": [
+        "Lucía Gavela"
+      ],
+      "lat": 40.4237276,
+      "lng": -3.6899043,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "National Library of Spain"
+    }
+  ]
+}

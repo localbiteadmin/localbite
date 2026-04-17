@@ -1,0 +1,210 @@
+LocalBite Madrid — Pipeline Audit
+City: Madrid, Spain | Slug: madrid-spain | Pack date: 2026-04-17 | Pipeline: localbite-v7
+Year range: 2023–2026 | Review mode: BRIEF | Concentration cap: 30%
+================================================================================
+
+PIPELINE SUMMARY
+────────────────
+Phase 0 (direct fetch):        3 sources attempted, 1 failed (GastroMadrid — 400/451), 2 confirmed
+Phase 1 (search):              38 planned queries + 3 Phase 1B cross-validation = 41 total
+Phase 2 (fetch & extract):     7 sources confirmed, 75 restaurants extracted
+Phase 3 (score & review):      31 final entries (6 Tier A + 25 Tier B)
+User removals at review:       0 (user accepted all 31)
+Output entries:                31
+
+SOURCES TABLE
+─────────────
+ID                   Publication                Language  COI    Concentration  Writers
+gastromadrid-blog    GastroMadrid               es        no     YES (flag)     Julián Acebes; Irene S.
+gastronomistas       Gastronomistas             es        no     no             Javier Sánchez; Cristina Barbero
+timeout-madrid-en    Time Out Madrid            en        YES    no             Marta Bac
+spanish-sabores      Spanish Sabores            en        YES    no             Lauren Aloise
+elpais-gastronomia   El País Gastronomía        es        no     no             Paz Álvarez
+marie-claire-es      Marie Claire España        es        no     no             Lucía Gavela
+gastroactitud        Gastroactitud              es        no     no             José Carlos Capel
+
+WRITER PROFILES
+───────────────
+Julián Acebes (GastroMadrid, ES): GastroMadrid is Madrid's dedicated gastronomy magazine and blog,
+with Julián Acebes as its lead writer. The publication produces in-depth neighbourhood-by-neighbourhood
+guides to the capital's restaurant scene, combining practical recommendations with editorial context.
+Its Barrio guides are among the most cited Spanish-language food references for Madrid.
+
+Irene S. (GastroMadrid — Salamanca article, ES): Contributing writer at GastroMadrid who authored the
+publication's Salamanca neighbourhood guide for 2024, covering the district's restaurants with the same
+neighbourhood-first editorial approach as the primary team.
+
+Javier Sánchez / Cristina Barbero (Gastronomistas, ES): Gastronomistas is a Madrid-based food journalism
+team whose writers cover the capital's restaurant scene with a critical eye. Javier Sánchez and Cristina
+Barbero contribute restaurant recommendations, annual best-of round-ups, and neighbourhood guides, with
+a focus on new openings and international cuisine arriving in the city.
+
+Marta Bac (Time Out Madrid, EN — ⚠ COI): Marta Bac is the Editorial Director of Time Out Madrid, where
+she oversees the publication's restaurant coverage and curates its annual lists of the city's best dining
+options. Note: Time Out Group operates food markets in multiple cities including Madrid; commercial
+interests may influence restaurant recommendations.
+
+Lauren Aloise (Spanish Sabores, EN — ⚠ COI): Lauren Aloise is a trained chef and longtime Madrid
+resident who founded Spanish Sabores to document her experience eating through the Spanish capital. She
+is also co-founder of Devour Tours, a food tour company with operations in Madrid. Note: as a tour
+operator, some recommendations may reflect commercial considerations.
+
+Paz Álvarez (El País Gastronomía, ES): Paz Álvarez is a food journalist at El País, Spain's national
+newspaper of record, where she contributes restaurant profiles and gastronomic features for the paper's
+gastronomy section. Her writing combines detailed reportage on chefs and restaurants with broader
+cultural context about Madrid's evolving dining scene.
+
+Lucía Gavela (Marie Claire España, ES): Lucía Gavela is a food and lifestyle writer at Marie Claire
+España, covering the Madrid restaurant scene with a focus on innovative and design-conscious openings.
+Her restaurant recommendations highlight spaces that blend creative cooking with a strong aesthetic
+sensibility.
+
+José Carlos Capel (Gastroactitud, ES): José Carlos Capel is one of Spain's most distinguished food
+critics, who spent 35 years as the gastronomy critic for El País and is the founder and president of
+Madrid Fusión, the world-renowned annual gastronomy congress. His Gastroactitud platform publishes
+rigorous, detail-rich individual restaurant reviews from across Spain, with extensive Madrid coverage.
+
+FETCH QA SUMMARY
+────────────────
+Source               Status     Chars    Retries  Wayback  Notes
+gastromadrid-blog    good       8,500    0        no       Multi-article series (Malasaña, Chueca, Letras, Chamberí, Salamanca)
+gastronomistas       good       4,500    0        no       4 articles fetched (aperturas 2023, 2024; internacional 2024; Chueca 2023)
+timeout-madrid-en    partial    8,950    0        no       Phase 2 full re-fetch returned 404; Phase 0 + Phase 2 combined
+spanish-sabores      good       47,000   0        no
+elpais-gastronomia   good       8,500    0        no       Most article URLs returned 404 (paywall); 1 article accessible
+marie-claire-es      good       2,800    0        no
+gastroactitud        good       8,500    0        no
+
+FAILED / REJECTED SOURCES
+──────────────────────────
+gastromadrid.com      Phase 0: 400 direct fetch; 451 Wayback Legal Block. Permanently excluded.
+hollyhitstheroad.com  All articles pre-2023 (Jul 2022, Oct 2021); About page 404. Rejected.
+theinfatuation.com    best-madrid-restaurants page dated Jan 21 2022. Pre-2023. Rejected.
+conelmorrofino.com    All 3 fetch attempts returned 150–200 chars security/CAPTCHA. Permanently excluded.
+tapasmagazine.es      Byline absent on all fetched articles. No named author. Rejected.
+madridsecreto.co      Original publication date Oct 8 2021 (pre-2023). "Updated" label disregarded. Rejected.
+
+GEOGRAPHIC EXCLUSION
+─────────────────────
+elpais.com — Villa Más article (2026-03-26): restaurant located in Sant Feliu de Guíxols, Costa Brava.
+Not extracted.
+
+SIBLING EDITION CHECK
+──────────────────────
+timeout.com/madrid (EN) and timeout.es/madrid (ES): same publisher (Time Out Group); Spanish edition
+produced by same editorial team. Only timeout.com/madrid counted as source.
+
+PUBLISHER CONCENTRATION REPORT
+────────────────────────────────
+Publisher            Single-source Tier B  Cap (30% of 75)  Excess  Action
+gastromadrid-blog    43                    22               21      Auto-rejected (21 entries)
+
+Auto-rejected entries — undated (12):
+  Burnout (Chueca), Cannibal Raw Bar (Chueca), Comparte Bistró (Chueca), Hermanos Vinagre (Chueca),
+  Kuoco 360 Food (Chueca), Tampu (Chueca), CEBO (Huertas), Casa Alberto (Huertas), Triciclo (Huertas),
+  Vinoteca Moratín (Huertas), Yugo The Bunker (Huertas), Inclán Brutal Bar (Huertas)
+
+Auto-rejected entries — dated, lowest confidence (9):
+  Pez Tortilla (Malasaña), Restaurante Lamian (Malasaña), Bacira (Chamberí), Fismuler (Chamberí),
+  Lakasa (Chamberí), Soy Kitchen (Chamberí), Tripea (Chamberí), StreetXO (Salamanca), Verdejo (Salamanca)
+
+COI REPORT
+───────────
+Source               COI Flag  Reason
+timeout-madrid-en    ⚠ YES     Time Out Group operates food markets in Madrid
+spanish-sabores      ⚠ YES     Lauren Aloise is co-founder of Devour Tours (food tour operator, Madrid)
+gastromadrid-blog    clean     —
+gastronomistas       clean     —
+elpais-gastronomia   clean     —
+marie-claire-es      clean     —
+gastroactitud        clean     —
+
+COI-only entries recommended for removal (12 — all accepted by user for removal):
+  Manifesto 13, Casa Revuelta, La Casa del Abuelo, El Sobrino de Botín, Casa Lucas,
+  Taberna Tempranillo, Lambuzo, Celso y Manolo, La Sanabresa, Casa González, Casa Dani, DSTAgE
+
+Note: Angelita Madrid has COI sources (timeout-madrid-en, spanish-sabores) but also two independent
+non-COI sources (gastromadrid-blog, gastronomistas). Entry retained; ⚠coi flag noted.
+
+CONFIDENCE TIER SUMMARY
+────────────────────────
+Tier A (2+ independent sources or both-pool):  6 entries
+  Both-pool: Angelita Madrid (4 sources: EN × 2 different publishers + ES × 2 different publishers)
+  ES-pool 2-source: La Tasquería, La Barra de la Tasquería, Gioia, Roostiq, Chispa Bistró
+
+Tier B (single-source, quote quality verified):  25 entries
+  gastromadrid-blog single-source (22 retained under cap): Carmencita Brunch, La Ardosa,
+    La Tasquita de Enfrente, Coque, El Invernadero, Kappo, Lana, Las Tortillas de Gabino,
+    Pilar Akaneya, Quimbaya, Saddle Madrid, Sala de Despiece, Smoked Room, Amós, El Paraguas,
+    Haramboure, Noi Restaurante, Ramón Freixa, Santerra, Taberna Pedraza, Tepic + (none of these = 21 kept)
+
+  Wait — gastromadrid-blog Tier B final kept: Carmencita Brunch, La Ardosa, La Tasquita de Enfrente
+    (Malasaña), Coque, El Invernadero, Kappo, Lana, Las Tortillas de Gabino, Pilar Akaneya, Quimbaya,
+    Saddle Madrid, Sala de Despiece, Smoked Room (Chamberí × 10), Amós, El Paraguas, Haramboure,
+    Noi Restaurante, Ramón Freixa, Santerra, Taberna Pedraza, Tepic (Salamanca × 8) = 21 total
+
+  gastronomistas single-source: Toki (Chueca), Aredna (Chamberí), Triperito (Salamanca) = 3
+  marie-claire-es single-source: The Library (Salamanca) = 1
+
+Tier C:  0 entries
+
+NULL NEIGHBOURHOOD REMOVALS
+─────────────────────────────
+10 entries recommended for removal (null neighbourhood, single-source Tier B):
+  OSA, Pabú, Velasco&Abellà, Sen Omakase, Chez Madrid, Insurgente, Pury, Arnanz,
+  Playa Madrid 1932, Desborre
+
+CHAIN REMOVAL
+──────────────
+Kabuki Madrid — multiple Kabuki locations operating in Spain; recommended for removal.
+
+OPEN STATUS CHECK REQUIRED
+────────────────────────────
+30 of 31 final entries have open_status_check: true (sourced from 2023 or 2024 articles).
+Exception: The Library (article_date 2025-12-29) — open_status_check: false.
+
+NEIGHBOURHOOD COVERAGE — FINAL 31
+────────────────────────────────────
+Malasaña:    3  (Carmencita Brunch, La Ardosa, La Tasquita de Enfrente)
+Chueca:      5  (Angelita Madrid, Chispa Bistró, Gioia, Roostiq, Toki)
+Chamberí:   12  (La Barra de la Tasquería, La Tasquería, Aredna, Coque, El Invernadero,
+                  Kappo, Lana, Las Tortillas de Gabino, Pilar Akaneya, Quimbaya,
+                  Saddle Madrid, Sala de Despiece, Smoked Room)
+Salamanca:  11  (Amós, El Paraguas, Haramboure, Noi Restaurante, Ramón Freixa, Santerra,
+                  Taberna Pedraza, Tepic, Triperito, The Library)
+La Latina:   0  ← structural gap (only COI-only sources covered this neighbourhood)
+Huertas:     0  ← structural gap (gastromadrid-blog entries undated → concentration cap;
+                   spanish-sabores entries COI-only)
+Centro:      0  ← structural gap (spanish-sabores entries only → COI-only removal)
+Lavapiés:    0  ← no qualifying source found
+Embajadores: 0  ← no qualifying source found
+Usera:       0  ← no qualifying source found
+
+NOTE: Coverage gaps for La Latina, Huertas, and Centro reflect structural limitation of the 2026
+Madrid English-language food writing ecosystem: no qualifying non-COI EN source was found during
+41 search queries. The ES sources that covered these neighbourhoods either: (a) had undated articles
+caught by the concentration cap (gastromadrid-blog Huertas series), or (b) were exclusively from
+COI sources (spanish-sabores). This is a characteristic of this pipeline run, not an error.
+
+SEARCH LOG REFERENCE
+─────────────────────
+Full search log: localbite-madrid-search-log.txt
+  Phase 0: lines 3–13
+  Phase 1 queries A-01 through B-18: lines 14–52
+  Phase 1B cross-validation: lines 54–57
+  COI checks: lines 58–64
+  Sibling check: line 66
+  Phase 2 failure summary: appended section
+  Phase 3 analysis: appended section
+
+OUTPUT FILES
+─────────────
+localbite-madrid-search-plan.txt       Phase 1 search plan (38 queries, year distribution check)
+localbite-madrid-search-log.txt        Full execution log (Phase 0 through Phase 3)
+localbite-madrid-working.json          All 75 extracted entries with tier scoring and removal flags
+localbite-madrid-raw.json              Copy of working JSON (all 75 entries)
+localbite-madrid-2023-2026-v7rebuild.json  Final output — 31 approved entries, production format
+localbite-madrid-audit.txt             This file
+
+================================================================================
+End of audit — LocalBite Madrid 2023-2026 v7rebuild — generated 2026-04-17
