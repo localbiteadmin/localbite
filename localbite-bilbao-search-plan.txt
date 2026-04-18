@@ -1,0 +1,90 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LOCALBITE BILBAO SEARCH PLAN — v7 pipeline
+City: Bilbao, Spain | Year range: 2023-2026
+Generated: 2026-04-18
+
+YEAR DISTRIBUTION PRE-CHECK:
+Queries referencing earlier years (2023-2024): 10
+Queries referencing later years (2025-2026): 11
+Queries with no year term: 12
+[year-distribution-check] PASSED — 10 queries reference earlier years (2023/2024), 11 queries reference recent years (2025/2026), 12 queries have no year term.
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
+
+TIER 1 — Casco Viejo
+A-01 [ES] mejores restaurantes Casco Viejo Bilbao recomendaciones gastronomía 2023 2024
+A-02 [EN] best restaurants Casco Viejo Bilbao food guide critic 2025 2026
+
+TIER 1 — Ensanche
+A-03 [ES] dónde comer bien Ensanche Bilbao guía gastronómica 2025
+A-04 [EN] Ensanche Bilbao restaurants recommended food writer 2023 2024
+
+TIER 1 — Abando
+A-05 [ES] restaurantes recomendados Abando Bilbao crítica gastronómica 2024
+A-06 [EN] best places to eat Abando Bilbao food guide 2025 2026
+
+TIER 2 — Indautxu
+A-07 [ES] restaurantes Indautxu Bilbao guía gastronomía 2023 2024
+A-08 [EN] Indautxu Bilbao restaurant guide recommendations 2025
+
+TIER 2 — Deusto
+A-09 [ES] mejores bares restaurantes Deusto Bilbao 2025
+A-10 [EN] Deusto Bilbao where to eat food guide 2024
+
+TIER 2 — San Francisco
+A-11 [ES] restaurantes barrio San Francisco Bilbao 2023 2024
+A-12 [EN] San Francisco neighbourhood Bilbao dining food recommendations 2025
+
+TIER 3 — Zorrozaurre
+A-13 [ES] restaurantes Zorrozaurre Bilbao gastronómica dónde comer
+
+TIER 3 — Basurto
+A-14 [ES] comer Basurto Bilbao restaurantes recomendados
+
+TIER 3 — Begoña
+A-15 [ES] restaurantes Begoña Bilbao donde comer guía
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries)
+B-01 [EN] best restaurants Bilbao 2025 2026 food critic guide honest
+B-02 [EN] where to eat in Bilbao Spain local expert recommendations personal
+
+Cross-2 — City-wide ES (3 queries)
+B-03 [ES] mejores restaurantes Bilbao 2025 guía crítica gastronómica
+B-04 [ES] dónde comer Bilbao recomendaciones vecino bloguero 2023 2024
+B-05 [ES] Bilbao restaurantes periodismo gastronómico selección 2024 2025
+
+Cross-3 — Generic writer-first (2 queries)
+B-06 [ES] escritor gastronómico Bilbao blog recomendaciones restaurantes
+B-07 [EN] food writer Bilbao restaurant recommendations personal blog guide
+
+Cross-4 — Named awards (3 queries)
+B-08 [ES] Premio Euskadi Gastronomía 2024 2025 ganadores restaurantes Bilbao
+B-09 [ES] Soles Repsol País Vasco 2024 2025 Bilbao restaurantes premiados
+B-10 [ES] San Sebastián Gastronomika Premio Revelación 2023 2024 Bilbao chef
+
+Cross-5 — Recent openings (2 queries)
+B-11 [ES] nuevas aperturas restaurantes Bilbao 2024 2025 inauguración
+B-12 [EN] new restaurant openings Bilbao 2025 2026 best newcomers
+
+Cross-6 — Vocabulary-specific ES (2 queries)
+B-13 [ES] mejores pintxos Bilbao txikiteo bares recomendados 2024 2025
+B-14 [ES] bodegón sidrería sagardotegia Bilbao restaurante recomendado menú del día
+
+Cross-7 — Cuisine and community (2 queries)
+B-15 [ES] restaurante japonés asiático Bilbao recomendación crítica gastronómica
+B-16 [ES] cocina creativa moderna Bilbao chef joven revelación 2024 2025
+
+Cross-8 — Publication-category ES (2 queries)
+B-17 [ES] revista gastronómica independiente Bilbao mejores restaurantes selección
+B-18 [ES] suplemento gastronomía periódico vasco restaurantes Bilbao recomendados
+
+════════════════════════════════════════
+TOTAL PLANNED QUERIES: 33 (well within soft ceiling of 45)
+════════════════════════════════════════

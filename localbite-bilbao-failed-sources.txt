@@ -1,0 +1,96 @@
+LOCALBITE BILBAO FAILED SOURCES — v7 pipeline
+City: Bilbao, Spain | PACK_DATE: 2026-04-18
+
+════════════════════════════════════════
+PHASE 0 — PRE-CONFIGURED SOURCES (FAILED)
+════════════════════════════════════════
+
+elcorreo.com/gastronomia/
+  Reason: Hub/portal page; no dated restaurant-guide articles; no named food critic confirmed
+
+elpais.com/espana/pais-vasco/
+  Reason: General Basque Country news section; no food content found
+
+════════════════════════════════════════
+PHASE 1 — CANDIDATES VERIFIED AND REJECTED
+════════════════════════════════════════
+
+bi-aste.com
+  Article: pintxos article, Aug 2023
+  Reason: No named author on article or About page
+
+viajeroscallejeros.com
+  Article: multiple Bilbao neighbourhood articles
+  Reason: No named author anywhere on site
+
+theslowcyclist.com
+  Article: Bilbao food article found (Tim Moore, author confirmed)
+  Reason: Single article; no food-writing credential established; insufficient qualifying restaurants
+
+samiraholma.com
+  Author: Samira Holma
+  Article: Bilbao food article found
+  Reason: No qualifying quotes — restaurants mentioned without specific dish detail
+
+deia.eus / ondavasca.com
+  Article: Jan 2025 gastronomy article referencing Bikote Foodie blog (Dani García)
+  Reason: Author not confirmed with full first name + surname at article level
+
+theobjective.com (Marine Landreau, Mar 2025)
+  Article: Bilbao restaurant article
+  Reason: Promotional tone; no critical quotes qualifying for extraction
+
+theobjective.com (Brenda Alonso, Aug 2023)
+  Article: Bilbao restaurant article
+  Reason: Content reads as formulaic/AI-generated; no genuine editorial voice
+
+gastronosfera.com
+  Article: Multiple Bilbao articles
+  Reason: No named author on Bilbao content
+
+bilbaoclick.com
+  Article: Multiple Bilbao neighbourhood articles
+  Reason: Aggregator-style content; no named author
+
+yendoporlavida.com
+  Article: Bilbao restaurant articles
+  Reason: No named author found
+
+polloasaoconensalada.com
+  Article: Ensanche and Indautxu Bilbao articles
+  Reason: No named author found
+
+euskoguide.com
+  Article: Indautxu Bilbao food content
+  Reason: No named author found
+
+════════════════════════════════════════
+PHASE 1B — CROSS-VALIDATION SEARCHES (no new sources)
+════════════════════════════════════════
+
+"Gure Toki Bilbao recomendacion critica" → TripAdvisor, Yelp, Foursquare, booking aggregators only
+"Zarate Bilbao recomendacion critica restaurante" → tapasmagazine.es (no author), TheFork, TripAdvisor, Guía Repsol
+"Victor Montes Bilbao recomendacion critica restaurante" → TripAdvisor, Frommers, guide-du-paysbasque.com
+
+════════════════════════════════════════
+PHASE 3 — CONCENTRATION CAP DROPS
+════════════════════════════════════════
+
+Aitor Rauleaga Jatetxea (src-lqcdm-cubillo)
+  Reason: Concentration cap — src-lqcdm-cubillo at 33.3% of pool; lowest-confidence entry: no named chef in entry; quote describes general cooking style without dish-level specifics
+
+Batzoki de Miribilla (src-lqcdm-cubillo)
+  Reason: Concentration cap — dishes_mentioned contains only generic menu types (menú degustación, menú diario); no specific dish names; peripheral neighbourhood (Miribilla)
+
+════════════════════════════════════════
+USER REMOVAL (Phase 3 review)
+════════════════════════════════════════
+
+Le Chocolat (src-aa-hood)
+  Reason: User removed — bakery/café, not a restaurant
+
+════════════════════════════════════════
+NOTE: Structural characteristic
+════════════════════════════════════════
+
+Bilbao's food blog ecosystem has a high incidence of anonymous authorship. The majority of Spanish-language dining sites and local food blogs reviewed during Phase 1 did not credit named authors. This prevented reaching the 6-source minimum. 5 sources were confirmed. Diversity gate passed (2 EN primaries, 2 ES primaries, 1 EN secondary).

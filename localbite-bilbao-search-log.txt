@@ -1,0 +1,57 @@
+LOCALBITE BILBAO SEARCH LOG — v7 pipeline
+City: Bilbao, Spain | Year range: 2023-2026
+Started: 2026-04-18
+
+[phase-0] "https://www.elcorreo.com/gastronomia/" → FAILED — hub/portal page, no dated restaurant-guide articles, no named food critic confirmed
+[phase-0] "https://elpais.com/espana/pais-vasco/" → FAILED — general Basque Country news section, no food content
+
+[neighbourhood-CascoViejo] "mejores restaurantes Casco Viejo Bilbao recomendaciones gastronomía 2023 2024" → bilbaoclick.com, bi-aste.com (Oct 2023), guiarepsol.com, viajeroscallejeros.com, salir.com among results; bi-aste.com and viajeroscallejeros.com flagged for verification
+[neighbourhood-CascoViejo] "best restaurants Casco Viejo Bilbao food guide critic 2025 2026" → appetitesabroad.com, theculturetrip.com, discoverdonosti.com, underthesuntravels.com among results; appetitesabroad.com, culinarybackstreets.com flagged
+[neighbourhood-Ensanche] "dónde comer bien Ensanche Bilbao guía gastronómica 2025" → polloasaoconensalada.com, latroupe.com (Sep 2025), viajeroscallejeros.com, soyunblogdeviajes.com among results
+[neighbourhood-Ensanche] "Ensanche Bilbao restaurants recommended food writer 2023 2024" → thediscoveriesof.com, theculturetrip.com, theslowcyclist.com, wanderlog.com among results; theslowcyclist.com noted but Wanderlog/TheFork excluded
+[neighbourhood-Abando] "restaurantes recomendados Abando Bilbao crítica gastronómica 2024" → infobae.com (Apr 2024), bilbaoclick.com, yendoporlavida.com among results
+[neighbourhood-Abando] "best places to eat Abando Bilbao food guide 2025 2026" → appetitesabroad.com, culinarybackstreets.com, timeout.com, underthesuntravels.com among results; culinarybackstreets.com flagged for verification
+[neighbourhood-Indautxu] "restaurantes Indautxu Bilbao guía gastronomía 2023 2024" → polloasaoconensalada.com (same blog as Ensanche), debilbaopues.com, gastronosfera.com among results
+[neighbourhood-Indautxu] "Indautxu Bilbao restaurant guide recommendations 2025" → euskoguide.com, theculturetrip.com, tripadvisor among results; euskoguide.com noted
+[neighbourhood-Deusto] "mejores bares restaurantes Deusto Bilbao 2025" → latroupe.com, bilbaoclick.com, tabernadedeusto.com among results
+[neighbourhood-Deusto] "Deusto Bilbao where to eat food guide 2024" → bilbaoinsider.com, theweek.com, appetitesabroad.com, underthesuntravels.com, vagrantappetite.com among results; theweek.com flagged for verification
+[neighbourhood-SanFrancisco] "restaurantes barrio San Francisco Bilbao 2023 2024" → yendoporlavida.com, bilbaoclick.com, paginasamarillas.es among results; thin results for this specific neighbourhood
+[neighbourhood-SanFrancisco] "San Francisco neighbourhood Bilbao dining food recommendations 2025" → timetomomo.com, theculturetrip.com among results; thin results
+[neighbourhood-Zorrozaurre] "restaurantes Zorrozaurre Bilbao gastronómica dónde comer" → bilbaodiferente.wordpress.com (2014, out of range), viajeroscallejeros.com, bilbaoclick.com among results; Zorrozaurre-specific content very sparse
+[neighbourhood-Basurto] "comer Basurto Bilbao restaurantes recomendados" → repuebla.me, viajeroscallejeros.com, organizotuviaje.com among results; Basurto-specific content sparse
+[neighbourhood-Begoña] "restaurantes Begoña Bilbao donde comer guía" → tripadvisor, viajeroscallejeros.com among results; Begoña-specific content sparse
+[cross-1] "best restaurants Bilbao 2025 2026 food critic guide honest" → tripadvisor, thefork, appetitesabroad.com, theworlds50best.com, verybilbao.com among results
+[cross-1] "where to eat in Bilbao Spain local expert recommendations personal" → appetitesabroad.com, globalphile.com, thingstodoinbilbao.com, samiraholma.com among results; samiraholma.com flagged
+[cross-2] "mejores restaurantes Bilbao 2025 guía crítica gastronómica" → ondavasca.com/deia.eus (Jan 2025, references Bikote Foodie blog), latroupe.com (Sep 2025), yendoporlavida.com, bonviveur.com, portalbilbao.com among results; deia.eus article flagged
+[cross-2] "dónde comer Bilbao recomendaciones vecino bloguero 2023 2024" → gastronosfera.com, viajeroscallejeros.com, theobjective.com (Aug 2023), cometeelmundo.net among results; theobjective.com (2023) flagged
+[cross-2] "Bilbao restaurantes periodismo gastronómico selección 2024 2025" → deia.eus (Jan 2025), theobjective.com (Mar 2025), bonviveur.com, facefoodmag.com among results; theobjective.com (Mar 2025) flagged for verification
+[cross-3] "escritor gastronómico Bilbao blog recomendaciones restaurantes" → ondavasca.com/deia.eus (Bikote Foodie), appvelada.com (mentions Igor Cubillo), bilbaoclick.com among results; Igor Cubillo loquecomadonmanuel.com confirmed
+[cross-3] "food writer Bilbao restaurant recommendations personal blog guide" → appetitesabroad.com, thehappyjetlagger.com (Tatiana, no surname), samiraholma.com, olivemagazine.com (Esme Fox, 2019 out of range) among results
+[cross-4] "Premio Euskadi Gastronomía 2024 2025 ganadores restaurantes Bilbao" → irekia.euskadi.eus, basquetour.eus, mantala.eus, 7canibales.com among results; no specific Bilbao restaurant editorial articles found
+[cross-4] "Soles Repsol País Vasco 2024 2025 Bilbao restaurantes premiados" → deia.eus (award news Mar 2024, Mar 2025), elespanol.com, gastroeconomy.com among results; coverage confirms Amaren, Islares named for Bilbao
+[cross-4] "San Sebastián Gastronomika Premio Revelación 2023 2024 Bilbao chef" → academiavascadegastronomia.com, gastroactitud.com, 7canibales.com among results; no Bilbao-specific award editorial articles found
+[cross-5] "nuevas aperturas restaurantes Bilbao 2024 2025 inauguración" → lariadelocio.es, ilovebilbao.com, deia.eus among results; no new qualifying sources
+[cross-5] "new restaurant openings Bilbao 2025 2026 best newcomers" → latroupe.com (404), timeout.com, appetitesabroad.com among results; no new qualifying sources
+[cross-6] "mejores pintxos Bilbao txikiteo bares recomendados 2024 2025" → deia.eus (Feb 2024, Oct 2024), bilbaohiria.com (2024), ilovebilbao.com, tapasypintxos.com (Jan 2025) among results; bilbaohiria.com CONFIRMED (Mairenis Gómez, Jun 2024)
+[cross-6] "bodegón sidrería sagardotegia Bilbao restaurante recomendado menú del día" → bilbaosagardotegi.com, bilbaosecreto.com, lariadelocio.es among results; no new qualifying sources
+[cross-7] "restaurante japonés asiático Bilbao recomendación crítica gastronómica" → almabotxera.com (jorge, 2019, out of range), bilbaoclick.com among results; no new qualifying sources
+[cross-7] "cocina creativa moderna Bilbao chef joven revelación 2024 2025" → huleymantel.com, regijatetxea.com, verybilbao.com among results; no new qualifying sources
+[cross-8] "revista gastronómica independiente Bilbao mejores restaurantes selección" → bilbon.biz, gastronosfera.com, 7canibales.com (no author confirmed), bonviveur.com among results; no new qualifying sources
+[cross-8] "suplemento gastronomía periódico vasco restaurantes Bilbao recomendados" → bi-aste.com (Aug 2023, no author confirmed), disfrutabilbao.com, viajeroscallejeros.com, verybilbao.com among results; no new qualifying sources
+
+[phase-1b-crossval] "Gure Toki Bilbao recomendacion critica" → TripAdvisor, Yelp, Foursquare, booking aggregators only — no new qualifying editorial sources
+[phase-1b-crossval] "Zarate Bilbao recomendacion critica restaurante" → tapasmagazine.es (no author), TheFork, TripAdvisor, Guía Repsol — no new qualifying sources
+[phase-1b-crossval] "Victor Montes Bilbao recomendacion critica restaurante" → TripAdvisor, Frommers, guide-du-paysbasque.com — no new qualifying sources
+
+[stopping-rule] triggered after 33 planned queries + 3 Phase 1B queries — last 12+ consecutive verification attempts returned no qualifying new sources
+
+ACCEPTED SOURCES:
+[coi-check] Culinary Backstreets — commercial conflict: NO
+[coi-check] bilbaohiria.com — commercial conflict: NO
+[coi-check] appetitesabroad.com — commercial conflict: NO
+[coi-check] theweek.com — commercial conflict: NO
+[coi-check] loquecomadonmanuel.com — commercial conflict: NO
+[single-author-confirmed] Appetites Abroad — About page confirms Moani Hood as sole author. Article-level byline not required.
+[single-author-confirmed] Lo que Coma Don Manuel — Igor Cubillo is director and founder, consistent first-person voice throughout. Article-level byline confirmed.
+
+STRUCTURAL CHARACTERISTIC: The majority of Bilbao food blogs and Spanish-language dining sites do not credit named authors. 6-source minimum target not achieved; 5 sources confirmed. Documented as structural characteristic of Bilbao's food blog ecosystem.

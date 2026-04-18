@@ -1,0 +1,169 @@
+LOCALBITE BILBAO AUDIT — v7 pipeline
+City: Bilbao, Spain | CITY_SLUG: bilbao-spain | PACK_DATE: 2026-04-18
+Year range: 2023-2026 | REVIEW_MODE: BRIEF
+
+════════════════════════════════════════
+SECTION 1 — CONFIRMED SOURCES
+════════════════════════════════════════
+
+src-cb-buckley
+  Publication: Culinary Backstreets
+  Author: Marti Buckley
+  Article: "The Essentials: Where to Eat in Bilbao, Spain"
+  URL: culinarybackstreets.com
+  Date: 2025-12-12
+  Language: EN
+  Type: Primary
+  COI check: PASS — no commercial conflict
+  Author confirmation: Named byline on article
+  open_status_check: false (2025 article)
+
+src-bh-gomez
+  Publication: bilbaohiria.com
+  Author: Mairenis Gómez
+  Article: "De pintxos por Bilbao: 10 bares imprescindibles en 2024"
+  Date: 2024-06-04
+  Language: ES
+  Type: Primary
+  COI check: PASS — no commercial conflict
+  Author confirmation: Named byline on article
+  open_status_check: true (2024 article, pre-2025)
+
+src-aa-hood
+  Publication: Appetites Abroad
+  Author: Moani Hood
+  Article: "Savoring Bilbao: A Foodie's Guide on Where to Eat in Bilbao, Spain"
+  Date: 2025-08-21
+  Language: EN
+  Type: Secondary (personal travel blog, no food-writing credential confirmed)
+  COI check: PASS — no commercial conflict
+  Author confirmation: Single-author rule — About page confirms Moani Hood as sole author
+  open_status_check: false (2025 article)
+
+src-week-forshaw
+  Publication: The Week
+  Author: Irenie Forshaw
+  Article: "A foodie guide to Bilbao"
+  Date: 2024-06-04
+  Language: EN
+  Type: Primary
+  COI check: PASS — no commercial conflict
+  Author confirmation: Named byline on article
+  open_status_check: true (2024 article, pre-2025)
+
+src-lqcdm-cubillo
+  Publication: Lo que Coma Don Manuel (loquecomadonmanuel.com)
+  Author: Igor Cubillo
+  Article: "Mis mejores restaurantes de Bilbao"
+  Date: 2025-12-30
+  Language: ES
+  Type: Primary
+  COI check: PASS — no commercial conflict
+  Author confirmation: Igor Cubillo is director and founder; consistent first-person voice; article-level byline confirmed
+  open_status_check: false (2025 article)
+
+SOURCE DIVERSITY GATE:
+  EN primaries: 2 (src-cb-buckley, src-week-forshaw) ✓
+  ES primaries: 2 (src-bh-gomez, src-lqcdm-cubillo) ✓
+  EN secondary: 1 (src-aa-hood) ✓
+  Total sources: 5 (minimum 6 not achieved — documented as structural characteristic of Bilbao food blog ecosystem; anonymous authorship is pervasive)
+  Diversity gate: PASS (2 EN + 2 ES primaries)
+
+════════════════════════════════════════
+SECTION 2 — PHASE 0 FAILURES
+════════════════════════════════════════
+
+elcorreo.com/gastronomia/ — hub/portal page, no dated restaurant-guide articles, no named food critic
+elpais.com/espana/pais-vasco/ — general Basque Country news section, no food content
+
+════════════════════════════════════════
+SECTION 3 — REJECTED CANDIDATES (Phase 1 verification)
+════════════════════════════════════════
+
+bi-aste.com — pintxos article Aug 2023; no named author found on article or About page; REJECT: no byline
+viajeroscallejeros.com — multiple articles; no named author anywhere on site; REJECT: no byline
+appetitesabroad.com — see ACCEPTED (Moani Hood confirmed via single-author rule)
+culinarybackstreets.com — see ACCEPTED
+theslowcyclist.com — travel blog; Bilbao article found; no food-writing credential; author name: Tim Moore; REJECT: insufficient food-writing credential for primary; not promoted to secondary — single article with few qualifying restaurants
+samiraholma.com — personal travel blog; author Samira Holma; Bilbao article found; no restaurants with qualifying quotes; REJECT: insufficient quote quality
+deia.eus — Jan 2025 article references Bikote Foodie blog (Dani García, no surname confirmed at article level); REJECT: author not confirmed with full name
+theobjective.com (Mar 2025, Marine Landreau) — article promotional in tone; no critical quotes; REJECT: quote quality
+theobjective.com (Aug 2023, Brenda Alonso) — content reads as formulaic/AI-generated; no genuine editorial voice; REJECT: quote quality
+gastronosfera.com — no named author on Bilbao articles; REJECT: no byline
+bilbaoclick.com — aggregator-style content, no named author; REJECT: no byline
+yendoporlavida.com — multiple articles; no named author; REJECT: no byline
+polloasaoconensalada.com — no named author; REJECT: no byline
+euskoguide.com — no named author on Bilbao food content; REJECT: no byline
+theweek.com — see ACCEPTED (Irenie Forshaw confirmed)
+
+════════════════════════════════════════
+SECTION 4 — EXTRACTION-TIME AUTO-REJECTS (Phase 2)
+════════════════════════════════════════
+
+From src-aa-hood (secondary — required 2+ specific details per entry):
+  Sorginzulo — 0 specific details; REJECT
+  Singular — 0 specific details; REJECT
+  Cafe Bilba (Café Bar Bilbao variant) — 1 specific detail (location only); REJECT
+  Berton — 1 specific detail; REJECT
+  HDH Bilbao — 1 specific detail; REJECT
+  Txokomex — 0 specific details; REJECT
+  Baster — 1 specific detail; REJECT
+  Lurrina — 1 specific detail; REJECT
+  La Olla — 1 specific detail; REJECT
+  La Ribera Market — excluded: not a restaurant (market)
+  Hotel Tayko Bar — excluded: not a restaurant (hotel bar)
+
+════════════════════════════════════════
+SECTION 5 — PHASE 3 DECISIONS
+════════════════════════════════════════
+
+MERGES APPLIED (source-array updates):
+  Asador Indusi: sources → ["src-cb-buckley", "src-lqcdm-cubillo"] | both-pool | Tier A
+  Txakoli Simón: sources → ["src-cb-buckley", "src-lqcdm-cubillo"] | both-pool | Tier A
+  Víctor Montes: sources → ["src-bh-gomez", "src-lqcdm-cubillo"] | es-pool | Tier A
+  Zarate: sources → ["src-week-forshaw", "src-lqcdm-cubillo"] | both-pool | Tier A
+
+CONCENTRATION CAP CHECK:
+  Cap: 30% of total Tier A+B
+  Pre-cap totals: 42 entries, 4 Tier A, 38 Tier B
+  src-lqcdm-cubillo single-source Tier B: 14
+  14/42 = 33.3% → OVER CAP
+  Required drops: solve (14−D)/(42−D) ≤ 0.30 → D ≥ 2
+  Entries dropped (lowest-confidence):
+    Aitor Rauleaga Jatetxea — no named chef in entry; quote describes cooking style without specific dish names attributed to a chef; weakest confidence in pool
+    Batzoki de Miribilla — dishes_mentioned contains only generic menu types (menú degustación, menú diario); no specific dishes named; peripheral neighbourhood
+  Post-cap: src-lqcdm-cubillo contributes 12/40 = 30.0% ✓
+
+TIER SUMMARY (post-cap):
+  Tier A: 4 (Asador Indusi, Txakoli Simón, Víctor Montes, Zarate)
+  Tier B: 36
+  Total in OUTPUT_RAW: 40
+
+════════════════════════════════════════
+SECTION 6 — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
+
+Casco Viejo: 17 entries (Taberna Basaras, Bodega Joserra, Gure Toki, Rio-Oja, Irrintzi, Bikandi Etxea, Café Bar Bilbao, Bar Charly, Bacaicoa, Baste, Fermín, Motrikes, Con B de Bilbao, Víctor Montes, Taska Beltz, Le Chocolat, Los Fueros, Mina, Ola Martín Berasategui)
+Abando: 16 entries (Café Iruña, Txakoli Simón, Bar El Eme, Berton, Nerua Guggenheim Bilbao, Casa Rufo, Amaren, El Arandia de Julen, La Despensa del Etxanobe, Kuma, Lasai, Porrue, Serantes I, Waman, Yandiola)
+Ensanche: 4 entries (La Viña del Ensanche, El Globo, Lucky Baster)
+Indautxu: 2 entries (Asador Indusi, Zarate)
+Begoña: 1 entry (Kate Zaharra)
+Miribilla: 0 (Batzoki de Miribilla dropped by cap)
+
+Underrepresented: Deusto, San Francisco, Basurto, Zorrozaurre, Uribarri, Txurdinaga, Otxarkoaga, Rekalde, Ibaiondo — no qualifying sources found for these neighbourhoods
+
+════════════════════════════════════════
+SECTION 7 — OPEN STATUS FLAGS
+════════════════════════════════════════
+
+13 entries flagged open_status_check: true (all from 2024 articles — src-bh-gomez and src-week-forshaw):
+  From src-bh-gomez (2024-06-04): Café Bar Bilbao, Bar Charly, Bacaicoa, Baste, Berton, Fermín, Motrikes, Con B de Bilbao, Víctor Montes
+  From src-week-forshaw (2024-06-04): La Viña del Ensanche, El Globo, Casa Rufo, Kate Zaharra, Zarate, Nerua Guggenheim Bilbao
+
+Note: Zarate is Tier A (both-pool). Víctor Montes is Tier A (es-pool). Both still require open-status verification before publication.
+
+════════════════════════════════════════
+SECTION 8 — FLAGGED FOR REVIEW
+════════════════════════════════════════
+
+Le Chocolat — classified as "Bakery / café"; not a sit-down restaurant; user should confirm inclusion

@@ -1,0 +1,29 @@
+{
+  "city": "Bilbao",
+  "country": "Spain",
+  "total": 39,
+  "found": 38,
+  "hit_rate_pct": 97,
+  "nominatim": 33,
+  "photon": 5,
+  "already": 0,
+  "not_found": 1,
+  "orphans": 0,
+  "high_confidence": 31,
+  "medium_confidence": 7,
+  "verify_recommended": 7,
+  "centroid_fallback": 1,
+  "not_found_names": [
+    "Waman"
+  ],
+  "orphan_names": [],
+  "medium_names": [
+    "Café Iruña",
+    "Bar El Eme",
+    "Lucky Baster",
+    "Kate Zaharra",
+    "Nerua Guggenheim Bilbao",
+    "La Despensa del Etxanobe",
+    "Serantes I"
+  ]
+}
