@@ -1,0 +1,74 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Bilbao
+COUNTRY: Spain
+CITY_SLUG: bilbao-spain
+PACK_DATE: 2026-04-18
+PIPELINE: localbite-v7
+
+YEAR_RANGE: 2023-2026
+
+PRIMARY_LANGUAGE: Spanish (ES)
+SECONDARY_LANGUAGE: English (EN)
+SINGLE_LANGUAGE_CITY: NO
+
+PRICE_CURRENCY: EUR
+PRICE_LEVELS:
+- 1 = under €20pp
+- 2 = €20–40pp
+- 3 = €40–80pp
+- 4 = over €80pp
+
+TIER_1_NEIGHBOURHOODS:
+Casco Viejo, Ensanche, Abando
+
+TIER_2_NEIGHBOURHOODS:
+Indautxu, Deusto, San Francisco
+
+TIER_3_NEIGHBOURHOODS:
+Zorrozaurre, Basurto, Begoña
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Casco Viejo, Ensanche, Abando, Indautxu, Deusto, San Francisco,
+Begoña, Basurto, Zorrozaurre, Miribilla, Txurdinaga, Uribarri,
+Otxarkoaga, Rekalde, Ibaiondo
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+San Sebastián, Donostia, Vitoria-Gasteiz, Getxo, Barakaldo,
+Portugalete, or any location described as "outside Bilbao",
+"near Bilbao", "day trip from Bilbao", or another Basque city.
+Greater Bilbao (Gran Bilbao) municipalities are excluded unless
+the article explicitly describes the restaurant as part of the
+Bilbao city dining scene.
+
+NAMED_AWARDS:
+Premio Euskadi de Gastronomía, Soles Repsol País Vasco,
+San Sebastián Gastronomika Premio Revelación
+
+LOCAL_FOOD_VOCABULARY:
+pintxos, txikiteo, bodegón, sagardotegia, sidrería, menú del día
+
+DIRECT_FETCH_SOURCES:
+- El Correo Gastronomía — https://www.elcorreo.com/gastronomia/
+- El País País Vasco — https://elpais.com/espana/pais-vasco/
+
+COMMERCIAL_CONFLICTS_NOTED:
+None known.
+
+CONCENTRATION_CAP: 30%
+
+RIAD_RULE: SKIP
+
+KNOWN_PROBLEMATIC_URLS:
+- gastronomistas.com (returns 1.6MB pages, causes session failures)
+
+OUTPUT_SEARCH_PLAN: ./localbite-bilbao-search-plan.txt
+OUTPUT_SEARCH_LOG: ./localbite-bilbao-search-log.txt
+OUTPUT_RAW: ./localbite-bilbao-raw.json
+OUTPUT_WORKING: ./localbite-bilbao-working.json
+OUTPUT_FINAL: ./localbite-bilbao-2023-2026.json
+OUTPUT_AUDIT: ./localbite-bilbao-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-bilbao-failed-sources.txt

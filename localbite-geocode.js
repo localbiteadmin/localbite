@@ -74,6 +74,7 @@ const CITY_BOXES = {
   'Malaga':       { latMin: 36.68, latMax: 36.76, lngMin:  -4.48, lngMax:  -4.33 },
   'Madrid':       { latMin: 40.35, latMax: 40.50, lngMin:  -3.75, lngMax:  -3.60 },
   'Seville':      { latMin: 37.30, latMax: 37.45, lngMin:  -6.05, lngMax:  -5.90 },
+  'Bilbao':       { latMin: 43.22, latMax: 43.32, lngMin:  -3.05, lngMax:  -2.80 },
 };
 
 const COUNTRY_BOXES = {
