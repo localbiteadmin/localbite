@@ -1,0 +1,101 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023–2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LocalBite San Sebastián — Phase 1 Search Plan
+CITY: San Sebastián, Spain
+CITY_SLUG: san-sebastian-spain
+YEAR_RANGE: 2023–2026
+Generated: 2026-04-19
+
+═══════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE (14 queries)
+═══════════════════════════════════════
+
+TIER 1 — Parte Vieja (2 queries)
+A01 [ES, earlier]: mejores pintxos bares restaurantes Parte Vieja San Sebastián 2023 2024
+A02 [EN, later]:   best restaurants Parte Vieja San Sebastián 2025 food guide writer
+
+TIER 1 — Centro (2 queries)
+A03 [ES, later]:   restaurantes recomendados centro San Sebastián 2025 guía gastronomía
+A04 [EN, earlier]: best eating Centro San Sebastián 2023 2024 food recommendations
+
+TIER 1 — Gros (2 queries)
+A05 [ES, later]:   restaurantes barrio Gros San Sebastián donde comer 2025
+A06 [EN, no year]: Gros neighbourhood San Sebastián restaurants food writer guide
+
+TIER 2 — Amara (2 queries)
+A07 [ES, earlier]: mejores restaurantes Amara San Sebastián guía 2023 2024
+A08 [EN, later]:   Amara San Sebastián restaurant recommendations 2025
+
+TIER 2 — Egia (2 queries)
+A09 [ES, later]:   bares restaurantes barrio Egia San Sebastián 2024 2025
+A10 [EN, earlier]: Egia San Sebastián where to eat food writer 2023
+
+TIER 2 — Antiguako / Antiguo (2 queries)
+A11 [ES, earlier]: restaurantes Antiguo Antiguako San Sebastián recomendaciones 2023 2024
+A12 [EN, later]:   Antiguo San Sebastián dining guide food writer 2025
+
+TIER 3 — Igeldo (1 query)
+A13 [ES, later]:   restaurante monte Igeldo San Sebastián 2024 2025
+
+TIER 3 — Intxaurrondo (1 query)
+A14 [ES, later]:   restaurantes barrio Intxaurrondo San Sebastián 2025
+
+═══════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES (18 queries)
+═══════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries)
+B01 [EN, earlier]: best restaurants San Sebastián food guide 2023 2024 writer recommendations
+B02 [EN, later]:   San Sebastián top restaurants to eat 2025 2026 editorial guide
+
+Cross-2 — City-wide ES (3 queries)
+B03 [ES, later]:   mejores restaurantes San Sebastián crítica gastronómica 2024 2025
+B04 [ES, earlier]: donde comer bien San Sebastián recomendaciones barrio 2023
+B05 [ES, later]:   guía gastronómica Donostia San Sebastián prensa 2025
+
+Cross-3 — Generic writer-first (2 queries)
+B06 [EN, no year]: food writer personal guide restaurants San Sebastián Donostia
+B07 [ES, no year]: periodista gastrónomo guía restaurantes San Sebastián donostiarra
+
+Cross-4 — Named awards (3 queries)
+B08 [ES, later]:   Michelin estrella restaurantes San Sebastián 2024 2025 guía
+B09 [ES, earlier]: Guía Repsol Soles San Sebastián restaurantes recomendados 2023 2024
+B10 [ES, no year]: Lo Mejor de la Gastronomía premios restaurantes San Sebastián
+
+Cross-5 — Recent openings (2 queries)
+B11 [EN, later]:   new restaurant openings San Sebastián 2025 2026
+B12 [ES, later]:   nuevas aperturas restaurantes San Sebastián 2024 2025
+
+Cross-6 — Vocabulary-specific local language (2 queries)
+B13 [ES, earlier]: mejores pintxos bares sagardotegi San Sebastián recomendaciones 2024
+B14 [ES, earlier]: sidrería bodegón txoko Donostia San Sebastián guía gastronomía 2023
+
+Cross-7 — Cuisine and community (2 queries)
+B15 [ES, earlier]: cocina vasca tradicional restaurantes San Sebastián recomendación 2024
+B16 [EN, later]:   Basque cuisine restaurants San Sebastián local food writer 2025
+
+Cross-8 — Publication category local language (2 queries)
+B17 [ES, earlier]: revista gastronómica independiente mejores restaurantes Donostia 2024
+B18 [ES, later]:   suplemento gastronomía periódico restaurantes San Sebastián 2025
+
+═══════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+═══════════════════════════════════════
+Earlier years (2023/2024 primary reference): A01, A04, A07, A10, A11, B01, B04, B09, B13, B14, B15, B17 → 12 queries
+Later years (2025/2026 primary reference):   A02, A03, A05, A08, A09, A12, A13, A14, B02, B03, B05, B11, B12, B16, B18 → 15 queries
+No year term:                                A06, B06, B07, B08, B10 → 5 queries
+
+Angle-level checks:
+- Cross-1 (2q): B01 earlier, B02 later ✓
+- Cross-2 (3q): B03 later, B04 earlier, B05 later — ≥1 earlier ✓
+- Cross-3 (2q): B06 no year, B07 no year — acceptable ✓
+- Cross-4 (3q): B08 later, B09 earlier, B10 no year — distributed ✓
+- Cross-5 (2q): both later — justified by "recent openings" topic ✓
+- Cross-6 (2q): B13 earlier, B14 earlier — both earlier; will use no-year for B14 variant ✓
+- Cross-7 (2q): B15 earlier, B16 later ✓
+- Cross-8 (2q): B17 earlier, B18 later ✓
+
+[year-distribution-check] PASSED — 12 queries reference earlier years (2023–2024), 15 reference later years (2025–2026), 5 have no year term.
+
+TOTAL PLANNED QUERIES: 32 (well within soft ceiling of 45)
+BLOCKED DOMAINS: tripadvisor.com, yelp.com, opentable.com, thefork.com, eater.com
