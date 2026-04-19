@@ -1,0 +1,80 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+Change only this section for each new city.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: San Sebastián
+COUNTRY: Spain
+CITY_SLUG: san-sebastian-spain
+PACK_DATE: 2026-04-19
+YEAR_RANGE: 2023–2026
+
+PRIMARY_LANGUAGE: Spanish (ES)
+SECONDARY_LANGUAGE: English (EN)
+SINGLE_LANGUAGE_CITY: NO
+
+PRICE_CURRENCY: EUR
+PRICE_LEVELS:
+- 1 = under €15 pp (pintxo bar / sidrería / casual)
+- 2 = €15–40 pp (mid-range / traditional)
+- 3 = €40–80 pp (upscale / contemporary Basque)
+- 4 = over €80 pp (fine dining / Michelin)
+
+TIER_1_NEIGHBOURHOODS:
+Parte Vieja, Centro, Gros
+
+TIER_2_NEIGHBOURHOODS:
+Amara, Egia, Antiguako
+
+TIER_3_NEIGHBOURHOODS:
+Igeldo, Intxaurrondo
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Parte Vieja, Centro, Gros, Amara, Amara Berri, Egia,
+Antiguako, Igeldo, Intxaurrondo, Loiola, Martutene,
+Miraconcha, Ondarreta, Aiete, Benta Berri
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Biarritz, Bayonne, Hondarribia, Getaria, Zarautz,
+Bilbao, Vitoria-Gasteiz, Pamplona, or any location
+described as "near San Sebastián", "day trip from
+San Sebastián", or another Basque or Spanish city.
+Exclude any restaurant in France regardless of proximity.
+
+NAMED_AWARDS:
+Michelin Guide España Portugal,
+Guía Repsol,
+50 Best Restaurants Spain,
+Lo Mejor de la Gastronomía
+
+DIRECT_FETCH_SOURCES:
+(Leave blank — no pre-known article-level URLs confirmed
+for this run. Phase 0 will be skipped.)
+
+LOCAL_FOOD_VOCABULARY:
+pintxo, pintxos, sagardotegi (cider house), txakoli,
+bodegón, txoko, sidrería, poteo (pintxo bar crawl)
+
+COMMERCIAL_CONFLICTS_NOTED:
+None known at time of writing.
+
+KNOWN_PROBLEMATIC_URLS:
+- tripadvisor.com (aggregator — reject)
+- yelp.com (aggregator — reject)
+- opentable.com (booking platform — reject)
+- thefork.com (booking platform — reject)
+- eater.com/maps (aggregator map format — reject)
+
+RIAD_RULE: SKIP
+
+CONCENTRATION_CAP: 30%
+
+UNATTENDED_MODE: YES
+
+OUTPUT_SEARCH_PLAN:   ./localbite-san-sebastian-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-san-sebastian-search-log.txt
+OUTPUT_RAW:           ./localbite-san-sebastian-raw.json
+OUTPUT_WORKING:       ./localbite-san-sebastian-working.json
+OUTPUT_FINAL:         ./localbite-san-sebastian-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-san-sebastian-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-san-sebastian-failed-sources.txt
