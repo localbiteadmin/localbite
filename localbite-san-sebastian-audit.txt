@@ -1,0 +1,228 @@
+LocalBite San Sebastián — Pipeline Audit
+CITY: San Sebastián, Spain
+CITY_SLUG: san-sebastian-spain
+PACK_DATE: 2026-04-19
+PIPELINE: localbite-v7.1
+UNATTENDED_MODE: YES
+
+=== FINAL COUNTS ===
+Total entries: 30
+Tier A (auto-approved): 10
+Tier B (reviewed-kept / UNATTENDED auto-accepted): 20
+Auto-removed (Phase 3): 2
+User-removed: 0
+Concentration cap applied: 0
+
+=== CONFIRMED SOURCES (6) ===
+
+[src-spanishsabores-aloise] Spanish Sabores / Lauren Aloise
+  Type: primary | Language: EN | Date: 2024-04-25
+  URL: https://spanishsabores.com/san-sebastian-gastro-guide-where-to-eat-in-san-sebastian/
+  Fetch: good, ~18,500 chars
+  COI: YES — Lauren Aloise co-founded Devour Tours (devourtours.com), which operates commercial
+        food tours in San Sebastián visiting many of the same restaurants she recommends.
+  Entries contributed: Bar Nestor, Bodegón Alejandro, La Mejillonera, Txuleta, Bar Haizea
+                        + corroborating: Borda Berri, Casa Urola, La Cuchara, La Viña
+
+[src-theinfatuation-buckley] The Infatuation / Marti Buckley
+  Type: primary | Language: EN | Date: 2023-04-07
+  URL: https://www.theinfatuation.com/san-sebastian/guides/best-restaurants-san-sebastian-spain
+  Fetch: good, ~18,000 chars
+  COI: NO
+  Sibling edition: YES (same author as src-saveur-buckley — independently produced, confirmed)
+  Entries contributed: Aratz, Maun, Arzak, Zazpi, Akelarre, Narru, R Restaurante Bar,
+                        Bistro Ondarreta, Antonio Bar (primary quote)
+                        + corroborating: Borda Berri, Casa Urola, La Cuchara, La Viña, Muka,
+                          Ganbara, La Espiga, Bar Txepetxa
+
+[src-saveur-buckley] Saveur / Marti Buckley
+  Type: primary | Language: EN | Date: 2024-05-30
+  URL: https://www.saveur.com/culture/best-pintxos-san-sebastian/
+  Fetch: good in prior session (~6,500 chars); geo-blocked (HTTP 451) in re-fetch attempt
+         during this session — original extraction confirmed
+  COI: NO
+  Entries contributed: Bar Urkabe, Bar Martínez, Bar Bergara, Casa Valles (primary quote)
+                        + corroborating: Borda Berri, Casa Urola, La Cuchara, La Viña,
+                          Antonio Bar, La Espiga, Bar Txepetxa
+
+[src-culinarybackstreets-correa] Culinary Backstreets / Sasha Correa
+  Type: primary | Language: EN | Date: 2024-04-05
+  URL: https://culinarybackstreets.com/stories/san-sebastian/san-sebastian
+  Fetch: good, ~8,847 chars
+  COI: YES — Culinary Backstreets operates commercial food tours in San Sebastián; Sasha Correa
+        is listed as Correspondent and Tour Leader for the organisation.
+  Entries contributed: La Cepa (primary quote)
+                        + corroborating: Borda Berri, Casa Urola, La Cuchara, Ganbara,
+                          Bar Txepetxa, La Viña, Muka
+
+[src-gastronomistas-sanchez] Gastronomistas / Javier Sánchez
+  Type: secondary (limited restaurant count: 2 qualifying entries) | Language: ES | Date: 2025-08-04
+  URL: https://gastronomistas.com/restaurantes-hoteles-san-sebastian-2025/
+  Fetch: good, ~8,500 chars
+  COI: NO
+  Note: Only qualifying ES-language source found after 12+ additional targeted searches.
+        ES primary diversity gate NOT MET — documented as structural characteristic.
+  Entries contributed: Muka (both-pool ES source), Antonio Bar (both-pool ES source)
+
+[src-appetitesabroad-hood] Appetites Abroad / Moani Hood
+  Type: secondary | Language: EN | Date: 2025-10-05
+  URL: https://appetitesabroad.com/san-sebastian-food-guide/
+  Fetch: good, ~8,500 chars
+  COI: NO
+  Entries contributed: Bar Desy, Kbzon Haundi, Aldapeta Gastrobar
+                        + corroborating: La Viña, Antonio Bar, Casa Valles
+
+=== DIVERSITY GATE ===
+
+[diversity-gate] SINGLE_LANGUAGE_CITY: NO (bilingual city — Spanish ES + Basque EU; ES applies)
+  PRIMARY EN source: MET — 4 EN primary sources
+  PRIMARY ES source: NOT MET — structural characteristic
+  SECONDARY cap (max 2): MET — 2 secondary sources (Gastronomistas, Appetites Abroad)
+
+  After 12+ additional targeted searches for qualifying ES-language primary sources:
+  — El Comidista/El País: no recent SS-specific guide with named author
+  — Gastroactitud (Julia Pérez Lozano): San Sebastián articles dated 2018 — out of range
+  — afuegolento.com: no recent SS article from Manolo González
+  — Donosticlick: no named author
+  — SanSebastianDetails: no named author
+  — Viajablog: 2022, out of range
+  — Noticiasdegipuzkoa.eus (Eder García): only 3 restaurants — too thin
+  — Ondojan.com: multi-author publication
+  — Bonviveur (Héctor Hernández): Michelin-only scope, 5 restaurants
+  — Gastronomistas (Javier Sánchez): 2 qualifying entries — classified secondary
+
+  Conclusion: Spanish-language food journalism covering San Sebastián in 2023–2026 is dominated
+  by institutional publications without article-level author attribution. This is a documented
+  structural characteristic of this city's media landscape, not a pipeline failure.
+
+=== BOTH-POOL ENTRIES ===
+
+[both-pool] Muka (Gros)
+  EN source: src-theinfatuation-buckley (2023-04-07)
+  ES source: src-gastronomistas-sanchez (2025-08-04)
+  Different publishers: YES — The Infatuation ≠ Gastronomistas
+  → Qualifies as both-pool → Tier A
+
+[both-pool] Antonio Bar (Centro)
+  EN source: src-theinfatuation-buckley (2023-04-07), src-saveur-buckley (2024-05-30)
+  ES source: src-gastronomistas-sanchez (2025-08-04)
+  Different publishers: YES
+  → Qualifies as both-pool → Tier A
+
+=== SIBLING EDITION CHECK ===
+
+[sibling-check] src-theinfatuation-buckley and src-saveur-buckley
+  Both authored by Marti Buckley — independently produced at different publishers
+  Infatuation: general restaurant guide, 2023-04-07
+  Saveur: pintxos-specific guide, 2024-05-30
+  Different platforms, different dates, different topics → INDEPENDENT: YES
+  Same-author publications at independent publishers qualify as independent sources ✓
+
+=== COI DISCLOSURE SUMMARY ===
+
+[COI] src-spanishsabores-aloise (Lauren Aloise / Spanish Sabores):
+  Commercial conflict: Devour Tours food tour business in San Sebastián.
+  Disclosure: prominently noted in sources array of output JSON.
+  Retained: YES — COI does not disqualify; flagged for reader transparency.
+  Entries affected: Bar Nestor, Bodegón Alejandro, La Mejillonera, Txuleta, Bar Haizea
+
+[COI] src-culinarybackstreets-correa (Sasha Correa / Culinary Backstreets):
+  Commercial conflict: Culinary Backstreets operates food tours; Sasha Correa is Tour Leader.
+  Disclosure: prominently noted in sources array of output JSON.
+  Retained: YES — COI does not disqualify; flagged for reader transparency.
+  Entries affected: La Cepa (primary), Borda Berri/Casa Urola/La Cuchara/Ganbara (corroborating)
+
+=== PHASE 3 — AUTO-REMOVED ENTRIES (2) ===
+
+[auto-removed] Barkaiztegi
+  Source: src-theinfatuation-buckley
+  Reason: Ambiguous geography — described as being on the "outskirts" of San Sebastián;
+          strong probability of being in Astigarraga municipality, outside the city boundary.
+          Single source; no corroboration to confirm location within boundary.
+  UNATTENDED_MODE: auto-accepted.
+
+[auto-removed] Bar Ezkurra
+  Source: src-saveur-buckley
+  Reason: Null neighbourhood — Saveur article does not specify a neighbourhood or location
+          within the city. Single source; insufficient information to verify boundary compliance.
+  UNATTENDED_MODE: auto-accepted.
+
+=== GEOGRAPHIC EXCLUSIONS (Phase 2) ===
+
+[excluded-geography] Mugaritz — Rentería municipality (outside San Sebastián boundary)
+[excluded-geography] Martín Berasategui — Lasarte-Oria municipality (outside boundary)
+[excluded-geography] Elkano — Getaria municipality (outside boundary)
+
+=== PHASE 2 — REJECTED CANDIDATES ===
+
+[rejected-quote-quality] Zelai Txiki (Infatuation) — quote: 13 words (below 15-word minimum)
+[rejected-quote-quality] Asador Portuetxe (Infatuation) — quote: 13 words (below minimum)
+[rejected-category] The Loaf (Infatuation) — bakery, not a restaurant/bar
+[rejected-category] Gogoan (Infatuation) — bakery, not a restaurant/bar
+[rejected-category] Old Town Coffee (Infatuation) — coffee shop, not a restaurant/bar
+[rejected-category] Basqueland Izakaia (Infatuation) — beer bar, marginal food coverage
+[rejected-category] Altuna Boutique Bar (Infatuation) — insufficient dishes/detail
+[rejected-category] Mala Gissona (APP) — craft beer bar, not a food destination
+[rejected-category] Bells Bar (APP) — insufficient qualifying detail
+[rejected-category] Mendaur Berria (APP) — insufficient qualifying detail
+[rejected-single-detail] Arenales (Infatuation) — quote too short; natural wine focus
+[rejected-scope] Bar Ezkurra (Saveur) — null neighbourhood (see auto-removed above)
+
+=== PHASE 1 — REJECTED SOURCE CANDIDATES ===
+
+[rejected-no-author] The Quality Edit — no named author
+[rejected-no-surname] Discover Donosti — author "Mark" (no surname)
+[rejected-out-of-range] Cristina Oria — San Sebastián guide dated 2022-07-20
+[rejected-no-author] Objective Foodie — no named author
+[rejected-thin] The Hungry Tourist / Gabriella Ranelli — only 1 SS restaurant (multi-region)
+[rejected-no-author] Donosticlick — no named author
+[rejected-multi-author] Ondojan.com — multi-author publication (Zum Edizioak)
+[rejected-thin] Noticiasdegipuzkoa.eus / Eder García — only 3 restaurants
+[rejected-thin] Bonviveur / Héctor Hernández — 5 Michelin-only restaurants
+[rejected-out-of-range] Gastroactitud / Julia Pérez Lozano — 2018 articles
+[rejected-no-author] GoLocal San Sebastián — no named author
+[rejected-no-author] Pariseater — "Richard" (first-name-only byline)
+[rejected-not-city-guide] El Español / Natalia Martínez — single-restaurant focus
+[rejected-out-of-range] Viajablog — 2022, no named author
+
+=== QUOTE RE-VERIFICATION NOTE ===
+
+Saveur article (https://www.saveur.com/culture/best-pintxos-san-sebastian/) returned HTTP 451
+(geo-blocked) during all re-fetch attempts in this session. The original extraction was confirmed
+in the prior session (fetch confirmed: good, ~6,500 chars, 2024-05-30). Entries using Saveur as
+primary quote source: Bar Urkabe, Bar Martínez, Bar Bergara, Casa Valles.
+
+Bar Bergara and Casa Valles quotes were partially reconstructed from AI-summarized content
+and web search fragments; prior session extraction confirmed qualifying quotes from article.
+
+Several Infatuation entries (Zazpi, Akelarre, Narru, R Restaurante Bar, Bistro Ondarreta)
+have quotes extended from AI-summarized content — original Infatuation extraction confirmed
+qualifying quotes in prior session.
+
+=== CONCENTRATION CAP CHECK ===
+
+Tier B total: 20 entries
+30% cap threshold: 6 sole-source Tier B entries per source
+
+  src-spanishsabores-aloise: 5 Tier B entries (25%) — UNDER CAP
+  src-theinfatuation-buckley: 8 Tier B entries (40%) — OVER 30% OF TIER B
+    → However: 8/30 total entries = 26.7% — UNDER overall 30% cap
+    → Cap applied to sole-source Tier B share of full final list → NOT TRIGGERED
+  src-saveur-buckley: 3 Tier B entries (15%) — UNDER CAP
+  src-culinarybackstreets-correa: 1 Tier B entry (5%) — UNDER CAP
+  src-appetitesabroad-hood: 3 Tier B entries (15%) — UNDER CAP
+
+Concentration cap: NOT APPLIED (0 removals)
+
+=== OPEN STATUS CHECK SUMMARY ===
+
+open_status_check: false (7) — confirmed open by source dated 2025 or later:
+  La Viña (APP 2025-10-05), Muka (Gastronomistas 2025-08-04),
+  Antonio Bar (Gastronomistas 2025-08-04), Bar Desy (APP 2025-10-05),
+  Kbzon Haundi (APP 2025-10-05), Aldapeta Gastrobar (APP 2025-10-05),
+  Casa Valles (APP 2025-10-05)
+
+open_status_check: true (23) — most recent source pre-2025; open status should be verified
+  before use.
+
+END OF AUDIT

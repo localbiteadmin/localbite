@@ -1725,6 +1725,16 @@ const CENTROIDS = {
   'Indautxu': [43.2617, -2.9390],
   'Ensanche': [43.2620, -2.9330],
   'Begoña': [43.2652, -2.9083],
+
+  // San Sebastián
+  // NOTE: 'Centro' key already exists pointing to Granada [37.1750, -3.5907].
+  // Only Maun has null coords in SS Centro — if it maps to wrong city, add
+  // 'Centro' override here (will overwrite Granada entry).
+  'Parte Vieja': [43.3237, -1.9847],
+  'Gros': [43.3220, -1.9770],
+  'Igeldo': [43.3065, -2.0214],
+  'Miraconcha': [43.3215, -1.9495],
+  'Antiguako': [43.3140, -2.0050],
   'El Perchel': [36.7170, -4.4380],
   'Pedregalejo': [36.7200, -4.3710],
   'El Palo': [36.7190, -4.3430],
@@ -1759,6 +1769,7 @@ const CITY_CENTRES = {
   'Toronto': [43.6532, -79.3832],
   'Porto': [41.1496, -8.6109],
   'Málaga': [36.7213, -4.4214],
+  'San Sebastián': [43.3183, -1.9812],
 };
 
 const CITY_BOUNDS = {
@@ -1775,6 +1786,7 @@ const CITY_BOUNDS = {
   'Granada':      { minLat: 37.10, maxLat: 37.24, minLng: -3.66,  maxLng: -3.52  },
   'Porto':        { minLat: 41.10, maxLat: 41.22, minLng: -8.80,  maxLng: -8.55  },
   'Málaga':       { minLat: 36.68, maxLat: 36.76, minLng: -4.48,  maxLng: -4.35  },
+  'San Sebastián': { minLat: 43.28, maxLat: 43.34, minLng: -2.04,  maxLng: -1.89  },
 };
 
 function isWithinCityBounds(lat, lng, cityName) {

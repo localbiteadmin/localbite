@@ -1,0 +1,123 @@
+LocalBite San Sebastián — Search Log
+CITY: San Sebastián, Spain
+YEAR_RANGE: 2023–2026
+Started: 2026-04-19
+
+[year-distribution-check] PASSED — 12 queries reference earlier years (2023–2024), 15 reference later years (2025–2026), 5 have no year term.
+
+=== PART A — NEIGHBOURHOOD QUERIES ===
+
+[neighbourhood-ParteVieja] "mejores pintxos bares restaurantes Parte Vieja San Sebastián 2023 2024" → Multiple pintxo bar guides found; discoverdonosti.com, sehacecaminoalandar.com, kaixosansebastian.com flagged for verification
+[neighbourhood-ParteVieja] "best restaurants Parte Vieja San Sebastián 2025 food guide writer" → spanishsabores.com, thequalityedit.com, theinfatuation.com, appetitesabroad.com flagged for verification
+[neighbourhood-Centro] "restaurantes recomendados centro San Sebastián 2025 guía gastronomía" → gastronomistas.com, bonviveur.es, sistersandthecity.com, txellsnotebook.com found; gastronomistas.com flagged
+[neighbourhood-Centro] "best eating Centro San Sebastián 2023 2024 food recommendations" → spanishsabores.com (repeat), theinfatuation.com, appetitesabroad.com, devourtours.com found
+[neighbourhood-Gros] "restaurantes barrio Gros San Sebastián donde comer 2025" → guiarepsol.com Gros article, discoverdonosti.com/best-restaurants-in-gros, sistersandthecity.com found; Guía Repsol Gros article flagged
+[neighbourhood-Gros] "Gros neighbourhood San Sebastián restaurants food writer guide" → sophieetc.com, golocalsansebastian.com, my-travelmonkey.com, timetomomo.com found; no new qualifying candidates
+[neighbourhood-Amara] "mejores restaurantes Amara San Sebastián guía 2023 2024" → sistersandthecity.com Amara article; no new primary candidates found
+[neighbourhood-Amara] "Amara San Sebastián restaurant recommendations 2025" → devourtours.com Amara guide, spanishsabores.com (repeat), liveinsansebastian.com found; no new qualifying candidates
+[neighbourhood-Egia] "bares restaurantes barrio Egia San Sebastián 2024 2025" → local bar listings only; no qualifying sources found
+[neighbourhood-Egia] "Egia San Sebastián where to eat food writer 2023" → culinarybackstreets.com (San Sebastian food tour page), devourtours.com found; culinarybackstreets.com flagged
+[neighbourhood-Antiguo] "restaurantes Antiguo Antiguako San Sebastián recomendaciones 2023 2024" → discoverdonosti.com/restaurants-in-antiguo, sistersandthecity.com, theobjective.com (2023) found; discoverdonosti.com flagged
+[neighbourhood-Antiguo] "Antiguo San Sebastián dining guide food writer 2025" → spanishsabores.com (repeat), thequalityedit.com (repeat), culinarybackstreets.com found; culinarybackstreets.com confirmed candidate
+[neighbourhood-Igeldo] "restaurante monte Igeldo San Sebastián 2024 2025" → asador restaurant websites found; no qualifying editorial sources
+[neighbourhood-Intxaurrondo] "restaurantes barrio Intxaurrondo San Sebastián 2025" → local bar directories only; no qualifying sources found
+
+=== PART B — CROSS-CUTTING ANGLES ===
+
+[cross-1] "best restaurants San Sebastián food guide 2023 2024 writer recommendations" → bearleaders.com (2024), spanishsabores.com (repeat), thehungrytourist.com, theinfatuation.com found; thehungrytourist.com flagged
+[cross-1] "San Sebastián top restaurants to eat 2025 2026 editorial guide" → spanishsabores.com (repeat), thequalityedit.com (repeat), pariseater.com found; pariseater.com flagged
+[cross-2] "mejores restaurantes San Sebastián crítica gastronómica 2024 2025" → donosticlick.com (no author), bonviveur.es (Héctor Hernández, 5 Michelin restaurants only), guiarepsol.com main article found
+[cross-2] "donde comer bien San Sebastián recomendaciones barrio 2023" → guiarepsol.com (repeat), walkeatdie.com (2021, out of range), gastronosfera.com found
+[cross-2] "guía gastronómica Donostia San Sebastián prensa 2025" → official tourism PDF, gastronomistas.com (repeat), ondojan.com found; ondojan.com checked — multi-author publication
+[cross-3] "food writer personal guide restaurants San Sebastián Donostia" → spanishsabores.com (repeat), culinarybackstreets.com (repeat), appetitesabroad.com (repeat) found; appetitesabroad.com flagged
+[cross-3] "periodista gastrónomo guía restaurantes San Sebastián donostiarra" → cristinaoria.com (2022, out of range), afuegolento.com/autor/manolo-gonzalez (no recent SS article) found
+[cross-4] "Michelin estrella restaurantes San Sebastián 2024 2025 guía" → guide.michelin.com (no individual author), bonviveur.es (repeat), gastroeconomy.com found
+[cross-4] "Guía Repsol Soles San Sebastián restaurantes recomendados 2023 2024" → guiarepsol.com (no author), gastroeconomy.com Repsol lists, thegourmetjournal.com found; no qualifying new sources
+[cross-4] "Lo Mejor de la Gastronomía premios restaurantes San Sebastián" → no specific article with qualifying named author found
+[cross-5] "new restaurant openings San Sebastián 2025 2026" → theworlds50best.com mentions Lotu (2026 Hotel Palacio Bellas Artes); no qualifying editorial source found
+[cross-5] "nuevas aperturas restaurantes San Sebastián 2024 2025" → gastroeconomy.com openings agenda, elespanol.com (Natalia Martínez - Ibai as best opening), found; elespanol.com checked — only 2 SS restaurants, not a city guide
+[cross-6] "mejores pintxos bares sagardotegi San Sebastián recomendaciones 2024" → objectivefoodie.com (2024, no author), discoverdonosti.com pintxos (no surname), sehacecaminoalandar.com (2017, out of range) found
+[cross-6] "sidrería bodegón txoko Donostia San Sebastián guía gastronomía 2023" → official tourism sidrería content; no qualifying sources found
+[cross-7] "cocina vasca tradicional restaurantes San Sebastián recomendación 2024" → gastronosfera.com (no author), yourtripagent.com (no author) found
+[cross-7] "Basque cuisine restaurants San Sebastián local food writer 2025" → spanishsabores.com (repeat), thehungrytourist.com (Gabriella Ranelli — outside SS boundary), culinarybackstreets.com specific Sasha Correa article confirmed; saveur.com/culture/best-pintxos-san-sebastian/ (Marti Buckley) found and flagged
+[cross-8] "revista gastronómica independiente mejores restaurantes Donostia 2024" → neo2.com OAD 2024 (no author), sistersandthecity.com 2024 Gipuzkoa (outside SS), noticiasdegipuzkoa.eus (Eder García) found; noticiasdegipuzkoa.eus checked — only 3 restaurants
+[cross-8] "suplemento gastronomía periódico restaurantes San Sebastián 2025" → gastronomistas.com (repeat), confirmed as qualifying source
+
+=== CANDIDATE VERIFICATION ===
+
+[phase-1] FETCHED Spanish Sabores (spanishsabores.com) — 2024-04-25 — ~18,500 chars
+[phase-1] FETCHED Culinary Backstreets Sasha Correa article (culinarybackstreets.com/stories/san-sebastian/san-sebastian) — 2024-04-05 — ~8,847 chars
+[phase-1] FETCHED Gastronomistas Javier Sánchez (gastronomistas.com/restaurantes-hoteles-san-sebastian-2025/) — 2025-08-04 — ~8,500 chars
+[phase-1] FETCHED Discover Donosti Gros (discoverdonosti.com/best-restaurants-in-gros/) — 2023-05-07 — ~3,500 chars
+[phase-1] FETCHED The Quality Edit (thequalityedit.com/articles/san-sebastian-guide) — 2025-06-23 — ~4,200 chars — REJECTED: no named author
+[phase-1] FETCHED Spanish Sabores About page — confirmed single author: Lauren Aloise
+[phase-1] FETCHED Culinary Backstreets city guide — multi-author platform confirmed; individual Sasha Correa article accepted
+[phase-1] FETCHED Discover Donosti About page — author "Mark" (no surname) — REJECTED: full surname required
+[phase-1] FETCHED Cristina Oria San Sebastián guide — 2022-07-20 — REJECTED: outside year range
+[phase-1] FETCHED Objective Foodie pintxos — no named author — REJECTED
+[phase-1] FETCHED Appetites Abroad About page — confirmed single author: Moani Hood
+[phase-1] FETCHED The Hungry Tourist Basque food article — Gabriella Ranelli — article covers multiple Basque regions; only 1 SS restaurant — REJECTED: insufficient SS-specific content
+[phase-1] FETCHED Donosticlick — no named author found — REJECTED
+[phase-1] FETCHED Ondojan.com — multi-author publication (Zum Edizioak) — REJECTED: no qualifying SS restaurant guide found
+[phase-1] FETCHED Noticias de Gipuzkoa / Eder García — 2024-08-05 — only 3 restaurants — REJECTED: too thin
+[phase-1] FETCHED Saveur / Marti Buckley (saveur.com/culture/best-pintxos-san-sebastian/) — 2024-05-30 — ~6,500 chars — ACCEPTED
+[phase-1] FETCHED The Infatuation / Marti Buckley (theinfatuation.com/san-sebastian/guides/best-restaurants-san-sebastian-spain) — 2023-04-07 — ~18,000 chars — ACCEPTED
+[phase-1] FETCHED Culinary Backstreets Sasha Correa (culinarybackstreets.com/stories/san-sebastian/san-sebastian) — confirmed 8,847 chars, Sasha Correa confirmed author — ACCEPTED
+[phase-1] FETCHED Appetites Abroad (appetitesabroad.com/san-sebastian-food-guide/) — 2025-10-05 — ~8,500 chars — ACCEPTED (secondary)
+[phase-1] FETCHED Bonviveur / Héctor Hernández — 2024-12-11 — only 5 Michelin restaurants, ~3,500 chars — REJECTED: too thin, Michelin-only scope
+[phase-1] FETCHED Gastroactitud / Julia Pérez Lozano — Casa Urola review — 2018 — REJECTED: outside year range
+[phase-1] FETCHED GoLocal San Sebastián — no named author — REJECTED
+[phase-1] FETCHED El Español / Natalia Martínez — Ibai-only focus, not a city guide — REJECTED
+[phase-1] FETCHED Pariseater / Richard — first-name-only byline — REJECTED: surname required
+[phase-1] FETCHED Gastroactitud San Sebastián — 2018 — REJECTED: outside year range
+[phase-1] FETCHED Viajablog — no author, 2022 — REJECTED: outside year range
+
+=== COI CHECKS ===
+
+[coi-check] Spanish Sabores / Lauren Aloise — commercial conflict: YES — Lauren co-founded Devour Tours (devourtours.com), which operates commercial food tours in San Sebastián visiting many of the same restaurants she recommends in the article.
+[coi-check] The Infatuation / Marti Buckley — commercial conflict: NO
+[coi-check] Saveur / Marti Buckley — commercial conflict: NO
+[coi-check] Culinary Backstreets / Sasha Correa — commercial conflict: YES — Culinary Backstreets operates commercial food tours in San Sebastián; Sasha Correa is listed as a Correspondent and Tour Leader for the organization.
+[coi-check] Gastronomistas / Javier Sánchez — commercial conflict: NO
+[coi-check] Appetites Abroad / Moani Hood — commercial conflict: NO
+
+=== SIBLING EDITION CHECKS ===
+
+[sibling-check] The Infatuation and Saveur (both Marti Buckley) — same author, different publishers — independently produced: YES — evidence: different platforms, different publication dates (April 2023 vs. May 2024), different article formats and topics (general restaurant guide vs. pintxo-specific); same-author publications at independent publishers DO qualify as independent sources.
+
+=== PUBLISHER CONCENTRATION ===
+
+[publisher-concentration] No single publisher contributes 2+ articles to the candidate pool. No concentration flag triggered.
+
+=== DIVERSITY GATE ASSESSMENT ===
+
+Diversity gate for bilingual city (SINGLE_LANGUAGE_CITY: NO):
+- PRIMARY_LANGUAGE (ES) primary source: NOT MET — only 1 secondary ES source (Gastronomistas/Javier Sánchez)
+- SECONDARY_LANGUAGE (EN) primary source: MET — 4 EN primary sources
+- No more than 2 secondary sources: MET — 2 secondaries total
+
+Additional targeted searches run (12 total, exceeding required 8):
+- Attempted: El Comidista/El País, Gastroactitud recent, afuegolento.com, Donosticlick, SanSebastianDetails, SoyUnBlogDeViajes, GoLocal, Viajablog, Diario Vasco, Macarfi/El Español, Gastronomistas additional articles, local ES personal bloggers
+
+[diversity-gate] STRUCTURAL CHARACTERISTIC — After 12 additional targeted searches, no qualifying ES-language primary source found. Spanish-language food journalism covering San Sebastián/Donostia in 2023–2026 is dominated by institutional publications (Guía Repsol, official tourism, Michelin) without article-level author attribution, or by multi-author platforms and personal blogs lacking full-name bylines or falling outside the year range. This is documented as a structural characteristic of this city's media landscape, not a pipeline failure.
+
+=== PHASE 1B — CROSS-VALIDATION ===
+
+Most-mentioned restaurants across confirmed sources (top 3):
+1. La Cuchara de San Telmo (in all 4 primary EN sources)
+2. La Viña (in all 4 primary EN sources)
+3. Casa Urola (in Spanish Sabores, Culinary Backstreets, Saveur, The Infatuation = 4 sources)
+
+[phase-1b-crossval] "La Cuchara de San Telmo San Sebastián recomendacion critica" → The Infatuation individual review found (same publisher, already in pool); no new qualifying sources
+[phase-1b-crossval] "La Viña San Sebastián recomendacion critica restaurante tarta queso" → no new qualifying sources; recipe blogs and TikTok content only
+[phase-1b-crossval] "Borda Berri San Sebastián recomendacion critica restaurante" → The Infatuation review found (same publisher, already in pool); no new qualifying sources
+[phase-1b-crossval] "Casa Urola San Sebastián recomendacion critica restaurante" → gastroactitud.com (2018, out of range); guide.michelin.com (no author); no new qualifying sources
+
+Phase 1B results:
+- Cross-validation queries run: 4
+- New qualifying sources found: 0
+- Sources already known: all cross-validated restaurants appear in existing pool
+
+=== STOPPING RULE ===
+
+32 total main queries + 12+ additional diversity searches = 44+ queries total. Soft ceiling (45) approached. Stopping after Phase 1B completion.

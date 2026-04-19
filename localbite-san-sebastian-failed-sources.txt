@@ -1,0 +1,108 @@
+LocalBite San Sebastián — Failed Source Candidates
+CITY: San Sebastián, Spain
+DATE: 2026-04-19
+
+This file documents all source candidates that were found during Phase 1 searches
+but failed one or more qualifying criteria and were not included in the confirmed
+source pool.
+
+=== FAILED CANDIDATES ===
+
+[FAILED] The Quality Edit
+  URL checked: https://thequalityedit.com/articles/san-sebastian-guide
+  Date: 2025-06-23
+  Reason: No named author — article has no byline. Author attribution required.
+
+[FAILED] Discover Donosti
+  URL checked: discoverdonosti.com/best-restaurants-in-gros/
+  Date: 2023-05-07
+  Reason: Author listed as "Mark" — no surname provided. Full first name AND surname required.
+
+[FAILED] Cristina Oria (cristinaoria.com)
+  URL checked: Cristina Oria San Sebastián guide
+  Date: 2022-07-20
+  Reason: Publication date outside year range 2023–2026. Out-of-range date.
+
+[FAILED] Objective Foodie (objectivefoodie.com)
+  URL checked: Pintxos guide 2024
+  Reason: No named author. Author attribution required.
+
+[FAILED] The Hungry Tourist / Gabriella Ranelli (thehungrytourist.com)
+  URL checked: Basque cuisine article
+  Reason: Article covers multiple Basque regions; only 1 restaurant within San Sebastián
+          municipal boundary. Minimum qualifying threshold not met.
+
+[FAILED] Donosticlick (donosticlick.com)
+  Reason: No named author found on article or about page.
+
+[FAILED] Ondojan.com
+  Reason: Multi-author publication (Zum Edizioak editorial collective). Individual article-level
+          byline required; no qualifying single-author SS restaurant guide found.
+
+[FAILED] Noticias de Gipuzkoa / Eder García (noticiasdegipuzkoa.eus)
+  Date: 2024-08-05
+  Reason: Article names only 3 restaurants. Minimum content threshold not met (too thin).
+
+[FAILED] Bonviveur / Héctor Hernández (bonviveur.es)
+  Date: 2024-12-11
+  Reason: Article covers only 5 Michelin-starred restaurants; Michelin-only scope; too thin
+          (~3,500 chars). Insufficient breadth and restaurant count.
+
+[FAILED] Gastroactitud / Julia Pérez Lozano (gastroactitud.com)
+  Reason: San Sebastián articles found (Casa Urola review, others) all dated 2018 — outside
+          year range 2023–2026.
+
+[FAILED] GoLocal San Sebastián (golocalsansebastian.com)
+  Reason: No named author found.
+
+[FAILED] Pariseater (pariseater.com)
+  Byline: "Richard" (first name only)
+  Reason: Surname required for author attribution. First-name-only byline rejected.
+
+[FAILED] El Español / Natalia Martínez (elespanol.com)
+  Reason: Article focuses exclusively on Ibai as "best opening" — not a city guide.
+          Only 2 SS restaurants mentioned. Not a qualifying restaurant guide.
+
+[FAILED] Viajablog (viajablog.com)
+  Date: 2022
+  Reason: Publication date outside year range. Also no named author.
+
+[FAILED] Sehacecaminoalandar.com
+  Reason: San Sebastián pintxos article dated 2017 — well outside year range.
+
+[FAILED] afuegolento.com / Manolo González
+  Reason: No recent San Sebastián-specific restaurant guide article found in 2023–2026 range.
+
+[FAILED] SoyUnBlogDeViajes
+  Reason: No named author. Publication date outside range.
+
+[FAILED] walkeatdie.com
+  Date: 2021
+  Reason: Publication date outside year range 2023–2026.
+
+[FAILED] Gastronosfera (gastronosfera.com)
+  Reason: No named author on San Sebastián articles found.
+
+[FAILED] sistersandthecity.com
+  Reason: Articles found but no full-name author attribution confirmed.
+
+[FAILED] txellsnotebook.com
+  Reason: Personal blog — no named author with full surname confirmed.
+
+[FAILED] theobjective.com (2023 San Sebastián article)
+  Reason: No named author on the article found during verification.
+
+[FAILED] yourtripagent.com
+  Reason: No named author found.
+
+[FAILED] neo2.com / OAD 2024
+  Reason: No named individual author on San Sebastián content.
+
+[FAILED] bearleaders.com (2024)
+  Reason: Insufficient San Sebastián-specific qualifying content after verification.
+
+[FAILED] gastroeconomy.com
+  Reason: Coverage found (restaurant openings, Repsol lists) but no city-guide format
+          with individual author byline qualifying the full restaurant set.
+
+END OF FAILED SOURCES
