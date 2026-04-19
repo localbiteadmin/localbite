@@ -1,5 +1,5 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PART 2 — PIPELINE ENGINE v7
+PART 2 — PIPELINE ENGINE v7.1
 Do not change this section between cities.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -37,12 +37,25 @@ OPTIONAL — leave blank if not applicable:
   TIER_3_NEIGHBOURHOODS  emerging areas — blank if none
   GEOGRAPHIC_BOUNDARY_EXCLUDE  blank if none
   DIRECT_FETCH_SOURCES   blank to skip Phase 0 entirely
+                         NOTE: must be article-level URLs pointing to
+                         a specific named-author food guide article.
+                         Section pages and publication homepages will
+                         almost always fail Phase 0 — they return hub
+                         content with no dated article for extraction.
   NAMED_AWARDS           blank to use generic award queries
   LOCAL_FOOD_VOCABULARY  blank to skip Cross-6 angle entirely
   COMMERCIAL_CONFLICTS_NOTED  blank if none known
   KNOWN_PROBLEMATIC_URLS blank if none
   RIAD_RULE              APPLY or SKIP — default SKIP
   CONCENTRATION_CAP      percentage — default 30%
+  UNATTENDED_MODE        YES or NO — default NO
+                         YES: pipeline auto-accepts all Phase 3
+                         recommended removals and writes final JSON
+                         without pausing for user input at the review
+                         table. Phase 1 source review pause is always
+                         kept regardless of this setting.
+                         NO or blank: present review table and wait
+                         for user input as normal.
 
 FALLBACK BEHAVIOUR for undefined optional variables:
   TIER_3_NEIGHBOURHOODS blank    → omit Tier 3 neighbourhood queries
@@ -52,6 +65,7 @@ FALLBACK BEHAVIOUR for undefined optional variables:
   LOCAL_FOOD_VOCABULARY blank    → skip Cross-6 angle entirely
   RIAD_RULE blank                → treat as SKIP
   CONCENTRATION_CAP blank        → apply 30% default cap
+  UNATTENDED_MODE blank          → treat as NO
 
 ════════════════════════════════════════
 ⚠  PART 1 MUST NOT CONTAIN SUCCESS CRITERIA  ⚠
@@ -219,6 +233,7 @@ For each URL in DIRECT_FETCH_SOURCES:
 3. Confirm: at least one article or review dated within YEAR_RANGE?
 4. If both pass: add to candidate pool as pre-verified source.
    Note writer full name for use in Phase 1 queries.
+   Record the exact article URL fetched as article_url for this source.
    Log: [phase-0] FETCHED [publication] — [date] — [chars] chars
 5. If either fails: log reason and skip.
    Log: [phase-0] FAILED [publication] — [reason]
@@ -353,6 +368,11 @@ fetch via Jina to confirm:
 If under 2,000 chars or no date visible: reject without using
 a full fetch slot.
 
+Record the exact Jina fetch URL as article_url for every
+source that passes verification. This is the specific article
+URL — not the publication homepage. It is required for the
+source record and will be used as the viewer source link.
+
 SOURCE QUALITY RULES:
 ✓ Full name author in article text, date within YEAR_RANGE,
   restaurant guide for this city, editorial independence,
@@ -443,6 +463,7 @@ Log each as: [phase-1b-crossval] "[query]" → [result]
 
 STEP 3: Verify any new candidates via Jina.
 Apply same quality rules as Phase 1.
+Record the exact article URL as article_url for any new source.
 Do not include sources already in the candidate pool.
 
 Report after Phase 1B:
@@ -475,6 +496,10 @@ FETCH PROTOCOL:
 Fetch all sources via Jina (https://r.jina.ai/[URL]).
 Send all Jina requests in parallel. Then process extractions
 one source at a time in the order they return.
+
+The exact URL used for each Jina fetch is the article_url for
+that source. Record it precisely — this is what the viewer
+will link to when a user clicks "Source ↗".
 
 TWO-TIER RETRY RULE:
 If any fetch returns under 3,000 characters:
@@ -533,7 +558,14 @@ without completing every field on this list:
                      logged reason (e.g. single-author rule applied)
   ✓ writer_profile   2–3 user-facing sentences — no pipeline notes,
                      no fetch data, no operational information
-  ✓ url              full URL
+  ✓ url              publication homepage URL
+  ✓ article_url      the exact article URL fetched via Jina —
+                     NOT the publication homepage. This is the
+                     specific article used for extraction. It is
+                     what users see when clicking "Source ↗" in
+                     the viewer. This field is MANDATORY. If the
+                     article_url is the same as url, record it
+                     explicitly — do not leave it blank.
   ✓ language         ISO code: en / es / ca / pt / fr / ar
   ✓ source_type      "primary" or "secondary"
   ✓ article_date     from fetched text — "undated" if not found
@@ -748,7 +780,6 @@ Review every Tier B entry. Flag:
 - ⚠ null-neighbourhood entries — recommend for review
 
 STEP 4 — Review table
-Show: Tier A + Tier B entries with NO recommended removal.
 
 AUTO-REMOVAL RULE — NULL NEIGHBOURHOOD:
 Any Tier B entry where neighbourhood is null AND source_count
@@ -769,9 +800,18 @@ AUTO-REMOVED (recommended Tier B) — [N] entries — see OUTPUT_AUDIT
 
 COI FLAGS: [list sources with commercial conflicts]
 PUBLISHER CONCENTRATION: [list flagged publishers]
-
-"Enter numbers to remove, or press Enter to accept all."
 ---
+
+UNATTENDED MODE BEHAVIOUR:
+If UNATTENDED_MODE: YES in Part 1:
+→ Auto-accept all pipeline-recommended removals immediately.
+→ Do not present the "Enter numbers to remove" prompt.
+→ Log: [unattended-mode] auto-accepted [N] recommended removals.
+→ Proceed directly to STEP 5 — Export.
+
+If UNATTENDED_MODE: NO or blank:
+→ Present: "Enter numbers to remove, or press Enter to accept all."
+→ Wait for user input before proceeding to STEP 5.
 
 STEP 5 — Export
 
@@ -785,7 +825,8 @@ Format: restaurant name | tier | reason | source
 Write FILE 1 (raw) to OUTPUT_RAW — all Tier A and Tier B entries
 before removals.
 
-Apply user removals. Write FILE 2 (final) to OUTPUT_FINAL.
+Apply user removals (or auto-accept if UNATTENDED_MODE: YES).
+Write FILE 2 (final) to OUTPUT_FINAL.
 
 ════════════════════════════════════════
 JSON STRUCTURE — CRITICAL REQUIREMENTS
@@ -807,7 +848,7 @@ JSON structure — FILE 2 (final):
   "city_slug": "[CITY_SLUG]",
   "built": "[today's date]",
   "source_recency": "[YEAR_RANGE]",
-  "pipeline": "localbite-v7",
+  "pipeline": "localbite-v7.1",
   "confidence_tiers": {
     "auto_approved": [count],
     "reviewed_kept": [count],
@@ -822,7 +863,8 @@ JSON structure — FILE 2 (final):
       "publication": "string",
       "writer": "string or null",
       "writer_profile": "2–3 sentence user-facing profile",
-      "url": "string",
+      "url": "publication homepage URL",
+      "article_url": "exact article URL used for extraction — NOT the homepage",
       "language": "en/es/ca/pt/fr/ar",
       "source_type": "primary or secondary",
       "article_date": "YYYY-MM-DD or undated",
@@ -976,7 +1018,7 @@ try {
 const e = {
   city: '[CITY_SLUG]',
   date: new Date().toISOString().split('T')[0],
-  pipeline: 'localbite-v7',
+  pipeline: 'localbite-v7.1',
   sources_confirmed: sourcesConfirmed,
   final_entries: finalEntries,
   both_pool: bothPool,

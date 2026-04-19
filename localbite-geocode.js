@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// LocalBite Geocoding Script v8
+// LocalBite Geocoding Script v8.1
 // Combination 1: Nominatim → Photon
 //
 // Usage: node localbite-geocode.js <city-json-file> [--debug]
@@ -121,7 +121,7 @@ function httpGet(url, headers = {}) {
   return new Promise((resolve, reject) => {
     const options = {
       headers: {
-        'User-Agent': 'LocalBite-Geocoder/8.0 (github.com/localbiteadmin/localbite)',
+        'User-Agent': 'LocalBite-Geocoder/8.1 (github.com/localbiteadmin/localbite)',
         ...headers
       }
     };
@@ -140,44 +140,59 @@ function httpGet(url, headers = {}) {
 }
 
 // ── NON-RESTAURANT ENTITY DETECTION ──
+// Patterns for streets, squares, parks, landmarks, and transit.
+// Language coverage: Spanish, Portuguese, French, Catalan, Basque,
+// English, Arabic (romanised). Add new languages as new cities are added.
 const NON_RESTAURANT_PATTERNS = [
-  /^Carrer (de |d'|dels? |de les |via |del |major|nou|vell)/i,
-  /^Carrer [A-Z]/i,
+  // ── Spanish ──
+  /^Calle (de |del |de la |de los )/i,
+  /^Plaza (de |del |de la |de los )/i,
+  /^Avenida (de |do |da )/i,
+  /^Paseo (de |del )/i,
   /^Puente (de |del |de la )/i,
-  /^Pont (de |del |d')/i,
   /^Castillo (de |del |de la )/i,
-  /^Castell (de |del |d')/i,
   /^Centro [Dd]eportivo/i,
   /^Polideportivo/i,
   /^Arroyo (de |del |de la )/i,
-  /^Ribeira (de |do |da )/i,
   /^Parque (de |del |de la )/i,
   /^Jardín (de |del |de la )/i,
   /^Jardines (de |del |de la )/i,
   /^Palacio (de |del |de la )/i,
-  /^Palau (de |del |d')/i,
   /^Torre (de |del |de la )/i,
   /^Iglesia (de |del |de la )/i,
   /^Catedral/i,
   /^Basílica/i,
   /^Convento (de |del |de la )/i,
   /^Museo (de |del |de la )/i,
-  /^Mercat (de |del |d')/i,
   /^Mercado (de |del |de la )/i,
-  /^Calle (de |del |de la |de los )/i,
+  // ── Portuguese ──
   /^Rua (de |do |da |dos |das )/i,
-  /^Rue (de |du |des |de la )/i,
-  /^Plaça (de |del |de la |d')/i,
-  /^Plaza (de |del |de la |de los )/i,
   /^Praça (de |do |da )/i,
-  /^Place (de |du |des |de la )/i,
-  /^Jardins? (de |del |d')/i,
+  /^Ribeira (de |do |da )/i,
   /^Parque (de |do |da )/i,
+  // ── French ──
+  /^Rue (de |du |des |de la )/i,
+  /^Place (de |du |des |de la )/i,
   /^Parc (de |du |des )/i,
+  // ── Catalan ──
+  /^Carrer (de |d'|dels? |de les |via |del |major|nou|vell)/i,
+  /^Carrer [A-Z]/i,
+  /^Pont (de |del |d')/i,
+  /^Castell (de |del |d')/i,
+  /^Plaça (de |del |de la |d')/i,
+  /^Jardins? (de |del |d')/i,
+  /^Palau (de |del |d')/i,
+  /^Mercat (de |del |d')/i,
   /^Avinguda (de |del |d')/i,
-  /^Avenida (de |do |da )/i,
   /^Passeig (de |del |d')/i,
-  /^Paseo (de |del )/i,
+  // ── Basque (Euskara) ──
+  // kalea = street, etorbidea = avenue/boulevard,
+  // pasealekua = promenade/walk, enparantza = square/plaza
+  /\bkalea\b/i,
+  /\betorbidea\b/i,
+  /\bpasealekua\b/i,
+  /\benparantza\b/i,
+  // ── General / cross-language ──
   /\bEstació\b/i,
   /\bEstación\b/i,
   /\bEstação\b/i,
@@ -372,7 +387,7 @@ async function queryPhoton(name, nb, city, country) {
 
 // ── MAIN ──
 async function geocodeAll() {
-  console.log(`\nLocalBite Geocoder v8`);
+  console.log(`\nLocalBite Geocoder v8.1`);
   console.log(`══════════════════════════════════════════════`);
   console.log(`City:         ${city}, ${country}`);
   console.log(`Restaurants:  ${data.restaurants.length}`);

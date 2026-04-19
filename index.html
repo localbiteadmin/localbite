@@ -1171,7 +1171,7 @@ function renderCredits(sources) {
       ${fmtSrcTitle(s) ? `<div class="credit-title">&#8220;${escHtml(fmtSrcTitle(s))}&#8221;</div>` : ''}
       ${fmtSrcDate(s) ? `<div class="credit-date">Published ${escHtml(fmtSrcDate(s))}</div>` : ''}
       ${s.writer_profile ? `<div class="credit-profile">${escHtml(s.writer_profile)}</div>` : ''}
-      ${s.url ? `<a class="credit-link" href="${escHtml(s.url)}" target="_blank" rel="noopener">Read article ↗</a>` : ''}
+      ${(s.article_url || s.url) ? `<a class="credit-link" href="${escHtml(s.article_url || s.url)}" target="_blank" rel="noopener">Read article ↗</a>` : ''}
     </div>
   `).join('');
 }
@@ -1458,7 +1458,7 @@ function cardHTML(r) {
 
   const primaryId = r.sources && r.sources[0];
   const primarySrc = primaryId && currentSources[primaryId];
-  const sourceUrl = primarySrc ? primarySrc.url : '#';
+  const sourceUrl = primarySrc ? (primarySrc.article_url || primarySrc.url) : '#';
   const writerLabel = primarySrc
     ? (primarySrc.writer ? primarySrc.writer + ' · ' + primarySrc.publication : primarySrc.publication)
     : '';
