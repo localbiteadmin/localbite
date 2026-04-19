@@ -6,10 +6,10 @@
   "source_recency": "2023-2026",
   "pipeline": "localbite-v7.1",
   "confidence_tiers": {
-    "auto_approved": 10,
-    "reviewed_kept": 20,
+    "auto_approved": 9,
+    "reviewed_kept": 15,
     "auto_removed": 2,
-    "user_removed": 0,
+    "user_removed": 6,
     "auto_rejected": 12,
     "concentration_cap_applied": 0
   },
@@ -495,44 +495,6 @@
       "geo_matched_name": "Txepetxa"
     },
     {
-      "name": "Casa Valles",
-      "name_variants": [
-        "Casa Vallés"
-      ],
-      "neighbourhood": "Centro",
-      "cuisine": "Traditional pintxos bar",
-      "opening_year": 1942,
-      "price_level": 2,
-      "price_currency": "EUR",
-      "dishes_mentioned": [
-        "Gilda pintxo (anchovy, olive, pickled pepper)",
-        "tortilla de bacalao",
-        "zamburinas",
-        "txakoli"
-      ],
-      "signature_dish": "Gilda",
-      "quote": "A frozen-in-time bar founded in 1942 in the city center, where the Gilda—an anchovy, olive, and pickled pepper skewer—is said to have been invented.",
-      "quote_language": "original",
-      "language_pool": "en",
-      "source_count": 2,
-      "sources": [
-        "src-saveur-buckley",
-        "src-appetitesabroad-hood"
-      ],
-      "confidence_tier": "A",
-      "source_type_combination": "primary-EN",
-      "article_date": "2024-05-30",
-      "article_title": "The Pintxo Bars I Can't Live Without in San Sebastián",
-      "article_url": "https://www.saveur.com/culture/best-pintxos-san-sebastian/",
-      "open_status_check": false,
-      "flagged": false,
-      "lat": 43.3153288,
-      "lng": -1.9807318,
-      "geo_source": "nominatim",
-      "geo_confidence": "high",
-      "geo_matched_name": "Casa Valles"
-    },
-    {
       "name": "Bar Nestor",
       "name_variants": [
         "Nestor"
@@ -740,7 +702,7 @@
     {
       "name": "Maun",
       "name_variants": [],
-      "neighbourhood": "Centro",
+      "neighbourhood": "San Sebastián Centro",
       "cuisine": "Market stall, contemporary Basque",
       "opening_year": null,
       "price_level": 2,
@@ -806,107 +768,6 @@
       "geo_matched_name": "Arzak Jatetxea"
     },
     {
-      "name": "Zazpi",
-      "name_variants": [],
-      "neighbourhood": "Parte Vieja",
-      "cuisine": "Contemporary Basque",
-      "opening_year": null,
-      "price_level": 3,
-      "price_currency": "EUR",
-      "dishes_mentioned": [
-        "fish of the day",
-        "pigeon with pigeon pâté",
-        "tomato chutney"
-      ],
-      "signature_dish": null,
-      "quote": "One of the finest places in the city for a luxurious long lunch, with a thoughtful seasonal tasting menu and beautiful natural light.",
-      "quote_language": "original",
-      "language_pool": "en",
-      "source_count": 1,
-      "sources": [
-        "src-theinfatuation-buckley"
-      ],
-      "confidence_tier": "B",
-      "source_type_combination": "primary-EN",
-      "article_date": "2023-04-07",
-      "article_title": "The 25 Best Restaurants In San Sebastián",
-      "article_url": "https://www.theinfatuation.com/san-sebastian/guides/best-restaurants-san-sebastian-spain",
-      "open_status_check": true,
-      "flagged": false,
-      "lat": 43.3253107,
-      "lng": -1.984629,
-      "geo_source": "nominatim",
-      "geo_confidence": "high",
-      "geo_matched_name": "Zazpi"
-    },
-    {
-      "name": "Akelarre",
-      "name_variants": [],
-      "neighbourhood": "Igeldo",
-      "cuisine": "Haute Basque / nueva cocina vasca",
-      "opening_year": null,
-      "price_level": 4,
-      "price_currency": "EUR",
-      "dishes_mentioned": [
-        "black pudding layer cake",
-        "garbanzo consommé"
-      ],
-      "signature_dish": null,
-      "quote": "Chef Pedro Subijana's haute cuisine strikes the perfect balance between innovative and comfort food, with floor-to-ceiling views of the Cantabrian Sea.",
-      "quote_language": "original",
-      "language_pool": "en",
-      "source_count": 1,
-      "sources": [
-        "src-theinfatuation-buckley"
-      ],
-      "confidence_tier": "B",
-      "source_type_combination": "primary-EN",
-      "article_date": "2023-04-07",
-      "article_title": "The 25 Best Restaurants In San Sebastián",
-      "article_url": "https://www.theinfatuation.com/san-sebastian/guides/best-restaurants-san-sebastian-spain",
-      "open_status_check": true,
-      "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
-    },
-    {
-      "name": "Narru",
-      "name_variants": [],
-      "neighbourhood": "Centro",
-      "cuisine": "Contemporary Basque",
-      "opening_year": null,
-      "price_level": 3,
-      "price_currency": "EUR",
-      "dishes_mentioned": [
-        "kokotxas in three styles",
-        "oysters",
-        "oxtail ravioli with foie gras"
-      ],
-      "signature_dish": "kokotxas",
-      "quote": "A restaurant on an outdoor arcade overlooking the Buen Pastor cathedral, where locals see and are seen on weekend lunches.",
-      "quote_language": "original",
-      "language_pool": "en",
-      "source_count": 1,
-      "sources": [
-        "src-theinfatuation-buckley"
-      ],
-      "confidence_tier": "B",
-      "source_type_combination": "primary-EN",
-      "article_date": "2023-04-07",
-      "article_title": "The 25 Best Restaurants In San Sebastián",
-      "article_url": "https://www.theinfatuation.com/san-sebastian/guides/best-restaurants-san-sebastian-spain",
-      "open_status_check": true,
-      "flagged": false,
-      "lat": 43.3156942,
-      "lng": -1.9878703,
-      "geo_source": "nominatim",
-      "geo_confidence": "high",
-      "geo_matched_name": "Narru"
-    },
-    {
       "name": "R Restaurante Bar",
       "name_variants": [],
       "neighbourhood": "Gros",
@@ -941,39 +802,6 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null
-    },
-    {
-      "name": "Bistro Ondarreta",
-      "name_variants": [],
-      "neighbourhood": "Antiguako",
-      "cuisine": "French bistro",
-      "opening_year": null,
-      "price_level": 3,
-      "price_currency": "EUR",
-      "dishes_mentioned": [
-        "gougères",
-        "lobster pasta"
-      ],
-      "signature_dish": null,
-      "quote": "A French bistro in Antiguo with tiny tables, retro black-and-white tiled floors, a curvy bar, and Gallic dishes including gougères and lobster pasta.",
-      "quote_language": "original",
-      "language_pool": "en",
-      "source_count": 1,
-      "sources": [
-        "src-theinfatuation-buckley"
-      ],
-      "confidence_tier": "B",
-      "source_type_combination": "primary-EN",
-      "article_date": "2023-04-07",
-      "article_title": "The 25 Best Restaurants In San Sebastián",
-      "article_url": "https://www.theinfatuation.com/san-sebastian/guides/best-restaurants-san-sebastian-spain",
-      "open_status_check": true,
-      "flagged": false,
-      "lat": 43.3140784,
-      "lng": -2.0052197,
-      "geo_source": "nominatim",
-      "geo_confidence": "high",
-      "geo_matched_name": "El Bistro"
     },
     {
       "name": "Bar Urkabe",
@@ -1043,40 +871,6 @@
       "geo_source": "nominatim",
       "geo_confidence": "high",
       "geo_matched_name": "Bar Martínez"
-    },
-    {
-      "name": "Bar Bergara",
-      "name_variants": [
-        "Bergara"
-      ],
-      "neighbourhood": "Gros",
-      "cuisine": "Pintxos bar, creative cold pintxos",
-      "opening_year": null,
-      "price_level": 2,
-      "price_currency": "EUR",
-      "dishes_mentioned": [
-        "La Txalupa pintxo"
-      ],
-      "signature_dish": "La Txalupa",
-      "quote": "You'll only find La Txalupa at this legendary Gros bar, whose elaborate cold pintxos on display have made Bergara one of the city's most celebrated pintxo destinations.",
-      "quote_language": "original",
-      "language_pool": "en",
-      "source_count": 1,
-      "sources": [
-        "src-saveur-buckley"
-      ],
-      "confidence_tier": "B",
-      "source_type_combination": "primary-EN",
-      "article_date": "2024-05-30",
-      "article_title": "The Pintxo Bars I Can't Live Without in San Sebastián",
-      "article_url": "https://www.saveur.com/culture/best-pintxos-san-sebastian/",
-      "open_status_check": true,
-      "flagged": false,
-      "lat": 43.3243602,
-      "lng": -1.9723736,
-      "geo_source": "nominatim",
-      "geo_confidence": "high",
-      "geo_matched_name": "Bergara"
     },
     {
       "name": "La Cepa",
