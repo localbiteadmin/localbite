@@ -159,6 +159,8 @@ After every pipeline run:
 Before committing a new city as live:
 - Every neighbourhood with null-coordinate restaurants is registered
   in the CENTROIDS object in index.html
+- City added to CITY_CENTRES in index.html (fallback for null-coord restaurants)
+- City added to CITY_BOUNDS in index.html (required for map rendering of centroid markers)
 - localbite-index.json updated with new city entry
 - pipeline field in city JSON reads "localbite-v7.1" (or current version)
 - sources array is named "sources" (not "sources_used")
