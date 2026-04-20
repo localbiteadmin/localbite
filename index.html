@@ -2088,7 +2088,11 @@ function updateMap(restaurants) {
     });
 
     Object.entries(groups).forEach(([nb, rests]) => {
-      let coords = CENTROIDS[nb];
+      // Check city-JSON-embedded centroids first (new architecture),
+      // then fall back to global CENTROIDS dict (legacy city packs).
+      let coords = (currentCityData && currentCityData.centroids && currentCityData.centroids[nb])
+        ? currentCityData.centroids[nb]
+        : CENTROIDS[nb];
       if (!coords) {
         const base = CITY_CENTRES[cityName] || [40.0, 0.0];
         coords = [
