@@ -131,10 +131,13 @@ Report any that are null so the user can investigate.
 ## Post-Pipeline Steps (in order)
 
 After every pipeline run:
-1. Run geocoding: node localbite-geocode.js localbite-[city]-[year].json
-2. Run post-pipeline script: node localbite-postrun.js localbite-[city]-[year].json
-3. Review CENTROIDS proposals in postrun output — human confirm required
-4. Add any missing CENTROIDS to index.html
+1. Run post-pipeline script: node localbite-postrun.js localbite-[city]-[year].json
+   (geocoding runs automatically as Step 1 inside postrun.js)
+2. Run centroid approval: node localbite-approve-centroids.js localbite-[city]-[year].json
+   Review each proposed centroid — accept, skip, or enter manually.
+   Do NOT commit the city JSON until this step is complete.
+3. Verify CITY_CENTRES entry exists for the new city in index.html
+4. Verify CITY_BOUNDS entry exists for the new city in index.html
 5. Commit all output files
 
 ---
