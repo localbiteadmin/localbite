@@ -833,6 +833,22 @@ Write FILE 2 (final) to OUTPUT_FINAL.
 JSON STRUCTURE — CRITICAL REQUIREMENTS
 ════════════════════════════════════════
 
+FIELD NAME CONTRACT — exact names required, no substitutions allowed.
+These names are read directly by the viewer. Using any variant
+(e.g. "author_name" instead of "writer", "publisher" instead of
+"publication") causes silent viewer failures with no error message.
+If context compaction has occurred: re-read this block before
+writing any JSON output to verify field names are correct.
+
+SOURCES array — required field names (no substitutions):
+  id, publication, writer, writer_profile, url, article_url,
+  language, source_type, article_date, article_title, fetch_status,
+  commercial_conflict, commercial_conflict_note
+
+RESTAURANTS array — required field names (no substitutions):
+  name, neighbourhood, language_pool, confidence_tier, quote,
+  sources, lat, lng, geo_source, geo_confidence, geo_matched_name
+
 FIELD NAME WARNING: The top-level sources array MUST be named
 "sources". Never use "sources_used", "source_list", or any other
 variant. The viewer reads data.sources directly and will silently
