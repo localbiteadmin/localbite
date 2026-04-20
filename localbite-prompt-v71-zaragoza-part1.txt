@@ -1,0 +1,119 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES (v7.1)
+Change only this section for each new city.
+Full prompt = cat this file + localbite-prompt-v7-template.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+════════════════════════════════════════
+REQUIRED VARIABLES
+════════════════════════════════════════
+
+CITY: Zaragoza
+COUNTRY: Spain
+CITY_SLUG: zaragoza-spain
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: ES
+SEARCH_LANGUAGES: Spanish, English
+SINGLE_LANGUAGE_CITY: NO
+YEAR_RANGE: 2023–2026
+
+════════════════════════════════════════
+OPTIONAL VARIABLES
+════════════════════════════════════════
+
+UNATTENDED_MODE: YES
+— Phase 1 COMPLETE pause is always kept regardless of this setting.
+— When YES: Phase 3 removal recommendations are auto-accepted without
+  stopping for confirmation. Final JSON is written immediately.
+— When NO (default): Pipeline pauses at Phase 3 review table.
+
+DIRECT_FETCH_SOURCES:
+— No confirmed article-level URLs available for Zaragoza.
+— Phase 0 will be skipped. Pipeline relies entirely on Phase 1
+  discovery.
+— Note: DIRECT_FETCH_SOURCES must be article-level URLs pointing to
+  a specific named-author food guide. Section pages and publication
+  homepages will almost always fail Phase 0.
+
+════════════════════════════════════════
+NEIGHBOURHOOD STRUCTURE
+════════════════════════════════════════
+
+Research basis: Official Zaragoza municipal district structure
+verified via local sources (soydezaragoza.es and municipal data).
+15 official districts; 9 selected for dining relevance based on
+population, bar/restaurant density, and food writing coverage.
+Districts with no meaningful dining scene (Actur, Casablanca,
+Valdespartera, Miralbueno, Oliver, Santa Isabel, rural barrios)
+excluded from search queries.
+
+TIER_1_NEIGHBOURHOODS: Casco Histórico, Centro, Universidad
+TIER_2_NEIGHBOURHOODS: San José, Delicias, El Rabal
+TIER_3_NEIGHBOURHOODS: La Almozara, Las Fuentes, Torrero
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Casco Histórico, El Tubo, La Magdalena, San Pablo, La Seo,
+San Agustín, San Miguel, Centro, Universidad, Goya, Romareda,
+San José, Bajo Aragón, Príncipe Felipe, Delicias, La Bombarda,
+Ciudad Jardín, El Rabal, La Jota, Arrabal, La Almozara,
+Las Fuentes, Montemolín, Torrero, La Paz
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Huesca, Teruel, Pamplona, Logroño, Tudela, or any location
+described as "outside Zaragoza", "near Zaragoza", "day trip
+from Zaragoza", or another Aragonese town or city.
+
+════════════════════════════════════════
+LOCAL CONTEXT
+════════════════════════════════════════
+
+LOCAL_FOOD_VOCABULARY:
+— ternasco (Aragonese suckling lamb — the defining regional dish)
+— borraja (borage — distinctive local vegetable, hard to find elsewhere)
+— migas aragonesas (breadcrumb dish, deep rural Aragonese tradition)
+— longaniza de Graus (cured sausage, Aragonese charcuterie)
+— melocotón de Calanda (peach with DO designation, intensely local)
+— trufa negra (black truffle from Teruel province — premium local product)
+— vinos del Somontano / Campo de Borja / Cariñena / Calatayud (local DOs)
+— garnacha / garnacha blanca (dominant local grape varieties)
+— El Tubo (the historic tapas alley district within Casco Histórico —
+  the most concentrated bar scene in Zaragoza, essential local term)
+
+Use 2 Cross-6 vocabulary queries in Spanish targeting ternasco,
+borraja, and El Tubo to catch local-register food writing that
+city-wide queries miss.
+
+SOURCE_EXAMPLES:
+— Local Zaragoza food press: Heraldo de Aragón gastronomía,
+  El Periódico de Aragón, Aragón Digital
+— Regional food magazines: Aragón Gastronómico, Gastronomía Aragonesa
+— Local food bloggers writing in Spanish about Zaragoza dining
+— English-language food writers: The Infatuation, Eater, Condé Nast
+  Traveller, food bloggers with documented Zaragoza coverage
+— Note: Zaragoza is less internationally written-about than Madrid,
+  Barcelona, or San Sebastián. EN primary sources may be thin.
+  Do not manufacture a false both-pool — document accurately.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+— None confirmed for Zaragoza food media. Apply standard COI check
+  to every source per template instructions.
+
+SECONDARY_SOURCES: Time Out, Condé Nast Traveller, Lonely Planet,
+El País Gastro (national desk), El Mundo Metrópoli (national desk)
+
+════════════════════════════════════════
+PRICE AND OUTPUT
+════════════════════════════════════════
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+- 1 = under €20pp
+- 2 = €20–40pp
+- 3 = €40–80pp
+- 4 = over €80pp
+
+OUTPUT_RAW: ./localbite-zaragoza-raw.json
+OUTPUT_FINAL: ./localbite-zaragoza-2023-2026.json
+OUTPUT_WORKING: ./localbite-zaragoza-working.json
+OUTPUT_SEARCH_LOG: ./localbite-zaragoza-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-zaragoza-search-plan.txt

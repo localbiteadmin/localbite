@@ -1,0 +1,1182 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES (v7.1)
+Change only this section for each new city.
+Full prompt = cat this file + localbite-prompt-v7-template.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+════════════════════════════════════════
+REQUIRED VARIABLES
+════════════════════════════════════════
+
+CITY: Zaragoza
+COUNTRY: Spain
+CITY_SLUG: zaragoza-spain
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: ES
+SEARCH_LANGUAGES: Spanish, English
+SINGLE_LANGUAGE_CITY: NO
+YEAR_RANGE: 2023–2026
+
+════════════════════════════════════════
+OPTIONAL VARIABLES
+════════════════════════════════════════
+
+UNATTENDED_MODE: YES
+— Phase 1 COMPLETE pause is always kept regardless of this setting.
+— When YES: Phase 3 removal recommendations are auto-accepted without
+  stopping for confirmation. Final JSON is written immediately.
+— When NO (default): Pipeline pauses at Phase 3 review table.
+
+DIRECT_FETCH_SOURCES:
+— No confirmed article-level URLs available for Zaragoza.
+— Phase 0 will be skipped. Pipeline relies entirely on Phase 1
+  discovery.
+— Note: DIRECT_FETCH_SOURCES must be article-level URLs pointing to
+  a specific named-author food guide. Section pages and publication
+  homepages will almost always fail Phase 0.
+
+════════════════════════════════════════
+NEIGHBOURHOOD STRUCTURE
+════════════════════════════════════════
+
+Research basis: Official Zaragoza municipal district structure
+verified via local sources (soydezaragoza.es and municipal data).
+15 official districts; 9 selected for dining relevance based on
+population, bar/restaurant density, and food writing coverage.
+Districts with no meaningful dining scene (Actur, Casablanca,
+Valdespartera, Miralbueno, Oliver, Santa Isabel, rural barrios)
+excluded from search queries.
+
+TIER_1_NEIGHBOURHOODS: Casco Histórico, Centro, Universidad
+TIER_2_NEIGHBOURHOODS: San José, Delicias, El Rabal
+TIER_3_NEIGHBOURHOODS: La Almozara, Las Fuentes, Torrero
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Casco Histórico, El Tubo, La Magdalena, San Pablo, La Seo,
+San Agustín, San Miguel, Centro, Universidad, Goya, Romareda,
+San José, Bajo Aragón, Príncipe Felipe, Delicias, La Bombarda,
+Ciudad Jardín, El Rabal, La Jota, Arrabal, La Almozara,
+Las Fuentes, Montemolín, Torrero, La Paz
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Huesca, Teruel, Pamplona, Logroño, Tudela, or any location
+described as "outside Zaragoza", "near Zaragoza", "day trip
+from Zaragoza", or another Aragonese town or city.
+
+════════════════════════════════════════
+LOCAL CONTEXT
+════════════════════════════════════════
+
+LOCAL_FOOD_VOCABULARY:
+— ternasco (Aragonese suckling lamb — the defining regional dish)
+— borraja (borage — distinctive local vegetable, hard to find elsewhere)
+— migas aragonesas (breadcrumb dish, deep rural Aragonese tradition)
+— longaniza de Graus (cured sausage, Aragonese charcuterie)
+— melocotón de Calanda (peach with DO designation, intensely local)
+— trufa negra (black truffle from Teruel province — premium local product)
+— vinos del Somontano / Campo de Borja / Cariñena / Calatayud (local DOs)
+— garnacha / garnacha blanca (dominant local grape varieties)
+— El Tubo (the historic tapas alley district within Casco Histórico —
+  the most concentrated bar scene in Zaragoza, essential local term)
+
+Use 2 Cross-6 vocabulary queries in Spanish targeting ternasco,
+borraja, and El Tubo to catch local-register food writing that
+city-wide queries miss.
+
+SOURCE_EXAMPLES:
+— Local Zaragoza food press: Heraldo de Aragón gastronomía,
+  El Periódico de Aragón, Aragón Digital
+— Regional food magazines: Aragón Gastronómico, Gastronomía Aragonesa
+— Local food bloggers writing in Spanish about Zaragoza dining
+— English-language food writers: The Infatuation, Eater, Condé Nast
+  Traveller, food bloggers with documented Zaragoza coverage
+— Note: Zaragoza is less internationally written-about than Madrid,
+  Barcelona, or San Sebastián. EN primary sources may be thin.
+  Do not manufacture a false both-pool — document accurately.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+— None confirmed for Zaragoza food media. Apply standard COI check
+  to every source per template instructions.
+
+SECONDARY_SOURCES: Time Out, Condé Nast Traveller, Lonely Planet,
+El País Gastro (national desk), El Mundo Metrópoli (national desk)
+
+════════════════════════════════════════
+PRICE AND OUTPUT
+════════════════════════════════════════
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+- 1 = under €20pp
+- 2 = €20–40pp
+- 3 = €40–80pp
+- 4 = over €80pp
+
+OUTPUT_RAW: ./localbite-zaragoza-raw.json
+OUTPUT_FINAL: ./localbite-zaragoza-2023-2026.json
+OUTPUT_WORKING: ./localbite-zaragoza-working.json
+OUTPUT_SEARCH_LOG: ./localbite-zaragoza-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-zaragoza-search-plan.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 2 — PIPELINE ENGINE v7.1
+Do not change this section between cities.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+════════════════════════════════════════
+PART 1 VARIABLE CONTRACT
+════════════════════════════════════════
+
+This template requires the following variables from Part 1.
+REQUIRED variables must be present — the pipeline will not run
+correctly without them. OPTIONAL variables may be left blank;
+documented fallback behaviour applies when blank.
+
+REQUIRED — must be present in every Part 1:
+  CITY
+  COUNTRY
+  CITY_SLUG
+  PACK_DATE
+  YEAR_RANGE
+  PRIMARY_LANGUAGE       e.g. "Spanish (ES)"
+  SECONDARY_LANGUAGE     e.g. "English (EN)" — blank if single-language
+  SINGLE_LANGUAGE_CITY   YES or NO
+  PRICE_CURRENCY         e.g. EUR, GBP, MAD
+  TIER_1_NEIGHBOURHOODS  central / tourist areas — comma-separated
+  TIER_2_NEIGHBOURHOODS  residential areas — comma-separated
+  GEOGRAPHIC_BOUNDARY_INCLUDE  canonical neighbourhood list
+  OUTPUT_SEARCH_PLAN
+  OUTPUT_SEARCH_LOG
+  OUTPUT_RAW
+  OUTPUT_WORKING
+  OUTPUT_FINAL
+  OUTPUT_AUDIT
+  OUTPUT_FAILED_SOURCES
+
+OPTIONAL — leave blank if not applicable:
+  TIER_3_NEIGHBOURHOODS  emerging areas — blank if none
+  GEOGRAPHIC_BOUNDARY_EXCLUDE  blank if none
+  DIRECT_FETCH_SOURCES   blank to skip Phase 0 entirely
+                         NOTE: must be article-level URLs pointing to
+                         a specific named-author food guide article.
+                         Section pages and publication homepages will
+                         almost always fail Phase 0 — they return hub
+                         content with no dated article for extraction.
+  NAMED_AWARDS           blank to use generic award queries
+  LOCAL_FOOD_VOCABULARY  blank to skip Cross-6 angle entirely
+  COMMERCIAL_CONFLICTS_NOTED  blank if none known
+  KNOWN_PROBLEMATIC_URLS blank if none
+  RIAD_RULE              APPLY or SKIP — default SKIP
+  CONCENTRATION_CAP      percentage — default 30%
+  UNATTENDED_MODE        YES or NO — default NO
+                         YES: pipeline auto-accepts all Phase 3
+                         recommended removals and writes final JSON
+                         without pausing for user input at the review
+                         table. Phase 1 source review pause is always
+                         kept regardless of this setting.
+                         NO or blank: present review table and wait
+                         for user input as normal.
+
+FALLBACK BEHAVIOUR for undefined optional variables:
+  TIER_3_NEIGHBOURHOODS blank    → omit Tier 3 neighbourhood queries
+  GEOGRAPHIC_BOUNDARY_EXCLUDE blank → no automatic exclusions
+  DIRECT_FETCH_SOURCES blank     → skip Phase 0 entirely
+  NAMED_AWARDS blank             → run 1 EN + 1 local + 1 Michelin query
+  LOCAL_FOOD_VOCABULARY blank    → skip Cross-6 angle entirely
+  RIAD_RULE blank                → treat as SKIP
+  CONCENTRATION_CAP blank        → apply 30% default cap
+  UNATTENDED_MODE blank          → treat as NO
+
+════════════════════════════════════════
+⚠  PART 1 MUST NOT CONTAIN SUCCESS CRITERIA  ⚠
+════════════════════════════════════════
+
+Part 1 must never include minimum restaurant counts, both-pool
+targets, quality thresholds, or any form of success metric.
+Their presence causes the pipeline to optimise toward targets
+rather than genuine source discovery. Success criteria belong
+in post-run journal assessment only — never in the prompt.
+
+════════════════════════════════════════
+
+I am building a LocalBite city pack for [CITY], [COUNTRY].
+I want restaurant recommendations from named local food writers
+from articles published or substantially updated within [YEAR_RANGE].
+Use the variables defined in Part 1 throughout.
+
+Run the full pipeline automatically. Pause once after Phase 1
+source selection for source review. Pause once at the end for
+a single bulk review. Do not stop at any other point.
+
+REVIEW_MODE: BRIEF
+In BRIEF mode, the review table and summary sections are condensed:
+- Review table: show only # | Name | Neighbourhood | Cuisine | Pool | Tier | ⚠
+  (omit Price, Sources, Source type combo columns)
+- Auto-rejected section: show total count and reasons only — no individual entries
+- Publisher concentration report: one line per publisher flagged
+- Phase 0/1B reports: one line each (count + outcome)
+- Recommended removals: list only, no extended explanation
+- Search log: include in full (not condensed)
+- Token/performance metrics: include in full
+
+════════════════════════════════════════
+CONTENT WINDOW NOTE
+════════════════════════════════════════
+
+Articles from earlier years within [YEAR_RANGE] are acceptable
+but require extra care:
+- Flag any restaurant from a pre-2025 source with article_date
+  recorded as the actual publication date
+- Add open_status_check: true for all pre-2025-sourced restaurants
+  so a verification pass can be run before the city goes live
+- Do not reject a source solely because it is from 2023 or 2024
+  if it is otherwise the strongest available source for this city
+
+════════════════════════════════════════
+WRITER PROFILE RULE — MANDATORY
+════════════════════════════════════════
+
+The writer_profile field is USER-FACING. It appears in the
+LocalBite Sources panel. Never include in writer_profile:
+✗ Fetch quality or character counts
+✗ Tier assignments or confidence scores
+✗ Rejection reasons or pipeline notes
+✗ Internal pipeline terminology
+✓ Write 2–3 natural sentences covering: who the writer is,
+  their connection to this city, and their editorial stance.
+
+════════════════════════════════════════
+NAMED AUTHOR REQUIREMENTS — MANDATORY
+════════════════════════════════════════
+
+A named author is required for every source. Apply these rules
+throughout Phase 1 source quality evaluation:
+
+✓ Full first name AND surname required — e.g. "Lauren Aloise"
+✗ Initials-only bylines — e.g. "Irene S.", "J. Smith" — REJECT
+✗ Anonymous editorial team credits — REJECT regardless of publication
+✗ No byline anywhere in article or About page — REJECT
+
+SINGLE-AUTHOR SITE RULE:
+For personal sites where the entire site is demonstrably one
+named person's work — confirmed by About page, consistent
+first-person voice throughout, no other bylines present —
+About page authorship confirmation of full name is sufficient.
+Article-level byline is not required in this case.
+When applying this rule, log explicitly:
+[single-author-confirmed] [publication] — About page confirms
+[full name] as sole author. Article-level byline not required.
+This rule does not apply to multi-author publications or
+editorial teams — those require article-level bylines.
+
+════════════════════════════════════════
+SEARCH TOOL NOTE — MANDATORY
+════════════════════════════════════════
+
+The web search tool returns a maximum of 10 results per query.
+This is a hard tool limit that cannot be overridden by any
+instruction. Do not reference result positions beyond 10.
+Do not estimate or report positions not actually observed.
+Do not claim sources were found at "positions 11-30" or similar —
+this would be fabricated data.
+
+════════════════════════════════════════
+OUTPUT SIZE MANAGEMENT
+════════════════════════════════════════
+
+To prevent token limit errors:
+- Extract and write one source at a time to OUTPUT_WORKING
+- Never hold all sources in memory simultaneously
+- If any single fetch returns over 500,000 characters, truncate
+  to the first 50,000 characters and note truncation
+- For secondary sources, extract a maximum of 30 restaurants
+
+════════════════════════════════════════
+SEARCH RULES — apply to all phases
+════════════════════════════════════════
+
+✗ Do not use the site: operator in any search query
+✗ Do not search for a specific publication by name
+✗ Do not repeat a query already in OUTPUT_SEARCH_LOG
+✓ Use open queries describing the type of content you want
+✓ Vary language — use PRIMARY_LANGUAGE, SECONDARY_LANGUAGE,
+  and any additional languages relevant to this city
+
+YEAR RANGE DISTRIBUTION — MANDATORY:
+Queries must be distributed across the full YEAR_RANGE defined
+in Part 1. Do not concentrate year references on the most recent
+year only.
+
+Rules by angle size:
+- Angles with 2 queries: one must reference the earlier years
+  of YEAR_RANGE, one must reference the later years
+- Angles with 3 queries: at least one must reference the
+  earlier portion of YEAR_RANGE
+- Angles with 4+ queries: distribute proportionally — no more
+  than half may reference only the most recent year
+- Queries with no year term are acceptable and do not count
+  against either side of the distribution
+
+Before running any searches, review the written search plan
+and confirm year distribution is met across all angles.
+If not, rewrite the affected queries before proceeding.
+Log: [year-distribution-check] PASSED — [N] queries reference
+earlier years, [N] queries reference recent years, [N] queries
+have no year term.
+
+════════════════════════════════════════
+SEARCH LOG
+════════════════════════════════════════
+
+After every search or Jina fetch, immediately append one line
+to OUTPUT_SEARCH_LOG using these exact prefix formats:
+
+  [phase-0] for Phase 0 direct fetches
+  [neighbourhood-AREA] for Part A neighbourhood queries
+  [cross-N] for Part B cross-cutting angle queries (e.g. [cross-1])
+  [phase-1b-crossval] for Phase 1B cross-validation queries
+
+Format: [prefix] "[exact query or URL]" → [one sentence on results]
+
+Do this in real time. Do not reconstruct from memory at the end.
+
+════════════════════════════════════════
+PHASE 0 — DIRECT FETCH OF KNOWN SOURCES
+════════════════════════════════════════
+
+[Skip this phase entirely if DIRECT_FETCH_SOURCES is blank.
+Proceed directly to Phase 1 Step 1.]
+
+For each URL in DIRECT_FETCH_SOURCES:
+1. Fetch via https://r.jina.ai/[URL]
+2. Confirm: returns 2,000+ characters of genuine food content?
+3. Confirm: at least one article or review dated within YEAR_RANGE?
+4. If both pass: add to candidate pool as pre-verified source.
+   Note writer full name for use in Phase 1 queries.
+   Record the exact article URL fetched as article_url for this source.
+   Log: [phase-0] FETCHED [publication] — [date] — [chars] chars
+5. If either fails: log reason and skip.
+   Log: [phase-0] FAILED [publication] — [reason]
+   For 404 failures, retry via Wayback Machine:
+   https://r.jina.ai/https://web.archive.org/web/2026/[URL]
+   Log: [phase-0] WAYBACK RETRY [publication] — [outcome]
+
+After Phase 0 report:
+PHASE 0 RESULTS:
+- Successfully fetched: [list with writer full names]
+- Failed: [list with reasons]
+- Writers confirmed for Phase 1: [full names only]
+
+Proceed to Phase 1.
+
+════════════════════════════════════════
+PHASE 1 — SOURCE SELECTION
+════════════════════════════════════════
+
+STEP 1 — Write search plan
+
+Before running any searches, write a plan to OUTPUT_SEARCH_PLAN.
+
+MANDATORY SELF-CONFIRMATION — write this as the first line
+of OUTPUT_SEARCH_PLAN before anything else:
+"MANDATORY REQUIREMENTS CONFIRMED: year range distribution
+across [YEAR_RANGE], cross-validation Phase 1B after main
+searches, audit file required, 10 results per query (hard limit)."
+If you cannot confirm all four, stop and report which
+requirement cannot be met before proceeding.
+
+The search plan has two parts:
+
+PART A — NEIGHBOURHOOD COVERAGE (non-negotiable)
+
+Structure queries using the tier variables from Part 1:
+
+TIER_1_NEIGHBOURHOODS (central / tourist areas):
+For each named area: 1 query in PRIMARY_LANGUAGE +
+1 query in SECONDARY_LANGUAGE = 2 queries per area.
+
+TIER_2_NEIGHBOURHOODS (residential areas):
+For each named area: 1 query in PRIMARY_LANGUAGE +
+1 query in SECONDARY_LANGUAGE = 2 queries per area.
+
+TIER_3_NEIGHBOURHOODS (emerging areas):
+For each named area: 1 query in PRIMARY_LANGUAGE only.
+If TIER_3_NEIGHBOURHOODS is blank: skip Tier 3 entirely.
+
+Every neighbourhood must be named explicitly in at least
+one query. Do not substitute or add areas not in the tiers.
+
+PART B — CROSS-CUTTING ANGLES (run after all neighbourhood queries)
+These angles cover what neighbourhood queries miss:
+
+  Cross-1 — City-wide in SECONDARY_LANGUAGE: 2 queries
+    Vary register — one editorial guide style, one personal
+    recommendation style. Do not reuse neighbourhood phrasing.
+
+  Cross-2 — City-wide in PRIMARY_LANGUAGE: 3 queries
+    Use 3 meaningfully different registers: formal food
+    criticism, casual neighbourhood recommendation, food
+    journalism / press guide.
+
+  Cross-3 — Generic writer-first: 2 queries
+    Open discovery queries. Do not name specific writers.
+    1 in each language.
+
+  Cross-4 — Named awards: 3 queries
+    Use award names from NAMED_AWARDS exactly. One query per
+    award. Target articles about results and winners — not
+    the award body itself. If NAMED_AWARDS is blank, run
+    generic award queries: 1 EN + 1 local language + 1 Michelin.
+
+  Cross-5 — Recent openings: 2 queries
+    1 in each language. Target new openings specifically.
+
+  Cross-6 — Vocabulary-specific local language: 2 queries
+    Use vocabulary from LOCAL_FOOD_VOCABULARY. Target the
+    casual neighbourhood register city-wide queries miss.
+    If LOCAL_FOOD_VOCABULARY is blank: skip this angle entirely.
+
+  Cross-7 — Cuisine and community: 2 queries
+    Target food communities whose writing is not captured
+    by generic city-wide queries. Use specific cuisine types
+    or cultural communities relevant to this city.
+    If not applicable: skip this angle.
+
+  Cross-8 — Publication-category local language: 2 queries
+    Target categories of local publication by descriptor only.
+    Do not name specific publications.
+    1 independent food magazine / revista gastronómica
+    1 newspaper gastronomy supplement
+
+STOPPING RULE:
+If the last 8 consecutive queries have all returned sources
+already in the candidate pool or no qualifying new sources,
+stop searching and proceed to Step 3 — even if not all angles
+are complete. Log: [stopping-rule] triggered after [N] queries.
+
+Query ceilings: Soft ceiling 45 queries. Hard ceiling 55 queries.
+Do not exceed 55 under any circumstances.
+
+QUERY RULES:
+✗ Each query must be meaningfully distinct from all previous
+✗ Do not repeat any query already in OUTPUT_SEARCH_LOG
+✓ Apply year range distribution rule across all angles
+✓ Vary language across queries
+✓ Neighbourhood queries must name the neighbourhood explicitly
+
+Write the full plan before running any queries.
+Confirm year distribution check before proceeding.
+
+STEP 2 — Execute search plan
+
+Run all planned queries in order: neighbourhood queries first
+(Part A), then cross-cutting angles (Part B). Log each query
+immediately after running using the correct prefix format.
+Apply stopping rule if triggered.
+
+STEP 3 — Evaluate candidates
+
+For each candidate found via search, run a quick verification
+fetch via Jina to confirm:
+- Publication date is within YEAR_RANGE (check article text,
+  not CMS metadata or "updated" label — these are unreliable)
+- Named author present (full first name AND surname) in article
+  text OR About page (apply single-author rule where appropriate)
+- Article is specifically about this city's restaurants
+- Page returns 2,000+ chars confirming genuine article content
+
+If under 2,000 chars or no date visible: reject without using
+a full fetch slot.
+
+Record the exact Jina fetch URL as article_url for every
+source that passes verification. This is the specific article
+URL — not the publication homepage. It is required for the
+source record and will be used as the viewer source link.
+
+SOURCE QUALITY RULES:
+✓ Full name author in article text, date within YEAR_RANGE,
+  restaurant guide for this city, editorial independence,
+  no obvious advertorial
+✓ Personal single-author site — About page byline of full
+  name sufficient (apply single-author rule — log confirmation)
+✓ Independent blogger with evidence of local residency or
+  regular city coverage
+✓ Freelance food writer with documented city coverage
+✓ Local press journalist writing a food guide for this city
+✗ No named author anywhere — reject regardless of publication
+✗ Initials-only byline (e.g. "Irene S.", "J. Smith") — REJECT
+✗ Date outside YEAR_RANGE (verify from fetched text, not
+  updated label or URL)
+✗ Booking sites, hotel sites, sponsored content
+✗ Covers whole country or region, not this city specifically
+✗ KNOWN_PROBLEMATIC_URLS
+✗ Social media primary sources without fetchable articles
+✗ Articles that read as promotional or lack specific critical detail
+
+CONFLICT OF INTEREST CHECK (mandatory for every source):
+For every candidate that passes quality rules, log:
+[coi-check] [publication] — commercial conflict: YES/NO
+If YES: prepend "⚠ coi — " to the writer_profile text and
+flag ⚠ coi in review table. Do not reject — flag and include.
+Example: "⚠ coi — [Name] is a food writer..."
+Sources with commercial conflicts count toward secondary cap.
+
+SIBLING EDITION CHECK (mandatory when applicable):
+If a publication has editions in multiple languages:
+Log: [sibling-check] [publication] [LANG1] and [LANG2] —
+independently produced: YES/NO — evidence: [specific evidence]
+Same-publisher cross-language editions do NOT qualify as
+independent agreement for both-pool.
+
+WRITER PROFILE (mandatory for every accepted source):
+Write 2–3 sentences covering who the writer is, their
+connection to this city, and their editorial stance.
+This is USER-FACING — no pipeline notes, no fetch data.
+Store as writer_profile in the sources array.
+
+PUBLISHER CONCENTRATION CHECK:
+After selecting sources, check: does any single publisher
+contribute 2+ articles or 50%+ of either language pool?
+If yes: log [publisher-concentration] flag and attempt 3–4
+supplementary searches for an independent alternative.
+If no alternative found: document as structural characteristic.
+
+DIVERSITY GATE:
+For bilingual/multilingual cities (SINGLE_LANGUAGE_CITY: NO):
+✓ At least 1 primary source in PRIMARY_LANGUAGE
+✓ At least 1 primary source in SECONDARY_LANGUAGE
+✓ No more than 2 secondary sources in total
+
+For single-language cities (SINGLE_LANGUAGE_CITY: YES):
+✓ At least 2 legacy/institutional sources
+✓ At least 1 independent/freelance source
+✓ No more than 2 secondary sources in total
+
+If gate not met: run up to 8 additional targeted searches.
+If still not met: document as structural characteristic.
+
+Select 6–12 sources. Do not stop for approval.
+
+════════════════════════════════════════
+PHASE 1B — CROSS-VALIDATION SUPPLEMENT
+════════════════════════════════════════
+
+After completing all main queries (Part A + Part B), run
+cross-validation queries before proceeding to Phase 2.
+
+Cross-validation queries are RESPONSIVE — they cannot be
+pre-written. Write them based on what Phase 0 and Phase 1
+confirmed.
+
+STEP 1: Identify the most-mentioned restaurant names across
+all confirmed Phase 0 and Phase 1 sources combined.
+Scale the number of queries to sources confirmed:
+- 3 or more sources confirmed: use 3 most-mentioned names
+- 2 sources confirmed: use 2 most-mentioned names (2 queries)
+- 1 source confirmed: use 1 most-mentioned name (1 query)
+- 0 sources confirmed: skip Phase 1B entirely
+  Log: [phase-1b-crossval] SKIPPED — no confirmed sources
+
+STEP 2: For each selected restaurant name, run one targeted query:
+"[restaurant name] [city] recomendacion critica"
+(or equivalent in the primary local language)
+Log each as: [phase-1b-crossval] "[query]" → [result]
+
+STEP 3: Verify any new candidates via Jina.
+Apply same quality rules as Phase 1.
+Record the exact article URL as article_url for any new source.
+Do not include sources already in the candidate pool.
+
+Report after Phase 1B:
+- Cross-validation queries run: [count]
+- New qualifying sources found: [list]
+- Sources already known: [count]
+
+════════════════════════════════════════
+PHASE 1 COMPLETE — AWAITING INSTRUCTION
+════════════════════════════════════════
+
+Present the confirmed source list now. For each source show:
+publication, writer (full name), language, article date,
+source type, COI flag if applicable.
+
+STOP. Do not proceed to Phase 2 automatically.
+
+The source list is now LOCKED. No sources may be added,
+reconsidered, or substituted after this point under any
+circumstances. Proceed to Phase 2 with exactly the sources
+listed above and no others.
+
+Wait for the explicit instruction "PROCEED" before continuing.
+
+════════════════════════════════════════
+PHASE 2 — FETCH AND EXTRACT (with retry)
+════════════════════════════════════════
+
+FETCH PROTOCOL:
+Fetch all sources via Jina (https://r.jina.ai/[URL]).
+Send all Jina requests in parallel. Then process extractions
+one source at a time in the order they return.
+
+The exact URL used for each Jina fetch is the article_url for
+that source. Record it precisely — this is what the viewer
+will link to when a user clicks "Source ↗".
+
+TWO-TIER RETRY RULE:
+If any fetch returns under 3,000 characters:
+
+  RETRY 1 — Transient failure check:
+  1. Wait 30 seconds
+  2. Retry the same URL via Jina
+  3. If now 3,000+ chars: proceed normally.
+     Log: [retry-1-success] [publication] — recovered after 30s
+
+  RETRY 2 — Extended wait (if Retry 1 still under 3,000 chars):
+  1. Wait 60 seconds
+  2. Retry the same URL via Jina one final time
+  3. If now 3,000+ chars: proceed normally.
+     Log: [retry-2-success] [publication] — recovered after 60s
+
+  FINAL FAILURE (if still under 3,000 chars after both retries):
+  - Mark as fetch_status: "failed"
+  - Try Wayback Machine fallback:
+    https://r.jina.ai/https://web.archive.org/web/2026/[URL]
+    Log: [wayback-retry] [publication] — [outcome]
+  - If Wayback also fails: log to OUTPUT_FAILED_SOURCES and skip
+  - writer_profile must still be written from search snippet
+
+END-OF-PHASE FAILED SOURCES REPORT:
+After all sources processed, output:
+FAILED SOURCES SUMMARY:
+- Sources recovered by Retry 1 (30s): [list]
+- Sources recovered by Retry 2 (60s): [list]
+- Sources recovered by Wayback: [list]
+- Sources failed after all retries: [list with char counts]
+- Total restaurants lost to permanent failures: [estimate]
+
+For each source report:
+- Publication and writer
+- Characters returned (attempt 1 / retry 1 / retry 2 / wayback)
+- Fetch quality: good (3,000+) / partial (1,000–3,000) /
+  failed (under 1,000 after all retries)
+- Retries attempted: 0 / 1 / 2
+- Wayback attempted: yes/no
+- Outcome: success / recovered / failed
+- Restaurants extracted (count, or 0 if failed)
+- Written to working file: yes / no
+
+════════════════════════════════════════
+MANDATORY SOURCE FIELD CHECKLIST
+════════════════════════════════════════
+
+Before writing any source to OUTPUT_WORKING, verify ALL of the
+following fields are populated. Do not proceed to extraction
+without completing every field on this list:
+
+  ✓ id               unique slug e.g. "src-publication-writerlastname"
+  ✓ publication      full publication name — never "Unknown"
+  ✓ writer           full first name and surname, or null with
+                     logged reason (e.g. single-author rule applied)
+  ✓ writer_profile   2–3 user-facing sentences — no pipeline notes,
+                     no fetch data, no operational information
+  ✓ url              publication homepage URL
+  ✓ article_url      the exact article URL fetched via Jina —
+                     NOT the publication homepage. This is the
+                     specific article used for extraction. It is
+                     what users see when clicking "Source ↗" in
+                     the viewer. This field is MANDATORY. If the
+                     article_url is the same as url, record it
+                     explicitly — do not leave it blank.
+  ✓ language         ISO code: en / es / ca / pt / fr / ar
+  ✓ source_type      "primary" or "secondary"
+  ✓ article_date     from fetched text — "undated" if not found
+  ✓ article_title    from page h1 or title tag — null if not found
+  ✓ fetch_status     "good" / "partial" / "failed"
+  ✓ fetch_chars      number of characters returned
+  ✓ retries_attempted  0 / 1 / 2
+  ✓ wayback_attempted  true / false
+  ✓ commercial_conflict  true or false — never omit this field
+  ✓ commercial_conflict_note  description if true, null if false
+  ✓ publisher_concentration_flag  true / false
+  ✓ found_via        "phase-0" / "phase-1" / "phase-1b-crossval"
+
+════════════════════════════════════════
+EXTRACTION RULES
+════════════════════════════════════════
+
+✓ Only include restaurants explicitly named in fetched text
+✓ Extract the following fields for each restaurant:
+    name
+    name_variants (all spelling variants found)
+    neighbourhood (canonical from GEOGRAPHIC_BOUNDARY_INCLUDE)
+    cuisine type
+    opening_year (if mentioned)
+    price_level
+    dishes_mentioned (array of ALL dishes named in article text —
+      use empty array [] if none mentioned)
+    signature_dish (only if writer explicitly singles one out —
+      see Signature Dish Rule below)
+    quote (writer's words, minimum 15 words, at least 1 specific
+      detail — see Quote Quality Rule below)
+    quote_language ("original" or "translated from [language]")
+    article_date (from fetched text — "undated" if not visible)
+    article_title (from page h1 or title tag — null if not found)
+    open_status_check (true if article_date is pre-2025, else false)
+✗ Do not use training knowledge to add any detail not in
+  the fetched article text
+✗ Do not include if only evidence is a list title or header
+✗ Secondary sources: maximum 30 restaurants
+
+QUOTE QUALITY RULE — AUTO-REJECT AT EXTRACTION:
+Valid quote = at least 15 words AND at least one specific detail
+(dish name, chef name, physical description, price, year, or
+neighbourhood).
+
+If a quote is under 15 words OR has no specific detail:
+→ DO NOT add this restaurant to OUTPUT_WORKING
+→ Auto-reject at extraction time
+→ Log: [extraction-reject] [restaurant name] from [source] —
+  reason: quote under 15 words / no specific detail
+→ Include this rejection in OUTPUT_AUDIT
+
+For secondary source entries: two specific details required.
+If only one specific detail: auto-reject at extraction time.
+
+SIGNATURE DISH RULE:
+Record all dishes mentioned in a dishes_mentioned array.
+Set signature_dish only if the article explicitly identifies
+one dish as distinctive, exemplary, or the thing to order.
+If the article mentions multiple dishes equally, leave
+signature_dish null and populate dishes_mentioned only.
+Do not select a signature dish by position (e.g. "first
+mentioned") — only set it if the writer singles one out.
+
+ARTICLE DATE FIELD:
+Record the date found in fetched article text as article_date.
+If no date visible in fetched text, record as "undated".
+Do not use CMS metadata, "updated" labels, or URL patterns.
+If article_date is from a pre-2025 year, set open_status_check:
+true on every restaurant extracted from that source.
+
+NEIGHBOURHOOD RULE FOR UNGEOCODED RESTAURANTS:
+For every restaurant where coordinates will be null (automated
+geocoding cannot resolve the address), neighbourhood MUST be
+populated from article text context. This enables centroid
+fallback in the viewer — a restaurant with both null neighbourhood
+and null coordinates will not display correctly on the map.
+If neighbourhood genuinely cannot be determined from article
+text: set to null but flag ⚠ null-neighbourhood in the review
+table and record in OUTPUT_AUDIT.
+
+NAME NORMALISATION:
+If the same restaurant appears under multiple spellings, merge
+into one entry using the most complete name. Record all variants
+in name_variants. Report all merges at end of phase.
+
+NEIGHBOURHOOD STANDARDISATION:
+Map to canonical forms from GEOGRAPHIC_BOUNDARY_INCLUDE.
+Use null if neighbourhood cannot be determined from article text.
+Do not invent neighbourhoods not in GEOGRAPHIC_BOUNDARY_INCLUDE.
+
+LANGUAGE_POOL FIELD:
+Set language_pool as a plain string — never a list or array.
+Rules:
+  "both"         → restaurant appears in sources from 2+ different
+                   language pools from DIFFERENT publishers.
+                   Same-publisher cross-language editions do NOT qualify.
+  "en"           → English-language sources only
+  "es"           → Spanish-language sources only
+  "ca"           → Catalan-language sources only
+  "pt"           → Portuguese-language sources only
+  "fr"           → French-language sources only
+  "ar"           → Arabic-language sources only
+  "multi-source" → SINGLE_LANGUAGE_CITY only: 2+ independent sources
+Calculate this field in Phase 3 after all sources are merged.
+Never write ["en", "es"] or any bracket/list form.
+
+GEOGRAPHIC BOUNDARY:
+✗ Auto-exclude anything in GEOGRAPHIC_BOUNDARY_EXCLUDE
+✗ Flag any restaurant whose location description is ambiguous
+
+RIAD RULE (apply only if RIAD_RULE: APPLY in Part 1):
+Flag any hotel or riad restaurant with ⚠ riad.
+Include only if: quote contains specific dish detail AND writer
+explicitly recommends for food, not atmosphere.
+
+════════════════════════════════════════
+WORKING FILE FORMAT
+════════════════════════════════════════
+
+Write each restaurant to OUTPUT_WORKING as a JSON array entry.
+The working file is an append-only JSON array. Each entry uses
+the same field names as the final restaurant JSON plus the
+pipeline tracking field _source_id (the only underscore-prefixed
+field permitted). All other field names must exactly match the
+final JSON schema below.
+
+Working file entry structure:
+{
+  "_source_id": "src-slug",
+  "name": "string",
+  "name_variants": [],
+  "neighbourhood": "canonical form or null",
+  "cuisine": "string or null",
+  "opening_year": "number or null",
+  "price_level": "number or null",
+  "price_currency": "[PRICE_CURRENCY]",
+  "dishes_mentioned": [],
+  "signature_dish": "string or null",
+  "quote": "string",
+  "quote_language": "original or translated from [language]",
+  "article_date": "YYYY-MM-DD or undated",
+  "article_title": "string or null",
+  "open_status_check": false,
+  "sources": ["src-slug"]
+}
+
+Do not use any other field names in the working file.
+
+TRACEABILITY CHECK (mandatory before proceeding to Phase 3):
+For every restaurant in OUTPUT_WORKING, verify you can identify
+the specific source URL and the sentence in fetched text where
+its name appeared. If any restaurant cannot be traced: remove
+it and log the removal in OUTPUT_AUDIT.
+
+════════════════════════════════════════
+PHASE 3 — ASSEMBLE, SCORE, AND REVIEW
+════════════════════════════════════════
+
+Read OUTPUT_WORKING as input.
+
+STEP 1 — Deduplicate and merge
+Combine all entries. Match on normalised name.
+Report: total before dedup / total after / merges made.
+
+STEP 2 — Assign confidence tier
+
+BOTH-POOL DEFINITION (strict):
+A restaurant qualifies as both-pool ONLY if it appears in:
+- At least one source in language pool A, AND
+- At least one source in language pool B, AND
+- The two sources are from DIFFERENT publishers with no shared
+  ownership, brand relationship, or licensing arrangement.
+Same-publisher cross-language editions do NOT qualify as
+both-pool even if they have different editorial teams.
+
+TIER A — Auto-approve:
+- 2 or more independent sources, OR
+- Both-pool (using strict definition above)
+
+For single-language cities (SINGLE_LANGUAGE_CITY: YES):
+- Tier A = legacy/institutional + independent/freelance source
+
+TIER B — Review recommended:
+- Single primary or independent source, good fetch quality,
+  quote ≥15 words with ≥1 specific detail
+- Secondary single source, good fetch quality, quote ≥15 words
+  with ≥2 specific details
+
+TIER C — Auto-reject:
+- Failed fetch, single source
+- Quote under 15 words or no specific details (should have
+  been caught at extraction — log if any reach this stage)
+- Secondary single-source with fewer than 2 specific details
+- Outside GEOGRAPHIC_BOUNDARY_INCLUDE
+- Failed traceability check
+
+SOURCE CONCENTRATION CAP:
+If any single source contributes more than [CONCENTRATION_CAP]%
+(default 30%) of total (Tier A + Tier B) entries as single-source
+Tier B: auto-reject lowest-confidence entries from that source
+until within cap. Report in AUTO-REJECTED section.
+
+STEP 3 — Recommended removals (mandatory)
+Review every Tier B entry. Flag:
+- Not a restaurant (bar-only, café-only, bakery, market stall)
+- Chain with no local significance
+- Conflict of interest without sufficient editorial detail
+- Hotel/riad restaurant with atmosphere-only quote (RIAD_RULE)
+- open_status_check entries — flag but do NOT run closure
+  searches during the pipeline
+- ⚠ null-neighbourhood entries — recommend for review
+
+STEP 4 — Review table
+
+AUTO-REMOVAL RULE — NULL NEIGHBOURHOOD:
+Any Tier B entry where neighbourhood is null AND source_count
+is 1 is automatically recommended for removal.
+Exception: retain if quote contains explicit city district
+reference confirming city location.
+
+Sort: both-pool first → multi-source → single-source alphabetical.
+
+Columns:
+# | Name | Neighbourhood | Cuisine | Pool | Tier | ⚠
+
+After table — mandatory:
+
+---
+AUTO-REJECTED (Tier C) — [N] entries — see OUTPUT_AUDIT
+AUTO-REMOVED (recommended Tier B) — [N] entries — see OUTPUT_AUDIT
+
+COI FLAGS: [list sources with commercial conflicts]
+PUBLISHER CONCENTRATION: [list flagged publishers]
+---
+
+UNATTENDED MODE BEHAVIOUR:
+If UNATTENDED_MODE: YES in Part 1:
+→ Auto-accept all pipeline-recommended removals immediately.
+→ Do not present the "Enter numbers to remove" prompt.
+→ Log: [unattended-mode] auto-accepted [N] recommended removals.
+→ Proceed directly to STEP 5 — Export.
+
+If UNATTENDED_MODE: NO or blank:
+→ Present: "Enter numbers to remove, or press Enter to accept all."
+→ Wait for user input before proceeding to STEP 5.
+
+STEP 5 — Export
+
+Write OUTPUT_AUDIT now. This file is MANDATORY and must not
+be skipped. Confirm write succeeded before reporting run complete.
+Include: all Tier C auto-rejections, recommended Tier B removals,
+concentration cap decisions, geographic exclusions, COI disclosures,
+extraction-time auto-rejections (quote quality failures).
+Format: restaurant name | tier | reason | source
+
+Write FILE 1 (raw) to OUTPUT_RAW — all Tier A and Tier B entries
+before removals.
+
+Apply user removals (or auto-accept if UNATTENDED_MODE: YES).
+Write FILE 2 (final) to OUTPUT_FINAL.
+
+════════════════════════════════════════
+JSON STRUCTURE — CRITICAL REQUIREMENTS
+════════════════════════════════════════
+
+FIELD NAME WARNING: The top-level sources array MUST be named
+"sources". Never use "sources_used", "source_list", or any other
+variant. The viewer reads data.sources directly and will silently
+fail with 0 sources displayed if this field is misnamed.
+
+Output "city", "country", "city_slug", "built", "source_recency",
+and "pipeline" as top-level fields — NOT nested under "meta".
+The geocoding script reads data.city directly.
+
+JSON structure — FILE 2 (final):
+{
+  "city": "[CITY]",
+  "country": "[COUNTRY]",
+  "city_slug": "[CITY_SLUG]",
+  "built": "[today's date]",
+  "source_recency": "[YEAR_RANGE]",
+  "pipeline": "localbite-v7.1",
+  "confidence_tiers": {
+    "auto_approved": [count],
+    "reviewed_kept": [count],
+    "auto_removed": [count],
+    "user_removed": [count],
+    "auto_rejected": [count],
+    "concentration_cap_applied": [count]
+  },
+  "sources": [
+    {
+      "id": "src-slug",
+      "publication": "string",
+      "writer": "string or null",
+      "writer_profile": "2–3 sentence user-facing profile",
+      "url": "publication homepage URL",
+      "article_url": "exact article URL used for extraction — NOT the homepage",
+      "language": "en/es/ca/pt/fr/ar",
+      "source_type": "primary or secondary",
+      "article_date": "YYYY-MM-DD or undated",
+      "article_title": "string or null",
+      "fetch_status": "good / partial / failed",
+      "fetch_chars": [number],
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": true,
+      "commercial_conflict_note": "string or null",
+      "publisher_concentration_flag": false,
+      "found_via": "phase-0 / phase-1 / phase-1b-crossval"
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "string",
+      "name_variants": [],
+      "neighbourhood": "canonical form or null",
+      "cuisine": "string or null",
+      "opening_year": "number or null",
+      "price_level": "number or null",
+      "price_currency": "[PRICE_CURRENCY]",
+      "dishes_mentioned": [],
+      "signature_dish": "string or null",
+      "quote": "string",
+      "quote_language": "original or translated from [language]",
+      "language_pool": "both / en / es / ca / pt / fr / ar / multi-source",
+      "source_count": [number],
+      "sources": ["src-ids"],
+      "confidence_tier": "A or B",
+      "source_type_combination": "string",
+      "article_date": "YYYY-MM-DD or undated",
+      "article_title": "string or null",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
+    }
+  ]
+}
+
+FLAGGED FIELD RULE:
+Set flagged: true for any restaurant where one or more of the
+following apply: COI source is the only or primary source,
+open_status_check is true, riad flag applies, geographic
+location is ambiguous, or ⚠ null-neighbourhood applies.
+Set flagged: false only when none of the above conditions apply.
+
+════════════════════════════════════════
+FINAL SUMMARY
+════════════════════════════════════════
+
+PIPELINE METRICS:
+- Raw count / final count
+- Both-pool count and entries (strict definition applied)
+- Tier A / Tier B kept / recommended-for-removal / user-removed /
+  Tier C auto-rejected / concentration cap applied
+- open_status_check flagged: [count]
+- Extraction-time auto-rejections (quote quality): [count]
+
+SOURCES TABLE:
+Publication | Writer | Language | Type | Date | Fetch | COI | Found via
+
+WRITER PROFILES: [one profile per source]
+
+FETCH QA SUMMARY:
+- Sources fetched successfully (3,000+ chars): [count]
+- Sources retried: [count]
+- Sources recovered by Wayback: [count]
+- Sources failed after all retries: [count]
+
+PUBLISHER CONCENTRATION REPORT:
+- Publishers contributing 2+ articles: [list]
+- Flags triggered: [list]
+- Resolved by supplementary search: yes/no
+
+COI REPORT:
+- Sources with commercial conflicts: [list with description]
+
+AUDIT SUMMARY:
+- Auto-rejections (Tier C): [count] — see OUTPUT_AUDIT
+- Auto-removals (recommended Tier B): [count] — see OUTPUT_AUDIT
+- Extraction-time rejections (quote quality): [count] — see OUTPUT_AUDIT
+
+════════════════════════════════════════
+METRICS LOG — mandatory final action
+════════════════════════════════════════
+
+After the review table is complete and user removals are applied,
+run this command to append pipeline stats to localbite-run-metrics.log.
+Token capture is handled programmatically by the node command below.
+
+node -e "
+const fs = require('fs');
+const path = require('path');
+const os = require('os');
+
+// Extract session data from most recent session-meta JSON file
+let sessionData = { input_tokens: null, output_tokens: null, duration_minutes: null, tool_counts: null };
+try {
+  const sessionMetaDir = path.join(os.homedir(), '.claude', 'usage-data', 'session-meta');
+  if (fs.existsSync(sessionMetaDir)) {
+    const files = fs.readdirSync(sessionMetaDir)
+      .filter(f => f.endsWith('.json'))
+      .map(f => ({
+        name: f,
+        path: path.join(sessionMetaDir, f),
+        mtime: fs.statSync(path.join(sessionMetaDir, f)).mtime
+      }))
+      .sort((a, b) => b.mtime - a.mtime);
+    if (files.length > 0) {
+      const mostRecent = JSON.parse(fs.readFileSync(files[0].path, 'utf8'));
+      sessionData = mostRecent;
+    }
+  }
+} catch (err) {
+  console.log('Could not read session-meta data:', err.message);
+}
+
+const totalToolUses = sessionData.tool_counts ?
+  Object.values(sessionData.tool_counts).reduce((sum, count) => sum + count, 0) : null;
+
+// Read final JSON to extract counts programmatically
+let finalData = {restaurants: [], sources: []};
+try {
+  finalData = JSON.parse(fs.readFileSync('[OUTPUT_FINAL]', 'utf8'));
+} catch(e) {}
+
+const finalEntries = finalData.restaurants ? finalData.restaurants.length : 0;
+const sourcesConfirmed = finalData.sources ? finalData.sources.length : 0;
+const bothPool = finalData.restaurants ?
+  finalData.restaurants.filter(r => r.language_pool === 'both').length : 0;
+const tierA = finalData.restaurants ?
+  finalData.restaurants.filter(r => r.confidence_tier === 'A').length : 0;
+const tierB = finalData.restaurants ?
+  finalData.restaurants.filter(r => r.confidence_tier === 'B').length : 0;
+const openCheck = finalData.restaurants ?
+  finalData.restaurants.filter(r => r.open_status_check === true).length : 0;
+
+// Count searches from log
+let searchesRun = 0;
+try {
+  const log = fs.readFileSync('[OUTPUT_SEARCH_LOG]', 'utf8');
+  searchesRun = (log.match(/^\[(?:phase-0|phase-1b-crossval|neighbourhood-|cross-)/gm) || []).length;
+} catch(e) {}
+
+const e = {
+  city: '[CITY_SLUG]',
+  date: new Date().toISOString().split('T')[0],
+  pipeline: 'localbite-v7.1',
+  sources_confirmed: sourcesConfirmed,
+  final_entries: finalEntries,
+  both_pool: bothPool,
+  tier_a: tierA,
+  tier_b: tierB,
+  tier_c: 0,
+  searches_run: searchesRun,
+  open_status_check: openCheck,
+  tokens: sessionData.input_tokens && sessionData.output_tokens ?
+    sessionData.input_tokens + sessionData.output_tokens : null,
+  input_tokens: sessionData.input_tokens || null,
+  output_tokens: sessionData.output_tokens || null,
+  tool_uses: totalToolUses || null,
+  run_time_seconds: sessionData.duration_minutes ?
+    Math.round(sessionData.duration_minutes * 60) : null
+};
+
+fs.appendFileSync('localbite-run-metrics.log', JSON.stringify(e) + '\n');
+console.log('Metrics logged:', JSON.stringify(e, null, 2));
+"
+
+Replace [OUTPUT_FINAL], [OUTPUT_SEARCH_LOG], and [CITY_SLUG]
+with the actual values from Part 1 before running.
+Confirm: "Metrics logged:" appears in output before closing session.
+This step is MANDATORY. Do not skip it.
+
+════════════════════════════════════════
+SEARCH TRANSPARENCY
+════════════════════════════════════════
+
+Read OUTPUT_SEARCH_LOG and include full contents as final
+section under heading "Search log".
+
+════════════════════════════════════════
+START
+════════════════════════════════════════
+
+[If DIRECT_FETCH_SOURCES is populated: start Phase 0 now.]
+[If DIRECT_FETCH_SOURCES is blank: start Phase 1 Step 1 now.]
+Stop at the Phase 1 COMPLETE pause and wait for PROCEED
+before continuing to Phase 2.
