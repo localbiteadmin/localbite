@@ -58,14 +58,22 @@ function generateWriterProfile(writer, publication, articleTitle, articleDate, l
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) { resolve(null); return; }
 
-    const prompt = `Write a 2–3 sentence user-facing profile for a food writer appearing in the LocalBite restaurant discovery app. The profile appears in the Sources panel and is read by users deciding whether to trust the recommendations.
+    const prompt = `Write a user-facing profile for a food writer in the LocalBite restaurant discovery app.
+
+CRITICAL: You MUST write the profile in ENGLISH. This is non-negotiable regardless of the source language. Even if the publication is Spanish, French, or any other language, the profile must be in English.
 
 Writer: ${writer}
 Publication: ${publication}
 Article: "${articleTitle}" (${articleDate})
-Language: ${language}
+Source language: ${language}
 
-Write the profile in English regardless of the article language. Cover: who this writer is, what the publication covers and its audience, and why this writer is a credible food voice for this city. Do not include: pipeline notes, fetch quality, tier assignments, or any operational data. Do not start with the writer's name as the first word.
+STRICT RULES:
+- Write exactly 2-3 sentences. No more.
+- Only state facts derivable from the fields above. Do not invent years of experience, network size, or any biographical detail not given.
+- Cover: who this writer is and what the publication covers.
+- Do not start with the writer name as the first word.
+- No pipeline notes, no operational data.
+- Output MUST be in ENGLISH.
 
 Respond with only the profile text — no preamble, no quotes, no labels.`;
 
