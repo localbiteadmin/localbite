@@ -1,0 +1,174 @@
+LOCALBITE v7.1 — ZARAGOZA SEARCH LOG
+City: Zaragoza, Spain | Date: 2026-04-20
+Pipeline: localbite-v7.1
+
+[year-distribution-check] PASSED — 5 queries reference earlier years (2023/2023-2024), 12 queries reference recent years (2024-2025/2025/2025-2026), 16 queries have no year term.
+
+=== PART A — NEIGHBOURHOOD COVERAGE ===
+
+[neighbourhood-CascoHistorico] "restaurantes Casco Histórico Zaragoza guía gastronómica 2023 2024" → Multiple candidates: hoyaragon.es (Nacho Viñau, Jan 2024), aragondigital.es casco antiguo article, comecomezaragoza.es (no author), zaragozaguia.com (no author).
+
+[neighbourhood-CascoHistorico] "best restaurants Casco Historico Zaragoza food guide" → Mainly aggregator/booking sites (Tripadvisor, TheFork, Evendo, Wanderlog) — no qualifying editorial sources.
+
+[neighbourhood-Centro] "mejores restaurantes barrio Centro Zaragoza recomendaciones 2025" → guiarepsol.com (2021, outside range), comecomezaragoza.es (no author), oportunidadviajera.com (2017, outside range).
+
+[neighbourhood-Centro] "where to eat Centro district Zaragoza 2024 2025" → comecomezaragoza.es (no author), enjoyzaragoza.es, zaragozaguia.com (no author). No new qualifying sources.
+
+[neighbourhood-Universidad] "restaurantes zona Universidad Zaragoza reseña gastronómica" → comecomezaragoza.es (no author), aragondigital.es "City" article (Oct 2024, no author visible), cafesybares.com (no author).
+
+[neighbourhood-Universidad] "food guide Universidad neighbourhood Zaragoza restaurants" → rutica41.com, ryanair.com (Lucy Norris, undated), thespaintravelguru.com (CAPTCHA blocked). No new qualifying sources.
+
+[neighbourhood-SanJose] "restaurantes barrio San José Zaragoza mejores recomendados 2024" → infobae.com article on Michelin-recommended restaurants (Ana Plaza, Aug 2024) — confirmed as candidate. zaragozaguia.com (no author).
+
+[neighbourhood-SanJose] "dining San José Zaragoza restaurant recommendations" → Wanderlog, TheFork, Tripadvisor aggregators — no editorial sources.
+
+[neighbourhood-Delicias] "bares restaurantes Delicias Zaragoza guía 2024 2025" → unbuendiaenzaragoza.com (no author confirmed), aragondigital.es Delicias tapas article (Apr 2025, no author confirmed). comecomezaragoza.es (no author).
+
+[neighbourhood-Delicias] "best places to eat Delicias Zaragoza" → Aggregators only. No new qualifying sources.
+
+[neighbourhood-ElRabal] "restaurantes El Rabal Arrabal Zaragoza reseña 2023 2024" → enjoyzaragoza.es (Yolanda Gil, Jan 2023) — confirmed candidate. zaragozaguia.com (no author).
+
+[neighbourhood-ElRabal] "restaurants El Rabal Zaragoza guide" → Local directory sites only. No new qualifying sources.
+
+[neighbourhood-LaAlmozara] "restaurantes La Almozara Zaragoza recomendación" → guiajoselin.es (only first name "Jose", surname not found) — rejected. repuebla.me (no author).
+
+[neighbourhood-LasFuentes] "bares restaurantes Las Fuentes Zaragoza" → repuebla.me (no author), zaragozaguia.com (no author). No qualifying sources.
+
+[neighbourhood-Torrero] "restaurantes Torrero La Paz Zaragoza" → Directory sites only. No qualifying editorial sources.
+
+=== PART B — CROSS-CUTTING ANGLES ===
+
+[cross-1] "best restaurants Zaragoza Spain 2023 2024 food guide" → thespaintravelguru.com (CAPTCHA blocked), ryanair.com (Lucy Norris, undated — rejected). No new qualifying sources.
+
+[cross-1] "where to eat Zaragoza Spain 2025 recommendations" → budgettraveller.org (2017, outside range), thespaintravelguru.com (CAPTCHA). No new qualifying sources.
+
+[cross-2] "guía gastronómica Zaragoza mejores restaurantes 2025 2026" → comecomezaragoza.es (no author), zaragozaguia.com (no author), enjoyzaragoza.es (multiple). No new qualifying sources.
+
+[cross-2] "restaurantes de moda Zaragoza recomendados 2024" → aragondigital.es (Talía Benedicto Romera, Dec 30, 2024) — confirmed candidate. hoyaragon.es new openings Oct 2024 (Nacho Viñau) noted.
+
+[cross-2] "crítica gastronómica Zaragoza restaurante destacado 2023" → comecomezaragoza.es/los-23 (no author, URL redirected to 2026 version), gastronomistas.com (Ferran Imedio, Sep 2023) — confirmed candidate.
+
+[cross-3] "food writer personal restaurant recommendations Zaragoza Spain" → theculturetrip.com (403 blocked). No new qualifying sources.
+
+[cross-3] "blogger gastronómico Zaragoza restaurantes favoritos" → saboreandozaragoza.es (503 error), ivanescomer.blogspot.com (old blog, no dates), comecomezaragoza.es/ruta-gastronomica-con-inaki-urrutia/ (no author). No new qualifying sources.
+
+[cross-4] "Michelin Zaragoza restaurante estrella recomendado 2024 2025" → aragondigital.es Michelin article, enjoyzaragoza.es, facefoodmag.com, infobae.com (Ana Plaza, Aug 2024) — confirmed candidate.
+
+[cross-4] "premios gastronomía Aragón Zaragoza restaurante mejor 2024" → igastroaragon.com (events only, no authors), enjoyzaragoza.es (no author confirmed), premioshoreca.com (institutional).
+
+[cross-4] "Bib Gourmand Zaragoza Michelin 2023 2024 2025" → goaragon.es, enjoyzaragoza.es (no author confirmed). No new qualifying sources.
+
+[cross-5] "restaurantes nuevos abiertos Zaragoza 2023 2024" → hoyaragon.es (Nacho Viñau, May 2023 and Oct 2024) — additional articles by confirmed author. zaragozaguia.com (no author).
+
+[cross-5] "new restaurant openings Zaragoza Spain 2025 2026" → Aggregators only. No new qualifying sources.
+
+[cross-6] "ternasco borraja Zaragoza restaurante donde comer reseña" → hoyaragon.es (Nacho Viñau, Mar 12, 2025) — confirmed candidate. lazarola.com (not verified), aragondigital.es ternasco (May 2025, no author confirmed for this article).
+
+[cross-6] "El Tubo Zaragoza tapas mejores bares guía" → unbuendiaenzaragoza.com (no author confirmed), guiarepsol.com (Nov 2021, outside year range). pasean2.com (Dec 2018, outside range).
+
+[cross-7] "cocina aragonesa tradicional Zaragoza restaurante recomendación crítica" → goaragon.es (no author confirmed), turismoenaragon.com (no author, Jan 2024). theobjective.com/gastronomia/2024-09-21 (Brenda Alonso, Sep 2024) — confirmed candidate (already in pool from earlier search).
+
+[cross-7] "international restaurant Zaragoza ethnic food recommendations" → Aggregators only. No new qualifying sources.
+
+[cross-8] "revista gastronómica aragonesa mejores restaurantes Zaragoza 2024" → igastroaragon.com (events only), labuenavidaenzaragoza.com (Florentino Fondevila — specific articles not verified in range), zaragozaguia.com (no author).
+
+[cross-8] "suplemento gastronomía Zaragoza restaurantes periodista recomendados" → aragondigital.es (already confirmed), hoyaragon.es (already confirmed). No new sources.
+
+=== SUPPLEMENTARY SEARCHES (publisher concentration hoyaragon.es) ===
+
+[cross-supplementary] "Heraldo de Aragón gastronomía restaurantes Zaragoza recomendados 2024 2025" → No Heraldo de Aragón article with named author found. comecomezaragoza.es (no author) again prominent. gastronomistas.com/gastrotapas-2024 (Ferran Imedio, Jun 2024) — same publisher as existing gastronomistas.com source.
+
+[cross-supplementary] "Zaragoza Spain restaurants guide blogger 2023 2024 2025 named author review" → itimaker.com ("Editor" — anonymous), thespaintravelguru.com (CAPTCHA). Amazon book guides (outdated). No new qualifying sources.
+
+[cross-supplementary] "Zaragoza food guide English blogger writer personal visit 2024 2025 restaurants eat" → itimaker.com (Jan 2026, "Editor" — anonymous). No qualifying EN sources found.
+
+=== JINA FETCH LOG ===
+
+[phase-0] SKIPPED — DIRECT_FETCH_SOURCES blank.
+
+[phase-1] FETCHED comecomezaragoza.es/los-25-restaurantes-2025/ → URL redirects to Jan 2026 article. No named author. REJECTED — anonymous editorial team.
+
+[phase-1] FETCHED hoyaragon.es Casco Histórico Jan 2024 → CONFIRMED: Nacho Viñau, Jan 18, 2024, 8,500 chars.
+
+[phase-1] FETCHED theobjective.com Sep 2024 → CONFIRMED: Brenda Alonso, Sep 21, 2024, 8,500 chars.
+
+[phase-1] FETCHED guiajoselin.es → About page: only "Jose" (no surname). REJECTED — no full name.
+
+[phase-1] FETCHED unbuendiaenzaragoza.com El Tubo → No author. REJECTED.
+
+[phase-1] FETCHED comecomezaragoza.es About page → 404 error. No author. REJECTED — anonymous.
+
+[phase-1] FETCHED comecomezaragoza.es/los-23-restaurantes-2023/ → Redirects to 2026 article. No author. REJECTED.
+
+[phase-1] FETCHED gastronomistas.com/buenos-restaurantes-de-zaragoza/ → CONFIRMED: Ferran Imedio, Sep 30, 2023, 18,500 chars.
+
+[phase-1] FETCHED saboreandozaragoza.es → 503 error. REJECTED.
+
+[phase-1] FETCHED alwayspacktissues.com/about → 404. Article: no author named. REJECTED.
+
+[phase-1] FETCHED viajes.nationalgeographic.com.es Zaragoza → No author. Oct 2022. REJECTED — outside year range.
+
+[phase-1] FETCHED directoalpaladar.com Zaragoza → No author. Jul 2022. REJECTED — outside year range.
+
+[phase-1] FETCHED zaragozaguia.com 2025 article → No author. REJECTED.
+
+[phase-1] FETCHED guiajoselin.es homepage → Author "Jose" only (no surname). REJECTED — no full name.
+
+[phase-1] FETCHED aragondigital.es Dec 2024 → CONFIRMED: Talía Benedicto Romera, Dec 30, 2024, 18,500 chars.
+
+[phase-1] FETCHED hoyaragon.es Oct 2024 new openings → CONFIRMED: Nacho Viñau, Oct 6, 2024, 3,800 chars (partial).
+
+[phase-1] FETCHED thespaintravelguru.com → CAPTCHA blocked. REJECTED.
+
+[phase-1] FETCHED labuenavidaenzaragoza.com category → Florentino Fondevila confirmed as editor/author. Recent articles 2025-2026. Specific restaurant guide article not confirmed in range.
+
+[phase-1] FETCHED budgettraveller.org 24-hours-Zaragoza → No author. Dec 2017. REJECTED — outside range.
+
+[phase-1] FETCHED enjoyzaragoza.es Arrabal Jan 2023 → CONFIRMED: Yolanda Gil (byline "LA TILDE BY YOLANDA GIL"), Jan 8, 2023, 3,500 chars — partial quality.
+
+[phase-1] FETCHED turismoenaragon.com Jan 2024 → No author. REJECTED.
+
+[phase-1] FETCHED ryanair.com foodie guide → Author: Lucy Norris, undated. Secondary-only candidate, undated. REJECTED — no confirmed date.
+
+[phase-1] FETCHED hoyaragon.es Apr 2023 → CONFIRMED: Nacho Viñau, Apr 13, 2023, 3,500 chars — partial. Same publisher as Jan 2024 article.
+
+[phase-1] FETCHED tapasmagazine.es Zaragoza → Juan Barbacil, Mar 2022. REJECTED — outside year range.
+
+[phase-1] FETCHED labuenavidaenzaragoza.com homepage → Articles from 2025-2026 confirmed. Author Florentino Fondevila. No city-wide restaurant guide article verified.
+
+[phase-1] FETCHED pasean2.com El Tubo → No author. Dec 2018. REJECTED — outside range.
+
+[phase-1] FETCHED infobae.com Michelin Zaragoza Aug 2024 → CONFIRMED: Ana Plaza, Aug 26, 2024, 8,500 chars.
+
+[phase-1] FETCHED gastronomistas.com Gastrotapas 2024 → Ferran Imedio, Jun 2024, 8,500 chars — SAME publisher as gastronomistas.com Sep 2023 already in pool. Not added (publisher concentration).
+
+[phase-1] FETCHED itimaker.com Zaragoza food guide 2025 → Author: "Editor" (anonymous). REJECTED.
+
+[coi-check] hoyaragon.es — commercial conflict: NO
+[coi-check] theobjective.com — commercial conflict: NO
+[coi-check] gastronomistas.com — commercial conflict: NO
+[coi-check] aragondigital.es — commercial conflict: NO
+[coi-check] infobae.com — commercial conflict: NO
+[coi-check] enjoyzaragoza.es — commercial conflict: NO
+
+[single-author-confirmed] No single-author sites confirmed. All sites are multi-author publications with article-level bylines present.
+
+[publisher-concentration] hoyaragon.es — 2 candidate articles (Jan 2024 Casco Histórico + Mar 2025 Ternasco). Supplementary searches run (3 queries). No independent Aragonese food media alternative found with named author in range. Documented as structural characteristic — Aragón has limited independent food media with named authors. Retaining both hoyaragon.es articles given different topics, dates, and content.
+
+[sibling-check] No sibling edition issues identified.
+
+[diversity-gate] PRIMARY_LANGUAGE (Spanish): ✓ — 6 primary sources confirmed.
+[diversity-gate] SECONDARY_LANGUAGE (English): ✗ — 0 sources. All named-author EN candidates either outside year range, CAPTCHA-blocked, undated, or anonymous. Documented as structural characteristic for Zaragoza per Part 1 note: "EN primary sources may be thin. Do not manufacture a false both-pool — document accurately."
+
+=== PHASE 1B — CROSS-VALIDATION ===
+
+Most-mentioned restaurants across 7 confirmed sources: El Chalet (3 sources), Maite (2 sources, different publishers), Gamberro (2 sources, different publishers).
+
+[phase-1b-crossval] "El Chalet Zaragoza recomendacion critica restaurante" → Aggregators only (Tripadvisor, Guía Repsol restaurant card, gastroranking). No new editorial sources with named authors.
+
+[phase-1b-crossval] "Maite restaurante Zaragoza recomendacion critica" → Aggregators only (Tripadvisor, Guía Repsol card, ojoalplato.com, Michelin guide listing). No new editorial sources.
+
+[phase-1b-crossval] "Gamberro restaurante Zaragoza recomendacion critica" → Aggregators only (Tripadvisor, Verema, Sluurpy). Restaurant's own blog and encuinarte.com found but not qualifying editorial sources. No new sources.
+
+Phase 1B summary: 3 cross-validation queries run. 0 new qualifying sources found. 3 restaurants (El Chalet, Maite, Gamberro) confirmed across multiple known sources — validates source pool depth.
+

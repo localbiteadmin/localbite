@@ -1,0 +1,152 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023–2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LOCALBITE v7.1 — ZARAGOZA SEARCH PLAN
+City: Zaragoza, Spain | Year range: 2023–2026
+Primary language: Spanish | Secondary: English
+Single-language city: NO
+Generated: 2026-04-20
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE (15 queries)
+════════════════════════════════════════
+
+TIER 1 — Central/tourist areas (6 queries)
+
+Q01 [neighbourhood-CascoHistorico] ES — earlier years:
+"restaurantes Casco Histórico Zaragoza guía gastronómica 2023 2024"
+
+Q02 [neighbourhood-CascoHistorico] EN — no year term:
+"best restaurants Casco Historico Zaragoza food guide"
+
+Q03 [neighbourhood-Centro] ES — later years:
+"mejores restaurantes barrio Centro Zaragoza recomendaciones 2025"
+
+Q04 [neighbourhood-Centro] EN — later years:
+"where to eat Centro district Zaragoza 2024 2025"
+
+Q05 [neighbourhood-Universidad] ES — no year term:
+"restaurantes zona Universidad Zaragoza reseña gastronómica"
+
+Q06 [neighbourhood-Universidad] EN — no year term:
+"food guide Universidad neighbourhood Zaragoza restaurants"
+
+TIER 2 — Residential areas (6 queries)
+
+Q07 [neighbourhood-SanJose] ES — later years:
+"restaurantes barrio San José Zaragoza mejores recomendados 2024"
+
+Q08 [neighbourhood-SanJose] EN — no year term:
+"dining San José Zaragoza restaurant recommendations"
+
+Q09 [neighbourhood-Delicias] ES — later years:
+"bares restaurantes Delicias Zaragoza guía 2024 2025"
+
+Q10 [neighbourhood-Delicias] EN — no year term:
+"best places to eat Delicias Zaragoza"
+
+Q11 [neighbourhood-ElRabal] ES — earlier years:
+"restaurantes El Rabal Arrabal Zaragoza reseña 2023 2024"
+
+Q12 [neighbourhood-ElRabal] EN — no year term:
+"restaurants El Rabal Zaragoza guide"
+
+TIER 3 — Emerging areas (3 queries, ES only)
+
+Q13 [neighbourhood-LaAlmozara] ES:
+"restaurantes La Almozara Zaragoza recomendación"
+
+Q14 [neighbourhood-LasFuentes] ES:
+"bares restaurantes Las Fuentes Zaragoza"
+
+Q15 [neighbourhood-Torrero] ES:
+"restaurantes Torrero La Paz Zaragoza"
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES (18 queries)
+════════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries — one earlier, one later)
+
+Q16 [cross-1] EN — earlier years:
+"best restaurants Zaragoza Spain 2023 2024 food guide"
+
+Q17 [cross-1] EN — later years:
+"where to eat Zaragoza Spain 2025 recommendations"
+
+Cross-2 — City-wide ES (3 queries — at least one earlier)
+
+Q18 [cross-2] ES — later years:
+"guía gastronómica Zaragoza mejores restaurantes 2025 2026"
+
+Q19 [cross-2] ES — later years:
+"restaurantes de moda Zaragoza recomendados 2024"
+
+Q20 [cross-2] ES — earlier years:
+"crítica gastronómica Zaragoza restaurante destacado 2023"
+
+Cross-3 — Writer-first (2 queries, 1 EN + 1 ES)
+
+Q21 [cross-3] EN — no year term:
+"food writer personal restaurant recommendations Zaragoza Spain"
+
+Q22 [cross-3] ES — no year term:
+"blogger gastronómico Zaragoza restaurantes favoritos"
+
+Cross-4 — Named awards (3 queries)
+
+Q23 [cross-4] awards — later years:
+"Michelin Zaragoza restaurante estrella recomendado 2024 2025"
+
+Q24 [cross-4] awards — later years:
+"premios gastronomía Aragón Zaragoza restaurante mejor 2024"
+
+Q25 [cross-4] awards — multi-year:
+"Bib Gourmand Zaragoza Michelin 2023 2024 2025"
+
+Cross-5 — Recent openings (2 queries — one earlier, one later)
+
+Q26 [cross-5] ES — earlier years:
+"restaurantes nuevos abiertos Zaragoza 2023 2024"
+
+Q27 [cross-5] EN — later years:
+"new restaurant openings Zaragoza Spain 2025 2026"
+
+Cross-6 — Vocabulary-specific ES (2 queries)
+
+Q28 [cross-6] ES — no year term:
+"ternasco borraja Zaragoza restaurante donde comer reseña"
+
+Q29 [cross-6] ES — no year term:
+"El Tubo Zaragoza tapas mejores bares guía"
+
+Cross-7 — Cuisine and community (2 queries)
+
+Q30 [cross-7] ES — no year term:
+"cocina aragonesa tradicional Zaragoza restaurante recomendación crítica"
+
+Q31 [cross-7] EN — no year term:
+"international restaurant Zaragoza ethnic food recommendations"
+
+Cross-8 — Publication-category ES (2 queries)
+
+Q32 [cross-8] ES — later years:
+"revista gastronómica aragonesa mejores restaurantes Zaragoza 2024"
+
+Q33 [cross-8] ES — no year term:
+"suplemento gastronomía Zaragoza restaurantes periodista recomendados"
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+Earlier years (2023 / 2023–2024): Q01, Q11, Q16, Q20, Q26 = 5 queries
+Later years (2024 / 2024–2025 / 2025 / 2025–2026): Q03, Q04, Q07, Q09, Q17, Q18, Q19, Q23, Q24, Q25, Q27, Q32 = 12 queries
+No year term: Q02, Q05, Q06, Q08, Q10, Q12, Q13, Q14, Q15, Q21, Q22, Q28, Q29, Q30, Q31, Q33 = 16 queries
+
+Cross-1 (2 queries): Q16 earlier ✓ / Q17 later ✓
+Cross-2 (3 queries): Q20 earlier ✓
+Cross-5 (2 queries): Q26 earlier ✓ / Q27 later ✓
+
+[year-distribution-check] PASSED — 5 queries reference earlier years, 12 queries reference recent years, 16 queries have no year term.
+
+Total planned queries: 33
+Soft ceiling: 45 | Hard ceiling: 55 — within limits.

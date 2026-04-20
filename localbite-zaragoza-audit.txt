@@ -1,0 +1,192 @@
+LOCALBITE v7.1 — ZARAGOZA AUDIT FILE
+City: Zaragoza, Spain | Date: 2026-04-20
+Pipeline: localbite-v7.1
+Output: localbite-zaragoza-2023-2026.json
+
+════════════════════════════════════════
+PIPELINE SUMMARY
+════════════════════════════════════════
+
+Searches run: 36 (33 planned + 3 supplementary publisher-concentration searches)
+Phase 0 (direct fetch): SKIPPED — DIRECT_FETCH_SOURCES blank
+Phase 1B (cross-validation): 3 queries run, 0 new qualifying sources found
+Sources confirmed: 7
+Sources rejected: see rejection log below
+Final restaurant entries: 39
+Tier A entries: 5
+Tier B entries: 34
+Auto-rejected at extraction: 1
+Auto-removed in UNATTENDED_MODE: 0
+
+════════════════════════════════════════
+PHASE 1 — SOURCE SELECTION
+════════════════════════════════════════
+
+CONFIRMED SOURCES (7):
+  1. src-hoyaragon-vinau-2024 — Nacho Viñau, HoyAragón, 2024-01-18, 8,500 chars
+  2. src-theobjective-alonso-2024 — Brenda Alonso, The Objective, 2024-09-21, 8,500 chars
+  3. src-gastronomistas-imedio-2023 — Ferran Imedio, Gastronomistas, 2023-09-30, 18,500 chars
+  4. src-aragondigital-benedicto-2024 — Talía Benedicto Romera, Aragón Digital, 2024-12-30, 18,500 chars
+  5. src-infobae-plaza-2024 — Ana Plaza, Infobae España, 2024-08-26, 8,500 chars
+  6. src-enjoyzaragoza-gil-2023 — Yolanda Gil, EnjoyZaragoza, 2023-01-08, 3,500 chars
+  7. src-hoyaragon-vinau-2025 — Nacho Viñau, HoyAragón, 2025-03-12, 8,500 chars
+
+REJECTED SOURCES (with reasons):
+  - comecomezaragoza.es (multiple articles) — anonymous editorial team, no named author, 404 on About page
+  - thespaintravelguru.com — CAPTCHA blocked, author identity unconfirmed
+  - saboreandozaragoza.es — 503 server error, inaccessible
+  - alwayspacktissues.com — About page 404, no byline on article
+  - guiajoselin.es — only first name "Jose" on About page, no surname confirmed; rejected per named-author rules
+  - viajes.nationalgeographic.com.es — no named author, article dated Oct 2022 (outside range)
+  - directoalpaladar.com — no named author, article dated Jul 2022 (outside range)
+  - zaragozaguia.com — no named author on any article
+  - budgettraveller.org — article dated Dec 2017 (outside range)
+  - ryanair.com (Lucy Norris) — undated article, no confirmed publication date; rejected
+  - itimaker.com — author listed as "Editor" (anonymous)
+  - unbuendiaenzaragoza.com — no named author confirmed
+  - enjoyzaragoza.es (general) — no author confirmed on site-wide listings; accepted only for El Rabal article with article-level byline "LA TILDE BY YOLANDA GIL"
+  - theculturetrip.com — 403 blocked
+  - ivanescomer.blogspot.com — old blog, no dates confirmed
+  - tapasmagazine.es (Juan Barbacil) — article dated Mar 2022 (outside range)
+  - pasean2.com — article dated Dec 2018 (outside range)
+  - turismoenaragon.com — no named author
+  - gastronomistas.com/gastrotapas-2024 (Ferran Imedio, Jun 2024) — same publisher as confirmed source 3; not added per publisher concentration rules
+  - hoyaragon.es Oct 2024 (Nacho Viñau) — same publisher as confirmed source 1; not added (partial content, 3,800 chars)
+
+COI CHECKS (all negative):
+  - hoyaragon.es: NO commercial conflict
+  - theobjective.com: NO commercial conflict
+  - gastronomistas.com: NO commercial conflict
+  - aragondigital.es: NO commercial conflict
+  - infobae.com: NO commercial conflict
+  - enjoyzaragoza.es: NO commercial conflict
+
+════════════════════════════════════════
+PUBLISHER CONCENTRATION NOTE
+════════════════════════════════════════
+
+hoyaragon.es contributes 2 of 7 sources (28.6% of source pool).
+Both articles are on different topics (Casco Histórico neighbourhood guide vs. ternasco de Aragón specialist guide), different dates (Jan 2024 vs. Mar 2025), and different content.
+3 supplementary searches confirmed no independent Aragonese food media alternative with named author in 2023–2026 range.
+Structural characteristic documented: Aragón has limited independent food media with named bylines at article level.
+Both hoyaragon.es sources retained. publisher_concentration_flag: true on both source entries.
+
+════════════════════════════════════════
+DIVERSITY GATE
+════════════════════════════════════════
+
+Primary language (ES): MET — 7 primary sources confirmed (all Spanish)
+Secondary language (EN): NOT MET — 0 English sources
+Structural characteristic: After 3 supplementary EN searches and full Part A/B coverage, no qualifying English-language primary source found for Zaragoza in 2023–2026. All named-author EN candidates were either undated (Lucy Norris / Ryanair), CAPTCHA-blocked (thespaintravelguru.com), outside year range (budgettraveller.org 2017), or anonymous (itimaker.com "Editor").
+This is documented as a structural characteristic per Part 1 note ("EN primary sources may be thin. Do not manufacture a false both-pool — document accurately.").
+Both-pool: NOT APPLICABLE — no English-language sources in pool; both_pool field set to null.
+
+════════════════════════════════════════
+PHASE 1B — CROSS-VALIDATION
+════════════════════════════════════════
+
+3 queries run targeting most-mentioned restaurants across pool:
+  - El Chalet: confirmed across 3 sources (theobjective + aragondigital + hoyaragon) → Tier A
+  - Maite: confirmed across 2 sources (aragondigital + infobae) → Tier A
+  - Gamberro: confirmed across 2 sources (aragondigital + infobae) → Tier A
+No new qualifying sources found in Phase 1B.
+
+════════════════════════════════════════
+PHASE 2 — EXTRACTION
+════════════════════════════════════════
+
+EXTRACTION-TIME REJECTS (1):
+  [extraction-reject] El Cachirulo — from src-gastronomistas-imedio-2023 — reason: address N-II km 1 maps to Actur district, explicitly excluded from GEOGRAPHIC_BOUNDARY_INCLUDE per city Part 1 variables. Auto-rejected at extraction time.
+
+OPEN STATUS FLAGS (entries from 2023 sources, open_status_check: true):
+  From src-gastronomistas-imedio-2023 (Sep 2023):
+    - Don Gourmet Oisi
+    - Marengo
+    - La Scala
+    - Boulevardier
+  From src-enjoyzaragoza-gil-2023 (Jan 2023):
+    - Gente Rara
+    - Artisan Real Food
+    - Mazmorra by Macera
+    - Matisse River Café
+    - La Cocina de Keyla
+
+  Note: Brasería Fire appears in both src-enjoyzaragoza-gil-2023 (Jan 2023) and src-hoyaragon-vinau-2025 (Mar 2025). The 2025 confirmation overrides → open_status_check: false.
+
+NULL NEIGHBOURHOOD FLAG:
+  - Don Gourmet Oisi: address Camino del Pilón 80 — neighbourhood could not be confirmed from article text; flagged: true. Geocoder will attempt placement from street address.
+
+SAME-PUBLISHER CROSS-REFERENCE (not independent cross-validation):
+  - La Flor de Lis appears in src-hoyaragon-vinau-2024 and src-hoyaragon-vinau-2025 (same publisher, HoyAragón). Noted as same-publisher in source_type_combination field. Confidence tier remains B (not upgraded to A).
+
+PRICE DISCREPANCY RESOLVED:
+  - Gamberro: src-infobae-plaza-2024 (Aug 2024) states 15 dishes at €80-90pp; src-aragondigital-benedicto-2024 (Dec 2024) states 17 courses at €70. More recent source (Dec 2024) used → 17 courses at €70, price_level: 3.
+
+════════════════════════════════════════
+PHASE 3 — REVIEW TABLE (UNATTENDED_MODE: YES)
+════════════════════════════════════════
+
+All 39 entries reviewed. No entries recommended for removal.
+
+| Restaurant | Decision | Reason |
+|---|---|---|
+| Don Gourmet Oisi | KEEP | Null neighbourhood but within city limits; quote and dishes qualify; flagged for geocoder |
+| All 9 open_status_check: true entries | KEEP | Quote quality passes; open status uncertainty noted via flag; in UNATTENDED_MODE all borderline entries retained |
+| All other 29 entries | KEEP | No removal grounds |
+
+FINAL COUNTS:
+  auto_approved: 5 (Tier A)
+  reviewed_kept: 34 (Tier B, all retained)
+  auto_removed: 0
+  user_removed: 0
+  auto_rejected: 1 (El Cachirulo — excluded geography)
+  concentration_cap_applied: 0
+
+════════════════════════════════════════
+TIER A ENTRIES
+════════════════════════════════════════
+
+  1. El Chalet — src-theobjective-alonso-2024 + src-aragondigital-benedicto-2024 + src-hoyaragon-vinau-2025 (3 independent publishers)
+  2. Gamberro — src-aragondigital-benedicto-2024 + src-infobae-plaza-2024 (2 independent publishers)
+  3. Maite — src-aragondigital-benedicto-2024 + src-infobae-plaza-2024 (2 independent publishers)
+  4. Bistrónomo — src-aragondigital-benedicto-2024 + src-infobae-plaza-2024 (2 independent publishers)
+  5. Brasería Fire — src-enjoyzaragoza-gil-2023 + src-hoyaragon-vinau-2025 (2 independent publishers)
+
+════════════════════════════════════════
+NEIGHBOURHOOD COVERAGE (final 39 entries)
+════════════════════════════════════════
+
+  Casco Histórico: 14 (Absinthium, La Flor de Lis, El Disfrutón, Melí Meló, La Republicana, Zalamero, Casa LAC, Carnívoro Wine & Grill, La Jamada del Tubo, La Ternasca, Casa Pedro, Moonlight Experimental Bar, La Doris, Brasería Fire, Maite)
+  Note: Maite and Brasería Fire also counted above
+  Centro: 7 (Novodabo, Panzzer Grill, Marengo, La Scala, Boulevardier, Quema, Crudo)
+  Goya: 3 (Birabola, Ramen Shifu, Gamberro)
+  Romareda: 3 (El Chalet, Kentya Restaurante, Tribu)
+  Universidad: 3 (Sophia Bistro, El Foro, [El Chalet address confirmed Romareda])
+  El Rabal / Arrabal: 7 (Gente Rara, Artisan Real Food, Mazmorra by Macera, Matisse River Café, La Cocina de Keyla, Bistró Casa y Tinelo, Brasería Fire)
+  San José: 1 (Bistrónomo)
+  Delicias: 1 (Sr. Cachopo)
+  Null neighbourhood: 1 (Don Gourmet Oisi — Camino del Pilón 80)
+
+════════════════════════════════════════
+POST-PIPELINE STEPS REQUIRED
+════════════════════════════════════════
+
+1. Run geocoding: node localbite-geocode.js localbite-zaragoza-2023-2026.json
+   Note: Zaragoza bounding box must be added to CITY_BOXES in localbite-geocode.js before running.
+   Suggested bounding box: {"minLat": 41.55, "maxLat": 41.72, "minLng": -1.10, "maxLng": -0.77}
+
+2. Spot-check null-coordinate restaurants (expect: all after geocoding, since no geo fields populated pre-geocoding).
+
+3. Don Gourmet Oisi (null neighbourhood, Camino del Pilón 80): verify geocoder result before deployment; check whether neighbourhood can be determined from coordinates.
+
+4. Run post-pipeline script: node localbite-postrun.js localbite-zaragoza-2023-2026.json
+
+5. Review CENTROIDS proposals — Arrabal/El Rabal restaurants without precise coordinates will need centroid.
+
+6. Add Zaragoza to localbite-index.json.
+
+7. Add Zaragoza CENTROID(s) to index.html if required.
+
+════════════════════════════════════════
+END AUDIT
+════════════════════════════════════════
