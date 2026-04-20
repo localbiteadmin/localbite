@@ -8,61 +8,81 @@
   "sources": [
     {
       "source_id": "src-diariodevalladolid-gonzalez",
-      "publisher": "Diario de Valladolid",
-      "author_name": "Diego González",
+      "id": "src-diariodevalladolid-gonzalez",
+      "publication": "Diario de Valladolid",
+      "writer": "Diego González",
       "article_title": "Los restaurantes para comer el mejor lechazo en Valladolid",
       "article_date": "2023-08-15",
       "article_url": "https://www.diariodevalladolid.es/valladolid/230815/159547/restaurantes-mejor-lechazo-valladolid.html",
       "language": "es",
       "classification": "primary",
       "fetch_status": "good",
-      "publisher_concentration_flag": true
+      "publisher_concentration_flag": true,
+      "writer_profile": "Diego González writes for Diario de Valladolid.",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null
     },
     {
       "source_id": "src-diariodevalladolid-sanchez",
-      "publisher": "Diario de Valladolid",
-      "author_name": "Estela Sánchez",
+      "id": "src-diariodevalladolid-sanchez",
+      "publication": "Diario de Valladolid",
+      "writer": "Estela Sánchez",
       "article_title": "Los 15 restaurantes de Valladolid mejor valorados por los clientes",
       "article_date": "2025-11-29",
       "article_url": "https://www.diariodevalladolid.es/valladolid/251129/277398/los-15-restaurantes-de-valladolid-mejor-valorados-por-los-clientes.html",
       "language": "es",
       "classification": "primary",
       "fetch_status": "good",
-      "publisher_concentration_flag": true
+      "publisher_concentration_flag": true,
+      "writer_profile": "Estela Sánchez writes for Diario de Valladolid.",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null
     },
     {
       "source_id": "src-recomiendovalladolid-lazaro",
-      "publisher": "Recomiendo Valladolid",
-      "author_name": "Pablo Lázaro",
+      "id": "src-recomiendovalladolid-lazaro",
+      "publication": "Recomiendo Valladolid",
+      "writer": "Pablo Lázaro",
       "article_title": "Flamma [representative article]",
       "article_date": "2024-05-16",
       "article_url": "https://recomiendovalladolid.com/flamma/",
       "language": "es",
       "classification": "primary",
       "fetch_status": "partial",
-      "retries_attempted": 1
+      "retries_attempted": 1,
+      "writer_profile": "Pablo Lázaro writes for Recomiendo Valladolid.",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null
     },
     {
       "source_id": "src-theobjective-alonso",
-      "publisher": "The Objective",
-      "author_name": "Brenda Alonso",
+      "id": "src-theobjective-alonso",
+      "publication": "The Objective",
+      "writer": "Brenda Alonso",
       "article_title": "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad",
       "article_date": "2023-08-25",
       "article_url": "https://theobjective.com/lifestyle/2023-08-25/donde-comer-valladolid-restaurantes/",
       "language": "es",
       "classification": "secondary",
-      "fetch_status": "good"
+      "fetch_status": "good",
+      "writer_profile": "Brenda Alonso writes for The Objective.",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null
     },
     {
       "source_id": "src-elespanol-calvo",
-      "publisher": "El Español (Cocinillas)",
-      "author_name": "Adriana Calvo",
+      "id": "src-elespanol-calvo",
+      "publication": "El Español (Cocinillas)",
+      "writer": "Adriana Calvo",
       "article_title": "6 platos de 6 restaurantes de Valladolid que recomiendan los mejores chefs de España",
       "article_date": "2024-03-25",
       "article_url": "https://www.elespanol.com/cocinillas/restaurantes/20240325/platos-restaurantes-valladolid-recomiendan-mejores-chefs-espana/842665780_0.html",
       "language": "es",
       "classification": "secondary",
-      "fetch_status": "good"
+      "fetch_status": "good",
+      "writer_profile": "Adriana Calvo writes for El Español (Cocinillas).",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null
     }
   ],
   "restaurants": [
@@ -101,7 +121,8 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "geo_confidence": null
+      "geo_confidence": null,
+      "language_pool": "multi-source"
     },
     {
       "id": "valladolid-spain-la-parrilla-de-san-lorenzo",
@@ -138,7 +159,8 @@
       "lng": -4.7313989,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Parrilla de San Lorenzo"
+      "geo_matched_name": "La Parrilla de San Lorenzo",
+      "language_pool": "multi-source"
     },
     {
       "id": "valladolid-spain-niza",
@@ -172,7 +194,8 @@
       "lng": -4.7214829,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Niza"
+      "geo_matched_name": "Niza",
+      "language_pool": "multi-source"
     },
     {
       "id": "valladolid-spain-el-figon-de-recoletos",
@@ -204,7 +227,8 @@
       "lng": -4.7286025,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El figón de Recoletos"
+      "geo_matched_name": "El figón de Recoletos",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-gastrobar-pasion",
@@ -235,7 +259,8 @@
       "lng": -4.7297962,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Gastrobar Pasión"
+      "geo_matched_name": "Gastrobar Pasión",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-creperia-le-domen",
@@ -270,7 +295,8 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "geo_confidence": null
+      "geo_confidence": null,
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-la-cocina-de-manuel",
@@ -302,7 +328,8 @@
       "lng": -4.7376471,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Cocina de Manuel"
+      "geo_matched_name": "La Cocina de Manuel",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-don-txipiron",
@@ -331,7 +358,8 @@
       "lng": -4.7260306,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Don Txipirón"
+      "geo_matched_name": "Don Txipirón",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-eh-voila",
@@ -367,7 +395,8 @@
       "lng": -4.7215309,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Eh Voilà!"
+      "geo_matched_name": "Eh Voilà!",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-pispitrello-ristorante",
@@ -396,7 +425,8 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "geo_confidence": null
+      "geo_confidence": null,
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-ditaly",
@@ -426,7 +456,8 @@
       "lng": -4.7302398,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Ditaly"
+      "geo_matched_name": "Ditaly",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-ristorante-il-nuovo-veneto",
@@ -459,7 +490,8 @@
       "lng": -4.7209165,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Ristorante il Nuovo Veneto's"
+      "geo_matched_name": "Ristorante il Nuovo Veneto's",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-flamma",
@@ -490,7 +522,8 @@
       "lng": -4.7238069,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Flamma"
+      "geo_matched_name": "Flamma",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-el-patio-del-olivo",
@@ -525,7 +558,8 @@
       "lng": -4.7294683,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Patio del Olivo"
+      "geo_matched_name": "El Patio del Olivo",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-castizo",
@@ -558,7 +592,8 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "geo_confidence": null
+      "geo_confidence": null,
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-azul-mediterraneo",
@@ -593,7 +628,8 @@
       "lng": -4.7303992,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Azul Mediterráneo"
+      "geo_matched_name": "Azul Mediterráneo",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-metanoia",
@@ -627,7 +663,8 @@
       "lng": -4.7300485,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Hanam Korean BBQ"
+      "geo_matched_name": "Hanam Korean BBQ",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-la-barra-del-hidalgo",
@@ -661,7 +698,8 @@
       "lng": -4.7274936,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Barra del Hidalgo"
+      "geo_matched_name": "La Barra del Hidalgo",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-el-consejero-del-rey",
@@ -693,7 +731,8 @@
       "lng": -4.7282152,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Consejero del Rey"
+      "geo_matched_name": "El Consejero del Rey",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-mesa-cero-del-val",
@@ -725,7 +764,8 @@
       "lng": -4.7280948,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Mesa cero"
+      "geo_matched_name": "Mesa cero",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-los-zagales",
@@ -760,7 +800,8 @@
       "lng": -4.7298699,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Los Zagales"
+      "geo_matched_name": "Los Zagales",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-campogrande",
@@ -789,7 +830,8 @@
       "lng": -4.7333816,
       "geo_source": "nominatim",
       "geo_confidence": "medium",
-      "geo_matched_name": "Campogrande"
+      "geo_matched_name": "Campogrande",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-la-tasquita",
@@ -820,7 +862,8 @@
       "lng": -4.7303418,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Tasquita"
+      "geo_matched_name": "La Tasquita",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-bar-el-corcho",
@@ -852,7 +895,8 @@
       "lng": -4.7296233,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "El Corcho"
+      "geo_matched_name": "El Corcho",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-jero",
@@ -884,7 +928,8 @@
       "lng": -4.7296643,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Jero"
+      "geo_matched_name": "Jero",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-el-peso",
@@ -914,7 +959,8 @@
       "lng": -4.7295137,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Peso"
+      "geo_matched_name": "El Peso",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-la-criolla",
@@ -941,7 +987,8 @@
       "lng": -4.7298536,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Criolla"
+      "geo_matched_name": "La Criolla",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-suite-22",
@@ -969,7 +1016,8 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "geo_confidence": null
+      "geo_confidence": null,
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-don-bacalao",
@@ -1000,7 +1048,8 @@
       "lng": -4.7277269,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Don Bacalao"
+      "geo_matched_name": "Don Bacalao",
+      "language_pool": "es"
     },
     {
       "id": "valladolid-spain-puerto-chico",
@@ -1032,7 +1081,8 @@
       "lng": -4.7166767,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bar Puerto Chico"
+      "geo_matched_name": "Bar Puerto Chico",
+      "language_pool": "es"
     }
   ],
   "centroids": {
