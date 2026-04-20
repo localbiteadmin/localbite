@@ -1,0 +1,156 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES (v7.1)
+Change only this section for each new city.
+Full prompt = cat this file + localbite-prompt-v7-template.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+════════════════════════════════════════
+REQUIRED VARIABLES
+════════════════════════════════════════
+
+CITY: Valladolid
+COUNTRY: Spain
+CITY_SLUG: valladolid-spain
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: ES
+SEARCH_LANGUAGES: Spanish, English
+SINGLE_LANGUAGE_CITY: NO
+YEAR_RANGE: 2023–2026
+
+════════════════════════════════════════
+OPTIONAL VARIABLES
+════════════════════════════════════════
+
+UNATTENDED_MODE: YES
+— Phase 1 COMPLETE pause is always kept regardless of this setting.
+— When YES: Phase 3 removal recommendations are auto-accepted without
+  stopping for confirmation. Final JSON is written immediately.
+— When NO (default): Pipeline pauses at Phase 3 review table.
+
+DIRECT_FETCH_SOURCES:
+— No confirmed article-level URLs available for Valladolid food writers.
+— Phase 0 will be skipped. Pipeline relies entirely on Phase 1
+  discovery.
+— Note: DIRECT_FETCH_SOURCES must be article-level URLs pointing to
+  a specific named-author food guide. Section pages and publication
+  homepages will almost always fail Phase 0.
+
+════════════════════════════════════════
+NEIGHBOURHOOD STRUCTURE
+════════════════════════════════════════
+
+Research basis: Valladolid has 12 official administrative districts
+(purely electoral/census — not used socially or by food writers).
+The relevant units are barrios (social neighbourhoods). Research
+via valladolid.com/turismo, Diario de Valladolid, and local food
+sources confirms the dining scene is heavily concentrated in the
+historic centre, with secondary scenes in adjacent and residential
+barrios. Generic neighbourhood names prefixed with city name per
+naming convention to prevent centroid collisions.
+
+TIER_1_NEIGHBOURHOODS: Valladolid Centro, Paseo de Zorrilla
+TIER_2_NEIGHBOURHOODS: Valladolid Delicias, Caño Argales
+TIER_3_NEIGHBOURHOODS: Rondilla, Valladolid La Victoria
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Valladolid Centro, Casco Histórico, Plaza Mayor, La Antigua,
+Catedral, Mercado del Val, Calle Correos, Calle Gamazo,
+Plaza de Portugalete, Plaza de la Universidad, San Martín,
+Paseo de Zorrilla, Acera de Recoletos, Valladolid Delicias,
+Las Delicias, Caño Argales, Rondilla, Valladolid La Victoria,
+La Victoria, Huerta del Rey, Parquesol, Girón
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Salamanca, Burgos, León, Palencia, Segovia, Zamora, or any
+location described as "outside Valladolid", "near Valladolid",
+"day trip from Valladolid", "provincia de Valladolid" (without
+being the city itself), or another Castilian city.
+Also exclude: wineries and bodegas in the Ribera del Duero,
+Rueda, or Cigales DO zones unless the restaurant is physically
+located within Valladolid city limits.
+
+════════════════════════════════════════
+LOCAL CONTEXT
+════════════════════════════════════════
+
+LOCAL_FOOD_VOCABULARY:
+— lechazo (roast suckling lamb — the defining dish of Valladolid
+  and Castilla y León; asadores specialising in lechazo al horno
+  are the city's most distinctive restaurant category)
+— torreznos (crispy pork belly — a Valladolid bar staple,
+  frequently mentioned in local tapas writing)
+— morcilla (blood sausage — local Castilian variety, distinct
+  from Burgos morcilla)
+— bacalao (salt cod — several institutions built around it,
+  notably Don Bacalao which is a local landmark)
+— verdejo (white wine grape — dominant in nearby Rueda DO,
+  the default wine pairing at Valladolid restaurants)
+— Ribera del Duero / Rueda / Cigales / Toro (the four wine DOs
+  converging on Valladolid — highly relevant to restaurant coverage)
+— pincho / pinchos (tapa format dominant in Valladolid bar culture)
+— Pincho de Oro / El Pincho de Oro (the city's annual tapas
+  competition — a major local food calendar event, use in
+  awards queries to find local food writers covering it)
+— Concurso Nacional de Pinchos y Tapas de Valladolid (the national
+  competition hosted here annually — generates strong local press)
+— Mercado del Val (19th-century market rehabilitated as a gastro
+  market; a key location reference in local food writing)
+
+Use 2–3 vocabulary queries in Spanish targeting lechazo, torreznos,
+and Pincho de Oro to catch local-register food writing that
+city-wide queries miss.
+
+SOURCE_EXAMPLES:
+— Local Valladolid food press: Diario de Valladolid, El Norte de
+  Castilla (regional paper of record for Castilla y León),
+  El Mundo Castilla y León
+— Regional food coverage: Castilla y León Gastronómica,
+  local food bloggers writing in Spanish about Valladolid dining
+— Repsol Guide (has awarded multiple Soles to Valladolid
+  restaurants — El Trigo, Alquimia Laboratorios, Dámaso,
+  Llantén, Suite 22, Trasto, Villaparamesa Tapas, Sibaritas Klub)
+— English-language food writers: The Infatuation, Eater, Condé Nast
+  Traveller, food bloggers with documented Valladolid coverage
+— Note: Valladolid is less internationally written-about than Madrid
+  or Barcelona. EN primary sources are likely thin. Do not
+  manufacture a false both-pool — document accurately if EN coverage
+  is structurally absent.
+
+KNOWN_AWARDS:
+— El Trigo — 1 Michelin star, 2 Repsol Soles (chef Víctor Martín)
+— Alquimia Laboratorios — 1 Michelin star, 1 Repsol Sol
+  (chef Alvar Hinojal)
+— Pincho de Oro — annual local tapas competition winners
+— Concurso Nacional de Pinchos y Tapas — national competition
+  hosted in Valladolid; local winners generate strong press
+
+Use named awards queries for El Trigo and Alquimia Laboratorios
+in Phase 0 cross-validation. Do not use generic "Michelin
+Valladolid" — use named restaurant queries to find articles that
+a local writer actually wrote, not aggregator lists.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+— None confirmed for Valladolid food media. Apply standard COI
+  check to every source per template instructions.
+
+SECONDARY_SOURCES: Time Out, Condé Nast Traveller, Lonely Planet,
+El País Gastro (national desk), El Mundo Metrópoli (national desk),
+Infobae España (national/Argentine outlet — treat as secondary
+regardless of article quality, per pipeline rules)
+
+════════════════════════════════════════
+PRICE AND OUTPUT
+════════════════════════════════════════
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+- 1 = under €20pp
+- 2 = €20–40pp
+- 3 = €40–80pp
+- 4 = over €80pp
+
+OUTPUT_RAW: ./localbite-valladolid-raw.json
+OUTPUT_FINAL: ./localbite-valladolid-2023-2026.json
+OUTPUT_WORKING: ./localbite-valladolid-working.json
+OUTPUT_SEARCH_LOG: ./localbite-valladolid-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-valladolid-search-plan.txt
