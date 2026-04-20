@@ -5453,3 +5453,47 @@ script and city-by-city testing with individual commits. Estimated ~2h 30m.
 
 *Fleet: 17 cities live. Last commit: 372bdb1.*
 
+
+### Post-Journal Addendum — 2026-04-20
+
+Three additional commits landed after the journal was written (9babcf2).
+Outstanding items updated accordingly.
+
+**Zaragoza map rendering — further fixes required after journal was written:**
+
+Don Gourmet Oisi was still mapping to the Castelló de la Plana area after
+the main session commits. Investigation confirmed two additional omissions:
+
+1. **Zaragoza missing from CITY_CENTRES** — when a restaurant has null
+   coordinates and its neighbourhood centroid is also missing, the viewer
+   falls back to `CITY_CENTRES[cityName]`. Zaragoza was not in CITY_CENTRES,
+   so the fallback was `[40.0, 0.0]` (Atlantic Ocean) with a random offset
+   applied — producing the Castelló de la Plana result.
+
+2. **Zaragoza missing from CITY_BOUNDS** — required for the viewer to
+   validate and render centroid markers correctly for that city.
+
+3. **Las Fuentes centroid missing** — Don Gourmet Oisi was assigned to
+   Las Fuentes but no centroid entry existed for it.
+
+All three fixed and committed. Don Gourmet now renders correctly as a
+dashed-border marker in the Las Fuentes area.
+
+**CLAUDE.md Viewer Deployment Checklist updated** — two mandatory steps
+added for every new city: add to CITY_CENTRES and add to CITY_BOUNDS.
+These were previously undocumented and caused the Zaragoza rendering issues.
+
+| File | Change | Commit |
+|------|--------|--------|
+| localbite-zaragoza-2023-2026.json | Bistró Casa y Tinelo coords nulled (outside bounding box); Don Gourmet assigned to Las Fuentes | 1516398 |
+| index.html | Zaragoza added to CITY_CENTRES; Las Fuentes centroid added | 1516398 |
+| index.html | Zaragoza added to CITY_BOUNDS | f6f0bff |
+| CLAUDE.md | Viewer Deployment Checklist — CITY_CENTRES and CITY_BOUNDS added as mandatory steps | c39ff3a |
+
+*Corrected last commit: c39ff3a (not 372bdb1 as stated in journal)*
+
+**Outstanding items correction:**
+- Bistró Casa y Tinelo — ~~coordinates outside bounding box, needs nulling~~ **RESOLVED c39ff3a**
+
+*Fleet: 17 cities live. Actual last commit: c39ff3a.*
+
