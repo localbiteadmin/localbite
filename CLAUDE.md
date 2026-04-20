@@ -28,6 +28,56 @@ Never commit:
 
 ---
 
+## Part 1 Preparation — Mandatory Pre-Steps
+
+Before writing any city's Part 1 file, complete both steps:
+
+### Step A — Neighbourhood research (mandatory)
+
+Do not rely on training knowledge for neighbourhood lists. Training
+knowledge is reliable for the top 4-5 tourist-facing areas of
+well-documented cities but is unreliable for residential districts
+and may be wrong or incomplete for less internationally covered cities.
+
+Required process:
+1. Query the city's official district/neighbourhood structure using
+   local-language sources (municipal websites, local news, Wikipedia
+   in the primary language)
+2. Identify population data and dining relevance signals for each district
+3. Exclude districts with no meaningful restaurant/bar scene
+   (new residential developments, industrial areas, rural barrios)
+4. Use the verified list as the basis for TIER_1/2/3 and
+   GEOGRAPHIC_BOUNDARY_INCLUDE — not training knowledge
+
+Example query pattern (adapt language):
+  "[city] barrios distritos oficiales mapa gastronomia restaurantes"
+
+Document the research basis in a comment in the Part 1 NEIGHBOURHOOD
+STRUCTURE section.
+
+### Step B — Secondary source classification (mandatory)
+
+Before finalising SECONDARY_SOURCES in Part 1, consider:
+
+Always secondary (regardless of city):
+- Time Out, Conde Nast Traveller, Lonely Planet
+- National news outlets covering a city outside their home region
+  (e.g. infobae.com covering Zaragoza, El Pais covering a regional city)
+- Any outlet whose primary audience is national/international rather
+  than the city's own residents
+
+Check per city:
+- Local editions of national outlets may qualify as primary if the
+  food coverage is written by a locally-based named author
+- Regional outlets covering the city as their primary beat are primary
+
+Infobae.com specifically: always secondary for Spanish cities.
+It is an Argentine/Spanish national outlet — its restaurant coverage
+is visitor/national-audience perspective, not local food writing.
+Add to SECONDARY_SOURCES for any Spanish city Part 1.
+
+---
+
 ## Pipeline Prompt Files
 
 When asked to save a prompt to a file: WRITE the file verbatim.
