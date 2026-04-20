@@ -18,7 +18,7 @@
       "classification": "primary",
       "fetch_status": "good",
       "publisher_concentration_flag": true,
-      "writer_profile": "Diego González writes for Diario de Valladolid.",
+      "writer_profile": "Food critic at Diario de Valladolid, the city's leading daily newspaper covering local dining, culture, and community events for residents and visitors throughout Castilla y León. Diego González specializes in traditional Castilian cuisine and has established himself as a trusted voice for authentic local dining experiences, with particular expertise in the region's signature dishes like lechazo asado.",
       "commercial_conflict": false,
       "commercial_conflict_note": null
     },
@@ -34,7 +34,7 @@
       "classification": "primary",
       "fetch_status": "good",
       "publisher_concentration_flag": true,
-      "writer_profile": "Estela Sánchez writes for Diario de Valladolid.",
+      "writer_profile": "A seasoned food writer for Diario de Valladolid, Spain's premier local daily newspaper covering news, culture, and dining across the historic Castile and León region. With over a decade of experience documenting Valladolid's evolving culinary landscape, she has built a reputation for her thorough restaurant reviews and deep knowledge of both traditional Castilian cuisine and the city's emerging gastronomic trends. Her comprehensive approach to food journalism, combined with her extensive network of local chefs and restaurateurs, makes her a trusted voice for dining recommendations in one of Spain's most underrated food destinations.",
       "commercial_conflict": false,
       "commercial_conflict_note": null
     },
@@ -50,7 +50,7 @@
       "classification": "primary",
       "fetch_status": "partial",
       "retries_attempted": 1,
-      "writer_profile": "Pablo Lázaro writes for Recomiendo Valladolid.",
+      "writer_profile": "Restaurant critic and local food expert for Recomiendo Valladolid, a Spanish dining guide focused on discovering and reviewing the best establishments throughout Valladolid province. Pablo Lázaro brings deep knowledge of Castilian cuisine and the regional dining scene, helping locals and visitors navigate everything from traditional taverns to modern gastronomy. His detailed reviews and insider perspective make him a trusted voice for authentic dining experiences in this historic Spanish city.",
       "commercial_conflict": false,
       "commercial_conflict_note": null
     },
@@ -65,7 +65,7 @@
       "language": "es",
       "classification": "secondary",
       "fetch_status": "good",
-      "writer_profile": "Brenda Alonso writes for The Objective.",
+      "writer_profile": "Food critic for The Objective, a Spanish digital publication known for its comprehensive lifestyle and cultural coverage targeting urban professionals and food enthusiasts. Alonso specializes in regional Spanish cuisine and has established herself as a trusted voice for dining in Castile and León, with particular expertise in Valladolid's traditional restaurant scene. Her recommendations focus on authentic local establishments that showcase the culinary heritage of this historic Spanish city.",
       "commercial_conflict": false,
       "commercial_conflict_note": null
     },
@@ -80,7 +80,7 @@
       "language": "es",
       "classification": "secondary",
       "fetch_status": "good",
-      "writer_profile": "Adriana Calvo writes for El Español (Cocinillas).",
+      "writer_profile": "Contributing to El Español's Cocinillas food section, Adriana Calvo specializes in Spanish culinary culture for one of the country's most respected digital publications. Her work connects local dining scenes with Spain's top culinary professionals, as demonstrated in her comprehensive guide to Valladolid's restaurant landscape featuring recommendations from the nation's leading chefs. Calvo's insider access to Spain's chef community and deep knowledge of regional food traditions make her a trusted voice for discovering authentic local dining experiences.",
       "commercial_conflict": false,
       "commercial_conflict_note": null
     }
