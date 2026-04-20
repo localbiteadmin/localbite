@@ -5201,3 +5201,255 @@ blocking deployment.
 
 *Fleet: 16 cities live. Last commit: f735229.*
 
+
+## Session — 2026-04-20 (Zaragoza v7.1 + pipeline fixes + neighbourhood research process)
+
+### Overview
+
+Full session. Verified San Sebastián deployment, fixed two pipeline issues
+(COI marker format, template instruction), ran Zaragoza as the second v7.1
+city end-to-end confirming unattended mode, and formalised the neighbourhood
+research approach. Fleet moves from 16 to 17 cities.
+
+---
+
+### San Sebastián Post-Deployment Verification
+
+Checked live site after session close yesterday. Results:
+
+- Source links → article URLs confirmed working ✓
+- Map rendering → Maun in correct location (San Sebastián Centro) ✓
+- Both-pool badge → appearing on Muka and Antonio Bar ✓
+- COI markers → **missing** from Lauren Aloise and Sasha Correa profiles
+
+COI flag was present in prose (Devour Tours named, tour leader role named)
+but the `⚠ coi — ` prefix was not prepended to writer_profile text. Two
+separate fixes applied:
+
+1. **Data fix** — localbite-san-sebastian-2023-2026.json: both profiles
+   now start with `⚠ coi — ` (commit 0008a7e)
+
+2. **Template fix** — localbite-prompt-v7-template.txt line 399 updated
+   from "Include in writer_profile" to "prepend '⚠ coi — ' to the
+   writer_profile text" with an example (commit d6361fe)
+
+---
+
+### Saveur Geo-Block — Decision Made
+
+The Saveur HTTP 451 (geo-block) fired during San Sebastián extraction but
+does not affect users — Saveur doesn't geo-block regular browser traffic.
+The article_url in the JSON links correctly to the Saveur pintxos article.
+
+**Decision:** Wayback Machine as a fallback fetch is a valid future option
+but not implemented now. Noted for a future session when pipeline complexity
+justifies it. The current failed-fetch rule (skip if fetch fails) remains
+the handling policy for geo-blocked sources.
+
+---
+
+### Neighbourhood Research Process — Formalised
+
+At end of previous session, confirmed that training knowledge alone is
+insufficient for reliable neighbourhood lists — it covers the top 4-5
+tourist-facing areas but misses residential districts and may be wrong for
+less internationally covered cities.
+
+**Adopted approach for all future Part 1 files:**
+Before writing any Part 1, query the city's official district/neighbourhood
+structure in the primary language using local sources. Filter for dining
+relevance using population data and local writing signals. This produces a
+verified flat list rather than a guessed tier structure.
+
+**Zaragoza validation:** Web search of soydezaragoza.es and municipal data
+identified 15 official districts. 9 selected for dining relevance. This
+approach surfaced Universidad/Goya/Romareda as a distinct dining zone and
+correctly excluded Actur, Casablanca, Valdespartera, Miralbueno, Oliver,
+Santa Isabel, and rural barrios — all of which I would have missed or
+incorrectly included from training knowledge alone.
+
+This process was added to CLAUDE.md as a mandatory pre-Part 1 step this
+session (commit 372bdb1) — Step A in the new Part 1 Preparation section.
+
+---
+
+### Zaragoza v7.1 — Run Details
+
+**File:** localbite-zaragoza-2023-2026.json
+**Commits:** cd0de1a (city pack + index + CENTROIDS), e30bc5e (working file cleanup)
+
+| Metric | Value |
+|--------|-------|
+| Final restaurants | 39 |
+| Sources | 7 (all ES primary) |
+| Both-pool | 0 (structural — no EN sources available) |
+| Tier A | 5 (El Chalet, Gamberro, Maite, Bistrónomo, Brasería Fire) |
+| Tier B | 34 |
+| Searches run | 36 (33 planned + 3 supplementary) |
+| open_status_check | 9 |
+| Geocoding | ~37/39 (Brasería Fire nulled — wrong OSM match) |
+
+**Sources confirmed:**
+| Publication | Writer | Language | Type |
+|-------------|--------|----------|------|
+| hoyaragon.es | Nacho Viñau | ES | Primary |
+| theobjective.com | Brenda Alonso | ES | Primary |
+| gastronomistas.com | Ferran Imedio | ES | Primary |
+| aragondigital.es | Talía Benedicto Romera | ES | Primary |
+| infobae.com | Ana Plaza | ES | Primary |
+| enjoyzaragoza.es | Yolanda Gil | ES | Primary |
+| hoyaragon.es | Nacho Viñau | ES | Primary (2nd article) |
+
+---
+
+### Structural Findings — Zaragoza
+
+**No English-language primary sources found** after 3 targeted supplementary
+searches. All named-author EN candidates were outside year range, CAPTCHA-
+blocked, undated, or anonymous. Correctly documented as structural
+characteristic per Part 1 guidance. Zero both-pool is the honest outcome.
+
+**hoyaragon.es publisher concentration** — 2 articles by same writer (Nacho
+Viñau) covering distinct topics and dates. Supplementary searches found no
+independent Aragonese food media alternative with named author. Retained both
+articles with documentation. No concentration cap applied (article-level
+entries within bounds).
+
+**Infobae.com treatment** — national Argentine/Spanish outlet writing about
+Michelin restaurants. Should have been classified as secondary (similar to
+El País Gastro). Pipeline treated as primary. Minor classification issue;
+its entries scored correctly under extraction quality rules regardless.
+Note for future: add infobae.com to SECONDARY_SOURCES in Spanish city Part 1
+files.
+
+---
+
+### Geocoding Notes
+
+- Brasería Fire → false positive match ("Brasería Espa-Nica") — coords nulled
+- 4 new CENTROIDS added to index.html: Casco Histórico, Goya, El Rabal, San José
+- Casco Histórico centroid averaged from 5 restaurants — HIGH SPREAD flag,
+  accepted as plausible for a large central district
+- San José centroid manually assigned (district centre) — Bistrónomo had no
+  geocoded restaurants to average from
+- Marengo, Sophia Bistro, Matisse River Café — medium confidence, accepted
+- Bistró Casa y Tinelo — coordinates [41.6587743, -0.8362532] are outside
+  the Zaragoza bounding box (lngMin -0.95). Not caught this session.
+  Needs nulling in a follow-up fix — flagged as outstanding item.
+
+---
+
+### Pipeline Behaviour — Second v7.1 Run Observations
+
+**Self-correction:** Pipeline caught a corrupt duplicate El Chalet entry
+(Kentya restaurant data attached to a second El Chalet entry) and removed it
+without prompting. Good sign.
+
+**Context compaction occurred** at ~20 minutes into Phase 2. Pipeline re-read
+search log and schema before continuing — correct behaviour per CLAUDE.md.
+No quotes reconstructed from AI knowledge (unlike San Sebastián's Infatuation
+entries). No audit flags raised post-compaction.
+
+**Metrics null** — token counts null due to run spanning two context windows.
+Known limitation, not a blocker.
+
+**UNATTENDED_MODE: YES** — Phase 3 ran without stopping, all 39 entries
+auto-accepted. No removals recommended by pipeline.
+
+---
+
+### Key Decisions
+
+**Saveur geo-block:** Wayback Machine fallback noted as future option,
+not implemented. Current policy (skip failed fetches) unchanged.
+
+**Infobae.com:** Should be added to SECONDARY_SOURCES for future Spanish
+city runs. Not retroactively fixing Zaragoza.
+
+**Neighbourhood research:** Verified approach adopted. CLAUDE.md updated
+this session with mandatory pre-Part 1 steps (neighbourhood research +
+secondary source classification including infobae.com rule).
+
+**Both-pool with zero EN sources:** Correctly handled. Pack goes live as
+ES-only without manufacturing false cross-validation.
+
+---
+
+### Files Produced or Updated
+
+| File | Status | Commit |
+|------|--------|--------|
+| localbite-san-sebastian-2023-2026.json | Updated — COI markers | 0008a7e |
+| localbite-prompt-v7-template.txt | Updated — COI prepend fix | d6361fe |
+| localbite-prompt-v71-zaragoza-part1.txt | New | 1eeadbb |
+| localbite-prompt-v71-zaragoza.txt | New | 1eeadbb |
+| localbite-geocode.js | Updated — Zaragoza bounding box | 1eeadbb |
+| localbite-zaragoza-2023-2026.json | New | cd0de1a |
+| localbite-zaragoza-audit.txt | New | cd0de1a |
+| localbite-zaragoza-search-log.txt | New | cd0de1a |
+| localbite-zaragoza-search-plan.txt | New | cd0de1a |
+| localbite-index.json | Updated — Zaragoza added, fleet 17 | cd0de1a |
+| index.html | Updated — Zaragoza CENTROIDS | cd0de1a |
+| localbite-run-metrics.log | Updated — Zaragoza entry | cd0de1a |
+| localbite-zaragoza-2023-2026.json | Updated — centroid collisions, writer profiles, article URLs | 372bdb1 |
+| index.html | Updated — Zaragoza Centro CENTROIDS | 372bdb1 |
+| CLAUDE.md | Updated — Part 1 Preparation section (neighbourhood research + secondary source rules) | 372bdb1 |
+| Global instructions | Updated — fleet 17 | (project settings) |
+
+---
+
+### CENTROIDS Architecture — Full Audit and Decision
+
+Post-deployment verification of Zaragoza revealed multiple live rendering
+issues: restaurants mapping to Valencia, Málaga area. Investigation confirmed
+the root cause is structural — CENTROIDS is a flat unnamespaced dictionary
+that breaks whenever neighbourhood names repeat across cities.
+
+**Confirmed live collisions across the fleet:**
+- `'Centro'` → Granada: affects Madrid (multiple files use Centro)
+- `'Centro Histórico'` → Málaga: affects Córdoba and Seville
+- `'Medina'` → Chefchaouen (last write wins): affects Marrakesh and Rabat
+- `'San Lorenzo'` → Seville overrides Córdoba (fragile ordering dependency)
+- `'Casco Histórico'` → Zaragoza: will affect any future Spanish city
+- Zaragoza also had: `'El Rabal'`, `'Goya'`, `'San José'`, `'Centro'`
+  all colliding with other city entries
+
+**Zaragoza-specific fixes applied this session:**
+- 7 restaurants remapped from `Centro` → `Zaragoza Centro`
+- Don Gourmet Oisi assigned to `Las Fuentes` (was null)
+- `'Zaragoza Centro': [41.6558, -0.8773]` added to index.html
+- Writer profiles cleaned of pipeline internals for all 7 sources
+- Article URLs corrected to exact Jina fetch URLs (simplified paths were 404ing)
+
+**Architecture decision made:** Option A — city-keyed nested CENTROIDS
+structure. Decision rationale: neighbourhood names are inherently local and
+will always repeat at scale. The "distinctive names won't repeat" assumption
+was wrong from the start and gets worse as the fleet grows. Option C (prefix
+rule) relies on pipeline discipline that we've already seen isn't reliable.
+Option A closes the problem permanently.
+
+**Option A deferred to dedicated next session** — too large and risk-laden
+to bolt onto the end of this session. Viewer change is low-risk (one line,
+backward-compatible), but the CENTROIDS restructure requires a pre-audit
+script and city-by-city testing with individual commits. Estimated ~2h 30m.
+
+---
+
+### Outstanding Items
+
+- [ ] **CENTROIDS Option A** — dedicated session, first priority. City-keyed
+      nested structure. Pre-audit script first. Viewer one-line change.
+      Restructure collision entries city by city. Test full fleet.
+- [ ] Zaragoza — verify rendering on live site after this session's fixes
+- [ ] Bistró Casa y Tinelo — coordinates outside bounding box, needs nulling
+- [ ] Seville Part 1 — needs updating to canonical v7.1 variable names before Seville v2
+- [ ] Madrid open_status_check verification — 56 restaurants still pending
+- [ ] San Sebastián open_status_check — 23 restaurants still pending
+- [ ] Madrid "Irene S." byline — still unresolved
+- [ ] Token capture undercounting — session-meta covers only portion of pipeline run
+- [ ] Saveur geo-block fallback — Wayback Machine noted as future option
+- [ ] Custom Skill /run-pipeline — deferred
+- [ ] PostToolUse Hook for JSON validation — deferred
+
+*Fleet: 17 cities live. Last commit: 372bdb1.*
+
