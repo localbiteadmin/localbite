@@ -396,8 +396,9 @@ SOURCE QUALITY RULES:
 CONFLICT OF INTEREST CHECK (mandatory for every source):
 For every candidate that passes quality rules, log:
 [coi-check] [publication] — commercial conflict: YES/NO
-If YES: describe the conflict. Include in writer_profile and
+If YES: prepend "⚠ coi — " to the writer_profile text and
 flag ⚠ coi in review table. Do not reject — flag and include.
+Example: "⚠ coi — [Name] is a food writer..."
 Sources with commercial conflicts count toward secondary cap.
 
 SIBLING EDITION CHECK (mandatory when applicable):
