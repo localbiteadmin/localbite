@@ -1,0 +1,47 @@
+VALLADOLID SEARCH LOG — LocalBite v7.1
+Phase 0 skipped (DIRECT_FETCH_SOURCES blank)
+
+[neighbourhood-Valladolid Centro] "restaurantes recomendados centro Valladolid 2023 2024" → theobjective.com (2023-08-25 article), soyunblogdeviajes.com (2025 guide), diariodevalladolid.es (restaurant ranking) appeared; aggregators dominant
+[neighbourhood-Valladolid Centro] "best restaurants Valladolid city centre 2025 2026" → most results were Valladolid Mexico; foodandtravel.com 48hr guide and travelswithmissy.com appeared for Spain
+[neighbourhood-Paseo de Zorrilla] "mejores restaurantes Paseo Zorrilla Valladolid 2024 2025" → soyunblogdeviajes.com repeated; dovleuve.es (restaurant site, not editorial); no new editorial candidates
+[neighbourhood-Paseo de Zorrilla] "restaurants Paseo de Zorrilla Valladolid guide" → dovleuve.es, restauranteraza.com (restaurant sites); no editorial candidates
+[neighbourhood-Valladolid Delicias] "restaurantes barrio Delicias Valladolid gastronomía 2023 2024" → theobjective.com repeated; directories dominant; limited editorial coverage for this residential neighbourhood
+[neighbourhood-Valladolid Delicias] "Delicias neighbourhood Valladolid food recommendations" → directories and aggregators; no editorial candidates; confirms residential character
+[neighbourhood-Caño Argales] "bares restaurantes Caño Argales Valladolid 2024 2025" → mostly Caño Argales Café y Tapas restaurant pages; no editorial candidates
+[neighbourhood-Caño Argales] "Caño Argales Valladolid eating out guide" → same restaurant pages; no editorial candidates
+[neighbourhood-Rondilla] "restaurantes Rondilla Valladolid gastronomía" → eldiadevalladolid.com (2024-03 article on Rondilla restaurant); grados.uemc.es (university blog guide) appeared
+[neighbourhood-La Victoria] "restaurantes La Victoria Valladolid dónde comer" → La Dársena de La Victoria, diariodecastillayleon.es article; directories dominant
+[cross-1] "best restaurants in Valladolid Spain food guide 2024" → foodandtravel.com 48hr guide confirmed; travelswithmissy.com; aggregators
+[cross-1] "where to eat Valladolid Spain personal recommendations 2025" → foodandtravel.com again; travelswithmissy.com; ojoalplato.com ("Mis favoritos de Valladolid") appeared
+[cross-2] "crítica gastronómica restaurantes Valladolid 2024" → menudeldiafinder.com (2024 guide); yummybarcelona.com (Valladolid escapada); diariodevalladolid.es; soyunblogdeviajes.com
+[cross-2] "dónde comer en Valladolid recomendaciones barrio 2025" → turium.es; viajeroscallejeros.com; ojoalplato.com repeated; grados.uemc.es
+[cross-2] "guía restaurantes Valladolid periodismo gastronómico 2023" → theobjective.com confirmed 2023; guiagastronomicavalladolid.es (dedicated local gastronomy site!) appeared; diariodevalladolid.es
+[cross-3] "bloguero gastronómico guía restaurantes Valladolid" → guiagastronomicavalladolid.es repeated; recomiendovalladolid.com; yummybarcelona.com; soyunblogdeviajes.com
+[cross-3] "food writer restaurant recommendations Valladolid Castile" → aggregators dominant; willflyforfood.net (likely Mexico); travelswithmissy.com
+[cross-4] "El Trigo restaurante Valladolid víctor martín reseña crítica" → albertogranados.com (food blog with Trigo review); zampatelmundo.com; gastroactivity.com; almaroja.es
+[cross-4] "Alquimia Laboratorios Valladolid chef recomendación artículo" → deviajeconblog.com (dedicated Alquimia article); recomiendovalladolid.com/alquimia; TheFork/TripAdvisor
+[cross-4] "Pincho de Oro Valladolid ganadores crónica periodismo" → diariodevalladolid.es confirmed multiple competition articles (2023, 2024, 2025); hitcooking.com; huleymantel.com
+[cross-5] "nuevas aperturas restaurantes Valladolid 2024 2025" → diariodevalladolid.es new openings articles; valladolidya.com.es; elespanol.com
+[cross-5] "new restaurant openings Valladolid Spain 2024 2025" → aggregators dominant; no new editorial candidates
+[cross-6] "lechazo asador Valladolid recomendación crítica 2023 2024" → diariodevalladolid.es lechazo article (2023-08-15) confirmed; elespanol.com lechazo article (2023-08-13); mesalechazo.com (trade body)
+[cross-6] "torreznos pinchos Valladolid bar mejor 2024 2025" → sehacecaminoalandar.com (tapas route); gastroactitud.com (pinchos guide); guiarepsol.com (Tapear por Valladolid article)
+[cross-7] "restaurantes cocina castellana tradicional Valladolid reseña 2024" → diariodevalladolid.es (2025-11-29 article); menudeldiafinder.com; grados.uemc.es
+[cross-7] "traditional Castilian food where to eat Valladolid" → not run (EN cross-7 — covered by Cross-1/Cross-3 results; no new candidates expected)
+[cross-8] "revista gastronomía Valladolid mejores restaurantes crítica" → diariodevalladolid.es (2026-04-02 article) and (2025-11-29); no dedicated food magazine found
+[cross-8] "suplemento gastronomía periódico Valladolid restaurante reseña 2023 2024" → diariodevalladolid.es multiple articles; elespanol.com Cocinillas section; excelenciasgourmet.com appeared
+
+[year-distribution-check] PASSED — 7 queries reference earlier years (2023–2024), 7 queries reference later years (2025–2026), 13 queries have no year term.
+
+[cross-4] "El Trigo restaurante Valladolid víctor martín reseña crítica" → albertogranados.com (2018, outside YEAR_RANGE); guiarepsol.com Trigo listing; aggregators
+[supplementary] "El Norte de Castilla gastronomía restaurantes Valladolid reseña 2024 2025" → diariodevalladolid.es repeated; elespanol.com Cocinillas "6 platos de 6 restaurantes" (Adriana Calvo, 2024-03-25) CONFIRMED; no Norte de Castilla editorial results
+[supplementary] "Valladolid mejores restaurantes guía local recomendación periodista 2024 2025" → topvalladolid.com, turium.es, menudeldiafinder.com — no new named-author sources
+[supplementary] "Valladolid Spain restaurants food blog English writer 2023 2024 2025" → foodandtravel.com (no author, under 2600 chars) repeated; no EN primary sources found
+[supplementary] "crítica restaurantes Valladolid norte castilla gastronomía chef local 2024" → no Norte de Castilla articles returned; diariodevalladolid.es, elespanol.com repeated
+
+[stopping-rule] EN primary search: 9+ queries covering English-language sources returned no qualifying named-author articles. Documenting as structural characteristic.
+[publisher-concentration] Diario de Valladolid: 2 articles proposed (Diego González 2023 + Estela Sánchez 2025) = 40% of 5-source pool. Supplementary searches run (2 additional queries). No independent alternative found. Documenting as structural characteristic of Valladolid food media landscape.
+
+[phase-1b-crossval] "Alquimia Valladolid recomendacion critica" → only aggregators (TripAdvisor, TheFork, Michelin Guide). No new editorial sources.
+[phase-1b-crossval] "La Parrilla San Lorenzo Valladolid recomendacion critica" → aggregators + Guía Repsol listing. No new editorial sources.
+[phase-1b-crossval] "Los Zagales Valladolid recomendacion critica" → aggregators only. No new editorial sources.
+Phase 1B result: 3 queries, 0 new qualifying sources.

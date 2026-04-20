@@ -1,0 +1,239 @@
+LOCALBITE VALLADOLID AUDIT
+Run date: 2026-04-20
+Pipeline: localbite-v7.1
+City slug: valladolid-spain
+
+════════════════════════════════════════════════════
+PHASE 1 — SOURCE SELECTION
+════════════════════════════════════════════════════
+
+CONFIRMED SOURCES (5):
+
+  src-diariodevalladolid-gonzalez
+    Author: Diego González
+    Publisher: Diario de Valladolid (primary)
+    Article: "Los restaurantes para comer el mejor lechazo en Valladolid"
+    Date: 2023-08-15
+    URL: https://www.diariodevalladolid.es/valladolid/230815/159547/restaurantes-mejor-lechazo-valladolid.html
+    Fetch: good (~4,500 chars)
+    Notes: Publisher concentration flag — same publisher as src-diariodevalladolid-sanchez
+
+  src-diariodevalladolid-sanchez
+    Author: Estela Sánchez
+    Publisher: Diario de Valladolid (primary)
+    Article: "Los 15 restaurantes de Valladolid mejor valorados por los clientes"
+    Date: 2025-11-29
+    URL: https://www.diariodevalladolid.es/valladolid/251129/277398/los-15-restaurantes-de-valladolid-mejor-valorados-por-los-clientes.html
+    Fetch: good (~8,500 chars)
+    Notes: Publisher concentration flag — same publisher as src-diariodevalladolid-gonzalez
+
+  src-recomiendovalladolid-lazaro
+    Author: Pablo Lázaro
+    Publisher: Recomiendo Valladolid (primary)
+    Article: "Flamma" [representative article; blog covers one restaurant per post]
+    Date: 2024-05-16 (representative)
+    URL: https://recomiendovalladolid.com/flamma/
+    Fetch: partial (~2,800 chars per article — confirmed genuine short-form single-restaurant format)
+    Retries: 1 (confirmed complete on retry)
+    Notes: Single-author-confirmed personal blog. 7 individual article URLs fetched during Phase 2.
+
+  src-theobjective-alonso
+    Author: Brenda Alonso
+    Publisher: The Objective (secondary — national outlet)
+    Article: "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad"
+    Date: 2023-08-25
+    URL: https://theobjective.com/lifestyle/2023-08-25/donde-comer-valladolid-restaurantes/
+    Fetch: good (~8,500 chars)
+
+  src-elespanol-calvo
+    Author: Adriana Calvo
+    Publisher: El Español / Cocinillas (secondary — national outlet)
+    Article: "6 platos de 6 restaurantes de Valladolid que recomiendan los mejores chefs de España"
+    Date: 2024-03-25
+    URL: https://www.elespanol.com/cocinillas/restaurantes/20240325/platos-restaurantes-valladolid-recomiendan-mejores-chefs-espana/842665780_0.html
+    Fetch: good (~8,500 chars)
+
+────────────────────────────────────────────────────
+REJECTED SOURCES (Phase 1):
+
+  ojoalplato.com
+    Reason: No article author identified. Only credit found was photographer "Paco Palanca".
+    Rule violated: Full-name article author required.
+
+  soyunblogdeviajes.com
+    Reason: About page returned 404; revealed collective unnamed female contributors ("Sobre nosotras").
+    Rule violated: No individual named author.
+
+  eldiadevalladolid.com
+    Reason: Byline was "M.B." — initials only.
+    Rule violated: Initials-only bylines rejected.
+
+  huleymantel.com
+    Reason: Author listed as "Redacción Hule y Mantel" — editorial team credit.
+    Rule violated: No individual named author.
+
+  albertogranados.com
+    Reason: Author Alberto Granados confirmed, but article dated September 19, 2018.
+    Rule violated: Outside YEAR_RANGE 2023–2026.
+
+  viajeroscallejeros.com
+    Reason: No named author; article from 2021.
+    Rule violated: No author + outside YEAR_RANGE.
+
+  foodandtravel.com
+    Reason: No named author; ~2,400 chars.
+    Rule violated: No named author.
+
+  guiagastronomicavalladolid.es
+    Reason: No named authors identified — directory/promotional site.
+    Rule violated: No individual named author.
+
+  gastroactitud.com
+    Reason: Article dated October 4, 2021.
+    Rule violated: Outside YEAR_RANGE.
+
+  sehacecaminoalandar.com
+    Reason: Article dated August 9, 2022.
+    Rule violated: Outside YEAR_RANGE.
+
+────────────────────────────────────────────────────
+STRUCTURAL NOTES (Phase 1):
+
+  EN primary source: ABSENT
+    9+ English-language queries run. No qualifying named-author English-language articles found.
+    Only EN candidates were: Valladolid Mexico articles, unnamed-author travel blogs, or
+    sub-2,600-char pieces with no byline. Documented as structural characteristic of Valladolid
+    (less internationally written-about than Madrid/Barcelona).
+    Diversity gate: EN pool structurally absent — logged, not flagged as pipeline error.
+    Stopping rule applied after 9+ EN queries with 0 qualifying results.
+
+  Publisher concentration (Diario de Valladolid × 2):
+    Two supplementary searches run to find independent alternatives to second
+    Diario de Valladolid source. No qualifying independent source found.
+    Documented as structural characteristic of Valladolid food media landscape.
+    Concentration flag set on both gonzalez and sanchez source entries.
+
+════════════════════════════════════════════════════
+PHASE 2 — EXTRACTION REJECTIONS
+════════════════════════════════════════════════════
+
+  Costa del Piñón (src-diariodevalladolid-gonzalez)
+    Reason: Quote under 15 words. Auto-rejected at extraction.
+
+  Sibuya Sushi Bar (src-diariodevalladolid-sanchez)
+    Reason: Quote under 15 words. Auto-rejected at extraction.
+
+  Dámaso (src-diariodevalladolid-sanchez + src-elespanol-calvo)
+    Reason: Located at Club de Campo La Galera, Arroyo de la Encomienda — a separate municipality
+    outside Valladolid city limits. GEOGRAPHIC_BOUNDARY_EXCLUDE applied.
+    Both source references excluded. Restaurant not counted in pool.
+
+════════════════════════════════════════════════════
+PHASE 3 — DEDUPLICATION, SCORING, REMOVALS
+════════════════════════════════════════════════════
+
+STEP 1 — DEDUPLICATION:
+  Entries in working file: 40
+  Merges:
+    Alquimia Laboratorio: src-diariodevalladolid-sanchez + src-recomiendovalladolid-lazaro
+                          + src-elespanol-calvo → merged (3 entries → 1, saves 2)
+    La Parrilla de San Lorenzo: src-diariodevalladolid-gonzalez + src-theobjective-alonso
+                          → merged (2 entries → 1, saves 1)
+    Niza: src-diariodevalladolid-sanchez + src-theobjective-alonso
+                          → merged (2 entries → 1, saves 1)
+  Unique restaurants after dedup: 36
+  Total entry reductions: 4
+
+STEP 2 — TIER ASSIGNMENT:
+  Tier A (multi-source, ≥2 publishers): 3
+    • Alquimia Laboratorio — 3 publishers: Diario de Valladolid × Recomiendo Valladolid × El Español
+    • La Parrilla de San Lorenzo — 2 publishers: Diario de Valladolid × The Objective
+    • Niza — 2 publishers: Diario de Valladolid × The Objective
+
+  Both-pool check: 0
+    No EN-language sources confirmed. Both-pool requires cross-language-pool coverage.
+    All confirmed sources are ES-language. Both-pool structurally absent.
+
+  Tier B (single source, valid quote, known neighbourhood): 30
+  Tier C (auto-remove): 3
+
+STEP 3 — TIER C AUTO-REMOVALS (null neighbourhood + single source):
+  1. Mesón Don Pelayo (src-diariodevalladolid-gonzalez)
+     neighbourhood=null, single source, no explicit district reference in quote.
+     AUTO-REMOVED.
+
+  2. Martin Quiroga (src-diariodevalladolid-sanchez)
+     neighbourhood=null, single source, no explicit district reference in quote.
+     AUTO-REMOVED.
+
+  3. 5 Gustos / Cinco Gustos (src-elespanol-calvo)
+     neighbourhood=null, single source, no explicit district reference in quote.
+     AUTO-REMOVED.
+
+  Tier B after Tier C removals: 30
+
+STEP 4 — CONCENTRATION CAP (max 30% of Tier B = max 9 entries per publisher):
+  Applied cap based on initial Tier B count of 30.
+
+  Diario de Valladolid (src-gonzalez + src-sanchez combined): 11/30 = 36.7% → cap at 9 → remove 2
+    REMOVED: La Mafia (src-diariodevalladolid-sanchez)
+      Reason: Chain franchise restaurant (La Mafia se sienta a la mesa); quote describes
+      generic cultural concept without food-specific detail. Least informative entry
+      in the Sánchez Tier B pool.
+    REMOVED: Pide Por Esa Boquita (src-diariodevalladolid-sanchez)
+      Reason: Zero dishes_mentioned; quote describes pet-friendly Repsol Solete award,
+      not food content. Least food-informative entry in the Sánchez Tier B pool.
+
+  The Objective (src-theobjective-alonso): 10/30 = 33.3% → cap at 9 → remove 1
+    REMOVED: Brook Steakburguer (src-theobjective-alonso)
+      Reason: Generic American-style burger joint with no distinctive local food angle;
+      quote is entirely formulaic ("jugosas y llenas de sabor"). Least distinctive
+      entry in the Alonso Tier B pool.
+
+  Tier B after concentration cap: 27
+
+STEP 5 — FINAL COUNTS:
+  Tier A in OUTPUT_RAW: 3
+  Tier B in OUTPUT_RAW: 30 (pre-cap)
+  OUTPUT_RAW total: 33
+
+  Tier A in OUTPUT_FINAL: 3
+  Tier B in OUTPUT_FINAL: 27 (post-cap)
+  OUTPUT_FINAL total: 30
+
+  Tier C auto-removed (not in RAW or FINAL): 3
+  Concentration cap removed (in RAW, not FINAL): 3
+
+════════════════════════════════════════════════════
+NOTES AND DISCLOSURES
+════════════════════════════════════════════════════
+
+  ADDRESS CONFLICT — Metanoia / Los Zagales at Calle Pasión 13:
+    Both restaurants are associated with Calle Pasión 13. Metanoia (opened 2023) replaced
+    prior occupants (Fortuna 25 / La Pepita) at that address. Los Zagales is an established
+    nearby restaurant. Treated as distinct restaurants from separate sources. Both retained.
+    open_status_check=true on Metanoia (2023 opening; single pre-2025 source — verify still active).
+
+  COI DISCLOSURES:
+    Pablo Lázaro (recomiendovalladolid.com): independent local food writer; no commercial
+    relationships to reviewed restaurants identified in fetched articles. No disclaimers
+    present in reviewed articles.
+
+  UNATTENDED_MODE: YES — all Phase 3 recommended removals auto-accepted.
+
+  EN DIVERSITY GATE: Structurally absent (documented above). No EN primary source exists
+    for Valladolid. Logged as structural characteristic; pipeline continues.
+
+  BOTH-POOL COUNT: 0 (no cross-language coverage possible).
+
+════════════════════════════════════════════════════
+SEARCH COVERAGE SUMMARY
+════════════════════════════════════════════════════
+  Total queries planned: 28
+  Total queries run: 38 (28 planned + 7 supplementary + 3 Phase 1B cross-validation)
+  Year distribution check: PASSED (7 early / 7 late / 13 no-year)
+  Phase 1B result: 0 new sources (3 cross-validation queries run)
+  Stopping rule applied: EN primary pool (9+ queries, 0 qualifying sources)
+  Publisher concentration supplementary: 2 additional queries run, 0 new sources found
+
+END OF AUDIT

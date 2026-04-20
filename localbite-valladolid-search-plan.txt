@@ -1,0 +1,91 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023–2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+CITY: Valladolid, Spain
+YEAR_RANGE: 2023–2026
+PRIMARY_LANGUAGE: Spanish
+SECONDARY_LANGUAGE: English
+SINGLE_LANGUAGE_CITY: NO
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
+
+TIER 1 — Valladolid Centro
+  Q01 [ES] restaurantes recomendados centro Valladolid 2023 2024
+  Q02 [EN] best restaurants Valladolid city centre 2025 2026
+
+TIER 1 — Paseo de Zorrilla
+  Q03 [ES] mejores restaurantes Paseo Zorrilla Valladolid 2024 2025
+  Q04 [EN] restaurants Paseo de Zorrilla Valladolid guide
+
+TIER 2 — Valladolid Delicias
+  Q05 [ES] restaurantes barrio Delicias Valladolid gastronomía 2023 2024
+  Q06 [EN] Delicias neighbourhood Valladolid food recommendations
+
+TIER 2 — Caño Argales
+  Q07 [ES] bares restaurantes Caño Argales Valladolid 2024 2025
+  Q08 [EN] Caño Argales Valladolid eating out guide
+
+TIER 3 — Rondilla
+  Q09 [ES] restaurantes Rondilla Valladolid gastronomía
+
+TIER 3 — Valladolid La Victoria
+  Q10 [ES] restaurantes La Victoria Valladolid dónde comer
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries)
+  Q11 [EN] best restaurants in Valladolid Spain food guide 2024
+  Q12 [EN] where to eat Valladolid Spain personal recommendations 2025
+
+Cross-2 — City-wide ES (3 queries)
+  Q13 [ES] crítica gastronómica restaurantes Valladolid 2024
+  Q14 [ES] dónde comer en Valladolid recomendaciones barrio 2025
+  Q15 [ES] guía restaurantes Valladolid periodismo gastronómico 2023
+
+Cross-3 — Generic writer-first (2 queries)
+  Q16 [ES] bloguero gastronómico guía restaurantes Valladolid
+  Q17 [EN] food writer restaurant recommendations Valladolid Castile
+
+Cross-4 — Named awards (3 queries)
+  Q18 [ES] El Trigo Valladolid estrella Michelin crítica reseña artículo
+  Q19 [ES] Alquimia Laboratorios Valladolid chef recomendación artículo
+  Q20 [ES] Pincho de Oro Valladolid ganadores crónica periodismo
+
+Cross-5 — Recent openings (2 queries)
+  Q21 [ES] nuevas aperturas restaurantes Valladolid 2024 2025
+  Q22 [EN] new restaurant openings Valladolid Spain 2024 2025
+
+Cross-6 — Vocabulary-specific ES (2 queries)
+  Q23 [ES] lechazo asador Valladolid recomendación crítica 2023 2024
+  Q24 [ES] torreznos pinchos Valladolid bar mejor 2024 2025
+
+Cross-7 — Cuisine and community (2 queries)
+  Q25 [ES] restaurantes cocina castellana tradicional Valladolid reseña 2024
+  Q26 [EN] traditional Castilian food where to eat Valladolid
+
+Cross-8 — Publication category ES (2 queries)
+  Q27 [ES] revista gastronomía Valladolid mejores restaurantes crítica
+  Q28 [ES] suplemento gastronomía periódico Valladolid restaurante reseña 2023 2024
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+
+Queries referencing earlier years (2023, 2024):
+  Q01, Q05, Q15, Q18, Q23, Q24, Q28 → 7 queries
+
+Queries referencing later years (2025, 2026):
+  Q02, Q03, Q07, Q12, Q14, Q21, Q22 → 7 queries
+
+Queries referencing both / overlapping:
+  Q13 (2024), Q24 (2024–2025)
+
+Queries with no year term:
+  Q04, Q06, Q08, Q09, Q10, Q11, Q16, Q17, Q19, Q20, Q25, Q26, Q27
+
+[year-distribution-check] PASSED — 7 queries reference earlier years (2023–2024), 7 queries reference later years (2025–2026), 13 queries have no year term.
+
+Total planned queries: 28 (within soft ceiling of 45)

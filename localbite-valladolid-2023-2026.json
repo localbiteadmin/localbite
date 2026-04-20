@@ -1,0 +1,1044 @@
+{
+  "city": "Valladolid",
+  "country": "Spain",
+  "city_slug": "valladolid-spain",
+  "built": "2026-04-20",
+  "source_recency": "2025-11-29",
+  "pipeline": "localbite-v7.1",
+  "sources": [
+    {
+      "source_id": "src-diariodevalladolid-gonzalez",
+      "publisher": "Diario de Valladolid",
+      "author_name": "Diego González",
+      "article_title": "Los restaurantes para comer el mejor lechazo en Valladolid",
+      "article_date": "2023-08-15",
+      "article_url": "https://www.diariodevalladolid.es/valladolid/230815/159547/restaurantes-mejor-lechazo-valladolid.html",
+      "language": "es",
+      "classification": "primary",
+      "fetch_status": "good",
+      "publisher_concentration_flag": true
+    },
+    {
+      "source_id": "src-diariodevalladolid-sanchez",
+      "publisher": "Diario de Valladolid",
+      "author_name": "Estela Sánchez",
+      "article_title": "Los 15 restaurantes de Valladolid mejor valorados por los clientes",
+      "article_date": "2025-11-29",
+      "article_url": "https://www.diariodevalladolid.es/valladolid/251129/277398/los-15-restaurantes-de-valladolid-mejor-valorados-por-los-clientes.html",
+      "language": "es",
+      "classification": "primary",
+      "fetch_status": "good",
+      "publisher_concentration_flag": true
+    },
+    {
+      "source_id": "src-recomiendovalladolid-lazaro",
+      "publisher": "Recomiendo Valladolid",
+      "author_name": "Pablo Lázaro",
+      "article_title": "Flamma [representative article]",
+      "article_date": "2024-05-16",
+      "article_url": "https://recomiendovalladolid.com/flamma/",
+      "language": "es",
+      "classification": "primary",
+      "fetch_status": "partial",
+      "retries_attempted": 1
+    },
+    {
+      "source_id": "src-theobjective-alonso",
+      "publisher": "The Objective",
+      "author_name": "Brenda Alonso",
+      "article_title": "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad",
+      "article_date": "2023-08-25",
+      "article_url": "https://theobjective.com/lifestyle/2023-08-25/donde-comer-valladolid-restaurantes/",
+      "language": "es",
+      "classification": "secondary",
+      "fetch_status": "good"
+    },
+    {
+      "source_id": "src-elespanol-calvo",
+      "publisher": "El Español (Cocinillas)",
+      "author_name": "Adriana Calvo",
+      "article_title": "6 platos de 6 restaurantes de Valladolid que recomiendan los mejores chefs de España",
+      "article_date": "2024-03-25",
+      "article_url": "https://www.elespanol.com/cocinillas/restaurantes/20240325/platos-restaurantes-valladolid-recomiendan-mejores-chefs-espana/842665780_0.html",
+      "language": "es",
+      "classification": "secondary",
+      "fetch_status": "good"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "valladolid-spain-alquimia-laboratorio",
+      "name": "Alquimia Laboratorio",
+      "name_variants": [
+        "Alquimia",
+        "Alquimia Laboratorio"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Alta cocina / cocina de autor",
+      "opening_year": 2018,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "menú Noradrenalina-Adarsa",
+        "menú Serotonina",
+        "menú Dopamina",
+        "Piedra de Foie (mousse de foie con yogur cubierto de chocolate)",
+        "foie gras"
+      ],
+      "signature_dish": "Piedra de Foie",
+      "quote": "su plato más emblemático durante más de diez años, la Piedra de Foie: mousse de foie con yogur cubierto de chocolate presentado junto a piedras reales, obra del chef Alvar Hinojal con una estrella Michelin",
+      "quote_language": "translated from Spanish",
+      "confidence_tier": "A",
+      "both_pool": false,
+      "sources": [
+        "src-diariodevalladolid-sanchez",
+        "src-recomiendovalladolid-lazaro",
+        "src-elespanol-calvo"
+      ],
+      "article_date": "2024-03-25",
+      "article_title": "6 platos de 6 restaurantes de Valladolid que recomiendan los mejores chefs de España",
+      "open_status_check": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
+    },
+    {
+      "id": "valladolid-spain-la-parrilla-de-san-lorenzo",
+      "name": "La Parrilla de San Lorenzo",
+      "name_variants": [
+        "Parrilla de San Lorenzo"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Asador castellano",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "lechazo asado",
+        "media paleta de lechazo",
+        "cuarto de lechazo",
+        "parrillada de carne",
+        "entrecot",
+        "chorizo criollo"
+      ],
+      "signature_dish": "lechazo asado",
+      "quote": "sirve lechazo con certificación IGP elaborado a fuego lento en hornos de leña tradicionales, con precios de 25 euros la media paleta para una persona y 50 euros el cuarto para dos",
+      "quote_language": "translated from Spanish",
+      "confidence_tier": "A",
+      "both_pool": false,
+      "sources": [
+        "src-diariodevalladolid-gonzalez",
+        "src-theobjective-alonso"
+      ],
+      "article_date": "2023-08-15",
+      "article_title": "Los restaurantes para comer el mejor lechazo en Valladolid",
+      "open_status_check": true,
+      "lat": 41.6513742,
+      "lng": -4.7313989,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Parrilla de San Lorenzo"
+    },
+    {
+      "id": "valladolid-spain-niza",
+      "name": "Niza",
+      "name_variants": [
+        "Restaurante Niza"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Mediterránea / italiana",
+      "opening_year": 1989,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta",
+        "carnes a la brasa",
+        "pulpo a la brasa"
+      ],
+      "signature_dish": "pulpo a la brasa",
+      "quote": "Uno de sus platos destacados es el pulpo a la brasa, que combina la textura perfecta con ingredientes frescos, en un ambiente elegante que lo convierte en una opción para cenas especiales",
+      "quote_language": "original",
+      "confidence_tier": "A",
+      "both_pool": false,
+      "sources": [
+        "src-diariodevalladolid-sanchez",
+        "src-theobjective-alonso"
+      ],
+      "article_date": "2023-08-25",
+      "article_title": "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad",
+      "open_status_check": false,
+      "lat": 41.6569541,
+      "lng": -4.7214829,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Niza"
+    },
+    {
+      "id": "valladolid-spain-el-figon-de-recoletos",
+      "name": "El Figón de Recoletos",
+      "name_variants": [
+        "Figón de Recoletos",
+        "Asador de Aranda - El Figón"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Asador castellano",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "lechazo asado"
+      ],
+      "signature_dish": "lechazo asado",
+      "quote": "perteneciente a Asador de Aranda con más de 38 años de experiencia, utiliza cocción lenta en hornos de leña de encina con menús de lechazo entre 46,50 y 57,50 euros",
+      "quote_language": "translated from Spanish",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-diariodevalladolid-gonzalez"
+      ],
+      "article_date": "2023-08-15",
+      "article_title": "Los restaurantes para comer el mejor lechazo en Valladolid",
+      "open_status_check": true,
+      "lat": 41.647601,
+      "lng": -4.7286025,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "El figón de Recoletos"
+    },
+    {
+      "id": "valladolid-spain-gastrobar-pasion",
+      "name": "Gastrobar Pasión",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Pintxos / tapas",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pulpo a la parrilla",
+        "pintxos",
+        "tapas"
+      ],
+      "signature_dish": null,
+      "quote": "ofrece una carta que destaca por su variedad entre pintxos y tapas, con comida de calidad como por ejemplo el pulpo a la parrilla",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-diariodevalladolid-sanchez"
+      ],
+      "article_date": "2025-11-29",
+      "article_title": "Los 15 restaurantes de Valladolid mejor valorados por los clientes",
+      "open_status_check": false,
+      "lat": 41.6514962,
+      "lng": -4.7297962,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Gastrobar Pasión"
+    },
+    {
+      "id": "valladolid-spain-creperia-le-domen",
+      "name": "Restaurante Creperia Le Domen",
+      "name_variants": [
+        "Le Domen",
+        "Creperia Le Domen"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Francesa / crepes",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "galletes",
+        "crepes",
+        "carnes preparadas en piedra",
+        "tarte tatin",
+        "crepe de caramelo"
+      ],
+      "signature_dish": null,
+      "quote": "ofrece un viaje por Francia a través de la gastronomía de diferentes partes del país, entre galletes, crepes o carnes preparadas en piedra",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-diariodevalladolid-sanchez"
+      ],
+      "article_date": "2025-11-29",
+      "article_title": "Los 15 restaurantes de Valladolid mejor valorados por los clientes",
+      "open_status_check": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
+    },
+    {
+      "id": "valladolid-spain-la-cocina-de-manuel",
+      "name": "La Cocina de Manuel",
+      "name_variants": [
+        "Cocina de Manuel"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Española contemporánea",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "manitas de cerdo deshuesadas con crema de batata al curry",
+        "gyozas de panceta y langostinos"
+      ],
+      "signature_dish": null,
+      "quote": "forma parte de la Guía Michelin con una carta que fusiona la cocina tradicional con la moderna, con platos de temporada elaborados con materia prima local",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-diariodevalladolid-sanchez"
+      ],
+      "article_date": "2025-11-29",
+      "article_title": "Los 15 restaurantes de Valladolid mejor valorados por los clientes",
+      "open_status_check": false,
+      "lat": 41.6378564,
+      "lng": -4.7376471,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Cocina de Manuel"
+    },
+    {
+      "id": "valladolid-spain-don-txipiron",
+      "name": "Don Txipiron",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Española / mariscos",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "chipirones frescos a la plancha"
+      ],
+      "signature_dish": "chipirones frescos a la plancha",
+      "quote": "Entre las calles cerca de la Catedral de Valladolid se encuentra Don Txipiron, que destaca por sus chipirones frescos a la plancha y su amplia selección de carnes y mariscos",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-diariodevalladolid-sanchez"
+      ],
+      "article_date": "2025-11-29",
+      "article_title": "Los 15 restaurantes de Valladolid mejor valorados por los clientes",
+      "open_status_check": false,
+      "lat": 41.6533358,
+      "lng": -4.7260306,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Don Txipirón"
+    },
+    {
+      "id": "valladolid-spain-eh-voila",
+      "name": "Eh Voilà",
+      "name_variants": [
+        "Eh Voila",
+        "Eh Voilà!"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Internacional / francesa",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "carpaccios",
+        "quiches",
+        "pastas",
+        "carnes",
+        "crepes"
+      ],
+      "signature_dish": null,
+      "quote": "ha traído a Valladolid la gastronomía internacional y casera, también adaptada para personas vegetarianas o con intolerancias alimentarias",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-diariodevalladolid-sanchez"
+      ],
+      "article_date": "2025-11-29",
+      "article_title": "Los 15 restaurantes de Valladolid mejor valorados por los clientes",
+      "open_status_check": false,
+      "lat": 41.6550571,
+      "lng": -4.7215309,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Eh Voilà!"
+    },
+    {
+      "id": "valladolid-spain-pispitrello-ristorante",
+      "name": "Pispitrello Ristorante",
+      "name_variants": [
+        "Pipistrello Ristorante",
+        "Pispitrello"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Italiana / slow food",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "se defiende el movimiento slow-food en el que respetan que la gastronomía debe disfrutarse a un ritmo lento, con ingredientes premium traídos directamente de Italia",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-diariodevalladolid-sanchez"
+      ],
+      "article_date": "2025-11-29",
+      "article_title": "Los 15 restaurantes de Valladolid mejor valorados por los clientes",
+      "open_status_check": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
+    },
+    {
+      "id": "valladolid-spain-ditaly",
+      "name": "Ditaly",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Italiana",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pizza napolitana",
+        "tarta casera de queso"
+      ],
+      "signature_dish": "pizza napolitana",
+      "quote": "La especialidad de Ditaly en los platos de la cocina italiana que se funden en el calor del horno. La pizza napolitana es su plato estrella",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-diariodevalladolid-sanchez"
+      ],
+      "article_date": "2025-11-29",
+      "article_title": "Los 15 restaurantes de Valladolid mejor valorados por los clientes",
+      "open_status_check": false,
+      "lat": 41.6531081,
+      "lng": -4.7302398,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Ditaly"
+    },
+    {
+      "id": "valladolid-spain-ristorante-il-nuovo-veneto",
+      "name": "Ristorante Il Nuovo Veneto",
+      "name_variants": [
+        "Il Nuovo Veneto's",
+        "Il Nuovo Veneto"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Italiana / fusión",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Pizza Thai",
+        "pasta"
+      ],
+      "signature_dish": "Pizza Thai",
+      "quote": "Un concepto de restaurante italiano que mezcla esta cultura con platos de diversos países, que presentó la Pizza Thai al concurso nacional de pizza con salsa de ostras, aceite de sésamo y langostinos",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-diariodevalladolid-sanchez"
+      ],
+      "article_date": "2025-11-29",
+      "article_title": "Los 15 restaurantes de Valladolid mejor valorados por los clientes",
+      "open_status_check": false,
+      "lat": 41.6577906,
+      "lng": -4.7209165,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Ristorante il Nuovo Veneto's"
+    },
+    {
+      "id": "valladolid-spain-flamma",
+      "name": "Flamma",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Brasa / contemporánea",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "lechazo a la brasa",
+        "ternera",
+        "embutidos de matanza"
+      ],
+      "signature_dish": null,
+      "quote": "La cocina opera en dos secciones: la zona Josper con lechazo lechal de primera calidad y ternera, y la cocina principal donde García crea sabores afilados, intensos y explosivos con especial fortaleza en los guisos y aliños",
+      "quote_language": "translated from Spanish",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-recomiendovalladolid-lazaro"
+      ],
+      "article_date": "2024-05-16",
+      "article_title": "Flamma",
+      "open_status_check": true,
+      "lat": 41.6522139,
+      "lng": -4.7238069,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Flamma"
+    },
+    {
+      "id": "valladolid-spain-el-patio-del-olivo",
+      "name": "El Patio del Olivo",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Española / cocina de mercado",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "marmitako",
+        "alubias con chorizo",
+        "lentejas",
+        "patatas guisadas",
+        "bacalao con tomate",
+        "ternera con arroz",
+        "ensaladas"
+      ],
+      "signature_dish": null,
+      "quote": "formato de cazuelitas individuales con platos de temporada como marmitako, alubias con chorizo, lentejas, patatas guisadas, bacalao con tomate y ternera con arroz, todo a 4-5 euros la ración",
+      "quote_language": "translated from Spanish",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-recomiendovalladolid-lazaro"
+      ],
+      "article_date": "2025-04-16",
+      "article_title": "El Patio del Olivo",
+      "open_status_check": false,
+      "lat": 41.6503463,
+      "lng": -4.7294683,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "El Patio del Olivo"
+    },
+    {
+      "id": "valladolid-spain-castizo",
+      "name": "Castizo",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Taberna / vinos / tapas",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tortilla de patata",
+        "rabo de toro de lidia",
+        "croquetas de jamón y carabineros",
+        "tartar de lubina Aquanaria",
+        "tataki de atún Balfegó",
+        "oreja guisada"
+      ],
+      "signature_dish": "tortilla de patata",
+      "quote": "La tortilla, melosa, cremosa y con un elevado protagonismo para un huevo perfectamente infusionado e integrado en unas patatas y cebolla bien confitadas",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-recomiendovalladolid-lazaro"
+      ],
+      "article_date": "2024-11-15",
+      "article_title": "Castizo",
+      "open_status_check": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
+    },
+    {
+      "id": "valladolid-spain-azul-mediterraneo",
+      "name": "Azul Mediterráneo",
+      "name_variants": [],
+      "neighbourhood": "Paseo de Zorrilla",
+      "cuisine": "Mediterránea / arrocería",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "arroz seco de carabineros",
+        "arroz seco de gamba y cigala",
+        "arroz seco de alcachofa con tuétano y picaña",
+        "arroz negro de cocochas",
+        "arroz meloso de bogavante",
+        "ensaladilla rusa con tartar de atún",
+        "manillas de cerdo con carabineros"
+      ],
+      "signature_dish": null,
+      "quote": "Su amplio elenco, sus solventes resultados y su especialización, en tiempos en que reina la indeterminación y la falta de personalidad en muchas cartas, lo convierte en un lugar imprescindible",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-recomiendovalladolid-lazaro"
+      ],
+      "article_date": "2024-03-14",
+      "article_title": "Azul Mediterráneo",
+      "open_status_check": true,
+      "lat": 41.6367069,
+      "lng": -4.7303992,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Azul Mediterráneo"
+    },
+    {
+      "id": "valladolid-spain-metanoia",
+      "name": "Metanoia",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "India del sur",
+      "opening_year": 2023,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "chicken tikka masala",
+        "cordero korma",
+        "ternera vindaloo",
+        "naans",
+        "dosas",
+        "arroces"
+      ],
+      "signature_dish": null,
+      "quote": "hay cremosidad en sus pacientes elaboraciones, hay equilibrio y sutileza en el empleo de especias frescas, hay carga aromática en nariz y hay cromatismo en los platos",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-recomiendovalladolid-lazaro"
+      ],
+      "article_date": "2024-05-15",
+      "article_title": "Metanoia",
+      "open_status_check": true,
+      "lat": 41.6512925,
+      "lng": -4.7300485,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Hanam Korean BBQ"
+    },
+    {
+      "id": "valladolid-spain-la-barra-del-hidalgo",
+      "name": "La Barra del Hidalgo",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Tasca / tapas castellanas",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Hidalguito (montado de lomo, pimiento y queso)",
+        "oreja brava",
+        "torreznos",
+        "bravas",
+        "ensaladilla",
+        "hamburguesa de entraña"
+      ],
+      "signature_dish": "Hidalguito",
+      "quote": "una tasca de las de toda la vida, de codo en barra, de dicharachera conversación, de rondas de cañas y raciones, con especialidades como el Hidalguito: un montado de lomo, pimiento y queso",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-recomiendovalladolid-lazaro"
+      ],
+      "article_date": "2024-08-28",
+      "article_title": "La Barra del Hidalgo",
+      "open_status_check": true,
+      "lat": 41.6517082,
+      "lng": -4.7274936,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Barra del Hidalgo"
+    },
+    {
+      "id": "valladolid-spain-el-consejero-del-rey",
+      "name": "El Consejero del Rey",
+      "name_variants": [
+        "Consejero del Rey"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Castellana tradicional",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cordero lechal",
+        "cochinillo asado"
+      ],
+      "signature_dish": null,
+      "quote": "Su menú se basa en recetas tradicionales de la región, destacando platos como el cordero lechal, tierno y lleno de sabor, así como el cochinillo asado, una exquisitez local",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "article_date": "2023-08-25",
+      "article_title": "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad",
+      "open_status_check": true,
+      "lat": 41.6537685,
+      "lng": -4.7282152,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "El Consejero del Rey"
+    },
+    {
+      "id": "valladolid-spain-mesa-cero-del-val",
+      "name": "Mesa Cero Del Val",
+      "name_variants": [
+        "Mesa Cero del Val",
+        "Mesa Cero"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Cocina de fusión / menú degustación",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "menú degustación de temporada"
+      ],
+      "signature_dish": null,
+      "quote": "Este restaurante de alta gama ofrece un menú degustación que cambia con las estaciones, utilizando ingredientes locales y técnicas culinarias innovadoras, con cada plato elaborado como una obra de arte",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "article_date": "2023-08-25",
+      "article_title": "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad",
+      "open_status_check": true,
+      "lat": 41.6541417,
+      "lng": -4.7280948,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Mesa cero"
+    },
+    {
+      "id": "valladolid-spain-los-zagales",
+      "name": "Los Zagales",
+      "name_variants": [
+        "Los Zagales de la Abadía",
+        "Restaurante Los Zagales"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Tapas / pinchos castellanos",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cochinillo asado",
+        "lechazo asado",
+        "quesos locales",
+        "embutidos"
+      ],
+      "signature_dish": null,
+      "quote": "Con un ambiente acogedor y tradicional, Los Zagales destaca por su enfoque en la cocina castellana. Su cochinillo y lechazo asado son platos icónicos que reflejan la rica tradición culinaria de la región",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "article_date": "2023-08-25",
+      "article_title": "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad",
+      "open_status_check": true,
+      "lat": 41.651347,
+      "lng": -4.7298699,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Los Zagales"
+    },
+    {
+      "id": "valladolid-spain-campogrande",
+      "name": "Campogrande",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Cocina de autor / fusión",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tartar de atún con aguacate y mango"
+      ],
+      "signature_dish": "tartar de atún con aguacate y mango",
+      "quote": "Para los amantes de la cocina de autor, Campogrande ofrece creatividad en la presentación. Prueba el tartar de atún con aguacate y mango para una explosión de sabores frescos y vibrantes",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "article_date": "2023-08-25",
+      "article_title": "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad",
+      "open_status_check": true,
+      "lat": 41.6459086,
+      "lng": -4.7333816,
+      "geo_source": "nominatim",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Campogrande"
+    },
+    {
+      "id": "valladolid-spain-la-tasquita",
+      "name": "La Tasquita",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Tapas castellanas",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tapas de temporada",
+        "gambas con ajitos en tosta",
+        "solomillo"
+      ],
+      "signature_dish": null,
+      "quote": "Este rincón acogedor es famoso por sus tapas tradicionales, que varían según la temporada y la disponibilidad de ingredientes frescos, acompañadas de caña de cerveza local",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "article_date": "2023-08-25",
+      "article_title": "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad",
+      "open_status_check": true,
+      "lat": 41.6515195,
+      "lng": -4.7303418,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Tasquita"
+    },
+    {
+      "id": "valladolid-spain-bar-el-corcho",
+      "name": "Bar El Corcho",
+      "name_variants": [
+        "El Corcho"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Tapas / vinos",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "croquetas caseras",
+        "pimientos rellenos"
+      ],
+      "signature_dish": "croquetas caseras",
+      "quote": "Sus croquetas caseras y pimientos rellenos son opciones populares que dan una muestra del sabor auténtico de Valladolid, con una selección de vinos locales para maridar",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "article_date": "2023-08-25",
+      "article_title": "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad",
+      "open_status_check": true,
+      "lat": 41.6521642,
+      "lng": -4.7296233,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "El Corcho"
+    },
+    {
+      "id": "valladolid-spain-jero",
+      "name": "Jero",
+      "name_variants": [
+        "Restaurante Jero"
+      ],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Tapas / española",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "huevos rotos con jamón",
+        "risotto de setas"
+      ],
+      "signature_dish": null,
+      "quote": "Desde huevos rotos con jamón hasta risotto de setas, aquí encontrarás una amplia variedad de opciones, con un menú que cambia según la disponibilidad de ingredientes frescos",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "article_date": "2023-08-25",
+      "article_title": "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad",
+      "open_status_check": true,
+      "lat": 41.6530183,
+      "lng": -4.7296643,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Jero"
+    },
+    {
+      "id": "valladolid-spain-el-peso",
+      "name": "El Peso",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Española / carnes",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cecina de León",
+        "solomillo"
+      ],
+      "signature_dish": null,
+      "quote": "Su cecina de León es una opción popular para comenzar, seguida de un solomillo tierno y jugoso, con una presentación que hace de cada plato una experiencia sensorial",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "article_date": "2023-08-25",
+      "article_title": "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad",
+      "open_status_check": true,
+      "lat": 41.6524019,
+      "lng": -4.7295137,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "El Peso"
+    },
+    {
+      "id": "valladolid-spain-la-criolla",
+      "name": "La Criolla",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Castellana contemporánea",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "la cocina tradicional de La Criolla ha sabido evolucionar decantándose por una cocina actual y contemporánea, siempre pendiente de los productos más frescos, con siete salas dedicadas a personajes vallisoletanos ilustres como Miguel Delibes, Lola Herrera y Concha Velasco",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "article_date": "2023-08-25",
+      "article_title": "Dónde comer en Valladolid en 2023: 12 restaurantes típicos de la ciudad",
+      "open_status_check": true,
+      "lat": 41.6518809,
+      "lng": -4.7298536,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Criolla"
+    },
+    {
+      "id": "valladolid-spain-suite-22",
+      "name": "Suite 22",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Alta cocina / española contemporánea",
+      "opening_year": 2011,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "steak tartar con trufa y hojaldre frito"
+      ],
+      "signature_dish": "Steak Tartar",
+      "quote": "uno de sus platos más exitosos, el Steak Tartar, que elaboran al momento ante el comensal con carne cortada a cuchillo, chalota, cebolla, alcaparra, yema de huevo, vinagre, salsa Worcestershire, tabasco, mostaza y trufa sobre hojaldre frito dorado",
+      "quote_language": "original",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-elespanol-calvo"
+      ],
+      "article_date": "2024-03-25",
+      "article_title": "6 platos de 6 restaurantes de Valladolid que recomiendan los mejores chefs de España",
+      "open_status_check": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null
+    },
+    {
+      "id": "valladolid-spain-don-bacalao",
+      "name": "Don Bacalao",
+      "name_variants": [],
+      "neighbourhood": "Valladolid Centro",
+      "cuisine": "Bacalao / española",
+      "opening_year": 1984,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bacalao estilo taberna",
+        "bacalao braseado y confitado",
+        "majada de ajo y almendras"
+      ],
+      "signature_dish": "Bacalao Estilo Taberna",
+      "quote": "el chef Alfonso García brasea y confita el bacalao, luego crea una majada con ajo, pan tostado, guindilla, almendras y avellanas que emulsiona con el aceite de cocción",
+      "quote_language": "translated from Spanish",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-elespanol-calvo"
+      ],
+      "article_date": "2024-03-25",
+      "article_title": "6 platos de 6 restaurantes de Valladolid que recomiendan los mejores chefs de España",
+      "open_status_check": true,
+      "lat": 41.6566025,
+      "lng": -4.7277269,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Don Bacalao"
+    },
+    {
+      "id": "valladolid-spain-puerto-chico",
+      "name": "Puerto Chico",
+      "name_variants": [],
+      "neighbourhood": "Caño Argales",
+      "cuisine": "Pinchos / cocina creativa",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Taj Mahal (lechazo al estilo tandoori)",
+        "pan frito",
+        "yogur especiado",
+        "caviar de masala tandoori"
+      ],
+      "signature_dish": "Taj Mahal",
+      "quote": "reinterpreta el lechazo asado a través de la técnica del pollo tandoori indio, combinando la carne deshuesada con pan frito, yogur especiado y caviar de masala tandoori en el pincho Taj Mahal",
+      "quote_language": "translated from Spanish",
+      "confidence_tier": "B",
+      "both_pool": false,
+      "sources": [
+        "src-elespanol-calvo"
+      ],
+      "article_date": "2024-03-25",
+      "article_title": "6 platos de 6 restaurantes de Valladolid que recomiendan los mejores chefs de España",
+      "open_status_check": true,
+      "lat": 41.6511922,
+      "lng": -4.7166767,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bar Puerto Chico"
+    }
+  ],
+  "centroids": {
+    "Valladolid Centro": [
+      41.6516,
+      -4.7283
+    ]
+  }
+}
