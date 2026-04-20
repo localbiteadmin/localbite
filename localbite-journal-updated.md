@@ -5021,3 +5021,183 @@ Keep Phase 1 source approval as the single mandatory human touchpoint.
 
 *Fleet: 15 cities, ~600 restaurants*
 
+## Session — 2026-04-19 (v7.1 build, San Sebastián live, unattended mode infrastructure)
+
+### Overview
+
+Full build session. Delivered v7.1 template and infrastructure, ran San Sebastián
+as the first v7.1 city end-to-end, identified and fixed a significant product
+issue with source links, and confirmed the unattended mode pipeline working in
+practice. Fleet moves from 15 to 16 cities.
+
+---
+
+### Source Link Product Issue — Identified and Fixed
+
+A systematic review of the Bilbao city pack confirmed that all 5 source URLs
+stored in the JSON were publication homepages, not article URLs. The pipeline
+always had the correct article URL available during extraction (the Jina fetch
+URL) but discarded it — storing only the root domain. Every "Source ↗" link
+in the viewer was taking users to a homepage rather than the article describing
+the restaurant.
+
+**Fix applied:**
+- `article_url` added as a mandatory field in the v7.1 source schema
+- Viewer updated with `article_url || url` fallback (lines 1174 and 1461 of
+  index.html) — existing cities continue using `url`, new cities use `article_url`
+- San Sebastián confirmed working: all 6 sources have distinct article_url values
+
+**Existing 15 cities:** untouched. article_url will be corrected at natural
+rebuild time.
+
+---
+
+### v7.1 Infrastructure — All Items Committed
+
+| Item | Description | Commit |
+|------|-------------|--------|
+| localbite-prompt-v7-template.txt | v7.1 — article_url, UNATTENDED_MODE, DIRECT_FETCH_SOURCES guidance | 134cc46 |
+| localbite-geocode.js | v8.1 — Basque street patterns (kalea, etorbidea, pasealekua, enparantza) | 134cc46 |
+| CLAUDE.md | New — repo-level Claude Code instructions | 134cc46 |
+| localbite-postrun.js | New — post-pipeline automation (geocoding + CENTROIDS + index update) | 134cc46 |
+| index.html | article_url fallback in source links | 134cc46 |
+
+---
+
+### UNATTENDED_MODE — First Live Test
+
+San Sebastián was the first v7.1 run with UNATTENDED_MODE: YES. Results:
+
+- Phase 1 pause fired correctly — stopped and waited for PROCEED ✓
+- Phase 3 ran without stopping — auto-accepted all recommended removals ✓
+- localbite-postrun.js ran automatically after pipeline — geocoding + CENTROIDS
+  check + index update all executed in sequence ✓
+- article_url captured for all 6 sources ✓
+- CLAUDE.md read by Claude Code — git push correctly deferred to user ✓
+
+Human touchpoints this run: 2 (Phase 1 source approval + CENTROIDS confirm).
+Down from the previous 5.
+
+---
+
+### San Sebastián v7.1 — Run Details
+
+**File:** localbite-san-sebastian-2023-2026.json
+**Commits:** ddee9b9 (initial), 74df3d9 (corrections), 432de40 (search plan),
+            f735229 (index update)
+
+| Metric | Value |
+|--------|-------|
+| Final restaurants | 24 (after corrections) |
+| Sources | 6 |
+| Both-pool | 2 (Muka, Antonio Bar) |
+| Geocoding | 27/30 = 90% (before corrections) |
+| Searches run | 44 |
+| open_status_check | 23 |
+
+**Sources confirmed:**
+| Publication | Writer | Language | Type | COI |
+|-------------|--------|----------|------|-----|
+| Spanish Sabores | Lauren Aloise | EN | Primary | ⚠ Devour Tours |
+| The Infatuation | Marti Buckley | EN | Primary | — |
+| Saveur | Marti Buckley | EN | Primary | — |
+| Culinary Backstreets | Sasha Correa | EN | Primary | ⚠ food tours |
+| Gastronomistas | Javier Sánchez | ES | Secondary | — |
+| Appetites Abroad | Moani Hood | EN | Secondary | — |
+
+**Structural characteristic confirmed:** No ES-language primary source with
+named author found after 12+ additional diversity gate searches. Spanish-language
+food media for San Sebastián dominated by institutional publications without
+bylines. Documented in index notes.
+
+---
+
+### Post-Pipeline Corrections Applied
+
+Six entries removed after audit flagged unverifiable quotes:
+
+**Saveur geo-blocked (HTTP 451) — quotes reconstructed, not from fetched text:**
+- Bar Bergara (Saveur-only)
+- Casa Valles (Saveur primary quote)
+
+**Infatuation entries flagged as AI-summarized after context compaction:**
+- Zazpi
+- Akelarre
+- Narru
+- Bistro Ondarreta
+
+These are v7.1 pipeline integrity issues, not template bugs. The Saveur geo-block
+is unpredictable and city-specific. The compaction issue is a known risk on long
+runs — the audit correctly caught both.
+
+---
+
+### Geocoding Notes
+
+- 90% automated geocoding rate (27/30 before corrections, proportionally similar after)
+- R Restaurante Bar false positive caught: Photon matched "Gasteiz Bar-Restaurante"
+  in Antiguo/Ondarreta — nulled, falls back to Gros centroid
+- Maun (Centro) CENTROIDS collision resolved: neighbourhood remapped to
+  "San Sebastián Centro", new CENTROIDS entry added to index.html
+- San Sebastián bounding box: both 'San Sebastian' and 'San Sebastián' keys
+  added to CITY_BOXES (pipeline added accented key automatically)
+
+---
+
+### Key Decisions
+
+**article_url is the correct fix for source links** — not Google Maps links or
+anchor deep links. The Jina fetch URL is always available during extraction and
+is the most accurate representation of what the pipeline actually read.
+
+**Removing unverifiable quotes is the right call** — six entries removed rather
+than keeping AI-reconstructed content in the pack. Data integrity over count.
+
+**San Sebastián goes live as "complete"** — open_status_check warnings appear
+on individual cards in the viewer, giving users appropriate context without
+blocking deployment.
+
+**Zaragoza identified as next city** — agreed before session close.
+
+---
+
+### Files Produced or Updated
+
+| File | Status | Commit |
+|------|--------|--------|
+| localbite-prompt-v7-template.txt | Updated — v7.1 | 134cc46 |
+| localbite-geocode.js | Updated — v8.1 | 134cc46 |
+| CLAUDE.md | New | 134cc46 |
+| localbite-postrun.js | New | 134cc46 |
+| index.html | Updated — article_url fallback + SS CENTROIDS | 134cc46, ddee9b9, 74df3d9 |
+| localbite-prompt-v71-san-sebastian-part1.txt | New | 4690111 |
+| localbite-prompt-v71-san-sebastian.txt | New | 4690111 |
+| localbite-san-sebastian-2023-2026.json | New | ddee9b9, 74df3d9 |
+| localbite-san-sebastian-raw.json | New | ddee9b9, 74df3d9 |
+| localbite-san-sebastian-audit.txt | New | ddee9b9 |
+| localbite-san-sebastian-failed-sources.txt | New | ddee9b9 |
+| localbite-san-sebastian-search-plan.txt | New | 432de40 |
+| localbite-index.json | Updated — SS added, fleet 16 | f735229 |
+| localbite-run-metrics.log | Updated — SS entry | ddee9b9 |
+| Global instructions | Updated — fleet 16, v7.1 | (project settings) |
+
+---
+
+### Outstanding Items
+
+- [ ] Zaragoza — next city run (Part 1 not yet written)
+- [ ] Seville Part 1 — needs updating to canonical v7.1 variable names before Seville v2
+- [ ] Madrid open_status_check verification — 56 restaurants still pending
+- [ ] Madrid "Irene S." byline — still unresolved
+- [ ] San Sebastián open_status_check — 23 restaurants need verification before
+      those entries are fully reliable
+- [ ] Saveur geo-block (HTTP 451) — will recur for any city where Saveur is a
+      source. Consider Wayback Machine as standard fallback for geo-blocked sources.
+- [ ] Token capture undercounting — session-meta covers only portion of pipeline
+      run. Bilbao showed ~17k tokens vs expected ~120k. Not a blocker but worth
+      investigating.
+- [ ] Custom Skill /run-pipeline — deferred (marginal value vs another city run)
+- [ ] PostToolUse Hook for JSON validation — deferred (same reasoning)
+
+*Fleet: 16 cities live. Last commit: f735229.*
+
