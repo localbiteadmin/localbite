@@ -1,0 +1,463 @@
+{
+  "city": "Alicante",
+  "country": "Spain",
+  "city_slug": "alicante-spain",
+  "built": "2026-04-21",
+  "source_recency": "2023-2026",
+  "pipeline": "localbite-v7.1",
+  "confidence_tiers": {
+    "tier_a": {
+      "label": "Multiple independent sources",
+      "description": "Restaurant recommended by 2+ independent sources, or appears in both ES and EN source pools from different publishers",
+      "count": 1
+    },
+    "tier_b": {
+      "label": "Single qualified source",
+      "description": "Restaurant recommended by one named-author source meeting all quality criteria",
+      "count": 8
+    },
+    "tier_c": {
+      "label": "Auto-rejected",
+      "description": "Failed extraction-time quality checks (quote under 15 words, no specific detail)",
+      "count": 1
+    }
+  },
+  "sources": [
+    {
+      "id": "src-elespanol-labarragourmet",
+      "author": "Miquel Hernandis",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2026-03-14",
+      "article_url": "https://www.elespanol.com/alicante/vivir/gastronomia/20260314/joya-explanada-alicante-disfrutar-mejores-tapas-chef-mimada-reyes/1003744156438_0.html",
+      "fetch_quality": "good",
+      "fetch_chars": 4800,
+      "publication": "El Español Alicante",
+      "writer": "Miquel Hernandis",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for El Español Alicante, covering the culinary scene and restaurant landscape in the Alicante region of Spain. Miquel Hernandis contributes food guides and dining recommendations to help readers discover local restaurants and eateries. His work focuses on showcasing the diverse food culture and dining options available in the area."
+    },
+    {
+      "id": "src-elespanol-betonbrut",
+      "author": "Miquel Hernandis",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2026-02-28",
+      "article_url": "https://www.elespanol.com/alicante/vivir/gastronomia/20260228/restaurante-terraza-alicante-tapear-comer-arroz-exclusiva/1003744149453_0.html",
+      "fetch_quality": "good",
+      "fetch_chars": 5200,
+      "publication": "El Español Alicante",
+      "writer": "Miquel Hernandis",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for El Español Alicante, a Spanish digital publication covering regional news and culture in the Alicante area. Miquel Hernandis specializes in culinary content, including comprehensive food guides that help readers discover local dining establishments and gastronomic experiences."
+    },
+    {
+      "id": "src-elespanol-plegat",
+      "author": "Miquel Hernandis",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2026-03-08",
+      "article_url": "https://www.elespanol.com/alicante/vivir/gastronomia/20260308/nanin-chef-entrevista-madrid-fusion-plegat/1003744159571_0.html",
+      "fetch_quality": "good",
+      "fetch_chars": 6100,
+      "publication": "El Español Alicante",
+      "writer": "Miquel Hernandis",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for El Español Alicante, a Spanish publication covering local dining and culinary experiences in the Alicante region. Miquel Hernandis contributes food guides that help readers discover restaurants and gastronomic offerings throughout the area."
+    },
+    {
+      "id": "src-elespanol-marcelbistro",
+      "author": "Miquel Hernandis",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2026-03-22",
+      "article_url": "https://www.elespanol.com/alicante/vivir/gastronomia/20260322/calle-setas-marcel-bistro-frances-alicante-calle-setas-ducasse-ducasse/1003744178296_0.html",
+      "fetch_quality": "good",
+      "fetch_chars": 5600,
+      "publication": "El Español Alicante",
+      "writer": "Miquel Hernandis",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer at El Español Alicante, a Spanish regional publication covering local dining and culinary trends in the Alicante area. Miquel Hernandis contributes food guides and restaurant coverage, helping readers discover the best dining experiences in this Mediterranean coastal region of Spain."
+    },
+    {
+      "id": "src-almanaque-ruiz",
+      "author": "Ángeles Ruiz",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2025-07-14",
+      "article_url": "https://almanaquegastronomico.com/criticas-de-restaurantes/arroces/nou-manolin-de-alicante/",
+      "fetch_quality": "good",
+      "fetch_chars": 7300,
+      "publication": "Almanaque Gastronómico",
+      "writer": "Ángeles Ruiz",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for Almanaque Gastronómico, specializing in comprehensive dining guides and culinary discoveries. Ángeles Ruiz contributes expert restaurant recommendations and food insights to help readers navigate the local dining scene. Her recent work includes detailed food guides that showcase the best culinary experiences in the region."
+    },
+    {
+      "id": "src-todoalicante-almenar",
+      "author": "Susana Almenar",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2023-04-23",
+      "article_url": "https://www.todoalicante.es/gastronomia/nou-manolin-restaurante-alicantino-fama-internacional-barra-tapas-20230421234120-nt.html",
+      "fetch_quality": "good",
+      "fetch_chars": 5900,
+      "publication": "TodoAlicante",
+      "writer": "Susana Almenar",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "A food writer for TodoAlicante, Susana Almenar contributes comprehensive dining guides to help readers discover local culinary experiences. TodoAlicante focuses on restaurant and food coverage in the Alicante region, providing readers with curated recommendations for their dining adventures."
+    },
+    {
+      "id": "src-gourmetgorro-gilbert",
+      "author": "Ed Gilbert",
+      "language": "en",
+      "classification": "primary",
+      "article_date": "undated",
+      "article_url": "https://gourmetgorro.blogspot.com/2023/08/a-few-great-places-to-eat-in-alicante.html",
+      "fetch_quality": "good",
+      "fetch_chars": 9400,
+      "note": "single-author-confirmed: About page confirms Ed Gilbert as sole author; article URL shows /2023/08/ path; no date in article body → article_date: undated",
+      "publication": "Gourmet Gorro",
+      "writer": "Ed Gilbert",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Gourmet Gorro food writer Ed Gilbert creates comprehensive food guides for dining enthusiasts. His work focuses on restaurant discovery and culinary exploration through detailed food coverage."
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Nou Manolín",
+      "name_variants": [
+        "Nou Manolin",
+        "Restaurante Nou Manolín"
+      ],
+      "neighbourhood": "Alicante Centro",
+      "cuisine": "traditional Alicante / tapas / Mediterranean",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bonito en escabeche con sopa de mango y fruta de la pasión",
+        "verduras de temporada con espuma de albahaca y piñones",
+        "albóndigas caseras al vino",
+        "gamba roja",
+        "cigala",
+        "croquetas",
+        "ensaladilla",
+        "arroces del día",
+        "canelones de la casa",
+        "calamares a la romana",
+        "arroz con langosta",
+        "arroz con salmonete y gambas",
+        "fideuá",
+        "crystal breads topped with ensalada and anchovies",
+        "jamon with runny-yolked quail eggs",
+        "battered bacalao with lime mayonnaise"
+      ],
+      "signature_dish": null,
+      "quote": "En la barra se van los ojos a la gamba roja y la cigala dispuestas en forma de pirámide egipcia en grandes lebrillos con cama de hielo.",
+      "quote_language": "original",
+      "article_date": "2023-04-23",
+      "open_status_check": true,
+      "tier": "A",
+      "language_pool": "both",
+      "flagged": true,
+      "flag_reason": "open_status_check — oldest source dated 2023-04-23; verify still open before deployment",
+      "lat": 38.3452916,
+      "lng": -0.4851219,
+      "centroid": null,
+      "sources": [
+        "src-almanaque-ruiz",
+        "src-todoalicante-almenar",
+        "src-gourmetgorro-gilbert"
+      ],
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Nou Manolín"
+    },
+    {
+      "name": "Béton Brut",
+      "name_variants": [
+        "Beton Brut"
+      ],
+      "neighbourhood": "Alicante El Puerto",
+      "cuisine": "contemporary Mediterranean",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ensaladilla rusa marinera con anchoa cantábrica y chips de alga",
+        "croquetas de gambas al ajillo",
+        "arroz con lomo alto, hongos y foie",
+        "ostras",
+        "jamón"
+      ],
+      "signature_dish": null,
+      "quote": "Que sea una guerra en la que los soldados aparezcan de repente, no todos de golpe",
+      "quote_language": "original",
+      "article_date": "2026-02-28",
+      "open_status_check": false,
+      "tier": "B",
+      "language_pool": "es",
+      "flagged": false,
+      "lat": 38.3405981,
+      "lng": -0.4795019,
+      "centroid": null,
+      "sources": [
+        "src-elespanol-betonbrut"
+      ],
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Béton Brut"
+    },
+    {
+      "name": "Plëgat",
+      "name_variants": [
+        "Plegat"
+      ],
+      "neighbourhood": "Alicante Centro",
+      "cuisine": "contemporary / tasting menu",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tartar de salchicha de El Pinós",
+        "raya con técnica francesa",
+        "ciervo",
+        "faisán",
+        "perdiz",
+        "pato azulón",
+        "Sticky Toffee con chocolate, boletus y vainilla"
+      ],
+      "signature_dish": null,
+      "quote": "Es el más elemental, una cucharada de carne con un pequeño aliño, pero la gracia es que a veces menos es más.",
+      "quote_language": "original",
+      "article_date": "2026-03-08",
+      "open_status_check": false,
+      "tier": "B",
+      "language_pool": "es",
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "centroid": null,
+      "sources": [
+        "src-elespanol-plegat"
+      ]
+    },
+    {
+      "name": "La Barra del Gourmet",
+      "name_variants": [],
+      "neighbourhood": "Alicante Centro",
+      "cuisine": "tapas / Mediterranean",
+      "opening_year": 2026,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "arroces",
+        "quisquilla de Santa Pola",
+        "alcachofas",
+        "tomates",
+        "pinchos"
+      ],
+      "signature_dish": null,
+      "quote": "aquí tenemos que vender arroces, arroces buenos porque al final es lo que nos caracteriza a los alicantinos",
+      "quote_language": "original",
+      "article_date": "2026-03-14",
+      "open_status_check": false,
+      "tier": "B",
+      "language_pool": "es",
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "centroid": null,
+      "sources": [
+        "src-elespanol-labarragourmet"
+      ],
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null
+    },
+    {
+      "name": "Marcel Bistró",
+      "name_variants": [
+        "Marcel Bistro"
+      ],
+      "neighbourhood": "Alicante Ensanche",
+      "cuisine": "French bistro",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "steak tartar",
+        "solomillo Rossini",
+        "bacalao con salsa de limón",
+        "cassoulet con judías blancas, magret y confit de pato",
+        "quiche lorraine",
+        "magret de pato",
+        "terrina de foie gras con salsa de pera",
+        "Tarte Tatin",
+        "profiteroles con helado de vainilla",
+        "tarta de limón y merengue"
+      ],
+      "signature_dish": null,
+      "quote": "Quería tener un espacio muy acogedor y para recibir a la gente como en mi casa, que sean casi amigos.",
+      "quote_language": "original",
+      "article_date": "2026-03-22",
+      "open_status_check": false,
+      "tier": "B",
+      "language_pool": "es",
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "centroid": null,
+      "sources": [
+        "src-elespanol-marcelbistro"
+      ]
+    },
+    {
+      "name": "Cesar Anca",
+      "name_variants": [
+        "César Anca",
+        "Cesar Anca Restaurante"
+      ],
+      "neighbourhood": "Alicante Centro",
+      "cuisine": "creative tapas / contemporary Spanish",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "oxtail cannelloni with crispy jamon crumb",
+        "millefeuille of caramelised apple, foie gras, goats cheese and smoked cod",
+        "pork cheek with pomme puree and deep red wine sauce",
+        "millefeuille with turrón custard"
+      ],
+      "signature_dish": null,
+      "quote": "Cesar Anca, which is situated just off the Explanada de España, serves some of the most creative and delicious tapas we've found in Alicante.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "open_status_check": false,
+      "tier": "B",
+      "language_pool": "en",
+      "flagged": false,
+      "lat": 38.3429488,
+      "lng": -0.48502,
+      "centroid": null,
+      "sources": [
+        "src-gourmetgorro-gilbert"
+      ],
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La barra de César Anca"
+    },
+    {
+      "name": "Probar el Buen Bar",
+      "name_variants": [
+        "Probar"
+      ],
+      "neighbourhood": "Alicante Centro",
+      "cuisine": "creative tapas",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "thin oozy tortilla with caramelised onions topped with savoury sabayon",
+        "fried pork belly torreznos with garlic charged mashed potato",
+        "ensaladilla rusa with smoked eel and sweet peppers",
+        "stew croquetas"
+      ],
+      "signature_dish": null,
+      "quote": "Tucked away down a city centre side street, Probar serves lovely twists on classic tapas dishes.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "open_status_check": false,
+      "tier": "B",
+      "language_pool": "en",
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "centroid": null,
+      "sources": [
+        "src-gourmetgorro-gilbert"
+      ]
+    },
+    {
+      "name": "Bar Guillermo",
+      "name_variants": [
+        "Bar Guillermo Alicante"
+      ],
+      "neighbourhood": "Alicante Centro",
+      "cuisine": "traditional tapas bar",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "delicately battered calamari",
+        "salt cod loaded croquetas"
+      ],
+      "signature_dish": null,
+      "quote": "A traditional tapas bar, which is located just north of the central market, Bar Guillermo was almost empty when we visited around 10pm.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "open_status_check": false,
+      "tier": "B",
+      "language_pool": "en",
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "centroid": null,
+      "sources": [
+        "src-gourmetgorro-gilbert"
+      ]
+    },
+    {
+      "name": "Cervecerías Sento",
+      "name_variants": [
+        "Sento",
+        "Sento Barrio"
+      ],
+      "neighbourhood": "Alicante El Barrio",
+      "cuisine": "tapas bar / montaditos",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "montaditos (30+ varieties)",
+        "signature lollipops with pork, ham, bechamel and tomato jam",
+        "pork meatballs with almond butter"
+      ],
+      "signature_dish": "signature lollipops with pork, ham, bechamel and tomato jam",
+      "quote": "Over 30 different montaditos are on offer as well as their signature lollipops - rather filthy yet delicious whorls of pork, ham and bechamel, and tomato jam as well as slightly dry pork meatballs with a compelling satay-like almond butter.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "open_status_check": false,
+      "tier": "B",
+      "language_pool": "en",
+      "flagged": false,
+      "lat": 38.3460167,
+      "lng": -0.4826151,
+      "centroid": null,
+      "sources": [
+        "src-gourmetgorro-gilbert"
+      ],
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Cervecería Sento Barrio"
+    }
+  ],
+  "centroids": {
+    "Alicante Centro": [
+      38.3442,
+      -0.4839
+    ],
+    "Alicante Ensanche": [
+      38.3446,
+      -0.4955
+    ]
+  }
+}
