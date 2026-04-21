@@ -91,15 +91,8 @@ Full prompt = Part 1 + template:
 
 ## Pipeline Execution
 
-⚠ CRITICAL: Always launch from a CLEAN terminal tab — never from inside
-an existing Claude Code session. Launching from within Claude Code causes
-it to run the pipeline as a background subprocess, which stalls at Phase 1
-and cannot be recovered without killing both processes and relaunching.
-
-Correct launch sequence:
-  1. Open a new terminal tab (not inside Claude Code)
-  2. cd /Users/harryenchin/Documents/GitHub/localbite
-  3. claude --dangerously-skip-permissions < localbite-prompt-v71-[city].txt
+Launch the pipeline with:
+  claude --dangerously-skip-permissions < localbite-prompt-v71-[city].txt
 
 With PHASE1_AUTO_PROCEED: YES and UNATTENDED_MODE: YES, the pipeline runs
 fully unattended. The only required human step is centroid approval:
