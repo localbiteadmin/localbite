@@ -1458,7 +1458,7 @@ function cardHTML(r) {
 
   const primaryId = r.sources && r.sources[0];
   const primarySrc = primaryId && currentSources[primaryId];
-  const sourceUrl = primarySrc ? (primarySrc.article_url || primarySrc.url) : '#';
+  const sourceUrl = primarySrc ? (primarySrc.article_url || primarySrc.url || null) : null;
   const writerLabel = primarySrc
     ? (primarySrc.writer ? primarySrc.writer + ' · ' + primarySrc.publication : primarySrc.publication)
     : '';
@@ -1497,7 +1497,7 @@ function cardHTML(r) {
       <div class="card-footer">
         <div class="card-attribution">
           <span class="card-writer">${escHtml(writerLabel)}</span>
-          <a class="card-source-link" href="${escHtml(sourceUrl)}" target="_blank" rel="noopener">Source ↗</a>
+          ${sourceUrl ? `<a class="card-source-link" href="${escHtml(sourceUrl)}" target="_blank" rel="noopener">Source ↗</a>` : ''}
         </div>
         ${sourceChips}
         ${writerProfile}

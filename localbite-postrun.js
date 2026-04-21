@@ -310,7 +310,8 @@ function isThinProfile(profile) {
     const recency = data.source_recency || '';
     const isDateString = /^\d{4}-\d{2}-\d{2}$/.test(recency);
     const isYearRange  = /^\d{4}-\d{4}$/.test(recency);
-    if (isDateString || (!isYearRange && recency !== '')) {
+    const isEmpty = recency === '' || recency === null || recency === undefined;
+    if (isEmpty || isDateString || (!isYearRange && !isEmpty)) {
       // Extract year range from filename: localbite-city-YYYY-YYYY.json
       const rangeMatch = path.basename(file).match(/(\d{4}-\d{4})\.json$/);
       if (rangeMatch) {

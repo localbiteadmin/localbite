@@ -100,7 +100,9 @@ const COUNTRY_BOXES = {
 // ── PRE-FLIGHT: BOUNDING BOX REQUIRED ──
 // Missing bounding box is a hard stop — not a warning.
 // Add the city to CITY_BOXES above before running.
-const cityBox = CITY_BOXES[city];
+// Case-insensitive lookup — handles title-cased city names e.g. 'Santiago De Compostela'
+const cityKey = Object.keys(CITY_BOXES).find(k => k.toLowerCase() === city.toLowerCase()) || city;
+const cityBox = CITY_BOXES[cityKey];
 if (!cityBox) {
   console.error(`\nERROR: No bounding box configured for "${city}".`);
   console.error('Geocoding cannot proceed without a bounding box — false positives will reach the final pack.');
