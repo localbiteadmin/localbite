@@ -1,0 +1,151 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES (v7.1)
+Change only this section for each new city.
+Full prompt = cat this file + localbite-prompt-v7-template.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+════════════════════════════════════════
+REQUIRED VARIABLES
+════════════════════════════════════════
+
+CITY: Santiago de Compostela
+COUNTRY: Spain
+CITY_SLUG: santiago-de-compostela-spain
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: ES, GL
+SEARCH_LANGUAGES: Spanish, Galician, English
+SINGLE_LANGUAGE_CITY: NO
+YEAR_RANGE: 2023–2026
+
+════════════════════════════════════════
+OPTIONAL VARIABLES
+════════════════════════════════════════
+
+UNATTENDED_MODE: YES
+PHASE1_AUTO_PROCEED: YES
+— When YES: pipeline proceeds to Phase 2 immediately after
+  presenting the Phase 1 source list, without waiting for
+  a PROCEED instruction.
+
+DIRECT_FETCH_SOURCES:
+— No confirmed article-level URLs available for Santiago de Compostela.
+— Phase 0 will be skipped. Pipeline relies entirely on Phase 1
+  discovery.
+
+════════════════════════════════════════
+NEIGHBOURHOOD STRUCTURE
+════════════════════════════════════════
+
+Research basis: Official Santiago de Compostela municipal structure
+verified via local sources. The Casco Histórico (UNESCO World Heritage
+Site) is overwhelmingly the dominant dining area — the Cathedral,
+Praza do Obradoiro, Rúa do Franco, Rúa da Raíña, and Mercado de
+Abastos all fall within it. Secondary scenes exist in adjacent
+neighbourhoods just outside the historic walls.
+
+Note on naming: Generic names prefixed per project convention.
+"Casco Histórico" and "Ensanche" appear in other fleet cities
+and must be prefixed throughout the JSON output.
+
+TIER_1_NEIGHBOURHOODS: Santiago Casco Histórico, San Pedro
+TIER_2_NEIGHBOURHOODS: Santiago Ensanche, Agra do Orzán
+TIER_3_NEIGHBOURHOODS: Fontiñas, Vista Alegre
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Santiago Casco Histórico (Cathedral, Praza do Obradoiro,
+Praza das Praterías, Rúa do Franco, Rúa da Raíña, Rúa Nova,
+Mercado de Abastos, Rúa de San Pedro area), San Pedro (Barrio
+de San Pedro, just outside historic walls), Santiago Ensanche
+(modern expansion district), Agra do Orzán, Fontiñas, Vista Alegre
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+A Coruña, Vigo, Pontevedra, Lugo, Ourense, or any location
+described as "outside Santiago", "Galicia region", "nearby town",
+"day trip from Santiago", or another Galician city or municipality.
+The Rías Baixas wine region produces the Albariño served in Santiago
+but restaurants in Cambados, O Grove, or other towns are excluded.
+
+════════════════════════════════════════
+LOCAL CONTEXT
+════════════════════════════════════════
+
+LOCAL_FOOD_VOCABULARY:
+— pulpo á feira (octopus with paprika, olive oil and cachelos —
+  the defining Galician dish, essential search term)
+— percebes (goose barnacles — hyper-local prestige seafood,
+  Atlantic Galician coast exclusive)
+— empanada gallega / empanada de millo (filled pastry with
+  cornmeal crust — signals local food writing)
+— lacón con grelos (cured pork shoulder with turnip greens —
+  quintessential Galician winter dish)
+— caldo gallego (broth with greens, beans, potatoes, chorizo)
+— tarta de Santiago (almond cake with cross motif — city's
+  signature dessert, DOP protected)
+— Albariño (Rías Baixas DO white wine — the default wine pairing
+  throughout Galician food writing)
+— Ribeiro (DO white wine region, also common in Santiago)
+— vieiras (large scallops — the pilgrim symbol of Santiago,
+  frequently on menus)
+— zamburiñas (small queen scallops — cheaper, common in tapas)
+— zorza (seasoned raw pork mince — Galician cooking staple)
+— Mercado de Abastos (Santiago's central market — essential
+  local term, anchor of the contemporary dining scene)
+
+GALICIAN LANGUAGE NOTE: Galicia has its own co-official language
+(Galego/Gallego). Named food writers may write in Galician (GL),
+Spanish (ES), or English (EN). GL + EN sources from different
+publishers qualify as both-pool under the standard definition.
+Search in all three languages. Galician vocabulary signals:
+"restaurante", "gastronomía galega", "cociña galega", "marisco".
+
+Use 2 Cross-6 vocabulary queries targeting pulpo á feira,
+percebes, and Mercado de Abastos to catch local-register food
+writing in both Spanish and Galician that generic queries miss.
+
+SOURCE_EXAMPLES:
+— Local Santiago/Galician press: El Correo Gallego (main daily),
+  La Voz de Galicia (regional), Praza Pública (Galician language),
+  Turismo de Santiago official guides
+— Regional gastronomy: Guía Repsol Galicia section,
+  El País Gastro (Galicia/northwest desk)
+— English-language: Camino de Santiago food bloggers,
+  travel food writers covering Galicia (Guardian, Telegraph,
+  Condé Nast Traveller), EN food blogs with Santiago coverage
+— Note: The Camino pilgrim trail generates genuine EN food
+  writing that other Spanish cities lack. Both-pool is more
+  likely here than in Zaragoza, Valladolid, or Alicante.
+  Do not manufacture it if EN sources don't qualify.
+
+KNOWN_AWARDS:
+— Casa Marcelo: 1 Michelin star (chef Marcelo Tejedor,
+  Rúa do Franco area)
+— A Tafona de Lucía Freitas: 1 Michelin star (chef Lucía Freitas,
+  near Mercado de Abastos)
+— Repsol: several Soles in Santiago — include named award queries
+— Named award queries: "Casa Marcelo Michelin Santiago",
+  "A Tafona Lucía Freitas Michelin"
+
+KNOWN_COMMERCIAL_CONFLICTS:
+— None confirmed for Santiago de Compostela food media.
+  Apply standard COI check to every source per template instructions.
+
+SECONDARY_SOURCES: Time Out, Condé Nast Traveller, Lonely Planet,
+El País Gastro (national desk), El Mundo Metrópoli (national desk),
+Guía Repsol (national)
+
+════════════════════════════════════════
+PRICE AND OUTPUT
+════════════════════════════════════════
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+- 1 = under €20pp
+- 2 = €20–40pp
+- 3 = €40–80pp
+- 4 = over €80pp
+
+OUTPUT_RAW: ./localbite-santiago-raw.json
+OUTPUT_FINAL: ./localbite-santiago-2023-2026.json
+OUTPUT_WORKING: ./localbite-santiago-working.json
+OUTPUT_SEARCH_LOG: ./localbite-santiago-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-santiago-search-plan.txt
