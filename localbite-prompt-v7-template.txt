@@ -1025,12 +1025,32 @@ const tierB = finalData.restaurants ?
 const openCheck = finalData.restaurants ?
   finalData.restaurants.filter(r => r.open_status_check === true).length : 0;
 
-// Count searches from log
+// Count searches from log (all lines = all tool uses in log)
 let searchesRun = 0;
+let toolUsesFromLog = null;
 try {
   const log = fs.readFileSync('[OUTPUT_SEARCH_LOG]', 'utf8');
-  searchesRun = (log.match(/^\[(?:phase-0|phase-1b-crossval|neighbourhood-|cross-)/gm) || []).length;
+  const lines = log.split('\n').filter(l => l.trim().length > 0);
+  searchesRun = lines.length;
+  toolUsesFromLog = lines.length;
 } catch(e) {}
+
+// Derive run time from file timestamps when session-meta is null
+// Search log is created at pipeline start; final JSON is written at end
+let runTimeSeconds = sessionData.duration_minutes ?
+  Math.round(sessionData.duration_minutes * 60) : null;
+if (!runTimeSeconds) {
+  try {
+    const logStat   = fs.statSync('[OUTPUT_SEARCH_LOG]');
+    const finalStat = fs.statSync('[OUTPUT_FINAL]');
+    const startMs = logStat.birthtimeMs || logStat.ctimeMs;
+    const endMs   = finalStat.mtimeMs;
+    if (endMs > startMs) runTimeSeconds = Math.round((endMs - startMs) / 1000);
+  } catch(e) {}
+}
+
+// Prefer session-meta tool count; fall back to log line count
+const resolvedToolUses = totalToolUses || toolUsesFromLog;
 
 const e = {
   city: '[CITY_SLUG]',
@@ -1048,9 +1068,10 @@ const e = {
     sessionData.input_tokens + sessionData.output_tokens : null,
   input_tokens: sessionData.input_tokens || null,
   output_tokens: sessionData.output_tokens || null,
-  tool_uses: totalToolUses || null,
-  run_time_seconds: sessionData.duration_minutes ?
-    Math.round(sessionData.duration_minutes * 60) : null
+  tool_uses: resolvedToolUses || null,
+  tool_uses_source: totalToolUses ? 'session-meta' : (toolUsesFromLog ? 'search-log' : null),
+  run_time_seconds: runTimeSeconds,
+  run_time_source: sessionData.duration_minutes ? 'session-meta' : (runTimeSeconds ? 'file-timestamps' : null)
 };
 
 fs.appendFileSync('localbite-run-metrics.log', JSON.stringify(e) + '\n');
