@@ -1251,5 +1251,7 @@ START
 
 [If DIRECT_FETCH_SOURCES is populated: start Phase 0 now.]
 [If DIRECT_FETCH_SOURCES is blank: start Phase 1 Step 1 now.]
-Stop at the Phase 1 COMPLETE pause and wait for PROCEED
-before continuing to Phase 2.
+If PHASE1_AUTO_PROCEED: YES — proceed to Phase 2 automatically after
+presenting the Phase 1 source list. Do not stop.
+If PHASE1_AUTO_PROCEED: NO or blank — stop at Phase 1 COMPLETE
+and wait for PROCEED before continuing to Phase 2.
