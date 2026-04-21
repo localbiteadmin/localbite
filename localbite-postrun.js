@@ -416,11 +416,95 @@ function isThinProfile(profile) {
     console.log(`✓  No centroids action required.`);
   }
 
+  // ══ STEP 4 — CITY_CENTRES + CITY_BOUNDS auto-add ═══════════════════════════
+  // Check if the new city has entries in index.html. If not, derive from
+  // localbite-geocode.js bounding box and insert automatically.
+  console.log(`\nSTEP 4 — CITY_CENTRES + CITY_BOUNDS check`);
+  console.log(`──────────────────────────────────────────────`);
+
+  {
+    const indexPath = 'index.html';
+    let indexHtml = fs.readFileSync(indexPath, 'utf8');
+    let indexChanged = false;
+
+    // Read bounding box from localbite-geocode.js
+    let bbox = null;
+    try {
+      const geocodeJs = fs.readFileSync('localbite-geocode.js', 'utf8');
+      // Match: 'CityName': { latMin: X, latMax: X, lngMin: X, lngMax: X }
+      const bboxRe = new RegExp(`'${city}'\\s*:\\s*\\{[^}]*latMin:\\s*([\\d.-]+)[^}]*latMax:\\s*([\\d.-]+)[^}]*lngMin:\\s*([\\d.-]+)[^}]*lngMax:\\s*([\\d.-]+)`, 's');
+      const m = geocodeJs.match(bboxRe);
+      if (m) {
+        bbox = {
+          latMin: parseFloat(m[1]), latMax: parseFloat(m[2]),
+          lngMin: parseFloat(m[3]), lngMax: parseFloat(m[4])
+        };
+      }
+    } catch(e) {
+      console.log(`  ⚠ Could not read localbite-geocode.js: ${e.message}`);
+    }
+
+    // --- CITY_CENTRES ---
+    const centresHasCity = new RegExp(`'${city}'\\s*:`).test(
+      indexHtml.slice(indexHtml.indexOf('const CITY_CENTRES'), indexHtml.indexOf('};', indexHtml.indexOf('const CITY_CENTRES')))
+    );
+
+    if (centresHasCity) {
+      console.log(`✓ CITY_CENTRES — '${city}' already present.`);
+    } else if (bbox) {
+      const centreLat = ((bbox.latMin + bbox.latMax) / 2).toFixed(4);
+      const centreLng = ((bbox.lngMin + bbox.lngMax) / 2).toFixed(4);
+      const newEntry  = `  '${city}': [${centreLat}, ${centreLng}],\n`;
+      // Insert before the closing }; of CITY_CENTRES
+      const centresEnd = indexHtml.indexOf('};', indexHtml.indexOf('const CITY_CENTRES'));
+      indexHtml = indexHtml.slice(0, centresEnd) + newEntry + indexHtml.slice(centresEnd);
+      indexChanged = true;
+      console.log(`✓ CITY_CENTRES — added '${city}': [${centreLat}, ${centreLng}] (bbox midpoint)`);
+      console.log(`  ⚠ Verify this looks like the right city centre on the live map.`);
+    } else {
+      console.log(`✗ CITY_CENTRES — '${city}' missing and no bounding box found in localbite-geocode.js.`);
+      console.log(`  Add manually: '${city}': [lat, lng], in the CITY_CENTRES block.`);
+    }
+
+    // --- CITY_BOUNDS ---
+    const boundsHasCity = new RegExp(`'${city}'\\s*:`).test(
+      indexHtml.slice(indexHtml.indexOf('const CITY_BOUNDS'), indexHtml.indexOf('};', indexHtml.indexOf('const CITY_BOUNDS')))
+    );
+
+    if (boundsHasCity) {
+      console.log(`✓ CITY_BOUNDS  — '${city}' already present.`);
+    } else if (bbox) {
+      // Use tighter bounds for viewer (geocode.js has wider tolerance boxes)
+      // Shrink each edge by 20% of the range for a tighter viewer bound
+      const latRange = bbox.latMax - bbox.latMin;
+      const lngRange = bbox.lngMax - bbox.lngMin;
+      const pad = 0.20;
+      const minLat = (bbox.latMin + latRange * pad).toFixed(2);
+      const maxLat = (bbox.latMax - latRange * pad).toFixed(2);
+      const minLng = (bbox.lngMin + lngRange * pad).toFixed(2);
+      const maxLng = (bbox.lngMax - lngRange * pad).toFixed(2);
+      const newBounds = `  '${city}':      { minLat: ${minLat}, maxLat: ${maxLat}, minLng: ${minLng}, maxLng: ${maxLng} },\n`;
+      const boundsEnd = indexHtml.indexOf('};', indexHtml.indexOf('const CITY_BOUNDS'));
+      indexHtml = indexHtml.slice(0, boundsEnd) + newBounds + indexHtml.slice(boundsEnd);
+      indexChanged = true;
+      console.log(`✓ CITY_BOUNDS  — added '${city}' (tightened from geocode.js bbox)`);
+      console.log(`  ⚠ Verify bounds look correct if restaurants appear off-map.`);
+    } else {
+      console.log(`✗ CITY_BOUNDS  — '${city}' missing and no bounding box found.`);
+      console.log(`  Add manually in the CITY_BOUNDS block in index.html.`);
+    }
+
+    if (indexChanged) {
+      fs.writeFileSync(indexPath, indexHtml);
+      console.log(`\n✓ index.html updated — review changes before committing.`);
+    }
+  }
+
   console.log('');
   console.log(`Next steps:`);
   const steps = missingCount > 0
-    ? [`1. node localbite-approve-centroids.js ${file}`, `2. Verify CITY_CENTRES for ${city} in index.html`, `3. Verify CITY_BOUNDS for ${city} in index.html`, `4. git add ${file} localbite-index.json`]
-    : [`1. Verify CITY_CENTRES for ${city} in index.html`, `2. Verify CITY_BOUNDS for ${city} in index.html`, `3. git add ${file} localbite-index.json`];
+    ? [`1. node localbite-approve-centroids.js ${file}`, `2. git add ${file} index.html localbite-index.json`]
+    : [`1. git add ${file} index.html localbite-index.json`];
   steps.forEach(s => console.log(`  ${s}`));
   console.log('');
 

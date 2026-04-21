@@ -122,7 +122,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "language_pool": "multi-source"
+      "language_pool": "multi-source",
+      "geo_matched_name": null
     },
     {
       "id": "valladolid-spain-la-parrilla-de-san-lorenzo",
@@ -426,7 +427,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "language_pool": "es"
+      "language_pool": "es",
+      "geo_matched_name": null
     },
     {
       "id": "valladolid-spain-ditaly",
@@ -1017,7 +1019,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "language_pool": "es"
+      "language_pool": "es",
+      "geo_matched_name": null
     },
     {
       "id": "valladolid-spain-don-bacalao",
@@ -1090,5 +1093,23 @@
       41.6516,
       -4.7283
     ]
+  },
+  "centroids_proposed": {
+    "Valladolid Centro": {
+      "coords": [
+        41.6516,
+        -4.7283
+      ],
+      "source": "averaged",
+      "restaurant_count": 26,
+      "high_spread": true,
+      "lat_spread": 0.0287,
+      "lng_spread": 0.0214,
+      "requires_verification": true,
+      "null_coord_restaurants": [
+        "Restaurante Creperia Le Domen",
+        "Castizo"
+      ]
+    }
   }
 }
