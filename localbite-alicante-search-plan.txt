@@ -1,0 +1,92 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023–2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LOCALBITE ALICANTE SEARCH PLAN
+City: Alicante, Spain
+Pipeline: v7.1
+Year range: 2023–2026
+Primary language: Spanish (ES)
+Secondary language: English (EN)
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
+
+TIER 1 — Alicante Centro (2 queries × 2 languages = 4)
+A01 [ES] "restaurantes Alicante Centro mejores recomendaciones 2023 2024"
+A02 [EN] "best restaurants Alicante city centre food guide 2024 2025"
+A03 [ES] "guía gastronómica centro Alicante barrio restaurantes donde comer"
+A04 [EN] "Alicante city centre where to eat local recommendations 2025 2026"
+
+TIER 1 — Alicante El Barrio (2 queries × 2 languages = 4)
+A05 [ES] "restaurantes El Barrio Alicante tapas bares recomendados 2024 2025"
+A06 [EN] "El Barrio Alicante old town restaurants where to eat 2023 2024"
+A07 [ES] "bares tapas El Barrio Alicante casco antiguo gastronomía"
+A08 [EN] "Alicante old quarter El Barrio best places to eat food writer"
+
+TIER 2 — Alicante Ensanche (2 queries × 2 languages = 4)
+A09 [ES] "restaurantes Ensanche Alicante guía gastronómica 2024 2025"
+A10 [EN] "Alicante Ensanche neighbourhood restaurants dining guide"
+
+TIER 2 — Alicante El Puerto (2 queries × 2 languages = 4)
+A11 [ES] "restaurantes puerto deportivo Alicante marina gastronomía 2023 2024"
+A12 [EN] "Alicante marina port restaurants best places to eat 2025 2026"
+
+TIER 3 — Benalúa (1 ES query)
+A13 [ES] "restaurantes Benalúa Alicante barrio gastronomía local donde comer"
+
+TIER 3 — Playa de San Juan (1 ES query)
+A14 [ES] "restaurantes Playa de San Juan Alicante mejores recomendaciones 2024 2025"
+
+PART A TOTAL: 14 queries
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries, different registers)
+B01 [EN] "best restaurants in Alicante Spain food guide 2023 2024"
+B02 [EN] "where to eat in Alicante Spain local recommendations hidden gems 2025 2026"
+
+Cross-2 — City-wide ES (3 queries, meaningfully different registers)
+B03 [ES] "guía gastronómica Alicante 2024 restaurantes crítica culinaria"
+B04 [ES] "donde comer Alicante mejores restaurantes barrio recomendaciones locales 2025"
+B05 [ES] "Alicante restaurantes temporada gastronomía periodismo culinario 2023"
+
+Cross-3 — Generic writer-first (2 queries, 1 each language)
+B06 [ES] "periodista gastrónomos escritores gastronómicos Alicante recomiendan restaurantes"
+B07 [EN] "food writer blogger Alicante Spain restaurant recommendations personal guide"
+
+Cross-4 — Named awards (3 queries)
+B08 "El Portal Alicante Michelin star restaurant chef"
+B09 "Baeza Rufete Michelin Alicante estrella restaurante reseña"
+B10 "Repsol Sol restaurantes Alicante guía premiados recomendados"
+
+Cross-5 — Recent openings (2 queries, 1 each language)
+B11 [ES] "nuevas aperturas restaurantes Alicante 2024 2025 inauguración"
+B12 [EN] "new restaurant openings Alicante 2024 2025 2026"
+
+Cross-6 — Vocabulary-specific ES (2 queries)
+B13 [ES] "arroz a banda esgarraet Alicante restaurantes donde comer auténtico local"
+B14 [ES] "La Terreta gastronomía Alicante restaurantes locales recomendaciones"
+
+Cross-7 — Cuisine and community (2 queries)
+B15 [ES] "gamba roja Alicante restaurantes marisco mejores marisquerías recomendadas"
+B16 [EN] "seafood rice traditional restaurants Alicante local cuisine recommendations"
+
+Cross-8 — Publication category ES (2 queries)
+B17 [ES] "revista gastronómica Alicante guía independiente restaurantes mejores"
+B18 [ES] "suplemento gastronómico periódico Alicante mejores restaurantes recomendados"
+
+PART B TOTAL: 18 queries
+
+GRAND TOTAL PLANNED: 32 queries
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+
+Queries referencing earlier years (2023–2024): A01, A06, A11, B01, B05, B08 = 6 queries
+Queries referencing later years (2025–2026): A02, A04, A05, A09, A12, A14, B02, B04, B11, B12 = 10 queries
+Queries with no year term: A03, A07, A08, A10, A13, B03, B06, B07, B09, B10, B13, B14, B15, B16, B17, B18 = 16 queries
+
+[year-distribution-check] PASSED — 6 queries reference earlier years, 10 reference recent years, 16 have no year term.

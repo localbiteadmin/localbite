@@ -1,0 +1,76 @@
+LOCALBITE ALICANTE AUDIT LOG
+Pipeline: localbite-v7.1
+Date: 2026-04-21
+===========================
+
+TIER C AUTO-REJECTIONS (extraction-time)
+-----------------------------------------
+Anomaly | C | extraction-reject: quote under 15 words ("We've also had excellent gelato from Anomaly, another city centre parlour." = 11 words) | src-gourmetgorro-gilbert
+
+RECOMMENDED TIER B REMOVALS (auto-accepted, UNATTENDED_MODE: YES)
+------------------------------------------------------------------
+La Taverna del Racó del Pla | B | auto-removed: null neighbourhood, single source, no explicit district in quote | src-gourmetgorro-gilbert
+L'arruzz | B | auto-removed: null neighbourhood, single source, no explicit district in quote | src-gourmetgorro-gilbert
+Govana | B | auto-removed: null neighbourhood, single source, no explicit district in quote | src-gourmetgorro-gilbert
+Gravina 4 | B | auto-removed: null neighbourhood, single source, no explicit district in quote | src-gourmetgorro-gilbert
+Pipirrana Vermut | B | auto-removed: null neighbourhood, single source, no explicit district in quote | src-gourmetgorro-gilbert
+La Taberna del Gourmet | B | auto-removed: null neighbourhood, single source, no explicit district in quote | src-gourmetgorro-gilbert
+Bar Manero | B | auto-removed: null neighbourhood, single source, no explicit district in quote | src-gourmetgorro-gilbert
+Cervecería El Canto | B | auto-removed: null neighbourhood, single source, no explicit district in quote | src-gourmetgorro-gilbert
+ToBar | B | auto-removed: null neighbourhood, single source, no explicit district in quote | src-gourmetgorro-gilbert
+Livanti Gelato Di Sicilia | B | auto-removed: null neighbourhood + not a restaurant (gelateria) | src-gourmetgorro-gilbert
+Bubbles Beer Club | B | auto-removed: null neighbourhood + bar-only, no food dishes mentioned | src-gourmetgorro-gilbert
+La Mala Buena | B | auto-removed: null neighbourhood + bar-only, no food dishes mentioned | src-gourmetgorro-gilbert
+Malatesta | B | auto-removed: null neighbourhood + bar-only, no food dishes mentioned | src-gourmetgorro-gilbert
+
+CONCENTRATION CAP
+-----------------
+No single source exceeded the 30% concentration cap on an individual basis.
+Publisher concentration flag: El Español Alicante (4 articles by Miquel Hernandis). Supplementary searches exhausted
+across 35 queries (32 Phase 1 + 3 Phase 1B). No independent ES alternative sources found with named authors and
+multi-restaurant guides for Alicante city. Documented as structural characteristic of local Alicante food media
+coverage (individual restaurant profiles rather than curated guides).
+
+GEOGRAPHIC EXCLUSIONS
+---------------------
+None. All retained restaurants confirmed in Alicante city by article text or title context.
+
+COI DISCLOSURES
+---------------
+No commercial conflicts identified for any of the 7 confirmed sources.
+
+EXTRACTION-TIME REJECTIONS (full list)
+---------------------------------------
+Anomaly (gourmetgorro) — quote under 15 words
+
+SIBLING EDITION CHECKS
+-----------------------
+Not applicable. No multi-language editions of same publisher in source pool.
+
+SINGLE-AUTHOR RULE APPLIED
+---------------------------
+gourmetgorro.blogspot.com — About page confirms Ed Gilbert as sole author.
+Article-level byline not required. [single-author-confirmed]
+
+PUBLISHER CONCENTRATION SUPPLEMENTARY SEARCHES
+------------------------------------------------
+35 total queries run (32 Phase 1 + 3 Phase 1B) attempting to find independent ES primary sources
+with named authors writing multi-restaurant guides for Alicante city. Candidates checked and rejected:
+- gastroalicante.com: blocked (HTTP 400, both attempts)
+- gastroguiaalicante.com: blocked (HTTP 400)
+- gastronosfera.com: no Alicante-specific guide, no author bylines
+- gastroactitud.com: national outlet, no named authors
+- gastroplanet.es: unavailable (503)
+- encuinarte.com: subscription-gated, provincial not city coverage
+- alicantepress.com: initials-only bylines (M.B., Jota)
+- alicanteplaza.es: editorial "Plaza" credit only (no full name)
+- alicantextra.com: no named author on Béton Brut articles
+- ojoalplato.com: multi-restaurant guide (26 restaurants) but no named author found
+- eightyflavors.com: first name only ("Gaby", no surname)
+- tripinsiders.net: no named author
+- impulsguide.online: no named author
+- directoalpaladar.com: blocked (HTTP 451)
+- lulabyauroratorres.com: restaurant's own website, not editorial
+- galissea.com: articles dated 2017-2018, outside year range
+- myalicanteguide.com: domain squatted by gambling site
+- localtoursalicante.com: security-blocked
