@@ -1235,7 +1235,7 @@ async function loadCity(meta) {
 
     currentCityData = data;
     allRestaurants = data.restaurants || [];
-    (data.sources || []).forEach(s => { currentSources[s.id] = s; });
+    (data.sources || []).forEach(s => { const key = s.id || s.source_id; if (key) currentSources[key] = s; });
 
     renderHero(data, meta);
     buildFilters(allRestaurants, data);
