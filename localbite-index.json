@@ -259,6 +259,20 @@
       "status": "complete",
       "open_status_check_count": 1,
       "notes": ""
+    },
+    {
+      "city": "Santiago de Compostela",
+      "country": "Spain",
+      "city_slug": "santiago-de-compostela-spain",
+      "pipeline": "localbite-v7.1",
+      "built": "2026-04-21",
+      "restaurant_count": 27,
+      "both_pool_count": 3,
+      "source_count": 6,
+      "file": "localbite-santiago-2023-2026.json",
+      "status": "complete",
+      "open_status_check_count": 27,
+      "notes": ""
     }
   ]
 }
