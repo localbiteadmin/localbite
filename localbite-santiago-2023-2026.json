@@ -17,7 +17,8 @@
       "writer": "Sergio Romero",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer for El Correo Gallego who specializes in covering local Galician cuisine and restaurant culture. His work focuses on authentic regional dining experiences, including comprehensive guides to traditional establishments in Santiago de Compostela where visitors can enjoy hearty, local fare."
+      "writer_profile": "Food writer for El Correo Gallego who specializes in covering local Galician cuisine and restaurant culture. His work focuses on authentic regional dining experiences, including comprehensive guides to traditional establishments in Santiago de Compostela where visitors can enjoy hearty, local fare.",
+      "id": "src-elcorreogallego-romero"
     },
     {
       "source_id": "src-gastrosantiago-castro",
@@ -30,7 +31,8 @@
       "writer": "Beatriz Castro",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer for GastroSantiago and El Español's Quincemil section, covering restaurant recommendations and culinary discoveries in Santiago de Compostela. Beatriz Castro specializes in highlighting quality dining establishments, including those featured in prestigious guides like the Guía Repsol."
+      "writer_profile": "Food writer for GastroSantiago and El Español's Quincemil section, covering restaurant recommendations and culinary discoveries in Santiago de Compostela. Beatriz Castro specializes in highlighting quality dining establishments, including those featured in prestigious guides like the Guía Repsol.",
+      "id": "src-gastrosantiago-castro"
     },
     {
       "source_id": "src-theobjective-alonso",
@@ -43,7 +45,8 @@
       "writer": "Brenda Alonso",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer for The Objective, covering restaurant guides and culinary destinations across Spain. Specializes in Michelin-starred dining and comprehensive restaurant recommendations for major Spanish cities like Santiago de Compostela."
+      "writer_profile": "Food writer for The Objective, covering restaurant guides and culinary destinations across Spain. Specializes in Michelin-starred dining and comprehensive restaurant recommendations for major Spanish cities like Santiago de Compostela.",
+      "id": "src-theobjective-alonso"
     },
     {
       "source_id": "src-caminoinsiderguide-bauer",
@@ -56,7 +59,8 @@
       "writer": "Christian W. Bauer",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer for Camino Insider Guide, specializing in restaurant discoveries along Spain's historic pilgrimage routes. Christian W. Bauer provides expert dining recommendations for travelers exploring Santiago de Compostela and other destinations on the Camino trail."
+      "writer_profile": "Food writer for Camino Insider Guide, specializing in restaurant discoveries along Spain's historic pilgrimage routes. Christian W. Bauer provides expert dining recommendations for travelers exploring Santiago de Compostela and other destinations on the Camino trail.",
+      "id": "src-caminoinsiderguide-bauer"
     },
     {
       "source_id": "src-oladaniela-sundebrown",
@@ -69,7 +73,8 @@
       "writer": "Daniela Sunde-Brown",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer for Ola Daniela, specializing in restaurant and dining scene coverage across Spanish destinations. Her recent work includes comprehensive guides to Santiago de Compostela's restaurant and tapas bar scene, offering readers curated recommendations for local dining experiences."
+      "writer_profile": "Food writer for Ola Daniela, specializing in restaurant and dining scene coverage across Spanish destinations. Her recent work includes comprehensive guides to Santiago de Compostela's restaurant and tapas bar scene, offering readers curated recommendations for local dining experiences.",
+      "id": "src-oladaniela-sundebrown"
     },
     {
       "source_id": "src-natgeo-madurga",
@@ -82,7 +87,8 @@
       "writer": "Lucía Díaz Madurga",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer for National Geographic España, Lucía Díaz Madurga specializes in restaurant discovery and culinary travel throughout Spain. She contributes dining guides and restaurant reviews to the Spanish edition of National Geographic, focusing on regional cuisine and top dining destinations across the country."
+      "writer_profile": "Food writer for National Geographic España, Lucía Díaz Madurga specializes in restaurant discovery and culinary travel throughout Spain. She contributes dining guides and restaurant reviews to the Spanish edition of National Geographic, focusing on regional cuisine and top dining destinations across the country.",
+      "id": "src-natgeo-madurga"
     }
   ],
   "restaurants": [
