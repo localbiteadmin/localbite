@@ -1,0 +1,208 @@
+LOCALBITE PIPELINE AUDIT — Santiago de Compostela, Spain
+Pipeline: localbite-v7.1
+Run date: 2026-04-21
+City slug: santiago-de-compostela-spain
+
+════════════════════════════════════════
+PHASE 0 — DIRECT FETCH
+════════════════════════════════════════
+Status: SKIPPED — no DIRECT_FETCH_SOURCES defined in Part 1.
+
+════════════════════════════════════════
+PHASE 1 — SOURCE DISCOVERY
+════════════════════════════════════════
+Searches run: 28 planned + 3 Phase 1B cross-validation = 31 total
+Search plan: localbite-santiago-search-plan.txt
+Search log: localbite-santiago-search-log.txt
+
+Sources confirmed (6):
+
+src-elcorreogallego-romero
+  Publisher: El Correo Gallego
+  Author: Sergio Romero
+  Article: "Los cinco mejores restaurantes 'enxebres' para hincharte a comer en Santiago de Compostela"
+  Date: 2024-03-25
+  Language: es
+  Type: primary
+  Author verification: Named byline in local daily; Sergio Romero confirmed as El Correo Gallego staff writer
+
+src-gastrosantiago-castro
+  Publisher: GastroSantiago / El Español (Quincemil section)
+  Author: Beatriz Castro
+  Article: "Estos son los restaurantes de Santiago de Compostela recomendados por la Guía Repsol"
+  Date: 2024-03-05
+  Language: es
+  Type: primary
+  Author verification: Named byline confirmed; GastroSantiago is the Santiago-specific gastronomy vertical of El Español/Quincemil
+
+src-theobjective-alonso
+  Publisher: The Objective
+  Author: Brenda Alonso
+  Article: "Dónde comer en Santiago de Compostela: los mejores restaurantes de la Guía Michelin"
+  Date: 2024-02-16
+  Language: es
+  Type: secondary (national online newspaper, not Santiago-based)
+  Author verification: Named byline confirmed
+
+src-caminoinsiderguide-bauer
+  Publisher: Camino Insider Guide
+  Author: Christian W. Bauer
+  Article: "The Best Restaurants in Santiago de Compostela"
+  Date: 2023-05-27
+  Language: en
+  Type: primary
+  Author verification: Single-author site confirmed via About page
+
+src-oladaniela-sundebrown
+  Publisher: Ola Daniela
+  Author: Daniela Sunde-Brown
+  Article: "Where to Eat in Santiago de Compostela: Restaurants & Tapas Bars"
+  Date: undated (CMS metadata suggests 2023-2024 range)
+  Language: en
+  Type: primary
+  Author verification: Single-author site confirmed via About page
+
+src-natgeo-madurga
+  Publisher: National Geographic España
+  Author: Lucía Díaz Madurga
+  Article: "Los siete mejores restaurantes de Santiago de Compostela"
+  Date: 2024-06-22
+  Language: es
+  Type: secondary (national/international outlet)
+  Author verification: Named byline confirmed in national travel publication
+
+Sources rejected:
+- hot-dinners.com (Catherine Hanly): article date 2019 — outside year range 2023–2026
+- greatbritishchefs.com: team credit only, no named individual author
+- galiciaslowtravel.com: no named author
+- viajeroscallejeros.com: collective "nosotros" byline, no individual author
+- themediterraneaninsider.com: no named author
+- emilyluxton.co.uk: article date 2016 — outside year range
+- Guardian (via elespanol.com/cocinillas reference): URL returned 404; Wayback Machine returned 451 (blocked)
+- travelswithasaddlebag.com: CAPTCHA security block, inaccessible
+- pickupthefork.substack.com: content about Santiago, Chile — wrong city
+- revistatierra.com (August 2025 "Tierra" byline): no full author name
+
+════════════════════════════════════════
+PHASE 1B — CROSS-VALIDATION
+════════════════════════════════════════
+Queries run: 3
+- "Abastos 2.0 Santiago de Compostela recomendacion critica" → TripAdvisor/aggregators only; lagastrolista.com (2020, out of range)
+- "Lume Santiago de Compostela recomendacion critica restaurante" → revistatierra.com (no full author); Guía Repsol listing
+- "A Horta d'Obradoiro Santiago de Compostela recomendacion critica" → blog (2015, out of range); TripAdvisor
+No new qualifying sources recovered in Phase 1B.
+
+════════════════════════════════════════
+PHASE 2 — FETCH AND EXTRACTION
+════════════════════════════════════════
+Sources fetched: 6/6 (100%)
+Failed fetches: 0
+Retry 1 recoveries: 0 needed
+Retry 2 recoveries: 0 needed
+Wayback Machine recoveries: 0 needed
+
+Extraction rejects:
+- O'Pazo (src-natgeo-madurga): location in Padrón, outside geographic boundary (confirmed via Michelin cross-reference)
+- O Balado (src-natgeo-madurga): location in Boqueixón, outside geographic boundary (confirmed via Michelin cross-reference)
+- El Romero (src-gastrosantiago-castro): quote under 15 words
+- DeLito (src-gastrosantiago-castro): no specific detail in available description — entry carried forward from oladaniela-sundebrown version which passed quality check
+- Mercado de Abastos (src-caminoinsiderguide-bauer): market complex, not a named restaurant
+- Bar Estrella (src-oladaniela-sundebrown): located in Pontevedra, outside geographic boundary
+
+Working file written: localbite-santiago-working.json (48 entries, 36 unique names)
+
+════════════════════════════════════════
+PHASE 3 — ASSEMBLE, SCORE, REVIEW
+════════════════════════════════════════
+Unique restaurants after deduplication: 36
+Auto-removes (UNATTENDED_MODE: YES):
+
+REMOVAL-01: Pepa A Loba
+  Reason: Cuisine classified as "Galician café-bar"; article describes it as a café bar (informal drinking/snacking establishment)
+  Source: src-elcorreogallego-romero (single source)
+
+REMOVAL-02: Bar Tita
+  Reason: Cuisine classified as "Galician bar"; article describes it explicitly as a bar
+  Source: src-oladaniela-sundebrown (single source)
+
+REMOVAL-03: Restaurante Abeiro
+  Reason: Hotel restaurant — located within NH Collection Santiago hotel; pipeline auto-removes hotel-only restaurants
+  Source: src-theobjective-alonso (single source)
+
+REMOVAL-04: Pedro Roca
+  Reason: Null neighbourhood, single source — article text did not specify Santiago neighbourhood
+  Source: src-gastrosantiago-castro (single source)
+
+REMOVAL-05: O Ferro
+  Reason: Null neighbourhood, single source — article text did not specify Santiago neighbourhood
+  Source: src-gastrosantiago-castro (single source)
+
+REMOVAL-06: Solleiros
+  Reason: Null neighbourhood, single source — article text did not specify Santiago neighbourhood
+  Source: src-gastrosantiago-castro (single source)
+
+REMOVAL-07: Bellaco
+  Reason: Null neighbourhood, single source — article text did not specify Santiago neighbourhood
+  Source: src-gastrosantiago-castro (single source)
+
+REMOVAL-08: Mar de Esteiro
+  Reason: Null neighbourhood, single source — article text did not specify Santiago neighbourhood
+  Source: src-natgeo-madurga (single source)
+
+REMOVAL-09: Orixe
+  Reason: Source concentration cap — gastrosantiago-castro sole-source entries = 9/28 = 32.1% (cap: 30%); Orixe removed as weakest sole-source entry from this publisher (quote provides no specific dish, price point, or distinguishing detail beyond generic heritage framing)
+  Source: src-gastrosantiago-castro (single source)
+
+Total removed: 9
+Final entries: 27
+
+════════════════════════════════════════
+CONFIDENCE TIERS
+════════════════════════════════════════
+Tier A (2+ independent sources or both-pool): 8
+  Abastos 2.0, Lume, A Horta d'Obradoiro, A Maceta, A Tafona, Anaco, A Viaxe, Pampín Bar
+
+Tier B (single source, quality quote): 19
+  A Moa, O Dezaseis, Casa Manolo, Mamá Peixe, O Sendeiro, A Casa da Viña, A Curtidoría,
+  Café de Altamira, Asador Gonzaba, Benedita Elisa, Gaio, Casa Marcelo, Simpar,
+  A Noiesa, Mesón Do Pulpo, O Testo, DeLito, Xachegou, NuMaru
+
+Tier C (rejected): 9 (see removals above)
+
+════════════════════════════════════════
+BOTH-POOL
+════════════════════════════════════════
+Both-pool restaurants (ES + EN from different publishers): 3
+  1. Lume — ES: gastrosantiago-castro, theobjective-alonso / EN: caminoinsiderguide-bauer
+  2. Abastos 2.0 — ES: gastrosantiago-castro, theobjective-alonso, natgeo-madurga / EN: oladaniela-sundebrown
+  3. A Maceta — ES: gastrosantiago-castro / EN: caminoinsiderguide-bauer
+
+════════════════════════════════════════
+DIVERSITY GATE
+════════════════════════════════════════
+≥1 primary ES: El Correo Gallego (Sergio Romero), GastroSantiago/El Español (Beatriz Castro) ✓
+≥1 primary EN: Camino Insider Guide (Christian W. Bauer), Ola Daniela (Daniela Sunde-Brown) ✓
+≤2 secondary: The Objective (Brenda Alonso), NatGeo España (Lucía Díaz Madurga) = 2 ✓
+DIVERSITY GATE: PASSED
+
+════════════════════════════════════════
+OPEN STATUS CHECK
+════════════════════════════════════════
+All 27 final entries: open_status_check = true
+Reason: All 6 confirmed sources are dated 2024 or earlier (bauer: 2023; oladaniela: undated → treated as pre-2025 for conservatism). No sources dated 2025 or 2026.
+
+════════════════════════════════════════
+NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
+Santiago Casco Histórico: 18 entries (Tier 1 — primary dining district)
+San Pedro: 6 entries (Tier 1)
+Santiago Ensanche: 1 entry (Tier 2 — Asador Gonzaba)
+Vista Alegre: 2 entries (Tier 3 — Mesón Do Pulpo, NuMaru)
+Agra do Orzán: 0 entries (Tier 2 — no qualifying sources found)
+Fontiñas: 0 entries (Tier 3 — directory pages only, no editorial sources)
+
+════════════════════════════════════════
+ARTICLE URL STATUS
+════════════════════════════════════════
+article_url fields: null for all 6 sources (URLs not captured in working file).
+Flag: Must populate article_url for all 6 sources before deployment (v7.1 requirement per CLAUDE.md).

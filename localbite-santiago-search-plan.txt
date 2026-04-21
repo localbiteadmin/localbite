@@ -1,0 +1,98 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023–2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+CITY: Santiago de Compostela, Spain
+CITY_SLUG: santiago-de-compostela-spain
+PRIMARY_LANGUAGE: Spanish
+SECONDARY_LANGUAGE: English
+SINGLE_LANGUAGE_CITY: NO
+YEAR_RANGE: 2023–2026
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
+
+TIER 1 — Santiago Casco Histórico (2 queries: ES + EN)
+A01 [neighbourhood-CascoHistórico] ES: "mejores restaurantes Casco Histórico Santiago de Compostela 2024 guía gastronómica" [earlier]
+A02 [neighbourhood-CascoHistórico] EN: "best restaurants Santiago de Compostela historic centre food guide 2025" [recent]
+
+TIER 1 — San Pedro (2 queries: ES + EN)
+A03 [neighbourhood-SanPedro] ES: "restaurantes barrio San Pedro Santiago de Compostela recomendaciones 2023" [earlier]
+A04 [neighbourhood-SanPedro] EN: "San Pedro neighbourhood Santiago de Compostela where to eat 2025" [recent]
+
+TIER 2 — Santiago Ensanche (2 queries: ES + EN)
+A05 [neighbourhood-SantiagoEnsanche] ES: "restaurantes ensanche Santiago de Compostela gastronomía 2025" [recent]
+A06 [neighbourhood-SantiagoEnsanche] EN: "Santiago Ensanche restaurants food recommendations 2024" [earlier]
+
+TIER 2 — Agra do Orzán (2 queries: ES + EN)
+A07 [neighbourhood-AgraOrzán] ES: "restaurantes Agra do Orzán Santiago de Compostela comer 2024" [earlier]
+A08 [neighbourhood-AgraOrzán] EN: "Agra do Orzán Santiago de Compostela food 2025" [recent]
+
+TIER 3 — Fontiñas (1 query: ES only)
+A09 [neighbourhood-Fontiñas] ES: "restaurantes Fontiñas Santiago de Compostela 2024" [earlier]
+
+TIER 3 — Vista Alegre (1 query: ES only)
+A10 [neighbourhood-VistaAlegre] ES: "restaurantes Vista Alegre Santiago de Compostela comer 2025" [recent]
+
+Part A total: 10 queries
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
+
+Cross-1 — City-wide in English (2 queries, vary register)
+B01 [cross-1] "Santiago de Compostela best restaurants food guide 2024 writer review" [earlier]
+B02 [cross-1] "where to eat Santiago de Compostela pilgrim food recommendations 2025" [recent]
+
+Cross-2 — City-wide in Spanish (3 queries, 3 registers)
+B03 [cross-2] "crítica gastronómica restaurantes Santiago de Compostela 2024 periodista" [earlier]
+B04 [cross-2] "dónde comer Santiago de Compostela recomendaciones locales barrio 2025" [recent]
+B05 [cross-2] "guía restaurantes Santiago de Compostela gastronomía gallega 2023 periodismo" [earlier]
+
+Cross-3 — Generic writer-first (2 queries: 1 EN + 1 ES)
+B06 [cross-3] ES: "crítico gastronómico recomendaciones restaurantes Santiago de Compostela" [no year]
+B07 [cross-3] EN: "food writer restaurant recommendations Santiago de Compostela Galicia" [no year]
+
+Cross-4 — Named awards (3 queries)
+B08 [cross-4] "Casa Marcelo Michelin Santiago de Compostela reseña chef Marcelo Tejedor" [no year]
+B09 [cross-4] "A Tafona Lucía Freitas Michelin Santiago restaurante reconocimiento" [no year]
+B10 [cross-4] "Soles Repsol Santiago de Compostela restaurantes premiados 2024" [earlier]
+
+Cross-5 — Recent openings (2 queries: 1 ES + 1 EN)
+B11 [cross-5] ES: "nuevos restaurantes Santiago de Compostela aperturas 2025" [recent]
+B12 [cross-5] EN: "new restaurant openings Santiago de Compostela 2024" [earlier]
+
+Cross-6 — Vocabulary-specific (2 queries targeting pulpo á feira, percebes, Mercado de Abastos)
+B13 [cross-6] "pulpo á feira percebes restaurante Santiago de Compostela recomendación escritor cociña galega" [no year]
+B14 [cross-6] "Mercado de Abastos Santiago gastronomía cociña galega recomendación 2024" [earlier]
+
+Cross-7 — Cuisine and community (2 queries)
+B15 [cross-7] "marisquería Santiago de Compostela recomendación marisco fresco 2024" [earlier]
+B16 [cross-7] "cocina gallega tradicional restaurante Santiago de Compostela escritor 2025" [recent]
+
+Cross-8 — Publication-category (2 queries)
+B17 [cross-8] "revista gastronómica independiente Galicia restaurantes Santiago de Compostela 2024" [earlier]
+B18 [cross-8] "suplemento gastronomía periódico Santiago de Compostela mejores restaurantes 2025" [recent]
+
+Part B total: 18 queries
+Grand total planned: 28 queries (soft ceiling: 45 / hard ceiling: 55)
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+
+Earlier years (2023/2024): A01, A03, A06, A07, A09, B01, B03, B05, B10, B12, B14, B15, B17 = 13 queries
+Recent years (2025/2026): A02, A04, A05, A08, A10, B02, B04, B11, B16, B18 = 10 queries
+No year term: B06, B07, B08, B09, B13 = 5 queries
+
+[year-distribution-check] PASSED — 13 queries reference earlier years, 10 queries reference recent years, 5 queries have no year term.
+
+Angles with 2 queries — distribution confirmed:
+  Cross-1: B01 earlier, B02 recent ✓
+  Cross-3: B06 no year, B07 no year (no year queries acceptable — no constraint violated)
+  Cross-5: B11 recent, B12 earlier ✓
+  Cross-6: B13 no year, B14 earlier ✓
+  Cross-7: B15 earlier, B16 recent ✓
+  Cross-8: B17 earlier, B18 recent ✓
+Angles with 3 queries:
+  Cross-2: B03 earlier, B04 recent, B05 earlier ✓
+  Cross-4: B08 no year, B09 no year, B10 earlier ✓
