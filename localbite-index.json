@@ -273,6 +273,20 @@
       "status": "complete",
       "open_status_check_count": 27,
       "notes": ""
+    },
+    {
+      "city": "Murcia",
+      "country": "Spain",
+      "city_slug": "murcia-spain",
+      "pipeline": "localbite-v7.1",
+      "built": "2026-04-21",
+      "restaurant_count": 10,
+      "both_pool_count": 0,
+      "source_count": 9,
+      "file": "localbite-murcia-2023-2026.json",
+      "status": "complete",
+      "open_status_check_count": 4,
+      "notes": ""
     }
   ]
 }

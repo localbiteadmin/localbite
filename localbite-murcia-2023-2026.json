@@ -1,0 +1,561 @@
+{
+  "city": "Murcia",
+  "country": "Spain",
+  "city_slug": "murcia-spain",
+  "built": "2026-04-21",
+  "source_recency": "2023-2026",
+  "pipeline": "localbite-v7.1",
+  "confidence_tiers": {
+    "tier_a": {
+      "label": "Multiple independent sources",
+      "description": "Restaurant recommended by 2+ independent sources, or appears in both ES and EN source pools from different publishers",
+      "count": 3
+    },
+    "tier_b": {
+      "label": "Single qualified source",
+      "description": "Restaurant recommended by one named-author source meeting all quality criteria; includes KNOWN_AWARDS entries retained by award-status override",
+      "count": 7
+    },
+    "tier_c": {
+      "label": "Auto-rejected",
+      "description": "Failed extraction-time quality checks (quote under 15 words, no specific detail)",
+      "count": 5,
+      "rejected": [
+        {
+          "name": "El Salón del Secreto",
+          "reason": "no qualifying quote ≥15 words with specific detail"
+        },
+        {
+          "name": "Keki",
+          "reason": "no qualifying quote extracted from croqueta article"
+        },
+        {
+          "name": "Bar Verónicas",
+          "reason": "extracted quote 13 words, below 15-word threshold"
+        },
+        {
+          "name": "Cosa Fina",
+          "reason": "no qualifying quote; no address confirmed"
+        },
+        {
+          "name": "Taúlla",
+          "reason": "NatGeo quote 7 words; no KNOWN_AWARDS status to override"
+        }
+      ]
+    }
+  },
+  "pool_notes": {
+    "en_primary_gap": true,
+    "en_primary_gap_reason": "Structural: Murcia is underserved by English-language restaurant writing. All EN candidates examined and rejected: Emily Luxton (2017, outside YEAR_RANGE), culinarytravels.co.uk (COI: commissioned by Visit Murcia + quotes <15 words), gourmetgorro.blogspot.com (2017), tickereatstheworld.com (2019), alicante-spain.com (2010), thespanishradish.com (2022, no Murcia city restaurants), murciatoday.com (no named author), theculturetrip.com (403 blocked).",
+    "both_pool_count": 0,
+    "concentration_note": "73% of final entries (8/11) are in Murcia Centro — reflects documented dining geography (Part 1: 'dining scene is heavily concentrated in the historic centre around Plaza de las Flores, Calle Trapería, Plaza del Cardenal Belluga and adjacent streets'). Standard 30% concentration cap not applied; geographic justification documented."
+  },
+  "sources": [
+    {
+      "id": "src-murcialist-tandem",
+      "author": "Miguel Ángel Torralba",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2023-03-20",
+      "article_url": "https://www.themurcialist.com/2023/03/tandem.html",
+      "fetch_quality": "good",
+      "fetch_chars": 3200,
+      "note": "single-author-confirmed: The Murcialist confirmed as sole-author site via About page, Instagram @themurcialist = 'Miguel Á. Torralba', and gastrobloggers.com listing. Single-Author Site Rule applied — no article-level byline required.",
+      "publication": "The Murcialist",
+      "writer": "Miguel Ángel Torralba",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Miguel Ángel Torralba is the sole author and founder of The Murcialist (El GPS gastronómico de Murcia), a personal food blog covering the Murcia restaurant scene. The site is written entirely in Spanish in first person, with reviews of local restaurants across the Murcia municipality."
+    },
+    {
+      "id": "src-murcialist-mapa",
+      "author": "Miguel Ángel Torralba",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2023-01-31",
+      "article_url": "https://www.themurcialist.com/2023/01/mapa.html",
+      "fetch_quality": "good",
+      "fetch_chars": 3100,
+      "note": "single-author-confirmed: same author as src-murcialist-tandem; Single-Author Site Rule applied.",
+      "publication": "The Murcialist",
+      "writer": "Miguel Ángel Torralba",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Miguel Ángel Torralba is the sole author of The Murcialist, a personal food blog focused on the Murcia dining scene. Reviews cover restaurants across all price points in the Murcia municipality."
+    },
+    {
+      "id": "src-murcialist-huesped",
+      "author": "Miguel Ángel Torralba",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2023-04-27",
+      "article_url": "https://www.themurcialist.com/2023/04/el-huesped.html",
+      "fetch_quality": "good",
+      "fetch_chars": 2900,
+      "note": "single-author-confirmed: same author as src-murcialist-tandem; Single-Author Site Rule applied.",
+      "publication": "The Murcialist",
+      "writer": "Miguel Ángel Torralba",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Miguel Ángel Torralba is the sole author of The Murcialist, a Murcia-focused food blog written in Spanish. Known for reviewing traditional tapas bars and neighbourhood restaurants alongside higher-end venues."
+    },
+    {
+      "id": "src-murcialist-federal",
+      "author": "Miguel Ángel Torralba",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2024-11-12",
+      "article_url": "https://www.themurcialist.com/2024/11/federal-cafe.html",
+      "fetch_quality": "good",
+      "fetch_chars": 2800,
+      "note": "single-author-confirmed: same author as src-murcialist-tandem; Single-Author Site Rule applied.",
+      "publication": "The Murcialist",
+      "writer": "Miguel Ángel Torralba",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Miguel Ángel Torralba is the sole author of The Murcialist, a personal food guide to Murcia covering the full range from tapas bars to tasting menus."
+    },
+    {
+      "id": "src-murcialist-pepejuan",
+      "author": "Miguel Ángel Torralba",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2025-10-20",
+      "article_url": "https://www.themurcialist.com/2025/10/pepe-juan.html",
+      "fetch_quality": "good",
+      "fetch_chars": 3000,
+      "note": "single-author-confirmed: same author as src-murcialist-tandem; Single-Author Site Rule applied.",
+      "publication": "The Murcialist",
+      "writer": "Miguel Ángel Torralba",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Miguel Ángel Torralba is the sole author of The Murcialist, a comprehensive food guide to Murcia city covering traditional bars, modern tapas, and chef-led venues."
+    },
+    {
+      "id": "src-gastrotimes-alcantara",
+      "author": "Concha Alcántara",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2024-01-16",
+      "article_url": "https://thegastrotimes.com/dia-internacional-de-la-croqueta-donde-encontrar-las-mejores-de-murcia/",
+      "fetch_quality": "good",
+      "fetch_chars": 4100,
+      "note": "explicit byline confirmed in article. Multi-author publication — only articles with explicit Concha Alcántara byline are used. Concha Alcántara is founder and director of The Gastro Times.",
+      "publication": "The Gastro Times",
+      "writer": "Concha Alcántara",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Concha Alcántara is the founder and director of The Gastro Times, a Murcia-based gastronomy publication, and host of the Gastroadictos programme on Onda Regional. She covers the Murcia restaurant scene from a local perspective with detailed knowledge of neighbourhood bars and restaurants."
+    },
+    {
+      "id": "src-gastroactitud-capel",
+      "author": "José Carlos Capel",
+      "language": "es",
+      "classification": "primary",
+      "article_date": "2024-12-12",
+      "article_url": "https://www.gastroactitud.com/restaurante/local-de-ensayo-murcia/",
+      "fetch_quality": "good",
+      "fetch_chars": 5800,
+      "note": "explicit byline confirmed. José Carlos Capel is creator/president of Madrid Fusión and was El País food critic for 35 years. Rated restaurant 7/10.",
+      "publication": "Gastroactitud",
+      "writer": "José Carlos Capel",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "José Carlos Capel is one of Spain's most prominent food critics, creator and president of Madrid Fusión, and former food critic of El País for 35 years. His reviews on Gastroactitud carry significant authority in the Spanish restaurant world. His Murcia Local de Ensayo review (December 2024) praises the chef as 'possibly the most technical chef in the Region of Murcia'."
+    },
+    {
+      "id": "src-natgeo-madurga",
+      "author": "Lucía Díaz Madurga",
+      "language": "es",
+      "classification": "secondary",
+      "article_date": "2024-11-20",
+      "article_url": "https://viajes.nationalgeographic.com.es/gastronomia/mejores-restaurantes-michelin-para-hacer-escapada-a-murcia_21452",
+      "fetch_quality": "good",
+      "fetch_chars": 6200,
+      "note": "National Geographic Viajes is classified secondary per pipeline policy: national publication with national/international audience. Lucía Díaz Madurga is responsible for the gastronomy section of Viajes National Geographic. Article is a Michelin-focused Murcia restaurant guide.",
+      "publication": "Viajes National Geographic España",
+      "writer": "Lucía Díaz Madurga",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Lucía Díaz Madurga is the gastronomy editor of Viajes National Geographic España, covering restaurant guides and food travel for a national Spanish audience. Her Murcia article focuses on Michelin-recognised restaurants in the city and region."
+    },
+    {
+      "id": "src-repsol-vega-frases",
+      "author": "Marina Vega",
+      "language": "es",
+      "classification": "secondary",
+      "article_date": "2023-10-01",
+      "article_url": "https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurante-frases-murcia/",
+      "fetch_quality": "good",
+      "fetch_chars": 5400,
+      "note": "Guía Repsol classified secondary per Part 1 SECONDARY_SOURCES list ('Guía Repsol (national)'). Marina Vega is the credited author of this 'nuestros favoritos' editorial piece.",
+      "publication": "Guía Repsol",
+      "writer": "Marina Vega",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Marina Vega is a food writer for Guía Repsol's editorial team, contributing 'nuestros favoritos' restaurant features. The Guía Repsol is classified as a secondary source for Murcia as it is a national publication with national audience scope."
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Local de Ensayo",
+      "name_variants": [
+        "Restaurante Local de Ensayo"
+      ],
+      "neighbourhood": "Murcia Centro",
+      "cuisine": "contemporary Spanish / revised tradition / seasonal",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tortilla de patatas spunta rellena de crema de cebolla",
+        "arroz meloso de Calasparra con manitas de cerdo, níscalos, trompetas negras, tupinambo y rabanitos",
+        "seta de chopo silvestre con láminas de trufa negra de La Sagra",
+        "flan de la casa"
+      ],
+      "signature_dish": "arroz meloso de Calasparra con manitas de cerdo y níscalos",
+      "quote": "el arroz meloso de Calasparra con manitas de cerdo, níscalos, trompetas negras, tupinambo y rabanitos",
+      "quote_language": "original",
+      "article_date": "2024-12-12",
+      "open_status_check": false,
+      "language_pool": "es",
+      "flagged": false,
+      "flag_reason": null,
+      "lat": null,
+      "lng": null,
+      "centroid": null,
+      "address": "Fuensanta, 5, Murcia",
+      "sources": [
+        "src-gastroactitud-capel",
+        "src-natgeo-madurga"
+      ],
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "confidence_tier": "A",
+      "geo_skip": true
+    },
+    {
+      "name": "Frases",
+      "name_variants": [
+        "Restaurante Frases"
+      ],
+      "neighbourhood": "Murcia Centro",
+      "cuisine": "modern Murcian / tasting menu / memory-driven",
+      "opening_year": 2018,
+      "price_level": 4,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "royal de foie Colvert con yema de huevo",
+        "estofado de trompeta amarilla y trufa",
+        "angula de monte con foie",
+        "marinera reinterpretada",
+        "mesa de abuela (panes, mantequilla, embutidos, tomate)"
+      ],
+      "signature_dish": null,
+      "quote": "Hemos querido representar una mesa tradicional de casa de abuela, repleta de panes, mantequilla, embutidos o tomate",
+      "quote_language": "original",
+      "article_date": "2023-10-01",
+      "open_status_check": true,
+      "language_pool": "es",
+      "flagged": true,
+      "flag_reason": "Restaurant relocated from Calle Soledad, 1 to Calle San Lorenzo (former Maza y Cerón space) — new address must be confirmed before deployment. 1 Michelin star awarded November 2024 (announced for 2025 guide). Menus: Origen €75, Tierra €100.",
+      "lat": null,
+      "lng": null,
+      "centroid": null,
+      "address": "Calle San Lorenzo, Murcia (relocated from Calle Soledad, 1)",
+      "sources": [
+        "src-natgeo-madurga",
+        "src-repsol-vega-frases"
+      ],
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "confidence_tier": "A"
+    },
+    {
+      "name": "Mapa",
+      "name_variants": [
+        "Mapa Taberna",
+        "Restaurante Mapa"
+      ],
+      "neighbourhood": "Santa Eulalia",
+      "cuisine": "fusion / travel cuisine / contemporary Mediterranean",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "croqueta de salchicha seca y almendras",
+        "arancino relleno de caldero al estilo murciano",
+        "gilda clásica",
+        "tortilla fina poco cuajada",
+        "coliflor buffalo vegana"
+      ],
+      "signature_dish": "arancino relleno de caldero",
+      "quote": "Una reinterpretación imaginativa de la croqueta de arroz siciliana rellena de caldero, con un carácter marcadamente murciano",
+      "quote_language": "translated",
+      "article_date": "2023-01-31",
+      "open_status_check": true,
+      "language_pool": "es",
+      "flagged": true,
+      "flag_reason": "open_status_check — oldest source dated 2023-01-31; verify still open before deployment. Quote translated from Spanish by Jina AI model.",
+      "lat": null,
+      "lng": null,
+      "centroid": null,
+      "address": "C/ Simón García, 57, Santa Eulalia, Murcia",
+      "sources": [
+        "src-murcialist-mapa",
+        "src-gastrotimes-alcantara"
+      ],
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "confidence_tier": "A",
+      "geo_skip": true
+    },
+    {
+      "name": "Tándem",
+      "name_variants": [
+        "Restaurante Tándem",
+        "Tandem Murcia"
+      ],
+      "neighbourhood": "Murcia Centro",
+      "cuisine": "contemporary product-focused / traditional Spanish",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "croquetas con taquitos de jamón y crema de huevo frito",
+        "steak tartar"
+      ],
+      "signature_dish": "croquetas",
+      "quote": "Una cremosidad increíble, con los taquitos de jamón presentes y rematadas con una crema de huevo frito",
+      "quote_language": "original",
+      "article_date": "2023-03-20",
+      "open_status_check": true,
+      "language_pool": "es",
+      "flagged": true,
+      "flag_reason": "open_status_check — source dated 2023-03-20; verify still open before deployment. Note: relocated from Santomera to Murcia city prior to review.",
+      "lat": null,
+      "lng": null,
+      "centroid": null,
+      "address": "C/ Cánovas del Castillo, 37, 30003 Murcia",
+      "sources": [
+        "src-murcialist-tandem"
+      ],
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "confidence_tier": "B"
+    },
+    {
+      "name": "El Huésped",
+      "name_variants": [
+        "El Huesped"
+      ],
+      "neighbourhood": "Murcia Centro",
+      "cuisine": "traditional Spanish tapas / taberna",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cazuela de alcachofas y pesto rojo",
+        "mini tortilla de patatas trufada",
+        "pan tostado con aceite y sal"
+      ],
+      "signature_dish": "cazuela de alcachofas y pesto rojo",
+      "quote": "Unas alcachofas en conserva muy tiernas que las terminan en el horno, con un delicioso pesto rojo",
+      "quote_language": "original",
+      "article_date": "2023-04-27",
+      "open_status_check": true,
+      "language_pool": "es",
+      "flagged": true,
+      "flag_reason": "open_status_check — source dated 2023-04-27; verify still open before deployment.",
+      "lat": 37.9848355,
+      "lng": -1.1334102,
+      "centroid": null,
+      "address": "C/ Ruipérez esquina Plaza de las Flores, 30004 Murcia",
+      "sources": [
+        "src-murcialist-huesped"
+      ],
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "El Huésped",
+      "confidence_tier": "B"
+    },
+    {
+      "name": "Federal Café",
+      "name_variants": [
+        "Federal Cafe"
+      ],
+      "neighbourhood": "Murcia Centro",
+      "cuisine": "brunch / Australian-inspired / café",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Mykonos bliss (yogur griego, huevos poché, aguacate, mantequilla de pimentón-chili)",
+        "Eggs Benedict (bacon inglés, salsa holandesa)"
+      ],
+      "signature_dish": null,
+      "quote": "El Mykonos bliss llevaba yogur griego, huevos poché, aguacate y mantequilla de pimentón y chili; los Eggs Benedict venían con bacon inglés y una deliciosa salsa holandesa",
+      "quote_language": "translated",
+      "article_date": "2024-11-12",
+      "open_status_check": false,
+      "language_pool": "es",
+      "flagged": false,
+      "flag_reason": null,
+      "lat": null,
+      "lng": null,
+      "centroid": null,
+      "address": "G.V. Alfonso X el Sabio, 13, 30008 Murcia",
+      "sources": [
+        "src-murcialist-federal"
+      ],
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "confidence_tier": "B",
+      "geo_skip": true
+    },
+    {
+      "name": "Pepe Juan",
+      "name_variants": [],
+      "neighbourhood": "Murcia Centro",
+      "cuisine": "traditional tapas / bar / Josper grill",
+      "opening_year": 2025,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ensaladilla de sepia y gambón con huevas de salmón",
+        "Langostino Tiger (rebozado crujiente)",
+        "caballitos (gambas rebozadas)",
+        "dorada a la brasa"
+      ],
+      "signature_dish": "Langostino Tiger",
+      "quote": "Está de escándalo, con un rebozado crujiente y un relleno con un sabor a mar increíble",
+      "quote_language": "original",
+      "article_date": "2025-10-20",
+      "open_status_check": false,
+      "language_pool": "es",
+      "flagged": false,
+      "flag_reason": null,
+      "lat": null,
+      "lng": null,
+      "centroid": null,
+      "address": "C/ Trapería, 30001 Murcia",
+      "sources": [
+        "src-murcialist-pepejuan"
+      ],
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "confidence_tier": "B",
+      "geo_skip": true
+    },
+    {
+      "name": "Almo",
+      "name_variants": [
+        "AlmaMater",
+        "Almo de Juan Guillamón",
+        "AlmaMater Murcia"
+      ],
+      "neighbourhood": "Murcia Centro",
+      "cuisine": "market cuisine / contemporary / Michelin-starred",
+      "opening_year": 2019,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "raíces y vanguardia se conjugan a la perfección a través de una cocina de mercado",
+      "quote_language": "original",
+      "article_date": "2024-11-20",
+      "open_status_check": false,
+      "language_pool": "es",
+      "flagged": false,
+      "flag_reason": null,
+      "lat": null,
+      "lng": null,
+      "centroid": null,
+      "address": "C/ Madre de Dios, 15, Murcia",
+      "sources": [
+        "src-natgeo-madurga"
+      ],
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "confidence_tier": "B"
+    },
+    {
+      "name": "Cabaña Buenavista",
+      "name_variants": [
+        "Cabana Buenavista",
+        "Restaurante Cabaña Buenavista"
+      ],
+      "neighbourhood": "El Palmar",
+      "cuisine": "high-end Murcian vanguard / tasting menu",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "un viaje por el recetario regional murciano",
+      "quote_language": "original",
+      "article_date": "2024-11-20",
+      "open_status_check": false,
+      "language_pool": "es",
+      "flagged": true,
+      "flag_reason": "KNOWN_AWARDS override: retained despite quote below 15-word threshold (7 words, NatGeo source). 2 Michelin stars (chef Pablo González-Conejero). El Palmar is a pedanía within Murcia municipality — included per Part 1 geographic policy.",
+      "lat": 37.9242711,
+      "lng": -1.1632434,
+      "centroid": null,
+      "address": "Urbanización Buenavista, El Palmar, Murcia",
+      "sources": [
+        "src-natgeo-madurga"
+      ],
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Cabaña de la Finca Buenavista",
+      "confidence_tier": "B"
+    },
+    {
+      "name": "Pura Cepa",
+      "name_variants": [
+        "Restaurante Pura Cepa"
+      ],
+      "neighbourhood": "Murcia Centro",
+      "cuisine": "wine bar / traditional tapas / seafood croquetas",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "croqueta de gamba roja"
+      ],
+      "signature_dish": "croqueta de gamba roja",
+      "quote": "La croqueta de gamba roja, delicada y con un pronunciado sabor a marisco",
+      "quote_language": "translated",
+      "article_date": "2024-01-16",
+      "open_status_check": false,
+      "language_pool": "es",
+      "flagged": true,
+      "flag_reason": "KNOWN_AWARDS override: retained despite no direct quote ≥15 words confirmed. 1 Sol Repsol (Part 1 KNOWN_AWARDS). Quote translated/paraphrased from S2 croqueta article by Concha Alcántara; original Spanish text may be longer. Plaza San Juan area, Murcia Centro.",
+      "lat": 37.9833661,
+      "lng": -1.1257837,
+      "centroid": null,
+      "address": "Plaza San Juan, Murcia",
+      "sources": [
+        "src-gastrotimes-alcantara"
+      ],
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pura Cepa",
+      "confidence_tier": "B"
+    }
+  ],
+  "centroids": {
+    "Murcia Centro": [
+      37.9879,
+      -1.1266
+    ]
+  }
+}
