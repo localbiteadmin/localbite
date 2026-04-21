@@ -1038,7 +1038,7 @@
 <footer class="site-footer">
   Every restaurant on LocalBite was explicitly named in a fetched source article — not inferred.
   <br>
-  Sources are linked on every card · Data covers 2025–2026 articles only
+  Sources are linked on every card · Data covers 2023–2026 articles only
 </footer>
 
 <script>
@@ -1228,7 +1228,7 @@ async function loadCity(meta) {
   document.getElementById('hero-sources-btn').textContent = 'Sources ↓';
 
   try {
-    const url = BASE + (meta.file || ('localbite-' + (meta.city_slug||meta.slug) + '-2025-2026.json'));
+    const url = BASE + (meta.file || ('localbite-' + (meta.city_slug||meta.slug) + '-2023-2026.json'));
     const res = await fetch(url);
     if (!res.ok) throw new Error('Not found');
     const data = await res.json();
@@ -1269,7 +1269,7 @@ function renderHero(data, meta) {
     <span class="city-meta-dot"></span>
     <span class="city-meta-item">${srcCount} source${srcCount!==1?'s':''}</span>
     <span class="city-meta-dot"></span>
-    <span class="city-meta-item">2025–2026 only</span>
+    <span class="city-meta-item">${escHtml(data.source_recency || '2023–2026')} only</span>
     ${pipeline ? `<span class="city-meta-dot"></span><span class="city-meta-item">Pipeline ${escHtml(pipeline)}</span>` : ''}
   `;
 
