@@ -5497,3 +5497,648 @@ These were previously undocumented and caused the Zaragoza rendering issues.
 
 *Fleet: 17 cities live. Actual last commit: c39ff3a.*
 
+
+## Session — 2026-04-20 (CENTROIDS architecture fix + Valladolid v7.1 + automation hardening)
+
+### Overview
+
+Full session. Resolved the CENTROIDS architecture problem permanently by moving
+centroids into city JSON files. Ran Valladolid as the 18th city and 3rd v7.1
+run. Fixed three classes of pipeline reliability issue: schema drift, thin writer
+profiles, and field name inconsistency. Produced a full fleet report.
+
+Fleet moves from 17 to 18 cities.
+
+---
+
+### CENTROIDS Architecture Fix
+
+**Problem confirmed:** The flat unnamespaced CENTROIDS dictionary in index.html
+causes silent map rendering failures when neighbourhood names repeat across
+cities. Four cities confirmed broken at session start:
+- Madrid: Centro → Granada [37.1750, -3.5907]
+- Seville + Córdoba: Centro Histórico → Málaga
+- Marrakesh, Rabat, Fes: Medina → Chefchaouen (last write wins)
+
+**Decision:** Move centroids into each city's JSON file. The global CENTROIDS
+block in index.html stays as a legacy fallback for 16 old cities and gradually
+empties as cities are rebuilt under v7.1.
+
+**Architecture:**
+```json
+{
+  "city": "Zaragoza",
+  "centroids": {
+    "Casco Histórico": [41.6528, -0.8799],
+    "Goya": [41.6411, -0.8896]
+  }
+}
+```
+
+Viewer lookup (index.html line ~2093) changed from `CENTROIDS[nb]` to:
+```js
+(currentCityData?.centroids?.[nb]) ? currentCityData.centroids[nb] : CENTROIDS[nb]
+```
+
+Backward-compatible — old cities continue using legacy fallback unchanged.
+
+**Components shipped:**
+- `localbite-postrun.js` v2.0 → v3.0: writes `centroids_proposed` to city JSON;
+  Nominatim fallback for zero-geocoded neighbourhoods
+- `localbite-approve-centroids.js` v1.0: interactive approval script — reads
+  `centroids_proposed`, accepts/rejects/manual entry, writes to `centroids`
+- `localbite-centroids-dryrun.js`: regression test for centroid calculation logic
+  (run once, confirmed v2.0 logic correct, then deleted)
+- `localbite-zaragoza-migrate-centroids.js`: one-time migration for Zaragoza
+  (run once, committed, then deleted)
+- Zaragoza JSON: migrated to new architecture with 6 centroid entries
+
+**Dry-run test findings:** Two Zaragoza centroids failed the tolerance check
+(El Rabal, Zaragoza Centro) — not a bug. The algorithm averages geocoded
+restaurants; manually-set values are district centres. For future regression
+tests, tolerance should be ±0.015° not ±0.005°.
+
+**Commits:**
+- bd62c2d — viewer centroid lookup (Step A)
+- f4ed8d3 — postrun v2.0, approve-centroids, Zaragoza migration, CLAUDE.md
+
+---
+
+### Pipeline Reliability Fixes
+
+**1. Schema validation in postrun.js (Step 1.5)**
+
+Context compaction mid-run caused Valladolid's pipeline to use `author_name`
+and `publisher` instead of `writer` and `publication`, and to omit
+`language_pool` from all restaurant entries. Schema validation now runs after
+geocoding and before centroid calculation. If required fields are missing or
+wrong field names used, the script exits with a clear error before any commit.
+
+Required source fields checked: `writer`, `publication`, `article_url`,
+`commercial_conflict`, `writer_profile`
+Required restaurant fields checked: `name`, `language_pool`, `quote`, `sources`
+
+**2. Field name contract in template**
+
+Added FIELD NAME CONTRACT block to `localbite-prompt-v7-template.txt` at line
+836, immediately before the existing FIELD NAME WARNING. Lists exact required
+field names for both sources and restaurants. Positioned at the JSON export
+point to maximise survival through context compaction.
+
+**3. Writer profile enrichment in postrun.js (Step 2b)**
+
+Pipeline-generated writer profiles are good when context is intact but degrade
+or disappear under compaction. Step 2b detects thin or placeholder profiles
+(under 80 chars, or matching `"[Name] writes for [Publication]."` pattern) and
+regenerates them via the Anthropic API.
+
+- Model: claude-sonnet-4-20250514
+- Tokens per profile: ~230 input + output
+- Cost per city: ~$0.01 (5-7 sources × $0.0017/profile)
+- Requires `ANTHROPIC_API_KEY` from platform.claude.com (separate from
+  Claude Max subscription)
+- Skips gracefully if API key not set
+- Only enriches thin/missing profiles — preserves good pipeline-generated ones
+
+Prompt tightened after Valladolid: enforces English output explicitly,
+prohibits biographical speculation, limits to 2-3 sentences derivable from
+known fields only.
+
+**Commits:**
+- 6e3a3de — postrun v3.0, approve-centroids, Zaragoza migration, CLAUDE.md
+- f17bf78 — enrichment prompt tightened (English enforcement + no speculation)
+- Template contract: included in 6e3a3de
+
+---
+
+### Valladolid v7.1 — Run Details
+
+**File:** localbite-valladolid-2023-2026.json
+**Commits:** 99bbd28 (pipeline), 4d263b1 (source_recency fix), e2c9c99 (schema fix),
+            dc627b4 (writer profiles)
+
+| Metric | Value |
+|--------|-------|
+| Final restaurants | 30 |
+| Sources | 5 |
+| Both-pool | 0 (EN sources structurally absent) |
+| Tier A (multi-source) | 3 (Alquimia Laboratorio, La Parrilla de San Lorenzo, Niza) |
+| Tier B | 27 |
+| Searches run | 38 (28 planned + 7 supplementary + 3 Phase 1B) |
+| Geocoding | 25/30 (3 wrong matches nulled, 5 on centroid) |
+| Run time | ~32 min elapsed |
+| Tokens | null (context compaction fired at ~15 min) |
+
+**Sources confirmed:**
+| Publication | Writer | Language | Type |
+|-------------|--------|----------|------|
+| Diario de Valladolid | Diego González | ES | Primary |
+| Diario de Valladolid | Estela Sánchez | ES | Primary (publisher concentration flagged) |
+| Recomiendo Valladolid | Pablo Lázaro | ES | Primary |
+| The Objective | Brenda Alonso | ES | Secondary |
+| El Español (Cocinillas) | Adriana Calvo | ES | Secondary |
+
+**Structural findings:**
+- EN primary sources structurally absent — 9+ EN searches, 0 qualifying results
+- Diario de Valladolid publisher concentration (2 articles) — 2 supplementary
+  searches found no alternative. Retained with documentation.
+- 3 concentration cap removals: La Mafia, Pide Por Esa Boquita, Brook Steakburguer
+- Dámaso excluded — located in Arroyo de la Encomienda municipality
+
+**Post-run fixes required (all resolved before commit):**
+1. Schema drift — `author_name`/`publisher` → `writer`/`publication`;
+   `language_pool` missing from all restaurants
+2. Writer profiles all placeholder — enriched via API (first production use)
+3. `source_recency` set to article date ("2025-11-29") instead of year range
+   ("2023-2026") — fixed manually
+4. 3 wrong geocoding matches nulled
+
+**CITY_CENTRES and CITY_BOUNDS:** Added automatically by Claude Code pipeline
+(first run where CLAUDE.md checklist was enforced by Claude Code). No manual
+index.html edits required for these.
+
+---
+
+### Neighbourhood Research — Valladolid
+
+Research confirmed: Valladolid's 12 official administrative districts are
+purely electoral and not used by locals or food writers. Social barrios are
+the relevant unit. Dining scene concentrated in historic centre with secondary
+scenes in Las Delicias, Caño Argales, Rondilla, La Victoria.
+
+Generic names prefixed per naming convention: Valladolid Centro, Valladolid
+Delicias, Valladolid La Victoria — prevents future centroid collisions.
+
+---
+
+### Token Capture — Outstanding Issue
+
+All three v7.1 runs (San Sebastián, Zaragoza, Valladolid) show null token
+counts in `localbite-run-metrics.log`. Root cause: context compaction fires
+mid-run, starting a new context window. The metrics node command at the end
+reads session metadata from the current window only — missing all tokens from
+the first window.
+
+This is not fixable by changing the node command. The correct fix is to
+replace session metadata with derived metrics:
+- Tool uses: count lines in search log (already tracked)
+- Run time: file timestamps (search log created at start, final JSON at end)
+- Token counts: genuinely unavailable for compacting runs without the API
+  usage endpoint — accept this gap or use the Anthropic usage dashboard
+
+**Outstanding:** Implement tool-use count and run time from file timestamps
+in the metrics node command. Token counts remain unavailable for compacting
+runs — document as known limitation.
+
+---
+
+### Fleet Report Produced
+
+Full fleet report covering all 18 cities with pipeline status, geocoding,
+both-pool counts, active collisions, and rebuild priority order.
+
+Delivered as:
+- Interactive dashboard (React widget in session)
+- PDF: `localbite-fleet-report-2026-04-20.pdf`
+- Markdown: `localbite-fleet-report-2026-04-20.md`
+
+---
+
+### Key Decisions
+
+**CENTROIDS in city JSON, not index.html** — permanent fix. Old cities
+continue via legacy fallback until rebuilt.
+
+**Phase 1 pause retained for now** — after 3 clean runs, the case for
+removing it is strengthening. Test with `PHASE1_PAUSE: NO` on a
+well-documented city in the next session.
+
+**API credits for writer enrichment** — $5 of API credits purchased at
+platform.claude.com. Covers ~500 city runs at ~$0.01 each.
+
+**Schema validation is now the primary defence against compaction drift** —
+the template contract reduces frequency, postrun.js validation catches it
+before commit regardless.
+
+---
+
+### Proposal for Next Session — Full Automation
+
+Target: reduce active human time per city to ~5 minutes.
+
+1. **CITY_CENTRES + CITY_BOUNDS auto-add in postrun.js** (15 min) — already
+   reads CITY_BOXES from localbite-geocode.js; use same data to auto-add
+   index.html entries instead of reminding human to do it manually.
+
+2. **Phase 1 pause test** (run time) — try `PHASE1_PAUSE: NO` on a
+   well-documented city. If source list is wrong, schema validation catches it.
+
+3. **Token capture from file timestamps** (45 min) — replace session metadata
+   with search log line count (tool uses) and file timestamp delta (run time).
+
+4. **One new city run to validate full automated flow** (~90 min elapsed).
+
+Post next session, the only remaining human touchpoint will be the centroid
+approval step (~2 min per city).
+
+---
+
+### Files Produced or Updated
+
+| File | Status | Commit |
+|------|--------|--------|
+| index.html | Updated — centroid lookup + Valladolid CITY_CENTRES/BOUNDS | bd62c2d, 99bbd28 |
+| localbite-postrun.js | Updated — v3.0 | 6e3a3de, f17bf78 |
+| localbite-approve-centroids.js | New | 6e3a3de |
+| localbite-prompt-v7-template.txt | Updated — field name contract | 6e3a3de |
+| localbite-zaragoza-2023-2026.json | Updated — centroid migration | f4ed8d3 |
+| localbite-prompt-v71-valladolid-part1.txt | New | b78e1ea |
+| localbite-prompt-v71-valladolid.txt | New | b78e1ea |
+| localbite-geocode.js | Updated — Valladolid bounding box | b78e1ea |
+| localbite-valladolid-2023-2026.json | New — schema fixed, profiles enriched | 99bbd28, 4d263b1, e2c9c99, dc627b4 |
+| localbite-valladolid-raw.json | New | 99bbd28 |
+| localbite-valladolid-audit.txt | New | 99bbd28 |
+| localbite-valladolid-search-log.txt | New | 99bbd28 |
+| localbite-valladolid-search-plan.txt | New | 99bbd28 |
+| localbite-index.json | Updated — Valladolid added, fleet 18 | 99bbd28 |
+| localbite-run-metrics.log | Updated — Valladolid entry | 99bbd28 |
+| localbite-journal-updated.md | Updated | 47513a9 + this entry |
+| localbite-fleet-report-2026-04-20.md | New | (not committed — reference doc) |
+| Global instructions | Updated — fleet 18 | (project settings) |
+
+---
+
+### Outstanding Items
+
+- [ ] **Full automation — next session priority** (see proposal above)
+  - Auto-add CITY_CENTRES + CITY_BOUNDS in postrun.js
+  - Test Phase 1 pause removal on a well-documented city
+  - Fix token capture using file timestamps
+- [ ] **Token capture** — null for all v7.1 runs due to compaction. Fix via
+      file timestamps in next session.
+- [ ] **16 old cities with active collisions** — accepted, resolve at rebuild time:
+      Madrid (Centro → Granada), Seville + Córdoba (Centro Histórico → Málaga),
+      Marrakesh + Rabat + Fes (Medina → Chefchaouen)
+- [ ] **Writer profile enrichment prompt** — Estela Sánchez profile may still
+      be slightly long. Acceptable for now.
+- [ ] **source_recency convention** — pipeline sets it to the most recent article
+      date; should be YEAR_RANGE. Add explicit instruction to template.
+- [ ] **Madrid open_status_check** — 56 restaurants pending. No verification
+      workflow agreed.
+- [ ] **San Sebastián open_status_check** — 23 restaurants pending.
+- [ ] **Madrid "Irene S." byline** — unresolved.
+- [ ] **Saveur geo-block fallback** — Wayback Machine noted as future option.
+- [ ] **Seville Part 1** — needs v7.1 variable name update before Seville v2.
+- [ ] **React migration** — at 2,215 lines, 285 from trigger.
+
+*Fleet: 18 cities live. Last commit: f17bf78.*
+
+
+---
+
+## Session — 2026-04-21 (Full automation pipeline — Santiago de Compostela, Murcia; infrastructure fixes)
+
+### Overview
+
+Long session focused on two goals: getting the pipeline to truly unattended execution, and understanding what it would take to make it fully automated end-to-end. Three cities were added (Alicante, Santiago de Compostela, Murcia), making 21 cities live. The Murcia run was the cleanest unattended run to date — all article_urls set correctly, source_recency correct, CITY_CENTRES and CITY_BOUNDS added automatically by the pipeline itself. Multiple infrastructure fixes were committed. A comprehensive automation gap analysis was completed and a plan for the next session was produced.
+
+---
+
+### Pipeline Launch Method — Validated
+
+After failed attempts with piped stdin and Claude Code reading the prompt interactively, the correct launch method was established and validated on both Santiago de Compostela and Murcia:
+
+1. Open a fresh terminal tab
+2. `cd /Users/harryenchin/Documents/GitHub/localbite`
+3. `claude --dangerously-skip-permissions`
+4. At the `❯` prompt, type: `Read localbite-prompt-v71-[city]-part1.txt and localbite-prompt-v7-template.txt and run the full pipeline now.`
+
+Piping via stdin (`< localbite-prompt-v71-[city].txt`) causes Claude Code to display the prompt and ask "what do you want to do?" rather than executing it. The typed-instruction method works reliably. CLAUDE.md updated and committed with this documentation.
+
+The earlier attempt also revealed that CLAUDE.md's warning about subprocess launching was too strongly worded — Claude Code read it and refused to run the pipeline entirely. The warning was removed and replaced with correct launch documentation.
+
+---
+
+### Infrastructure Fixes Committed
+
+All fixes committed in sequence throughout the session. Final commit: fe4a061.
+
+**localbite-geocode.js (v8.1 → v8.2):**
+- Case-insensitive CITY_BOXES lookup — fixed "Santiago De Compostela" vs "Santiago de Compostela" mismatch that caused geocoder to fail with no bounding box error
+- Removed duplicate "Santiago De Compostela" entry (both title-case and lowercase were present after the fix)
+- Added Murcia bounding box (expanded to cover El Palmar at latMin 37.91)
+- Added Santiago de Compostela bounding box
+
+**localbite-postrun.js (v3.0 → v3.1):**
+- article_url removed from REQUIRED_SOURCE_FIELDS (blocking) and replaced with a non-blocking warning that names each affected source — cannot be auto-repaired since postrun.js doesn't know the URLs
+- article_url null check added — presence check was insufficient; now also checks for null/empty value
+- source_id → id normalisation added to auto-repair (Step 1.5) — pipeline sometimes writes source_id instead of id
+- source_recency empty string validation — isEmpty condition added to catch empty strings and null values, not just malformed date strings
+
+**index.html (viewer):**
+- Source ↗ link hidden when article_url is null — previously rendered with href="#" causing navigation to Barcelona (the first city loaded)
+- currentSources indexes by `s.id || s.source_id` — handles both field name variants across old and new pipeline output
+- source_recency shown dynamically from data.source_recency in hero meta
+
+**CLAUDE.md:**
+- Pipeline launch warning removed (was blocking Claude Code from running)
+- Correct launch method documented with exact typed instruction
+
+**~/.zshrc:**
+- ANTHROPIC_API_KEY added permanently — available in all login shell sessions without manual export
+
+---
+
+### City Runs
+
+**Alicante (19th city) — 2026-04-21**
+- File: localbite-alicante-2023-2026.json
+- 9 restaurants, 7 sources, 1 both-pool (Nou Manolín: ES+EN)
+- Issues encountered: subprocess launch failure on first attempt, schema drift (auto-repair fixed), city_slug missing country suffix (auto-corrected), source_id vs id mismatch (fixed), article_url null (added manually), La Barra del Gourmet wrong geocode (nulled + geo_skip)
+- Thin pack — EN coverage structurally limited in Alicante
+
+**Santiago de Compostela (20th city) — 2026-04-21**
+- File: localbite-santiago-2023-2026.json
+- 27 restaurants, 6 sources, 3 both-pool (Lume, Abastos 2.0, A Maceta)
+- PHASE1_AUTO_PROCEED confirmed working: `[unattended-mode] Phase 1 auto-proceeding to Phase 2`
+- Issues: geocoder case mismatch (fixed — triggered the geocode.js case-insensitive fix), source_recency empty string (manual fix), article_url null (added manually from Jina fetch URLs), source_id → id mismatch (manual fix then added to auto-repair)
+- Sources: El Correo Gallego (Sergio Romero), GastroSantiago/El Español (Beatriz Castro), The Objective (Brenda Alonso), Camino Insider Guide (Christian W. Bauer, ⚠ coi), Oladaniela (Daniela Sunde-Brown), NatGeo España (Lucía Díaz Madurga)
+- Multiple post-pipeline commits required to fix data issues
+
+**Murcia (21st city) — 2026-04-21 — Cleanest unattended run**
+- File: localbite-murcia-2023-2026.json
+- 10 restaurants, 5 sources (9 source entries — Murcialist contributed 5 article-level entries), 0 both-pool
+- EN primary gap documented as structural — all EN candidates examined and rejected for valid reasons (wrong date range, COI, no named author, outside scope)
+- Pipeline auto-added CITY_CENTRES, CITY_BOUNDS, index.json — no postrun.js action needed for these
+- article_url: all 9 sources set correctly by the pipeline without any manual fix
+- source_recency: "2023-2026" correct without manual fix
+- city_slug: "murcia-spain" correct
+- Only manual steps: 4 wrong geocoding matches nulled + geo_skip (Local de Ensayo, Mapa, Federal Café, Pepe Juan)
+- Sources: Miguel Ángel Torralba (The Murcialist, 5 articles), Concha Alcántara (The Gastro Times), José Carlos Capel (Gastroactitud), Lucía Díaz Madurga (NatGeo Viajes), Marina Vega (Guía Repsol)
+- Pipeline also auto-expanded Murcia CITY_BOXES bounding box to cover El Palmar (Cabaña Buenavista, 2 Michelin stars)
+
+---
+
+### Automation Gap Analysis
+
+A comprehensive review of all issues blocking full automation was completed. Ranked by impact:
+
+| Issue | Blocks full automation | Fix complexity | Priority |
+|-------|----------------------|----------------|----------|
+| Wrong geocoding requires human review | YES — every run | Medium — fuzzy name matching | High |
+| article_url lost under compaction | SOMETIMES — unpredictable | Hard — compaction is Claude Code behaviour | High |
+| Centroid approval is interactive | YES — every run | Low — add --auto-accept flag | High |
+| Pipeline launch is multi-step | YES | Medium — expect/pexpect script | Medium |
+| source_recency edge cases | SOMETIMES | Low — already partially fixed | Medium |
+| API key not in all shell contexts | SOMETIMES | Low — .env file in repo | Low |
+| Git commit/push is manual | YES — deliberate | Low — deliberate human checkpoint | Low |
+| No automated viewer smoke test | Not blocking but risky | Medium | Low |
+
+After fixes planned for next session, per-city human time should drop from ~25 minutes to under 10 minutes. The remaining human steps will be: review 1–2 ambiguous geocoding cases, run git commit.
+
+---
+
+### Key Decisions
+
+- **Pipeline launch method confirmed:** Open Claude Code without pipe, type the read instruction at the prompt. Validated on Santiago and Murcia. Documented in CLAUDE.md.
+- **article_url is a non-blocking warning:** Cannot be auto-repaired by postrun.js. Source ↗ links hidden in viewer when null. Pipeline must write it during Phase 2.
+- **source_id → id auto-repair added:** postrun.js Step 1.5 now normalises both field name variants.
+- **Geocoder case-insensitive lookup:** CITY_BOXES lookup now case-insensitive. Eliminates title-case city name mismatches.
+- **Murcia EN gap is structural:** Not a pipeline failure — genuinely underserved by English-language food writing. Documented and accepted.
+- **Murcia sources_confirmed metric is inflated:** Metrics show 9 source entries but only 5 unique publishers (The Murcialist contributed 5 article-level entries). Metric counts entries not publishers.
+- **Raw JSON bug accepted for now:** Pipeline writes copy of final.json as raw.json instead of pre-removal working file. Fix planned for next session.
+- **Metrics null for all compacting runs:** Placeholder substitution bug in metrics node command. Fix planned for next session.
+- **Both fixes to CLAUDE.md:** Launch warning removed; correct launch method documented.
+
+---
+
+### Files Produced or Updated
+
+| File | Status | Notes |
+|------|--------|-------|
+| localbite-alicante-2023-2026.json | New | 9R, 1BP, 7 sources |
+| localbite-santiago-2023-2026.json | New | 27R, 3BP, 6 sources |
+| localbite-murcia-2023-2026.json | New | 10R, 0BP, 5 sources |
+| localbite-geocode.js | Updated | Case-insensitive lookup, new bounding boxes, duplicate removed |
+| localbite-postrun.js | Updated | article_url warning, source_id→id, source_recency fixes |
+| index.html | Updated | Viewer null article_url fix, currentSources fallback, 2228 lines |
+| localbite-index.json | Updated | 21 cities |
+| CLAUDE.md | Updated | Launch method corrected |
+| ~/.zshrc | Updated | ANTHROPIC_API_KEY persisted |
+| localbite-prompt-v71-alicante-part1.txt | New | |
+| localbite-prompt-v71-alicante.txt | New | |
+| localbite-prompt-v71-santiago-part1.txt | New | |
+| localbite-prompt-v71-santiago.txt | New | |
+| localbite-prompt-v71-murcia-part1.txt | New | |
+| localbite-prompt-v71-murcia.txt | New | |
+| localbite-alicante-search-log.txt | New | |
+| localbite-alicante-search-plan.txt | New | |
+| localbite-alicante-raw.json | New | |
+| localbite-alicante-audit.txt | New | |
+| localbite-santiago-search-log.txt | New | |
+| localbite-santiago-search-plan.txt | New | |
+| localbite-santiago-raw.json | New | |
+| localbite-santiago-audit.txt | New | |
+| localbite-murcia-search-log.txt | New | |
+| localbite-murcia-search-plan.txt | New | |
+| localbite-murcia-raw.json | New | Copy of final — raw JSON bug outstanding |
+| localbite-run-metrics.log | Updated | Entries for all three cities — all null except searches_run |
+| localbite-journal-updated.md | Updated | This entry |
+
+Final commit: ea531c7 (Murcia docs)
+Post-session fixes commit: fe4a061 (automation gap fixes)
+
+---
+
+### Outstanding Items
+
+- [ ] Fix metrics placeholder substitution bug — [OUTPUT_SEARCH_LOG] and [OUTPUT_FINAL] not substituted before metrics node command runs
+- [ ] Fix raw JSON output — should save pre-removal Tier C entries, not copy of final JSON
+- [ ] Add --auto-accept flag to localbite-approve-centroids.js
+- [ ] Add geocoding auto-null: entity blocklist + word-overlap check in localbite-geocode.js
+- [ ] Add article_url recovery from search log in postrun.js Step 1.7
+- [ ] Verify source_recency empty string condition with unit test
+- [ ] Add .env file for ANTHROPIC_API_KEY (available in all shell contexts)
+- [ ] Run Pamplona v7.1 as validation test of automation fixes
+- [ ] Madrid: 56 open_status_check pending; Centro → Granada centroid collision active
+- [ ] 7 cities with centroid collisions — accepted, resolve at rebuild time
+- [ ] 13 cities on old pipeline (pre-v7.1) — rebuild at natural trigger
+
+---
+
+*Fleet: 21 cities, 575+ restaurants, 8 on v7.1, index.html 2,228 lines (trigger 2,500)*
+
+
+---
+
+## Session — 2026-04-21 (Full automation pipeline — Santiago de Compostela, Murcia; infrastructure fixes)
+
+### Overview
+
+Long session focused on two goals: getting the pipeline to truly unattended execution, and understanding what it would take to make it fully automated end-to-end. Three cities were added (Alicante, Santiago de Compostela, Murcia), making 21 cities live. The Murcia run was the cleanest unattended run to date — all article_urls set correctly, source_recency correct, CITY_CENTRES and CITY_BOUNDS added automatically by the pipeline itself. Multiple infrastructure fixes were committed. A comprehensive automation gap analysis was completed and a plan for the next session was produced.
+
+---
+
+### Pipeline Launch Method — Validated
+
+After failed attempts with piped stdin and Claude Code reading the prompt interactively, the correct launch method was established and validated on both Santiago de Compostela and Murcia:
+
+1. Open a fresh terminal tab
+2. `cd /Users/harryenchin/Documents/GitHub/localbite`
+3. `claude --dangerously-skip-permissions`
+4. At the `❯` prompt, type: `Read localbite-prompt-v71-[city]-part1.txt and localbite-prompt-v7-template.txt and run the full pipeline now.`
+
+Piping via stdin (`< localbite-prompt-v71-[city].txt`) causes Claude Code to display the prompt and ask "what do you want to do?" rather than executing it. The typed-instruction method works reliably. CLAUDE.md updated and committed with this documentation.
+
+The earlier attempt also revealed that CLAUDE.md's warning about subprocess launching was too strongly worded — Claude Code read it and refused to run the pipeline entirely. The warning was removed and replaced with correct launch documentation.
+
+---
+
+### Infrastructure Fixes Committed
+
+All fixes committed in sequence throughout the session. Final commit: fe4a061.
+
+**localbite-geocode.js (v8.1 → v8.2):**
+- Case-insensitive CITY_BOXES lookup — fixed "Santiago De Compostela" vs "Santiago de Compostela" mismatch that caused geocoder to fail with no bounding box error
+- Removed duplicate "Santiago De Compostela" entry (both title-case and lowercase were present after the fix)
+- Added Murcia bounding box (expanded to cover El Palmar at latMin 37.91)
+- Added Santiago de Compostela bounding box
+
+**localbite-postrun.js (v3.0 → v3.1):**
+- article_url removed from REQUIRED_SOURCE_FIELDS (blocking) and replaced with a non-blocking warning that names each affected source — cannot be auto-repaired since postrun.js doesn't know the URLs
+- article_url null check added — presence check was insufficient; now also checks for null/empty value
+- source_id → id normalisation added to auto-repair (Step 1.5) — pipeline sometimes writes source_id instead of id
+- source_recency empty string validation — isEmpty condition added to catch empty strings and null values, not just malformed date strings
+
+**index.html (viewer):**
+- Source ↗ link hidden when article_url is null — previously rendered with href="#" causing navigation to Barcelona (the first city loaded)
+- currentSources indexes by `s.id || s.source_id` — handles both field name variants across old and new pipeline output
+- source_recency shown dynamically from data.source_recency in hero meta
+
+**CLAUDE.md:**
+- Pipeline launch warning removed (was blocking Claude Code from running)
+- Correct launch method documented with exact typed instruction
+
+**~/.zshrc:**
+- ANTHROPIC_API_KEY added permanently — available in all login shell sessions without manual export
+
+---
+
+### City Runs
+
+**Alicante (19th city) — 2026-04-21**
+- File: localbite-alicante-2023-2026.json
+- 9 restaurants, 7 sources, 1 both-pool (Nou Manolín: ES+EN)
+- Issues encountered: subprocess launch failure on first attempt, schema drift (auto-repair fixed), city_slug missing country suffix (auto-corrected), source_id vs id mismatch (fixed), article_url null (added manually), La Barra del Gourmet wrong geocode (nulled + geo_skip)
+- Thin pack — EN coverage structurally limited in Alicante
+
+**Santiago de Compostela (20th city) — 2026-04-21**
+- File: localbite-santiago-2023-2026.json
+- 27 restaurants, 6 sources, 3 both-pool (Lume, Abastos 2.0, A Maceta)
+- PHASE1_AUTO_PROCEED confirmed working: `[unattended-mode] Phase 1 auto-proceeding to Phase 2`
+- Issues: geocoder case mismatch (fixed — triggered the geocode.js case-insensitive fix), source_recency empty string (manual fix), article_url null (added manually from Jina fetch URLs), source_id → id mismatch (manual fix then added to auto-repair)
+- Sources: El Correo Gallego (Sergio Romero), GastroSantiago/El Español (Beatriz Castro), The Objective (Brenda Alonso), Camino Insider Guide (Christian W. Bauer, ⚠ coi), Oladaniela (Daniela Sunde-Brown), NatGeo España (Lucía Díaz Madurga)
+- Multiple post-pipeline commits required to fix data issues
+
+**Murcia (21st city) — 2026-04-21 — Cleanest unattended run**
+- File: localbite-murcia-2023-2026.json
+- 10 restaurants, 5 sources (9 source entries — Murcialist contributed 5 article-level entries), 0 both-pool
+- EN primary gap documented as structural — all EN candidates examined and rejected for valid reasons (wrong date range, COI, no named author, outside scope)
+- Pipeline auto-added CITY_CENTRES, CITY_BOUNDS, index.json — no postrun.js action needed for these
+- article_url: all 9 sources set correctly by the pipeline without any manual fix
+- source_recency: "2023-2026" correct without manual fix
+- city_slug: "murcia-spain" correct
+- Only manual steps: 4 wrong geocoding matches nulled + geo_skip (Local de Ensayo, Mapa, Federal Café, Pepe Juan)
+- Sources: Miguel Ángel Torralba (The Murcialist, 5 articles), Concha Alcántara (The Gastro Times), José Carlos Capel (Gastroactitud), Lucía Díaz Madurga (NatGeo Viajes), Marina Vega (Guía Repsol)
+- Pipeline also auto-expanded Murcia CITY_BOXES bounding box to cover El Palmar (Cabaña Buenavista, 2 Michelin stars)
+
+---
+
+### Automation Gap Analysis
+
+A comprehensive review of all issues blocking full automation was completed. Ranked by impact:
+
+| Issue | Blocks full automation | Fix complexity | Priority |
+|-------|----------------------|----------------|----------|
+| Wrong geocoding requires human review | YES — every run | Medium — fuzzy name matching | High |
+| article_url lost under compaction | SOMETIMES — unpredictable | Hard — compaction is Claude Code behaviour | High |
+| Centroid approval is interactive | YES — every run | Low — add --auto-accept flag | High |
+| Pipeline launch is multi-step | YES | Medium — expect/pexpect script | Medium |
+| source_recency edge cases | SOMETIMES | Low — already partially fixed | Medium |
+| API key not in all shell contexts | SOMETIMES | Low — .env file in repo | Low |
+| Git commit/push is manual | YES — deliberate | Low — deliberate human checkpoint | Low |
+| No automated viewer smoke test | Not blocking but risky | Medium | Low |
+
+After fixes planned for next session, per-city human time should drop from ~25 minutes to under 10 minutes. The remaining human steps will be: review 1–2 ambiguous geocoding cases, run git commit.
+
+---
+
+### Key Decisions
+
+- **Pipeline launch method confirmed:** Open Claude Code without pipe, type the read instruction at the prompt. Validated on Santiago and Murcia. Documented in CLAUDE.md.
+- **article_url is a non-blocking warning:** Cannot be auto-repaired by postrun.js. Source ↗ links hidden in viewer when null. Pipeline must write it during Phase 2.
+- **source_id → id auto-repair added:** postrun.js Step 1.5 now normalises both field name variants.
+- **Geocoder case-insensitive lookup:** CITY_BOXES lookup now case-insensitive. Eliminates title-case city name mismatches.
+- **Murcia EN gap is structural:** Not a pipeline failure — genuinely underserved by English-language food writing. Documented and accepted.
+- **Murcia sources_confirmed metric is inflated:** Metrics show 9 source entries but only 5 unique publishers (The Murcialist contributed 5 article-level entries). Metric counts entries not publishers.
+- **Raw JSON bug accepted for now:** Pipeline writes copy of final.json as raw.json instead of pre-removal working file. Fix planned for next session.
+- **Metrics null for all compacting runs:** Placeholder substitution bug in metrics node command. Fix planned for next session.
+- **Both fixes to CLAUDE.md:** Launch warning removed; correct launch method documented.
+
+---
+
+### Files Produced or Updated
+
+| File | Status | Notes |
+|------|--------|-------|
+| localbite-alicante-2023-2026.json | New | 9R, 1BP, 7 sources |
+| localbite-santiago-2023-2026.json | New | 27R, 3BP, 6 sources |
+| localbite-murcia-2023-2026.json | New | 10R, 0BP, 5 sources |
+| localbite-geocode.js | Updated | Case-insensitive lookup, new bounding boxes, duplicate removed |
+| localbite-postrun.js | Updated | article_url warning, source_id→id, source_recency fixes |
+| index.html | Updated | Viewer null article_url fix, currentSources fallback, 2228 lines |
+| localbite-index.json | Updated | 21 cities |
+| CLAUDE.md | Updated | Launch method corrected |
+| ~/.zshrc | Updated | ANTHROPIC_API_KEY persisted |
+| localbite-prompt-v71-alicante-part1.txt | New | |
+| localbite-prompt-v71-alicante.txt | New | |
+| localbite-prompt-v71-santiago-part1.txt | New | |
+| localbite-prompt-v71-santiago.txt | New | |
+| localbite-prompt-v71-murcia-part1.txt | New | |
+| localbite-prompt-v71-murcia.txt | New | |
+| localbite-alicante-search-log.txt | New | |
+| localbite-alicante-search-plan.txt | New | |
+| localbite-alicante-raw.json | New | |
+| localbite-alicante-audit.txt | New | |
+| localbite-santiago-search-log.txt | New | |
+| localbite-santiago-search-plan.txt | New | |
+| localbite-santiago-raw.json | New | |
+| localbite-santiago-audit.txt | New | |
+| localbite-murcia-search-log.txt | New | |
+| localbite-murcia-search-plan.txt | New | |
+| localbite-murcia-raw.json | New | Copy of final — raw JSON bug outstanding |
+| localbite-run-metrics.log | Updated | Entries for all three cities — all null except searches_run |
+| localbite-journal-updated.md | Updated | This entry |
+
+Final commit: ea531c7 (Murcia docs)
+Post-session fixes commit: fe4a061 (automation gap fixes)
+
+---
+
+### Outstanding Items
+
+- [ ] Fix metrics placeholder substitution bug — [OUTPUT_SEARCH_LOG] and [OUTPUT_FINAL] not substituted before metrics node command runs
+- [ ] Fix raw JSON output — should save pre-removal Tier C entries, not copy of final JSON
+- [ ] Add --auto-accept flag to localbite-approve-centroids.js
+- [ ] Add geocoding auto-null: entity blocklist + word-overlap check in localbite-geocode.js
+- [ ] Add article_url recovery from search log in postrun.js Step 1.7
+- [ ] Verify source_recency empty string condition with unit test
+- [ ] Add .env file for ANTHROPIC_API_KEY (available in all shell contexts)
+- [ ] Run Pamplona v7.1 as validation test of automation fixes
+- [ ] Madrid: 56 open_status_check pending; Centro → Granada centroid collision active
+- [ ] 7 cities with centroid collisions — accepted, resolve at rebuild time
+- [ ] 13 cities on old pipeline (pre-v7.1) — rebuild at natural trigger
+
+---
+
+*Fleet: 21 cities, 575+ restaurants, 8 on v7.1, index.html 2,228 lines (trigger 2,500)*
