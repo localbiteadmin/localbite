@@ -75,6 +75,7 @@ const CITY_BOXES = {
   'Madrid':       { latMin: 40.35, latMax: 40.50, lngMin:  -3.75, lngMax:  -3.60 },
   'Seville':      { latMin: 37.30, latMax: 37.45, lngMin:  -6.05, lngMax:  -5.90 },
   'Bilbao':       { latMin: 43.22, latMax: 43.32, lngMin:  -3.05, lngMax:  -2.80 },
+  'Alicante':    { latMin: 38.31, latMax: 38.41, lngMin: -0.54, lngMax: -0.44 },
   'Valladolid':    { latMin: 41.61, latMax: 41.72, lngMin: -4.82, lngMax: -4.63 },
   'Zaragoza':       { latMin: 41.60, latMax: 41.70, lngMin: -0.95, lngMax: -0.75 },
   'San Sebastian':  { latMin: 43.28, latMax: 43.34, lngMin:  -2.04, lngMax:  -1.89 },

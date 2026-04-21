@@ -1,0 +1,144 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES (v7.1)
+Change only this section for each new city.
+Full prompt = cat this file + localbite-prompt-v7-template.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+════════════════════════════════════════
+REQUIRED VARIABLES
+════════════════════════════════════════
+
+CITY: Alicante
+COUNTRY: Spain
+CITY_SLUG: alicante-spain
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: ES
+SEARCH_LANGUAGES: Spanish, English
+SINGLE_LANGUAGE_CITY: NO
+YEAR_RANGE: 2023–2026
+
+════════════════════════════════════════
+OPTIONAL VARIABLES
+════════════════════════════════════════
+
+UNATTENDED_MODE: YES
+PHASE1_AUTO_PROCEED: YES
+— When YES: pipeline proceeds to Phase 2 immediately after
+  presenting the Phase 1 source list, without waiting for
+  a PROCEED instruction.
+
+DIRECT_FETCH_SOURCES:
+— No confirmed article-level URLs available for Alicante.
+— Phase 0 will be skipped. Pipeline relies entirely on Phase 1
+  discovery.
+— Note: DIRECT_FETCH_SOURCES must be article-level URLs pointing to
+  a specific named-author food guide. Section pages and publication
+  homepages will almost always fail Phase 0.
+
+════════════════════════════════════════
+NEIGHBOURHOOD STRUCTURE
+════════════════════════════════════════
+
+Research basis: Official Alicante municipal structure and dining
+geography verified via local sources. Administrative districts are
+not used by food writers or locals for navigation — social barrios
+and named areas are the relevant unit. Dining scene is concentrated
+in the historic centre and waterfront with secondary scenes in
+Ensanche and the marina.
+
+Note on naming: Generic names prefixed per project convention to
+prevent centroid collisions with other fleet cities. "Centro",
+"El Barrio", "Ensanche", and "El Puerto" all appear in other
+cities and must be prefixed throughout the JSON output.
+
+TIER_1_NEIGHBOURHOODS: Alicante Centro, Alicante El Barrio
+TIER_2_NEIGHBOURHOODS: Alicante Ensanche, Alicante El Puerto
+TIER_3_NEIGHBOURHOODS: Benalúa, Playa de San Juan
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Alicante Centro (Plaza del Ayuntamiento, Explanada de España,
+Cathedral area), Alicante El Barrio (Santa Cruz old town, narrow
+streets below Castillo de Santa Bárbara), Alicante Ensanche
+(Ensanche Diputación, El Postiguet beach area), Alicante El Puerto
+(marina, Puerto deportivo), Benalúa, Carolinas Altas,
+Carolinas Bajas, Playa de San Juan
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Dénia, Calpe, Jávea, Altea, Benidorm, Villajoyosa, Elche,
+Murcia, Valencia, or any location described as "outside Alicante
+city", "province of Alicante", "Costa Blanca", "nearby town",
+or another municipality in the region.
+IMPORTANT: The Michelin-starred restaurants in Calpe (Audrey's,
+Beat, Orobianco) and Dénia (Quique Dacosta 3★, Bon Amb 2★) are
+in the province, not Alicante city — exclude these entirely.
+
+════════════════════════════════════════
+LOCAL CONTEXT
+════════════════════════════════════════
+
+LOCAL_FOOD_VOCABULARY:
+— arroz a banda (rice cooked in fish stock, the defining Alicante
+  dish — traditionally two courses: rice first, then the fish)
+— esgarraet (roasted red pepper and salt cod salad, intensely local)
+— pericana (dried ñora pepper and salt cod condiment, rustic origin)
+— caldero (fish and rice stew, regional Mar Menor variant)
+— coca de mollitas (flatbread with pork lard crumbles, local staple)
+— gamba roja (red prawn — closely associated with Dénia/Alicante
+  region, used throughout local food writing as premium product)
+— turrón de Alicante (hard nougat, DOP designation, Jijona origin)
+— Monastrell (dominant red grape of Alicante DO wine region)
+— La Terreta (informal term locals and food writers use for the
+  Alicante region — signals local-register writing)
+— El Barrio (the old town tapas zone below the castle — essential
+  local shorthand for the historic restaurant district)
+
+Use 2 Cross-6 vocabulary queries in Spanish targeting arroz a banda,
+esgarraet, and La Terreta to catch local-register food writing that
+generic city-wide queries miss.
+
+SOURCE_EXAMPLES:
+— Local Alicante press: Información de Alicante (main daily),
+  Las Provincias (Alicante edition), Diario Información,
+  El Español Alicante
+— Regional gastronomy: Guía Repsol Comunitat Valenciana section,
+  El País Gastro (Valencia/Alicante desk)
+— English-language: Olive Press food coverage, Costa Blanca travel
+  food writers, English-language expat food blogs with Alicante focus
+— Note: Alicante has higher tourist profile than Zaragoza or
+  Valladolid — EN-language coverage is more likely. Both-pool is
+  possible but not guaranteed. Do not manufacture a false both-pool
+  if EN sources are thin or do not qualify under the named-author rule.
+
+KNOWN_AWARDS:
+— El Portal Alicante - Krug Ambassade: 1 Michelin star (city centre)
+— Baeza & Rufete: 1 Michelin star (Alicante city outskirts)
+— La Taberna del Gourmet: Michelin Bib Gourmand
+— Repsol: several Soles in Alicante city — include named award queries
+— Province exclusion: Quique Dacosta Restaurante (Dénia, 3★),
+  Bon Amb (Jávea, 2★), Audrey's/Beat/Orobianco (Calpe, 1★ each)
+  are province only — do not include in city pack
+
+KNOWN_COMMERCIAL_CONFLICTS:
+— None confirmed for Alicante food media. Apply standard COI check
+  to every source per template instructions.
+
+SECONDARY_SOURCES: Time Out, Condé Nast Traveller, Lonely Planet,
+El País Gastro (national desk), El Mundo Metrópoli (national desk),
+Guía Repsol (national)
+
+════════════════════════════════════════
+PRICE AND OUTPUT
+════════════════════════════════════════
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+- 1 = under €20pp
+- 2 = €20–40pp
+- 3 = €40–80pp
+- 4 = over €80pp
+
+OUTPUT_RAW: ./localbite-alicante-raw.json
+OUTPUT_FINAL: ./localbite-alicante-2023-2026.json
+OUTPUT_WORKING: ./localbite-alicante-working.json
+OUTPUT_SEARCH_LOG: ./localbite-alicante-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-alicante-search-plan.txt
