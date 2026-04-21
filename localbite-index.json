@@ -1,7 +1,7 @@
 {
   "project": "LocalBite",
   "description": "Curated restaurant packs built from named food writers, 2025-2026 sources only",
-  "last_updated": "2026-04-20",
+  "last_updated": "2026-04-21",
   "cities": [
     {
       "city": "Barcelona",
@@ -237,7 +237,7 @@
       "country": "Spain",
       "city_slug": "valladolid-spain",
       "pipeline": "localbite-v7.1",
-      "built": "2026-04-20",
+      "built": "2026-04-21",
       "restaurant_count": 30,
       "both_pool_count": 0,
       "source_count": 5,
