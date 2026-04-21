@@ -407,6 +407,10 @@ async function geocodeAll() {
     const r = data.restaurants[i];
     const nb = r.neighbourhood || '';
 
+    if (r.geo_skip === true) {
+      console.log(`[${i + 1}/${data.restaurants.length}] ⊘ ${r.name} — geo_skip flag set, skipping`);
+      continue;
+    }
     if (r.lat && r.lng) {
       console.log(`[${i + 1}/${data.restaurants.length}] ✓ ${r.name} — already geocoded (${r.geo_source})`);
       stats.already++;

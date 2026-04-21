@@ -873,7 +873,7 @@ JSON structure — FILE 2 (final):
 {
   "city": "[CITY]",
   "country": "[COUNTRY]",
-  "city_slug": "[CITY_SLUG]",
+  "city_slug": "[CITY_SLUG]",  // MUST match Part 1 exactly, format: city-country e.g. "alicante-spain"
   "built": "[today's date]",
   "source_recency": "[YEAR_RANGE]",
   "pipeline": "localbite-v7.1",

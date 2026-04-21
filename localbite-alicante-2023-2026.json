@@ -165,7 +165,6 @@
       "quote_language": "original",
       "article_date": "2023-04-23",
       "open_status_check": true,
-      "tier": "A",
       "language_pool": "both",
       "flagged": true,
       "flag_reason": "open_status_check — oldest source dated 2023-04-23; verify still open before deployment",
@@ -179,7 +178,8 @@
       ],
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Nou Manolín"
+      "geo_matched_name": "Nou Manolín",
+      "confidence_tier": "A"
     },
     {
       "name": "Béton Brut",
@@ -203,7 +203,6 @@
       "quote_language": "original",
       "article_date": "2026-02-28",
       "open_status_check": false,
-      "tier": "B",
       "language_pool": "es",
       "flagged": false,
       "lat": 38.3405981,
@@ -214,7 +213,8 @@
       ],
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Béton Brut"
+      "geo_matched_name": "Béton Brut",
+      "confidence_tier": "B"
     },
     {
       "name": "Plëgat",
@@ -240,7 +240,6 @@
       "quote_language": "original",
       "article_date": "2026-03-08",
       "open_status_check": false,
-      "tier": "B",
       "language_pool": "es",
       "flagged": false,
       "lat": null,
@@ -248,7 +247,8 @@
       "centroid": null,
       "sources": [
         "src-elespanol-plegat"
-      ]
+      ],
+      "confidence_tier": "B"
     },
     {
       "name": "La Barra del Gourmet",
@@ -270,7 +270,6 @@
       "quote_language": "original",
       "article_date": "2026-03-14",
       "open_status_check": false,
-      "tier": "B",
       "language_pool": "es",
       "flagged": false,
       "lat": null,
@@ -281,7 +280,9 @@
       ],
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "confidence_tier": "B"
     },
     {
       "name": "Marcel Bistró",
@@ -310,7 +311,6 @@
       "quote_language": "original",
       "article_date": "2026-03-22",
       "open_status_check": false,
-      "tier": "B",
       "language_pool": "es",
       "flagged": false,
       "lat": null,
@@ -318,7 +318,8 @@
       "centroid": null,
       "sources": [
         "src-elespanol-marcelbistro"
-      ]
+      ],
+      "confidence_tier": "B"
     },
     {
       "name": "Cesar Anca",
@@ -342,7 +343,6 @@
       "quote_language": "original",
       "article_date": "undated",
       "open_status_check": false,
-      "tier": "B",
       "language_pool": "en",
       "flagged": false,
       "lat": 38.3429488,
@@ -353,7 +353,8 @@
       ],
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La barra de César Anca"
+      "geo_matched_name": "La barra de César Anca",
+      "confidence_tier": "B"
     },
     {
       "name": "Probar el Buen Bar",
@@ -376,7 +377,6 @@
       "quote_language": "original",
       "article_date": "undated",
       "open_status_check": false,
-      "tier": "B",
       "language_pool": "en",
       "flagged": false,
       "lat": null,
@@ -384,7 +384,8 @@
       "centroid": null,
       "sources": [
         "src-gourmetgorro-gilbert"
-      ]
+      ],
+      "confidence_tier": "B"
     },
     {
       "name": "Bar Guillermo",
@@ -405,7 +406,6 @@
       "quote_language": "original",
       "article_date": "undated",
       "open_status_check": false,
-      "tier": "B",
       "language_pool": "en",
       "flagged": false,
       "lat": null,
@@ -413,7 +413,8 @@
       "centroid": null,
       "sources": [
         "src-gourmetgorro-gilbert"
-      ]
+      ],
+      "confidence_tier": "B"
     },
     {
       "name": "Cervecerías Sento",
@@ -436,7 +437,6 @@
       "quote_language": "original",
       "article_date": "undated",
       "open_status_check": false,
-      "tier": "B",
       "language_pool": "en",
       "flagged": false,
       "lat": 38.3460167,
@@ -447,13 +447,14 @@
       ],
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Cervecería Sento Barrio"
+      "geo_matched_name": "Cervecería Sento Barrio",
+      "confidence_tier": "B"
     }
   ],
   "centroids": {
     "Alicante Centro": [
-      38.3442,
-      -0.4839
+      38.3441,
+      -0.4851
     ],
     "Alicante Ensanche": [
       38.3446,

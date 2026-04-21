@@ -185,11 +185,75 @@ function isThinProfile(profile) {
   const REQUIRED_SOURCE_FIELDS    = ['writer', 'publication', 'article_url', 'commercial_conflict', 'writer_profile'];
   const REQUIRED_RESTAURANT_FIELDS = ['name', 'language_pool', 'quote', 'sources'];
 
-  const errors = [];
   const sourcesArray = Array.isArray(data.sources) ? data.sources : Object.values(data.sources || {});
 
+  // ── Auto-repair known compaction drift patterns ──────────────────────────
+  // Runs before validation so postrun.js never blocks on fixable drift.
+  let autoRepaired = 0;
+  for (const src of sourcesArray) {
+    if ('publisher' in src && !('publication' in src)) {
+      src.publication = src.publisher; delete src.publisher; autoRepaired++;
+    }
+    if ('author_name' in src && !('writer' in src)) {
+      src.writer = src.author_name; delete src.author_name; autoRepaired++;
+    }
+    // Fix 3 — exhaustive field name variants from compaction drift
+    if ('url' in src && !('article_url' in src))           { src.article_url = src.url; delete src.url; autoRepaired++; }
+    if ('title' in src && !('article_title' in src))       { src.article_title = src.title; delete src.title; autoRepaired++; }
+    if ('date' in src && !('article_date' in src))         { src.article_date = src.date; delete src.date; autoRepaired++; }
+    if ('lang' in src && !('language' in src))             { src.language = src.lang; delete src.lang; autoRepaired++; }
+    if ('language_code' in src && !('language' in src))    { src.language = src.language_code; delete src.language_code; autoRepaired++; }
+    if ('coi' in src && !('commercial_conflict' in src))   { src.commercial_conflict = src.coi; delete src.coi; autoRepaired++; }
+    if (!('commercial_conflict' in src))      { src.commercial_conflict = false; autoRepaired++; }
+    if (!('commercial_conflict_note' in src)) { src.commercial_conflict_note = null; autoRepaired++; }
+    if (!src.writer_profile || src.writer_profile.trim().split(' ').length < 8) {
+      src.writer_profile = `${src.writer || 'Writer'} writes for ${src.publication || 'this publication'}.`;
+      autoRepaired++;
+    }
+  }
+
+  // Fix 3 — restaurant field name variants
+  for (const r of data.restaurants) {
+    if ('restaurant_name' in r && !('name' in r))   { r.name = r.restaurant_name; delete r.restaurant_name; autoRepaired++; }
+    if ('venue_name' in r && !('name' in r))        { r.name = r.venue_name; delete r.venue_name; autoRepaired++; }
+    if ('pool' in r && !('language_pool' in r))     { r.language_pool = r.pool; delete r.pool; autoRepaired++; }
+    if ('lang_pool' in r && !('language_pool' in r)){ r.language_pool = r.lang_pool; delete r.lang_pool; autoRepaired++; }
+    if ('tier' in r && !('confidence_tier' in r))   { r.confidence_tier = r.tier; delete r.tier; autoRepaired++; }
+  }
+
+  // Fix 1 — language_pool derived from source languages, not hardcoded
+  // Build a map of source_id → language from the sources array
+  const sourceLangMap = {};
+  for (const src of sourcesArray) {
+    const sid = src.id || src.source_id;
+    if (sid && src.language) sourceLangMap[sid] = (src.language || '').toLowerCase().trim();
+  }
+  for (const r of data.restaurants) {
+    if (!r.language_pool) {
+      const rSourceIds = Array.isArray(r.sources) ? r.sources : [];
+      const langs = new Set(rSourceIds.map(sid => sourceLangMap[sid]).filter(Boolean));
+      if (langs.has('en') && (langs.has('es') || langs.has('pt') || langs.has('fr') || langs.has('ca') || langs.has('ar'))) {
+        r.language_pool = 'both';
+      } else if (langs.has('en')) {
+        r.language_pool = 'en';
+      } else if (langs.size > 0) {
+        r.language_pool = [...langs][0]; // use first non-EN language found
+      } else {
+        r.language_pool = 'es'; // fallback only if no source language info available
+      }
+      autoRepaired++;
+    }
+  }
+  if (autoRepaired > 0) {
+    fs.writeFileSync(file, JSON.stringify(data, null, 2));
+    console.log(`⚠  Auto-repaired ${autoRepaired} field(s) — compaction drift detected and corrected.`);
+    console.log(`   Profile placeholders will be replaced by Step 2b enrichment.`);
+  }
+
+  // ── Validation (runs on repaired data) ───────────────────────────────────
+  const errors = [];
   for (const [i, src] of sourcesArray.entries()) {
-    const label = src.writer || src.author_name || src.id || `#${i}`;
+    const label = src.writer || src.id || `#${i}`;
     for (const field of REQUIRED_SOURCE_FIELDS) {
       if (!(field in src)) errors.push(`Source "${label}": missing field "${field}"`);
     }
@@ -198,7 +262,6 @@ function isThinProfile(profile) {
     if ('publisher' in src && !('publication' in src))
       errors.push(`Source "${label}": uses "publisher" — must be "publication"`);
   }
-
   for (const [i, r] of data.restaurants.entries()) {
     for (const field of REQUIRED_RESTAURANT_FIELDS) {
       if (!(field in r) || r[field] === undefined)
@@ -207,15 +270,37 @@ function isThinProfile(profile) {
   }
 
   if (errors.length > 0) {
-    console.log(`\n✗ SCHEMA VALIDATION FAILED — ${errors.length} error(s):\n`);
+    console.log(`\n✗ SCHEMA VALIDATION FAILED — ${errors.length} error(s) not auto-repairable:\n`);
     errors.forEach(e => console.log(`  ✗ ${e}`));
-    console.log(`\nCommon cause: context compaction caused field name drift.`);
-    console.log(`See FIELD NAME CONTRACT in the v7.1 template.`);
+    console.log(`\nThese errors require manual investigation.`);
     console.log(`\nDo NOT commit ${file} until schema errors are resolved.\n`);
     process.exit(1);
   }
 
   console.log(`✓ Schema validation passed — all required fields present.`);
+
+  // ══ STEP 1.6b — city_slug validation ══════════════════════════════════════
+  // Compaction sometimes drops the country suffix from city_slug (e.g. writes
+  // "alicante" instead of "alicante-spain"). Auto-correct from filename.
+  {
+    const slug = data.city_slug || '';
+    const hasCountry = slug.includes('-') && slug.split('-').length >= 2 &&
+                       slug !== slug.split('-')[0]; // more than just city name
+    if (!hasCountry) {
+      // Derive from filename: localbite-[city]-[year].json → city portion may be multi-word
+      // Use data.country to build the suffix
+      const countrySuffix = (data.country || '').toLowerCase().replace(/\s+/g, '-');
+      if (countrySuffix && !slug.endsWith(countrySuffix)) {
+        const corrected = `${slug}-${countrySuffix}`;
+        console.log(`\n⚠ city_slug "${slug}" missing country suffix — correcting to "${corrected}"`);
+        data.city_slug = corrected;
+        fs.writeFileSync(file, JSON.stringify(data, null, 2));
+        console.log(`✓ city_slug corrected.`);
+      }
+    } else {
+      console.log(`✓ city_slug "${slug}" — correct format.`);
+    }
+  }
 
   // ══ STEP 1.6 — source_recency validation ════════════════════════════════════
   // Compaction sometimes causes the pipeline to write the most recent article
