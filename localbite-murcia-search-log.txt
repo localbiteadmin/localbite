@@ -1,0 +1,269 @@
+LOCALBITE MURCIA SEARCH LOG
+Pipeline: localbite-v7.1 | City: Murcia, Spain | Run date: 2026-04-21
+Year range: 2023–2026 | Primary language: ES | Secondary: EN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PHASE 1 — SOURCE DISCOVERY
+───────────────────────────────────────────────────────────────────────
+
+PART A — NEIGHBOURHOOD QUERIES (28 planned, all run)
+
+A1 [ES, earlier] search: "mejores restaurantes Murcia Centro 2023 2024 guía gastronómica"
+  → The Gastro Times, saltaconmigo.com, La Verdad de Murcia, thegastrotimes.com
+A2 [EN, later] search: "best restaurants Murcia city centre Plaza Flores 2025 2026"
+  → Emily Luxton emilyluxton.co.uk, murciatoday.com, culture trip, timeout
+A3 [ES, earlier] search: "restaurantes Santa Eulalia Murcia recomendados 2024"
+  → themurcialist.com (Mapa, Santa Eulalia), comerviajarynadamas.com
+A4 [EN, no year] search: "Santa Eulalia Murcia neighbourhood restaurants food guide"
+  → saltaconmigo.com (rejected: multi-author, no full surnames)
+A5 [ES, later] search: "mejores bares tapas El Carmen Murcia 2025 2026"
+  → La Opinión de Murcia, murciahoy.com; no qualifying named-author sources
+A6 [EN, earlier] search: "El Carmen Murcia restaurants bar guide 2024"
+  → theculturetrip.com (403 Forbidden), generic listicles
+A7 [ES, earlier] search: "restaurantes La Flota Murcia guía 2023 2024"
+  → themurcialist.com (Tándem, C/Cánovas del Castillo near La Flota/Centro)
+A8 [EN, no year] search: "La Flota Murcia food restaurants guide"
+  → no qualifying EN sources
+A9 [ES, no year] search: "restaurantes Espinardo Murcia recomendados"
+  → Taúlla (Espinardo) via thegastrotimes.com; NatGeo Taúlla mention
+A10 [ES, no year] search: "mejores restaurantes La Alberca Murcia"
+  → no restaurant sources specific to La Alberca; general Murcia results
+
+PART B — CROSS-CUTTING QUERIES
+
+B1 [EN, earlier] search: "best restaurants Murcia Spain food guide 2023 2024"
+  → Emily Luxton (emilyluxton.co.uk) food guide for Murcia found
+B2 [EN, later] search: "where to eat in Murcia recommendations 2025 2026"
+  → tickereatstheworld.com (2019, outside YEAR_RANGE); bonviveur.es found
+B3 [ES, later] search: "crítica gastronómica restaurantes Murcia 2025"
+  → gastroactitud.com (José Carlos Capel — Local de Ensayo, Dec 2024)
+B4 [ES, earlier] search: "dónde comer bien en Murcia tapas barrio 2024"
+  → themurcialist.com (El Huésped, El Salón del Secreto)
+B5 [ES, earlier] search: "guía gastronómica Murcia prensa reseñas 2023"
+  → labrujuladelgourmet.com (Sergio Gallego; 503 error — domain suspended)
+B6 [ES, no year] search: "periodista gastronómica escritora comida Murcia guía restaurantes"
+  → gastroactitud.com Frases review (author credentials listed but no full name → rejected)
+B7 [EN, no year] search: "food writer Murcia restaurant recommendations guide"
+  → culinarytravels.co.uk (COI: commissioned by Visit Murcia; quotes <15 words → rejected)
+B8 [no year] search: "Cabaña Buenavista Michelin Murcia estrella chef González-Conejero"
+  → murciadiario.com, elitemurcia.es; confirmed 2 Michelin stars Pablo González-Conejero
+B9 [earlier] search: "Soles Repsol restaurantes Murcia 2024 2025"
+  → guiarepsol.com Frases (Marina Vega); Pura Cepa (1 Sol confirmed)
+B10 [later] search: "Michelin guide restaurants Murcia Spain 2025 2026"
+  → Almo (Juan Guillamón, 1 star); Frases (1 star, Nov 2024); Cabaña Buenavista (2 stars)
+B11 [ES, earlier] search: "nuevos restaurantes Murcia aperturas 2024 2025"
+  → themurcialist.com (El Salón del Secreto May 2024, Federal Café Nov 2024)
+B12 [EN, later] search: "new restaurant openings Murcia Spain 2025 2026"
+  → no qualifying EN named-author sources
+B13 [ES, no year] search: "marinera zarangollo tapas Murcia restaurante recomendado"
+  → D'Tomar y Salabores (The Gastro Times — no byline → rejected)
+B14 [ES, no year] search: "huerta murciana restaurante Murcia gastronomía local"
+  → generic Región de Murcia tourism content; no qualifying sources
+B15 [ES, no year] search: "arroz caldero Murcia restaurante recomendado Mar Menor"
+  → El Barco (The Murcialist Jul 2024 — Cabo de Palos, outside city → excluded)
+B16 [ES, no year] search: "pastel de carne michirones Murcia restaurante tradicional"
+  → teveoenmurcia.com (gambling redirect — domain repurposed → rejected)
+B17 [ES, no year] search: "revista gastronómica independiente Murcia restaurantes recomendados"
+  → themurcialist.com homepage; thegastrotimes.com confirmed as primary source
+B18 [ES, no year] search: "suplemento gastronomía periódico Murcia mejores restaurantes"
+  → La Verdad de Murcia; Murcia Hoy; no qualifying named-author food articles found
+
+PHASE 1 — SOURCE CANDIDATE FETCHES
+───────────────────────────────────────────────────────────────────────
+
+[FETCH] https://r.jina.ai/https://emilyluxton.co.uk/murcia-food-guide/
+  → Author: Emily Luxton; Date: 2017-08-02 → OUTSIDE YEAR_RANGE → REJECTED
+
+[FETCH] https://r.jina.ai/https://emilyluxton.co.uk/reasons-to-visit-murcia/
+  → Date: 2020-12 → OUTSIDE YEAR_RANGE; no restaurant recommendations → REJECTED
+
+[FETCH] https://r.jina.ai/https://saltaconmigo.com/about/
+  → Authors: Sara + JAAC; no full surnames; multi-author → REJECTED (named-author rule)
+
+[FETCH] https://r.jina.ai/https://comerviajarynadamas.com/ (multiple attempts)
+  → CAPTCHA-blocked on all attempts; cannot verify author → CANNOT USE
+
+[FETCH] https://r.jina.ai/https://teveoenmurcia.com/
+  → Domain repurposed; returns gambling content → REJECTED
+
+[FETCH] https://r.jina.ai/https://labrujuladelgourmet.com/
+  → 503 error; domain suspended → CANNOT ACCESS
+
+[FETCH] https://r.jina.ai/https://theculturetrip.com/europe/spain/murcia/
+  → 403 Forbidden → CANNOT ACCESS
+
+[FETCH] https://r.jina.ai/https://culinarytravels.co.uk/murcia-spain/
+  → COI: commissioned by Visit Murcia official tourism; quotes all <15 words → REJECTED
+
+[FETCH] https://r.jina.ai/https://thegastrotimes.com/local-de-ensayo-murcia/ (and similar The Gastro Times features)
+  → No author byline on these feature articles; multi-author site → CANNOT USE (byline required)
+
+[FETCH] https://r.jina.ai/https://thegastrotimes.com/bares-con-mas-solera/ (and others)
+  → No byline → CANNOT USE
+
+[FETCH] https://r.jina.ai/https://www.gastroactitud.com/pista/mejores-restaurantes-region-murcia/ (roundup article)
+  → Author unnamed (credentials only: 'Licenciada en Ciencias de la Información'); no full name → REJECTED
+
+[FETCH] https://r.jina.ai/https://www.gastroactitud.com/restaurante/frases-murcia/
+  → Author unnamed (credentials only); no full name → REJECTED (different author from Capel)
+
+[FETCH] https://r.jina.ai/https://thegastrotimes.com/dia-internacional-de-la-croqueta-donde-encontrar-las-mejores-de-murcia/
+  → Author: Concha Alcántara (explicit byline); Date: 2024-01-16; qualifying quotes ✓ → ACCEPTED (S2)
+
+[FETCH] https://r.jina.ai/https://www.gastroactitud.com/restaurante/local-de-ensayo-murcia/
+  → Author: José Carlos Capel (explicit byline); Date: 2024-12-12; qualifying quotes ✓ → ACCEPTED (S3)
+
+[FETCH] https://r.jina.ai/https://www.themurcialist.com/ (About/Instagram cross-check)
+  → Single-Author Site Rule confirmed: Miguel Ángel Torralba sole author
+  → Instagram @themurcialist = 'Miguel Á. Torralba'; gastrobloggers.com listing confirms full name → ACCEPTED (S1)
+
+[FETCH] https://r.jina.ai/https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurante-frases-murcia/
+  → Author: Marina Vega; Date: 2023-10-01; qualifying quotes ✓; Guía Repsol = SECONDARY per Part 1 → ACCEPTED (S5)
+
+[FETCH] https://r.jina.ai/https://bonviveur.es/noticias/mejores-restaurantes-murcia
+  → Author: Héctor Hernández; Date: 2024-12-11; Murcia city quotes too short (<15 words) → REJECTED
+
+[FETCH] https://r.jina.ai/https://viajes.nationalgeographic.com.es/gastronomia/mejores-restaurantes-michelin-para-hacer-escapada-a-murcia_21452
+  → Author: Lucía Díaz Madurga; Date: 2024-11-20; qualifying quotes ✓; NatGeo = SECONDARY per policy → ACCEPTED (S4)
+
+PHASE 1B — CROSS-VALIDATION QUERIES
+───────────────────────────────────────────────────────────────────────
+
+[1B-1] search: "Local de Ensayo Murcia reseña crítica 2024"
+  → Gastroactitud (already S3); no new qualifying sources
+
+[1B-2] search: "Cabaña Buenavista Michelin chef González-Conejero reseña 2024 2025"
+  → Various news about Michelin ceremony; no new qualifying primary sources
+
+[1B-3] search: "restaurante Frases Murcia reseña crítica gastronómica 2024 2025"
+  → Las Gastrocrónicas (Paco Hernández, Jul 2025): quotes about restaurant move only, no food quotes ≥15 words → REJECTED
+  → Gastronomía y Moda (Pepelu Martínez, Nov 2024): no dish-level quotes ≥15 words → REJECTED
+
+[FETCH] https://r.jina.ai/https://lasgastrocronicas.com/frases-cambia-de-escenario-la-ultima-estrella-michelin-de-murcia-se-traslada-a-un-nuevo-capitulo/
+  → Paco Hernández; logistics article about Frases relocation; no qualifying food quotes → REJECTED
+
+[FETCH] https://r.jina.ai/https://gastronomiaymoda.com/este-es-el-menu-degustacion-de-frases-el-restaurante-de-murcia-que-ha-conseguido-una-estrella-michelin-2025/
+  → Pepelu Martínez; no dish-level quotes ≥15 words → REJECTED
+
+1B RESULT: 3 queries run; 0 new qualifying sources; all 5 Phase 1 sources confirmed
+
+PHASE 2 — ARTICLE FETCHES AND EXTRACTION
+───────────────────────────────────────────────────────────────────────
+
+[FETCH] S1: https://r.jina.ai/https://www.themurcialist.com/2023/03/tandem.html
+  → Extracted: Tándem (C/Cánovas del Castillo, 37); qualifying quotes ✓; price €35-40
+
+[FETCH] S1: https://r.jina.ai/https://www.themurcialist.com/2023/01/mapa.html
+  → Extracted: Mapa (C/Simón García, 57, Santa Eulalia); qualifying quotes ✓; price €20-25
+
+[FETCH] S1: https://r.jina.ai/https://www.themurcialist.com/2023/04/el-huesped.html
+  → Extracted: El Huésped (Plaza de las Flores); qualifying quotes ✓; price €15-20
+
+[FETCH] S1: https://r.jina.ai/https://www.themurcialist.com/2024/05/el-salon-del-secreto.html
+  → Extracted: El Salón del Secreto (Plaza Santa Catalina, 3); quotes <15 words with specific detail → Tier C
+
+[FETCH] S1: https://r.jina.ai/https://www.themurcialist.com/2024/07/el-barco.html
+  → Location: Cabo de Palos (outside Murcia city) → EXCLUDED (geographic boundary)
+
+[FETCH] S1: https://r.jina.ai/https://www.themurcialist.com/2024/11/federal-cafe.html
+  → Extracted: Federal Café (G.V. Alfonso X el Sabio, 13); qualifying quotes ✓; price €5-15
+
+[FETCH] S1: https://r.jina.ai/https://www.themurcialist.com/2025/10/pepe-juan.html
+  → Extracted: Pepe Juan (C/Trapería); qualifying quotes ✓; price €30-35
+
+[FETCH] S1: https://r.jina.ai/http://www.themurcialist.com/2025/10/ (archive)
+  → Found Pepe Juan (Oct 2025 only within-city article)
+
+[FETCH] S1: https://r.jina.ai/https://www.themurcialist.com/ (homepage)
+  → Recent articles: Leña Madrid (Madrid — excluded), El Peretón (Sangonera la Seca — boundary check → excluded), La Manga Club articles (excluded)
+
+[FETCH] S2: https://r.jina.ai/https://thegastrotimes.com/dia-internacional-de-la-croqueta-donde-encontrar-las-mejores-de-murcia/
+  → Extracted: Keki (near Cathedral), Bar Verónicas, Mapa (Santa Eulalia), Pura Cepa (red prawn croqueta), Cosa Fina (sepia croqueta)
+  → Keki, Bar Verónicas, Cosa Fina: no qualifying quotes ≥15 words → Tier C
+  → Pura Cepa: no qualifying quote but 1 Sol Repsol (KNOWN_AWARDS) → retained
+
+[FETCH] S2: https://r.jina.ai/https://thegastrotimes.com/dtomar-y-salabores-tienen-la-mejor-marinera-region-de-murcia-2024/
+  → No explicit author byline → CANNOT USE
+
+[FETCH] S3: https://r.jina.ai/https://www.gastroactitud.com/restaurante/local-de-ensayo-murcia/
+  → Extracted: Local de Ensayo (Fuensanta 5, Murcia); menus €70-90; qualifying quotes ✓
+
+[FETCH] S4: https://r.jina.ai/https://viajes.nationalgeographic.com.es/gastronomia/mejores-restaurantes-michelin-para-hacer-escapada-a-murcia_21452
+  → Extracted: Local de Ensayo, Almo (C/Madre de Dios 15), Frases, Taúlla (Espinardo), Cabaña Buenavista (El Palmar)
+  → Almo: quote exactly 15 words ✓ → Tier B
+  → Taúlla: quote 7 words → Tier C (no KNOWN_AWARDS)
+  → Cabaña Buenavista: quote 7 words → KNOWN_AWARDS override (2 Michelin stars) → retained Tier B
+  → Magoga (Cartagena): EXCLUDED (geographic boundary)
+
+[FETCH] S5: https://r.jina.ai/https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurante-frases-murcia/
+  → Extracted: Frases (Calle Soledad, 1; now relocated); qualifying quotes ✓; note: article date 2023-10-01
+
+[FETCH] CHECK: https://r.jina.ai/https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurante-taulla-murcia/
+  → Marina Vega; date: 2022-02-11 → OUTSIDE YEAR_RANGE → CANNOT USE
+
+[FETCH] CHECK: https://r.jina.ai/https://thegastrotimes.com/taulla-el-restaurante-de-cocina-fusion-que-alberga-un-antiguo-molino-de-pimenton/
+  → No explicit author byline → CANNOT USE
+
+PHASE 2 — SUPPORTING VERIFICATION SEARCHES
+───────────────────────────────────────────────────────────────────────
+
+search: "restaurante Almo Murcia chef Juan Guillamón dirección calle 2024"
+  → Confirmed address: C/ Madre de Dios, 15, Murcia; 1 Michelin star
+
+search: "restaurante Taúlla Murcia dirección ubicación 2024"
+  → Confirmed address: C. Antonio Flores Guillamón, 2, Espinardo, Murcia
+
+search: "National Geographic Viajes Murcia restaurantes Lucía Díaz Madurga 2024"
+  → Found article URL: viajes.nationalgeographic.com.es/gastronomia/mejores-restaurantes-michelin-para-hacer-escapada-a-murcia_21452
+
+search: "The Gastro Times croquetas Murcia Concha Alcántara 2024"
+  → Confirmed URL and explicit byline for croqueta article
+
+search: "site:themurcialist.com 2024 2025 restaurante Murcia"
+  → Identified 2024 articles: La Cavalica (Alcantarilla — excluded), El Salón del Secreto (May 2024), Federal Café (Nov 2024)
+  → La Cavalica: Alcantarilla is a separate municipality → EXCLUDED
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 3 SUMMARY — AUTO-REMOVALS (UNATTENDED_MODE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Auto-rejected (Tier C):
+  [REMOVED] El Salón del Secreto — no qualifying quote ≥15 words with specific detail
+  [REMOVED] Keki — no qualifying quote extracted
+  [REMOVED] Bar Verónicas — quote 13 words (below 15-word threshold)
+  [REMOVED] Cosa Fina — no qualifying quote; no address
+  [REMOVED] Taúlla — NatGeo quote 7 words; not in Part 1 KNOWN_AWARDS
+
+Retained with flags:
+  [KEPT] Cabaña Buenavista — KNOWN_AWARDS override (2 Michelin stars); NatGeo quote 7 words
+  [KEPT] Pura Cepa — KNOWN_AWARDS override (1 Sol Repsol); quote quality borderline
+
+Geographic exclusions (not counted as Tier C):
+  [EXCLUDED] El Barco (Cabo de Palos — outside Murcia city boundary)
+  [EXCLUDED] La Cavalica (Alcantarilla — separate municipality)
+  [EXCLUDED] Magoga (Cartagena — separate municipality)
+  [EXCLUDED] El Peretón (Sangonera la Seca — peripheral pedanía, not in GEOGRAPHIC_BOUNDARY_INCLUDE)
+
+Concentration note:
+  Murcia Centro: 8/10 = 80% of final entries. Standard cap not applied.
+  Justification: Part 1 documents dining scene as 'heavily concentrated in the historic centre
+  around Plaza de las Flores, Calle Trapería, Plaza del Cardenal Belluga and adjacent streets'.
+
+EN primary gap:
+  Documented as structural characteristic. All EN candidates exhausted.
+  Pipeline proceeds with ES-only source pool.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FINAL TOTALS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Sources confirmed: 5 (3 primary ES, 2 secondary ES; 0 EN)
+Source articles used: 9
+Both-pool entries: 0 (structural EN gap documented)
+Tier A entries: 3
+Tier B entries: 7
+Tier C auto-rejected: 5
+Final dataset: 10 restaurants
+Searches run (Phase 1 + 1B): 28 + 3 = 31
+Fetch operations: ~28
+Total search/fetch operations: ~59

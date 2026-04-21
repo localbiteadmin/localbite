@@ -1,0 +1,81 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023–2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+CITY: Murcia, Spain
+YEAR_RANGE: 2023–2026
+PRIMARY_LANGUAGE: Spanish (ES)
+SECONDARY_LANGUAGE: English (EN)
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
+
+TIER 1 — Murcia Centro (2 queries: ES + EN)
+A1 [ES, earlier]: "mejores restaurantes Murcia Centro 2023 2024 guía gastronómica"
+A2 [EN, later]:   "best restaurants Murcia city centre Plaza Flores 2025 2026"
+
+TIER 1 — Santa Eulalia (2 queries: ES + EN)
+A3 [ES, earlier]: "restaurantes Santa Eulalia Murcia recomendados 2024"
+A4 [EN, no year]: "Santa Eulalia Murcia neighbourhood restaurants food guide"
+
+TIER 2 — Murcia El Carmen (2 queries: ES + EN)
+A5 [ES, later]:   "mejores bares tapas El Carmen Murcia 2025 2026"
+A6 [EN, earlier]: "El Carmen Murcia restaurants bar guide 2024"
+
+TIER 2 — La Flota (2 queries: ES + EN)
+A7 [ES, earlier]: "restaurantes La Flota Murcia guía 2023 2024"
+A8 [EN, no year]: "La Flota Murcia food restaurants guide"
+
+TIER 3 — Espinardo (1 query: ES only)
+A9 [ES, no year]: "restaurantes Espinardo Murcia recomendados"
+
+TIER 3 — La Alberca (1 query: ES only)
+A10 [ES, no year]: "mejores restaurantes La Alberca Murcia"
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries)
+B1 [EN, earlier]: "best restaurants Murcia Spain food guide 2023 2024"
+B2 [EN, later]:   "where to eat in Murcia recommendations 2025 2026"
+
+Cross-2 — City-wide ES (3 queries)
+B3 [ES, later]:   "crítica gastronómica restaurantes Murcia 2025"
+B4 [ES, earlier]: "dónde comer bien en Murcia tapas barrio 2024"
+B5 [ES, earlier]: "guía gastronómica Murcia prensa reseñas 2023"
+
+Cross-3 — Generic writer-first (2 queries)
+B6 [ES, no year]: "periodista gastronómica escritora comida Murcia guía restaurantes"
+B7 [EN, no year]: "food writer Murcia restaurant recommendations guide"
+
+Cross-4 — Named awards (3 queries)
+B8 [no year]:     "Cabaña Buenavista Michelin Murcia estrella chef González-Conejero"
+B9 [earlier]:     "Soles Repsol restaurantes Murcia 2024 2025"
+B10 [later]:      "Michelin guide restaurants Murcia Spain 2025 2026"
+
+Cross-5 — Recent openings (2 queries)
+B11 [ES, earlier]: "nuevos restaurantes Murcia aperturas 2024 2025"
+B12 [EN, later]:   "new restaurant openings Murcia Spain 2025 2026"
+
+Cross-6 — Vocabulary-specific (2 queries)
+B13 [ES, no year]: "marinera zarangollo tapas Murcia restaurante recomendado"
+B14 [ES, no year]: "huerta murciana restaurante Murcia gastronomía local"
+
+Cross-7 — Cuisine and community (2 queries)
+B15 [ES, no year]: "arroz caldero Murcia restaurante recomendado Mar Menor"
+B16 [ES, no year]: "pastel de carne michirones Murcia restaurante tradicional"
+
+Cross-8 — Publication-category ES (2 queries)
+B17 [ES, no year]: "revista gastronómica independiente Murcia restaurantes recomendados"
+B18 [ES, no year]: "suplemento gastronomía periódico Murcia mejores restaurantes"
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+
+Earlier years (2023/2024 references): A1, A3, A6, A7, B1, B4, B5, B9, B11 = 9 queries
+Later years (2025/2026 references):   A2, A5, B2, B3, B10, B12 = 6 queries
+No year term:                          A4, A8, A9, A10, B6, B7, B8, B13, B14, B15, B16, B17, B18 = 13 queries
+Total planned: 28 queries
+
+[year-distribution-check] PASSED — 9 queries reference earlier years, 6 queries reference recent years, 13 queries have no year term.
