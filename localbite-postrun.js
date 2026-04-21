@@ -191,6 +191,7 @@ function isThinProfile(profile) {
   // Runs before validation so postrun.js never blocks on fixable drift.
   let autoRepaired = 0;
   for (const src of sourcesArray) {
+    if ('source_id' in src && !('id' in src)) { src.id = src.source_id; autoRepaired++; }
     if ('publisher' in src && !('publication' in src)) {
       src.publication = src.publisher; delete src.publisher; autoRepaired++;
     }
