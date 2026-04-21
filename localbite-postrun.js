@@ -182,7 +182,7 @@ function isThinProfile(profile) {
   console.log(`\nSTEP 1.5 — Schema validation`);
   console.log(`──────────────────────────────────────────────`);
 
-  const REQUIRED_SOURCE_FIELDS    = ['writer', 'publication', 'article_url', 'commercial_conflict', 'writer_profile'];
+  const REQUIRED_SOURCE_FIELDS    = ['writer', 'publication', 'commercial_conflict', 'writer_profile'];
   const REQUIRED_RESTAURANT_FIELDS = ['name', 'language_pool', 'quote', 'sources'];
 
   const sourcesArray = Array.isArray(data.sources) ? data.sources : Object.values(data.sources || {});
@@ -268,6 +268,17 @@ function isThinProfile(profile) {
       if (!(field in r) || r[field] === undefined)
         errors.push(`Restaurant "${r.name || `#${i}`}": missing field "${field}"`);
     }
+  }
+
+  // article_url: warn if missing or null — non-blocking since it cannot be auto-repaired
+  const missingArticleUrls = sourcesArray.filter(s => !s.article_url);
+  if (missingArticleUrls.length > 0) {
+    console.log(`\n⚠  article_url missing or null for ${missingArticleUrls.length} source(s):`);
+    missingArticleUrls.forEach(s => {
+      const label = s.writer || s.id || s.source_id || 'unknown';
+      console.log(`  ⚠ ${label} (${s.publication || ''}) — add article_url manually`);
+    });
+    console.log(`  Source links will not display in the viewer for these sources.\n`);
   }
 
   if (errors.length > 0) {

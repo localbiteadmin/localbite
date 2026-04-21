@@ -91,8 +91,18 @@ Full prompt = Part 1 + template:
 
 ## Pipeline Execution
 
-Launch the pipeline with:
-  claude --dangerously-skip-permissions < localbite-prompt-v71-[city].txt
+## Pipeline Launch — Correct Method
+
+Open a fresh terminal tab and launch Claude Code without piping:
+  cd /Users/harryenchin/Documents/GitHub/localbite
+  claude --dangerously-skip-permissions
+
+At the Claude Code prompt, type this instruction:
+  Read localbite-prompt-v71-[city]-part1.txt and localbite-prompt-v7-template.txt and run the full pipeline now.
+
+NOTE: Do NOT pipe the prompt file via stdin (< localbite-prompt-v71-[city].txt).
+Piping causes Claude Code to read the file and ask "what do you want to do?"
+rather than executing it. Launch Claude Code first, then give the instruction.
 
 With PHASE1_AUTO_PROCEED: YES and UNATTENDED_MODE: YES, the pipeline runs
 fully unattended. The only required human step is centroid approval:
