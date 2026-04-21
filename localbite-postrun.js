@@ -217,6 +217,33 @@ function isThinProfile(profile) {
 
   console.log(`✓ Schema validation passed — all required fields present.`);
 
+  // ══ STEP 1.6 — source_recency validation ════════════════════════════════════
+  // Compaction sometimes causes the pipeline to write the most recent article
+  // date (e.g. "2025-11-29") instead of the YEAR_RANGE (e.g. "2023-2026").
+  // Detect and auto-correct from the filename before anything else runs.
+  {
+    const recency = data.source_recency || '';
+    const isDateString = /^\d{4}-\d{2}-\d{2}$/.test(recency);
+    const isYearRange  = /^\d{4}-\d{4}$/.test(recency);
+    if (isDateString || (!isYearRange && recency !== '')) {
+      // Extract year range from filename: localbite-city-YYYY-YYYY.json
+      const rangeMatch = path.basename(file).match(/(\d{4}-\d{4})\.json$/);
+      if (rangeMatch) {
+        const corrected = rangeMatch[1];
+        console.log(`\n⚠ source_recency "${recency}" looks like a date string — correcting to "${corrected}"`);
+        data.source_recency = corrected;
+        fs.writeFileSync(file, JSON.stringify(data, null, 2));
+        console.log(`✓ source_recency corrected and written.`);
+      } else {
+        console.log(`\n⚠ source_recency "${recency}" looks wrong but could not derive year range from filename.`);
+        console.log(`  Expected filename pattern: localbite-[city]-YYYY-YYYY.json`);
+        console.log(`  Fix manually: data.source_recency should be the YEAR_RANGE from Part 1.`);
+      }
+    } else {
+      console.log(`✓ source_recency "${recency}" — correct format.`);
+    }
+  }
+
   // ══ STEP 2 — CENTROIDS CALCULATION ═══════════════════════════════════════════
 
   console.log(`\nSTEP 2 — Centroids calculation`);
