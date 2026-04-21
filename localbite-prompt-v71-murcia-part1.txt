@@ -1,0 +1,142 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES (v7.1)
+Change only this section for each new city.
+Full prompt = cat this file + localbite-prompt-v7-template.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+════════════════════════════════════════
+REQUIRED VARIABLES
+════════════════════════════════════════
+
+CITY: Murcia
+COUNTRY: Spain
+CITY_SLUG: murcia-spain
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: ES
+SEARCH_LANGUAGES: Spanish, English
+SINGLE_LANGUAGE_CITY: NO
+YEAR_RANGE: 2023–2026
+
+════════════════════════════════════════
+OPTIONAL VARIABLES
+════════════════════════════════════════
+
+UNATTENDED_MODE: YES
+PHASE1_AUTO_PROCEED: YES
+— When YES: pipeline proceeds to Phase 2 immediately after
+  presenting the Phase 1 source list, without waiting for
+  a PROCEED instruction.
+
+DIRECT_FETCH_SOURCES:
+— No confirmed article-level URLs available for Murcia.
+— Phase 0 will be skipped. Pipeline relies entirely on Phase 1
+  discovery.
+
+════════════════════════════════════════
+NEIGHBOURHOOD STRUCTURE
+════════════════════════════════════════
+
+Research basis: Official Murcia municipal structure and dining
+geography verified via local sources. The dining scene is heavily
+concentrated in the historic centre around Plaza de las Flores,
+Calle Trapería, Plaza del Cardenal Belluga and adjacent streets.
+Secondary scenes exist in Santa Eulalia and El Carmen districts.
+
+Note on naming: "Centro" is generic and must be prefixed.
+"El Carmen" is also generic — use "Murcia El Carmen".
+
+TIER_1_NEIGHBOURHOODS: Murcia Centro, Santa Eulalia
+TIER_2_NEIGHBOURHOODS: Murcia El Carmen, La Flota
+TIER_3_NEIGHBOURHOODS: Espinardo, La Alberca
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Murcia Centro (Plaza de las Flores, Calle Trapería, Plaza del
+Cardenal Belluga, Plaza de los Apóstoles, Plaza San Juan,
+Plaza Julián Romea, Calle Santa Isabel, Mercado de Verónicas,
+Mercado de Correos gastromarket area), Santa Eulalia, Murcia
+El Carmen, La Flota, Espinardo, La Alberca, Churra
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+Cartagena, Lorca, Molina de Segura, Cieza, or any location
+described as "outside Murcia city", "Region of Murcia", "nearby
+town", or another municipality.
+El Palmar is a pedanía (hamlet) within the Murcia municipality —
+include restaurants there if they appear in local food writing
+about Murcia (e.g. Cabaña Buenavista). Exclude coastal resorts
+(La Manga, Águilas, Mazarrón) — these are a different trip.
+
+════════════════════════════════════════
+LOCAL CONTEXT
+════════════════════════════════════════
+
+LOCAL_FOOD_VOCABULARY:
+— marinera (bread stick or toast topped with Russian salad and
+  anchovy — the defining Murcian tapa, eaten in three bites)
+— zarangollo (scrambled eggs with courgette and onion —
+  quintessential Murcian home cooking, signals local writing)
+— michirones (dried bean stew with ham bone and pork —
+  traditional Murcian starter, found in most tapas bars)
+— pastel de carne (meat pie with distinctive filo pastry lid —
+  unique to Murcia, not found elsewhere in Spain)
+— caldero / arroz caldero (fish and rice dish from Mar Menor
+  fishermen — Murcia's answer to paella, DO NOT compare to paella
+  in any extraction)
+— huerta murciana (the fertile market garden around Murcia —
+  the central concept of local food identity, used constantly
+  in Murcian food writing)
+— Calasparra rice (DOP rice grown in Murcia province — premium
+  local product, signals serious local food writing)
+— café asiático (coffee with condensed milk, brandy, Licor 43,
+  cinnamon and lemon — Cartagena/Murcia signature drink)
+— entierro (anchovies, crisps and olives — local tapa)
+— Jumilla, Bullas, Yecla (local wine DOs — all in Murcia region)
+
+Use 2 Cross-6 vocabulary queries in Spanish targeting marinera,
+huerta murciana, and zarangollo to catch local-register food
+writing that generic city-wide queries miss.
+
+SOURCE_EXAMPLES:
+— Local Murcia press: La Verdad de Murcia (main daily),
+  La Opinión de Murcia, Murcia Hoy
+— Regional gastronomy: Guía Repsol (Murcia section),
+  El País Gastro (Murcia/southeast desk)
+— English-language: Emily Luxton (emilyluxton.co.uk — confirmed
+  Murcia food writer with dedicated Murcia food guide),
+  travel food bloggers covering southeastern Spain
+— Note: Murcia is less internationally written-about than
+  Santiago or Alicante. Both-pool is possible but lower
+  probability. Do not manufacture a false both-pool if EN
+  sources don't have named authors or don't qualify.
+
+KNOWN_AWARDS:
+— Cabaña Buenavista: 2 Michelin stars (chef Pablo González-Conejero,
+  Urbanización Buenavista, El Palmar — within Murcia municipality)
+— Pura Cepa: 1 Repsol Sol (Plaza San Juan area)
+— Repsol: several Soles in Murcia city — include named award queries
+— Named award queries: "Cabaña Buenavista Michelin Murcia",
+  "Soles Repsol restaurantes Murcia"
+
+KNOWN_COMMERCIAL_CONFLICTS:
+— None confirmed for Murcia food media. Apply standard COI check
+  to every source per template instructions.
+
+SECONDARY_SOURCES: Time Out, Condé Nast Traveller, Lonely Planet,
+El País Gastro (national desk), El Mundo Metrópoli (national desk),
+Guía Repsol (national)
+
+════════════════════════════════════════
+PRICE AND OUTPUT
+════════════════════════════════════════
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+- 1 = under €20pp
+- 2 = €20–40pp
+- 3 = €40–80pp
+- 4 = over €80pp
+
+OUTPUT_RAW: ./localbite-murcia-raw.json
+OUTPUT_FINAL: ./localbite-murcia-2023-2026.json
+OUTPUT_WORKING: ./localbite-murcia-working.json
+OUTPUT_SEARCH_LOG: ./localbite-murcia-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-murcia-search-plan.txt
