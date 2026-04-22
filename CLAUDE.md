@@ -105,8 +105,18 @@ Piping causes Claude Code to read the file and ask "what do you want to do?"
 rather than executing it. Launch Claude Code first, then give the instruction.
 
 With PHASE1_AUTO_PROCEED: YES and UNATTENDED_MODE: YES, the pipeline runs
-fully unattended. The only required human step is centroid approval:
-  node localbite-approve-centroids.js localbite-[city]-2023-2026.json
+fully unattended. The required human steps after the pipeline completes:
+  node localbite-postrun.js localbite-[city]-2023-2026.json
+  node localbite-approve-centroids.js localbite-[city]-2023-2026.json --auto-accept
+  git add localbite-[city]-2023-2026.json index.html localbite-index.json
+  git commit -m "data: [City] v7.1 -- N restaurants, N sources, N both-pool"
+  git push
+
+NOTE: When piping postrun output, redirect to avoid shell parsing issues:
+  node localbite-postrun.js [file] > /tmp/out.txt 2>&1 && cat /tmp/out.txt
+
+NOTE: CLAUDE.md is read by Claude Code at startup. Do not add instructions
+that could cause Claude Code to refuse to run the pipeline.
 
 ---
 

@@ -670,4 +670,82 @@ function isThinProfile(profile) {
     }
   }
 
+  // ======= STEP 5.5 - METRICS CAPTURE ================================
+  // Updates today's metrics log entry with run_time and tool_uses
+  // from file timestamps and search log. Tokens null for compacting runs.
+  {
+    const metricsLog = 'localbite-run-metrics.log';
+    try {
+      const allFiles = fs.readdirSync('.');
+      const searchLogs = allFiles
+        .filter(f => f.startsWith('localbite-') && f.endsWith('-search-log.txt'))
+        .map(f => ({ name: f, mtime: fs.statSync(f).mtimeMs }))
+        .sort((a, b) => b.mtime - a.mtime);
+      const finalJsons = allFiles
+        .filter(f => /^localbite-.*-\d{4}-\d{4}\.json$/.test(f) &&
+          !f.includes('raw') && !f.includes('working') &&
+          !f.includes('backup') && !f.includes('stats'))
+        .map(f => ({ name: f, mtime: fs.statSync(f).mtimeMs }))
+        .sort((a, b) => b.mtime - a.mtime);
+
+      const logFile  = searchLogs.length > 0 ? searchLogs[0].name : null;
+      const jsonFile = finalJsons.length  > 0 ? finalJsons[0].name : null;
+
+      let runTimeSecs = null;
+      if (logFile && jsonFile) {
+        const logStat  = fs.statSync(logFile);
+        const jsonStat = fs.statSync(jsonFile);
+        const startMs  = logStat.birthtimeMs || logStat.ctimeMs;
+        const endMs    = logStat.mtimeMs;  // Search log last write = pipeline end time
+        if (endMs > startMs) runTimeSecs = Math.round((endMs - startMs) / 1000);
+      }
+
+      let toolUses = null;
+      if (logFile) {
+        const logLines = fs.readFileSync(logFile, 'utf8')
+          .split('\n').filter(l => l.trim().length > 0);
+        toolUses = logLines.length;
+      }
+
+      if (fs.existsSync(metricsLog)) {
+        const citySlug = data.city_slug || data.city;
+        const today    = new Date().toISOString().split('T')[0];
+        const lines    = fs.readFileSync(metricsLog, 'utf8')
+          .split('\n').filter(l => l.trim().startsWith('{'));
+        let updated = false;
+        const newLines = lines.map(l => {
+          try {
+            const e = JSON.parse(l);
+            if (e.date === today &&
+                (e.city === citySlug || e.city === data.city)) {
+              if (runTimeSecs && !e.run_time_seconds) {
+                e.run_time_seconds = runTimeSecs;
+                e.run_time_source  = 'file-timestamps-postrun';
+              }
+              if (toolUses && !e.tool_uses) {
+                e.tool_uses        = toolUses;
+                e.tool_uses_source = 'search-log-postrun';
+              }
+              updated = true;
+              return JSON.stringify(e);
+            }
+            return l;
+          } catch(err) { return l; }
+        });
+        if (updated) {
+          fs.writeFileSync(metricsLog, newLines.join('\n') + '\n');
+          console.log('\nSTEP 5.5 -- Metrics updated:');
+          if (runTimeSecs) console.log(`  run_time: ${runTimeSecs}s`);
+          if (toolUses)    console.log(`  tool_uses: ${toolUses}`);
+        } else {
+          console.log(`\nSTEP 5.5 -- No today's metrics entry for ${citySlug}.`);
+        }
+      } else {
+        console.log('\nSTEP 5.5 -- No metrics log found -- skipping.');
+      }
+    } catch(err) {
+      console.log(`\nSTEP 5.5 -- Metrics update failed: ${err.message}`);
+    }
+  }
+
 })();

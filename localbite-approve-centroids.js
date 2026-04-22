@@ -202,9 +202,9 @@ function formatCoords(coords) {
 
   console.log('');
   console.log(`Next steps:`);
-  console.log(`  1. Verify CITY_CENTRES entry exists for ${city} in index.html`);
-  console.log(`  2. Verify CITY_BOUNDS entry exists for ${city} in index.html`);
-  console.log(`  3. Commit: git add ${file}`);
+  console.log(`  git add ${file} index.html localbite-index.json`);
+  console.log(`  git commit -m 'data: ${city} v7.1'`);
+  console.log(`  git push`);
   console.log('');
 
 })();

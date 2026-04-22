@@ -521,6 +521,7 @@ async function geocodeAll() {
     }
 
     console.log(`  ✗ Not found — will use neighbourhood centroid fallback in viewer`);
+    r.geo_skip = true;  // Prevent re-geocoding on future postrun runs
     notFound.push(r);
     stats.not_found++;
   }
