@@ -1093,23 +1093,5 @@
       41.6516,
       -4.7283
     ]
-  },
-  "centroids_proposed": {
-    "Valladolid Centro": {
-      "coords": [
-        41.6516,
-        -4.7283
-      ],
-      "source": "averaged",
-      "restaurant_count": 26,
-      "high_spread": true,
-      "lat_spread": 0.0287,
-      "lng_spread": 0.0214,
-      "requires_verification": true,
-      "null_coord_restaurants": [
-        "Restaurante Creperia Le Domen",
-        "Castizo"
-      ]
-    }
   }
 }

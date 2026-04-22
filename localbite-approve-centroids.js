@@ -15,10 +15,11 @@
 const fs       = require('fs');
 const readline = require('readline');
 
-const file = process.argv[2];
+const file       = process.argv[2];
+const autoAccept = process.argv.includes('--auto-accept');
 
 if (!file) {
-  console.error('Usage: node localbite-approve-centroids.js <city-json-file>');
+  console.error('Usage: node localbite-approve-centroids.js <city-json-file> [--auto-accept]');
   process.exit(1);
 }
 
@@ -76,10 +77,14 @@ function formatCoords(coords) {
   console.log(`Proposed centroids: ${entries.length}`);
   console.log(`══════════════════════════════════════════════`);
   console.log('');
-  console.log(`For each proposed centroid:`);
-  console.log(`  y — accept as proposed`);
-  console.log(`  n — skip (restaurant(s) will use CITY_CENTRES random offset)`);
-  console.log(`  m — enter coordinates manually`);
+  if (autoAccept) {
+    console.log(`Mode: AUTO-ACCEPT — all centroids with coordinates will be accepted.`);
+  } else {
+    console.log(`For each proposed centroid:`);
+    console.log(`  y — accept as proposed`);
+    console.log(`  n — skip (restaurant(s) will use CITY_CENTRES random offset)`);
+    console.log(`  m — enter coordinates manually`);
+  }
   console.log('');
 
   const approved = data.centroids || {};
@@ -119,7 +124,12 @@ function formatCoords(coords) {
 
     let answer;
 
-    if (entry.coords === null) {
+    if (autoAccept) {
+      // Auto-accept if coords are available; skip if not
+      answer = entry.coords !== null ? 'y' : 'n';
+      if (answer === 'y') console.log(`  Auto-accepting: ${formatCoords(entry.coords)}`);
+      else console.log(`  Auto-skipping: no coordinates available.`);
+    } else if (entry.coords === null) {
       answer = await ask(`  Enter coords manually or skip? (m/n): `);
       answer = answer.trim().toLowerCase() || 'n';
       if (answer !== 'm') answer = 'n';
@@ -151,7 +161,7 @@ function formatCoords(coords) {
     i++;
   }
 
-  rl.close();
+  if (!autoAccept) rl.close();
 
   // ── WRITE RESULTS ──────────────────────────────────────────────────────────
 
