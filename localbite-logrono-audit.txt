@@ -1,0 +1,256 @@
+LOCALBITE LOGROÑO — PIPELINE AUDIT FILE
+Pipeline: localbite-v7.1
+City: Logroño, Spain
+City slug: logrono-spain
+Date: 2026-04-22
+Year range: 2023–2026
+
+════════════════════════════════════════
+PHASE 0 — DIRECT FETCH FAILURES
+════════════════════════════════════════
+
+Guía Repsol (section page) | FAILED
+  URL attempted: https://www.guiarepsol.com/es/comer/donde-comer/restaurantes-en-logrono/
+  Reason: 404 error page (~18,500 chars, no restaurant content)
+  Wayback retry: 451 geo-blocked
+  Note: Working article-level URL later found via Phase 1 search
+        (https://www.guiarepsol.com/es/comer/de-tapeo/ruta-pinchos-calle-laurel-logrono/)
+        with author Otilia Anes da Veiga — confirmed as primary ES source
+
+El Diario La Rioja (section page) | FAILED
+  URL attempted: https://www.larioja.com/gastronomia/
+  Reason: 404 error page (~8,500 chars, no content)
+  Wayback retry: 451 geo-blocked
+  Note: Phase 0 section-page fetches often fail — article-level URLs required
+
+════════════════════════════════════════
+PHASE 1 — SOURCE EVALUATION REJECTS
+════════════════════════════════════════
+
+everydayfoodblog.com | REJECTED
+  Reason: Jina fetch 422 (unprocessable entity); direct WebFetch timed out after 60s
+  Appeared in: cross-1 (query 12), cross-2 (query 13), cross-3 (query 17)
+
+theculturetrip.com | REJECTED
+  Reason: HTTP 403 blocked — no content returned
+  Appeared in: cross-1 (query 12)
+
+directoalpaladar.com (gastroguía Logroño) | REJECTED
+  Reason: Article dated June 2022 — outside 2023–2026 year range
+  Appeared in: cross-6 (query 25)
+
+cluboenologique.com | REJECTED
+  Reason: No author byline found in article or About page after two fetch attempts
+  Search snippet suggested "Fintan Kerr" but byline not confirmed in fetched content
+
+winetourismspain.com | REJECTED
+  Reason: No named author (full first name + surname) found in articles
+
+soyunblogdeviajes.com | REJECTED
+  Reason: No named author found
+
+tapasypintxos.com | REJECTED
+  Reason: No named author found
+
+nuevecuatrouno.com (Sergio Moreno, Repsol Soles article) | REJECTED
+  Reason: Staff/contributor byline without sufficient restaurant-specific critical quotes;
+  zero qualifying 15-word quotes with specific detail extracted from article
+
+nuevecuatrouno.com (Bib Gourmand article) | REJECTED
+  Reason: Anonymous staff attribution — no named author; rejected per named author rule
+
+demesaenmesa.food.blog | REJECTED
+  Reason: Insufficient content verified via Jina — under 2,000 characters returned
+
+NYT / David Farley (La Rioja article) | REJECTED
+  Reason: Article covers rural La Rioja villages (Laguardia, Haro, etc.) — not Logroño;
+  geographic exclusion: no Logroño restaurant content confirmed in fetched text
+
+════════════════════════════════════════
+EXTRACTION-TIME AUTO-REJECTIONS (Quote Quality / Geographic / Status)
+════════════════════════════════════════
+
+Approximately 17 restaurants were auto-rejected at extraction time across all sources.
+Reasons:
+
+From Guía Repsol (Otilia Anes da Veiga, Nov 2024):
+  The Repsol pintxos route article covered approximately 10–12 bars on Calle del Laurel.
+  Bars beyond the 6 extracted (El Soldado de Tudelilla, La Casita, Bar El Muro,
+  Entretapas 941, Bar Ángel, La Tavina) failed quote quality: quotes under 15 words
+  or lacking specific dish/chef/price detail.
+
+From The Sauce Mag (Charlie Brown, Jul 2024):
+  Article covered additional bars beyond the 4 extracted (Bar San Lorenzo, Bar Soriano,
+  Taberna de Baco, Pata Negra). Additional entries failed quote quality rule.
+
+From Devour Tours (David Farley, Jul 2024):
+  Article titled "9 Best Pinchos & Tapas on Calle del Laurel in Logroño" — 9 bars total.
+  6 extracted (Bar El Muro, Bar Soriano as multi-source; Bar Donosti, Bar Sebas,
+  Bar Jubera, Bar El Perchas as single-source). 3 remaining failed secondary source
+  2-specific-detail minimum or had overlapping coverage already captured.
+
+From Nuevecuatrouno (Teresa Pérez de Azpillaga, Mar 2026):
+  Bar Gargonich | REJECTED at extraction
+  Reason: Article itself states Bar Gargonich has recently closed — excluded as
+  pipeline cannot include venues confirmed closed in source article
+
+From eldiario.es Viajes (Helena Crespo, Sep 2023):
+  Multiple La Rioja restaurants outside Logroño | GEOGRAPHIC EXCLUSION
+  Article covers the whole La Rioja region; restaurants in Fuenmayor, Laguardia,
+  Haro, Ezcaray, and other towns excluded per GEOGRAPHIC_BOUNDARY_EXCLUDE.
+  Michelin-starred Logroño restaurants (Ikaro, Ajonegro, Kiro Sushi) mentioned
+  but excluded per MICHELIN_EXCLUSIONS in Part 1.
+
+From all sources:
+  Tondeluna (Logroño) — referenced in search results but not extracted with qualifying
+  quote from any confirmed source; not in any confirmed source article text
+
+════════════════════════════════════════
+PHASE 3 — RECOMMENDED REMOVALS (UNATTENDED MODE: auto-accepted)
+════════════════════════════════════════
+
+[unattended-mode] auto-accepted 2 recommended removals.
+
+Delicious Waffle | REMOVED | source: src-nuevecuatrouno-perezdeazpillaga
+  Reason: Dessert/waffle bar — not a restaurant (crepes, gofres, milkshakes only)
+  Pipeline rule: "Not a restaurant (bar-only, café-only, bakery, market stall)"
+  Note: Ensanche neighbourhood coverage lost with this removal
+
+Enascuas | REMOVED | source: src-eldiario-crespo
+  Reason: Quote cites TripAdvisor reviews ("en la web de reseñas Tripadvisor aseguran
+  tener opciones para vegetarianos") rather than writer's own observation. The quote
+  quality rule requires the writer's own descriptive prose — citing another review
+  platform as evidence does not satisfy this. Additionally: secondary source, 2023
+  article (oldest in pool), open_status_check flagged.
+
+════════════════════════════════════════
+PHASE 3 — CONCENTRATION CAP AUTO-REJECT
+════════════════════════════════════════
+
+CONCENTRATION_CAP: 30% (default)
+
+Pre-removal check:
+  Total Tier A + Tier B entries (after recommended removals): 16
+  Repsol single-source Tier B: El Soldado de Tudelilla, La Casita, Entretapas 941,
+    Bar Ángel, La Tavina = 5 entries
+  5 / 16 = 31.25% — EXCEEDS 30% cap
+
+Auto-reject: La Tavina | source: src-repsol-anesdaveiga
+  Reason: Lowest-confidence Repsol single-source Tier B entry
+  Evidence: Only 1 dish mentioned in dishes_mentioned (thinnest Repsol entry);
+  wine bar / pintxos hybrid with minimal critical detail
+  Result: 4 / 15 = 26.7% — within cap ✓
+
+Post-rejection check:
+  Devour Tours single-source Tier B: 4 / 15 = 26.7% ✓
+  Sauce Mag single-source Tier B: 3 / 15 = 20.0% ✓
+  Gastroactitud: 1 / 15 = 6.7% ✓
+  Nuevecuatrouno: 1 / 15 = 6.7% ✓
+
+════════════════════════════════════════
+GEOGRAPHIC EXCLUSIONS
+════════════════════════════════════════
+
+All GEOGRAPHIC_BOUNDARY_EXCLUDE items applied:
+  El Portal de Echaurren (2★) — Ezcaray, ~50km from Logroño — excluded
+  Venta Moncalvillo (2★) — Daroca de Rioja, ~15km — excluded
+  Nublo (1★) — Haro, ~40km — excluded
+  Any restaurant outside Logroño municipal boundary — excluded throughout
+
+════════════════════════════════════════
+MICHELIN EXCLUSIONS
+════════════════════════════════════════
+
+  Ikaro (1★) — excluded
+  Ajonegro (1★) — excluded
+  Kiro Sushi (1★) — excluded
+  Bib Gourmand entries (Txebiko, etc.) — included if recommended by named writers;
+  no Bib Gourmand entries reached final cut via confirmed named-author sources
+
+════════════════════════════════════════
+COI DISCLOSURES
+════════════════════════════════════════
+
+src-devourtours-farley | commercial_conflict: true
+  David Farley's article was published on the Devour Tours platform.
+  Devour Tours operates food tours in Logroño — content on this platform
+  promotes venues aligned with commercial tour interests.
+  Flagged as secondary source. COI flag applied to writer_profile.
+  4 single-source Devour Tours Tier B entries flagged: true in final JSON.
+  2 multi-source entries (Bar El Muro, Bar Soriano) have non-COI primary source;
+  COI flagged: true only where Devour Tours is the sole source.
+
+════════════════════════════════════════
+PUBLISHER CONCENTRATION FLAG
+════════════════════════════════════════
+
+Guía Repsol (src-repsol-anesdaveiga) | publisher_concentration_flag: true
+  Contributed 5 single-source Tier B entries (after concentration cap removal of La Tavina)
+  Represented dominant ES coverage of Calle del Laurel pintxos bars
+  Supplementary searches run (entries 33–35 in search log) to find alternative ES sources;
+  NueveCuatroUno added as result, reducing structural concentration
+
+════════════════════════════════════════
+OPEN_STATUS_CHECK CORRECTION (Phase 3)
+════════════════════════════════════════
+
+Phase 2 extraction set open_status_check: false for all 2024-dated articles.
+Template rule requires open_status_check: true for all pre-2025 articles.
+Phase 3 corrects all 2024-sourced restaurant entries to open_status_check: true.
+Affected sources: Repsol (2024-11-13), Sauce Mag (2024-07-19),
+  Devour Tours (2024-07-22), Gastroactitud (2024-06-06).
+Only exception: Las Gildas de La Laurel from Nuevecuatrouno (2026-03-15)
+  retains open_status_check: false.
+
+════════════════════════════════════════
+DIVERSITY GATE CHECK
+════════════════════════════════════════
+
+Bilingual city (SINGLE_LANGUAGE_CITY: NO):
+  ✓ At least 1 primary ES source: Repsol, Gastroactitud, Nuevecuatrouno (all primary ES)
+  ✓ At least 1 primary EN source: The Sauce Mag (primary EN)
+  ✓ No more than 2 secondary sources total: Devour Tours (EN secondary COI) +
+    El Diario (ES secondary, 0 final entries) = 2 ✓
+
+DIVERSITY GATE: PASSED
+
+════════════════════════════════════════
+BOTH-POOL CHECK (strict definition)
+════════════════════════════════════════
+
+Bar El Muro:
+  Source 1: src-repsol-anesdaveiga (ES, Guía Repsol, primary)
+  Source 2: src-devourtours-farley (EN, Devour Tours, secondary)
+  Different publishers, different language pools → BOTH-POOL CONFIRMED ✓
+
+Bar Soriano:
+  Source 1: src-saucemag-brown (EN, The Sauce Mag, primary)
+  Source 2: src-devourtours-farley (EN, Devour Tours, secondary)
+  Different publishers, SAME language pool (both EN) → NOT both-pool
+  Classification: Tier A (2 independent sources), language_pool: "en"
+
+════════════════════════════════════════
+SINGLE-AUTHOR RULE APPLICATION
+════════════════════════════════════════
+
+The Sauce Mag (src-saucemag-brown):
+  [single-author-confirmed] The Sauce Mag — About page confirms Charlie Brown
+  as sole author. Article-level byline not required.
+  Personal Substack with consistent first-person voice, no other bylines present.
+
+════════════════════════════════════════
+PIPELINE SUMMARY
+════════════════════════════════════════
+
+Raw working file entries: 18
+Phase 3 input: 18
+Recommended removals (UNATTENDED auto-accepted): 2
+  (Delicious Waffle, Enascuas)
+Concentration cap auto-reject: 1
+  (La Tavina)
+Final entries: 15
+Tier A: 2 (Bar El Muro — both-pool; Bar Soriano — 2 independent sources)
+Tier B kept: 13
+Both-pool: 1
+open_status_check entries in final: 14 of 15
+flagged entries in final: 14 of 15 (open_status_check + COI-only-source)

@@ -1,0 +1,123 @@
+LOCALBITE LOGROÑO — FAILED SOURCES LOG
+Pipeline: localbite-v7.1
+Date: 2026-04-22
+
+════════════════════════════════════════
+PHASE 0 — DIRECT FETCH FAILURES
+════════════════════════════════════════
+
+Guía Repsol (section page)
+  URL: https://www.guiarepsol.com/es/comer/donde-comer/restaurantes-en-logrono/
+  Attempt 1 chars: ~18,500 (404 error page — no restaurant content)
+  Wayback retry: https://r.jina.ai/https://web.archive.org/web/2026/[URL]
+  Wayback outcome: 451 geo-blocked
+  Fetch quality: failed
+  Retries attempted: 1 (Wayback)
+  Wayback attempted: yes
+  Outcome: failed
+  Restaurants extracted: 0
+  Note: Working article-level URL later found via Phase 1 cross-6 search;
+        Repsol successfully used as primary ES source via different URL
+
+El Diario La Rioja (section page)
+  URL: https://www.larioja.com/gastronomia/
+  Attempt 1 chars: ~8,500 (404 error page — no content)
+  Wayback retry: 451 geo-blocked
+  Fetch quality: failed
+  Retries attempted: 1 (Wayback)
+  Wayback attempted: yes
+  Outcome: failed
+  Restaurants extracted: 0
+  Note: Section page fetches almost always fail — article-level URLs required
+
+════════════════════════════════════════
+PHASE 1 — CANDIDATE FETCH FAILURES
+(Sources that failed quality evaluation or fetch)
+════════════════════════════════════════
+
+everydayfoodblog.com
+  Appeared in: queries 12, 13, 17
+  Attempt 1: Jina returned 422 (unprocessable entity)
+  Direct WebFetch: timed out after 60 seconds
+  Fetch quality: failed
+  Retries attempted: 2 (Jina + direct WebFetch)
+  Wayback attempted: no
+  Outcome: failed — dropped
+  Restaurants extracted: 0
+
+theculturetrip.com (Logroño guide)
+  Appeared in: query 12
+  Attempt 1: HTTP 403 blocked — no content returned
+  Fetch quality: failed
+  Retries attempted: 0
+  Wayback attempted: no
+  Outcome: failed — dropped
+  Restaurants extracted: 0
+
+directoalpaladar.com (gastroguía Logroño)
+  Appeared in: query 25
+  Fetch: successful
+  Rejection reason: Article dated June 2022 — outside 2023–2026 year range
+  Fetch quality: good (content returned)
+  Outcome: rejected (date outside year range)
+  Restaurants extracted: 0
+
+cluboenologique.com (Logroño article)
+  Appeared in: query 17
+  Search snippet mentioned "Fintan Kerr" as possible author
+  Fetch 1 via Jina: no byline found in article text
+  Fetch 2 (retry): still no author byline confirmed
+  Rejection reason: No named author (full first name + surname) confirmed
+  Fetch quality: partial
+  Outcome: rejected (no named author)
+  Restaurants extracted: 0
+
+winetourismspain.com
+  Appeared in: queries 8, 13, 16, 27
+  Rejection reason: No named author found in any article
+  Outcome: rejected (no named author)
+  Restaurants extracted: 0
+
+soyunblogdeviajes.com
+  Appeared in: query 16
+  Rejection reason: No named author found
+  Outcome: rejected (no named author)
+  Restaurants extracted: 0
+
+tapasypintxos.com
+  Appeared in: query 15
+  Rejection reason: No named author found
+  Outcome: rejected (no named author)
+  Restaurants extracted: 0
+
+demesaenmesa.food.blog
+  Appeared in: query 28
+  Fetch via Jina: under 2,000 characters returned
+  Rejection reason: Insufficient content (below 2,000 char minimum)
+  Outcome: rejected (insufficient content)
+  Restaurants extracted: 0
+
+NYT / David Farley (La Rioja article)
+  Appeared in: Phase 1 cross searches
+  Fetch: successful
+  Rejection reason: Article covers rural La Rioja villages (Laguardia, Haro, etc.)
+    not Logroño city — geographic exclusion applies
+  No Logroño restaurant content confirmed in fetched text
+  Outcome: rejected (geographic — outside Logroño municipal boundary)
+  Restaurants extracted: 0
+
+════════════════════════════════════════
+FAILED SOURCES SUMMARY
+════════════════════════════════════════
+
+Sources recovered by Retry 1 (30s): none
+Sources recovered by Retry 2 (60s): none
+Sources recovered by Wayback: none
+Sources failed after all retries: Guía Repsol (phase-0 URL), El Diario La Rioja, everydayfoodblog.com
+Sources rejected (not fetch failures): directoalpaladar.com (date), cluboenologique.com (no author),
+  winetourismspain.com (no author), soyunblogdeviajes.com (no author),
+  tapasypintxos.com (no author), demesaenmesa.food.blog (insufficient content),
+  NYT Farley La Rioja (geographic)
+Total restaurants lost to permanent failures: 0
+  (Repsol and El Diario La Rioja phase-0 failures recovered via alternative URLs;
+  no qualifying restaurant content was lost from other failed sources)

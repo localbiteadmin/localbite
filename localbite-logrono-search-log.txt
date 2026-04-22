@@ -1,0 +1,35 @@
+[phase-0] "https://www.guiarepsol.com/es/comer/donde-comer/restaurantes-en-logrono/" → 404 error page, ~18,500 chars but no restaurant content. WAYBACK RETRY → 451 geo-blocked. FAILED.
+[phase-0] "https://www.larioja.com/gastronomia/" → 404 error page, ~8,500 chars, no content. WAYBACK RETRY → 451 geo-blocked. FAILED.
+[neighbourhood-CascoAntiguo] "mejores restaurantes Casco Antiguo Logroño 2023 crítica gastronomía" → Found lockherenow.com, logronoticias.com, directoalpaladar.com as candidates; generic lists prominent.
+[neighbourhood-CascoAntiguo] "best restaurants old town Logroño 2024 food guide" → Found theculturetrip.com, everydayfoodblog.com, winetourismspain.com, cluboenologique.com.
+[neighbourhood-Ensanche] "restaurantes Ensanche Logroño gastronomía 2024 recomendaciones" → Found directoalpaladar.com, viajeroscallejeros.com; no Ensanche-specific writers.
+[neighbourhood-Ensanche] "restaurants Ensanche neighbourhood Logroño food writer 2025" → Found everydayfoodblog.com; no Ensanche-specific content.
+[neighbourhood-MadreDeDios] "restaurantes barrio Madre de Dios Logroño comida 2023" → No food writer candidates specific to Madre de Dios.
+[neighbourhood-MadreDeDios] "Madre de Dios Logroño restaurants local food 2024" → winetourismspain.com appeared; no food writer for neighbourhood.
+[neighbourhood-LaEstrella] "restaurantes La Estrella Logroño gastronomía reseña" → Michelin star results dominated; La Estrella not a distinct restaurant district in coverage.
+[neighbourhood-ElCubo] "restaurantes El Cubo Logroño 2024 bares" → Bar Pasapoga and local bar results; no food writer coverage of El Cubo specifically.
+[neighbourhood-Cascajos] "restaurantes Cascajos Logroño 2023 comida" → Telepizza and Al Toque results; no food writer candidates.
+[cross-1] "best restaurants Logroño Spain 2024 food guide review" → Found theculturetrip.com (403 blocked), winetourismspain.com (no author), everydayfoodblog.com (timeout).
+[cross-1] "where to eat Logroño local recommendations 2025" → winetourismspain.com and everydayfoodblog.com again; Bar Soriano and Tondeluna prominent.
+[cross-2] "restaurantes Logroño 2024 crítica gastronómica escritor" → Found gastroactitud.com (José Carlos Capel, Arsa review, June 2024). CONFIRMED CANDIDATE.
+[cross-2] "dónde comer Logroño 2023 guía local pintxos barrio" → Found tapasypintxos.com (no author), guiarepsol.com/calle-laurel tapas guide (Otilia Anes da Veiga). CONFIRMED REPSOL CANDIDATE.
+[cross-2] "guía restaurantes Logroño 2025 periodismo gastronómico" → Found nuevecuatrouno.com multiple articles; soyunblogdeviajes.com (no named author).
+[cross-3] "food writer Logroño La Rioja restaurant guide 2024" → Found everydayfoodblog.com (timeout); cluboenologique.com (no author confirmed via Jina).
+[cross-3] "periodista gastronómica Logroño restaurante reseña 2023" → No new food writer candidates; gastroactitud.com already known.
+[cross-4] "Logroño restaurant awards best food 2024 2025" → Generic award sites; no Logroño-specific award journalism.
+[cross-4] "premios restaurantes Logroño La Rioja gastronomía mejores" → nuevecuatrouno.com Repsol Soles article (Sergio Moreno, March 2024). CONFIRMED CANDIDATE.
+[cross-4] "Logroño Bib Gourmand Michelin 2024 restaurantes recomendados" → nuevecuatrouno.com Bib Gourmand article (staff attribution, rejected).
+[cross-5] "new restaurants Logroño 2025 openings" → No named food writers for openings.
+[cross-5] "nuevos restaurantes Logroño 2025 aperturas" → Found nuevecuatrouno.com (Teresa Pérez de Azpillaga, March 2026) new openings article. CONFIRMED CANDIDATE.
+[cross-6] "Calle del Laurel Logroño mejores pinchos pintxos bar guía 2024" → Found guiarepsol.com tapas route (Otilia Anes da Veiga, Nov 2024) and devourtours.com (David Farley, Jul 2024). BOTH CONFIRMED.
+[cross-6] "caparrones patatas riojanas menestra restaurante Logroño 2023" → Found directoalpaladar.com gastroguía (2022, outside year range). REJECTED.
+[cross-7] "Camino de Santiago Logroño food restaurants pilgrim guide 2024" → Camino general food guides only; no Logroño-specific named writer.
+[cross-7] "Rioja wine region Logroño restaurants food pairing 2023" → winetourismspain.com (no author); general wine pairing content.
+[cross-8] "revista gastronómica independiente Logroño restaurantes recomendados" → Found demesaenmesa.food.blog (insufficient content verified), directoalpaladar.com (already rejected).
+[cross-8] "suplemento gastronomía periódico Logroño mejores restaurantes 2024" → nuevecuatrouno.com Repsol article already known.
+[phase-1b-crossval] "La Cocina de Ramón Logroño recomendacion crítica" → TripAdvisor reviews and Michelin listing only; no new food writer sources.
+[phase-1b-crossval] "Tondeluna Logroño recomendacion crítica" → Restaurant website and TripAdvisor only; no new food writer sources.
+[phase-1b-crossval] "Txebiko Logroño recomendacion crítica" → Restaurant website, TripAdvisor; no new food writer sources. Txebiko confirmed as 2025 Bib Gourmand.
+[supp-pub-concentration] "reseña restaurante Logroño 2024 2025 autor crítico gastronómico" → gastroactitud.com (Capel, already known); eldiario.es Viajes La Rioja candidate.
+[supp-pub-concentration] "gastronomia Logroño 2024 articulo blog periodista riojano" → Found eldiario.es/viajes (Helena Crespo, Sep 2023). CONFIRMED CANDIDATE.
+[supp-pub-concentration] "Logroño mejor restaurante 2024 recomendado guía periodismo rioja" → eldiario.es Helena Crespo article confirmed. NYT David Farley La Rioja article (outside Logroño). laprensadelrioja.com (2022, outside year range).

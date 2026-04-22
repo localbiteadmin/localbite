@@ -1,0 +1,88 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023–2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LOCALBITE LOGROÑO SEARCH PLAN — v7.1
+City: Logroño, Spain
+Year range: 2023–2026
+Primary language: Spanish (ES)
+Secondary language: English (EN)
+Single-language city: NO
+Query budget: 45 soft / 55 hard ceiling
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
+
+TIER 1 — Casco Antiguo (2 queries: ES + EN)
+A1. [neighbourhood-CascoAntiguo] ES: "mejores restaurantes Casco Antiguo Logroño 2023 crítica gastronomía"
+A2. [neighbourhood-CascoAntiguo] EN: "best restaurants old town Logroño 2024 food guide"
+
+TIER 2 — Ensanche (2 queries: ES + EN)
+A3. [neighbourhood-Ensanche] ES: "restaurantes Ensanche Logroño gastronomía 2024 recomendaciones"
+A4. [neighbourhood-Ensanche] EN: "restaurants Ensanche neighbourhood Logroño food writer 2025"
+
+TIER 2 — Madre de Dios (2 queries: ES + EN)
+A5. [neighbourhood-MadreDeDios] ES: "restaurantes barrio Madre de Dios Logroño comida 2023"
+A6. [neighbourhood-MadreDeDios] EN: "Madre de Dios Logroño restaurants local food 2024"
+
+TIER 3 — La Estrella (1 query: ES only)
+A7. [neighbourhood-LaEstrella] ES: "restaurantes La Estrella Logroño gastronomía reseña"
+
+TIER 3 — El Cubo (1 query: ES only)
+A8. [neighbourhood-ElCubo] ES: "restaurantes El Cubo Logroño 2024 bares"
+
+TIER 3 — Cascajos (1 query: ES only)
+A9. [neighbourhood-Cascajos] ES: "restaurantes Cascajos Logroño 2023 comida"
+
+PART A TOTAL: 9 queries
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries, distinct registers):
+B1. [cross-1] "best restaurants Logroño Spain 2024 food guide review" (editorial guide style)
+B2. [cross-1] "where to eat Logroño local recommendations 2025" (personal recommendation style)
+
+Cross-2 — City-wide ES (3 queries, distinct registers):
+B3. [cross-2] "restaurantes Logroño 2024 crítica gastronómica escritor" (formal food criticism)
+B4. [cross-2] "dónde comer Logroño 2023 guía local pintxos barrio" (casual neighbourhood recommendation)
+B5. [cross-2] "guía restaurantes Logroño 2025 periodismo gastronómico" (food journalism)
+
+Cross-3 — Generic writer-first (2 queries, 1 each language):
+B6. [cross-3] "food writer Logroño La Rioja restaurant guide 2024" (EN)
+B7. [cross-3] "periodista gastronómica Logroño restaurante reseña 2023" (ES)
+
+Cross-4 — Awards (3 queries, generic — no NAMED_AWARDS set):
+B8. [cross-4] "Logroño restaurant awards best food 2024 2025" (EN)
+B9. [cross-4] "premios restaurantes Logroño La Rioja gastronomía mejores" (ES local)
+B10. [cross-4] "Logroño Bib Gourmand Michelin 2024 restaurantes recomendados" (Michelin)
+
+Cross-5 — Recent openings (2 queries, 1 each language):
+B11. [cross-5] "new restaurants Logroño 2025 openings" (EN)
+B12. [cross-5] "nuevos restaurantes Logroño 2025 aperturas" (ES)
+
+Cross-6 — Vocabulary-specific ES (2 queries — pintxos, local produce, Laurel):
+B13. [cross-6] "Calle del Laurel Logroño mejores pinchos pintxos bar guía 2024" (ES)
+B14. [cross-6] "caparrones patatas riojanas menestra restaurante Logroño 2023" (ES)
+
+Cross-7 — Cuisine and community (2 queries — Camino, wine press):
+B15. [cross-7] "Camino de Santiago Logroño food restaurants pilgrim guide 2024" (EN)
+B16. [cross-7] "Rioja wine region Logroño restaurants food pairing 2023" (EN)
+
+Cross-8 — Publication-category ES (2 queries):
+B17. [cross-8] "revista gastronómica independiente Logroño restaurantes recomendados" (ES)
+B18. [cross-8] "suplemento gastronomía periódico Logroño mejores restaurantes 2024" (ES)
+
+PART B TOTAL: 18 queries
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+Earlier years (2023): A1, A5, A9, B4, B7, B14, B16
+Later years (2024–2026): A2, A3, A4, A6, A8, B1, B2, B3, B5, B6, B8, B9, B10, B11, B12, B13, B15, B18
+No year term: A7, B17
+
+[year-distribution-check] PASSED — 7 queries reference earlier years (2023), 18 queries reference recent years (2024–2026), 2 queries have no year term.
+
+TOTAL PLANNED QUERIES (Part A + Part B): 27
+Well within 45 soft ceiling and 55 hard ceiling.
