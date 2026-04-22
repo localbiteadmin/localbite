@@ -75,6 +75,8 @@ const CITY_BOXES = {
   'Madrid':       { latMin: 40.35, latMax: 40.50, lngMin:  -3.75, lngMax:  -3.60 },
   'Seville':      { latMin: 37.30, latMax: 37.45, lngMin:  -6.05, lngMax:  -5.90 },
   'Bilbao':       { latMin: 43.22, latMax: 43.32, lngMin:  -3.05, lngMax:  -2.80 },
+  'Logrono':           { latMin: 42.44, latMax: 42.49, lngMin: -2.48, lngMax: -2.42 },
+  'Logronoño':          { latMin: 42.44, latMax: 42.49, lngMin: -2.48, lngMax: -2.42 },
   'Pamplona':          { latMin: 42.76, latMax: 42.85, lngMin: -1.70, lngMax: -1.59 },
   'Murcia':           { latMin: 37.91, latMax: 38.05, lngMin: -1.20, lngMax: -1.06 },
   'Santiago de Compostela': { latMin: 42.84, latMax: 42.90, lngMin: -8.58, lngMax: -8.50 },

@@ -1,0 +1,154 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES (v7.1)
+Change only this section for each new city.
+Full prompt = cat this file + localbite-prompt-v7-template.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+════════════════════════════════════════
+REQUIRED VARIABLES
+════════════════════════════════════════
+
+CITY: Logroño
+COUNTRY: Spain
+CITY_SLUG: logrono-spain
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: ES
+SEARCH_LANGUAGES: Spanish, English
+SINGLE_LANGUAGE_CITY: NO
+YEAR_RANGE: 2023–2026
+
+════════════════════════════════════════
+OUTPUT FILES
+════════════════════════════════════════
+
+OUTPUT_SEARCH_PLAN:    localbite-logrono-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-logrono-search-log.txt
+OUTPUT_RAW:            localbite-logrono-raw.json
+OUTPUT_WORKING:        localbite-logrono-working.json
+OUTPUT_FINAL:          localbite-logrono-2023-2026.json
+OUTPUT_AUDIT:          localbite-logrono-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-logrono-failed-sources.txt
+
+════════════════════════════════════════
+UNATTENDED MODE
+════════════════════════════════════════
+
+UNATTENDED_MODE: YES
+PHASE1_AUTO_PROCEED: YES
+
+════════════════════════════════════════
+NEIGHBOURHOODS
+════════════════════════════════════════
+
+TIER_1_NEIGHBOURHOODS: Casco Antiguo
+
+TIER_2_NEIGHBOURHOODS: Ensanche, Madre de Dios
+
+TIER_3_NEIGHBOURHOODS: La Estrella, El Cubo, Cascajos
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+- Casco Antiguo: the old walled city — Calle del Laurel (THE pintxos street,
+  60+ bars in 200m), Travesía del Laurel, Calle San Agustín, Calle San Juan,
+  Calle Portales, Calle Bretón de los Herreros, Calle Sagasta, Plaza del
+  Mercado, Plaza de San Agustín, Calle Marqués de San Nicolás. This is where
+  the overwhelming majority of recommended restaurants are located.
+- Ensanche: 19th-century grid expansion south of the old city. Some
+  contemporary restaurants here.
+- Madre de Dios: residential neighbourhood with some local restaurants.
+- Include outlying Logroño neighbourhoods only if a named writer covers a
+  specific restaurant there.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+- El Portal de Echaurren (2★) — in Ezcaray, ~50km from Logroño. NOT in city.
+- Venta Moncalvillo (2★) — in Daroca de Rioja, ~15km from Logroño. Exclude.
+- Nublo (1★) — in Haro, ~40km from Logroño. Exclude.
+- Any restaurant outside Logroño municipal boundary. La Rioja has many
+  excellent village restaurants (Laguardia, Haro, Ezcaray) — exclude all.
+- Winery restaurants that are primarily wine tourism operations, not
+  independently reviewed dining destinations.
+
+════════════════════════════════════════
+MICHELIN EXCLUSIONS
+════════════════════════════════════════
+
+The following Logroño restaurants hold Michelin stars — EXCLUDE:
+- Ikaro (1★) — chefs Carolina Sánchez + Iñaki Murua — Ecuador/Rioja fusion
+- Ajonegro (1★) — chefs Mariana Sánchez + Gonzalo Baquedano — Mexico/Rioja
+- Kiro Sushi (1★) — chef Félix Jiménez — Japanese omakase, 6 covers
+
+Bib Gourmand in Logroño — include if named writers recommend.
+
+════════════════════════════════════════
+CITY RESEARCH NOTES
+════════════════════════════════════════
+
+Logroño is the capital of La Rioja — Spain's premier wine region. The food
+scene is defined by pintxos culture (similar to but distinct from Basque
+pintxos), exceptional Rioja wine, and produce from La Rioja's famous huerta.
+
+KEY DISHES AND CULINARY VOCABULARY:
+- Pintxos (also pinchos locally): small bites served at the bar. Unlike San
+  Sebastián, many Logroño bars specialize in a SINGLE signature pintxo —
+  ordering the right thing at each bar is part of the local culture.
+- Bar Soriano champiñones: grilled mushrooms — the most famous pintxo in
+  Logroño. Often called "the mushrooms of Soriano" by locals.
+- Cojonudo: chorizo + quail egg on bread — a Logroño pintxo institution.
+- Patatas a la riojana: potatoes with chorizo and piquillo peppers
+- Caparrones: red kidney beans from Anguiano, often with chistorra
+- Pimientos de piquillo de Lodosa: roasted red peppers, often stuffed
+- Menestra de verduras riojana: seasonal vegetable stew
+- Chistorra: thin Navarran/Riojan sausage
+- Morcilla riojana: blood sausage — Ferrero Rocher de morcilla at Bar El Muro
+- Trucha de La Rioja: river trout
+- Espárragos de La Rioja: white asparagus
+- Rioja wine: Tempranillo dominant, Garnacha, Viura for whites
+- Zurito: small beer, the standard pintxos crawl drink
+- Txikito: small glass of wine
+- Poteo: the act of doing a pintxos crawl bar to bar
+
+KEY NON-MICHELIN RESTAURANTS (likely to appear in sources):
+- La Cocina de Ramón (Calle Portales, 30) — traditional Riojan, market-driven
+- Tondeluna — contemporary Riojan, run by Francis Paniego protégé
+- La Chispa Adecuada — creative modern Riojan
+- Juan Carlos Ferrando — traditional upscale
+
+BOTH-POOL ASSESSMENT:
+MEDIUM-HIGH probability. Logroño is on the Camino de Santiago route, which
+generates genuine English-language food and travel writing. The city is also
+covered by wine writers (Rioja DOCa is internationally known). Named EN-
+language writers have covered Calle del Laurel and Logroño restaurants in
+Food & Wine, NY Times, National Geographic, and travel publications.
+Expect 2–5 both-pool entries.
+
+LANGUAGE NOTES:
+Spanish only — no regional co-official language. Searches in ES and EN.
+
+CONCENTRATION CAP NOTE:
+Calle del Laurel dominates all coverage. Watch for concentration on bar
+guides vs sit-down restaurant reviews. The pipeline should capture both
+types but apply the standard 30% cap per source.
+
+════════════════════════════════════════
+PHASE 0 — KNOWN HIGH-QUALITY SOURCES
+════════════════════════════════════════
+
+Fetch these directly in Phase 0:
+
+ES PRIMARY:
+- Guía Repsol Logroño: https://www.guiarepsol.com/es/comer/donde-comer/restaurantes-en-logrono/
+- El Diario La Rioja gastronomía: https://www.larioja.com/gastronomia/
+- Heraldo de Aragón La Rioja food section: search for named author
+
+EN PRIMARY (check for named bylines):
+- Devour Tours Logroño/Calle Laurel guide: named author
+- Food & Wine Logroño/La Rioja: search for named author
+- Saveur La Rioja Logroño: search for named author
+- National Geographic Logroño food: search for named author
+
+════════════════════════════════════════
+PIPELINE CONFIGURATION
+════════════════════════════════════════
+
+QUERY_BUDGET: 45 soft ceiling, 55 hard ceiling
+BOTH_POOL_NOTE: Medium-high probability. EN Camino/wine press covers Logroño.
+SOURCE_RECENCY: 2023-2026
