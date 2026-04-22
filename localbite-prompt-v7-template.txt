@@ -834,8 +834,9 @@ concentration cap decisions, geographic exclusions, COI disclosures,
 extraction-time auto-rejections (quote quality failures).
 Format: restaurant name | tier | reason | source
 
-Write FILE 1 (raw) to OUTPUT_RAW — all Tier A and Tier B entries
-before removals.
+Write FILE 1 (raw) to OUTPUT_RAW — copy OUTPUT_WORKING contents
+directly (all Tier A, Tier B, and Tier C entries that reached Phase 3)
+BEFORE applying any removals. Raw preserves the full extraction for audit.
 
 Apply user removals (or auto-accept if UNATTENDED_MODE: YES).
 Write FILE 2 (final) to OUTPUT_FINAL.
@@ -1019,10 +1020,28 @@ try {
 const totalToolUses = sessionData.tool_counts ?
   Object.values(sessionData.tool_counts).reduce((sum, count) => sum + count, 0) : null;
 
+// Auto-discover output files — no placeholder substitution needed
+const allFiles = fs.readdirSync('.');
+const searchLogFiles = allFiles
+  .filter(f => /^localbite-.*-search-log\.txt$/.test(f))
+  .map(f => ({ name: f, mtime: fs.statSync(f).mtimeMs }))
+  .sort((a, b) => b.mtime - a.mtime);
+const finalJsonFiles = allFiles
+  .filter(f => /^localbite-.*-\d{4}-\d{4}\.json$/.test(f) &&
+    !f.includes('raw') && !f.includes('working') &&
+    !f.includes('backup') && !f.includes('stats'))
+  .map(f => ({ name: f, mtime: fs.statSync(f).mtimeMs }))
+  .sort((a, b) => b.mtime - a.mtime);
+const resolvedSearchLog = searchLogFiles.length > 0 ? searchLogFiles[0].name : null;
+const resolvedFinal = finalJsonFiles.length > 0 ? finalJsonFiles[0].name : null;
+const citySlug = resolvedFinal
+  ? resolvedFinal.replace('localbite-', '').replace(/-\d{4}-\d{4}\.json$/, '')
+  : 'unknown';
+
 // Read final JSON to extract counts programmatically
 let finalData = {restaurants: [], sources: []};
 try {
-  finalData = JSON.parse(fs.readFileSync('[OUTPUT_FINAL]', 'utf8'));
+  if (resolvedFinal) finalData = JSON.parse(fs.readFileSync(resolvedFinal, 'utf8'));
 } catch(e) {}
 
 const finalEntries = finalData.restaurants ? finalData.restaurants.length : 0;
@@ -1040,7 +1059,7 @@ const openCheck = finalData.restaurants ?
 let searchesRun = 0;
 let toolUsesFromLog = null;
 try {
-  const log = fs.readFileSync('[OUTPUT_SEARCH_LOG]', 'utf8');
+  const log = resolvedSearchLog ? fs.readFileSync(resolvedSearchLog, 'utf8') : '';
   const lines = log.split('\n').filter(l => l.trim().length > 0);
   searchesRun = lines.length;
   toolUsesFromLog = lines.length;
@@ -1052,8 +1071,9 @@ let runTimeSeconds = sessionData.duration_minutes ?
   Math.round(sessionData.duration_minutes * 60) : null;
 if (!runTimeSeconds) {
   try {
-    const logStat   = fs.statSync('[OUTPUT_SEARCH_LOG]');
-    const finalStat = fs.statSync('[OUTPUT_FINAL]');
+    if (!resolvedSearchLog || !resolvedFinal) throw new Error('output files not found');
+    const logStat   = fs.statSync(resolvedSearchLog);
+    const finalStat = fs.statSync(resolvedFinal);
     const startMs = logStat.birthtimeMs || logStat.ctimeMs;
     const endMs   = finalStat.mtimeMs;
     if (endMs > startMs) runTimeSeconds = Math.round((endMs - startMs) / 1000);
@@ -1064,7 +1084,7 @@ if (!runTimeSeconds) {
 const resolvedToolUses = totalToolUses || toolUsesFromLog;
 
 const e = {
-  city: '[CITY_SLUG]',
+  city: citySlug,
   date: new Date().toISOString().split('T')[0],
   pipeline: 'localbite-v7.1',
   sources_confirmed: sourcesConfirmed,
@@ -1089,8 +1109,8 @@ fs.appendFileSync('localbite-run-metrics.log', JSON.stringify(e) + '\n');
 console.log('Metrics logged:', JSON.stringify(e, null, 2));
 "
 
-Replace [OUTPUT_FINAL], [OUTPUT_SEARCH_LOG], and [CITY_SLUG]
-with the actual values from Part 1 before running.
+No placeholder substitution needed — the command auto-discovers
+the most recently modified search log and final JSON in the directory.
 Confirm: "Metrics logged:" appears in output before closing session.
 This step is MANDATORY. Do not skip it.
 
