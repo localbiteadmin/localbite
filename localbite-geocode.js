@@ -394,6 +394,61 @@ async function queryPhoton(name, nb, city, country) {
   return null;
 }
 
+// ── AUTO-NULL CHECK ────────────────────────────────────────────────────────
+// Returns { autoNull: true, reason } when the geocoder matched a clearly wrong
+// result. Two layers: entity blocklist and word-overlap check.
+// Conservative — only auto-nulls when confident. Ambiguous cases pass through
+// as medium-confidence for human review.
+function shouldAutoNull(queriedName, matchedName) {
+  // Layer 1: Entity blocklist — non-restaurant entities commonly returned by Nominatim/Photon
+  const BLOCKLIST = [
+    'policía', 'policia', 'ayuntamiento', 'hospital', 'cuartel',
+    'comisaría', 'comisaria', 'juzgado', 'guardia civil', 'bomberos',
+    'farmacia', 'colegio público', 'colegio publico',
+    'instituto de educación', 'instituto de educacion',
+    'biblioteca', 'correos', 'hacienda'
+  ];
+  const matchedLower = matchedName.toLowerCase();
+  if (BLOCKLIST.some(term => matchedLower.includes(term))) {
+    return { autoNull: true, reason: `entity blocklist hit: "${matchedName}"` };
+  }
+
+  // Layer 2: Word-overlap check
+  const STOP_WORDS = new Set([
+    'de', 'la', 'el', 'los', 'las', 'del', 'al', 'en', 'y', 'a', 'o',
+    'le', 'les', 'du', 'des', 'the', 'and', 'of'
+  ]);
+  // Strip these from BOTH sides — they carry no identity signal
+  const TYPE_WORDS = new Set([
+    'bar', 'cafe', 'cafeteria', 'restaurant', 'restaurante', 'bistro',
+    'taberna', 'bodega', 'casa', 'rincon', 'cerveceria', 'meson',
+    'hostal', 'hotel', 'nuevo', 'nueva', 'viejo', 'vieja'
+  ]);
+
+  function normalize(s) {
+    return s.toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '') // strip diacritics
+      .replace(/[^a-z0-9\s]/g, ' ')                    // strip punctuation
+      .split(/\s+/)
+      .filter(t => t.length >= 3 && !STOP_WORDS.has(t) && !TYPE_WORDS.has(t));
+  }
+
+  const queryTokens  = new Set(normalize(queriedName));
+  const matchTokens  = new Set(normalize(matchedName));
+
+  // If either side normalises to nothing, can't judge — pass through
+  if (queryTokens.size === 0 || matchTokens.size === 0) {
+    return { autoNull: false, reason: 'insufficient tokens for comparison' };
+  }
+
+  const overlap = [...queryTokens].filter(t => matchTokens.has(t));
+  if (overlap.length === 0) {
+    return { autoNull: true, reason: `zero word overlap — queried "${queriedName}", matched "${matchedName}"` };
+  }
+
+  return { autoNull: false, reason: `${overlap.length} token(s) in common: ${overlap.join(', ')}` };
+}
+
 // ── MAIN ──
 async function geocodeAll() {
   console.log(`\nLocalBite Geocoder v8.1`);
@@ -404,7 +459,7 @@ async function geocodeAll() {
   console.log(`Bounding box: lat ${cityBox.latMin}–${cityBox.latMax}, lng ${cityBox.lngMin}–${cityBox.lngMax}`);
   console.log(`══════════════════════════════════════════════\n`);
 
-  const stats = { nominatim: 0, photon: 0, already: 0, not_found: 0 };
+  const stats = { nominatim: 0, photon: 0, already: 0, not_found: 0, auto_nulled: 0 };
   const notFound = [];
 
   for (let i = 0; i < data.restaurants.length; i++) {
@@ -427,6 +482,13 @@ async function geocodeAll() {
     let geo = await queryNominatim(r.name, nb, city, country);
     if (geo) {
       console.log(`  ✓ Nominatim [${geo.confidence}]: ${geo.lat.toFixed(5)}, ${geo.lng.toFixed(5)} — "${geo.matched_name}"`);
+      const nomCheck = shouldAutoNull(r.name, geo.matched_name);
+      if (nomCheck.autoNull) {
+        console.log(`  ✗ Auto-nulled (Nominatim): ${nomCheck.reason}`);
+        r.geo_skip = true;
+        stats.auto_nulled = (stats.auto_nulled || 0) + 1;
+        continue;
+      }
       Object.assign(r, {
         lat: geo.lat, lng: geo.lng,
         geo_source: 'nominatim', geo_confidence: geo.confidence,
@@ -441,6 +503,13 @@ async function geocodeAll() {
     geo = await queryPhoton(r.name, nb, city, country);
     if (geo) {
       console.log(`  ✓ Photon [${geo.confidence}]: ${geo.lat.toFixed(5)}, ${geo.lng.toFixed(5)} — "${geo.matched_name}"`);
+      const photonCheck = shouldAutoNull(r.name, geo.matched_name);
+      if (photonCheck.autoNull) {
+        console.log(`  ✗ Auto-nulled (Photon): ${photonCheck.reason}`);
+        r.geo_skip = true;
+        stats.auto_nulled = (stats.auto_nulled || 0) + 1;
+        continue;
+      }
       Object.assign(r, {
         lat: geo.lat, lng: geo.lng,
         geo_source: 'photon', geo_confidence: geo.confidence,
