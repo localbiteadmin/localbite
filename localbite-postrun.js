@@ -612,9 +612,62 @@ function isThinProfile(profile) {
   console.log('');
   console.log(`Next steps:`);
   const steps = missingCount > 0
-    ? [`1. node localbite-approve-centroids.js ${file}`, `2. git add ${file} index.html localbite-index.json`]
+    ? [`1. node localbite-approve-centroids.js ${file} --auto-accept`, `2. git add ${file} index.html localbite-index.json`]
     : [`1. git add ${file} index.html localbite-index.json`];
   steps.forEach(s => console.log(`  ${s}`));
   console.log('');
+
+  // ══ STEP 5 — NEIGHBOURHOOD CENTROIDS → index.html ══════════════════
+  // Auto-add approved neighbourhood centroids to the CENTROIDS object
+  // in index.html. Only adds entries that do not already exist.
+  {
+    console.log(`\nSTEP 5 — Neighbourhood centroids → index.html`);
+    console.log(`──────────────────────────────────────────────`);
+
+    const nbCentroids = data.centroids || {};
+    const nbKeys = Object.keys(nbCentroids);
+
+    if (nbKeys.length === 0) {
+      console.log(`✓ No neighbourhood centroids in JSON — nothing to add.`);
+    } else {
+      let htmlContent = fs.readFileSync('index.html', 'utf8');
+      const centroidsStart = htmlContent.indexOf('const CENTROIDS = {');
+      const centroidsEnd   = htmlContent.indexOf('};', centroidsStart);
+
+      if (centroidsStart < 0 || centroidsEnd < 0) {
+        console.log(`⚠ CENTROIDS object not found in index.html — skipping.`);
+      } else {
+        const centroidsBlock = htmlContent.slice(centroidsStart, centroidsEnd + 2);
+        let insertions = '';
+        let added = 0;
+        let alreadyPresent = 0;
+
+        for (const [nb, coords] of Object.entries(nbCentroids)) {
+          const escaped = nb.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');
+          const keyPattern = new RegExp(`'${escaped}'\\s*:`);
+          if (keyPattern.test(centroidsBlock)) {
+            alreadyPresent++;
+            continue;
+          }
+          insertions += `  '${nb}': [${coords[0]}, ${coords[1]}],\n`;
+          added++;
+          console.log(`  ✓ Adding: '${nb}': [${coords[0]}, ${coords[1]}]`);
+        }
+
+        if (added > 0) {
+          const cityBlock = `  // ${city}\n${insertions}`;
+          const newHtml = htmlContent.slice(0, centroidsEnd) +
+                          cityBlock +
+                          htmlContent.slice(centroidsEnd);
+          fs.writeFileSync('index.html', newHtml, 'utf8');
+          console.log(`\n✓ ${added} neighbourhood centroid(s) added to index.html.`);
+          if (alreadyPresent > 0)
+            console.log(`  (${alreadyPresent} already present — skipped)`);
+        } else {
+          console.log(`✓ All ${alreadyPresent} neighbourhood centroid(s) already in index.html.`);
+        }
+      }
+    }
+  }
 
 })();

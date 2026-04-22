@@ -838,6 +838,10 @@ Write FILE 1 (raw) to OUTPUT_RAW — copy OUTPUT_WORKING contents
 directly (all Tier A, Tier B, and Tier C entries that reached Phase 3)
 BEFORE applying any removals. Raw preserves the full extraction for audit.
 
+⚠ DO NOT run any git commands (git add, git commit, git push).
+Committing is handled by localbite-postrun.js after geocoding and validation.
+Running git commands in the pipeline creates a wrong commit with missing data.
+
 Apply user removals (or auto-accept if UNATTENDED_MODE: YES).
 Write FILE 2 (final) to OUTPUT_FINAL.
 

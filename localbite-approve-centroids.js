@@ -167,7 +167,9 @@ function formatCoords(coords) {
 
   console.log(`─────────────────────────────────────────────`);
   console.log(`Summary:`);
-  const newlyApproved = Object.keys(approved).length - Object.keys(data.centroids || {}).length;
+  // Count only centroids that came from centroids_proposed this run
+  const proposedKeys = entries.map(([k]) => k);
+  const newlyApproved = Object.keys(approved).filter(k => proposedKeys.includes(k)).length;
   console.log(`  Approved: ${newlyApproved} new centroid(s)`);
   console.log(`  Skipped:  ${skipped.length}`);
 
