@@ -6142,3 +6142,217 @@ Post-session fixes commit: fe4a061 (automation gap fixes)
 ---
 
 *Fleet: 21 cities, 575+ restaurants, 8 on v7.1, index.html 2,228 lines (trigger 2,500)*
+
+
+
+## Session — 2026-04-22 (Infrastructure Fixes + Pamplona + Logroño + Batch Architecture Analysis)
+
+### Overview
+
+Long session covering two new city runs (Pamplona as 22nd city, Logroño as 23rd), a comprehensive set of infrastructure fixes to postrun.js, geocode.js, and approve-centroids.js, a full fleet audit against actual JSON files, and a deep analysis of batch pipeline architecture including the Nominatim/Photon rate limit blockers. Session also produced updated global instructions and CLAUDE.md.
+
+---
+
+### Two New Cities Added
+
+**Pamplona, Spain — 22nd city**
+- 24 restaurants, 4 sources, 1 both-pool (Chez Belagua: Navarra Capital ES + EN secondary)
+- Sources: Navarra Capital ×2 (Oihane Ochoa), The Objective (Brenda Alonso), Tapas Magazine (Paco Cruz)
+- 54% geocoding rate — structural, many pintxos bars too new or informal for OSM
+- 6 neighbourhood centroids approved: San Jorge, Casco Antiguo, San Juan, Iturrama, Ensanche, Milagrosa
+- EN primary pool structurally absent — 8+ queries, zero qualifying EN primary sources found
+- Publisher concentration: navarracapital.es ×2 (same author Oihane Ochoa) — documented as structural characteristic
+- Session interrupted and resumed across two contexts — Pamplona self-committed at 294dc37 before postrun; postrun re-committed correct version at 96a0ead
+- Commits: 294dc37 (pipeline self-commit, wrong — no geocoding), 96a0ead (postrun), 1d50b60 (fixes)
+
+**Logroño, Spain — 23rd city**
+- 15 restaurants, 6 sources, 1 both-pool (Bar El Muro: Guía Repsol ES + Devour Tours EN)
+- Sources: Guía Repsol (Otilia Anes da Veiga), The Sauce Mag (Charlie Brown), Devour Tours (David Farley ⚠ coi), Gastroactitud (José Carlos Capel), NueveCuatroUno ×2 (Sergio Moreno + Teresa Pérez de Azpillaga)
+- 80% geocoding rate — 11 Nominatim, 1 Photon (Bar San Lorenzo → "Bar Lorenzo Tio Agus"), 3 not found
+- 1 neighbourhood centroid: Casco Antiguo [42.4656, -2.4489] — averaged from 12 geocoded restaurants
+- COI flagged: Devour Tours operates food tours in Logroño — commercial conflict documented
+- STEP 5.5 city matching failed: pipeline wrote "logrono", matcher expected "logrono-spain" — fix pending
+- Casco Antiguo centroid approved in JSON but NOT added to index.html — naming collision with Seville's existing entry
+- Commits: 8eca28b (data), 5d30596 (docs)
+
+---
+
+### Infrastructure Fixes Committed This Session
+
+**postrun.js v3.0 → v3.2**
+
+STEP 5 — neighbourhood centroids auto-add to index.html CENTROIDS object (new)
+- Reads approved centroids from data.centroids
+- Inserts entries that don't already exist in CENTROIDS
+- Currently blocked by naming collision for cities sharing neighbourhood names
+- Tested on Pamplona: correctly detected all 6 centroids already present
+
+STEP 5.5 — metrics capture from file timestamps and search log (new)
+- run_time_seconds: search log birthtime → search log mtime (pipeline start → end)
+- tool_uses: search log line count
+- Updates existing metrics log entry for today's city
+- Bug: city matching fails when pipeline writes plain city name vs city_slug format
+
+geo_skip for not-found restaurants (new in geocode.js)
+- After both Nominatim and Photon fail, sets geo_skip: true automatically
+- Prevents wasted re-geocoding on subsequent postrun runs
+
+--auto-accept default in next-steps message (fixed)
+- postrun.js next-steps now shows correct flag
+
+Counter bug fixed in approve-centroids (fixed)
+- "Approved: N new centroid(s)" now correctly counts centroids from current run only
+- Was comparing total approved count against existing centroids — always showed wrong number
+
+approve-centroids next-steps corrected (fixed)
+- Now shows correct git commands instead of obsolete "Verify CITY_CENTRES/BOUNDS" instructions
+
+run_time calculation corrected (fixed)
+- Was using JSON file mtime as end time — corrupted by re-runs
+- Now uses search log mtime — search log is written during pipeline only, never by postrun
+
+No-git instruction added to template (weak fix)
+- Added explicit "DO NOT run git commands" instruction to pipeline template
+- Acknowledged as weak: compaction may ignore it. Postrun commits are canonical.
+
+**geocode.js v8.1**
+- geo_skip auto-set for not-found restaurants after first postrun
+- Logroño bounding box added (both 'Logrono' and 'Logroño' variants)
+- Case-insensitive CITY_BOXES lookup previously fixed (2026-04-21)
+
+**localbite-approve-centroids.js**
+- Counter bug fixed
+- --auto-accept flag now standard and documented
+
+**index.html viewer**
+- isHighConfidence() updated: medium confidence with geo_matched_name → solid pin
+- Medium confidence with null geo_matched_name stays hollow pin
+- Rationale: medium confidence with a named match has real coordinates; medium with no match has unvalidated Photon coordinates
+
+**CLAUDE.md**
+- Updated post-pipeline checklist with all new steps
+- CENTROIDS naming collision documented with grep command
+- approve-centroids never chain with git — explicit warning
+- Redirect pattern for postrun output documented
+- No-git warning added
+- Part 1 preparation sections restored (accidentally dropped in first update, corrected in second commit)
+
+**~/.zshrc**
+- setopt nohistexpand added — kills ! history expansion permanently
+
+**.env**
+- ANTHROPIC_API_KEY persisted
+
+---
+
+### Key Decisions Made
+
+**CENTROIDS naming collision is an open architectural issue — not deferred, blocking**
+The CENTROIDS object uses bare neighbourhood names as keys. Multiple cities share names (Casco Antiguo, Ensanche, Medina etc). Silent data corruption occurs when a new city's centroid overwrites an existing entry. Logroño's Casco Antiguo centroid could not be added because Seville's entry uses the same key. Fix requires city-qualified keys (e.g. 'logrono-spain:Casco Antiguo') throughout CENTROIDS, viewer lookup logic, postrun STEP 5, approve-centroids, and all city JSON files. This is the highest-priority architectural fix before any batch run.
+
+**Medium confidence with named match → solid pin**
+Investigated 68 medium confidence entries across the fleet. Seville's 19 entries all have null geo_matched_name — Photon returned coordinates with zero name validation. These correctly stay hollow. All v7.1 city medium confidence matches have plausible named matches and correctly show solid pins. Barcelona has 4+ clearly wrong medium confidence matches (Âme→Hotel América etc) — these will be fixed at rebuild since old pipeline cities are being rebuilt anyway.
+
+**Self-hosted Nominatim/Photon: deferred**
+Analysed the batch throughput constraint thoroughly. Nominatim and Photon public APIs both have ~1 req/sec rate limits, making parallel postrun impossible. Self-hosted alternatives (Docker + Spain PBF for Nominatim, built from Nominatim database for Photon) would eliminate this constraint but the throughput gain (~2 extra cities per 3-hour session) doesn't justify the ~27GB disk + 4–8 hour one-time setup at current fleet size. Revisit at 50+ cities or if ToS block occurs.
+
+**Claude Code sessions share rate limits — confirmed**
+Research confirmed: all Claude Code instances on the same account share a rate limit pool. Each instance has its own independent context window but rate limits are pooled. Max 5x gives sufficient headroom for 2–3 concurrent Sonnet sessions. Practical batch approach: 2 parallel pipelines with 20-minute stagger for Phase 1, sequential postrun.
+
+**Batch pipeline architecture defined**
+- Max 2–3 simultaneous Claude Code sessions (Max 5x rate limit pool)
+- 20-minute stagger between pipeline launches
+- postrun strictly sequential (Nominatim ToS)
+- T1/T2/T3/T4 terminal assignment fixed — never run postrun from monitoring terminal
+- Expected throughput without self-hosted geocoders: 4–6 cities per 3-hour session with 2–3 parallel pipelines
+
+**Fleet audit revealed multiple errors in global instructions**
+Running the fleet script against actual JSON files revealed significant discrepancies:
+- Barcelona: 86R/10BP (was 78/14 in instructions)
+- Lisbon: 48R/1BP (was 63/23 — major error, likely wrong file referenced)
+- San Sebastián: 24R (was 30)
+- Chefchaouen: 12R (was 17)
+- Bilbao: v7 not v7.1
+- Seville: v7 not "old"
+- Porto: all metadata null — schema corruption, provenance unknown
+- Madrid: JSON not found by fleet script — filename pattern mismatch, investigate
+All corrections incorporated into updated global instructions.
+
+**The Claude Insights parallel orchestration proposal: not yet**
+Assessed the proposal for coordinator agent + Task tool + parallel subagents. Architecturally sound but overstates throughput ("10 cities in time of 1"), glosses over Nominatim constraint, has race condition in shared metrics.jsonl, and requires significant engineering. Recommended phased approach: fix outstanding issues first, validate 2-city parallel runs, then consider automation. Not this session.
+
+---
+
+### False Start Analysis — Session Learning
+
+Multiple fix scripts required v2/v3 rewrites due to:
+1. Scripts written before reading exact target strings from files
+2. Mental model of file state used after modifications — file had already changed
+3. Fix scripts targeting the same file as a previous fix without re-reading
+
+The dry-run-first pattern caught every mismatch before file modification. The test-before-apply discipline on medium confidence pin fix prevented a bad change (would have made Seville's 19 null-matched entries show as solid pins).
+
+Terminal buffer overflow from approve-centroids Unicode output hid git output multiple times. Rule established: never chain approve-centroids with git commands.
+
+postrun ran from monitoring terminal simultaneously with main terminal on Logroño — Nominatim ToS violation. Terminal assignment discipline established: T3 monitoring only, T4 postrun/git only.
+
+---
+
+### Files Produced or Updated
+
+| File | Status | Notes |
+|------|--------|-------|
+| localbite-pamplona-2023-2026.json | New | 24 restaurants, 4 sources, 1 both-pool |
+| localbite-logrono-2023-2026.json | New | 15 restaurants, 6 sources, 1 both-pool |
+| localbite-prompt-v71-pamplona-part1.txt | New | |
+| localbite-prompt-v71-pamplona.txt | New | |
+| localbite-prompt-v71-logrono-part1.txt | New | |
+| localbite-prompt-v71-logrono.txt | New | |
+| localbite-postrun.js | Updated | v3.0 → v3.2: STEP 5, STEP 5.5, geo_skip, --auto-accept default, run_time fix |
+| localbite-geocode.js | Updated | geo_skip for not-found, Logroño bbox, accent variants |
+| localbite-approve-centroids.js | Updated | Counter bug fix, next-steps corrected |
+| localbite-prompt-v7-template.txt | Updated | No-git instruction added |
+| index.html | Updated | isHighConfidence() medium + geo_matched_name fix |
+| CLAUDE.md | Updated | Full rewrite with session learnings |
+| localbite-index.json | Updated | 23 cities |
+| localbite-run-metrics.log | Updated | Pamplona and Logroño entries |
+| .env | New | ANTHROPIC_API_KEY persisted |
+| ~/.zshrc | Updated | setopt nohistexpand |
+
+Pipeline output files (docs commit):
+- localbite-pamplona-search-log.txt, search-plan.txt, audit.txt, raw.json, failed-sources.txt, working.json
+- localbite-logrono-search-log.txt, search-plan.txt, audit.txt, raw.json, failed-sources.txt, working.json
+
+---
+
+### Outstanding Items
+
+**Critical — must fix before batch runs:**
+- [ ] CENTROIDS naming collision — city-qualified keys architectural fix (2.5–3 hours, dedicated session)
+- [ ] STEP 5.5 city matching bug — pipeline writes "logrono", matcher expects "logrono-spain" (45 min)
+- [ ] Logroño Casco Antiguo centroid not in index.html — blocked by naming collision fix
+- [ ] Madrid JSON filename — not found by fleet script, investigate
+
+**Data quality:**
+- [ ] Porto metadata all null — investigate schema corruption
+- [ ] Santiago built date null — minor
+- [ ] Lisbon source_recency null — minor
+- [ ] Seville 19 medium confidence entries with null geo_matched_name — fix at rebuild
+- [ ] Barcelona 4+ clearly wrong geocodes — fix at rebuild
+- [ ] Madrid 56 open_status_check — no verification workflow agreed
+
+**Infrastructure:**
+- [ ] approve-centroids next-steps still shows "Verify CITY_CENTRES/BOUNDS" in some paths — cosmetic, fix at leisure
+- [ ] Pipeline self-commit not reliably prevented — no-git instruction survives compaction unreliably
+
+**Superseded files to remove at rebuild:**
+- localbite-barcelona-2025-2026.json
+- localbite-lisbon-2025-2026.json
+- localbite-toronto-2025-2026.json
+- localbite-valencia-2025-2026.json
+
+---
+
+*Fleet: 23 cities, ~769 restaurants, 10 on v7.1*
+*index.html: ~2,255 lines (trigger at 2,500)*
+*HEAD: 43d00cc*
