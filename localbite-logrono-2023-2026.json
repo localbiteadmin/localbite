@@ -1,0 +1,687 @@
+{
+  "city": "Logroño",
+  "country": "Spain",
+  "city_slug": "logrono-spain",
+  "built": "2026-04-22",
+  "source_recency": "2023-2026",
+  "pipeline": "localbite-v7.1",
+  "confidence_tiers": {
+    "auto_approved": 2,
+    "reviewed_kept": 13,
+    "auto_removed": 2,
+    "user_removed": 0,
+    "auto_rejected": 0,
+    "concentration_cap_applied": 1
+  },
+  "sources": [
+    {
+      "id": "src-repsol-anesdaveiga",
+      "publication": "Guía Repsol",
+      "writer": "Otilia Anes da Veiga",
+      "writer_profile": "Gastronomy and travel journalist who contributes to Guía Repsol, Spain's most authoritative restaurant and travel guide. Her November 2024 pintxos route along Calle del Laurel draws on first-hand visits to each bar, identifying the signature bite at every stop. Guía Repsol carries Spain's Sol rating system and is the primary reference for Spanish dining.",
+      "url": "https://www.guiarepsol.com",
+      "article_url": "https://www.guiarepsol.com/es/comer/de-tapeo/ruta-pinchos-calle-laurel-logrono/",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2024-11-13",
+      "article_title": "Ruta de pinchos por la calle Laurel de Logroño",
+      "fetch_status": "good",
+      "fetch_chars": null,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": true,
+      "found_via": "phase-1"
+    },
+    {
+      "id": "src-saucemag-brown",
+      "publication": "The Sauce Mag",
+      "writer": "Charlie Brown",
+      "writer_profile": "Charlie Brown is the sole creator of The Sauce Mag, a Substack-based food and travel publication documenting eating adventures across Europe and beyond. His July 2024 piece on Logroño emerged from an extended week of eating and drinking in the city, producing bar-by-bar recommendations built around what to order at each stop. The Sauce Mag is a confirmed single-author publication.",
+      "url": "https://thesaucemag.substack.com",
+      "article_url": "https://thesaucemag.substack.com/p/when-it-comes-to-tapas-logrono-san",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2024-07-19",
+      "article_title": "When It Comes to Tapas, Logroño > San Sebastian",
+      "fetch_status": "good",
+      "fetch_chars": null,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    {
+      "id": "src-devourtours-farley",
+      "publication": "Devour Tours",
+      "writer": "David Farley",
+      "writer_profile": "⚠ coi — David Farley is an American food and travel journalist whose work appears in The New York Times, National Geographic, and other major publications. His July 2024 guide to Calle del Laurel was published on the Devour Tours platform, a company that operates food tours in Logroño; the content was produced in the context of a commercial partnership. Farley's editorial detail is substantive, but the commercial conflict is noted.",
+      "url": "https://devourtours.com",
+      "article_url": "https://devourtours.com/blog/calle-laurel-logrono/",
+      "language": "en",
+      "source_type": "secondary",
+      "article_date": "2024-07-22",
+      "article_title": "9 Best Pinchos & Tapas on Calle del Laurel in Logroño",
+      "fetch_status": "good",
+      "fetch_chars": null,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": true,
+      "commercial_conflict_note": "Devour Tours operates food tours in Logroño — content on this platform promotes venues aligned with commercial tour interests.",
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    {
+      "id": "src-gastroactitud-capel",
+      "publication": "Gastroactitud",
+      "writer": "José Carlos Capel",
+      "writer_profile": "José Carlos Capel is Spain's most prominent food critic, co-founder of Madrid Fusión and long-time restaurant columnist for El País. His June 2024 review of Arsa — a newly opened Rioja-Andalucía fusion restaurant in Logroño — represents the highest-profile critical assessment an emerging local restaurant can receive. Capel consistently names specific dishes, techniques, and his own evaluative responses.",
+      "url": "https://www.gastroactitud.com",
+      "article_url": "https://www.gastroactitud.com/restaurante/arsa-logrono/",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2024-06-06",
+      "article_title": "Crítica del restaurante Arsa (Logroño)",
+      "fetch_status": "good",
+      "fetch_chars": null,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    {
+      "id": "src-nuevecuatrouno-perezdeazpillaga",
+      "publication": "NueveCuatroUno",
+      "writer": "Teresa Pérez de Azpillaga",
+      "writer_profile": "Teresa Pérez de Azpillaga is a journalist at NueveCuatroUno, a La Rioja-based digital news outlet covering local culture, food, and city life in Logroño. Her March 2026 piece on new hospitality openings provides current coverage of the evolving Logroño restaurant scene from a local press perspective.",
+      "url": "https://nuevecuatrouno.com",
+      "article_url": "https://nuevecuatrouno.com/2026/03/15/gastronomia-rioja-seis-nuevos-proyectos-hosteleria-logrono/",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2026-03-15",
+      "article_title": "Seis nuevos proyectos a la vista en la hostelería logroñesa",
+      "fetch_status": "good",
+      "fetch_chars": null,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    {
+      "id": "src-eldiario-crespo",
+      "publication": "eldiario.es Viajes",
+      "writer": "Helena Crespo",
+      "writer_profile": "Helena Crespo is a travel writer who contributes to eldiario.es, a Spanish independent national news outlet. Her September 2023 article covering La Rioja's best restaurants takes a visitor-facing regional perspective; the sole Logroño entry extracted was subsequently removed in Phase 3 due to a quote citing TripAdvisor rather than the writer's own observation.",
+      "url": "https://www.eldiario.es",
+      "article_url": "https://www.eldiario.es/viajes/mejores-restaurantes-la-rioja_1_10513395.html",
+      "language": "es",
+      "source_type": "secondary",
+      "article_date": "2023-09-25",
+      "article_title": "Los ocho mejores restaurantes de La Rioja",
+      "fetch_status": "good",
+      "fetch_chars": null,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Bar El Muro",
+      "name_variants": [
+        "El Muro",
+        "Bar El Muro"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos",
+      "opening_year": 1989,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "El Cojonudo",
+        "Ferrero Rocher de morcilla",
+        "chorizo picadillo",
+        "pimiento rojo",
+        "huevo de codorniz",
+        "morcilla",
+        "peanuts"
+      ],
+      "signature_dish": "Ferrero Rocher de morcilla",
+      "quote": "Un mollete de pan relleno de picadillo de chorizo, con una tira de pimiento rojo encima y coronado por un huevo de codorniz",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-repsol-anesdaveiga",
+        "src-devourtours-farley"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "article_date": "2024-11-13",
+      "article_title": "Ruta de pinchos por la calle Laurel de Logroño",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 42.4654561,
+      "lng": -2.4486453,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bar el Muro"
+    },
+    {
+      "name": "Bar Soriano",
+      "name_variants": [
+        "El Soriano",
+        "Soriano"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos",
+      "opening_year": 1972,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "champiñones con gamba",
+        "grilled mushrooms and prawn on baguette"
+      ],
+      "signature_dish": "Champis — trio of mushrooms with prawn on baguette in garlic oil",
+      "quote": "A trio of local mushrooms topped with a tiny prawn is skewered onto a slice of baguette and covered in an unholy amount of garlic oil",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "src-saucemag-brown",
+        "src-devourtours-farley"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "article_date": "2024-07-19",
+      "article_title": "When It Comes to Tapas, Logroño > San Sebastian",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 42.4656531,
+      "lng": -2.4491277,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Soriano"
+    },
+    {
+      "name": "Arsa",
+      "name_variants": [
+        "Restaurante Arsa",
+        "Arsa Restaurante"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "fusión Rioja-Andalucía",
+      "opening_year": 2024,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "duxelles de champiñones con espuma de gambas",
+        "buñuelo de orejas guisadas con alioli de alegrías riojanas",
+        "salmorejo de naranja sobre tartar de atún",
+        "berenjena glaseada con garbanzos y queso de sierra de Cameros",
+        "paté en costra riojano-andaluz",
+        "rodaballo en terrina con pil pil de algas",
+        "lomo de ciervo marinado con arrope de granadas",
+        "fardelejo riojano reinterpretado"
+      ],
+      "signature_dish": "Paté en costra riojano-andaluz con cerdo ibérico, cordero y foie gras al palo cortado",
+      "quote": "Paté en costra riojano-andaluz que incluye tropezones de cerdo ibérico, cordero y foie gras al aroma del palo cortado",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-gastroactitud-capel"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "article_date": "2024-06-06",
+      "article_title": "Crítica del restaurante Arsa (Logroño)",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Bar Ángel",
+      "name_variants": [
+        "Bar Angel"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos",
+      "opening_year": 1960,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "champiñones a la plancha con gamba",
+        "champichón con alioli y gamba"
+      ],
+      "signature_dish": "Champiñones a la plancha con alioli y gamba",
+      "quote": "Con un aliño cercano al alioli hecho a base de aceite de oliva, ajo y, como no, ese ingrediente que no se revela, esta delicia se cocina en la plancha y se remata con una gamba",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-repsol-anesdaveiga"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "article_date": "2024-11-13",
+      "article_title": "Ruta de pinchos por la calle Laurel de Logroño",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 42.4655515,
+      "lng": -2.4482521,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bar Angel"
+    },
+    {
+      "name": "Bar Donosti",
+      "name_variants": [
+        "Bar Donosti"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "foie a la plancha",
+        "foie gras on toast with lavender jam"
+      ],
+      "signature_dish": "Grilled foie gras on toast with lavender petal jam",
+      "quote": "grilled foie gras, which arrives on toast and is dapped with a jam made from lavender petals",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-devourtours-farley"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary",
+      "article_date": "2024-07-22",
+      "article_title": "9 Best Pinchos & Tapas on Calle del Laurel in Logroño",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 42.4655183,
+      "lng": -2.4482118,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Donosti"
+    },
+    {
+      "name": "Bar El Perchas",
+      "name_variants": [
+        "El Perchas",
+        "Bar El Percha"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "orejita rebozada",
+        "orejita picante"
+      ],
+      "signature_dish": "Orejita picante (spicy pig ear sandwich)",
+      "quote": "an orejita picante (a spicy little pig ear sandwich). It's more tender than its battered brethren",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-devourtours-farley"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary",
+      "article_date": "2024-07-22",
+      "article_title": "9 Best Pinchos & Tapas on Calle del Laurel in Logroño",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 42.4655199,
+      "lng": -2.4491905,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "El Perchas"
+    },
+    {
+      "name": "Bar Jubera",
+      "name_variants": [
+        "Jubera"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos",
+      "opening_year": 1980,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "patatas bravas con aioli y salsa picante"
+      ],
+      "signature_dish": "Patatas bravas with aioli and spicy sauce",
+      "quote": "fried cubed potatoes with an aioli and a slightly spicy sauce slathered over the top",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-devourtours-farley"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary",
+      "article_date": "2024-07-22",
+      "article_title": "9 Best Pinchos & Tapas on Calle del Laurel in Logroño",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 42.465491,
+      "lng": -2.448736,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bar Jubera"
+    },
+    {
+      "name": "Bar San Lorenzo",
+      "name_variants": [
+        "Bar Lorenzo"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "Tío Agus",
+        "pincho moruno",
+        "sausage in bun with salsa verde"
+      ],
+      "signature_dish": "Tío Agus — marinated pork in bun with grandfather's secret sauce",
+      "quote": "marinated pork grilled on a hot plancha until the outside chars, whacked in a small bun and liberally doused with a herby secret sauce designed by their grandfather",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-saucemag-brown"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "article_date": "2024-07-19",
+      "article_title": "When It Comes to Tapas, Logroño > San Sebastian",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 42.4657645,
+      "lng": -2.4491496,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Bar Lorenzo \"Tio Agus\""
+    },
+    {
+      "name": "Bar Sebas",
+      "name_variants": [
+        "Bar Sebas"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "tortilla de patatas mocosa",
+        "runny potato tortilla with chili sauce"
+      ],
+      "signature_dish": "Tortilla de patatas mocosa (slightly runny) with chili sauce",
+      "quote": "a tad runny—or mocosa, to use the local parlance. Bar Sebas is a tortilla-making institution",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-devourtours-farley"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary",
+      "article_date": "2024-07-22",
+      "article_title": "9 Best Pinchos & Tapas on Calle del Laurel in Logroño",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 42.4656765,
+      "lng": -2.4485212,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Sebas"
+    },
+    {
+      "name": "El Soldado de Tudelilla",
+      "name_variants": [
+        "El 'Soldado de Tudelilla'",
+        "Soldado de Tudelilla"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "ensalada de tomate",
+        "ensalada de lomo de chicharro",
+        "conservas premium",
+        "anchoa del Cantábrico",
+        "espárago de Navarra"
+      ],
+      "signature_dish": "Ensalada de tomate con aceite de Galilea",
+      "quote": "Azu busca, rebusca y selecciona en la Península Ibérica el mejor tomate, dentro y fuera de temporada, para ofrecer una ensalada con sabor durante todo el año",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-repsol-anesdaveiga"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "article_date": "2024-11-13",
+      "article_title": "Ruta de pinchos por la calle Laurel de Logroño",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 42.4658486,
+      "lng": -2.4494335,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "El Soldado de Tudelilla"
+    },
+    {
+      "name": "Entretapas 941",
+      "name_variants": [
+        "EntreTapas 941",
+        "Entretapas"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "pincho de solomillo con piña",
+        "foie con compota de manzana",
+        "salmón ahumado con tomate seco y mozzarella",
+        "patatas bravas"
+      ],
+      "signature_dish": "Pincho de solomillo con piña a la plancha",
+      "quote": "El pincho de solomillo con piña a la plancha, el resultado es un bocado jugoso donde los haya",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-repsol-anesdaveiga"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "article_date": "2024-11-13",
+      "article_title": "Ruta de pinchos por la calle Laurel de Logroño",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "La Casita",
+      "name_variants": [
+        "'La Casita'"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos",
+      "opening_year": 1986,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "brocheta de pulpo y langostino",
+        "zapatilla de jamón",
+        "croquetas caseras",
+        "embuchado",
+        "sorbete"
+      ],
+      "signature_dish": "Brocheta de pulpo y langostino a la plancha con aceite de oliva y pimentón de la Vera",
+      "quote": "La brocheta de pulpo y langostino a la plancha con aceite de oliva y pimentón de la Vera, que va genial con un Albariño",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-repsol-anesdaveiga"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "article_date": "2024-11-13",
+      "article_title": "Ruta de pinchos por la calle Laurel de Logroño",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 42.4658356,
+      "lng": -2.4492491,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Casita"
+    },
+    {
+      "name": "Las Gildas de La Laurel",
+      "name_variants": [
+        "Las Gildas"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos (gildas specialist)",
+      "opening_year": 2026,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "gildas",
+        "anti-gilda",
+        "sushi de cecina"
+      ],
+      "signature_dish": null,
+      "quote": "Desde la más clásica hasta las más modernas, pasando por la anti-gilda o el sushi de cecina",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-nuevecuatrouno-perezdeazpillaga"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "article_date": "2026-03-15",
+      "article_title": "Seis nuevos proyectos a la vista en la hostelería logroñesa",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Pata Negra",
+      "name_variants": [
+        "Jamonería Pata Negra"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos/jamón bar",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "bocata de jamón serrano con queso tetilla fundido",
+        "iberian charcuterie"
+      ],
+      "signature_dish": "Jamón serrano and melted tetilla cheese sandwich",
+      "quote": "A jamón serrano and melted tetilla cheese sandwich with magic in meat and fat and childhood memories of ham and cheese toasties",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-saucemag-brown"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "article_date": "2024-07-19",
+      "article_title": "When It Comes to Tapas, Logroño > San Sebastian",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 42.4654231,
+      "lng": -2.4490822,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pata Negra"
+    },
+    {
+      "name": "Taberna de Baco",
+      "name_variants": [
+        "La Taberna de Baco"
+      ],
+      "neighbourhood": "Casco Antiguo",
+      "cuisine": "pintxos",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "ensalada de tomate con cebolla blanca y guindilla",
+        "heirloom tomato salad"
+      ],
+      "signature_dish": "Summer tomato salad with Guindilla pepper",
+      "quote": "Ripe tomatoes cut into random-sized chunks with white onion slices and fresh Guindilla pepper, dressed with high-quality olive oil and vinegar",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-saucemag-brown"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "article_date": "2024-07-19",
+      "article_title": "When It Comes to Tapas, Logroño > San Sebastian",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 42.4659164,
+      "lng": -2.449344,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Taberna de Baco"
+    }
+  ],
+  "centroids": {
+    "Casco Antiguo": [
+      42.4656,
+      -2.4489
+    ]
+  }
+}
