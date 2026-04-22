@@ -99,7 +99,9 @@
   "restaurants": [
     {
       "name": "Chez Belagua",
-      "name_variants": ["Belagua"],
+      "name_variants": [
+        "Belagua"
+      ],
       "neighbourhood": "Casco Antiguo",
       "cuisine": "Traditional Navarrese",
       "opening_year": null,
@@ -129,15 +131,17 @@
       "article_title": "Los menús degustación también se extienden a los restaurantes de Pamplona sin estrella Michelin",
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.8171818,
+      "lng": -1.6418586,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Chez Belagua"
     },
     {
       "name": "Bar Maxi Izurde",
-      "name_variants": ["Maxi Izurde"],
+      "name_variants": [
+        "Maxi Izurde"
+      ],
       "neighbourhood": "San Jorge",
       "cuisine": "Traditional bar / pintxos",
       "opening_year": null,
@@ -208,7 +212,9 @@
     },
     {
       "name": "Koku",
-      "name_variants": ["Restaurante Koku"],
+      "name_variants": [
+        "Restaurante Koku"
+      ],
       "neighbourhood": "San Juan",
       "cuisine": "Asian fusion / Japanese-inspired",
       "opening_year": null,
@@ -269,15 +275,17 @@
       "article_title": "Los menús degustación también se extienden a los restaurantes de Pamplona sin estrella Michelin",
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.8307639,
+      "lng": -1.6281167,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bar Avenida"
     },
     {
       "name": "Casa Amparo",
-      "name_variants": ["Restaurante Casa Amparo"],
+      "name_variants": [
+        "Restaurante Casa Amparo"
+      ],
       "neighbourhood": "Iturrama",
       "cuisine": "Traditional Spanish / home cooking",
       "opening_year": null,
@@ -309,11 +317,14 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "geo_skip": true
     },
     {
       "name": "Gastrobar Moka",
-      "name_variants": ["Moka"],
+      "name_variants": [
+        "Moka"
+      ],
       "neighbourhood": "Ensanche",
       "cuisine": "Contemporary Spanish with Navarran wine pairing",
       "opening_year": null,
@@ -341,11 +352,11 @@
       "article_title": "Los menús degustación también se extienden a los restaurantes de Pamplona sin estrella Michelin",
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.8121961,
+      "lng": -1.6374922,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Gastrobar Moka"
     },
     {
       "name": "Casa Manolo",
@@ -372,15 +383,17 @@
       "article_title": "Los menús degustación también se extienden a los restaurantes de Pamplona sin estrella Michelin",
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.8143233,
+      "lng": -1.6434115,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Casa Manolo"
     },
     {
       "name": "Anttonenea",
-      "name_variants": ["Restaurante Anttonenea"],
+      "name_variants": [
+        "Restaurante Anttonenea"
+      ],
       "neighbourhood": "Casco Antiguo",
       "cuisine": "Contemporary Spanish",
       "opening_year": null,
@@ -445,11 +458,11 @@
       "article_title": "Los menús degustación también se extienden a los restaurantes de Pamplona sin estrella Michelin",
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.815683,
+      "lng": -1.649598,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Cuchara de Martín"
     },
     {
       "name": "Lomobajo",
@@ -511,15 +524,18 @@
       "article_title": "Los restaurantes emergentes de Pamplona que debes conocer",
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.8166431,
+      "lng": -1.6404178,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Arostegui"
     },
     {
       "name": "Nómada",
-      "name_variants": ["Nomada", "Restaurante Nómada"],
+      "name_variants": [
+        "Nomada",
+        "Restaurante Nómada"
+      ],
       "neighbourhood": "Iturrama",
       "cuisine": "International fusion / creative",
       "opening_year": 2024,
@@ -552,7 +568,9 @@
     },
     {
       "name": "Zurita Barra y Mantel",
-      "name_variants": ["Zurita"],
+      "name_variants": [
+        "Zurita"
+      ],
       "neighbourhood": "Casco Antiguo",
       "cuisine": "Contemporary Navarrese",
       "opening_year": null,
@@ -586,7 +604,10 @@
     },
     {
       "name": "Don Mérito Essencia",
-      "name_variants": ["Don Merito", "Don Mérito"],
+      "name_variants": [
+        "Don Merito",
+        "Don Mérito"
+      ],
       "neighbourhood": "Ensanche",
       "cuisine": "Galician-Navarrese / grill and seafood",
       "opening_year": null,
@@ -611,15 +632,17 @@
       "article_title": "Los restaurantes emergentes de Pamplona que debes conocer",
       "open_status_check": false,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.8104822,
+      "lng": -1.6623519,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Don Mérito"
     },
     {
       "name": "Picaflor",
-      "name_variants": ["Picaflor: De la Huerta a la Mesa"],
+      "name_variants": [
+        "Picaflor: De la Huerta a la Mesa"
+      ],
       "neighbourhood": "Ensanche",
       "cuisine": "Traditional Navarrese home cooking",
       "opening_year": 2024,
@@ -652,7 +675,9 @@
     },
     {
       "name": "Akari Gastroteka",
-      "name_variants": ["Akari"],
+      "name_variants": [
+        "Akari"
+      ],
       "neighbourhood": "Lezkairu",
       "cuisine": "Avant-garde pintxos",
       "opening_year": null,
@@ -675,15 +700,17 @@
       "article_title": "Dónde comer en Pamplona: diez restaurantes distinguidos con premios gastronómicos",
       "open_status_check": true,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.8066419,
+      "lng": -1.6288576,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Akari Gastroteka"
     },
     {
       "name": "Bar Binies",
-      "name_variants": ["Binies"],
+      "name_variants": [
+        "Binies"
+      ],
       "neighbourhood": "Casco Antiguo",
       "cuisine": "Traditional bar / pintxos",
       "opening_year": null,
@@ -716,7 +743,9 @@
     },
     {
       "name": "Restaurante Alma",
-      "name_variants": ["Alma"],
+      "name_variants": [
+        "Alma"
+      ],
       "neighbourhood": "Milagrosa",
       "cuisine": "Avant-garde Navarrese",
       "opening_year": null,
@@ -746,7 +775,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "geo_skip": true
     },
     {
       "name": "Baserriberri",
@@ -775,15 +805,17 @@
       "article_title": "Dónde comer en Pamplona: diez restaurantes distinguidos con premios gastronómicos",
       "open_status_check": true,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.8163704,
+      "lng": -1.6445903,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Baserriberri"
     },
     {
       "name": "Kiliki Taberna",
-      "name_variants": ["Kiliki"],
+      "name_variants": [
+        "Kiliki"
+      ],
       "neighbourhood": "Casco Antiguo",
       "cuisine": "Traditional Navarrese / eclectic",
       "opening_year": null,
@@ -807,11 +839,11 @@
       "article_title": "Dónde comer en Pamplona: diez restaurantes distinguidos con premios gastronómicos",
       "open_status_check": true,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.8236611,
+      "lng": -1.6502854,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Kiliki"
     },
     {
       "name": "New Trujal",
@@ -841,15 +873,18 @@
       "article_title": "Dónde comer en Pamplona: diez restaurantes distinguidos con premios gastronómicos",
       "open_status_check": true,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.8106852,
+      "lng": -1.6412255,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "New Trujal"
     },
     {
       "name": "Churrería La Mañueta",
-      "name_variants": ["La Mañueta", "La Manueta"],
+      "name_variants": [
+        "La Mañueta",
+        "La Manueta"
+      ],
       "neighbourhood": "Casco Antiguo",
       "cuisine": "Churros / traditional breakfast",
       "opening_year": null,
@@ -872,15 +907,18 @@
       "article_title": "Where to eat in Pamplona during San Fermín",
       "open_status_check": true,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.8189379,
+      "lng": -1.64325,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Churrería La Mañueta"
     },
     {
       "name": "Baviera",
-      "name_variants": ["Bávaros", "Bar Baviera"],
+      "name_variants": [
+        "Bávaros",
+        "Bar Baviera"
+      ],
       "neighbourhood": "Casco Antiguo",
       "cuisine": "Classic bar-restaurant / traditional Spanish",
       "opening_year": null,
@@ -903,11 +941,37 @@
       "article_title": "Where to eat in Pamplona during San Fermín",
       "open_status_check": true,
       "flagged": false,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "geo_confidence": null,
-      "geo_matched_name": null
+      "lat": 42.8170316,
+      "lng": -1.6420968,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bar Baviera"
     }
-  ]
+  ],
+  "centroids": {
+    "San Jorge": [
+      42.8212,
+      -1.6643
+    ],
+    "Casco Antiguo": [
+      42.8172,
+      -1.6434
+    ],
+    "San Juan": [
+      42.8146,
+      -1.6591
+    ],
+    "Iturrama": [
+      42.8057,
+      -1.6526
+    ],
+    "Ensanche": [
+      42.8123,
+      -1.6478
+    ],
+    "Milagrosa": [
+      42.8051,
+      -1.6388
+    ]
+  }
 }
