@@ -1,0 +1,104 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023–2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+════════════════════════════════════════
+SEARCH PLAN — Pamplona, Spain
+Pipeline: localbite-v7.1
+Date: 2026-04-22
+YEAR_RANGE: 2023–2026
+Query budget: 45 soft / 55 hard ceiling
+════════════════════════════════════════
+
+PHASE 0 — DIRECT FETCH (ES primary, hub pages — expect many to fail)
+F1. https://www.guiarepsol.com/es/comer/donde-comer/restaurantes-en-pamplona/
+F2. https://www.diariodenavarra.es/gastronomia/
+F3. https://www.noticiasdenavarra.com/gastronomia/
+F4. https://pamplonagastronomica.com/
+F5. https://navarracapital.es/gastronomia/
+
+EN PRIMARY — search-first (named author required):
+S1. Condé Nast Traveller Pamplona — search for named author
+S2. Food & Wine Pamplona / Navarra — search for named author
+S3. Saveur Pamplona — search for named author
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD QUERIES
+════════════════════════════════════════
+
+TIER 1 — Casco Antiguo / Casco Viejo (same area, both names covered)
+A1. [ES] "mejores restaurantes Casco Antiguo Pamplona 2023 2024"  [earlier]
+A2. [EN] "best restaurants old town Pamplona Casco Viejo 2025 2026"  [later]
+
+TIER 2 — Ensanche
+A3. [ES] "restaurantes Ensanche Pamplona recomendaciones 2025"  [later]
+A4. [EN] "Ensanche Pamplona restaurant guide 2024"  [earlier]
+
+TIER 2 — Iturrama
+A5. [ES] "bares pintxos Iturrama Pamplona 2024 2025"  [earlier+later]
+A6. [EN] "Iturrama Pamplona food guide restaurants"  [no year]
+
+TIER 3 — San Juan
+A7. [ES] "restaurantes barrio San Juan Pamplona gastronomia"  [no year]
+
+TIER 3 — Lezkairu
+A8. [ES] "Lezkairu Pamplona restaurantes gastronomia"  [no year]
+
+TIER 3 — Buztintxuri
+A9. [ES] "Buztintxuri Pamplona restaurantes"  [no year]
+
+Part A total: 9 queries
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries, 1 earlier / 1 later):
+B1. [EN] "best places to eat Pamplona Spain food guide 2025 2026"  [later]
+B2. [EN] "Pamplona restaurants worth visiting recommendations food writing 2024"  [earlier]
+
+Cross-2 — City-wide ES (3 queries, ≥1 earlier):
+B3. [ES] "guía gastronómica Pamplona restaurantes reseñas crítica 2025"  [later]
+B4. [ES] "donde comer Pamplona barrio recomendacion vecinos 2023 2024"  [earlier]
+B5. [ES] "periodismo gastronómico Navarra Pamplona restaurantes mejores 2026"  [later]
+
+Cross-3 — Writer-first discovery (1 ES + 1 EN, open):
+B6. [ES] "escritor gastrónomo periodista Pamplona Navarra guía restaurantes"  [no year]
+B7. [EN] "food writer Pamplona Navarre restaurant recommendations"  [no year]
+
+Cross-4 — Named awards (3 queries):
+B8. [ES] "Guía Repsol Sol premiados Pamplona Navarra restaurante 2024 2025"  [earlier+later]
+B9. [ES] "Michelin Bib Gourmand Pamplona Navarra restaurantes recomendados 2025"  [later]
+B10. [ES] "premios gastronomía Navarra mejor restaurante 2023 2024"  [earlier]
+
+Cross-5 — Recent openings (1 ES + 1 EN):
+B11. [ES] "nuevas aperturas restaurantes Pamplona 2025 2026"  [later]
+B12. [EN] "new restaurant openings Pamplona 2024 2025"  [earlier+later]
+
+Cross-6 — Vocabulary-specific ES (pintxos, poteo, Navarran ingredients):
+B13. [ES] "pintxos poteo Calle Estafeta San Nicolás Pamplona mejores bares 2024 2025"  [earlier+later]
+B14. [ES] "hongos setas temporada menú degustación Pamplona Navarra 2023 2024"  [earlier]
+
+Cross-7 — Cuisine and community:
+B15. [ES] "cocina navarra tradicional restaurante Pamplona huerta verduras 2025"  [later]
+B16. [EN] "San Fermin Pamplona food authentic local restaurants beyond tourists"  [no year]
+
+Cross-8 — Publication-category ES:
+B17. [ES] "revista gastronómica independiente Navarra Pamplona restaurantes crítica"  [no year]
+B18. [ES] "suplemento gastronomía periódico Navarra Pamplona mejores restaurantes 2025"  [later]
+
+Part B total: 18 queries
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+
+[year-distribution-check] PASSED — 9 queries reference earlier years (2023/2024),
+11 queries reference later years (2025/2026), 7 queries have no year term.
+Angles with 2 queries each have ≥1 earlier and ≥1 later reference (Cross-1, Cross-5 met;
+Cross-3, Cross-7, Cross-8 use no-year terms — acceptable per rule).
+Cross-2 (3 queries): 1 earlier (B4), 2 later (B3, B5) — meets ≥1 earlier requirement.
+Cross-4 (3 queries): 1 earlier+later (B8), 1 later (B9), 1 earlier (B10) — distributed.
+
+Total planned (Part A + Part B): 27 queries
+Phase 0 fetches: 5
+Phase 1B crossval: ~3 (responsive, TBD)
+Estimated total: ~35 — within 45 soft ceiling

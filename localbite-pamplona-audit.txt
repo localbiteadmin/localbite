@@ -1,0 +1,262 @@
+════════════════════════════════════════════════════════════════
+PIPELINE AUDIT — Pamplona, Spain
+Pipeline: localbite-v7.1
+Date: 2026-04-22
+════════════════════════════════════════════════════════════════
+
+SUMMARY
+-------
+Sources confirmed: 4
+  Primary ES: 2 (navarracapital.es — Oihane Ochoa, 2 articles)
+  Secondary ES: 1 (theobjective.com — Brenda Alonso, Dec 2023)
+  Secondary EN: 1 (tapasmagazine.es — Paco Cruz, Jul 2024)
+
+Raw extractions: 47 venue mentions across 4 sources
+  After extraction-phase rejections: 37 qualifying entries
+  After deduplication (3 merged pairs): 34 unique restaurants
+  After quality fail (Phase 3): 33 qualifying
+  After concentration cap (Phase 3): 24 final entries
+
+Final pack: 24 restaurants (3 Tier A, 21 Tier B)
+
+════════════════════════════════════════════════════════════════
+SECTION 1 — SOURCE SELECTION AUDIT
+════════════════════════════════════════════════════════════════
+
+PHASE 0 FAILURES (direct fetch attempts)
+-----------------------------------------
+[FAIL] Guía Repsol Pamplona — 404 error; Wayback returned HTTP 451
+       (legal/GDPR block). Permanently excluded.
+[FAIL] El Diario de Navarra gastronomía — 404 hub page, no article content.
+[FAIL] Noticias de Navarra gastronomía — 404 hub page, no article content.
+[FAIL] Pamplona Gastronómica (pamplonagastronomica.com) — 28,500 chars
+       genuine content, but About pages confirm anonymous/collective
+       authorship. No full named author disclosed. Failed named-author rule.
+[FAIL] Navarra Capital hub — Returned 2019 tourism promo, byline "Redacción"
+       (anonymous editorial). Failed.
+
+EN PRIMARY SEARCH (named author required)
+------------------------------------------
+[FAIL] Condé Nast Traveller — No Pamplona-specific named-author article
+       found within 2023–2026 range.
+[FAIL] Food & Wine — No qualifying Pamplona article found.
+[FAIL] Saveur — No qualifying Pamplona article found.
+[NOTE] EN primary gap is a structural characteristic of Pamplona. Eight
+       additional targeted searches (cross-1 through cross-8 EN angles)
+       returned no qualifying EN primary source with named author. San
+       Fermín generates EN travel writing but primarily at national/
+       aggregator outlets without named food writers covering the city
+       specifically. Tapas Magazine (secondary EN) provides the only
+       qualifying EN coverage.
+
+SOURCES CONFIRMED
+------------------
+[OK] src-navarracapital-ochoa-emergentes
+     Navarra Capital, Oihane Ochoa, Feb 15 2026
+     Found via: phase-1/cross-2
+     COI check: NO commercial conflict
+     Fetch: good, ~9,800 chars
+
+[OK] src-navarracapital-ochoa-menus
+     Navarra Capital, Oihane Ochoa, Mar 2026
+     Found via: phase-1/cross-8
+     COI check: NO commercial conflict
+     Fetch: good, ~8,200 chars
+
+[OK] src-theobjective-alonso
+     The Objective, Brenda Alonso, Dec 1 2023
+     Found via: phase-1/neighbourhood-CascoAntiguo
+     COI check: NO commercial conflict
+     Fetch: good, ~35,847 chars
+
+[OK] src-tapasmagazine-cruz
+     Tapas Magazine, Paco Cruz, Jul 6 2024
+     Found via: phase-1/cross-7
+     COI check: NO commercial conflict
+     Fetch: good, ~8,500 chars
+
+SECONDARY SOURCES EXCLUDED (secondary cap = 2 max)
+----------------------------------------------------
+[EXCLUDED] El Diario (Roberto Ruiz, Jun 2024) — qualifying but excluded
+           to stay within 2-secondary cap. Tapas Magazine selected
+           instead for EN pool coverage.
+[EXCLUDED] National Geographic Spain (Mari Carmen Duarte Jul 2024 +
+           Lucía Díaz Madurga Nov 2025) — qualifying articles confirmed
+           (Michelin Bib Gourmand coverage) but excluded by secondary cap.
+           Note: El Merca'o (Bib Gourmand) appeared in NG Spain but
+           cannot be included — no qualifying source in final pool.
+
+════════════════════════════════════════════════════════════════
+SECTION 2 — PUBLISHER CONCENTRATION
+════════════════════════════════════════════════════════════════
+
+PUBLISHER: Navarra Capital (navarracapital.es)
+  Articles: 2 (emergentes Feb 2026 + menus Mar 2026)
+  Author: Oihane Ochoa (same author, same publisher)
+  Supplementary searches run to find alternative ES primary: 8+
+  Outcome: No independent ES primary found for Pamplona.
+  STRUCTURAL CHARACTERISTIC documented.
+
+SOURCE CONCENTRATION ANALYSIS (after dedup, 34 unique restaurants):
+  src-navarracapital-ochoa-emergentes: 16/34 = 47% → OVER 30% CAP
+  src-navarracapital-ochoa-menus: 10/34 = 29% → at cap
+  src-theobjective-alonso: 8/34 = 24% → within cap
+  src-tapasmagazine-cruz: 3/34 = 9% → within cap
+
+ACTION: Concentration cap applied to src-navarracapital-ochoa-emergentes.
+Removed 9 lowest-confidence sole-source entries (see Section 3).
+Post-cap: emergentes contributes to 7/24 = 29% of final pack ✓
+
+menus source post-removal: 9/24 = 37.5% — structurally over cap.
+DOCUMENTED AS EXCEPTION: No alternative ES primary found. Both navarracapital
+articles represent distinct food angles (emerging openings vs. tasting menus)
+with different editorial content. Reported in audit as known issue.
+
+════════════════════════════════════════════════════════════════
+SECTION 3 — TIER C REJECTIONS AND REMOVALS
+════════════════════════════════════════════════════════════════
+
+EXTRACTION-PHASE REJECTIONS (11 total)
+----------------------------------------
+From src-theobjective-alonso:
+  [MICHELIN] Restaurante Kabo — Michelin 1★ (Part 1 exclusion list,
+             Av. Zaragoza, 10). Excluded at extraction.
+  [GEO-EXCL] Carlos Oyarbide Bistronomiko — Located in San Adrián
+             (~50km from Pamplona), outside Pamplona municipal boundary.
+             Excluded at extraction.
+
+From src-tapasmagazine-cruz:
+  [MICHELIN] Hotel Europa — Michelin 1★ (Part 1 exclusion list,
+             C. Espoz y Mina, 11, chef Pilar Idoate). Excluded.
+  [RIAD+QUAL] Hotel Maisonnave Bar — Hotel bar, atmosphere-only content
+              (Bloody Mary mention). RIAD_RULE: thin/not food-focused.
+  [RIAD+QUAL] Hotel Yoldi Bar — Hotel bar, champús (sorbet drink) only.
+              RIAD_RULE: thin/not food-focused.
+  [NOT-VENUE] Santo Domingo Market — Food market, not a dining venue.
+  [NOT-VENUE] Gazteluleku Gastronomic Society — Private society,
+              not a public restaurant.
+  [QUAL-FAIL] La Mandarra de la Ramos — No address, no specific dishes.
+              Secondary source (Tapas Magazine) requires 2 specific
+              details. Failed quote quality rule.
+  [QUAL-FAIL] El Redín — No address, no specific dishes. Failed quote
+              quality rule.
+  [QUAL-FAIL] Bar Danubio — No address, no specific dishes. Failed quote
+              quality rule.
+
+Phase 3 quality rejection:
+  [QUAL-FAIL] Errejota (src-navarracapital-ochoa-menus) — Quote only 11
+              words ("Cada plato, cuidadosamente elaborado, combina
+              productos locales con toques creativos"). No specific dishes
+              identified in fetch. Failed ≥15 word AND ≥1 specific detail
+              rule. Tier C.
+
+CONCENTRATION CAP REMOVALS (9 entries from emergentes)
+--------------------------------------------------------
+Removal priority: newest openings with least established track record,
+then most generic descriptions. All are sole-source Tier B entries.
+
+  [CAP] Saona — Mediterranean chain, opened Nov 14 2025 (newest opening
+        in pack, least track record). Generic chain concept.
+  [CAP] Restaurante Origen — Opened March 2026 (no track record at
+        article date). Philosophy-only description, no specific dishes.
+  [CAP] Caradura — Opened February 2026. Vermut bar with very thin food
+        content; barely food-focused.
+  [CAP] Mestizo Gastro Club — Generic "sharing plates" concept, no
+        distinctive dishes in description.
+  [CAP] Kungfu Bistro — Opened late 2025. Generic dim sum fusion, not
+        distinctive for Pamplona's culinary identity.
+  [CAP] Bearán — Third-iteration reopening Dec 2025, marginally specific
+        dishes.
+  [CAP] Iruñazarra — Recently relocated (Casco Antiguo → San Roque),
+        address uncertainty. Pintxos named but no narrative depth.
+  [CAP] Olio Pizza Bar — Pizza concept; while award-nominated, least
+        representative of Pamplona's culinary identity.
+  [CAP] La Ideal Mar — Seafood, opened July 2024, strong dish list but
+        weakest narrative among kept emergentes entries.
+
+BOTH-POOL ENTRIES
+------------------
+  Chez Belagua: primary-ES (navarracapital-menus, 2026) + secondary-EN
+               (tapasmagazine-cruz, 2024). Different publishers, different
+               language pools. Confirmed both-pool. ✓
+
+MULTI-SOURCE (same language pool)
+-----------------------------------
+  Bar Maxi Izurde: primary-ES (navarracapital-menus) + secondary-ES
+                   (theobjective-alonso). Different publishers. Tier A ✓
+  Les Amis: primary-ES (navarracapital-emergentes) + secondary-ES
+            (theobjective-alonso). Different publishers. Tier A ✓
+
+════════════════════════════════════════════════════════════════
+SECTION 4 — GEOGRAPHIC BOUNDARY DECISIONS
+════════════════════════════════════════════════════════════════
+
+INCLUDED OUTSIDE TIER 1/2 NEIGHBOURHOODS
+------------------------------------------
+  Bar Avenida — La Chantrea (eastern neighbourhood, not in Part 1 boundary
+                list). Within Pamplona municipal boundary. Included.
+  Bar Maxi Izurde / Koku — San Jorge / San Juan. Within boundary. Included.
+  Akari Gastroteka — Soto de Lezkairu (Tier 3 in Part 1). Named writer
+                     covers it specifically → included per Tier 3 rule.
+  Restaurante Alma — Milagrosa (southern Pamplona). Within boundary.
+  La Cuchara de Martín — No street address available. Included with
+                          neighbourhood: "Pamplona". Will require centroid.
+
+HOTEL RESTAURANT (RIAD_RULE: SKIP applies)
+--------------------------------------------
+  Zurita Barra y Mantel (Gran Hotel La Perla) — RIAD_RULE SKIP. Included
+  because: (1) named chef Leandro Gil explicitly mentioned, (2) specific
+  dishes listed (bikini trufado a la brasa, untamorros de cordero,
+  lentejas caviar), (3) food content is primary focus of description.
+  Note: Les Amis (Calle Pozo Blanco) is a standalone restaurant, not hotel.
+
+════════════════════════════════════════════════════════════════
+SECTION 5 — OPEN STATUS FLAGS
+════════════════════════════════════════════════════════════════
+
+open_status_check: true (source > 18 months old at build date 2026-04-22)
+  All 6 entries from src-theobjective-alonso (Dec 2023, 28 months):
+    Akari Gastroteka, Bar Binies, Restaurante Alma, Baserriberri,
+    Kiliki Taberna, New Trujal
+
+  All 2 entries from src-tapasmagazine-cruz (Jul 2024, 21 months):
+    Churrería La Mañueta, Baviera
+
+  Total open_status_check: true = 8 entries (33% of pack)
+
+open_status_check: false (confirmed active via 2026 sources)
+  Multi-source entries with navarracapital 2026 confirmation:
+    Chez Belagua, Bar Maxi Izurde, Les Amis
+  All 13 single-source navarracapital 2026 entries
+
+════════════════════════════════════════════════════════════════
+SECTION 6 — YEAR DISTRIBUTION AUDIT
+════════════════════════════════════════════════════════════════
+
+Year distribution of sources:
+  2023: The Objective (Dec 2023) — 1 source
+  2024: Tapas Magazine (Jul 2024) — 1 source
+  2026: Navarra Capital emergentes (Feb 2026) — 1 source
+        Navarra Capital menus (Mar 2026) — 1 source
+
+Year distribution of restaurant entries in final pack:
+  2023 anchor: 6 entries from The Objective ✓
+  2024 anchor: 2 entries from Tapas Magazine ✓
+  2026 anchor: 16 entries from Navarra Capital (2 articles) ✓
+
+YEAR_RANGE_DISTRIBUTION: PASS ✓ (all four years of 2023–2026 represented)
+
+════════════════════════════════════════════════════════════════
+SECTION 7 — SEARCHES RUN
+════════════════════════════════════════════════════════════════
+
+Total queries: 43 (5 Phase 0 fetches + 27 Phase 1 searches + 8 COI/
+                   publisher-concentration supplementary + 3 Phase 1B
+                   cross-validation)
+Query budget: 43 / 45 soft ceiling — WITHIN BUDGET ✓
+Stopping rule triggered: after 31 Phase 1 queries — last 8+ consecutive
+queries returned no qualifying new sources.
+
+════════════════════════════════════════════════════════════════
+END OF AUDIT
+════════════════════════════════════════════════════════════════

@@ -1,0 +1,90 @@
+════════════════════════════════════════════════════════════════
+FAILED SOURCES — Pamplona, Spain
+Pipeline: localbite-v7.1
+Date: 2026-04-22
+════════════════════════════════════════════════════════════════
+
+PHASE 0 — DIRECT FETCH FAILURES
+---------------------------------
+
+[PERMANENT-FAIL] https://www.guiarepsol.com/es/comer/donde-comer/restaurantes-en-pamplona/
+  Status: 404; Wayback retry returned HTTP 451 (legal/GDPR block)
+  Reason: URL no longer active; Wayback legally blocked
+
+[PERMANENT-FAIL] https://www.diariodenavarra.es/gastronomia/
+  Status: 404 — hub page section no longer exists
+  Reason: El Diario de Navarra restructured their URL scheme
+
+[PERMANENT-FAIL] https://www.noticiasdenavarra.com/gastronomia/
+  Status: 404 — hub page section no longer exists
+
+[NAMED-AUTHOR-FAIL] https://pamplonagastronomica.com/
+  Status: 200 (28,500 chars good content)
+  Reason: About pages confirm anonymous/collective authorship.
+  Note: "removed anonymity in 2024" reported in press, but no full
+  named author disclosed on the site itself. Failed named-author rule.
+
+[NAMED-AUTHOR-FAIL] https://navarracapital.es/gastronomia/ (hub)
+  Status: 200 but returned 2019 tourism promo with "Redacción" byline
+  Reason: Anonymous editorial byline. Failed.
+
+PHASE 1 — SEARCH CANDIDATES THAT FAILED QUALIFICATION
+-------------------------------------------------------
+
+[NO-NAMED-AUTHOR] navarra.okdiario.com — Multiple articles found
+  but no named food writer bylines. TripAdvisor-based aggregator content.
+
+[NO-NAMED-AUTHOR] huleymantel.com — July 2024 Pamplona guide found
+  but no named author visible in article or About page.
+
+[NO-NAMED-AUTHOR] viajeroscallejeros.com — Feb 2025 article found
+  but no named author visible.
+
+[NO-NAMED-AUTHOR] directoalpaladar.com — Apr 2025 Pamplona article found
+  but named author not visible in Jina fetch.
+
+[YEAR-OUT-RANGE] demesaenmesa.food.blog (Juan Antonio Rayo) — Named author
+  confirmed (Juan Antonio Rayo), but most recent Pamplona articles
+  dated 2016-2017. Outside 2023–2026 year range.
+
+[YEAR-OUT-RANGE] donostiafoods.com — Pamplona article from August 2016.
+  Outside 2023–2026 range.
+
+[NO-NAMED-AUTHOR] starwinelist.com — Pamplona restaurant listing found
+  but no named editorial author for food writing content.
+
+[NO-NAMED-AUTHOR] itimaker.com — Multiple Pamplona food guides found
+  but no individual bylines, only institutional/tool-generated content.
+
+[NO-NAMED-AUTHOR] theculturetrip.com — Pamplona content found but
+  no named food writer byline confirmed.
+
+[NO-NAMED-AUTHOR] thedailytravelblogs.wordpress.com — Iturrama pintxos
+  content found but no named individual author confirmed.
+
+SECONDARY CAP EXCLUSIONS (qualifying but excluded)
+---------------------------------------------------
+
+[SECONDARY-CAP] eldiario.es — Roberto Ruiz, Jun 2024
+  "Pintxos poteo Calle Estafeta San Nicolás" article, ~8,500 chars
+  Qualifying (named author, national newspaper, within year range)
+  Excluded: secondary cap already filled by The Objective + Tapas Magazine
+
+[SECONDARY-CAP] viajes.nationalgeographic.com.es — Mari Carmen Duarte,
+  Jul 2024 (Michelin/Bib Gourmand Pamplona/Navarra)
+  Qualifying (named author, verified)
+  Excluded: secondary cap filled
+
+[SECONDARY-CAP] viajes.nationalgeographic.com.es — Lucía Díaz Madurga,
+  Nov 2025 (cocina navarra tradicional guide)
+  Qualifying (named author, verified)
+  Excluded: secondary cap filled
+
+NOTE: El Merca'o (Bib Gourmand, Pamplona) was confirmed in NG Spain
+searches but has no qualifying source in the final pool. The Bib Gourmand
+entry for Enekorri (Part 1) likewise has no qualifying source mention.
+Both excluded from final pack.
+
+════════════════════════════════════════════════════════════════
+END OF FAILED SOURCES LOG
+════════════════════════════════════════════════════════════════

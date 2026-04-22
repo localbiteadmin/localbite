@@ -1,0 +1,42 @@
+[phase-0] "https://www.guiarepsol.com/es/comer/donde-comer/restaurantes-en-pamplona/" → 404 error; Wayback retry returned HTTP 451 (legal block). FAILED.
+[phase-0] "https://www.diariodenavarra.es/gastronomia/" → 404 page not found; no article content, no named author. FAILED.
+[phase-0] "https://www.noticiasdenavarra.com/gastronomia/" → 404 page not found; no food content. FAILED.
+[phase-0] "https://pamplonagastronomica.com/" → 28,500 chars genuine restaurant content BUT no named author visible; About pages confirm anonymous/collective authorship with no full name disclosed. FAILED (named author rule).
+[phase-0] "https://navarracapital.es/gastronomia/" → Hub page returns tourism promo article from 2019; byline is "Redacción" (anonymous editorial). FAILED.
+[neighbourhood-CascoAntiguo] "mejores restaurantes Casco Antiguo Pamplona 2023 2024" → Results included navarra.okdiario (TripAdvisor-based, no named author), navarracapital.es emergentes article, theobjective.com (Brenda Alonso, Dec 2023 — candidate).
+[neighbourhood-CascoViejo] "best restaurants old town Pamplona Casco Viejo 2025 2026" → Results included pamplonews.com reference to Directo al Paladar, navarracapital.es emergentes — no new qualifying EN sources.
+[neighbourhood-Ensanche] "restaurantes Ensanche Pamplona recomendaciones 2025" → theobjective.com (Dec 2023) confirmed; noticiasdenavarra.com specific news items; no independent qualifying source.
+[neighbourhood-Ensanche] "Ensanche Pamplona restaurant guide 2024" → theobjective.com (already known), runningofthebulls.com (commercial, no author — fail).
+[neighbourhood-Iturrama] "bares pintxos Iturrama Pamplona 2024 2025" → pamplonagastronomica.com (no named author — fail); thedailytravelblogs.wordpress.com (need check); La Traca bar site.
+[neighbourhood-Iturrama] "Iturrama Pamplona food guide restaurants" → itimaker.com blog (no byline); aggregators only; no qualifying source.
+[neighbourhood-SanJuan] "restaurantes barrio San Juan Pamplona gastronomia" → navarracapital.es emergentes (already known); no new qualifying source.
+[neighbourhood-Lezkairu] "Lezkairu Pamplona restaurantes gastronomia" → akari gastroteka and bar sites; no independent qualifying food guide source.
+[neighbourhood-Buztintxuri] "Buztintxuri Pamplona restaurantes" → directory/aggregator results; no qualifying source.
+[cross-1] "best places to eat Pamplona Spain food guide 2025 2026" → theculturetrip.com (no byline found); itimaker.com (no byline found); aggregators.
+[cross-1] "Pamplona restaurants worth visiting recommendations food writing 2024" → aggregators; no qualifying named-author EN source.
+[cross-2] "guía gastronómica Pamplona restaurantes reseñas crítica 2025" → navarracapital.es (Oihane Ochoa, Feb 2026 — confirmed); Guía Macarfi article in noticiasdenavarra.com.
+[cross-2] "donde comer Pamplona barrio recomendacion vecinos 2023 2024" → directoalpaladar.com (no named author visible — fail); theobjective.com (Brenda Alonso — already confirmed).
+[cross-2] "periodismo gastronómico Navarra Pamplona restaurantes mejores 2026" → navarra.okdiario Michelin results; navarracapital.es (already known).
+[cross-3] "escritor gastrónomo periodista Pamplona Navarra guía restaurantes" → huleymantel.com (no named author — fail); navarracapital.es (already known); pamplonagastronomica.com (already failed).
+[cross-3] "food writer Pamplona Navarre restaurant recommendations" → aggregators only; no qualifying named-author EN primary source.
+[cross-4] "Guía Repsol Sol premiados Pamplona Navarra restaurante 2024 2025" → award news in noticiasdenavarra.com and navarracapital.es; no qualifying standalone guide.
+[cross-4] "Michelin Bib Gourmand Pamplona Navarra restaurantes recomendados 2025" → viajes.nationalgeographic.com.es (confirmed: Mari Carmen Duarte, Jul 2024 + Lucía Díaz Madurga, Nov 2025); El Merca'o confirmed as Bib Gourmand.
+[cross-4] "premios gastronomía Navarra mejor restaurante 2023 2024" → academianavarradegastronomia.es awards summary; no qualifying standalone guide.
+[cross-5] "nuevas aperturas restaurantes Pamplona 2025 2026" → navarracapital.es (already known); no new qualifying source.
+[cross-5] "new restaurant openings Pamplona 2024 2025" → navarracapital.es (already known); aggregators.
+[cross-6] "pintxos poteo Calle Estafeta San Nicolás Pamplona mejores bares 2024 2025" → eldiario.es (Roberto Ruiz, Jun 2024 — verified 8,500 chars — SECONDARY, national, excluded by secondary cap); viajes.nationalgeographic.com.es (already known).
+[cross-6] "hongos setas temporada menú degustación Pamplona Navarra 2023 2024" → navarracapital.es menus degustación (Oihane Ochoa, Mar 2026 — confirmed); no new qualifying source.
+[cross-7] "cocina navarra tradicional restaurante Pamplona huerta verduras 2025" → viajes.nationalgeographic.com.es (Lucía Díaz Madurga, Nov 2025 — verified, excluded by secondary cap); noticiasdenavarra.com NG article references.
+[cross-7] "San Fermin Pamplona food authentic local restaurants beyond tourists" → tapasmagazine.es/en (Paco Cruz, Jul 2024 — confirmed; 8,500 chars; SECONDARY EN).
+[cross-8] "revista gastronómica independiente Navarra Pamplona restaurantes crítica" → demesaenmesa.food.blog (Juan Antonio Rayo — dates 2016-2017, outside year range — fail); viajes.nationalgeographic.com.es (already known).
+[cross-8] "suplemento gastronomía periódico Navarra Pamplona mejores restaurantes 2025" → viajes.nationalgeographic.com.es (already known); noticiasdenavarra.com NG references.
+[coi-check] Navarra Capital — commercial conflict: NO
+[coi-check] The Objective — commercial conflict: NO
+[coi-check] Tapas Magazine — commercial conflict: NO (editorial lifestyle content confirmed)
+[publisher-concentration] Navarra Capital — 2 articles, same author (Oihane Ochoa). Supplementary searches run: no independent alternative ES primary found. Documented as structural characteristic.
+[publisher-concentration] National Geographic Spain — 2 articles found (Mari Carmen Duarte + Lucía Díaz Madurga). Only 0 included (excluded to stay within 2-secondary cap).
+[sibling-check] Tapas Magazine EN and ES editions — single publication with EN and ES content. English-language article selected (tapasmagazine.es/en/).
+[stopping-rule] triggered after 31 queries — last 8+ consecutive queries returned sources already in pool or no qualifying new sources.
+[phase-1b-crossval] "Les Amis Pamplona recomendacion critica restaurante" → TripAdvisor reviews, navarracapital.es anniversary article, pamplonagastronomica.com (no named author). No new qualifying source.
+[phase-1b-crossval] "Chez Belagua Pamplona recomendacion critica pintxos" → TripAdvisor, hola.com celebrity pintxos guide (no independent food writer). No new qualifying source.
+[phase-1b-crossval] "Baserriberri Pamplona recomendacion critica restaurante" → sistersandthecity.com (no individual named author — fail). No new qualifying source.

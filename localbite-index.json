@@ -1,7 +1,7 @@
 {
   "project": "LocalBite",
   "description": "Curated restaurant packs built from named food writers, 2025-2026 sources only",
-  "last_updated": "2026-04-21",
+  "last_updated": "2026-04-22",
   "cities": [
     {
       "city": "Barcelona",
@@ -287,6 +287,20 @@
       "status": "complete",
       "open_status_check_count": 4,
       "notes": ""
+    },
+    {
+      "city": "Pamplona",
+      "country": "Spain",
+      "city_slug": "pamplona-spain",
+      "pipeline": "localbite-v7.1",
+      "built": "2026-04-22",
+      "restaurant_count": 24,
+      "both_pool_count": 1,
+      "source_count": 4,
+      "file": "localbite-pamplona-2023-2026.json",
+      "status": "complete",
+      "open_status_check_count": 8,
+      "notes": "Publisher concentration: navarracapital.es x2 (structural — no alternative ES primary found). EN primary gap: structural (no qualifying EN primary source found). Concentration cap applied to emergentes source (16→7 entries)."
     }
   ]
 }
