@@ -8,3 +8,4 @@ w800*/
 h600*/
 tiles/
 *.pages
+.env

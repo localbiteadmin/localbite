@@ -53,6 +53,18 @@ function nominatimGeocode(query) {
   });
 }
 
+// Load .env file if present (makes ANTHROPIC_API_KEY available in non-login shells)
+try {
+  const envPath = require('path').join(__dirname, '.env');
+  if (require('fs').existsSync(envPath)) {
+    require('fs').readFileSync(envPath, 'utf8').split('
+').forEach(line => {
+      const m = line.match(/^([A-Z_]+)=(.+)$/);
+      if (m) process.env[m[1]] = process.env[m[1]] || m[2].trim();
+    });
+  }
+} catch(e) {}
+
 function generateWriterProfile(writer, publication, articleTitle, articleDate, language) {
   return new Promise((resolve) => {
     const apiKey = process.env.ANTHROPIC_API_KEY;
