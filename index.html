@@ -1512,7 +1512,10 @@ function cardHTML(r) {
 
 // ── GEO CONFIDENCE HELPERS ──
 function isHighConfidence(r) {
-  return r.geo_confidence === 'high' || r.geo_confidence === 'verified';
+  if (r.geo_confidence === 'high' || r.geo_confidence === 'verified') return true;
+  // Medium confidence only solid if geocoder returned a named match to validate against
+  if (r.geo_confidence === 'medium' && r.geo_matched_name) return true;
+  return false;
 }
 function isMediumConfidence(r) {
   return !!(r.lat && r.lng && !isHighConfidence(r));
