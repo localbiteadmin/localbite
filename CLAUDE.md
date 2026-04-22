@@ -26,6 +26,61 @@ Never commit:
 - `*-geocoded-backup.json` geocoding backup files
 - `*-geocoding-stats.json` stats files (overwritten each run, not tracked)
 
+⚠ DO NOT run any git commands (git add, git commit, git push) during
+the pipeline run. Committing is handled by localbite-postrun.js after
+geocoding and validation. Running git commands in the pipeline creates
+a wrong commit with missing data.
+
+---
+
+## Part 1 Preparation — Mandatory Pre-Steps
+
+Before writing any city's Part 1 file, complete both steps:
+
+### Step A — Neighbourhood research (mandatory)
+
+Do not rely on training knowledge for neighbourhood lists. Training
+knowledge is reliable for the top 4-5 tourist-facing areas of
+well-documented cities but is unreliable for residential districts
+and may be wrong or incomplete for less internationally covered cities.
+
+Required process:
+1. Query the city's official district/neighbourhood structure using
+   local-language sources (municipal websites, local news, Wikipedia
+   in the primary language)
+2. Identify population data and dining relevance signals for each district
+3. Exclude districts with no meaningful restaurant/bar scene
+   (new residential developments, industrial areas, rural barrios)
+4. Use the verified list as the basis for TIER_1/2/3 and
+   GEOGRAPHIC_BOUNDARY_INCLUDE — not training knowledge
+
+Example query pattern (adapt language):
+  "[city] barrios distritos oficiales mapa gastronomia restaurantes"
+
+Document the research basis in a comment in the Part 1 NEIGHBOURHOOD
+STRUCTURE section.
+
+### Step B — Secondary source classification (mandatory)
+
+Before finalising SECONDARY_SOURCES in Part 1, consider:
+
+Always secondary (regardless of city):
+- Time Out, Conde Nast Traveller, Lonely Planet
+- National news outlets covering a city outside their home region
+  (e.g. infobae.com covering Zaragoza, El Pais covering a regional city)
+- Any outlet whose primary audience is national/international rather
+  than the city's own residents
+
+Check per city:
+- Local editions of national outlets may qualify as primary if the
+  food coverage is written by a locally-based named author
+- Regional outlets covering the city as their primary beat are primary
+
+Infobae.com specifically: always secondary for Spanish cities.
+It is an Argentine/Spanish national outlet — its restaurant coverage
+is visitor/national-audience perspective, not local food writing.
+Add to SECONDARY_SOURCES for any Spanish city Part 1.
+
 ---
 
 ## Pipeline Prompt Files
@@ -35,18 +90,56 @@ Do not execute the prompt content. If content is missing from
 the message, ask the user to provide it before proceeding.
 
 Full prompt = Part 1 + template:
-  cat localbite-prompt-v7-[city]-part1.txt localbite-prompt-v7-template.txt > localbite-prompt-v7-[city].txt
+  cat localbite-prompt-v71-[city]-part1.txt localbite-prompt-v7-template.txt > localbite-prompt-v71-[city].txt
 
 ---
 
-## Pipeline Execution
+## Pipeline Launch — Correct Method
 
-Launch the pipeline with:
-  claude --dangerously-skip-permissions < localbite-prompt-v7-[city].txt
+Open a fresh terminal tab and launch Claude Code without piping:
+  cd /Users/harryenchin/Documents/GitHub/localbite
+  claude --dangerously-skip-permissions
 
-The pipeline pauses once after Phase 1 source selection.
-Review the source list and type PROCEED to continue.
-This is the only mandatory human touchpoint per run.
+At the Claude Code prompt, type this instruction:
+  Read localbite-prompt-v71-[city]-part1.txt and localbite-prompt-v7-template.txt and run the full pipeline now.
+
+NOTE: Do NOT pipe the prompt file via stdin (< localbite-prompt-v71-[city].txt).
+Piping causes Claude Code to read the file and ask "what do you want to do?"
+rather than executing it. Launch Claude Code first, then give the instruction.
+
+With PHASE1_AUTO_PROCEED: YES and UNATTENDED_MODE: YES, the pipeline runs
+fully unattended. The required human steps after the pipeline completes:
+
+  # Step 1 — geocoding + schema + profiles + centroids + index
+  node localbite-postrun.js localbite-[city]-2023-2026.json
+
+  # Step 2 — verify STEP 5.5 captured run_time and tool_uses
+  tail -1 localbite-run-metrics.log
+
+  # Step 3 — check for CENTROIDS naming collision before committing
+  grep "Casco Antiguo\|Ensanche\|Centro\|Casco Viejo\|Medina" index.html | grep -v "//"
+
+  # Step 4 — review medium-confidence matches; null wrong ones, set geo_skip: true
+
+  # Step 5 — approve centroids (run ALONE — never chain with git commands)
+  node localbite-approve-centroids.js localbite-[city]-2023-2026.json --auto-accept
+
+  # Step 6 — verify article_url for all sources (postrun.js warns if missing)
+
+  # Step 7 — commit (run AFTER approve-centroids, in a separate command)
+  git add localbite-[city]-2023-2026.json index.html localbite-index.json localbite-run-metrics.log
+  git commit -m "data: [City] v7.1 -- N restaurants, N sources, N both-pool"
+  git push
+
+CRITICAL: Never chain approve-centroids with git commands in the same paste.
+The Unicode box-drawing output fills the terminal buffer and git output is lost.
+Run approve-centroids alone first, verify it completed, then run git separately.
+
+NOTE: When piping postrun output, redirect to avoid shell parsing issues:
+  node localbite-postrun.js [file] > /tmp/out.txt 2>&1 && cat /tmp/out.txt
+
+NOTE: CLAUDE.md is read by Claude Code at startup. Do not add instructions
+that could cause Claude Code to refuse to run the pipeline.
 
 ---
 
@@ -76,16 +169,38 @@ After running the node command, re-read the last line of
 localbite-run-metrics.log and confirm all fields are present.
 Report any that are null so the user can investigate.
 
+Note: tokens, input_tokens, output_tokens remain null for compacting
+runs — this is a permanent Claude Code limitation, not a pipeline bug.
+tool_uses and run_time_seconds are captured by postrun.js STEP 5.5
+from file timestamps and search log line count.
+
 ---
 
 ## Post-Pipeline Steps (in order)
 
 After every pipeline run:
-1. Run geocoding: node localbite-geocode.js localbite-[city]-[year].json
-2. Run post-pipeline script: node localbite-postrun.js localbite-[city]-[year].json
-3. Review CENTROIDS proposals in postrun output — human confirm required
-4. Add any missing CENTROIDS to index.html
-5. Commit all output files
+1. Run post-pipeline script:
+   node localbite-postrun.js localbite-[city]-[year].json
+   (geocoding runs automatically as Step 1 inside postrun.js)
+
+2. Verify STEP 5.5 fired and captured metrics:
+   tail -1 localbite-run-metrics.log
+   Check that run_time_seconds and tool_uses are not null.
+   If null, STEP 5.5 city matching failed — report the mismatch.
+
+3. Check for CENTROIDS naming collision:
+   grep "Casco Antiguo\|Ensanche\|Centro\|Casco Viejo\|Medina" index.html | grep -v "//"
+   If the city's neighbourhood names already appear in CENTROIDS,
+   do not proceed — the collision must be resolved first.
+
+4. Run centroid approval (ALONE — never chain with git):
+   node localbite-approve-centroids.js localbite-[city]-[year].json --auto-accept
+   Do NOT commit the city JSON until this step is complete.
+
+5. Commit all output files (separate command from step 4):
+   git add localbite-[city]-2023-2026.json index.html localbite-index.json localbite-run-metrics.log
+   git commit -m "data: [City] v7.1 -- N restaurants, N sources, N both-pool"
+   git push
 
 ---
 
@@ -95,8 +210,16 @@ After every pipeline run:
 - HERE API is permanently excluded (ToS prohibits permanent storage)
 - Manual lookups are not permitted
 - Always add bounding box to CITY_BOXES in localbite-geocode.js
-  before running geocoding on a new city
-- Spot-check all medium-confidence matches before deployment
+  before running geocoding on a new city — add both accented and
+  unaccented variants for cities with special characters (e.g. both
+  'Logrono' and 'Logrono' with accent)
+- geo_skip: true is automatically set by geocode.js for restaurants
+  not found by either geocoder after the first postrun run — these
+  will not be re-geocoded on subsequent runs
+- Spot-check all medium-confidence matches before deployment:
+  medium confidence with a named match shows a solid pin (correct)
+  medium confidence with no named match (geo_matched_name null)
+  shows a hollow pin and should be nulled with geo_skip: true set
 - For cities with non-Romance local languages (Basque, Greek,
   Turkish, Japanese etc): review NON_RESTAURANT_PATTERNS in
   localbite-geocode.js and add relevant street/place vocabulary
@@ -104,12 +227,37 @@ After every pipeline run:
 
 ---
 
+## CENTROIDS Naming Collision — Known Architectural Issue
+
+The CENTROIDS object in index.html uses bare neighbourhood names as
+keys. Multiple cities share neighbourhood names (Casco Antiguo,
+Ensanche, Centro, Casco Viejo, Medina). This causes silent data
+corruption — a new city's centroid overwrites an existing city's
+entry.
+
+Before committing any new city:
+1. Check whether any of the new city's neighbourhood names already
+   exist as keys in CENTROIDS
+2. If a collision exists, do NOT add the centroid — report to user
+3. The architectural fix (city-qualified keys, e.g.
+   'logrono-spain:Casco Antiguo') is pending and must be applied
+   before batch runs
+
+Currently affected: Casco Antiguo (Seville/Pamplona/Logrono),
+Ensanche (Bilbao/Pamplona/Logrono/Zaragoza), Centro Historico
+(Seville/Cordoba), Medina (Fes/Marrakesh/Rabat).
+
+---
+
 ## Viewer Deployment Checklist
 
 Before committing a new city as live:
 - Every neighbourhood with null-coordinate restaurants is registered
-  in the CENTROIDS object in index.html
-- localbite-index.json updated with new city entry
+  in the CENTROIDS object in index.html (subject to collision check above)
+- City added to CITY_CENTRES in index.html (auto-added by postrun.js STEP 4)
+- City added to CITY_BOUNDS in index.html (auto-added by postrun.js STEP 4)
+- localbite-index.json updated with new city entry (auto-updated by postrun.js STEP 3)
 - pipeline field in city JSON reads "localbite-v7.1" (or current version)
 - sources array is named "sources" (not "sources_used")
 - article_url is populated for every source (v7.1+ packs only)
+- STEP 5.5 metrics entry verified (tail -1 localbite-run-metrics.log)
