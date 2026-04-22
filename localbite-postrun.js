@@ -57,8 +57,7 @@ function nominatimGeocode(query) {
 try {
   const envPath = require('path').join(__dirname, '.env');
   if (require('fs').existsSync(envPath)) {
-    require('fs').readFileSync(envPath, 'utf8').split('
-').forEach(line => {
+    require('fs').readFileSync(envPath, 'utf8').split('\n').forEach(line => {
       const m = line.match(/^([A-Z_]+)=(.+)$/);
       if (m) process.env[m[1]] = process.env[m[1]] || m[2].trim();
     });
