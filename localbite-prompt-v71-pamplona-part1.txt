@@ -1,0 +1,142 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES (v7.1)
+Change only this section for each new city.
+Full prompt = cat this file + localbite-prompt-v7-template.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+════════════════════════════════════════
+REQUIRED VARIABLES
+════════════════════════════════════════
+
+CITY: Pamplona
+COUNTRY: Spain
+CITY_SLUG: pamplona-spain
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_CODES: ES
+SEARCH_LANGUAGES: Spanish, English
+SINGLE_LANGUAGE_CITY: NO
+YEAR_RANGE: 2023–2026
+
+════════════════════════════════════════
+OUTPUT FILES
+════════════════════════════════════════
+
+OUTPUT_SEARCH_PLAN:   localbite-pamplona-search-plan.txt
+OUTPUT_SEARCH_LOG:    localbite-pamplona-search-log.txt
+OUTPUT_RAW:           localbite-pamplona-raw.json
+OUTPUT_WORKING:       localbite-pamplona-working.json
+OUTPUT_FINAL:         localbite-pamplona-2023-2026.json
+OUTPUT_AUDIT:         localbite-pamplona-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-pamplona-failed-sources.txt
+
+════════════════════════════════════════
+UNATTENDED MODE
+════════════════════════════════════════
+
+UNATTENDED_MODE: YES
+PHASE1_AUTO_PROCEED: YES
+
+════════════════════════════════════════
+NEIGHBOURHOODS
+════════════════════════════════════════
+
+TIER_1_NEIGHBOURHOODS: Casco Antiguo, Casco Viejo
+
+TIER_2_NEIGHBOURHOODS: Ensanche, Iturrama
+
+TIER_3_NEIGHBOURHOODS: San Juan, Lezkairu, Buztintxuri
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+- Casco Antiguo (also called Casco Viejo): the walled old city — Plaza del
+  Castillo, Calle Estafeta, Calle San Nicolás, Calle Comedias, Calle Zapatería,
+  Calle Mercaderes, Navarrería, Plaza Consistorial, Calle Jarauta, Calle San
+  Antón. Dominant dining zone.
+- Ensanche: 19th-century expansion grid south and west of the old city —
+  Paseo Sarasate, Avenida Carlos III, Calle Arrieta, Calle Olite, Calle Navarro
+  Villoslada, Avenida Roncesvalles, Avenida San Ignacio. More contemporary and
+  upscale restaurants.
+- Iturrama: Western residential neighbourhood near universities — Calle Iturrama,
+  Plaza Félix Huarte. Local pintxos bars and neighbourhood restaurants.
+- San Juan: Eastern residential neighbourhood — Avenida de Bayona corridor.
+- Lezkairu / Buztintxuri: Newer peripheral neighbourhoods. Include only if a
+  named writer covers a specific restaurant there.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+- El Molino de Urdániz (2 Michelin stars) — located in Urdániz village ~16km
+  from Pamplona. NOT in the city. Exclude.
+- Any restaurant outside the Pamplona municipal boundary. Navarra has excellent
+  village restaurants (Lesaka, Puente la Reina) — exclude all.
+- San Fermín tourist trap bars with no independent critical recognition.
+
+════════════════════════════════════════
+MICHELIN EXCLUSIONS
+════════════════════════════════════════
+
+The following Pamplona restaurants hold Michelin stars — EXCLUDE:
+- Rodero (1 star) — C. Emilio Arrieta, 3 — chef Koldo Rodero
+- Europa (1 star) — C. Espoz y Mina, 11 — chef Pilar Idoate
+- Kabo (1 star) — Av. Zaragoza, 10 — chefs Aaron Ortiz + Jaione Aizpurua
+
+Bib Gourmand — include if named writers recommend:
+- Enekorri — C. de la Estafeta, 24 — Leandro Gil
+
+════════════════════════════════════════
+CITY RESEARCH NOTES
+════════════════════════════════════════
+
+Pamplona is the capital of Navarra, a Spanish community with a distinct
+culinary identity shaped by its huerta (market garden), river trout, white
+asparagus, piquillo peppers, and a pintxos culture related to but distinct
+from the Basque Country.
+
+KEY DISHES AND CULINARY VOCABULARY:
+- Pintxos (local spelling — not pinchos): defining Pamplona eating format.
+  Bar crawl (poteo) along Calle Estafeta, San Nicolás, Zapatería is the
+  signature local experience.
+- Espárragos de Navarra: white asparagus, regional trademark
+- Pimientos del piquillo de Lodosa: roasted red peppers, often stuffed
+- Pochas con chistorra: white beans with Navarran sausage
+- Bacalao al ajoarriero: salt cod with garlic and piquillo
+- Trucha a la navarra: trout with jamón
+- Hongos / setas de temporada: seasonal wild mushrooms
+- Verduras de la huerta: Navarran market garden vegetables
+- Queso de oveja: sheep milk cheese
+- Caza: game (woodcock, partridge, wild boar)
+- Cuadrilla: group of friends eating together — core local social concept
+
+BOTH-POOL ASSESSMENT:
+Moderate probability. San Fermín / Running of the Bulls generates genuine
+English-language food and travel writing beyond pure tourist content. Named
+food writers have covered Pamplona for publications including Condé Nast
+Traveller, Food & Wine, and Saveur. Expect 2–4 both-pool entries if pipeline
+finds qualifying EN sources.
+
+LANGUAGE NOTES:
+Spanish is the sole official language in Pamplona. No Basque-language (EU)
+sources expected within the city. Search in Spanish (ES) and English (EN) only.
+
+════════════════════════════════════════
+PHASE 0 — KNOWN HIGH-QUALITY SOURCES
+════════════════════════════════════════
+
+Fetch these directly in Phase 0 before any Phase 1 searches:
+
+ES PRIMARY:
+- Guía Repsol Pamplona: https://www.guiarepsol.com/es/comer/donde-comer/restaurantes-en-pamplona/
+- El Diario de Navarra gastronomía: https://www.diariodenavarra.es/gastronomia/
+- Noticias de Navarra gastronomía: https://www.noticiasdenavarra.com/gastronomia/
+- Pamplona Gastronómica: https://pamplonagastronomica.com/
+- Navarra Capital gastronomía: https://navarracapital.es/gastronomia/
+
+EN PRIMARY (check for named bylines):
+- Condé Nast Traveller Pamplona — search for named author
+- Food & Wine Pamplona / Navarra — search for named author
+- Saveur Pamplona — search for named author
+
+════════════════════════════════════════
+PIPELINE CONFIGURATION
+════════════════════════════════════════
+
+QUERY_BUDGET: 45 soft ceiling, 55 hard ceiling
+BOTH_POOL_NOTE: Moderate probability. EN sources exist but must pass named-author test.
+SOURCE_RECENCY: 2023-2026
