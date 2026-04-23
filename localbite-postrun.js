@@ -380,6 +380,18 @@ function isThinProfile(profile) {
 
     const proposed = {};
 
+    // Read city bounding box for Nominatim result validation (Priority 1)
+    let centroidBbox = null;
+    try {
+      const geocodeJs = fs.readFileSync('localbite-geocode.js', 'utf8');
+      const bboxRe = new RegExp(
+        `'${city}'\\s*:\\s*\\{[^}]*latMin:\\s*([\\d.-]+)[^}]*latMax:\\s*([\\d.-]+)[^}]*lngMin:\\s*([\\d.-]+)[^}]*lngMax:\\s*([\\d.-]+)`,
+        's'
+      );
+      const m = geocodeJs.match(bboxRe);
+      if (m) centroidBbox = { latMin: parseFloat(m[1]), latMax: parseFloat(m[2]), lngMin: parseFloat(m[3]), lngMax: parseFloat(m[4]) };
+    } catch(e) {}
+
     for (const nb of missingNbs) {
       const nullNames = nbGroups[nb].map(r => r.name);
       const geocodedInNb = data.restaurants.filter(r => r.neighbourhood === nb && r.lat && r.lng);
@@ -403,9 +415,17 @@ function isThinProfile(profile) {
         console.log(`  ${nb}: no geocoded restaurants — querying Nominatim...`);
         await sleep(1100);
         const result = await nominatimGeocode(`${nb}, ${city}, ${country}`);
-        if (result) {
+        const inBbox = (result && centroidBbox)
+          ? (result.lat >= centroidBbox.latMin && result.lat <= centroidBbox.latMax &&
+             result.lng >= centroidBbox.lngMin && result.lng <= centroidBbox.lngMax)
+          : true; // if no bbox available, accept result
+        if (result && inBbox) {
           console.log(`  ${nb}: [${result.lat.toFixed(4)}, ${result.lng.toFixed(4)}] — Nominatim ⚠ verify`);
           proposed[nb] = { coords: [parseFloat(result.lat.toFixed(4)), parseFloat(result.lng.toFixed(4))], source: 'nominatim', nominatim_query: `${nb}, ${city}, ${country}`, nominatim_display: result.display_name, requires_verification: true, null_coord_restaurants: nullNames };
+        } else if (result && !inBbox) {
+          console.log(`  ${nb}: Nominatim [${result.lat.toFixed(4)}, ${result.lng.toFixed(4)}] — OUTSIDE city bounding box — rejected`);
+          console.log(`  ${nb}: matched: "${result.display_name}"`);
+          proposed[nb] = { coords: null, source: 'none', requires_verification: true, null_coord_restaurants: nullNames };
         } else {
           console.log(`  ${nb}: Nominatim returned no result — manual assignment required`);
           proposed[nb] = { coords: null, source: 'none', requires_verification: true, null_coord_restaurants: nullNames };
@@ -655,14 +675,10 @@ function isThinProfile(profile) {
         }
 
         if (added > 0) {
-          const cityBlock = `  // ${city}\n${insertions}`;
-          const newHtml = htmlContent.slice(0, centroidsEnd) +
-                          cityBlock +
-                          htmlContent.slice(centroidsEnd);
-          fs.writeFileSync('index.html', newHtml, 'utf8');
-          console.log(`\n✓ ${added} neighbourhood centroid(s) added to index.html.`);
+          console.log(`\n⚠ ${added} neighbourhood centroid(s) pending index.html write.`);
+          console.log(`  Run approve-centroids to write them to index.html CENTROIDS.`);
           if (alreadyPresent > 0)
-            console.log(`  (${alreadyPresent} already present — skipped)`);
+            console.log(`  (${alreadyPresent} already present in index.html — will be skipped)`);
         } else {
           console.log(`✓ All ${alreadyPresent} neighbourhood centroid(s) already in index.html.`);
         }

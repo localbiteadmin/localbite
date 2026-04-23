@@ -90,6 +90,7 @@ function formatCoords(coords) {
   const approved = data.centroids || {};
   const skipped  = [];
   let   i        = 1;
+  let   newlyApprovedCount = 0; // Priority 5: explicit counter
 
   for (const [nb, entry] of entries) {
     console.log(`─────────────────────────────────────────────`);
@@ -140,6 +141,7 @@ function formatCoords(coords) {
 
     if (answer === 'y') {
       approved[nb] = entry.coords;
+      newlyApprovedCount++;
       console.log(`  ✓ Accepted: ${formatCoords(entry.coords)}\n`);
     } else if (answer === 'm') {
       const latStr = await ask(`  Enter latitude:  `);
@@ -151,6 +153,7 @@ function formatCoords(coords) {
         skipped.push(nb);
       } else {
         approved[nb] = [lat, lng];
+        newlyApprovedCount++;
         console.log(`  ✓ Manually set: [${lat}, ${lng}]\n`);
       }
     } else {
@@ -167,10 +170,8 @@ function formatCoords(coords) {
 
   console.log(`─────────────────────────────────────────────`);
   console.log(`Summary:`);
-  // Count only centroids that came from centroids_proposed this run
   const proposedKeys = entries.map(([k]) => k);
-  const newlyApproved = Object.keys(approved).filter(k => proposedKeys.includes(k)).length;
-  console.log(`  Approved: ${newlyApproved} new centroid(s)`);
+  console.log(`  Approved: ${newlyApprovedCount} new centroid(s)`);
   console.log(`  Skipped:  ${skipped.length}`);
 
   if (skipped.length > 0) {
@@ -199,6 +200,46 @@ function formatCoords(coords) {
   console.log(`\n✓ Written to ${file}`);
   console.log(`  centroids: ${Object.keys(approved).length} entries`);
   console.log(`  centroids_proposed: removed`);
+
+  // Priority 2 — write newly approved centroids to index.html CENTROIDS block
+  const indexPath = 'index.html';
+  if (fs.existsSync(indexPath) && newlyApprovedCount > 0) {
+    try {
+      let htmlContent = fs.readFileSync(indexPath, 'utf8');
+      const centroidsStart = htmlContent.indexOf('const CENTROIDS = {');
+      const centroidsEnd   = htmlContent.indexOf('};', centroidsStart);
+
+      if (centroidsStart >= 0 && centroidsEnd >= 0) {
+        const centroidsBlock = htmlContent.slice(centroidsStart, centroidsEnd + 2);
+        let insertions = '';
+        let htmlAdded = 0;
+        let htmlAlreadyPresent = 0;
+
+        for (const [nb, coords] of Object.entries(approved)) {
+          if (!proposedKeys.includes(nb)) continue; // only newly approved this run
+          const escaped = nb.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');
+          const keyPattern = new RegExp(`'${escaped}'\\s*:`);
+          if (keyPattern.test(centroidsBlock)) { htmlAlreadyPresent++; continue; }
+          insertions += `  '${nb}': [${coords[0]}, ${coords[1]}],\n`;
+          htmlAdded++;
+        }
+
+        if (htmlAdded > 0) {
+          const cityBlock = `  // ${city}\n${insertions}`;
+          const newHtml = htmlContent.slice(0, centroidsEnd) + cityBlock + htmlContent.slice(centroidsEnd);
+          fs.writeFileSync(indexPath, newHtml, 'utf8');
+          console.log(`✓ ${htmlAdded} neighbourhood centroid(s) written to index.html CENTROIDS.`);
+          if (htmlAlreadyPresent > 0) console.log(`  (${htmlAlreadyPresent} already present — skipped)`);
+        } else if (htmlAlreadyPresent > 0) {
+          console.log(`✓ All neighbourhood centroids already in index.html — nothing added.`);
+        }
+      } else {
+        console.log(`⚠ CENTROIDS block not found in index.html — centroids not written to viewer.`);
+      }
+    } catch(e) {
+      console.log(`⚠ Could not update index.html CENTROIDS: ${e.message}`);
+    }
+  }
 
   console.log('');
   console.log(`Next steps:`);
