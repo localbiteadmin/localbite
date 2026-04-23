@@ -1,0 +1,1005 @@
+{
+  "city": "A Coruña",
+  "country": "Spain",
+  "city_slug": "a-coruna-spain",
+  "built": "2026-04-23",
+  "source_recency": "2023-2026",
+  "pipeline": "localbite-v7.1",
+  "confidence_tiers": {
+    "auto_approved": 11,
+    "reviewed_kept": 14,
+    "auto_removed": 0,
+    "user_removed": 0,
+    "auto_rejected": 4,
+    "concentration_cap_applied": 4
+  },
+  "sources": [
+    {
+      "id": "src-elig-quiroga",
+      "publication": "El Ideal Gallego",
+      "writer": "Lucía Quiroga",
+      "writer_profile": "Lucía Quiroga is a food writer for El Ideal Gallego, the main daily newspaper serving A Coruña and the province. Her gastronomy coverage focuses on the restaurants that local coruñeses return to repeatedly, with attention to the city's seafood tradition and its newer generation of chef-led kitchens.",
+      "url": "https://www.elidealgallego.com",
+      "article_url": "https://www.elidealgallego.com/articulo/gastroideal/siete-restaurantes-coruneses-brillan-estrella-4142329",
+      "article_title": "Siete restaurantes coruñeses que brillan sin estrella",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2023-01-17",
+      "fetch_status": "good",
+      "fetch_chars": 23847,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1/cross-2"
+    },
+    {
+      "id": "src-qm-lede",
+      "publication": "Quincemil (elespanol.com)",
+      "writer": "Adrián Lede",
+      "writer_profile": "Adrián Lede is a food and lifestyle writer for Quincemil, the A Coruña-focused digital edition of elespanol.com. His restaurant coverage tracks Repsol and Michelin recognition in the city and profiles the chefs and venues that define the local gastronomic moment.",
+      "url": "https://www.elespanol.com/quincemil",
+      "article_url": "https://www.elespanol.com/quincemil/vivir/gastrocoruna/20240305/restaurantes-coruna-recomendados-guia-repsol/837666793_0.html",
+      "article_title": "Los restaurantes de A Coruña recomendados por la Guía Repsol",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2024-03-05",
+      "fetch_status": "good",
+      "fetch_chars": 6125,
+      "retries_attempted": 1,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": true,
+      "found_via": "phase-1/cross-8"
+    },
+    {
+      "id": "src-qm-moreno",
+      "publication": "Quincemil (elespanol.com)",
+      "writer": "Myrian Moreno",
+      "writer_profile": "Myrian Moreno writes about gastronomy and culture for Quincemil, the A Coruña edition of elespanol.com. Her Michelin guide coverage tracks the full range of Bib Gourmand and Selected restaurants in the city each year, providing a local-language record of the guide's recognition across the A Coruña scene.",
+      "url": "https://www.elespanol.com/quincemil",
+      "article_url": "https://www.elespanol.com/quincemil/vivir/gastrocoruna/20241128/restaurantes-coruna-galardonados-seleccionados-guia-michelin-trt/904410037_0.html",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2024-11-28",
+      "fetch_status": "good",
+      "fetch_chars": 2592,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": true,
+      "found_via": "phase-1/cross-4"
+    },
+    {
+      "id": "src-obj-suarez",
+      "publication": "The Objective",
+      "writer": "Alfonso C. Suárez",
+      "writer_profile": "Alfonso C. Suárez is a food journalist at The Objective, a national Spanish digital media outlet known for independent opinion journalism. His A Coruña guide focuses on the restaurants where a local would take you for pulpo, empanada, and marisco, surveying the spectrum from traditional pulperías to modern gastrobars.",
+      "url": "https://theobjective.com",
+      "article_url": "https://theobjective.com/gastronomia/2023-10-06/donde-comer-coruna-restaurantes/",
+      "article_title": "Dónde comer en La Coruña: 10 restaurantes en los que pedir pulpo, empanada o marisco",
+      "language": "es",
+      "source_type": "secondary",
+      "article_date": "2023-10-06",
+      "fetch_status": "good",
+      "fetch_chars": 8641,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1/cross-2"
+    },
+    {
+      "id": "src-metro-montenegro",
+      "publication": "Metropolitano.gal",
+      "writer": "Gloria Montenegro",
+      "writer_profile": "Gloria Montenegro is a food and culture writer for Metropolitano.gal, a Galician digital news platform covering the region's gastronomy, politics, and society. Her Repsol guide coverage for Galicia highlights the A Coruña restaurants earning new Sol designations each cycle.",
+      "url": "https://metropolitano.gal",
+      "article_url": "https://metropolitano.gal/enfoque/descubre-los-40-mejores-restaurantes-de-galicia-segun-la-guia-repsol-asi-son-los-nuevos-soles/",
+      "article_title": "Descubre los 40 mejores restaurantes de Galicia según la Guía Repsol",
+      "language": "es",
+      "source_type": "secondary",
+      "article_date": "2024-03-04",
+      "fetch_status": "good",
+      "fetch_chars": 950,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1/cross-4"
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Terreo Cocina Casual",
+      "name_variants": [
+        "Terreo"
+      ],
+      "neighbourhood": "San Andrés",
+      "cuisine": "Cocina casual / seafood / arroces",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "zamburiñas",
+        "arroces",
+        "mariscos",
+        "crustáceos"
+      ],
+      "signature_dish": "arroces",
+      "quote": "Casual à la carte establishment led by chef Quique Vázquez and Ana Señarís. The restaurant ranks first on A Coruña's TripAdvisor list and earned Michelin Bib Gourmand recognition for potential star-level dining.",
+      "quote_language": "translated-from-es",
+      "language_pool": "es",
+      "source_count": 3,
+      "sources": [
+        "src-elig-quiroga",
+        "src-qm-moreno",
+        "src-metro-montenegro"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-ES+secondary-ES",
+      "article_date": "2024-11-28",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Artabria",
+      "name_variants": [],
+      "neighbourhood": "Ensanche",
+      "cuisine": "Cocina gallega tradicional / seafood",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "zamburiñas con crema de nécora",
+        "rollitos de salmón ahumado con tartar de langostinos",
+        "lamprea de temporada"
+      ],
+      "signature_dish": "zamburiñas con crema de nécora",
+      "quote": "Traditional cooking with modern touches receives Michelin Bib Gourmand honors. The establishment is noted for zamburiña baskets and seafood preparations that have cultivated a dedicated local following.",
+      "quote_language": "translated-from-es",
+      "language_pool": "es",
+      "source_count": 2,
+      "sources": [
+        "src-elig-quiroga",
+        "src-qm-moreno"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-11-28",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3664259,
+      "lng": -8.4132635,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Artabria"
+    },
+    {
+      "name": "El de Alberto",
+      "name_variants": [
+        "El de Alberto A Coruña"
+      ],
+      "neighbourhood": "Orzán",
+      "cuisine": "Cocina contemporánea gallega",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "arroces",
+        "arroz de setas y castañas",
+        "canelón de centolla",
+        "rabo de toro",
+        "filipinos rellenos con crema de orujo"
+      ],
+      "signature_dish": "arroces",
+      "quote": "Uno de esos eternos favoritos a llevarse algún día el Sol. Un restaurante consolidado y prestigioso que destaca por su cocina contemporánea de gran nivel. De la carta destacan sus arroces y la originalidad de su propuesta de entrantes.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 4,
+      "sources": [
+        "src-elig-quiroga",
+        "src-qm-lede",
+        "src-qm-moreno",
+        "src-obj-suarez"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-ES+secondary-ES",
+      "article_date": "2024-11-28",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3698876,
+      "lng": -8.4047274,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "El de Alberto"
+    },
+    {
+      "name": "NaDo",
+      "name_variants": [],
+      "neighbourhood": "Cidade Vella",
+      "cuisine": "Cocina atlántica contemporánea",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "productos de temporada",
+        "cocina atlántica"
+      ],
+      "signature_dish": null,
+      "quote": "Iván Domínguez's 'Atlantic militancy' concept showcases seasonal, local products with marine focus. Critic Carlos Capel noted the restaurant 'is so good it can do whatever it wants.'",
+      "quote_language": "translated-from-es",
+      "language_pool": "es",
+      "source_count": 2,
+      "sources": [
+        "src-elig-quiroga",
+        "src-qm-moreno"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-11-28",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Omakase",
+      "name_variants": [
+        "Omakase A Coruña"
+      ],
+      "neighbourhood": "Cidade Vella",
+      "cuisine": "Omakase sushi / Japanese",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "menú omakase",
+        "sushi de temporada"
+      ],
+      "signature_dish": "menú omakase diario",
+      "quote": "A Coruña's first traditional omakase sushi restaurant, run by chef Adrián Figueroa — single tasting menus adjusted daily by fish market availability.",
+      "quote_language": "translated-from-es",
+      "language_pool": "es",
+      "source_count": 2,
+      "sources": [
+        "src-elig-quiroga",
+        "src-qm-moreno"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-11-28",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Pracer",
+      "name_variants": [],
+      "neighbourhood": "Zalaeta",
+      "cuisine": "Cocina moderna gallega / brasa",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "croqueta de centolla",
+        "marisco de lonja"
+      ],
+      "signature_dish": "croqueta de centolla",
+      "quote": "Música y cocina se dan la mano en un local con una estética y una propuesta rompedora. Una cocina moderna, desenfadada y atrevida de la mano de los chefs Moncho Bargo y Javi Freijeiro. Entre sus imprescindibles está la famosa croqueta de centolla.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 2,
+      "sources": [
+        "src-elig-quiroga",
+        "src-qm-lede"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-03-05",
+      "article_title": "Los restaurantes de A Coruña recomendados por la Guía Repsol",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3748481,
+      "lng": -8.400571,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pracer"
+    },
+    {
+      "name": "O Lagar da Estrella",
+      "name_variants": [
+        "O Lagar de la Estrella"
+      ],
+      "neighbourhood": "Cidade Vella",
+      "cuisine": "Cocina gallega contemporánea / informal",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "arroces",
+        "bocadillo de churrasco",
+        "croqueta de mejillón",
+        "tosta de sardina ahumada",
+        "arroz de vaca con setas y alioli de ajo asado"
+      ],
+      "signature_dish": "bocadillo de churrasco",
+      "quote": "Este restaurante propone una cocina informal y gustosa en la céntrica calle de la Estrella. A destacar sus arroces y creaciones que ya son emblemáticas en la ciudad como su bocadillo de churrasco. Local elegante y decorado con gusto.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 2,
+      "sources": [
+        "src-qm-lede",
+        "src-obj-suarez"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-ES+secondary-ES",
+      "article_date": "2024-03-05",
+      "article_title": "Los restaurantes de A Coruña recomendados por la Guía Repsol",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3687966,
+      "lng": -8.403479,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "O Lagar da Estrella"
+    },
+    {
+      "name": "A Mundiña",
+      "name_variants": [
+        "Amundiña"
+      ],
+      "neighbourhood": "Cidade Vella",
+      "cuisine": "Marisquería / cocina gallega de mercado",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "caldeirada de pescados de roca",
+        "salpicón de bogavante",
+        "almejas a la sartén",
+        "mariscos y pescados"
+      ],
+      "signature_dish": "caldeirada de pescados de roca",
+      "quote": "Ubicado entre las céntricas calle Real y avenida de la Marina, nos encontramos uno de los templos de la ciudad para disfrutar de los mariscos y los pescados. A destacar la caldeirada de pescados de roca.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 3,
+      "sources": [
+        "src-qm-lede",
+        "src-qm-moreno",
+        "src-obj-suarez"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-ES+secondary-ES",
+      "article_date": "2024-11-28",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3691427,
+      "lng": -8.4015153,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "A Mundiña"
+    },
+    {
+      "name": "Miga",
+      "name_variants": [
+        "La Taberna de Miga",
+        "Miga A Coruña"
+      ],
+      "neighbourhood": "Ensanche",
+      "cuisine": "Cocina de temporada / gallega informal",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "callos",
+        "cocina de mercado",
+        "platos de temporada"
+      ],
+      "signature_dish": "callos",
+      "quote": "El chef Adrián Felípez dirige su propio proyecto basado en la cocina de temporada y los platos informales. Situado en un céntrico local de la plaza de España, tiene una carta con buena calidad-precio que mezcla la cocina tradicional y moderna. A destacar sus geniales callos.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 3,
+      "sources": [
+        "src-qm-lede",
+        "src-qm-moreno",
+        "src-obj-suarez"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-ES+secondary-ES",
+      "article_date": "2024-11-28",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Eclectic",
+      "name_variants": [],
+      "neighbourhood": "Ensanche",
+      "cuisine": "Menú degustación / cocina creativa gallega",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "Menú Victoria (96€)",
+        "Menú Totora (82€)",
+        "cocina de investigación histórica"
+      ],
+      "signature_dish": null,
+      "quote": "Contemporary cuisine establishment featuring 'investigación histórica' as a fundamental element. The restaurant offers two rotating tasting menus updated quarterly — Menú Victoria at 96€ and Menú Totora at 82€.",
+      "quote_language": "translated-from-es",
+      "language_pool": "es",
+      "source_count": 2,
+      "sources": [
+        "src-qm-moreno",
+        "src-metro-montenegro"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-ES+secondary-ES",
+      "article_date": "2024-11-28",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3710415,
+      "lng": -8.3983907,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Eclectic Lar Gastronómico"
+    },
+    {
+      "name": "Salitre",
+      "name_variants": [
+        "Salitre A Coruña"
+      ],
+      "neighbourhood": "Riazor",
+      "cuisine": "Cocina gallega tradicional / arroces y marisco",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "caldeirada de pescado",
+        "arroces",
+        "cocina gallega de producto"
+      ],
+      "signature_dish": "caldeirada de pescado",
+      "quote": "En Salitre, no vienes a sorprenderte, sino a comer bien.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 2,
+      "sources": [
+        "src-qm-moreno",
+        "src-obj-suarez"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-ES+secondary-ES",
+      "article_date": "2024-11-28",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3759497,
+      "lng": -8.3942225,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Salitre"
+    },
+    {
+      "name": "Millo",
+      "name_variants": [
+        "Millo Orzán"
+      ],
+      "neighbourhood": "Orzán",
+      "cuisine": "Cocina de mercado / Galician creative",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "tortilla de Betanzos con callos de bacalao",
+        "tiramisu"
+      ],
+      "signature_dish": "tortilla de Betanzos con callos de bacalao",
+      "quote": "Moncho Méndez's small Orzán location offers market-driven cuisine with innovative presentations. Notable dishes include Betanzos tortilla with salt cod tripe and a distinctive tiramisu.",
+      "quote_language": "translated-from-es",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-elig-quiroga"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-ES",
+      "article_date": "2023-01-17",
+      "article_title": "Siete restaurantes coruñeses que brillan sin estrella",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3705912,
+      "lng": -8.4032478,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Millo"
+    },
+    {
+      "name": "Peculiar",
+      "name_variants": [
+        "Peculiar A Coruña"
+      ],
+      "neighbourhood": "Cidade Vella",
+      "cuisine": "Cocina sencilla e imaginativa / modern Galician",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "falso risotto de vieira"
+      ],
+      "signature_dish": "falso risotto de vieira",
+      "quote": "La dupla formada por Álvaro Victoria como chef y Rubén García en sala ya suma cuatro proyectos en el centro de A Coruña, pero el más emblemático es Peculiar. Cocina sencilla e imaginativa con platos icónicos como su falso risotto de vieira.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-qm-lede"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-03-05",
+      "article_title": "Los restaurantes de A Coruña recomendados por la Guía Repsol",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3705322,
+      "lng": -8.4001442,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Peculiar"
+    },
+    {
+      "name": "La Escondita",
+      "name_variants": [
+        "La Escondida"
+      ],
+      "neighbourhood": "Cidade Vella",
+      "cuisine": "Brasa / cocina de producto",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "lubina a la brasa"
+      ],
+      "signature_dish": "lubina a la brasa",
+      "quote": "Escondido en un lateral de la plaza de María Pita, encontramos este pequeño y encantador restaurante que tiene la brasa como protagonista. Trato cercano, carta sencilla con buena materia prima y platos imprescindibles como su lubina a la brasa.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-qm-lede"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-03-05",
+      "article_title": "Los restaurantes de A Coruña recomendados por la Guía Repsol",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "El Charrúa",
+      "name_variants": [
+        "El Charrua"
+      ],
+      "neighbourhood": "Cidade Vella",
+      "cuisine": "Carnes / steakhouse",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "carnes nacionales",
+        "carnes argentinas",
+        "carnes americanas"
+      ],
+      "signature_dish": null,
+      "quote": "Uno de los mejores lugares de la ciudad para disfrutar de una buena carne. Un local íntimo y con buen gusto en el que disfrutar de carnes nacionales, argentinas o americanas. Todo ello preparado a la perfección y acompañado de guarniciones muy sabrosas.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-qm-lede"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-03-05",
+      "article_title": "Los restaurantes de A Coruña recomendados por la Guía Repsol",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3690633,
+      "lng": -8.4031687,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Charrúa"
+    },
+    {
+      "name": "Pulpeira de Melide",
+      "name_variants": [],
+      "neighbourhood": "Ensanche",
+      "cuisine": "Pulpería / cocina gallega tradicional",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "pulpo á feira",
+        "tortilla de Betanzos"
+      ],
+      "signature_dish": "pulpo á feira",
+      "quote": "Actualización a los tiempos actuales de esas pulperías de toda la vida. Como no podía ser de otra forma, el pulpo á feira es el gran protagonista, pero también tienen otros platos imprescindibles como la tortilla de Betanzos, que fue nombrada como una de las mejores de España.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-qm-lede"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-03-05",
+      "article_title": "Los restaurantes de A Coruña recomendados por la Guía Repsol",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3728626,
+      "lng": -8.3972293,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pulpeira de Melide"
+    },
+    {
+      "name": "Pablo Gallego",
+      "name_variants": [
+        "Restaurante Pablo Gallego"
+      ],
+      "neighbourhood": "Cidade Vella",
+      "cuisine": "Cocina gallega tradicional y moderna",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "cocina gallega de autor"
+      ],
+      "signature_dish": null,
+      "quote": "Pablo Gallego, uno de los cocineros con más experiencia e historia en la cocina gallega, lidera este proyecto cerca de la plaza de María Pita. Una cocina entre lo tradicional y lo moderno con una cuidada selección de la materia prima y la mano de un reputado chef.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-qm-lede"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-03-05",
+      "article_title": "Los restaurantes de A Coruña recomendados por la Guía Repsol",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3705107,
+      "lng": -8.3948437,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Restaurante Pablo Gallego"
+    },
+    {
+      "name": "Tira do Playa",
+      "name_variants": [],
+      "neighbourhood": "Riazor",
+      "cuisine": "Brasa / marisco gallego",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "pescados a la brasa",
+        "marisco gallego",
+        "tortilla de Betanzos"
+      ],
+      "signature_dish": "pescados a la brasa",
+      "quote": "Un restaurante para comer disfrutando de una de las mejores vistas de la ciudad de A Coruña. La propuesta gastronómica se basa principalmente en los pescados a la brasa y el marisco gallego, pero no nos perdamos su tortilla, del legendario José Manuel Crespo, 'Crispi'.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-qm-lede"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-03-05",
+      "article_title": "Los restaurantes de A Coruña recomendados por la Guía Repsol",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.368452,
+      "lng": -8.4134771,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Tira do Playa"
+    },
+    {
+      "name": "La Penela",
+      "name_variants": [],
+      "neighbourhood": "Cidade Vella",
+      "cuisine": "Cocina gallega clásica",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "tortilla de Betanzos",
+        "carne asada con patatas"
+      ],
+      "signature_dish": "tortilla de Betanzos",
+      "quote": "Un local clásico y de ambiente agradable que ha conquistado Madrid o París con sus propuestas. Tortilla de Betanzos y su célebre carne asada con patatas son dos platos que hay que probar sí o sí.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-qm-lede"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-03-05",
+      "article_title": "Los restaurantes de A Coruña recomendados por la Guía Repsol",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3702889,
+      "lng": -8.3955144,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Restaurante A Penela"
+    },
+    {
+      "name": "Taberna 5 Mares",
+      "name_variants": [
+        "5 Mares"
+      ],
+      "neighbourhood": "Zalaeta",
+      "cuisine": "Cocina informal / tapas y raciones",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "aperitivos",
+        "platos para compartir"
+      ],
+      "signature_dish": null,
+      "quote": "Está situado en el Monte de San Pedro, justo al lado del ganador de dos Soles de Repsol, Árbore da Veira, al que está asociado. Aquí podemos disfrutar de una comida más informal y original servida de forma moderna y variada.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 2,
+      "sources": [
+        "src-qm-lede",
+        "src-qm-moreno"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-11-28",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3772319,
+      "lng": -8.433032,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Taberna 5 Mares"
+    },
+    {
+      "name": "Culuca Cociña",
+      "name_variants": [
+        "Culuca"
+      ],
+      "neighbourhood": "Os Mallos",
+      "cuisine": "Cocina de mercado / gastrobar",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "callos"
+      ],
+      "signature_dish": "callos",
+      "quote": "El chef Chisco Jiménez dirige este lugar que destaca por su cocina joven y de mercado con gran respeto al producto. No te vayas sin probar sus míticos callos, toda una leyenda en la ciudad.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 2,
+      "sources": [
+        "src-qm-lede",
+        "src-qm-moreno"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-11-28",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3634449,
+      "lng": -8.4090422,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Culuca"
+    },
+    {
+      "name": "A Espiga",
+      "name_variants": [],
+      "neighbourhood": "Cidade Vella",
+      "cuisine": "Cocina de temporada / Galician bistro",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "tortilla vaga",
+        "croquetas ahumadas",
+        "platos para compartir"
+      ],
+      "signature_dish": "tortilla vaga",
+      "quote": "Situado en la Ciudad Vieja de A Coruña, el restaurante llama la atención por su bonita decoración y situación. Una carta con gran presencia para las carnes y con entrantes muy variados. Productos frescos del día, con varios platos para compartir.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 2,
+      "sources": [
+        "src-qm-lede",
+        "src-qm-moreno"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-ES",
+      "article_date": "2024-11-28",
+      "article_title": "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3697972,
+      "lng": -8.3948545,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "A Espiga"
+    },
+    {
+      "name": "Pulpería O Rueiro",
+      "name_variants": [
+        "O Rueiro"
+      ],
+      "neighbourhood": "Agra do Orzán",
+      "cuisine": "Pulpería / cocina gallega tradicional",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "pulpo á feira",
+        "marisco gallego"
+      ],
+      "signature_dish": "pulpo á feira",
+      "quote": "Pulpería especializada en servir pulpo á feira, plato icónico de la región. El pulpo se cocina a la perfección y se sirve con aceite de oliva, sal y pimentón, ofreciendo una experiencia culinaria auténtica en ambiente de pulpería gallega.",
+      "quote_language": "translated-from-es",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-obj-suarez"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary-ES",
+      "article_date": "2023-10-06",
+      "article_title": "Dónde comer en La Coruña: 10 restaurantes en los que pedir pulpo, empanada o marisco",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3760007,
+      "lng": -8.3975933,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Pulpeira O Rueiro"
+    },
+    {
+      "name": "Casa Pardo",
+      "name_variants": [],
+      "neighbourhood": "Ensanche",
+      "cuisine": "Empanadas / cocina gallega tradicional",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "empanada de pato con puerro y manzana",
+        "empanada de bonito",
+        "zamburiñas"
+      ],
+      "signature_dish": "empanada de pato con puerro y manzana",
+      "quote": "Variada oferta incluye empanadas de sabores innovadores como pato con puerro y manzana, así como opciones tradicionales como bonito y zamburiñas.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-obj-suarez"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary-ES",
+      "article_date": "2023-10-06",
+      "article_title": "Dónde comer en La Coruña: 10 restaurantes en los que pedir pulpo, empanada o marisco",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3565639,
+      "lng": -8.3997401,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Casa Pardo"
+    },
+    {
+      "name": "Basílico",
+      "name_variants": [
+        "Basilico"
+      ],
+      "neighbourhood": "Ensanche",
+      "cuisine": "Cocina italiana / Mediterranean",
+      "opening_year": 1999,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "risotto de pescado con arroz carnaroli",
+        "tagliolini al nero di sepia con langostinos y mejillones"
+      ],
+      "signature_dish": "risotto de pescado",
+      "quote": "Su famoso risotto, cocinado con arroz carnaroli y caldo de pescado del día, es una exquisitez sin necesidad de nata, utilizando aceite de oliva virgen extra. Pasta importada, carnes de calidad, pescados frescos y postres caseros.",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-obj-suarez"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary-ES",
+      "article_date": "2023-10-06",
+      "article_title": "Dónde comer en La Coruña: 10 restaurantes en los que pedir pulpo, empanada o marisco",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 43.3693485,
+      "lng": -8.4193053,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Basilico"
+    }
+  ],
+  "centroids": {
+    "San Andrés": [
+      43.371,
+      -8.404
+    ],
+    "Cidade Vella": [
+      43.3697,
+      -8.3991
+    ],
+    "Ensanche": [
+      43.3672,
+      -8.4056
+    ]
+  }
+}
