@@ -272,19 +272,24 @@ function isThinProfile(profile) {
     const sid = src.id || src.source_id;
     if (sid && src.language) sourceLangMap[sid] = (src.language || '').toLowerCase().trim();
   }
+  // Fix 4 — language_pool: always recalculate from source languages
+  // r.sources may be array of strings OR array of {source_id, quote, ...} objects
   for (const r of data.restaurants) {
-    if (!r.language_pool) {
-      const rSourceIds = Array.isArray(r.sources) ? r.sources : [];
-      const langs = new Set(rSourceIds.map(sid => sourceLangMap[sid]).filter(Boolean));
+    const rSources = Array.isArray(r.sources) ? r.sources : [];
+    const rSourceIds = rSources.map(s => typeof s === 'string' ? s : (s.source_id || s.id || ''));
+    const langs = new Set(rSourceIds.map(sid => sourceLangMap[sid]).filter(Boolean));
+    if (langs.size > 0) {
+      let derived;
       if (langs.has('en') && (langs.has('es') || langs.has('pt') || langs.has('fr') || langs.has('ca') || langs.has('ar'))) {
-        r.language_pool = 'both';
+        derived = 'both';
       } else if (langs.has('en')) {
-        r.language_pool = 'en';
-      } else if (langs.size > 0) {
-        r.language_pool = [...langs][0]; // use first non-EN language found
+        derived = 'en';
       } else {
-        r.language_pool = 'es'; // fallback only if no source language info available
+        derived = [...langs][0];
       }
+      if (r.language_pool !== derived) { r.language_pool = derived; autoRepaired++; }
+    } else if (!r.language_pool) {
+      r.language_pool = 'es'; // fallback only if no source language info and field missing
       autoRepaired++;
     }
   }

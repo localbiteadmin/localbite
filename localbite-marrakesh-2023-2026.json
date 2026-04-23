@@ -159,7 +159,7 @@
       "lat": 31.6292152,
       "lng": -7.986435,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Their lamb tagine is tender enough to eat with a spoon, and the couscous dishes are always perfectly fluffy."
     },
     {
@@ -190,7 +190,7 @@
       "lat": 31.638459,
       "lng": -8.0164694,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "The tender, fall-off-the-bone meat and friendly service make it a regular stop in my Marrakech food adventures."
     },
     {
@@ -217,7 +217,7 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Le Tanjia proves that you can enjoy a touch of luxury without emptying your wallet, with evening belly dancing performances."
     },
     {
@@ -247,7 +247,7 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "The Harira soup here reminds me of what my Moroccan friends' mothers make - it's that authentic!"
     },
     {
@@ -277,7 +277,7 @@
       "lat": 31.6340749,
       "lng": -8.0145815,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Food here is deeply traditional but executed in sophisticated style by some very experienced cooks."
     },
     {
@@ -305,7 +305,7 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "dine on pizza and fab fusion food beneath the magnolia tree, hang at the bar with a Saharan spritz"
     },
     {
@@ -336,7 +336,7 @@
       "lat": 31.6490515,
       "lng": -8.0150853,
       "geo_source": "photon",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Heart of lettuce drenched in dressing and topped with pistachio dust are absolutely delicious, as is the grapefruit pavlova."
     },
     {
@@ -365,7 +365,7 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Seasonal, creative farm-to-fork menu. Delicately seasoned meat and fish served alongside unusual veggie offerings, organic wines and mocktails."
     },
     {
@@ -407,7 +407,7 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "language_pool": "es",
+      "language_pool": "both",
       "quote": "delicate marinated sardines, the black rice and crab croquettes and crowd-pleasing schnitzel with fresh coleslaw"
     },
     {
@@ -453,7 +453,7 @@
       "lat": 31.6365673,
       "lng": -7.9934804,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "both",
       "quote": "multi-course gastronomic Moroccan diffa feast in lavishly decorated dining rooms with musicians playing the oud"
     },
     {
@@ -507,7 +507,7 @@
       "lat": 31.6286777,
       "lng": -7.9874376,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "both",
       "quote": "cumin-slathered calamari from Agadir, organic chicken marinated in sweet harissa and crunchy cauliflower and fennel salad"
     },
     {
@@ -540,7 +540,7 @@
       "lat": 31.6245374,
       "lng": -7.985213,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "fatet batinjan (aubergine covered in spicy mincemeat, yoghurt and pita chips) — excellent Lebanese cuisine in the heart of the medina"
     },
     {
@@ -583,7 +583,7 @@
       "lat": 31.6390715,
       "lng": -8.0137562,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "they serve one of the best couscous dishes in Marrakech (around 50 MAD), available only on Fridays."
     },
     {
@@ -617,7 +617,7 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "grilled liver, lungs and even brains, served either in a tagine or simply grilled — consistently good grilled meat"
     },
     {
@@ -650,7 +650,7 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "My personal favourites are the mezze-style starters: Baba Ganoush (roasted aubergine dip) and Muhammara Harra (roasted peppers with nuts)."
     },
     {
@@ -681,7 +681,7 @@
       "lat": 31.6331197,
       "lng": -8.010006,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "I usually go there a bit dressed up, when I want to feel a touch more elegant and sink into the French Art Deco mood."
     },
     {
@@ -710,7 +710,7 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "They are famous for their omelettes, served in small metal pans. My favourite is the omelette with dried meat (khlia)."
     },
     {
@@ -753,7 +753,7 @@
       "lat": 31.6359916,
       "lng": -8.0133642,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "both",
       "quote": "The signature dish is the slow-cooked shoulder of lamb. Most of the menu is classic Moroccan, but the kitchen gives the dishes a slightly modern twist."
     },
     {
@@ -795,7 +795,7 @@
       "lat": 31.63384,
       "lng": -8.0151742,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "The Art Deco-style bar feels like an old English gentlemen's club: soft lighting, live musicians on some evenings, cigars, and a working fireplace."
     },
     {
@@ -827,7 +827,7 @@
       "lat": 31.6342962,
       "lng": -8.0099975,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "My favourite part is the inner garden. If you plan to go, definitely reserve a table in the garden area specifically."
     },
     {
@@ -857,7 +857,7 @@
       "lat": 31.6213065,
       "lng": -8.005058,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "I usually go with friends around midnight, when the live band starts playing (before that there is a DJ)."
     },
     {
@@ -884,7 +884,7 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "It feels a bit like stepping into the 1980s: older waiters in white gloves, waterfalls playing on the TV screens, simple food."
     },
     {
@@ -916,7 +916,7 @@
       "lat": 31.6305819,
       "lng": -8.0082107,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "good for tapas, shared plates and a later dinner. The menu leans towards grilled fish, seafood and classic Spanish dishes."
     },
     {
@@ -941,7 +941,7 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "rooftop restaurant and bar with wide, open views over the Guéliz skyline – one of the few places in Marrakech where you really see the modern city from above."
     },
     {
@@ -971,7 +971,7 @@
       "lat": 31.6311393,
       "lng": -8.0086003,
       "geo_source": "photon",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "a quiet, sit-down restaurant with both French and Moroccan dishes on the menu. It's an easy choice if you want a straightforward three-course meal."
     },
     {
@@ -999,7 +999,7 @@
       "lat": 31.631923,
       "lng": -7.9848998,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "fr",
       "quote": "La cuisine proposée est un subtil mélange de gastronomie marocaine et d'influences méditerranéennes, avec des plats raffinés."
     },
     {
@@ -1031,7 +1031,7 @@
       "lat": 31.5753657,
       "lng": -8.0166295,
       "geo_source": "photon",
-      "language_pool": "es",
+      "language_pool": "fr",
       "quote": "Les recettes traditionnelles revisitées, où les saveurs beldi rencontrent des influences contemporaines, aussi bien dans l'assiette qu'en termes d'ambiance."
     },
     {
@@ -1062,7 +1062,7 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "language_pool": "es",
+      "language_pool": "fr",
       "quote": "La qualité exceptionnelle de ses pièces de bœuf, soigneusement sélectionnées et parfaitement maîtrisées à la cuisson."
     },
     {
@@ -1095,7 +1095,7 @@
       "lat": 31.6252691,
       "lng": -7.9983024,
       "geo_source": "photon",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "The gnocchetti were extra light and fluffy yet rich and earthy thanks to the beetroot."
     },
     {
@@ -1127,7 +1127,7 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "The pastilla was filled with lobster and meatballs with foie gras. The couscous was flaky and buttery."
     },
     {
@@ -1159,7 +1159,7 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Set in beautiful gardens surrounded by orange, olive and palm trees with lots of fish and seafood options."
     },
     {
@@ -1191,7 +1191,7 @@
       "lat": 31.6320971,
       "lng": -7.9855182,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "A great choice if seeking a local yet fancier option where you can drink wine and cocktails."
     },
     {
@@ -1225,7 +1225,7 @@
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Only open for lunch with just two seatings. A small garden oasis—Instagram-worthy with shared tables."
     },
     {
@@ -1267,7 +1267,7 @@
       "lat": 31.6712223,
       "lng": -7.9850067,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "both",
       "quote": "La cuisine proposée est à la fois marocaine et méditerranéenne, avec des plats frais, colorés et bien exécutés."
     },
     {
@@ -1298,7 +1298,7 @@
       "lat": 31.6311251,
       "lng": -7.9853577,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Rooftop is lovely. While lacking mountain views due to construction, it's really nice and less crowded."
     },
     {
@@ -1328,7 +1328,7 @@
       "lat": 31.6311057,
       "lng": -7.989435,
       "geo_source": "photon",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Nice place with great rooftop views offering something different. Serves wine and beer, uncommon for the medina."
     },
     {
@@ -1359,7 +1359,7 @@
       "lat": 31.635339,
       "lng": -7.9889649,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Perfect restaurant for nice pasta plate in Morocco. Pasta dishes rather good, pizza decent with generous toppings."
     },
     {
@@ -1390,7 +1390,7 @@
       "lat": 31.6130285,
       "lng": -7.987289,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Come for camel burger or smoothie and hikayat—Moroccan storytelling in English with cultural Q&A sessions."
     },
     {
@@ -1421,7 +1421,7 @@
       "lat": 31.6262683,
       "lng": -7.9867501,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Cheese 'cigarettes' wrapped in pastry with a sweet chilli dipping sauce. Cheese and pastry are just an elite combination."
     },
     {
@@ -1449,7 +1449,7 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Yalla 3 course menu at 370 dirhams (around £30) per person, which was more than enough food as portion sizes are ample."
     },
     {
@@ -1480,7 +1480,7 @@
       "lat": 31.6332222,
       "lng": -7.9920436,
       "geo_source": "nominatim",
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Braised octopus and steak quesadillas. I would never think to pair octopus with crunchy fried chickpeas, but it works beautifully!"
     },
     {
@@ -1505,7 +1505,7 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "es",
+      "language_pool": "en",
       "quote": "Menu focuses on Moroccan flavours and local producers, with dishes inspired by the Market and Moroccan street food."
     }
   ],
