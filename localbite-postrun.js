@@ -188,6 +188,25 @@ function isThinProfile(profile) {
     process.exit(1);
   }
 
+  // ── Priority 4: Orphan check — block if any restaurant has no coords AND no neighbourhood
+  {
+    const orphans = data.restaurants.filter(
+      r => (!r.lat || r.lat === null) && (!r.neighbourhood || r.neighbourhood === null || r.neighbourhood.trim() === '')
+    );
+    if (orphans.length > 0) {
+      console.log(`\n⚠  ORPHAN WARNING — ${orphans.length} restaurant(s) have no coordinates AND no neighbourhood:`);
+      orphans.forEach((r, i) => console.log(`  ${i + 1}. ${r.name} — will not display on map`));
+      if (!process.argv.includes('--allow-orphans')) {
+        console.log(`\n✗ Blocking: assign a neighbourhood to each orphan before committing.`);
+        console.log(`  To override: node localbite-postrun.js ${file} --allow-orphans`);
+        console.log(`  Do NOT commit ${file} until orphans are resolved or --allow-orphans is used deliberately.\n`);
+        process.exit(1);
+      } else {
+        console.log(`\n  --allow-orphans flag set — continuing despite orphans.`);
+      }
+    }
+  }
+
   // ══ STEP 1.5 — SCHEMA VALIDATION ═════════════════════════════════════════════
 
   console.log(`\nSTEP 1.5 — Schema validation`);
@@ -201,6 +220,7 @@ function isThinProfile(profile) {
   // ── Auto-repair known compaction drift patterns ──────────────────────────
   // Runs before validation so postrun.js never blocks on fixable drift.
   let autoRepaired = 0;
+  const surnameRepairs = []; // Priority 3: track surname-only writer repairs
   for (const src of sourcesArray) {
     if ('source_id' in src && !('id' in src)) { src.id = src.source_id; autoRepaired++; }
     if ('publisher' in src && !('publication' in src)) {
@@ -208,6 +228,18 @@ function isThinProfile(profile) {
     }
     if ('author_name' in src && !('writer' in src)) {
       src.writer = src.author_name; delete src.author_name; autoRepaired++;
+    }
+    // Writer surname fallback — if writer still null after all known repairs,
+    // extract surname from source_id (pattern: src-[publication]-[surname])
+    if (!src.writer) {
+      const sid = (src.id || src.source_id || '');
+      const parts = sid.replace(/^src-/, '').split('-');
+      if (parts.length >= 2) {
+        const raw = parts[parts.length - 1];
+        src.writer = raw.charAt(0).toUpperCase() + raw.slice(1);
+        autoRepaired++;
+        surnameRepairs.push({ id: sid, writer: src.writer });
+      }
     }
     // Fix 3 — exhaustive field name variants from compaction drift
     if ('url' in src && !('article_url' in src))           { src.article_url = src.url; delete src.url; autoRepaired++; }
@@ -260,6 +292,10 @@ function isThinProfile(profile) {
     fs.writeFileSync(file, JSON.stringify(data, null, 2));
     console.log(`⚠  Auto-repaired ${autoRepaired} field(s) — compaction drift detected and corrected.`);
     console.log(`   Profile placeholders will be replaced by Step 2b enrichment.`);
+  }
+  if (surnameRepairs.length > 0) {
+    console.log(`⚠  Writer surname-only repair applied to ${surnameRepairs.length} source(s):`);
+    surnameRepairs.forEach(r => console.log(`  ⚠ "${r.id}" → writer: "${r.writer}" (surname only — verify full name)`));
   }
 
   // ── Validation (runs on repaired data) ───────────────────────────────────
