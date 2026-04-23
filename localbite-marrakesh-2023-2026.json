@@ -1,0 +1,1531 @@
+{
+  "pipeline": "localbite-v7.1",
+  "city": "Marrakesh",
+  "country": "Morocco",
+  "city_slug": "marrakesh-morocco",
+  "pack_date": "2026-04-23",
+  "year_range": "2023-2026",
+  "currency": "MAD",
+  "sources": [
+    {
+      "source_id": "src-blondieinmorocco-barcaite",
+      "publication": "Blondie in Morocco",
+      "publication_type": "single-author blog",
+      "writer_first": "Rasa",
+      "writer_last": "Barcaite",
+      "language": "en",
+      "source_type": "primary",
+      "article_url": "https://www.blondieinmorocco.com/locals-guide-to-the-best-restaurants-in-marrakech-new-town-gueliz/",
+      "article_date": null,
+      "article_date_note": "undated; estimated November 2025 from site context",
+      "found_via": "phase-1 Q05/Q06",
+      "id": "src-blondieinmorocco-barcaite",
+      "writer": "Rasa Barcaite",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for Blondie in Morocco, where Rasa Barcaite creates comprehensive food guides exploring the culinary landscape of Morocco. Her recent work includes detailed restaurant and dining recommendations that help travelers and locals discover authentic Moroccan cuisine and dining experiences."
+    },
+    {
+      "source_id": "src-bewilderedinmorocco-mizinskamomcilovic",
+      "publication": "Bewildered in Morocco",
+      "publication_type": "single-author blog",
+      "writer_first": "Monika",
+      "writer_last": "Mizińska-Momčilović",
+      "language": "en",
+      "source_type": "primary",
+      "article_url": "https://bewilderedinmorocco.com/best-affordable-restaurants-marrakech-local-guide/",
+      "article_date": "2025-02-07",
+      "article_date_note": null,
+      "found_via": "phase-1 Q02/Q33",
+      "id": "src-bewilderedinmorocco-mizinskamomcilovic",
+      "writer": "Monika Mizińska-Momčilović",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "A food writer for Bewildered in Morocco, Monika Mizińska-Momčilović contributes culinary guides that help navigate Morocco's dining landscape. Her work focuses on providing practical food guidance for those exploring Moroccan cuisine and restaurant culture."
+    },
+    {
+      "source_id": "src-marrakechmadame-durant",
+      "publication": "Marrakech Madame",
+      "publication_type": "multi-author blog",
+      "writer_first": "Camille",
+      "writer_last": "Durant",
+      "language": "fr",
+      "source_type": "primary",
+      "article_url": "https://marrakechmadame.com/meilleurs-restaurants-marrakech/",
+      "article_date": "2026-02-03",
+      "article_date_note": null,
+      "found_via": "phase-1 Q22/Q23",
+      "id": "src-marrakechmadame-durant",
+      "writer": "Camille Durant",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for Marrakech Madame, contributing comprehensive dining guides that explore the culinary landscape of Morocco's vibrant food scene. Camille Durant specializes in creating detailed restaurant recommendations and food guides for travelers and locals seeking authentic dining experiences in Marrakech."
+    },
+    {
+      "source_id": "src-timeout-hardykirby",
+      "publication": "Time Out Marrakech",
+      "publication_type": "multi-author media outlet",
+      "writer_first": "Paula",
+      "writer_last": "Hardy",
+      "writer_note": "co-written with Sally Kirby",
+      "language": "en",
+      "source_type": "secondary",
+      "article_url": "https://www.timeout.com/marrakech/restaurants/best-restaurants-in-marrakech",
+      "article_date": "2025-02-25",
+      "article_date_note": null,
+      "found_via": "phase-1 Q02/Q21",
+      "id": "src-timeout-hardykirby",
+      "writer": "Paula Hardy",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for Time Out Marrakech, specializing in the city's vibrant culinary landscape and dining scene. Paula Hardy provides insider guides to help locals and travelers discover the best restaurants, street food, and hidden culinary gems throughout Morocco's cultural capital."
+    },
+    {
+      "source_id": "src-midnightblueelephant-ziehen",
+      "publication": "The Midnight Blue Elephant",
+      "publication_type": "single-author blog",
+      "writer_first": "Annika",
+      "writer_last": "Ziehen",
+      "language": "en",
+      "source_type": "primary",
+      "article_url": "https://www.midnightblueelephant.com/marrakech-food/",
+      "article_date": null,
+      "article_date_note": "undated; estimated January 2026 from site context",
+      "found_via": "phase-1 Q02/Q20",
+      "id": "src-midnightblueelephant-ziehen",
+      "writer": "Annika Ziehen",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for The Midnight Blue Elephant, Annika Ziehen creates comprehensive dining guides to help readers navigate the culinary landscape. Her recent food guide work focuses on curating restaurant recommendations and dining insights. Through The Midnight Blue Elephant, she provides practical food and restaurant coverage for local diners."
+    },
+    {
+      "source_id": "src-anoushkaprobyn-probyn",
+      "publication": "Anoushka Probyn",
+      "publication_type": "single-author blog",
+      "writer_first": "Anoushka",
+      "writer_last": "Probyn",
+      "language": "en",
+      "source_type": "primary",
+      "article_url": "https://anoushkaprobyn.com/the-most-beautiful-restaurants-in-marrakech/",
+      "article_date": "2024-09-23",
+      "article_date_note": null,
+      "found_via": "phase-1 Q03/Q26",
+      "id": "src-anoushkaprobyn-probyn",
+      "writer": "Anoushka Probyn",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer who creates comprehensive dining guides for LocalBite users. Her publication focuses on curating essential restaurant recommendations and culinary insights to help diners discover their next great meal."
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "L'Mida",
+      "neighbourhood": "Medina",
+      "cuisine": "Modern Moroccan",
+      "sources": [
+        {
+          "source_id": "src-bewilderedinmorocco-mizinskamomcilovic",
+          "quote": "Their lamb tagine is tender enough to eat with a spoon, and the couscous dishes are always perfectly fluffy.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "lamb tagine",
+            "couscous"
+          ],
+          "price_info": "budget-friendly",
+          "open_status_check": false
+        },
+        {
+          "source_id": "src-midnightblueelephant-ziehen",
+          "quote": "Rooftop and restaurant with modern Moroccan interior. Coffee was really good, lamb burger very good.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "lamb burger",
+            "tuna poke bowl with zucchini noodles",
+            "tagines",
+            "grilled meats"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "L'Mida",
+      "geo_skip": false,
+      "lat": 31.6292152,
+      "lng": -7.986435,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "Their lamb tagine is tender enough to eat with a spoon, and the couscous dishes are always perfectly fluffy."
+    },
+    {
+      "name": "Chez Lamine",
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan (mechoui specialty)",
+      "sources": [
+        {
+          "source_id": "src-bewilderedinmorocco-mizinskamomcilovic",
+          "quote": "The tender, fall-off-the-bone meat and friendly service make it a regular stop in my Marrakech food adventures.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "mechoui",
+            "slow-roasted lamb"
+          ],
+          "price_info": "budget-friendly",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "chez Lamine",
+      "geo_skip": false,
+      "lat": 31.638459,
+      "lng": -8.0164694,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "The tender, fall-off-the-bone meat and friendly service make it a regular stop in my Marrakech food adventures."
+    },
+    {
+      "name": "Le Tanjia",
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan",
+      "sources": [
+        {
+          "source_id": "src-bewilderedinmorocco-mizinskamomcilovic",
+          "quote": "Le Tanjia proves that you can enjoy a touch of luxury without emptying your wallet, with evening belly dancing performances.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "tanjia (slow-cooked meat stew)"
+          ],
+          "price_info": "moderate/budget-friendly",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "es",
+      "quote": "Le Tanjia proves that you can enjoy a touch of luxury without emptying your wallet, with evening belly dancing performances."
+    },
+    {
+      "name": "Chez Mmima",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Moroccan and international fusion",
+      "sources": [
+        {
+          "source_id": "src-bewilderedinmorocco-mizinskamomcilovic",
+          "quote": "The Harira soup here reminds me of what my Moroccan friends' mothers make - it's that authentic!",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "harira soup"
+          ],
+          "price_info": "budget-friendly",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "es",
+      "quote": "The Harira soup here reminds me of what my Moroccan friends' mothers make - it's that authentic!"
+    },
+    {
+      "name": "Sahbi Sahbi",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Modern Moroccan",
+      "sources": [
+        {
+          "source_id": "src-timeout-hardykirby",
+          "quote": "Food here is deeply traditional but executed in sophisticated style by some very experienced cooks.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "regional traditional dishes"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Sahbi Sahbi",
+      "geo_skip": false,
+      "lat": 31.6340749,
+      "lng": -8.0145815,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "Food here is deeply traditional but executed in sophisticated style by some very experienced cooks."
+    },
+    {
+      "name": "Pétanque Social Club",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Pizza and fusion",
+      "sources": [
+        {
+          "source_id": "src-timeout-hardykirby",
+          "quote": "dine on pizza and fab fusion food beneath the magnolia tree, hang at the bar with a Saharan spritz",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "pizza",
+            "fusion food"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "es",
+      "quote": "dine on pizza and fab fusion food beneath the magnolia tree, hang at the bar with a Saharan spritz"
+    },
+    {
+      "name": "Maison Reine",
+      "neighbourhood": "Bab Doukkala",
+      "cuisine": "French-influenced vegetable-forward",
+      "sources": [
+        {
+          "source_id": "src-timeout-hardykirby",
+          "quote": "Heart of lettuce drenched in dressing and topped with pistachio dust are absolutely delicious, as is the grapefruit pavlova.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "heart of lettuce with pistachio dust",
+            "grapefruit pavlova"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Maison Marrakech",
+      "geo_skip": false,
+      "lat": 31.6490515,
+      "lng": -8.0150853,
+      "geo_source": "photon",
+      "language_pool": "es",
+      "quote": "Heart of lettuce drenched in dressing and topped with pistachio dust are absolutely delicious, as is the grapefruit pavlova."
+    },
+    {
+      "name": "Farmers",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Farm-to-fork seasonal",
+      "sources": [
+        {
+          "source_id": "src-timeout-hardykirby",
+          "quote": "Seasonal, creative farm-to-fork menu. Delicately seasoned meat and fish served alongside unusual veggie offerings, organic wines and mocktails.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "squash blossom tacos",
+            "organic wines",
+            "mocktails"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "es",
+      "quote": "Seasonal, creative farm-to-fork menu. Delicately seasoned meat and fish served alongside unusual veggie offerings, organic wines and mocktails."
+    },
+    {
+      "name": "+61",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Medi-Moroccan fusion",
+      "sources": [
+        {
+          "source_id": "src-timeout-hardykirby",
+          "quote": "delicate marinated sardines, the black rice and crab croquettes and crowd-pleasing schnitzel with fresh coleslaw",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "marinated sardines",
+            "black rice and crab croquettes",
+            "schnitzel with coleslaw"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        },
+        {
+          "source_id": "src-marrakechmadame-durant",
+          "quote": "L'un des restaurants les plus modernes et créatifs de Guéliz, très apprécié par les amateurs de bonne cuisine et les expatriés.",
+          "quote_language": "fr",
+          "dishes_mentioned": [
+            "carefully plated original creations"
+          ],
+          "price_info": "€28-40 per person",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": true,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "es",
+      "quote": "delicate marinated sardines, the black rice and crab croquettes and crowd-pleasing schnitzel with fresh coleslaw"
+    },
+    {
+      "name": "Dar Yacout",
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan gastronomic (diffa)",
+      "sources": [
+        {
+          "source_id": "src-timeout-hardykirby",
+          "quote": "multi-course gastronomic Moroccan diffa feast in lavishly decorated dining rooms with musicians playing the oud",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "salads",
+            "tagine",
+            "couscous",
+            "sweet bastilla"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        },
+        {
+          "source_id": "src-marrakechmadame-durant",
+          "quote": "pastilla, tajines, couscous et pâtisseries traditionnelles, servis en plusieurs temps. L'ambiance feutrée, les salons richement décorés.",
+          "quote_language": "fr",
+          "dishes_mentioned": [
+            "pastilla",
+            "tajines",
+            "couscous",
+            "traditional pastries"
+          ],
+          "price_info": "high",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": true,
+      "riad_flag": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Dar Yacout",
+      "geo_skip": false,
+      "lat": 31.6365673,
+      "lng": -7.9934804,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "multi-course gastronomic Moroccan diffa feast in lavishly decorated dining rooms with musicians playing the oud"
+    },
+    {
+      "name": "Nomad",
+      "neighbourhood": "Medina",
+      "cuisine": "Contemporary Moroccan",
+      "sources": [
+        {
+          "source_id": "src-timeout-hardykirby",
+          "quote": "cumin-slathered calamari from Agadir, organic chicken marinated in sweet harissa and crunchy cauliflower and fennel salad",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "cumin-slathered calamari",
+            "organic chicken with sweet harissa",
+            "cauliflower and fennel salad"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        },
+        {
+          "source_id": "src-marrakechmadame-durant",
+          "quote": "La carte revisite les plats marocains avec une touche créative et actuelle, tout en proposant quelques options végétariennes.",
+          "quote_language": "fr",
+          "dishes_mentioned": [
+            "revisited Moroccan plates"
+          ],
+          "price_info": "mid-range",
+          "open_status_check": false
+        },
+        {
+          "source_id": "src-midnightblueelephant-ziehen",
+          "quote": "Roof terrace offers best views over medina and Place des Epices with water mist sprinklers in summer.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "cauliflower salad with strawberries",
+            "burger",
+            "homemade ice creams and sorbets"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": true,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Nomad",
+      "geo_skip": false,
+      "lat": 31.6286777,
+      "lng": -7.9874376,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "cumin-slathered calamari from Agadir, organic chicken marinated in sweet harissa and crunchy cauliflower and fennel salad"
+    },
+    {
+      "name": "Naranj",
+      "neighbourhood": "Medina",
+      "cuisine": "Lebanese",
+      "sources": [
+        {
+          "source_id": "src-timeout-hardykirby",
+          "quote": "fatet batinjan (aubergine covered in spicy mincemeat, yoghurt and pita chips) — excellent Lebanese cuisine in the heart of the medina",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "kibbeh",
+            "fatet batinjan",
+            "chicken salad",
+            "mezze"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Naranj Libanese",
+      "geo_skip": false,
+      "lat": 31.6245374,
+      "lng": -7.985213,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "fatet batinjan (aubergine covered in spicy mincemeat, yoghurt and pita chips) — excellent Lebanese cuisine in the heart of the medina"
+    },
+    {
+      "name": "Amal",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Traditional Moroccan (non-profit cooperative)",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "they serve one of the best couscous dishes in Marrakech (around 50 MAD), available only on Fridays.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "couscous"
+          ],
+          "price_info": "~50 MAD",
+          "open_status_check": false
+        },
+        {
+          "source_id": "src-timeout-hardykirby",
+          "quote": "heart-warming, homely favourites like lentil, cauliflower and leeks salad and a truly excellent fish tagine on Fridays",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "lentil salad",
+            "cauliflower and leeks salad",
+            "fish tagine",
+            "couscous"
+          ],
+          "price_info": "moderate",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Association Amal - Women Training Center and Moroccan Restaurant",
+      "geo_skip": false,
+      "lat": 31.6390715,
+      "lng": -8.0137562,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "they serve one of the best couscous dishes in Marrakech (around 50 MAD), available only on Fridays."
+    },
+    {
+      "name": "Chez Bejguenni",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Moroccan grilled meat",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "grilled liver, lungs and even brains, served either in a tagine or simply grilled — consistently good grilled meat",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "grilled liver",
+            "lungs",
+            "brains",
+            "tagine",
+            "grilled meat"
+          ],
+          "price_info": "50-70 MAD per person",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "es",
+      "quote": "grilled liver, lungs and even brains, served either in a tagine or simply grilled — consistently good grilled meat"
+    },
+    {
+      "name": "Chez Ouazzani",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Moroccan, vegetarian-friendly",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "My personal favourites are the mezze-style starters: Baba Ganoush (roasted aubergine dip) and Muhammara Harra (roasted peppers with nuts).",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "baba ganoush",
+            "muhammara harra",
+            "tagines",
+            "couscous"
+          ],
+          "price_info": "~50 MAD",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "es",
+      "quote": "My personal favourites are the mezze-style starters: Baba Ganoush (roasted aubergine dip) and Muhammara Harra (roasted peppers with nuts)."
+    },
+    {
+      "name": "Grand Café de la Poste",
+      "neighbourhood": "Gueliz",
+      "cuisine": "French brasserie with Moroccan touches",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "I usually go there a bit dressed up, when I want to feel a touch more elegant and sink into the French Art Deco mood.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "salads",
+            "main dishes"
+          ],
+          "price_info": "salads ~120 MAD, mains ~170 MAD",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Grand Café de la Poste",
+      "geo_skip": false,
+      "lat": 31.6331197,
+      "lng": -8.010006,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "I usually go there a bit dressed up, when I want to feel a touch more elegant and sink into the French Art Deco mood."
+    },
+    {
+      "name": "Espace Fruits Othmane",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Moroccan breakfast",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "They are famous for their omelettes, served in small metal pans. My favourite is the omelette with dried meat (khlia).",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "omelette with khlia",
+            "fresh juices",
+            "beldi breakfasts"
+          ],
+          "price_info": "omelettes <20 MAD, juices 10-15 MAD",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "es",
+      "quote": "They are famous for their omelettes, served in small metal pans. My favourite is the omelette with dried meat (khlia)."
+    },
+    {
+      "name": "Al Fassia",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Traditional Moroccan (upscale, women-run)",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "The signature dish is the slow-cooked shoulder of lamb. Most of the menu is classic Moroccan, but the kitchen gives the dishes a slightly modern twist.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "slow-cooked shoulder of lamb",
+            "tagines"
+          ],
+          "price_info": "traditional dishes ~140 MAD+",
+          "open_status_check": false
+        },
+        {
+          "source_id": "src-marrakechmadame-durant",
+          "quote": "Tajines, couscous et spécialités marocaines sont préparés dans le respect des traditions, avec des produits soigneusement sélectionnés.",
+          "quote_language": "fr",
+          "dishes_mentioned": [
+            "tajines",
+            "couscous",
+            "Moroccan specialities"
+          ],
+          "price_info": "mid-range",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": true,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Al Fassia",
+      "geo_skip": false,
+      "lat": 31.6359916,
+      "lng": -8.0133642,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "The signature dish is the slow-cooked shoulder of lamb. Most of the menu is classic Moroccan, but the kitchen gives the dishes a slightly modern twist."
+    },
+    {
+      "name": "La Trattoria",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Italian",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "The Art Deco-style bar feels like an old English gentlemen's club: soft lighting, live musicians on some evenings, cigars, and a working fireplace.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "pasta",
+            "main courses"
+          ],
+          "price_info": "mains ~200 MAD, pasta ~130 MAD",
+          "open_status_check": false
+        },
+        {
+          "source_id": "src-anoushkaprobyn-probyn",
+          "quote": "Fettuccine with prawns and zucchini, and Ravioli 'alla tanjia' with olive tapenade. Though both very tasty, if I was to nit-pick...",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "fettuccine with prawns and zucchini",
+            "ravioli alla tanjia with olive tapenade"
+          ],
+          "price_info": null,
+          "open_status_check": true
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "La Trattoria",
+      "geo_skip": false,
+      "lat": 31.63384,
+      "lng": -8.0151742,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "The Art Deco-style bar feels like an old English gentlemen's club: soft lighting, live musicians on some evenings, cigars, and a working fireplace."
+    },
+    {
+      "name": "Entrepotes",
+      "neighbourhood": "Gueliz",
+      "cuisine": "International tapas",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "My favourite part is the inner garden. If you plan to go, definitely reserve a table in the garden area specifically.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "tapas",
+            "wine",
+            "cocktails"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "entrepotes",
+      "geo_skip": false,
+      "lat": 31.6342962,
+      "lng": -8.0099975,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "My favourite part is the inner garden. If you plan to go, definitely reserve a table in the garden area specifically."
+    },
+    {
+      "name": "Épicurien",
+      "neighbourhood": "Gueliz",
+      "cuisine": "International (dinner and live music venue)",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "I usually go with friends around midnight, when the live band starts playing (before that there is a DJ).",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "main courses"
+          ],
+          "price_info": "mains ~200 MAD, wine ~300 MAD",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "L'Epicurien",
+      "geo_skip": false,
+      "lat": 31.6213065,
+      "lng": -8.005058,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "I usually go with friends around midnight, when the live band starts playing (before that there is a DJ)."
+    },
+    {
+      "name": "La Taverna",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Moroccan/International",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "It feels a bit like stepping into the 1980s: older waiters in white gloves, waterfalls playing on the TV screens, simple food.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "simple food"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "es",
+      "quote": "It feels a bit like stepping into the 1980s: older waiters in white gloves, waterfalls playing on the TV screens, simple food."
+    },
+    {
+      "name": "Casa Jose Marrakech",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Spanish tapas",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "good for tapas, shared plates and a later dinner. The menu leans towards grilled fish, seafood and classic Spanish dishes.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "tapas",
+            "grilled fish",
+            "seafood"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Casa José",
+      "geo_skip": false,
+      "lat": 31.6305819,
+      "lng": -8.0082107,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "good for tapas, shared plates and a later dinner. The menu leans towards grilled fish, seafood and classic Spanish dishes."
+    },
+    {
+      "name": "laÔ Marrakech",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Contemporary international (rooftop)",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "rooftop restaurant and bar with wide, open views over the Guéliz skyline – one of the few places in Marrakech where you really see the modern city from above.",
+          "quote_language": "en",
+          "dishes_mentioned": [],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "es",
+      "quote": "rooftop restaurant and bar with wide, open views over the Guéliz skyline – one of the few places in Marrakech where you really see the modern city from above."
+    },
+    {
+      "name": "Les Jardins de Guéliz",
+      "neighbourhood": "Gueliz",
+      "cuisine": "French and Moroccan",
+      "sources": [
+        {
+          "source_id": "src-blondieinmorocco-barcaite",
+          "quote": "a quiet, sit-down restaurant with both French and Moroccan dishes on the menu. It's an easy choice if you want a straightforward three-course meal.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "three-course meals"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Le Jardins de Guéliz",
+      "geo_skip": false,
+      "lat": 31.6311393,
+      "lng": -8.0086003,
+      "geo_source": "photon",
+      "language_pool": "es",
+      "quote": "a quiet, sit-down restaurant with both French and Moroccan dishes on the menu. It's an easy choice if you want a straightforward three-course meal."
+    },
+    {
+      "name": "Le Foundouk",
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan and Mediterranean",
+      "sources": [
+        {
+          "source_id": "src-marrakechmadame-durant",
+          "quote": "La cuisine proposée est un subtil mélange de gastronomie marocaine et d'influences méditerranéennes, avec des plats raffinés.",
+          "quote_language": "fr",
+          "dishes_mentioned": [],
+          "price_info": "high",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Le Foundouk",
+      "geo_skip": false,
+      "lat": 31.631923,
+      "lng": -7.9848998,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "La cuisine proposée est un subtil mélange de gastronomie marocaine et d'influences méditerranéennes, avec des plats raffinés."
+    },
+    {
+      "name": "Beldi Fusion",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Modern Moroccan fusion",
+      "sources": [
+        {
+          "source_id": "src-marrakechmadame-durant",
+          "quote": "Les recettes traditionnelles revisitées, où les saveurs beldi rencontrent des influences contemporaines, aussi bien dans l'assiette qu'en termes d'ambiance.",
+          "quote_language": "fr",
+          "dishes_mentioned": [
+            "revisited tajines",
+            "fusion plates",
+            "vegetarian options"
+          ],
+          "price_info": "€22-35 per person",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Beldi Marrakech",
+      "geo_skip": false,
+      "lat": 31.5753657,
+      "lng": -8.0166295,
+      "geo_source": "photon",
+      "language_pool": "es",
+      "quote": "Les recettes traditionnelles revisitées, où les saveurs beldi rencontrent des influences contemporaines, aussi bien dans l'assiette qu'en termes d'ambiance."
+    },
+    {
+      "name": "Meat Grill Marrakech",
+      "neighbourhood": "Gueliz",
+      "cuisine": "Steakhouse",
+      "sources": [
+        {
+          "source_id": "src-marrakechmadame-durant",
+          "quote": "La qualité exceptionnelle de ses pièces de bœuf, soigneusement sélectionnées et parfaitement maîtrisées à la cuisson.",
+          "quote_language": "fr",
+          "dishes_mentioned": [
+            "matured beef",
+            "premium cuts"
+          ],
+          "price_info": "€30-50 per person",
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "es",
+      "quote": "La qualité exceptionnelle de ses pièces de bœuf, soigneusement sélectionnées et parfaitement maîtrisées à la cuisson."
+    },
+    {
+      "name": "Sesamo (Royal Mansour)",
+      "neighbourhood": "Hivernage",
+      "cuisine": "Italian",
+      "sources": [
+        {
+          "source_id": "src-midnightblueelephant-ziehen",
+          "quote": "The gnocchetti were extra light and fluffy yet rich and earthy thanks to the beetroot.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "beetroot gnocchetti",
+            "mushroom risotto",
+            "turbot with seafood stew",
+            "veal Milanese"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Sesamo (Royal Mansour) Marrakesh",
+      "geo_skip": false,
+      "lat": 31.6252691,
+      "lng": -7.9983024,
+      "geo_source": "photon",
+      "language_pool": "es",
+      "quote": "The gnocchetti were extra light and fluffy yet rich and earthy thanks to the beetroot."
+    },
+    {
+      "name": "Le Marocain (La Mamounia)",
+      "neighbourhood": "Hivernage",
+      "cuisine": "Elevated Moroccan",
+      "sources": [
+        {
+          "source_id": "src-midnightblueelephant-ziehen",
+          "quote": "The pastilla was filled with lobster and meatballs with foie gras. The couscous was flaky AND buttery.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "lobster pastilla",
+            "meatballs with foie gras",
+            "flaky buttery couscous"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "es",
+      "quote": "The pastilla was filled with lobster and meatballs with foie gras. The couscous was flaky and buttery."
+    },
+    {
+      "name": "Le Jardin (Royal Mansour)",
+      "neighbourhood": "Hivernage",
+      "cuisine": "Modern with Asian touch",
+      "sources": [
+        {
+          "source_id": "src-midnightblueelephant-ziehen",
+          "quote": "Set in beautiful gardens surrounded by orange, olive and palm trees with lots of fish and seafood options.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "vegetable and fish carpaccios",
+            "tatakis",
+            "chicken wontons",
+            "oven-roasted garden vegetables",
+            "crab",
+            "frozen coconut"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "es",
+      "quote": "Set in beautiful gardens surrounded by orange, olive and palm trees with lots of fish and seafood options."
+    },
+    {
+      "name": "Le Trou Au Mur",
+      "neighbourhood": "Medina",
+      "cuisine": "International and Moroccan",
+      "sources": [
+        {
+          "source_id": "src-midnightblueelephant-ziehen",
+          "quote": "A great choice if seeking a local yet fancier option where you can drink wine and cocktails.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "various local dishes",
+            "daily specials",
+            "homemade sorbets"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Le Trou au Mur",
+      "geo_skip": false,
+      "lat": 31.6320971,
+      "lng": -7.9855182,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "A great choice if seeking a local yet fancier option where you can drink wine and cocktails."
+    },
+    {
+      "name": "La Famille",
+      "neighbourhood": "Medina",
+      "cuisine": "Modern Mediterranean",
+      "sources": [
+        {
+          "source_id": "src-midnightblueelephant-ziehen",
+          "quote": "Only open for lunch with just two seatings. A small garden oasis—Instagram-worthy with shared tables.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "dips and bread",
+            "salad",
+            "pasta",
+            "flatbread",
+            "fruit tarts"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "es",
+      "quote": "Only open for lunch with just two seatings. A small garden oasis—Instagram-worthy with shared tables."
+    },
+    {
+      "name": "Le Jardin",
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan and International Bistro",
+      "sources": [
+        {
+          "source_id": "src-marrakechmadame-durant",
+          "quote": "La cuisine proposée est à la fois marocaine et méditerranéenne, avec des plats frais, colorés et bien exécutés.",
+          "quote_language": "fr",
+          "dishes_mentioned": [
+            "fresh colorful plates"
+          ],
+          "price_info": "mid-range",
+          "open_status_check": false
+        },
+        {
+          "source_id": "src-midnightblueelephant-ziehen",
+          "quote": "Well-liked restaurant tiled green with lots of trees. Garden-riad setting beautiful, quite hidden in souks.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "salmon tartar",
+            "pastilla",
+            "chicken pita pocket with chermoula"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": true,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Le Jardin",
+      "geo_skip": false,
+      "lat": 31.6712223,
+      "lng": -7.9850067,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "La cuisine proposée est à la fois marocaine et méditerranéenne, avec des plats frais, colorés et bien exécutés."
+    },
+    {
+      "name": "Le Slimana",
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan",
+      "sources": [
+        {
+          "source_id": "src-midnightblueelephant-ziehen",
+          "quote": "Rooftop is lovely. While lacking mountain views due to construction, it's really nice and less crowded.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "hummus gnocchi with truffle and artichokes",
+            "mocktails"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Le Slimana",
+      "geo_skip": false,
+      "lat": 31.6311251,
+      "lng": -7.9853577,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "Rooftop is lovely. While lacking mountain views due to construction, it's really nice and less crowded."
+    },
+    {
+      "name": "Terrace des Épices",
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan and International",
+      "sources": [
+        {
+          "source_id": "src-midnightblueelephant-ziehen",
+          "quote": "Nice place with great rooftop views offering something different. Serves wine and beer, uncommon for medina.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "fresh salads"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "La Fontaine des épices",
+      "geo_skip": false,
+      "lat": 31.6311057,
+      "lng": -7.989435,
+      "geo_source": "photon",
+      "language_pool": "es",
+      "quote": "Nice place with great rooftop views offering something different. Serves wine and beer, uncommon for the medina."
+    },
+    {
+      "name": "Limoni",
+      "neighbourhood": "Medina",
+      "cuisine": "Italian",
+      "sources": [
+        {
+          "source_id": "src-midnightblueelephant-ziehen",
+          "quote": "Perfect restaurant for nice pasta plate in Morocco. Pasta dishes rather good, pizza decent with generous toppings.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "homemade pasta",
+            "pizza"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "I Limoni",
+      "geo_skip": false,
+      "lat": 31.635339,
+      "lng": -7.9889649,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "Perfect restaurant for nice pasta plate in Morocco. Pasta dishes rather good, pizza decent with generous toppings."
+    },
+    {
+      "name": "Cafe Clock",
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan café with cultural program",
+      "sources": [
+        {
+          "source_id": "src-midnightblueelephant-ziehen",
+          "quote": "Come for camel burger or smoothie and hikayat—Moroccan storytelling in English with cultural Q&A sessions.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "camel burger",
+            "smoothies"
+          ],
+          "price_info": null,
+          "open_status_check": false
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Café Clock",
+      "geo_skip": false,
+      "lat": 31.6130285,
+      "lng": -7.987289,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "Come for camel burger or smoothie and hikayat—Moroccan storytelling in English with cultural Q&A sessions."
+    },
+    {
+      "name": "Le Salama",
+      "neighbourhood": "Medina",
+      "cuisine": "Moroccan/Mezze",
+      "sources": [
+        {
+          "source_id": "src-anoushkaprobyn-probyn",
+          "quote": "Cheese 'cigarettes' wrapped in pastry with a sweet chilli dipping sauce. Cheese and pastry are just an elite combination.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "cheese cigarettes with sweet chilli sauce",
+            "mezze"
+          ],
+          "price_info": null,
+          "open_status_check": true
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Le Salama",
+      "geo_skip": false,
+      "lat": 31.6262683,
+      "lng": -7.9867501,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "Cheese 'cigarettes' wrapped in pastry with a sweet chilli dipping sauce. Cheese and pastry are just an elite combination."
+    },
+    {
+      "name": "Folk Marrakech",
+      "neighbourhood": "Medina",
+      "cuisine": "Traditional Moroccan",
+      "sources": [
+        {
+          "source_id": "src-anoushkaprobyn-probyn",
+          "quote": "Yalla 3 course menu at 370 dirhams (around £30) per person, which was more than enough food as portion sizes are ample.",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "mezze",
+            "tagines"
+          ],
+          "price_info": "370 MAD / ~£30 for 3-course menu",
+          "open_status_check": true
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "es",
+      "quote": "Yalla 3 course menu at 370 dirhams (around £30) per person, which was more than enough food as portion sizes are ample."
+    },
+    {
+      "name": "Les Jardins du Lotus",
+      "neighbourhood": "Medina",
+      "cuisine": "Fusion with Moroccan flavours",
+      "sources": [
+        {
+          "source_id": "src-anoushkaprobyn-probyn",
+          "quote": "Braised octopus and steak quesadillas. I would never think to pair octopus with crunchy fried chickpeas, but it works beautifully!",
+          "quote_language": "en",
+          "dishes_mentioned": [
+            "braised octopus with crunchy fried chickpeas",
+            "steak quesadillas"
+          ],
+          "price_info": null,
+          "open_status_check": true
+        }
+      ],
+      "confidence": "A",
+      "both_pool": false,
+      "riad_flag": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Les Jardins Du Lotus",
+      "geo_skip": false,
+      "lat": 31.6332222,
+      "lng": -7.9920436,
+      "geo_source": "nominatim",
+      "language_pool": "es",
+      "quote": "Braised octopus and steak quesadillas. I would never think to pair octopus with crunchy fried chickpeas, but it works beautifully!"
+    },
+    {
+      "name": "Le Table du Souk (La Sultana)",
+      "neighbourhood": "Kasbah",
+      "cuisine": "Moroccan market-inspired",
+      "sources": [
+        {
+          "source_id": "src-anoushkaprobyn-probyn",
+          "quote": "Menu focuses on Moroccan flavours and local producers, with dishes inspired by the Market and Moroccan street food.",
+          "quote_language": "en",
+          "dishes_mentioned": [],
+          "price_info": null,
+          "open_status_check": true
+        }
+      ],
+      "confidence": "B",
+      "both_pool": false,
+      "riad_flag": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "es",
+      "quote": "Menu focuses on Moroccan flavours and local producers, with dishes inspired by the Market and Moroccan street food."
+    }
+  ],
+  "source_recency": "2023-2026",
+  "centroids": {
+    "Medina": [
+      31.6331,
+      -7.9896
+    ],
+    "Gueliz": [
+      31.6269,
+      -8.0115
+    ],
+    "Hivernage": [
+      31.6253,
+      -7.9983
+    ],
+    "Kasbah": [
+      31.624,
+      -7.9872
+    ]
+  }
+}
