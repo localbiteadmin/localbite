@@ -1,0 +1,248 @@
+{
+  "city": "Rabat",
+  "country": "Morocco",
+  "city_slug": "rabat-morocco",
+  "built": "2026-04-23",
+  "source_recency": "2023-2026",
+  "pipeline": "localbite-v7.1",
+  "confidence_tiers": {
+    "auto_approved": 1,
+    "reviewed_kept": 4,
+    "auto_removed": 5,
+    "user_removed": 0,
+    "auto_rejected": 1,
+    "concentration_cap_applied": 0
+  },
+  "sources": [
+    {
+      "id": "src-artandthensome-moris",
+      "publication": "Art And Then Some",
+      "writer": "Cedric Moris",
+      "writer_profile": "Art And Then Some is a travel and lifestyle publication covering global destinations with an emphasis on independently researched recommendations. Cedric Moris writes destination guides with specific food and neighbourhood detail, covering Rabat as part of a broader Morocco focus. His March 2026 guide is the most comprehensive named-author English-language dining roundup for the city available within this period.",
+      "url": "https://www.artandthensome.com",
+      "article_url": "https://www.artandthensome.com/where-to-eat-in-rabat-morocco/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2026-03-05",
+      "article_title": "Where To Eat In Rabat Morocco (2026): Best Restaurants, Cafés And Local Favorites",
+      "fetch_status": "good",
+      "fetch_chars": 18500,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": true,
+      "found_via": "phase-1"
+    },
+    {
+      "id": "src-mwnlifestyle-ououda",
+      "publication": "MWN Lifestyle",
+      "writer": "Ihab Ou-ouda",
+      "writer_profile": "MWN Lifestyle is a Morocco-based English-language lifestyle publication covering food, culture, and city life across the country. Ihab Ou-ouda writes restaurant features with attention to menu specifics and dining context, with his October 2025 piece on Marea providing the most detailed single-restaurant account of Rabat's seafood dining scene available in English. The publication covers Moroccan cities from a resident-informed perspective.",
+      "url": "https://www.mwnlifestyle.com",
+      "article_url": "https://www.mwnlifestyle.com/marea-rabat-fresh-market-driven-seafood-in-the-heart-of-hassan/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2025-10-06",
+      "article_title": "Marea Rabat: Fresh, Market-Driven Seafood in the Heart of Hassan",
+      "fetch_status": "partial",
+      "fetch_chars": 2800,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1b-crossval"
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Marea",
+      "name_variants": [
+        "Restaurant Marea"
+      ],
+      "neighbourhood": "Hassan",
+      "cuisine": "Seafood, contemporary Moroccan-Mediterranean",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "MAD",
+      "dishes_mentioned": [
+        "grilled fish",
+        "fish tartare",
+        "fried fish",
+        "fish tagine",
+        "seafood pastilla",
+        "fish soup",
+        "risotto",
+        "paella",
+        "grilled fillets with light sauces",
+        "whole grilled catch of the day"
+      ],
+      "signature_dish": null,
+      "quote": "The menu depends on what the nearby ports deliver, and that's exactly the point: fish arrives, kitchen reacts, you win.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "src-artandthensome-moris",
+        "src-mwnlifestyle-ououda"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary × 2",
+      "article_date": "2026-03-05",
+      "article_title": "Where To Eat In Rabat Morocco (2026): Best Restaurants, Cafés And Local Favorites",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Grill Robuchon",
+      "name_variants": [
+        "Restaurant Grill Robuchon"
+      ],
+      "neighbourhood": "Agdal",
+      "cuisine": "French bistro",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "MAD",
+      "dishes_mentioned": [
+        "tomato tartare",
+        "smoked meat skewers",
+        "seasonal vegetables",
+        "peanut cake",
+        "roasted peach melba"
+      ],
+      "signature_dish": null,
+      "quote": "The décor keeps it modern and understated: clean lines, warm wood, neutral tones… the kind of room where your lunch somehow turns into a three-course 'why not?'",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-artandthensome-moris"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary × 1",
+      "article_date": "2026-03-05",
+      "article_title": "Where To Eat In Rabat Morocco (2026): Best Restaurants, Cafés And Local Favorites",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Le Relais de Paris",
+      "name_variants": [],
+      "neighbourhood": "Hassan",
+      "cuisine": "Traditional French",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "MAD",
+      "dishes_mentioned": [
+        "Dover sole meunière",
+        "entrecôte with shallot sauce"
+      ],
+      "signature_dish": null,
+      "quote": "Le Relais de Paris is one of those places where you step inside and immediately forget you're in Rabat for a second.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-artandthensome-moris"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary × 1",
+      "article_date": "2026-03-05",
+      "article_title": "Where To Eat In Rabat Morocco (2026): Best Restaurants, Cafés And Local Favorites",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Al Warda",
+      "name_variants": [],
+      "neighbourhood": "Souissi",
+      "cuisine": "Contemporary Moroccan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "MAD",
+      "dishes_mentioned": [
+        "pastilla",
+        "tagines",
+        "couscous"
+      ],
+      "signature_dish": null,
+      "quote": "The room glows with zellige shimmer, stylized arabesques, and that softly lit, dressed-up mood that makes you want to order something celebratory.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-artandthensome-moris"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary × 1",
+      "article_date": "2026-03-05",
+      "article_title": "Where To Eat In Rabat Morocco (2026): Best Restaurants, Cafés And Local Favorites",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Mare Nostrum",
+      "name_variants": [],
+      "neighbourhood": "Ville Nouvelle",
+      "cuisine": "Mediterranean",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "MAD",
+      "dishes_mentioned": [
+        "pizzas",
+        "tagines",
+        "barbecued meats"
+      ],
+      "signature_dish": null,
+      "quote": "Mare Nostrum is where you go when the plan is make it a night with colorful, modern décor.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-artandthensome-moris"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary × 1",
+      "article_date": "2026-03-05",
+      "article_title": "Where To Eat In Rabat Morocco (2026): Best Restaurants, Cafés And Local Favorites",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 34.018773,
+      "lng": -6.8254374,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Le Mare Nostrum"
+    }
+  ],
+  "centroids": {
+    "Hassan": [
+      34.0139,
+      -6.8256
+    ]
+  }
+}
