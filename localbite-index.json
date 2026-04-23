@@ -89,15 +89,15 @@
       "city": "Chefchaouen",
       "country": "Morocco",
       "city_slug": "chefchaouen-morocco",
-      "pipeline": "localbite-middle-path-v5",
-      "built": "2026-03-25",
-      "restaurant_count": 12,
-      "both_pool_count": 1,
-      "source_count": 5,
-      "description": "17 restaurants from 5 named sources, all English tourist-facing",
-      "file": "localbite-chefchaouen-2025-2026.json",
+      "pipeline": "localbite-v7.1",
+      "built": "2026-04-23",
+      "restaurant_count": 2,
+      "both_pool_count": 0,
+      "source_count": 1,
+      "file": "localbite-chefchaouen-2023-2026.json",
       "status": "complete",
-      "notes": "All sources tourist-facing — no local food critics in Chefchaouen. Bab Ssour confirmed by 5 sources including FR+EN both-pool. Nominatim v3 achieved 65% geocoding hit rate with zero false positives."
+      "open_status_check_count": 2,
+      "notes": ""
     },
     {
       "city": "Toronto",
