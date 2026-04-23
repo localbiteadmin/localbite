@@ -1,0 +1,434 @@
+{
+  "city": "Vigo",
+  "country": "Spain",
+  "city_slug": "vigo-spain",
+  "pipeline": "localbite-v7.1",
+  "year_range": "2023-2026",
+  "generated_date": "2026-04-23",
+  "both_pool": false,
+  "language_pool": "es",
+  "sources": [
+    {
+      "source_id": "src-metropolitano-cifuentes",
+      "author": "Carolina Cifuentes",
+      "article_url": null,
+      "article_date": "2023-12-17",
+      "article_title": "Tres restaurantes top en Vigo y área premiados por su cocina de calidad a precios razonables",
+      "language": "es",
+      "source_tier": "primary",
+      "fetch_status": "good",
+      "fetch_chars": 3200,
+      "id": "src-metropolitano-cifuentes",
+      "publication": "Metropolitano.gal",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for Metropolitano.gal, a metropolitan publication covering the Galician region. Cifuentes specializes in identifying quality restaurants that offer exceptional cuisine at reasonable prices, focusing on establishments in Vigo and the surrounding area.",
+      "writer": "Cifuentes"
+    },
+    {
+      "source_id": "src-treintayseis-picatoste",
+      "author": "Mauro Picatoste",
+      "article_url": null,
+      "article_date": "2024-03-05",
+      "article_title": "Estos son los restaurantes recomendados por la Guía Repsol en Vigo",
+      "language": "es",
+      "source_tier": "primary",
+      "fetch_status": "good",
+      "fetch_chars": 8500,
+      "id": "src-treintayseis-picatoste",
+      "publication": "El Español / Treintayseis",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer at El Español and Treintayseis who covers restaurant recommendations and dining guides across Spain. Picatoste specializes in analyzing prestigious culinary rankings, including coverage of Michelin Guide-level establishments and regional dining scenes like Vigo's restaurant landscape.",
+      "writer": "Picatoste"
+    },
+    {
+      "source_id": "src-theobjective-alonso",
+      "author": "Brenda Alonso",
+      "article_url": null,
+      "article_date": "2023-08-31",
+      "article_title": "Dónde comer en Vigo: los 11 restaurantes más recomendados por los vigueses",
+      "language": "es",
+      "source_tier": "secondary",
+      "fetch_status": "good",
+      "fetch_chars": 8750,
+      "id": "src-theobjective-alonso",
+      "publication": "The Objective",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer Alonso contributes to The Objective, focusing on local dining recommendations and restaurant coverage. His work includes comprehensive guides to the best dining establishments in Spanish cities, featuring restaurants recommended by local residents.",
+      "writer": "Alonso"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "vigo-spain-001",
+      "name": "Casa Marco",
+      "name_variants": [
+        "Restaurante Casa Marco"
+      ],
+      "neighbourhood": "García Barbón",
+      "cuisine": "Galician traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "lomo de bacalao al horno encebollado con patatas panaderas",
+        "sopa de chocolate blanco con helado de cítricos",
+        "arroz con bogavante",
+        "marisco a la plancha",
+        "carnes",
+        "arroces",
+        "pescados"
+      ],
+      "signature_dish": "arroz con bogavante",
+      "quote": "Uno de los restaurantes de Vigo que la Guía Michelin destaca por su precio, con un buen apartado de carnes, arroces, pescados y especialidades. Entre los platos recomendados se encuentran el lomo de bacalao al horno encebollado con patatas panaderas o la sopa de chocolate blanco con helado de cítricos.",
+      "quote_language": "original",
+      "article_date": "2023-12-17",
+      "article_title": "Tres restaurantes top en Vigo y área premiados por su cocina de calidad a precios razonables",
+      "open_status_check": true,
+      "source_count": 2,
+      "language_pool": "es",
+      "both_pool": false,
+      "sources": [
+        "src-metropolitano-cifuentes",
+        "src-theobjective-alonso"
+      ],
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_source": "nominatim",
+      "geo_matched_name": "Casa Marco",
+      "geo_skip": false,
+      "lat": 42.2382024,
+      "lng": -8.7106962
+    },
+    {
+      "id": "vigo-spain-002",
+      "name": "Morrofino",
+      "name_variants": [
+        "Morrofino Taberna"
+      ],
+      "neighbourhood": "Centro",
+      "cuisine": "Galician contemporary",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "tiradito de jurel en escabeche",
+        "croqueta de mantequilla ahumada con cigala",
+        "katsu sando de rabo de vaca al vino"
+      ],
+      "signature_dish": null,
+      "quote": "Taberna gastronómica contemporánea con cocina y productos gallegos usando técnicas modernas e introduciendo también preparaciones internacionales. Tiradito de jurel en escabeche, croqueta de mantequilla ahumada con cigala y katsu sando de rabo de vaca al vino entre sus recomendados.",
+      "quote_language": "original",
+      "article_date": "2024-03-05",
+      "article_title": "Estos son los restaurantes recomendados por la Guía Repsol en Vigo",
+      "open_status_check": true,
+      "source_count": 2,
+      "language_pool": "es",
+      "both_pool": false,
+      "sources": [
+        "src-metropolitano-cifuentes",
+        "src-treintayseis-picatoste"
+      ],
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_source": "nominatim",
+      "geo_matched_name": "Morrofino Taberna",
+      "geo_skip": false,
+      "lat": 42.2384631,
+      "lng": -8.7128075
+    },
+    {
+      "id": "vigo-spain-003",
+      "name": "Malauva Wine Bar",
+      "name_variants": [],
+      "neighbourhood": "O Berbés",
+      "cuisine": "Galician tapas",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "bocata de cacheira",
+        "focaccia de sardina",
+        "taco de langostino",
+        "jurel"
+      ],
+      "signature_dish": null,
+      "quote": "Con Marina Pérez en la cocina y José Martínez en sala y bodega, da protagonismo a la barra y al tapeo con una oferta que se configura a diario. Bocata de cacheira, focaccia de sardina, taco de langostino y jurel entre sus recomendados.",
+      "quote_language": "original",
+      "article_date": "2024-03-05",
+      "article_title": "Estos son los restaurantes recomendados por la Guía Repsol en Vigo",
+      "open_status_check": true,
+      "source_count": 1,
+      "language_pool": "es",
+      "both_pool": false,
+      "sources": [
+        "src-treintayseis-picatoste"
+      ],
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_source": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "id": "vigo-spain-004",
+      "name": "Detapaencepa",
+      "name_variants": [
+        "De Tapa en Cepa"
+      ],
+      "neighbourhood": "Centro",
+      "cuisine": "Galician creative",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "escabeches",
+        "empanadas",
+        "carpaccios",
+        "bivalbos",
+        "pescados",
+        "mariscos de la Ría"
+      ],
+      "signature_dish": null,
+      "quote": "Ofrece cocina tradicional con un punto de fusión y creativa en dos ambientes, con escabeches, empanadas, carpaccios, bivalbos, pescados y mariscos de la Ría entre sus recomendados por la Guía Repsol.",
+      "quote_language": "original",
+      "article_date": "2024-03-05",
+      "article_title": "Estos son los restaurantes recomendados por la Guía Repsol en Vigo",
+      "open_status_check": true,
+      "source_count": 1,
+      "language_pool": "es",
+      "both_pool": false,
+      "sources": [
+        "src-treintayseis-picatoste"
+      ],
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_source": "nominatim",
+      "geo_matched_name": "Detapaencepa",
+      "geo_skip": false,
+      "lat": 42.2342884,
+      "lng": -8.7225833
+    },
+    {
+      "id": "vigo-spain-005",
+      "name": "Bitadorna",
+      "name_variants": [],
+      "neighbourhood": "Centro",
+      "cuisine": "Galician market cuisine",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "langosta roja salpicón",
+        "ostras gratinadas",
+        "cocochas de merluza al pilpil",
+        "repostería artesana"
+      ],
+      "signature_dish": null,
+      "quote": "Chus Castro ofrece cocina de producto local que mezcla calidad y cierta creatividad, con eventos gastronómicos de temporada para la caza, la lamprea y la langosta. Langosta roja salpicón, ostras gratinadas y cocochas de merluza al pilpil entre sus recomendados. La repostería es artesana al cien por cien.",
+      "quote_language": "original",
+      "article_date": "2024-03-05",
+      "article_title": "Estos son los restaurantes recomendados por la Guía Repsol en Vigo",
+      "open_status_check": true,
+      "source_count": 1,
+      "language_pool": "es",
+      "both_pool": false,
+      "sources": [
+        "src-treintayseis-picatoste"
+      ],
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_source": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "id": "vigo-spain-006",
+      "name": "Rokuseki",
+      "name_variants": [],
+      "neighbourhood": "Centro",
+      "cuisine": "Japanese yakiniku",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "yakiniku",
+        "carnes certificado Kobe"
+      ],
+      "signature_dish": null,
+      "quote": "Felipe y Natsumi proponen una barbacoa japonesa o yakiniku donde es el comensal el que cocina las carnes en una pequeña barbacoa de carbón integrada en la mesa. Algunas ofertas llevan certificado Kobe y están finamente cortadas.",
+      "quote_language": "original",
+      "article_date": "2024-03-05",
+      "article_title": "Estos son los restaurantes recomendados por la Guía Repsol en Vigo",
+      "open_status_check": true,
+      "source_count": 1,
+      "language_pool": "es",
+      "both_pool": false,
+      "sources": [
+        "src-treintayseis-picatoste"
+      ],
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_source": "nominatim",
+      "geo_matched_name": "Rokuseki",
+      "geo_skip": false,
+      "lat": 42.2372472,
+      "lng": -8.7144
+    },
+    {
+      "id": "vigo-spain-007",
+      "name": "O Porco",
+      "name_variants": [],
+      "neighbourhood": "Casco Vello",
+      "cuisine": "Galician traditional",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "lacón con grelos"
+      ],
+      "signature_dish": "lacón con grelos",
+      "quote": "O Porco es un lugar que no puedes perderte si deseas saborear la auténtica cocina gallega. Su especialidad es el lacón con grelos, un plato tradicional que te dejará maravillado por su jugosidad y sabor único. Su ambiente acogedor y rústico te transportará a la esencia de Galicia.",
+      "quote_language": "original",
+      "article_date": "2023-08-31",
+      "article_title": "Dónde comer en Vigo: los 11 restaurantes más recomendados por los vigueses",
+      "open_status_check": true,
+      "source_count": 1,
+      "language_pool": "es",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_source": "nominatim",
+      "geo_matched_name": "O Porco",
+      "geo_skip": false,
+      "lat": 42.2388559,
+      "lng": -8.7277929
+    },
+    {
+      "id": "vigo-spain-008",
+      "name": "The Othilio Bar",
+      "name_variants": [],
+      "neighbourhood": "Centro",
+      "cuisine": "Creative Galician",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "pulpo a la brasa con espuma de patata trufada"
+      ],
+      "signature_dish": "pulpo a la brasa con espuma de patata trufada",
+      "quote": "Con una propuesta gastronómica que combina ingredientes locales con técnicas modernas, The Othilio Bar te deleitará con platos como el pulpo a la brasa con espuma de patata trufada. Su ambiente vanguardista y atención meticulosa completan la experiencia.",
+      "quote_language": "original",
+      "article_date": "2023-08-31",
+      "article_title": "Dónde comer en Vigo: los 11 restaurantes más recomendados por los vigueses",
+      "open_status_check": true,
+      "source_count": 1,
+      "language_pool": "es",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "medium",
+      "geo_source": "photon",
+      "geo_matched_name": "The Othilio",
+      "geo_skip": false,
+      "lat": 42.2400378,
+      "lng": -8.7230325
+    },
+    {
+      "id": "vigo-spain-009",
+      "name": "Follas Novas",
+      "name_variants": [
+        "Restaurante Follas Novas"
+      ],
+      "neighbourhood": "Centro",
+      "cuisine": "Contemporary Galician",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "empanada de lamprea y foie"
+      ],
+      "signature_dish": "empanada de lamprea y foie",
+      "quote": "Su empanada de lamprea y foie ejemplifica la innovación y tradición que caracteriza a este lugar. No olvides acompañar tu comida con uno de los vinos locales de su cuidada selección.",
+      "quote_language": "original",
+      "article_date": "2023-08-31",
+      "article_title": "Dónde comer en Vigo: los 11 restaurantes más recomendados por los vigueses",
+      "open_status_check": true,
+      "source_count": 1,
+      "language_pool": "es",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_source": "nominatim",
+      "geo_matched_name": "Follas Novas",
+      "geo_skip": false,
+      "lat": 42.2376777,
+      "lng": -8.7128229
+    },
+    {
+      "id": "vigo-spain-010",
+      "name": "Casa Vella",
+      "name_variants": [
+        "Restaurante Casa Vella"
+      ],
+      "neighbourhood": "O Berbés",
+      "cuisine": "Galician seafood",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "cabrito asado en horno de leña"
+      ],
+      "signature_dish": "cabrito asado en horno de leña",
+      "quote": "Ubicado en un edificio histórico, Casa Vella combina la atmósfera tradicional con una cocina refinada. Su especialidad, el cabrito asado en horno de leña, captura la esencia de la gastronomía gallega en un plato memorable que resalta la calidad de los ingredientes locales.",
+      "quote_language": "original",
+      "article_date": "2023-08-31",
+      "article_title": "Dónde comer en Vigo: los 11 restaurantes más recomendados por los vigueses",
+      "open_status_check": true,
+      "source_count": 1,
+      "language_pool": "es",
+      "both_pool": false,
+      "sources": [
+        "src-theobjective-alonso"
+      ],
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_source": "nominatim",
+      "geo_matched_name": "Casa Vella",
+      "geo_skip": false,
+      "lat": 42.2398771,
+      "lng": -8.7258227
+    }
+  ],
+  "source_recency": "2023-2026",
+  "centroids": {
+    "O Berbés": [
+      42.2399,
+      -8.7258
+    ],
+    "Centro": [
+      42.2375,
+      -8.7171
+    ]
+  }
+}

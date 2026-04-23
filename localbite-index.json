@@ -1,7 +1,7 @@
 {
   "project": "LocalBite",
   "description": "Curated restaurant packs built from named food writers, 2025-2026 sources only",
-  "last_updated": "2026-04-22",
+  "last_updated": "2026-04-23",
   "cities": [
     {
       "city": "Barcelona",
@@ -314,6 +314,34 @@
       "file": "localbite-logrono-2023-2026.json",
       "status": "complete",
       "open_status_check_count": 14,
+      "notes": ""
+    },
+    {
+      "city": "Palma de Mallorca",
+      "country": "Spain",
+      "city_slug": "palma-de-mallorca-spain",
+      "pipeline": "localbite-v7.1",
+      "built": "2026-04-23",
+      "restaurant_count": 33,
+      "both_pool_count": 5,
+      "source_count": 6,
+      "file": "localbite-palma-de-mallorca-2023-2026.json",
+      "status": "complete",
+      "open_status_check_count": 7,
+      "notes": ""
+    },
+    {
+      "city": "Vigo",
+      "country": "Spain",
+      "city_slug": "vigo-spain",
+      "pipeline": "localbite-v7.1",
+      "built": "2026-04-23",
+      "restaurant_count": 10,
+      "both_pool_count": 0,
+      "source_count": 3,
+      "file": "localbite-vigo-2023-2026.json",
+      "status": "complete",
+      "open_status_check_count": 10,
       "notes": ""
     }
   ]
