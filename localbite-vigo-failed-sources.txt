@@ -1,0 +1,86 @@
+# LocalBite Vigo — Failed Sources
+# Pipeline: localbite-v7.1 | Date: 2026-04-23
+# All sources investigated and rejected during Phase 1 / Phase 1B
+
+amovida.gal
+  Reason: No named author at article level. "Onde comer en Vigo" food guide shows only
+  "Licenciada en xornalismo pola USC" credential. About page confirms multi-author team
+  (Paula Cermeño, Estela Gómez, Pablo Vázquez, Tamara Novoa) but no article-level byline.
+  Pipeline rule: multi-author publications require article-level byline. REJECT.
+
+fionadunlop.com
+  Reason: Insufficient restaurant content. "Top seafood in Vigo" (May 2025, Fiona Dunlop)
+  names only 1 restaurant (Enxebre); quote is under 15-word minimum. 0 qualifying entries.
+  REJECT.
+
+pantagruelsupongo.com
+  Reason: "2024: os meus restaurantes do ano en Galicia" (Jan 2025, Manoel Foucellas)
+  covers 7 Galician restaurants but none in Vigo city. No Vigo-specific articles found
+  at the URL attempted (404 on search). REJECT.
+
+trucosviajeros.com
+  Reason: Article dated 2021. Outside 2023-2026 year range. No named author confirmed.
+  REJECT (year range + author).
+
+fascinatingspain.com
+  Reason: Eating in Vigo article published/updated 2017. Outside year range. Author
+  identified by initials only (not full name). REJECT (year range + initials-only author).
+
+theculturetrip.com
+  Reason: 403 Forbidden on fetch attempt. Unable to verify named author, date, or content.
+  REJECT (unverifiable).
+
+foodandtravel.com
+  Reason: No date, no author identified. Only 3 restaurants mentioned. Thin content.
+  REJECT (no author, no date).
+
+eatandwalkabout.com
+  Reason: Author Sean P. O'Rourke, Mar 2026 — author and date would qualify. However,
+  article contains no restaurant names (food tour descriptions only) and the site operates
+  commercial food tours in Vigo — commercial conflict. REJECT (no restaurant names,
+  commercial conflict).
+
+vivevigo.info
+  Reason: Local Vigo guide with useful content but no named author confirmed on any article.
+  REJECT (no named author).
+
+guiadelbuenvivir.com/vigo
+  Reason: No author, no date, thin content (fewer than 5 restaurants). REJECT.
+
+guiarepsol.com/vigo
+  Reason: 404 Not Found on attempted URL. Repsol guide does not have a direct listable
+  article URL — it is a database rather than a named-author article. REJECT (not article format,
+  no named author).
+
+metropolitano.gal — "15 aperturas gastronómicas 2023"
+  Reason: No named author on article. (A separate metropolitano.gal article by Carolina
+  Cifuentes was confirmed and used as src-metropolitano-cifuentes.) REJECT (no named author).
+
+metropolitano.gal — O Petisquiño festival guide
+  Reason: Festival guide, not restaurant guide. No named author. REJECT (wrong content type,
+  no named author).
+
+lavozdegalicia.es — food section
+  Reason: Searched but no specific food articles with named authors found for Vigo in the
+  year range via web search. elespanol.com/treintayseis dominates local Vigo food coverage
+  in search results. REJECT (no qualifying article found).
+
+diariodepontevedra.es
+  Reason: "Dónde cenar en Vigo" (June 2024) found in search results but not fetched —
+  Pontevedra local newspaper; Vigo is outside its primary beat. Would classify as secondary
+  even if qualifying. Stopping rule triggered before supplementary fetch. NOT FETCHED.
+
+spanishsabores.com
+  Reason: Galicia-focused food blog (Lauren Aloise). Identified in cross-cutting search.
+  Not fetched — insufficient evidence of Vigo-specific content before stopping rule triggered.
+  NOT FETCHED.
+
+cenandoconpablo.es
+  Reason: Personal food blog, Casa Marco review. Identified in Phase 1B cross-validation.
+  Not fetched before session context exhaustion. See audit Section 7.
+  NOT FETCHED — OPTIONAL FOLLOW-UP.
+
+revistatierra.com
+  Reason: Food magazine Tierra, Detapaencepa review. Identified in Phase 1B cross-validation.
+  Not fetched before session context exhaustion. See audit Section 7.
+  NOT FETCHED — OPTIONAL FOLLOW-UP.

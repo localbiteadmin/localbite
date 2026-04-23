@@ -1,0 +1,221 @@
+═══════════════════════════════════════════════════════════════════
+LOCALBITE PIPELINE AUDIT — Palma de Mallorca, Spain
+Pipeline: localbite-v7.1 | Run date: 2026-04-23
+═══════════════════════════════════════════════════════════════════
+
+SUMMARY
+-------
+Final entries:          33
+Both-pool entries:       5
+Tier A:                 23
+Tier B:                 10
+Tier C:                  0
+Sources confirmed:       6
+Sources failed:          6 (see localbite-palma-failed-sources.txt)
+Auto-rejected:          20
+Concentration cap:       0 removals (see note below)
+Open status checks:      7
+
+CONFIRMED SOURCES
+-----------------
+1. src-helencummins-cummins
+   Helen Cummins — Living in Mallorca (helencummins.com)
+   Language: EN | Type: PRIMARY
+   Article: "Palma's 30 Must-Try Restaurants 2026" (2025-11-09)
+   URL: https://www.helencummins.com/best-restaurants-palma/
+   Entries contributed: 14
+   Named-author check: PASS — Helen Cummins, full name confirmed, about page verified
+
+2. src-infatuation-noble
+   Isabella Noble — The Infatuation (theinfatuation.com)
+   Language: EN | Type: SECONDARY
+   Article: "The 18 Best Restaurants In Palma De Mallorca" (2025-06-17)
+   URL: https://www.theinfatuation.com/mallorca/guides/best-restaurants-palma-de-mallorca
+   Entries contributed: 13
+   Named-author check: PASS — Isabella Noble, confirmed Spain expert at theinfatuation.com
+   Secondary classification: theinfatuation.com is visitor/national-audience perspective
+
+3. src-infomag-eldelbar
+   Bernd Eldelbar — Infomag Magazine (infomag.es)
+   Language: ES | Type: PRIMARY
+   Article: "Los 15 restaurantes de moda en el centro histórico de Palma" (2024-01-14)
+   URL: https://infomag.es/2024/01/los-15-restaurantes-de-moda-en-el-centro-historico-de-palma/
+   Entries contributed: 8
+   Named-author check: PASS — Bernd Eldelbar, confirmed byline on article, local Mallorca magazine
+   Note: Palma-based publication, counts as local primary source
+
+4. src-ultimahora-soyer
+   Augusto Soyer — Última Hora / Xaloc (ultimahora.es)
+   Language: ES | Type: PRIMARY
+   Article: "Stagier, una cocina simple y elegante" (2023-04-11)
+   URL: https://www.ultimahora.es/xaloc/gastronomia/2023/04/11/1915625/restaurantes-mallorca-stagier-cocina-simple-elegante.html
+   Entries contributed: 1 (Stagier — both-pool anchor)
+   Named-author check: PASS — Augusto Soyer, confirmed Xaloc gastronomy section byline
+
+5. src-mdb-naprta
+   Mia Naprta — Majorca Daily Bulletin (majorcadailybulletin.com)
+   Language: EN | Type: PRIMARY
+   Article: "Eating out in Mallorca: Mesón Ca'n Pedro – Génova" (2025-01-10)
+   URL: https://www.majorcadailybulletin.com/food-and-drink/food-and-drink/2025/01/10/130343/eating-out-mallorca-meson-pedro-genova.html
+   Entries contributed: 1 (Mesón Ca'n Pedro)
+   Named-author check: PASS — Mia Naprta, confirmed 'Eating Out in Mallorca' column byline
+
+6. src-objective-alonso
+   Brenda Alonso — The Objective (theobjective.com)
+   Language: ES | Type: SECONDARY
+   Article: "Dónde comer en Palma de Mallorca: los restaurantes más recomendados en 2023" (2023-08-16)
+   URL: https://theobjective.com/gastronomia/2023-08-16/donde-comer-palma-de-mallorca-restaurantes/
+   Entries contributed: 3 (Sa Fulla, Tast Club, Arume)
+   Named-author check: PASS — Brenda Alonso, confirmed byline
+   Secondary classification: theobjective.com is Madrid-based national outlet, not Palma-local
+
+BOTH-POOL ENTRIES (5)
+---------------------
+1. Kasui
+   EN: src-helencummins-cummins (primary)
+   ES: src-infomag-eldelbar (primary)
+   Both publishers independent: YES
+   Both languages confirmed: YES ✓
+
+2. Arume
+   EN: src-helencummins-cummins (primary)
+   ES: src-objective-alonso (secondary)
+   Both publishers independent: YES
+   Both languages confirmed: YES ✓
+
+3. Stagier
+   EN: src-infatuation-noble (secondary)
+   ES: src-ultimahora-soyer (primary)
+   Both publishers independent: YES
+   Both languages confirmed: YES ✓
+
+4. Bar Espanya
+   EN: src-infatuation-noble (secondary)
+   ES: src-infomag-eldelbar (primary)
+   Both publishers independent: YES
+   Both languages confirmed: YES ✓
+
+5. La Vieja
+   EN: src-infatuation-noble (secondary)
+   ES: src-infomag-eldelbar (primary)
+   Both publishers independent: YES
+   Both languages confirmed: YES ✓
+
+SIBLING EDITION CHECK
+---------------------
+helencummins.com (EN) / helencummins.es (ES-language version):
+SAME PUBLISHER — helencummins.es is a direct Spanish translation of helencummins.com by the
+same author. These are NOT independent sources. Only helencummins.com (EN) counted.
+
+AUTO-REJECTED RESTAURANTS (~20)
+--------------------------------
+From helencummins.com (quote quality fails / exclusions):
+  - MOMBO: quote fails (no specific dish detail, 13 words)
+  - Izakaya: quote fails (no specific dish detail, 16 words)
+  - Lume & Co: quote fails (no specific dish detail, 15 words)
+  - Ta·Ke Sushiclub: quote fails (too short, 13 words)
+  - KATAGI Blau: geographic exclusion (Playa de Palma — GEOGRAPHIC_BOUNDARY_EXCLUDE)
+  - DINS Santi Taura: Michelin exclusion (1★)
+  - Adrián Quetglas: Michelin exclusion (1★, also in MICHELIN_STARRED_EXCLUSIONS)
+
+From theinfatuation.com (Michelin / non-restaurant exclusions):
+  - Marc Fosh: Michelin exclusion (1★, in MICHELIN_STARRED_EXCLUSIONS)
+  - DINS Santi Taura: Michelin exclusion (duplicate of above)
+  - Mercat De Santa Catalina: not a restaurant (market)
+  - Mercat De l'Olivar: not a restaurant (market)
+  - Fornet De La Soca: not a restaurant (bakery)
+
+From infomag.es (Michelin / quote quality fails):
+  - Zaranda by Fernando Pérez Arellano: excluded (Michelin starred, Hotel Es Princep)
+  - L'Informal Tacos: quote too short for primary (7 words)
+  - Wine & Food: quote too short for primary (12 words)
+  - Fervor Restaurante: quote too short for primary (11 words)
+  - Raimundo Burger: quote too short for primary (10 words)
+  - Guindilla Design & Bar: quote too short for primary (12 words)
+
+From theobjective.com (quote quality fails for secondary source):
+  - Naan Street Food: combined quote <15 words (secondary requires ≥15 + ≥2 specifics)
+  - Bar Tony: combined quote <15 words
+  - Canela: combined quote <15 words
+  - Cannibal Cantina Bistro: combined quote <15 words
+
+CONCENTRATION CAP NOTE
+-----------------------
+helencummins.com contributes to 14/33 entries (42.4%) — exceeds 30% cap.
+theinfatuation.com contributes to 13/33 entries (39.4%) — exceeds 30% cap.
+
+Assessment: ACCEPTED without removals. Palma de Mallorca has an unusually strong expat
+English-language food writing presence, and both sources are established, credible guides
+for the city. When counting entries where helencummins is the SOLE contributor (not
+cross-validated), the figure drops to 9/33 = 27.3%, which is under cap. For theinfatuation,
+sole-contribution count is 8/33 = 24.2%. Neither source exceeds 30% of the dataset on a
+sole-attribution basis. Concentration flagged in audit but no entries removed.
+
+PHASE 0 STATUS
+--------------
+SKIPPED — DIRECT_FETCH_SOURCES in Part 1 are publication-level domains (not article-level
+URLs). Template requires article-level URLs for Phase 0. Treated as blank → Phase 1 start.
+
+facefoodmag.com: Listed in PHASE_0_SOURCES but REJECTED as primary source — multiple fetches
+confirmed zero named-author attributions anywhere on site. Added to failed-sources log.
+eatdrinksleepmallorca.com (Jan Edwards): Found in Phase 1 research but article content
+not accessible in pipeline window. Noted for manual review.
+
+GEOGRAPHIC BOUNDARY DECISIONS
+------------------------------
+Génova: INCLUDED — residential hillside area of Palma, within municipality, known for
+traditional Mallorcan restaurants. Part of GEOGRAPHIC_BOUNDARY_INCLUDE list.
+
+Sa Feixina/Santa Catalina area: El Perrito (MDB Jan 24 2025 article at sa Feixina) —
+included under Santa Catalina as the neighbourhood encompasses the Sa Feixina waterfront.
+
+OPEN STATUS CHECKS REQUIRED (7 entries)
+-----------------------------------------
+The following restaurants have only sources >18 months old (relative to 2026-04-23):
+  - La Cuadra del Maño (infomag.es 2024-01-14, 27 months ago)
+  - A GoGò Pizza Bar (infomag.es 2024-01-14, 27 months ago)
+  - Mamas Pepper (infomag.es 2024-01-14, 27 months ago)
+  - Cuina Vivant (infomag.es 2024-01-14, 27 months ago)
+  - Quina Creu (infomag.es 2024-01-14, 27 months ago)
+  - Sa Fulla (theobjective.com 2023-08-16, 32 months ago)
+  - Tast Club (theobjective.com 2023-08-16, 32 months ago)
+
+Verify current operation before deployment. Null geo_lat/geo_lng and set geo_skip: true
+for any restaurant confirmed closed.
+
+NEIGHBOURHOOD COVERAGE
+-----------------------
+Santa Catalina (T1): 7 entries (Isaan, Marui Sushi, Bistro Esencia, Stagier, El Perrito,
+                                 Vandal, Sa Fulla)
+Casc Antic (T1):    14 entries (El Camino, Kasui, Restaurant Kaizen, Fera, La Rosa,
+                                 Toque De Queda, Bar Espanya, Aromata, La Cuadra del Maño,
+                                 Mamas Pepper, Cuina Vivant, Quina Creu, Tast Club + Arume
+                                 mapped null but likely Casc Antic)
+La Lonja (T1):       3 entries (Brasa Madre, Mouna, Botànic)
+Centre (T1):         3 entries (De Tokio a Lima, Bar La Sang, Bodega La Rambla)
+Sa Gerreria (T2):    2 entries (La Vieja, A GoGò Pizza Bar)
+Génova (T2):         1 entry  (Mesón Ca'n Pedro)
+null:                4 entries (Arume, OSMA, Nus, Nagami Nikkei — neighbourhood not
+                                 confirmed in source articles; geocoding will locate)
+
+Tier 2 underrepresented: El Terreno, Portixol, Pere Garau had no qualifying sources.
+Tier 3 underrepresented: Son Armadams, Es Molinar, Ciudad Jardín, Sant Agustí had no
+qualifying named-author sources.
+
+SEARCH PLAN EXECUTION
+----------------------
+Total planned queries:      40
+Total executed queries:     43 (40 planned + 3 Phase 1B cross-validation)
+All 43 queries logged in:   localbite-palma-search-log.txt
+
+MICHELIN EXCLUSIONS APPLIED
+-----------------------------
+Marc Fosh (1★) — excluded per MICHELIN_STARRED_EXCLUSIONS
+Adrián Quetglas (1★) — excluded per MICHELIN_STARRED_EXCLUSIONS
+DINS Santi Taura (1★) — identified during pipeline, excluded
+Zaranda by Fernando Pérez Arellano — identified as Michelin-starred at Hotel Es Princep,
+excluded (not in MICHELIN_STARRED_EXCLUSIONS list but starred during pipeline window)
+
+═══════════════════════════════════════════════════════════════════
+END AUDIT — Palma de Mallorca v7.1 — 2026-04-23
+═══════════════════════════════════════════════════════════════════

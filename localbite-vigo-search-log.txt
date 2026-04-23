@@ -1,0 +1,57 @@
+# LocalBite Vigo — Search Log
+# Pipeline: localbite-v7.1 | Date: 2026-04-23
+[neighbourhood-Casco Vello] "mellores restaurantes Casco Vello Vigo guía gastronómica recomendacións" → Multiple candidates: guiadelbuenvivir.com (ES guide), vivevigo.info (local Vigo site), metropolitano.gal (Michelin note), elespanol.com/treintayseis (Repsol guide article), vigoe.es; TripAdvisor and tourism sites excluded
+[neighbourhood-Casco Vello] "best restaurants Casco Vello Vigo old town food guide 2025 2026" → milehacker.com (EN food guide), foodandtravel.com (Food and Travel magazine), ryanair.com (airline tourism guide - secondary); TripAdvisor, Expedia excluded
+[neighbourhood-O Berbés] "restaurantes O Berbés Vigo mariscos tapas recomendación 2023 2024" → trucosviajeros.com (personal blog - recomendaciones de toda la vida), metropolitano.gal (confirmed active food coverage), vigonoticias.com (local news - Amares Tapas profile); mostly tourism/TripAdvisor results
+[neighbourhood-O Berbés] "O Berbés Vigo seafood restaurants where to eat 2025" → fionadunlop.com (Fiona Dunlop, personal food/travel writer, "Top seafood in Vigo" May 2025 - strong EN candidate); wanderlog, TripAdvisor, Barceló hotel excluded
+[neighbourhood-Bouzas] "restaurantes Bouzas Vigo barrio marineiro onde comer" → vivevigo.info (multiple Bouzas-specific content confirmed), trucosviajeros.com (confirmed again); latulabouzas.es is restaurant's own site, excluded
+[neighbourhood-Bouzas] "Bouzas Vigo restaurant recommendations fishing village food" → fascinatingspain.com (Eating in Vigo - potential EN candidate), travelmag.com (travel magazine secondary); ryanair.com, Barceló, OpenTable excluded
+[neighbourhood-Centro] "mellores restaurantes zona Príncipe García Barbón Vigo guía 2024" → metropolitano.gal confirmed with multiple specific guides: Michelin bib gourmand article, O Petisquiño 2024 guide; gastroranking.es (aggregator, excluded); wanderlog excluded
+[neighbourhood-Centro] "best restaurants Vigo city centre Príncipe street food recommendations 2025 2026" → lasislascies.com (Where to eat in Vigo - potential EN candidate), viajeroscanallas.es (travel blog, EN version); TripAdvisor, wanderlog excluded
+[neighbourhood-Gran Vía] "restaurantes Gran Vía Vigo onde comer crítica gastronómica 2023" → metropolitano.gal confirmed (15 aperturas 2023 article), theobjective.com (2023-08-31 "11 restaurantes más recomendados por los vigueses" - strong candidate); mall restaurant lists excluded
+[neighbourhood-Areal] "restaurantes barrio Areal Vigo novidades apertura 2024 2025" → metropolitano.gal confirmed (2025 aperturas article), elespanol.com/treintayseis Gastrovigo confirmed, pantagruelsupongo.com ("2024 os meus restaurantes do ano en Galicia" Jan 2025 - personal GL food blog - strong candidate)
+[neighbourhood-Gran Vía] "Gran Vía Vigo restaurants dining guide recommendations" → No new qualifying candidates; TripAdvisor, wanderlog, Yelp, Michelin guide only; ryanair tourism excluded
+[neighbourhood-Areal] "Areal neighbourhood Vigo restaurants food guide" → eatandwalkabout.com ("Vigo Food Tour Guide: Galician Tapas, Seafood and Wine" - potential EN food tour guide candidate); TripAdvisor, wanderlog excluded
+[neighbourhood-Teis] "restaurantes Teis Vigo gastronomía onde comer" → elespanol.com/treintayseis confirmed (2024 ría vistas article), alvientooo.com (potential personal food blog), viajeroscallejeros.com (potential travel food blog); gastroranking.es aggregator excluded
+[neighbourhood-Coia] "restaurantes barrio Coia Vigo recomendacións" → metropolitano.gal confirmed (Coia restaurant article), diariodepontevedra.es ("Dónde cenar en Vigo" June 2024 - local Pontevedra newspaper - potential candidate); TripAdvisor, wanderlog excluded
+[neighbourhood-Navia] "restaurantes Navia Vigo gastronomía local" → No qualifying food writing candidates; search engine returning Navia Asturias results and generic directory listings; no food writers covering Navia specifically
+[neighbourhood-Os Mallos] "Os Mallos Vigo restaurantes tapas crítica" → No qualifying candidates; mostly Portuguese-language TripAdvisor results and general tapas lists; Os Mallos has minimal food writing coverage
+[cross-1] "best restaurants Vigo Spain food guide 2025 2026 recommendations" → theculturetrip.com ("The Best Restaurants In Vigo, Spain" - digital travel media, secondary); TripAdvisor, Yelp, wanderlog, TheFork, Michelin guide excluded
+[cross-1] "where to eat Vigo Galicia seafood local writer personal recommendations" → fionadunlop.com confirmed (personal food/travel writer); spanishsabores.com (food blog, Galicia-focused); ryanair, Barceló hotel excluded
+[cross-2] "mellores restaurantes Vigo 2025 guía gastronómica recomendacións xornalista" → amovida.gal STRONG NEW CANDIDATE (GL-language local guide: "Onde comer en Vigo" + "Os mellores restaurantes de peixe e marisco en Vigo"), metropolitano.gal confirmed, elespanol.com/treintayseis confirmed (2024 Michelin/best-rated articles), diariodepontevedra.es confirmed
+[cross-2] "crítica gastronómica Vigo onde comer marisco pulpo cocina gallega" → elespanol.com/treintayseis confirmed (best value restaurant article); unaideaunviaje.com (27-restaurant travel blog); restaurant own sites excluded
+[cross-2] "onde comer en Vigo 2023 2024 guía restaurantes escritor local" → elespanol.com/treintayseis STRONG: "según escritora María Oruña" (2024-06-25) and "según periodista Luis García" (2023-12-03) - named-author pieces; theobjective.com (2023-08-31 "11 restaurantes recomendados por vigueses"); discoveringvigo.com; antoniorull.com (local guide)
+[cross-3] "food writer Vigo Galicia restaurant recommendations article" → discoveringvigo.com ("Galician Food 12 Dishes" - Vigo-focused EN site); spanishsabores.com confirmed; no new primary candidates
+[cross-3] "escritora gastrónoma guía restaurantes Vigo artigo revista" → elespanol.com/treintayseis confirmed (María Oruña article again), antoniorull.com ("Guía de Vigo hecha por alguien que vive aquí" - local guide); no new candidates
+[cross-4] "Vigo restaurant award best 2024 2025 gastronomy prize winners" → No Vigo-specific results; international award bodies only; query too generic
+[cross-4] "premios gastronómicos Vigo mellores restaurantes galardón 2023 2024" → metropolitano.gal confirmed (Galicia gastronomy prizes article); pantagruelsupongo.com confirmed ("2024 os meus restaurantes do ano en Galicia"); no new candidates
+[cross-4] "Michelin guide Vigo Galicia recommended restaurants 2024 2025 bib gourmand" → elespanol.com/treintayseis confirmed (14 Vigo Michelin restaurants 2025 article Nov 2024); elespanol.com/quincemil is same publisher as treintayseis (El Español Galicia) - same publisher note
+[cross-5] "novos restaurantes Vigo apertura 2024 2025 novidades gastronómicas" → metropolitano.gal confirmed ("aperturas gastronómicas 2025" article + "15 aperturas 2023"); elespanol.com/treintayseis confirmed (diez nuevos locales verano 2025)
+[cross-5] "new restaurant openings Vigo 2025 2026 best new places to eat" → No useful Vigo results; query returned US cities; no new candidates
+[cross-7] "marisquería pulpería Vigo ría mellores recomendación onde comer marisco fresco" → vigoenfamilia.es ("Las mejores marisquerías de Vigo" - Vigo family/local guide, potential candidate); elespanol.com/treintayseis confirmed (centollo article Nov 2024); TripAdvisor, restaurant own sites excluded
+[cross-7] "Vigo seafood mariscos oysters barnacles restaurants local guide" → fionadunlop.com confirmed; winetourism.com (wine tourism commercial site - excluded); fascinatingspain.com confirmed (but 2017 URL noted - need year check); theculturetrip.com confirmed secondary
+[cross-8] "revista gastronómica galega Vigo restaurantes recomendacións independente" → theobjective.com confirmed (2023-08-31 "11 restaurantes más recomendados"); vigogastronomico.com is restaurant group not media - excluded; no independent GL gastronomy magazine found
+[cross-8] "suplemento gastronomía xornal Vigo mellores restaurantes crítica 2024 2025" → pantagruelsupongo.com confirmed, metropolitano.gal confirmed, elespanol.com/treintayseis confirmed (Feb 2026 article "restaurante vigués que acaba de entrar en la élite")
+
+--- SUPPLEMENTARY SEARCHES (primary GL/ES gap, EN gap) ---
+[supplementary] "vivevigo.info restaurantes guía comer Vigo recomendacións autor" → vivevigo.info confirmed as local guide but no named author; elespanol.com/treintayseis confirmed
+[supplementary] "lavozdegalicia.es vigo gastronomia restaurantes guia onde comer 2024" → No specific lavozdegalicia.es food articles with named authors found; elespanol.com/quincemil and treintayseis dominate results
+[supplementary] fetch guiarepsol.com/vigo → 404 not found; Repsol guide does not have a direct article URL
+[supplementary] fetch guiadelbuenvivir.com/vigo-donde-comer-casco-vello → no author, no date, thin content; rejected
+[supplementary] fetch metropolitano.gal O Petisquiño 2024 → no named author; 18,500 chars but festival guide not restaurant guide
+[supplementary] fetch theculturetrip.com/vigo → 403 Forbidden blocked
+[supplementary] fetch fascinatingspain.com/vigo → 2017 article, outside year range, initials-only author; rejected
+[supplementary] fetch foodandtravel.com/vigo → no date, no author, only 3 restaurants; rejected
+[supplementary] fetch trucosviajeros.com/vigo → 2021 date, outside year range, no named author; rejected
+[supplementary] fetch vivevigo.info → no named author confirmed; rejected
+[supplementary] fetch eatandwalkabout.com/vigo → Sean P. O'Rourke, Mar 2026, but no restaurant names (food tour descriptions only); commercial conflict; rejected
+[supplementary] fetch amovida.gal/peixe-marisco-vigo → no named author; rejected
+[supplementary] fetch pantagruelsupongo.com/vigo → 404 on search; no Vigo-specific articles found
+[supplementary] fetch metropolitano.gal 15 aperturas 2023 → no named author; rejected
+[supplementary] fetch fionadunlop.com → confirmed 0 qualifying restaurants (1 restaurant named, quote under 15 words); rejected
+[stopping-rule] triggered after approximately 40 total queries (planned + supplementary). No new qualifying sources in last 10+ queries.
+
+--- PHASE 1B CROSS-VALIDATION ---
+[phase-1b-crossval] "Morrofino Vigo recomendacion critica restaurante" → TripAdvisor, gastroranking, Michelin profile, Repsol profile only; no new qualifying sources
+[phase-1b-crossval] "Casa Marco Vigo recomendacion critica restaurante" → cenandoconpablo.es (personal food blog, Casa Marco review - potential new candidate); TripAdvisor, Michelin excluded; elzampondecompostela.blogspot.com 2017 excluded (outside year range)
+[phase-1b-crossval] "Detapaencepa Vigo recomendacion critica restaurante" → revistatierra.com ("De Tapa en Cepa" - food magazine Tierra, potential candidate); TripAdvisor, Michelin excluded

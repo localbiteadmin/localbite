@@ -1,0 +1,79 @@
+FAILED / REJECTED SOURCES — Palma de Mallorca v7.1 — 2026-04-23
+═══════════════════════════════════════════════════════════════════
+
+Sources considered during Phase 0/1 research but rejected before extraction.
+
+─────────────────────────────────────────────────────────────────
+1. facefoodmag.com
+   Reason: NO NAMED AUTHOR — multiple fetches confirmed zero author attributions on
+   articles and About page. Listed in PHASE_0_SOURCES as "named writers" but authorship
+   is entirely institutional. Named-author requirement: FAIL.
+   Status: REJECTED at Phase 0 / Phase 1 author verification
+
+2. diariodemallorca.es
+   Reason: NO NAMED AUTHOR on gastronomy articles reviewed. Coverage confirmed (local
+   newspaper with restaurant content) but bylines are institutional or missing on
+   fetched pages. Named-author requirement: FAIL.
+   Status: REJECTED at Phase 1 author verification
+
+3. themallorcan.com
+   Reason: NO NAMED AUTHOR — appeared prominently in multiple Phase 1 searches (e.g.,
+   "32 best restaurants Santa Catalina"). Multiple article and About page fetches
+   confirmed no individual author attribution anywhere on the site.
+   Named-author requirement: FAIL.
+   Status: REJECTED at Phase 1 author verification
+
+4. mallorcafoodies.com
+   Reason: NO NAMED AUTHOR confirmed. Appeared in searches as a candidate source but
+   author attribution not found on articles fetched during Phase 1.
+   Status: REJECTED at Phase 1 author verification
+
+5. abc-mallorca.com (Top 101 list)
+   Reason: PARTIAL BYLINE — list articles show byline "Helen" only (no surname).
+   Named-author requirement requires full first name + surname. FAIL.
+   Status: REJECTED at Phase 1 author verification
+
+6. mallorcabites.substack.com (Felix Hanika)
+   Reason: SURNAME UNCONFIRMED — search snippets showed "Felix Hanika" but About page
+   and article text only displayed "Felix" with no surname confirmed in fetched content.
+   Named-author requirement: FAIL (surname not confirmed).
+   Status: REJECTED at Phase 1 author verification
+
+7. eatdrinksleepmallorca.com (Jan Edwards)
+   Reason: ARTICLE NOT ACCESSIBLE — source identified as a qualifying named-author
+   English-language Mallorca food blog (Jan Edwards, long-running). Article content
+   could not be fully retrieved in pipeline window. Confirmed as a qualifying source
+   for future pipeline runs if article-level URLs are available at Phase 0.
+   Status: INCOMPLETE — not rejected on quality grounds, access failure only
+
+8. helencummins.es (ES-language edition)
+   Reason: SIBLING EDITION — helencummins.es is the direct Spanish-language translation
+   of helencummins.com (same author, same publisher). Does NOT qualify as an independent
+   ES source for both-pool counting. Only helencummins.com (EN) counted.
+   Status: REJECTED as independent source (sibling check FAIL)
+
+9. heylolly.co.uk
+   Reason: AUTHOR NOT CONFIRMED — appeared in multiple searches. Full name not confirmed
+   during Phase 1 research ("heylolly" is a handle, not a full name). FAIL.
+   Status: REJECTED at Phase 1 author verification
+
+10. cometemallorca.com / mallorqueando.com
+    Reason: NO NAMED AUTHOR confirmed on fetched content. Generic travel/food sites
+    without individual authorship.
+    Status: REJECTED at Phase 1 author verification
+
+─────────────────────────────────────────────────────────────────
+PHASE 0 SKIP NOTE:
+PHASE_0_SOURCES in Part 1 included publication-level domains, not article-level URLs.
+Template requires article-level URLs for Phase 0 direct-fetch. All listed sources
+treated as blank → Phase 1 research proceeded from scratch.
+
+SOURCES CONFIRMED BUT CONTRIBUTING < 3 ENTRIES:
+- src-ultimahora-soyer: 1 entry (single article reviewed = Stagier only)
+  Additional Xaloc reviews by Augusto Soyer exist but were not fetched as full sources
+  due to single-article approach in Phase 1B cross-validation.
+- src-mdb-naprta: 1 entry (single article reviewed = Mesón Ca'n Pedro)
+  Additional Mia Naprta reviews exist at MDB but were not in scope for this pipeline run.
+═══════════════════════════════════════════════════════════════════
+END FAILED SOURCES — Palma de Mallorca v7.1
+═══════════════════════════════════════════════════════════════════

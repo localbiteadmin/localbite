@@ -1,0 +1,181 @@
+# LocalBite Vigo — Audit File
+# Pipeline: localbite-v7.1 | Date: 2026-04-23
+# Final entries: 10 | Sources confirmed: 3 | Both-pool: 0
+
+════════════════════════════════════════════════════════════
+SECTION 1 — SOURCES CONFIRMED
+════════════════════════════════════════════════════════════
+
+[src-metropolitano-cifuentes]
+  Publisher:  Metropolitano.gal
+  Author:     Carolina Cifuentes
+  Article:    "Tres restaurantes top en Vigo y área premiados por su cocina de calidad a precios razonables"
+  Date:       2023-12-17
+  Tier:       PRIMARY (GL/ES local media, named byline confirmed, Vigo-specific coverage)
+  Fetch:      Good — ~3,200 chars extracted via Jina
+  Article URL: null — URL not recorded during Phase 2; postrun.js will warn
+  Restaurants yielded (final): 2 (Casa Marco as Tier A co-source, Morrofino as Tier A co-source)
+
+[src-treintayseis-picatoste]
+  Publisher:  El Español / Treintayseis (Vigo-specific section)
+  Author:     Mauro Picatoste
+  Article:    "Estos son los restaurantes recomendados por la Guía Repsol en Vigo"
+  Date:       2024-03-05
+  Tier:       PRIMARY — classified per CLAUDE.md local-edition rule: treintayseis is the Vigo-specific
+              section of El Español with locally-based named author covering Vigo exclusively;
+              more local than quincemil (all-Galicia). Analogous to a local edition.
+  Fetch:      Good — ~8,500 chars extracted via Jina
+  Article URL: null — URL not recorded during Phase 2; postrun.js will warn
+  Restaurants yielded (final): 5 (Morrofino Tier A co-source + Malauva Wine Bar, Detapaencepa,
+              Bitadorna, Rokuseki as Tier B single-source)
+
+[src-theobjective-alonso]
+  Publisher:  The Objective
+  Author:     Brenda Alonso
+  Article:    "Dónde comer en Vigo: los 11 restaurantes más recomendados por los vigueses"
+  Date:       2023-08-31
+  Tier:       SECONDARY — The Objective is a national Spanish outlet (Madrid-based); no evidence
+              Brenda Alonso is Vigo-based. 2 specific details required per quote; all entries pass.
+  Fetch:      Good — ~8,750 chars extracted via Jina
+  Article URL: null — URL not recorded during Phase 2; postrun.js will warn
+  Restaurants yielded (final): 4 (Casa Marco Tier A co-source + O Porco, The Othilio Bar,
+              Follas Novas, Casa Vella as Tier B single-source)
+
+════════════════════════════════════════════════════════════
+SECTION 2 — TIER C AUTO-REMOVALS (null neighbourhood + single source)
+════════════════════════════════════════════════════════════
+
+[REMOVED] Mesa de Conus
+  Source: src-treintayseis-picatoste
+  Reason: neighbourhood null — located in Sárdoma, outside GEOGRAPHIC_BOUNDARY_INCLUDE.
+          Single source. AUTO-REMOVAL per null-neighbourhood + source_count=1 rule.
+
+[REMOVED] Alcabre
+  Source: src-treintayseis-picatoste
+  Reason: neighbourhood null — located in Alcabre area (hotel restaurant), outside
+          GEOGRAPHIC_BOUNDARY_INCLUDE. Single source. AUTO-REMOVAL per null-neighbourhood
+          + source_count=1 rule.
+
+════════════════════════════════════════════════════════════
+SECTION 3 — CONCENTRATION CAP REMOVALS
+════════════════════════════════════════════════════════════
+
+Initial Tier A+B pool (after Tier C removal): 15 entries
+30% cap = 4 single-source Tier B entries per source (floor of 15 × 0.30 = 4.5)
+
+--- theobjective-alonso: 8 single-source Tier B / 15 = 53.3% → exceeds cap → remove 4 ---
+
+[REMOVED] La Hacienda de Machado
+  Reason: Lowest confidence. Brazilian steakhouse (iberoamerican meat grill) in Coia — non-Galician
+          cuisine category, secondary neighbourhood (Tier 3), least representative of Vigo food
+          identity. No signature_dish. Generic quote.
+
+[REMOVED] María Manuela
+  Reason: Generic quote with no distinguishing detail beyond "frente al mar" location claim and
+          grilled fish/seafood offering. No chef name, no signature_dish, no neighbourhood detail.
+          Weakest entry from secondary source.
+
+[REMOVED] Mesón Compostela
+  Reason: Pulpo a feira and caldo gallego are the canonical Galician clichés; no distinguishing
+          information (no chef, no address, no signature twist). Quote adds nothing beyond genre.
+          No signature_dish.
+
+[REMOVED] Casa Nisio
+  Reason: Japanese cuisine redundant given Rokuseki (also Japanese, in Centro, from primary source)
+          already in final list. Casa Nisio is from secondary source with lower evidentiary weight.
+          sashimi de pescado fresco is the only specific detail.
+
+theobjective-alonso remaining Tier B: O Porco, The Othilio Bar, Follas Novas, Casa Vella = 4 ✓
+
+--- treintayseis-picatoste: 5 single-source Tier B / 15 = 33.3% → exceeds cap → remove 1 ---
+
+[REMOVED] Niño Corvo
+  Reason: Quote contains no specific dishes — only a genre description ("cociña sen vergoña",
+          mezcla gallega/asiática). Fails relative quality threshold among treintayseis entries
+          where all others have named dishes or detailed chef profiles.
+
+treintayseis-picatoste remaining Tier B: Malauva Wine Bar, Detapaencepa, Bitadorna, Rokuseki = 4 ✓
+
+--- metropolitano-cifuentes: 0 single-source Tier B (both restaurants are Tier A) — no cap applies ---
+
+════════════════════════════════════════════════════════════
+SECTION 4 — MICHELIN EXCLUSIONS
+════════════════════════════════════════════════════════════
+
+The following Michelin-starred restaurants were pre-excluded per pipeline rules and
+were not extracted even when encountered in source articles:
+
+  Maruja Limón — 1★, chef Rafael Centeno
+  Silabario — 1★, chef Alberto González Prelcic
+
+════════════════════════════════════════════════════════════
+SECTION 5 — EN SOURCE POOL (BOTH-POOL)
+════════════════════════════════════════════════════════════
+
+No qualifying primary EN sources found. Both-pool = 0.
+
+Vigo structural characteristic: Vigo serves primarily a regional/national Spanish-language
+audience. English food writing is minimal compared to Santiago de Compostela. All candidate
+EN sources were rejected on quality or content grounds:
+  - fionadunlop.com: only 1 restaurant named, quote under 15 words — rejected
+  - foodandtravel.com: no date, no author — rejected
+  - theculturetrip.com: 403 Forbidden — could not verify
+  - fascinatingspain.com: 2017, outside year range — rejected
+  - eatandwalkabout.com: no restaurant names in article (food tour only), commercial conflict — rejected
+
+════════════════════════════════════════════════════════════
+SECTION 6 — ARTICLE URL STATUS
+════════════════════════════════════════════════════════════
+
+All 3 source article_url fields are null. The Jina fetch URLs were used in Phase 2 to
+retrieve article content but the original article URLs were not written to the working
+file. postrun.js STEP 6 will warn on missing article_url fields. Manual verification
+and URL population recommended before deployment.
+
+════════════════════════════════════════════════════════════
+SECTION 7 — PHASE 1B CROSS-VALIDATION CANDIDATES (NOT FETCHED)
+════════════════════════════════════════════════════════════
+
+The following candidates were identified in Phase 1B cross-validation searches but
+were not fetched/confirmed as sources before session context exhaustion:
+
+  cenandoconpablo.es — personal food blog, Casa Marco review
+    Status: Not fetched. If verified, could add a third publisher to Casa Marco.
+    Recommendation: low priority — Casa Marco is already Tier A.
+
+  revistatierra.com — food magazine Tierra, Detapaencepa review
+    Status: Not fetched. If verified, could elevate Detapaencepa to Tier A.
+    Recommendation: optional — verify in a follow-up session if desired.
+
+════════════════════════════════════════════════════════════
+SECTION 8 — FINAL SUMMARY
+════════════════════════════════════════════════════════════
+
+Sources confirmed:    3
+  Primary:            2 (metropolitano-cifuentes, treintayseis-picatoste)
+  Secondary:          1 (theobjective-alonso)
+  EN primary:         0
+
+Restaurants:
+  Working (pre-dedup): 19
+  Unique (post-dedup): 17
+  Tier C removed:       2 (null neighbourhood)
+  Concentration cap:    5 (4 theobjective + 1 treintayseis)
+  Final:               10
+
+Final breakdown:
+  Tier A (2+ publishers): 2 — Casa Marco, Morrofino
+  Tier B (single source): 8 — Malauva Wine Bar, Detapaencepa, Bitadorna, Rokuseki,
+                               O Porco, The Othilio Bar, Follas Novas, Casa Vella
+  Both-pool:              0
+
+Neighbourhood distribution (final 10):
+  Centro:        6 (Morrofino, Detapaencepa, Bitadorna, Rokuseki, The Othilio Bar, Follas Novas)
+  O Berbés:      2 (Malauva Wine Bar, Casa Vella)
+  Casco Vello:   1 (O Porco)
+  García Barbón: 1 (Casa Marco)
+  Bouzas:        0 — no qualifying sources found for this neighbourhood
+  Gran Vía:      0 — no qualifying sources found for this neighbourhood
+  Areal:         0 — Casa Nisio removed (concentration cap)
+
+Open status check: true for all 10 (all source articles dated 2023-2024, pre-2025)

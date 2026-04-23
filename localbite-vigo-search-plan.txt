@@ -1,0 +1,127 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LOCALBITE SEARCH PLAN — VIGO, SPAIN
+Pipeline: localbite-v7.1
+Date: 2026-04-23
+Year range: 2023-2026
+Primary language: GL (Galician), ES (Spanish)
+Secondary language: EN (English)
+
+PHASE 0: SKIP — DIRECT_FETCH_SOURCES blank (PHASE_0_SOURCES are publication-level, not article-level URLs)
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
+
+TIER 1 (2 queries each: 1 GL/ES + 1 EN)
+
+A1. Casco Vello — GL/ES
+    "mellores restaurantes Casco Vello Vigo guía gastronómica recomendacións"
+
+A2. Casco Vello — EN
+    "best restaurants Casco Vello Vigo old town food guide 2025 2026"
+
+A3. O Berbés — GL/ES
+    "restaurantes O Berbés Vigo mariscos tapas recomendación 2023 2024"
+
+A4. O Berbés — EN
+    "O Berbés Vigo seafood restaurants where to eat 2025"
+
+A5. Bouzas — GL/ES
+    "restaurantes Bouzas Vigo barrio marineiro onde comer"
+
+A6. Bouzas — EN
+    "Bouzas Vigo restaurant recommendations fishing village food"
+
+TIER 2 (2 queries each: 1 GL/ES + 1 EN)
+
+A7. Centro / Príncipe / García Barbón — GL/ES
+    "mellores restaurantes zona Príncipe García Barbón Vigo guía 2024"
+
+A8. Centro — EN
+    "best restaurants Vigo city centre Príncipe street food recommendations 2025 2026"
+
+A9. Gran Vía — GL/ES
+    "restaurantes Gran Vía Vigo onde comer crítica gastronómica 2023"
+
+A10. Gran Vía — EN
+     "Gran Vía Vigo restaurants dining guide recommendations"
+
+A11. Areal — GL/ES
+     "restaurantes barrio Areal Vigo novidades apertura 2024 2025"
+
+A12. Areal — EN
+     "Areal neighbourhood Vigo restaurants food guide"
+
+TIER 3 (1 query each in GL/ES only)
+
+A13. Teis — GL/ES
+     "restaurantes Teis Vigo gastronomía onde comer"
+
+A14. Coia — GL/ES
+     "restaurantes barrio Coia Vigo recomendacións"
+
+A15. Navia — GL/ES
+     "restaurantes Navia Vigo gastronomía local"
+
+A16. Os Mallos — GL/ES
+     "Os Mallos Vigo restaurantes tapas crítica"
+
+PART A total: 16 queries
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries)
+
+B1. "best restaurants Vigo Spain food guide 2025 2026 recommendations"
+B2. "where to eat Vigo Galicia seafood local writer personal recommendations"
+
+Cross-2 — City-wide GL/ES (3 queries)
+
+B3. "mellores restaurantes Vigo 2025 guía gastronómica recomendacións xornalista"
+B4. "crítica gastronómica Vigo onde comer marisco pulpo cocina gallega"
+B5. "onde comer en Vigo 2023 2024 guía restaurantes escritor local"
+
+Cross-3 — Generic writer-first (2 queries: 1 EN + 1 GL/ES)
+
+B6. "food writer Vigo Galicia restaurant recommendations article"
+B7. "escritora gastrónoma guía restaurantes Vigo artigo revista"
+
+Cross-4 — Named awards / generic (3 queries)
+
+B8. "Vigo restaurant award best 2024 2025 gastronomy prize winners"
+B9. "premios gastronómicos Vigo mellores restaurantes galardón 2023 2024"
+B10. "Michelin guide Vigo Galicia recommended restaurants 2024 2025 bib gourmand"
+
+Cross-5 — Recent openings (2 queries: 1 GL/ES + 1 EN)
+
+B11. "novos restaurantes Vigo apertura 2024 2025 novidades gastronómicas"
+B12. "new restaurant openings Vigo 2025 2026 best new places to eat"
+
+Cross-6 — LOCAL_FOOD_VOCABULARY blank: SKIP
+
+Cross-7 — Cuisine and community (2 queries: seafood focus)
+
+B13. "marisquería pulpería Vigo ría mellores recomendación onde comer marisco fresco"
+B14. "Vigo seafood mariscos oysters barnacles restaurants local guide"
+
+Cross-8 — Publication category GL/ES (2 queries)
+
+B15. "revista gastronómica galega Vigo restaurantes recomendacións independente"
+B16. "suplemento gastronomía xornal Vigo mellores restaurantes crítica 2024 2025"
+
+PART B total: 16 queries
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+
+Earlier years (2023-2024): A3 (2023 2024), A7 (2024), A9 (2023), B5 (2023 2024), B8 (2024 2025), B9 (2023 2024) = 6 queries
+Later years (2025-2026): A2 (2025 2026), A4 (2025), A8 (2025 2026), A11 (2024 2025), B1 (2025 2026), B3 (2025), B10 (2024 2025), B11 (2024 2025), B12 (2025 2026), B16 (2024 2025) = 10 queries
+No year term: remaining 16 queries
+
+[year-distribution-check] PASSED — 6 queries reference earlier years (2023-2024), 10 queries reference later years (2025-2026), 16 queries have no year term.
+
+TOTAL PLANNED: 32 queries (well under soft ceiling of 45)

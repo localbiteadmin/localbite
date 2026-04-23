@@ -1,0 +1,43 @@
+[neighbourhood-Santa Catalina] "Santa Catalina Palma restaurantes mejores 2023 2024" → Found helencummins.es, facefoodmag.com, mallorcafoodies.com, mallorqueando.com as candidates
+[neighbourhood-Santa Catalina] "best restaurants Santa Catalina Palma Mallorca 2025 2026" → Found themallorcan.com (32 best), helencummins.com (30 must-try), facefoodmag.com EN, theinfatuation.com as candidates
+[neighbourhood-La Lonja] "La Lonja Palma restaurantes bares recomendados 2024" → Mainly TripAdvisor, OpenTable; no new named-author source
+[neighbourhood-La Lonja] "La Lonja Palma Mallorca restaurants food guide 2025" → helencummins.com, themallorcan.com again; heylolly.co.uk appeared
+[neighbourhood-Casc Antic] "Casc Antic Palma Mallorca casco antiguo restaurantes 2023 2024" → abc-mallorca.es, infomag.es (Jan 2024), ultimahora.es as candidates
+[neighbourhood-Casc Antic] "old town Palma Mallorca best restaurants 2025 2026" → helencummins.com, themallorcan.com, paperplanesandcaramelwaffles.com, andyandjane.com
+[neighbourhood-Passeig des Born] "Passeig des Born Palma bars restaurantes 2024" → Mostly venue/map results; abc-mallorca.com appeared
+[neighbourhood-Passeig des Born] "Passeig Born Palma Mallorca dining food 2026" → TripAdvisor, palmaweekly.com
+[neighbourhood-Centre] "Centre Palma restaurantes Plaza España 2023 2024" → mallorcafoodies.com, helencummins.es (2023 article), nakarhotel.com blog, infomag.es
+[neighbourhood-Centre] "Palma centre city restaurants best food 2025" → helencummins.com, discoversoller.com, heylolly.co.uk, andyandjane.com, ocho-suites.com
+[neighbourhood-Sa Gerreria] "Sa Gerreria Palma restaurantes barrio gastronomia 2024 2025" → ultimahora.es/xaloc (Augusto Soyer articles), gastroranking.es, cityhaunts.co.uk
+[neighbourhood-Sa Gerreria] "Sa Gerreria Palma restaurants neighbourhood 2025 2026" → helencummins.com, cityhaunts.co.uk, estilopalma.com
+[neighbourhood-El Terreno] "El Terreno Palma de Mallorca restaurantes 2023 2024" → mallorcacaprice.com, affordablemallorca.com; no new named-author source
+[neighbourhood-El Terreno] "El Terreno Palma restaurants food 2025" → mallorcabites.substack.com (Felix Hanika, first name only), wkdy.studio (404), ocho-suites.com
+[neighbourhood-Portixol] "Portixol Palma restaurantes mariscos frente al mar 2024" → abc-mallorca.es (Portixol guide), mallorcafoodies.com, oladelmar.es
+[neighbourhood-Portixol] "Portixol Palma Mallorca restaurants waterfront food 2025 2026" → helencummins.com, Periplo Portixol Michelin entry
+[neighbourhood-Pere Garau] "Pere Garau Palma mercado restaurantes barrio 2023 2024" → ultimahora.es (market article), mallorcasecrets.blog; no named-author restaurant guide
+[neighbourhood-Pere Garau] "Pere Garau Palma Mallorca restaurants local 2025" → palmaweekly.com, mallorcasecrets.blog
+[neighbourhood-Génova] "Génova Palma restaurantes cocina mallorquina 2024" → majorcadailybulletin.com (Mia Naprta Ca'n Pedro article confirmed), canpedro.es
+[neighbourhood-Génova] "Génova Palma Mallorca restaurants dining 2025 2026" → majorcadailybulletin.com Mia Naprta (Jan 2025 Ca'n Pedro review confirmed)
+[neighbourhood-Son Armadams] "Son Armadams Palma restaurantes 2024 2025" → affordablemallorca.com; no named-author source
+[neighbourhood-Es Molinar] "Es Molinar Palma restaurantes barrio 2024 2025" → mallorcafoodies.com, helencummins.es (Portixol/Molinar article), palmaweekly.com
+[neighbourhood-Ciudad Jardín] "Ciudad Jardin Palma de Mallorca restaurantes 2023 2024" → mallorcafoodies.com, mallorqueando.com; no named-author restaurant guide
+[neighbourhood-Sant Agustí] "Sant Agustí Palma de Mallorca restaurantes 2024" → TripAdvisor, buyahomemallorca.com; no named-author source
+[cross-1] "best restaurants Palma de Mallorca 2024 local food writers guide" → helencummins.com confirmed, theinfatuation.com confirmed, heylolly.co.uk (no full name)
+[cross-1] "where to eat in Palma Mallorca recommendations 2025 2026" → helencummins.com, themallorcan.com (no author), andyandjane.com, heylolly.co.uk (no full name)
+[cross-2] "mejores restaurantes Palma de Mallorca guia gastronomica 2023 2024" → theobjective.com (Brenda Alonso, Aug 2023), emilio-innobar.com, helencummins.es
+[cross-2] "donde comer Palma Mallorca recomendaciones barrio 2025" → helencummins.es confirmed, various budget guides
+[cross-2] "Palma Mallorca critica gastronomica restaurante 2025 2026" → ultimahora.es/xaloc gastronomy section confirmed, helencummins.es
+[cross-3] "gastronomia Mallorca blogger critica restaurantes opinion 2024" → ultimahora.es (influencers article, Redacción Digital), caroluscocina.com, mallorcafoodies.com
+[cross-3] "food writer Mallorca restaurant review independent guide 2025" → helencummins.com, eatdrinksleepmallorca.com (Jan Edwards confirmed), mallorcacaprice.com (no author)
+[cross-4] "premios gastronomia Mallorca Islas Baleares mejores restaurantes 2024 2025" → ultimahora.es (Premis Gastronòmics Mallorca 2024), mallorcadiario.com (TaPalma)
+[cross-4] "Mallorca best restaurant awards food 2023 2024" → abc-mallorca.com Top 101 2023/2024 (partial byline only), eatdrinksleepmallorca.com Michelin article
+[cross-4] "Bib Gourmand Palma Mallorca restaurantes 2025 2026" → Michelin guide; Bib Gourmand restaurants in Sóller and Selva (not Palma city)
+[cross-5] "nuevas aperturas restaurantes Palma Mallorca 2024 2025" → gastroeconomy.com, abc-mallorca.es (restaurantes abiertos invierno); no new named-author source
+[cross-5] "new restaurant openings Palma Mallorca 2025 2026" → helencummins.com, abc-mallorca.com (new restaurants), themallorcan.com (no author)
+[cross-7] "cocina mallorquina tradicional restaurantes Palma 2024 2025" → helencummins.es (22 Mallorca restaurants article), gastrowalk.com; no new qualifying source
+[cross-7] "vegetarian vegan restaurants Palma Mallorca food guide 2024 2025" → themallorcan.com (15 vegetarian, no author), abc-mallorca.com (vegetarian guide), majorcadailybulletin.com (Apr 2025 no author)
+[cross-8] "revista gastronomica independiente Mallorca restaurantes 2024" → facefoodmag.com (no named authors), abc-mallorca.es Top 101 (partial name), gastronomiaenmallorca.com
+[cross-8] "suplemento gastronomia periodico Palma Mallorca restaurantes 2025" → mallorcaglobalmag.es (no named author), helencummins.es, ultimahora.es/xaloc confirmed
+[phase-1b-crossval] "El Camino Palma restaurante recomendacion critica" → No new qualifying named-author sources found
+[phase-1b-crossval] "Stagier Palma restaurante critica recomendacion" → ultimahora.es/xaloc by Augusto Soyer (April 2023) confirmed: new article for candidate pool
+[phase-1b-crossval] "Isaan Palma restaurante tailandes critica recomendacion" → No new qualifying named-author sources found
