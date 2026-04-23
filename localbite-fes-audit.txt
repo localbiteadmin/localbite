@@ -1,0 +1,107 @@
+LocalBite Pipeline Audit — Fes, Morocco
+Generated: 2026-04-23
+Pipeline: localbite-v7.1
+Sources: 4 (anitasfeast.com, eva-darling.com, maroclovers.com, le360.ma)
+
+============================
+EXTRACTION-TIME AUTO-REJECTIONS (Quote Quality / RIAD_RULE)
+============================
+
+Restaurant Zahra (maroclovers.com / Myriam Bendriss Mudibu) | RIAD_RULE | Riad hotel restaurant; quote lacks specific dish name ("explosion de saveurs et de textures dans des présentations contemporaines" — atmospheric, no dish detail) | src-maroclovers-bendrissmudibu
+
+Restaurant Riad Almakan (maroclovers.com / Myriam Bendriss Mudibu) | RIAD_RULE | Riad restaurant; quote is architectural/atmospheric only ("Zellige et tadelakt, colorful traditional mosaics, rooftop sunset views, spa hammam") — no specific food dish | src-maroclovers-bendrissmudibu
+
+Restaurant Jnan Al Fassi / Marriott (maroclovers.com / Myriam Bendriss Mudibu) | RIAD_RULE | Hotel restaurant; quote is atmosphere-only ("ambiance unique animée par des musiques live marocaines du lundi au samedi, atmosphère festive") — no specific food dish | src-maroclovers-bendrissmudibu
+
+Restaurant Bouquet Garni / Marriott (maroclovers.com / Myriam Bendriss Mudibu) | RIAD_RULE | Hotel restaurant; only specific detail is a drink ("mojitos réputées spécialités de la maison") — no food dish | src-maroclovers-bendrissmudibu
+
+Eden at Palais Amani (eva-darling.com / Eva Phan) | RIAD_RULE | Palace/hotel restaurant; quote has price detail (495 dhs) but no specific dish name — atmosphere focus ("charming garden", "romantic, upscale Moroccan restaurant") | src-evadarling-phan
+
+ALL le360.ma restaurants — Nisrine Zaoui article (le360.ma) — August 4, 2024
+Source yielded 0 qualifying restaurant extractions due to quote quality failures:
+  Chez Rachid | quote under 15 words or lacks specific detail | src-le360-zaoui
+  Chez Thami | quote under 15 words or lacks specific detail | src-le360-zaoui
+  Gargote Bab Allah | quote lacks dish name, price, or chef detail (only hours of service noted) | src-le360-zaoui
+  Palais Medina & Spa | quote under 10 words, no dish detail | src-le360-zaoui
+  Dar Hatim (le360) | quote under 10 words, vague | src-le360-zaoui
+  Nur Restaurant | quote under 5 words | src-le360-zaoui
+  Limone del Garda | quote under 5 words | src-le360-zaoui
+  Café Clock (le360) | quote 12 words (under 15) | src-le360-zaoui
+  La Maison Bleue (le360) | quote under 10 words | src-le360-zaoui
+  Riad Rcif | quote under 12 words | src-le360-zaoui
+  La Maison des Saveurs | quote under 10 words | src-le360-zaoui
+
+Note: Source src-le360-zaoui (Nisrine Zaoui, le360.ma, Aug 2024) remains in confirmed sources list as valid primary FR source. The article is a tourism overview rather than a detailed food guide, yielding no qualifying restaurant extractions.
+
+============================
+PHASE 3 AUTO-REJECTED (Tier C)
+============================
+
+None. All Tier C candidates were caught at extraction time above.
+
+============================
+CONCENTRATION CAP AUTO-REMOVALS (eva-darling.com exceeded 30% cap)
+============================
+
+eva-darling.com contributed 10 single-source Tier B entries of 25 total unique restaurants (40%). Cap applied: 30% of 25 = 7.5, max 7 entries. 3 lowest-confidence entries removed:
+
+La Cave | Tier B (single source) | Concentration cap — indirect quote ("reviewers applaud" rather than direct writer assessment); internationally generic menu (pasta, spring rolls, Turkish) weakens local editorial value | src-evadarling-phan
+
+Fez Café | Tier B (single source) | Concentration cap — Eva Phan notes "food is overpriced for its quality" and "afternoon best spent as relaxing escape" — atmosphere-over-food recommendation; food content insufficient for LocalBite standard | src-evadarling-phan
+
+Le Peroke Cafe Restaurant | Tier B (single source) | Concentration cap — quote is view-focused (Marinid Tombs view, seating style, owner name); no specific dish mentioned | src-evadarling-phan
+
+============================
+RECOMMENDED TIER B REMOVALS (auto-accepted, UNATTENDED_MODE: YES)
+============================
+
+Café Restaurant Al Oud | Tier B (single source) | Recommended removal — quote attributes quality to third parties ("according to travelers, this bright café serves some of the best pastillas") rather than direct writer assessment; insufficient independent editorial voice | src-evadarling-phan
+
+============================
+COI DISCLOSURES
+============================
+
+No commercial conflicts identified for any confirmed source.
+  anitasfeast.com (Anita Breland): commercial_conflict: false
+  eva-darling.com (Eva Phan): commercial_conflict: false
+  maroclovers.com (Myriam Bendriss Mudibu): commercial_conflict: false
+  le360.ma (Nisrine Zaoui): commercial_conflict: false
+
+============================
+PUBLISHER CONCENTRATION REPORT
+============================
+
+eva-darling.com: contributed 10 of 25 (40%) unique restaurant entries as single-source Tier B.
+Cap applied: 3 entries removed (La Cave, Fez Café, Le Peroke Cafe Restaurant).
+Resolved by cap enforcement: YES.
+
+============================
+GEOGRAPHIC EXCLUSIONS
+============================
+
+None applied. All confirmed restaurants are within GEOGRAPHIC_BOUNDARY_INCLUDE.
+
+============================
+SIBLING EDITION CHECK
+============================
+
+maroclovers.com FR (Myriam Bendriss Mudibu) and EN (same author, same date, same content) are same-publisher cross-language editions.
+Same-publisher editions do NOT qualify as independent agreement for both-pool.
+EN edition excluded from source pool; FR edition retained.
+
+============================
+SOURCE REJECTIONS (Phase 1)
+============================
+
+a-contresens.net — article date May 2017, outside YEAR_RANGE (2023-2026)
+willflyforfood.net — no author surname found (only "JB and Ren"); full name requirement not met
+guidedumaroc.fr — article date October 2012, outside YEAR_RANGE
+travelandlust.com — article date December 2022, outside YEAR_RANGE
+travelmoroccotoday.com — no named author found on About page (only "girlwiththepassport" handle)
+princeandhawker.com — author name "Calvin" only, no surname found
+roughguides.com/fez-culinary-capital — no publication date visible; internal reference suggests pre-2017
+svadore.com — 500 Internal Server Error on fetch
+moroccotravelguru.com — no named author found
+heerby.ma — no named author found; quotes are aggregate user reviews, not editorial writing
+thenotsoinnocentsabroad.com — article date August 2016, outside YEAR_RANGE
+afar.com — most recent update July 2022, outside YEAR_RANGE

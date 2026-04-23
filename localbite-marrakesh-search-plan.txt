@@ -1,0 +1,121 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LocalBite Marrakesh — Search Plan v7.1
+Generated: 2026-04-23
+CITY: Marrakesh | COUNTRY: Morocco | YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: FR, AR | SECONDARY_LANGUAGE: EN
+SINGLE_LANGUAGE_CITY: NO | PRICE_CURRENCY: MAD
+RIAD_RULE: APPLY | CONCENTRATION_CAP: 30%
+LOCAL_FOOD_VOCABULARY: blank → Cross-6 SKIPPED
+NAMED_AWARDS: blank → generic award queries for Cross-4
+DIRECT_FETCH_SOURCES: blank → Phase 0 SKIPPED
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE (19 queries)
+════════════════════════════════════════
+
+TIER 1 (2 queries each: 1 FR/AR + 1 EN)
+
+[Medina]
+Q01 (FR/earlier): meilleurs restaurants Médina Marrakech guide gastronomique 2023 2024
+Q02 (EN/later):   best restaurants Marrakech Medina food writer guide 2025
+
+[Jemaa el-Fna]
+Q03 (FR/later):   restaurants place Jemaa el-Fna Marrakech recommandations 2025
+Q04 (EN/earlier): where to eat Jemaa el-Fna square Marrakesh food 2023 2024
+
+[Gueliz]
+Q05 (FR/earlier): restaurants Gueliz Marrakech bonnes adresses gastronomie 2024
+Q06 (EN/later):   Gueliz Marrakech best restaurants dining neighbourhood 2025
+
+[Hivernage]
+Q07 (FR/earlier): restaurants quartier Hivernage Marrakech guide 2023
+Q08 (EN/later):   Hivernage Marrakesh restaurants food recommendations 2025
+
+TIER 2 (2 queries each: 1 FR/AR + 1 EN)
+
+[Kasbah]
+Q09 (FR/earlier): restaurants Kasbah Marrakech critique gastronomique 2024
+Q10 (EN/later):   Kasbah Marrakesh where to eat restaurants 2025
+
+[Mellah]
+Q11 (FR/earlier): restaurants Mellah Marrakech quartier adresses locales 2023
+Q12 (EN/later):   Mellah Marrakesh restaurants dining local quarter 2025
+
+[Bab Doukkala]
+Q13 (FR/later):   restaurants Bab Doukkala Marrakech guide local 2025
+Q14 (EN/earlier): Bab Doukkala Marrakesh restaurants neighbourhood food 2024
+
+[Mouassine]
+Q15 (FR/earlier): restaurants Mouassine Marrakech recommandations 2023 2024
+Q16 (EN/later):   Mouassine Marrakesh restaurants food where to eat 2025
+
+TIER 3 (1 query each: FR only)
+
+[Palmeraie]
+Q17 (FR/later):   restaurants Palmeraie Marrakech critique gastronomique 2025
+
+[Targa]
+Q18 (FR/earlier): restaurants Targa Marrakech bonnes adresses locales 2023
+
+[Ménara]
+Q19 (FR/earlier): restaurants quartier Ménara Marrakech guide gastronomie 2024
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES (16 queries; Cross-6 skipped)
+════════════════════════════════════════
+
+[Cross-1 — EN city-wide, 2 queries]
+Q20 (EN/later):   best places to eat Marrakech food guide writer recommendations 2025
+Q21 (EN/earlier): food writer top restaurants Marrakech personal picks 2023 2024
+
+[Cross-2 — FR/AR city-wide, 3 queries]
+Q22 (FR/later):   guide gastronomique Marrakech meilleurs restaurants critique 2025 2026
+Q23 (FR/earlier): meilleures tables Marrakech cuisine marocaine adresses locales 2024
+Q24 (AR/earlier): أفضل مطاعم مراكش توصيات المطبخ المغربي 2023
+
+[Cross-3 — generic writer-first, 2 queries]
+Q25 (FR/later):   journaliste gastronomique recommande restaurants Marrakech 2025
+Q26 (EN/earlier): food journalist restaurant recommendations Marrakech where locals eat 2024
+
+[Cross-4 — named awards (generic), 3 queries]
+Q27 (EN/both):    Morocco best restaurant awards winners 2024 2025
+Q28 (FR/earlier): prix meilleur restaurant Maroc Marrakech gastronomie 2023
+Q29 (EN/later):   Michelin guide Morocco Marrakech restaurants recognition 2025
+
+[Cross-5 — recent openings, 2 queries]
+Q30 (FR/earlier): nouveaux restaurants Marrakech ouvertures 2023 2024
+Q31 (EN/later):   new restaurant openings Marrakech 2025 2026
+
+[Cross-6 — SKIPPED: LOCAL_FOOD_VOCABULARY blank]
+
+[Cross-7 — cuisine and community, 2 queries]
+Q32 (FR/earlier): cuisine marocaine tagine pastilla Marrakech restaurant critique 2024
+Q33 (EN/later):   Moroccan traditional cuisine restaurants Marrakech authentic local food writer 2025
+
+[Cross-8 — publication-category, 2 queries]
+Q34 (FR/earlier): magazine gastronomique indépendant Maroc Marrakech restaurants 2023
+Q35 (FR/later):   supplément gastronomique presse Marrakech bonnes tables 2025
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+
+Earlier years (2023-2024): Q01,Q04,Q05,Q07,Q09,Q11,Q14,Q15,Q18,Q19,Q21,Q23,Q24,Q26,Q28,Q30,Q32,Q34 = 18 queries
+Later years (2025-2026):   Q02,Q03,Q06,Q08,Q10,Q12,Q13,Q16,Q17,Q20,Q22,Q25,Q29,Q31,Q33,Q35 = 16 queries
+Spans both:                Q27 = 1 query
+No year term:              0 queries
+
+Tier-1 (2-query angles): each has 1 earlier + 1 later ✓
+Tier-2 (2-query angles): each has 1 earlier + 1 later ✓
+Cross-1 (2): 1 earlier + 1 later ✓
+Cross-2 (3): 2 earlier + 1 later (≥1 earlier met) ✓
+Cross-3 (2): 1 earlier + 1 later ✓
+Cross-4 (3): 2 earlier + 1 later (≥1 earlier met) ✓
+Cross-5 (2): 1 earlier + 1 later ✓
+Cross-7 (2): 1 earlier + 1 later ✓
+Cross-8 (2): 1 earlier + 1 later ✓
+
+[year-distribution-check] PASSED — 18 queries reference earlier years, 16 queries reference later years, 1 spans both, 0 have no year term.
+
+Total planned queries: 35 (soft ceiling 45, hard ceiling 55)

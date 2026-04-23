@@ -1,0 +1,92 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+CITY: Chefchaouen, Morocco
+YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: EN
+SECONDARY_LANGUAGE: FR
+TIER_1: Medina, Bab Ssour, Plaza Uta el-Hammam
+TIER_2: Ain Tissimane, Ras el-Maa
+TIER_3: (none)
+LOCAL_FOOD_VOCABULARY: (blank → Cross-6 skipped)
+NAMED_AWARDS: (blank → generic award queries)
+CONCENTRATION_CAP: 30%
+RIAD_RULE: APPLY
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+PART A — NEIGHBOURHOOD COVERAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TIER 1 — Medina (2 queries)
+A1. EN: "best restaurants Chefchaouen medina food guide 2023 2024"
+A2. FR: "meilleurs restaurants Chefchaouen médina recommandations 2024"
+
+TIER 1 — Bab Ssour (2 queries)
+A3. EN: "Chefchaouen Bab Ssour restaurants where to eat 2025"
+A4. FR: "Chefchaouen Bab Ssour restaurants manger 2025 2026"
+
+TIER 1 — Plaza Uta el-Hammam (2 queries)
+A5. EN: "Chefchaouen Plaza Uta el-Hammam restaurants dining review 2023 2024"
+A6. FR: "Plaza Uta el-Hammam Chefchaouen restaurants café guide 2025"
+
+TIER 2 — Ain Tissimane (2 queries)
+A7. EN: "Chefchaouen Ain Tissimane restaurant food 2024 2025"
+A8. FR: "Ain Tissimane Chefchaouen restaurant manger 2023"
+
+TIER 2 — Ras el-Maa (2 queries)
+A9. EN: "Chefchaouen Ras el-Maa restaurant café waterfall 2025 2026"
+A10. FR: "Ras el-Maa Chefchaouen restaurant guide 2024"
+
+Part A total: 10 queries
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+PART B — CROSS-CUTTING ANGLES
+━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cross-1 — City-wide FR (2 queries)
+B1. FR: "guide gastronomique Chefchaouen où manger restaurants locaux 2024 2025"
+B2. FR: "Chefchaouen cuisine marocaine restaurant recommandé 2023"
+
+Cross-2 — City-wide EN (3 queries)
+B3. EN: "Chefchaouen food guide best local restaurants to eat 2025 2026"
+B4. EN: "where to eat Chefchaouen Morocco travel food recommendation 2023 2024"
+B5. EN: "Chefchaouen restaurant review Moroccan food writer 2025"
+
+Cross-3 — Generic writer-first (2 queries)
+B6. EN: "food writer guide eating Chefchaouen Morocco authentic restaurant 2024"
+B7. FR: "blogueur gastronomique Chefchaouen restaurant article 2025"
+
+Cross-4 — Awards/generic (3 queries)
+B8. EN: "best restaurants Morocco awards 2024 2025 Chefchaouen"
+B9. FR: "meilleur restaurant Maroc classement guide Chefchaouen 2023 2024"
+B10. EN: "Chefchaouen Morocco restaurant recommended award listed 2025 2026"
+
+Cross-5 — Recent openings (2 queries)
+B11. EN: "new restaurant opening Chefchaouen Morocco 2024 2025"
+B12. FR: "nouveau restaurant ouverture Chefchaouen 2025 2026"
+
+Cross-6 — SKIPPED (LOCAL_FOOD_VOCABULARY blank)
+
+Cross-7 — Cuisine and community (2 queries)
+B13. EN: "Chefchaouen traditional Moroccan tagine restaurant Rif mountain food guide 2023 2024"
+B14. EN: "Chefchaouen vegetarian vegan food restaurant Morocco travel 2025"
+
+Cross-8 — Publication-category FR (2 queries)
+B15. FR: "magazine gastronomique indépendant Chefchaouen restaurant 2024 2025"
+B16. FR: "journal supplément gastronomie Chefchaouen Maroc restaurant 2023"
+
+Part B total: 16 queries
+
+━━━━━━━━━━━━━━━━━━━━━━━━━
+TOTALS
+━━━━━━━━━━━━━━━━━━━━━━━━━
+Part A: 10 queries
+Part B: 16 queries
+Grand total planned: 26 queries
+
+YEAR DISTRIBUTION CHECK:
+- Queries referencing earlier portion (2023–2024): A1, A2, A5, A8, A10, B2, B4, B7(implicit), B9, B13, B16 = 11 queries
+- Queries referencing later portion (2025–2026): A3, A4, A6, A7, A9, B1, B3, B5, B6, B10, B11, B12, B14, B15 = 14 queries
+- Queries with no year term: A8 (mixed), B8 (partially)
+- Distribution check: PASSED — adequate coverage of 2023-2024 and 2025-2026 across all multi-query angles.
+
+Stopping rule: If 8 consecutive queries yield no new sources, stop before completing all angles.

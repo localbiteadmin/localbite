@@ -1,0 +1,41 @@
+[neighbourhood-Medina] "meilleurs restaurants Médina Marrakech guide gastronomique 2023 2024" → Results mostly aggregator/promo sites; candidates: marrakechinsiders.com, vanupied.com; no clear named-author primary source yet
+[neighbourhood-Medina] "best restaurants Marrakech Medina food writer guide 2025" → Results include timeout.com/marrakech, lauralovestotravel.com, willflyforfood.net, bewilderedinmorocco.com, midnightblueelephant.com, conversanttraveller.com — multiple personal blog candidates
+[neighbourhood-Jemaa el-Fna] "restaurants place Jemaa el-Fna Marrakech recommandations 2025" → Mostly TripAdvisor/OpenTable; candidate: anoushkaprobyn.com (named author), whereandwander.com
+[neighbourhood-Jemaa el-Fna] "where to eat Jemaa el-Fna square Marrakesh food 2023 2024" → bewilderedinmorocco.com (Morocco-specific blog), whereandwander.com (2026 mechoui piece), thetravelsketch.com
+[neighbourhood-Gueliz] "restaurants Gueliz Marrakech bonnes adresses gastronomie 2024" → blondieinmorocco.com ("locals guide" titled), lespetitesjambes.com (FR blog), morocco-traveler.com, lilybilly.ma
+[neighbourhood-Gueliz] "Gueliz Marrakech best restaurants dining neighbourhood 2025" → blondieinmorocco.com again prominent; timeout.com/marrakech; mostly TripAdvisor otherwise
+[neighbourhood-Hivernage] "restaurants quartier Hivernage Marrakech guide 2023" → Mostly hotel sites (La Mamounia, Comptoir Darna own sites); no clear named-author independent source
+[neighbourhood-Hivernage] "Hivernage Marrakesh restaurants food recommendations 2025" → Aggregator sites (TripAdvisor, bestrestaurantsmarrakech.com); no new named-author candidates
+[neighbourhood-Kasbah] "restaurants Kasbah Marrakech critique gastronomique 2024" → heerby.ma (FR local platform), yonder.fr (FR travel magazine); mostly aggregators
+[neighbourhood-Kasbah] "Kasbah Marrakesh where to eat restaurants 2025" → marocmama.com (Morocco-specific blog, named author possible), lauralovestotravel.com repeating
+[neighbourhood-Mellah] "restaurants Mellah Marrakech quartier adresses locales 2023" → foundouk.com (own-restaurant, COI); mostly aggregators; no strong named-author candidates
+[neighbourhood-Mellah] "Mellah Marrakesh restaurants dining local quarter 2025" → marocmama.com (Mellah article), heerby.ma (EN list); TripAdvisor dominates
+[neighbourhood-Bab Doukkala] "restaurants Bab Doukkala Marrakech guide local 2025" → Mostly TripAdvisor/OpenTable; timeout.com; no new named-author candidates
+[neighbourhood-Bab Doukkala] "Bab Doukkala Marrakesh restaurants neighbourhood food 2024" → STRONG CANDIDATE: medium.com/@gran_tourismo — "Soaking up the Rhythm of Daily Life on Rue Bab Doukkala" by Lara Dunston — named food/travel writer
+[neighbourhood-Mouassine] "restaurants Mouassine Marrakech recommandations 2023 2024" → conversanttraveller.com (Heather Cowper — named author), bartsboekje.com (Bart's Boekje), eva-darling.com; good candidate pool emerging
+[neighbourhood-Mouassine] "Mouassine Marrakesh restaurants food where to eat 2025" → willflyforfood.net, bartsboekje.com, blondieinmorocco.com, marocmama.com — all repeating; strong pool confirmed
+[neighbourhood-Palmeraie] "restaurants Palmeraie Marrakech critique gastronomique 2025" → Mostly aggregators/hotel sites; saharapeace.com (5 meilleurs restaurants); Palmeraie confirmed as resort-zone
+[neighbourhood-Targa] "restaurants Targa Marrakech bonnes adresses locales 2023" → lemondeourien.fr (FR personal travel blog, named author possible), lespetitesjambes.com (FR Morocco blog), orane-company.fr
+[neighbourhood-Ménara] "restaurants quartier Ménara Marrakech guide gastronomie 2024" → majorelexplorer.com (Moroccan gastronomy blog), shoelifer.com (new tables article), yonder.fr (72h Marrakech guide)
+[cross-1] "best places to eat Marrakech food guide writer recommendations 2025" → blondieinmorocco.com, bewilderedinmorocco.com, midnightblueelephant.com, feelmorocco.travel all prominent; strong EN candidate pool confirmed
+[cross-1] "food writer top restaurants Marrakech personal picks 2023 2024" → willflyforfood.net, bartsboekje.com, eva-darling.com, conversanttraveller.com; NOTE: Time Out Marrakech has locally-based writers (Paula Hardy, Sally Kirby)
+[cross-2] "guide gastronomique Marrakech meilleurs restaurants critique 2025 2026" → ousortir.ma (Moroccan lifestyle, 2026 guide), marrakechmadame.com ("mon top 18" — personal blog), visitmarrakech.com (50 Best 2026 news)
+[cross-2] "meilleures tables Marrakech cuisine marocaine adresses locales 2024" → lemondeourien.fr ("mes bonnes adresses" personal blog), marrakechmadame.com again, lespetitesjambes.com, vh.ma (Moroccan lifestyle)
+[cross-2] "أفضل مطاعم مراكش توصيات المطبخ المغربي 2023" → urtrips.com, arabtravelers.com, raheba.com — mostly AR aggregator/travel sites, no clear named local food writer
+[cross-3] "journaliste gastronomique recommande restaurants Marrakech 2025" → vh.ma ("Marrakech revisite sa table"), nosvoyagesheureux.fr; KEY LEAD: Tara Stevens named as food journalist with Marrakech selections
+[cross-3] "food journalist restaurant recommendations Marrakech where locals eat 2024" → bewilderedinmorocco.com ("From Tajines to Terraces"), anoushkaprobyn.com confirmed; blondieinmorocco.com, midnightblueelephant.com
+[cross-4] "Morocco best restaurant awards winners 2024 2025" → worldculinaryawards.com: La Grande Table Marocaine won Morocco Best Restaurant 2024; +61, La Table de La Sultana nominated 2025
+[cross-4] "prix meilleur restaurant Maroc Marrakech gastronomie 2023" → Mostly price guides and aggregators; no new named-author sources
+[cross-4] "Michelin guide Morocco Marrakech restaurants recognition 2025" → Confirmed no Michelin in Morocco; mwnlifestyle.com (Morocco World News); theluxuryeditor.com (luxury travel)
+[cross-5] "nouveaux restaurants Marrakech ouvertures 2023 2024" → femmesdumaroc.com ("Nouvelles tables 8 adresses"), luxe-infinity-maroc.com (luxury openings), vivre-marrakech.com
+[cross-5] "new restaurant openings Marrakech 2025 2026" → el-fenn.com (hotel blog — COI), midnightblueelephant.com (2026 guide), wallpaper.com (design/lifestyle magazine)
+[cross-7] "cuisine marocaine tagine pastilla Marrakech restaurant critique 2024" → nikodouniko.com (personal food blog), bewilderedinmorocco.com; mostly hotel/fine-dining own sites
+[cross-7] "Moroccan traditional cuisine restaurants Marrakech authentic local food writer 2025" → bewilderedinmorocco.com (multiple articles confirmed), blondieinmorocco.com; strong local-voice positioning for both
+[cross-8] "magazine gastronomique indépendant Maroc Marrakech restaurants 2023" → ledouar.com (2023-03-14 article "Top 5 restaurants gastronomique"), femmesdumaroc.com ("Nouvelles tables"), luxe-infinity-maroc.com (Maroc luxury lifestyle)
+[cross-8] "supplément gastronomique presse Marrakech bonnes tables 2025" → femmesdumaroc.com (consistent FR Moroccan magazine), luxe-infinity-maroc.com (2025-04-30 "Des tables remarquables à Marrakech"), vh.ma
+[phase-1b-crossval] "Nomad restaurant Marrakech critique recommandation writer" → checking cross-validation for most-mentioned restaurant
+[phase-1b-crossval] "La Trattoria Marrakech restaurant critique recommandation" → checking cross-validation second most-mentioned  
+[phase-1b-crossval] "+61 restaurant Marrakech critique food writer" → checking cross-validation for third most-mentioned
+[phase-1b-crossval] "Nomad restaurant Marrakech critique recommandation auteur food writer" → TripAdvisor dominant; hellofarrah.com (personal food blog review of Nomad); thatbestbite.com; no new qualified sources
+[phase-1b-crossval] "La Trattoria Marrakech restaurant critique writer recommendation" → TripAdvisor dominant; thetruthtraveller.com; no new qualifying sources
+[phase-1b-crossval] "+61 restaurant Marrakech critique food writer review" → TripAdvisor, 50Best Discovery; sources already in candidate pool

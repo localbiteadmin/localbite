@@ -1,0 +1,63 @@
+[neighbourhood-Medina] "restaurants Medina Rabat recommandés 2023 2024" → Heerby.ma, willflyforfood.net, barcelo.com appear; no new named-author candidates
+[neighbourhood-Medina] "best restaurants Medina Rabat 2025 2026 guide" → petitfute.co.uk, willflyforfood.net, evendo.com; no new named-author candidates
+[neighbourhood-Agdal] "restaurants Agdal Rabat guide gastronomique 2025" → majourneys.ma, visitrabat.com, goodmove.ma; candidates to verify
+[neighbourhood-Agdal] "where to eat Agdal Rabat 2023 2024 recommendations" → themodtraveller.com, marocmama.com, travelmoroccotoday.com; candidates to verify
+[neighbourhood-Hassan] "meilleurs restaurants quartier Hassan Rabat 2023 gastronomie" → willflyforfood.net, goodmove.ma, petitfute.co.uk; no new named-author candidates
+[neighbourhood-Hassan] "restaurants Hassan neighbourhood Rabat 2025 food guide" → willflyforfood.net, marocmama.com, maroclovers.com; no new named-author candidates
+[neighbourhood-Ville-Nouvelle] "restaurants Ville Nouvelle Rabat bons plans 2025 2026" → maroclovers.com, wanderlog.com, petitfute.co.uk; no new named-author candidates
+[neighbourhood-Ville-Nouvelle] "eating in Ville Nouvelle Rabat restaurant recommendations 2023 2024" → willflyforfood.net, themodtraveller.com, marocmama.com; no new named-author candidates
+[neighbourhood-Souissi] "restaurants Souissi Rabat gastronomie 2025" → petitfute.co.uk, visitrabat.com, sofitel; no new named-author candidates
+[neighbourhood-Souissi] "best restaurants Souissi Rabat 2023 2024 guide" → heerby.ma, themodtraveller.com, morocco-traveler.com; no new named-author candidates
+[neighbourhood-Hay-Riad] "restaurants Hay Riad Rabat recommandations 2023 2024" → tripadvisor, marocmama.com; no new named-author candidates
+[neighbourhood-Hay-Riad] "restaurants Hay Riad Rabat food 2025" → tripadvisor, visitrabat.com; no new named-author candidates
+[neighbourhood-Aviation] "restaurants quartier Aviation Rabat 2023" → willflyforfood.net; no named-author candidates specific to Aviation
+[neighbourhood-Aviation] "where to eat Aviation Rabat 2025 recommendations" → travelmoroccotoday.com, maroclovers.com, marocmama.com; no new named-author candidates
+[neighbourhood-Océan] "restaurants Océan Rabat bord de mer 2025" → tripadvisor, goodmove.ma, marearestaurant.ma; no named-author candidates
+[neighbourhood-Océan] "seafood restaurants Océan Rabat 2023 2024 guide" → themodtraveller.com, feries.ma, morocco-traveler.com; candidate feries.ma to verify
+[neighbourhood-Akkari] "restaurants Akkari Rabat adresses 2024" → restaurantguru.com, heerby.ma; no named-author candidates
+[neighbourhood-Youssoufia] "restaurants Youssoufia Rabat 2023" → jobi.ma, themodtraveller.com; no Youssoufia-specific named-author candidates
+[neighbourhood-Madinat-Al-Irfane] "restaurants Madinat Al Irfane Rabat 2025" → expedia, trip.com, heerby.ma; no named-author candidates
+[cross-1] "best restaurants in Rabat Morocco food guide 2025 2026" → artandthensome.com (Cedric Moris, March 2026), willflyforfood.net, maroclovers.com; artandthensome.com to verify
+[cross-1] "where to eat in Rabat Morocco local recommendations 2023 2024" → willflyforfood.net, themodtraveller.com, marocmama.com, dinesurf.com; candidates to verify
+[cross-2] "meilleurs restaurants Rabat Maroc critique gastronomique 2025" → majourneys.ma, goodmove.ma, marocvoyagedereve.com; no named-author candidates
+[cross-2] "adresses incontournables restaurants Rabat 2023 2024 gastronomie" → bestrestaurantsmaroc.com, marocvoyagedereve.com, maroclovers.com; no new named-author candidates
+[cross-2] "guide restaurant Rabat journaliste culinaire recommandation" → welovebuzz.com, marocvoyagedereve.com, rabat-24.com, maroclovers.com; no named-author candidates
+[cross-3] "food writer review restaurant Rabat Morocco 2025" → travelmoroccotoday.com, marocmama.com; no new named-author candidates
+[cross-3] "chroniqueur gastronomie Rabat Maroc article restaurant 2023 2024" → o-maroc.com, goodmove.ma, marocvoyagedereve.com; no named food critic covering Rabat found
+[cross-4] "best restaurant awards Rabat Morocco 2025 winners recognition" → worldculinaryawards.com, laliste.com; no qualifying article sources
+[cross-4] "prix meilleur restaurant Rabat Maroc palmarès 2023 2024" → bestrestaurantsmaroc.com, petitfute.co.uk; no new named-author candidates
+[cross-4] "Michelin guide Maroc restaurant recommandé 2024 2025" → guide.michelin.com; confirmed Michelin does not cover Morocco
+[cross-5] "nouvelles ouvertures restaurants Rabat 2025 2026" → ousortir.ma (Casablanca only), majourneys.ma; no new named-author candidates
+[cross-5] "new restaurant openings Rabat Morocco 2023 2024" → macooking.com (404), dinesurf.com (404); Four Seasons 2024 opening noted
+[cross-7] "cuisine marocaine traditionnelle Rabat restaurant authentique 2025" → majourneys.ma, goodmove.ma; no new named-author candidates
+[cross-7] "Moroccan traditional cuisine restaurant Rabat authentic 2023 2024" → dinesurf.com (404), willflyforfood.net, themodtraveller.com; no new named-author candidates
+[cross-8] "magazine gastronomique indépendant Rabat Maroc restaurant 2023 2024" → aemagazine.ma (team byline), luxe-infinity-maroc.com; no individual named authors
+[cross-8] "supplément gastronomie journal Rabat Maroc bonnes tables 2025" → femmesdumaroc.com (no named author), laliste.com; Gault&Millau Maroc noted (launches May 2026)
+[phase-1b-crossval] VERIFICATION: willflyforfood.net — no named author found in article or about page → REJECTED
+[phase-1b-crossval] VERIFICATION: marocmama.com — article dated January 5, 2021 → OUTSIDE year range → REJECTED
+[phase-1b-crossval] VERIFICATION: themodtraveller.com (Jacqueline Mendelsohn) — article dated November 7, 2022 → OUTSIDE year range → REJECTED
+[phase-1b-crossval] VERIFICATION: majourneys.ma — no named author → REJECTED
+[phase-1b-crossval] VERIFICATION: goodmove.ma — no named author → REJECTED
+[phase-1b-crossval] VERIFICATION: maroclovers.com — author "Myriam" only (no surname) → REJECTED
+[phase-1b-crossval] VERIFICATION: feries.ma — no named author → REJECTED
+[phase-1b-crossval] VERIFICATION: travelmoroccotoday.com — author "Kelly" only (no surname confirmed) → REJECTED
+[phase-1b-crossval] VERIFICATION: artandthensome.com — author Cedric Moris, byline confirmed, March 5, 2026, 18,500 chars → ACCEPTED
+[phase-1b-crossval] VERIFICATION: heerby.ma — "Heerby Team" collective byline → REJECTED
+[phase-1b-crossval] VERIFICATION: lavieeco.com — no Rabat restaurant content → FAILED
+[phase-1b-crossval] VERIFICATION: telquel.ma — no restaurant content for Rabat → FAILED
+[phase-1b-crossval] VERIFICATION: yabiladi.com — no restaurant content for Rabat → FAILED
+[phase-1b-crossval] VERIFICATION: gillespudlowski.com — Rabat articles dated 2010-2011, outside year range → REJECTED
+[phase-1b-crossval] VERIFICATION: marocvoyagedereve.com — no named author → REJECTED
+[phase-1b-crossval] VERIFICATION: dinesurf.com — 404 error → FAILED
+[phase-1b-crossval] VERIFICATION: macooking.com — 404 error → FAILED
+[phase-1b-crossval] VERIFICATION: aemagazine.ma — "la rédaction" collective byline → REJECTED
+[phase-1b-crossval] VERIFICATION: femmesdumaroc.com — no named author → REJECTED
+[phase-1b-crossval] DIVERSITY-GATE: FR/AR language primary source — NOT MET after 8+ supplementary searches. Documented as structural characteristic: Rabat food writing in FR/AR is overwhelmingly anonymous or team-bylined; no qualifying named-author FR/AR source found within 2023-2026. Part 1 anticipated this gap ("Rabat food writing is thinner than Marrakesh or Casablanca").
+[phase-1b-crossval] "Marea Rabat restaurant critique recommandation avis 2024 2025" → mwnlifestyle.com found (Ihab Ou-ouda, October 2025), verified as named-author EN source → ACCEPTED as new Phase 1B source
+[phase-1b-crossval] Cross-validation queries run: 1 | New qualifying sources found: mwnlifestyle.com (Ihab Ou-ouda) | Sources already known: artandthensome.com
+[coi-check] artandthensome.com — commercial conflict: NO
+[coi-check] mwnlifestyle.com — commercial conflict: NO
+[extraction-reject] Picolo's from artandthensome.com — reason: 17 words but no specific detail (no dish name, chef name, physical description, price, year, or neighbourhood in quote)
+[publisher-concentration] artandthensome.com contributes 9/10 entries as single-source Tier B (90%). Supplementary searches confirmed no alternative sources available. Structural characteristic documented.
+[concentration-cap-structural] Cap cannot reach 30% with 2-source structural pool. Applied quality-based removals first (riads, bars, geographic flags). Remaining 4 Tier B entries represent best available non-flagged coverage.
+[unattended-mode] auto-accepted 5 recommended removals: Jazz Bar Tour Hassan Palace (bar-only), Le Laurier (hotel/atmosphere), Riad Dar Chrifa (riad/atmosphere), Golden Fish (hotel/atmosphere), L'Oursin (geographic ambiguity).

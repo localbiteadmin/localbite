@@ -1,0 +1,32 @@
+[neighbourhood-Fes-el-Bali] "meilleurs restaurants médina Fès 2023 2024 guide gastronomique" → candidates: maroclovers.com, a-contresens.net, vanupied.com, riadsmorocco.com, afar.com
+[neighbourhood-Fes-el-Bali] "best restaurants Fes el-Bali medina 2025 dining guide" → candidates: willflyforfood.net, eva-darling.com, anitasfeast.com, travelmoroccotoday.com, afar.com
+[neighbourhood-Fes-el-Jdid] "restaurants Fès el-Jdid mellah adresses 2025 recommandations" → limited results; a-contresens.net and vanupied.com reappear; no strong new candidates
+[neighbourhood-Fes-el-Jdid] "Fes el-Jdid dining where to eat restaurants 2023 2024" → maroclovers.com, travelmoroccotoday.com, nationalgeographic.com, morocco-traveler.com
+[neighbourhood-Ville-Nouvelle] "restaurants Ville Nouvelle Fès 2024 meilleures tables" → madein.city/fes, a-contresens.net, bestrestaurantsmaroc.com, fes.fr/ou-manger
+[neighbourhood-Ville-Nouvelle] "Ville Nouvelle Fez restaurants best places to eat 2025 2026" → maroclovers.com (EN), svadore.com, afar.com
+[neighbourhood-Agdal] "restaurants Agdal Fès adresses gastronomiques 2023 2024" → maroclovers.com, vanupied.com, riadsmorocco.com; Agdal has limited specific coverage
+[neighbourhood-Agdal] "Agdal Fez neighborhood restaurants food guide 2025" → anitasfeast.com, travelmoroccotoday.com, fez-guide.com, travelandlust.com
+[neighbourhood-Ziat] "restaurants Ziat Fès bonnes tables 2025 cuisine" → a-contresens.net, maroclovers.com, vanupied.com; Ziat has minimal specific coverage
+[neighbourhood-Ziat] "Ziat Fes restaurants where to eat 2023 2024" → wanderingstus.com, moroccotraveland.com, travelandlust.com; Palais Faraj/Star of Souafine noted in Ziat
+[neighbourhood-Dhar-Mehraz] "restaurants Dhar Mehraz Fès cuisine 2024 2025" → Hotel Sahrai (hotel restaurant, riad rule); nationalgeographic.com reappears
+[neighbourhood-Ain-Chkef] "restaurants Aïn Chkef Fès adresses recommandées 2023 2024" → eat.ma (listing), topmenu.ma (listing), festourism.org; no strong editorial candidates from Aïn Chkef
+[neighbourhood-Saiss] "restaurants Saïss Fès table gastronomique 2025 2026" → maroclovers.com, a-contresens.net; Saïss yields no specific restaurant editorial coverage
+[cross-1] "best restaurants in Fes Morocco food guide 2025 2026" → heerby.ma, travelmoroccotoday.com, moroccotravelguru.com, anitasfeast.com, maroclovers.com (EN)
+[cross-1] "where to eat in Fez Morocco local food recommendations 2023 2024" → nationalgeographic.com, anitasfeast.com, willflyforfood.net, travelandlust.com, svadore.com
+[cross-2] "meilleures tables Fès Maroc guide gastronomique 2025" → petitfute.co.uk, ousortir.ma, maroclovers.com, a-contresens.net, vanupied.com
+[cross-2] "restaurants typiques marocains Fès recommandations locales 2024" → guidedumaroc.fr, le360.ma, a-contresens.net, vanupied.com, afar.com
+[cross-2] "guide culinaire Fès bonnes adresses 2023 journaliste gastronomie" → le360.ma, festourism.org; no specific named journalist Fès guide found
+[cross-3] "critique gastronomique Fès Maroc article restaurant 2025" → a-contresens.net, vanupied.com, maroclovers.com; no new named-journalist sources
+[cross-3] "food writer Fez Morocco restaurant review article 2023 2024" → princeandhawker.com (Restaurant MB review, March 2024), travelandlust.com, svadore.com
+[cross-4] "best restaurants Morocco awards winners Fes 2024 2025" → worldculinaryawards.com (national winners, not Fes-specific); no Michelin coverage in Morocco confirmed
+[cross-4] "prix gastronomie Maroc Fès lauréats restaurants 2023 2024" → no Fes-specific prize/award guides found
+[cross-4] "Michelin Morocco Fes restaurant recognition guide 2025" → confirmed no Michelin stars in Morocco; Michelin exclusions: None (matches Part 1)
+[cross-5] "nouvelles ouvertures restaurants Fès 2025 2026" → Marriott hotel openings only; no independent new restaurant editorial found
+[cross-5] "new restaurant openings Fez Morocco 2024 2025" → roughguides.com (Fez culinary capital article), anitasfeast.com reappears, eva-darling.com
+[cross-7] "Moroccan traditional cuisine Fes fassi food culture restaurants 2023 2024" → anitasfeast.com, lonelyplanet.com (secondary), nationalgeographic.com (secondary), morocco-traveler.com, gomorocconow.com
+[cross-7] "cuisine fassi traditionnelle restaurant Fès 2025 gastronomie" → maroclovers.com, a-contresens.net (rejected), festourism.org; no new candidates
+[cross-8] "magazine gastronomie Maroc guide restaurants Fès 2024 2025" → Gault&Millau Morocco (first guide May 2026, not yet published); le360.ma, bestrestaurantsmaroc.com
+[cross-8] "presse Maroc supplement gastronomique restaurants Fès recommandé 2023" → maroclovers.com, bestrestaurantsmaroc.com (100 Best Restaurants Maroc reference); no new editorial sources
+[phase-1b-crossval] "Café Clock Fès recommandation critique restaurant avis" → TripAdvisor, Petit Futé only; no new editorial sources
+[phase-1b-crossval] "Ruined Garden restaurant Fès critique gastronomique recommandation" → thenotsoinnocentsabroad.com (new candidate); Fodor's (secondary)
+[phase-1b-crossval] "Ishq restaurant Fez Morocco food review recommendation" → anitasfeast.com (already in pool), maroclovers.com (already in pool); no new sources

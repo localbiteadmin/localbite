@@ -1,0 +1,93 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+CITY: Fes, Morocco
+YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: FR, AR
+SECONDARY_LANGUAGE: EN
+SINGLE_LANGUAGE_CITY: NO
+PRICE_CURRENCY: MAD (defaulted — not specified in Part 1)
+
+============================
+PART A — NEIGHBOURHOOD COVERAGE
+============================
+
+TIER_1: Fes el-Bali, Fes el-Jdid, Ville Nouvelle
+
+Fes el-Bali:
+  A1 (FR): "meilleurs restaurants médina Fès 2023 2024 guide gastronomique"
+  A2 (EN): "best restaurants Fes el-Bali medina 2025 dining guide"
+
+Fes el-Jdid:
+  A3 (FR): "restaurants Fès el-Jdid mellah adresses 2025 recommandations"
+  A4 (EN): "Fes el-Jdid dining where to eat restaurants 2023 2024"
+
+Ville Nouvelle:
+  A5 (FR): "restaurants Ville Nouvelle Fès 2024 meilleures tables"
+  A6 (EN): "Ville Nouvelle Fez restaurants best places to eat 2025 2026"
+
+TIER_2: Agdal, Ziat, Dhar Mehraz
+
+Agdal:
+  A7 (FR): "restaurants Agdal Fès adresses gastronomiques 2023 2024"
+  A8 (EN): "Agdal Fez neighborhood restaurants food guide 2025"
+
+Ziat:
+  A9 (FR): "restaurants Ziat Fès bonnes tables 2025 cuisine"
+  A10 (EN): "Ziat Fes restaurants where to eat 2023 2024"
+
+Dhar Mehraz:
+  A11 (FR): "restaurants Dhar Mehraz Fès cuisine 2024 2025"
+  A12 (EN): "Dhar Mehraz Fez food guide restaurants"
+
+TIER_3: Aïn Chkef, Saïss (FR only)
+
+  A13 (FR): "restaurants Aïn Chkef Fès adresses recommandées 2023 2024"
+  A14 (FR): "restaurants Saïss Fès table gastronomique 2025 2026"
+
+============================
+PART B — CROSS-CUTTING ANGLES
+============================
+
+Cross-1 (EN, city-wide, 2 queries):
+  B1 (EN): "best restaurants in Fes Morocco food guide 2025 2026"
+  B2 (EN): "where to eat in Fez Morocco local food recommendations 2023 2024"
+
+Cross-2 (FR, city-wide, 3 queries):
+  B3 (FR): "meilleures tables Fès Maroc guide gastronomique 2025"
+  B4 (FR): "restaurants typiques marocains Fès recommandations locales 2024"
+  B5 (FR): "guide culinaire Fès bonnes adresses 2023 journaliste gastronomie"
+
+Cross-3 (writer-first, 1 FR + 1 EN):
+  B6 (FR): "critique gastronomique Fès Maroc article restaurant 2025"
+  B7 (EN): "food writer Fez Morocco restaurant review article 2023 2024"
+
+Cross-4 (awards, generic — no NAMED_AWARDS defined):
+  B8 (EN): "best restaurants Morocco awards winners Fes 2024 2025"
+  B9 (FR): "prix gastronomie Maroc Fès lauréats restaurants 2023 2024"
+  B10 (EN): "Michelin Morocco Fes restaurant recognition guide 2025"
+
+Cross-5 (recent openings, 1 FR + 1 EN):
+  B11 (FR): "nouvelles ouvertures restaurants Fès 2025 2026"
+  B12 (EN): "new restaurant openings Fez Morocco 2024 2025"
+
+Cross-6: SKIP — LOCAL_FOOD_VOCABULARY not defined in Part 1
+
+Cross-7 (cuisine and community, 2 queries):
+  B13 (EN): "Moroccan traditional cuisine Fes fassi food culture restaurants 2023 2024"
+  B14 (FR): "cuisine fassi traditionnelle restaurant Fès 2025 gastronomie"
+
+Cross-8 (publication categories in FR, 2 queries):
+  B15 (FR): "magazine gastronomie Maroc guide restaurants Fès 2024 2025"
+  B16 (FR): "presse Maroc supplement gastronomique restaurants Fès recommandé 2023"
+
+============================
+YEAR DISTRIBUTION CHECK
+============================
+
+Earlier years referenced (2023-2024): A1, A4, A5, A7, A10, A13, B2, B4, B5, B7, B8, B9, B13, B16 = 14 queries
+Recent years referenced (2025-2026): A2, A3, A6, A8, A9, A11, A14, B1, B3, B6, B10, B11, B12, B14, B15 = 15 queries
+No year term: A12 = 1 query
+
+DISTRIBUTION CHECK: PASSED — 14 queries reference earlier years (2023-2024), 15 queries reference recent years (2025-2026), 1 query has no year term.
+
+Total planned queries: 30 (well within soft ceiling of 45)

@@ -1,0 +1,83 @@
+LOCALBITE AUDIT — Chefchaouen, Morocco
+Pipeline: localbite-v7.1
+Date: 2026-04-23
+Source: wanderingstus.com (Wandering Stus — Lauren Stuart & Jesse Stuart)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXTRACTION-TIME AUTO-REJECTIONS (quote quality failures)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Café Restaurant Marisco Twins | extraction-reject | name-only mention, no description or quote | src-wanderingstus-stuart
+BILMOS | extraction-reject | name-only mention, no description or quote | src-wanderingstus-stuart
+Good Ben Jaamae | extraction-reject | name-only mention, no description or quote | src-wanderingstus-stuart
+Sofia | extraction-reject | quote under 15 words ("Simple, but tasty local Moroccan cuisine" — 7 words, no specific dish) | src-wanderingstus-stuart
+Cafe Clock | extraction-reject | quote under 15 words ("Breakfast destination with great views" — 5 words, no specific dish detail) | src-wanderingstus-stuart
+Toda Creperie & Ice Cream | extraction-reject | brief descriptor only, dessert-focused venue | src-wanderingstus-stuart
+Restaurant Al Wiam | extraction-reject | brief descriptor only ("Top-ranked Moroccan restaurant" — 3 words) | src-wanderingstus-stuart
+Chez Foad | extraction-reject | brief descriptor only ("Authentic Moroccan family restaurant" — 4 words) | src-wanderingstus-stuart
+Restaurant Chourafa | extraction-reject | brief descriptor only ("Features fresh seafood and great hospitality" — 6 words, under 15 words) | src-wanderingstus-stuart
+
+Total extraction-time rejections: 9
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AUTO-REMOVED (recommended Tier B — UNATTENDED_MODE: YES)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Mester Juices at Veranda Cafe | Tier B | café-only / juice bar, not a restaurant | src-wanderingstus-stuart
+
+Total auto-removed: 1
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIER C AUTO-REJECTIONS (Phase 3)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+None.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONCENTRATION CAP DECISIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Wandering Stus contributes 100% of all Tier B entries (2/2 entries after auto-removal).
+30% cap cannot be applied without eliminating all entries.
+Decision: Documented as single-source structural characteristic of Chefchaouen source pool.
+Cap not applied.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GEOGRAPHIC EXCLUSIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+None.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+COI DISCLOSURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+None. Wandering Stus is an independent personal travel blog with no declared commercial relationships.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SOURCE POOL STRUCTURAL NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+FR diversity gate: NOT MET. 25+ searches including 8+ targeted FR supplementary queries found no FR-language food writing for Chefchaouen with qualifying named authors (full first name + surname) within 2023-2026. All identified FR candidates used first-name-only pseudonyms (Florence, Gwen, Alexandra) or predated the year range threshold. Structural characteristic.
+
+Culinary Backstreets: No Chefchaouen content found.
+The Culture Trip: 403 Forbidden; Wayback 451 blocked.
+Fodors.com: 403/Cloudflare blocked.
+Petit Futé: 403 CAPTCHA blocked.
+Nomadic Matt: 404 — no Chefchaouen restaurant page.
+
+Named-author rejection log:
+- Life in the Fast Jane (lifeinthefastjane.com): Oct 2024, author "Jane" only — no surname on About page or article. REJECTED.
+- Travel Morocco Today (travelmoroccotoday.com): Mar 2025, author "girlwiththepassport" — no full name disclosed. REJECTED.
+- The Blonde Abroad (theblondeabroad.com): author "Kiki" only — no surname on About page. REJECTED.
+- Reporter on the Road (reporterontheroad.com): Jul 2025, author "Florence" only — no surname on About page. REJECTED.
+- Rediscovering Emily (rediscovering-emily.com): Oct 2025, author "Emily" only — no surname. REJECTED.
+- Spirited Pursuit (spiritedpursuit.com): May 2017 — outside YEAR_RANGE. REJECTED.
+- Taverna Travels (tavernatravels.com): Apr 2020 — outside YEAR_RANGE. REJECTED.
+- Where Tara Went (wheretarawent.com): Jul 2019 — outside YEAR_RANGE. REJECTED.
+- 2 Cups of Travel (2cupsoftravel.com): Jun 2022 — outside YEAR_RANGE. REJECTED.
+- Cut the Fromage (cutthefromage.com): Nov 2022 — outside YEAR_RANGE. REJECTED.
+- The Culture Trip: 403 error. REJECTED.
+- Unique Travel Morocco: commercial travel company, no named author. REJECTED.
+- Sir Driver Tours: tour company. REJECTED.
+- Feel Morocco Travel: tour company, article dated 2014. REJECTED.
+- Not Just a Tourist: no named author, tour offerings noted. REJECTED.
+- Les Pauline: multi-author blog, Aug 2018 — outside YEAR_RANGE. REJECTED.
+- Dans la Valise de Gwen: no full author name, unclear date. REJECTED.
+- Morocco Marhaba: HTTP 400 error. REJECTED.
+- Mademoiselle Modeuse: Mar 2020 — outside YEAR_RANGE, no restaurant descriptions. REJECTED.
+- The Moroccan Compass: Oct 2025, no named author. REJECTED.
+- Marocnomades: author "Omar" only, article covers Morocco generally not Chefchaouen specifically. REJECTED.

@@ -1,0 +1,34 @@
+{
+  "pipeline": "localbite-v7.1",
+  "city": "Marrakesh",
+  "note": "Pre-removal snapshot — all Phase 2 passing entries before Phase 3 filtering. See localbite-marrakesh-working.json for full source-level entries with rejection flags.",
+  "pack_date": "2026-04-23",
+  "phase2_pass_count": 62,
+  "phase3_removed": [
+    {"name": "Café de France", "source": "src-bewilderedinmorocco-mizinskamomcilovic", "reason": "café-only/atmosphere-only quote"},
+    {"name": "Café des Épices", "source": "src-bewilderedinmorocco-mizinskamomcilovic", "reason": "café-only"},
+    {"name": "Comptoir Darna", "source": "src-blondieinmorocco-barcaite", "reason": "writer explicitly recommends for experience not food"},
+    {"name": "Baromètre", "source": "src-blondieinmorocco-barcaite", "reason": "bar-only"},
+    {"name": "68 Bar", "source": "src-blondieinmorocco-barcaite", "reason": "bar-only"},
+    {"name": "Shawarma Agha", "source": "src-marrakechmadame-durant", "reason": "null neighbourhood (Daoudiat not in canonical list)"},
+    {"name": "Bacha Coffee", "source": "src-midnightblueelephant-ziehen", "reason": "café/coffee house"},
+    {"name": "Cafe Kessabine", "source": "src-midnightblueelephant-ziehen", "reason": "café — atmosphere recommendation, no food quote"},
+    {"name": "Dar Dar Rooftop", "source": "src-anoushkaprobyn-probyn", "reason": "atmosphere/sunset-only quote"},
+    {"name": "Atay Cafe", "source": "src-anoushkaprobyn-probyn", "reason": "café-only"},
+    {"name": "Pétanque Social Club (blondie entry)", "source": "src-blondieinmorocco-barcaite", "reason": "writer lukewarm on food/value — timeout entry retained"}
+  ],
+  "phase2_auto_rejected": [
+    {"name": "Turkish Steakhouse", "source": "src-bewilderedinmorocco-mizinskamomcilovic", "reason": "14 words — under 15-word minimum"},
+    {"name": "Mizaan", "source": "src-timeout-hardykirby", "reason": "14 words — under 15-word minimum"},
+    {"name": "Le Loft", "source": "src-marrakechmadame-durant", "reason": "14 words — under 15-word minimum"},
+    {"name": "La Trattoria", "source": "src-marrakechmadame-durant", "reason": "12 words — under 15-word minimum"},
+    {"name": "Nobu Marrakech", "source": "src-marrakechmadame-durant", "reason": "13 words — under 15-word minimum"},
+    {"name": "+61", "source": "src-midnightblueelephant-ziehen", "reason": "12 words — under 15-word minimum"},
+    {"name": "Foundouk Gargaa", "source": "src-midnightblueelephant-ziehen", "reason": "14 words — under 15-word minimum"},
+    {"name": "El-Fenn", "source": "src-midnightblueelephant-ziehen", "reason": "RIAD_RULE — atmosphere-only quote, no food/dish detail"},
+    {"name": "Izza", "source": "src-midnightblueelephant-ziehen", "reason": "13 words + riad with insufficient quote length"},
+    {"name": "Nomad", "source": "src-anoushkaprobyn-probyn", "reason": "author did not dine — explicitly noted she did not eat there"}
+  ],
+  "final_restaurant_count": 42,
+  "both_pool_count": 5
+}

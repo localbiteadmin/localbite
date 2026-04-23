@@ -1,0 +1,27 @@
+[neighbourhood-Medina] "best restaurants Chefchaouen medina food guide 2023 2024" → lifeinthefastjane.com, travelmoroccotoday.com, tavernatravels.com, theculturetrip.com, wanderlog.com, uniquetravelmorocco.com identified; all pending verification
+[neighbourhood-Medina] "meilleurs restaurants Chefchaouen médina recommandations 2024" → Same EN candidates confirmed; petitfute.co.uk (FR) identified; notjustatourist.com identified
+[neighbourhood-Bab Ssour] "Chefchaouen Bab Ssour restaurants where to eat 2025" → wanderingstus.com newly identified; sirdrivertours.com (tour company) noted
+[neighbourhood-Bab Ssour] "Chefchaouen Bab Ssour restaurants manger 2025 2026" → babsour.com (restaurant's own site — not a source); no new candidates
+[neighbourhood-Plaza Uta el-Hammam] "Chefchaouen Plaza Uta el-Hammam restaurants dining review 2023 2024" → theculturetrip.com confirmed in results; sirdrivertours.com repeated
+[neighbourhood-Plaza Uta el-Hammam] "Plaza Uta el-Hammam Chefchaouen restaurants café guide 2025" → themoroccancompass.com identified; airial.travel (AI aggregator) excluded
+[neighbourhood-Ain Tissimane] "Chefchaouen Ain Tissimane restaurant food 2024 2025" → No dedicated coverage; chefchaouen-morocco.com, fodors.com noted
+[neighbourhood-Ras el-Maa] "Chefchaouen Ras el-Maa restaurant café waterfall 2025 2026" → Sightseeing results only; no qualifying food writer sources
+[cross-1] "guide gastronomique Chefchaouen où manger restaurants locaux 2024 2025" → petitfute.co.uk (FR) confirmed in results; chefchaouen.city noted
+[cross-1] "Chefchaouen cuisine marocaine restaurant recommandé 2023" → No new FR candidates beyond those already noted
+[cross-2] "Chefchaouen food guide best local restaurants to eat 2025 2026" → heerby.ma identified; fodors.com confirmed in results
+[cross-2] "where to eat Chefchaouen Morocco travel food recommendation 2023 2024" → wanderingstus.com confirmed prominent; theculturetrip.com, 2cupsoftravel.com identified
+[cross-2] "Chefchaouen restaurant review Moroccan food writer 2025" → 2cupsoftravel.com confirmed; no named food writer sources found
+[cross-3] "food writer guide eating Chefchaouen Morocco authentic restaurant 2024" → theblondeabroad.com, spiritedpursuit.com identified
+[cross-3] "blogueur gastronomique Chefchaouen restaurant article 2025" → theblondeabroad.com confirmed; spiritedpursuit.com confirmed; reporterontheroad.com (FR) identified
+[cross-4] "best restaurants Morocco awards 2024 2025 Chefchaouen" → No awards coverage; same commercial candidates repeated
+[cross-4] "meilleur restaurant Maroc classement guide Chefchaouen 2023 2024" → No FR award sources found
+[cross-4] "Chefchaouen Morocco restaurant recommended award listed 2025 2026" → uniquetravelmorocco.com (commercial) and tavernatravels.com repeated; no new
+[cross-5] "new restaurant opening Chefchaouen Morocco 2024 2025" → No new openings coverage; established sources repeated
+[cross-5] "nouveau restaurant ouverture Chefchaouen 2025 2026" → No FR new openings content found
+[cross-7] "Chefchaouen traditional Moroccan tagine restaurant Rif mountain food guide 2023 2024" → heerby.ma, themoroccancompass.com confirmed
+[cross-7] "Chefchaouen vegetarian vegan food restaurant Morocco travel 2025" → cutthefromage.com, wheretarawent.com identified; thesunrisedreamers.com noted (national-level, not city-specific)
+[cross-8] "magazine gastronomique indépendant Chefchaouen restaurant 2024 2025" → petitfute.co.uk (403 blocked); no independent food magazine found
+[cross-8] "Chefchaouen Morocco best restaurants 2023 travel blog named author recommendation" → rediscovering-emily.com, spiritedpursuit.com confirmed; no new qualifiers
+[stopping-rule] triggered after 25 planned queries + supplementary searches — last 12 consecutive queries returned no new qualifying sources
+[phase-1b-crossval] "Bab Ssour Chefchaouen restaurant review recommendation food writer" → TripAdvisor and aggregator reviews only; no new qualifying sources identified
+[year-distribution-check] PASSED — 11 queries reference earlier years (2023–2024), 14 queries reference later years (2025–2026), remaining queries have no year term

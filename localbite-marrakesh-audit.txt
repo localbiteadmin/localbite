@@ -1,0 +1,152 @@
+LocalBite Pipeline Audit — Marrakesh, Morocco
+v7.1 | Pack date: 2026-04-23 | Year range: 2023-2026
+════════════════════════════════════════════════════
+
+PHASE 0
+-------
+SKIPPED — Part 1 specifies PHASE_0_SOURCES (publication names) but no DIRECT_FETCH_SOURCES
+(specific article URLs). Template requires URLs for Phase 0 direct fetch. Phase 0 correctly
+skipped; publications folded into Phase 1 search pool.
+
+PHASE 1 — SOURCE SELECTION
+---------------------------
+Search plan: 35 queries (19 neighbourhood, 16 cross-cutting; Cross-6 SKIPPED — LOCAL_FOOD_VOCABULARY blank)
+Year distribution: 18 earlier (2023-2024), 16 later (2025-2026), 1 spans both — PASSED
+Phase 1B cross-validation: 3 queries run on top-mentioned restaurants (Nomad, La Trattoria, +61)
+  → hellofarrah.com rejected (article date 2016, outside YEAR_RANGE)
+  → No new qualifying sources found via cross-validation
+
+CONFIRMED SOURCES (6):
+  [primary EN]  src-blondieinmorocco-barcaite     — Rasa Barcaite, Blondie in Morocco (undated/~Nov 2025)
+  [primary EN]  src-bewilderedinmorocco-mizinskamomcilovic — Monika Mizińska-Momčilović, Bewildered in Morocco (2025-02-07)
+  [primary FR]  src-marrakechmadame-durant         — Camille Durant, Marrakech Madame (2026-02-03)
+  [secondary EN] src-timeout-hardykirby            — Paula Hardy & Sally Kirby, Time Out Marrakech (2025-02-25)
+  [primary EN]  src-midnightblueelephant-ziehen    — Annika Ziehen, The Midnight Blue Elephant (undated/~Jan 2026)
+  [primary EN]  src-anoushkaprobyn-probyn          — Anoushka Probyn (2024-09-23)
+
+DIVERSITY GATE:
+  Primary FR/AR source: ✓ (Marrakech Madame — FR)
+  Primary EN source: ✓ (Blondie in Morocco, Bewildered in Morocco, Midnight Blue Elephant, Anoushka Probyn)
+  Secondary cap (≤2): ✓ (1 secondary — Time Out Marrakech)
+
+PUBLISHER CONCENTRATION: No publisher contributes 2+ articles — no flag triggered.
+COI CHECK: All 6 sources — no commercial conflict identified.
+
+REJECTED SOURCES (notable):
+  — conversanttraveller.com (Heather Cowper): article dated 2017 — outside YEAR_RANGE → REJECTED
+  — culinarybackstreets.com: listed in Part 1 SECONDARY_SOURCES but no Marrakesh content (404) → SKIPPED
+  — luxe-infinity-maroc.com: article URL returned 404 → DROPPED
+  — tara-stevens / furthermag: all Marrakech articles from 2018-2021 — outside YEAR_RANGE → REJECTED
+  — hellofarrah.com (cross-validation): article dated 2016 → REJECTED
+
+SINGLE-AUTHOR SITE CONFIRMATIONS (About page, full first + surname):
+  — blondieinmorocco.com: Rasa Barcaite ✓
+  — bewilderedinmorocco.com: Monika Mizińska-Momčilović ✓
+  — midnightblueelephant.com: Annika Ziehen ✓
+  — anoushkaprobyn.com: Anoushka Probyn ✓
+
+PHASE 2 — EXTRACTION
+---------------------
+Total entries extracted across 6 sources: 72
+  bewilderedinmorocco: 7 (6 pass + 1 auto_reject)
+  timeout: 10 (9 pass + 1 auto_reject)
+  blondieinmorocco: 17 (all pass — bars/removals handled in Phase 3)
+  marrakechmadame: 12 (8 pass + 3 auto_reject + 1 geo_excluded)
+  midnightblueelephant: 18 (14 pass + 4 auto_reject)
+  anoushkaprobyn: 8 (7 pass + 1 auto_reject)
+Phase 2 passing: 62
+
+AUTO-REJECTIONS (10 total):
+  Turkish Steakhouse (bewilderedinmorocco): 14 words — under minimum
+  Mizaan (timeout): 14 words — under minimum
+  Le Loft (marrakechmadame): 14 words — under minimum
+  La Trattoria [marrakechmadame entry] (marrakechmadame): 12 words — under minimum
+  Nobu Marrakech (marrakechmadame): 13 words — under minimum
+  +61 [midnightblue entry] (midnightblueelephant): 12 words — under minimum
+  Foundouk Gargaa (midnightblueelephant): 14 words — under minimum
+  El-Fenn (midnightblueelephant): RIAD_RULE — atmosphere-only quote, no food/dish detail
+  Izza (midnightblueelephant): 13 words + riad — fails both minimum and RIAD_RULE
+  Nomad [anoushkaprobyn entry] (anoushkaprobyn): author explicitly did not dine
+
+RIAD_RULE APPLICATIONS:
+  Dar Yacout: "multi-course gastronomic Moroccan diffa feast... musicians playing the oud" — specific dishes ✓ PASS
+  Sesamo Royal Mansour: "The gnocchetti were extra light and fluffy yet rich and earthy thanks to the beetroot" — specific dish ✓ PASS
+  Le Marocain Mamounia: "pastilla filled with lobster and meatballs with foie gras. The couscous was flaky AND buttery" — specific dishes ✓ PASS
+  Le Jardin Royal Mansour: "beautiful gardens... lots of fish and seafood options" — borderline (atmosphere-heavy); writer lists 6 specific dishes in article context → PASS
+  Le Table du Souk La Sultana: "Moroccan flavours and local producers... inspired by the Market and Moroccan street food" — food recommendation ✓ PASS
+  El-Fenn: "Rooftop bar feels like entering cool kids' corner with Koutoubia Mosque and Atlas Mountains views" — atmosphere-only, no dish → FAIL → auto_reject
+  Izza: 13-word quote → fails minimum before RIAD_RULE even applies → auto_reject
+
+GEOGRAPHIC EXCLUSION:
+  Chof d'Or (marrakechmadame): explicitly located in M'Hamid — outside Marrakesh city → excluded
+  Shawarma Agha (marrakechmadame): Daoudiat — not in canonical neighbourhood list → Phase 3 null-neighbourhood removal
+  Pasta Cozy (blondieinmorocco): Palmeraie — in GEOGRAPHIC_BOUNDARY_EXCLUDE; quote is atmosphere-only, no food detail → Phase 2 excluded
+
+OPEN STATUS CHECK:
+  src-anoushkaprobyn-probyn (article_date: 2024-09-23, pre-2025): ALL 7 entries from this source have open_status_check: true
+
+PHASE 3 — ASSEMBLY AND REVIEW
+-------------------------------
+Phase 3 removals (10 entries removed from 62 Phase 2 passing):
+  Café de France: café-only/atmosphere-only quote
+  Café des Épices: café-only
+  Comptoir Darna: writer explicitly recommends "for the experience and the show, not the food"
+  Baromètre: bar-only (underground cocktail bar)
+  68 Bar: bar-only (name confirms)
+  Shawarma Agha: null neighbourhood (Daoudiat)
+  Bacha Coffee: café/coffee house
+  Cafe Kessabine: café — atmosphere recommendation, no food quote despite having food
+  Dar Dar Rooftop: atmosphere/sunset-only quote, no food detail
+  Atay Cafe: café-only
+
+Phase 3 source drops (not restaurant removals):
+  Pétanque Social Club (blondieinmorocco entry): writer lukewarm on food/value
+    → restaurant KEPT using timeout entry (positive quote: "pizza and fab fusion food beneath magnolia tree")
+
+DEDUPLICATION MERGES:
+  L'Mida: bewilderedinmorocco + midnightblueelephant → 1 entry (2 EN sources)
+  Amal/Amal Centre: blondieinmorocco + timeout → 1 entry
+  +61/Plus61: timeout + marrakechmadame → 1 entry [BOTH-POOL: EN + FR]
+  Dar Yacout: timeout + marrakechmadame → 1 entry [BOTH-POOL: EN + FR]
+  Nomad: timeout + marrakechmadame + midnightblueelephant → 1 entry [BOTH-POOL: EN + FR]
+  Al Fassia: blondieinmorocco + marrakechmadame → 1 entry [BOTH-POOL: EN + FR]
+  La Trattoria: blondieinmorocco + anoushkaprobyn → 1 entry (2 EN primary sources)
+  Le Jardin (Medina): marrakechmadame + midnightblueelephant → 1 entry [BOTH-POOL: FR + EN]
+
+CONCENTRATION CAP CHECK (30%):
+  blondieinmorocco sole-source entries: 10/42 = 23.8% ✓ under cap
+  midnightblueelephant sole-source entries: 9/42 = 21.4% ✓ under cap
+  No single source triggers concentration flag.
+
+FINAL DATASET:
+  Total unique restaurants: 42
+  Both-pool: 5 (+61, Dar Yacout, Nomad, Al Fassia, Le Jardin [Medina])
+  Riad/hotel: 5 (Dar Yacout, Sesamo Royal Mansour, Le Marocain Mamounia, Le Jardin Royal Mansour, Le Table du Souk La Sultana)
+  Confidence A: 22
+  Confidence B: 20
+  Confidence C: 0
+
+NEIGHBOURHOOD DISTRIBUTION:
+  Medina: 20 restaurants (L'Mida, Chez Lamine, Le Tanjia, Dar Yacout, Nomad, Naranj, Le Foundouk, Le Jardin, Le Trou Au Mur, La Famille, Le Slimana, Terrace des Épices, Limoni, Cafe Clock, Le Salama, Folk Marrakech, Les Jardins du Lotus, Pétanque Social Club, Maison Reine)
+  Gueliz: 18 restaurants (Chez Mmima, Sahbi Sahbi, Farmers, +61, Amal, Chez Bejguenni, Chez Ouazzani, Grand Café de la Poste, Espace Fruits Othmane, Al Fassia, La Trattoria, Entrepotes, Épicurien, La Taverna, Casa Jose Marrakech, laÔ Marrakech, Les Jardins de Guéliz, Beldi Fusion, Meat Grill Marrakech)
+  Hivernage: 3 restaurants (Sesamo Royal Mansour, Le Marocain Mamounia, Le Jardin Royal Mansour)
+  Bab Doukkala: 1 restaurant (Maison Reine)
+  Kasbah: 1 restaurant (Le Table du Souk La Sultana)
+
+  [Note: Pétanque Social Club was listed as Medina (timeout) and Gueliz (blondie). Timeout's neighbourhood listed as Medina near Bab Doukkala; address (70 Bd el Mansour Eddahbi) is in Gueliz. Listed as Gueliz in final JSON.]
+
+UNATTENDED MODE DECISIONS:
+  All Phase 3 bars/cafés: auto-removed (consistent with pipeline bar/café filter)
+  Comptoir Darna: auto-removed (writer actively anti-recommends for food)
+  Pétanque Social Club (blondie entry): blondie source dropped, timeout source retained
+  Cafe Clock: KEPT despite café name — writer recommends specific dish (camel burger) + cultural program
+  All RIAD_RULE passes: auto-accepted
+  La Taverna (blondie): KEPT despite lukewarm tone — passes all mechanical criteria
+
+MICHELIN NOTE:
+  Michelin Guide does not cover Morocco. No starred exclusions apply.
+
+SEARCH LOG:
+  See localbite-marrakesh-search-log.txt (41 queries logged)
+════════════════════════════════════════════════════
+END AUDIT

@@ -1,0 +1,46 @@
+LocalBite Pipeline — Rabat, Morocco
+Failed Sources Log — v7.1 — 2026-04-23
+────────────────────────────────────────────────────────────────────────
+
+PHASE 0 — DIRECT FETCH SOURCES
+────────────────────────────────────────────────────────────────────────
+Not applicable — DIRECT_FETCH_SOURCES blank in Part 1. Phase 0 skipped.
+
+PHASE 0_SOURCES — checked but not direct-fetch
+────────────────────────────────────────────────────────────────────────
+lavieeco.com — no Rabat restaurant content found → FAILED
+telquel.ma — no restaurant content for Rabat → FAILED
+leconomiste.com — no Rabat restaurant feature content confirmed → FAILED
+yabiladi.com — no restaurant content for Rabat → FAILED
+
+PHASE 1 — CANDIDATES REJECTED AT QUALITY EVALUATION
+────────────────────────────────────────────────────────────────────────
+willflyforfood.net — no named author found in article or About page → REJECTED
+marocmama.com — article dated January 5, 2021, outside year range 2023-2026 → REJECTED (date)
+themodtraveller.com (Jacqueline Mendelsohn) — article dated November 7, 2022, outside year range 2023-2026 → REJECTED (date)
+majourneys.ma — no named author → REJECTED
+goodmove.ma — no named author → REJECTED
+maroclovers.com — author "Myriam" only, no surname confirmed → REJECTED (initials/first-name-only rule)
+feries.ma — no named author → REJECTED
+travelmoroccotoday.com — author "Kelly" only, no confirmed surname → REJECTED (initials/first-name-only rule)
+heerby.ma — "Heerby Team" collective byline → REJECTED
+gillespudlowski.com — Rabat articles dated 2010-2011, outside year range → REJECTED (date)
+marocvoyagedereve.com — no named author → REJECTED
+dinesurf.com — 404 error → FAILED
+macooking.com — 404 error → FAILED
+aemagazine.ma — "la rédaction" collective byline → REJECTED
+femmesdumaroc.com — no named author → REJECTED
+petitfute.co.uk — 403 Forbidden / CAPTCHA blocked → FAILED (access blocked)
+culinarybackstreets.com — 404 for /cities-2/rabat/ — no Rabat city guide exists → FAILED
+timeout.com/rabat — not verified (no evidence of existence for Rabat) → SKIPPED
+mapetitemaisonmaroc.com — not verified (no named-author Rabat content found in search results) → SKIPPED
+hespress.com — not verified (no named-author restaurant content for Rabat found) → SKIPPED
+
+SOURCES CONFIRMED — 2
+────────────────────────────────────────────────────────────────────────
+artandthensome.com — Cedric Moris — EN — 18,500 chars — good — found via phase-1 → ACCEPTED
+mwnlifestyle.com — Ihab Ou-ouda — EN — 2,800 chars — partial — found via phase-1b-crossval → ACCEPTED
+
+STRUCTURAL NOTES
+────────────────────────────────────────────────────────────────────────
+Rabat named-author food writing within 2023-2026 is structurally thin. After 35 planned queries + 8+ supplementary diversity gate searches, only 2 qualifying sources were identified. No named-author FR/AR sources exist within the year range for this city. This is consistent with Part 1 source strategy assessment ("Rabat food writing is thinner than Marrakesh or Casablanca"). Michelin does not cover Morocco.

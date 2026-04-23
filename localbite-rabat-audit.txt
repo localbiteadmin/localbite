@@ -1,0 +1,67 @@
+LocalBite Pipeline — Rabat, Morocco
+Audit Log — v7.1 — 2026-04-23
+────────────────────────────────────────────────────────────────────────
+
+EXTRACTION-TIME REJECTIONS (Quote Quality) — 1 entry
+────────────────────────────────────────────────────────────────────────
+Picolo's | extraction-reject | Quote under 15 words with no specific detail — "Picolo's is the kind of place we keep in our back pocket for an easy, elegant meal" (17 words but no dish name, chef name, physical description, price, year, or neighbourhood) | src-artandthensome-moris
+
+AUTO-REJECTED (Tier C) — 0 entries
+────────────────────────────────────────────────────────────────────────
+None. All entries with fetch failures were excluded at Phase 1 evaluation.
+
+AUTO-REMOVED (Recommended Tier B — UNATTENDED_MODE: YES) — 5 entries
+────────────────────────────────────────────────────────────────────────
+Jazz Bar Tour Hassan Palace | Tier B | Bar-only — piano bar/lounge with cocktails and tapas; not a restaurant; auto-removed per template rule | src-artandthensome-moris
+
+Le Laurier | Tier B | Hotel restaurant (Tour Hassan Palace Hotel); quote is atmosphere-focused with no specific food detail ("we might accidentally stay all afternoon") — RIAD_RULE applied; auto-removed | src-artandthensome-moris
+
+Riad Dar Chrifa Restaurant | Tier B | Riad restaurant; quote describes courtyard and ambience rather than specific dishes ("bright courtyards, carved arches, traditional details, and a calm") — RIAD_RULE applied; auto-removed | src-artandthensome-moris
+
+Golden Fish | Tier B | Hotel restaurant (probable Sofitel property); quote is atmosphere-focused ("one of the prettiest dining rooms in Rabat, full stop") with no dish-level food detail — RIAD_RULE applied; auto-removed | src-artandthensome-moris
+
+L'Oursin | Tier B | Geographic ambiguity — article describes as "on the Atlantic" and "30 minutes from city centre"; consistent with Témara coastal location, which is in GEOGRAPHIC_BOUNDARY_EXCLUDE (separate city to the south); auto-removed | src-artandthensome-moris
+
+CONCENTRATION CAP — STRUCTURAL (formally inapplicable)
+────────────────────────────────────────────────────────────────────────
+artandthensome.com contributes 4 of 5 final entries as single-source Tier B (80% of total; 100% of Tier B). Standard 30% cap formula requires N/(N+1) ≤ 0.30, which with a 2-source pool (N = 4 Tier B entries) cannot be satisfied without reducing to 0 Tier B entries entirely. Cap formally inapplicable in 2-source structural pool. Resolution: quality-based removals applied first (RIAD_RULE, bar-only, geographic ambiguity), retaining 4 highest-quality non-flagged Tier B entries. Supplementary searches (8+) confirmed no alternative qualifying named-author sources available for Rabat within 2023-2026. Documented as structural characteristic.
+
+DIVERSITY GATE — STRUCTURAL FAILURE
+────────────────────────────────────────────────────────────────────────
+PRIMARY_LANGUAGE (FR/AR) diversity gate not met after 8+ supplementary targeted searches.
+
+PHASE_0_SOURCES checked:
+  lavieeco.com — no Rabat restaurant content found
+  telquel.ma — no restaurant content for Rabat
+  leconomiste.com — no Rabat restaurant feature content confirmed
+  yabiladi.com — no restaurant content for Rabat
+
+Named critics checked:
+  Gilles Pudlowski (gillespudlowski.com) — Rabat articles dated 2010-2011, outside year range
+
+Other FR/AR candidates evaluated:
+  majourneys.ma, goodmove.ma, maroclovers.com, marocvoyagedereve.com, feries.ma,
+  aemagazine.ma, femmesdumaroc.com — all rejected: no named author or collective byline
+
+Conclusion: No qualifying named-author FR/AR source covering Rabat restaurants within 2023-2026 found. Documented as structural characteristic. Rabat food writing in FR/AR is overwhelmingly anonymous or team-bylined. Part 1 source strategy anticipated this gap ("Rabat food writing is thinner than Marrakesh or Casablanca").
+
+BOTH-POOL STATUS
+────────────────────────────────────────────────────────────────────────
+both-pool: 0 entries. Marea appears in 2 independent sources (artandthensome.com and mwnlifestyle.com), both confirmed as different publishers with no shared ownership or licensing. However, both sources are EN-language only — no cross-language pool qualification applies. language_pool = "en" for Marea.
+
+COI DISCLOSURES
+────────────────────────────────────────────────────────────────────────
+artandthensome.com (Cedric Moris) — commercial conflict: NO
+mwnlifestyle.com (Ihab Ou-ouda) — commercial conflict: NO
+
+GEOGRAPHIC EXCLUSIONS
+────────────────────────────────────────────────────────────────────────
+L'Oursin — excluded as geographic ambiguity: described as Atlantic coast location 30 minutes from city centre; probable Témara coastal area (GEOGRAPHIC_BOUNDARY_EXCLUDE: separate city to the south).
+
+No restaurants from Salé (separate municipality across Bouregreg) or Kenitra found in sources.
+
+NOTE ON ARTICLE_URL FIELDS
+────────────────────────────────────────────────────────────────────────
+article_url values for both sources were constructed from article titles and publication URL patterns following context compaction. Exact fetch URLs from Jina verification (Phase 1/1B) were recorded in the pre-compaction session context but are no longer retrievable. Recommend verifying both article_url values against live pages before deployment:
+  src-artandthensome-moris: https://www.artandthensome.com/where-to-eat-in-rabat-morocco/
+  src-mwnlifestyle-ououda: https://www.mwnlifestyle.com/marea-rabat-fresh-market-driven-seafood-in-the-heart-of-hassan/

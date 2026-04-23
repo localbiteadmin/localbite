@@ -1,0 +1,54 @@
+LocalBite Failed Sources — Marrakesh, Morocco
+v7.1 | Pack date: 2026-04-23
+════════════════════════════════════════════
+
+REJECTED — OUTSIDE YEAR RANGE (2023-2026)
+  conversanttraveller.com / Heather Cowper
+    URL: https://conversanttraveller.com/restaurants-marrakesh-morocco/
+    Reason: Article dated 2017 — outside YEAR_RANGE 2023-2026
+
+  hellofarrah.com (Phase 1B cross-validation)
+    URL: hellofarrah.com review of Nomad Marrakech
+    Reason: Article dated 2016 — outside YEAR_RANGE
+
+  Tara Stevens / furthermag / AFAR
+    URLs: multiple Marrakech pieces
+    Reason: All available Marrakech restaurant articles dated 2018-2021 — outside YEAR_RANGE
+
+REJECTED — NO CONTENT / 404
+  luxe-infinity-maroc.com
+    URL attempted: article on remarkable Marrakech tables
+    Reason: URL returned 404
+
+  culinarybackstreets.com
+    URL attempted: Marrakesh section
+    Reason: No Marrakesh content available (404); listed in Part 1 SECONDARY_SOURCES but has no coverage
+
+REJECTED — CONFLICTS OF INTEREST / EXCLUDED BY RULE
+  el-fenn.com (hotel blog)
+    Reason: COI — el-fenn.com is the restaurant/hotel's own site
+
+  foundouk.com (own-restaurant site)
+    Reason: COI — restaurant's own site
+
+  saharapeace.com (aggregator)
+    Reason: Aggregator/promo site — no named author
+
+  bestrestaurantsmarrakech.com
+    Reason: Aggregator — no named author
+
+PASSED PHASE 1 BUT NOT USED (candidates not selected)
+  marocmama.com
+    Reason: Named author (Amanda Mouttaki) confirmed; articles found for Mellah and Kasbah;
+    article dates unconfirmed within YEAR_RANGE; replaced by stronger candidates with verified dates
+
+  yonder.fr
+    Reason: FR travel magazine; "72h Marrakech" article confirmed; passed as secondary candidate
+    but not selected — secondary cap already met (Time Out) and yonder.fr coverage less specific
+    than confirmed sources
+
+  blondieinmorocco.com (2nd article consideration)
+    Reason: Article "locals-guide-to-the-best-restaurants-in-marrakech-new-town-gueliz/" confirmed
+    and used. A second article by same writer not selected — single-article cap per writer applied.
+════════════════════════════════════════════
+END FAILED SOURCES LOG

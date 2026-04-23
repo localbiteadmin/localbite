@@ -1,0 +1,122 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LocalBite Pipeline — Rabat, Morocco
+Search Plan — v7.1 — 2026-04-23
+
+CITY: Rabat | COUNTRY: Morocco | YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: FR, AR | SECONDARY_LANGUAGE: EN
+
+════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════
+
+TIER 1 — Medina, Agdal, Hassan, Ville Nouvelle
+(2 queries each: 1 FR + 1 EN)
+
+[neighbourhood-Medina]
+  A-01 [FR, earlier] "restaurants Medina Rabat recommandés 2023 2024"
+  A-02 [EN, later]   "best restaurants Medina Rabat 2025 2026 guide"
+
+[neighbourhood-Agdal]
+  A-03 [FR, later]   "restaurants Agdal Rabat guide gastronomique 2025"
+  A-04 [EN, earlier] "where to eat Agdal Rabat 2023 2024 recommendations"
+
+[neighbourhood-Hassan]
+  A-05 [FR, earlier] "meilleurs restaurants quartier Hassan Rabat 2023 gastronomie"
+  A-06 [EN, later]   "restaurants Hassan neighbourhood Rabat 2025 food guide"
+
+[neighbourhood-Ville-Nouvelle]
+  A-07 [FR, later]   "restaurants Ville Nouvelle Rabat bons plans 2025 2026"
+  A-08 [EN, earlier] "eating in Ville Nouvelle Rabat restaurant recommendations 2023 2024"
+
+TIER 2 — Souissi, Hay Riad, Aviation, Océan
+(2 queries each: 1 FR + 1 EN)
+
+[neighbourhood-Souissi]
+  A-09 [FR, later]   "restaurants Souissi Rabat gastronomie 2025"
+  A-10 [EN, earlier] "best restaurants Souissi Rabat 2023 2024 guide"
+
+[neighbourhood-Hay-Riad]
+  A-11 [FR, earlier] "restaurants Hay Riad Rabat recommandations 2023 2024"
+  A-12 [EN, later]   "restaurants Hay Riad Rabat food 2025"
+
+[neighbourhood-Aviation]
+  A-13 [FR, earlier] "restaurants quartier Aviation Rabat 2023"
+  A-14 [EN, later]   "where to eat Aviation Rabat 2025 recommendations"
+
+[neighbourhood-Océan]
+  A-15 [FR, later]   "restaurants Océan Rabat bord de mer 2025"
+  A-16 [EN, earlier] "seafood restaurants Océan Rabat 2023 2024 guide"
+
+TIER 3 — Akkari, Youssoufia, Madinat Al Irfane
+(1 query each: FR only)
+
+[neighbourhood-Akkari]
+  A-17 [FR]          "restaurants Akkari Rabat adresses 2024"
+
+[neighbourhood-Youssoufia]
+  A-18 [FR]          "restaurants Youssoufia Rabat 2023"
+
+[neighbourhood-Madinat-Al-Irfane]
+  A-19 [FR]          "restaurants Madinat Al Irfane Rabat 2025"
+
+PART A TOTAL: 19 queries
+
+════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries, 1 earlier + 1 later)
+  B-20 [EN, later]   "best restaurants in Rabat Morocco food guide 2025 2026"
+  B-21 [EN, earlier] "where to eat in Rabat Morocco local recommendations 2023 2024"
+
+Cross-2 — City-wide FR (3 queries, at least 1 earlier)
+  B-22 [FR, later]   "meilleurs restaurants Rabat Maroc critique gastronomique 2025"
+  B-23 [FR, earlier] "adresses incontournables restaurants Rabat 2023 2024 gastronomie"
+  B-24 [FR, no year] "guide restaurant Rabat journaliste culinaire recommandation"
+
+Cross-3 — Generic writer-first (2 queries, 1 earlier + 1 later)
+  B-25 [EN, later]   "food writer review restaurant Rabat Morocco 2025"
+  B-26 [FR, earlier] "chroniqueur gastronomie Rabat Maroc article restaurant 2023 2024"
+
+Cross-4 — Named awards / generic (NAMED_AWARDS blank → 1 EN + 1 FR + 1 Michelin)
+  B-27 [EN, later]   "best restaurant awards Rabat Morocco 2025 winners recognition"
+  B-28 [FR, earlier] "prix meilleur restaurant Rabat Maroc palmarès 2023 2024"
+  B-29 [FR, both]    "Michelin guide Maroc restaurant recommandé 2024 2025"
+
+Cross-5 — Recent openings (2 queries, 1 earlier + 1 later)
+  B-30 [FR, later]   "nouvelles ouvertures restaurants Rabat 2025 2026"
+  B-31 [EN, earlier] "new restaurant openings Rabat Morocco 2023 2024"
+
+Cross-6 — LOCAL_FOOD_VOCABULARY blank → SKIPPED
+
+Cross-7 — Cuisine and community (2 queries, 1 earlier + 1 later)
+  B-32 [FR, later]   "cuisine marocaine traditionnelle Rabat restaurant authentique 2025"
+  B-33 [EN, earlier] "Moroccan traditional cuisine restaurant Rabat authentic 2023 2024"
+
+Cross-8 — Publication category FR (2 queries, 1 earlier + 1 later)
+  B-34 [FR, earlier] "magazine gastronomique indépendant Rabat Maroc restaurant 2023 2024"
+  B-35 [FR, later]   "supplément gastronomie journal Rabat Maroc bonnes tables 2025"
+
+PART B TOTAL: 16 queries
+
+GRAND TOTAL: 35 queries (soft ceiling 45, hard ceiling 55)
+
+════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════
+
+Queries referencing earlier years (2023, 2023-2024):
+  A-01, A-04, A-05, A-08, A-10, A-11, A-13, A-16, A-18, B-21, B-23, B-26, B-28, B-31, B-33, B-34
+  Count: 16
+
+Queries referencing later years (2025, 2025-2026):
+  A-02, A-03, A-06, A-07, A-09, A-12, A-14, A-15, A-19, B-20, B-22, B-27, B-29, B-30, B-32, B-35
+  Count: 16
+
+Queries with no year term:
+  B-24, B-25 (2025 = later), B-27 (later)
+  No year: B-24
+  Count: 1
+
+[year-distribution-check] PASSED — 16 queries reference earlier years (2023–2024), 16 queries reference later years (2025–2026), 1 query has no year term. Distribution is balanced and meets all angle rules.
