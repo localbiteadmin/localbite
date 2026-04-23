@@ -1,0 +1,72 @@
+# LocalBite Pipeline — Part 1: Bilbao
+# v7.1 — 2026-04-23
+
+CITY:             Bilbao
+COUNTRY:          Spain
+CITY_SLUG:        bilbao-spain
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: ES, EU
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Bilbao's pintxos culture is centred in Casco Viejo (old town) on Calle del Licenciado
+# Poza and the streets around Plaza Nueva. Ensanche (Abando) is the bourgeois
+# dining district with higher-end restaurants. Indautxu has strong neighbourhood
+# dining. Deusto (university area) has casual dining. San Mamés is the stadium area.
+# Basque (Euskara) language sources are valid primary sources alongside ES.
+
+TIER_1_NEIGHBOURHOODS: Casco Viejo, Ensanche, Indautxu
+TIER_2_NEIGHBOURHOODS: San Mamés, Deusto, Amézola, Basurto
+TIER_3_NEIGHBOURHOODS: Rekalde, Otxarkoaga, Txurdinaga, Begoña
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Casco Viejo, Ensanche (Abando), Indautxu, San Mamés, Deusto,
+  Amézola, Basurto, Rekalde, Begoña, Santutxu
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Getxo (separate municipality, Las Arenas — different food scene),
+  San Sebastián / Donostia (separate city 100km east — different food scene),
+  Vitoria-Gasteiz (separate city), Guernica/Gernika,
+  Barakaldo, Sestao (separate municipalities in Greater Bilbao metro)
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  Mina (1★, Álvaro Garrido), Etxanobe Atelier (1★, Fernando Canales),
+  Nerua (1★, Josean Alija — in Guggenheim Museum)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Bilbao food writing is primarily ES with some EU (Euskara). EN coverage
+# exists due to Guggenheim tourism but is mostly travel-facing.
+# El Correo is the main Basque Country newspaper. Deia is the other major paper.
+# Both-pool possible with independent EN food writers alongside ES/EU press.
+# Pintxos bars are the core of Bilbao food culture — ensure pipeline captures
+# bar/pintxos recommendations alongside full-service restaurants.
+
+PHASE_0_SOURCES:
+  - elcorreo.com (ES — main Basque Country newspaper, food section)
+  - deia.eus (ES/EU — Basque nationalist newspaper, food coverage)
+  - guiarepsol.com (ES — Repsol guide, search Bilbao entries)
+  - eitb.eus (ES/EU — Basque public broadcaster, gastronomy section)
+
+SECONDARY_SOURCES:
+  - elpais.com/gastronomia (ES — El Comidista / El País, search Bilbao features)
+  - bonviveur.es (ES — national food platform, search Bilbao guide)
+  - timeout.com/bilbao (EN — verify named author and recency)
+  - theinfatuation.com (EN — search Bilbao guide if exists)
+  - basquecountry.eus (EN — tourism board adjacent — verify editorial independence)
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-bilbao-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-bilbao-search-log.txt
+OUTPUT_WORKING:        localbite-bilbao-working.json
+OUTPUT_RAW:            localbite-bilbao-raw.json
+OUTPUT_FINAL:          localbite-bilbao-2023-2026.json
+OUTPUT_AUDIT:          localbite-bilbao-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-bilbao-failed-sources.txt

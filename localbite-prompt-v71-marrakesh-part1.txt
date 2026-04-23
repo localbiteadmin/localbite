@@ -1,0 +1,70 @@
+# LocalBite Pipeline — Part 1: Marrakesh
+# v7.1 — 2026-04-23
+
+CITY:             Marrakesh
+COUNTRY:          Morocco
+CITY_SLUG:        marrakesh-morocco
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: FR, AR
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Marrakesh divides clearly between the ancient Medina and the French-built
+# Gueliz/Hivernage (Ville Nouvelle). Jemaa el-Fna is the iconic central square.
+# Kasbah and Mellah are the southern medina quarters.
+# Gueliz is the modern dining hub with wine-serving restaurants.
+# Palmeraie is the luxury resort area — exclude unless strong local writer coverage.
+# Riad restaurants are extremely common — apply RIAD_RULE.
+
+TIER_1_NEIGHBOURHOODS: Medina, Jemaa el-Fna, Gueliz, Hivernage
+TIER_2_NEIGHBOURHOODS: Kasbah, Mellah, Bab Doukkala, Mouassine
+TIER_3_NEIGHBOURHOODS: Palmeraie, Targa, Ménara
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Medina (all quarters), Jemaa el-Fna, Kasbah, Mellah, Mouassine,
+  Bab Doukkala, Gueliz (Ville Nouvelle), Hivernage
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Palmeraie (resort enclave — exclude unless strong local writer recommendation),
+  Ménara/airport area, Agafay Desert (outside city),
+  Essaouira (separate city 170km away), Ouarzazate
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Michelin Guide does not cover Morocco — no exclusions apply.
+MICHELIN_STARRED_EXCLUSIONS: None
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Marrakesh has stronger EN food writing than Fes due to higher tourist volume.
+# FR-language food coverage exists in Moroccan press and expat publications.
+# Both-pool requires EN + FR cross-validation from independent publishers.
+# Luxury travel writers often cover Marrakesh — verify editorial independence
+# and ensure recommendations are not sponsored hotel/riad content.
+
+RIAD_RULE: APPLY
+
+PHASE_0_SOURCES:
+  - yabiladi.com (FR/AR — Moroccan news and lifestyle, search restaurant features)
+  - lavieeco.com (FR — Moroccan business/lifestyle, food features)
+  - timeout.com/marrakech (EN — verify named author and recency)
+  - leconomiste.com (FR — Moroccan press, lifestyle section)
+
+SECONDARY_SOURCES:
+  - culinarybackstreets.com (EN — food travel platform, search Marrakesh features)
+  - thetravelbible.com (EN — verify named author)
+  - evasion.ma (FR — Moroccan lifestyle/travel, food coverage)
+  - telquel.ma (FR — Moroccan news magazine, food and lifestyle)
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-marrakesh-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-marrakesh-search-log.txt
+OUTPUT_WORKING:        localbite-marrakesh-working.json
+OUTPUT_RAW:            localbite-marrakesh-raw.json
+OUTPUT_FINAL:          localbite-marrakesh-2023-2026.json
+OUTPUT_AUDIT:          localbite-marrakesh-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-marrakesh-failed-sources.txt

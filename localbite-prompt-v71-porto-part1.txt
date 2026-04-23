@@ -1,0 +1,72 @@
+# LocalBite Pipeline — Part 1: Porto
+# v7.1 — 2026-04-23
+
+CITY:             Porto
+COUNTRY:          Portugal
+CITY_SLUG:        porto-portugal
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: PT
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Porto's food scene clusters in the historic centre (Ribeira, Miragaia),
+# the creative neighbourhood of Bonfim, and the traditional Cedofeita/Massarelos.
+# Foz do Douro is the upscale waterfront area further west.
+# Matosinhos (adjacent municipality) is the famous seafood destination and
+# is commonly covered alongside Porto by food writers — include.
+# Gaia (Vila Nova de Gaia) is across the Douro and technically a separate
+# municipality but is covered by Porto food writers — include cautiously.
+
+TIER_1_NEIGHBOURHOODS: Ribeira, Bonfim, Cedofeita, Miragaia
+TIER_2_NEIGHBOURHOODS: Foz do Douro, Massarelos, Lordelo do Ouro, Campanhã
+TIER_3_NEIGHBOURHOODS: Matosinhos (adjacent), Gaia (across river)
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Ribeira, Bonfim, Cedofeita, Miragaia, Foz do Douro, Massarelos,
+  Lordelo do Ouro, Campanhã, Paranhos, Ramalde,
+  Matosinhos (if covered by Porto food writers as part of Porto food scene),
+  Vila Nova de Gaia waterfront (if covered as part of Porto food scene)
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Braga (separate city 50km north), Guimarães (separate city),
+  Póvoa de Varzim, Vila do Conde, Espinho (all separate municipalities)
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  The Yeatman (1★), Antiqvvm (1★, Ricardo Costa), Euskalduna Studio (1★),
+  Pedro Lemos (1★)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Porto has strong PT-language food press and growing EN food writing.
+# Both-pool is achievable with independent PT + EN sources.
+# Mesa Marcada covers Porto alongside Lisbon. Observador has Porto coverage.
+# EN food travel writers increasingly cover Porto as a destination.
+
+PHASE_0_SOURCES:
+  - mesaMarcada.com (PT — independent food critic Miguel Pires, covers Porto)
+  - observador.pt (PT — quality digital newspaper, food section with named writers)
+  - timeout.com/porto (EN/PT — verify named author and recency)
+  - publico.pt (PT — quality newspaper, food and culture section)
+
+SECONDARY_SOURCES:
+  - culinarybackstreets.com (EN — food travel platform, search Porto features)
+  - eater.com (EN — search Porto guide if exists, verify named author)
+  - dn.pt (PT — Diário de Notícias, lifestyle and food section)
+  - jornaldenoticias.pt (PT — Jornal de Notícias, Porto-based newspaper)
+  - guiarepsol.com (ES — Repsol guide, search Porto entries)
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-porto-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-porto-search-log.txt
+OUTPUT_WORKING:        localbite-porto-working.json
+OUTPUT_RAW:            localbite-porto-raw.json
+OUTPUT_FINAL:          localbite-porto-2023-2026.json
+OUTPUT_AUDIT:          localbite-porto-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-porto-failed-sources.txt

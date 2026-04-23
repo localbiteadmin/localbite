@@ -1,0 +1,84 @@
+# LocalBite Pipeline — Part 1: Barcelona
+# v7.1 — 2026-04-23
+
+CITY:             Barcelona
+COUNTRY:          Spain
+CITY_SLUG:        barcelona-spain
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: ES, CA
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Barcelona has three primary food languages: Spanish (ES), Catalan (CA), and English (EN).
+# CA-language sources are primary — Beteve.cat, ElNacional.cat, Ara Mengem are key.
+# Eixample (Esquerra and Dreta) is the densest restaurant district.
+# Gràcia has the strongest neighbourhood dining identity.
+# El Born/Sant Pere is the tapas and craft food hub.
+# Poble Sec and Sant Antoni have become serious dining neighbourhoods.
+# Barceloneta is the seafood and paella strip (tourist-heavy — verify quality).
+# Note: Time Out Barcelona CA and ES editions have shared editorial — do not
+# count as two independent sources.
+
+TIER_1_NEIGHBOURHOODS: Eixample, Gràcia, El Born, Poble Sec, Sant Antoni
+TIER_2_NEIGHBOURHOODS: Barri Gòtic, El Raval, Barceloneta, Poblenou, Sarrià
+TIER_3_NEIGHBOURHOODS: Sant Martí, Sants, Nou Barris, Horta-Guinardó
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Eixample (Esquerra and Dreta), Gràcia, El Born, Sant Pere,
+  Poble Sec, Sant Antoni, Barri Gòtic, El Raval, Barceloneta,
+  Poblenou (22@ district area), Sarrià, Sant Gervasi, Vila Olímpica,
+  Sants, Fort Pienc, Clot
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Hospitalet de Llobregat (separate municipality),
+  Badalona (separate municipality), Sant Cugat del Vallès,
+  Sitges (separate municipality 35km south),
+  Girona (separate city), Tarragona (separate city)
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  Disfrutar (3★), Lasarte (3★, Martín Berasategui), Cocina Hermanos Torres (2★),
+  Moments (2★, Carme Ruscalleda), Alkimia (1★), Cinc Sentits (1★),
+  Angle (1★), Koy Shunka (1★), Hoja Santa (1★, Albert Adrià)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Barcelona has the richest multi-language food writing in the fleet.
+# CA sources are primary alongside ES — never treat CA as secondary.
+# Both-pool requires independent publishers in different languages.
+# Time Out Barcelona: CA and ES editions share editorial — count as one source only.
+# Barcelona Food Experience (Maria) is a reliable long-running EN source.
+# Beteve.cat published the Slow Food/Cargols Barcelona guide — strong CA source.
+# Guía Repsol has strong Barcelona coverage with named writers.
+# The Infatuation has Barcelona coverage — verify named author.
+
+PHASE_0_SOURCES:
+  - barcelonafoodexperience.com (EN — Maria, long-running named-author EN food blog)
+  - beteve.cat (CA — Barcelona local broadcaster, Slow Food/Cargols coverage, named writers)
+  - elnacional.cat (CA — Catalan digital newspaper, food section with named writers)
+  - guiarepsol.com (ES — Repsol guide, search Barcelona entries, named writers)
+
+SECONDARY_SOURCES:
+  - timeout.com/barcelona (ES/CA — Time Out Barcelona, named writers — count as one source)
+  - theinfatuation.com/barcelona (EN — verify named author and recency)
+  - ara.cat (CA — major Catalan newspaper — verify named byline, previously rejected for no byline)
+  - gastronomistas.com (ES — ⚠ known to return very large pages — use with caution)
+  - elpais.com/gastronomia (ES — El Comidista / El País, search Barcelona features)
+
+KNOWN_PROBLEMATIC_URLS:
+  - gastronomistas.com (returns very large pages — may cause session issues)
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-barcelona-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-barcelona-search-log.txt
+OUTPUT_WORKING:        localbite-barcelona-working.json
+OUTPUT_RAW:            localbite-barcelona-raw.json
+OUTPUT_FINAL:          localbite-barcelona-2023-2026.json
+OUTPUT_AUDIT:          localbite-barcelona-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-barcelona-failed-sources.txt

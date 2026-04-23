@@ -1,0 +1,67 @@
+# LocalBite Pipeline — Part 1: Málaga
+# v7.1 — 2026-04-23
+
+CITY:             Málaga
+COUNTRY:          Spain
+CITY_SLUG:        malaga-spain
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: ES
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Málaga's food scene has expanded significantly with the Soho art district
+# becoming a serious dining destination. Centro Histórico is the traditional core.
+# La Malagueta is the seafood beach area. El Palo and Pedregalejo further east
+# are the famous chiringuito (beach restaurant) strips.
+# La Trinidad and Lagunillas are emerging neighbourhood dining areas.
+
+TIER_1_NEIGHBOURHOODS: Centro Histórico, Soho, La Malagueta
+TIER_2_NEIGHBOURHOODS: El Perchel, La Trinidad, Lagunillas, El Ejido
+TIER_3_NEIGHBOURHOODS: El Palo, Pedregalejo, El Limonar, Teatinos
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Centro Histórico, Soho (MUPAM area), La Malagueta, El Perchel,
+  La Trinidad, Lagunillas, El Ejido, El Palo, Pedregalejo, El Limonar
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Torremolinos (separate municipality), Benalmádena, Marbella,
+  Mijas, Fuengirola (all separate municipalities on the Costa del Sol),
+  Ronda (separate city 100km inland), Nerja
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  José Carlos García (1★, JCG Restaurante — verify current status)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Málaga food writing is primarily ES. EN coverage exists due to large
+# expat community and tourist traffic — verify editorial independence.
+# Sur (Diario Sur) is the main local newspaper. La Opinión de Málaga is the other.
+# Both-pool is possible given expat EN food writing presence.
+
+PHASE_0_SOURCES:
+  - diariosur.es (ES — Sur, main Málaga local newspaper, food section)
+  - laopiniondemalaga.es (ES — La Opinión de Málaga, food section)
+  - guiarepsol.com (ES — Repsol guide, search Málaga entries)
+
+SECONDARY_SOURCES:
+  - elpais.com/gastronomia (ES — El Comidista / El País, search Málaga features)
+  - bonviveur.es (ES — national food platform, search Málaga guide)
+  - timeout.com/malaga (EN — verify named author and recency)
+  - malagahoy.es (ES — local newspaper, food section)
+  - thelocal.es (EN — expat English press in Spain, search Málaga food)
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-malaga-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-malaga-search-log.txt
+OUTPUT_WORKING:        localbite-malaga-working.json
+OUTPUT_RAW:            localbite-malaga-raw.json
+OUTPUT_FINAL:          localbite-malaga-2023-2026.json
+OUTPUT_AUDIT:          localbite-malaga-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-malaga-failed-sources.txt

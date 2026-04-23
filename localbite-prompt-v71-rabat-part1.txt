@@ -1,0 +1,69 @@
+# LocalBite Pipeline — Part 1: Rabat
+# v7.1 — 2026-04-23
+
+CITY:             Rabat
+COUNTRY:          Morocco
+CITY_SLUG:        rabat-morocco
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: FR, AR
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Rabat is Morocco's administrative capital — more local, less tourist-facing
+# than Marrakesh or Fes. The Medina is smaller and more residential.
+# Agdal and Hassan are the main modern dining neighbourhoods (government area).
+# Souissi is the upscale diplomatic quarter with fine dining.
+# Ville Nouvelle (centre-ville) is the main commercial and restaurant area.
+# Salé is the twin city across the Bouregreg — different municipality, exclude.
+
+TIER_1_NEIGHBOURHOODS: Medina, Agdal, Hassan, Ville Nouvelle
+TIER_2_NEIGHBOURHOODS: Souissi, Hay Riad, Aviation, Océan
+TIER_3_NEIGHBOURHOODS: Akkari, Youssoufia, Madinat Al Irfane
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Medina, Kasbah des Oudayas, Agdal, Hassan, Ville Nouvelle,
+  Souissi, Hay Riad, Aviation, Océan
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Salé (separate municipality across Bouregreg river),
+  Temara (separate city to the south), Kenitra (separate city),
+  Casablanca (80km south — separate city, very different food scene)
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Michelin Guide does not cover Morocco — no exclusions apply.
+MICHELIN_STARRED_EXCLUSIONS: None
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Rabat food writing is thinner than Marrakesh or Casablanca. The city is
+# primarily covered in FR-language Moroccan press. EN food writing specifically
+# about Rabat restaurants is rare. Accept structural EN gap if no qualifying
+# sources found after targeted searches. Both-pool is possible but not expected.
+
+RIAD_RULE: APPLY
+
+PHASE_0_SOURCES:
+  - lavieeco.com (FR — Moroccan business/lifestyle, food features)
+  - telquel.ma (FR — Moroccan news magazine, food and lifestyle)
+  - leconomiste.com (FR — Moroccan press, search Rabat restaurant features)
+  - yabiladi.com (FR/AR — Moroccan news, lifestyle section)
+
+SECONDARY_SOURCES:
+  - culinarybackstreets.com (EN — food travel platform, search Rabat features)
+  - timeout.com/rabat (EN — if exists, verify named author and recency)
+  - mapetitemaisonmaroc.com (FR — Morocco lifestyle, food coverage)
+  - hespress.com (FR/AR — Moroccan news, lifestyle and food)
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-rabat-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-rabat-search-log.txt
+OUTPUT_WORKING:        localbite-rabat-working.json
+OUTPUT_RAW:            localbite-rabat-raw.json
+OUTPUT_FINAL:          localbite-rabat-2023-2026.json
+OUTPUT_AUDIT:          localbite-rabat-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-rabat-failed-sources.txt

@@ -1,0 +1,72 @@
+# LocalBite Pipeline — Part 1: Seville
+# v7.1 — 2026-04-23
+
+CITY:             Seville
+COUNTRY:          Spain
+CITY_SLUG:        seville-spain
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: ES
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Seville's food culture divides between the historic tapas bars of Triana
+# and the old city, and the modern restaurant scene of Alameda de Hércules
+# and the evolving Macarena district. Santa Cruz (barrio Santa Cruz) is
+# tourist-heavy but has genuine local restaurants. El Arenal is the bullring
+# district with traditional taverns. Nervión is the commercial and residential
+# dining area east of the old city.
+
+TIER_1_NEIGHBOURHOODS: Triana, Alameda de Hércules, Santa Cruz, El Arenal
+TIER_2_NEIGHBOURHOODS: Macarena, Nervión, San Lorenzo, Casco Antiguo
+TIER_3_NEIGHBOURHOODS: Los Remedios, Bellavista, Heliópolis, Palmete
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Triana, Alameda de Hércules, Santa Cruz (barrio), El Arenal,
+  Macarena, Nervión, San Lorenzo, Casco Antiguo (Centro), Los Remedios,
+  La Cartuja area, San Bernardo
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Dos Hermanas (separate municipality south), Alcalá de Guadaíra,
+  Mairena del Aljarafe, San Juan de Aznalfarache (all separate municipalities),
+  Huelva (separate province capital), Cádiz (separate city)
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  Cañabota (1★), Sobretablas (1★, Julio Fernández Quintero — verify current status),
+  Clos (1★)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Seville food writing is primarily ES. EN coverage exists due to significant
+# tourist traffic but is often travel-facing — verify editorial independence.
+# ABC de Sevilla is the main local newspaper. El Mundo Sevilla also covers food.
+# Both-pool possible with independent EN food writers alongside ES press.
+# Seville is a large well-documented city — expect 6-10 qualifying sources.
+
+PHASE_0_SOURCES:
+  - abcdesevilla.es (ES — ABC de Sevilla, main local newspaper, food section)
+  - guiarepsol.com (ES — Repsol guide, search Seville entries)
+  - diariodesevilla.es (ES — Diario de Sevilla, food section)
+  - sevilla.elconfidencial.com (ES — El Confidencial Sevilla, food features)
+
+SECONDARY_SOURCES:
+  - elpais.com/gastronomia (ES — El Comidista / El País, search Seville features)
+  - bonviveur.es (ES — national food platform, search Seville guide)
+  - timeout.com/seville (EN — verify named author and recency)
+  - theinfatuation.com (EN — search Seville guide if exists)
+  - devoursevilletours.com (EN — verify editorial independence, not just tour content)
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-seville-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-seville-search-log.txt
+OUTPUT_WORKING:        localbite-seville-working.json
+OUTPUT_RAW:            localbite-seville-raw.json
+OUTPUT_FINAL:          localbite-seville-2023-2026.json
+OUTPUT_AUDIT:          localbite-seville-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-seville-failed-sources.txt

@@ -1,0 +1,67 @@
+# LocalBite Pipeline — Part 1: Granada
+# v7.1 — 2026-04-23
+
+CITY:             Granada
+COUNTRY:          Spain
+CITY_SLUG:        granada-spain
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: ES
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Granada's food identity is defined by free tapas culture — order a drink,
+# get a tapa. Albaicín (UNESCO) is the historic Moorish quarter with cave bars.
+# Realejo (former Jewish quarter) has quality restaurants. Centro is the
+# main commercial and tapas bar area. Sacromonte is the flamenco cave district.
+# La Zubia and Armilla are outside the city core — exclude.
+
+TIER_1_NEIGHBOURHOODS: Centro, Albaicín, Realejo
+TIER_2_NEIGHBOURHOODS: Sacromonte, Zaidín, Genil, Chana
+TIER_3_NEIGHBOURHOODS: Beiro, Ronda, Cartuja
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Centro, Albaicín, Realejo (El Campillo / San Matías area),
+  Sacromonte, Zaidín, Genil, Chana, Beiro, Ronda, Cartuja
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  La Zubia (separate municipality), Armilla (separate municipality),
+  Ogíjares, Cenes de la Vega, Sierra Nevada (ski resort 30km away),
+  Motril (separate city on coast)
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  Damasqueros (1★, Marta Sánchez — verify current status)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Granada food writing is primarily ES. EN coverage exists but is mostly
+# tourist-facing travel content — verify editorial independence carefully.
+# Ideal de Granada is the main local newspaper with food coverage.
+# Both-pool is possible but source pool is structurally thin.
+# Do not lower standards to inflate source count.
+
+PHASE_0_SOURCES:
+  - ideal.es (ES — Ideal de Granada, main local newspaper, food section)
+  - guiarepsol.com (ES — Repsol guide, search Granada entries)
+  - elindependientedegranada.es (ES — local digital newspaper, food coverage)
+
+SECONDARY_SOURCES:
+  - elpais.com/gastronomia (ES — El Comidista / El País, search Granada features)
+  - bonviveur.es (ES — national food platform, search Granada guide)
+  - timeout.com/granada (EN — if exists, verify named author and recency)
+  - devourspain.com or similar EN food travel writers covering Granada
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-granada-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-granada-search-log.txt
+OUTPUT_WORKING:        localbite-granada-working.json
+OUTPUT_RAW:            localbite-granada-raw.json
+OUTPUT_FINAL:          localbite-granada-2023-2026.json
+OUTPUT_AUDIT:          localbite-granada-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-granada-failed-sources.txt

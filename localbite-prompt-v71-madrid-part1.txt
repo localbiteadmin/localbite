@@ -1,0 +1,77 @@
+# LocalBite Pipeline — Part 1: Madrid
+# v7.1 — 2026-04-23
+
+CITY:             Madrid
+COUNTRY:          Spain
+CITY_SLUG:        madrid-spain
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: ES
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Madrid's food scene is the largest and most diverse in Spain.
+# Malasaña and Chueca are the creative dining and bar districts.
+# La Latina is the traditional tapas neighbourhood (Cava Baja, Cava Alta).
+# Lavapiés is the multicultural and emerging food hub.
+# Salamanca is the upscale dining district. Chamberí has strong neighbourhood dining.
+# Mercado de San Miguel (adjacent to Plaza Mayor) is tourist-facing — apply caution.
+# Huertas/Las Letras is the literary district with traditional restaurants.
+
+TIER_1_NEIGHBOURHOODS: Malasaña, Chueca, La Latina, Lavapiés, Chamberí
+TIER_2_NEIGHBOURHOODS: Salamanca, Retiro, Huertas, Argüelles, Moncloa
+TIER_3_NEIGHBOURHOODS: Tetuán, Vallecas, Carabanchel, Hortaleza, Usera
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Malasaña, Chueca, La Latina, Lavapiés, Chamberí, Salamanca,
+  Retiro, Huertas (Las Letras), Argüelles, Moncloa, Sol/Centro,
+  Tetuán, Usera (Chinese/Asian food culture), Vallecas, Carabanchel,
+  Hortaleza, Alcobendas (if covered as part of Madrid food scene)
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Pozuelo de Alarcón (separate municipality), Las Rozas, Majadahonda,
+  Alcalá de Henares (separate historic city), Toledo (separate city),
+  Segovia (separate city), Aranjuez
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  DiverXO (3★, David Muñoz), Coque (2★, Mario Sandoval),
+  Ramón Freixa Madrid (1★), DSTAgE (1★, Diego Guerrero),
+  Corral de la Morería Gastronómico (1★), Cebo (1★),
+  Smoked Room (1★), Paco Roncero (1★)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Madrid has the richest ES-language food writing ecosystem in Spain.
+# El Comidista (El País) is the gold standard for named-author ES food criticism.
+# Guía Repsol has extensive Madrid coverage. El Mundo has a food section.
+# The Infatuation has a Madrid edition with named writers.
+# Both-pool is achievable with independent EN food writers alongside ES press.
+# Time Out Madrid exists — verify named author and recency.
+
+PHASE_0_SOURCES:
+  - elpais.com/gastronomia (ES — El Comidista / El País, named food writers)
+  - guiarepsol.com (ES — Repsol guide, search Madrid entries, named writers)
+  - elmundo.es (ES — El Mundo, food section with named critics)
+  - theinfatuation.com/madrid (EN — The Infatuation Madrid, verify named author)
+
+SECONDARY_SOURCES:
+  - timeout.com/madrid (EN/ES — Time Out Madrid, verify named author)
+  - bonviveur.es (ES — national food platform, search Madrid guide)
+  - elespanol.com (ES — El Español, food section with named writers)
+  - eater.com (EN — search Madrid guide if exists, verify named author)
+  - madridfoodtour.com or similar EN food writers covering Madrid
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-madrid-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-madrid-search-log.txt
+OUTPUT_WORKING:        localbite-madrid-working.json
+OUTPUT_RAW:            localbite-madrid-raw.json
+OUTPUT_FINAL:          localbite-madrid-2023-2026.json
+OUTPUT_AUDIT:          localbite-madrid-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-madrid-failed-sources.txt

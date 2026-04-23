@@ -1,0 +1,79 @@
+# LocalBite Pipeline — Part 1: Lisbon
+# v7.1 — 2026-04-23
+
+CITY:             Lisbon
+COUNTRY:          Portugal
+CITY_SLUG:        lisbon-portugal
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: PT
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Lisbon's food scene is concentrated in Chiado/Bairro Alto, Príncipe Real,
+# Santos, Mouraria, and the newer creative hubs of Beato and Marvila.
+# Alfama is tourist-heavy but has genuine local restaurants.
+# LX Factory (Alcântara) is the design/food market district.
+# Intendente has emerged as a local neighbourhood dining area.
+# Belém is worth including for its cultural restaurants despite being further west.
+
+TIER_1_NEIGHBOURHOODS: Chiado, Bairro Alto, Príncipe Real, Santos, Mouraria
+TIER_2_NEIGHBOURHOODS: Alfama, Intendente, Beato, Marvila, Alcântara, Graça
+TIER_3_NEIGHBOURHOODS: Belém, Campo de Ourique, Amoreiras, Benfica
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Chiado, Bairro Alto, Príncipe Real, Santos, Mouraria, Alfama,
+  Intendente, Beato, Marvila, Alcântara (LX Factory area), Graça,
+  Belém, Campo de Ourique, Amoreiras, Anjos, Arroios
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Cascais (separate municipality 30km west), Sintra (separate municipality),
+  Setúbal (separate city), Almada (across the Tagus — separate municipality),
+  Costa da Caparica, Sesimbra
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  Belcanto (2★, José Avillez), Alma (1★, Henrique Sá Pessoa),
+  Encanto (1★, José Avillez), Feitoria (1★), Loco (1★, Alexandre Silva),
+  Eleven (1★), Epur (1★)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Lisbon has strong PT-language food press and a significant EN expat/travel
+# food writing scene. Both-pool is achievable with independent PT + EN sources.
+# Time Out Lisboa has a commercial conflict — they operate Time Out Market Lisboa
+# food hall. Include with ⚠ coi flag but do not reject outright.
+# Mesa Marcada (Miguel Pires) is the leading independent PT food critic.
+# Observador has strong named food writing in PT.
+
+PHASE_0_SOURCES:
+  - mesaMarcada.com (PT — independent food critic Miguel Pires, top PT source)
+  - observador.pt (PT — quality digital newspaper, food section with named writers)
+  - timeout.com/lisbon (EN/PT — ⚠ COI: operates Time Out Market Lisboa)
+  - publico.pt (PT — quality newspaper, food and culture section)
+
+SECONDARY_SOURCES:
+  - expedia-style.com or similar EN food travel writers covering Lisbon
+  - culinarybackstreets.com (EN — food travel platform, search Lisbon features)
+  - eater.com (EN — search Lisbon guide if exists, verify named author)
+  - guiarepsol.com (ES — Repsol guide, search Lisbon entries)
+  - dn.pt (PT — Diário de Notícias, lifestyle and food section)
+
+COMMERCIAL_CONFLICTS_NOTED:
+  Time Out Lisboa — operates Time Out Market Lisboa food hall.
+  Flag with ⚠ coi in writer_profile. Do not reject — include transparently.
+
+COI_FLAG_SOURCES:
+  - timeout.com/lisbon (Time Out Market Lisboa — food hall operator)
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-lisbon-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-lisbon-search-log.txt
+OUTPUT_WORKING:        localbite-lisbon-working.json
+OUTPUT_RAW:            localbite-lisbon-raw.json
+OUTPUT_FINAL:          localbite-lisbon-2023-2026.json
+OUTPUT_AUDIT:          localbite-lisbon-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-lisbon-failed-sources.txt

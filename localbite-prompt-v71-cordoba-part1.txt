@@ -1,0 +1,69 @@
+# LocalBite Pipeline — Part 1: Córdoba
+# v7.1 — 2026-04-23
+
+CITY:             Córdoba
+COUNTRY:          Spain
+CITY_SLUG:        cordoba-spain
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: ES
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Córdoba's food scene is concentrated in the historic Casco Antiguo/Judería
+# around the Mezquita, and the modern Centro. San Basilio is the famous
+# patios neighbourhood. Ciudad Jardín and El Brillante are residential dining areas.
+# Córdoba is known for salmorejo (thick cold tomato soup), flamenquín, and
+# rabo de toro (oxtail stew) — pipeline should surface these local dishes.
+
+TIER_1_NEIGHBOURHOODS: Casco Antiguo, Judería, Centro
+TIER_2_NEIGHBOURHOODS: San Basilio, El Brillante, Ciudad Jardín, Sector Sur
+TIER_3_NEIGHBOURHOODS: Levante, Poniente Norte, Zumbacón
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Casco Antiguo, Judería (Jewish quarter), Centro, San Basilio,
+  El Brillante, Ciudad Jardín, Sector Sur, Miraflores
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Montilla (separate municipality, wine region), Priego de Córdoba,
+  Baena (olive oil region), Écija (separate municipality),
+  Jaén (separate province capital)
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  Noor (1★, Paco Morales — Nazarí cuisine)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Córdoba food writing is primarily ES. EN coverage exists due to Mezquita
+# tourism but is often generic travel content — verify editorial independence.
+# Diario Córdoba is the main local newspaper. El Día de Córdoba is the other.
+# Both-pool is achievable — Córdoba has had strong cross-validation in previous runs.
+# The current pack has the highest both-pool rate in the fleet (49%) — rebuild
+# should find similar cross-validation if source quality rules are applied correctly.
+
+PHASE_0_SOURCES:
+  - diariocordoba.com (ES — Diario Córdoba, main local newspaper, food section)
+  - eldiadecordoba.es (ES — El Día de Córdoba, food coverage)
+  - guiarepsol.com (ES — Repsol guide, search Córdoba entries)
+
+SECONDARY_SOURCES:
+  - elpais.com/gastronomia (ES — El Comidista / El País, search Córdoba features)
+  - bonviveur.es (ES — national food platform, search Córdoba guide)
+  - timeout.com/cordoba (EN — verify named author and recency)
+  - devourspain.com or similar EN food travel writers covering Córdoba
+  - abc.es (ES — ABC Córdoba edition, food and culture)
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-cordoba-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-cordoba-search-log.txt
+OUTPUT_WORKING:        localbite-cordoba-working.json
+OUTPUT_RAW:            localbite-cordoba-raw.json
+OUTPUT_FINAL:          localbite-cordoba-2023-2026.json
+OUTPUT_AUDIT:          localbite-cordoba-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-cordoba-failed-sources.txt

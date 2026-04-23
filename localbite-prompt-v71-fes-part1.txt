@@ -1,0 +1,68 @@
+# LocalBite Pipeline — Part 1: Fes
+# v7.1 — 2026-04-23
+
+CITY:             Fes
+COUNTRY:          Morocco
+CITY_SLUG:        fes-morocco
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: FR, AR
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Fes has two historic medinas plus the French-built Ville Nouvelle.
+# Fes el-Bali is the UNESCO-listed ancient medina — the core dining area.
+# Fes el-Jdid is the smaller adjoining medina with the mellah (Jewish quarter).
+# Ville Nouvelle (Agdal/Ziat) has modern restaurants and cafes.
+# Riad restaurants are common — apply RIAD_RULE.
+
+TIER_1_NEIGHBOURHOODS: Fes el-Bali, Fes el-Jdid, Ville Nouvelle
+TIER_2_NEIGHBOURHOODS: Agdal, Ziat, Dhar Mehraz
+TIER_3_NEIGHBOURHOODS: Aïn Chkef, Saïss
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Fes el-Bali (entire ancient medina), Fes el-Jdid, Mellah,
+  Ville Nouvelle, Agdal, Ziat, Dhar Mehraz
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Meknès (separate city 60km away), Ifrane, Azrou,
+  airport area, industrial zones on Fes periphery
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Michelin Guide does not cover Morocco — no exclusions apply.
+MICHELIN_STARRED_EXCLUSIONS: None
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Fes food writing is primarily in FR and EN. AR-language food media
+# covering specific restaurant guides is rare. EN travel food writers
+# with documented Fes residency or regular coverage are acceptable.
+# Both-pool requires EN + FR cross-validation from independent publishers.
+# Source pool is structurally thin — accept fewer sources if quality gates
+# are met. Do not lower standards to inflate source count.
+
+RIAD_RULE: APPLY
+
+PHASE_0_SOURCES:
+  - madeinmedina.com (FR/EN — Fes lifestyle and food coverage, verify named author)
+  - feztouristinfo.com (EN — verify named author and recency)
+  - guidedumaroc.com (FR — Morocco travel and food, search Fes restaurant features)
+
+SECONDARY_SOURCES:
+  - lonelyplanet.com (EN — search Fes restaurant guide, verify named author)
+  - timeout.com/morocco (EN — if Fes coverage exists, verify named author)
+  - culinarybackstreets.com (EN — food travel platform, search Fes features)
+  - lavieeco.com (FR — Moroccan business/lifestyle press, food features)
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-fes-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-fes-search-log.txt
+OUTPUT_WORKING:        localbite-fes-working.json
+OUTPUT_RAW:            localbite-fes-raw.json
+OUTPUT_FINAL:          localbite-fes-2023-2026.json
+OUTPUT_AUDIT:          localbite-fes-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-fes-failed-sources.txt

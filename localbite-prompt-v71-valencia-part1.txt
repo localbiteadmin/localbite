@@ -1,0 +1,74 @@
+# LocalBite Pipeline — Part 1: Valencia
+# v7.1 — 2026-04-23
+
+CITY:             Valencia
+COUNTRY:          Spain
+CITY_SLUG:        valencia-spain
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: ES
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Valencia's food identity is defined by rice dishes (paella, arrós al forn,
+# arròs negre) and horchata. El Carmen (Barrio del Carmen) is the historic
+# dining core. Ruzafa is the creative neighbourhood dining hub.
+# Cabanyal is the former fishing village turned dining destination near the beach.
+# The Eixample (Valencia's, not Barcelona's) is the main commercial dining area.
+# Benimaclet is the university-area neighbourhood with local character.
+
+TIER_1_NEIGHBOURHOODS: El Carmen, Ruzafa, Cabanyal, Eixample
+TIER_2_NEIGHBOURHOODS: Benimaclet, Jesús, Quatre Carreres, Extramurs
+TIER_3_NEIGHBOURHOODS: Poblats Marítims, Campanar, La Saïdia, Patraix
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  El Carmen (Barrio del Carmen), Ruzafa, Cabanyal, Eixample,
+  Benimaclet, Jesús, Quatre Carreres, Extramurs, Poblats Marítims,
+  Algirós, Campanar, La Saïdia, Patraix, Ciutat Vella
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Alicante (separate province capital), Castellón (separate city),
+  Torrent (separate municipality), Gandia, Dénia, Morella
+  (all outside Valencia city limits), L'Eliana, Burjassot
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  Ricard Camarena (2★), Fierro (1★), Kaido Sushi Bar (1★),
+  Riff (1★, Bernd Knöller), Fraula (1★), Canyar (1★)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Valencia food writing is primarily ES. EN coverage exists but is often
+# travel-facing — verify editorial independence carefully.
+# Las Provincias and Levante-EMV are the two main local newspapers.
+# Both had paywall issues in previous pipeline runs — try direct fetches.
+# Hello Valencia is a long-running local city guide with named writers.
+# El Comidista (El País) has published Valencia rice guides with named writers.
+# Both-pool is achievable with independent EN food writers alongside ES press.
+
+PHASE_0_SOURCES:
+  - lasprovincias.es (ES — Las Provincias, main Valencia local newspaper, food section)
+  - levante-emv.com (ES — Levante-EMV, second major local newspaper, food section)
+  - guiarepsol.com (ES — Repsol guide, search Valencia entries)
+  - helloValencia.com (ES/EN — long-running local city guide, named writers)
+
+SECONDARY_SOURCES:
+  - elpais.com/gastronomia (ES — El Comidista / El País, search Valencia rice/food features)
+  - bonviveur.es (ES — national food platform, search Valencia guide)
+  - timeout.com/valencia (EN — verify named author and recency)
+  - theinfatuation.com (EN — search Valencia guide if exists, verify named author)
+  - devourvalenciatours.com or similar EN food travel writers covering Valencia
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-valencia-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-valencia-search-log.txt
+OUTPUT_WORKING:        localbite-valencia-working.json
+OUTPUT_RAW:            localbite-valencia-raw.json
+OUTPUT_FINAL:          localbite-valencia-2023-2026.json
+OUTPUT_AUDIT:          localbite-valencia-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-valencia-failed-sources.txt

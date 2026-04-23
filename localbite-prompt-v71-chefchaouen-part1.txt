@@ -1,0 +1,67 @@
+# LocalBite Pipeline — Part 1: Chefchaouen
+# v7.1 — 2026-04-23
+
+CITY:             Chefchaouen
+COUNTRY:          Morocco
+CITY_SLUG:        chefchaouen-morocco
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: EN
+SECONDARY_LANGUAGE: FR
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Chefchaouen is a small blue-painted mountain city in the Rif.
+# The Medina is the only meaningful dining area — essentially one neighbourhood.
+# Bab Ssour is the main gate/plaza area where most restaurants cluster.
+# Outside the medina there are very few qualifying restaurants.
+# Source pool will be almost entirely tourist-facing EN travel writers.
+
+TIER_1_NEIGHBOURHOODS: Medina, Bab Ssour, Plaza Uta el-Hammam
+TIER_2_NEIGHBOURHOODS: Ain Tissimane, Ras el-Maa
+TIER_3_NEIGHBOURHOODS:
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Medina (entire walled city), Bab Ssour, Plaza Uta el-Hammam,
+  Ain Tissimane, Ras el-Maa area
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Tétouan (separate city 60km north), Al Hoceima,
+  rural Rif mountain area outside city limits
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Michelin Guide does not cover Morocco — no exclusions apply.
+MICHELIN_STARRED_EXCLUSIONS: None
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Chefchaouen food writing is almost entirely tourist-facing EN content.
+# FR-language coverage exists but is minimal. AR-language food media
+# does not meaningfully cover Chefchaouen restaurants.
+# Source pool is structurally thin — a small city. Accept 3-5 sources
+# if quality gates are met. Both-pool requires EN + FR from different publishers.
+
+RIAD_RULE: APPLY
+
+PHASE_0_SOURCES:
+  - nomadicmatt.com (EN — major travel platform, search Chefchaouen food)
+  - theblondeabroad.com (EN — travel writer, search Chefchaouen features)
+  - wanderlust.co.uk (EN — travel magazine, search Chefchaouen food guide)
+
+SECONDARY_SOURCES:
+  - culinarybackstreets.com (EN — food travel platform, search Chefchaouen)
+  - lonelyplanet.com (EN — search Chefchaouen restaurant guide, verify named author)
+  - timeout.com/morocco (EN — if Chefchaouen coverage exists, verify named author)
+  - lavieeco.com (FR — Moroccan lifestyle, search Chefchaouen features)
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-chefchaouen-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-chefchaouen-search-log.txt
+OUTPUT_WORKING:        localbite-chefchaouen-working.json
+OUTPUT_RAW:            localbite-chefchaouen-raw.json
+OUTPUT_FINAL:          localbite-chefchaouen-2023-2026.json
+OUTPUT_AUDIT:          localbite-chefchaouen-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-chefchaouen-failed-sources.txt

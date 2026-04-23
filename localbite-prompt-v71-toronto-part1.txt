@@ -1,0 +1,77 @@
+# LocalBite Pipeline — Part 1: Toronto
+# v7.1 — 2026-04-23
+
+CITY:             Toronto
+COUNTRY:          Canada
+CITY_SLUG:        toronto-canada
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: EN
+SECONDARY_LANGUAGE:
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Toronto is a single-language EN city. Both-pool is structurally impossible
+# under current definition (requires EN + non-EN language cross-validation).
+# The food scene is geographically spread across the city with strong
+# neighbourhood identities. King West and Ossington are the highest-density
+# dining corridors. Kensington Market and Chinatown are the diverse food hubs.
+# Leslieville and Riverside are the emerging east-end dining neighbourhoods.
+# Scarborough has significant diaspora food culture worth including.
+
+TIER_1_NEIGHBOURHOODS: King West, Queen West, Ossington, Kensington Market
+TIER_2_NEIGHBOURHOODS: Leslieville, Riverside, Distillery District, Annex, Yorkville
+TIER_3_NEIGHBOURHOODS: Little Italy, Little Portugal, Chinatown, Greektown, Scarborough
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  King West, Queen West, Ossington, Kensington Market, Chinatown,
+  Leslieville, Riverside, Distillery District, St. Lawrence,
+  Annex, Yorkville, Little Italy (College St), Little Portugal,
+  Greektown (Danforth), Corktown, Regent Park, Cabbagetown,
+  Roncesvalles, Parkdale, Trinity Bellwoods, West Queen West,
+  Davisville, Mount Pleasant, Little India (Gerrard),
+  Scarborough (if covered by Toronto food writers)
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Mississauga (separate municipality), Brampton, Markham, Richmond Hill,
+  Vaughan (all separate municipalities in Greater Toronto Area),
+  Hamilton (separate city), Oakville, Burlington
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  Alo (1★), Enigma (check current Michelin status),
+  George (check), Canoe (check — verify current star status)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Toronto food writing is EN only. Both-pool is structurally impossible —
+# do not attempt to force both-pool by including marginal sources.
+# Toronto Life annual Best Restaurants list is the gold standard.
+# NOW Magazine and Foodism Toronto have named writers.
+# Toronto Star (Karon Liu) and Globe and Mail have named food reporters.
+# Eater Toronto has variable named authorship — verify per article.
+
+PHASE_0_SOURCES:
+  - torontolife.com (EN — Toronto Life, annual best restaurants list, named writers)
+  - foodism.ca (EN — Foodism Toronto, named editorial writers)
+  - nowtoronto.com (EN — NOW Magazine, food section with named writers)
+  - thestar.com (EN — Toronto Star, Karon Liu and other named food reporters)
+
+SECONDARY_SOURCES:
+  - theglobeandmail.com (EN — Globe and Mail, named food writers)
+  - eater.com/toronto (EN — Eater Toronto, verify named author per article)
+  - theinfatuation.com/toronto (EN — The Infatuation Toronto, verify named author)
+  - canadasbest.ca or similar (EN — Canada's 100 Best Restaurants, verify named)
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-toronto-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-toronto-search-log.txt
+OUTPUT_WORKING:        localbite-toronto-working.json
+OUTPUT_RAW:            localbite-toronto-raw.json
+OUTPUT_FINAL:          localbite-toronto-2023-2026.json
+OUTPUT_AUDIT:          localbite-toronto-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-toronto-failed-sources.txt
