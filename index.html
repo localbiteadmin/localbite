@@ -1358,7 +1358,7 @@ function getFilteredRestaurants() {
   return allRestaurants.filter(r => {
     if (nb && r.neighbourhood !== nb) return false;
     if (cui && r.cuisine !== cui) return false;
-    if (price && String(r.price_level) !== price) return false;
+    if (price && r.price_level != null && String(r.price_level) !== price) return false;
     if (pool) {
       const p = r.language_pool || '';
       if (pool === 'both' && p !== 'both' && p !== 'both-pool' && p !== 'multi-source') return false;
