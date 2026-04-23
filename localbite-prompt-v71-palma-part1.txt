@@ -1,0 +1,70 @@
+# LocalBite Pipeline — Part 1: Palma de Mallorca
+# v7.1 — 2026-04-23
+
+CITY:             Palma de Mallorca
+COUNTRY:          Spain
+CITY_SLUG:        palma-de-mallorca-spain
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: ES, CA
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Source: Ajuntament de Palma district structure + gastronomy signals.
+# Palma has a large expat English-speaking community giving it unusually
+# strong EN food writing coverage for a Spanish city — high both-pool probability.
+# Santa Catalina is the undisputed food epicentre. La Lonja/Casc Antic is the
+# historic dining quarter. Ca'n Pastilla/El Arenal are resort-facing, exclude.
+
+TIER_1_NEIGHBOURHOODS: Santa Catalina, La Lonja, Casc Antic, Passeig des Born, Centre
+TIER_2_NEIGHBOURHOODS: Sa Gerreria, El Terreno, Portixol, Pere Garau, Génova
+TIER_3_NEIGHBOURHOODS: Son Armadams, Es Molinar, Ciudad Jardín, Sant Agustí
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Santa Catalina, La Lonja, Casc Antic (Old Town / Casco Antiguo), Passeig des Born,
+  Centre (Plaça d'Espanya area), Sa Gerreria, El Terreno, Portixol, Pere Garau,
+  Génova, Son Armadams, Es Molinar, Ciudad Jardín, Sant Agustí, Sa Calatrava
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Ca'n Pastilla, El Arenal, Platja de Palma, Playa de Palma (resort strip),
+  Son Vida (hotel/golf enclave), Port Portals (outside city), Andratx, Sóller,
+  Port de Sóller, Deià, Valldemossa (all outside Palma municipality)
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  Marc Fosh (1★, Old Town), Adrián Quetglas (1★)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Palma has unusually strong EN expat food press alongside ES/CA local press.
+# Both-pool probability is high — target EN + ES/CA cross-validation.
+# CA (Catalan/Mallorquí) sources exist but are less common for restaurant coverage.
+# FaceFoodMag is the specialist Mallorcan gastronomy publication.
+# Eat Drink Sleep Mallorca is a long-running named-author EN food blog based on the island.
+
+PHASE_0_SOURCES:
+  - facefoodmag.com (ES/CA — Mallorcan food specialists, named writers)
+  - eatdrinksleepmallorca.com (EN — long-running Mallorca food blog, verify named author)
+  - majorcadailybulletin.com (EN — English-language Mallorcan newspaper, food section)
+  - diariodemallorca.es (ES/CA — main local newspaper, gastronomy section)
+  - ultimahora.es (ES/CA — local newspaper, restaurant coverage)
+
+SECONDARY_SOURCES:
+  - helencummins.com (EN — Mallorca-based food writer, verify recency)
+  - mallorcaglobalmag.es (ES/CA — island lifestyle magazine, food section)
+  - guiarepsol.com (ES — Repsol guide, search Palma entries)
+  - timeout.com/mallorca (EN — verify named author)
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-palma-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-palma-search-log.txt
+OUTPUT_WORKING:        localbite-palma-working.json
+OUTPUT_RAW:            localbite-palma-raw.json
+OUTPUT_FINAL:          localbite-palma-de-mallorca-2023-2026.json
+OUTPUT_AUDIT:          localbite-palma-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-palma-failed-sources.txt

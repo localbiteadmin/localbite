@@ -1,0 +1,72 @@
+# LocalBite Pipeline — Part 1: A Coruña
+# v7.1 — 2026-04-23
+
+CITY:             A Coruña
+COUNTRY:          Spain
+CITY_SLUG:        a-coruna-spain
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: GL, ES
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Source: Concello da Coruña district structure + gastronomy signals.
+# A Coruña has a distinct food culture: octopus, scallops, turbot, lamprey
+# (seasonal), percebes (gooseneck barnacles), tortilla de Betanzos style.
+# Cidade Vella (old town) and the Orzán/Agra do Orzán beach area are the
+# twin food epicentres. San Andrés is the main central artery with many restaurants.
+# Millo, Terreo, and Triay are among the notable modern Galician spots to target.
+
+TIER_1_NEIGHBOURHOODS: Cidade Vella, Orzán, Agra do Orzán, San Andrés, Ensanche
+TIER_2_NEIGHBOURHOODS: Monte Alto, Zalaeta, Riazor, Os Mallos, Matogrande
+TIER_3_NEIGHBOURHOODS: Elviña, Peruleiro, Palavea, Culleredo (adjacent municipality — exclude)
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Cidade Vella (old town), Orzán, Agra do Orzán, San Andrés, Ensanche,
+  Monte Alto, Zalaeta, Riazor, Os Mallos, Matogrande, Juan Flórez area,
+  Paseo Marítimo area
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Culleredo, Arteixo, Oleiros (separate municipalities),
+  A Grela / Pocomaco industrial zones, Airport area,
+  Betanzos (separate city 25km away)
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  Árbore da Veira (1★, chef Luis Veira), A Estación (check current star status)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# A Coruña has strong GL/ES food press. Quincemil (elespanol.com subsidiary)
+# is the most active local digital food media with named writers.
+# Directoalpaladar has published A Coruña gastro guides with named authors.
+# EN coverage is thin — accept structural EN gap if no qualifying sources found.
+# La Voz de Galicia covers food seriously with named critics.
+# Note: chef Álvaro Victoriano has been quoted as a local food authority —
+# pipeline should look for his recommendations in GL/ES press.
+
+PHASE_0_SOURCES:
+  - quincemil.es / elespanol.com (ES — local digital media, named food writers)
+  - lavozdegalicia.es (GL/ES — major regional newspaper, A Coruña food section)
+  - directoalpaladar.com (ES — national food media, search A Coruña gastro guide)
+  - guiarepsol.com (ES — Repsol guide, search A Coruña entries)
+
+SECONDARY_SOURCES:
+  - elidealgallego.es (ES/GL — local A Coruña newspaper, food section)
+  - metropolitano.gal (GL/ES — Galician digital media, may cover A Coruña)
+  - timeout.com/a-coruna (EN — if exists, verify named author and recency)
+  - devour-style EN food travel writers covering A Coruña
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-a-coruna-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-a-coruna-search-log.txt
+OUTPUT_WORKING:        localbite-a-coruna-working.json
+OUTPUT_RAW:            localbite-a-coruna-raw.json
+OUTPUT_FINAL:          localbite-a-coruna-2023-2026.json
+OUTPUT_AUDIT:          localbite-a-coruna-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-a-coruna-failed-sources.txt

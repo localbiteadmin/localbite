@@ -1,0 +1,69 @@
+# LocalBite Pipeline — Part 1: Vigo
+# v7.1 — 2026-04-23
+
+CITY:             Vigo
+COUNTRY:          Spain
+CITY_SLUG:        vigo-spain
+YEAR_RANGE:       2023-2026
+PRIMARY_LANGUAGE: GL, ES
+SECONDARY_LANGUAGE: EN
+
+# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
+# Source: Concello de Vigo neighbourhood structure + gastronomy signals.
+# Vigo's food identity is built around the ría: oysters, gooseneck barnacles,
+# velvet crabs, spider crab, mussels. A Pedra (Praza da Pedra / Rúa da Pescadaría)
+# is the famous oyster street. O Berbés is the traditional fishing quarter.
+# Casco Vello has the densest tapas bar concentration (Rúa Real).
+# Bouzas is the former fishing village with authentic seafood tradition.
+
+TIER_1_NEIGHBOURHOODS: Casco Vello, O Berbés, Bouzas
+TIER_2_NEIGHBOURHOODS: Centro (Príncipe / García Barbón / Paseo de Alfonso), Gran Vía, Areal
+TIER_3_NEIGHBOURHOODS: Teis, Coia, Navia, Os Mallos
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Casco Vello, O Berbés (A Pedra / Praza da Pedra), Bouzas, Centro, Príncipe,
+  García Barbón, Paseo de Alfonso, Gran Vía, Areal, Camelias, Teis, Coia
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Cangas (across the ría — different municipality), Moaña, Redondela,
+  Baiona, Sanxenxo (all separate municipalities), Islas Cíes (no restaurants),
+  Vigo Airport area, Fragoselo industrial zone
+
+# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
+# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+MICHELIN_STARRED_EXCLUSIONS:
+  Maruja Limón (1★, chef Rafael Centeno), Silabario (1★, chef Alberto González Prelcic)
+
+# ── SOURCE STRATEGY ──────────────────────────────────────────
+# Vigo's food writing is primarily in GL and ES. EN coverage is thinner than
+# Santiago — Vigo is less of a tourist destination. Both-pool possible but
+# EN primary sources may be limited. Accept 0 both-pool if EN sources don't qualify.
+# Metropolitano.gal is the key local GL/ES food media for Vigo.
+# Faro de Vigo is the main local newspaper and publishes food criticism.
+
+PHASE_0_SOURCES:
+  - metropolitano.gal (GL/ES — Vigo-focused local media, gastronomy coverage)
+  - farodevigo.es (GL/ES — main Vigo newspaper, food section)
+  - lavozdegalicia.es (GL/ES — regional newspaper, Vigo edition food section)
+  - guiarepsol.com (ES — Repsol guide, search Vigo entries)
+
+SECONDARY_SOURCES:
+  - elespanol.com/quincemil (ES — digital local media, food coverage)
+  - directoalpaladar.com (ES — national food media, search Vigo features)
+  - timeout.com/vigo (EN — if exists, verify named author and recency)
+  - devourspainviagefoodtours.com or similar EN food travel writers covering Vigo
+
+COI_FLAG_SOURCES: None known
+
+# ── PIPELINE SETTINGS ────────────────────────────────────────
+PHASE1_AUTO_PROCEED:  YES
+UNATTENDED_MODE:      YES
+
+# ── OUTPUT FILES ─────────────────────────────────────────────
+OUTPUT_SEARCH_PLAN:    localbite-vigo-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-vigo-search-log.txt
+OUTPUT_WORKING:        localbite-vigo-working.json
+OUTPUT_RAW:            localbite-vigo-raw.json
+OUTPUT_FINAL:          localbite-vigo-2023-2026.json
+OUTPUT_AUDIT:          localbite-vigo-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-vigo-failed-sources.txt
