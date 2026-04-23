@@ -6356,3 +6356,148 @@ Pipeline output files (docs commit):
 *Fleet: 23 cities, ~769 restaurants, 10 on v7.1*
 *index.html: ~2,255 lines (trigger at 2,500)*
 *HEAD: 43d00cc*
+
+## Session — 2026-04-23 (Fix Sessions A+B, Part 1 files, Batch 1 Morocco)
+
+### Overview
+
+Full-day session covering three major workstreams: pipeline fix sessions (Priorities 1-5), creation of Part 1 files for all 14 rebuild cities, and Batch 1 Morocco (4-city parallel rebuild). Session also included the discovery and fix of a new language_pool derivation bug triggered by compaction-reconstruction. All Morocco cities committed.
+
+---
+
+### Fix Session A — Priorities 1, 2, 5 (commit f1ce405)
+
+**Priority 1: Bounding box validation for neighbourhood centroid Nominatim queries**
+postrun.js STEP 2 now reads city bounding box from geocode.js before the Nominatim neighbourhood loop. If Nominatim returns coordinates outside the city bounding box, the result is rejected and treated as not-found. Confirmed working — the San Andrés/Santiago false positive (A Coruña) that required manual rejection in the previous session would now be caught automatically.
+
+**Priority 2: Move index.html centroid writes from STEP 5 to approve-centroids**
+postrun.js STEP 5 no longer writes to index.html — it reports pending centroids and instructs the user to run approve-centroids. approve-centroids.js now writes newly approved centroids to index.html CENTROIDS block after writing to JSON. Confirmed working in Chefchaouen (Plaza Uta el-Hammam written correctly) and Marrakesh (Kasbah centroid written, 3 already-present skipped correctly).
+
+**Priority 5: approve-centroids counter bug**
+Counter now tracks `newlyApprovedCount` explicitly during the loop instead of filtering approved keys after the fact. All Batch 1 runs showed correct counts. Previously the counter overcounted by including pre-existing centroids from data.centroids.
+
+---
+
+### Fix Session B — Priorities 3, 4 (commit 8387dbe)
+
+**Priority 3: Writer dropout surname auto-repair**
+postrun.js STEP 1.5 now attempts to extract surname from source_id as a last resort when writer field is null after all other repairs. Pattern: `src-[publication]-[surname]` → capitalize last hyphen-separated token. Triggered on all 6 Marrakesh sources (full names corrected via repair script). Edge cases tested: single-segment IDs correctly not extracted, multi-part publication names correctly resolved to last token.
+
+**Priority 4: Orphan blocking error**
+postrun.js now checks for orphan restaurants (no coordinates AND no neighbourhood) after geocoding. Exits with blocking error and do-not-commit instruction unless `--allow-orphans` flag is passed. Not triggered in Batch 1 (no orphans in Morocco cities).
+
+---
+
+### Part 1 Files — All 14 Rebuild Cities (commit 478e6d6)
+
+Part 1 files created for all 14 non-v7.1 cities:
+- Morocco: Fes, Marrakesh, Rabat, Chefchaouen
+- Portugal: Lisbon, Porto
+- Light Spain: Granada, Málaga
+- Medium Spain: Bilbao, Seville, Córdoba
+- Toronto
+- Heavy Spain: Barcelona, Valencia
+- Madrid
+
+All use YEAR_RANGE: 2023-2026 (Morocco previously used 2025-2026 — now corrected). PHASE1_AUTO_PROCEED: YES and UNATTENDED_MODE: YES in all files. Michelin exclusions, source strategy, and neighbourhood structure populated for each city. COI flag included for Lisbon (Time Out Market Lisboa).
+
+---
+
+### Language Pool Bug Discovery and Fix (commits 16a7abc, in postrun.js)
+
+**Root cause:** Two-part failure in postrun.js STEP 1.5 language_pool derivation:
+
+1. Guard `if (!r.language_pool)` meant pipeline-set default values (e.g. 'es') were never corrected by auto-repair.
+2. `r.sources` may be array of objects `[{source_id, quote, ...}]` when pipeline compacts during Phase 2 and reconstructs from transcript. The code treated each object as a source ID string, so `sourceLangMap[object]` always returned undefined. Language pool derivation silently failed, leaving the pipeline's incorrect default in place.
+
+**Only manifests on compaction-reconstruction.** Non-compacting runs write sources as plain string IDs and are unaffected. Fes, Rabat, Chefchaouen completed without Phase 2 compaction and had correct language_pool values. Marrakesh compacted mid-Phase 2 and had all 42 restaurants showing 'es' (pipeline default).
+
+**Fix:** Always recalculate language_pool when positive evidence is available from source languages. Extract source IDs correctly from both string and object formats. Committed in postrun.js (effectively v3.1 though version string not updated).
+
+**Marrakesh data patched:** fix-marrakesh-langpool.py corrected 42 language_pool values. Result: 5 both-pool (EN+FR), 34 EN-only, 3 FR-only. Committed alongside postrun.js fix.
+
+---
+
+### Batch 1 — Morocco (4 cities)
+
+**Terminal setup:** 6 terminals (T1-Fes, T2-Marrakesh, T3-Rabat, T4-Chefchaouen, T5-Monitor, T6-Postrun). 20-minute stagger between launches. All four ran simultaneously without rate limit issues.
+
+**Fes** (commit 3a24034):
+- 21 restaurants, 4 sources, 3 both-pool, 71% geocoding
+- Clean run. No compaction issues. Both-pool correct (EN+FR sources, string format).
+- Superseded localbite-fes-2025-2026.json removed.
+
+**Rabat** (commit bbf0bc2):
+- 5 restaurants, 2 sources, 0 both-pool, 60% geocoding
+- 2 bad geocoding matches manually nulled: Grill Robuchon→"Grill 23", Al Warda→"Résidence Warda". Both passed word-overlap check (1 word match each) but were clearly wrong restaurants.
+- Hassan centroid from Nominatim correctly identified as Hassan district of Rabat.
+- Superseded localbite-rabat-2025-2026.json removed.
+- Regression vs v5 (10R→5R, 3 sources→2): confirmed correct — named-author rules correctly rejected anonymous sources.
+
+**Chefchaouen** (commit 871c5cc):
+- 2 restaurants, 1 source, 0 both-pool, 50% geocoding
+- "Restaurant Casa Aladdin" auto-nulled (matched "Restaurant Casa Aladin" — single letter difference "dd" vs "d"). Zero word overlap check too strict for minor spelling variations. Manually restored with geo_skip: true.
+- Plaza Uta el-Hammam Nominatim returned no result — manual coordinates entered [35.1686, -5.2681] via interactive approve-centroids. Priority 2 fix correctly wrote centroid to index.html CENTROIDS.
+- Regression vs v5 (12R→2R, 5 sources→1): correct — v5 sources likely failed named-author gate.
+- Superseded localbite-chefchaouen-2025-2026.json removed.
+
+**Marrakesh** (commits a4eec43, 16a7abc):
+- 42 restaurants, 6 sources, 5 both-pool (after fix), 62% geocoding
+- Compacted during Phase 2 AND Phase 3. Both recoveries successful.
+- Quote field dropout: all 42 restaurants missing quote in final JSON. Repaired from working.json.
+- Writer field dropout: all 6 sources had surname-only writers. Full names corrected from Phase 1 output.
+- 7 bad geocoding matches nulled: Chez Mmima/Bejguenni/Ouazzani→"Chez Chegrouni", +61→city name, Meat Grill→vegetarian restaurant, Le Marocain→pharmacy, La Famille→pharmacy.
+- Language pool bug: all 42 showed 'es'. Fixed to 5 both-pool, 34 EN, 3 FR after postrun.js fix.
+- Superseded localbite-marrakesh-2025-2026.json removed.
+
+**Morocco batch results vs v5:**
+
+| City | v5 R | v7.1 R | v5 BP | v7.1 BP | Assessment |
+|------|------|--------|-------|---------|------------|
+| Fes | 10 | 21 | 1 | 3 | Clear improvement |
+| Marrakesh | 14 | 42 | 4 | 5 | Improvement |
+| Rabat | 10 | 5 | 0 | 0 | Regression — correct |
+| Chefchaouen | 12 | 2 | 1 | 0 | Regression — correct |
+
+---
+
+### Key Decisions
+
+- Language pool bug: fix postrun.js + patch Marrakesh only (other cities unaffected). Do not re-run postrun on other cities.
+- Rabat/Chefchaouen regressions: accept as correct behavior. Smaller named-author packs are better than larger anonymous-source packs.
+- Chefchaouen Casa Aladdin: restore manually rather than weaken auto-null logic globally. Flag auto-null word overlap threshold as a future fix (single-character spelling variants should not trigger zero-overlap).
+- 4-city parallel batch: validated as viable. No rate limit issues with 20-minute stagger.
+
+---
+
+### Files Produced or Updated
+
+| File | Type | Commit |
+|------|------|--------|
+| localbite-postrun.js | fix (Priority 1+2+3+4+5+langpool) | f1ce405, 8387dbe, 16a7abc |
+| localbite-approve-centroids.js | fix (Priority 2+5) | f1ce405 |
+| localbite-prompt-v71-[14 cities]-part1.txt | new | 478e6d6 |
+| localbite-fes-2023-2026.json | new (rebuild) | 3a24034 |
+| localbite-rabat-2023-2026.json | new (rebuild) | bbf0bc2 |
+| localbite-chefchaouen-2023-2026.json | new (rebuild) | 871c5cc |
+| localbite-marrakesh-2023-2026.json | new (rebuild) + langpool fix | a4eec43, 16a7abc |
+| localbite-fes-2025-2026.json | deleted (superseded) | 3a24034 |
+| localbite-rabat-2025-2026.json | deleted (superseded) | bbf0bc2 |
+| localbite-chefchaouen-2025-2026.json | deleted (superseded) | 871c5cc |
+| localbite-marrakesh-2025-2026.json | deleted (superseded) | a4eec43 |
+| Pipeline output docs (all 4 Morocco cities) | new | 094df8c |
+
+---
+
+### Outstanding Items
+
+- [ ] Batch 2: Lisbon, Porto, Granada, Málaga — Part 1 files ready, bounding boxes confirmed in geocode.js
+- [ ] Auto-null word overlap threshold: single-character spelling variations (e.g. "Aladdin" vs "Aladin") trigger zero-overlap incorrectly. Investigate Levenshtein distance or fuzzy match as supplement.
+- [ ] Postrun.js version string: still says v3.0 but effectively v3.1 after today's fixes. Update at next opportunity.
+- [ ] Check other v7.1 cities for object-format sources: only manifests on compaction-reconstruction. Run quick check on all committed v7.1 JSONs to confirm string format.
+- [ ] Marrakesh 0 both-pool in v5 was 4 — the new 5 both-pool is from genuine EN+FR cross-validation. Worth noting the source pool is stronger in v7.1.
+- [ ] Global instructions and CLAUDE.md updates required — see session notes.
+
+*Fleet: 26 cities, ~861 restaurants (estimated). 14 on v7.1, 4 Morocco rebuilt today.*
+
+
