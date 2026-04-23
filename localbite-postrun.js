@@ -716,8 +716,14 @@ function isThinProfile(profile) {
         const newLines = lines.map(l => {
           try {
             const e = JSON.parse(l);
-            if (e.date === today &&
-                (e.city === citySlug || e.city === data.city)) {
+            const _norm = s => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const _eCity    = _norm(e.city);
+            const _slugNorm = _norm(citySlug);
+            const _nameNorm = _norm(data.city);
+            const _cityMatch = e.city === citySlug || e.city === data.city ||
+                               _eCity === _slugNorm || _eCity === _nameNorm ||
+                               _slugNorm.startsWith(_eCity + '-');
+            if (e.date === today && _cityMatch) {
               if (runTimeSecs && !e.run_time_seconds) {
                 e.run_time_seconds = runTimeSecs;
                 e.run_time_source  = 'file-timestamps-postrun';
