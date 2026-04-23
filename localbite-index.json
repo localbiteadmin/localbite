@@ -33,15 +33,15 @@
       "city": "Fes",
       "country": "Morocco",
       "city_slug": "fes-morocco",
-      "pipeline": "localbite-middle-path-v4",
-      "built": "2026-03-22",
-      "restaurant_count": 10,
-      "both_pool_count": 1,
-      "source_count": 3,
-      "description": "10 restaurants from 3 named sources across English and French",
-      "file": "./localbite-fes-2025-2026.json",
+      "pipeline": "localbite-v7.1",
+      "built": "2026-04-23",
+      "restaurant_count": 21,
+      "both_pool_count": 3,
+      "source_count": 4,
+      "file": "localbite-fes-2023-2026.json",
       "status": "complete",
-      "notes": "Thin source pool — Arabic-language sources not found via search. Methodology case study."
+      "open_status_check_count": 6,
+      "notes": ""
     },
     {
       "city": "Marrakesh",
