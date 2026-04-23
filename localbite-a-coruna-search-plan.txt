@@ -1,0 +1,97 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+===========================================================
+LocalBite Search Plan — A Coruña, Spain
+Pipeline v7.1 | Date: 2026-04-23
+===========================================================
+
+CITY: A Coruña | SLUG: a-coruna-spain | YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: GL, ES | SECONDARY_LANGUAGE: EN
+SINGLE_LANGUAGE_CITY: NO | PRICE_CURRENCY: EUR
+CONCENTRATION_CAP: 30% (default) | RIAD_RULE: SKIP
+LOCAL_FOOD_VOCABULARY: blank → Cross-6 SKIPPED
+NAMED_AWARDS: blank → generic awards (1 EN + 1 local + 1 Michelin/Repsol)
+PHASE0: SKIPPED (DIRECT_FETCH_SOURCES blank)
+PHASE1_AUTO_PROCEED: YES | UNATTENDED_MODE: YES
+
+-----------------------------------------------------------
+PART A — NEIGHBOURHOOD COVERAGE
+-----------------------------------------------------------
+
+TIER_1 (5 areas × 2 queries = 10 queries):
+
+A1.  [neighbourhood-CidadeVella] ES/GL, earlier: "restaurantes Cidade Vella A Coruña 2024 guía"
+A2.  [neighbourhood-CidadeVella] EN, recent: "best restaurants old town A Coruña 2025"
+A3.  [neighbourhood-Orzán] ES/GL, earlier: "mellores restaurantes Orzán A Coruña 2023"
+A4.  [neighbourhood-Orzán] EN, recent: "where to eat Orzan beach A Coruña 2025 2026"
+A5.  [neighbourhood-AgraDoOrzán] ES/GL, earlier: "restaurantes Agra do Orzán A Coruña 2024"
+A6.  [neighbourhood-AgraDoOrzán] EN, recent: "restaurants Agra do Orzan A Coruña guide 2025"
+A7.  [neighbourhood-SanAndrés] ES/GL, earlier: "mellores restaurantes San Andrés A Coruña 2023"
+A8.  [neighbourhood-SanAndrés] EN, recent: "best places to eat San Andres A Coruña 2025"
+A9.  [neighbourhood-Ensanche] ES/GL, recent: "restaurantes Ensanche A Coruña 2025 2026"
+A10. [neighbourhood-Ensanche] EN, earlier: "Ensanche neighbourhood restaurants A Coruña 2024"
+
+TIER_2 (5 areas × 2 queries = 10 queries):
+
+A11. [neighbourhood-MonteAlto] ES/GL, earlier: "restaurantes Monte Alto A Coruña 2023"
+A12. [neighbourhood-MonteAlto] EN, recent: "Monte Alto A Coruña restaurants 2025"
+A13. [neighbourhood-Zalaeta] ES/GL, earlier: "restaurantes Zalaeta A Coruña 2024"
+A14. [neighbourhood-Zalaeta] EN, recent: "Zalaeta A Coruña where to eat 2025"
+A15. [neighbourhood-Riazor] ES/GL, recent: "restaurantes Riazor A Coruña 2025"
+A16. [neighbourhood-Riazor] EN, earlier: "Riazor beach restaurants A Coruña 2023"
+A17. [neighbourhood-OsMallos] ES/GL, earlier: "restaurantes Os Mallos A Coruña 2024"
+A18. [neighbourhood-OsMallos] EN, recent: "Os Mallos A Coruña dining 2025 2026"
+A19. [neighbourhood-Matogrande] ES/GL, earlier: "restaurantes Matogrande A Coruña 2023"
+A20. [neighbourhood-Matogrande] EN, recent: "Matogrande A Coruña restaurants 2025"
+
+TIER_3 (3 areas × 1 query = 3 queries):
+
+A21. [neighbourhood-Elviña] ES/GL: "restaurantes Elviña A Coruña"
+A22. [neighbourhood-Peruleiro] ES/GL: "restaurantes Peruleiro A Coruña"
+A23. [neighbourhood-Palavea] ES/GL: "restaurantes Palavea A Coruña"
+
+-----------------------------------------------------------
+PART B — CROSS-CUTTING ANGLES
+-----------------------------------------------------------
+
+Cross-1 — City-wide EN (2 queries):
+B1. [cross-1] EN earlier: "best restaurants A Coruña 2023 2024 food guide local recommendations"
+B2. [cross-1] EN recent: "top places to eat A Coruña 2025 2026 honest review"
+
+Cross-2 — City-wide GL/ES (3 queries):
+B3. [cross-2] ES formal, earlier: "guía gastronómica A Coruña mejores restaurantes 2023 crítica"
+B4. [cross-2] GL casual, recent: "onde comer ben A Coruña recomendacións locais 2025"
+B5. [cross-2] ES journalism, earlier: "A Coruña restaurantes xornalismo gastronomia artigo 2024"
+
+Cross-3 — Generic writer-first (2 queries):
+B6. [cross-3] ES: "crítica gastronómica A Coruña escritora comida recomendación"
+B7. [cross-3] EN: "food writer A Coruña restaurant recommendations personal guide"
+
+Cross-4 — Named awards (3 queries, generic):
+B8.  [cross-4] EN: "A Coruña restaurant award winner best 2024 2025"
+B9.  [cross-4] ES/GL: "premios gastronómicos Galicia A Coruña mejor restaurante"
+B10. [cross-4] Repsol/Michelin: "Repsol Sol A Coruña restaurante recomendado guia"
+
+Cross-5 — Recent openings (2 queries):
+B11. [cross-5] ES, recent: "nuevos restaurantes A Coruña 2025 2026 aperturas"
+B12. [cross-5] EN, earlier: "new restaurant openings A Coruña 2023 2024"
+
+Cross-6 — SKIPPED (LOCAL_FOOD_VOCABULARY blank)
+
+Cross-7 — Cuisine and community (2 queries):
+B13. [cross-7] GL/ES: "pulpo percebes marisco A Coruña mejor restaurante recomendacion"
+B14. [cross-7] GL/ES: "tortilla betanzos lamprea A Coruña restaurante gastronomia gallega"
+
+Cross-8 — Publication-category local language (2 queries):
+B15. [cross-8] ES: "revista gastronómica galicia restaurantes A Coruña recomendados"
+B16. [cross-8] ES: "suplemento gastronomía periódico A Coruña mejores restaurantes"
+
+-----------------------------------------------------------
+YEAR DISTRIBUTION CHECK
+-----------------------------------------------------------
+Earlier years (2023-2024): A1, A3, A5, A7, A10, A11, A13, A16, A17, A19, B1, B3, B5, B8, B12 = 15 queries
+Recent years (2025-2026): A2, A4, A6, A8, A9, A12, A14, A15, A18, A20, B2, B4, B11 = 13 queries
+No year term: A21-A23, B6, B7, B9, B10, B13, B14, B15, B16 = 11 queries
+[year-distribution-check] PASSED — 15 queries reference earlier years, 13 queries reference recent years, 11 queries have no year term.
+
+Total planned queries: 39 (under 45 soft ceiling)

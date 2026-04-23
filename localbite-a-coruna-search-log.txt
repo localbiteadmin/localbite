@@ -1,0 +1,61 @@
+LocalBite Search Log — A Coruña, Spain — 2026-04-23
+[neighbourhood-CidadeVella] "restaurantes Cidade Vella A Coruña 2024 guía" → quincemil.es multiple articles, saltaconmigo.com guide, volandosinfiltro.com 2024, viajeroscallejeros.com, metropolitano.gal Repsol Galicia piece; edreams rejected (booking site)
+[neighbourhood-CidadeVella] "best restaurants old town A Coruña 2025" → thesaucemag.substack.com promising EN guide by Charlie Brown; wanderlog/tripadvisor/hotel sites rejected
+[neighbourhood-Orzán] "mellores restaurantes Orzán A Coruña 2023" → quincemil.es Agra do Orzán piece (2022), elidealgallego.es "siete restaurantes sin estrella", quincemil.es "100 restaurantes" list
+[neighbourhood-Orzán] "where to eat Orzan beach A Coruña 2025 2026" → Millo Orzán restaurant site, beach guides — no new qualifying food-writer sources
+[neighbourhood-AgraDoOrzán] "restaurantes Agra do Orzán A Coruña 2024" → quincemil.es Agra do Orzán 2022 article; elidealgallego.es "vuelta al mundo" Agra do Orzán piece
+[neighbourhood-AgraDoOrzán] "restaurants Agra do Orzan A Coruña guide 2025" → autoreserve.com aggregator; no new named-author food-writer sources
+[neighbourhood-SanAndrés] "mellores restaurantes San Andrés A Coruña 2023" → quincemil.es Macarfi 2026 guide article; elidealgallego.es "siete restaurantes sin estrella" again
+[neighbourhood-SanAndrés] "best places to eat San Andres A Coruña 2025" → TheFork/wanderlog aggregators; no new qualifying named-author sources
+[neighbourhood-Ensanche] "restaurantes Ensanche A Coruña 2025 2026" → queverdeviajes.com 2025 guide; engalicia.info 2026 list; TheFork/Tripadvisor rejected
+[neighbourhood-Ensanche] "Ensanche neighbourhood restaurants A Coruña 2024" → volare.volotea.com airline magazine, no named local author; tripadvisor/thefork rejected
+[neighbourhood-MonteAlto] "restaurantes Monte Alto A Coruña 2023" → quincemil.es "Kilomberos de Monte Alto" 2024 community piece; elidealgallego.es Casa Matilde article
+[neighbourhood-MonteAlto] "Monte Alto A Coruña restaurants 2025" → quincemil.es cocido Monte Alto 2025 article; elidealgallego.es new Monte Alto market 2025
+[neighbourhood-Zalaeta] "restaurantes Zalaeta A Coruña 2024" → directoalpaladar.com "Pracer" restaurant article + gastroguía A Coruña article — STRONG CANDIDATES; elidealgallego.es "siete restaurantes sin estrella"
+[neighbourhood-Zalaeta] "Zalaeta A Coruña where to eat 2025" → no new qualifying sources
+[neighbourhood-Riazor] "restaurantes Riazor A Coruña 2025" → aggregator results only; fedegustando.com Restaurante Ricardo piece
+[neighbourhood-Riazor] "Riazor beach restaurants A Coruña 2023" → elidealgallego.es "restaurantes frente al mar para el invierno" + "mejores restaurantes con vistas en A Coruña" — INTERESTING
+[neighbourhood-OsMallos] "restaurantes Os Mallos A Coruña 2024" → elidealgallego.es "Os Mallos está de moda" article; quincemil.es "nuevos locales hostelería" 2024
+[neighbourhood-OsMallos] "Os Mallos A Coruña dining 2025 2026" → no new qualifying sources
+[neighbourhood-Matogrande] "restaurantes Matogrande A Coruña 2023" → quincemil.es "revolucionaria propuesta gastronómica" (Gunnen) 2024 specific piece; O Fieital own site
+[neighbourhood-Matogrande] "restaurantes Matogrande A Coruña 2025" → elidealgallego.es "burritos más rápidos" (Gazteka) — single-restaurant piece, limited utility; quincemil.es Gunnen TikTok link rejected
+[neighbourhood-Elviña] "restaurantes Elviña A Coruña" → quincemil.es "taberna barrio deportivista" 2025 — specific; mainly small local bars, no food-writer guides to Elviña
+[neighbourhood-Peruleiro] "restaurantes Peruleiro A Coruña" → no qualifying food-writer sources; area has cafeterias/bars but no restaurant food-writer coverage
+[neighbourhood-Palavea] "restaurantes Palavea A Coruña" → Michelin guide listings only; no named food-writer sources for Palavea specifically
+[cross-1] "best restaurants A Coruña 2023 2024 food guide local recommendations" → wanderlog/hotel sites rejected; vueling.com blog interesting but airline mag; tasteatlas.com aggregator rejected
+[cross-1] "top places to eat A Coruña 2025 2026 honest review" → foodandtravel.com Clarissa Hyman article found (FETCHED: May 2022, outside YEAR_RANGE — REJECTED); thesaucemag.substack.com Charlie Brown confirmed again
+[cross-2] "guía gastronómica A Coruña mejores restaurantes 2023 crítica" → theobjective.com Alfonso C. Suárez Oct 2023 (FETCHED: ~8,500 chars, national outlet); directoalpaladar.com gastroguía again; elidealgallego.es "siete restaurantes" confirmed
+[cross-2] "onde comer ben A Coruña recomendacións locais 2025" → volandosinfiltro.com 2025 article (FETCHED: no named author — REJECTED); quincemil.es "vicepresidente Deputación" 2026 — COI concern; buenosdiasmundo.com piece
+[cross-2] "A Coruña restaurantes xornalismo gastronomia artigo 2024" → quincemil.es multiple articles confirmed; galicia forum gastronomico pieces (event coverage, not restaurant guides)
+[cross-3] "crítica gastronómica A Coruña escritora comida recomendación" → quincemil.es Macarfi 2026 guide article; buenosdiasmundo.com "15 restaurantes ideales" appeared
+[cross-3] "food writer A Coruña restaurant recommendations personal guide" → foodandtravel.com Clarissa Hyman confirmed (2022, outside range); thesaucemag substack again
+[cross-4] "A Coruña restaurant award winner best 2024 2025" → Michelin guide pages; no new qualifying food-writer sources
+[cross-4] "premios gastronómicos Galicia A Coruña mejor restaurante" → metropolitano.gal Repsol Galicia pieces confirmed; quincemil.es Michelin Galicia article; Cociñeiro Galego 2025 event info
+[cross-4] "Repsol Sol A Coruña restaurante recomendado guia" → quincemil.es "19 restaurantes recomendados Repsol" article; elidealgallego.es "siete restaurantes incluídos Repsol"; metropolitano.gal Galicia Repsol
+[cross-5] "nuevos restaurantes A Coruña 2025 2026 aperturas" → quincemil.es "Diez nuevos locales hostelería verano 2025" July 2025; elidealgallego.es "A Coruña suma dos nuevos restaurantes Repsol 2026"
+[cross-5] "new restaurant openings A Coruña 2023 2024" → quincemil.es "nuevos locales hostelería 2024/2025" article again; wanderlog/TheFork aggregators rejected
+[cross-7] "pulpo percebes marisco A Coruña mejor restaurante recomendacion" → theobjective.com Oct 2023 confirmed again; directoalpaladar.com "9 mejores locales donde un coruñés te llevaría a tomar marisco" — NEW, fetching; infoleiros.com piece found
+[cross-7] "tortilla betanzos lamprea A Coruña restaurante gastronomia gallega" → elidealgallego.es "tortilla carbonara coruna"; La Penela coverage in Betanzos (25km, excluded area)
+[cross-8] "revista gastronómica galicia restaurantes A Coruña recomendados" → quincemil.es multiple Repsol/Michelin/Macarfi roundups confirmed; metropolitano.gal Repsol Galicia; bonviveur.es "17 mejores restaurantes Galicia" — Galicia-wide, not city-specific
+[cross-8] "suplemento gastronomía periódico A Coruña mejores restaurantes" → quincemil.es Macarfi articles confirmed; directoalpaladar.com gastroguía confirmed (451 block); elidealgallego.es "siete restaurantes sin estrella" confirmed; madmenmagazine.com piece appeared
+
+[phase-1b-crossval] "El de Alberto A Coruña recomendacion critica" → only 2014-2017 blog posts; TripAdvisor/aggregators — no new qualifying sources
+[phase-1b-crossval] "A Mundiña A Coruña recomendacion critica" → Michelin/Repsol guide pages; fedegustando.com appeared but single-restaurant piece — no new qualifying sources
+[phase-1b-crossval] "Miga restaurante A Coruña recomendacion critica" → conmuchagula.com appeared but captcha blocked — no new qualifying sources
+
+[publisher-concentration-supp] lavozdegalicia.es direct fetch → 404; no qualifying article found
+[publisher-concentration-supp] passaportenobolso.com → captcha blocked; no content retrievable
+[publisher-concentration-supp] EN supplementary "A Coruña restaurants English food guide 2024 2025" → no new qualifying sources; documented as structural characteristic
+
+[PHASE 1 LOCKED — 5 sources confirmed]
+
+[phase-2-fetch] src-elig-quiroga: FETCHED https://r.jina.ai/https://www.elidealgallego.com/articulo/gastroideal/siete-restaurantes-coruneses-brillan-estrella-4142329 → 1,843 chars (jina-processed); 7 restaurants extracted; Árbore da Veira excluded (Michelin 1★)
+[phase-2-fetch] src-qm-lede: FETCHED https://r.jina.ai/https://www.elespanol.com/quincemil/vivir/gastrocoruna/20240305/restaurantes-coruna-recomendados-guia-repsol/837666793_0.html → 1,350 chars (brief summary — re-fetched); RE-FETCH returned 6,125 chars table with 19 restaurants verbatim
+[phase-2-fetch] src-qm-moreno: FETCHED https://r.jina.ai/https://www.elespanol.com/quincemil/vivir/gastrocoruna/20241128/restaurantes-coruna-galardonados-seleccionados-guia-michelin-trt/904410037_0.html → 2,592 chars; Bib Gourmand (3) + Selected (12) restaurants; El Refugio (Oleiros) excluded; Asador Coruña and Bido rejected (quote quality)
+[phase-2-fetch] src-obj-suarez: FETCHED https://r.jina.ai/https://theobjective.com/gastronomia/2023-10-06/donde-comer-coruna-restaurantes/ → 8,641 chars; 10 restaurants in article; Árbore da Veira excluded; Comarea Marina rejected (AI-generated description, no extractable writer quote)
+[phase-2-fetch] src-metro-montenegro: FETCHED https://r.jina.ai/https://metropolitano.gal/enfoque/descubre-los-40-mejores-restaurantes-de-galicia-segun-la-guia-repsol-asi-son-los-nuevos-soles/ → 950 chars; 2 A Coruña city restaurants identified (Eclectic, Terreo)
+
+[concentration-cap] src-qm-lede: 11/29 single-source Tier B = 37.9% > 30% cap; auto-removed 4 entries: Taberna O'Secreto, 55 Pasos, Río Ulla, Atípico; post-cap: 7/25 = 28% ✓
+
+[PHASE 3 COMPLETE — UNATTENDED_MODE auto-accepted all recommendations]
+[FINAL] 25 restaurants: 11 Tier A, 14 Tier B | 5 sources | both-pool: 0 | open_status_check: all true

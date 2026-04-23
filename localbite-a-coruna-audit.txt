@@ -1,0 +1,134 @@
+LocalBite Audit Log — A Coruña, Spain — 2026-04-23
+Pipeline v7.1 | UNATTENDED_MODE: YES
+
+===========================================================
+PHASE 1 — SOURCE SELECTION
+===========================================================
+
+CONFIRMED SOURCES (5):
+
+[src-elig-quiroga] El Ideal Gallego | Lucía Quiroga | 2023-01-17 | primary | es
+  Article: "Siete restaurantes coruñeses que brillan sin estrella"
+  URL: https://www.elidealgallego.com/articulo/gastroideal/siete-restaurantes-coruneses-brillan-estrella-4142329
+  Fetch: 23,847 chars | Status: good
+  Found via: phase-1/cross-2
+
+[src-qm-lede] Quincemil (elespanol.com) | Adrián Lede | 2024-03-05 | primary | es
+  Article: "Los restaurantes de A Coruña recomendados por la Guía Repsol"
+  URL: https://www.elespanol.com/quincemil/vivir/gastrocoruna/20240305/restaurantes-coruna-recomendados-guia-repsol/837666793_0.html
+  Fetch: 6,125 chars (re-fetch) | Status: good | Retries: 1
+  Publisher concentration flag: YES (2/5 sources = 40%)
+  Found via: phase-1/cross-8
+
+[src-qm-moreno] Quincemil (elespanol.com) | Myrian Moreno | 2024-11-28 | primary | es
+  Article: "Los restaurantes de A Coruña galardonados y seleccionados por la Guía Michelin"
+  URL: https://www.elespanol.com/quincemil/vivir/gastrocoruna/20241128/restaurantes-coruna-galardonados-seleccionados-guia-michelin-trt/904410037_0.html
+  Fetch: 2,592 chars | Status: good
+  Publisher concentration flag: YES (2/5 sources = 40%)
+  Found via: phase-1/cross-4
+
+[src-obj-suarez] The Objective | Alfonso C. Suárez | 2023-10-06 | secondary | es
+  Article: "Dónde comer en La Coruña: 10 restaurantes en los que pedir pulpo, empanada o marisco"
+  URL: https://theobjective.com/gastronomia/2023-10-06/donde-comer-coruna-restaurantes/
+  Fetch: 8,641 chars | Status: good
+  Found via: phase-1/cross-2
+
+[src-metro-montenegro] Metropolitano.gal | Gloria Montenegro | 2024-03-04 | secondary | es/gl
+  Article: "Descubre los 40 mejores restaurantes de Galicia según la Guía Repsol"
+  URL: https://metropolitano.gal/enfoque/descubre-los-40-mejores-restaurantes-de-galicia-segun-la-guia-repsol-asi-son-los-nuevos-soles/
+  Fetch: 950 chars (A Coruña city section only) | Status: good
+  Found via: phase-1/cross-4
+
+-----------------------------------------------------------
+REJECTED SOURCES (Phase 1):
+-----------------------------------------------------------
+
+[REJECTED] directoalpaladar.com — HTTP 451 (Unavailable for Legal Reasons); Wayback Machine also returned 451; permanently inaccessible
+[REJECTED] thesaucemag.substack.com (Charlie Brown) — paywalled Substack; jina fetch returned <2,000 chars with no confirmed author name
+[REJECTED] passaportenobolso.com — captcha/robot challenge; fetch blocked
+[REJECTED] conmuchagula.com — captcha screen; blocked in Phase 1B
+[REJECTED] lavozdegalicia.es — 404 on direct food section URL; never surfaced in search results; no qualifying article found (structural gap)
+[REJECTED] foodandtravel.com (Clarissa Hyman) — article from May 2022; outside YEAR_RANGE 2023-2026
+[REJECTED] volandosinfiltro.com — no named author; rejected
+[REJECTED] saltaconmigo.com — no named author; rejected
+[REJECTED] quincemil.es Macarfi 2026 — byline "Redacción Quincemil" (editorial team, no individual); rejected
+[REJECTED] elidealgallego.es Repsol 2022 article — publication date 2022; outside YEAR_RANGE
+[REJECTED] quincemil.es "Nacho Carretero" article — adds to publisher concentration; also Carretero is a crime journalist repurposed; insufficient food writing credentials
+
+-----------------------------------------------------------
+PHASE 1B — CROSS-VALIDATION
+-----------------------------------------------------------
+
+3 cross-validation queries run. No new qualifying sources found.
+Restaurants confirmed across sources: El de Alberto, A Mundiña, Miga.
+
+[phase-1b] "El de Alberto A Coruña recomendacion critica" → only 2014-2017 blog posts; aggregators — no new sources
+[phase-1b] "A Mundiña A Coruña recomendacion critica" → fedegustando.com appeared but single-restaurant piece — rejected
+[phase-1b] "Miga restaurante A Coruña recomendacion critica" → conmuchagula.com appeared but captcha blocked — rejected
+
+PUBLISHER CONCENTRATION: quincemil.es = 2/5 sources (40%). Supplementary searches:
+  — lavozdegalicia.es: 404 error, no qualifying article found
+  — passaportenobolso.com: captcha blocked
+  — EN guide supplementary: no results
+  Resolution: documented as structural characteristic of A Coruña media landscape
+
+EN DIVERSITY GATE: UNMET — no qualifying EN source within 2023-2026 found after 3+ targeted searches.
+  Part 1 explicitly confirms: "EN coverage is thin — accept structural EN gap."
+  Resolution: documented as structural characteristic
+
+===========================================================
+PHASE 2 — EXTRACTION
+===========================================================
+
+MICHELIN EXCLUSIONS APPLIED:
+  — Árbore da Veira (1★, Luis Veira): appeared in src-obj-suarez list; EXCLUDED per MICHELIN_STARRED_EXCLUSIONS
+  — Salitre: theobjective.com (Oct 2023) describes as Michelin-starred; BUT quincemil.es Michelin article (Nov 2024) lists as "Selected" only; NOT on MICHELIN_STARRED_EXCLUSIONS list → RETAINED. Flagged for user review.
+  — A Estación: not encountered in any source; no action needed
+
+GEOGRAPHIC EXCLUSIONS:
+  — El Refugio (Oleiros): src-qm-moreno lists it; Oleiros is a separate municipality — EXCLUDED
+
+EXTRACTION-TIME REJECTIONS (quote quality):
+  — Bido (src-qm-moreno): "emphasizes seasonal, quality products with meticulous preparation attention" — <15 effective words of food writer voice; no specific dishes → REJECTED
+  — Asador Coruña (src-qm-moreno): single phrase "carnes gallegas hechas en parrilla de leña" — below threshold → REJECTED
+  — Comarea Marina (src-obj-suarez): jina.ai fetch returned AI-generated description; no identifiable verbatim Alfonso C. Suárez text extractable → REJECTED
+
+===========================================================
+PHASE 3 — TIER ASSIGNMENT AND REVIEW
+===========================================================
+
+CONCENTRATION CAP APPLICATION (src-qm-lede):
+  Pre-cap: 11 single-source Tier B entries from src-qm-lede out of 29 total (37.9% > 30% cap)
+  Target: ≤30% = max 8 single-source Tier B from one publisher
+  Removed (4 entries to reach 7/25 = 28%):
+    1. Taberna O'Secreto — no named dishes, no chef, most generic description
+    2. 55 Pasos — vague "productos de proximidad"; neighbourhood unclear
+    3. Río Ulla — neighbourhood Os Castros not in GEOGRAPHIC_BOUNDARY_INCLUDE; would be null
+    4. Atípico — "cocina personal" is least distinctive remaining entry
+  Post-cap: src-qm-lede contributes 7 single-source Tier B out of 25 total (28%) ✓
+
+TIER ASSIGNMENTS:
+  Tier A (11): Terreo, Artabria, El de Alberto, NaDo, Omakase, Pracer, O Lagar da Estrella, A Mundiña, Miga, Eclectic, Salitre
+  Tier B (14): Millo, Peculiar, La Escondita, El Charrúa, Pulpeira de Melide, Pablo Gallego, Tira do Playa, La Penela, Taberna 5 Mares, Culuca Cociña, A Espiga, Pulpería O Rueiro, Casa Pardo, Basílico
+
+SAME-PUBLISHER NOTE (quincemil.es):
+  Taberna 5 Mares, Culuca Cociña, A Espiga — appear in both src-qm-lede and src-qm-moreno.
+  Both are quincemil.es / elespanol.com → same publisher → does NOT qualify for Tier A.
+  Retained as Tier B with source_count: 2.
+
+UNATTENDED_MODE: all Phase 3 recommendations auto-accepted. No user review pending.
+
+===========================================================
+FINAL COUNTS
+===========================================================
+
+Sources confirmed: 5
+Restaurants in final output: 25
+  Tier A: 11 (auto-approved)
+  Tier B: 14 (reviewed_kept, UNATTENDED auto-accept)
+Both-pool qualified: 0 (all sources es/gl — no EN source found)
+open_status_check: true for all 25 (all sources pre-2025)
+
+Tier C auto-rejected total: 8
+  — Extraction-time: 4 (Bido, Asador Coruña, El Refugio, Comarea Marina)
+  — Concentration cap: 4 (Taberna O'Secreto, 55 Pasos, Río Ulla, Atípico)

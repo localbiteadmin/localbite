@@ -1,0 +1,70 @@
+{
+  "pipeline_stage": "working",
+  "city": "A Coruña",
+  "city_slug": "a-coruna-spain",
+  "run_date": "2026-04-23",
+  "sources_confirmed": 5,
+  "entries_extracted": 33,
+  "entries_tier_a": 11,
+  "entries_tier_b": 14,
+  "entries_tier_c_rejected": 8,
+  "concentration_cap_applied": 4,
+  "extraction_rejected": 4,
+  "notes": "quincemil.es publisher concentration (2/5 sources = 40%) — documented as structural characteristic of A Coruña media landscape; no alternative qualified. EN diversity gate UNMET — structural characteristic per Part 1 note. Árbore da Veira excluded (Michelin 1★). El Refugio (Oleiros) excluded (outside city boundary). Salitre retained despite theobjective.com 2023 labelling it Michelin-starred — quincemil.es Nov 2024 lists it as Selected only; not on MICHELIN_STARRED_EXCLUSIONS list.",
+  "tier_c_auto_rejected": [
+    {
+      "name": "Bido",
+      "source": "src-qm-moreno",
+      "reason": "extraction-time rejection — description 'emphasizes seasonal, quality products with meticulous preparation attention' fails quote quality rule: no specific dishes, no food writer voice, generic descriptor only"
+    },
+    {
+      "name": "Asador Coruña",
+      "source": "src-qm-moreno",
+      "reason": "extraction-time rejection — description 'carnes gallegas hechas en parrilla de leña' is a single phrase, below 15-word minimum quote quality threshold"
+    },
+    {
+      "name": "El Refugio",
+      "source": "src-qm-moreno",
+      "reason": "geographic exclusion — located in Oleiros, a separate municipality outside GEOGRAPHIC_BOUNDARY_INCLUDE"
+    },
+    {
+      "name": "Comarea Marina",
+      "source": "src-obj-suarez",
+      "reason": "extraction-time rejection — jina.ai fetch returned AI-generated description rather than verbatim food writer text; no identifiable Alfonso C. Suárez voice or specific original quote extractable"
+    },
+    {
+      "name": "Taberna O'Secreto",
+      "source": "src-qm-lede",
+      "reason": "concentration cap removal — src-qm-lede single-source Tier B entries exceeded 30% cap (11/29 = 37.9%); removed as first priority (lowest specificity: no named dishes, no chef)"
+    },
+    {
+      "name": "55 Pasos",
+      "source": "src-qm-lede",
+      "reason": "concentration cap removal — proposal 'productos de proximidad' and 'estilo tradicional' with 'gastronomía húngara' is unusual but description too vague; removed in cap reduction"
+    },
+    {
+      "name": "Río Ulla",
+      "source": "src-qm-lede",
+      "reason": "concentration cap removal — neighbourhood Os Castros not in GEOGRAPHIC_BOUNDARY_INCLUDE; null neighbourhood would result; removed in cap reduction"
+    },
+    {
+      "name": "Atípico",
+      "source": "src-qm-lede",
+      "reason": "concentration cap removal — 'cocina personal' descriptor least distinctive among remaining single-source Tier B entries from src-qm-lede; removed to bring concentration to 7/25 = 28%"
+    }
+  ],
+  "publisher_concentration_check": {
+    "publisher": "quincemil.es / elespanol.com",
+    "source_count": 2,
+    "total_sources": 5,
+    "percentage": 40.0,
+    "threshold": 30,
+    "flag": true,
+    "resolution": "supplementary searches found no viable alternative; documented as structural characteristic"
+  },
+  "en_diversity_gate": {
+    "met": false,
+    "resolution": "Part 1 explicitly notes EN coverage is thin — accept structural gap"
+  },
+  "both_pool_qualified": 0
+}

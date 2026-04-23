@@ -1,0 +1,43 @@
+LocalBite Failed Sources — A Coruña, Spain — 2026-04-23
+Pipeline v7.1
+
+NOTE: No Phase 2 fetch failures. All 5 confirmed sources returned usable content.
+
+-----------------------------------------------------------
+Phase 1 Rejected / Inaccessible Sources
+-----------------------------------------------------------
+
+[BLOCKED-451] directoalpaladar.com
+  Attempted: gastroguía A Coruña article + marisco article
+  Error: HTTP 451 (Unavailable for Legal Reasons) on direct fetch
+  Wayback Machine: also returned 451
+  Status: permanently inaccessible; documented
+
+[BLOCKED-captcha] passaportenobolso.com
+  Attempted: EN guide candidate
+  Error: robot/captcha challenge screen
+  Status: blocked; no content retrievable
+
+[BLOCKED-captcha] conmuchagula.com
+  Attempted: Phase 1B cross-validation
+  Error: captcha screen
+  Status: blocked
+
+[BLOCKED-paywall] thesaucemag.substack.com (Charlie Brown)
+  Attempted: EN guide for A Coruña 2025
+  Error: paywalled Substack; jina returned <2,000 chars, no author confirmed
+  Status: rejected (paywall)
+
+[404] lavozdegalicia.es
+  Attempted: direct food section URL
+  Error: 404
+  Notes: never surfaced in 39 search queries; structural gap for this run
+
+[OUT-OF-RANGE] foodandtravel.com (Clarissa Hyman)
+  Article date: May 2022
+  Status: outside YEAR_RANGE 2023-2026; rejected
+
+-----------------------------------------------------------
+Phase 2 — No failures
+-----------------------------------------------------------
+All 5 sources fetched successfully via r.jina.ai.
