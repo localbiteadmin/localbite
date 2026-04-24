@@ -1,109 +1,119 @@
-LOCALBITE LISBON — SEARCH PLAN v6
-Generated: 2026-04-13
-Pipeline: localbite-v6
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PHASE 0 SUMMARY
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-FETCHED: Mesa Marcada — ~85,000 chars — April 2026 — Miguel Pires, Cristiana Beltrão confirmed
-FETCHED: Culinary Backstreets Lisbon — ~85,000 chars — 2024-2026 — Célia Pedroso, Austin Bush confirmed
-FAILED:  Observador gastronomia section — 404 error — section homepage not resolving
+LocalBite Pipeline — Lisbon Search Plan v7.1
+Generated: 2026-04-24
 
-Writers confirmed for Phase 1B: Miguel Pires, Cristiana Beltrão, Célia Pedroso, Austin Bush
+CITY: Lisbon | COUNTRY: Portugal | YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: PT | SECONDARY_LANGUAGE: EN
+TIER_1: Chiado, Bairro Alto, Príncipe Real, Santos, Mouraria
+TIER_2: Alfama, Intendente, Beato, Marvila, Alcântara, Graça
+TIER_3: Belém, Campo de Ourique, Amoreiras, Benfica
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PART A — NEIGHBOURHOOD QUERIES (bilingual: EN + PT)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Lisbon is a multilingual-european city (LANGUAGE_CODES: PT, EN).
-Each neighbourhood group gets 2 queries — one EN, one PT.
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD QUERIES (26 total)
+════════════════════════════════════════
 
-Group 1: Alfama + Mouraria
-  A1a [EN]: "best restaurants Alfama Mouraria Lisbon food writer guide"
-  A1b [PT]: "restaurantes Alfama Mouraria Lisboa recomendações guia"
+TIER 1 — Chiado (2 queries)
+A-01 [neighbourhood-chiado] PT: "restaurantes Chiado Lisboa crítica gastronómica 2023 2024"
+A-02 [neighbourhood-chiado] EN: "best restaurants Chiado Lisbon food review 2025 2026"
 
-Group 2: Bairro Alto + Chiado
-  A2a [EN]: "best restaurants Bairro Alto Chiado Lisbon food guide"
-  A2b [PT]: "restaurantes Bairro Alto Chiado Lisboa guia gastronomico"
+TIER 1 — Bairro Alto (2 queries)
+A-03 [neighbourhood-bairroalto] PT: "restaurantes Bairro Alto Lisboa recomendação 2025"
+A-04 [neighbourhood-bairroalto] EN: "eating out Bairro Alto Lisbon food guide 2023 2024"
 
-Group 3: Baixa + Intendente
-  A3a [EN]: "restaurants Baixa Intendente Lisbon guide 2025"
-  A3b [PT]: "restaurantes Baixa Intendente Lisboa onde comer 2025"
+TIER 1 — Príncipe Real (2 queries)
+A-05 [neighbourhood-principereal] PT: "restaurantes Príncipe Real Lisboa guia gastronómico 2024"
+A-06 [neighbourhood-principereal] EN: "best places to eat Príncipe Real Lisbon 2025 2026"
 
-Group 4: Arroios
-  A4a [EN]: "Arroios Lisbon restaurants food writer 2024 2025"
-  A4b [PT]: "restaurantes Arroios Lisboa guia gastronomia"
+TIER 1 — Santos (2 queries)
+A-07 [neighbourhood-santos] PT: "onde comer Santos Lisboa jantar recomendado 2025"
+A-08 [neighbourhood-santos] EN: "Santos Lisbon restaurants food recommendations 2023 2024"
 
-Group 5: Avenidas Novas
-  A5a [EN]: "Avenidas Novas Lisbon restaurants food guide"
-  A5b [PT]: "restaurantes Avenidas Novas Lisboa recomendações"
+TIER 1 — Mouraria (2 queries)
+A-09 [neighbourhood-mouraria] PT: "restaurantes Mouraria Lisboa crítica 2023 2024"
+A-10 [neighbourhood-mouraria] EN: "best restaurants Mouraria Lisbon local dining 2025 2026"
 
-Group 6: Belém + Alcântara
-  A6a [EN]: "best restaurants Belem Alcantara Lisbon guide"
-  A6b [PT]: "restaurantes Belém Alcântara Lisboa guia gastronomia"
+TIER 2 — Alfama (2 queries)
+A-11 [neighbourhood-alfama] PT: "restaurantes Alfama Lisboa recomendação jantar 2024 2025"
+A-12 [neighbourhood-alfama] EN: "dining in Alfama Lisbon authentic restaurants 2023"
 
-Group 7: Santos + Príncipe Real
-  A7a [EN]: "Santos Principe Real Lisbon restaurants food writer"
-  A7b [PT]: "restaurantes Santos Príncipe Real Lisboa guia"
+TIER 2 — Intendente (2 queries)
+A-13 [neighbourhood-intendente] PT: "restaurantes Intendente Lisboa bairro guia 2023 2024"
+A-14 [neighbourhood-intendente] EN: "Intendente Lisbon restaurants local food scene 2025"
 
-Group 8: Campo de Ourique + Estrela + Lapa
-  A8a [EN]: "Campo de Ourique Estrela Lapa Lisbon restaurants guide"
-  A8b [PT]: "restaurantes Campo de Ourique Estrela Lapa Lisboa"
+TIER 2 — Beato (2 queries)
+A-15 [neighbourhood-beato] PT: "restaurantes Beato Lisboa onde comer 2025 2026"
+A-16 [neighbourhood-beato] EN: "Beato Lisbon dining guide creative food scene 2023 2024"
 
-Group 9: Alvalade
-  A9a [EN]: "Alvalade Lisbon restaurants food guide 2025"
-  A9b [PT]: "restaurantes Alvalade Lisboa guia gastronomia"
+TIER 2 — Marvila (2 queries)
+A-17 [neighbourhood-marvila] PT: "restaurantes Marvila Lisboa onde jantar 2024"
+A-18 [neighbourhood-marvila] EN: "Marvila Lisbon food scene restaurants 2025 2026"
 
-Group 10: Beato + Marvila
-  A10a [EN]: "Beato Marvila Lisbon restaurants food writer guide"
-  A10b [PT]: "restaurantes Beato Marvila Lisboa guia 2025"
+TIER 2 — Alcântara (2 queries)
+A-19 [neighbourhood-alcantara] PT: "restaurantes Alcântara LX Factory Lisboa 2023 2024"
+A-20 [neighbourhood-alcantara] EN: "LX Factory Alcântara Lisbon restaurants food 2025"
 
-Group 11: Parque das Nações
-  A11a [EN]: "Parque das Nacoes Lisbon restaurants food guide"
-  A11b [PT]: "restaurantes Parque das Nações Lisboa recomendações"
+TIER 2 — Graça (2 queries)
+A-21 [neighbourhood-graca] PT: "restaurantes Graça Lisboa jantar recomendado 2025 2026"
+A-22 [neighbourhood-graca] EN: "Graça Lisbon neighbourhood restaurants local guide 2023 2024"
 
-Group 12: Almada (conditional)
-  A12a [EN]: "Almada Lisbon dining scene restaurants food writer 2025"
-  A12b [PT]: "restaurantes Almada cena gastronómica Lisboa 2025"
+TIER 3 — Belém (1 query)
+A-23 [neighbourhood-belem] PT: "restaurantes Belém Lisboa gastronomia além pastéis 2024 2025"
 
-TOTAL PART A: 24 queries
+TIER 3 — Campo de Ourique (1 query)
+A-24 [neighbourhood-campodeourique] PT: "restaurantes Campo de Ourique Lisboa bairro local 2023"
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PART B — CROSS-CUTTING ANGLES (14 queries)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIER 3 — Amoreiras (1 query)
+A-25 [neighbourhood-amoreiras] PT: "restaurantes Amoreiras Lisboa guia 2025"
 
-Cross-1 — City-wide (3 queries):
-  B1a [EN 2026]: "best restaurants Lisbon Portugal food writer local guide 2026"
-  B1b [PT 2025]: "melhores restaurantes Lisboa Portugal guia gastronomico 2025"
-  B1c [EN no year]: "local food writers Lisbon restaurant recommendations independent"
+TIER 3 — Benfica (1 query)
+A-26 [neighbourhood-benfica] PT: "restaurantes Benfica Lisboa onde comer 2024"
 
-Cross-2 — Writer-first (3 queries):
-  B2a: "Miguel Pires food writer Lisbon restaurant reviews"
-  B2b: "Célia Pedroso Lisbon food guide restaurants recommendations"
-  B2c [PT]: "críticos gastronomia Lisboa Portugal escritores locais 2025"
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES (16 total)
+════════════════════════════════════════
 
-Cross-3 — Recent openings 2024–2026 (2 queries):
-  B3a [EN]: "new restaurant openings Lisbon 2025 2026 food writer"
-  B3b [PT]: "novos restaurantes Lisboa 2025 2026 abertos guia"
+Cross-1 — City-wide EN (2 queries)
+B-27 [cross-1] EN editorial: "best restaurants Lisbon 2025 2026 food critic guide"
+B-28 [cross-1] EN personal: "where to eat in Lisbon local recommendations 2023 2024"
 
-Cross-4 — Older coverage 2023–2024 (2 queries):
-  B4a [EN]: "best restaurants Lisbon 2023 food writer guide"
-  B4b [PT]: "melhores restaurantes Lisboa 2024 guia gastronomia"
+Cross-2 — City-wide PT (3 queries)
+B-29 [cross-2] PT formal: "melhores restaurantes Lisboa crítica gastronómica 2025"
+B-30 [cross-2] PT casual: "onde comer Lisboa bairro recomendações locais 2023 2024"
+B-31 [cross-2] PT press: "guia restaurantes Lisboa jornalismo gastronómico 2026"
 
-Cross-5 — Awards and recognition (2 queries):
-  B5a [EN]: "Michelin guide Lisbon restaurants 2024 2025"
-  B5b [PT]: "prémios gastronomia Lisboa melhores restaurantes 2025"
+Cross-3 — Writer-first (2 queries)
+B-32 [cross-3] PT: "crítico gastronómico Lisboa artigo restaurante 2024"
+B-33 [cross-3] EN: "food writer Lisbon restaurant review article 2025"
 
-Cross-6 — Forum and community (2 queries):
-  B6a [EN]: "Lisbon restaurants recommendations food lovers local 2025"
-  B6b [PT]: "Lisboa restaurantes recomendações escritor gastronomia independente"
+Cross-4 — Awards (3 queries — generic, NAMED_AWARDS blank)
+B-34 [cross-4] EN: "Lisbon restaurant award winners best 2024 2025"
+B-35 [cross-4] PT: "premiados restaurantes Lisboa gastronomia melhor 2023 2024"
+B-36 [cross-4] Michelin: "Michelin Bib Gourmand Lisboa restaurantes recomendados 2025"
 
-Cross-7 — Cuisine diversity (2 queries — Lisbon has significant African/Brazilian diaspora food scene):
-  B7a [EN]: "African food Lisbon restaurants Cape Verdean Angolan food writer"
-  B7b [PT]: "restaurantes africanos brasileiros Lisboa guia gastronomia escritor"
+Cross-5 — Recent openings (2 queries)
+B-37 [cross-5] PT: "novos restaurantes Lisboa abertura 2025 2026"
+B-38 [cross-5] EN: "new restaurant openings Lisbon 2024 2025"
 
-TOTAL PART B: 14 queries
+Cross-6 — SKIP (LOCAL_FOOD_VOCABULARY blank)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-GRAND TOTAL: 38 queries planned
-Within medium-city range (30–45). Stopping rule applies after 8 consecutive zero-yield queries.
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Cross-7 — Cuisine and community (2 queries)
+B-39 [cross-7] PT: "restaurantes bacalhau petiscos tasca Lisboa crítica 2024 2025"
+B-40 [cross-7] EN: "Portuguese cuisine petiscos traditional Lisbon food guide 2023 2024"
+
+Cross-8 — Publication categories (2 queries)
+B-41 [cross-8] PT: "revista gastronómica independente Lisboa restaurantes recomendados"
+B-42 [cross-8] EN: "Lisbon newspaper food supplement restaurant guide 2025"
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+
+Earlier years (2023/2024): A-01, A-04, A-05, A-08, A-09, A-12, A-13, A-16, A-17, A-19, A-22, A-24, A-26, B-28, B-30, B-32, B-35, B-40 = 18 queries
+Later years (2025/2026): A-02, A-03, A-06, A-07, A-10, A-14, A-15, A-18, A-20, A-21, A-25, B-27, B-29, B-31, B-33, B-36, B-37, B-42 = 18 queries
+Mixed (2024 2025 / both): A-11, A-23, B-34, B-38, B-39 = 5 queries
+No year term: B-41 = 1 query
+
+[year-distribution-check] PASSED — 18 queries reference earlier years, 18 queries reference later years, 5 queries reference both, 1 query has no year term.
+
+Total planned queries: 42 (under 45 soft ceiling)

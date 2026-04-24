@@ -1,0 +1,73 @@
+LocalBite Pipeline v7.1 — Málaga Audit
+Built: 2026-04-24
+Sources: 6 | Final entries: 34 | Both-pool: 2
+
+════════════════════════════════════════
+AUTO-REMOVED (Recommended Tier B — auto-accepted, UNATTENDED_MODE: YES)
+════════════════════════════════════════
+
+La Tranca | Tier B | bar-primarily: article describes a bar serving cold beer and empanadas; no evidence of table-service dining establishment | src-spanishsabores-aloise
+Las Merchanas | Tier B | bar-primarily: Semana Santa-themed bar; described explicitly as a bar | src-spanishsabores-aloise
+El Huesca | Tier B | bar-primarily: vermut bar, atmosphere-only quote referencing Cathedral views and passing hours; no food dishes mentioned | src-elespanol-gaspar
+Parador de Málaga Gibralfaro | Tier B | hotel restaurant; Gibralfaro not in GEOGRAPHIC_BOUNDARY_INCLUDE | src-mlwot-reina
+Pez Tomillo | Tier B | quote lacks dish-name specificity: "modern interpretations of Malaga classics, and really yummy seafood too" — no named dish, no chef name, no price; fails specific detail requirement | src-spanishsabores-aloise
+
+════════════════════════════════════════
+AUTO-REJECTED (Tier C — caught at Phase 3 scoring)
+════════════════════════════════════════
+
+None. All 39 post-dedup entries reached Phase 3 with valid quotes. No extraction-time rejections logged in this session.
+
+════════════════════════════════════════
+CONCENTRATION CAP DECISIONS
+════════════════════════════════════════
+
+No cap applied. Highest concentration: src-spanishsabores-aloise with 11 single-source Tier B entries = 28.2% of 39 (cap: 30%). Under threshold.
+
+════════════════════════════════════════
+GEOGRAPHIC EXCLUSIONS
+════════════════════════════════════════
+
+Parador de Málaga Gibralfaro: Gibralfaro hill is outside GEOGRAPHIC_BOUNDARY_INCLUDE. Removed (see auto-removed above).
+Several restaurants from src-elespanol-navarro article were noted in Marbella — excluded at extraction time; not present in working file.
+
+════════════════════════════════════════
+COI DISCLOSURES
+════════════════════════════════════════
+
+No commercial conflicts identified across any of the 6 confirmed sources.
+
+════════════════════════════════════════
+PUBLISHER CONCENTRATION FLAGS
+════════════════════════════════════════
+
+El Español Málaga: 2 articles from same publisher (src-elespanol-gaspar Dec 2024 + src-elespanol-navarro Oct 2025). Contributes 100% of ES primary pool. Four supplementary searches conducted; no independent ES city-level food guide publisher found for Málaga within YEAR_RANGE. Documented as structural characteristic of Málaga's ES food writing ecosystem.
+
+════════════════════════════════════════
+SIBLING EDITION CHECKS
+════════════════════════════════════════
+
+SpanishSabores: single-author site — About page confirms Lauren Aloise as sole author. Article-level byline not required.
+Andalucia Lovers (EN/ES): writer identified only as "Clara" (surname not found in article or About page). Failed named-author requirement (full first name AND surname required). Not confirmed as source in this v7.1 run.
+
+════════════════════════════════════════
+OPEN STATUS CHECK ENTRIES
+════════════════════════════════════════
+
+28 of 34 final entries carry open_status_check: true due to pre-2025 source article dates. Sources triggering the flag:
+- src-spanishsabores-aloise: article_date 2023-07-12
+- src-mlwot-reina: article_date 2024-03-19
+- src-elespanol-gaspar: article_date 2024-12-13
+- src-natgeo-heras: article_date 2024-11-07
+
+Merged entries (El Pimpi, Los Patios de Beatas, Uvedoble, Casa Aranda, Beluga) also carry open_status_check: true because at least one contributing source is pre-2025. A verification pass is required before the city goes live.
+
+════════════════════════════════════════
+DEDUPLICATION MERGES
+════════════════════════════════════════
+
+El Pimpi: merged from src-spanishsabores-aloise + src-mlwot-reina + src-ewn-newton (3 → 1)
+Uvedoble: merged from src-spanishsabores-aloise + src-ewn-newton (2 → 1)
+Los Patios de Beatas: merged from src-spanishsabores-aloise + src-ewn-newton (2 → 1)
+Casa Aranda: merged from src-spanishsabores-aloise (EN) + src-elespanol-navarro (ES) → BOTH-POOL
+Beluga: merged from src-ewn-newton (EN) + src-natgeo-heras (ES) → BOTH-POOL

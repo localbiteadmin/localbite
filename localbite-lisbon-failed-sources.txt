@@ -1,0 +1,112 @@
+LOCALBITE LISBON — FAILED SOURCES
+Generated: 2026-04-24
+Pipeline: localbite-v7.1
+
+════════════════════════════════════════════════════
+ACCESS FAILURES (fetch returned error or no content)
+════════════════════════════════════════════════════
+
+publico.pt
+  Status:  HTTP 451 (Unavailable For Legal Reasons)
+  Blocker: CloudFront geo-block / legal access restriction
+  Notes:   Quality PT newspaper with named food critics (Fugas supplement).
+           Geo-block appears systematic; Wayback Machine retry also returned 451.
+           Permanent structural failure for this region/session.
+
+observador.pt
+  Status:  HTTP 404
+  Blocker: Gastronomy section URL not found
+  Notes:   Digital newspaper with quality named food writing.
+           Section may have been restructured or URL changed.
+           Try /alimentacao/ or /lifestyle/gastronomia/ on future runs.
+
+evasoes.pt
+  Status:  HTTP 403 Forbidden
+  Blocker: CloudFront security block
+  Notes:   Portuguese travel and lifestyle magazine with food coverage.
+
+etaste.pt
+  Status:  HTTP 403 Forbidden
+  Blocker: Security verification (bot detection)
+  Notes:   Portuguese food review platform.
+
+lisboasecreta.co
+  Status:  JavaScript challenge / bot verification
+  Blocker: Cloudflare challenge page returned instead of content
+  Notes:   Lisbon local guide with named contributors. Could not access article content.
+
+mesamarcada.com (review articles)
+  Status:  HTTP 404 on multiple specific article URLs
+  Blocker: Article URL 404s (only news items accessible)
+  Notes:   The Mesa Marcada main site is accessible; specific review article URLs
+           for Parra Wine Bistro (Mar 2025), Kaigi (Nov 2023), and Oven (Jun 2025)
+           all returned 404. Category index URL also 404.
+           Only accessible: Boubou's news item (Apr 2026) — used as PT primary source.
+           Mesa Marcada uses non-standard URL structure; future runs should try
+           the homepage for current article links rather than guessing article URLs.
+
+════════════════════════════════════════════════════
+REJECTED — NO NAMED INDIVIDUAL AUTHOR
+════════════════════════════════════════════════════
+
+lisboninsiders.com "Eat List"
+  Status:  Accessible
+  Reason:  Restaurant cards listed with no individual author attribution.
+           Page shows editorial content without a byline.
+
+ondevamosjantar.com
+  Status:  Accessible
+  Reason:  Site operates via gmail address; no individual founder named on About page.
+           Cannot meet named author requirement.
+
+mesamarcada.com "Uma Cozinha lisboeta" (Feb 2024)
+  Status:  Accessible
+  Reason:  Article shows anonymous avatar with no author name attached.
+           Named author requirement not met.
+
+Culinary Backstreets Lisbon city guide (main page)
+  Status:  Accessible
+  Reason:  "Author: Culinary Backstreets" shown — editorial team credit, not individual.
+           Used the Best Bites 2024 article (Austin Bush, named byline) instead.
+
+════════════════════════════════════════════════════
+REJECTED — ZERO EXTRACTION VALUE
+════════════════════════════════════════════════════
+
+NiT Lisboa "Lisboa à Prova" (Eva Reimão)
+  URL:     https://www.nit.pt/comida/restaurantes/ja-sabemos-quais-sao-os-169-melhores-restaurantes-de-lisboa
+  Status:  Accessible (named author: Eva Reimão confirmed)
+  Reason:  Article lists 169 restaurants in competition award tiers (1-star, 2-star, 3-star
+           categories from the Câmara de Lisboa's formal evaluation programme) with no
+           individual restaurant descriptions. Zero restaurants meet the Quote Quality
+           Rule (≥15 words + ≥1 specific detail).
+           Replaced by: src-guiarepsol-moura (Catarina Moura, Prado review)
+
+Guia Michelin Lisboa 2024 analysis (Mesa Marcada, Feb 2024)
+  Status:  Accessible
+  Reason:  Opinion/analysis piece about Michelin star awards — no individual restaurant
+           descriptions for non-starred restaurants. Stars-only restaurants excluded
+           per MICHELIN_STARRED_EXCLUSIONS. No extractable entries.
+
+Mesa Marcada Prémios Mesa Marcada 2025 (Feb 2026)
+  Status:  Accessible
+  Reason:  Awards article; restaurants listed without individual descriptions meeting
+           quote quality rule. Majority of named restaurants are Michelin-starred.
+           No named author on the article (editorial post). Double rejection.
+
+════════════════════════════════════════════════════
+REJECTED — SECONDARY CAP FULL
+════════════════════════════════════════════════════
+
+spanishsabores.com (Lauren Aloise)
+  Status:  Accessible; named author confirmed
+  Reason:  Article includes tourist-facing attractions (A Ginjinha, Time Out Market)
+           alongside restaurants — classified secondary (tourist/national audience).
+           Secondary cap already full (Repsol + Time Out = 2). Dropped.
+
+════════════════════════════════════════════════════
+PHASE 0 — SKIPPED
+════════════════════════════════════════════════════
+
+DIRECT_FETCH_SOURCES was blank in Part 1 — Phase 0 was skipped entirely.
+Sources were discovered via Phase 1 search queries.

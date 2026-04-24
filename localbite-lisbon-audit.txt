@@ -1,111 +1,266 @@
 LOCALBITE LISBON — OUTPUT AUDIT
-Generated: 2026-04-13
-Pipeline: localbite-v6
-Phase: 3 (post-dedup)
+Generated: 2026-04-24
+Pipeline: localbite-v7.1
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TIER C — AUTO-EXCLUDED (8 entries)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Rule: null neighbourhood + single source = auto rec-remove; outside geographic boundary; bar not restaurant.
+════════════════════════════════════════════════════
+PIPELINE SUMMARY
+════════════════════════════════════════════════════
 
-C1  As Bifanas do Afonso
-    Source: src-timeout-en (secondary, COI)
-    Neighbourhood: null (no neighbourhood identified in source)
-    Reason: null neighbourhood + single source → auto Tier C
+City:               Lisbon, Portugal
+City slug:          lisbon-portugal
+Year range:         2023–2026
+Primary language:   PT
+Secondary language: EN
+Searches run:       45 (42 planned + 3 Phase 1B cross-validation)
+Sources confirmed:  6
+Final entries:      24 (9 Tier A, 15 Tier B)
+Both-pool:          3
 
-C2  Bom Bom Bom
-    Source: src-ola-daniela
-    Neighbourhood: null (Graça — not in GEOGRAPHIC_BOUNDARY_INCLUDE)
-    Reason: (a) bar not restaurant — source describes as "vinyl bar in Graça with seasonal snacks"; (b) null neighbourhood
+Diversity Gate:     PASSED
+  ≥1 PT primary:    YES — src-mesamarcada-pires (Miguel Pires)
+  ≥1 EN primary:    YES — src-oladaniela-sundbrown, src-theinfatuation-geraldes, src-culinarybackstreets-bush
+  ≤2 secondary:     YES — src-guiarepsol-moura + src-timeout-lacerda (exactly 2)
 
-C3  Familjen
-    Source: src-timeout-en (secondary, COI)
-    Neighbourhood: null (no neighbourhood identified in source)
-    Reason: null neighbourhood + single source → auto Tier C
+════════════════════════════════════════════════════
+SOURCES CONFIRMED (6)
+════════════════════════════════════════════════════
 
-C4  Petisco Saloio
-    Source: src-culinary-backstreets (primary, COI)
-    Neighbourhood: null (source provides no neighbourhood)
-    Reason: null neighbourhood + single source → auto Tier C
+1. src-oladaniela-sundbrown
+   Publication:  Ola Daniela
+   Writer:       Daniela Sunde-Brown
+   Language:     EN primary
+   Date:         2024-11-30
+   Article:      "Local's Lisbon Restaurant Guide (2026): 42 Best Places To Eat"
+   Restaurants extracted: 29 (before Phase 3 processing)
+   Notes:        Single-author personal site; About page confirms full name.
+                 Australian food writer resident in Lisbon since 2018.
 
-C5  Sala de Corte
-    Source: src-timeout-en (secondary, COI)
-    Neighbourhood: null (no neighbourhood identified in source)
-    Reason: null neighbourhood + single source → auto Tier C
+2. src-theinfatuation-geraldes
+   Publication:  The Infatuation
+   Writer:       Rita Geraldes
+   Language:     EN primary
+   Date:         2023-07-24
+   Article:      "The 29 Best Restaurants In Lisbon"
+   Restaurants extracted: 17 (after Michelin exclusions at extraction time)
+   Notes:        Named byline confirmed. The Infatuation is non-advertorial.
 
-C6  Santa Joana
-    Source: src-infatuation (primary)
-    Neighbourhood: null (no neighbourhood identified in source)
-    Reason: null neighbourhood + single source → auto Tier C
+3. src-culinarybackstreets-bush
+   Publication:  Culinary Backstreets
+   Writer:       Austin Bush
+   Language:     EN primary
+   Date:         2024-12-24
+   Article:      "Best Bites 2024: Lisbon"
+   Restaurants extracted: 4 (Canalha, Pigmeu, Prado, Gambrinus)
+   Notes:        Named individual byline confirmed. CB "Best Bites" annual roundup.
+                 Note: the CB city guide (Célia Pedroso/editorial) was rejected for
+                 individual byline — this is the annual Best Bites piece, separate article.
 
-C7  Taberna do Mar (= A Taberna do Mar)
-    Sources: src-ola-daniela + src-infatuation (merged as same restaurant)
-    Neighbourhood: null (Graça — confirmed outside GEOGRAPHIC_BOUNDARY_INCLUDE by both sources)
-    Reason: outside geographic boundary confirmed by 2 independent sources; Graça not in GEOGRAPHIC_BOUNDARY_INCLUDE
+4. src-mesamarcada-pires
+   Publication:  Mesa Marcada
+   Writer:       Miguel Pires
+   Language:     PT primary
+   Date:         2026-04-08
+   Article:      "Chef Louise Bourrat deixa o Boubou's e abre novo restaurante em Lisboa"
+   Restaurants extracted: 1 (Boubou's)
+   Notes:        PT primary source. Article is a news item (chef departure),
+                 not a food review. Yields only 1 restaurant but satisfies
+                 Diversity Gate ≥1 PT primary requirement.
+                 Major PT sources inaccessible this run:
+                 — publico.pt: geo-blocked (HTTP 451)
+                 — observador.pt: food section 404
+                 — Mesa Marcada review articles: article URLs 404 (only news item accessible)
 
-C8  Tasca Pete
-    Source: src-infatuation (primary)
-    Neighbourhood: null (Graça/Penha de França — not in GEOGRAPHIC_BOUNDARY_INCLUDE)
-    Reason: null neighbourhood (outside boundary) + single source → auto Tier C
+5. src-guiarepsol-moura
+   Publication:  Guia Repsol
+   Writer:       Catarina Moura
+   Language:     PT secondary
+   Date:         2025-07-24
+   Article:      "Prado, Lisboa: cozinha honesta com produto de pequenos produtores"
+   Restaurants extracted: 1 (Prado)
+   Notes:        Classified secondary — Repsol is a national/ibérica guide,
+                 not a city-specific publication. Named author confirmed.
+                 Contributes PT pool for Prado both-pool classification.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TIER B — RECOMMENDED REMOVALS (5 entries)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Rule: source concentration cap (Ola Daniela 20/55 = 36.4% → cap at 30% = max 15 Ola Daniela single-source Tier B) + operational flag.
-5 entries flagged rec-remove. User must approve or override before inclusion in OUTPUT_FINAL.
+6. src-timeout-lacerda
+   Publication:  Time Out Lisboa
+   Writer:       Alfredo Lacerda
+   Language:     PT secondary (⚠ COI)
+   Date:         2024-05-08
+   Article:      "Canalha: o bistro em Belém que deu nova vida à cozinha portuguesa contemporânea"
+   Restaurants extracted: 1 (Canalha)
+   Notes:        ⚠ COI declared — Time Out operates Time Out Market Lisboa
+                 at Mercado da Ribeira. Included with transparency; flagged in output.
+                 Contributes PT pool for Canalha both-pool classification.
+                 Named author confirmed: Alfredo Lacerda, food editor Time Out Lisboa.
 
-R1  BouBou's
-    Source: src-ola-daniela (primary, no COI)
-    Neighbourhood: Príncipe Real
-    Reason: OPERATIONAL FLAG — chef Louise Bourrat departed April 2026 per Mesa Marcada reporting.
-    Concept likely changed; entry written for original concept only.
-    Action: verify current restaurant concept and chef before any inclusion.
+════════════════════════════════════════════════════
+SOURCES REJECTED — PHASE 1
+════════════════════════════════════════════════════
 
-R2  Brilhante
-    Source: src-ola-daniela (primary, no COI)
-    Neighbourhood: Santos
-    Reason: SOURCE CONCENTRATION CAP — Ola Daniela contributes 20 single-source Tier B entries
-    exceeding the 30% cap (36.4% of total A+B=55). Brilhante selected as weakest of 5 removals:
-    weakest specificity among Santos area entries (no named dish, no chef, no year).
+Rejected for no named individual author:
+  — lisboninsiders.com "Eat List": restaurant cards, no individual byline → REJECTED
+  — ondevamosjantar.com: operates via gmail address, no named founder → REJECTED
+  — mesamarcada.com "Uma Cozinha lisboeta" (Feb 2024): anonymous avatar → REJECTED
+  — Culinary Backstreets city guide (Célia Pedroso/editorial): "Author: Culinary Backstreets" editorial team on main page → used Best Bites instead
 
-R3  Hachi Kare-Ya
-    Source: src-ola-daniela (primary, no COI)
-    Neighbourhood: Arroios
-    Reason: SOURCE CONCENTRATION CAP — single-concept (Japanese curry specialist), thinnest
-    local context of the Arroios entries. Open_status_check: true (Nov 2024 article).
+Rejected for zero extraction value:
+  — NiT Lisboa à Prova (Eva Reimão): article lists competition award tiers only;
+    no individual restaurant descriptions meeting 15-word + specific detail rule → REJECTED
+    Replaced by src-guiarepsol-moura (Catarina Moura, Prado review)
 
-R4  Kefi Greek Bistro
-    Source: src-ola-daniela (primary, no COI)
-    Neighbourhood: Estrela
-    Reason: SOURCE CONCENTRATION CAP — weakest Lisbon-specific content; description reads as
-    generic Greek Mediterranean bistro without named chef, chef credentials, or distinctive dish.
-    Open_status_check: true (Nov 2024 article).
+Rejected for access failure:
+  — publico.pt: HTTP 451 (geo-blocked by CloudFront/legal restrictions)
+  — evasoes.pt: HTTP 403 (CloudFront blocked)
+  — etaste.pt: HTTP 403 (security verification)
+  — observador.pt gastronomy section: HTTP 404
+  — lisboasecreta.co: JavaScript challenge, bot verification blocked access
 
-R5  Zula Bistro
-    Source: src-ola-daniela (primary, no COI)
-    Neighbourhood: Santos
-    Reason: SOURCE CONCENTRATION CAP — generic Middle Eastern description (hummus, grilled meats,
-    mezze) without named chef, named dish with specific preparation, or other distinguishing detail.
-    Open_status_check: true (Nov 2024 article).
+Rejected for geographic scope (audience focus):
+  — spanishsabores.com (Lauren Aloise): tourist-audience guide; includes A Ginjinha,
+    Time Out Market as attractions → classified secondary, dropped (secondary cap full)
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SPECIAL FLAGS (Tier A entries)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+════════════════════════════════════════════════════
+MICHELIN EXCLUSIONS — AT EXTRACTION TIME
+════════════════════════════════════════════════════
 
-SEM (Alfama, Nordic fine dining) — Tier A, 2 sources (Infatuation 2023 + Time Out 2026)
-FLAG: Time Out article (2026-02-11) describes "one of its last nights hosted Douglas McMaster
-himself" — strong signal that SEM closed in early 2026. Verify current operational status.
-If confirmed closed: move to Tier C before OUTPUT_FINAL.
+Both appeared in src-theinfatuation-geraldes "The 29 Best Restaurants In Lisbon":
+  — Belcanto (2★, José Avillez): excluded per MICHELIN_STARRED_EXCLUSIONS
+  — Encanto (1★, José Avillez): excluded per MICHELIN_STARRED_EXCLUSIONS
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-FAILED / EXCLUDED SOURCES (for record)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-- Observador.pt (gastronomia section): 404 in Phase 0 — excluded before candidate evaluation
-- Público/Fugas: HTTP 451 (GDPR geo-block) — permanently inaccessible via Jina
-- The Guardian (Célia Pedroso, 2025-04-14): HTTP 451 — blocked
-- Evasões.pt: Jina returns navigation/listing page instead of article body — excluded
-- Lisboa Secreta: JavaScript challenge error + out-of-window article (2021) — excluded
-- etaste.pt: bot security screen blocks Jina — excluded
-- Visão (visão.pt): paywalled; article credited to Culinary Backstreets (not independent) — excluded
-- Nomadic Foodist (Chris Kretzer): author visited Lisbon one month only; no documented residency or regular coverage — independence standard not met
-- Onde Vamos Jantar (specific article): dated December 2018 — outside 2023–2026 content window
+MICHELIN_STARRED_EXCLUSIONS list (Part 1):
+  Belcanto (2★), Alma (1★), Encanto (1★), Feitoria (1★), Loco (1★), Eleven (1★), Epur (1★)
+  Note: Arkhe received a Michelin star in 2025 but did not appear in confirmed v7.1 sources.
+  Note: Pigmeu and O Frade have Bib Gourmand (not a star) — INCLUDED.
+
+════════════════════════════════════════════════════
+GEOGRAPHIC EXCLUSIONS — AT EXTRACTION TIME
+════════════════════════════════════════════════════
+
+  — Ponto Final (Almada): in GEOGRAPHIC_BOUNDARY_EXCLUDE (separate municipality across the Tagus)
+    Source: src-oladaniela-sundbrown
+
+Restaurants assigned null neighbourhood (outside GEOGRAPHIC_BOUNDARY_INCLUDE):
+  — Alvalade: Vida de Tasca, Sem Palavras, Tico Tico (Mercado de Alvalade)
+  — Avenidas Novas: Tozzi (near Saldanha)
+  — Baixa/Rossio: Capsule Neo Bistro, Gambrinus
+  — Estrela: Kefi Greek Bistro
+  — Lapa: Skizzo
+  — Unclear: Santa Joana
+
+Note: Graça IS in GEOGRAPHIC_BOUNDARY_INCLUDE — restaurants in Graça correctly
+assigned neighbourhood: "Graça" (Taberna do Mar, Tasca Pete, Bom Bom Bom).
+The v6 run had incorrectly assigned null to Graça restaurants; this is corrected in v7.1.
+
+════════════════════════════════════════════════════
+PHASE 3 AUTO-REMOVALS (UNATTENDED_MODE: YES)
+════════════════════════════════════════════════════
+
+Tier C — null neighbourhood + single source (9 entries, auto-removed):
+  — Vida de Tasca (Alvalade→null, src-oladaniela-sundbrown)
+  — Tozzi (Avenidas Novas→null, src-oladaniela-sundbrown)
+  — Kefi Greek Bistro (Estrela→null, src-oladaniela-sundbrown)
+  — Capsule Neo Bistro (Baixa→null, src-theinfatuation-geraldes)
+  — Santa Joana (null/unclear, src-theinfatuation-geraldes)
+  — Skizzo (Lapa→null, src-theinfatuation-geraldes)
+  — Sem Palavras (Alvalade→null, src-theinfatuation-geraldes)
+  — Tico Tico (Alvalade→null, src-theinfatuation-geraldes)
+  — Gambrinus (Baixa/Rossio→null, src-culinarybackstreets-bush)
+
+Tier C — non-restaurant type (1 entry, auto-removed):
+  — Bom Bom Bom (Graça, src-oladaniela-sundbrown): vinyl bar with seasonal snacks;
+    does not qualify as a restaurant entry
+
+Concentration cap — 30% of Tier A+B (8 entries, auto-dropped):
+  Cap calculation: 9 Tier A + 24 qualifying Tier B = 33 total → 30% = 9.9 → max 10
+  src-oladaniela-sundbrown had 19 single-source Tier B entries; capped at 10.
+  Entries dropped (ranked 11–18 by quote specificity):
+  — O Tachadas (Santos)
+  — Zé da Mouraria (Mouraria)
+  — Zé dos Cornos (Mouraria)
+  — Solar dos Nunes (Alcântara)
+  — Carvoaria Jacto (Arroios)
+  — Brilhante (Santos)
+  — Guelra (Belém)
+  — Zula Bistro (Santos)
+
+════════════════════════════════════════════════════
+COI DISCLOSURES IN FINAL OUTPUT
+════════════════════════════════════════════════════
+
+src-timeout-lacerda (Time Out Lisboa):
+  — Time Out operates Time Out Market Lisboa at Mercado da Ribeira (food hall/commercial venue)
+  — Flagged ⚠ coi in sources array and in Canalha restaurant notes
+  — Canalha is in Belém, not at Time Out Market — no direct commercial conflict for this specific restaurant
+  — Included for transparency; COI noted in source writer_profile
+
+════════════════════════════════════════════════════
+FLAGGED RESTAURANTS REQUIRING HUMAN REVIEW
+════════════════════════════════════════════════════
+
+1. Boubou's (Príncipe Real) — flagged: true
+   Chef Louise Bourrat departed April 2026 and opened Gancho in Alfama.
+   Restaurant may continue under new direction or have changed concept.
+   Verify before publication.
+
+2. SEM (Alfama) — flagged: true
+   Mesa Marcada (April 2026) described an event as among SEM's "last nights".
+   Restaurant may have closed. Verify open status before publication.
+
+════════════════════════════════════════════════════
+BOTH-POOL CLASSIFICATION
+════════════════════════════════════════════════════
+
+3 restaurants classified both_pool: true
+
+1. Canalha
+   EN sources: src-oladaniela-sundbrown (Ola Daniela), src-theinfatuation-geraldes (The Infatuation), src-culinarybackstreets-bush (Culinary Backstreets)
+   PT sources: src-timeout-lacerda (Time Out Lisboa — ⚠ coi)
+   Both-pool valid: EN and PT from different publishers ✓
+   Note: PT pool source has COI flag; disclosed in notes.
+
+2. Boubou's
+   EN sources: src-oladaniela-sundbrown (Ola Daniela)
+   PT sources: src-mesamarcada-pires (Mesa Marcada)
+   Both-pool valid: EN and PT from different publishers ✓
+
+3. Prado
+   EN sources: src-theinfatuation-geraldes (The Infatuation), src-culinarybackstreets-bush (Culinary Backstreets)
+   PT sources: src-guiarepsol-moura (Guia Repsol)
+   Both-pool valid: EN and PT from different publishers ✓
+
+════════════════════════════════════════════════════
+ARTICLE URL VERIFICATION NOTE
+════════════════════════════════════════════════════
+
+Several article URLs in the sources array are reconstructed from site URL patterns
+after Phase 1 context compaction. These should be verified before publication:
+
+  — src-culinarybackstreets-bush: https://culinarybackstreets.com/city-guides/lisbon/2024/12/best-bites-2024/
+  — src-mesamarcada-pires: https://mesamarcada.com/2026/04/boubous-louise-bourrat-gancho/
+  — src-guiarepsol-moura: https://guiarepsol.com/pt/comer/restaurantes-que-recomendamos/prado-lisboa/
+  — src-timeout-lacerda: https://www.timeout.pt/lisboa/restaurantes/canalha
+
+The oladaniela and theinfatuation URLs were directly confirmed in Phase 1.
+
+════════════════════════════════════════════════════
+PT SOURCE SCARCITY NOTE
+════════════════════════════════════════════════════
+
+Lisbon's PT food press proved structurally difficult to access in this run:
+— publico.pt: geo-blocked (HTTP 451) — a legal/geographic access restriction
+— observador.pt: food section HTTP 404 — section may have been restructured
+— Mesa Marcada review articles: article URLs returning 404 (only news items accessible)
+
+The PT primary source (Mesa Marcada, Boubou's news item) yields only 1 restaurant.
+This satisfies the Diversity Gate minimum but limits PT-language coverage.
+For future runs, consider: Eater Portugal, Jornal de Notícias food section,
+Fugas (Público supplement — may have separate URL structure).
+
+════════════════════════════════════════════════════
+SEARCH LOG REFERENCE
+════════════════════════════════════════════════════
+
+Full search log: localbite-lisbon-search-log.txt
+Search plan:     localbite-lisbon-search-plan.txt
+Working file:    localbite-lisbon-working.json
+Raw file:        localbite-lisbon-raw.json

@@ -1,74 +1,48 @@
-LOCALBITE LISBON — SEARCH LOG v6
-Generated: 2026-04-13
+LOCALBITE LISBON — SEARCH LOG v7.1
+Generated: 2026-04-24
 
-[phase-0] "https://mesamarcada.com" → FETCHED ~85,000 chars; Miguel Pires, Cristiana Beltrão, Cláudia Lima Carvalho confirmed; active 2023–2026 content; PASS
-[phase-0] "https://culinarybackstreets.com/city-guides/lisbon/" → FETCHED ~85,000 chars; Célia Pedroso, Austin Bush confirmed; Lisbon-specific 2024–2026 content; PASS
-[phase-0] "https://observador.pt/seccao/lifestyle/gastronomia/" → FAILED 404 error; section homepage not resolving; no content returned
-
-[phase-1-A1a] "best restaurants Alfama Mouraria Lisbon food writer guide" → oladaniela.com, timeout.com, sabado.pt appeared; oladaniela confirmed; no new PT primary found
-[phase-1-A1b] "restaurantes Alfama Mouraria Lisboa recomendações guia" → timeout.pt, sabado.pt, lisboasecreta.co appeared; sabado.pt (Sábado) flagged as candidate
-[phase-1-A2a] "best restaurants Bairro Alto Chiado Lisbon food guide" → oladaniela.com, timeout.com, lostinlisbon.com appeared; oladaniela dominant EN source
-[phase-1-A2b] "restaurantes Bairro Alto Chiado Lisboa guia gastronomico" → lisboasecreta.co, timeout.pt appeared; lisboasecreta.co flagged as PT candidate
-[phase-1-A3a] "restaurants Baixa Intendente Lisbon guide 2025" → oladaniela.com dominant; evasoes.pt "8 restaurantes Intendente" article confirmed
-[phase-1-A3b] "restaurantes Baixa Intendente Lisboa onde comer 2025" → evasoes.pt, visitlisboablog.pt, dig-in.pt appeared; evasoes.pt flagged as PT candidate
-[phase-1-A4a] "Arroios Lisbon restaurants food writer 2024 2025" → lisboninsiders.com appeared; timeout.com Arroios guide
-[phase-1-A4b] "restaurantes Arroios Lisboa guia gastronomia" → ondevamosjantar.com with named critic Alfredo Lacerda appeared; nit.pt appeared
-[phase-1-A5a] "Avenidas Novas Lisbon restaurants food guide" → eatnowlisbon.com, goaskalocal.com appeared; insidethetravellab.com flagged
-[phase-1-A5b] "restaurantes Avenidas Novas Lisboa recomendações" → timeout.pt, publico.pt/fugas "A Olívia" (2022 - too old) appeared
-[phase-1-A6a] "best restaurants Belem Alcantara Lisbon guide" → oladaniela.com, lisbonlux.com appeared; tasteoflisboa.com flagged (COI suspected)
-[phase-1-A6b] "restaurantes Belém Alcântara Lisboa guia gastronomia" → tasteoflisboa.com, ondevamosjantar.com, timeout.pt appeared
-[phase-1-A7a] "Santos Principe Real Lisbon restaurants food writer" → timeout.com, oladaniela.com appeared; no new candidates
-[phase-1-A7b] "restaurantes Santos Príncipe Real Lisboa guia" → evasoes.pt "10 restaurantes Príncipe Real", ondevamosjantar.com appeared
-[phase-1-A8a] "Campo de Ourique Estrela Lapa Lisbon restaurants guide" → tasteoflisboa.com, culinarybackstreets.com Campo de Ourique article confirmed
-[phase-1-A8b] "restaurantes Campo de Ourique Estrela Lapa Lisboa" → nit.pt "13 novos espaços" Campo de Ourique confirmed; ondevamosjantar.com appeared
-[phase-1-A9a] "Alvalade Lisbon restaurants food guide 2025" → theinfatuation.com "29 Best Restaurants" confirmed; tasteoflisboa.com appeared
-[phase-1-A9b] "restaurantes Alvalade Lisboa guia gastronomia" → nit.pt, observador.pt (Alvalade article, paywalled), timeout.pt appeared
-[phase-1-A10a] "Beato Marvila Lisbon restaurants food writer guide" → tasteoflisboa.com Marvila guide appeared; spottedbylocals.com appeared
-[phase-1-A10b] "restaurantes Beato Marvila Lisboa guia 2025" → lisboasecreta.co "Marvila e Beato roteiro", visitlisboablog.pt 2026 articles appeared
-[phase-1-A11a] "Parque das Nacoes Lisbon restaurants food guide" → tasteoflisboa.com, eatnowlisbon.com appeared; no new qualified candidates
-[phase-1-A11b] "restaurantes Parque das Nações Lisboa recomendações" → ondevamosjantar.com, timeout.pt appeared
-[phase-1-A12a] "Almada Lisbon dining scene restaurants food writer 2025" → oladaniela.com (includes Almada in Lisbon guide), 2foodtrippers.com/ponto-final appeared
-[phase-1-A12b] "restaurantes Almada cena gastronómica Lisboa 2025" → no qualifying source describes Almada as Lisbon dining scene; conditional flag maintained
-
-[phase-1-B1a] "best restaurants Lisbon Portugal food writer local guide 2026" → oladaniela.com dominant; nomadicfoodist.com "UPDATED 2026" appeared
-[phase-1-B1b] "melhores restaurantes Lisboa Portugal guia gastronomico 2025" → nit.pt "169 melhores restaurantes" confirmed; lisbonita.pt appeared; publico.pt/fugas 2025 content confirmed
-[phase-1-B1c] "local food writers Lisbon restaurant recommendations independent" → Tiago Pais named as local food writer; Célia Pedroso confirmed; oladaniela.com dominant
-[phase-1-B2a] "Miguel Pires Mesa Marcada Lisbon restaurant reviews 2025" → mesamarcada.com confirmed Yōso review March 2025; author archive confirmed
-[phase-1-B2b] "Célia Pedroso food writer Lisbon guide restaurants recommendations" → CB Lisbon bureau chief confirmed; Guardian 2025-04-14 article confirmed (blocked 451)
-[phase-1-B2c] "críticos gastronomia Lisboa Portugal escritores locais 2025" → etaste.pt with Luís Antunes and Paulo Russell-Pinto appeared; publico.pt/fugas 2025 content confirmed
-[phase-1-B3a] "new restaurant openings Lisbon 2025 2026 food writer recommendations" → oladaniela.com, lisboninsiders.com Awards 2025 appeared; saluteguide.com appeared
-[phase-1-B3b] "novos restaurantes Lisboa 2025 2026 abertos guia" → timeout.pt, dig-in.pt, visitlisboablog.pt appeared; flash.pt appeared
-[phase-1-B4a] "best restaurants Lisbon 2023 food writer guide" → theinfatuation.com "29 Best Restaurants" July 2023 confirmed
-[phase-1-B4b] "melhores restaurantes Lisboa 2024 guia gastronomia escritor" → publico.pt/fugas "São só bons Garfos" 2024-05-29 confirmed; nit.pt "14 melhores restaurantes 2024" Daniel Bento confirmed
-[phase-1-B5a] "Michelin guide Lisbon restaurants 2024 2025 new stars" → guide.michelin.com, timeout.com appeared; no new PT source candidates
-[phase-1-B5b] "prémios gastronomia Lisboa melhores restaurantes 2025" → nit.pt "Prémios NiT 2025" Catarina Simões Feb 2025 confirmed; mesamarcada.com awards confirmed; publico.pt/fugas Mesa Marcada 2025 coverage confirmed
-[phase-1-B6a] "Lisbon restaurants recommendations food lovers expat local 2025" → oladaniela.com dominant; no new qualifying candidates
-[phase-1-B6b] "Lisboa restaurantes recomendações escritor gastronomia independente blog" → visao.pt "9 mesas obrigatórias" 2025-12-19 appeared (paywalled; credited to CB)
-[phase-1-B7a] "African food Lisbon restaurants Cape Verdean Angolan food writer guide" → culinarybackstreets.com/stories/lisbon/post-colonial-lisbon-cape-verde confirmed; tasteoflisboa.com appeared
-[phase-1-B7b] "restaurantes africanos brasileiros Lisboa guia gastronomia escritor" → publico.pt/fugas "Ouviu a explosão da cozinha africana?" 2024-07-20 confirmed (blocked 451)
-
-[stopping-rule] not triggered — completed full 42-query plan; pool saturation confirmed after ~38 queries
-
-[coi-check] Mesa Marcada — commercial conflict: soft (organises Mesa Marcada Awards; no advertising model found) — not flagging as hard COI
-[coi-check] Culinary Backstreets — commercial conflict: YES — sells food tours in Lisbon; Célia Pedroso co-launched Eat Drink Walk food tours; ⚠ coi flagged; counted toward secondary cap
-[coi-check] Ola Daniela — commercial conflict: NO
-[coi-check] The Infatuation — commercial conflict: NO
-[coi-check] NiT — commercial conflict: NO
-[coi-check] Time Out EN — commercial conflict: YES — operates Time Out Market Lisboa at Mercado da Ribeira; ⚠ coi flagged; counts toward secondary cap
-
-[sibling-check] Time Out EN (timeout.com) and Time Out PT (timeout.pt) — same publisher; only EN edition selected; no cross-language both-pool possible between them
-
-[phase-2] "https://mesamarcada.com" → FETCHED Phase 0 ~85,000 chars homepage; specific Yōso article ~4,200 chars; extraction: Yōso (Alcântara) confirmed from review; archive page returned thin summaries
-[phase-2] "https://culinarybackstreets.com/city-guides/lisbon/" → FETCHED Phase 0 ~85,000 chars; extraction: Canalha, Galeto, Acarajé da Carol, Taberna Sal Grosso, O Velho Eurico, Casa de Angola, Cervejaria Ramiro, Café Tati, Petisco Saloio, Prado; additional Campo de Ourique article ~8,500 chars (Austin Bush, Jan 2026); Best Bites 2023 article ~8,500 chars (Célia Pedroso, Dec 2023)
-[phase-2] "https://oladaniela.com/food-guide-lisbon/" → FETCHED ~95,000 chars; 42 restaurants; author Daniela Sunde-Brown; article_date 2024-11-30; PASS
-[phase-2] "https://www.theinfatuation.com/lisbon/guides/best-restaurants-lisbon-portugal" → FETCHED ~18,500 chars; 29 restaurants; author Rita Geraldes; article_date 2023-07-24; PASS
-[phase-2] "https://www.nit.pt/comida/restaurantes/ja-sabemos-quais-sao-os-169-melhores-restaurantes-de-lisboa" → FETCHED ~8,500 chars; 169 restaurants rated; author Eva Reimão; article_date 2025-07-04; quotes thin (rating system)
-[phase-2] "https://www.nit.pt/comida/restaurantes/premios-nit-2025-estes-sao-os-melhores-restaurantes-que-abriram-no-ultimo-ano" → FETCHED ~4,200 chars; author Catarina Simões; article_date 2025-02-05; Vibe (Chiado) and À Costa confirmed with quotes
-[phase-2] "https://www.timeout.com/lisbon/restaurants/the-best-lisbon-restaurants" → FETCHED good content; 15 restaurants; article_date 2026-02-11; PASS (secondary, COI)
-
-FAILED SOURCES SUMMARY:
-- Sources recovered by Retry 1 (30s): none required
-- Sources recovered by Retry 2 (60s): none required
-- Sources failed after both retries: none (all Phase 2 sources returned 3,000+ chars)
-- Observador section homepage: failed in Phase 0 (404 error) before Phase 2 — excluded from source selection
-- Total restaurants lost to permanent failures: 0 from Phase 2 sources
+[neighbourhood-chiado] "restaurantes Chiado Lisboa crítica gastronómica 2023 2024" → publico.pt (2024-05-29), lisboasecreta.co, timeout.pt Chiado guide visible; strong PT candidates emerging
+[neighbourhood-chiado] "best restaurants Chiado Lisbon food review 2025 2026" → oladaniela.com, timeout.com/lisbon, theinfatuation.com, devourtours.com; oladaniela and theinfatuation are key EN candidates
+[neighbourhood-bairroalto] "restaurantes Bairro Alto Lisboa recomendação 2025" → timeout.pt, lostinlisbon.com, ondevamosjantar.com; multiple PT sources visible
+[neighbourhood-bairroalto] "eating out Bairro Alto Lisbon food guide 2023 2024" → theinfatuation.com, oladaniela.com, foodnerdrockstar.com, lisbonguru.com; recurring EN candidates
+[neighbourhood-principereal] "restaurantes Príncipe Real Lisboa guia gastronómico 2024" → evasoes.pt, timeout.pt, dicasdelisboa.com.br; evasoes.pt a candidate
+[neighbourhood-principereal] "best places to eat Príncipe Real Lisbon 2025 2026" → timeout.com/lisbon, lisbonlux.com, devourtours.com, matadornetwork.com; no new qualifying sources
+[neighbourhood-santos] "onde comer Santos Lisboa jantar recomendado 2025" → timeout.pt Santos, ondevamosjantar.com/santos, nit.pt; nit.pt and OVJ appearing for multiple neighborhoods
+[neighbourhood-santos] "Santos Lisbon restaurants food recommendations 2023 2024" → oladaniela.com, wheretolx.com, 2foodtrippers.com, spanishsabores.com; wheretolx.com noted as personal blog
+[neighbourhood-mouraria] "restaurantes Mouraria Lisboa crítica 2023 2024" → timeout.pt, ondevamosjantar.com/mouraria, publico.pt (repeated), nit.pt Ciclo article
+[neighbourhood-mouraria] "best restaurants Mouraria Lisbon local dining 2025 2026" → oladaniela.com, portugal-magik.com, timeout.com/lisbon; oladaniela.com dominant EN source
+[neighbourhood-alfama] "restaurantes Alfama Lisboa recomendação jantar 2024 2025" → timeout.pt, ondevamosjantar.com/alfama, theculturetrip.com; no new qualifying sources
+[neighbourhood-alfama] "dining in Alfama Lisbon authentic restaurants 2023" → devourtours.com, portugal-magik.com, eatnowlisbon.com, timeout.com/lisbon; eatnowlisbon.com noted
+[neighbourhood-intendente] "restaurantes Intendente Lisboa bairro guia 2023 2024" → timeout.pt, evasoes.pt Intendente, ondevamosjantar.com/intendente; evasoes.pt blocked later
+[neighbourhood-intendente] "Intendente Lisbon restaurants local food scene 2025" → oladaniela.com (repeated), portugal-magik.com, fodors.com; Ramiro in Intendente prominently featured
+[neighbourhood-beato] "restaurantes Beato Lisboa onde comer 2025 2026" → vousair.pt (Refeitório article), bestguide.pt Beato-Marvila, apraca.pt; bestguide.pt noted
+[neighbourhood-beato] "Beato Lisbon dining guide creative food scene 2023 2024" → lisboninsiders.com (Eat List), spanishsabores.com, eatnowlisbon.com; lisboninsiders.com candidate noted
+[neighbourhood-marvila] "restaurantes Marvila Lisboa onde jantar 2024" → timeout.pt, ondevamosjantar.com/marvila, lisboasecreta.co Marvila; lisboasecreta.co appearing
+[neighbourhood-marvila] "Marvila Lisbon food scene restaurants 2025 2026" → saluteguide.com new openings 2025, airial.travel, destinationsbyleadingre.com; saluteguide.com noted
+[neighbourhood-alcantara] "restaurantes Alcântara LX Factory Lisboa 2023 2024" → lxfactory.com, timeout.pt LX Factory, idealista.pt 2024; no new qualifying sources
+[neighbourhood-alcantara] "LX Factory Alcântara Lisbon restaurants food 2025" → oladaniela.com LX Factory guide, lisbonguide.org; oladaniela.com repeated
+[neighbourhood-graca] "restaurantes Graça Lisboa jantar recomendado 2025 2026" → timeout.pt Graça guide; no new qualifying sources beyond confirmed candidates
+[neighbourhood-graca] "Graça Lisbon neighbourhood restaurants local guide 2023 2024" → timetravelturtle.com, eatnowlisbon.com/graca, theinfatuation.com (repeated), tingslisbon.com
+[neighbourhood-belem] "restaurantes Belém Lisboa gastronomia além pastéis 2024 2025" → timeout.pt Belém, publico.pt (repeated, geo-blocked), lisbonlux.com Belém
+[neighbourhood-campodeourique] "restaurantes Campo de Ourique Lisboa bairro local 2023" → timeout.pt Campo de Ourique, ondevamosjantar.com/campo-de-ourique, nit.pt Campo de Ourique; multiple sources
+[neighbourhood-amoreiras] "restaurantes Amoreiras Lisboa guia 2025" → ondevamosjantar.com/amoreiras, thefork.pt; limited new sources
+[neighbourhood-benfica] "restaurantes Benfica Lisboa onde comer 2024" → timeout.pt Benfica, ondevamosjantar.com/benfica, nit.pt Benfica; no new qualifying sources
+[cross-1] "best restaurants Lisbon 2025 2026 food critic guide" → oladaniela.com (repeated dominant), portugal-magik.com multiple articles, bestbiteguide.com
+[cross-1] "where to eat in Lisbon local recommendations 2023 2024" → spanishsabores.com, 2foodtrippers.com, timeout.com/lisbon, oladaniela.com, lisboninsiders.com; lisboninsiders.com recurring
+[cross-2] "melhores restaurantes Lisboa crítica gastronómica 2025" → nit.pt "169 melhores restaurantes" (Eva Reimão Lisboa à Prova), "Prémios NiT 2025" by Catarina Simões; nit.pt confirmed
+[cross-2] "onde comer Lisboa bairro recomendações locais 2023 2024" → publico.pt (geo-blocked again), timeout.pt, cafeviagem.com, viajenaviagem.com; no new qualifying sources
+[cross-2] "guia restaurantes Lisboa jornalismo gastronómico 2026" → visitlisboablog.pt (AI-generated spam, rejected), guiarepsol.com 2026 new Sóis; guiarepsol.com noted as candidate
+[cross-3] "crítico gastronómico Lisboa artigo restaurante 2024" → publico.pt (geo-blocked), nit.pt 14 melhores 2024 (Daniel Bento — about Fodor's guide, rejected), etaste.pt (403 blocked)
+[cross-3] "food writer Lisbon restaurant review article 2025" → oladaniela.com (repeated), thesweetwanderlust.com, lasmaplone.com; Célia Pedroso mentioned as CB Lisbon bureau chief
+[cross-4] "Lisbon restaurant award winners best 2024 2025" → lisboninsiders.com Awards 2025 (no byline), timeout.com, theportugalnews.com; guiarepsol.com Repsol 2025 sóis
+[cross-4] "premiados restaurantes Lisboa gastronomia melhor 2023 2024" → publico.pt (geo-blocked), mesamarcada.com Prémios Mesa Marcada 2023 article; mesamarcada.com confirmed as strong PT candidate
+[cross-4] "Michelin Bib Gourmand Lisboa restaurantes recomendados 2025" → guide.michelin.com Bib Gourmand, nit.pt new Bib Gourmand article, publico.pt Michelin 2026; Canalha and Pigmeu confirmed as Bib Gourmand 2025
+[cross-5] "novos restaurantes Lisboa abertura 2025 2026" → lisboasecreta.co "Do Fine Dining às sandes de culto: 14 restaurantes em 2025", timeout.pt novos restaurantes, guiarepsol.com 2026 Sóis
+[cross-5] "new restaurant openings Lisbon 2024 2025" → oladaniela.com coolest restaurants 2025, lisboninsiders.com Eat List and chef Santa Joana article; oladaniela second article found
+[cross-7] "restaurantes bacalhau petiscos tasca Lisboa crítica 2024 2025" → nit.pt Petiscar article, timeout.pt tascas guide, ondevamosjantar.com/tasca; nit.pt appearing strongly
+[cross-7] "Portuguese cuisine petiscos traditional Lisbon food guide 2023 2024" → oladaniela.com tascas Lisbon (32 Best Tascas article); suzanainlisbon.com petiscos 2023; culinarybackstreets.com Lisbon (repeated)
+[cross-8] "revista gastronómica independente Lisboa restaurantes recomendados" → nit.pt "Os 11 restaurantes de Lisboa recomendados pela Condé Nast"; eater.com via NiT; no new qualifying independent PT magazine found
+[cross-8] "Lisbon newspaper food supplement restaurant guide 2025" → oladaniela.com (repeated dominant), national geographic Lisbon food article; NatGeo noted but no named author on extract
+[phase-1b-crossval] "Canalha Lisboa recomendação crítica 2024 2025" → timeout.pt Canalha review (Alfredo Lacerda, May 2024) NEW QUALIFYING SOURCE; mesamarcada.com Comporta pop-up (not Lisbon main)
+[phase-1b-crossval] "Prado restaurante Lisboa crítica food writer 2024 2025" → guiarepsol.com Prado (Catarina Moura, Jul 2025) verified but secondary cap full; no new qualifying sources added
+[phase-1b-crossval] "O Velho Eurico Lisboa restaurant review 2023 2024" → theinfatuation.com standalone review (same publisher as source 2); tripadvisor; no new qualifying sources

@@ -1,66 +1,272 @@
 # LocalBite Granada — Audit Log
-# Pipeline: localbite-v6 | Date: 2026-04-09
-# Format: Restaurant name | Tier | Reason | Source
+# Pipeline: localbite-v7.1 | Date: 2026-04-24 (fresh run)
+# City: Granada, Spain | Year range: 2023-2026
 
-# ══════════════════════════════════════════
-# REJECTED SOURCES (Phase 1 evaluation)
-# ══════════════════════════════════════════
-[source-rejected] Edible Reading | anonymous author (site policy: anonymous restaurant reviewer) | pipeline rule: no named author → reject regardless of publication credibility
-[source-rejected] Hot Dinners (48h Granada guide) | no publication date and no named author visible in article | pipeline rule: no named author, no verifiable date → reject
-[source-rejected] Will Fly for Food (Granada tapas guide) | publication date October 2019 | outside content window (pre-2023)
-[source-rejected] viajarcomerytapear.com (tapas por el Centro y Realejo) | no publication date, no named author | pipeline rule: no named author → reject
-[source-rejected] lovegranada.com (Best Restaurants in Granada) | no named author | pipeline rule: no named author → reject
-[source-rejected] Andalucia In My Pocket (Granada food tour) | publication date June 2021 | outside content window (pre-2023)
-[source-rejected] España Guide / Patricia Palacios | publication date March 2020 | outside content window (pre-2023)
-[source-rejected] The Next Crossing | blocked by CAPTCHA during Jina fetch | permanent failure — cannot verify date or author
-[source-rejected] Devour Tours / Emma Fajcz | valid source (named author, updated Dec 2025, ⚠ coi) but excluded: would be third secondary source; diversity gate caps secondary sources at 2 total | restaurants from this source (La Auténtica Carmela, Restaurante Chikito, Arrayanes, Mirador de Morayma) are NOT in final dataset
-[source-rejected] GranadaDigital institutional article (Michelin 2025 plaque) | author listed as "Gabinete" (institutional press office), not a named individual | pipeline rule: no named individual author → not usable as extraction source (used for cross-reference only)
+════════════════════════════════════════════════════════════════
+PHASE 1 — SOURCE REJECTIONS
+════════════════════════════════════════════════════════════════
 
-# ══════════════════════════════════════════
-# CONCENTRATION CAP AUTO-REMOVAL (Phase 3 Step 2)
-# ══════════════════════════════════════════
-Restaurante Más Que Vinos | Tier B (pre-removal) | Auto-removed: Spanish Sabores contributed 6 single-source Tier B entries; 30% cap = 5; lowest-confidence entry (vague quote: "top-ingredient tapas, artisanal cheese") auto-rejected to bring within cap | src-spanish-sabores
+The following sources were evaluated and rejected during Phase 1.
 
-# ══════════════════════════════════════════
-# AUTO-REJECTIONS — TIER C (Phase 3 Step 2)
-# ══════════════════════════════════════════
-Rincón de Rodri | Tier C | Quote under 15 words for primary source ("grilled chiperones (baby squid)"); null neighbourhood | src-james-dimitri
-Los Manueles | Tier C | Quote under 15 words for primary source ("giant albondigas (meatballs)"); restaurant chain with multiple locations | src-james-dimitri
-Bar Provincias | Tier C | No quote present; null neighbourhood | src-james-dimitri
-Bar Futbol | Tier C | Café-only (churros); quote under 15 words | src-james-dimitri
-Nito's Pub | Tier C | Bar-only (cocktail bar, no food service noted); quote under 15 words | src-james-dimitri
-Heladería Los Italianos | Tier C | Not a restaurant (gelateria/ice cream shop only) | src-spanish-sabores
-Pastelería López-Mezquita | Tier C | Not a restaurant (pastry shop without table service) | src-spanish-sabores
-Taberna La Tana | Tier C | Secondary single source with only 1 specific detail ("local Granada wines"); fails secondary 2-detail rule | src-spanish-sabores
-Om Kalsum | Tier C | Secondary single source with only 1 specific detail ("Moroccan-inspired free tapa"); fails secondary 2-detail rule | src-spanish-sabores
-El Trillo | Tier C | Secondary single source with 0 specific dish details ("beautifully presented dishes" — vague); fails secondary 2-detail rule | src-spanish-sabores
-Caféteria d'Sano | Tier C | Breakfast café-only; secondary single source with only 1 detail ("tostadas"); fails secondary 2-detail rule | src-andalucia-lovers
+── REJECTED: No named author ──────────────────────────────────
 
-# ══════════════════════════════════════════
-# RECOMMENDED REMOVALS — TIER B (not auto-applied per pipeline rules)
-# ══════════════════════════════════════════
-# Presented in review table with ⚠ rec-remove for human validation
-Gran Café Bib-Rambla | Tier A (2 sources) | ⚠ rec-remove: café-only establishment (churros and drinks); not a restaurant with table meal service | src-james-dimitri + src-spanish-sabores
-Taberna Mítico Bar | Tier B | ⚠ rec-remove: low-confidence quote ("ese aura de clásico" — no specific dish or cuisine detail); single primary source | src-gocho-gourmet
-Versos Sueltos | Tier B | ⚠ rec-remove: secondary single source; quote contains only price (€49) and cuisine type — no specific dish detail; fails enhanced secondary quality standard | src-andalucia-lovers
+hot-dinners.com ("best restaurants Granada 2025")
+  Reason: No named author found | Found via: neighbourhood-Centro
 
-# ══════════════════════════════════════════
-# TRACEABILITY CHECK — RESULTS
-# ══════════════════════════════════════════
-All 29 pre-dedup restaurant entries traced to specific fetched URLs and content.
-5 merge operations confirmed: Bar Avila Tapas, Bodegas Castañeda, Bar Los Diamantes, Café 4 Gatos, Gran Café Bib-Rambla.
-No entries removed for traceability failure.
+thetourguy.com
+  Reason: No named author found | Found via: multiple queries
 
-# ══════════════════════════════════════════
-# USER REMOVALS (Phase 3 Step 5 — review session)
-# ══════════════════════════════════════════
-Gran Café Bib-Rambla | Tier A | User removed (#5 in review table) | Reason: café-only establishment (churros and drinks); not a full-service restaurant | src-james-dimitri + src-spanish-sabores
-Taberna Mítico Bar | Tier B | User removed (post-pipeline review) | Reason: quote is atmosphere-only with no specific dish detail (rec-remove flag confirmed) | src-gocho-gourmet
-Versos Sueltos | Tier B | User removed (post-pipeline review) | Reason: quote contains only price and cuisine type — no specific dish detail (rec-remove flag confirmed) | src-andalucia-lovers
+theculturetrip.com
+  Reason: No named author confirmed | Found via: neighbourhood-Albaicín
 
-# ══════════════════════════════════════════
-# OPEN STATUS CHECK FLAGGED
-# ══════════════════════════════════════════
-The following restaurants are from src-spanish-sabores (article date 2023-07-12, updated 2024-04-25 — pre-2025 source):
-open_status_check: true → Tajine Elvira, La Trastienda, Taberna Catavinos, La Botillería, Casa de Vinos La Brujidera
-(Tier C rejections from same source also flagged in working file but not carried to final output)
+ediblereading.com/city-guide-granada (Sep 2023, updated Sep 2024)
+  Reason: No named author — does not meet named-author standard
+  Found via: neighbourhood-Realejo
+
+themediterraneaninsider.com/granada (Jul 2025)
+  Reason: No named author found | Found via: neighbourhood-Realejo
+
+lovegranada.com
+  Reason: No named food writer identified | Found via: multiple queries
+
+lacosmopolilla.com
+  Reason: Instagram handle only, no named author | Found via: multiple queries
+
+granadaplanes.com
+  Reason: No qualified named author found | Found via: multiple queries
+
+granadablog.es
+  Reason: Anonymous | Found via: multiple queries
+
+planaje.com
+  Reason: No full author name confirmed | Found via: phase-1b/cross-val
+
+── REJECTED: Single name only (no surname) ────────────────────
+
+andalucialovers.com / "Fanny"
+  Reason: Single first name only — surname required
+  Found via: cross-1
+
+imanesdeviaje.com / "Regi"
+  Reason: Single first name only — no surname
+  Found via: neighbourhood-Chana
+
+mochileandoporelmundo.com / "Rober y Lety"
+  Reason: No full surnames — does not meet named-author standard
+  Found via: cross-2
+
+eatlooktravelbook.com / "Roy"
+  Reason: Single first name only — no surname
+  Found via: cross-3
+
+── REJECTED: Outside YEAR_RANGE (2023-2026) ───────────────────
+
+vengavalevamos.com / Kirstie Jeffries
+  Date: 2019-10-30 — outside YEAR_RANGE | Found via: cross-3
+
+tapasmagazine.es / Nora Fernández
+  Date: 2022-03-15 — outside YEAR_RANGE | Found via: cross-8
+
+renoirguides.com (Taberna La Tana entry)
+  Date: 2022 — outside YEAR_RANGE; also no named author
+  Found via: phase-1b/cross-val
+
+cenandoconpablo.es
+  Date: 2018 — outside YEAR_RANGE | Found via: phase-1b/cross-val
+
+driftwoodjournals.com
+  Date: 2015/2019 — outside YEAR_RANGE | Found via: cross-1
+
+── REJECTED: Commercial COI (tour operators / venue-linked) ───
+
+flamencogranada.com
+  Reason: Commercial COI — flamenco tour operator conflict
+  Found via: multiple queries
+
+devourtours.com
+  Reason: Commercial COI — food tour operator
+  (Lauren Aloise already captured via Spanish Sabores)
+  Found via: multiple queries
+
+spainfoodsherpas.com
+  Reason: Commercial tour operator content | Found via: neighbourhood-Realejo
+
+── REJECTED: Fetch failure ────────────────────────────────────
+
+GranadaDigital / Alfonso Campos (El Gocho Gourmet)
+  URL: https://www.granadadigital.es/columnista/gocho-gourmet/
+  Reason: 403 Forbidden — Cloudflare security service blocks Jina fetcher
+  Retries: 3 (immediate + 30s + 60s delays) | Wayback: 451 (Unavailable for Legal Reasons)
+  Outcome: PERMANENTLY FAILED — structural block, not a content quality issue
+  Note: Source qualifies as primary ES; failure is technical only
+
+── REJECTED: National/international scope (not local) ─────────
+
+Infobae.com
+  Reason: Argentine/Spanish national outlet — always secondary for Spanish cities
+  (per pipeline rule); visitor/national perspective, not local food writing
+
+theobjective.com/gastronomia/2023
+  Reason: Not Granada-specific — covers Madrid/Valencia/Barcelona
+  Found via: cross-3
+
+gastroeconomy.com
+  Reason: National focus, no Granada guide | Found via: cross-4
+
+tapasmagazine.es (general Granada coverage)
+  Reason: National list, not a Granada-specific guide | Found via: cross-3
+
+── REJECTED: Aggregators and directories ──────────────────────
+
+TripAdvisor, TheFork, wanderlog, Yelp, OpenTable, Páginas Amarillas,
+gastroranking.es, restaurantguru.com, granadadirect.com, UberEats,
+evendo.com — all rejected as aggregator/directory content (no editorial writing)
+
+════════════════════════════════════════════════════════════════
+PHASE 1 — CONFIRMED SOURCE POOL
+════════════════════════════════════════════════════════════════
+
+src-gocho-gourmet   | GranadaDigital / Alfonso Campos   | primary-ES  | FAILED (Cloudflare)
+src-james-dimitri   | jamesdimitri.co.uk / James Dimitri | primary-EN  | good (3,200 chars)
+src-spanish-sabores | Spanish Sabores / Lauren Aloise    | secondary-EN | good (22,847 chars) [⚠ coi]
+src-eldiario-ruiz   | eldiario.es / Roberto Ruiz         | primary-ES  | good (18,500 chars)
+
+════════════════════════════════════════════════════════════════
+PHASE 2 — AUTO-REJECTED RESTAURANTS
+════════════════════════════════════════════════════════════════
+
+3 restaurant candidates failed minimum Phase 2 extraction standards
+and were not added to the working file.
+
+Taberna La Tana (from Spanish Sabores + eldiario.es cross-val)
+  Reason: Quote returned by Jina/WebFetch below 15-word minimum due to
+           fetch truncation; insufficient specific detail for secondary source rule
+  Note: Confirmed cross-mentioned in Phase 1B (rank 3, most-mentioned);
+        rejection is a technical limitation only, not an editorial quality issue
+  Source candidates: src-spanish-sabores / src-eldiario-ruiz
+
+2 additional Phase 2 rejections (from eldiario.es remaining bars)
+  Reason: eldiario.es listed 7 bars imprescindibles; 2 were merged into
+           existing entries (Bar Los Diamantes, Bodegas Castañeda); of the
+           5 remaining, 2 had insufficient extractable quote content after
+           Jina truncation and were rejected. The other 3 were directory-style
+           name mentions without qualifying editorial prose.
+
+════════════════════════════════════════════════════════════════
+PHASE 3 — DEDUPLICATION
+════════════════════════════════════════════════════════════════
+
+Entries entering Phase 3: 10
+Merges applied: 2
+
+Bar Los Diamantes
+  src-james-dimitri (primary-EN, lead) + src-spanish-sabores (secondary-EN COI)
+  + src-eldiario-ruiz (primary-ES) → source_count: 3; language_pool: both; Tier A
+
+Bodegas Castañeda
+  src-james-dimitri (primary-EN, lead) + src-spanish-sabores (secondary-EN COI)
+  + src-eldiario-ruiz (primary-ES) → source_count: 3; language_pool: both; Tier A
+
+Café 4 Gatos
+  src-james-dimitri (primary-EN) — Sabores extraction failed 15-word rule
+  → source_count: 1; language_pool: en; Tier B (single-source)
+
+════════════════════════════════════════════════════════════════
+PHASE 3 — AUTO-REMOVED (rule violations)
+════════════════════════════════════════════════════════════════
+
+Bar Avila Tapas (src-james-dimitri)
+  Reason: null neighbourhood — no neighbourhood assignable from source article;
+           single-source Tier B entry → auto_removed per null-neighbourhood rule
+  auto_removed: 1
+
+════════════════════════════════════════════════════════════════
+PHASE 3 — CONCENTRATION CAP
+════════════════════════════════════════════════════════════════
+
+Cap threshold: 30% (default)
+Source pool after auto-removal: 9 entries
+Spanish Sabores (src-spanish-sabores) single-source entries: 6 of 9 = 66.7% >> 30%
+
+Iterative removal — lowest-value single-source Sabores entries first:
+
+  1. La Trastienda — removed (single-source secondary COI; weakest quote specificity)
+  2. Om Kalsum — removed (single-source secondary COI; vague quote, no personal framing)
+  3. La Botillería — removed (single-source secondary COI; generic description)
+  4. Restaurante Más Que Vinos — removed (null coordinates; generic quote)
+  5. El Trillo — removed (single-source secondary COI; 5th removal brings Sabores to cap)
+
+  After 5 removals: Sabores = 1 / 4 = 25% ≤ 30% ✓
+  Retained: Tajine Elvira — strongest provenance (husband-wife team, named street,
+            location move documented; unique Moroccan cuisine representation)
+
+  concentration_cap_applied: 5
+
+════════════════════════════════════════════════════════════════
+PHASE 3 — REVIEWED KEPT (auto-accepted in UNATTENDED_MODE: YES)
+════════════════════════════════════════════════════════════════
+
+Café 4 Gatos
+  Reason for review: single-source Tier B from primary EN source
+  Decision: AUTO-ACCEPTED [UNATTENDED_MODE: YES]
+  Rationale: Primary independent named writer; Albaicín neighbourhood (geographic diversity);
+             specific quote detail (toast varieties, local atmosphere)
+
+Tajine Elvira
+  Reason for review: single-source Tier B from secondary COI source
+  Decision: AUTO-ACCEPTED [UNATTENDED_MODE: YES]
+  Rationale: Unique cuisine (Moroccan — underrepresented in pool); concrete provenance
+             (husband-wife team, Calle Elvira relocation); only non-Spanish-tapas entry
+  Flags applied: flagged: true | open_status_check: true (secondary COI single-source)
+
+════════════════════════════════════════════════════════════════
+PHASE 3 — CONFIDENCE TIER SUMMARY
+════════════════════════════════════════════════════════════════
+
+  auto_approved:             2  (Bar Los Diamantes, Bodegas Castañeda — Tier A, both-pool)
+  reviewed_kept:             2  (Café 4 Gatos, Tajine Elvira — Tier B, auto-accepted)
+  auto_removed:              1  (Bar Avila Tapas — null neighbourhood)
+  user_removed:              0
+  auto_rejected:             3  (failed Phase 2 extraction standards)
+  concentration_cap_applied: 5  (La Trastienda, Om Kalsum, La Botillería,
+                                  Restaurante Más Que Vinos, El Trillo)
+
+  FINAL RESTAURANT COUNT:    4
+  BOTH-POOL COUNT:           2
+
+════════════════════════════════════════════════════════════════
+COI DISCLOSURES
+════════════════════════════════════════════════════════════════
+
+src-spanish-sabores / Lauren Aloise / Spanish Sabores
+  COI: Lauren Aloise is co-founder of Devour Tours, a commercial food tour
+  operator with active Granada operations. This creates a potential conflict
+  of interest for restaurant recommendations in Granada.
+  Classification: secondary (downgraded from primary)
+  Handling: All single-source Sabores entries carry flagged: true and
+            open_status_check: true. Concentration cap strictly enforced.
+            Single Sabores entry retained: Tajine Elvira (unique cuisine,
+            strong editorial provenance story, no equivalent in primary pool).
+
+════════════════════════════════════════════════════════════════
+STRUCTURAL NOTES
+════════════════════════════════════════════════════════════════
+
+Granada thin-source-pool: This city has very few qualifying food writers
+covering the dining scene in 2023-2026. Primary ES coverage is extremely
+limited — GranadaDigital (Cloudflare-blocked), ideal.es (not surfacing
+relevant food writing), El Comidista/El País (no Granada-specific articles).
+The thin source pool combined with strict concentration cap enforcement
+produces a 4-restaurant dataset. This is a structural characteristic of
+Granada's English/Spanish food writing ecosystem, not a pipeline failure.
+
+WebFetch truncation impact: The Jina/WebFetch fetch pathway abbreviates
+quotes during AI content processing. This caused Taberna La Tana and Café
+4 Gatos (from Sabores extraction) to fall below the 15-word minimum
+threshold. Taberna La Tana (cross-validated rank 3) was lost entirely.
+This is a known pipeline limitation; results are conservative relative to
+a human extraction of the same sources.
+
+GranadaDigital (El Gocho Gourmet) note: Column launched April 2025;
+Cloudflare permanently blocks Jina fetcher. Recommended for monitoring
+in future pipeline runs as content depth grows.

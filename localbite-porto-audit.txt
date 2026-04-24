@@ -1,0 +1,228 @@
+# LocalBite Porto — Pipeline Audit
+# Pipeline: localbite-v7.1
+# Built: 2026-04-24
+# City: Porto, Portugal | Slug: porto-portugal
+
+==============================
+SOURCES CONFIRMED (4)
+==============================
+
+[PRIMARY-EN] Portoalities — Sara Riobom
+  URL: https://portoalities.com/en/best-restaurants-in-ribeira/
+  Date: 2026-04-03
+  Restaurants extracted (before cap): 9
+  Restaurants in final (after cap): 5
+  COI: none
+  Notes: Single-author blog. Author byline confirmed on site About page.
+
+[PRIMARY-EN] Go Ask A Local — Leonor Tito
+  URL: https://goaskalocal.com/blog/porto-restaurants-and-bars
+  Date: 2023-02-03
+  Restaurants extracted: 3 qualifying (cross-references to Portoalities/CB entries)
+  Restaurants as standalone final entries: 1 (Restaurante Costume Bistrô)
+  COI: none
+  Notes: Single-author blog. Author byline confirmed on About page and article header.
+
+[SECONDARY-PT] Visão — Florbela Alves & Lucília Monteiro
+  URL: https://visao.pt/visaose7e/comer-e-beber/2024-10-04-porto-7-novos-restaurantes-que-abriram-nos-ultimos-meses/
+  Date: 2024-10-04
+  Restaurants extracted: 5 (after boundary exclusions)
+  Restaurants in final: 5
+  COI: none
+  Notes: National weekly magazine (secondary). Co-bylined article; Florbela Alves lead author.
+  Boundary exclusions: Cibû (Leça da Palmeira), Belos Aires Praia (Arcozelo/Aguda).
+
+[SECONDARY-EN] Culinary Backstreets — Rafael Tonon
+  URL: https://culinarybackstreets.com/stories/porto/best-bites-2024-5
+  Date: 2024-12-16
+  Restaurants extracted: 6 (after café exclusion)
+  Restaurants in final: 6 (including Casa Expresso shared with Go Ask A Local)
+  COI: none
+  Notes: Multi-author food travel platform (secondary). Named author confirmed via article byline.
+  Café exclusion: Vonn & Vonnie (coffee shop, not dining restaurant).
+
+==============================
+DIVERSITY GATE
+==============================
+
+PT PRIMARY MET: NO
+PT SECONDARY USED: Visão (src-visao-oct2024)
+
+Exhaustive PT primary search result (8 supplementary targeted queries):
+- Mesa Marcada (mesaMarcada.com): Article-level byline inaccessible via Jina. One article
+  explicitly attributed text as "adapted from Revista de Vinhos" with photos by Miguel Pires.
+  No independent article-level author byline visible. REJECTED.
+- Observador (observador.pt): gastronomia section returned 404. Alternative
+  por-pratos-nunca-dantes-navegados section is podcast-only (170 chars description,
+  no extractable article text). REJECTED.
+- Publico/Fugas (publico.pt): All URLs returned HTTP 451 (Unavailable For Legal Reasons / GDPR
+  geo-block). Inaccessible. REJECTED.
+- Porto Secreto (portosecreto.co): JavaScript security verification challenge. Inaccessible.
+  REJECTED.
+- NCultura (ncultura.pt): No author byline. REJECTED.
+- Saber Viver (saberviver.pt): No named individual — credited to "Saber Viver" (publication
+  name). REJECTED.
+- Viaje Comigo (viajecomigo.com): No byline. REJECTED.
+Conclusion: documented as structural characteristic of Porto PT food writing web landscape.
+
+==============================
+BOTH-POOL STATUS
+==============================
+
+BOTH-POOL COUNT: 0
+
+Structural explanation: Visão (PT secondary) exclusively covers 2024 new restaurant openings
+in Porto. EN sources (Portoalities 2026, Go Ask A Local 2023, CB Dec 2024) cover established
+Ribeira restaurants and general best-of lists. The 2024 new openings in Visão (Barro, Urraca,
+L'Egoïste, Blss U, Ikebana Izakaya) do not appear in any EN source.
+
+Both-pool is structurally unavailable for this run given the PT/EN source coverage gap.
+
+==============================
+PHASE 2 AUTO-REJECTIONS (12)
+==============================
+
+[MICHELIN] DOP — src-portoalities-ribeira
+  Reason: Michelin starred (1★ awarded March 2026). Excluded per MICHELIN_STARRED_EXCLUSIONS.
+
+[NO-SPECIFIC-DETAIL] Tokkotai — src-portoalities-ribeira
+  Reason: Quote describes attentive service and extensive menu; no dish name, chef, price,
+  physical description, year, or neighbourhood within the quote.
+
+[NOT-RESTAURANT] Wine Quay — src-portoalities-ribeira
+  Reason: Article explicitly describes as "a wine bar rather than full restaurant."
+
+[NOT-RESTAURANT] Vonn & Vonnie — src-cb-best-bites-2024
+  Reason: Article describes as "one of Porto's top coffee spots." Café/coffee shop.
+
+[BOUNDARY] Cibû — src-visao-oct2024
+  Reason: Located in Leça da Palmeira (Municipality of Matosinhos, not Porto). Address:
+  R. do Castelo, 15, Leça da Palmeira. Outside GEOGRAPHIC_BOUNDARY_INCLUDE.
+
+[BOUNDARY] Belos Aires Praia — src-visao-oct2024
+  Reason: Located in Arcozelo/Aguda beach, Vila Nova de Gaia. Address: R. do Mar, 227,
+  Arcozelo, Aguda. Far south of VNG waterfront; not covered as part of Porto food scene.
+
+[NO-SPECIFIC-DETAIL] Caçula — src-goaskalocal-porto
+  Quote: "They have very fresh food, nice salads, and an interesting adaptation of our
+  traditional foods with a modern twist." (20 words)
+  Reason: No dish name, chef, price, physical description, year, or neighbourhood in quote.
+
+[NO-SPECIFIC-DETAIL] Papagaio — src-goaskalocal-porto
+  Quote: "While the food is not especially unique, it is always good and almost all the
+  clients are Portuguese." (18 words)
+  Reason: Local clientele observation is not a qualifying specific detail per template.
+
+[NO-SPECIFIC-DETAIL] Porto À Noite — src-goaskalocal-porto
+  Quote: "This is nothing stylish or fancy, but it's good honest Portuguese food at great
+  prices." (16 words)
+  Reason: "great prices" too vague — no actual price figure or dish mentioned.
+
+[UNDER-MINIMUM] Tapabento — src-goaskalocal-porto
+  Quote: "The food is to die for and the staff are excellent." (11 words)
+  Reason: Under 15-word minimum. Portoalities entry retained.
+
+[UNDER-MINIMUM] Postigo do Carvão — src-goaskalocal-porto
+  Quote: "Uninterested in new trends, the kitchen stays loyal to traditional Portuguese
+  cuisine." (12 words)
+  Reason: Under 15-word minimum. Portoalities entry retained.
+
+[UNDER-MINIMUM] Taberna dos Mercadores — src-goaskalocal-porto
+  Reason: Paraphrased fragment under 15-word minimum for confirmed verbatim quote.
+  Portoalities entry retained.
+
+==============================
+PHASE 3 CONCENTRATION CAP REMOVALS (4)
+==============================
+
+Trigger: Portoalities contributed 9/21 unique restaurants (42.9%) — exceeds 30% cap.
+Required reduction: 4 entries removed to reach 5/17 = 29.4%.
+All removed entries are Tier B (single source). Removed lowest-confidence first.
+
+[CONCENTRATION-CAP] Bacalhau — src-portoalities-ribeira
+  Reason: Generic single-ingredient focus; quote partially paraphrased; weakest quote
+  confidence of Portoalities entries.
+
+[CONCENTRATION-CAP] A Grade — src-portoalities-ribeira
+  Reason: Quote assembled from fragmented dish fragments; lowest traceability confidence
+  (verbatim sentence not directly recoverable from Jina fetch).
+
+[CONCENTRATION-CAP] Vinhas d'Alho — src-portoalities-ribeira
+  Reason: Quote focuses on Douro River view and romantic atmosphere; weakest food-specific
+  detail of the remaining Portoalities pool.
+
+[CONCENTRATION-CAP] Adega de São Nicolau — src-portoalities-ribeira
+  Reason: Same ownership as Taberna dos Mercadores (both operated by same proprietors per
+  article); reduces effective source redundancy within the Ribeira cluster.
+
+==============================
+DEDUPLICATION (2)
+==============================
+
+Terra Nova — appeared in Portoalities AND Go Ask A Local
+  Resolution: Tier A. Both source citations retained in sources array.
+  Primary quote: Portoalities (stronger food detail: "codfish and oysters").
+  Go Ask A Local quote: "Takes local products and recipes and mixes them with foreign
+  flavors to create an international presentation and evolution of local gastronomy." (21 words)
+
+Casa Expresso — appeared in Go Ask A Local AND Culinary Backstreets
+  Resolution: Tier A. Both source citations retained in sources array.
+  Primary quote: CB (stronger specificity: "beef liver with onions, cod escabeche,
+  and rojão sandwiches").
+  Go Ask A Local quote: "They continue to serve local traditional foods that almost all
+  other restaurants have forgotten about." (15 words)
+
+==============================
+OTHER EXCLUSIONS (noted in search phase)
+==============================
+
+- Michelin-starred restaurants excluded (all phases): The Yeatman (1★), Antiqvvm (1★),
+  Euskalduna Studio (1★), Pedro Lemos (1★), DOP (1★ 2026)
+- Time Out Porto EN (timeout.com/porto): Rafael Tonon — EXCLUDED: secondary cap already
+  reached (CB + Visão = 2 secondaries); COI note (Rafael Tonon also writes for Culinary
+  Backstreets — same author in two secondary sources creates conflict)
+- Time Out Porto PT (timeout.pt): Mariana Morais Pinheiro & Rafael Tonon — EXCLUDED:
+  secondary cap reached; same publisher as EN edition; COI (Tonon shared across sources)
+- Olive Magazine: Alex Crossley et al. — EXCLUDED: secondary cap reached (Visão + CB
+  already selected)
+- CB Essentials Porto: Author listed as "Culinary Backstreets" (no named individual) —
+  REJECTED at fetch-verify stage
+- Adventures of Cricket: First name only ("Christie") — insufficient author identification
+- The Luxury Editor: No byline, date outside 2023-2026 range
+
+==============================
+OPEN STATUS CHECK FLAGS
+==============================
+
+Restaurants requiring open status verification (from pre-2025 articles):
+- Terra Nova (Go Ask A Local citation, 2023-02-03) — verify still operating
+- Restaurante Costume Bistrô (Go Ask A Local, 2023-02-03) — verify still operating
+- Casa Expresso (Go Ask A Local citation, 2023-02-03; CB citation, 2024-12-16)
+- Barro (Visão, 2024-10-04) — new opening Oct 2024, verify
+- Urraca (Visão, 2024-10-04) — new opening Jul 2024, verify
+- L'Egoïste (Visão, 2024-10-04) — new opening, verify
+- Blss U (Visão, 2024-10-04) — new opening, verify
+- Ikebana Izakaya (Visão, 2024-10-04) — new opening Aug 2024, verify
+- Borboleta (CB, 2024-12-16) — verify
+- Venn Canteen (CB, 2024-12-16) — verify
+- Soma Café e Cozinha (CB, 2024-12-16) — verify
+- Éter (CB, 2024-12-16) — verify
+- Liz (CB, 2024-12-16) — verify
+
+Note: Portoalities entries (2026-04-03) — open_status_check: false (confirmed current).
+Terra Nova has one 2026 Portoalities citation (open confirmed) and one 2023 Go Ask A Local
+citation (open_status_check: true on that citation only).
+
+==============================
+FINAL COUNTS
+==============================
+
+Sources:         4 (2 primary EN, 1 secondary PT, 1 secondary EN)
+Restaurants:     17
+Tier A:          2 (Terra Nova, Casa Expresso)
+Tier B:          15
+Tier C:          0
+Both-pool:       0
+Language pool EN: 12
+Language pool PT:  5
+Searches run:    42 (34 planned + 8 PT supplementary)

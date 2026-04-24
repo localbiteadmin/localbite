@@ -1,0 +1,122 @@
+# LocalBite Porto — Failed / Rejected Sources
+# Pipeline: localbite-v7.1
+# Built: 2026-04-24
+
+==============================
+FETCH FAILURES (inaccessible)
+==============================
+
+Publico/Fugas (publico.pt)
+  Reason: HTTP 451 — Unavailable For Legal Reasons (GDPR geo-block on all publico.pt URLs)
+  Impact: Major PT primary source unavailable
+
+Porto Secreto (portosecreto.co)
+  Reason: JavaScript security verification challenge (bot detection)
+  Impact: Local PT source unavailable
+
+Atlas Porto (atlasporto.com)
+  Reason: CAPTCHA security check, no article content accessible
+
+Observador podcast (observador.pt/seccao/por-pratos-nunca-dantes-navegados)
+  Reason: Podcast-only content; ~170 chars description, no extractable article text
+  Note: Initial URL observador.pt/seccao/lifestyle/gastronomia returned 404
+
+==============================
+AUTHOR VERIFICATION FAILURES
+==============================
+
+Adventures of Cricket (adventuresofcricket.com/best-restaurants-porto/)
+  Date: Nov 2025 — within range
+  Author: "Christie" — first name only, no surname identified
+  Reason: Insufficient author identification
+
+NCultura (ncultura.pt/10-dos-melhores-restaurantes-do-porto-em-2023/)
+  Date: Jun 7, 2023 — within range
+  Author: NO BYLINE — no named individual identified
+  Reason: Author requirement not met
+
+Saber Viver (saberviver.pt — Porto restaurants article)
+  Date: Jan 19, 2024 — within range
+  Author: "Saber Viver" — publication name credited, no named individual
+  Reason: Author requirement not met
+
+Viaje Comigo (viajecomigo.com/2024/12/05/...)
+  Date: Dec 5, 2024 — within range
+  Author: NO BYLINE
+  Reason: Author requirement not met
+
+The Petiscos (thepetiscos.com/blogs/...)
+  Date: Oct 7, 2025 — within range
+  Author: NO NAMED AUTHOR, ~4,847 chars
+  Reason: Author requirement not met
+
+viva-porto.pt article
+  Date: Apr 23, 2026 — within range
+  Author: NO BYLINE
+  Reason: Author requirement not met
+
+==============================
+DATE OUTSIDE RANGE
+==============================
+
+The Luxury Editor (theluxuryeditor.com/best-restaurants-in-porto/)
+  Date: Mar 2, 2022 — outside 2023-2026 range
+  Author: NO BYLINE (also no byline)
+  Reason: Date outside range AND no author
+
+A Ticket to Take Off (atickettotakeoff.com/en/best-restaurants-porto-by-a-local/)
+  Date: Apr 3, 2022 — outside 2023-2026 range
+  Author: NO BYLINE (also no byline)
+  Reason: Date outside range AND no author
+
+CB Rogério do Redondo (culinarybackstreets.com/stories/porto/rogerio-do-redondo)
+  Date: Mar 11, 2020 — outside range
+  Reason: Date outside range
+
+==============================
+BYLINE INTERPRETATION FAILURES
+==============================
+
+Mesa Marcada — Miguel Pires
+  URLs checked: mesamarcada.com/2025/09/22/... (Cafeína) and mesamarcada.com/2025/05/21/...
+  (Le Monument)
+  Reason: No article-level author byline visible via Jina fetch. One article explicitly states
+  "Texto adaptado a partir do original publicado na Revista de Vinhos de Agosto. As fotos,
+  são de Miguel Pires" — Miguel Pires credited as photographer only; article text is adapted
+  from Revista de Vinhos, not an original Mesa Marcada article.
+
+CB Essentials Porto (culinarybackstreets.com/stories/porto/the-essentials-6)
+  Date: Mar 7, 2025
+  Author: "Culinary Backstreets" — no named individual author
+  Reason: Multi-author platform requires named article-level author
+
+==============================
+SECONDARY CAP EXCLUSIONS (cap reached at 2)
+==============================
+
+Olive Magazine (olivemagazine.com/travel/europe/porto-places-to-eat-and-drink/)
+  Date: Mar 16, 2026
+  Authors: Alex Crossley, Keith Kendrick, Helen Salter, Laura Rowe
+  Quality: good (25 restaurants, ~8,847 chars)
+  Reason: Secondary cap already reached (Visão + CB = 2/2)
+
+Time Out Porto EN (timeout.com/porto/restaurants/the-best-porto-restaurants)
+  Date: Mar 17, 2025
+  Author: Rafael Tonon
+  Quality: good (30 restaurants, ~28,500 chars)
+  Reason: Secondary cap reached AND COI (Rafael Tonon also writes for CB — author appears
+  in two secondary sources)
+
+Time Out Porto PT (timeout.pt/porto/pt/restaurantes/os-melhores-restaurantes-no-porto)
+  Date: Feb 25, 2026
+  Authors: Mariana Morais Pinheiro & Rafael Tonon
+  Reason: Secondary cap reached; same publisher as EN edition; Rafael Tonon COI
+
+==============================
+SIBLING/PUBLISHER CONFLICT
+==============================
+
+Time Out Porto EN (timeout.com) and Time Out Porto PT (timeout.pt):
+  Both produced by Time Out Media. Rafael Tonon appears in both editions.
+  Could not contribute to both-pool (same parent publisher).
+  Both excluded from final pool (secondary cap reached independently).

@@ -1,77 +1,101 @@
-# LocalBite Porto — Search Plan
-# Pipeline: localbite-strategy-c-v6
-# Total queries: 30
-# Built: 2026-04-10
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
 
-# Phase 0 writers confirmed: Miguel Pires (Mesa Marcada), Rafael Tonon (Culinary Backstreets), Cláudia Brandão (Culinary Backstreets)
+CITY: Porto, Portugal
+CITY_SLUG: porto-portugal
+YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: PT
+SECONDARY_LANGUAGE: EN
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
 
-# ─────────────────────────────────────────
-# ANGLE A — City-wide English (4 queries)
-# ─────────────────────────────────────────
-A1. best restaurants Porto Portugal local food guide recommendations 2025
-A2. Porto Portugal dining guide food writer recommendations 2024 2025
-A3. where to eat Porto Portugal independent food critic guide 2025 2026
-A4. Porto Portugal best places to eat neighborhood guide honest review 2023 2024
+==============================
+PART A — NEIGHBOURHOOD QUERIES
+==============================
 
-# ─────────────────────────────────────────
-# ANGLE B — City-wide Portuguese (5 queries)
-# ─────────────────────────────────────────
-B1. melhores restaurantes Porto Portugal guia gastronómico 2025
-B2. onde comer no Porto Portugal recomendações crítico gastronómico 2025 2026
-B3. guia restaurantes Porto Portugal crítica gastronómica independente 2024
-B4. melhores restaurantes Porto 2023 2024 jornalista gastronomia
-B5. restaurantes imperdíveis Porto Portugal escritor gastronómico recomendações 2025
+TIER 1 — Ribeira (2 queries)
+A-01 [PT]: restaurantes Ribeira Porto recomendados critica gastronomica 2023 2024
+A-02 [EN]: best restaurants Ribeira Porto food guide 2024 2025
 
-# ─────────────────────────────────────────
-# ANGLE C — Per-neighbourhood English (4 queries)
-# ─────────────────────────────────────────
-C1. best restaurants Ribeira Porto Portugal waterfront food guide recommendations
-C2. where to eat Ribeira Porto local guide food writer honest 2024 2025
-C3. best restaurants Bonfim Porto Portugal neighbourhood food recommendations 2024 2025
-C4. Bonfim Porto dining guide local food writer recommendations 2023 2025
+TIER 1 — Bonfim (2 queries)
+A-03 [PT]: melhores restaurantes Bonfim Porto critica gastronomica 2024 2025
+A-04 [EN]: Bonfim Porto restaurant recommendations guide 2023 2024
 
-# ─────────────────────────────────────────
-# ANGLE D — Per-neighbourhood Portuguese (4 queries)
-# ─────────────────────────────────────────
-D1. melhores restaurantes Ribeira Porto recomendações guia local 2024 2025
-D2. onde comer Ribeira Porto Portugal crítica gastronómica 2023 2025
-D3. melhores restaurantes Bonfim Porto guia gastronómico 2024 2025
-D4. restaurantes Cedofeita Foz do Douro Porto recomendações escritor gastronómico 2024 2025
+TIER 1 — Cedofeita (2 queries)
+A-05 [PT]: restaurantes Cedofeita Porto recomendados guia gastronomico 2024
+A-06 [EN]: Cedofeita Porto restaurants food writer recommendations 2025
 
-# ─────────────────────────────────────────
-# ANGLE E — Writer-first (4 queries)
-# (first 2 use Phase 0 writers; last 2 open writer-type in PT)
-# ─────────────────────────────────────────
-E1. Miguel Pires Porto restaurantes recomendações crítico gastronomia
-E2. Rafael Tonon Porto restaurants food writing recommendations guide
-E3. crítico gastronómico independente Porto Portugal melhores restaurantes 2025
-E4. blogueiro gastronomia Porto Portugal recomendações restaurantes escritor local 2024 2025
+TIER 1 — Miragaia (2 queries)
+A-07 [PT]: melhores restaurantes Miragaia Porto critica gastronomia 2023 2024
+A-08 [EN]: Miragaia Porto dining restaurant guide
 
-# ─────────────────────────────────────────
-# ANGLE F — Forum and community (3 queries)
-# ─────────────────────────────────────────
-F1. Porto Portugal restaurants recommendations locals forum honest 2024 2025
-F2. best local restaurants Porto expat recommendations community guide 2025
-F3. fórum recomendações restaurantes Porto Portugal moradores opinião honesta 2024
+TIER 2 — Foz do Douro (2 queries)
+A-09 [PT]: restaurantes Foz do Douro Porto gastronomia critica 2024 2025
+A-10 [EN]: Foz do Douro Porto best restaurants food guide 2023
 
-# ─────────────────────────────────────────
-# ANGLE G — Recent openings (2 queries)
-# ─────────────────────────────────────────
-G1. new restaurant openings Porto Portugal 2024 2025 best recent
-G2. novos restaurantes Porto Portugal aberturas 2024 2025 melhores
+TIER 2 — Massarelos (2 queries)
+A-11 [PT]: restaurantes Massarelos Porto critica gastronomica 2024
+A-12 [EN]: Massarelos Porto restaurants dining recommendations 2023 2025
 
-# ─────────────────────────────────────────
-# ANGLE H — Awards and recognition (2 queries)
-# ─────────────────────────────────────────
-H1. best restaurants Porto Portugal award recognition food guide 2024 2025
-H2. prémios gastronomia Porto Portugal melhores restaurantes reconhecidos 2024 2025
+TIER 2 — Lordelo do Ouro (2 queries)
+A-13 [PT]: restaurantes Lordelo do Ouro Porto gastronomia recomendados 2024
+A-14 [EN]: Lordelo do Ouro Porto food guide restaurants
 
-# ─────────────────────────────────────────
-# ANGLE I — Publication-specific by category (2 queries)
-# ─────────────────────────────────────────
-I1. independent food media Porto Portugal restaurant guide journalist recommendations 2024 2025
-I2. revista gastronomia Portugal Porto melhores restaurantes crítica independente 2025
+TIER 2 — Campanhã (2 queries)
+A-15 [PT]: restaurantes Campanhã Porto boas escolhas gastronomia 2024
+A-16 [EN]: Campanhã Porto restaurants recommendations food 2023 2024
 
-# ─────────────────────────────────────────
-# TOTAL: 30 queries
-# ─────────────────────────────────────────
+TIER 3 — Matosinhos (1 query)
+A-17 [PT]: melhores restaurantes Matosinhos frutos do mar critica gastronomica 2024 2025
+
+TIER 3 — Vila Nova de Gaia (1 query)
+A-18 [PT]: restaurantes Vila Nova de Gaia Porto critica gastronomia 2023 2024
+
+PART A TOTAL: 18 queries
+
+==============================
+PART B — CROSS-CUTTING ANGLES
+==============================
+
+Cross-1 — City-wide EN (2 queries)
+B-19 [EN, editorial]: best restaurants Porto Portugal food guide 2024 2025
+B-20 [EN, personal]: where to eat Porto Portugal local food recommendations 2023
+
+Cross-2 — City-wide PT (3 queries)
+B-21 [PT, formal]: melhores restaurantes Porto critica gastronomica 2025
+B-22 [PT, casual]: onde comer Porto bairros recomendacoes locais 2024
+B-23 [PT, journalism]: guia gastronomico Porto imprensa jornalismo 2023 2024
+
+Cross-3 — Generic writer-first (2 queries)
+B-24 [PT]: critico gastronomico Porto cronicas restaurantes 2024 2025
+B-25 [EN]: food writer Porto Portugal restaurant review 2023 2024
+
+Cross-4 — Named awards — generic (3 queries)
+B-26 [EN]: Michelin guide Porto restaurants bib gourmand 2024 2025
+B-27 [PT]: Boa Cama Boa Mesa premiados Porto 2024 2025
+B-28 [PT]: Fork restaurantes premiados Porto 2023 2024
+
+Cross-5 — Recent openings (2 queries)
+B-29 [PT]: novos restaurantes Porto abertos 2024 2025 critica
+B-30 [EN]: new restaurant openings Porto 2024 2025 food guide
+
+Cross-6 — LOCAL_FOOD_VOCABULARY blank → SKIP
+
+Cross-7 — Cuisine and community (2 queries)
+B-31 [PT]: cozinha portuguesa contemporanea Porto chef restaurantes critica 2024
+B-32 [EN]: petiscos tasca traditional Porto food culture 2023 2024
+
+Cross-8 — Publication-category PT (2 queries)
+B-33 [PT]: revista gastronomica independente Porto restaurantes 2024
+B-34 [PT]: suplemento gastronomia jornal Porto melhores restaurantes 2025
+
+PART B TOTAL: 16 queries
+
+GRAND TOTAL: 34 queries (soft ceiling 45, hard ceiling 55)
+
+==============================
+YEAR DISTRIBUTION CHECK
+==============================
+Queries referencing 2023 or 2023-2024 (earlier): A-01, A-04, A-07, A-10, A-12, A-16, A-18, B-20, B-23, B-25, B-28, B-32 = 12 queries
+Queries referencing 2024-2025 or 2025 (later): A-02, A-03, A-05, A-06, A-09, A-11, A-13, A-15, A-17, B-19, B-21, B-22, B-24, B-26, B-27, B-29, B-30, B-31, B-33, B-34 = 20 queries
+No year term: A-08, A-14 = 2 queries
+[year-distribution-check] PASSED — 12 queries reference earlier years (2023/2023-2024), 20 queries reference later years (2024-2025/2025), 2 queries have no year term.

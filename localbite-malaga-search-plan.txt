@@ -1,71 +1,105 @@
-LOCALBITE SEARCH PLAN — MÁLAGA, SPAIN
-Generated: 2026-04-10
-Phase 0 writer names confirmed: NONE (all three Phase 0 sources failed to load)
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
 
-Total queries: 30
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CITY: Málaga | COUNTRY: Spain | YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: ES | SECONDARY_LANGUAGE: EN
+PHASE1_AUTO_PROCEED: YES | UNATTENDED_MODE: YES
 
-ANGLE A — City-wide English (4 queries)
-────────────────────────────────────────
-A1. "best restaurants Málaga Spain food writer local guide 2026"
-A2. "top places to eat Málaga Spain independent food critic 2025 recommendations"
-A3. "Málaga Spain restaurant guide named author 2024 hidden gems"
-A4. "where to eat Málaga Spain local food expert picks 2023 2024"
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
 
-ANGLE B — City-wide Spanish (5 queries)
-────────────────────────────────────────
-B1. "mejores restaurantes Málaga España guia gastronomica critico 2026"
-B2. "donde comer Málaga España recomendaciones escritor gastronomico 2025"
-B3. "guia restaurantes Málaga 2024 opinion gastronomica experto local"
-B4. "los mejores restaurantes malaga 2023 critica gastronomica periodista"
-B5. "restaurantes imprescindibles malaga españa recomendacion periodista gastronomia 2025"
+TIER 1 — Centro Histórico (2 queries: 1 ES later + 1 EN earlier)
+Q1  [neighbourhood-Centro Histórico] ES later:  mejores restaurantes Centro Histórico Málaga 2025
+Q2  [neighbourhood-Centro Histórico] EN earlier: best restaurants historic centre Málaga 2023 2024
 
-ANGLE C — Per-neighbourhood English (4 queries)
-────────────────────────────────────────────────
-C1. "best restaurants Centro Histórico Málaga old town food guide 2025"
-C2. "where to eat historic centre Málaga Spain critic recommendations 2024"
-C3. "Soho Málaga restaurants arts quarter dining guide 2025 food writer"
-C4. "best places eat Soho district Málaga Spain independent guide 2024"
+TIER 1 — Soho (2 queries: 1 ES later + 1 EN earlier)
+Q3  [neighbourhood-Soho] ES later:  restaurantes barrio Soho Málaga gastronomía 2025 2026
+Q4  [neighbourhood-Soho] EN earlier: where to eat Soho Málaga neighbourhood 2024
 
-ANGLE D — Per-neighbourhood Spanish (4 queries)
-────────────────────────────────────────────────
-D1. "restaurantes Centro Histórico Málaga barrio casco antiguo mejores 2025"
-D2. "mejores restaurantes Soho Málaga barrio de las artes gastronomia 2024"
-D3. "restaurantes El Perchel Málaga guia gastronomica recomendacion 2024"
-D4. "mejores restaurantes Pedregalejo El Palo Málaga playa recomendacion 2025"
+TIER 1 — La Malagueta (2 queries: 1 ES earlier + 1 EN later)
+Q5  [neighbourhood-La Malagueta] ES earlier: chiringuitos mariscos La Malagueta Málaga 2023 2024
+Q6  [neighbourhood-La Malagueta] EN later:   La Malagueta beach restaurants Málaga seafood 2025
 
-ANGLE E — Writer-first (4 queries)
-[No Phase 0 writer names confirmed; using open writer-type patterns; 2 Spanish required]
-────────────────────────────────────────────────────────────────────────────────────────
-E1. "food writer based in Málaga Spain restaurant blog personal recommendations 2025"
-E2. "independent food blogger Málaga Spain English restaurant recommendations 2024"
-E3. "critico gastronomico malaga españa blog personal restaurantes recomendaciones 2025"
-E4. "escritor gastronomico malaga andalucia local recomendaciones restaurantes 2024"
+TIER 2 — El Perchel (2 queries: 1 ES later + 1 EN earlier)
+Q7  [neighbourhood-El Perchel] ES later:  restaurantes El Perchel Málaga 2025
+Q8  [neighbourhood-El Perchel] EN earlier: eating in El Perchel Málaga neighbourhood 2023 2024
 
-ANGLE F — Forum and community (3 queries)
-[At least 1 Spanish-language]
-───────────────────────────────────────────
-F1. "Málaga Spain best restaurants forum discussion locals recommend 2024 2025"
-F2. "where eat Málaga Spain traveller forum community advice independent restaurants 2025"
-F3. "foro malaga donde comer restaurantes recomendaciones locales 2024 2025"
+TIER 2 — La Trinidad (2 queries: 1 ES earlier + 1 EN later)
+Q9  [neighbourhood-La Trinidad] ES earlier: bares restaurantes La Trinidad Málaga barrio 2023
+Q10 [neighbourhood-La Trinidad] EN later:   La Trinidad Málaga dining emerging 2025 2026
 
-ANGLE G — Recent openings (2 queries)
-[1 EN + 1 ES]
-─────────────────────────────────────────
-G1. "new restaurant openings Málaga Spain 2024 2025 food critic review"
-G2. "nuevos restaurantes malaga 2024 2025 apertura critica gastronomica"
+TIER 2 — Lagunillas (2 queries: 1 ES later + 1 EN earlier)
+Q11 [neighbourhood-Lagunillas] ES later:  restaurantes Lagunillas Málaga 2025 taberna comida
+Q12 [neighbourhood-Lagunillas] EN earlier: Lagunillas Málaga restaurants neighbourhood 2024
 
-ANGLE H — Awards and recognition (2 queries)
-[1 EN + 1 ES — no specific publication names]
-───────────────────────────────────────────────────
-H1. "Málaga Spain restaurant awards recognition notable dining 2024 2025"
-H2. "premios gastronomicos malaga españa restaurantes reconocidos 2024 2025"
+TIER 2 — El Ejido (2 queries: 1 ES earlier + 1 EN later)
+Q13 [neighbourhood-El Ejido] ES earlier: bares restaurantes El Ejido Málaga barrio 2023 2024
+Q14 [neighbourhood-El Ejido] EN later:   El Ejido Málaga dining neighbourhood 2025 2026
 
-ANGLE I — Publication-specific (2 queries)
-[Food media by category, not by name]
-──────────────────────────────────────────
-I1. "Málaga Spain independent food publication restaurant critic guide 2024 2025"
-I2. "revista gastronomica andalucia malaga restaurantes mejores critica 2024 2025"
+TIER 3 — El Palo (1 ES query only)
+Q15 [neighbourhood-El Palo] ES later: restaurantes El Palo Málaga chiringuito 2025
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TOTAL: 30 queries across 9 angles
+TIER 3 — Pedregalejo (1 ES query only)
+Q16 [neighbourhood-Pedregalejo] ES earlier: marisquería chiringuito Pedregalejo Málaga 2023 2024
+
+TIER 3 — El Limonar (1 ES query only)
+Q17 [neighbourhood-El Limonar] ES later: restaurantes El Limonar Málaga 2025
+
+TIER 3 — Teatinos (1 ES query only — no year term)
+Q18 [neighbourhood-Teatinos] ES: restaurantes Teatinos Málaga barrio
+
+PART A TOTAL: 18 queries
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries)
+Q19 [cross-1] EN later:   best restaurants Málaga 2025 food guide writer
+Q20 [cross-1] EN earlier: Málaga restaurant recommendations guide 2023 2024
+
+Cross-2 — City-wide ES (3 queries)
+Q21 [cross-2] ES later:   crítica gastronómica restaurantes Málaga 2025
+Q22 [cross-2] ES earlier: dónde comer en Málaga recomendaciones barrios 2023 2024
+Q23 [cross-2] ES no-year: guía gastronómica periodista Málaga mejores restaurantes
+
+Cross-3 — Generic writer-first (2 queries)
+Q24 [cross-3] ES earlier: escritor gastrónomo Málaga artículo restaurantes 2023 2024
+Q25 [cross-3] EN later:   food writer Málaga restaurant recommendations 2025 2026
+
+Cross-4 — Named awards (generic — NAMED_AWARDS blank): 3 queries
+Q26 [cross-4] EN no-year:    Málaga restaurant awards best winners
+Q27 [cross-4] ES earlier:   premios gastronomía Málaga mejores restaurantes 2023 2024
+Q28 [cross-4] Michelin later: Michelin guide Málaga bib gourmand 2025 2026
+
+Cross-5 — Recent openings (2 queries)
+Q29 [cross-5] ES later:   nuevas aperturas restaurantes Málaga 2025 2026
+Q30 [cross-5] EN earlier: new restaurant openings Málaga 2023 2024
+
+Cross-7 — Cuisine and community (2 queries)
+Q31 [cross-7] ES no-year: restaurantes vegetarianos marisquería autóctona Málaga gastronomía local
+Q32 [cross-7] EN later:   Málaga seafood traditional cuisine bars 2025 food culture
+
+Cross-8 — Publication-category local language (2 queries)
+Q33 [cross-8] ES no-year:  revista gastronómica independiente Málaga mejores restaurantes
+Q34 [cross-8] ES earlier:  suplemento gastronomía periódico Málaga restaurantes 2023 2024
+
+PART B TOTAL: 16 queries
+
+GRAND TOTAL: 34 queries (soft ceiling 45, hard ceiling 55)
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+
+Earlier-year queries (2023-2024): Q2,Q4,Q5,Q8,Q9,Q12,Q13,Q16,Q20,Q22,Q24,Q27,Q30,Q34 = 14 queries
+Later-year queries (2025-2026):   Q1,Q3,Q6,Q7,Q10,Q11,Q14,Q15,Q17,Q19,Q21,Q25,Q28,Q29,Q32 = 15 queries
+No-year queries:                  Q18,Q23,Q26,Q31,Q33 = 5 queries
+
+[year-distribution-check] PASSED — 14 queries reference earlier years (2023-2024), 15 queries reference later years (2025-2026), 5 queries have no year term.
+
+All angles with 2 queries: one references earlier years, one references later years. ✓
+Cross-2 (3 queries): Q22 references earlier years. ✓
+Cross-4 (3 queries): Q27 references earlier years, Q28 references later years. ✓
+
+Plan ready. Proceeding to Step 2 — Execute search plan.

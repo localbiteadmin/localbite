@@ -1,2 +1,13 @@
 # LocalBite Granada — Failed Sources Log
-# Pipeline: localbite-v6 | Date: 2026-04-09
+# Pipeline: localbite-v7.1 | Date: 2026-04-24 (fresh run)
+
+GranadaDigital / Alfonso Campos (El Gocho Gourmet)
+  URL:     https://www.granadadigital.es/columnista/gocho-gourmet/
+  Reason:  403 Forbidden — Cloudflare security service blocks Jina fetcher
+  Retries: Attempt 1 (immediate): 403 | Retry 1 (30s): 403 | Retry 2 (60s): 403
+  Wayback: https://r.jina.ai/https://web.archive.org/web/2026/[URL] → 451 (Unavailable for Legal Reasons)
+  Outcome: PERMANENTLY FAILED — structural Cloudflare block, not a content quality issue
+  Restaurants lost: 0 directly extractable (column page, not a specific article)
+  Note:    GranadaDigital is confirmed as a qualifying primary ES source; the El Gocho Gourmet
+           column is a valid food writing venue. Fetch failure is a technical barrier only.
+           Recommend monitoring for Jina compatibility improvements in future runs.
