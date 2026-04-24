@@ -169,15 +169,15 @@
       "city": "Málaga",
       "country": "Spain",
       "city_slug": "malaga-spain",
-      "pipeline": "localbite-strategy-c-v6",
-      "built": "2026-04-10",
-      "restaurant_count": 23,
-      "both_pool_count": 0,
+      "pipeline": "localbite-v7.1",
+      "built": "2026-04-24",
+      "restaurant_count": 34,
+      "both_pool_count": 2,
       "source_count": 6,
-      "description": "23 restaurants from 6 named sources across English and Spanish. Zero both-pool is structural — EN and ES sources cover different restaurant segments.",
       "file": "localbite-malaga-2023-2026.json",
       "status": "complete",
-      "notes": "All Phase 0 sources failed (Jina blocked or no content). El Español Málaga holds 100% of ES pool — structural characteristic. Pedregalejo and El Palo included conditionally (2 entries)."
+      "open_status_check_count": 28,
+      "notes": ""
     },
     {
       "city": "Madrid",
