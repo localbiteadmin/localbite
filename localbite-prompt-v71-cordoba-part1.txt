@@ -1,5 +1,15 @@
 # LocalBite Pipeline — Part 1: Córdoba
-# v7.1 — 2026-04-23
+# v7.1 — 2026-04-24 (revised after v7.1 rebuild analysis)
+#
+# REVISION NOTES:
+# The first v7.1 rebuild produced only 2 both-pool from 5 sources.
+# Git history audit confirmed the old v6 pack's 17 both-pool was genuine —
+# named authors existed for all 9 v6 sources. Failures in the first v7.1 run:
+# 1. Argentine Córdoba contamination dominated search results
+# 2. Cordópolis (elDiario.es Córdoba section) not surfaced — add as Phase 0
+# 3. Piccavey.com falsely rejected — byline on About page, not article header
+# 4. Yendo por la Vida (Txema Aguado) not found — add as known source
+# 5. El Debate wrong article fetched — named author existed, wrong piece
 
 CITY:             Córdoba
 COUNTRY:          Spain
@@ -7,13 +17,6 @@ CITY_SLUG:        cordoba-spain
 YEAR_RANGE:       2023-2026
 PRIMARY_LANGUAGE: ES
 SECONDARY_LANGUAGE: EN
-
-# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
-# Córdoba's food scene is concentrated in the historic Casco Antiguo/Judería
-# around the Mezquita, and the modern Centro. San Basilio is the famous
-# patios neighbourhood. Ciudad Jardín and El Brillante are residential dining areas.
-# Córdoba is known for salmorejo (thick cold tomato soup), flamenquín, and
-# rabo de toro (oxtail stew) — pipeline should surface these local dishes.
 
 TIER_1_NEIGHBOURHOODS: Casco Antiguo, Judería, Centro
 TIER_2_NEIGHBOURHOODS: San Basilio, El Brillante, Ciudad Jardín, Sector Sur
@@ -24,42 +27,55 @@ GEOGRAPHIC_BOUNDARY_INCLUDE:
   El Brillante, Ciudad Jardín, Sector Sur, Miraflores
 
 GEOGRAPHIC_BOUNDARY_EXCLUDE:
-  Montilla (separate municipality, wine region), Priego de Córdoba,
-  Baena (olive oil region), Écija (separate municipality),
-  Jaén (separate province capital)
+  Montilla, Priego de Córdoba, Baena, Écija, Jaén
+
+# ── ARGENTINA CONTAMINATION WARNING ──────────────────────────
+# CRITICAL: "Córdoba" without disambiguation returns Argentine results.
+# ALL search queries must use "Córdoba España", "Córdoba Spain", or
+# "Córdoba capital Andalucía" to avoid contamination.
+# Auto-reject any source from: circuitogastronomico.com, malevamag.com,
+# soldepiedra.com.ar, and any .ar domain or Argentine publication.
+
+ARGENTINA_DISAMBIGUATION: REQUIRED — all queries must include España or Spain
+ARGENTINA_AUTOBLOCK: .ar domains, Argentine publications, Córdoba Argentina
 
 # ── MICHELIN EXCLUSIONS ──────────────────────────────────────
-# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
 MICHELIN_STARRED_EXCLUSIONS:
   Noor (1★, Paco Morales — Nazarí cuisine)
 
-# ── SOURCE STRATEGY ──────────────────────────────────────────
-# Córdoba food writing is primarily ES. EN coverage exists due to Mezquita
-# tourism but is often generic travel content — verify editorial independence.
-# Diario Córdoba is the main local newspaper. El Día de Córdoba is the other.
-# Both-pool is achievable — Córdoba has had strong cross-validation in previous runs.
-# The current pack has the highest both-pool rate in the fleet (49%) — rebuild
-# should find similar cross-validation if source quality rules are applied correctly.
+# ── PHASE 0: DIRECT FETCH SOURCES ────────────────────────────
+# Confirmed named-author sources from v6 pack verified via git history.
+
+DIRECT_FETCH_SOURCES:
+  - cordopolis.es (ES — Cordópolis, elDiario.es Córdoba section.
+    Juan Velasco and Alfonso Alba are named food writers.
+    Fetch food/gastronomy section for restaurant guides 2023-2026.)
+  - yendoporlavida.com (ES — Txema Aguado, confirmed named author in v6 pack)
+  - piccavey.com (EN — Molly Piccavey. NOTE: single-author site — byline on
+    About page only, not article headers. Apply single-author site rule.
+    DO NOT reject for missing article-level byline.)
+  - spainbyhanne.dk (EN — Hanne Olsen, confirmed named author in v6 pack)
+  - andyhayler.com (EN — Andy Hayler. Check for Córdoba articles 2023-2026.)
 
 PHASE_0_SOURCES:
-  - diariocordoba.com (ES — Diario Córdoba, main local newspaper, food section)
+  - diariocordoba.com (ES — main local newspaper, food section)
   - eldiadecordoba.es (ES — El Día de Córdoba, food coverage)
-  - guiarepsol.com (ES — Repsol guide, search Córdoba entries)
+  - guiarepsol.com (ES — Repsol guide, always use Córdoba España in queries)
+  - theobjective.com (ES — Brenda Alonso confirmed in v6 and v7.1)
 
 SECONDARY_SOURCES:
-  - elpais.com/gastronomia (ES — El Comidista / El País, search Córdoba features)
-  - bonviveur.es (ES — national food platform, search Córdoba guide)
-  - timeout.com/cordoba (EN — verify named author and recency)
-  - devourspain.com or similar EN food travel writers covering Córdoba
-  - abc.es (ES — ABC Córdoba edition, food and culture)
+  - elpais.com/gastronomia (ES — search Córdoba España features)
+  - bonviveur.es (ES — search Córdoba España guide)
+  - andalucialovers.com (EN — Morgane Mazelier confirmed in v6 and v7.1)
+  - abc.es (ES — ABC Córdoba edition)
+  - eldebate.com (ES — M. Ángeles Ramírez confirmed in v6. Fetch specific
+    restaurant guide articles not Repsol roundups which may lack bylines.)
 
 COI_FLAG_SOURCES: None known
 
-# ── PIPELINE SETTINGS ────────────────────────────────────────
 PHASE1_AUTO_PROCEED:  YES
 UNATTENDED_MODE:      YES
 
-# ── OUTPUT FILES ─────────────────────────────────────────────
 OUTPUT_SEARCH_PLAN:    localbite-cordoba-search-plan.txt
 OUTPUT_SEARCH_LOG:     localbite-cordoba-search-log.txt
 OUTPUT_WORKING:        localbite-cordoba-working.json
