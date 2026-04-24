@@ -153,15 +153,15 @@
       "city": "Porto",
       "country": "Portugal",
       "city_slug": "porto-portugal",
-      "pipeline": "localbite-strategy-c-v6",
-      "built": "2026-04-10",
-      "restaurant_count": 53,
-      "both_pool_count": 2,
-      "source_count": 10,
-      "description": "53 restaurants from 10 named sources across English and Portuguese. 2 both-pool entries. 2 Gaia entries flagged neighbourhood_gaia.",
+      "pipeline": "localbite-v7.1",
+      "built": "2026-04-24",
+      "restaurant_count": 17,
+      "both_pool_count": 0,
+      "source_count": 4,
       "file": "localbite-porto-2023-2026.json",
       "status": "complete",
-      "notes": "Mesa Marcada bylines not extractable via Jina — known limitation. PT source pool thin (Visão + NCultura only). Star Wine List novel source found via Phase 1B."
+      "open_status_check_count": 0,
+      "notes": ""
     },
     {
       "city": "Málaga",
