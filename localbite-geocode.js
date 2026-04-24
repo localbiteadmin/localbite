@@ -450,6 +450,26 @@ function shouldAutoNull(queriedName, matchedName) {
 
   const overlap = [...queryTokens].filter(t => matchTokens.has(t));
   if (overlap.length === 0) {
+    // Levenshtein check: if any token pair is within edit distance 2,
+    // don't auto-null — single-character differences (accents, double letters,
+    // spelling variants) should not be treated as zero overlap.
+    // Length >= 4 guard prevents short tokens (e.g. "23") from matching anything.
+    function lev(a, b) {
+      const m = a.length, n = b.length;
+      const dp = Array.from({length: m+1}, (_, i) =>
+        Array.from({length: n+1}, (_, j) => i === 0 ? j : j === 0 ? i : 0));
+      for (let i = 1; i <= m; i++)
+        for (let j = 1; j <= n; j++)
+          dp[i][j] = a[i-1] === b[j-1] ? dp[i-1][j-1] :
+            1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
+      return dp[m][n];
+    }
+    const nearMatch = [...queryTokens].some(qt =>
+      [...matchTokens].some(mt => mt.length >= 4 && qt.length >= 4 && lev(qt, mt) <= 2)
+    );
+    if (nearMatch) {
+      return { autoNull: false, reason: `near-match via Levenshtein despite zero exact overlap — "${queriedName}" vs "${matchedName}"` };
+    }
     return { autoNull: true, reason: `zero word overlap — queried "${queriedName}", matched "${matchedName}"` };
   }
 
