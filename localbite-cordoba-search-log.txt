@@ -1,35 +1,44 @@
-LOCALBITE V6 — CÓRDOBA SEARCH LOG
-Generated: 2026-04-09
+LOCALBITE V7.1 — CÓRDOBA SEARCH LOG
+Generated: 2026-04-24
 
-[phase-0] "https://sevilla.cosasdecome.es/category/cordoba/" → 404 error, no content found
-[phase-0] "https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurantes-cordoba/" → fetched successfully, 10 restaurants listed, article date 2022 (outside window), ⚠ COI flagged; Repsol awards their own restaurants Soles
-[phase-0] "https://cordoba.cosasdecome.es/" → 400 error, domain not found
-[phase-0] "https://www.cosasdecome.es/cordoba/" → 404 error, no content
-[phase-0] "https://sevilla.cosasdecome.es/?s=cordoba" → minimal result, only unrelated awards article; CosasDeCome confirmed has minimal Córdoba coverage
-
-[phase-1-cross-1] "mejores restaurantes Córdoba España guía gastronómica periodista 2024 2025" → found eldebate.com (M. Ángeles Ramírez, 2026), elespanol.com (Adriana Calvo, 2025), circuitogastronomico.com (Córdoba Argentina — auto-reject)
-[phase-1-A-1] "best restaurants Córdoba Spain food writer guide 2024 neighbourhood local" → found piccavey.com (Jan 2026), roamandthrive.com (Dec 2024), devourtours.com (March 2026 update); El Churrasco, Taberna de Almodóvar, Noor confirmed
-[phase-1-A-2] "restaurantes Judería San Basilio Córdoba recomendaciones gastronomía 2024" → found gruporosalescordoba.com (operational, no journalist), Casa Salinas, Mesón San Basilio, El Churrasco, Bodegas Campos
-[phase-1-cross-2] "donde comer Córdoba 2025 crítica gastronómica reseña restaurante" → search returned Argentina Córdoba results mixed in; found theobjective.com (valid), eldebate.com Córdoba section confirmed
-[phase-1-A-3] "Córdoba Spain restaurants Ribera food review travel writer 2024 2025" → found sarajoytravel.com, piccavey.com, La Taberna del Río, Moriles Ribera, Amaltea confirmed
-[phase-1-cross-3] "nuevos restaurantes Córdoba España 2025 aperturas reseña gastronómica" → Ditaly confirmed as Italian chain (reject), Amaltea and Casa Salvador-Dmerkado confirmed (Repsol 2026), guide.michelin.com (bot protection)
-[phase-1-cross-4] "Córdoba Michelin star restaurants Noor Choco ReComiendo review 2024 2025" → travelsforstars.com (no named author), andyhayler.com (Andy Hayler, June 2024), orangedonuttours.com (commercial tour operator — reject)
-[phase-1-cross-5] "Córdoba Spain food guide salmorejo rabo de toro taberna authentic local writer 2023 2024" → spainbyhanne.dk (Hanne Olsen, Dec 2025), piccavey.com confirmed, devourtours.com confirmed
-[phase-1-A-4] "ABC Córdoba gastronomía restaurantes reseña periodista 2024 2025" → circuitogastronomico.com (Argentina — reject), found premiosgurmecordoba.es (CAPTCHA blocked), eldebate.com confirmed, cordobahoy.es confirmed
-[phase-1-cross-6] "Córdoba Michelin star restaurants Noor Choco ReComiendo review 2024 2025" → travelsforstars.com (no named author, reject), andyhayler.com confirmed
-[phase-1-A-5] "Culinary Backstreets Córdoba Spain restaurant food guide" → confirmed no Córdoba coverage from Culinary Backstreets
-[phase-1-cross-7] "nuevos restaurantes Córdoba España 2025 aperturas reseña gastronómica" → eldebate.com confirmed, cordobabn.com (Macarfi 2026 article), vertigorestaurante.com (restaurant own site)
-[phase-1-A-6] "Cordopolis gastronomía restaurantes Córdoba reseña 2024 2025" → cordopolis.eldiario.es confirmed as local newspaper with named journalist Alejandra Luque (Nov 2024) and Juan Velasco (Nov 2025)
-[phase-1-A-7] "restaurantes Córdoba Santa Marina Ribera San Andrés barrio comer local recomendación 2024" → Bar Santa Marina, Moriles Ribera confirmed; cordobabn.com FLORA route (Oct 2025)
-[phase-1-cross-8] "Terra Olea El Envero La Cuchara de San Lorenzo restaurantes Córdoba reseña chef 2024" → confirmed Michelin Bib Gourmand for all three; Manuel Valera (El Envero), Paco Villar (Terra Olea), Narciso/Paco López (La Cuchara)
-[phase-1-cross-9] "Córdoba Spain food writer journalist award winning restaurants guide travel 2025 2026" → spainbyhanne.dk confirmed (Hanne Olsen, 7 years covering Córdoba gastronomy), andalucialovers.com (Morgane Mazelier, Nov 2024)
-[phase-1-A-8] "Brillante Cañero campo verdad Córdoba restaurantes barrio local comer recomendación" → Noor confirmed in Cañero, ReComiendo/El Envero confirmed in Brillante area; ifoodie.es found
-[phase-1-cross-10] "donde comer Córdoba 2025 crítica gastronómica reseña restaurante" → cometeelmundo.net (Henar Sánchez, Dec 2024), eatandlovemadrid.es (Susana & Fabio)
-[phase-1-cross-11] "gastronomía Córdoba 2026 nuevos restaurantes reconocimientos guía crítica" → cordobabn.com (Alvaro Sánchez, Feb 2026 Macarfi), eldebate.com (451 error on one article), new eldebate.com article about local hot spot
-[phase-1-cross-12] "Choco restaurante Kisko García Córdoba Fuensanta reseña crítica menú 2024 2025" → yendoporlavida.com (Txema Aguado, Jan 2024), cordobabn.com (ELLE reference, Jan 2024)
-[phase-1-cross-13] "La Ermita Candelaria Córdoba Javier Campos restaurante Repsol review 2024 2025" → cordobahoy.es (2024 Sol Repsol), eldebate.com (2024)
-[phase-1-cross-14] "Garum Arbequina Vertigo Tellus restaurant Córdoba review food writer 2024 2025" → eatingwithziggy.com (Ziggy, July 2024, personal blogger), gastroranking.es (aggregator), Michelin confirmed these as 2024 recommended
-[phase-1-cross-15] "ReComiendo restaurante Córdoba Periko Ortega reseña crítica estrella Michelin 2025" → cordopolis.eldiario.es (Alfonso Alba, Nov 2025) confirmed; cope.es confirmed Michelin star
-
-STOPPING RULE CHECK: Last 4 searches returned mostly known sources or aggregators. Pool is sufficient with 8+ qualifying candidates. Stopping search phase.
-TOTAL QUERIES RUN: 21 (under 55 ceiling)
+[neighbourhood-Casco Antiguo] "mejores restaurantes Casco Antiguo Córdoba 2023 2024 guía gastronómica" → aggregators (TripAdvisor, TheFork), laguiadelsibarita.com (Carlos Sáez 2024-11-04 — advertorial about Google rankings for Bodegas Mezquita, rejected), woowcordoba.es; no qualifying editorial sources
+[neighbourhood-Casco Antiguo] "best restaurants Casco Antiguo Córdoba 2025 2026 food guide review" → andalucialovers.com (Morgane Mazelier — candidate), orangedonuttours.com (commercial tour operator — rejected), laguiadelsibarita.com (rejected — same advertorial article); aggregators
+[neighbourhood-Judería] "restaurantes Judería Córdoba recomendaciones crítica 2025 2026" → cometeelmundo.net (Henar Sánchez — candidate confirmed), eldebate.com found; TheFork, Michelin guide aggregators; no new qualifying sources beyond known candidates
+[neighbourhood-Judería] "restaurants Jewish quarter Judería Córdoba where to eat 2023 2024" → devourtours.com (commercial tour operator — rejected), TripAdvisor, OpenTable, wanderlog aggregators; spainbyhanne.dk confirmed
+[neighbourhood-Centro] "mejores restaurantes Centro Córdoba 2023 2024 reseña gastronómica" → cometeelmundo.net confirmed, gastroranking.es (aggregator), TripAdvisor; circuitogastronomico.com (Argentina — rejected)
+[neighbourhood-Centro] "best places to eat Centro Córdoba 2025 2026 food writer guide" → roamandthrive.com (no named author — rejected), andalucialovers.com confirmed, spainbyhanne.dk confirmed; TripAdvisor, TheFork
+[neighbourhood-San Basilio] "restaurantes San Basilio Córdoba 2025 dónde comer recomendaciones" → gruporosalescordoba.com (restaurant group own site — rejected), TripAdvisor; alvientooo.com found but not investigated further
+[neighbourhood-San Basilio] "restaurants San Basilio Córdoba patios neighbourhood food 2023 2024" → TripAdvisor, evendo.com aggregators; no qualifying editorial sources
+[neighbourhood-El Brillante] "restaurantes El Brillante Córdoba 2023 2024 crítica gastronómica" → TripAdvisor near Hacienda El Brillante; cordoba.infoisinfo.es directory; no qualifying editorial sources
+[neighbourhood-El Brillante] "best restaurants El Brillante Córdoba 2025 2026" → Yelp, Expedia directories; no qualifying editorial sources
+[neighbourhood-Ciudad Jardín] "mejores restaurantes Ciudad Jardín Córdoba 2024 2025 guía" → cordoba.infoisinfo.es directory, circuitogastronomico.com (Argentina — rejected); thebusinesstraveller.es found but not investigated
+[neighbourhood-Ciudad Jardín] "restaurants Ciudad Jardín Córdoba where to eat 2023 2024" → spainbyhanne.dk confirmed; TripAdvisor Argentina result mixed in; no Córdoba-Spain-specific editorial sources
+[neighbourhood-Sector Sur] "restaurantes Sector Sur Córdoba recomendaciones 2025 2026" → eldebate.com (Repsol article Feb 2026 — no named author on that piece), cordobabn.com (Macarfi article Feb 2026 — no qualifying quotes); circuitogastronomico.com Argentina rejected
+[neighbourhood-Sector Sur] "Sector Sur Córdoba restaurants food guide 2023 2024" → roamandthrive.com (no author — rejected), piccavey.com (no author — rejected); no qualifying editorial sources
+[neighbourhood-Levante] "restaurantes barrio Levante Córdoba dónde comer 2024 2025" → cometeelmundo.net confirmed, conalgasenlamaleta.com found but not investigated; Páginas Amarillas directory
+[neighbourhood-Poniente Norte] "restaurantes Poniente Norte Córdoba 2023 gastronomía" → soldepiedra.com.ar (Argentina — rejected); theobjective.com/lifestyle/2023-08-25/donde-comer-cordoba-restaurantes/ confirmed (Brenda Alonso); turismodecordoba.org official tourism site (no named author)
+[neighbourhood-Zumbacón] "restaurantes Zumbacón Córdoba 2025 mejores sitios" → no results for Zumbacón; returned general Córdoba sources already in pool
+[cross-1] "best restaurants Córdoba Spain 2025 2026 food guide named writer review" → spainbyhanne.dk confirmed, roamandthrive.com rejected, andalucialovers.com confirmed; TripAdvisor, TheFork aggregators
+[cross-1] "where to eat in Córdoba Spain 2023 2024 personal recommendations" → piccavey.com (no author — rejected), spainbyhanne.dk confirmed; TripAdvisor aggregators; everydayfoodblog.com found but not investigated
+[cross-2] "crítica gastronómica Córdoba 2025 2026 los mejores restaurantes recomendados" → eldebate.com (Repsol article — no named author on that piece), cordobabn.com (Macarfi — no qualifying quotes); circuitogastronomico.com Argentina rejected
+[cross-2] "dónde comer en Córdoba recomendaciones de locales barrios 2023 2024" → cometeelmundo.net confirmed; circuitogastronomico.com Argentina rejected; malevamag.com Argentina rejected; theobjective.com confirmed
+[cross-2] "guía gastronómica Córdoba periodismo culinario periodista 2024 2025" → hola.com (no named author — rejected); thegourmetjournal.com (national — no Córdoba content); no qualifying sources
+[cross-3] "periodista gastronómica recomienda restaurantes Córdoba 2024" → eldebate.com (M. Ángeles Ramírez — confirmed with weak quotes); cordobabn.com Flora 2024 found; theobjective.com/gastronomia/2023-10-12/ (does not cover Córdoba)
+[cross-3] "food writer recommends Córdoba restaurants 2025 2026" → spainbyhanne.dk confirmed, andalucialovers.com confirmed; roamandthrive.com rejected; piccavey.com rejected
+[cross-4] "Michelin guide restaurants Córdoba Spain 2024 2025 recommendations bib gourmand" → Terra Olea and El Envero confirmed as Bib Gourmand; ReComiendo confirmed 1★ (Nov 2025); Choco confirmed 1★; Noor confirmed 3★ — all starred restaurants excluded
+[cross-4] "Sol Repsol Córdoba restaurantes premiados guía 2023 2024" → gastroeconomy.com (no named author for Córdoba piece); guiarepsol.com (no named author, 2022 date — rejected); infobae.com (Argentine national outlet — auto-reject per Part 1)
+[cross-4] "award winning restaurants Córdoba Andalusia 2025" → spainbyhanne.dk confirmed; orangedonuttours.com rejected; no new qualifying sources
+[cross-5] "nuevas aperturas restaurantes Córdoba 2024 2025" → circuitogastronomico.com Argentina rejected (all results Argentina Córdoba)
+[cross-5] "new restaurant openings Córdoba Spain 2025 2026" → piccavey.com rejected; TripAdvisor, OpenTable aggregators; no qualifying new editorial sources
+[cross-7] "salmorejo rabo de toro flamenquín restaurantes Córdoba mejores 2023 2024" → soniagraupera.com (Sònia Graupera, Aug 30, 2024 — candidate confirmed); theobjective.com 2024-01-10 (same publisher as Brenda Alonso — publisher concentration noted); theobjective.com 2025-01-16 (Marine Landreau — same publisher, rejected due to concentration cap); elespanol.com (David Martínez, May 2024 — no qualifying quotes, rejected)
+[cross-7] "Andalusian cuisine Córdoba traditional dishes best restaurants 2025" → spainbyhanne.dk confirmed; roamandthrive.com rejected; Michelin exclusions confirmed (Noor 3★, Choco 1★, ReComiendo 1★)
+[cross-8] "revista gastronómica independiente Córdoba restaurantes recomendados 2024 2025" → cordobapatrimoniogastronomico.com (official cultural body — no named author); circuitogastronomico.com Argentina rejected; all results Argentina or no named authors
+[cross-8] "suplemento gastronomía periódico Córdoba mejores restaurantes 2023 2024" → circuitogastronomico.com Argentina rejected; no local Spanish newspaper gastronomy supplements surfaced
+[supplementary] "dónde comer Córdoba guía blogger food crítica restaurante local 2024" → eatandlovemadrid.es (Susana & Fabio — first names only, no surnames — rejected); no new qualifying sources
+[supplementary] "Córdoba España gastronomía blog periodista restaurantes recomendación personal 2023 2024 2025" → cordobabn.com (Flora 2025 — Alvaro Sánchez — no qualifying quotes, rejected); no new qualifying sources
+[supplementary] "restaurante Córdoba España reseña personal visita blog viajera 2024 2025" → librosdeviajes.com (author "Admin" — no named author, rejected); elblogdeceleste.com found (not fetched)
+[supplementary] "Córdoba food diary travel blogger eating trip review 2024 2025" → spainbyhanne.dk confirmed; no new qualifying sources
+[supplementary] "cordopolis gastronomía restaurantes Córdoba reseña crítica 2024 2025" → cordopolis.eldiario.es (editorial staff "Redacción Cordópolis" — no individual byline, rejected); eldebate.com confirmed
+[phase-1b-crossval] "Casa Pepe de la Judería Córdoba recomendacion critica" → TripAdvisor, Yelp, OpenTable aggregators; fatemehrecommends.com (first name only — rejected); guiarepsol.com (no named author, 2022 date — rejected); no new qualifying sources
+[phase-1b-crossval] "Bar Santos Córdoba recomendacion critica tortilla" → TripAdvisor, minube.net, gastroranking.es aggregators; TikTok videos; no qualifying editorial sources
+[phase-1b-crossval] "Taberna La Viuda Córdoba recomendacion critica restaurante" → TripAdvisor, wanderlog, gastroranking.es aggregators; gruporosalescordoba.com (restaurant own site — rejected); no new qualifying sources

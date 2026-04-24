@@ -1,96 +1,67 @@
-LOCALBITE BILBAO FAILED SOURCES — v7 pipeline
-City: Bilbao, Spain | PACK_DATE: 2026-04-18
+LOCALBITE BILBAO FAILED SOURCES — v7.1 pipeline
+City: Bilbao, Spain | BUILT: 2026-04-24
 
 ════════════════════════════════════════
-PHASE 0 — PRE-CONFIGURED SOURCES (FAILED)
+PERMANENTLY FAILED FETCHES
 ════════════════════════════════════════
 
-elcorreo.com/gastronomia/
-  Reason: Hub/portal page; no dated restaurant-guide articles; no named food critic confirmed
-
-elpais.com/espana/pais-vasco/
-  Reason: General Basque Country news section; no food content found
+bilbaosecreto.com
+  Reason: CAPTCHA / JavaScript verification block
+  Jina fetch (r.jina.ai) returned verification challenge screen, not article content
+  Chars returned: ~200 (JS challenge only)
+  Retry 1: not attempted (structural block, not transient)
+  Retry 2: not attempted
+  Wayback attempted: no
+  Outcome: permanently rejected
+  Restaurants lost: unknown (source was a candidate from cross-4 Guía Repsol query)
 
 ════════════════════════════════════════
-PHASE 1 — CANDIDATES VERIFIED AND REJECTED
+SOURCES REJECTED BEFORE FETCH (date / editorial / access issues)
 ════════════════════════════════════════
 
-bi-aste.com
-  Article: pintxos article, Aug 2023
-  Reason: No named author on article or About page
-
-viajeroscallejeros.com
-  Article: multiple Bilbao neighbourhood articles
-  Reason: No named author anywhere on site
-
-theslowcyclist.com
-  Article: Bilbao food article found (Tim Moore, author confirmed)
-  Reason: Single article; no food-writing credential established; insufficient qualifying restaurants
+elcorreo.com (Basque Country newspaper, food section)
+  Reason: No food guide content indexed in search results; likely behind paywall
+  Fetch attempted: no
+  Note: Listed as Phase 0 source in Part 1 but without article-level URL
 
 samiraholma.com
-  Author: Samira Holma
-  Article: Bilbao food article found
-  Reason: No qualifying quotes — restaurants mentioned without specific dish detail
+  Reason: Article dated November 2019 — outside 2023-2026 range
+  Fetch attempted: no (date confirmed from search snippet)
 
-deia.eus / ondavasca.com
-  Article: Jan 2025 gastronomy article referencing Bikote Foodie blog (Dani García)
-  Reason: Author not confirmed with full first name + surname at article level
+thediscoveriesof.com (Julianna Barnaby)
+  Reason: Article dated June 2022 — outside 2023-2026 range
+  Fetch attempted: no (date confirmed from search snippet)
 
-theobjective.com (Marine Landreau, Mar 2025)
-  Article: Bilbao restaurant article
-  Reason: Promotional tone; no critical quotes qualifying for extraction
+chestertravels.com
+  Reason: No qualifying article found with named author and date in range
+  Fetch attempted: no
 
-theobjective.com (Brenda Alonso, Aug 2023)
-  Article: Bilbao restaurant article
-  Reason: Content reads as formulaic/AI-generated; no genuine editorial voice
+globalphile.com
+  Reason: No qualifying named author identified
+  Fetch attempted: no
 
-gastronosfera.com
-  Article: Multiple Bilbao articles
-  Reason: No named author on Bilbao content
+bilbaohiria.com — Gure Toki entry
+  Reason: Quote under 15 words at extraction (14 words)
+  Quote text: "Su huevo mollet, el foie con manzana y el bocata de pastrami son imprescindibles"
+  Outcome: extraction-time rejection; restaurant retained via CB + deia.eus sources
 
-bilbaoclick.com
-  Article: Multiple Bilbao neighbourhood articles
-  Reason: Aggregator-style content; no named author
+bilbaohiria.com — Baste entry
+  Reason: Quote under 15 words at extraction (14 words)
+  Quote text: "Los mejillones rellenos son su pintxo estrella. Un buen mejillón con un relleno exquisito"
+  Outcome: extraction-time rejection; restaurant not in final pack
 
-yendoporlavida.com
-  Article: Bilbao restaurant articles
-  Reason: No named author found
-
-polloasaoconensalada.com
-  Article: Ensanche and Indautxu Bilbao articles
-  Reason: No named author found
-
-euskoguide.com
-  Article: Indautxu Bilbao food content
-  Reason: No named author found
+bilbaohiria.com — Motrikes entry
+  Reason: Quote under 15 words at extraction (14 words)
+  Quote text: "Los champiñones a la plancha sobre una rebanada de pan son simples pero deliciosos"
+  Outcome: extraction-time rejection; restaurant not in final pack
 
 ════════════════════════════════════════
-PHASE 1B — CROSS-VALIDATION SEARCHES (no new sources)
+FAILED SOURCES SUMMARY
 ════════════════════════════════════════
 
-"Gure Toki Bilbao recomendacion critica" → TripAdvisor, Yelp, Foursquare, booking aggregators only
-"Zarate Bilbao recomendacion critica restaurante" → tapasmagazine.es (no author), TheFork, TripAdvisor, Guía Repsol
-"Victor Montes Bilbao recomendacion critica restaurante" → TripAdvisor, Frommers, guide-du-paysbasque.com
-
-════════════════════════════════════════
-PHASE 3 — CONCENTRATION CAP DROPS
-════════════════════════════════════════
-
-Aitor Rauleaga Jatetxea (src-lqcdm-cubillo)
-  Reason: Concentration cap — src-lqcdm-cubillo at 33.3% of pool; lowest-confidence entry: no named chef in entry; quote describes general cooking style without dish-level specifics
-
-Batzoki de Miribilla (src-lqcdm-cubillo)
-  Reason: Concentration cap — dishes_mentioned contains only generic menu types (menú degustación, menú diario); no specific dish names; peripheral neighbourhood (Miribilla)
-
-════════════════════════════════════════
-USER REMOVAL (Phase 3 review)
-════════════════════════════════════════
-
-Le Chocolat (src-aa-hood)
-  Reason: User removed — bakery/café, not a restaurant
-
-════════════════════════════════════════
-NOTE: Structural characteristic
-════════════════════════════════════════
-
-Bilbao's food blog ecosystem has a high incidence of anonymous authorship. The majority of Spanish-language dining sites and local food blogs reviewed during Phase 1 did not credit named authors. This prevented reaching the 6-source minimum. 5 sources were confirmed. Diversity gate passed (2 EN primaries, 2 ES primaries, 1 EN secondary).
+Sources recovered by Retry 1 (30s): 0
+Sources recovered by Retry 2 (60s): 0
+Sources recovered by Wayback: 0
+Sources failed after all retries: 1 (bilbaosecreto.com)
+Total restaurants lost to permanent failures: unknown (bilbaosecreto was a candidate, not confirmed)
+Extraction-time rejections (quote quality): 3 entries from bilbaohiria.com

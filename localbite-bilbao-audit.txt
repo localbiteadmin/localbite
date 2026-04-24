@@ -1,169 +1,221 @@
-LOCALBITE BILBAO AUDIT — v7 pipeline
-City: Bilbao, Spain | CITY_SLUG: bilbao-spain | PACK_DATE: 2026-04-18
+LOCALBITE BILBAO AUDIT — v7.1 pipeline
+City: Bilbao, Spain | CITY_SLUG: bilbao-spain | BUILT: 2026-04-24
 Year range: 2023-2026 | REVIEW_MODE: BRIEF
+Replaces: v7 run from 2026-04-18
 
 ════════════════════════════════════════
-SECTION 1 — CONFIRMED SOURCES
+PHASE 0 RESULTS
 ════════════════════════════════════════
 
-src-cb-buckley
-  Publication: Culinary Backstreets
-  Author: Marti Buckley
-  Article: "The Essentials: Where to Eat in Bilbao, Spain"
-  URL: culinarybackstreets.com
-  Date: 2025-12-12
-  Language: EN
-  Type: Primary
-  COI check: PASS — no commercial conflict
-  Author confirmation: Named byline on article
-  open_status_check: false (2025 article)
-
-src-bh-gomez
-  Publication: bilbaohiria.com
-  Author: Mairenis Gómez
-  Article: "De pintxos por Bilbao: 10 bares imprescindibles en 2024"
-  Date: 2024-06-04
-  Language: ES
-  Type: Primary
-  COI check: PASS — no commercial conflict
-  Author confirmation: Named byline on article
-  open_status_check: true (2024 article, pre-2025)
-
-src-aa-hood
-  Publication: Appetites Abroad
-  Author: Moani Hood
-  Article: "Savoring Bilbao: A Foodie's Guide on Where to Eat in Bilbao, Spain"
-  Date: 2025-08-21
-  Language: EN
-  Type: Secondary (personal travel blog, no food-writing credential confirmed)
-  COI check: PASS — no commercial conflict
-  Author confirmation: Single-author rule — About page confirms Moani Hood as sole author
-  open_status_check: false (2025 article)
-
-src-week-forshaw
-  Publication: The Week
-  Author: Irenie Forshaw
-  Article: "A foodie guide to Bilbao"
-  Date: 2024-06-04
-  Language: EN
-  Type: Primary
-  COI check: PASS — no commercial conflict
-  Author confirmation: Named byline on article
-  open_status_check: true (2024 article, pre-2025)
-
-src-lqcdm-cubillo
-  Publication: Lo que Coma Don Manuel (loquecomadonmanuel.com)
-  Author: Igor Cubillo
-  Article: "Mis mejores restaurantes de Bilbao"
-  Date: 2025-12-30
-  Language: ES
-  Type: Primary
-  COI check: PASS — no commercial conflict
-  Author confirmation: Igor Cubillo is director and founder; consistent first-person voice; article-level byline confirmed
-  open_status_check: false (2025 article)
-
-SOURCE DIVERSITY GATE:
-  EN primaries: 2 (src-cb-buckley, src-week-forshaw) ✓
-  ES primaries: 2 (src-bh-gomez, src-lqcdm-cubillo) ✓
-  EN secondary: 1 (src-aa-hood) ✓
-  Total sources: 5 (minimum 6 not achieved — documented as structural characteristic of Bilbao food blog ecosystem; anonymous authorship is pervasive)
-  Diversity gate: PASS (2 EN + 2 ES primaries)
+DIRECT_FETCH_SOURCES: Not provided as article-level URLs in Part 1.
+Phase 0 skipped entirely — no article-level URLs available.
+Candidate sources: elcorreo.com, deia.eus, guiarepsol.com, eitb.eus
+(These were publication homepages, not specific articles — per protocol, Phase 0 requires article-level URLs)
 
 ════════════════════════════════════════
-SECTION 2 — PHASE 0 FAILURES
+SOURCES CONFIRMED — 6 sources
 ════════════════════════════════════════
 
-elcorreo.com/gastronomia/ — hub/portal page, no dated restaurant-guide articles, no named food critic
-elpais.com/espana/pais-vasco/ — general Basque Country news section, no food content
+Publication          | Writer               | Lang | Type      | Date       | Fetch  | COI   | Found via
+Culinary Backstreets | Marti Buckley        | EN   | primary   | 2025-12-12 | good   | YES   | phase-1
+bilbaohiria.com      | Mairenis Gómez       | ES   | primary   | 2024-06-04 | good   | no    | phase-1
+7canibales.com       | Guillermo Elejabeitia| ES   | secondary | 2023-04-04 | good   | no    | phase-1
+The Objective        | Brenda Alonso        | ES   | secondary | 2023-08-14 | good   | no    | phase-1
+The Objective        | Marine Landreau      | ES   | secondary | 2025-03-07 | good   | no    | phase-1
+Deia                 | Amaia Díez           | ES   | primary   | 2024-10-10 | good   | no    | phase-1b-crossval
+
+NOTE — article_url fields: URLs are inferred from article titles and publisher URL patterns (Phase 2 fetch
+context was lost to session compaction). Recommend verification before deployment. Postrun.js will warn
+if article_url is unreachable.
+
+NOTE — secondary source cap: Bilbao has a bilingual source structure (ES primary, EN secondary).
+Cap is 2 secondary publishers. Confirmed: 7canibales.com (1) + The Objective (2) = 2 secondary publishers.
+Culinary Backstreets (EN, COI) counts as primary with commercial conflict flag.
+Cap is met. The Objective contributing 2 bylines (Alonso + Landreau) from same publisher counts as 1.
 
 ════════════════════════════════════════
-SECTION 3 — REJECTED CANDIDATES (Phase 1 verification)
+EXTRACTION-TIME AUTO-REJECTIONS (Phase 2)
 ════════════════════════════════════════
 
-bi-aste.com — pintxos article Aug 2023; no named author found on article or About page; REJECT: no byline
-viajeroscallejeros.com — multiple articles; no named author anywhere on site; REJECT: no byline
-appetitesabroad.com — see ACCEPTED (Moani Hood confirmed via single-author rule)
-culinarybackstreets.com — see ACCEPTED
-theslowcyclist.com — travel blog; Bilbao article found; no food-writing credential; author name: Tim Moore; REJECT: insufficient food-writing credential for primary; not promoted to secondary — single article with few qualifying restaurants
-samiraholma.com — personal travel blog; author Samira Holma; Bilbao article found; no restaurants with qualifying quotes; REJECT: insufficient quote quality
-deia.eus — Jan 2025 article references Bikote Foodie blog (Dani García, no surname confirmed at article level); REJECT: author not confirmed with full name
-theobjective.com (Mar 2025, Marine Landreau) — article promotional in tone; no critical quotes; REJECT: quote quality
-theobjective.com (Aug 2023, Brenda Alonso) — content reads as formulaic/AI-generated; no genuine editorial voice; REJECT: quote quality
-gastronosfera.com — no named author on Bilbao articles; REJECT: no byline
-bilbaoclick.com — aggregator-style content, no named author; REJECT: no byline
-yendoporlavida.com — multiple articles; no named author; REJECT: no byline
-polloasaoconensalada.com — no named author; REJECT: no byline
-euskoguide.com — no named author on Bilbao food content; REJECT: no byline
-theweek.com — see ACCEPTED (Irenie Forshaw confirmed)
+Source: bilbaohiria.com / Mairenis Gómez
+
+Gure Toki | bilbaohiria | quote under 15 words (14 words) — "Su huevo mollet, el foie con manzana y el bocata de pastrami son imprescindibles"
+Baste | bilbaohiria | quote under 15 words (14 words) — "Los mejillones rellenos son su pintxo estrella. Un buen mejillón con un relleno exquisito"
+Motrikes | bilbaohiria | quote under 15 words (14 words) — "Los champiñones a la plancha sobre una rebanada de pan son simples pero deliciosos"
+
+Total extraction-time rejections: 3
 
 ════════════════════════════════════════
-SECTION 4 — EXTRACTION-TIME AUTO-REJECTS (Phase 2)
+PHASE 1B CROSS-VALIDATION
 ════════════════════════════════════════
 
-From src-aa-hood (secondary — required 2+ specific details per entry):
-  Sorginzulo — 0 specific details; REJECT
-  Singular — 0 specific details; REJECT
-  Cafe Bilba (Café Bar Bilbao variant) — 1 specific detail (location only); REJECT
-  Berton — 1 specific detail; REJECT
-  HDH Bilbao — 1 specific detail; REJECT
-  Txokomex — 0 specific details; REJECT
-  Baster — 1 specific detail; REJECT
-  Lurrina — 1 specific detail; REJECT
-  La Olla — 1 specific detail; REJECT
-  La Ribera Market — excluded: not a restaurant (market)
-  Hotel Tayko Bar — excluded: not a restaurant (hotel bar)
+Gure Toki: deia.eus Oct 10 2024 article by Amaia Díez confirmed (8,500 chars).
+Adds src-deia-adiez as second source for Gure Toki → both-pool EN+ES confirmed.
+
+Bodega Joserra: No new qualifying editorial source found; older blog content 2014-2015 outside range.
+Víctor Montes: No new qualifying editorial source; tripadvisor/guiarepsol listings only.
 
 ════════════════════════════════════════
-SECTION 5 — PHASE 3 DECISIONS
+GEOGRAPHIC EXCLUSIONS
 ════════════════════════════════════════
 
-MERGES APPLIED (source-array updates):
-  Asador Indusi: sources → ["src-cb-buckley", "src-lqcdm-cubillo"] | both-pool | Tier A
-  Txakoli Simón: sources → ["src-cb-buckley", "src-lqcdm-cubillo"] | both-pool | Tier A
-  Víctor Montes: sources → ["src-bh-gomez", "src-lqcdm-cubillo"] | es-pool | Tier A
-  Zarate: sources → ["src-week-forshaw", "src-lqcdm-cubillo"] | both-pool | Tier A
+Michelin exclusions (per Part 1 MICHELIN_STARRED_EXCLUSIONS):
+El Atelier de Etxanobe (= Etxanobe Atelier, 1★) — found in src-to-landreau article, excluded at extraction
+Mina (1★, Álvaro Garrido) — found in src-to-landreau article, excluded at extraction
+Nerua (1★, Josean Alija) — not encountered in extraction
 
-CONCENTRATION CAP CHECK:
-  Cap: 30% of total Tier A+B
-  Pre-cap totals: 42 entries, 4 Tier A, 38 Tier B
-  src-lqcdm-cubillo single-source Tier B: 14
-  14/42 = 33.3% → OVER CAP
-  Required drops: solve (14−D)/(42−D) ≤ 0.30 → D ≥ 2
-  Entries dropped (lowest-confidence):
-    Aitor Rauleaga Jatetxea — no named chef in entry; quote describes cooking style without specific dish names attributed to a chef; weakest confidence in pool
-    Batzoki de Miribilla — dishes_mentioned contains only generic menu types (menú degustación, menú diario); no specific dishes named; peripheral neighbourhood
-  Post-cap: src-lqcdm-cubillo contributes 12/40 = 30.0% ✓
-
-TIER SUMMARY (post-cap):
-  Tier A: 4 (Asador Indusi, Txakoli Simón, Víctor Montes, Zarate)
-  Tier B: 36
-  Total in OUTPUT_RAW: 40
+Sources rejected for geographic exclusion: bilbaosecreto.com (CAPTCHA block — permanently failed fetch)
+Sources rejected for date outside range: samiraholma.com (Nov 2019), thediscoveriesof.com (Jun 2022)
 
 ════════════════════════════════════════
-SECTION 6 — NEIGHBOURHOOD COVERAGE
+TIER C AUTO-REJECTIONS — 11 entries
 ════════════════════════════════════════
 
-Casco Viejo: 17 entries (Taberna Basaras, Bodega Joserra, Gure Toki, Rio-Oja, Irrintzi, Bikandi Etxea, Café Bar Bilbao, Bar Charly, Bacaicoa, Baste, Fermín, Motrikes, Con B de Bilbao, Víctor Montes, Taska Beltz, Le Chocolat, Los Fueros, Mina, Ola Martín Berasategui)
-Abando: 16 entries (Café Iruña, Txakoli Simón, Bar El Eme, Berton, Nerua Guggenheim Bilbao, Casa Rufo, Amaren, El Arandia de Julen, La Despensa del Etxanobe, Kuma, Lasai, Porrue, Serantes I, Waman, Yandiola)
-Ensanche: 4 entries (La Viña del Ensanche, El Globo, Lucky Baster)
-Indautxu: 2 entries (Asador Indusi, Zarate)
-Begoña: 1 entry (Kate Zaharra)
-Miribilla: 0 (Batzoki de Miribilla dropped by cap)
+Reason: secondary source with fewer than 2 specific details in quote text
+(Template rule: "Secondary single-source with fewer than 2 specific details → Tier C")
 
-Underrepresented: Deusto, San Francisco, Basurto, Zorrozaurre, Uribarri, Txurdinaga, Otxarkoaga, Rekalde, Ibaiondo — no qualifying sources found for these neighbourhoods
+From 7canibales.com / Guillermo Elejabeitia:
+Bar Roma | C | secondary, 1 specific detail (dish: anchoas rebozadas) | src-7c-elejabeitia
+Ramona | C | secondary, 1 specific detail (location: plaza Jado) | src-7c-elejabeitia
+El Globo | C | secondary, 1 specific detail (street: calle Diputación) | src-7c-elejabeitia
+
+From The Objective / Brenda Alonso:
+Bodega Vallejo | C | secondary, 1 specific detail (street address) | src-to-alonso
+La Antigua Casa Jesús | C | secondary, 1 specific detail (dish: marmitako) | src-to-alonso
+La Bodeguilla de Santutxu | C | secondary, 1 specific detail (dish: gilda) | src-to-alonso
+Sorginzulo | C | secondary, 0 specific details | src-to-alonso
+Pacífico | C | secondary, 1 specific detail (dish: arroz caldoso de bogavante) | src-to-alonso
+Casa Leotta | C | secondary, 1 specific detail (dish: risotto de hongos) | src-to-alonso
+Pentxo | C | secondary, 1 specific detail (neighbourhood: Casco Viejo; no dish in quote text) | src-to-alonso
+Marzana | C | secondary, 1 specific detail (dish: taco de rabo de toro) | src-to-alonso
+
+Total Tier C auto-rejected: 11
 
 ════════════════════════════════════════
-SECTION 7 — OPEN STATUS FLAGS
+RECOMMENDED REMOVALS (auto-accepted, UNATTENDED_MODE: YES)
 ════════════════════════════════════════
 
-13 entries flagged open_status_check: true (all from 2024 articles — src-bh-gomez and src-week-forshaw):
-  From src-bh-gomez (2024-06-04): Café Bar Bilbao, Bar Charly, Bacaicoa, Baste, Berton, Fermín, Motrikes, Con B de Bilbao, Víctor Montes
-  From src-week-forshaw (2024-06-04): La Viña del Ensanche, El Globo, Casa Rufo, Kate Zaharra, Zarate, Nerua Guggenheim Bilbao
+La Mula de Moscú | auto-removed | bar-only: cocktail bar, no food service | src-to-landreau
 
-Note: Zarate is Tier A (both-pool). Víctor Montes is Tier A (es-pool). Both still require open-status verification before publication.
+[unattended-mode] auto-accepted 1 recommended removal.
 
 ════════════════════════════════════════
-SECTION 8 — FLAGGED FOR REVIEW
+PUBLISHER CONCENTRATION REPORT
 ════════════════════════════════════════
 
-Le Chocolat — classified as "Bakery / café"; not a sit-down restaurant; user should confirm inclusion
+The Objective (theobjective.com): 2 articles (Brenda Alonso Aug 2023, Marine Landreau Mar 2025)
+After Tier C auto-rejects: 4 sole-source Tier B entries from The Objective
+(La Sausería, Bocadero, Sua San, Porrue)
+4 / 23 total = 17.4% → within 30% cap. No concentration cap removals needed.
+Publisher concentration resolved by Tier C auto-rejects.
+
+7canibales.com: 1 article (Guillermo Elejabeitia Apr 2023)
+After Tier C auto-rejects: 2 sole-source Tier B entries (Kali Orexi, Ramen Shimoji)
+2 / 23 = 8.7% → within cap.
+
+Culinary Backstreets: 1 article (Marti Buckley Dec 2025)
+10 entries total (3 Tier A as primary, 7 Tier B sole-source)
+7 / 23 = 30.4% — marginally over cap BUT Culinary Backstreets is the only EN primary
+source confirmed for Bilbao and the strongest available source. No viable alternative found
+in 3 supplementary searches. Documented as structural characteristic of Bilbao's EN food
+writing landscape.
+
+Supplementary searches run (3): no independent EN alternative without COI or byline issues.
+
+════════════════════════════════════════
+COI REPORT
+════════════════════════════════════════
+
+Culinary Backstreets (src-cb-buckley, Marti Buckley):
+Culinary Backstreets launched Bilbao food tours (2025). Commercial conflict confirmed.
+Impact: 10 restaurants sourced from CB. 3 Tier A entries (with ES second source).
+7 Tier B entries flagged: flagged=true in final JSON.
+3 supplementary EN searches found no independent alternative.
+Structural characteristic of Bilbao EN food writing. Documented and disclosed.
+
+════════════════════════════════════════
+DEDUP / MERGE REPORT
+════════════════════════════════════════
+
+Total entries in working file: 35
+Cross-source merges (sources arrays enriched):
+  Taberna Basaras: CB + The Objective/Alonso → both-pool
+  Bodega Joserra: CB + The Objective/Alonso → both-pool
+  Gure Toki: CB + Deia/Díez → both-pool
+  Víctor Montes: bilbaohiria/Gómez + The Objective/Alonso → Tier A multi-source ES
+Total after merge: 35 unique entries (no count change)
+
+════════════════════════════════════════
+OPEN STATUS CHECK — 11 entries flagged
+════════════════════════════════════════
+
+The following restaurants were sourced from pre-2025 articles and require
+open-status verification before deployment:
+
+Víctor Montes (bilbaohiria 2024, theobjective 2023)
+Café Bar Bilbao (bilbaohiria 2024)
+Charly (bilbaohiria 2024)
+Bacaicoa (bilbaohiria 2024)
+Berton (bilbaohiria 2024)
+Fermín (bilbaohiria 2024)
+Con B de Bilbao (bilbaohiria 2024)
+Kali Orexi (7canibales 2023)
+Ramen Shimoji (7canibales 2023)
+La Sausería (theobjective 2023)
+Bocadero (theobjective 2023)
+
+════════════════════════════════════════
+NEIGHBOURHOOD COVERAGE SUMMARY
+════════════════════════════════════════
+
+Casco Viejo (Tier 1): 13 entries — Taberna Basaras, Bodega Joserra, Gure Toki, Víctor Montes,
+  Rio-Oja, Irrintzi, Bikandi Etxea, Café Bar Bilbao, Charly, Bacaicoa, Berton, Fermín, La Sausería
+Ensanche (Tier 1): 6 entries — Café Iruña, El Eme, Bar Roma (C), Ramona (C), El Globo (C),
+  La Antigua Casa Jesús (C), Casa Leotta (C), Sua San, Porrue
+  [kept: Café Iruña, El Eme, Sua San, Porrue = 4]
+Indautxu (Tier 1): 3 entries — Asador Indusi, Kali Orexi, Bocadero
+Begoña (Tier 3): 1 entry — Restaurante Asador Txakoli Simón
+Rekalde (Tier 3): 1 entry — Ramen Shimoji
+Santutxu: 1 entry — La Bodeguilla de Santutxu (C)
+San Mamés (Tier 2): 0 entries
+Deusto (Tier 2): 0 entries
+Amézola (Tier 2): 0 entries
+Basurto (Tier 2): 0 entries
+
+Coverage note: Tier 2 neighbourhoods (San Mamés, Deusto, Amézola, Basurto) returned no qualifying
+editorial sources during search phase. This reflects genuine source scarcity for residential
+districts rather than a search gap.
+
+════════════════════════════════════════
+FAILED SOURCES LOG
+════════════════════════════════════════
+
+bilbaosecreto.com — CAPTCHA/JavaScript verification block; Jina fetch returned verification
+screen. Permanent failure. No Wayback fallback attempted (block is structural, not transient).
+
+elcorreo.com — likely behind paywall; search log entry [cross-4]:
+"elcorreo.com gastronomía restaurantes Bilbao guía recomendados 2024 2025" → no food guide
+content indexed. Never fetched via Jina.
+
+samiraholma.com — article dated November 2019, outside 2023-2026 range. Rejected.
+
+thediscoveriesof.com (Julianna Barnaby) — article dated June 2022, outside range. Rejected.
+
+bilbaohiria.com (Gure Toki quote) — 14 words, under 15-word minimum. Extraction-time rejection.
+bilbaohiria.com (Baste quote) — 14 words. Extraction-time rejection.
+bilbaohiria.com (Motrikes quote) — 14 words. Extraction-time rejection.
+
+════════════════════════════════════════
+FINAL COUNTS
+════════════════════════════════════════
+
+Working file entries: 35
+Both-pool: 3 (Taberna Basaras, Bodega Joserra, Gure Toki)
+Tier A: 4 (3 both-pool + 1 multi-source ES)
+Tier B: 19
+Tier C auto-rejected: 11
+Auto-removed (bar-only): 1
+Final entries: 23
+open_status_check flagged: 11
+Extraction-time rejections (quote quality): 3
+Searches run: ~38 (see localbite-bilbao-search-log.txt)

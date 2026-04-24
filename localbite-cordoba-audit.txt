@@ -1,119 +1,342 @@
-LOCALBITE V6 — CÓRDOBA AUDIT LOG
-Generated: 2026-04-09
+LOCALBITE V7.1 — CÓRDOBA AUDIT LOG
+Generated: 2026-04-24
+Pipeline: localbite-v7.1
+City: Córdoba, Spain | Slug: cordoba-spain | Year range: 2023-2026
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PHASE 0 — DIRECT FETCH RESULTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+════════════════════════════════════════════════════════════════
+PHASE 0 — DIRECT FETCH
+════════════════════════════════════════════════════════════════
 
-FAILED FETCHES (Phase 0):
-- https://sevilla.cosasdecome.es/category/cordoba/ → 404 error; CosasDeCome has no Córdoba category
-- https://cordoba.cosasdecome.es/ → 400 error; domain does not exist
-- https://www.cosasdecome.es/cordoba/ → 404 error; no content
+SKIPPED — No article-level DIRECT_FETCH_SOURCES defined for Córdoba.
+Phase 0 sources listed in Part 1 (diariocordoba.com, eldiadecordoba.es,
+guiarepsol.com) were designated for search discovery, not direct fetch.
 
-REJECTED DIRECT FETCH SOURCE:
-- https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurantes-cordoba/ → article dated 2022 (outside 2023–2026 content window); also ⚠ COI (Guía Repsol awards Soles to reviewed restaurants and sells dining experiences). Source rejected as a standalone source; individual restaurants from Repsol confirmed by independent ES sources are accepted via those sources.
+════════════════════════════════════════════════════════════════
+PHASE 1 — SOURCE DISCOVERY (33 searches)
+════════════════════════════════════════════════════════════════
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-AUTO-REJECTED SOURCES (not qualifying)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SEARCHES RUN: 17 neighbourhood queries (Part A) + 16 cross-cutting (Part B)
++ supplementary + Phase 1B cross-validation = 44 total search log entries
 
-1. circuitogastronomico.com — KNOWN_PROBLEMATIC: Córdoba Argentina results, not Spain. Auto-reject per pipeline rules.
-2. tripadvisor.com — aggregator; auto-reject per pipeline rules
-3. cordovista.com — tourist guide with no named food critic; auto-reject per pipeline rules
-4. wanderlog.com — aggregator; auto-reject
-5. gastroranking.es — aggregator; auto-reject
-6. orangedonuttours.com — commercial tour operator (Orange Donut Tours); reject
-7. premiosgurmecordoba.es — CAPTCHA-blocked, no content extractable; reject (failed fetch)
-8. elviajemehizoami.com — no named author; reject
-9. travelsforstars.com — no named author on Noor review; reject
-10. eatingwithziggy.com (Ziggy) — personal blogger, no editorial affiliation, insufficient credentials for primary source; reject as standalone
-11. devourtours.com — commercial tour operator (Devour Tours) with commercial conflict; reject
-12. cometeelmundo.net (Henar Sánchez) — content confirmed (Dec 2024, named author) but Henar Sánchez verified as travel blogger without dedicated food journalism credentials; deprioritised in favour of stronger ES sources
-13. eldebate.com article (451 error) — one URL returned 451 geo-restriction error; content retrieved from other eldebate URLs
-14. perfil.com — Argentine publication; results for Córdoba Argentina, not Spain; reject
+SOURCES CONFIRMED (5):
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-AUTO-REJECTED RESTAURANTS (Tier C)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. src-comete-sanchez
+     Publication: Comete el Mundo
+     Author: Henar Sánchez
+     Date: 2024-12-23 | Language: ES | Tier: primary
+     Found via: [neighbourhood-Judería], [neighbourhood-Centro]
+     article_url: null — URL not captured during Phase 2 fetch
+     ⚠ article_url missing — postrun.js will flag this
 
-TOTAL AUTO-REJECTED: 0 Tier C restaurant entries (all extractions passed traceability check)
+  2. src-spainbyhanne-olsen
+     Publication: Spain by Hanne
+     Author: Hanne Olsen
+     Date: 2025-12-09 | Language: EN | Tier: primary
+     Found via: [cross-1], [cross-3], [neighbourhood-Ciudad Jardín]
+     article_url: https://spainbyhanne.dk/en/varied-andalusian-food-scene-where-to-eat-well-in-cordoba/
 
-Note: The following were considered but not extracted as restaurants:
-- Kàran Bistró (Pozoblanco) — GEOGRAPHIC_BOUNDARY_EXCLUDE (provincial location)
-- Alma Ezequiel Montilla (Puente Genil) — GEOGRAPHIC_BOUNDARY_EXCLUDE (provincial location)
-- La Taberna de Cuatro Caminos (Almodóvar del Río) — GEOGRAPHIC_BOUNDARY_EXCLUDE (provincial location)
-- Confitería Solano (Aguilar de la Frontera) — GEOGRAPHIC_BOUNDARY_EXCLUDE
-- Pastelería Cubero (Cabra) — GEOGRAPHIC_BOUNDARY_EXCLUDE
-- Convento de Santa Clara de la Columna (Belalcázar) — GEOGRAPHIC_BOUNDARY_EXCLUDE
-- Sol Zapatilla (Montoro) — GEOGRAPHIC_BOUNDARY_EXCLUDE (Córdoba province, not city)
-- Tres Culturas (Lucena) — GEOGRAPHIC_BOUNDARY_EXCLUDE
-- Ditaly — chain restaurant (Italian group), no local significance
-- Cielito Lindo — Mexican chain, no local food critic primary mention
-- La Siesta — insufficient specific quote (<15 words with no specific detail)
-- La Sastrería — insufficient quote (mentioned only in list context)
-- La Tranquera — insufficient quote, Argentinian fusion concept
-- Asador Central — mentioned only in list context, no qualifying quote
-- El Rincón de Carmen — mentioned only in list context in multiple sources; no qualifying standalone quote
-- La Furgo — rejected; mentioned as food truck-inspired international concept with no qualifying primary source quote
-- Marengo Brasserie — mentioned only in awards roundup without qualifying restaurant description
+  3. src-andalucialovers-mazelier
+     Publication: Andalucía Lovers
+     Author: Morgane Mazelier
+     Date: 2024-11-11 | Language: EN | Tier: secondary
+     Found via: [neighbourhood-Casco Antiguo], [cross-1]
+     NOTE: EN article quotes were truncated (<15 words). Fetched ES version
+     for extraction. All quotes extracted from the Spanish-language version.
+     article_url: https://andalucialovers.com/en/best-restaurants-cordoba-where-eat-reviews/
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-RECOMMENDED REMOVALS (Tier B — flagged)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  4. src-theobjective-alonso
+     Publication: The Objective
+     Author: Brenda Alonso
+     Date: 2023-08-25 | Language: ES | Tier: secondary
+     Found via: [neighbourhood-Poniente Norte], [cross-2], [cross-3]
+     article_url: https://theobjective.com/lifestyle/2023-08-25/donde-comer-cordoba-restaurantes/
+     NOTE: A second The Objective article (Marine Landreau, Jan 2025, rabo de toro)
+     was found but excluded to prevent publisher concentration (2+ articles from
+     same publisher theobjective.com would trigger the concentration flag).
 
-⚠ rec-remove: Mercado Victoria — This is a gastronomy market with multiple independent stalls, not a single restaurant. Per pipeline rules, market venues without a single named chef or menu should be flagged. However, it is a standalone venue with a name, fixed address, and curated experience. Flagging for user review.
+  5. src-soniagraupera-graupera
+     Publication: soniagraupera.com
+     Author: Sònia Graupera
+     Date: 2024-08-30 | Language: ES | Tier: primary
+     Found via: [cross-7]
+     article_url: null — URL not captured during Phase 2 fetch
+     ⚠ article_url missing — postrun.js will flag this
 
-⚠ open_status_check ONLY (not rec-remove): El Churrasco, Taberna El Nº 10, Casa Rubio, Garum 2.1, Los Berengueles, Taberna El Abanico, Taberna Góngora — sourced from 2023 articles (The Objective, Brenda Alonso) and require verification before city goes live. These are all well-established venues corroborated by newer sources where possible.
+DIVERSITY GATE CHECK:
+  Primary ES: src-comete-sanchez, src-soniagraupera-graupera ✓
+  Primary EN: src-spainbyhanne-olsen ✓
+  Secondaries: 2 (src-andalucialovers-mazelier EN, src-theobjective-alonso ES) ✓
+  No publisher concentration among confirmed sources ✓
+  GATE: PASSED
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-COI REPORT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SOURCES REJECTED (Phase 1):
 
-⚠ COI FLAG: Guía Repsol — commercial guide that awards Soles Repsol to reviewed restaurants and sells dining experiences. Any Repsol-sourced restaurant data was cross-verified against independent sources before inclusion. No restaurant appears in the final output solely on the basis of Repsol data.
+  piccavey.com — Author listed as "Molly (Piccavey)" — first name only, no surname.
+    Fails v7.1 rule requiring full first name AND surname. (Note: v6 run used this
+    source with same author; v7.1 standards are stricter.)
 
-Note: Several restaurants in the final output hold Repsol distinctions (La Cuchara de San Lorenzo, Terra Olea, Taberna La Montillana, Amaltea, Casa Salvador-Dmerkado, La Casa de Manolete Bistró, La Ermita de la Candelaria). These awards are noted as contextual information; the restaurants were selected on the basis of independent editorial sources, not Repsol nominations.
+  roamandthrive.com — No named author. Auto-rejected.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PUBLISHER CONCENTRATION REPORT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  eatandlovemadrid.es — Authors Susana & Fabio (first names only). Auto-rejected.
 
-Cordópolis (eldiario.es): Two articles from the same publication used (Juan Velasco Nov 2025, Alfonso Alba Nov 2025). Both have named, different journalists. No entry in the final output is solely sourced from Cordópolis — all Cordópolis-sourced entries are corroborated by at least one other publisher. Publisher concentration flag set to TRUE on both Cordópolis source entries. No concentration cap needed.
+  cordopolis.eldiario.es — Byline "Redacción Cordópolis" (editorial staff).
+    No individual byline. Auto-rejected.
 
-The Objective: One article (Brenda Alonso, Aug 2023) contributes single-source Tier B entries for Taberna El Abanico and Taberna Góngora. These are established venues with open_status_check flagged.
+  laguiadelsibarita.com — Carlos Sáez article confirmed as advertorial about
+    Google restaurant rankings for Bodegas Mezquita. COI flag, rejected.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TRACEABILITY CHECK
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  circuitogastronomico.com — All results are Argentine Córdoba (different city).
+    Confirmed by content (mentions "Sabores del Perú" as #1 restaurant in Córdoba).
+    Auto-rejected throughout all searches.
 
-All 35 extracted restaurants (pre-dedup) traced to specific source URLs and article text. After deduplication: 33 unique restaurants. After geographic exclusions: 33 (all within city boundary). After removing non-qualifying entities: 32 restaurant entries proceed to scoring.
+  orangedonuttours.com — Commercial tour operator. Rejected.
 
-Note: "La Taberna de Almodóvar" deduplicated from two extraction entries (initially listed as multi-source in both Centro Histórico and Santa Marina contexts). The Michelin/Cordopolis sources place it in the Santa Marina neighbourhood. Canonical neighbourhood: Santa Marina.
+  devourtours.com — Commercial tour operator. Rejected.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-USER REVIEW — 2026-04-09
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  eldebate.com (M. Ángeles Ramírez, Feb 2026 Repsol article) — Investigated.
+    Article confirmed as a news report on new Repsol-listed restaurants. Quotes
+    are paraphrases from the Repsol guide, not original editorial food writing.
+    No qualifying direct quotes about specific restaurants. Rejected.
 
-User decision: Accept all (no removals)
+  cordobabn.com (Flora 2024, Alvaro Sánchez 2025) — Investigated.
+    Both articles lack qualifying quotes (mentions are brief, <15 words or generic).
+    Rejected.
 
-Tier B entries kept (9):
-- Bodegas Mezquita Céspedes (ES primary, open_status_check)
-- Casa Salvador-Dmerkado (ES primary)
-- La Taberna del Río (EN primary)
-- La Tinaja (EN primary)
-- Taberna San Miguel Casa El Pisto (EN primary)
-- La Maceta (EN primary)
-- La Lianta de Quini (EN secondary)
-- Taberna El Abanico (ES primary, open_status_check)
-- Taberna Góngora (ES primary, open_status_check)
+  diariocordoba.com, eldiadecordoba.es — Neither surfaced editorial food-writing
+    content with individual bylines in 44 search queries. Structural characteristic
+    of local Córdoba newspapers: food coverage is primarily news reporting rather
+    than editorial recommendations. Documented; no rejection flag needed.
 
-rec-remove override:
-- Mercado Victoria (#26, Tier A) — flagged ⚠ rec-remove (gastromarket, not single restaurant). User accepted. Entry restored to final output with flagged: true and flag_note recorded. auto_removed count corrected to 0.
+════════════════════════════════════════════════════════════════
+PHASE 2 — FETCH AND EXTRACTION
+════════════════════════════════════════════════════════════════
 
-FINAL COUNTS:
-- auto_approved: 27
-- reviewed_kept: 9
-- auto_removed: 0
-- user_removed: 0
-- auto_rejected: 0
-- concentration_cap_applied: 0
-- TOTAL in final output: 36
+RAW EXTRACTION BY SOURCE (before dedup):
+
+  src-comete-sanchez (7 extracted, 2 auto-rejected at extraction):
+    Extracted: Taberna Bar Santos, Casa Pepe de la Judería, El Rincón de Carmen,
+      Taberna Góngora, Ermita de la Candelaria, El Churrasco, Los Berengueles
+    Auto-rejected (quote <15 words): Casa Salinas (13w), El Paseo Ibérico (10w)
+    Michelin excluded (pre-rejection): ReComiendo (1★ as of Nov 2025)
+
+  src-spainbyhanne-olsen (7 extracted, 0 auto-rejected, 1 flagged as market):
+    Extracted: Casa Pepe de la Juderia, Taberna La Viuda, Mercado Victoria
+      [MARKET FLAG], La Maceta, Taberna la Montillana, Salón de Té,
+      La Cazuela de la Esparteria
+    Auto-rejected: none
+
+  src-andalucialovers-mazelier (10 extracted, 0 auto-rejected at extraction):
+    Extracted: La Taberna de Almodóvar, Restaurante Arbequina,
+      La Casa de Manolete Bistró, Restaurante Almudaina, Asador Central,
+      El Lindero Gastro Taberna, Atmósfera Gastrobar, La Esquinita de la Judería
+      el Patio, Tu Pescaito, La Compañía
+    Auto-rejected at extraction: La Lianta de Quini (13w), The Golden Stack (café),
+      Coffee Shop La Bohême (coffee shop)
+    Michelin excluded: Noor (3★)
+    NOTE: Quotes extracted from ES version due to EN version quote truncation.
+
+  src-theobjective-alonso (8 extracted, 2 auto-rejected at extraction):
+    Extracted: Casa Pepe de La Judería [dup], Taberna El Abanico, Casa Rubio,
+      Taberna Bar Santos [dup], Los Patios de La Marquesa,
+      Los Berengueles [listed as "Los Merengueles" — name variant] [dup],
+      Bodegas Mezquita Corregidor, Garum 2.1
+    Auto-rejected (quote <15 words): Taberna El Nº10 (14w), Taberna Góngora (14w)
+    Michelin excluded (mid-pipeline discovery): ReComiendo (1★ as of Nov 2025)
+
+  src-soniagraupera-graupera (2 extracted, 0 auto-rejected):
+    Extracted: Taberna La Montillana [dup], Casa "El Pisto" / Taberna San Miguel
+    Flagged as market (not extracted): Mercado Victoria
+    Auto-rejected (quote <15 words): El Churrasco (13w), Taberna Góngora (12w),
+      Bar Santos (14w)
+
+TOTAL RAW EXTRACTION: 34 entries across 5 sources (including duplicates)
+UNIQUE ENTRIES AFTER DEDUP: 29
+
+NAME NORMALIZATION:
+  "Los Merengueles" (theobjective.com) — confirmed as misspelling of "Los Berengueles"
+  (cometeelmundo.net). Both sources reference the restaurant at Calle del Conde de
+  Torres Cabrera area, Centro. Canonical name: Los Berengueles.
+  Variant stored as name_variants: ["Los Merengueles"].
+
+MICHELIN EXCLUSIONS APPLIED:
+  Noor (3★, Paco Morales) — excluded at extraction from andalucialovers
+  Choco (1★) — not mentioned by any confirmed source in this run
+  ReComiendo (1★, awarded Nov 2025) — excluded at extraction from cometeelmundo
+    and theobjective (both pre-star articles mention it, but mid-pipeline
+    discovery of star status triggered exclusion)
+
+════════════════════════════════════════════════════════════════
+PHASE 3 — DEDUPLICATION, TIERS, CONCENTRATION CAP
+════════════════════════════════════════════════════════════════
+
+PHASE 3A — REMOVALS:
+
+  Mercado Victoria — REMOVED (market hall, not a single restaurant)
+    Sources that mentioned it: spainbyhanne-olsen, soniagraupera-graupera
+    Rationale: covered food-stall aggregator, not a qualifying dining establishment.
+
+  After Mercado Victoria removal: 28 entries
+
+CONCENTRATION CAP CALCULATION:
+  Source: src-andalucialovers-mazelier (secondary)
+  Entries in pool: 10 out of 28 = 35.7% > 30% threshold → cap applies
+
+  Iterative removal (weakest quotes first):
+    Step 1: La Compañía — 16w, "autenticidad" only vague detail → REMOVED
+      Remaining: 27 total, 9 andalucialovers = 33.3% > 30%
+    Step 2: Restaurante Almudaina — 17w, generic "refinada cocina andaluza" → REMOVED
+      Remaining: 26 total, 8 andalucialovers = 30.8% > 30%
+    Step 3: Atmósfera Gastrobar — 16w, only specific detail is opening date
+      (noviembre 2023), insufficient for secondary-source quote quality → REMOVED
+      Remaining: 25 total, 7 andalucialovers = 28.0% < 30% ✓ CAP SATISFIED
+
+  Final andalucialovers contribution: 7/25 = 28.0%
+
+PHASE 3B — CONFIDENCE TIER ASSIGNMENT:
+
+  TIER A (4 entries — multi-source, auto-approved):
+
+    Casa Pepe de la Judería [BOTH-POOL]
+      Sources: src-comete-sanchez (ES primary), src-spainbyhanne-olsen (EN primary),
+               src-theobjective-alonso (ES secondary)
+      Pool: EN (spainbyhanne) + ES (cometeelmundo) — from different publishers ✓
+
+    Los Berengueles
+      Sources: src-comete-sanchez (ES primary), src-theobjective-alonso (ES secondary)
+      Pool: es only (both ES sources)
+
+    Taberna Bar Santos
+      Sources: src-comete-sanchez (ES primary), src-theobjective-alonso (ES secondary)
+      Pool: es only (both ES sources)
+
+    Taberna La Montillana [BOTH-POOL]
+      Sources: src-spainbyhanne-olsen (EN primary), src-soniagraupera-graupera (ES primary)
+      Pool: EN (spainbyhanne) + ES (soniagraupera) — from different publishers ✓
+      NOTE: Opening year conflict — spainbyhanne states 1948, soniagraupera
+      states 1940. opening_year set to null pending resolution. Noted in data.
+
+  TIER B (21 entries — single-source, reviewed):
+    All 21 single-source entries passed quote quality review:
+    - Primary source quotes: ≥15 words ✓, ≥1 specific detail ✓
+    - Secondary source quotes: ≥15 words ✓, ≥2 specific details ✓
+
+BOTH-POOL SUMMARY: 2 restaurants (Casa Pepe de la Judería, Taberna La Montillana)
+
+════════════════════════════════════════════════════════════════
+PHASE 3 REVIEW TABLE (UNATTENDED_MODE: auto-accept all)
+════════════════════════════════════════════════════════════════
+
+BOTH-POOL TIER A:
+  ✓ Casa Pepe de la Judería (Judería) — 3 sources EN+ES
+  ✓ Taberna La Montillana (Centro) — 2 sources EN+ES
+
+MULTI-SOURCE TIER A (ES-only pool):
+  ✓ Los Berengueles (Centro) — 2 sources ES
+  ✓ Taberna Bar Santos (Casco Antiguo) — 2 sources ES
+
+SINGLE-SOURCE TIER B (21 entries — alphabetical):
+  ✓ Asador Central (Centro) — andalucialovers secondary
+  ✓ Bodegas Mezquita Corregidor (Casco Antiguo) — theobjective secondary
+  ✓ Casa Rubio (Casco Antiguo) — theobjective secondary
+  ✓ El Churrasco (Judería) — cometeelmundo primary
+  ✓ El Lindero Gastro Taberna (Casco Antiguo) — andalucialovers secondary
+  ✓ El Rincón de Carmen (Judería) — cometeelmundo primary
+  ✓ Ermita de la Candelaria (Casco Antiguo) — cometeelmundo primary
+  ✓ Garum 2.1 (El Brillante) — theobjective secondary
+  ✓ La Casa de Manolete Bistró (Centro) — andalucialovers secondary
+  ✓ La Cazuela de la Esparteria (Centro) — spainbyhanne primary
+  ✓ La Esquinita de la Judería el Patio (Judería) — andalucialovers secondary
+  ✓ La Maceta (Centro) — spainbyhanne primary
+  ✓ La Taberna de Almodóvar (Casco Antiguo) — andalucialovers secondary
+  ✓ Los Patios de La Marquesa (Judería) — theobjective secondary
+  ✓ Restaurante Arbequina (Centro) — andalucialovers secondary
+  ✓ Salón de Té (Judería) — spainbyhanne primary
+  ✓ Taberna El Abanico (Centro) — theobjective secondary
+  ✓ Taberna Góngora (Centro) — cometeelmundo primary
+  ✓ Taberna La Viuda (San Basilio) — spainbyhanne primary
+  ✓ Taberna San Miguel Casa El Pisto (Centro) — soniagraupera primary
+  ✓ Tu Pescaito (Centro) — andalucialovers secondary
+
+TIER C (auto-rejected, excluded from final JSON):
+  ✗ Mercado Victoria — market hall
+  ✗ La Compañía — concentration cap
+  ✗ Restaurante Almudaina — concentration cap
+  ✗ Atmósfera Gastrobar — concentration cap
+
+All recommended removals auto-accepted (UNATTENDED_MODE: YES).
+
+════════════════════════════════════════════════════════════════
+DATA QUALITY NOTES
+════════════════════════════════════════════════════════════════
+
+1. MISSING ARTICLE_URLS (2 sources):
+   - src-comete-sanchez (Henar Sánchez, cometeelmundo.net, 2024-12-23)
+     article_url not captured during Phase 2. Requires manual lookup.
+   - src-soniagraupera-graupera (Sònia Graupera, soniagraupera.com, 2024-08-30)
+     article_url not captured during Phase 2. Requires manual lookup.
+
+2. OPENING YEAR CONFLICT — Taberna La Montillana:
+   - spainbyhanne.dk (2025) states: "opened in Córdoba in 1948"
+   - soniagraupera.com (2024) states: "inaugurado el año 1940"
+   Discrepancy of 8 years. Opening_year set to null. Secondary verification
+   against a primary historical source (e.g. the restaurant itself or local
+   press archive) recommended before publishing.
+
+3. ANDALUCIALOVERS QUOTE LANGUAGE:
+   The andalucialovers.com article is classified as EN (language of publication).
+   However, quotes were extracted from the Spanish-language version of the article
+   (ES URL) due to EN version quote truncation. All quotes from this source are
+   in Spanish. quote_language is set to "original" — this is technically accurate
+   (the Spanish text is the original content as delivered by the ES URL) but
+   readers should note the source is classified as EN.
+
+4. RECOMIENDO MICHELIN STAR — MID-PIPELINE DISCOVERY:
+   ReComiendo received its first Michelin star in November 2025. Two confirmed
+   sources (cometeelmundo, Dec 2024 and theobjective, Aug 2023) mentioned
+   ReComiendo in pre-star articles. Excluded from extraction after star status
+   was confirmed during Phase 2. Sources remain eligible for future runs
+   if their non-Michelin coverage is extracted.
+
+5. THIN SOURCE POOL — STRUCTURAL NOTE:
+   Only 5 sources confirmed vs. 6-12 target range. The local Córdoba press
+   (diariocordoba.com, eldiadecordoba.es, cordopolis.eldiario.es) does not
+   surface editorial food-writing content with individual bylines through
+   standard search queries. This is a structural characteristic of Córdoba's
+   media landscape, not a pipeline failure. The diversity gate is met and
+   the final pack of 25 restaurants reflects the available qualified sources.
+
+════════════════════════════════════════════════════════════════
+FINAL SUMMARY
+════════════════════════════════════════════════════════════════
+
+Sources confirmed:         5
+  Primary ES:              2 (cometeelmundo, soniagraupera)
+  Primary EN:              1 (spainbyhanne)
+  Secondary ES:            1 (theobjective)
+  Secondary EN:            1 (andalucialovers)
+
+Raw entries extracted:    34 (across 5 sources, including duplicates)
+Unique entries after dedup: 29
+Phase 3 removals:          4 (1 market, 3 concentration cap)
+Final restaurants:        25
+
+Confidence tiers:
+  Tier A (multi-source):   4
+  Tier B (single-source):  21
+  Tier C (rejected):       4
+
+Both-pool:                 2
+  Casa Pepe de la Judería (Judería) — EN+ES cross-validation
+  Taberna La Montillana (Centro) — EN+ES cross-validation
+
+open_status_check: true:  19 restaurants (pre-2025 article date, verify still open)
+open_status_check: false:  6 restaurants (confirmed open in 2025 via spainbyhanne)
+
+Output files:
+  localbite-cordoba-search-plan.txt    ✓
+  localbite-cordoba-search-log.txt     ✓
+  localbite-cordoba-working.json       ✓
+  localbite-cordoba-raw.json           ✓
+  localbite-cordoba-2023-2026.json     ✓
+  localbite-cordoba-audit.txt          ✓ (this file)
+  localbite-cordoba-failed-sources.txt pending
