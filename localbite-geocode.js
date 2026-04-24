@@ -70,6 +70,7 @@ const CITY_BOXES = {
   'Tel Aviv':     { latMin: 32.00, latMax: 32.20, lngMin:  34.70, lngMax:  34.90 },
   'Toronto':      { latMin: 43.58, latMax: 43.86, lngMin: -79.64, lngMax: -79.11 },
   'Cordoba':      { latMin: 37.82, latMax: 37.96, lngMin:  -4.87, lngMax:  -4.68 },
+  'Córdoba':      { latMin: 37.82, latMax: 37.96, lngMin:  -4.87, lngMax:  -4.68 },
   'Granada':      { latMin: 37.14, latMax: 37.25, lngMin:  -3.65, lngMax:  -3.55 },
   'Malaga':       { latMin: 36.68, latMax: 36.76, lngMin:  -4.48, lngMax:  -4.33 },
   'Málaga':       { latMin: 36.68, latMax: 36.76, lngMin:  -4.48, lngMax:  -4.33 },
