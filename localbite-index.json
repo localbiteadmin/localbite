@@ -197,15 +197,15 @@
       "city": "Bilbao",
       "country": "Spain",
       "city_slug": "bilbao-spain",
-      "pipeline": "localbite-v7",
-      "built": "2026-04-18",
-      "restaurant_count": 39,
+      "pipeline": "localbite-v7.1",
+      "built": "2026-04-24",
+      "restaurant_count": 23,
       "both_pool_count": 3,
-      "source_count": 5,
-      "description": "39 restaurants from 5 named sources across English and Spanish. 3 both-pool entries. First v7 pipeline run on a new city.",
+      "source_count": 6,
       "file": "localbite-bilbao-2023-2026.json",
       "status": "complete",
-      "notes": "Structural characteristic: majority of Bilbao food blogs do not credit named authors — 5 sources vs 6-12 target. Concentration cap applied (2 entries from Igor Cubillo removed)."
+      "open_status_check_count": 11,
+      "notes": ""
     },
     {
       "city": "San Sebastián",
