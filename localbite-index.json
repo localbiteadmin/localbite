@@ -103,15 +103,15 @@
       "city": "Toronto",
       "country": "Canada",
       "city_slug": "toronto-canada",
-      "pipeline": "localbite-v5v6-merge",
-      "built": "2026-04-13",
-      "restaurant_count": 66,
+      "pipeline": "localbite-v7.1",
+      "built": "2026-04-25",
+      "restaurant_count": 52,
       "both_pool_count": 0,
-      "source_count": 12,
-      "description": "34 restaurants from 5 active sources, all English. Sources: Madame Marie fall + summer 2025, Toronto Life Michelin 2025, The Curious Creature, Canada's 100 Best. v6 fresh run; Toronto Life annual list 403-blocked.",
+      "source_count": 4,
       "file": "localbite-toronto-2023-2026.json",
       "status": "complete",
-      "multi_source_count": 22
+      "open_status_check_count": 9,
+      "notes": ""
     },
     {
       "city": "Seville",
