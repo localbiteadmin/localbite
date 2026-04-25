@@ -1,4 +1,4 @@
 LOCALBITE FAILED SOURCES — Valencia, Spain
-Pipeline: localbite-v6
+Pipeline: localbite-v7.1 | Date: 2026-04-25
 ════════════════════════════════════════
 Format: URL | attempt-1 chars | retry-1 chars | retry-2 chars | outcome

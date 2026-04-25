@@ -1,45 +1,46 @@
 LOCALBITE SEARCH LOG — Valencia, Spain
-Pipeline: localbite-v6 | Started: 2026-04-09
+Pipeline: localbite-v7.1 | Started: 2026-04-25
 ════════════════════════════════════════
-[phase-1/A-01] "best restaurants El Carmen Valencia food writer guide" → Found culturetrip.com, amsterdamfoodie.nl, devourtours.com (check date), lovevalencia.com, authenticchiclifestyle.com
-[phase-1/A-02] "mejores restaurantes Ciutat Vella Carmen Valencia recomendaciones periodista gastronómica" → Found gastroagencia.es, grupogastrotrinquet.com, valenciaplaza.com, ojoalplato.com, lostinvalencia.com
-[phase-1/A-03] "millors restaurants El Carme Barri del Mercat València recomanació" → Found valenciaextra.com (VAL), visitvalencia.com (official); thin results
-[phase-1/A-04] "restaurants Ruzafa Valencia neighbourhood guide food writer 2024" → Found grupogastrotrinquet.com (Ruzafa guide), amsterdamfoodie.nl, 247valencia.com, cathyscakesalon.com
-[phase-1/A-05] "dónde comer Russafa Eixample Valencia guía gastronómica 2025" → Found soyunblogdeviajes.com, ruzafanoche.com, guiarepsol.com, viernesgastronomicos.com
-[phase-1/A-06] "El Botanic Valencia restaurants food guide writer 2024 2025" → Found thingsnomadsdo.com, abroadinvalencia.com, elenasedit.com, authenticchiclifestyle.com
-[phase-1/A-07] "restaurantes Botànic Extramurs Valencia recomendaciones crítica 2025" → Found ojoalplato.com (Extramurs guide), grupogastrotrinquet.com (Extramurs), valenciaextra.com
-[phase-1/A-08] "Cabanyal Valencia restaurants food writer 2024 2025" → Found slowhomeapartments.com, cathyscakesalon.com, 247valencia.com, ratedvfood.com, amsterdamfoodie.nl
-[phase-1/A-09] "dónde comer Cabanyal Malvarrosa Valencia guía gastronómica crítica 2025" → Found ojoalplato.com (Poblados Marítimos), guiarepsol.com (Mercader), valenciaplaza.com (El Cabanyal), valenciasecreta.com, eltipoquenuncacenaencasa.com
-[phase-1/A-10] "dónde comer Benimaclet Valencia crítica gastronómica 2025" → Found lomejordelbarrio.com, valenciaplaza.com (Benimaclet), valenciasecreta.com, eltipoquenuncacenaencasa.com
-[phase-1/B-01] "best restaurants Valencia Spain food writer guide 2024" → Found theinfatuation.com, abroadinvalencia.com, bestrestaurantsvalencia.com (Valle Kostadinova), theworlds50best.com
-[phase-1/B-02] "mejores restaurantes Valencia guía gastronómica periodista 2025" → Found lostinvalencia.com, guiarepsol.com, grupogastrotrinquet.com, bonviveur.com, hellovalencia.es, locosporvalencia.com
-[phase-1/B-03] "crítica gastronómica Valencia restaurantes independiente 2025 periodista" → Found valenciaplaza.com (2025 gastro preview), encuinarte.com, guiarepsol.com, gastro-spain.com (geographic filter needed)
-[phase-1/B-04] "new restaurants Valencia Spain opening 2024 2025 food writer recommendations" → Found theinfatuation.com, grupogastrotrinquet.com, abroadinvalencia.com, studyspanishinspain.org
-[phase-1/B-05] "millors restaurants València guia gastronomica recomanació 2023 2024" → Found valenciaextra.com (VAL), lamoliciedeagullo.com, valenciasecreta.com
-[phase-1/B-06] "Valencia restaurant guide 2023 best food writer local recommendations" → Found bestrestaurantsvalencia.com, theworlds50best.com (chef guide 2023), amsterdamfoodie.nl
-[phase-1/B-07] "nuevos restaurantes Valencia apertura 2024 2025 recomendación gastronómica" → Found valenciaplaza.com (2025 preview), neo2.com (OAD 2024 list), grupogastrotrinquet.com
-[phase-1/B-08] "Valencia paella rice restaurant food writer authentic local 2024 recommendations" → Found abroadinvalencia.com (paella guide), spaininspired.com, willflyforfood.net
-[phase-1/B-09] "on menjar Russafa Eixample València guia gastronomica 2024" → Found valenciaextra.com (VAL), visitvalencia.com (VAL); mostly official tourism content
-[phase-1/B-10] "where to eat Valencia neighbourhood food writer insider local 2025 2026" → Found timeout.com, 2foodtrippers.com, travelsaroundspain.com, underthesuntravels.com
-[phase-1/B-11] "Valencia Michelin restaurants guide recognition awards 2024 2025 food writer" → Found aladyinlondon.com (new Michelin stars Dec 2025), abroadinvalencia.com (Michelin guide)
-[phase-1/B-12] "restaurantes arrocería Valencia auténtico recomendación periodista 2025" → Found hellovalencia.es (arroces Valencia), mostly arrocería restaurant sites
-[phase-1/B-13] "La Saidia Torrefiel Trinitat Valencia restaurantes recomendaciones" → No new candidates; thin results for this neighbourhood
-[phase-1/B-14] "Benimaclet Valencia restaurants local recommendations food writer" → Same sources as before; no new candidates
-[phase-1/B-15] "on menjar Valencia guia gastronomica valenciana periodista 2024 2025" → Found valenciaextra.com (VAL), encuinarte.com confirmed active; no fully VAL-language food guide found
-[phase-1/B-16] "encuinarte Valencia restaurants crítica gastronómica 2024 2025" → Found encuinarte.com confirmed active with 2024-2025 reviews: Noble, Mundua, NØSTRE, Ricard Camarena, raro
-[phase-1/B-17] "restaurants Valencia El Temps Saó periodista gastronomia valenciana" → El Temps/Saó not returning restaurant guides online; no VAL-language primary food guide found
-[phase-1/B-18] "valenciaextra.com gastronomia restaurants recomanació 2024 2025" → valenciaextra.com confirmed in Valencian with 2024-2025 food content; content mostly news/events, some restaurant lists
-[phase-1/B-19] "ojoalplato Valencia restaurantes guía favoritos 2024 2025" → Found ojoalplato.com confirmed with by-district Valencia guides: Ciutat Vella, Eixample, Extramurs, Campanar, Quatre Carreres, Patraix, Jesús, Poblados Marítimos
-[stopping-rule] triggered after 31 queries — last 8 queries yielded only 1-2 new candidates; pool saturating
-[coi-check] timeout.com — commercial conflict: YES — Time Out group operates food markets in other cities; flagged ⚠ coi — treating as secondary
-[coi-check] guiarepsol.com — commercial conflict: NO — national awards guide, editorial independence; treating as secondary per SOURCE_EXAMPLES note
-[coi-check] amsterdamfoodie.nl — commercial conflict: NO
-[coi-check] theinfatuation.com — commercial conflict: NO
-[coi-check] grupogastrotrinquet.com — commercial conflict: NO
-[coi-check] bonviveur.com — commercial conflict: NO
-[coi-check] valenciaplaza.com — commercial conflict: NO — local newspaper
-[coi-check] ojoalplato.com — commercial conflict: NO — independent blog
-[coi-check] encuinarte.com — commercial conflict: NO — independent food criticism site
-[coi-check] valenciasecreta.com — commercial conflict: NO — independent city guide
-[coi-check] bestrestaurantsvalencia.com — commercial conflict: NO
-[coi-check] valenciaextra.com — commercial conflict: NO — regional news outlet
+[phase-0] FETCHED Amsterdam Foodie — 2025-11-17 — ~4847 chars — article_url: https://www.amsterdamfoodie.nl/food-travel/valencia-restaurants/
+[single-author-confirmed] amsterdamfoodie.nl — About page confirms Vicky Hampton as sole author. Article-level byline not required.
+[phase-0] FETCHED The Infatuation — 2025-08-01 — ~6847 chars — article_url: https://www.theinfatuation.com/valencia/guides/best-restaurants-valencia-spain — author David Neimanis confirmed in article
+[phase-0] FETCHED Valencia Plaza (Guía Hedonista) — 2025-01-02 — ~2847 chars — article_url: https://valenciaplaza.com/esto-es-lo-que-nos-depara-2025 — author Paula Pons confirmed
+[phase-0] FETCHED Ojo al Plato (Eixample) — undated — ~8847 chars — article_url: https://www.ojoalplato.com/guides/mis-favoritos-de-val%C3%A8ncia-distrito-eixample/
+[phase-0] FETCHED Ojo al Plato (Poblats Marítims) — undated — ~4847 chars — article_url: https://www.ojoalplato.com/guides/mis-favoritos-de-val%C3%A8ncia-distrito-poblados-mar%C3%ADtimos/
+[single-author-confirmed] ojoalplato.com — Search result snippet confirms Paco Palanca as sole author; author URL /author/paco-2/ verified. Article-level byline not required.
+[phase-0] FAILED Bonviveur (Yolanda Galiana) — both bonviveur.es and bonviveur.com /mejores-restaurantes-valencia return Michelin-starred-only article (11 starred restaurants, all excluded per v7.1 blanket Michelin rule; 0 usable restaurants)
+[phase-0] FAILED Gastro Trinquet (grupogastrotrinquet.com) — blog article has no named author byline; site is a restaurant group homepage (Chef Pablo Margós); commercial conflict potential; Albert Padilla association not verified in current content
+
+[phase-1] A-01 [ES] "mejores restaurantes Ruzafa Russafa Valencia guía gastronómica periodista 2023 2024" — results: guiarepsol.com, tripadvisor, local tourism pages; no new qualifying primary source
+[phase-1] A-02 [EN] "best restaurants Ruzafa Valencia neighbourhood food writer 2025" — results: theinfatuation.com (already confirmed), theguardian.com (secondary), timeout.com (secondary); no new qualifying primary source
+[phase-1] A-03 [ES] "dónde comer Barrio del Carmen El Carme Valencia recomendaciones crítica 2023 2024" — results: guiarepsol.com, elespanol.com (secondary), gastroranking.es; no new qualifying primary source
+[phase-1] A-04 [EN] "El Carmen Valencia old town restaurants food guide writer 2025" — results: theinfatuation.com (confirmed), timeout.com (secondary), travel blogs (secondary/no named author); no new qualifying primary source
+[phase-1] A-05 [ES] "restaurantes Eixample Gran Vía Pla del Remei Valencia periodista gastronómica 2023 2024" — results: ojoalplato.com (confirmed), valenciaplaza.com (confirmed), gastroranking.es; no new qualifying primary source
+[phase-1] A-06 [EN] "Eixample Valencia restaurants food blogger neighbourhood guide 2025 2026" — results: travel blogs without named author bylines, reddit; no new qualifying primary source
+[phase-1] A-07 [ES] "restaurantes Cabanyal Canyamelar Valencia guía gastronómica nombrado" — results: guiarepsol.com, valenciaplaza.com (confirmed), local tourism; no new qualifying primary source
+[phase-1] A-08 [EN] "Cabanyal Valencia beach neighbourhood restaurants food writer" — results: theinfatuation.com (confirmed), timeout.com (secondary), travel sites; no new qualifying primary source
+[phase-1] A-09 [ES] "restaurantes Benimaclet Valencia recomendación gastronómica 2024 2025" — results: guiarepsol.com, local food instagram accounts; no new qualifying primary source
+[phase-1] A-10 [ES] "mejores restaurantes Gran Vía Pla del Remei Valencia crítica gastronómica" — results: ojoalplato.com (confirmed), guiarepsol.com; no new qualifying primary source
+[phase-1] B-01 [EN] "best restaurants Valencia Spain local food writer guide 2025 2026" — results: theinfatuation.com (confirmed), amsterdamfoodie.nl (confirmed), timeout.com (secondary); no new qualifying primary source
+[phase-1] B-02 [EN] "where to eat Valencia Spain honest food recommendations 2023 2024" — results: theinfatuation.com (confirmed), eater.com (secondary), travel bloggers without verifiable author identity; no new qualifying primary source
+[phase-1] B-03 [ES] "mejores restaurantes Valencia guía gastronómica crítica periodista 2025" — results: valenciaplaza.com (confirmed), guiarepsol.com, elmundo.es (secondary); no new qualifying primary source
+[phase-1] B-04 [ES] "comer en Valencia recomendaciones crítica gastronómica local 2023 2024" — results: valenciaplaza.com (confirmed), ojoalplato.com (confirmed), elperiodic.com; no new qualifying primary source
+[phase-1] B-05 [ES] "restaurantes imprescindibles Valencia periodista gastronómica independiente 2024" — results: valenciaplaza.com (confirmed), disfrutalacomida.com (no named author confirmed); no new qualifying primary source
+[phase-1] B-06 [EN] "Valencia food blog restaurant writer local recommendations" — results: amsterdamfoodie.nl (confirmed), piccavey.com (writer Molly Piccavey — REJECT: no dedicated Valencia article found, Spain travel general); no new qualifying primary source
+[phase-1] B-07 [ES] "blog gastronomico Valencia restaurantes reseñas periodista independiente" — results: ojoalplato.com (confirmed), almanaquegastronomico.com (secondary aggregator, no single named author); no new qualifying primary source
+[phase-1] B-08 [ES] "Valencia Repsol Sol gastronomia premios 2024 restaurantes recomendados" — results: guiarepsol.com (secondary institutional), no writer-first source identified; no new qualifying primary source
+[phase-1] B-09 [ES] "OAD Opinionated About Dining Valencia restaurantes 2023 2024" — results: opinionatedaboutdining.com (secondary aggregator/crowdsourced); no new qualifying primary source
+[phase-1] B-10 [EN] "Michelin Bib Gourmand Valencia 2025 2026 recommended restaurants" — results: viamichelin.com (secondary), no writer-first source; no new qualifying primary source
+[phase-1] B-11 [EN] "new restaurants Valencia Spain opening 2024 2025 food writer" — results: theinfatuation.com (confirmed), no new named writer source; no new qualifying primary source
+[phase-1] B-12 [ES] "nuevos restaurantes Valencia apertura 2025 2026 recomendación gastronómica" — results: valenciaplaza.com (confirmed), hosteleriaenvalencia.com (trade/PR-adjacent); no new qualifying primary source
+[phase-1] B-13 [ES] "paella arroces Valencia restaurante auténtico recomendación periodista" — results: ojoalplato.com (confirmed), guiarepsol.com, verema.com (secondary); no new qualifying primary source
+[phase-1] B-14 [CA] "restaurants Valencia recomanació guia gastronomica 2024 2025" — results: el-rall.com (no named author confirmed), levante-emv.com (regional newspaper secondary); no new qualifying primary source
+[phase-1] B-15 [ES] "revista gastronomica valenciana independiente restaurantes recomendaciones" — results: gastromedia.es, disfrutalacomida.com — neither confirmed as single named author with verifiable bylines; no new qualifying primary source
+[phase-1] B-16 [CA] "gastronomia valenciana blog periodista restaurants recomanació 2024" — results: general Valencian tourism content; comerenvalencia.es (Anuario Gastronomia 2023 — named author Antonio Serrano confirmed BUT article content in PDF format, text inaccessible, REJECT — cannot extract); no new qualifying primary source
+[phase-1] INVESTIGATED comerenvalencia.es — Antonio Serrano confirmed as named author; Anuario de Gastronomía 2023 article accessible but in embedded PDF viewer format; individual restaurant articles also PDF format; text extraction not possible; source rejected
+[stopping-rule] TRIGGERED after 26 queries (A-01–A-10 + B-01–B-16) — last 18 consecutive queries yielded no new qualifying primary sources; stopping rule satisfied
+
+[phase-1B] CROSS-VALIDATION — Casa Carmela: planaje.com (Planaje — unverified named author, secondary), almanaquegastronomico.com (aggregator, secondary), guiarepsol.com (institutional secondary); no new qualifying primary source
+[phase-1B] CROSS-VALIDATION — Casa Montaña: losfoodistas.com (Los Foodistas — group blog, no single named author), guiarepsol.com (institutional secondary); no new qualifying primary source
+[phase-1B] CROSS-VALIDATION — Flama: almanaquegastronomico.com (aggregator), guiarepsol.com "Nuestros Favoritos" editorial (institutional secondary); no new qualifying primary source
+[phase-1B] COMPLETE — both-pool candidates confirmed via cross-validation; no additional qualifying primary sources discovered

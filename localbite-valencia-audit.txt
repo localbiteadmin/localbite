@@ -1,35 +1,31 @@
 LOCALBITE AUDIT LOG — Valencia, Spain
-Pipeline: localbite-v6
+Pipeline: localbite-v7.1 | Date: 2026-04-25
 ════════════════════════════════════════
 Format: Restaurant name | Tier | Reason | Source
 
-AUTO-REJECTED (Tier C):
-La Fábrica de Hielo | C | Cultural venue / bar, not a restaurant | src-amsterdamfoodie
-Ubik Café | C | Café with no substantive food recommendation | src-amsterdamfoodie
-Café Artysana | C | Café with no food-specific recommendation | src-amsterdamfoodie
-Restaurante Maremar | C | Location (Playa de Pinedo) outside GEOGRAPHIC_BOUNDARY_INCLUDE | src-amsterdamfoodie
-
-RECOMMENDED REMOVALS (Tier B — rec-remove, presented for human review):
-Emiliano Bodega | B | Source explicitly notes "still in consolidation phase" — no stable quality signal | src-ojoalplato-poblats
-El Cabanyal Restaurant | B | Name ambiguity with the neighbourhood name; single source only | src-ojoalplato-poblats
-Riff | B | Quote derived from partial fetch (bonviveur 3,500 chars); lacks specific dish or scene detail | src-bonviveur
-
-USER REMOVALS (applied 2026-04-09):
-Barbaric | user-removed | No neighbourhood recorded; generic natural-wine bar framing
-Acapulco Bar | user-removed | No neighbourhood recorded; Mexican restaurant outside core Valencian focus
-Askua | user-removed | No neighbourhood recorded; steakhouse without local cuisine anchor
-Forastera | user-removed | No neighbourhood recorded; generic seasonal framing
-L'Alquimista | user-removed | No neighbourhood recorded; Italian fresh pasta without local anchor
-Riff | user-removed | Flagged (⚠ rec-remove): quote from partial fetch (3,500 chars), lacks specific dish or scene detail
-
-TRACEABILITY CHECKS PASSED:
-All 49 post-dedup restaurants traced to specific fetched source text. No fabricated entries detected.
-
-TIER CORRECTIONS APPLIED:
-Fierro: upgraded B → A (2 independent ES sources: bonviveur + grupogastrotrinquet)
-Fraula: upgraded B → A (2 independent ES sources: bonviveur + grupogastrotrinquet)
-Kaido Sushi Bar: upgraded B → A (2 independent ES sources: bonviveur + grupogastrotrinquet)
-Lienzo: upgraded B → A (2 independent ES sources: bonviveur + grupogastrotrinquet)
-Cocleque: upgraded B → A (2 independent ES sources: ojoalplato-poblats + valenciaplaza)
-Xaruga: upgraded B → A (2 independent ES sources: ojoalplato-poblats + valenciaplaza)
-Noble: source corrected — ojoalplato-eixample did not mention Noble; single source (valenciaplaza) confirmed → Tier B retained
+[EXCLUDED] La Salita | auto-reject | Michelin starred (Begoña Rodrigo) — blanket v7.1 Michelin rule | s2 The Infatuation, s4 Ojo al Plato Eixample
+[EXCLUDED] Ricard Camarena | auto-reject | Michelin starred — blanket v7.1 Michelin rule | s2 The Infatuation
+[EXCLUDED] El Poblet | auto-reject | Michelin starred (Luis Valls) — blanket v7.1 Michelin rule | s2 The Infatuation
+[EXCLUDED] La Chipirona | auto-reject | Confirmed closed per Ojo al Plato Eixample source | s4
+[EXCLUDED] L'Orxateria | auto-reject | Horchata stand at Mercado Central — not a named restaurant establishment | s1 Amsterdam Foodie
+[EXCLUDED] Ampar | concentration-cap trim | OAP Eixample single-source count at cap limit (30%); weakest quote (9 words, abstract) | s4
+[EXCLUDED] Le Bar de Vins | concentration-cap trim | OAP Eixample single-source count at cap limit (30%); generic wine bar description | s4
+[EXCLUDED] Casa D'Aragona | quote-quality | Quote from Valencia Plaza below 15-word threshold with specific detail | s3
+[EXCLUDED] Informal | quote-quality | Quote from Valencia Plaza below 15-word threshold; preview article format | s3
+[EXCLUDED] Clementina | quote-quality | Quote from Valencia Plaza below 15-word threshold; preview article format | s3
+[EXCLUDED] Maestro Bar | quote-quality | Quote from Valencia Plaza below 15-word threshold; preview article format | s3
+[EXCLUDED] Escama | not-yet-visited | Upcoming opening predicted for Feb 2025 per VP article; Paula Pons had not visited at time of writing | s3
+[EXCLUDED] Unnamed rice restaurant (Pierpaolo Ricciardo) | no-name | Restaurant name not confirmed from source extraction; owner name only | s5
+[EXCLUDED] Bar at Carrer Vicente Gallart | no-name | Restaurant name not confirmed from source extraction; location reference only | s5
+[EXCLUDED] Italian restaurant at Carrer del Rosari | no-name | Restaurant name not confirmed from source extraction; location reference only | s5
+[EXCLUDED] Taberna at Carrer de la Reina | no-name | Restaurant name not confirmed from source extraction; location reference only | s5
+[EXCLUDED] Pizzeria at Carrer de Just Vilar | no-name | Restaurant name not confirmed from source extraction; location reference only | s5
+[CLOSED-NOTE] Vertical | closed Jan 2024 | Not included — closed; mentioned in VP article as closure | s3
+[CLOSED-NOTE] La Aldeana (original) | closed Jul 2024 | Not included — closed; mentioned in VP article as closure. NB: Bodega La Aldeana 1927 (OAP-Poblats) may be successor or separate establishment; flagged open_status_check | s3
+[CLOSED-NOTE] Malarmat | closed Jul 2024 | Not included — closed; mentioned in VP article | s3
+[CLOSED-NOTE] Bekaa | closed Jul 2024 | Not included — closed; mentioned in VP article | s3
+[CLOSED-NOTE] Dalima | closed Jul 2024 | Not included — closed; mentioned in VP article | s3
+[CLOSED-NOTE] A Contracorriente | closed Sep 2024 | Not included — closed; mentioned in VP article | s3
+[CLOSED-NOTE] Hikari Yakitori Bar | closed Dec 2024 | Not included — closed; sister restaurant to Nozomi; mentioned in VP article | s3
+[FLAG] Karak | open_status_check | Temporarily closed Apr–Jun 2026 per Michelin guide page; seasonal closure; set open_status_check: true | s1
+[FLAG] Bodega La Aldeana 1927 | open_status_check | May be related to La Aldeana (closed Jul 2024 per VP); Paco Palanca's guide shows as open in 2026; set open_status_check: true | s5
