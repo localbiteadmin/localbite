@@ -1,67 +1,134 @@
 # LocalBite Pipeline — Part 1: Toronto
-# v7.1 — 2026-04-23
+# v7.1 — 2026-04-25
+#
+# NOTES:
+# Toronto is an EN-only city. 0 both-pool is structural — not a pipeline
+# failure. language_pool will be 'en' for all entries. Do not spend
+# searches looking for French or other language sources.
+#
+# The previous pack (v5v6-merge, 66R) has unknown source provenance.
+# No git history audit possible — treat as a fresh discovery run.
+# Superseded file localbite-toronto-2025-2026.json should be removed
+# with the v7.1 commit (git rm localbite-toronto-2025-2026.json).
 
 CITY:             Toronto
 COUNTRY:          Canada
 CITY_SLUG:        toronto-canada
 YEAR_RANGE:       2023-2026
 PRIMARY_LANGUAGE: EN
-SECONDARY_LANGUAGE:
+SECONDARY_LANGUAGE: none
 
 # ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
-# Toronto is a single-language EN city. Both-pool is structurally impossible
-# under current definition (requires EN + non-EN language cross-validation).
-# The food scene is geographically spread across the city with strong
-# neighbourhood identities. King West and Ossington are the highest-density
-# dining corridors. Kensington Market and Chinatown are the diverse food hubs.
-# Leslieville and Riverside are the emerging east-end dining neighbourhoods.
-# Scarborough has significant diaspora food culture worth including.
+# Toronto's food scene spans a large amalgamated city. Tier 1 covers
+# the highest-density dining neighbourhoods. Toronto has no language
+# geography — all tiers searched in English only.
+#
+# Research basis: City of Toronto ward/neighbourhood maps + dining
+# concentration by media coverage frequency.
 
-TIER_1_NEIGHBOURHOODS: King West, Queen West, Ossington, Kensington Market
-TIER_2_NEIGHBOURHOODS: Leslieville, Riverside, Distillery District, Annex, Yorkville
-TIER_3_NEIGHBOURHOODS: Little Italy, Little Portugal, Chinatown, Greektown, Scarborough
+TIER_1_NEIGHBOURHOODS:
+  King West, Queen West, Ossington, Kensington Market,
+  Chinatown, Little Italy (College St), Dundas West,
+  Leslieville, Distillery District, St. Lawrence Market area,
+  Annex, Yorkville, Scarborough
+
+TIER_2_NEIGHBOURHOODS:
+  Parkdale, Roncesvalles, Trinity Bellwoods, West Queen West,
+  Riverside, Little India (Gerrard St E), Greektown (Danforth),
+  Little Portugal, Corktown, Regent Park, Cabbagetown,
+  North York (Yonge-Sheppard corridor), Etobicoke
+
+TIER_3_NEIGHBOURHOODS:
+  Davisville, Mount Pleasant, Summerhill, Rosedale,
+  East Danforth, Little Bangladesh, Financial District,
+  Entertainment District, Harbourfront
 
 GEOGRAPHIC_BOUNDARY_INCLUDE:
-  King West, Queen West, Ossington, Kensington Market, Chinatown,
-  Leslieville, Riverside, Distillery District, St. Lawrence,
-  Annex, Yorkville, Little Italy (College St), Little Portugal,
-  Greektown (Danforth), Corktown, Regent Park, Cabbagetown,
-  Roncesvalles, Parkdale, Trinity Bellwoods, West Queen West,
-  Davisville, Mount Pleasant, Little India (Gerrard),
-  Scarborough (if covered by Toronto food writers)
+  All City of Toronto proper (post-1998 amalgamation):
+  Downtown Core, Financial District, Entertainment District,
+  King West, Queen West, Ossington, Parkdale, Roncesvalles,
+  Little Italy, Little Portugal, Kensington Market, Chinatown,
+  Dundas West, Trinity Bellwoods, West Queen West, Leslieville,
+  Riverside, Distillery District, St. Lawrence, Corktown,
+  Regent Park, Cabbagetown, Annex, Yorkville, Summerhill,
+  Rosedale, Davisville, Mount Pleasant, Little India (Gerrard),
+  Greektown (Danforth), East Danforth, Little Bangladesh,
+  Scarborough, Etobicoke, North York
 
 GEOGRAPHIC_BOUNDARY_EXCLUDE:
-  Mississauga (separate municipality), Brampton, Markham, Richmond Hill,
-  Vaughan (all separate municipalities in Greater Toronto Area),
-  Hamilton (separate city), Oakville, Burlington
+  Mississauga, Brampton, Markham, Richmond Hill, Vaughan,
+  Oakville, Hamilton, or any location described as "outside
+  Toronto", "Greater Toronto Area" without being within Toronto
+  proper, "suburb of Toronto", or a day trip from Toronto.
 
 # ── MICHELIN EXCLUSIONS ──────────────────────────────────────
-# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+# Toronto received its first Michelin Guide in 2022.
+# Exclude all Michelin-starred restaurants per pipeline rules.
 MICHELIN_STARRED_EXCLUSIONS:
-  Alo (1★), Enigma (check current Michelin status),
-  George (check), Canoe (check — verify current star status)
+  Sushi Masaki Saito (2★), Alo (1★), Enigma (1★),
+  Frilu (1★), Kaiseki Yu-zen Hashimoto (1★),
+  Langdon Hall (1★ — Cambridge, outside Toronto — exclude regardless),
+  Nomi (1★), DaNico (1★)
+# Note: Michelin Toronto list evolves annually — pipeline should
+# also reject any restaurant it identifies as having a current star.
 
-# ── SOURCE STRATEGY ──────────────────────────────────────────
-# Toronto food writing is EN only. Both-pool is structurally impossible —
-# do not attempt to force both-pool by including marginal sources.
-# Toronto Life annual Best Restaurants list is the gold standard.
-# NOW Magazine and Foodism Toronto have named writers.
-# Toronto Star (Karon Liu) and Globe and Mail have named food reporters.
-# Eater Toronto has variable named authorship — verify per article.
+# ── DIRECT FETCH SOURCES (Phase 0) ──────────────────────────
+# Named writers with confirmed Toronto food writing track records.
+# Fetch these directly before Phase 1 search begins.
 
+DIRECT_FETCH_SOURCES:
+  - corey-mintz (EN — Corey Mintz, established Toronto food journalist.
+    Has written for Globe and Mail, Toronto Star, The Walrus.
+    Search for his recent restaurant writing 2023-2026.)
+  - natalia-manzocco (EN — Natalia Manzocco, Toronto food writer.
+    Has written for Toronto Life, NOW Magazine. Search for her
+    restaurant guides and reviews 2023-2026.)
+  - amy-pataki (EN — Amy Pataki, longtime Globe and Mail restaurant
+    critic. Search for her Toronto reviews 2023-2026.)
+
+# ── PHASE 0 SOURCES ─────────────────────────────────────────
 PHASE_0_SOURCES:
-  - torontolife.com (EN — Toronto Life, annual best restaurants list, named writers)
-  - foodism.ca (EN — Foodism Toronto, named editorial writers)
-  - nowtoronto.com (EN — NOW Magazine, food section with named writers)
-  - thestar.com (EN — Toronto Star, Karon Liu and other named food reporters)
+  - eater.com/toronto (EN — Eater Toronto. Named authors required —
+    check byline on each piece. Good source for new openings and
+    neighbourhood guides. Year range: 2023-2026.)
+  - nowtoronto.com (EN — NOW Magazine. Named food writer required.
+    Independent alt-weekly with strong food coverage. Year range:
+    2023-2026.)
+  - theglobeandmail.com food section (EN — Globe and Mail. Named
+    author required. National paper but Toronto food section has
+    locally embedded writers. Year range: 2023-2026.)
+  - theinfatuation.com/toronto (EN — The Infatuation Toronto.
+    Named author required. Check publication date from fetched text
+    not metadata — guides are frequently updated without re-dating.)
 
+# ── SECONDARY SOURCES ────────────────────────────────────────
 SECONDARY_SOURCES:
-  - theglobeandmail.com (EN — Globe and Mail, named food writers)
-  - eater.com/toronto (EN — Eater Toronto, verify named author per article)
-  - theinfatuation.com/toronto (EN — The Infatuation Toronto, verify named author)
-  - canadasbest.ca or similar (EN — Canada's 100 Best Restaurants, verify named)
+  - torontolife.com (EN — Toronto Life. ⚠ COI: documented history
+    of removing critical reviews after advertiser pressure. Include
+    with ⚠ coi flag if used. Named author required. Do not reject
+    outright — include transparently.)
+  - canada100best.com (EN — Canada's 100 Best Restaurants. National
+    awards list. Secondary. Max 10 Toronto entries extracted.)
+  - bonappetit.com (EN — Bon Appétit. National/international.
+    Secondary. Only if Toronto-specific named coverage found.)
+  - condénasttraveller.com (EN — Condé Nast Traveller. Always
+    secondary. Year range strict — 2023-2026 only.)
 
-COI_FLAG_SOURCES: None known
+# ── KNOWN PROBLEMATIC URLS ──────────────────────────────────
+# Do not fetch or extract from these sources under any circumstances:
+KNOWN_PROBLEMATIC_URLS:
+  - blogto.com (commercial aggregator — no named food critics,
+    listicle content, SEO farm)
+  - hungry416.com (commercial aggregator)
+  - torontoguardian.com (SEO content farm)
+  - overheretoronto.com (lifestyle aggregator)
+  - yelp.com, tripadvisor.com, opentable.com, zomato.com
+  - thefork.com and all booking platforms
+
+# ── COI FLAG SOURCES ─────────────────────────────────────────
+COI_FLAG_SOURCES:
+  - torontolife.com — documented advertiser pressure on editorial
+    independence. Flag with ⚠ coi in writer_profile if included.
 
 # ── PIPELINE SETTINGS ────────────────────────────────────────
 PHASE1_AUTO_PROCEED:  YES

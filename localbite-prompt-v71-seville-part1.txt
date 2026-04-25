@@ -1,5 +1,22 @@
 # LocalBite Pipeline — Part 1: Seville
-# v7.1 — 2026-04-23
+# v7.1 — 2026-04-25
+#
+# REVISION NOTES (git history audit 2026-04-25):
+# Old v7 pack had 10 sources, all with named authors — all pass current
+# quality gates. 5 both-pool entries were genuine. Any both-pool
+# regression in this rebuild is a pipeline search failure, not quality
+# gates working correctly.
+#
+# Old v7 sources confirmed:
+#   ES: Pepe Monforte (CosasDeCome x4), Ariana Buenafuente (Sevilla Secreta x2),
+#       Brenda Alonso (The Objective x1), Mari Carmen Duarte (Nat Geo x1)
+#   EN: Shawn Hennessey (Bitesize Sevilla x1), Lauren Aloise (Spanish Sabores x1)
+#
+# CosasDeCome WARNING: Pepe Monforte produced 4 articles from different
+# Seville neighbourhoods. In v7, these were treated as 4 separate sources.
+# In v7.1, all cosasdecome.com articles count as ONE source for concentration
+# cap purposes. The pipeline must apply the 30% cap across all CosasDeCome
+# entries combined, not per article.
 
 CITY:             Seville
 COUNTRY:          Spain
@@ -9,54 +26,103 @@ PRIMARY_LANGUAGE: ES
 SECONDARY_LANGUAGE: EN
 
 # ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
-# Seville's food culture divides between the historic tapas bars of Triana
-# and the old city, and the modern restaurant scene of Alameda de Hércules
-# and the evolving Macarena district. Santa Cruz (barrio Santa Cruz) is
-# tourist-heavy but has genuine local restaurants. El Arenal is the bullring
-# district with traditional taverns. Nervión is the commercial and residential
-# dining area east of the old city.
+# Seville's food scene is heavily concentrated in the historic centre
+# and Triana. The free tapa culture (tapas gratis with drinks) is
+# particularly strong in Alfalfa, El Salvador, and Arenal — pipeline
+# should surface bars and tabernas with this culture as restaurants
+# qualify if they serve food with editorial intent.
+#
+# Research basis: Seville municipal districts + CosasDeCome neighbourhood
+# coverage confirmed from old v7 pack (Triana, Los Remedios, Nervión,
+# Pino Montano all featured in prior sources).
 
-TIER_1_NEIGHBOURHOODS: Triana, Alameda de Hércules, Santa Cruz, El Arenal
-TIER_2_NEIGHBOURHOODS: Macarena, Nervión, San Lorenzo, Casco Antiguo
-TIER_3_NEIGHBOURHOODS: Los Remedios, Bellavista, Heliópolis, Palmete
+TIER_1_NEIGHBOURHOODS:
+  Casco Antiguo, Santa Cruz, Alfalfa, Arenal, El Salvador,
+  Triana, Alameda de Hércules
+
+TIER_2_NEIGHBOURHOODS:
+  Los Remedios, Macarena, Nervión, San Bernardo, La Calzada
+
+TIER_3_NEIGHBOURHOODS:
+  Pino Montano, Heliópolis, Bellavista, Sur, Palmete, Torreblanca
 
 GEOGRAPHIC_BOUNDARY_INCLUDE:
-  Triana, Alameda de Hércules, Santa Cruz (barrio), El Arenal,
-  Macarena, Nervión, San Lorenzo, Casco Antiguo (Centro), Los Remedios,
-  La Cartuja area, San Bernardo
+  Casco Antiguo, Santa Cruz, Alfalfa, Arenal, El Salvador,
+  Triana, Alameda de Hércules, Los Remedios, Macarena, Feria,
+  Nervión, San Bernardo, La Calzada, Pino Montano, Heliópolis,
+  Bellavista, Sur, Palmete, Torreblanca
 
 GEOGRAPHIC_BOUNDARY_EXCLUDE:
-  Dos Hermanas (separate municipality south), Alcalá de Guadaíra,
-  Mairena del Aljarafe, San Juan de Aznalfarache (all separate municipalities),
-  Huelva (separate province capital), Cádiz (separate city)
+  Dos Hermanas, Alcalá de Guadaíra, Bormujos, Mairena del Aljarafe,
+  Camas, Gelves, Tomares, Castilleja de la Cuesta, or any location
+  described as "outside Seville", "near Seville", "day trip from
+  Seville", or any municipality in the Sevilla metropolitan area that
+  is not within the city of Seville proper.
 
 # ── MICHELIN EXCLUSIONS ──────────────────────────────────────
-# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
+# Do not extract Michelin-starred restaurants per pipeline rules.
 MICHELIN_STARRED_EXCLUSIONS:
-  Cañabota (1★), Sobretablas (1★, Julio Fernández Quintero — verify current status),
-  Clos (1★)
+  Abantal (1★, Julio Fernández Quintero),
+  Cañabota (1★ — verify current star status before excluding)
+# Note: Seville Michelin list evolves. Pipeline should also reject
+# any restaurant it identifies as currently holding a Michelin star.
 
-# ── SOURCE STRATEGY ──────────────────────────────────────────
-# Seville food writing is primarily ES. EN coverage exists due to significant
-# tourist traffic but is often travel-facing — verify editorial independence.
-# ABC de Sevilla is the main local newspaper. El Mundo Sevilla also covers food.
-# Both-pool possible with independent EN food writers alongside ES press.
-# Seville is a large well-documented city — expect 6-10 qualifying sources.
+# ── DIRECT FETCH SOURCES (Phase 0) ──────────────────────────
+# All confirmed from git history audit — named authors, passed quality
+# gates in v7, must be direct-fetched before Phase 1 searches begin.
 
+DIRECT_FETCH_SOURCES:
+  - cosasdecome.com (ES — Pepe Monforte, Seville's leading local food
+    journalist. Fetch neighbourhood-specific restaurant guides for
+    Seville 2023-2026. WARNING: all cosasdecome.com articles count as
+    ONE source for concentration cap — do not treat each article as an
+    independent source. Apply 30% concentration cap across all
+    CosasDeCome entries combined.)
+  - sevillasecreta.co (ES — Ariana Buenafuente. Confirmed named author
+    in v7 pack. Check whether this is a single-author site — if byline
+    only appears on About page, apply single-author site rule. Fetch
+    restaurant guide articles 2023-2026.)
+  - bitesize.substack.com OR bitesize-sevilla (EN — Shawn Hennessey,
+    Bitesize Sevilla Substack. Local EN named author confirmed in v7
+    pack. Search for his Seville restaurant writing 2023-2026.)
+  - theobjective.com (ES — Brenda Alonso. Confirmed in v7 Seville and
+    v7.1 Bilbao and Córdoba packs. Fetch Seville restaurant articles
+    2023-2026.)
+
+# ── PHASE 0 SOURCES ─────────────────────────────────────────
 PHASE_0_SOURCES:
-  - abcdesevilla.es (ES — ABC de Sevilla, main local newspaper, food section)
-  - guiarepsol.com (ES — Repsol guide, search Seville entries)
-  - diariodesevilla.es (ES — Diario de Sevilla, food section)
-  - sevilla.elconfidencial.com (ES — El Confidencial Sevilla, food features)
+  - guiarepsol.com (ES — Repsol guide Seville entries. Named author
+    required — check byline. Year range 2023-2026.)
+  - diariodesevilla.es (ES — Diario de Sevilla, main local newspaper.
+    Named author required. Food/gastronomy section.)
+  - abcsevilla.abc.es (ES — ABC Sevilla, major local newspaper.
+    Named author required. Restaurant and gastronomy coverage.)
+  - elpais.com/andalucia (ES — El País Andalucía edition. Named author
+    required. Locally embedded food coverage distinct from national
+    El País gastronomy section.)
 
+# ── SECONDARY SOURCES ────────────────────────────────────────
 SECONDARY_SOURCES:
-  - elpais.com/gastronomia (ES — El Comidista / El País, search Seville features)
-  - bonviveur.es (ES — national food platform, search Seville guide)
-  - timeout.com/seville (EN — verify named author and recency)
-  - theinfatuation.com (EN — search Seville guide if exists)
-  - devoursevilletours.com (EN — verify editorial independence, not just tour content)
+  - spanishsabores.com (EN — Lauren Aloise. ⚠ coi: Spanish Sabores
+    operates Devour Seville food tours — commercial conflict with
+    restaurant recommendations. Include with ⚠ coi flag in
+    writer_profile. Do not reject outright — include transparently.
+    Apply concentration cap strictly.)
+  - viajes.nationalgeographic.com.es (ES — Viajes National Geographic
+    España. Mari Carmen Duarte confirmed in v7 pack. National/travel
+    audience — secondary. Named author required.)
+  - timeout.com/seville OR timeout.es/sevilla (EN/ES — Time Out Seville.
+    No market operation confirmed for Seville. Named author required.
+    If Time Out operates any food market or commercial venue in Seville,
+    flag with ⚠ coi.)
+  - thelocal.es (EN — The Local Spain. National English-language outlet.
+    Secondary. Named author required. Seville-specific food articles only.)
+  - culinarybackstreets.com (EN — Culinary Backstreets. Named author
+    required. Check for Seville-specific content 2023-2026.)
 
-COI_FLAG_SOURCES: None known
+# ── COI FLAG SOURCES ─────────────────────────────────────────
+COI_FLAG_SOURCES:
+  - spanishsabores.com (Spanish Sabores / Devour Seville food tours)
 
 # ── PIPELINE SETTINGS ────────────────────────────────────────
 PHASE1_AUTO_PROCEED:  YES
