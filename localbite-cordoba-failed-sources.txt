@@ -1,130 +1,50 @@
-LOCALBITE V7.1 — CÓRDOBA FAILED SOURCES
+LocalBite Pipeline v7.1 — Córdoba Failed Sources
 Generated: 2026-04-24
 
-Sources investigated and rejected during Phase 1 source discovery.
-Does not include sources that were not investigated (aggregators, directories).
+════════════════════════════════════════
+SOURCES FAILED / REJECTED
+════════════════════════════════════════
 
-════════════════════════════════════════════════════════════════
+andyhayler.com
+  Reason: All URL formats 404 — homepage, /restaurant-guide/country/Spain/city/Cordoba, /225
+  Chars returned: <200 (404 pages)
+  Retries: 2
+  Wayback attempted: yes (still 404)
+  Outcome: failed — no Córdoba content accessible
+  Restaurants lost: estimated 0-2 (Andy Hayler does not appear to have active Córdoba coverage)
 
-REJECTED — NO NAMED AUTHOR / AUTHOR FAILS FULL-NAME RULE
+guiarepsol.com
+  Reason: Article byline is "Redacción Guía Repsol" (editorial team credit) — no named individual author
+  Rule triggered: Anonymous editorial team credits — REJECT regardless of publication
+  Outcome: rejected at Phase 1 evaluation
+  Restaurants lost: 0 (content not extracted)
 
-  piccavey.com
-  Author: "Molly (Piccavey)" — first name only, no surname
-  Rejection reason: v7.1 requires full first name AND surname.
-  Note: This source was used in the v6 Córdoba run with the same author credit.
-  v7.1 standards are stricter — first-name-only does not qualify.
+diariocordoba.com
+  Reason: Phase 0 source — no article with named individual author and specific restaurant guide content within YEAR_RANGE found via search. Coverage found was primarily event listings and news briefs without editorial food writing bylines.
+  Outcome: not confirmed as source
+  Restaurants lost: unknown
 
-  roamandthrive.com
-  Rejection reason: No named author found on any Córdoba content.
+eldiadecordoba.es
+  Reason: Phase 0 source — no article with named individual author and qualifying restaurant guide content found via search within YEAR_RANGE.
+  Outcome: not confirmed as source
+  Restaurants lost: unknown
 
-  piccavey.com (confirmed twice across multiple search queries)
-  See above.
+════════════════════════════════════════
+SOURCES RECOVERED
+════════════════════════════════════════
 
-  eatandlovemadrid.es
-  Authors: "Susana & Fabio" — first names only, no surnames.
-  Rejection reason: First-name-only bylines do not meet v7.1 author standard.
+cordopolis.eldiario.es
+  Initial fetch: /gastronomia/ returned 404
+  Recovery: /temas/gastronomia/ returned article list; specific article fetched successfully
+  Outcome: recovered — 5 restaurants extracted
 
-  cordopolis.eldiario.es
-  Byline: "Redacción Cordópolis" (editorial staff collective)
-  Rejection reason: No individual named byline. Editorial staff credit
-  does not qualify under v7.1 individual-author rule.
+════════════════════════════════════════
+FETCH QA SUMMARY
+════════════════════════════════════════
 
-  librosdeviajes.com
-  Byline: "Admin" — no named author.
-  Rejection reason: No individual named byline.
-
-════════════════════════════════════════════════════════════════
-
-REJECTED — COMMERCIAL CONFLICT / ADVERTORIAL
-
-  laguiadelsibarita.com
-  Author: Carlos Sáez
-  Date: 2024-11-04
-  Rejection reason: Article confirmed as advertorial. Content is about
-  Google restaurant rankings for Bodegas Mezquita — not independent
-  editorial restaurant writing. COI flag applied.
-
-  orangedonuttours.com
-  Rejection reason: Commercial tour operator website. All content is
-  commercially motivated restaurant promotion. Rejected per pipeline rules.
-
-  devourtours.com
-  Rejection reason: Commercial tour operator website. Rejected.
-
-════════════════════════════════════════════════════════════════
-
-REJECTED — WRONG GEOGRAPHY
-
-  circuitogastronomico.com
-  Rejection reason: Argentine website covering Córdoba, Argentina (not Spain).
-  Confirmed by content (ranks "Sabores del Perú" as #1 restaurant in Córdoba).
-  Appeared in 6+ search queries — consistently returned and consistently
-  rejected. Auto-reject pattern established after first confirmation.
-
-  malevamag.com
-  Rejection reason: Argentine publication. Córdoba coverage is Córdoba,
-  Argentina. Auto-reject per Part 1 geographic boundary rules.
-
-  infobae.com
-  Rejection reason: Argentine/Spanish national outlet. Per CLAUDE.md,
-  infobae.com is always secondary for Spanish cities. No Córdoba-specific
-  editorial food writing with named author found. Not investigated further.
-
-  soldepiedra.com.ar
-  Rejection reason: Argentine website. Auto-rejected.
-
-════════════════════════════════════════════════════════════════
-
-REJECTED — INSUFFICIENT QUOTE QUALITY (INVESTIGATED)
-
-  eldebate.com (M. Ángeles Ramírez, La Voz de Córdoba)
-  Date: 2026-02-19 (Repsol additions article)
-  Investigated: Article is a news report on new Repsol-listed restaurants.
-  Content is paraphrase of Repsol guide entries, not original editorial
-  food writing with qualifying first-person restaurant quotes. No qualifying
-  quotes (≥15 words, specific detail) found for any restaurant.
-  Source rejected; not used in extraction.
-
-  cordobabn.com (Flora 2024, Alvaro Sánchez 2025)
-  Investigated: Both articles lack qualifying quotes — mentions are either
-  brief (<15 words) or generic descriptions without specific dish/chef/
-  experience detail. Rejected.
-
-  elespanol.com (David Martínez, May 2024)
-  Found in [cross-7] search. No qualifying quotes for Córdoba restaurants.
-  Rejected at Phase 1 investigation.
-
-════════════════════════════════════════════════════════════════
-
-NOT SURFACED (structural — no rejection flag)
-
-  diariocordoba.com — Diario Córdoba (main local newspaper)
-  eldiadecordoba.es — El Día de Córdoba (local newspaper)
-  Neither newspaper surfaced editorial food-writing content with individual
-  bylines through 44 search queries. Food coverage in these outlets appears
-  to be primarily news reporting (event coverage, award announcements) rather
-  than personal editorial restaurant recommendations. This is a documented
-  structural characteristic of Córdoba's local press landscape — not a
-  pipeline failure or fetch error. Both remain eligible for future runs
-  if article-level direct fetch URLs can be identified.
-
-  timeout.com/cordoba
-  No Córdoba content found with named author and qualifying quotes.
-  Not investigated in detail.
-
-  bonviveur.es
-  No Córdoba-specific named-author content surfaced in searches.
-
-════════════════════════════════════════════════════════════════
-
-MICHELIN EXCLUSIONS (not failed sources — pre-exclusion rule)
-
-  Noor (3★, Paco Morales) — excluded at extraction per pipeline rules
-  Choco (1★) — not mentioned by confirmed sources in this run
-  ReComiendo (1★ as of Nov 2025) — excluded at extraction; star awarded
-    after some source articles were published, but mid-pipeline discovery
-    of star status triggered exclusion per Michelin exclusion rule
-
-Terra Olea and El Envero — confirmed as Bib Gourmand holders (not starred).
-  Bib Gourmand restaurants are NOT excluded; neither appeared in confirmed
-  sources in this run.
+Sources fetched successfully (3,000+ chars): 7
+Sources retried: 1 (cordopolis — 404 navigation, recovered via alternate path)
+Sources recovered by Wayback: 0
+Sources permanently failed: 1 (andyhayler.com)
+Sources rejected pre-fetch: 1 (guiarepsol.com — no named author)
+Sources not confirmed: 2 (diariocordoba.com, eldiadecordoba.es)

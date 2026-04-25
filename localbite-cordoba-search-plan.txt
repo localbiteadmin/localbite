@@ -1,110 +1,106 @@
 MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
 
-CITY: Córdoba | COUNTRY: Spain | CITY_SLUG: cordoba-spain | YEAR_RANGE: 2023-2026
-PRIMARY_LANGUAGE: ES | SECONDARY_LANGUAGE: EN
-PHASE0: SKIP (no article-level DIRECT_FETCH_SOURCES)
+CITY: Córdoba, España
+DATE: 2026-04-24
+ARGENTINA_DISAMBIGUATION: REQUIRED — all queries include España or Spain
 
-════════════════════════════════════════
+PHASE 0 SUMMARY:
+- cordopolis.eldiario.es → FETCHED (Alejandro Jiménez, May 3 2024)
+- yendoporlavida.com → FETCHED (Txema Aguado, Jan 24 2024)
+- piccavey.com → FETCHED (Molly Piccavey, Jan 18 2026, single-author rule applied)
+- spainbyhanne.dk → FETCHED (Hanne Olsen, Dec 9 2025)
+- andyhayler.com → FAILED (multiple URL formats 404)
+
+WRITERS CONFIRMED FOR PHASE 1: Alejandro Jiménez, Txema Aguado, Molly Piccavey, Hanne Olsen
+
+═══════════════════════════════════════
 PART A — NEIGHBOURHOOD COVERAGE
-════════════════════════════════════════
+═══════════════════════════════════════
 
-TIER 1 — Casco Antiguo (2 queries)
-  A-01 [ES] mejores restaurantes Casco Antiguo Córdoba 2023 2024 guía gastronómica
-  A-02 [EN] best restaurants Casco Antiguo Córdoba 2025 2026 food guide review
+TIER 1 — Casco Antiguo (2 queries):
+Q01 (ES): "mejores restaurantes Casco Antiguo Córdoba España guía gastronómica 2024"
+Q02 (EN): "best restaurants Casco Antiguo Cordoba Spain food guide 2025"
 
-TIER 1 — Judería (2 queries)
-  A-03 [ES] restaurantes Judería Córdoba recomendaciones crítica 2025 2026
-  A-04 [EN] restaurants Jewish quarter Judería Córdoba where to eat 2023 2024
+TIER 1 — Judería (2 queries):
+Q03 (ES): "donde comer Judería Córdoba España recomendaciones 2023 2024"
+Q04 (EN): "best places to eat Juderia Cordoba Spain 2025 2026"
 
-TIER 1 — Centro (2 queries)
-  A-05 [ES] mejores restaurantes Centro Córdoba 2023 2024 reseña gastronómica
-  A-06 [EN] best places to eat Centro Córdoba 2025 2026 food writer guide
+TIER 1 — Centro (2 queries):
+Q05 (ES): "restaurantes Centro Córdoba España crítica gastronómica 2025"
+Q06 (EN): "food guide Centro district Cordoba Spain restaurants 2023 2024"
 
-TIER 2 — San Basilio (2 queries)
-  A-07 [ES] restaurantes San Basilio Córdoba 2025 dónde comer recomendaciones
-  A-08 [EN] restaurants San Basilio Córdoba patios neighbourhood food 2023 2024
+TIER 2 — San Basilio (2 queries):
+Q07 (ES): "tapas bares restaurantes San Basilio Córdoba España recomendaciones 2024"
+Q08 (EN): "tapas guide San Basilio Cordoba Spain 2025 2026"
 
-TIER 2 — El Brillante (2 queries)
-  A-09 [ES] restaurantes El Brillante Córdoba 2023 2024 crítica gastronómica
-  A-10 [EN] best restaurants El Brillante Córdoba 2025 2026
+TIER 2 — El Brillante (2 queries):
+Q09 (ES): "restaurantes El Brillante Córdoba España recomendaciones 2025"
+Q10 (EN): "best places to eat El Brillante Cordoba Spain 2023 2024"
 
-TIER 2 — Ciudad Jardín (2 queries)
-  A-11 [ES] mejores restaurantes Ciudad Jardín Córdoba 2024 2025 guía
-  A-12 [EN] restaurants Ciudad Jardín Córdoba where to eat 2023 2024
+TIER 2 — Ciudad Jardín (2 queries):
+Q11 (ES): "bares restaurantes Ciudad Jardín Córdoba España 2023 2024"
+Q12 (EN): "restaurants Ciudad Jardin Cordoba Spain guide 2025"
 
-TIER 2 — Sector Sur (2 queries)
-  A-13 [ES] restaurantes Sector Sur Córdoba recomendaciones 2025 2026
-  A-14 [EN] Sector Sur Córdoba restaurants food guide 2023 2024
+TIER 2 — Sector Sur (2 queries):
+Q13 (ES): "gastronomía Sector Sur Córdoba España restaurantes 2025"
+Q14 (EN): "best tapas Sector Sur Cordoba Spain 2023 2024"
 
-TIER 3 — Levante (1 query)
-  A-15 [ES] restaurantes barrio Levante Córdoba dónde comer 2024 2025
+TIER 3 — Levante (1 query):
+Q15 (ES): "tapas restaurantes barrio Levante Córdoba España"
 
-TIER 3 — Poniente Norte (1 query)
-  A-16 [ES] restaurantes Poniente Norte Córdoba 2023 gastronomía
+TIER 3 — Poniente Norte (1 query):
+Q16 (ES): "bares restaurantes Poniente Norte Córdoba España"
 
-TIER 3 — Zumbacón (1 query)
-  A-17 [ES] restaurantes Zumbacón Córdoba 2025 mejores sitios
+TIER 3 — Zumbacón (1 query):
+Q17 (ES): "restaurantes Zumbacón Córdoba España"
 
 PART A TOTAL: 17 queries
 
-════════════════════════════════════════
+═══════════════════════════════════════
 PART B — CROSS-CUTTING ANGLES
-════════════════════════════════════════
+═══════════════════════════════════════
 
-Cross-1 — City-wide EN (2 queries)
-  B-01 [EN] best restaurants Córdoba Spain 2025 2026 food guide named writer review
-  B-02 [EN] where to eat in Córdoba Spain 2023 2024 personal recommendations
+Cross-1 — City-wide EN (2 queries):
+Q18 (EN): "best restaurants Córdoba Spain editorial food guide 2023 2024"
+Q19 (EN): "where to eat in Córdoba Spain local recommendations 2025 2026"
 
-Cross-2 — City-wide ES (3 queries)
-  B-03 [ES] crítica gastronómica Córdoba 2025 2026 los mejores restaurantes recomendados
-  B-04 [ES] dónde comer en Córdoba recomendaciones de locales barrios 2023 2024
-  B-05 [ES] guía gastronómica Córdoba periodismo culinario periodista 2024 2025
+Cross-2 — City-wide ES (3 queries):
+Q20 (ES): "guía gastronómica Córdoba España restaurantes imprescindibles 2023"
+Q21 (ES): "donde comer bien Córdoba España barrio recomendaciones locales 2025"
+Q22 (ES): "mejores restaurantes Córdoba España crítica periodismo gastronómico 2024"
 
-Cross-3 — Generic writer-first (2 queries)
-  B-06 [ES] periodista gastronómica recomienda restaurantes Córdoba 2024
-  B-07 [EN] food writer recommends Córdoba restaurants 2025 2026
+Cross-3 — Generic writer-first (2 queries):
+Q23 (EN): "food writer review Córdoba Spain restaurants 2023 2024"
+Q24 (ES): "crítica gastronómica escritora periodista Córdoba España restaurantes 2025"
 
-Cross-4 — Named awards / generic (3 queries)
-  B-08 [EN] Michelin guide restaurants Córdoba Spain 2024 2025 recommendations bib gourmand
-  B-09 [ES] Sol Repsol Córdoba restaurantes premiados guía 2023 2024
-  B-10 [EN] award winning restaurants Córdoba Andalusia 2025
+Cross-4 — Named awards (3 queries — generic per NAMED_AWARDS blank):
+Q25 (EN): "Michelin recommended restaurants Córdoba Spain 2024 review guide"
+Q26 (ES): "guía Repsol restaurantes Córdoba España mejores seleccionados 2025"
+Q27 (ES): "Bib Gourmand Córdoba España restaurantes recomendados 2023 2024"
 
-Cross-5 — Recent openings (2 queries)
-  B-11 [ES] nuevas aperturas restaurantes Córdoba 2024 2025
-  B-12 [EN] new restaurant openings Córdoba Spain 2025 2026
+Cross-5 — Recent openings (2 queries):
+Q28 (ES): "nuevas aperturas restaurantes Córdoba España 2024 2025"
+Q29 (EN): "new restaurants opening Cordoba Spain 2023 2024"
 
 Cross-6 — SKIP (LOCAL_FOOD_VOCABULARY blank)
 
-Cross-7 — Cuisine and community (2 queries)
-  B-13 [ES] salmorejo rabo de toro flamenquín restaurantes Córdoba mejores 2023 2024
-  B-14 [EN] Andalusian cuisine Córdoba traditional dishes best restaurants 2025
+Cross-7 — Cuisine and community (2 queries):
+Q30 (ES): "gastronomía cordobesa tradicional taberna cocina 2024 2025"
+Q31 (EN): "Andalusian cuisine Córdoba Spain best tapas bars local food 2023"
 
-Cross-8 — Publication-category local language (2 queries)
-  B-15 [ES] revista gastronómica independiente Córdoba restaurantes recomendados 2024 2025
-  B-16 [ES] suplemento gastronomía periódico Córdoba mejores restaurantes 2023 2024
+Cross-8 — Publication-category ES (2 queries):
+Q32 (ES): "revista gastronómica independiente restaurantes Córdoba España recomendaciones"
+Q33 (ES): "suplemento gastronomía periódico Córdoba España mejores restaurantes 2024"
 
 PART B TOTAL: 16 queries
 
-GRAND TOTAL: 33 queries (within 45 soft ceiling / 55 hard ceiling)
+═══════════════════════════════════════
+TOTAL PLANNED QUERIES: 33
+Soft ceiling: 45 | Hard ceiling: 55
+═══════════════════════════════════════
 
-════════════════════════════════════════
-YEAR DISTRIBUTION CHECK
-════════════════════════════════════════
-
-Earlier years (2023 / 2024 emphasis):
-  A-01, A-04, A-05, A-08, A-09, A-12, A-14, A-16,
-  B-02, B-04, B-06, B-09, B-13, B-16
-  = 14 queries
-
-Later years (2025 / 2026 emphasis):
-  A-02, A-03, A-06, A-07, A-10, A-13, A-15, A-17,
-  B-01, B-03, B-07, B-10, B-11, B-12, B-14
-  = 15 queries
-
-Mixed (both ranges):
-  A-11, B-05, B-08
-  = 3 queries (neutral)
-
-Cross-validation (Phase 1B): responsive queries, written after Phase 1 completes.
-
-[year-distribution-check] PASSED — 14 queries reference earlier years, 15 reference recent years, 3 are mixed/neutral. Distribution is compliant across 2023-2026 range.
+YEAR-DISTRIBUTION CHECK:
+Earlier years (2023–2024): Q01, Q03, Q06, Q07, Q10, Q11, Q14, Q18, Q20, Q22, Q23, Q25, Q27, Q29, Q31, Q33 → 16 queries
+Later years (2025–2026): Q02, Q04, Q05, Q08, Q09, Q12, Q13, Q19, Q21, Q24, Q26, Q28 → 12 queries
+No year term: Q15, Q16, Q17, Q32 → 4 queries
+[year-distribution-check] PASSED — 16 queries reference earlier years, 12 reference later years, 4 have no year term.
