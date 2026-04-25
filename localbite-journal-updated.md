@@ -6500,4 +6500,164 @@ All use YEAR_RANGE: 2023-2026 (Morocco previously used 2025-2026 — now correct
 
 *Fleet: 26 cities, ~861 restaurants (estimated). 14 on v7.1, 4 Morocco rebuilt today.*
 
+## Session — 2026-04-24 (Batch 2 Iberian Push + Bilbao/Córdoba + Córdoba v2)
+
+### Overview
+Very long session. Started with a pre-batch Levenshtein geocoding fix, ran Batch 2 (Lisbon, Porto, Granada, Málaga), then opportunistically added Bilbao and Córdoba rebuilds, then had to redo Córdoba a second time after a git history audit revealed the first attempt was a pipeline search failure rather than quality improvement. Also discovered and fixed fabricated article URLs in Bilbao and Lisbon.
+
+---
+
+### Fixes Committed Before Batch 2
+
+**Levenshtein distance check in geocode.js shouldAutoNull() (d59595b)**
+Single-character spelling differences (e.g. "Casa Aladdin" vs "Casa Aladin") were triggering false zero-overlap auto-null. Added a Levenshtein distance check (edit distance ≤ 2, tokens ≥ 4 chars) as a supplement to word overlap. Tested against both the Chefchaouen false-null case (should pass) and the Rabat wrong-match cases (should still auto-null). All 6 tests passed.
+
+---
+
+### Batch 2: Lisbon, Porto, Granada, Málaga
+
+**Rate limit hit mid-batch.** Lisbon (48 searches) and Porto (81 searches) ran simultaneously and consumed most of the session window before Granada and Málaga could complete. Both Granada and Málaga hit the rate limit and exited. Required relaunch. Key lesson: batch by total expected search volume, not city count.
+
+**Lisbon (26aa95f): 48R→24R, 1BP→3BP**
+Regression in restaurant count but improvement in both-pool quality. Mesa Marcada (Miguel Pires) confirmed found and used. Time Out Lisboa COI flagged correctly in Portuguese in writer_profile. Language pool distribution (3 both, 21 EN-only) reflects genuine structural segmentation — EN and PT critics recommend different restaurants in Lisbon. The regression is correct. 2 wrong geocodes nulled (O Maravilhas→Praceta Maravilhas, Essencial→beauty salon).
+
+**Porto (3c1750a): 53R→17R, 2BP→0BP**
+Significant regression but confirmed honest. Working file had 23 entries — only 1 null entry difference from final 17. No data loss from rate limit. PT primary source structural gap confirmed: Mesa Marcada Porto articles have no article-level author byline (text adapted from Revista de Vinhos, Pires credited for photography only). Observador podcast-only. Público/Fugas 451 geo-blocked. Named PT food bloggers systematically omit surnames. Venn Canteen and Liz nulled (wrong geocode matches). Bonfim centroid removed — derived from Venn Canteen which was nulled.
+
+**Granada (c422c5f): 15R→4R, 0BP→2BP**
+Dramatic regression but correct. Concentration cap fired on Lauren Aloise/Spanish Sabores (was contributing 67%, capped to 25%). GranadaDigital/Alfonso Campos permanently Cloudflare-blocked — significant quality loss. 4 restaurants with 2 genuine both-pool is an honest result given the structural constraints. Rate limit caused a restart; first partial run (7 restaurants) was overwritten by full run. Tajine Elvira geocode nulled (Puerta de Elvira is a historic gate, not a restaurant).
+
+**Málaga (dcdab48): 23R→34R, 0BP→2BP**
+Best result of Batch 2 — improvement on all metrics. 6 sources, 2 both-pool, 34 restaurants from what was previously a 0BP Strategy-C pack. El Ejido neighbourhood queries returned El Ejido Almería results throughout — geography collision documented. Verum→El Lagar de Verum nulled (winery outside city). Málaga accent variant added to CITY_BOXES (was failing geocoding for cities where city name has accent). Córdoba accent variant also added at same time.
+
+---
+
+### Bilbao Rebuild (8953332): 39R→23R, 3BP→3BP
+
+v7→v7.1 rebuild. Both-pool stability at 3 confirms old v7 quality signal was genuine. Restaurant regression explained by: concentration cap limiting Culinary Backstreets (marginally over 30%), 11 Tier C auto-rejections for thin single-source entries. CITY_CENTRES and CITY_BOUNDS were missing for Bilbao — added by postrun. 2 wrong geocodes nulled (Café Bar Bilbao→Mini Bar Bilbao, Ramen Shimoji→Sugoi Ramen). Key gap: deia.eus (Bilbao's Basque newspaper, Amaia Díez) was found only via Phase 1B cross-validation — should be a Phase 0 DIRECT_FETCH_SOURCE in next rebuild.
+
+---
+
+### Article URL Fabrication Discovery and Fix (c8dd254)
+
+After committing Bilbao and Lisbon, verified article URLs on the live site. Found 4 broken URLs:
+- CB Bilbao: inferred wrong URL post-compaction
+- Mesa Marcada Lisbon: fabricated Boubou's URL (actual source was Prémios Mesa Marcada awards article)
+- Guia Repsol Lisbon: path mismatch
+- Time Out Lisboa: missing /pt/ in path
+
+Fixed all four. Established hard rule: article_url must never be inferred or fabricated. If not confirmed from fetch, set null. Added to global instructions and CLAUDE.md.
+
+---
+
+### Córdoba First Attempt (f65a724): 35R→25R, 17BP→2BP
+
+First v7.1 rebuild produced 25R, 5 sources, 2 both-pool. Initially appeared to be quality gates working correctly — smaller but more honest pack. Then ran git history audit.
+
+**Git history audit: git show 8d542ca:localbite-cordoba-2023-2026.json**
+
+Old v6 pack had 9 sources, all named authors:
+- Andy Hayler (EN), Hanne Olsen (EN), Molly Piccavey (EN), Morgane Mazelier (EN)
+- Juan Velasco (ES/Cordópolis), Alfonso Alba (ES/Cordópolis), M. Ángeles Ramírez (ES/El Debate), Brenda Alonso (ES/The Objective), Txema Aguado (ES/Yendo por la Vida)
+
+Language pool distribution: both:17, es:11, en:7. The old 17 both-pool was genuine.
+
+**First attempt failures:**
+1. Argentine Córdoba contamination — circuitogastronomico.com, malevamag.com dominated results
+2. Cordópolis (elDiario.es Córdoba section) never surfaced — Juan Velasco, Alfonso Alba not found
+3. Piccavey.com falsely rejected — Molly Piccavey's byline is on About page not article headers
+4. Yendo por la Vida (Txema Aguado) never appeared in search results
+5. El Debate returned a Repsol roundup without a named author instead of M. Ángeles Ramírez's restaurant guide
+
+---
+
+### Córdoba Part 1 Revision (a85e501)
+
+Updated Part 1 file with:
+- ARGENTINA_DISAMBIGUATION: REQUIRED — all queries must include España or Spain
+- ARGENTINA_AUTOBLOCK: .ar domains
+- cordopolis.es as DIRECT_FETCH_SOURCE with named writers
+- yendoporlavida.com as DIRECT_FETCH_SOURCE (Txema Aguado)
+- piccavey.com as DIRECT_FETCH_SOURCE with explicit single-author site note
+- spainbyhanne.dk and andyhayler.com as direct fetch sources
+- theobjective.com, andalucialovers.com confirmed in PHASE_0_SOURCES
+- Note on El Debate: fetch specific restaurant guide articles, not Repsol roundups
+
+---
+
+### Córdoba Second Attempt (828cb1f): 25R→41R, 2BP→6BP
+
+Phase 0 fetched all 5 direct fetch sources successfully. New source found: El Viaje Me Hizo a Mí (Jose López, Nov 2024). All 5 original target sources recovered plus one new. Final: 41R, 8 sources, 6 both-pool.
+
+The intervention worked completely. Part 1 file quality is the primary quality lever — 30 minutes of Part 1 work produced 4× more both-pool entries and 64% more restaurants.
+
+One orphan (Terra Olea — no neighbourhood in article context) — assigned to Casco Antiguo. Three wrong geocodes nulled (Los Patios de La Marquesa, Asador Central, Atmósfera Gastrobar). Note: Choco (1★ Michelin) appears in pack — pipeline included because only Noor was listed in MICHELIN_STARRED_EXCLUSIONS. Decision pending: deliberate inclusion or accidental omission.
+
+---
+
+### Key Decisions
+
+1. **article_url must never be inferred or fabricated.** Hard rule. Null if not from fetch.
+
+2. **Git history audit is mandatory before accepting regression.** Both-pool regression is only "correct" if old sources fail current quality gates. If old sources pass, it's a pipeline failure.
+
+3. **Part 1 file quality is the primary quality lever.** The pipeline cannot compensate for a weak Part 1 file. Known sources → DIRECT_FETCH_SOURCES. Known collisions → disambiguation instructions.
+
+4. **Rate limit batching rule.** Batch by total expected search volume not city count. Lisbon + Porto = effectively a 4-heavy-city batch.
+
+5. **Single-author sites need explicit Part 1 documentation.** The pipeline will not infer single-author site status independently.
+
+---
+
+### Fixes and Commits Summary
+
+| Commit | Description |
+|--------|-------------|
+| d59595b | Levenshtein distance check in shouldAutoNull |
+| 26aa95f | Lisbon v7.1 rebuild |
+| 3c1750a | Porto v7.1 rebuild |
+| c422c5f | Granada v7.1 rebuild |
+| dcdab48 | Málaga v7.1 rebuild + Málaga accent fix in CITY_BOXES |
+| 27924a1 | Batch 2 pipeline docs |
+| 8d033ad | Córdoba accent fix + Granada metrics correction |
+| 8953332 | Bilbao v7.1 rebuild |
+| f65a724 | Córdoba v7.1 first attempt (pipeline failure) |
+| 8a2016e | Bilbao + Córdoba pipeline docs |
+| c8dd254 | article_url fixes: CB Bilbao, Repsol Lisboa, TimeOut Lisboa, Mesa Marcada nulled |
+| a85e501 | Córdoba Part 1 revised |
+| 828cb1f | Córdoba v7.1 second attempt |
+| dfbac6b | Córdoba v7.1 v2 pipeline docs |
+
+---
+
+### Outstanding Items
+
+- [ ] Bilbao: test remaining 5 source URLs (bilbaohiria, 7canibales, theobjective ×2, deia)
+- [ ] Bilbao: add deia.eus to Phase 0 DIRECT_FETCH_SOURCES in Part 1 for next rebuild
+- [ ] Córdoba: decide whether Choco 1★ stays in pack or gets removed
+- [ ] Lisbon/Porto: Público/Fugas geo-block — permanent structural gap, no workaround
+- [ ] Seville rebuild — Part 1 file needs preparation
+- [ ] Toronto rebuild — Part 1 file needs preparation
+- [ ] Barcelona, Valencia, Madrid — Part 1 files ready, rebuilds pending
+- [ ] Global instructions and CLAUDE.md updates (this session — completed)
+
+---
+
+### Files Produced or Updated
+
+| File | Status |
+|------|--------|
+| localbite-lisbon-2023-2026.json | Updated (v7.1 rebuild) |
+| localbite-porto-2023-2026.json | Updated (v7.1 rebuild) |
+| localbite-granada-2023-2026.json | Updated (v7.1 rebuild) |
+| localbite-malaga-2023-2026.json | Updated (v7.1 rebuild) |
+| localbite-bilbao-2023-2026.json | Updated (v7.1 rebuild) |
+| localbite-cordoba-2023-2026.json | Updated (v7.1 rebuild v2) |
+| localbite-geocode.js | Updated (Levenshtein, Málaga/Córdoba accent variants) |
+| localbite-prompt-v71-cordoba-part1.txt | Updated (Argentina disambiguation, direct fetch sources) |
+| localbite-run-metrics.log | Updated (all city entries) |
+| localbite-index.json | Updated (all city entries) |
+| index.html | Updated (Bilbao/Córdoba CITY_CENTRES/CITY_BOUNDS added) |
+
+*Fleet: 22 v7.1 cities, 28 files, 897 restaurants, 2,265 index.html lines*
 
