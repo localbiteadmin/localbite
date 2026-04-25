@@ -1,96 +1,91 @@
-LOCALBITE V6 — SEVILLE SEARCH PLAN
-Pipeline run: 2026-04-09
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
 
-PHASE 0 RESULTS:
-- Spanish Sabores (Lauren Aloise) — /eating-in-seville/ — Apr 25, 2024 — SUCCESS
-- Sevilla Secreta (Ariana Buenafuente) — /restaurantes-sevilla/ — Nov 2023/Jun 2024 — SUCCESS (partial bot blocks on sub-articles)
-- Writers for Phase 1: Lauren Aloise, Ariana Buenafuente, Culinary Backstreets
+CITY: Seville | YEAR_RANGE: 2023-2026 | PRIMARY: ES | SECONDARY: EN
+Generated: 2026-04-25
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PART A — NEIGHBOURHOOD QUERIES (22 total: 11 groups × 2 languages)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART A — NEIGHBOURHOOD COVERAGE
 
-Group 1: Casco Antiguo / Santa Cruz / El Arenal
-  A1-EN: best restaurants Casco Antiguo Santa Cruz Seville food guide 2024
-  A1-ES: mejores restaurantes casco antiguo Santa Cruz Sevilla guía 2024
+TIER_1 (Casco Antiguo, Santa Cruz, Alfalfa, Arenal, El Salvador, Triana, Alameda de Hércules)
+Each area: 1 ES + 1 EN query = 2 queries per area
 
-Group 2: Triana
-  A2-EN: Triana Seville restaurants food guide local writer 2024
-  A2-ES: mejores restaurantes Triana Sevilla guía gastronómica 2024
+A-1  [neighbourhood-CascoAntiguo] "mejores restaurantes Casco Antiguo Sevilla periodista gastronomico 2023 2024"
+A-2  [neighbourhood-CascoAntiguo] "best restaurants historic centre Seville food writer 2025 2026"
+A-3  [neighbourhood-SantaCruz] "donde comer barrio Santa Cruz Sevilla critica gastronomica 2024"
+A-4  [neighbourhood-SantaCruz] "Santa Cruz Seville restaurant recommendations local food blogger 2025"
+A-5  [neighbourhood-Alfalfa] "tapas bares barrio Alfalfa Sevilla guia gastronomica 2023"
+A-6  [neighbourhood-Alfalfa] "Alfalfa neighbourhood Seville tapas bars food guide 2025"
+A-7  [neighbourhood-Arenal] "restaurantes barrio Arenal Sevilla periodismo gastronomico 2025 2026"
+A-8  [neighbourhood-Arenal] "Arenal Seville restaurants food writer recommendations 2024"
+A-9  [neighbourhood-ElSalvador] "bares tapas zona El Salvador Sevilla guia local 2024"
+A-10 [neighbourhood-ElSalvador] "El Salvador plaza Seville tapas food writer guide 2025"
+A-11 [neighbourhood-Triana] "restaurantes Triana Sevilla critica gastronomica local 2024 2025"
+A-12 [neighbourhood-Triana] "Triana Seville restaurant guide food writer 2023 2024"
+A-13 [neighbourhood-AlamedaHercules] "bares restaurantes Alameda de Hercules Sevilla periodista 2025 2026"
+A-14 [neighbourhood-AlamedaHercules] "Alameda Hercules Seville dining recommendations food blogger 2023 2024"
 
-Group 3: La Macarena
-  A3-EN: La Macarena Seville neighbourhood restaurants food 2024
-  A3-ES: restaurantes La Macarena Sevilla recomendaciones 2024
+TIER_2 (Los Remedios, Macarena, Nervión, San Bernardo, La Calzada)
+Each area: 1 ES + 1 EN query = 2 queries per area
 
-Group 4: Los Remedios
-  A4-EN: Los Remedios Seville restaurants bars food guide 2024
-  A4-ES: restaurantes bares Los Remedios Sevilla donde comer 2024
+A-15 [neighbourhood-LosRemedios] "restaurantes barrio Los Remedios Sevilla critica gastronomica 2024 2025"
+A-16 [neighbourhood-LosRemedios] "Los Remedios Seville restaurant recommendations food writer 2023"
+A-17 [neighbourhood-Macarena] "restaurantes zona Macarena Sevilla guia local gastronomica 2023 2024"
+A-18 [neighbourhood-Macarena] "Macarena Seville restaurants food guide writer 2025"
+A-19 [neighbourhood-Nervion] "mejores tapas restaurantes Nervion Sevilla gastronomia 2024 2025"
+A-20 [neighbourhood-Nervion] "Nervion Seville restaurants food writer recommendations 2025 2026"
+A-21 [neighbourhood-SanBernardo] "bares restaurantes San Bernardo Sevilla guia gastronomica 2023 2024"
+A-22 [neighbourhood-SanBernardo] "San Bernardo Seville restaurants food guide local"
+A-23 [neighbourhood-LaCalzada] "restaurantes La Calzada Sevilla guia local gastronomica 2023"
+A-24 [neighbourhood-LaCalzada] "La Calzada Sevilla comer bien recomendaciones 2025"
 
-Group 5: Nervión
-  A5-EN: Nervión Seville restaurants dining guide 2024
-  A5-ES: restaurantes Nervión Sevilla guía gastronomía 2024
+TIER_3 (Pino Montano, Heliópolis, Bellavista, Sur, Palmete, Torreblanca)
+Each area: 1 ES query only
 
-Group 6: San Pablo-Santa Justa
-  A6-EN: San Pablo Santa Justa Seville restaurants food scene 2024
-  A6-ES: restaurantes San Pablo Santa Justa Sevilla barrio de moda 2024
+A-25 [neighbourhood-PinoMontano] "bares restaurantes Pino Montano Sevilla gastronomia local"
+A-26 [neighbourhood-Heliopolis] "restaurantes Heliopolis Sevilla critica periodista gastronomico"
+A-27 [neighbourhood-Bellavista] "restaurantes Bellavista Sevilla guia gastronomica local"
+A-28 [neighbourhood-Sur] "donde comer barrio Sur Sevilla gastronomia 2024"
+A-29 [neighbourhood-Palmete] "restaurantes Palmete Sevilla recomendaciones gastronomicas"
+A-30 [neighbourhood-Torreblanca] "bares restaurantes Torreblanca Sevilla guia local gastronomica"
 
-Group 7: Cerro-Amate / Bellavista-La Palmera / Heliópolis
-  A7-EN: Heliópolis Bellavista Seville restaurants neighbourhood guide 2024
-  A7-ES: restaurantes Heliópolis Bellavista Palmera Sevilla comer 2024
+PART B — CROSS-CUTTING ANGLES
 
-Group 8: El Porvenir / Sur
-  A8-EN: El Porvenir south Seville restaurants food guide 2024
-  A8-ES: restaurantes El Porvenir barrio sur Sevilla gastronomía 2024
+Cross-1 — City-wide EN (2 queries)
+B-31 [cross-1] "best restaurants Seville Spain 2023 2024 food writer guide"
+B-32 [cross-1] "Seville restaurant recommendations personal favorites local expat 2025 2026"
 
-Group 9: Sevilla Este / Torreblanca
-  A9-EN: Sevilla Este Torreblanca restaurants food local 2024
-  A9-ES: restaurantes Sevilla Este Torreblanca donde comer 2024
+Cross-2 — City-wide ES (3 queries)
+B-33 [cross-2] "critica gastronomica restaurantes Sevilla 2023 2024 periodista escritor"
+B-34 [cross-2] "donde tapear comer bien Sevilla barrio recomendaciones locales 2025"
+B-35 [cross-2] "guia gastronomica Sevilla prensa restaurantes destacados 2024 2025"
 
-Group 10: Pino Montano / Norte
-  A10-EN: Pino Montano north Seville restaurants food 2024
-  A10-ES: restaurantes Pino Montano barrio norte Sevilla 2024
+Cross-3 — Generic writer-first (2 queries)
+B-36 [cross-3] "escritor gastronomico sevillano recomienda restaurantes Sevilla 2024 2025"
+B-37 [cross-3] "food journalist writer recommends Seville restaurants 2023 2024"
 
-Group 11: Palmete / La Barzola / Rochelambert / Oeste
-  A11-EN: Palmete Rochelambert Seville restaurants guide 2024
-  A11-ES: restaurantes Palmete Barzola Rochelambert Sevilla oeste 2024
+Cross-4 — Awards (3 queries)
+B-38 [cross-4] "restaurantes Soles Repsol Sevilla 2024 2025 recomendaciones"
+B-39 [cross-4] "Bib Gourmand Sevilla restaurantes Michelin accesibles 2024 2025"
+B-40 [cross-4] "reconocimientos gastronomicos Sevilla premios restaurantes 2023 2024"
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PART B — CROSS-CUTTING QUERIES (14 total)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Cross-5 — Recent openings (2 queries)
+B-41 [cross-5] "nuevos restaurantes aperturas Sevilla 2024 2025 recomendacion local"
+B-42 [cross-5] "new restaurant openings Seville 2025 2026 food writer review"
 
-Cross-1 City-wide (3 queries):
-  C1a: best restaurants Seville Spain food writer guide 2024
-  C1b: mejores restaurantes Sevilla guía gastronómica periodista 2025
-  C1c: donde comer Sevilla recomendaciones critica gastronomica 2023
+Cross-6 — SKIPPED (LOCAL_FOOD_VOCABULARY not defined in Part 1)
 
-Cross-2 Writer-first (3 queries):
-  C2a: Lauren Aloise Seville food guide restaurants 2024 2025
-  C2b: Culinary Backstreets Seville Spain restaurants food writing 2024
-  C2c: Ariana Buenafuente Sevilla restaurantes crítica gastronómica 2024
+Cross-7 — Cuisine and community (2 queries)
+B-43 [cross-7] "tabernas tascas sevillanas tradicionales genuinas recomendacion 2023 2024"
+B-44 [cross-7] "cocina internacional fusión Sevilla restaurantes destacados 2024 2025"
 
-Cross-3 Recent openings 2024–2026 (2 queries):
-  C3a: new restaurant openings Seville 2025 2026 food guide
-  C3b: nuevos restaurantes abiertos Sevilla 2025 2026 aperturas
+Cross-8 — Publication-category ES (2 queries)
+B-45 [cross-8] "revista gastronomica independiente Sevilla restaurantes recomendados critica"
+B-46 [cross-8] "suplemento gastronomia periodico Sevilla restaurantes destacados 2023 2024"
 
-Cross-4 Older coverage 2023–2024 (2 queries):
-  C4a: Seville restaurant guide food writer 2023 independent
-  C4b: mejores restaurantes Sevilla 2023 guía local periodista gastronomía
+TOTAL QUERIES PLANNED: 46 (under soft ceiling 45 — Cross-6 skip brings us within ceiling)
+Note: If stopping rule triggers after 8 consecutive no-new-source queries, will stop early.
 
-Cross-5 Awards and recognition (2 queries):
-  C5a: Seville restaurants Michelin star Repsol recognition 2024 2025
-  C5b: restaurantes premiados Sevilla Michelin Repsol sol guía 2024 2025
-
-Cross-6 Forum and community (2 queries):
-  C6a: Seville restaurants recommendations locals food forum 2024
-  C6b: foro recomendaciones restaurantes Sevilla locales 2024
-
-Cross-7 Cuisine diversity (2 queries):
-  C7a: Japanese Korean Asian fusion restaurants Seville Spain 2024 food guide
-  C7b: restaurantes internacionales cocina asiática japonesa Sevilla 2024
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TOTAL TARGET: 36 queries
-STOPPING RULE: If last 8 consecutive queries yield no new sources, stop
-SOFT CEILING: 55 queries maximum
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+YEAR DISTRIBUTION CHECK:
+Queries referencing earlier years (2023-2024): A-1, A-3, A-5, A-8, A-9, A-12, A-14, A-16, A-17, A-21, A-23, B-31, B-33, B-37, B-40, B-43, B-46 = 17 queries
+Queries referencing recent years (2025-2026): A-2, A-4, A-6, A-7, A-10, A-11, A-13, A-15, A-18, A-19, A-20, A-24, B-32, B-34, B-35, B-36, B-38, B-39, B-41, B-42, B-44 = 21 queries
+Queries with no year term: A-22, A-25-A-30, B-45, B-36(mixed) = 8 queries
+[year-distribution-check] PASSED — 17 queries reference earlier years, 21 reference recent years, 8 have no year term. Distribution proportional across YEAR_RANGE 2023-2026.

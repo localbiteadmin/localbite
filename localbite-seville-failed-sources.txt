@@ -1,4 +1,135 @@
-LOCALBITE V6 — SEVILLE FAILED SOURCES
-Pipeline run: 2026-04-09
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+LOCALBITE PIPELINE — SEVILLE v7.1 FAILED SOURCES
+Generated: 2026-04-25
 
+All sources that failed all retry attempts and contributed 0 entries to the final output.
+
+══════════════════════════════════════════════════════════════════
+
+cosasdecome.com / sevilla.cosasdecome.es
+  Author: Pepe Monforte
+  Language: ES
+  Failure mode: DIRECTORY FORMAT — no editorial prose quotes
+  Retry count: 5 articles fetched
+  Articles tried:
+    sevilla.cosasdecome.es/donde-comer-muy-bien-en-la-zona-de-la-macarena/
+    sevilla.cosasdecome.es/donde-comer-muy-bien-en-triana-y-los-remedios/
+    sevilla.cosasdecome.es/donde-comer-muy-bien-en-nervion/
+    sevilla.cosasdecome.es/30-bares-para-tapear-muy-bien-en-nervion/
+    sevilla.cosasdecome.es/el-mapa-de-los-bares-de-barrio-de-sevilla/
+  Outcome: All articles structured as directory listings with no editorial prose.
+    Source was usable in old v7 (lower quality bar); fails v7.1 quote quality rules.
+
+theobjective.com
+  Author: Brenda Alonso
+  Language: ES
+  Failure mode: AI-GENERATED CONTENT — formulaic text, not genuine editorial writing
+  Retry count: 2 fetch attempts
+  Articles tried:
+    theobjective.com/lifestyle/2023-07-28/donde-comer-sevilla-restaurantes/
+    (second URL attempted; same AI-generated pattern returned)
+  Outcome: Both fetches returned clearly AI-generated text ("ambiente acogedor,"
+    "autentica cocina [X]" repeated identically for all 16 restaurants). Rejected.
+
+sevillasecreta.co/tapear-bares-remedios/
+  Author: Ariana Buenafuente (inferred — single-author site)
+  Language: ES
+  Failure mode: BOT CHALLENGE — JavaScript verification block
+  Retry count: 3 fetch attempts (direct URL + Wayback Machine + alternative paths)
+  Outcome: Persistent bot challenge on all attempts. No content extracted from this
+    specific article. The main sevillasecreta.co domain contributed 3 entries from a
+    different article (restaurantes-de-moda-sevilla).
+
+sevillasecreta.co/50-restaurantes-y-bares-de-sevilla.../
+  Author: Ariana Buenafuente
+  Language: ES
+  Failure mode: YEAR RANGE — article dated Feb 2, 2022 (outside 2023-2026)
+  Outcome: Auto-rejected.
+
+guiarepsol.com
+  Author: (various — named author required)
+  Language: ES
+  Failure mode: NO NAMED-AUTHOR ARTICLES ACCESSIBLE for Seville in 2023-2026 range
+  Retry count: 1 search pass
+  Outcome: No qualifying named-author articles found in Phase 1 searches.
+
+diariodesevilla.es
+  Author: (various)
+  Language: ES
+  Failure mode: PAYWALL — no article access
+  Retry count: 1 direct fetch attempt
+  Outcome: €0.50/24h paywall on all content. Cannot extract quotes.
+
+abcsevilla.abc.es
+  Author: (various)
+  Language: ES
+  Failure mode: DOMAIN BLOCKED — web crawl restriction
+  Retry count: 1 direct fetch attempt
+  Outcome: Domain blocked from web crawl. Cannot extract content.
+
+timeout.com/seville
+  Author: (various)
+  Language: EN
+  Failure mode: 404 NOT FOUND
+  Retry count: 1 direct fetch attempt
+  URL tried: timeout.com/seville/restaurants/best-restaurants-in-seville
+  Outcome: 404. Time Out Seville page does not exist at this URL.
+
+gastroactitud.com
+  Author: (initials only — no full name)
+  Language: ES
+  Failure mode: NAMED AUTHOR REQUIREMENT — initials-only byline
+  Retry count: 1 check (Phase 1B cross-validation)
+  Outcome: No full name byline found. Pipeline requires full first name AND surname.
+    Rejected per named author requirement.
+
+ochosabores.com
+  Author: (unconfirmed)
+  Language: ES
+  Failure mode: NAMED AUTHOR REQUIREMENT — no confirmed named author
+  Retry count: 1 search check
+  Outcome: No named author confirmed from search results. Not fetched further.
+
+azahar-sevilla.com
+  Author: (unconfirmed)
+  Language: ES
+  Failure mode: NAMED AUTHOR REQUIREMENT — no confirmed named author
+  Retry count: 1 search check
+  Outcome: No named author confirmed from search results. Not fetched further.
+
+culinarybackstreets.com
+  Author: (various)
+  Language: EN
+  Failure mode: NO SEVILLE CONTENT FOUND in 2023-2026 range
+  Retry count: 1 search check (listed in Part 1 SECONDARY_SOURCES)
+  Outcome: No qualifying Seville-specific articles found.
+
+thelocal.es
+  Author: (various)
+  Language: EN
+  Failure mode: NO SEVILLE RESTAURANT CONTENT FOUND in 2023-2026 range
+  Retry count: 1 search check (listed in Part 1 SECONDARY_SOURCES)
+  Outcome: No qualifying Seville-specific restaurant articles found.
+
+detapasconchencho.es/maquiavelo-sevilla (INDIVIDUAL ARTICLE FAIL — source passed)
+  Author: Chencho Cubiles
+  Language: ES
+  Failure mode: WRONG CONTENT RETURNED — fetch returned Bar Coliseo content
+  Retry count: 1 fetch attempt
+  Outcome: Fetch returned wrong article content. Skipped. Other detapasconchencho.es
+    articles contributed 5 entries — source passed overall.
+
+══════════════════════════════════════════════════════════════════
+GEOGRAPHIC REJECTS (confirmed fetch, confirmed author, wrong location)
+══════════════════════════════════════════════════════════════════
+
+detapasconchencho.es → El Pescaito
+  Location: Valencina de la Concepcion (outside Seville proper)
+  Reject: GEOGRAPHIC_BOUNDARY_EXCLUDE
+
+detapasconchencho.es → Sushi Boulevard Shop
+  Location: Tomares (outside Seville proper)
+  Reject: GEOGRAPHIC_BOUNDARY_EXCLUDE
+
+sevilla.cosasdecome.es → Pepe Moreno
+  Location: Lora del Rio (outside Seville proper)
+  Reject: GEOGRAPHIC_BOUNDARY_EXCLUDE (also: directory format failure)
