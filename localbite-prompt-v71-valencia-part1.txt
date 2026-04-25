@@ -1,74 +1,252 @@
-# LocalBite Pipeline — Part 1: Valencia
-# v7.1 — 2026-04-23
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES — Valencia v7.1
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-CITY:             Valencia
-COUNTRY:          Spain
-CITY_SLUG:        valencia-spain
-YEAR_RANGE:       2023-2026
-PRIMARY_LANGUAGE: ES
-SECONDARY_LANGUAGE: EN
+CITY: Valencia
+COUNTRY: Spain
+CITY_SLUG: valencia-spain
+LANGUAGE_PRIMARY: Spanish / Valencian
+LANGUAGE_CODES: ES / CA (Valencian is the local Catalan variant)
+SEARCH_LANGUAGES: English, Spanish, Valencian/Catalan
+YEAR_RANGE: 2023-2026
 
-# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
-# Valencia's food identity is defined by rice dishes (paella, arrós al forn,
-# arròs negre) and horchata. El Carmen (Barrio del Carmen) is the historic
-# dining core. Ruzafa is the creative neighbourhood dining hub.
-# Cabanyal is the former fishing village turned dining destination near the beach.
-# The Eixample (Valencia's, not Barcelona's) is the main commercial dining area.
-# Benimaclet is the university-area neighbourhood with local character.
+OUTPUT_FINAL: ./localbite-valencia-2023-2026.json
+OUTPUT_WORKING: ./localbite-valencia-working.json
+OUTPUT_SEARCH_LOG: ./localbite-valencia-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-valencia-search-plan.txt
 
-TIER_1_NEIGHBOURHOODS: El Carmen, Ruzafa, Cabanyal, Eixample
-TIER_2_NEIGHBOURHOODS: Benimaclet, Jesús, Quatre Carreres, Extramurs
-TIER_3_NEIGHBOURHOODS: Poblats Marítims, Campanar, La Saïdia, Patraix
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE SETTINGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUERY_SOFT_CEILING: 45
+QUERY_HARD_CEILING: 55
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+- 1 = under €20pp
+- 2 = €20–40pp
+- 3 = €40–80pp
+- 4 = over €80pp
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 0 — DIRECT FETCH SOURCES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+These are confirmed named-author sources from the v6 Valencia pack
+(git audit 2026-04-25). Fetch all directly in Phase 0 before any
+Phase 1 discovery searches.
+
+DIRECT_FETCH_SOURCES:
+
+1. Amsterdam Foodie — Valencia guide
+   URL: https://www.amsterdamfoodie.nl/category/spain/valencia/
+   Writer: Vicky Hampton
+   Language: EN
+   Note: Confirmed named author in v6. EN travel blogger with documented
+     Valencia coverage. Fetch her most recent Valencia restaurant guide
+     from 2023 or later. Confirm article date from fetched text.
+
+2. The Infatuation — Valencia
+   URL: https://www.theinfatuation.com/valencia
+   Writer: David Neimanis (confirmed in v6 — verify current byline)
+   Language: EN
+   Note: Confirmed named author in v6. Fetch the most recent Valencia
+     guide. Confirm article date from fetched text — The Infatuation
+     sometimes surfaces old guides in search results. Use Hit List or
+     most recent guide if main guide is pre-2023.
+
+3. Valencia Plaza — Guía Hedonista
+   URL: https://valenciaplaza.com/gastronomia
+   Writer: Paula Pons
+   Language: ES
+   Note: Confirmed named author in v6. Valencia Plaza is a major local
+     ES digital newspaper. Guía Hedonista is their restaurant guide
+     section. Fetch Paula Pons' most recent Valencia restaurant guide
+     from 2023 or later.
+
+4. Ojo al Plato — Valencia Eixample article
+   URL: https://ojaalplato.com/
+   Writer: Paco Palanca
+   Language: ES
+   Note: Confirmed named author in v6 (appeared as two separate
+     neighbourhood-focused articles). Fetch Paco Palanca's most
+     recent Valencia restaurant content from 2023 or later.
+     SAME-PUBLISHER NOTE: Both Ojo al Plato articles (entries 4 and 5)
+     are from the same publisher and author — they cannot cross-validate
+     each other for both-pool. Treat as a single publisher's contribution
+     regardless of how many articles are fetched.
+
+5. Ojo al Plato — Valencia Poblats article (second article)
+   URL: https://ojaalplato.com/
+   Writer: Paco Palanca
+   Language: ES
+   Note: Same publisher as entry 4. If multiple qualifying articles
+     from Ojo al Plato exist, fetch both — the restaurants in each
+     may appear in other sources from different publishers. But the
+     two Ojo al Plato articles cannot create both-pool with each other.
+
+6. Bonviveur — Valencia
+   URL: https://www.bonviveur.es/the-food-guide/mejores-restaurantes-valencia
+   Writer: Yolanda Galiana
+   Language: ES
+   Note: Confirmed named author in v6. ES gastronomic guide site.
+     Apply concentration cap carefully if Bonviveur covers many
+     restaurants — it tends toward comprehensive lists. Quote quality
+     check is essential; Bonviveur entries sometimes lack specific detail.
+
+7. Gastro Trinquet / Grupo Gastro Trinquet
+   URL: https://www.gastrotrinquet.com/
+   Writer: Albert Padilla
+   Language: ES
+   Note: Confirmed named author in v6. Local Valencia food publication.
+     Fetch his most recent Valencia restaurant guide from 2023 or later.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BOTH-POOL DEFINITION — BILINGUAL CITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Valencia is bilingual (ES / Valencian CA) with an English expat and
+travel writing layer. Both-pool requires:
+- Two editorially independent sources
+- From different publishers
+- Writing in different languages
+
+VALID both-pool combinations:
+- EN source + ES source (different publishers) ✓
+- EN source + Valencian CA source (different publishers) ✓
+- ES source + Valencian CA source (different publishers) ✓
+
+NOT valid:
+- Ojo al Plato article 1 + Ojo al Plato article 2: same publisher ✗
+- Any two articles from the same publication ✗
+
+VALENCIAN-LANGUAGE NOTE: The v6 pack had no Valencian/CA-language
+source. Valencian is spoken widely in Valencia and some food media
+publishes in Valencian. Finding a named-author Valencian-language
+source in Phase 1 would open a new both-pool lane. Prioritise
+Valencian-language discovery in Phase 1 searches.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MICHELIN STARRED EXCLUSIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ALL Michelin-starred restaurants must be excluded from the final pack.
+Apply consistently. Verify current star status from the Michelin Guide
+website — star assignments change annually.
+
+Known Valencia Michelin-starred restaurants (verify current status):
+- Ricard Camarena Restaurant — 2★, chef Ricard Camarena
+- El Poblet — 1★, chef Luís Valls
+- La Salita — 1★, chef Begoña Rodrigo (verify open status and stars)
+- Karak — check current star status
+
+NOTE ON PREVIOUS RUNS: Ricard Camarena and El Poblet both appeared as
+both-pool entries in previous Valencia pipeline runs. They must be
+excluded in this v7.1 rebuild per the Michelin blanket exclusion rule.
+This will correctly reduce the both-pool count relative to older packs.
+
+BIB GOURMAND restaurants: Not excluded — include freely if recommended
+by named food writers. Examples: MercatBar (Ricard Camarena group but
+Bib Gourmand), Canalla Bistro (Ricard Camarena group, Bib Gourmand).
+Note: even though these are from the same chef group as starred venues,
+Bib Gourmand restaurants are not starred and are not excluded.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NEIGHBOURHOOD TIERS FOR PHASE 1 SEARCHES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TIER 1 — Highest density:
+- Ruzafa (Russafa in Valencian)
+- El Carmen / Barrio del Carmen (old town)
+
+TIER 2 — High density:
+- Eixample Valenciana (Ensanche)
+- Cabanyal / Canyamelar (beachside neighbourhood, growing food scene)
+
+TIER 3 — Emerging:
+- Benimaclet
+- Gran Vía / Pla del Remei
 
 GEOGRAPHIC_BOUNDARY_INCLUDE:
-  El Carmen (Barrio del Carmen), Ruzafa, Cabanyal, Eixample,
-  Benimaclet, Jesús, Quatre Carreres, Extramurs, Poblats Marítims,
-  Algirós, Campanar, La Saïdia, Patraix, Ciutat Vella
+Barrio del Carmen, El Carme, Ruzafa, Russafa, Eixample Valenciana,
+Cabanyal, Canyamelar, Benimaclet, Gran Vía, Pla del Remei,
+La Xerea, Sant Francesc, El Pilar, La Seu, Malvarrosa,
+Patraix, Campanar, Quatre Carreres
 
 GEOGRAPHIC_BOUNDARY_EXCLUDE:
-  Alicante (separate province capital), Castellón (separate city),
-  Torrent (separate municipality), Gandia, Dénia, Morella
-  (all outside Valencia city limits), L'Eliana, Burjassot
+Alicante, Dénia, Morella, Sagunto, Carcaixent, San Antonio de
+Benagéber, Alfafara, or any location described as "outside Valencia
+city", "Comunitat Valenciana" without being in Valencia city proper,
+"near Valencia", "day trip from Valencia". GastroSpain and similar
+regional guides frequently include restaurants from across Comunitat
+Valenciana — reject any entry not confirmed as being within Valencia
+city limits.
 
-# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
-# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
-MICHELIN_STARRED_EXCLUSIONS:
-  Ricard Camarena (2★), Fierro (1★), Kaido Sushi Bar (1★),
-  Riff (1★, Bernd Knöller), Fraula (1★), Canyar (1★)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 1 SEARCH GUIDANCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-# ── SOURCE STRATEGY ──────────────────────────────────────────
-# Valencia food writing is primarily ES. EN coverage exists but is often
-# travel-facing — verify editorial independence carefully.
-# Las Provincias and Levante-EMV are the two main local newspapers.
-# Both had paywall issues in previous pipeline runs — try direct fetches.
-# Hello Valencia is a long-running local city guide with named writers.
-# El Comidista (El País) has published Valencia rice guides with named writers.
-# Both-pool is achievable with independent EN food writers alongside ES press.
+After Phase 0 direct fetches, run Phase 1 searches targeting sources
+not already in DIRECT_FETCH_SOURCES.
 
-PHASE_0_SOURCES:
-  - lasprovincias.es (ES — Las Provincias, main Valencia local newspaper, food section)
-  - levante-emv.com (ES — Levante-EMV, second major local newspaper, food section)
-  - guiarepsol.com (ES — Repsol guide, search Valencia entries)
-  - helloValencia.com (ES/EN — long-running local city guide, named writers)
+Priority search angles:
+1. Valencian-language food writers — this is the primary discovery
+   gap from the v6 pack. Search in Valencian: "restaurants Valencia
+   recomanacions guia gastronomica 2024 2025" and similar.
+   Publications to look for: Levante-EMV (if accessible), El País
+   Comunitat Valenciana, local Valencian-language food blogs.
+2. ES food bloggers with Valencia focus not already in Phase 0
+3. EN food writers / expat bloggers based in or covering Valencia
+4. Cross-validation searches: search for restaurants already found
+   in Phase 0 to discover additional sources covering them
+5. Las Provincias, Levante-EMV: both were paywalled in previous runs.
+   Attempt fetch — if still paywalled (403 or subscription wall),
+   log and move on. Do not spend multiple queries on paywalled sources.
 
-SECONDARY_SOURCES:
-  - elpais.com/gastronomia (ES — El Comidista / El País, search Valencia rice/food features)
-  - bonviveur.es (ES — national food platform, search Valencia guide)
-  - timeout.com/valencia (EN — verify named author and recency)
-  - theinfatuation.com (EN — search Valencia guide if exists, verify named author)
-  - devourvalenciatours.com or similar EN food travel writers covering Valencia
+REGIONAL PUBLICATION WARNING: GastroSpain, some Repsol entries, and
+similar regional publications frequently cover all of Comunitat
+Valenciana (Alicante, Dénia, Morella, etc.) alongside Valencia city.
+If fetched, apply strict geographic filter — only include restaurants
+confirmed as within Valencia city limits. Reject all others.
 
-COI_FLAG_SOURCES: None known
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+KNOWN PROBLEMATIC URLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-# ── PIPELINE SETTINGS ────────────────────────────────────────
-PHASE1_AUTO_PROCEED:  YES
-UNATTENDED_MODE:      YES
+- gastronomistas.com — returns 1.6MB pages, causes session failures
+- yelp.com — aggregator, reject
+- tripadvisor.com — aggregator, reject
+- thefork.com / eltenedor.com — booking platform, reject
+- timeout.com/valencia — secondary source only; acceptable for
+  cross-validation but not as sole source for any entry
 
-# ── OUTPUT FILES ─────────────────────────────────────────────
-OUTPUT_SEARCH_PLAN:    localbite-valencia-search-plan.txt
-OUTPUT_SEARCH_LOG:     localbite-valencia-search-log.txt
-OUTPUT_WORKING:        localbite-valencia-working.json
-OUTPUT_RAW:            localbite-valencia-raw.json
-OUTPUT_FINAL:          localbite-valencia-2023-2026.json
-OUTPUT_AUDIT:          localbite-valencia-audit.txt
-OUTPUT_FAILED_SOURCES: localbite-valencia-failed-sources.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONFLICT OF INTEREST FLAGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Devour Valencia / Devour Tours Blog: COI — commercial tour operator.
+  Same Devour Tours group as Devour Barcelona. Reject as primary source.
+  If restaurant recommendations from Devour Valencia appear, they may
+  be used only if independently confirmed by a non-Devour source.
+
+- Hello Valencia: rejected in v3 as anonymous editorial. Apply same
+  rule — no named author means rejection regardless of content quality.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GIT HISTORY NOTE — REGRESSION THRESHOLD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The v6 Valencia pack (47R, 10BP) was built from 7 named-author sources,
+all of which pass current quality gates. However, some of the v6
+both-pool entries (Ricard Camarena, El Poblet) were Michelin-starred
+restaurants now subject to blanket exclusion. Expect some regression
+on that dimension — this is correct.
+
+A significant both-pool regression beyond the Michelin exclusions would
+indicate a pipeline search failure. Minimum acceptable for a successful
+v7.1 run: 5+ both-pool entries (accounting for 2-3 Michelin exclusions
+from the v6 both-pool). If both-pool falls below 4, check the Phase 0
+fetch log before accepting.

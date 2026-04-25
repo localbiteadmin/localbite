@@ -1,84 +1,324 @@
-# LocalBite Pipeline — Part 1: Barcelona
-# v7.1 — 2026-04-23
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES — Barcelona v7.1
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-CITY:             Barcelona
-COUNTRY:          Spain
-CITY_SLUG:        barcelona-spain
-YEAR_RANGE:       2023-2026
-PRIMARY_LANGUAGE: ES, CA
-SECONDARY_LANGUAGE: EN
+CITY: Barcelona
+COUNTRY: Spain
+CITY_SLUG: barcelona-spain
+LANGUAGE_PRIMARY: Spanish / Catalan
+LANGUAGE_CODES: ES / CA
+SEARCH_LANGUAGES: English, Spanish, Catalan
+YEAR_RANGE: 2023-2026
 
-# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
-# Barcelona has three primary food languages: Spanish (ES), Catalan (CA), and English (EN).
-# CA-language sources are primary — Beteve.cat, ElNacional.cat, Ara Mengem are key.
-# Eixample (Esquerra and Dreta) is the densest restaurant district.
-# Gràcia has the strongest neighbourhood dining identity.
-# El Born/Sant Pere is the tapas and craft food hub.
-# Poble Sec and Sant Antoni have become serious dining neighbourhoods.
-# Barceloneta is the seafood and paella strip (tourist-heavy — verify quality).
-# Note: Time Out Barcelona CA and ES editions have shared editorial — do not
-# count as two independent sources.
+OUTPUT_FINAL: ./localbite-barcelona-2023-2026.json
+OUTPUT_WORKING: ./localbite-barcelona-working.json
+OUTPUT_SEARCH_LOG: ./localbite-barcelona-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-barcelona-search-plan.txt
 
-TIER_1_NEIGHBOURHOODS: Eixample, Gràcia, El Born, Poble Sec, Sant Antoni
-TIER_2_NEIGHBOURHOODS: Barri Gòtic, El Raval, Barceloneta, Poblenou, Sarrià
-TIER_3_NEIGHBOURHOODS: Sant Martí, Sants, Nou Barris, Horta-Guinardó
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE SETTINGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUERY_SOFT_CEILING: 45
+QUERY_HARD_CEILING: 55
+YEAR_RANGE: 2023-2026
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+- 1 = under €20pp
+- 2 = €20–40pp
+- 3 = €40–80pp
+- 4 = over €80pp
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 0 — DIRECT FETCH SOURCES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+These are confirmed named-author sources from previous Barcelona runs.
+Fetch all directly in Phase 0 before any Phase 1 discovery searches.
+All were confirmed valid in the v6 pack (2026-04-25 git audit).
+
+DIRECT_FETCH_SOURCES:
+
+1. Barcelona Food Experience
+   URL: https://www.barcelonafoodexperience.com/best-restaurants-barcelona/
+   Writer: Maria (single-author site — About page confirms Maria is sole
+     author; apply single-author site rule; article-level byline not
+     required)
+   Language: EN
+   Note: Site has published multiple annual guides. Confirm article date
+     is 2023 or later from fetched text. If main guide is older, search
+     for most recent guide post on the site.
+
+2. Beteve.cat — Slow Food Barcelona / Cargols awards
+   URL: https://www.beteve.cat/
+   Writer: Carmen Cortés Vidal
+   Language: CA
+   Note: Search beteve.cat for the most recent restaurant guide or
+     Cargols/Slow Food Barcelona coverage. The 2025-11-05 piece by
+     Carmen Cortés Vidal on the Slow Food Cargols award was confirmed
+     in the v4 run and contributed heavily to CA-language both-pool.
+     Fetch the most recent version of this guide.
+
+3. Culinary Backstreets Barcelona
+   URL: https://culinarybackstreets.com/cities-category/barcelona/
+   Writer: Paula Mourenza
+   Language: EN
+   Note: Paula Mourenza is Culinary Backstreets' Barcelona correspondent.
+     Confirmed named author in v6. Fetch her most recent Barcelona
+     restaurant guide or neighbourhood guide.
+
+4. Gastronosfera
+   URL: https://www.gastronosfera.com/es/tendencias/
+   Writer: Eric Morgado
+   Language: ES
+   Note: Confirmed named author in v6 pack. Fetch his most recent
+     Barcelona restaurant recommendations from 2023 or later.
+
+5. The New Barcelona Post — Anna Torrents
+   URL: https://www.thenewbarcelonapost.com/
+   Writer: Anna Torrents
+   Language: EN (site publishes in EN and ES — fetch her articles
+     specifically; she writes in ES or EN depending on piece)
+   Note: Confirmed named author in v6. The New Barcelona Post also
+     featured P. Ribot (Baco & Boca) as a second writer in v6 — see
+     entry 6 below. IMPORTANT: Both articles are from The New Barcelona
+     Post — same publisher. They cannot create both-pool with each other.
+     They can only contribute to both-pool when crossing with a
+     genuinely different publisher in a different language.
+
+6. The New Barcelona Post — P. Ribot (Baco & Boca)
+   URL: https://www.thenewbarcelonapost.com/
+   Writer: P. Ribot (Baco & Boca column)
+   Language: ES
+   Note: Same publisher as entry 5. Confirmed named author in v6.
+     Treat as separate source for extraction purposes but mark as
+     same-publisher — both-pool eligibility: cannot cross-validate
+     with entry 5 (same publisher). Can cross-validate with Gastronosfera,
+     In and Out Barcelona, Guía Repsol, or any other genuinely separate
+     ES/CA publisher.
+
+7. In and Out Barcelona
+   URL: https://www.inandoutbarcelona.com/
+   Writer: Stefania Talento
+   Language: ES
+   Note: Confirmed named author in v6. Independent ES food site.
+     Fetch her most recent Barcelona restaurant guide from 2023 or later.
+
+8. Guía Repsol — Barcelona entries
+   URL: https://www.guiarepsol.com/es/gastronomia/
+   Writer: Lourdes López
+   Language: ES
+   Note: Confirmed named author in v4 and v6. Fetch her Barcelona-specific
+     restaurant guide from 2023 or later. Guía Repsol also publishes
+     annual Sol awards — include Sol-recognised Barcelona restaurants
+     if covered in a named-author article.
+
+9. ElNacional.cat — Barcelona restaurants
+   URL: https://www.elnacional.cat/
+   Writer: Jordi Tubella
+   Language: CA
+   Note: Confirmed named author in v6. Independent Catalan digital
+     newspaper. Fetch his most recent Barcelona restaurant guide.
+
+10. The Infatuation — Barcelona Hit List
+    URL: https://www.theinfatuation.com/barcelona/guides/hit-list-best-new-restaurants-barcelona
+    Writer: Isabelle Kliger (confirmed in v4) — verify current byline
+    Language: EN
+    CRITICAL NOTE: The Infatuation main Barcelona guide
+    (/best-restaurants-hotels-barcelona) was published in January 2022
+    and is outside the year range. Use the Hit List only
+    (/hit-list-best-new-restaurants-barcelona) which was updated in 2025.
+    Confirm article date from fetched text before extracting.
+
+ADDITIONAL PHASE 0 ATTEMPT (lower confidence — attempt after the above):
+
+11. Ara.cat Mengem
+    URL: https://www.ara.cat/mengem/
+    Writer: Rosa Rodón (confirmed in v4 run, though earlier v3 run had
+      byline issues — article-level byline verification required)
+    Language: CA
+    Note: Major Catalan newspaper food section. In v4, Rosa Rodón was
+      confirmed as named author. In an earlier v3 run, no byline was
+      found. Fetch and check for named author in article text before
+      extracting. If no byline visible, reject per named-author rule.
+      Do not apply single-author site rule — Ara.cat is a large
+      publication with multiple writers.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BOTH-POOL DEFINITION — TRILINGUAL CITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Barcelona is trilingual (EN / ES / CA). Both-pool requires:
+- Two editorially independent sources
+- From different publishers
+- Writing in different languages
+
+VALID both-pool combinations:
+- EN source + ES source (different publishers) ✓
+- EN source + CA source (different publishers) ✓
+- ES source + CA source (different publishers) ✓
+
+NOT valid:
+- The New Barcelona Post (entry 5) + The New Barcelona Post (entry 6):
+  same publisher regardless of language ✗
+- Time Out Barcelona ES + Time Out Barcelona CA: same publisher ✗
+  (These editions were confirmed to share the same editorial team and
+  restaurant list in previous runs — count as one source only)
+
+IMPORTANT — sibling edition check: If Time Out Barcelona appears in
+Phase 1 in both ES and CA versions, verify they are independently
+produced before counting as separate sources. Previous runs confirmed
+they share the same list — treat as one source only.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MICHELIN STARRED EXCLUSIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ALL Michelin-starred restaurants must be excluded from the final pack.
+Apply consistently — if one starred restaurant is excluded, all must be.
+Verify current star status from the Michelin Guide website during
+Phase 1 — star assignments change annually.
+
+Known Barcelona Michelin-starred restaurants (verify current status):
+- Lasarte — 3★, chef Paolo Casagrande
+- Disfrutar — 3★, chefs Eduard Xatruch / Oriol Castro / Mateu Casañas
+- ABaC — 2★, chef Jordi Cruz
+- Angle — 1★, chef Jordi Cruz (group restaurant)
+- Alkimia — 1★, chef Jordi Vilà
+- Cinc Sentits — 1★, chef Jordi Artal
+- Koy Shunka — 1★
+- Moments — 1★, chef Raül Balam
+- Via Veneto — 1★
+- Enigma — 1★, chef Albert Adrià (verify open status — closures/reopenings
+  in recent years)
+- Bodega 1900 — check current star status (Albert Adrià group)
+- Hoja Santa — check current star status and open status
+- Tickets — check current star status and open status
+
+Note: Albert Adrià has operated multiple venues, some of which have
+closed. Verify open status AND current star status for all Adrià venues
+before including in exclusion list. Closed venues need not be excluded.
+
+BIB GOURMAND restaurants: Not excluded — Bib Gourmand is a value
+recommendation, not a star. Include freely if recommended by named
+food writers.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NEIGHBOURHOOD TIERS FOR PHASE 1 SEARCHES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Run neighbourhood-specific searches across these 6 areas:
+
+TIER 1 — Highest density (search in Phase 1 first):
+- Eixample (including Esquerra de l'Eixample, Dreta de l'Eixample)
+- El Born / Sant Pere / Santa Caterina
+
+TIER 2 — High density:
+- Gràcia
+- El Raval / Sant Antoni / Poble Sec
+
+TIER 3 — Emerging / underrepresented:
+- Poblenou / Sant Martí
+- Sarrià-Sant Gervasi / Les Corts
+
+Run at least one neighbourhood search per tier in each language.
 
 GEOGRAPHIC_BOUNDARY_INCLUDE:
-  Eixample (Esquerra and Dreta), Gràcia, El Born, Sant Pere,
-  Poble Sec, Sant Antoni, Barri Gòtic, El Raval, Barceloneta,
-  Poblenou (22@ district area), Sarrià, Sant Gervasi, Vila Olímpica,
-  Sants, Fort Pienc, Clot
+Eixample, Gràcia, El Raval, El Born, Barri Gòtic, Poblenou,
+Sant Antoni, Poble Sec, Sants, Sarrià-Sant Gervasi, Les Corts,
+Horta-Guinardó, Sant Andreu, Sant Martí, Nou Barris,
+Santa Caterina, Barceloneta, Montjuïc, Diagonal
 
 GEOGRAPHIC_BOUNDARY_EXCLUDE:
-  Hospitalet de Llobregat (separate municipality),
-  Badalona (separate municipality), Sant Cugat del Vallès,
-  Sitges (separate municipality 35km south),
-  Girona (separate city), Tarragona (separate city)
+Sitges, L'Hospitalet de Llobregat, Badalona, Terrassa, Sabadell,
+Castelldefels, or any location described as "outside Barcelona",
+"near Barcelona", "day trip from Barcelona", or in another city
 
-# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
-# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
-MICHELIN_STARRED_EXCLUSIONS:
-  Disfrutar (3★), Lasarte (3★, Martín Berasategui), Cocina Hermanos Torres (2★),
-  Moments (2★, Carme Ruscalleda), Alkimia (1★), Cinc Sentits (1★),
-  Angle (1★), Koy Shunka (1★), Hoja Santa (1★, Albert Adrià)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 1 SEARCH GUIDANCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-# ── SOURCE STRATEGY ──────────────────────────────────────────
-# Barcelona has the richest multi-language food writing in the fleet.
-# CA sources are primary alongside ES — never treat CA as secondary.
-# Both-pool requires independent publishers in different languages.
-# Time Out Barcelona: CA and ES editions share editorial — count as one source only.
-# Barcelona Food Experience (Maria) is a reliable long-running EN source.
-# Beteve.cat published the Slow Food/Cargols Barcelona guide — strong CA source.
-# Guía Repsol has strong Barcelona coverage with named writers.
-# The Infatuation has Barcelona coverage — verify named author.
+After Phase 0 direct fetches, run Phase 1 searches to discover
+additional sources not in the DIRECT_FETCH_SOURCES list.
 
-PHASE_0_SOURCES:
-  - barcelonafoodexperience.com (EN — Maria, long-running named-author EN food blog)
-  - beteve.cat (CA — Barcelona local broadcaster, Slow Food/Cargols coverage, named writers)
-  - elnacional.cat (CA — Catalan digital newspaper, food section with named writers)
-  - guiarepsol.com (ES — Repsol guide, search Barcelona entries, named writers)
+Target language distribution for Phase 1:
+- EN queries: 30%
+- ES queries: 35%
+- CA queries: 35%
 
-SECONDARY_SOURCES:
-  - timeout.com/barcelona (ES/CA — Time Out Barcelona, named writers — count as one source)
-  - theinfatuation.com/barcelona (EN — verify named author and recency)
-  - ara.cat (CA — major Catalan newspaper — verify named byline, previously rejected for no byline)
-  - gastronomistas.com (ES — ⚠ known to return very large pages — use with caution)
-  - elpais.com/gastronomia (ES — El Comidista / El País, search Barcelona features)
+CA-language sources are the primary quality lever for both-pool in
+Barcelona. Prioritise CA discovery searches — the v4 run demonstrated
+that Beteve.cat was only found because of CA-language aggregator seed
+fetches. Run CA-language writer-first and neighbourhood queries.
 
-KNOWN_PROBLEMATIC_URLS:
-  - gastronomistas.com (returns very large pages — may cause session issues)
+PRIORITY SEARCH ANGLES for Phase 1:
+1. CA-language food writers / critics / bloggers Barcelona 2024 2025
+2. CA-language neighbourhood food guides (Eixample / Born / Gràcia
+   in Catalan)
+3. Named food journalists writing for Catalan media (not Ara.cat
+   which is in Phase 0) — ElMón, Nació Digital gastronomia, Crític
+4. ES food bloggers Barcelona not already in DIRECT_FETCH_SOURCES
+5. EN expat food writers with documented Barcelona residency
+6. Guía Repsol Sol awards Barcelona — named-author coverage
+7. Cross-validation queries: search for restaurants already found in
+   Phase 0 to discover additional sources covering them
 
-COI_FLAG_SOURCES: None known
+DO NOT search for:
+- Forums, Reddit, TripAdvisor, Yelp (excluded sources)
+- Gastronomistas.com (KNOWN_PROBLEMATIC_URL)
+- Michelin Guide (use only for exclusion list verification)
 
-# ── PIPELINE SETTINGS ────────────────────────────────────────
-PHASE1_AUTO_PROCEED:  YES
-UNATTENDED_MODE:      YES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+KNOWN PROBLEMATIC URLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-# ── OUTPUT FILES ─────────────────────────────────────────────
-OUTPUT_SEARCH_PLAN:    localbite-barcelona-search-plan.txt
-OUTPUT_SEARCH_LOG:     localbite-barcelona-search-log.txt
-OUTPUT_WORKING:        localbite-barcelona-working.json
-OUTPUT_RAW:            localbite-barcelona-raw.json
-OUTPUT_FINAL:          localbite-barcelona-2023-2026.json
-OUTPUT_AUDIT:          localbite-barcelona-audit.txt
-OUTPUT_FAILED_SOURCES: localbite-barcelona-failed-sources.txt
+- gastronomistas.com — returns 1.6MB pages, causes session failures;
+  do not attempt to fetch even if found in search results
+- yelp.com — aggregator, reject
+- tripadvisor.com — aggregator, reject
+- thefork.com / eltenedor.com — booking platform, reject
+- timeout.com/barcelona (ES and CA editions) — secondary source;
+  acceptable only for multi-source cross-validation; Time Out ES and CA
+  Barcelona editions share the same editorial list — count as one source
+  only regardless of language
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONFLICT OF INTEREST FLAGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+- Fancy Nancista (nancista.com) — Nancy, EN, independent food blogger.
+  Previously used in v4. Note: editorially narrow — skews heavily toward
+  Asian restaurants in Eixample. If found in Phase 1, include but flag
+  limited geographic and cuisine diversity. Apply concentration cap
+  carefully if she covers many restaurants.
+
+- Devour Barcelona Tours — if Devour Tours blog appears in searches,
+  flag COI (commercial tour operator). Reject as source.
+
+- Time Out Barcelona: Check whether Time Out operates a food market
+  or food hall in Barcelona. If confirmed, flag as ⚠ coi in
+  writer_profile. Do not reject — include transparently.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SINGLE-AUTHOR SITE RULE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Barcelona Food Experience: single-author site. Maria is confirmed
+as the sole author from the About page. Do not reject for missing
+article-level byline. All articles from barcelonafoodexperience.com
+are accepted as authored by Maria. Document this in the Phase 0 log.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GIT HISTORY NOTE — REGRESSION THRESHOLD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The v6 Barcelona pack (86R, 10BP) was built from 9 named-author sources,
+all of which pass current quality gates. A significant both-pool
+regression in the v7.1 rebuild would indicate a pipeline search failure,
+not quality gates working correctly. The minimum acceptable output for
+a successful v7.1 run is 6+ both-pool entries from 7+ sources.
+If both-pool falls below 6, check the search log before accepting
+the result — identify which Phase 0 sources failed and why.
