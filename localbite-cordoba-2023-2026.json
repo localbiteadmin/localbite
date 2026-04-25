@@ -459,38 +459,6 @@
       "geo_skip": true
     },
     {
-      "name": "Choco",
-      "name_variants": [
-        "Restaurante Choco"
-      ],
-      "neighbourhood": "Ciudad Jardín",
-      "cuisine": "Contemporary Andalusian",
-      "opening_year": null,
-      "price_level": 3,
-      "price_currency": "EUR",
-      "dishes_mentioned": [],
-      "signature_dish": null,
-      "quote": "Menú Barrio Antiguo (110€ sin bebidas) compuesto de 14 pases basados en los sabores cordobeses abiertos al mundo, dividido en 4 apartados temáticos: Infancia, Entorno, Familia y Legado.",
-      "quote_language": "original",
-      "language_pool": "es",
-      "source_count": 2,
-      "sources": [
-        "src-yendoporlavida-aguado",
-        "src-eldebate-ramirez"
-      ],
-      "confidence_tier": "A",
-      "source_type_combination": "primary-es + secondary-es",
-      "article_date": "2024-01-24",
-      "article_title": "Choco de Córdoba y su menú con aires cordobeses",
-      "open_status_check": true,
-      "flagged": true,
-      "lat": 37.8851847,
-      "lng": -4.7623794,
-      "geo_source": "nominatim",
-      "geo_confidence": "high",
-      "geo_matched_name": "Choco"
-    },
-    {
       "name": "Sociedad Plateros María Auxiliadora",
       "name_variants": [
         "Sociedad de Plateros María Auxiliadora"
