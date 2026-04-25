@@ -1,35 +1,55 @@
-[phase-0] FETCHED madamemarie.co — 2026-03-09 — ~50,000 chars — genuine Toronto restaurant reviews; active through March 2026; writer Mme. M. confirmed
-[phase-0] FAILED torontolife.com/food/ — Jina returned ~8,500 chars but content was general editorial (crime, real estate), not food section articles
-[phase-0] FAILED nowtoronto.com/food-and-drink/ — CAPTCHA/bot block; ~850 chars returned; no food content accessible
-
-[phase-1-N1] "best restaurants Downtown Core Entertainment District Toronto food writer 2025" → Toronto Life "best new restaurants of 2025" surfaced; Hungry416 and corner.inc aggregator-style guides; no new named-critic sources beyond Toronto Life
-[phase-1-N2] "best restaurants King West Queen West Toronto food critic 2025 2026" → Toronto Life Queen West guide surfaced; Madame Marie fall 2025 confirmed; Foodism 2026 23-best list resurfaced; Streets of Toronto 12 best new restaurants appeared
-[phase-1-N3] "Ossington Dundas West Toronto restaurants food writer recommendations 2025" → Streets of Toronto Ossington lists surfaced (multiple articles, no consistent named author visible); TasteToronto Ossington (no named author); Toronto Life 2025 resurfaced
-[phase-1-N4] "Little Portugal Little Italy College Street Toronto restaurants guide 2026" → Only aggregator and tourism sites returned; no named-critic editorial articles identified
-[phase-1-N5] "Kensington Market Chinatown Toronto best restaurants food critic 2025" → Streets of Toronto Chinatown list; lovetravellingblog Dec 2025; no strong named-critic primary sources
-[phase-1-N6] "Annex Yorkville Rosedale Toronto restaurants food writer 2025 2026" → blogTO Annex article Oct 2025 (need author check); NOW Toronto OpenTable mention; Foodism new restaurants surfaced (capped)
-[phase-1-N7] "Leslieville Riverside Toronto restaurant recommendations food writer 2025" → Only aggregators (TasteToronto, OpenTable, Yelp); no named-critic sources identified
-[phase-1-N8] "Distillery District Corktown St Lawrence Market Toronto restaurants 2025 writer" → Foodism Distillery article (capped); blogTO Distillery; no strong named-critic source
-[phase-1-N9] "Greektown Danforth East York Toronto best restaurants food critic 2025" → Streets of Toronto Danforth ranked list; Foodism Greek restaurants (capped); no new named-critic sources
-[phase-1-N10] "Little India Gerrard Toronto restaurant guide writer 2025 2026" → Toronto Life Gerrard Street East guide by Crystal Luxmore confirmed; Streets of Toronto Little India neighbourhood guide (editorial team, no named author)
-[phase-1-N11] "Bloor West Village Roncesvalles Junction Toronto restaurants food writer 2025" → Diary of a Toronto Girl Roncesvalles (personal blog, need author check); blogTO Roncesvalles (commercial conflicts check needed); no strong named-critic sources
-[phase-1-N12] "North York Etobicoke Toronto restaurant recommendations food writer 2025 2026" → Foodism new restaurants surfaced (capped); Toronto Life Best Restaurants 2026 announced for June 8 (future event); blogTO Winterlicious 2026 (likely sponsored); no primary named-critic sources
-[phase-1-N13] "Scarborough Toronto best restaurants food writer named author 2025 2026" → Diary of a Toronto Girl Scarborough Dec 2025; blogTO Scarborough March 2026; Madame Marie fall 2025 resurfaced; nomsmagazine Scarborough 2024
-[phase-1-N14] "North York Toronto restaurant recommendations food writer 2026" → (covered in N12 combined search)
-
-[phase-1-C1a] "best restaurants Toronto 2026 food writer editorial guide" → Toronto Life 2026 event (June 8, future); Streets of Toronto 12 best new restaurants confirmed; blogTO neighbourhood restaurants Jan 2026
-[phase-1-C1b] "Toronto where to eat 2025 local food critic recommendations" → Toronto Life best new restaurants 2025 confirmed; Toronto Life most popular restaurant openings 2025 surfaced; iamafoodblog Toronto 2025 appeared (independent blog)
-[phase-1-C2a] "Mme M Toronto hottest new restaurants fall summer 2025 independent review" → Madame Marie summer 2025 URL confirmed: madamemarie.co/torontos-hottest-new-restaurants-for-summer-2025; fall 2025 URL confirmed
-[phase-1-C2b] "Liza Agrba Caroline Aksich Toronto Life best new restaurants 2025 guide" → Toronto Life 2025 best new restaurants confirmed: published May 12, 2025; writers Liza Agrba, Caroline Aksich, Erin Hershberg; 43rd annual ranking
-[phase-1-C2c] "Keema Lesesne Raymond Cua Toronto food writer restaurant guide 2025" → Raymond Cua confirmed as Travelling Foodie founder (travellingfoodie.net), not NOW Toronto; NOW Toronto Keema Lesesne immersive dining piece found; Chu on This and Randwalk Toronto guides surfaced
-[phase-1-C3a] "Toronto new restaurant openings 2025 must try food journalist named author" → Toronto Life most popular restaurant openings 2025; Madame Marie summer 2025; Bold Traveller surfaced (travel publication); The Curious Creature blog Jan 2025 appeared
-[phase-1-C3b] "best restaurants Toronto 2023 2024 food writer editorial independent" → Toronto Life best new restaurants 2024 confirmed: torontolife.com/food/torontos-best-new-restaurants-of-2024/; Toronto Life 2023 also found; Narcity food writer piece surfaced
-[phase-1-C4a] "iamafoodblog Toronto best restaurants 2025 independent writer" → iamafoodblog Toronto 2025 confirmed: blog by "Mike and I"; Toronto Food Blog Best of 2025 (Jan 1 2026) confirmed; Stephanie Dickison articles page surfaced
-[phase-1-C5a] "Michelin Guide Toronto 2025 starred Bib Gourmand restaurants list" → Michelin Guide 2025 confirmed: 1 two-star (Pearl Morissette), 16 one-stars, 26 Bib Gourmands; Travelling Foodie Michelin article surfaced; Toronto Life Michelin update 2025 confirmed
-[phase-1-C5b] "Canada 100 best restaurants 2025 Toronto entries food critic" → canadas100best.com 2025 list confirmed; Toronto has 29 entries; Alo, Edulis, Quetzal, Sushi Masaki Saito, Sushi Yugen, Bernhardt's, Mhel, Giulietta among Toronto entries
-[phase-1-C6a] "Toronto restaurant best places locals eat hidden gem food writer 2025 2026" → iamafoodblog Toronto 2025 resurfaced; blogTO secret restaurants April 2026; Streets of Toronto resurfaced
-[phase-1-C6b] "Streets of Toronto best restaurants ranked named author 2025" → Streets of Toronto confirmed as editorial team pieces without consistent individual named authors; multiple ranked lists found (12 best, 25 best, 81 top spots) but no individual bylines confirmed
-[phase-1-C7a] "best Caribbean Ethiopian West African Toronto restaurants food writer guide 2025" → AfroToronto.com African cuisine guide (need author check); Destination Toronto Afro-Caribbean guide; no strong named-critic primary source
-[phase-1-C7b] "Keema Lesesne Toronto Caribbean dining guide restaurants 2025" → NOW Toronto Caribbean food spots article confirmed: nowtoronto.com/summerguide/taste-the-islands-at-these-8-caribbean-food-spots-in-toronto/ — writer Keema Lesesne
-[phase-1-C7c] "Toronto best new restaurants 2025 must visit food journalist blog independent review" → The Curious Creature blog Jan 26 2025 surfaced (thecuriouscreature.com); Bold Traveller; blogTO multiple hottest restaurant articles
-[phase-1-C8a] "Canada 100 best restaurants 2025 Toronto food critic curated" → canadas100best.com confirmed; 29 Toronto entries; curated by 160 industry judges
+[phase-0] SEARCHED "Corey Mintz Toronto restaurant review 2024 2025" → coreymintz.ca, Toronto Life tag page, The Walrus author page found; no qualifying Toronto restaurant guide/review article from 2023-2026; work is food industry journalism (economics, labour)
+[phase-0] FAILED coreymintz.ca/selected-works — no Toronto restaurant reviews 2023-2026; Walrus articles focus on food industry topics
+[phase-0] SEARCHED "Natalia Manzocco Toronto restaurant guide 2024 2025" → nowtoronto.com/author/natalia-manzocco/ found; most recent articles shown are 2020-2021; LinkedIn confirms move to Senior Copywriter role
+[phase-0] FAILED natalia-manzocco/NOW Magazine — author page shows 2020-2021 articles only; writer has moved to copywriting career
+[phase-0] SEARCHED "Amy Pataki Globe Mail Toronto restaurant critic 2024 2025" → confirmed Amy Pataki was Toronto Star critic, not Globe and Mail; left Toronto Star in 2019 (outside year range)
+[phase-0] FAILED amy-pataki — Toronto Star critic until 2019; outside YEAR_RANGE 2023-2026; Part 1 publication attribution was incorrect (Toronto Star, not Globe and Mail)
+[phase-0] FETCHED eater.com — "The 38 Best Restaurants in Toronto, Canada" by Tiffany Leigh — updated Mar 24, 2025 — ~42,000 chars — 38 restaurants listed; confirmed Toronto food guide; named author confirmed
+[phase-0] FETCHED nowtoronto.com/food-and-drink/ — articles found; Sidra Jafri confirmed as named author (April 12, 2026); other articles lack named authors; restaurant guide section 404
+[phase-0] SEARCHED Globe and Mail Toronto food critic — Jason Chow hired as Toronto restaurant critic Feb 2018; author page returns 404; may have left publication
+[phase-0] FAILED theinfatuation.com/toronto/guides/best-restaurants-toronto — date in article text January 21, 2022; outside YEAR_RANGE 2023-2026; authors Erin Hershberg and Renee Suen
+[neighbourhood-King West] "King West Toronto best restaurants food critic review" → streetsoftoronto.com, dobbernationloves.com, Toronto Life; no named independent critic found beyond TL
+[neighbourhood-Queen West] "Queen West Toronto restaurant guide 2023 2024" → diaryofatorontogirl.com (Jessica Lam) flagged; Michelin West Queen West; streetsoftoronto.com editorial team; no standalone new named critic
+[neighbourhood-Ossington] "Ossington Avenue Toronto restaurant recommendations writer" → foodism.ca Ossington (Taylor Newlands publication); streetsoftoronto.com; no new named independent critic
+[neighbourhood-Kensington Market] "Kensington Market Toronto best restaurants food journalism" → foodism.ca, streetsoftoronto.com, destinationtoronto.com; no new named critic
+[neighbourhood-Chinatown] "Chinatown Toronto restaurant review critic 2024 2025" → stephaniedickison.com Chinatown tag, nomsmagazine.com (no author); no new qualifying source
+[neighbourhood-Little Italy] "Little Italy College Street Toronto restaurants food writer" → streetsoftoronto.com, OpenTable; no named food critic
+[neighbourhood-Dundas West] "Dundas West Toronto restaurant guide 2023" → finestfriends.substack.com ("Michael" first name only, FAILED), eatingthroughto.com; no new named critic
+[neighbourhood-Leslieville] "Leslieville Toronto best restaurants review 2024" → ritual.co, TasteToronto; no named food critic found
+[neighbourhood-Distillery District] "Distillery District Toronto restaurant guide critic" → streetsoftoronto.com, tofoodies.com; no new named critic
+[neighbourhood-St Lawrence Market] "St Lawrence Market area Toronto restaurants food writer 2025" → stephaniedickison.com tag (news not reviews), timeout.com; no new qualifying source
+[neighbourhood-Annex] "Annex Toronto best restaurants neighbourhood guide" → diaryofatorontogirl.com (Jessica Lam, Feb 2023) confirmed; viewthevibe.com Ama Scriver (2016, FAILED)
+[neighbourhood-Yorkville] "Yorkville Toronto restaurant critic review 2024 2025" → madamemarie.co (pseudonym, FAILED); nomsmagazine.com; dobbernationloves.com; no new qualifying source
+[neighbourhood-Scarborough] "Scarborough Toronto food guide restaurant recommendations 2023 2024" → diaryofatorontogirl.com (Jessica Lam, Feb 2023) confirmed; nomsmagazine (no author, FAILED)
+[neighbourhood-Parkdale] "Parkdale Toronto restaurant recommendations food writer" → Toronto Life Parkdale/Little Portugal guide (paywalled); torontofoodblog.com; no new named critic
+[neighbourhood-Roncesvalles] "Roncesvalles Toronto restaurant guide 2024 2025" → diaryofatorontogirl.com (Jessica Lam, Feb 2023) confirmed again; viewthevibe.com Roncesvalles; TasteToronto
+[neighbourhood-Trinity Bellwoods] "Trinity Bellwoods Toronto best places to eat critic" → foodism.ca, TasteToronto, destinationtoronto.com; no new qualifying source
+[neighbourhood-Little India] "Little India Gerrard Street East Toronto restaurant review" → Toronto Life Gerrard guide by Crystal Luxmore (published 2011, FAILED - outside year range); destinationtoronto.com
+[neighbourhood-Greektown] "Greektown Danforth Toronto restaurant guide food journalist" → streetsoftoronto.com (no individual byline); destinationtoronto.com tourism board; no new qualifying source
+[neighbourhood-Little Portugal] "Little Portugal Toronto restaurant recommendations 2024" → OpenTable, destinationtoronto.com, Toronto travel guides; no new qualifying source
+[neighbourhood-Corktown] "Corktown Toronto restaurants food writer critic 2023 2024" → wanderingcarol.com (2018, FAILED); Toronto Life (paywalled); no new qualifying source
+[neighbourhood-Regent Park Cabbagetown] "Regent Park Cabbagetown Toronto restaurant neighbourhood guide 2024 2025" → torontofoodblog.com (need author check), torontoism.com; no qualifying source confirmed
+[neighbourhood-North York] "North York Yonge-Sheppard corridor Toronto restaurants critic 2024" → diaryofatorontogirl.com North York guide (Jessica Lam, date unconfirmed); viewthevibe.com (no named author); no new qualifying source
+[neighbourhood-Etobicoke] "Etobicoke Toronto restaurant recommendations food writer 2023" → Narcity, thebesttoronto.com; no named food critic found
+[neighbourhood-Riverside] "Riverside Toronto restaurant recommendations neighbourhood" → stephaniedickison.com Riverside 2021 (outside range); viewthevibe.com Riverside (no date/author confirmed); no new qualifying source
+[neighbourhood-Davisville Mount Pleasant Summerhill Rosedale] "Davisville Mount Pleasant Summerhill Rosedale Toronto restaurant guide 2024" → Toronto Life neighbourhood guides (paywalled); ritual.co aggregator; no new qualifying source
+[neighbourhood-East Danforth Little Bangladesh] "East Danforth Little Bangladesh Toronto restaurant food writer" → CBC/Suresh Doss article (fetched 451 error); no qualifying fetchable source
+[neighbourhood-Financial District Entertainment District Harbourfront] "Financial District Entertainment District Harbourfront Toronto restaurant food journalist" → diaryofatorontogirl.com Entertainment District (Jessica Lam); viewthevibe.com Financial District; fodors.com; no new independent critic
+[cross-1] SKIPPED — no secondary language for Toronto (EN-only city)
+[cross-2] "Toronto best restaurants independent food criticism 2023" → Toronto Life 2023 (paywalled); streetsoftoronto.com (no individual byline); foodism.ca Taylor Newlands confirmed; no new source
+[cross-2] "Toronto neighbourhood restaurants guide food journalist 2024 2025" → stephaniedickison.com confirmed as news not reviews; Narcity food writer appeared; no new qualifying source
+[cross-2] "Toronto dining guide local critic recommendations 2026" → foodism.ca Taylor Newlands confirmed again; Toronto Life 2026 event upcoming; no new source
+[cross-3] "Toronto food writer restaurant favourite spots personal guide" → iamafoodblog.com ("Mike and I" anonymous, FAILED); chuonthis.ca (CAPTCHA blocked); narcity.com (no named author); no new qualifying source
+[cross-3] "Toronto local food journalist recommended restaurants hidden gems" → Destination Toronto; narcity.com; no new qualifying source
+[cross-4] "Canada 100 Best Restaurants Toronto winners list 2024 2025" → canadas100best.com confirmed; 29 Toronto entries 2025; no named individual author → FAILED per named-author rule
+[cross-4] "best new Toronto restaurant critics choice awards 2023 2024" → Toronto Life (paywalled); Canada's 100 Best (no named author); no new qualifying source
+[cross-5] "best new restaurant openings Toronto 2023 2024 food writer" → thecuriouscreature.com (Erin Nicole Davis, Jan 2025) or "Solmaz" (About page) - contradictory authorship, not confirmed; curiocity.com (no named author); no confirmed new source
+[cross-5] "new Toronto restaurants opening 2025 2026 recommended critic" → Toronto Life (paywalled); foodism.ca confirmed; viewthevibe.com (no named author); no new qualifying source
+[cross-7] "Toronto Chinese food writer best dim sum dumpling restaurant review" → aggregators only; no named food critic found
+[cross-7] "Toronto South Asian Caribbean West Indian food community restaurant guide" → afrotoronto.com (March 2026, no named author, FAILED); nowtoronto.com Caribbean — Keema Lesesne confirmed
+[cross-8] "Toronto independent food magazine restaurant guide critic" → foodism.ca confirmed (Taylor Newlands); stephaniedickison.com confirmed as news/not-reviews; canadianfoodaficionado.com 404 FAILED
+[cross-8] "Toronto newspaper food section restaurant critic review column" → Globe Mail no Toronto critic (Jason Chow 404); Toronto Star Karon Liu (paywalled); no freely accessible restaurant guide found
+[phase-1b-crossval] "Bernhardt's Toronto restaurant review recommendation critic 2024 2025" → Canada's 100 Best (no named author, already rejected); madamemarie.co (pseudonym, already rejected); shaneasavours.com (need author check); no new qualifying source
+[phase-1b-crossval] "Belle Isle Toronto restaurant Gerrard review food writer" → Toronto Life (paywalled); TikTok/social; no new qualifying source
+[phase-1b-crossval] "Famiglia Baldassarre Toronto pasta restaurant critic food guide" → Michelin Guide (not a food writer source); TasteToronto (no named author); no new qualifying source
+[stopping-rule] triggered after 10+ consecutive neighbourhood/cross queries returning no new qualifying sources

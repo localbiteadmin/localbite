@@ -1,0 +1,77 @@
+LocalBite Toronto v7.1 — Failed Sources
+Built: 2026-04-25
+────────────────────────────────────────────
+
+PHASE 0 — DIRECT WRITER SEARCHES
+────────────────────────────────────────────
+coreymintz.ca / The Walrus
+  Reason: Writes food industry journalism (economics, labour), not restaurant reviews.
+  No qualifying Toronto restaurant guide/review in 2023-2026.
+
+natalia-manzocco / NOW Magazine
+  Reason: Moved to Senior Copywriter role. Author page shows 2020-2021 articles only.
+
+amy-pataki / Toronto Star
+  Reason: Was Toronto Star critic (Part 1 incorrectly attributed to Globe and Mail).
+  Left Toronto Star in 2019 — outside YEAR_RANGE 2023-2026.
+
+theinfatuation.com/toronto
+  Reason: Publication date confirmed January 21, 2022 — outside YEAR_RANGE.
+  Authors: Erin Hershberg and Renee Suen.
+
+theglobeandmail.com (food section)
+  Reason: Jason Chow (Toronto restaurant critic, hired 2018) — author page 404.
+  No freely accessible Toronto restaurant guide found.
+
+PHASE 1 — NAMED AUTHOR FAILURES
+────────────────────────────────────────────
+madamemarie.co
+  Reason: Active Toronto food blogger (articles through April 2026) but
+  intentionally anonymous; full name not publicly disclosed.
+  Rule: named-author requirement (full first name + surname required).
+
+finestfriends.substack.com
+  Reason: Author identified as "Michael" (first name only on Substack profile).
+  Full surname not found. Rule: named-author requirement.
+
+thecuriouscreature.com
+  Reason: Contradictory authorship — "Erin Nicole Davis" on articles but
+  "Solmaz" on About page. Author identity not confirmed.
+
+iamafoodblog.com
+  Reason: Anonymous authorship ("Mike and I" on site).
+
+canada100best.com
+  Reason: No named individual author. Editorial board attribution only.
+
+PHASE 1 — CONTENT / PAYWALL FAILURES
+────────────────────────────────────────────
+torontolife.com (2024 Best New Restaurants, 2025 Best New Restaurants)
+  Reason: 403/451 paywall. Content not accessible.
+  Note: Toronto Life has documented COI history (advertiser pressure on editorial).
+
+nowtoronto.com (restaurant guide section)
+  Reason: Guide section returned 404. Only individual articles accessible.
+
+stephaniedickison.com
+  Reason: Content confirmed as news/food industry coverage, not restaurant recommendations.
+
+PHASE 1 — FETCH FAILURES
+────────────────────────────────────────────
+chuonthis.ca
+  Reason: CAPTCHA-blocked; Jina fetch returned challenge page, not content.
+
+cbc.ca / Suresh Doss (East Danforth / Little Bangladesh article)
+  Reason: 451 Unavailable For Legal Reasons on Jina fetch.
+
+viewthevibe.com (various neighbourhood guides)
+  Reason: No named individual author on articles checked.
+
+SOURCES NOT ATTEMPTED (known problematic per Part 1)
+────────────────────────────────────────────
+blogto.com — commercial aggregator, no named food critics, SEO farm
+hungry416.com — commercial aggregator
+torontoguardian.com — SEO content farm
+overheretoronto.com — lifestyle aggregator
+yelp.com, tripadvisor.com, opentable.com, zomato.com — booking/review platforms
+thefork.com — booking platform

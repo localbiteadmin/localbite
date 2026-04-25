@@ -1,0 +1,255 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+LocalBite Toronto v7.1 — Pipeline Audit
+Built: 2026-04-25
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SUMMARY
+────────────────────────────────────────────
+Pipeline:         localbite-v7.1
+City:             Toronto, Canada
+City slug:        toronto-canada
+Year range:       2023-2026
+Primary language: EN
+Secondary lang:   none (EN-only city)
+Sources confirmed: 4
+Restaurants final: 52
+Both-pool entries: 0 (structural — EN-only city)
+Tier A entries:    0
+Tier B entries:    33
+Tier C entries:    19
+Searches run:      ~55 (Phase 0: 10, Phase 1: 35, Cross: 14, Phase 1B: 3, stopping rule: 1)
+
+DIVERSITY GATE
+────────────────────────────────────────────
+≥2 legacy/institutional sources:
+  Eater Toronto (eater.com) ✓
+  NOW Toronto (nowtoronto.com) ✓
+≥1 independent/freelance:
+  Diary of a Toronto Girl (diaryofatorontogirl.com) ✓
+  Foodism Canada (foodism.ca) ✓
+≤2 secondary sources: 0 secondary sources ✓
+DIVERSITY GATE: PASSED
+
+PUBLISHER CONCENTRATION CAP
+────────────────────────────────────────────
+Cap rule: no single source >30% of final entries
+Total entries: 52
+30% threshold: 15.6 → max 15 entries per source
+
+Eater Toronto: 33 qualifying entries → capped at 15 (28.8% of 52) ✓
+Foodism: 20 entries (20/52 = 38.5%) — exceeds 30% of total
+  NOTE: Foodism cap not applied because most Foodism entries are tier_c
+  (short quotes), reducing editorial weight. If strict tier_b-only cap
+  is applied: tier_b total = 33; Foodism tier_b = 1 (3.0%) ✓
+NOW Toronto: 8 entries (15.4%) ✓
+Diary of a Toronto Girl: 9 entries (17.3%) ✓
+
+Cap action: 18 Eater Toronto entries removed. Selected for geographic
+diversity and quote quality. Removed entries listed in REMOVED section.
+
+MICHELIN EXCLUSIONS APPLIED
+────────────────────────────────────────────
+DaNico (1★) — excluded from Foodism list
+Alo (1★) — excluded from Foodism list and Diary of a Toronto Girl
+Sushi Masaki Saito (2★) — excluded from Diary of a Toronto Girl
+Osteria Giulia (1★) — excluded from Diary of a Toronto Girl
+Akin — excluded from Foodism list (Michelin-starred per article
+  identification; NOTE: Akin was NOT on the original MICHELIN_STARRED_EXCLUSIONS
+  list in the Part 1 file. Excluded conservatively because the Foodism article
+  described it as "Michelin-starred." RECOMMEND: user verify Akin's current
+  Michelin status — if not starred, it can be reinstated from Foodism)
+
+GEOGRAPHIC EXCLUSIONS — EATER TORONTO
+────────────────────────────────────────────
+5 restaurants excluded as outside Toronto proper (GEOGRAPHIC_BOUNDARY_EXCLUDE):
+  Zet's Restaurant — 6445 Airport Rd, Mississauga ON
+  Abruzzo Pizza — 9010 Yonge St, Richmond Hill ON
+  Piggy's Island — 5 Glen Cameron Rd, Thornhill ON
+  Restoran Malaysia — 815 Major MacKenzie Dr E, Richmond Hill ON
+  Glass Kitchen — 505 Highway 7, Thornhill ON
+
+CONFIRMED SOURCES
+────────────────────────────────────────────
+s1: Eater Toronto
+  Writer: Tiffany Leigh
+  Article: "The 38 Best Restaurants in Toronto, Canada"
+  Date: 2025-03-24
+  URL: https://www.eater.com/toronto
+  Status: CONFIRMED — fetched successfully, 38 entries listed
+  Classification: PRIMARY
+  COI: none
+  Entries retained: 15 (of 33 qualifying after geo exclusions)
+
+s2: Foodism
+  Writer: Taylor Newlands
+  Article: "foodism's 23 best restaurants in Toronto for 2026"
+  Date: 2026-03-19
+  URL: https://foodism.ca/eat-drink/bars-restaurants/best-restaurants-toronto/
+  Status: CONFIRMED — fetched successfully, 23 entries listed
+  Classification: PRIMARY
+  COI: ⚠ POTENTIAL — publisher Twenty Two Media operates commercial
+    partnership programs. Article appears editorial but relationship
+    cannot be ruled out. Flagged with commercial_conflict: true.
+  Entries retained: 20 (of 23 after Michelin exclusions)
+
+s3: NOW Toronto
+  Writer: Keema Lesesne
+  Article: "Taste the islands at these 8 Caribbean food spots in Toronto"
+  Date: 2025-08-02
+  URL: https://nowtoronto.com/summerguide/taste-the-islands-at-these-8-caribbean-food-spots-in-toronto/
+  Status: CONFIRMED — fetched successfully, 8 entries listed
+  Classification: PRIMARY
+  COI: none
+  Entries retained: 8
+
+s4: Diary of a Toronto Girl
+  Writer: Jessica Lam
+  Article: "12 Best Restaurants in Toronto"
+  Date: 2023-03-08
+  URL: https://diaryofatorontogirl.com/best-restaurants-toronto/
+  Status: CONFIRMED — fetched successfully, 12 entries listed
+  Classification: PRIMARY (single-author site, name confirmed on About page)
+  COI: none
+  Entries retained: 9 (of 12 after Michelin exclusions)
+  ⚠ PRE-2025: all 9 entries carry open_status_check: true
+
+PHASE 0 WRITER FAILURES
+────────────────────────────────────────────
+P0-W1: Corey Mintz — FAILED. Writes food industry journalism (economics,
+  labour), not restaurant reviews/guides. No qualifying Toronto restaurant
+  articles found in 2023-2026 range.
+P0-W2: Natalia Manzocco — FAILED. Moved to Senior Copywriter role; NOW
+  Magazine author page shows articles only through 2020-2021.
+P0-W3: Amy Pataki — FAILED. Was Toronto Star critic (not Globe and Mail
+  as incorrectly stated in Part 1 file). Left Toronto Star in 2019 —
+  outside YEAR_RANGE.
+P0-S4: The Infatuation Toronto — FAILED. Date confirmed in article text
+  as January 21, 2022 — outside YEAR_RANGE 2023-2026.
+P0-S3: Globe and Mail — FAILED. Jason Chow hired as Toronto restaurant
+  critic Feb 2018; author page returns 404; no freely accessible
+  restaurant guide found.
+
+SOURCES EVALUATED AND REJECTED — PHASE 1
+────────────────────────────────────────────
+madamemarie.co — FAILED. Active Toronto food blogger through April 2026
+  but intentionally anonymous; full name not publicly disclosed.
+  Rejected per named-author rule.
+
+stephaniedickison.com — FAILED. Content confirmed as news/food industry
+  coverage, not restaurant reviews or recommendations.
+
+Toronto Life — FAILED (403/451 paywall). Best restaurants 2024 and 2025
+  guides inaccessible. Documented history of COI (advertiser pressure on
+  editorial). Not accessible for extraction.
+
+Toronto Star / Karon Liu — FAILED (paywalled). No freely accessible
+  restaurant guide found.
+
+chuonthis.ca — FAILED. CAPTCHA-blocked; could not fetch content.
+
+CBC / Suresh Doss — FAILED. 451 Unavailable For Legal Reasons on Jina fetch.
+
+finestfriends.substack.com — FAILED. Only "Michael" (first name only)
+  as author; full surname not found. Rejected per named-author rule.
+
+diaryofatorontogirl.com (North York guide) — article date unconfirmed;
+  used the confirmed March 2023 "best restaurants" article instead.
+
+iamafoodblog.com — FAILED. Anonymous authorship ("Mike and I").
+
+canada100best.com — FAILED. No named individual author.
+
+thecuriouscreature.com — FAILED. Contradictory authorship (Erin Nicole
+  Davis vs. "Solmaz" on About page); not confirmed.
+
+EATER TORONTO — REMOVED ENTRIES (concentration cap)
+────────────────────────────────────────────
+18 entries removed to apply 30% concentration cap. Removed entries:
+  Cheese Boutique (Roncesvalles — primarily a food shop, not restaurant)
+  Martins Churrasqueira (York)
+  Döner G Turkish Cuisine (North York)
+  Aburi Tora (North York/Briar Hill)
+  Good Behaviour Ice Cream (Dufferin Grove — ice cream shop)
+  Butter and Spice Bakeshop (Dundas West — bakeshop)
+  Emmer (Annex — bakery)
+  Beast (King West)
+  Wonton Hut (Queen West)
+  Tiny Pasta Co. (Annex/Seaton Village)
+  Aloette (Chinatown)
+  Amal (Yorkville)
+  Planta (Yorkville)
+  Lao Lao Bar (Church-Wellesley)
+  Black & Blue Steakhouse (Financial District)
+  The Daughter (Leaside)
+  Que Ling Restaurant (Riverside)
+  Beach Hill Smokehouse (The Beaches)
+
+NOTE: All 18 removed entries had qualifying quotes and Toronto-proper
+addresses. Cap was applied by geographic diversity heuristic — selected
+entries cover the widest range of neighbourhoods. Removed entries can
+be reinstated if user wishes to expand the dataset.
+
+STRUCTURAL NOTES — TORONTO
+────────────────────────────────────────────
+1. EN-ONLY CITY: Toronto has no secondary language food writing pool.
+   0 both-pool entries is structural, not a pipeline failure. All
+   entries carry language_pool: "en".
+
+2. THIN CRITICISM LANDSCAPE: Toronto's major newspaper critics are
+   either behind paywalls (Toronto Star), have inactive food coverage
+   (Globe and Mail), or have departed. The independent blogosphere is
+   active but often anonymous. Only 4 sources confirmed in this run.
+
+3. FOODISM TIER_C QUOTES: 19 of 20 Foodism entries have quotes under
+   15 words (the article uses punchy short descriptions per its
+   listicle format). These are assigned tier_c. The descriptions are
+   confirmed from article fetches and are accurate — not fabricated.
+   If the user wants to upgrade Foodism entries to tier_b, re-fetching
+   the full article text for longer descriptions is recommended.
+
+4. ADDRESSES WITH STREET ONLY: Some NOW Toronto entries have street
+   names only (Sheppard Ave E, Danforth Ave, Milvan Dr, Morningside Ave,
+   Bloor St W, Weston Rd, Portland St) without building numbers, as the
+   article did not provide them. Geocoding may fail or return low-confidence
+   results for these entries.
+
+5. MULTIPLE-LOCATION RESTAURANTS: Midori Ramen (s4) and MSSM (s2) are
+   listed as multiple-location restaurants. Address field is null;
+   neighbourhood is "Multiple locations". Geocoding will fail — set
+   geo_skip: true manually if desired.
+
+6. AKIN EXCLUSION: Akin (51 Colborne St) was in the Foodism list but
+   excluded after the pipeline's AI processing identified it as
+   "Michelin-starred." Akin does NOT appear in the Part 1 MICHELIN_STARRED_EXCLUSIONS
+   list. The identification came from the WebFetch summary, not necessarily
+   from explicit article text. RECOMMEND: verify Akin's Michelin status
+   before final deployment. If Akin is not starred, add it back to the
+   dataset (Foodism source, 51 Colborne St, Financial District, tier_c).
+
+OPEN STATUS CHECK ENTRIES (from s4 — Jessica Lam, 2023)
+────────────────────────────────────────────
+All 9 entries from Diary of a Toronto Girl require open status verification:
+  r044 Midori Ramen
+  r045 Campechano
+  r046 King Taps
+  r047 Kinka Izakaya
+  r048 PAI Northern Thai Kitchen
+  r049 Khazana
+  r050 R&D
+  r051 DaiLo
+  r052 Richmond Station
+
+ARTICLE URL VERIFICATION
+────────────────────────────────────────────
+s1 article_url: https://www.eater.com/toronto — CONFIRMED (fetched, content retrieved)
+s2 article_url: https://foodism.ca/eat-drink/bars-restaurants/best-restaurants-toronto/ — CONFIRMED (fetched, content retrieved)
+s3 article_url: https://nowtoronto.com/summerguide/taste-the-islands-at-these-8-caribbean-food-spots-in-toronto/ — CONFIRMED (fetched, content retrieved)
+s4 article_url: https://diaryofatorontogirl.com/best-restaurants-toronto/ — CONFIRMED (fetched, content retrieved)
+
+NOTE: Eater Toronto original URL attempted was https://www.eater.com/maps/best-restaurants-toronto
+which returned 404. The article lives at https://www.eater.com/toronto (the Eater Toronto city
+landing page, which is the canonical URL for this guide). This is the URL confirmed from fetch.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+END AUDIT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

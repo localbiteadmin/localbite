@@ -1,58 +1,150 @@
-LOCALBITE TORONTO — PHASE 1 SEARCH PLAN (v6 FRESH RUN)
-Generated: 2026-04-13
-Total queries planned: 30 (14 neighbourhood + 16 cross-cutting)
-Goal: diversify beyond Foodism CA — target Toronto Life, NOW Toronto,
-Eat North, Local Love TO, Globe and Mail, independent blogs.
-Publisher cap: max 2 Foodism articles in final pool.
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PART A — NEIGHBOURHOOD QUERIES (EN, 1 per group)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-N1: "best restaurants Downtown Core Entertainment District Toronto food writer 2025"
-N2: "best restaurants King West Queen West Toronto food critic 2025 2026"
-N3: "Ossington Dundas West Toronto restaurants food writer recommendations 2025"
-N4: "Little Portugal Little Italy College Street Toronto restaurants guide 2026"
-N5: "Kensington Market Chinatown Toronto best restaurants food critic 2025"
-N6: "Annex Yorkville Rosedale Toronto restaurants food writer 2025 2026"
-N7: "Leslieville Riverside Toronto restaurant recommendations food writer 2025"
-N8: "Distillery District Corktown St Lawrence Market Toronto restaurants 2025 writer"
-N9: "Greektown Danforth East York Toronto best restaurants food critic 2025"
-N10: "Little India Gerrard Toronto restaurant guide writer 2025 2026"
-N11: "Bloor West Village Roncesvalles Junction Toronto restaurants food writer 2025"
-N12: "Etobicoke Toronto dining restaurant guide food writer 2025"
-N13: "Scarborough Toronto best restaurants food writer named author 2025 2026"
-N14: "North York Toronto restaurant recommendations food writer 2026"
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PART B — CROSS-CUTTING ANGLES
+LocalBite Toronto — Search Plan v7.1
+Built: 2026-04-25
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Cross-1 (City-wide, 3 queries):
-C1a: "best restaurants Toronto 2026 food writer editorial guide"
-C1b: "Toronto where to eat 2025 local food critic recommendations"
-C1c: "best new restaurants Toronto 2025 named writer annual list"
+CITY: Toronto, Canada
+YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: EN
+SECONDARY_LANGUAGE: none (single-language city, EN only)
+PRICE_CURRENCY: CAD
 
-Cross-2 (Writer-first, 3 queries — Mme. M., Taylor Newlands, Betty Binon from Phase 0 + prev run):
-C2a: "Mme M madamemarie Toronto restaurant guide best 2025 2026"
-C2b: "Taylor Newlands Toronto restaurant recommendations Foodism 2026"
-C2c: "Liza Agrba Toronto Life best restaurants 2025"
+NOTES:
+- Toronto is an EN-only city. No secondary-language searches.
+- Cross-1 (city-wide in SECONDARY) is skipped — no secondary language.
+- 0 both-pool is structural, not a pipeline failure.
+- KNOWN_PROBLEMATIC_URLS: blogto.com, hungry416.com, torontoguardian.com,
+  overheretoronto.com, yelp.com, tripadvisor.com, opentable.com, zomato.com,
+  thefork.com and all booking platforms.
+- torontolife.com: include with coi flag if found.
 
-Cross-3 (Recent openings 2024-2026, 2 queries):
-C3a: "Toronto new restaurant openings 2025 must try food journalist"
-C3b: "best new restaurants Toronto opened 2026 food writer critic"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 0 — DIRECT WRITER SEARCHES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Cross-4 (Older coverage 2023-2024, 2 queries):
-C4a: "best restaurants Toronto 2023 food writer editorial"
-C4b: "Toronto restaurant guide 2024 named critic independent review"
+Writers to find articles for (named in DIRECT_FETCH_SOURCES):
+P0-W1: "Corey Mintz Toronto restaurant review 2024 2025" -> find specific article
+P0-W2: "Natalia Manzocco Toronto restaurant guide 2024 2025" -> find specific article
+P0-W3: "Amy Pataki Globe Mail Toronto restaurant critic 2024 2025" -> find specific article
 
-Cross-5 (Awards and recognition, 2 queries):
-C5a: "Michelin Guide Toronto 2025 starred restaurants food writer reaction"
-C5b: "Canada 100 best restaurants 2025 2026 Toronto entries critic"
+PHASE_0_SOURCES to search:
+P0-S1: Eater Toronto (eater.com) — search for named-author Toronto restaurant guide 2023-2026
+P0-S2: NOW Magazine (nowtoronto.com) — search for named food writer Toronto restaurants
+P0-S3: Globe and Mail food section — covered by P0-W1/P0-W3
+P0-S4: The Infatuation Toronto — search for named-author Toronto restaurant guide
 
-Cross-6 (Forum and community, 2 queries):
-C6a: "Toronto restaurant recommendations local guide 2025 not tourist"
-C6b: "where locals eat Toronto food community guide 2025 2026"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 1 PART A — NEIGHBOURHOOD COVERAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Cross-7 (Cuisine diversity, 2 queries):
-C7a: "best Caribbean South Asian Ethiopian restaurants Toronto food writer 2025"
-C7b: "Toronto diverse neighbourhood dining guide critic 2025 community food"
+TIER 1 (13 areas x 1 query EN = 13 queries):
+
+T1-1:  "King West Toronto best restaurants food critic review"
+T1-2:  "Queen West Toronto restaurant guide 2023 2024"
+T1-3:  "Ossington Avenue Toronto restaurant recommendations writer"
+T1-4:  "Kensington Market Toronto best restaurants food journalism"
+T1-5:  "Chinatown Toronto restaurant review critic 2024 2025"
+T1-6:  "Little Italy College Street Toronto restaurants food writer"
+T1-7:  "Dundas West Toronto restaurant guide 2023"
+T1-8:  "Leslieville Toronto best restaurants review 2024"
+T1-9:  "Distillery District Toronto restaurant guide critic"
+T1-10: "St Lawrence Market area Toronto restaurants food writer 2025"
+T1-11: "Annex Toronto best restaurants neighbourhood guide"
+T1-12: "Yorkville Toronto restaurant critic review 2024 2025"
+T1-13: "Scarborough Toronto food guide restaurant recommendations 2023 2024"
+
+TIER 2 (13 areas x 1 query EN = 13 queries):
+
+T2-1:  "Parkdale Toronto restaurant recommendations food writer"
+T2-2:  "Roncesvalles Toronto restaurant guide 2024 2025"
+T2-3:  "Trinity Bellwoods Toronto best places to eat critic"
+T2-4:  "West Queen West Toronto food guide restaurants 2023"
+T2-5:  "Riverside Toronto restaurant recommendations neighbourhood"
+T2-6:  "Little India Gerrard Street East Toronto restaurant review"
+T2-7:  "Greektown Danforth Toronto restaurant guide food journalist"
+T2-8:  "Little Portugal Toronto restaurant recommendations 2024"
+T2-9:  "Corktown Toronto restaurants food writer critic 2023 2024"
+T2-10: "Regent Park Toronto restaurant neighbourhood guide 2024 2025"
+T2-11: "Cabbagetown Toronto restaurant guide food writer"
+T2-12: "North York Yonge-Sheppard corridor Toronto restaurants critic 2024"
+T2-13: "Etobicoke Toronto restaurant recommendations food writer 2023"
+
+TIER 3 (9 areas x 1 query EN = 9 queries):
+
+T3-1:  "Davisville Toronto restaurant guide neighbourhood"
+T3-2:  "Mount Pleasant Toronto best restaurants 2024 2025"
+T3-3:  "Summerhill Toronto restaurant recommendations critic"
+T3-4:  "Rosedale Toronto restaurant guide food writer"
+T3-5:  "East Danforth Toronto food restaurant review 2024"
+T3-6:  "Little Bangladesh Toronto restaurant guide 2023 2024"
+T3-7:  "Financial District Toronto restaurant lunch critic review"
+T3-8:  "Entertainment District Toronto best restaurants food journalist"
+T3-9:  "Harbourfront Toronto restaurant guide waterfront dining"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 1 PART B — CROSS-CUTTING ANGLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cross-1 (City-wide secondary language): SKIPPED — no secondary language.
+
+Cross-2 (City-wide EN, 3 queries — varied registers):
+C2-1:  "Toronto best restaurants independent food criticism 2023"
+C2-2:  "Toronto neighbourhood restaurants guide food journalist 2024 2025"
+C2-3:  "Toronto dining guide local critic recommendations 2026"
+
+Cross-3 (Generic writer-first, 2 queries in EN):
+C3-1:  "Toronto food writer restaurant favourite spots personal guide"
+C3-2:  "Toronto local food journalist recommended restaurants hidden gems"
+
+Cross-4 (Named awards — NAMED_AWARDS blank, generic: EN + local + Michelin-adjacent):
+C4-1:  "Canada 100 Best Restaurants Toronto winners list 2024 2025"
+C4-2:  "best new Toronto restaurant critics choice awards 2023 2024"
+C4-3:  "Toronto Bib Gourmand worthy restaurant critic local recommendation"
+
+Cross-5 (Recent openings, 2 queries):
+C5-1:  "best new restaurant openings Toronto 2023 2024 food writer"
+C5-2:  "new Toronto restaurants opening 2025 2026 recommended critic"
+
+Cross-6 (Vocabulary-specific): SKIPPED — LOCAL_FOOD_VOCABULARY blank.
+
+Cross-7 (Cuisine and community, 2 queries):
+C7-1:  "Toronto Chinese food writer best dim sum dumpling restaurant review"
+C7-2:  "Toronto South Asian Caribbean West Indian food community restaurant guide"
+
+Cross-8 (Publication-category, 2 queries):
+C8-1:  "Toronto independent food magazine restaurant guide critic"
+C8-2:  "Toronto newspaper food section restaurant critic review column"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TOTALS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Tier 1:         13 queries
+Tier 2:         13 queries
+Tier 3:          9 queries
+Cross-2:         3 queries
+Cross-3:         2 queries
+Cross-4:         3 queries
+Cross-5:         2 queries
+Cross-6:         0 queries (skipped)
+Cross-7:         2 queries
+Cross-8:         2 queries
+─────────────────────────────
+TOTAL PLANNED:  49 queries (below hard ceiling 55)
+
+Stopping rule applies if last 8 consecutive queries return no new qualifying sources.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+YEAR DISTRIBUTION CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Earlier years (2023, 2023-2024): T1-2, T1-5, T1-7, T1-13, T2-4, T2-9, T2-13,
+  T3-5, T3-6, C2-1, C4-2, C5-1 = 12 queries
+Recent years (2025, 2025-2026): T1-10, T1-12, T2-2, T2-10, T2-12, C2-2, C5-2 = 7 queries
+No year term: ~30 queries
+
+[year-distribution-check] PASSED — 12 queries reference earlier years (2023-2024),
+7 queries reference recent years (2025-2026), ~30 queries have no year term.
+No angle is dominated by a single year.
