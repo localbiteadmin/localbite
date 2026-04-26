@@ -1,77 +1,281 @@
-# LocalBite Pipeline — Part 1: Madrid
-# v7.1 — 2026-04-23
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES: MADRID
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-CITY:             Madrid
-COUNTRY:          Spain
-CITY_SLUG:        madrid-spain
-YEAR_RANGE:       2023-2026
-PRIMARY_LANGUAGE: ES
-SECONDARY_LANGUAGE: EN
+CITY: Madrid
+COUNTRY: Spain
+CITY_SLUG: madrid-spain
+YEAR_RANGE: 2023-2026
+LANGUAGE_PRIMARY: Spanish
+LANGUAGE_SECONDARY: English
+LANGUAGE_CODES: es, en
+SEARCH_LANGUAGES: Spanish, English
 
-# ── NEIGHBOURHOOD STRUCTURE ──────────────────────────────────
-# Madrid's food scene is the largest and most diverse in Spain.
-# Malasaña and Chueca are the creative dining and bar districts.
-# La Latina is the traditional tapas neighbourhood (Cava Baja, Cava Alta).
-# Lavapiés is the multicultural and emerging food hub.
-# Salamanca is the upscale dining district. Chamberí has strong neighbourhood dining.
-# Mercado de San Miguel (adjacent to Plaza Mayor) is tourist-facing — apply caution.
-# Huertas/Las Letras is the literary district with traditional restaurants.
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
 
-TIER_1_NEIGHBOURHOODS: Malasaña, Chueca, La Latina, Lavapiés, Chamberí
-TIER_2_NEIGHBOURHOODS: Salamanca, Retiro, Huertas, Argüelles, Moncloa
-TIER_3_NEIGHBOURHOODS: Tetuán, Vallecas, Carabanchel, Hortaleza, Usera
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+- 1 = under €20pp
+- 2 = €20–40pp
+- 3 = €40–80pp
+- 4 = over €80pp
 
-GEOGRAPHIC_BOUNDARY_INCLUDE:
-  Malasaña, Chueca, La Latina, Lavapiés, Chamberí, Salamanca,
-  Retiro, Huertas (Las Letras), Argüelles, Moncloa, Sol/Centro,
-  Tetuán, Usera (Chinese/Asian food culture), Vallecas, Carabanchel,
-  Hortaleza, Alcobendas (if covered as part of Madrid food scene)
+OUTPUT_RAW: ./localbite-madrid-raw.json
+OUTPUT_FINAL: ./localbite-madrid-2023-2026.json
+OUTPUT_WORKING: ./localbite-madrid-working.json
+OUTPUT_SEARCH_LOG: ./localbite-madrid-search-log.txt
+OUTPUT_SEARCH_PLAN: ./localbite-madrid-search-plan.txt
+OUTPUT_FAILED: ./localbite-madrid-failed-sources.txt
+
+════════════════════════════════════════
+GEOGRAPHY
+════════════════════════════════════════
+
+No known toponym collision for Madrid. Standard disambiguation is
+not required — do not add "Spain" or "España" to every query. Madrid
+is unambiguous in food writing searches.
+
+NEIGHBOURHOOD_TIERS — target all three tiers across Phase 0 and
+Phase 1 searches:
+
+Tier 1 (high food writing density):
+  Malasaña, Chueca, La Latina
+
+Tier 2 (strong secondary density):
+  Lavapiés, Salamanca, Chamberí
+
+Tier 3 (emerging or underrepresented):
+  Palacio, Sol, Retiro, Carabanchel, Usera, Tetuán
 
 GEOGRAPHIC_BOUNDARY_EXCLUDE:
-  Pozuelo de Alarcón (separate municipality), Las Rozas, Majadahonda,
-  Alcalá de Henares (separate historic city), Toledo (separate city),
-  Segovia (separate city), Aranjuez
+Any restaurant described as "outside Madrid", "Community of Madrid
+but not capital", or in named satellite towns (Pozuelo de Alarcón,
+Boadilla del Monte, San Lorenzo de El Escorial, Alcobendas, etc.).
+Montia (San Lorenzo de El Escorial) is 1★ Michelin but outside the
+city — auto-exclude by geography, not by starred status.
 
-# ── MICHELIN EXCLUSIONS ──────────────────────────────────────
-# Do not extract. Michelin-starred restaurants are excluded per pipeline rules.
-MICHELIN_STARRED_EXCLUSIONS:
-  DiverXO (3★, David Muñoz), Coque (2★, Mario Sandoval),
-  Ramón Freixa Madrid (1★), DSTAgE (1★, Diego Guerrero),
-  Corral de la Morería Gastronómico (1★), Cebo (1★),
-  Smoked Room (1★), Paco Roncero (1★)
+════════════════════════════════════════
+MICHELIN_STARRED_EXCLUSIONS — BLANKET RULE
+════════════════════════════════════════
 
-# ── SOURCE STRATEGY ──────────────────────────────────────────
-# Madrid has the richest ES-language food writing ecosystem in Spain.
-# El Comidista (El País) is the gold standard for named-author ES food criticism.
-# Guía Repsol has extensive Madrid coverage. El Mundo has a food section.
-# The Infatuation has a Madrid edition with named writers.
-# Both-pool is achievable with independent EN food writers alongside ES press.
-# Time Out Madrid exists — verify named author and recency.
+ALL Michelin-starred restaurants are excluded from the Madrid pack.
+This is a blanket rule applied consistently. If a source recommends
+any of the following, do not include them in the restaurant list
+regardless of quote quality or source tier.
 
-PHASE_0_SOURCES:
-  - elpais.com/gastronomia (ES — El Comidista / El País, named food writers)
-  - guiarepsol.com (ES — Repsol guide, search Madrid entries, named writers)
-  - elmundo.es (ES — El Mundo, food section with named critics)
-  - theinfatuation.com/madrid (EN — The Infatuation Madrid, verify named author)
+VERIFIED 2026 MICHELIN GUIDE — MADRID:
 
-SECONDARY_SOURCES:
-  - timeout.com/madrid (EN/ES — Time Out Madrid, verify named author)
-  - bonviveur.es (ES — national food platform, search Madrid guide)
-  - elespanol.com (ES — El Español, food section with named writers)
-  - eater.com (EN — search Madrid guide if exists, verify named author)
-  - madridfoodtour.com or similar EN food writers covering Madrid
+3★ (exclude):
+- DiverXO (Dabiz Muñoz) — Calle Padre Damián 23
 
-COI_FLAG_SOURCES: None known
+2★ (exclude all):
+- Ramón Freixa Atelier — Calle Velázquez 24
+- Deessa / Quique Dacosta — Mandarin Oriental Ritz
+- Coque (Mario Sandoval)
+- DSTAgE (Diego Guerrero)
+- Paco Roncero Restaurante — Calle Alcalá 15 (Casino de Madrid)
+- Smoked Room (Marcos Granda)
 
-# ── PIPELINE SETTINGS ────────────────────────────────────────
-PHASE1_AUTO_PROCEED:  YES
-UNATTENDED_MODE:      YES
+1★ (exclude all — confirmed from 2026 guide):
+- A'Barra
+- La Tasquería (Javi Estévez)
+- Desde 1911
+- Santerra
+- Yugo The Bunker
+- Toki
+- Sen Omakase
+- Ugo Chan
+- Quimbaya (Edwin Rodríguez)
+- Chispa Bistró (Juan D'Onofrio)
+- Èter
+- EMi
+- Pabú
+- El Invernadero (Rodrigo de la Calle)
+- VelascoAbellà (Óscar Velasco)
+- Gofio
+- La Candela Restó
+- Saddle
+- Kabuki Wellington
+- Lúa
+- Corral de la Morería Gastronómico
+- OSA
+- La Terraza del Casino (Paco Roncero)
+- Cebo (Hotel Urban)
 
-# ── OUTPUT FILES ─────────────────────────────────────────────
-OUTPUT_SEARCH_PLAN:    localbite-madrid-search-plan.txt
-OUTPUT_SEARCH_LOG:     localbite-madrid-search-log.txt
-OUTPUT_WORKING:        localbite-madrid-working.json
-OUTPUT_RAW:            localbite-madrid-raw.json
-OUTPUT_FINAL:          localbite-madrid-2023-2026.json
-OUTPUT_AUDIT:          localbite-madrid-audit.txt
-OUTPUT_FAILED_SOURCES: localbite-madrid-failed-sources.txt
+NOTE: Madrid has 31 starred restaurants total in the 2026 guide.
+The 1★ list above covers confirmed entries but may not be exhaustive.
+Before finalising Phase 3, cross-check any recommended restaurant
+against the current Michelin guide if it is a high-end tasting menu
+venue. When in doubt about starred status, exclude.
+
+════════════════════════════════════════
+KNOWN COI FLAGS
+════════════════════════════════════════
+
+Time Out Madrid (any writer):
+⚠ coi — Time Out operates Time Out Market Madrid, a commercial
+food hall. Include transparently, do not reject. Prepend "⚠ coi — "
+to the writer_profile field. Gorka Elorrieta is the confirmed named
+author from previous runs.
+
+Spanish Sabores / Lauren Aloise:
+⚠ coi — Lauren Aloise is co-founder of Devour Tours, which operates
+food tours in Madrid. Include transparently, do not reject. Prepend
+"⚠ coi — " to the writer_profile field.
+
+════════════════════════════════════════
+DIRECT_FETCH_SOURCES (Phase 0)
+════════════════════════════════════════
+
+These are confirmed named-author sources from previous Madrid pipeline
+runs. Fetch all of these in Phase 0 before running Phase 1 searches.
+For each: confirm the named author byline, verify article date is
+within YEAR_RANGE, and extract if it passes quality gates.
+
+If a URL 404s or returns under 1,000 characters, log as failed and
+move on — do not spend multiple fetch attempts on a single source.
+
+PHASE 0 SOURCE LIST:
+
+1. 7 Caníbales — Alberto Luchini (ES)
+   Site: 7canibales.com
+   Find: his most recent Madrid restaurant guide or best-of list
+   Note: Major ES food critic. Named author confirmed in v6 run.
+
+2. The Objective — ES food section
+   Site: theobjective.com
+   Find: article by Mara Sánchez or Brenda Alonso on Madrid
+   restaurants 2023–2026. Both are confirmed named authors.
+   Note: Do not accept anonymous editorial team credit.
+
+3. Epicurean Ways — Paul Richardson (EN)
+   Site: epicureanways.com
+   Find: Madrid restaurant guide or recommendations 2023–2026.
+   Note: English-language expat food writer, confirmed v6.
+
+4. Time Out Madrid — Gorka Elorrieta (EN) ⚠ coi
+   Site: timeout.com/madrid
+   Find: Gorka Elorrieta byline on Madrid restaurants guide.
+   Note: COI flagged above. Accept if named byline confirmed.
+   SIBLING CHECK: Time Out Madrid EN and Time Out Madrid ES must
+   be verified as independently produced before treating as separate
+   language pools. If same restaurant list, count as one source only.
+
+5. Spanish Sabores — Lauren Aloise (EN) ⚠ coi
+   Site: spanishsabores.com
+   Find: Madrid restaurant guide 2023–2026.
+   Note: COI flagged above. Accept if named byline confirmed.
+
+6. The Infatuation — Lori Zaino (EN)
+   Site: theinfatuation.com/madrid
+   Find: Use the Hit List (most recent) or Essential Restaurants
+   guide with Lori Zaino byline. Verify date — avoid any guide
+   pre-2023. If the Hit List is undated, check article text for
+   individual entry dates.
+   Note: Confirmed v7 run. Do not use the main guide if pre-2023.
+
+7. La Gastrónoma — Mapi Hermida (ES)
+   Site: lagastronoma.es or search "mapi hermida madrid restaurantes"
+   Find: Named article by Mapi Hermida on Madrid restaurants.
+   Note: Confirmed v7 run. ES primary source.
+
+8. GastroMadrid — Julián Acebes (ES)
+   Site: elblogdegastromadrid.com
+   Find: Named article by Julián Acebes. Multiple neighbourhood
+   articles exist (Chamberí, Salamanca, etc.) — fetch the most
+   recent dated article.
+   Note: Confirmed v7final run. Do not confuse with "Irene S."
+   articles from same site — Irene S. fails named-author test
+   (surname initial only). Accept Julián Acebes only.
+
+9. eldiario.es / Somos Madrid — Carlos Osorio (ES)
+   Site: eldiario.es
+   Find: Article by Carlos Osorio in Somos Madrid section on
+   restaurant recommendations 2023–2026.
+   Note: Confirmed v7final run. ES independent journalism.
+
+10. The Making of Madrid — Felicity Hughes (EN)
+    Site: themakingofmadrid.com
+    Find: Restaurant guide or recommendations by Felicity Hughes.
+    Note: Strong EN find from v7final run. Single-author site —
+    confirm author from About page and apply single-author site rule.
+    All articles from this site are accepted as Felicity Hughes.
+
+11. Gastroactitud — José Carlos Capel (ES)
+    Site: gastroactitud.com
+    Find: Madrid restaurant recommendations 2023–2026 by Capel.
+    Note: José Carlos Capel is a major ES food critic (longtime
+    El País restaurant critic). High-priority ES source. Confirmed
+    v7final run.
+
+12. Con El Morro Fino — verify full author name (ES)
+    Site: conelmorrhofino.com or search "con el morro fino madrid"
+    Note: Previous run showed author as "David" (first name only).
+    Check the About page for full name. If full name confirmed:
+    apply single-author site rule and accept. If first name only:
+    reject under named-author requirements.
+
+════════════════════════════════════════
+ADDITIONAL PHASE 1 CANDIDATE SOURCES
+════════════════════════════════════════
+
+These were not in previous runs but are worth targeting in Phase 1
+searches. Do not pre-fetch — discover through search.
+
+Strong ES candidates:
+- Guía Repsol Madrid section — check for named Madrid contributor
+- El País Gastro — José Carlos Capel or successor Madrid critic
+- El Mundo food section — check for named Madrid critic
+- Comer Madrid (various ES food blogs) — require named author
+
+Strong EN candidates:
+- The Local Spain — Madrid food coverage, check named author
+- Culinary Backstreets Madrid — check if Madrid edition active
+- Devour Madrid blog — ⚠ same COI as Spanish Sabores (Devour Tours)
+  Flag if found. Do not reject.
+
+════════════════════════════════════════
+KNOWN PROBLEMATIC SOURCES
+════════════════════════════════════════
+
+- gastronomistas.com — returns very large pages (1.6MB+), causes
+  session failures. Skip if found in search results.
+- Any Michelin.com restaurant pages — not editorial, not a source.
+- TripAdvisor, Google Maps, TheFork — aggregators, not sources.
+- booking platform content (OpenTable, ElTenedor) — not sources.
+
+════════════════════════════════════════
+REGRESSION THRESHOLD
+════════════════════════════════════════
+
+Previous Madrid v6 run: 5 named-author sources, 6 both-pool entries.
+All 5 sources pass current quality gates.
+
+TARGET: 8–12 both-pool (stronger ES source pool than v6 makes this
+achievable if Phase 0 sources are found).
+
+MINIMUM ACCEPTABLE: 6 both-pool.
+
+If the final pack has fewer than 6 both-pool entries: do not accept
+without checking the Phase 0 failure log. Report which Phase 0
+sources failed to fetch and why before concluding Phase 3.
+
+If both-pool is 0–3: this is a pipeline search failure, not a quality
+gates result. Flag clearly in the Phase 3 summary.
+
+════════════════════════════════════════
+OPEN STATUS
+════════════════════════════════════════
+
+Madrid is an active food city. Verify open status for any restaurant
+that opened before 2022 — closures are common. Apply the standard
+open_status_check rule.
+
+Notable known closure: Santceloni (2★ Michelin) — closed.
+Do not include if found in older articles.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+END OF PART 1 — CITY VARIABLES
+Append localbite-prompt-v7-template.txt to complete the full prompt.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
