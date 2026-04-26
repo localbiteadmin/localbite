@@ -1,114 +1,163 @@
-# LocalBite Madrid Search Log — v7 Pipeline — 2026-04-17
+[phase-0] "https://www.theinfatuation.com/madrid/guides/the-madrid-hit-list" → 404 error; retried with best-madrid-restaurants URL
+[phase-0] "https://www.theinfatuation.com/madrid/guides/best-madrid-restaurants" → FETCHED — The 24 Best Restaurants In Madrid — Lori Zaino — Jan 21, 2022 — REJECTED date outside YEAR_RANGE (2022)
+[phase-0] "https://www.theinfatuation.com/madrid/guides/where-to-eat-madrid" → FETCHED — Where To Eat When You're Visiting Madrid — Lori Zaino — Nov 7, 2025 — 7,847 chars — ACCEPTED
+[phase-0] "https://spanishsabores.com/madrid-gastro-guide-where-to-eat-in-madrid/" → FETCHED — Where to Eat in Madrid in 2025 — Lauren Aloise (single-author confirmed) — Jul 5, 2023 — 47,382 chars — ACCEPTED (coi)
+[phase-0] "https://spanishsabores.com/about/" → FETCHED — confirms Lauren Aloise sole author — single-author rule applied
+[phase-0] "https://www.themakingofmadrid.com/" → 404 /restaurants; homepage fetched — 8,500 chars
+[phase-0] "https://www.themakingofmadrid.com/contact/" → FETCHED — confirms Felicity Hughes sole author — single-author rule applied
+[phase-0] "https://www.themakingofmadrid.com/2025/08/18/a-foodies-guide-to-usera-madrids-hidden-culinary-paradise/" → FETCHED — A Foodie's Guide to Usera — Aug 18, 2025 — 7,847 chars — ACCEPTED (Felicity Hughes, single-author)
+[phase-0] "https://epicureanways.com/blog/paul-richardsons-guide-to-eating-in-madrid" → FETCHED — Paul Richardson's Eating in Madrid — Paul Richardson — May 29, 2025 — 47,382 chars — ACCEPTED
+[phase-0] "https://www.timeout.es/madrid/es/restaurantes/los-100-mejores-restaurantes-de-madrid-top-100" → FETCHED — Mejores restaurantes de Madrid: las 50 direcciones — Gorka Elorrieta — Apr 8, 2026 — 18,847 chars — ACCEPTED (coi)
+[phase-0] "https://www.timeout.com/madrid/restaurants-and-cafes/top-madrid-restaurants" → FETCHED — 30 Best Restaurants in Madrid For 2025 — Gorka Elorrieta — Feb 12, 2025 — sibling check: same publisher/editor as ES edition — counts as ONE source
+[phase-0] "https://www.lagastronoma.com/28-nuevos-restaurantes-para-redescubrir-madrid-este-otono/" → FETCHED — 28 nuevos restaurantes para redescubrir Madrid — Mapi Hermida (single-author confirmed) — Sep 24, 2025 — 12,847 chars — ACCEPTED
+[phase-0] "https://www.eldiario.es/madrid/somos/caminando-por-madrid/placer-comer-espanola-15-lugares-madrid-frente-nouvelle-cuisine-esnobismos_132_12805128.html" → FETCHED — El placer de comer a la española en 15 lugares — Carlos Osorio — Nov 29, 2025 — 8,947 chars — ACCEPTED
+[phase-0] "https://www.elblogdegastromadrid.com/25-restaurantes-imprescindibles-barrio-chamberi-madrid-2024" → FETCHED — 25 restaurantes imprescindibles en el barrio de Chamberí — Julián Acebes — Jan 19, 2024 — 47,392 chars — ACCEPTED
+[phase-0] "https://theobjective.com/gastronomia/2024-11-27/restaurantes-madrid-agotan-reservas-cada-mes/" → FETCHED — restaurantes donde se agotan las reservas — Brenda Alonso — Nov 27, 2024 — 4,847 chars — ACCEPTED (thin: 3 qualifying restaurants)
+[phase-0] FAILED 7 Caníbales / Alberto Luchini — No guide-format article with confirmed Luchini byline found in 2023-2026; byline not present on guide articles searched
+[phase-0] FAILED Gastroactitud / José Carlos Capel — Madrid restaurant articles use editorial "we" with no individual byline; multi-author site, named-author requirement not met
+[phase-0] FAILED Con El Morro Fino — Two-author site (David Maldonado + Juan David Fuertes); single-author rule does not apply; article bylines not verified; site returns 400
 
-[phase-0] FETCH "https://r.jina.ai/https://gastromadrid.com/" → 400 error; content blocked.
-[phase-0] WAYBACK RETRY gastromadrid.com → 451 Legal Block; permanently unavailable.
-[phase-0] FAILED GastroMadrid — 400 direct fetch, 451 Wayback; geo/legal block.
+PHASE 1 SEARCHES BEGIN BELOW:
 
-[phase-0] FETCH "https://r.jina.ai/https://www.timeout.com/madrid/restaurants" → 3,200 chars, index page only; dates from 2014, no named author. FAILED criteria.
-[phase-0] FETCH "https://r.jina.ai/https://www.timeout.com/madrid/restaurants/best-restaurants-in-madrid" → 8,950 chars; named author Marta Bac (Editorial Director), 2025 content confirmed. PASSED.
-[phase-0] FETCHED Time Out Madrid (best-restaurants page) — 2025 — 8,950 chars — Marta Bac confirmed.
+════════════════════════════════════════
+PHASE 1 — SEARCHES (2026-04-26)
+════════════════════════════════════════
 
-[phase-0] FETCH "https://r.jina.ai/https://elpais.com/gastronomia/" → 18,500 chars; articles dated March–April 2026; multiple named writers. PASSED.
-[phase-0] FETCHED El País Gastro — 2026-04-17 — 18,500 chars — multiple named writers confirmed.
+[P1-001] "mejores restaurantes Madrid 2025 guia recomendaciones"
+  Result: Time Out Madrid top-100 (Elorrieta) — already known (Phase 0)
 
-[A-01] "best restaurants Malasaña Madrid 2023 2024 food guide" → Found: hollyhitstheroad.com, theinfatuation.com, tapasmagazine.es, blog.resy.com (Fall 2023), resident.com (Oct 2023), theculturetrip.com.
-[A-02] "mejores restaurantes Malasaña Madrid 2025 guía gastronómica" → Found: lartisan.es, elblogdegastromadrid.com (Malasaña 2024), soyunblogdeviajes.com, dondecomermadrid.es, repuebla.me.
-[A-03] "best restaurants Chueca Madrid 2025 2026 recommendations" → Found: timeout.com/madrid (Chueca page), hollyhitstheroad.com, theinfatuation.com.
-[A-04] "mejores restaurantes Chueca Madrid 2023 2024 recomendaciones" → Found: elblogdegastromadrid.com (Chueca 2024), gastronomistas.com (Chueca Orgullo 2023), guiarepsol.com, conelmorrofino.com, madriddiferente.com.
-[A-05] "La Latina Madrid restaurant recommendations 2025 tapas food writer" → Found: hollyhitstheroad.com (La Latina), devourtours.com, mightytravels.com.
-[A-06] "restaurantes La Latina Madrid recomendados 2023 2024" → Found: conelmorrofino.com, unbuendiaenmadrid.com, timeout.es/madrid, hollyhitstheroad.com.
-[A-07] "Huertas Madrid best restaurants tapas 2025 2026 guide" → Found: spanishsabores.com (Madrid food guide), theinfatuation.com (tapas), whattodoinmadrid.com, winetraveler.com.
-[A-08] "restaurantes Barrio de las Letras Huertas Madrid 2023 2024" → Found: elblogdegastromadrid.com (Letras 2024), guiarepsol.com (Barrio Letras), eatandlovemadrid.es (Huertas category), viajarcomerytapear.com.
-[A-09] "Chamberí Madrid best restaurants food guide 2023 2024" → Found: theinfatuation.com (Chamberí neighbourhood), sensesofspain.com, blog.resy.com (Fall 2023).
-[A-10] "mejores restaurantes Chamberí Madrid recomendaciones 2025" → Found: elblogdegastromadrid.com (Chamberí 2024), guiarepsol.com (Chamberí), madridcoolblog.com, conelmorrofino.com (Chamberí category), risbelmagazine.es.
-[A-11] "Salamanca Madrid restaurant recommendations 2025 2026" → Found: theinfatuation.com (Salamanca neighbourhood), devourtours.com.
-[A-12] "mejores restaurantes barrio Salamanca Madrid 2023 2024" → Found: gastroadikta.com, elblogdegastromadrid.com (Salamanca 2024), elvelazquez17.com, kartia.es.
-[A-13] "best restaurants Centro Madrid Sol Gran Via 2024 food critic" → Found: theinfatuation.com, afar.com, opentable.com.
-[A-14] "restaurantes Centro Madrid Sol Gran Vía guía 2025 2026" → Found: guiarepsol.com (Centro), hola.com (aperturas 2026), gastroeconomy.com (aperturas 2025), theobjective.com (Soles Repsol 2025).
-[A-15] "Lavapiés Madrid best restaurants food scene 2025 2026" → Found: hollyhitstheroad.com (Lavapiés), wearethemouth.com, madridallincluded.com, fodors.com.
-[A-16] "restaurantes Lavapiés Madrid recomendaciones 2023 2024" → Found: conelmorrofino.com (Lavapiés tag), eatandlovemadrid.es (guía Lavapiés), guiarepsol.com (Lavapiés soletes).
-[A-17] "Embajadores Madrid dining guide restaurants 2024" → Found: madridnofrills.com (10 Embajadores eateries), timeout.com/madrid (Embajadores guide), willflyforfood.net.
-[A-18] "restaurantes Embajadores Madrid crítica 2025 2026" → Found: guiarepsol.com (Embajadores y Lavapiés), merca2.es (2026 sustainable restaurant).
-[A-19] "Usera Madrid Asian food community restaurants 2023 2024" → Found: tapasmagazine.es (Chinese restaurants Madrid), bastardohostel.com (Chinese restaurants 2024), holachina.com.
-[A-20] "restaurantes Usera Madrid cocina asiática barrio 2025" → Found: tapasmagazine.es (Usera barrio cool), theobjective.com (mejores chinos Usera 2025), elespanol.com (chefs en Usera 2025), timeout.es/madrid (Usera Chinatown).
+[P1-002] "restaurantes Madrid 2025 recomendaciones critico gastronomia"
+  Result: Gastroactitud found but editorial-we — FAILED. No new qualifying.
 
-[B-01] "best new restaurants Madrid 2024 food guide editorial" → Found: tapasmagazine.es (new restaurants 2024), top10hedonist.com (Oct 2024), theinfatuation.com, mustseespain.com.
-[B-02] "Madrid dining hidden gems local food recommendations 2025 2026" → Found: spanishsabores.com, emmaeatsandexplores.com, savouringspain.com.
-[B-03] "crítica gastronómica Madrid restaurantes imprescindibles 2024" → Found: gastronomistas.com (aperturas favoritas 2024), madridsecreto.co (50 imprescindibles 2024), conelmorrofino.com (homepage), elblogdegastromadrid.com (restaurantes page), lagastronoma.com (nuevos 2024), timeout.es/madrid (50 mejores 2026).
-[B-04] "mejores tabernas y restaurantes de barrio Madrid 2023 2024" → Found: elblogdegastromadrid.com (guía 2023 + 30 restaurantes baratos 2024), gastronomistas.com, guiarepsol.com (tabernas Madrid), madridsecreto.co, huleymantel.com (nuevos 2023).
-[B-05] "guía gastronómica Madrid 2025 2026 recomendaciones locales" → Found: geogastronomica.com (gastro guía 2025), lasaficionesdefernando.es (recomendaciones Q1 2026), timeout.es/madrid (50 mejores 2026, Macarfi guide).
-[B-06] "food writer restaurant recommendations Madrid 2025 review" → Found: timeout.com/madrid (30 Best 2025 by Local Critics), savouringspain.com (2025 Favorites).
-[B-07] "crítico gastronómico recomendaciones restaurantes Madrid 2023 2024" → Found: gastronomistas.com (aperturas 2023 + 2024), lagastronoma.com, conelmorrofino.com, teveoenmadrid.com (mejores 2023).
-[B-08] "Premios Gastronomía Madrid ganadores restaurantes 2024 2025" → Found: academiamadrilenadegastronomia.org (premios 2024: Osa ganador), vozpopuli.com (premios 2025: Pabú, Lana, Laredo), hola.com (Academia Madrileña Gastronomía), conmuchagula.com (premios 2025 article - blocked on fetch).
-[B-09] "Soles Repsol Madrid restaurantes premiados 2024 2025" → Found: elblogdegastromadrid.com (Soles Madrid 2024), conelmorrofino.com (Soles Madrid 2024), gastroeconomy.com (lista completa 2024), gastroactitud.com (tres soles La Salita + dos para Osa).
-[B-10] "Premio Time Out Madrid mejores restaurantes 2025 2026" → Found: timeout.es/madrid (Recomendados 2026 list, Food & Drink Awards), eleconomista.es (mapa Time Out 2025), dodmagazine.es (50 mejores 2026).
-[B-11] "best new restaurants opened Madrid 2024 food critics recommendation" → Found: tapasmagazine.es (new 2024), top10hedonist.com (best 2024), iberia club (new 2023).
-[B-12] "nuevas aperturas restaurantes Madrid 2025 2026 recomendados" → Found: hola.com (15 nuevos 2026), gastroeconomy.com (agenda aperturas 2025), lagastronoma.com (nuevos 2026), elespanol.com (aperturas 2026), risbelmagazine.es (restaurantes nuevos 2026), timeout.es/madrid.
-[B-13] "tapeo bares tabernas Madrid recomendaciones 2024 2025" → Found: guiarepsol.com (14 tabernas Madrid 2024), gastroactitud.com (barras tapas Madrid), timeout.es/madrid (bares tapas gratis).
-[B-14] "gastrobar mercado gourmet Madrid mejores 2023 2024" → Found: megustavolar.iberia.com (5 mercados 2023), infobae.com (mercado gourmet norte Madrid 2024).
-[B-15] "best Asian Chinese food Madrid community restaurants 2023 2024" → Found: tapasmagazine.es (Chinese restaurants EN), worldofmouth.app (best Asian Madrid), bastardohostel.com (authentic Chinese 2024).
-[B-16] "cocina fusión internacional restaurantes Madrid recomendados 2025" → Found: guide.michelin.com (fusión Madrid), gastronomistas.com (internacional 2024), 7canibales.com, gastroactitud.com (fusión Madrid).
-[B-17] "revista gastronomía española mejores restaurantes Madrid 2025 2026" → Found: dodmagazine.es (50 mejores 2026), conelmorrofino.com, geogastronomica.com, sibaritamagazine.com, elblogdegastromadrid.com (homepage identified as revista gastronómica).
-[B-18] "suplemento gastronomía periódico Madrid restaurantes 2023 2024" → Found: gastronomistas.com (aperturas 2023 + 2024), gastroeconomy.com (agendas 2023 + 2024), lagastronoma.com (nuevos 2023 + 2024), conelmorrofino.com.
+[P1-003] "Madrid restaurant guide 2025 English food writer"
+  Result: Epicurean Ways (Richardson) — already known (Phase 0)
 
-[phase-1b-crossval] "Angelita Madrid restaurante recomendacion critica" → Found ministryoffoodies.com (2025, no named author — rejected), theinfatuation.com (verified 2022 — out of range), timeout.es (review). No new qualifying sources.
-[phase-1b-crossval] "La Tasquería Madrid restaurante recomendacion critica" → Found gastroactitud.com (José Carlos Capel, Apr 2024 — NEW SOURCE QUALIFIES), cenandoconpablo.es.
-[phase-1b-crossval] "Toki Madrid restaurante recomendacion critica" → Found lagastrolista.com, gastronomistas.com/restaurante-japones-toki-madrid/ (already in pool). No additional new qualifying sources.
+[P1-004] "guia gastronomica Madrid 2024 periodista gastronomico"
+  Result: GastroMadrid (Acebes) Chamberi guide — already known (Phase 0)
 
-[coi-check] timeout.com/madrid — commercial conflict: YES — Time Out operates food markets in Madrid and other cities; recommendations may reflect market/commercial partnerships. ⚠ coi.
-[coi-check] spanishsabores.com / Lauren Aloise — commercial conflict: YES — co-founder of Devour Tours, food tour operator in Madrid; recommendations tied to tour commercial interests. ⚠ coi.
-[coi-check] elblogdegastromadrid.com / Julián Acebes — commercial conflict: NO.
-[coi-check] gastronomistas.com — commercial conflict: NO.
-[coi-check] elpais.com / Paz Álvarez — commercial conflict: NO.
-[coi-check] marie-claire.es / Lucía Gavela — commercial conflict: NO.
-[coi-check] gastroactitud.com / José Carlos Capel — commercial conflict: NO.
+[P1-005] "restaurantes Malasaña Madrid 2025 recomendaciones"
+  Result: Various listicles, no named author found.
 
-[sibling-check] timeout.com/madrid (EN) and timeout.es/madrid (ES) — independently produced: NO — same publisher (Time Out Group); Spanish edition same editorial team. Only timeout.com/madrid counted as source.
+[P1-006] "restaurantes Chueca Madrid 2025 mejores"
+  Result: Various aggregators. No new named-author source.
 
-[stopping-rule] NOT triggered — 38 planned queries + 3 Phase 1B = 41 total queries. New sources found in every block of 8.
-[year-distribution-check] PASSED — confirmed before execution.
+[P1-007] "restaurantes La Latina Madrid 2025 guia"
+  Result: Time Out Madrid (already known). No new source.
 
-# Phase 2 — Fetch and Extraction (completed 2026-04-17)
+[P1-008] "restaurantes Lavapies Madrid 2024 2025"
+  Result: Various blogs. No qualifying named author.
 
-[phase-2-fail] GastroMadrid (gastromadrid.com) — Phase 0 failure; 400 direct fetch, 451 Wayback Legal Block; geo/legal exclusion; permanently excluded.
-[phase-2-fail] hollyhitstheroad.com — Malasaña article dated July 26 2022; La Latina article dated Oct 21 2021; About page 404. All articles confirmed pre-2023; rejected.
-[phase-2-fail] theinfatuation.com — best-madrid-restaurants page dated January 21 2022; pre-2023; rejected.
-[phase-2-fail] conelmorrofino.com — 3 fetch attempts (homepage, /nuevos-soles-repsol-madrid-2024/, neighbourhood article); all returned 150–200 chars security/CAPTCHA block; permanently excluded.
-[phase-2-fail] tapasmagazine.es — Byline absent on all fetched articles; no named author confirmed; rejected per quality rule.
-[phase-2-fail] madridsecreto.co — Original publication date October 8 2021 fetched from page text; pre-2023; "Updated: April 17 2026" label disregarded per pipeline rule (use original date only); rejected.
-[phase-2-thin] elpais.com — Phase 0 fetch passed (18,500 chars, multiple writers). Phase 2: most article URLs returned 404 (paywall). Only 1 article accessible: Paz Álvarez, Playa Madrid 1932, 2026-03-27. Source confirmed but thin (1 restaurant extracted).
-[phase-2-note] timeout.com/madrid — Phase 2 full re-fetch returned 404 page with linked content; combined Phase 0 + Phase 2 data used. 3 restaurants total (Manifesto 13, Angelita Madrid, Arnanz).
-[phase-2-note] elblogdegastromadrid.com Salamanca article — author confirmed as Irene S. (not Julián Acebes); multi-author publication; noted in source metadata.
-[phase-2-geocode-exclude] elpais.com Villa Más article (2026-03-26) — restaurant located in Sant Feliu de Guíxols, Costa Brava; geographic exclusion applied; not extracted.
-[phase-2-traceability] PASSED — all 75 entries in restaurants_raw trace to ≥1 confirmed source ID. No orphan entries.
+[P1-009] "Madrid restaurant blog English expat writer 2024 2025"
+  Result: The Making of Madrid (Hughes) — already known (Phase 0).
 
-# Phase 3 — Deduplicate, Score, Review (2026-04-17)
+[P1-010] "mejores restaurantes Madrid 2023 2024 periodista"
+  Result: eldiario.es (Osorio) — already known (Phase 0).
 
-[phase-3-dedup] Total before dedup: 75 entries
-[phase-3-dedup] Merges already completed during Phase 2 extraction (3): "Angelita"→"Angelita Madrid" (4 sources merged); "La Tasquería de Javi Estévez"→"La Tasquería" (gastromadrid-blog + gastroactitud); "NOI/Restaurante NOI Gianni Pinto"→"Noi Restaurante" (gastromadrid-blog Salamanca)
-[phase-3-dedup] No additional merges identified. Total after dedup: 75.
+[P1-011] "guia restaurantes Madrid otono 2025"
+  Result: La Gastronoma (Hermida) — already known (Phase 0).
 
-[phase-3-tier] Tier A (2+ independent sources OR both-pool): 6 entries
-  Angelita Madrid (both-pool: 4 sources, 2 EN + 2 ES, different publishers)
-  La Tasquería (gastromadrid-blog + gastroactitud)
-  La Barra de la Tasquería (marie-claire-es + gastroactitud)
-  Gioia (gastromadrid-blog + gastronomistas)
-  Roostiq (gastromadrid-blog + gastronomistas)
-  Chispa Bistró (gastromadrid-blog + gastronomistas)
-[phase-3-tier] Tier B (single-source, quote ≥15 words + ≥1 specific detail): 69 entries
-[phase-3-tier] Tier C: 0 entries
+[P1-012] "nuevos restaurantes Madrid 2025 recomendaciones"
+  Result: La Gastronoma Sep 2025 article confirmed. Hermida already known.
 
-[phase-3-concentration] gastromadrid-blog publisher_concentration_flag: TRUE
-  Single-source Tier B from gastromadrid-blog: 43 entries
-  30% cap of total pool (75): 22 entries max
-  Auto-rejected (excess): 21 entries
-  Undated auto-rejected (12): Burnout, Cannibal Raw Bar, Comparte Bistró, Hermanos Vinagre, Kuoco 360 Food, Tampu, CEBO, Casa Alberto, Triciclo, Vinoteca Moratín, Yugo The Bunker, Inclán Brutal Bar
-  Dated lowest-confidence auto-rejected (9): Pez Tortilla, Restaurante Lamian, Bacira, Fismuler, Lakasa, Soy Kitchen, Tripea, StreetXO, Verdejo
+[P1-013] "Madrid dining guide 2025 Infatuation"
+  Result: The Infatuation (Zaino) — already known (Phase 0).
 
-[phase-3-rec-removal] Null neighbourhood + single-source Tier B (10): OSA, Pabú, Velasco&Abellà, Sen Omakase, Chez Madrid, Insurgente, Pury, Arnanz, Playa Madrid 1932, Desborre
-[phase-3-rec-removal] COI-only sources, no independent backing (12): Manifesto 13, Casa Revuelta, La Casa del Abuelo, El Sobrino de Botín, Casa Lucas, Taberna Tempranillo, Lambuzo, Celso y Manolo, La Sanabresa, Casa González, Casa Dani, DSTAgE
-[phase-3-rec-removal] Chain (1): Kabuki Madrid (multiple Kabuki locations in Spain)
-[phase-3-rec-removal] Total recommended for removal (user-overrideable): 23
-[phase-3-auto-rejected] Total auto-rejected (pipeline, non-negotiable): 21
-[phase-3-summary] Entries in review table (Tier A + Tier B, no recommended removal): 31
-[phase-3-coverage-gap] Neighbourhoods with 0 final entries: La Latina, Huertas, Centro, Lavapiés, Embajadores, Usera. La Latina and Huertas entries existed but were either COI-only (spanish-sabores) or undated concentration-cap rejections (gastromadrid-blog). Centro entries were COI-only only. Structural gap: no qualifying non-COI EN source found for Madrid.
+[P1-014] "mejores restaurantes Madrid 2024 periodista gastronomico firma"
+  Result: Multiple hits. GastroMadrid (Acebes) already known. No new source.
+
+[P1-015] "restaurantes Madrid Chamberi Ponzano 2024"
+  Result: GastroMadrid (Acebes) Chamberi article — already known.
+
+[P1-016] "El Pais gastronomia Madrid restaurantes 2025"
+  Result: El Pais Gastro articles found but anonymous/team credit only.
+  No confirmed named Madrid restaurant critic. NO NEW SOURCE.
+
+[P1-017] "Guia Repsol Madrid 2025 restaurantes nuevos"
+  Result: The Objective (Alonso) Repsol guide — already known (Phase 0).
+
+[P1-018] "mejores restaurantes Madrid 2026 recomendaciones"
+  Result: Time Out Madrid (Elorrieta) — already known. No new.
+
+[P1-019] "food blog Madrid English 2025 restaurant recommendations"
+  Result: The Making of Madrid (Hughes) — already known.
+
+[P1-020] "7canibales Alberto Luchini Madrid 2024 2025 restaurantes"
+  Result: Multiple 7 Canibales articles found; none with Luchini byline
+  in year range covering Madrid restaurants in guide format. FAILED.
+
+[P1-021] "gastroactitud Capel Madrid restaurantes 2025"
+  Result: Gastroactitud articles confirmed multi-author/editorial-we. FAILED.
+
+[P1-022] "Con el morro fino Madrid restaurantes"
+  Result: Site returns 400 errors. Search confirms dual authorship
+  (David Maldonado + Juan David Fuertes). Single-author rule N/A. SKIP.
+
+[P1-023] "Madrid Salamanca restaurantes 2025 guia"
+  Result: Brenda Alonso / The Objective Repsol guide — already known.
+
+[P1-024] "Usera gastronomia restaurantes Madrid 2025"
+  Result: The Making of Madrid (Hughes) Usera guide — already known.
+
+[P1-025] "La Local Spain Madrid restaurant review 2024 2025"
+  Result: The Local Spain articles found but no confirmed named author
+  on Madrid restaurant guides. NO NEW SOURCE.
+
+[P1-026] "Culinary Backstreets Madrid restaurant guide"
+  Result: Culinary Backstreets Madrid — no active Madrid edition found
+  in year range with named author. NO NEW SOURCE.
+
+[P1-027] "mejor comida Madrid blog personal recomendaciones 2024"
+  Result: Multiple personal blogs, none meeting named-author standard.
+
+[P1-028] "Brenda Alonso gastronomia Madrid restaurantes"
+  Result: The Objective (Alonso) — already confirmed Phase 0.
+
+[P1-029] "Mapi Hermida restaurantes Madrid recomendaciones"
+  Result: La Gastronoma (Hermida) — already confirmed Phase 0.
+
+[P1-030] "Lauren Aloise Madrid restaurants guide"
+  Result: Spanish Sabores (Aloise) — already confirmed Phase 0.
+
+[P1-031] "restaurantes Madrid 2025 nueva apertura guia"
+  Result: Multiple articles. La Gastronoma (Hermida) already known.
+  No new qualifying source found.
+
+[P1-032] "DOD Magazine restaurantes Madrid 2025"
+  Result: DOD Magazine found but CAPTCHA blocked. FAILED.
+
+[P1-033] "comida Madrid 2024 periodista especializado"
+  Result: No new named-author source identified.
+
+[P1-034] "Devour Madrid restaurantes blog"
+  Result: Devour Tours blog found — same COI as Spanish Sabores
+  (Lauren Aloise's company). Does not add new source — same publisher.
+
+════════════════════════════════════════
+PHASE 1B — CROSS-VALIDATION QUERIES (2026-04-26)
+════════════════════════════════════════
+
+[P1B-001] "Lana restaurante Madrid Ponzano reseña"
+  Result: Lana confirmed in Time Out, GastroMadrid, The Objective.
+  No additional qualifying source found beyond existing 3.
+
+[P1B-002] "Sacha restaurante Madrid bistro reseña"
+  Result: Sacha confirmed in Richardson (EN) and Time Out (ES).
+  Already both-pool. No new source.
+
+[P1B-003] "Tripea Vallehermoso Madrid reseña recomendacion"
+  Result: Tripea confirmed in Time Out and GastroMadrid.
+  No additional qualifying source found.
+
+════════════════════════════════════════
+PHASE 1 RESULTS SUMMARY
+════════════════════════════════════════
+
+Phase 1 queries run: 34
+Phase 1B queries run: 3
+New qualifying sources found: 0
+Sources already known confirmed: multiple (all 9 Phase 0 sources
+  confirmed present in search results, none yielding new sources)
+
+Stopping rule: 8+ consecutive searches with no new qualifying source.
+Phase 1 stopped and marked complete.
+
