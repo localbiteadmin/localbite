@@ -125,11 +125,19 @@ WRITER PROFILE RULE — MANDATORY
 The writer_profile field is USER-FACING. It appears in the
 LocalBite Sources panel. Never include in writer_profile:
 ✗ Fetch quality or character counts
-✗ Tier assignments or confidence scores
-✗ Rejection reasons or pipeline notes
-✗ Internal pipeline terminology
+✗ Tier assignments or confidence scores — NEVER write "PRIMARY source",
+  "SECONDARY source", "Tier A", "Tier B", "Tier C"
+✗ Rejection reasons or pipeline notes — NEVER write "Phase 0", "Phase 1",
+  "Phase 1B", "confirmed byline", "fetch quality", "cap applied"
+✗ Internal pipeline terminology — NEVER write "concentration cap",
+  "single-source", "named-author confirmed", "sibling edition check",
+  "cross-validated", "DIRECT_FETCH", or any pipeline phase reference
 ✓ Write 2–3 natural sentences covering: who the writer is,
   their connection to this city, and their editorial stance.
+✓ A correct profile: "[Writer] is a [role] at [publication], covering [topic]."
+✗ A wrong profile reads like a pipeline status report. If unsure whether
+  a phrase belongs here, ask: would a reader of the Sources panel understand
+  why this information is here? If no — remove it.
 
 ════════════════════════════════════════
 NAMED AUTHOR REQUIREMENTS — MANDATORY

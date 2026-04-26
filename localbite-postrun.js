@@ -83,7 +83,11 @@ STRICT RULES:
 - Only state facts derivable from the fields above. Do not invent years of experience, network size, or any biographical detail not given.
 - Cover: who this writer is and what the publication covers.
 - Do not start with the writer name as the first word.
-- No pipeline notes, no operational data.
+- No pipeline notes, no operational data. Specifically NEVER write:
+  "PRIMARY source", "SECONDARY source", "Tier A", "Tier B", "Tier C",
+  "Phase 0", "Phase 1", "fetch quality", "confirmed byline", "cap applied",
+  "concentration cap", "single-source", "named-author confirmed",
+  "sibling edition check", or any pipeline operational language.
 - Output MUST be in ENGLISH.
 
 Respond with only the profile text — no preamble, no quotes, no labels.`;
@@ -528,6 +532,29 @@ function isThinProfile(profile) {
 
       fs.writeFileSync(file, JSON.stringify(data, null, 2), 'utf8');
       console.log(`\n✓ ${enriched} profile(s) enriched and written to ${file}`);
+    }
+  }
+
+  // ══ STEP 2b VALIDATION — writer_profile prohibited terms ══════════════════
+  {
+    const PROHIBITED_PROFILE_TERMS = [
+      'PRIMARY source', 'SECONDARY source', 'Tier A', 'Tier B', 'Tier C',
+      'Phase 0', 'Phase 1', 'fetch quality', 'confirmed byline', 'cap applied',
+      'concentration cap', 'single-source', 'named-author confirmed', 'sibling edition'
+    ];
+    let profileContaminated = false;
+    for (const src of sourcesArray) {
+      const profile = src.writer_profile || '';
+      const hits = PROHIBITED_PROFILE_TERMS.filter(t =>
+        profile.toLowerCase().includes(t.toLowerCase())
+      );
+      if (hits.length > 0) {
+        console.warn(`\n⚠ writer_profile contamination: ${src.writer} — found: ${hits.join(', ')}`);
+        profileContaminated = true;
+      }
+    }
+    if (!profileContaminated) {
+      console.log(`\n✓ writer_profile validation passed — no prohibited terms detected.`);
     }
   }
 
