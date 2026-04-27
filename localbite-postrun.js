@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// LocalBite Post-Pipeline Script v3.0
+// LocalBite Post-Pipeline Script v3.3
 //
 // Changes from v2.0:
 //   - Step 1.5 (new): Schema validation — checks required field names
@@ -159,7 +159,7 @@ function isThinProfile(profile) {
     ? (Array.isArray(data.sources) ? data.sources.length : Object.keys(data.sources).length)
     : 0;
 
-  console.log(`\nLocalBite Post-Pipeline Script v3.0`);
+  console.log(`\nLocalBite Post-Pipeline Script v3.3`);
   console.log(`══════════════════════════════════════════════`);
   console.log(`City:     ${city}, ${country}`);
   console.log(`File:     ${file}`);
@@ -263,6 +263,9 @@ function isThinProfile(profile) {
   // Fix 3 — restaurant field name variants
   for (const r of data.restaurants) {
     if ('restaurant_name' in r && !('name' in r))   { r.name = r.restaurant_name; delete r.restaurant_name; autoRepaired++; }
+    // Compaction-reconstruction field variants for the quote field
+    if ('review_quote' in r && !('quote' in r))     { r.quote = r.review_quote; delete r.review_quote; autoRepaired++; }
+    if ('description'  in r && !('quote' in r))     { r.quote = r.description;  delete r.description;  autoRepaired++; }
     if ('venue_name' in r && !('name' in r))        { r.name = r.venue_name; delete r.venue_name; autoRepaired++; }
     if ('pool' in r && !('language_pool' in r))     { r.language_pool = r.pool; delete r.pool; autoRepaired++; }
     if ('lang_pool' in r && !('language_pool' in r)){ r.language_pool = r.lang_pool; delete r.lang_pool; autoRepaired++; }
@@ -699,9 +702,13 @@ function isThinProfile(profile) {
 
   console.log('');
   console.log(`Next steps:`);
+  const citySlugForLog = citySlug || 'city';
+  const searchLogFile = `localbite-${citySlugForLog}-search-log.txt`;
+  const fetchLogFile  = `localbite-${citySlugForLog}-fetch-log.txt`;
+  const pipelineDocFiles = `${file} index.html localbite-index.json localbite-run-metrics.log ${searchLogFile} ${fetchLogFile}`;
   const steps = missingCount > 0
-    ? [`1. node localbite-approve-centroids.js ${file} --auto-accept`, `2. git add ${file} index.html localbite-index.json`]
-    : [`1. git add ${file} index.html localbite-index.json`];
+    ? [`1. node localbite-approve-centroids.js ${file} --auto-accept`, `2. git add ${pipelineDocFiles}`]
+    : [`1. git add ${pipelineDocFiles}`];
   steps.forEach(s => console.log(`  ${s}`));
   console.log('');
 

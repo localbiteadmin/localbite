@@ -32,6 +32,7 @@ REQUIRED — must be present in every Part 1:
   OUTPUT_FINAL
   OUTPUT_AUDIT
   OUTPUT_FAILED_SOURCES
+  OUTPUT_FETCH_LOG
 
 OPTIONAL — leave blank if not applicable:
   TIER_3_NEIGHBOURHOODS  emerging areas — blank if none
@@ -233,6 +234,30 @@ to OUTPUT_SEARCH_LOG using these exact prefix formats:
 Format: [prefix] "[exact query or URL]" → [one sentence on results]
 
 Do this in real time. Do not reconstruct from memory at the end.
+
+════════════════════════════════════════
+FETCH LOG
+════════════════════════════════════════
+
+After every fetch attempt (Phase 0 direct fetches, Phase 1B verification
+fetches, Phase 2 source fetches), immediately append one line to
+OUTPUT_FETCH_LOG using this format:
+
+  [phase] "URL or domain" → [HTTP status] | [chars returned] | [OUTCOME] — one sentence reason
+
+HTTP status values: 200, 200+PAYWALL, 200+CAPTCHA, 200+DYNAMIC, 400,
+403, 404, 410, 451, TIMEOUT, SIZE
+
+Outcome values: ACCEPTED, REJECTED-byline, REJECTED-date, REJECTED-quote,
+REJECTED-geo, SKIPPED, PARTIAL, FAILED
+
+Examples:
+  [p0] "epicureanways.com/madrid-guide" → 200 | 45312ch | ACCEPTED — Paul Richardson, named author confirmed, 2024 article
+  [p0] "gastroactitud.com" → 200 | 23150ch | REJECTED-byline — editorial "we" throughout, multi-author site
+  [p0] "theobjective.com/article-x" → 404 | —ch | FAILED — URL dead, attempting Wayback
+  [p2] "theinfatuation.com/madrid/guides/where-to-eat-madrid" → 200+DYNAMIC | 48231ch | PARTIAL — scroll-load truncation, 11/~30 entries extracted
+
+Do this in real time after every fetch. Do not reconstruct from memory at the end.
 
 ════════════════════════════════════════
 PHASE 0 — DIRECT FETCH OF KNOWN SOURCES
