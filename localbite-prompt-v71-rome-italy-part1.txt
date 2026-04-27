@@ -84,10 +84,8 @@ DIRECT_FETCH_SOURCES:
 NAMED_AWARDS:
   50 Top Italy (50topitaly.it) — annual guide, independent
   L'Espresso Ristoranti d'Italia (annual guide)
-  Gambero Rosso Ristoranti d'Italia — NOTE: Gambero Rosso operates
-    a Città del gusto commercial food school in Rome. Flag all
-    Gambero Rosso sources with ⚠ coi in writer_profile. Do not
-    reject — include transparently.
+  Gambero Rosso Ristoranti d'Italia — standard named-author source.
+    Treat as any other publication. No COI.
   Slow Food Osterie d'Italia — independent guide, no COI
 
 MICHELIN_STARRED_EXCLUSIONS:
@@ -130,9 +128,7 @@ MICHELIN_STARRED_EXCLUSIONS:
   outside Rome city are auto-excluded by bounding box.
 
 KNOWN_COMMERCIAL_CONFLICTS:
-  Gambero Rosso — operates Città del gusto commercial cooking school
-    in Rome. Flag any Gambero Rosso source with ⚠ coi. Include
-    transparently with COI note.
+  None identified.
 
 PHASE1_AUTO_PROCEED: YES
 UNATTENDED_MODE: YES
@@ -147,7 +143,7 @@ ecosystem. Phase 1 should actively search for:
     gastronomici a Roma)
   - Blogs written by Rome-based food writers in Italian
   - Italian food publications covering Rome restaurants
-  - Dissapore, Gambero Rosso blog (with COI flag), Identità Golose
+  - Dissapore, Gambero Rosso blog, Identità Golose
 
 Both-pool requirements: To qualify for both-pool, need at least one
 EN source AND one IT/other-language source from different publishers.

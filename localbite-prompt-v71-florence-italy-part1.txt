@@ -90,11 +90,8 @@ DIRECT_FETCH_SOURCES:
 NAMED_AWARDS:
   50 Top Italy (50topitaly.it) — annual guide, independent
   L'Espresso Ristoranti d'Italia (annual guide)
-  Gambero Rosso Ristoranti d'Italia — NOTE: Gambero Rosso operates
-    the Città del gusto commercial food school network in Italy.
-    Verify if a Città del gusto operates in Florence specifically.
-    If confirmed, flag any Gambero Rosso Florence sources with ⚠ coi.
-    Do not reject — include transparently.
+  Gambero Rosso Ristoranti d'Italia — standard named-author source.
+    Treat as any other publication. No COI.
   Slow Food Osterie d'Italia — independent guide, no COI
 
 MICHELIN_STARRED_EXCLUSIONS:
@@ -127,8 +124,6 @@ MICHELIN_STARRED_EXCLUSIONS:
   bounding box.
 
 KNOWN_COMMERCIAL_CONFLICTS:
-  Gambero Rosso — verify Città del gusto presence in Florence.
-    Flag any Gambero Rosso sources with ⚠ coi if confirmed.
   Gucci Osteria — owned by Gucci (fashion house) and affiliated with
     Massimo Bottura. This is a commercial entity, but it is also
     Michelin-starred and therefore excluded regardless of COI.
@@ -144,7 +139,7 @@ Italian-language sources: Florence has strong IT food media.
 Phase 1 should search for:
   - Named Italian food critics and bloggers covering Florence
   - Leonardo Romanelli (leonardoromanelli.it) — check Phase 0 first
-  - Dissapore, Gambero Rosso blog (flag COI), local Florence food media
+  - Dissapore, Gambero Rosso blog, local Florence food media
   - Florentine food blogs in Italian
 
 Florentine food identity: Bistecca alla Fiorentina, ribollita, pappa

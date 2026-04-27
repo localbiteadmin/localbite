@@ -91,12 +91,8 @@ DIRECT_FETCH_SOURCES:
 NAMED_AWARDS:
   50 Top Italy (50topitaly.it) — annual guide, independent
   L'Espresso Ristoranti d'Italia (annual guide)
-  Gambero Rosso Ristoranti d'Italia — NOTE: Gambero Rosso operates
-    Città del gusto commercial cooking schools in Italy and may have
-    a Milan presence. ⚠ VERIFY if a Città del gusto operates in
-    Milan before including any Gambero Rosso sources. If confirmed,
-    flag with ⚠ coi in writer_profile. Do not reject — include
-    transparently.
+  Gambero Rosso Ristoranti d'Italia — standard named-author source.
+    Treat as any other publication. No COI.
   Slow Food Osterie d'Italia — independent guide, no COI
   Identità Golose — Milan-based food congress and guide
 
@@ -144,8 +140,6 @@ MICHELIN_STARRED_EXCLUSIONS:
   NOTE: Aalto lost its star in the 2025 edition and is not in the 2026 guide.
 
 KNOWN_COMMERCIAL_CONFLICTS:
-  Gambero Rosso — verify if Città del gusto operates in Milan.
-    If yes, flag any Gambero Rosso Milan sources with ⚠ coi.
   MUDEC Museum — Enrico Bartolini restaurant is inside a public museum.
     No COI for the museum itself; the restaurant is excluded on
     Michelin grounds only.
@@ -161,7 +155,7 @@ Italian-language sources: Milan has strong IT food media. Phase 1
 should actively search for:
   - Dissapore (dissapore.com) — Italian food media with named writers,
     covers Milan extensively. Check for named bylines.
-  - Gambero Rosso blog/magazine (flag COI if Città del gusto confirmed)
+  - Gambero Rosso blog/magazine
   - Local Milan food blogs in Italian
   - Named Italian food critics covering Milan restaurants
   - ItalyEat or similar IT food media
