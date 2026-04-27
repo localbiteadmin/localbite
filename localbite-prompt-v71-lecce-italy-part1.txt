@@ -1,0 +1,145 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Lecce, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Lecce
+COUNTRY: Italy
+CITY_SLUG: lecce-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €15pp (pasticceria, street food, caffè)
+  2 = €15–40pp (trattoria, osteria, casual Salentine)
+  3 = €40–80pp (modern Salentine, tasting menu entry)
+  4 = over €80pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Centro Storico (Piazza Sant'Oronzo, Piazza del Duomo,
+    Piazzetta Arco di Prato),
+  Rudiae, Stadio
+
+TIER_2_NEIGHBOURHOODS:
+  San Lazzaro, Leuca, Castromediano
+
+TIER_3_NEIGHBOURHOODS:
+  Merine, Surbo (if within city limits), San Cesario (if within)
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Lecce city municipality (Comune di Lecce) only.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Otranto (~40km south), Gallipoli (~40km west),
+  Ostuni (~60km north), Brindisi (~40km north),
+  Porto Cesareo, Santa Maria di Leuca, Maglie,
+  or any location described as "in the Salento",
+  "near Lecce", "on the Salentine coast", or "a day trip
+  from Lecce." These are popular destinations frequently
+  grouped with Lecce in food media.
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed. "Lecce" is unambiguous.
+  "Lecce Italy" is safe in English queries. No significant
+  toponym collision risk.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-lecce-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-lecce-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-lecce-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-lecce-italy-raw.json
+OUTPUT_WORKING:       ./localbite-lecce-italy-working.json
+OUTPUT_FINAL:         ./localbite-lecce-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-lecce-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-lecce-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  None confirmed for Phase 0. Proceed directly to Phase 1 search.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — standard named-author source,
+    no COI.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS — None in Lecce city or Puglia region
+
+  — 2 STARS — None in Lecce city or Puglia region
+
+  — 1 STAR in LECCE CITY (2026 guide) —
+  Primo Restaurant (Lecce city — confirmed 2026)
+  NOTE: Bros' (Lecce city) lost its Michelin star in the
+  2025→2026 transition. Bros' is NOT excluded — it may
+  appear as a non-starred recommendation from writers who
+  covered it during 2023–2025 when it was starred. However,
+  do NOT include Bros' in the pack if a writer only recommended
+  it because of its star — verify that editorial prose quotes
+  exist independently of the Michelin status.
+
+  — 1 STAR OUTSIDE LECCE CITY (auto-excluded by bounding box) —
+  Carovigno – Dissapore di Andrea Catalano (new 2026)
+  Manduria – Casamatta
+  Polignano a Mare – Pashà
+  Putignano – Angelo Sabatelli
+  Savelletri – Due Camini
+  Trani – Casa Sgarra
+  Trani – Quintessenza
+  Peschici – Porta di Basso
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  None identified.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — LECCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠ THIN CITY RISK: Lecce is a small city (~90,000 inhabitants)
+with limited English-language food media. May fall below ≥10R
+publish threshold. Run Lecce last within Batch F and review
+restaurant count before committing to index.
+
+Italian-language sources: Phase 1 should search for:
+  "migliori ristoranti Lecce osterie trattorie 2024 2025"
+  "dove mangiare Lecce guida gastronomica 2025"
+  "Lecce ristoranti consigliati critico gastronomico 2025"
+  Named IT Lecce/Salento food writers and bloggers
+
+Salentine food identity: Lecce has a distinctive food culture
+rooted in cucina povera (peasant cooking) elevated by quality
+local produce. The pipeline should target:
+  - Pasticciotti leccesi (custard-filled pastry — the defining
+    sweet of Lecce, found at Pasticceria Natale and others)
+  - Rustico leccese (puff pastry with tomato and mozzarella)
+  - Ciceri e tria (pasta with fried pasta strips and chickpeas)
+  - Frisella (dried bread soaked in olive oil and tomato)
+  - Pittu (local dialect for polpette di pane)
+  - Masserie (farmhouse restaurants) within city limits only
+  - Natural wine bars in the centro storico
+
+Salento contamination: The Salento peninsula is heavily promoted
+as a single destination. Many food guides cover the entire region
+under "Lecce" or "Salento." The pipeline must apply strict
+bounding box discipline — only restaurants within the Comune
+di Lecce qualify. Coastal towns (Otranto, Gallipoli, Porto
+Cesareo, Santa Maria di Leuca) are separate municipalities
+regardless of how travel writers group them.
+
+Bros' note: Bros' (chef Floriano Pellegrino) was the most famous
+Lecce restaurant internationally and lost its Michelin star in
+2026. It may still have strong editorial coverage from 2023–2025.
+Include if editorial prose quotes exist and the restaurant is
+being recommended for food quality, not just for its former star.
+
+Both-pool requirements: No Phase 0 sources confirmed. Phase 1
+must find qualifying EN and IT sources. If fewer than 10R can
+be reached from qualifying sources, park Lecce and document
+as thin city.

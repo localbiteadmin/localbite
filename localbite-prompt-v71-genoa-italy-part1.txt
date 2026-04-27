@@ -1,0 +1,133 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Genoa, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Genoa
+COUNTRY: Italy
+CITY_SLUG: genoa-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €15pp (friggitoria, focacceria, trattoria di caruggi)
+  2 = €15–40pp (mid-range trattoria, osteria, seafood casual)
+  3 = €40–80pp (modern Ligurian, tasting menu entry)
+  4 = over €80pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Centro Storico (Caruggi, Piazza De Ferrari, Porto Antico),
+  Castelletto, Foce
+
+TIER_2_NEIGHBOURHOODS:
+  Sampierdarena, San Fruttuoso, Quinto al Mare, Nervi,
+  Albaro, Sturla
+
+TIER_3_NEIGHBOURHOODS:
+  Sestri Ponente, Cornigliano, Pontedecimo, Voltri
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Genoa city municipality (Comune di Genova) only.
+  Genoa is an elongated city stretching along the coast —
+  all municipio districts from Voltri to Nervi are within the
+  city bounding box.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Portofino (Cracco Portofino 1★ is here — separate municipality,
+    ~35km from Genoa, auto-excluded by bounding box),
+  Cavi di Lavagna (Impronta d'Acqua 1★ — separate municipality),
+  Sestri Levante (Rezzano Cucina e Vino, new 1★ 2026 — separate
+    municipality, auto-excluded),
+  Rapallo, Santa Margherita Ligure, Camogli, Recco (famous for
+    focaccia al formaggio but separate municipality),
+  or any location described as "on the Riviera di Levante",
+  "near Portofino", or "outside Genoa."
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed. "Genova" in Italian and "Genoa Italy"
+  in English are unambiguous. Minor risk of confusion with Genoa
+  City, Wisconsin — negligible food media contamination.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-genoa-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-genoa-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-genoa-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-genoa-italy-raw.json
+OUTPUT_WORKING:       ./localbite-genoa-italy-working.json
+OUTPUT_FINAL:         ./localbite-genoa-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-genoa-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-genoa-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  None confirmed for Phase 0. Proceed directly to Phase 1 search.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — standard named-author source,
+    no COI.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS — None in Genoa city or Liguria
+
+  — 2 STARS — None in Genoa city or Liguria
+
+  — 1 STAR in GENOA CITY (2026 guide) —
+  Il Marin (Genoa city — Porto Antico area)
+  San Giorgio (Genoa city)
+  NOTE: The Cook (Genoa city) held 1★ in earlier guides but LOST
+  its star in the 2025→2026 transition. It is NOT in the 2026 guide.
+  Do not exclude The Cook — it may be a valid non-starred
+  recommendation if a source recommends it.
+
+  — 1 STAR OUTSIDE GENOA CITY (auto-excluded by bounding box) —
+  Cracco Portofino (Portofino — new 2026 star, separate municipality)
+  Impronta d'Acqua (Cavi di Lavagna — separate municipality)
+  Rezzano Cucina e Vino (Sestri Levante — new 2026, separate)
+  Equilibrio (Dolcedo — separate municipality, inland)
+  NOTE: Portofino is ~35km from Genoa city and will auto-exclude
+  via bounding box, but it frequently appears in "Genoa area"
+  restaurant guides. Reject at extraction stage if outside city.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  None identified.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — GENOA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Italian-language sources: Phase 1 should search for:
+  "migliori ristoranti Genova trattorie caruggi 2024 2025"
+  "dove mangiare Genova guida gastronomica 2025"
+  "Genova ristoranti consigliati critico gastronomico 2025"
+  Named IT Genoa food writers and bloggers
+
+Genovese food identity: Genoa has one of Italy's great street food
+and working-class food cultures. The pipeline should target:
+  - Focaccia genovese (the defining snack, sold at every bakery)
+  - Focaccia di Recco col formaggio (note: Recco is outside city)
+  - Farinata (chickpea flatbread)
+  - Pesto alla genovese (birthplace of pesto)
+  - Trattorie in the caruggi (medieval alleyways)
+  - Seafood from the Porto Antico area
+  - Cappon magro (elaborate Ligurian seafood salad)
+  - Zimino di ceci (chickpea and chard stew)
+
+Portofino contamination: Portofino restaurants appear constantly
+in "Genoa" food coverage. Apply firm bounding box rejection —
+Portofino is accessible only by boat or narrow mountain road and
+is clearly a separate destination from Genoa city.
+
+Both-pool requirements: No Phase 0 sources confirmed. The pipeline
+must find at least one qualifying EN source AND one qualifying IT
+source via Phase 1. Both must be different publishers, different
+languages. The publish threshold (≥10R) may be harder to reach
+without Phase 0 sources — Phase 1 should be aggressive.

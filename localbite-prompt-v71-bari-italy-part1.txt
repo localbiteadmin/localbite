@@ -1,0 +1,136 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Bari, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Bari
+COUNTRY: Italy
+CITY_SLUG: bari-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €15pp (panifici, street food, focacceria)
+  2 = €15–40pp (trattoria, osteria, casual seafood)
+  3 = €40–80pp (modern Pugliese, tasting menu entry)
+  4 = over €80pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Bari Vecchia (Città Vecchia, Lungomare),
+  Murattiano (Corso Vittorio Emanuele area),
+  Libertà, Carrassi
+
+TIER_2_NEIGHBOURHOODS:
+  San Pasquale, Poggiofranco, Japigia, Madonnella
+
+TIER_3_NEIGHBOURHOODS:
+  Loseto, Carbonara, Ceglie del Campo, Palese
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Bari city municipality (Comune di Bari) only.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  ⚠ ALL Puglia starred restaurants are OUTSIDE Bari city —
+  see MICHELIN_STARRED_EXCLUSIONS below.
+  Also exclude: Polignano a Mare (~30km south),
+  Conversano (~25km south), Putignano (~40km south),
+  Trani (~40km north), Carovigno, Savelletri, Ostuni,
+  Manduria, Lecce, or any location described as "near Bari",
+  "in the Valle d'Itria", "in the Murge", or "in Salento."
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed. "Bari" is unambiguous in Italian.
+  "Bari Italy" is safe in English queries. No significant
+  toponym collision risk.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-bari-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-bari-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-bari-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-bari-italy-raw.json
+OUTPUT_WORKING:       ./localbite-bari-italy-working.json
+OUTPUT_FINAL:         ./localbite-bari-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-bari-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-bari-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  None confirmed for Phase 0. Proceed directly to Phase 1 search.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — standard named-author source,
+    no COI.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS — None in Bari city or Puglia region
+
+  — 2 STARS — None in Bari city or Puglia region
+
+  — 1 STAR in BARI CITY —
+  ⚠ NONE. Bari has zero Michelin-starred restaurants as of 2026.
+  Confirmed: "Manca ancora un ristorante stellato nel capoluogo
+  di regione" (Puglia's regional capital has no starred restaurant).
+
+  — 1 STAR IN PUGLIA (ALL OUTSIDE BARI CITY — listed for pipeline
+  awareness — auto-excluded by bounding box) —
+  Carovigno – Dissapore di Andrea Catalano (new 2026)
+  Lecce – Primo Restaurant
+  Manduria – Casamatta
+  Polignano a Mare – Pashà
+  Putignano – Angelo Sabatelli
+  Savelletri – Due Camini
+  Trani – Casa Sgarra
+  Trani – Quintessenza
+  Peschici – Porta di Basso
+  NOTE: Bros' (Lecce) lost its star in the 2025→2026 transition.
+  It is no longer starred and does not require exclusion.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  None identified.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — BARI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠ THIN CITY RISK: Bari has no Michelin-starred restaurants and
+limited English-language food media. This city is at risk of
+falling below the ≥10R publish threshold. Run Bari last within
+Batch F and review restaurant count before committing to index.
+
+Italian-language sources: Phase 1 should search for:
+  "migliori ristoranti Bari osterie trattorie 2024 2025"
+  "dove mangiare Bari guida gastronomica 2025"
+  "Bari ristoranti consigliati critico gastronomico 2025"
+  Luciano Pignataro may have Bari/Puglia coverage — check
+  Named IT Bari food writers and local food bloggers
+
+Barese food identity: Bari has a rich, unpretentious food culture.
+The pipeline should target:
+  - Orecchiette al ragù barese (fresh pasta made by hand in
+    the streets of Bari Vecchia — Le Focacce / strada delle
+    orecchiette is a landmark)
+  - Sgagliozze (fried polenta squares, street food)
+  - Focaccia barese (thick, oily, olive-topped)
+  - Panzerotti (fried dough pockets)
+  - Seafood from the Adriatic (crudo di mare, ricci di mare)
+  - Tiella barese (rice, potatoes and mussels)
+
+Province contamination: Puglia is marketed as a unified
+destination and many guides lump Bari, Polignano a Mare,
+Alberobello, Locorotondo, and the Valle d'Itria together.
+The pipeline must apply strict bounding box discipline —
+only Bari city municipality qualifies.
+
+Both-pool requirements: No Phase 0 sources confirmed. Phase 1
+must find qualifying EN and IT sources. If sources cannot be
+found across both languages, document as structural gap.
+Consider parking Bari if <10R cannot be reached.
