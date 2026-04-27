@@ -91,25 +91,43 @@ NAMED_AWARDS:
   Slow Food Osterie d'Italia — independent guide, no COI
 
 MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
   — 3 STARS (exclude entirely) —
   La Pergola (Chef Heinz Beck, Via Alberto Cadlolo 101, Rome Cavalieri
-    Waldorf Astoria hotel, Monte Mario) — Rome's only 3-star restaurant.
-    Has held 3 stars since 2005.
+    Waldorf Astoria hotel, Monte Mario)
 
   — 2 STARS (exclude entirely) —
   Il Pagliaccio (Chef Anthony Genovese, Via dei Banchi Vecchi 129/a)
-  Acquolina (confirm full address at guide.michelin.com/it/lazio/roma)
-  ⚠ VERIFY third Rome 2-star: likely Il Convivio Troiani — confirm
-    name and address at guide.michelin.com/it/lazio/roma before launch.
+  Acquolina (Chef Daniele Lippi, at The First Roma Arte Hotel)
+  Enoteca La Torre (Chef Domenico Stile, at Villa Laetitia,
+    Lungotevere delle Armi 22)
 
   — 1 STAR (exclude entirely — apply blanket rule) —
-  Rome has 14 one-star restaurants in the 2025 guide. Verify the
-  complete list at guide.michelin.com/it/lazio/roma and add all
-  names here before launching the pipeline. Do not proceed with the
-  pipeline until this list is complete. Known 1-star restaurants
-  include (partial, confirm completeness):
-  Pipero Roma, Tordomatto, Glass Hostaria, Per Me Giulio Terrinoni,
-  Imago, Enoteca La Torre, Aroma, Moma, Ad Hoc — verify all.
+  All 16 one-star restaurants in Rome city (2026 guide):
+  Pulejo
+  Orma Roma
+  INEO (new 2026, at Anantara Palazzo Naiadi, Piazza della Repubblica)
+  Pipero Roma
+  Il Convivio Troiani
+  Per Me Giulio Terrinoni
+  Achilli al Parlamento
+  Imàgo (Hotel Hassler, Piazza Trinità dei Monti 6)
+  Moma
+  La Terrazza (new 2026, at Hotel Eden)
+  Marco Martini Restaurant
+  Aroma
+  All'Oro
+  Glass Hostaria (Trastevere)
+  Zia
+  Idylio by Apreda (The Pantheon Iconic Rome Hotel)
+
+  NOTE: Al Madrigale | Nuova Cucina Rurale (Tivoli, new 2026) is in Lazio
+  province but outside Rome city bounding box — auto-excluded by geography,
+  no need to add to exclusion list.
+
+  NOTE: Province of Rome (Lazio) has 26 starred restaurants total; the 6
+  outside Rome city are auto-excluded by bounding box.
 
 KNOWN_COMMERCIAL_CONFLICTS:
   Gambero Rosso — operates Città del gusto commercial cooking school

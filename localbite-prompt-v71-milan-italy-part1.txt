@@ -101,38 +101,47 @@ NAMED_AWARDS:
   Identità Golose — Milan-based food congress and guide
 
 MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
   — 3 STARS (exclude entirely) —
   Enrico Bartolini at MUDEC (Chef Enrico Bartolini, MUDEC Museum,
-    Viale Stelvio 1, Milan) — Milan's only 3-star restaurant.
-    Received third star in 2020. Italy's most-starred chef overall
-    (13 stars across multiple restaurants) — only this 3-star location
-    is in Milan city.
+    Viale Stelvio 1, Milan, Tortona district)
 
-  — 2 STARS (exclude entirely) —
-  ⚠ VERIFY ALL FOUR 2-STAR NAMES at guide.michelin.com/it/lombardia/milano
-    before launching the pipeline. The 2025 Michelin guide lists 4
-    two-star restaurants in Milan but their names were not fully
-    confirmed in pre-research. Do not proceed without this verification.
-    Known possibilities from research context: check Il Luogo di Aimo
-    e Nadia, Seta (Four Seasons Milan), and others.
+  — 2 STARS (exclude entirely — IN MILAN CITY) —
+  Andrea Aprea (at Fondazione Luigi Rovati)
+  Verso Capitaneo (Piazza del Duomo area)
+  Seta by Antonio Guida (at Mandarin Oriental Milan)
+
+  NOTE: D'O (Chef Davide Oldani, Cornaredo) is listed as a 4th Milan-province
+  2-star in the Michelin guide, but Cornaredo is a separate municipality
+  outside Milan city — it will be auto-excluded by the city bounding box.
+  Include it here for completeness: D'O (Cornaredo, outside city limits)
 
   — 1 STAR (exclude entirely — apply blanket rule) —
-  Milan has 14 one-star restaurants in the 2025 guide. Verify the
-  complete list at guide.michelin.com/it/lombardia/milano and add all
-  names here before launching the pipeline. Known 1-star restaurants
-  include (partial — confirm completeness):
-  Aalto (Chef Takeshi Iwai), Contraste (Chef Matias Perdomo),
-  Berton (Chef Andrea Berton), Cracco (Chef Carlo Cracco),
-  Felix Lo Basso home & restaurant (Chef Felice Lo Basso),
-  Il Luogo di Aimo e Nadia (Chefs Negrini and Pisani),
-  Horto (Chef Alberto Toè), Iyo (Chef Michele Biassoni),
-  Moebius Sperimentale (Enrico Croatti), Sadler (Chef Claudio Sadler),
-  Sine by Di Pinto (Chef Roberto Di Pinto),
-  Anima at Milano Verticale Hotel,
-  Olmo (Chef Davide Oldani — NOTE: in Cornaredo, outside city limits,
-    verify address before including in exclusion list vs. auto-excluded
-    by geography).
-  Joia (Chef Pietro Leeman) — CLOSED end of 2024, do not exclude.
+  All one-star restaurants in Milan city (2026 guide — 15 in province,
+  some in Cornaredo/outside city and auto-excluded by bounding box):
+
+  IN MILAN CITY:
+  Procaccini (Chef Emin Haziri — new 2026)
+  Abba (Chef Fabio Abbattista, Via Varesina 177, Certosa district — new 2026)
+  Anima (at Milano Verticale Hotel)
+  Berton (Chef Andrea Berton)
+  Contraste (Chef Matias Perdomo)
+  Cracco in Galleria (Chef Carlo Cracco, Galleria Vittorio Emanuele II)
+  Felix Lo Basso home & restaurant (Chef Felice Lo Basso)
+  Horto (Chef Alberto Toè, with Norbert Niederkofler — Green Star)
+  Il Luogo di Aimo e Nadia (Chefs Alessandro Negrini and Fabio Pisani)
+  Iyo (Chef Michele Biassoni / sushi master Haruo Ichikawa)
+  Iyo Kaiseki (Piazza Alvar Aalto, Porta Nuova)
+  Moebius Sperimentale (Enrico Croatti)
+  Sadler (Chef Claudio Sadler)
+  Sine by Di Pinto (Chef Roberto Di Pinto)
+
+  OUTSIDE MILAN CITY (auto-excluded by bounding box — include for completeness):
+  Olmo (near Cornaredo — Chef Davide Oldani/Riccardo Merli, outside city)
+
+  NOTE: Joia (Chef Pietro Leeman) — CLOSED end of 2024. Not in 2026 guide.
+  NOTE: Aalto lost its star in the 2025 edition and is not in the 2026 guide.
 
 KNOWN_COMMERCIAL_CONFLICTS:
   Gambero Rosso — verify if Città del gusto operates in Milan.
