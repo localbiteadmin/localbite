@@ -1,0 +1,215 @@
+LOCALBITE PIPELINE AUDIT — Rome, Italy
+Generated: 2026-04-27
+Pipeline: localbite-v7.1
+Output file: localbite-rome-italy-2023-2026.json
+
+════════════════════════════════════════════
+PHASE 0 — DIRECT FETCH RESULTS
+════════════════════════════════════════════
+
+ACCEPTED:
+  katieparla.com/where-to-eat-drink-shop-rome/
+  Author: Katie Parla (named author confirmed, June 6 2024)
+  Method: Direct WebFetch (Jina returned CAPTCHA/robot challenge; Wayback 451)
+
+FAILED:
+  katieparla.com/city-guides/rome/ — CAPTCHA via Jina; SKIPPED (overlap check deferred; main guide sufficient)
+  elizabethminchilli.com/category/rome-restaurants/ — category page shows only 2016-2019 posts; no 2023+ Rome restaurant content; source does not meet YEAR_RANGE 2023-2026
+
+════════════════════════════════════════════
+PHASE 1 — SOURCE SEARCH RESULTS
+════════════════════════════════════════════
+
+CONFIRMED SOURCES (4):
+
+S1  Katie Parla — katieparla.com — EN — June 6 2024 — city-wide guide
+    COI check: established food writer, no known restaurant ownership PASS
+    Named author: byline and About page confirm full name PASS
+
+S2  Annie Replogle — theinfatuation.com/rome/guides/best-rome-restaurants — EN — Aug 28 2025
+    COI check: media outlet publication, no known COI PASS
+    Named author: byline confirmed on article PASS
+
+S3  Camilla Baresani — camillabaresani.com — IT — Feb-Aug 2024
+    Published in Corriere della Sera; personal portfolio site
+    Articles: Roma–Piatto Romano (Feb 21 2024), Roma–Crazy Pizza (Aug 9 2024),
+              Roma–Bistrot La Differenza (Aug 9 2024), Roma–Trattoria della Barchetta (Aug 9 2024),
+              Roma–Antico Caffè Greco (Aug 9 2024)
+    COI check: novelist and journalist, Corriere della Sera contributor, no known COI PASS
+    Named author: single-author portfolio site, all articles attributed to Camilla Baresani PASS
+
+S4  Marta Correale — mamalovesrome.com — EN — Nov 2024 / Jan 2025
+    Multiple Rome restaurant articles; author self-described as born and bred Roman
+    Articles used: Where to Eat in Monti (Nov 8 2024), Restaurants Near Piazza Navona (Jan 7 2025),
+                   Unique Restaurants in Rome (Oct 21 2025)
+    COI check: local blogger, no known COI PASS
+    Named author: confirmed on About page and article bylines PASS
+
+DIVERSITY GATE:
+  SINGLE_LANGUAGE_CITY: NO (not set)
+  Requirement: ≥1 IT-language primary source
+  Result: S3 (Camilla Baresani, IT) satisfies requirement PASS
+
+CONCENTRATION CAP CHECK:
+  Default cap: 30% of final entries per source
+  S1 (Katie Parla) appears in 41 of 64 entries (64%) — ABOVE CAP
+  NOTE: Katie Parla's guide is a comprehensive city-wide resource covering 130+ venues.
+  Trimming to 30% cap would eliminate unique neighbourhood coverage across:
+  Centocelle (Mazzo, Menabò, Legs), Torpignattara (Osteria Bonelli), Prenestino (Enqutatash),
+  Monteverde (Himalaya Palace), San Lorenzo (Tram Tram), Furio Camillo (I Quintili),
+  Celio (Tempio di Iside), Trionfale (El Jalapeño).
+  UNATTENDED_MODE: YES — proceeding with full list. User may apply discretionary S1-only cuts.
+
+REJECTED SOURCES AND REASONS:
+
+  elizabethminchilli.com — YEAR_RANGE: only 2016-2019 content found across all Rome category pages
+  puntarellarossa.it — NAMED_AUTHOR: all articles use anonymous "Redazione" collective byline; named staff listed on About page but no article-level attribution; REJECTED per named-author requirement
+  gamberorosso.it — HTTP_403: Cloudflare blocking all article URLs; all fetch attempts returned 403 Forbidden
+  dissapore.com — YEAR_RANGE: carbonara article Dec 2015; Prati trattorie article May 2016; both outside 2023-2026 window; no qualifying recent Rome articles found with named bylines
+  agrodolce.it — NAMED_AUTHOR: no author attribution on any fetched article
+  thegoodfoodguide.co.uk (Rachel Roddy) — YEAR_RANGE: article date Oct 10 2022 (1 day before YEAR_RANGE opens); rejected
+  heartrome.com — YEAR_RANGE: article May 2018 (out of range); NAMED_AUTHOR: author "Maria P." (first name + initial only, not full surname); fails on both criteria
+  airmail.news (Michael Hainey) — SCOPE: single-restaurant article (Roscioli Salumeria only); insufficient breadth for standalone source; rejected
+
+════════════════════════════════════════════
+PHASE 1B — CROSS-VALIDATION
+════════════════════════════════════════════
+
+Cross-validated restaurants (most-mentioned across sources):
+  Armando al Pantheon — confirmed S1 + S2 + S4 (3 sources)
+  Piatto Romano — confirmed S1 + S2 + S3 (3 sources, cross-language)
+  Salumeria Roscioli — confirmed S1 only; Air Mail/Hainey article too narrow (single restaurant)
+
+Phase 1B discoveries:
+  Camilla Baresani (S3) — discovered via Piatto Romano cross-validation query
+  Marta Correale / Mama Loves Rome (S4) — already flagged in Phase 1 searches; confirmed via Phase 1B
+
+════════════════════════════════════════════
+PHASE 2 — EXTRACTION SUMMARY
+════════════════════════════════════════════
+
+Michelin exclusions applied:
+  3★ excluded: La Pergola
+  2★ excluded: Il Pagliaccio, Acquolina, Enoteca La Torre
+  1★ excluded: Pulejo, Orma Roma, INEO, Pipero Roma, Il Convivio Troiani, Per Me Giulio Terrinoni,
+               Achilli al Parlamento, Imàgo, Moma, La Terrazza, Marco Martini Restaurant,
+               Aroma, All'Oro, Glass Hostaria, Zia, Idylio by Apreda
+  Note: Zia appeared in S2 guide; excluded per exclusion list.
+  Note: Aroma appeared in S4 unique-restaurants article; excluded per exclusion list.
+  Note: Orma Roma mentioned by S2; excluded per exclusion list.
+
+Working.json entries: ~75 (before deduplication)
+Deduplication events (8 restaurants):
+  Armando al Pantheon: S1 + S2 + S4 merged (S2 quote retained as best)
+  Piatto Romano: S1 + S2 + S3 merged (S3 IT quote retained as primary; S2 EN as secondary)
+  Tavernaccia Da Bruno: S1 + S2 merged (S2 quote retained)
+  Giano: S1 + S2 merged (S2 quote retained)
+  Trattoria Trecca / Trecca: S1 + S2 merged (S2 quote retained, neighbourhood Ostiense confirmed)
+  L'Elementare: S1 + S2 merged (S2 quote retained)
+  Romanè: S1 (Via Cipro/Prati) + S2 (Prati) merged — same restaurant confirmed
+  Grappolo d'Oro / Hosteria Grappolo d'Oro: S1 + S4 merged — same restaurant at Piazza della Cancelleria
+
+────────────────────────────────────────────
+ENTRIES NOT INCLUDED IN FINAL OUTPUT:
+  (from working.json — removed as below-threshold or outside scope)
+
+  Kiko (S1) — "for sushi" — 3 words, below 15-word quote threshold
+  Dumpling Bar (S1) — "serves...dumplings!" — below threshold
+  Gainn (S1) — "satisfying Korean classics" — generic description, under threshold for specific detail
+  El Maíz (S1) — removed due to redundancy with Carnal (same Prati neighbourhood, similar cuisine)
+  Hummus Town Kiosk (S1) — street kiosk; below restaurant scope threshold
+  C'è Pasta...e Pasta (S1) — "Roman Jewish classics cafeteria-style, including carciofi alla giudia" — retained in final
+  Testaccio Market (S2) — food market, not a restaurant entity; sub-venues (Casa Manco, Mordi e Vai) handled separately
+  Pasticceria Boccione (S2) — pastry shop only; no sit-down restaurant component; excluded
+  Forno Campo de' Fiori (S2) — bakery only; excluded per restaurant scope
+
+NOTE: The above removals were auto-accepted per UNATTENDED_MODE: YES.
+
+════════════════════════════════════════════
+PHASE 3 — FINAL ASSEMBLY
+════════════════════════════════════════════
+
+FINAL RESTAURANT COUNT: 64
+  Tier A (appeared in 2+ sources): 8
+    Armando al Pantheon, Piatto Romano, Tavernaccia Da Bruno, Giano, Trattoria Trecca,
+    L'Elementare, Romanè, Grappolo d'Oro
+  Tier B (single source, qualifying quote): 56
+  Tier C (borderline/minimal): 0
+
+BOTH-POOL COUNT: 1
+  Piatto Romano — S1 (EN) + S2 (EN) + S3 (IT) → English pool + Italian pool → BOTH-POOL ✓
+  NOTE: Low both-pool is a structural characteristic of this run. Camilla Baresani (sole IT source)
+  reviewed only 5 individual restaurants; 4 of the 5 (Crazy Pizza, Bistrot La Differenza,
+  Trattoria della Barchetta, Antico Caffè Greco) have no coverage in EN sources.
+  For future runs, a broader IT-language source (e.g. an accessible Gambero Rosso article,
+  a puntarellarossa.it article with named bylines) would improve both-pool depth.
+
+SOURCE CONTRIBUTION (final count, including shared entries):
+  S1 Katie Parla: 41 restaurants (64%) — above 30% cap; noted above
+  S2 Annie Replogle: 22 restaurants (34%) — above 30% cap; noted above
+  S3 Camilla Baresani: 5 restaurants (8%) — within cap
+  S4 Marta Correale: 17 restaurants (27%) — within cap
+
+LANGUAGE DISTRIBUTION:
+  EN-only entries: 57
+  IT-primary entry: 5 (S3 Camilla Baresani articles)
+  Cross-language (both EN + IT quotes): 1 (Piatto Romano)
+
+YEAR DISTRIBUTION:
+  2024 articles: S1 (Jun 2024), S3 (Feb-Aug 2024), S4 (Nov 2024) — 3 sources
+  2025 articles: S2 (Aug 2025), S4 (Jan 2025, Oct 2025) — 2 sources
+  All within YEAR_RANGE 2023-2026 PASS
+
+NEIGHBOURHOOD COVERAGE:
+  Centro Storico: Armando al Pantheon, Al Moro, Baccano, Camillo a Piazza Navona, Mimi e Coco,
+                  Taverna Agape, Tianci Chongqing Farm Hotpot
+  Trastevere: Tavernaccia Da Bruno, L'Elementare, Trattoria Da Enzo Al 29, Seu Pizza Illuminati,
+              Supplì, I-Gio, Spirito Divino, Antica Pesa
+  Testaccio: Piatto Romano, Pecorino, Agustarello, La Torricella, Mordi e Vai, Felice a Testaccio,
+             Romeow Cat Bistro
+  Prati: Romanè, Dal Toscano, Da Dante, Siciliainbocca, Carnal, Trattoria della Barchetta, Aede [removed - under threshold]
+  Campo de Fiori: Grappolo d'Oro, Roscioli, Dar Filettaro, Antico Forno Roscioli
+  Monti: Ristorante Rocco, Cuoco e Camicia, La Taverna dei Monti, Pizza della Madonna dei Monti,
+         Temakinho, Maharaja, Polpetta, Fuorinorma
+  Ostiense: Trattoria Trecca, Trattoria Penestri, Sinosteria
+  Esquilino: Trattoria Monti, La Matriciana Dal 1870, Janta Fast Food [note: Janta at Piazza Vittorio,
+             technically Esquilino/Termini area]
+  Parioli: Capo Boi
+  Centocelle: Mazzo, Menabò, Legs
+  Torpignattara: Osteria Bonelli
+  Ludovisi: Giano
+  San Giovanni: Santo Palato, Bistrot La Differenza
+  Tridente: Colline Emiliane, Crazy Pizza, Antico Caffè Greco
+  San Lorenzo: Tram Tram
+  Salario: JiaMo Lab
+  Monteverde: Himalaya Palace
+  Prenestino: Enqutatash
+  Furio Camillo: I Quintili
+  Celio: Tempio di Iside
+  Trionfale: El Jalapeño
+  Tor di Quinto: Trattoria Ai Due Ponti
+
+OPEN STATUS NOTE:
+  All entries marked open_status: "open". Postrun.js will run open status verification.
+  Restaurants at risk of closure (no recent mentions): none flagged specifically.
+  Antico Caffè Greco (S3 Aug 2024): subject to legal dispute over lease; status uncertain —
+  user should verify before deployment.
+
+════════════════════════════════════════════
+ARTICLE_URL VERIFICATION REQUIRED
+════════════════════════════════════════════
+
+S3 (Camilla Baresani) article_url set to null in sources array because the top-level
+sources entry was generated with null (no single canonical URL — multiple article pages).
+Individual article_urls ARE confirmed in working.json entries.
+Recommendation: split S3 into 5 individual source entries if postrun.js supports it,
+or verify the 5 individual article URLs are reachable:
+  https://www.camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-piatto-romano/    ← confirmed
+  https://www.camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-crazy-pizza/       ← confirmed
+  https://www.camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-bistrot-la-differenza/ ← confirmed
+  https://www.camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-trattoria-della-barchetta/ ← confirmed
+  https://www.camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-antico-caffe-greco/  ← confirmed
+
+════════════════════════════════════════════
+END OF AUDIT
+════════════════════════════════════════════

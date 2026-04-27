@@ -1,0 +1,110 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LocalBite v7.1 — Rome, Italy
+Search Plan — Phase 1
+Primary Language: Italian (IT) | Secondary Language: English (EN)
+Year Range: 2023-2026
+
+════════════════════════════════════════
+PHASE 0 RESULTS
+════════════════════════════════════════
+Successfully fetched: Katie Parla (katieparla.com/where-to-eat-drink-shop-rome/) — updated June 6 2024
+Failed: Elizabeth Minchilli — no 2023+ Rome restaurant posts found on any category page
+Writers confirmed for Phase 1: Katie Parla
+
+════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
+
+TIER 1 (2 queries each — IT + EN):
+
+Q01 [IT] "ristoranti Trastevere Roma 2024 consigliati critica gastronomica"
+Q02 [EN] "best restaurants Trastevere Rome Italy food writer 2023"
+Q03 [IT] "ristoranti Testaccio Roma 2023 guida gastronomica consigliati"
+Q04 [EN] "where to eat Testaccio Rome independent guide 2024"
+Q05 [IT] "ristoranti Centro Storico Roma 2024 giornalista gastronomico critica"
+Q06 [EN] "Rome Centro Storico restaurants food critic recommendation 2023"
+Q07 [IT] "dove mangiare Prati Roma 2024 trattoria migliori"
+Q08 [EN] "Prati Rome restaurants food writer guide 2024"
+Q09 [IT] "ristoranti Campo de' Fiori Roma 2024 consigliati"
+Q10 [EN] "Campo de Fiori Rome restaurants recommendation 2023"
+Q11 [IT] "migliori ristoranti Monti Roma 2023 scrittore gastronomico"
+Q12 [EN] "best places to eat Monti Rome Italy 2024"
+Q13 [IT] "ristoranti Pigneto Roma 2024 trattoria cucina emergente"
+Q14 [EN] "Pigneto Rome where to eat food guide 2023"
+
+TIER 2 (2 queries each — IT + EN):
+
+Q15 [IT] "ristoranti Ostiense Roma 2024 food blog consigliati"
+Q16 [EN] "Ostiense Rome restaurants food recommendation 2023"
+Q17 [IT] "dove mangiare Parioli Roma 2024 ristoranti migliori"
+Q18 [EN] "Parioli Rome restaurants food writer 2023"
+Q19 [IT] "ristoranti Flaminio Roma 2024 consigliati apertura"
+Q20 [EN] "Flaminio Rome eat food guide 2024"
+Q21 [IT] "ristoranti Nomentano Roma 2023 trattoria osteria"
+Q22 [EN] "Nomentano Rome restaurants food recommendation 2024"
+Q23 [IT] "ristoranti Esquilino Roma 2024 cucina multietnica"
+Q24 [EN] "Esquilino Rome restaurants food writer guide 2023"
+Q25 [IT] "ristoranti Torpignattara Roma 2023 2024 cucina tradizionale"
+Q26 [EN] "Torpignattara Rome restaurants food recommendation 2024"
+Q27 [IT] "dove mangiare San Giovanni Roma 2024 trattoria migliori"
+Q28 [EN] "San Giovanni Rome restaurants food guide 2023"
+
+TIER 3 (1 query each — IT only):
+
+Q29 [IT] "ristoranti Prenestino Roma 2024 consigliati"
+Q30 [IT] "ristoranti Trionfale Roma 2024 mercato trattoria"
+Q31 [IT] "ristoranti Garbatella Roma 2023 2024 trattoria cucina romana"
+Q32 [IT] "migliori ristoranti Centocelle Roma 2024 emergente"
+Q33 [IT] "ristoranti Tiburtino Roma 2024 consigliati"
+
+════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries):
+Q34 [EN] "best independent restaurants Rome Italy 2024 food journalist guide"
+Q35 [EN] "where locals eat Rome Italy honest food recommendation 2023"
+
+Cross-2 — City-wide IT (3 queries):
+Q36 [IT] "i migliori ristoranti Roma 2024 critica gastronomica indipendente"
+Q37 [IT] "dove mangiano i romani migliori trattorie osterie 2023"
+Q38 [IT] "ristoranti Roma 2025 apertura nuovi consigliati giornalismo gastronomico"
+
+Cross-3 — Generic writer-first (2 queries):
+Q39 [EN] "food writer Rome Italy restaurant recommendations blog 2024"
+Q40 [IT] "blogger gastronomico Roma ristoranti consigliati 2023"
+
+Cross-4 — Named awards (3 queries):
+Q41 [IT] "50 Top Italy Roma ristoranti classifica 2024 2025"
+Q42 [IT] "L'Espresso Ristoranti d'Italia Roma guida 2024 2025 premiati"
+Q43 [IT] "Slow Food Osterie d'Italia Roma 2024 osterie segnalate"
+
+Cross-5 — Recent openings (2 queries):
+Q44 [IT] "nuove aperture ristoranti Roma 2024 2025 consigliati"
+Q45 [EN] "new restaurant openings Rome Italy 2024 2025 food guide"
+
+Cross-6 — SKIP (LOCAL_FOOD_VOCABULARY blank)
+
+Cross-7 — Cuisine and community (2 queries):
+Q46 [IT] "cucina romana tradizionale carbonara cacio e pepe ristoranti Roma 2024 critica"
+Q47 [IT] "pizza al taglio Roma 2024 2025 migliori consigliati food writer"
+
+Cross-8 — Publication category IT (2 queries):
+Q48 [IT] "rivista gastronomica italiana ristoranti Roma 2024 2025 recensione"
+Q49 [IT] "supplemento gastronomia giornale Roma ristoranti consigliati 2023 2024"
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+
+Queries referencing earlier years (2023): Q02, Q03, Q06, Q10, Q11, Q14, Q16, Q18, Q24, Q25, Q28, Q35, Q37, Q40, Q43, Q49 = 16 queries
+Queries referencing later years (2024-2026): Q01, Q04, Q05, Q07, Q08, Q09, Q12, Q13, Q15, Q17, Q19, Q20, Q21, Q22, Q23, Q26, Q27, Q29, Q30, Q32, Q33, Q34, Q36, Q38, Q39, Q44, Q45, Q46, Q47, Q48 = 30 queries
+Queries with no year term: Q41, Q42 = 2 queries (award queries)
+
+[year-distribution-check] PASSED — 16 queries reference earlier years (2023), 30 queries reference recent years (2024-2026), 2 queries have no year term (award body queries). Requirement met: not more than half reference only the most recent year.
+
+TOTAL PLANNED QUERIES: 49
+Soft ceiling: 45 | Hard ceiling: 55 | Stopping rule applies if last 8 consecutive return no new sources
+
+Proceed to Phase 1 Step 2 — Execute search plan.

@@ -1,0 +1,1762 @@
+{
+  "city": "Rome",
+  "country": "Italy",
+  "city_slug": "rome-italy",
+  "pipeline": "localbite-v7.1",
+  "date_generated": "2026-04-27",
+  "year_range": "2023-2026",
+  "city_language": "IT",
+  "price_currency": "EUR",
+  "sources": [
+    {
+      "source_id": "S1",
+      "writer": "Katie Parla",
+      "publication": "katieparla.com",
+      "language": "en",
+      "article_date": "2024-06-06",
+      "article_url": "https://katieparla.com/where-to-eat-drink-shop-rome/",
+      "article_title": "Where to Eat & Drink & Shop for Food in Rome in 2024",
+      "id": "S1",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food expert Katie Parla shares insider dining recommendations and culinary insights through her website katieparla.com. Her coverage focuses on authentic local food experiences, including comprehensive guides to eating, drinking, and food shopping in major culinary destinations like Rome."
+    },
+    {
+      "source_id": "S2",
+      "writer": "Annie Replogle",
+      "publication": "theinfatuation.com",
+      "language": "en",
+      "article_date": "2025-08-28",
+      "article_url": "https://www.theinfatuation.com/rome/guides/best-rome-restaurants",
+      "article_title": "The Best Restaurants In Rome",
+      "id": "S2",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer at The Infatuation, a popular restaurant discovery platform known for its honest, accessible reviews and dining recommendations. Annie Replogle covers international dining destinations, offering insider perspectives on the best places to eat in major cities around the world."
+    },
+    {
+      "source_id": "S3",
+      "writer": "Camilla Baresani",
+      "publication": "camillabaresani.com",
+      "language": "it",
+      "article_date": "2024-02-21",
+      "article_url": null,
+      "article_title": "Multiple Rome restaurant reviews (Corriere della Sera contributor)",
+      "id": "S3",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food critic and journalist who contributes to Corriere della Sera, Italy's leading national newspaper. Her work on camillabaresani.com features comprehensive restaurant reviews across Rome's dining scene, offering insights into the capital's culinary landscape."
+    },
+    {
+      "source_id": "S4",
+      "writer": "Marta Correale",
+      "publication": "mamalovesrome.com",
+      "language": "en",
+      "article_date": "2024-11-08",
+      "article_url": "https://mamalovesrome.com/where-to-eat-in-monti-restaurants/",
+      "article_title": "Where to Eat in Monti; 9 Delicious Restaurants Near Piazza Navona",
+      "id": "S4",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for mamalovesrome.com, specializing in Rome's dining scene with detailed neighborhood restaurant guides. Marta Correale creates comprehensive local food recommendations, covering everything from historic districts like Monti to iconic areas near major landmarks. Her work focuses on helping readers discover authentic Roman dining experiences across the city's diverse culinary landscape."
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Armando al Pantheon",
+      "neighbourhood": "Centro Storico",
+      "address": "Salita dei Crescenzi 31, Roma",
+      "cuisine": "Roman",
+      "quote": "fantastic amatriciana made with rigatoni and a sublime spaghetti alla carbonara — you can get a half-portion of each",
+      "quote_lang": "en",
+      "dishes": [
+        "amatriciana",
+        "spaghetti alla carbonara",
+        "saltimbocca alla romana",
+        "tripe"
+      ],
+      "sources": [
+        "S1",
+        "S2",
+        "S4"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8990605,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Armando al Pantheon",
+      "geo_skip": false,
+      "lng": 12.476199,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Piatto Romano",
+      "neighbourhood": "Testaccio",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "Piatto Romano, al Testaccio, è la tipica trattoria dove si vorrebbe mangiare tutti i giorni — cucina di casa ricercata, trionfi di verdure ed erbe di campo, accostamenti inconsueti che accendono la curiosità",
+      "quote_lang": "it",
+      "quote_en": "located in Testaccio, the neighborhood where cucina Romana was practically invented — hence the abundance of offal on the menu, including crispy artichokes and fried meatballs from chianina beef",
+      "dishes": [
+        "misticanza selvatica e portulaca in salsa di alici e sommacco",
+        "olive ascolane fatte in casa",
+        "tagliolini all'aglio nero fermentato",
+        "polpetti lessi ai fichi e pomodoro verde",
+        "crispy artichokes",
+        "fried meatballs from chianina beef"
+      ],
+      "sources": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "open_status": "open",
+      "lat": 41.8794167,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Piatto Romano",
+      "geo_skip": false,
+      "lng": 12.4760207,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Tavernaccia Da Bruno",
+      "neighbourhood": "Trastevere",
+      "address": null,
+      "cuisine": "Roman-Umbrian",
+      "quote": "comfort food so good, you simply won't want to leave — one of the best places to try some of Italy's greatest hits including coda alla vaccinara and maialino",
+      "quote_lang": "en",
+      "dishes": [
+        "eggplant parmigiana",
+        "coda alla vaccinara",
+        "maialino",
+        "lasagna",
+        "torta caprese"
+      ],
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8740974,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "La Tavernaccia",
+      "geo_skip": false,
+      "lng": 12.4686308,
+      "geo_source": "photon",
+      "language_pool": "en"
+    },
+    {
+      "name": "Giano",
+      "neighbourhood": "Ludovisi",
+      "address": null,
+      "cuisine": "Sicilian-Italian",
+      "quote": "you'll get a complimentary bread basket filled with crispy housemade focaccia alongside whipped ricotta with olive oil — Sicily-inspired Giano from acclaimed chef Ciccio Sultano",
+      "quote_lang": "en",
+      "dishes": [
+        "whipped ricotta with olive oil",
+        "spaghetto taratatà",
+        "fennel and orange salad"
+      ],
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": null,
+      "lon": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "en"
+    },
+    {
+      "name": "Trattoria Trecca",
+      "neighbourhood": "Ostiense",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "their regaje di pollo e patate is the perfect example — lusciously tender chicken innards sautéed with rosemary, a dish that defines the cucina romana",
+      "quote_lang": "en",
+      "dishes": [
+        "regaje di pollo e patate",
+        "rigatoni alla pajata"
+      ],
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8906915,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Trecca Mastrangeli",
+      "geo_skip": false,
+      "lng": 12.5063628,
+      "geo_source": "photon",
+      "language_pool": "en"
+    },
+    {
+      "name": "L'Elementare",
+      "neighbourhood": "Trastevere",
+      "address": null,
+      "cuisine": "Pizza",
+      "quote": "Pizzeria L'Elementare sets the benchmark for Roman-style pizza — it strikes that perfect balance of soft, airy dough with crispy crust",
+      "quote_lang": "en",
+      "dishes": [
+        "marinara doppia",
+        "pizza con patate and pancetta",
+        "supplì with fior di latte and 'nduja"
+      ],
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8561511,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "L'elementare",
+      "geo_skip": false,
+      "lng": 12.5667348,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Romanè",
+      "neighbourhood": "Prati",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "their tables are lined with lace paper placemats and hand-painted ceramic plates hang on the walls, serving carbonara with crispy guanciale and pollo alla cacciatora",
+      "quote_lang": "en",
+      "dishes": [
+        "carbonara with crispy guanciale",
+        "pollo alla cacciatora"
+      ],
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.9058434,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Romanè",
+      "geo_skip": false,
+      "lng": 12.4451473,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Grappolo d'Oro",
+      "neighbourhood": "Campo de Fiori",
+      "address": "Piazza della Cancelleria 80, Roma",
+      "cuisine": "Roman",
+      "quote": "prides itself in proposing dishes that are locally sourced from small, local producers, and prepared the traditional way",
+      "quote_lang": "en",
+      "dishes": [
+        "locally sourced Roman classics"
+      ],
+      "sources": [
+        "S1",
+        "S4"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.9072293,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Al grappolo d'oro",
+      "geo_skip": false,
+      "lng": 12.5015929,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Capo Boi",
+      "neighbourhood": "Parioli",
+      "address": null,
+      "cuisine": "Seafood-Sardinian",
+      "quote": "arguably the best seafood in all of Rome, with starters like paper-thin pane carasau, a crackly Sardinian flatbread, topped with thin shavings of bottarga",
+      "quote_lang": "en",
+      "dishes": [
+        "pane carasau with bottarga",
+        "salt-baked fish"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.9188633,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Capo Boi",
+      "geo_skip": false,
+      "lng": 12.5007912,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Dal Toscano",
+      "neighbourhood": "Prati",
+      "address": null,
+      "cuisine": "Tuscan-Roman",
+      "quote": "silky fettuccine bathed in an earthy white ragù and parmesan, as well as their thick and chewy pici noodles coated in red sauce",
+      "quote_lang": "en",
+      "dishes": [
+        "fettuccine with white ragù",
+        "pici noodles",
+        "bistecca alla fiorentina"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.9053401,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Toscano",
+      "geo_skip": false,
+      "lng": 12.491934,
+      "geo_source": "photon",
+      "language_pool": "en"
+    },
+    {
+      "name": "Antico Forno Roscioli",
+      "neighbourhood": "Campo de Fiori",
+      "address": null,
+      "cuisine": "Bakery",
+      "quote": "This must-visit bakery turns out fresh-from-the-oven pizza, crispy supplì, and an irresistible selection of baked goods including ciambelline and ricotta chocolate chip crostata",
+      "quote_lang": "en",
+      "dishes": [
+        "pizza rossa",
+        "pizza con patate",
+        "supplì",
+        "ciambelline",
+        "ricotta chocolate chip crostata"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8946562,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Antico Forno Roscioli",
+      "geo_skip": false,
+      "lng": 12.4745854,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Da Dante",
+      "neighbourhood": "Prati",
+      "address": null,
+      "cuisine": "Roman-Seafood",
+      "quote": "seafood spaghetti at Da Dante is so extraordinary, it might just ruin all other pasta — silky noodles glistening with garlic and the sea",
+      "quote_lang": "en",
+      "dishes": [
+        "seafood spaghetti",
+        "tonnarelli cacio e pepe",
+        "fried zucchini flowers"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": null,
+      "lon": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "en"
+    },
+    {
+      "name": "Trattoria Da Enzo Al 29",
+      "neighbourhood": "Trastevere",
+      "address": "Via dei Vascellari 29, Roma",
+      "cuisine": "Roman",
+      "quote": "a simple, lively restaurant with checkered tablecloths and specials scrawled on a chalkboard, serving rigatoni alla carbonara and tiramisu with Nutella",
+      "quote_lang": "en",
+      "dishes": [
+        "crispy artichokes",
+        "stracciatella with cherry tomatoes",
+        "rigatoni alla carbonara",
+        "tiramisu with Nutella"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8880864,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Da Enzo",
+      "geo_skip": false,
+      "lng": 12.477807,
+      "geo_source": "photon",
+      "language_pool": "en"
+    },
+    {
+      "name": "Trattoria Ai Due Ponti",
+      "neighbourhood": "Tor di Quinto",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "Your meal starts with a spread of salami that arrives on a large wooden tray, piled high with five pounds of assorted meats — then the gricia with asparagus and suckling maialino",
+      "quote_lang": "en",
+      "dishes": [
+        "assorted salami",
+        "gricia with asparagus",
+        "deconstructed amatriciana",
+        "suckling maialino"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.9545865,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria ai Due Ponti",
+      "geo_skip": false,
+      "lng": 12.4851051,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Ristorante Rocco",
+      "neighbourhood": "Monti",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "A standout is their cacio e pepe, perfectly creamy and peppery with textbook al dente spaghetti",
+      "quote_lang": "en",
+      "dishes": [
+        "cacio e pepe",
+        "daily pasta specials"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": null,
+      "lon": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "en"
+    },
+    {
+      "name": "Trattoria Penestri",
+      "neighbourhood": "Ostiense",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "Rustic wooden tables with vases of fresh flowers, the menu runs through all four Roman pasta pillars — carbonara, amatriciana, cacio e pepe, and pici all'aglione — plus a wonderful seared duck breast",
+      "quote_lang": "en",
+      "dishes": [
+        "carbonara",
+        "amatriciana",
+        "cacio e pepe",
+        "pici all'aglione",
+        "seared duck breast"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8733548,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Trattoria Pennestri",
+      "geo_skip": false,
+      "lng": 12.4798767,
+      "geo_source": "photon",
+      "language_pool": "en"
+    },
+    {
+      "name": "Pecorino",
+      "neighbourhood": "Testaccio",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "Even though there are white tablecloths on every table, the atmosphere is anything but pretentious at Pecorino — the creamy carbonara and maltagliati con carciofi are outstanding",
+      "quote_lang": "en",
+      "dishes": [
+        "carbonara",
+        "maltagliati con carciofi",
+        "zabaione cake"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8765626,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Pecorino",
+      "geo_skip": false,
+      "lng": 12.4740135,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "La Matriciana Dal 1870",
+      "neighbourhood": "Esquilino",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "La Matriciana is old-school Rome at its finest, encapsulating both the historic elegance of 1870 and the slick, suit-and-tie vibe — the amatriciana and tortellini in brodo are essential",
+      "quote_lang": "en",
+      "dishes": [
+        "amatriciana",
+        "gricia",
+        "tortellini in brodo"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": null,
+      "lon": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "en"
+    },
+    {
+      "name": "Siciliainbocca",
+      "neighbourhood": "Prati",
+      "address": null,
+      "cuisine": "Sicilian",
+      "quote": "Siciliainbocca in Prati feels like one of Palermo's bustling markets, serving eggplant caponata, softly-smoked ricotta with orange chili marmalade, and granita with brioche",
+      "quote_lang": "en",
+      "dishes": [
+        "eggplant caponata",
+        "smoked ricotta with orange chili marmalade",
+        "granita with brioche"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.9326793,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Siciliainbocca",
+      "geo_skip": false,
+      "lng": 12.4675588,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Dar Filettaro",
+      "neighbourhood": "Campo de Fiori",
+      "address": null,
+      "cuisine": "Roman-Jewish",
+      "quote": "our pick for Rome's iconic baccalà — the massive filet of fried salted cod served with puntarelle tossed in anchovy vinaigrette",
+      "quote_lang": "en",
+      "dishes": [
+        "baccalà (fried salted cod)",
+        "puntarelle with anchovy vinaigrette"
+      ],
+      "sources": [
+        "S2"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8946709,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Dar filettaro a Santa Barbara",
+      "geo_skip": false,
+      "lng": 12.473696,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Trattoria della Barchetta",
+      "neighbourhood": "Prati",
+      "address": "Via Giovanni Pierluigi da Palestrina 35, 00193 Roma",
+      "cuisine": "Roman",
+      "quote": "una cucina fastosa e per mangioni — piatti un po' vecchia maniera, molto ricchi e anche abbondanti: pizzelle con scarola, tonnarelli alla carbonara tartufata, coniglio all'ischitana con cialda di riso nero",
+      "quote_lang": "it",
+      "dishes": [
+        "pizzelle con scarola",
+        "tonnarelli alla carbonara tartufata",
+        "coniglio all'ischitana con cialda di riso nero"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8960558,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Via della Barchetta",
+      "geo_skip": false,
+      "lng": 12.4688074,
+      "geo_source": "photon",
+      "language_pool": "it"
+    },
+    {
+      "name": "Bistrot La Differenza",
+      "neighbourhood": "San Giovanni",
+      "address": "Largo Magnagrecia 4-5, 00183 Roma",
+      "cuisine": "Italian deli-bistro",
+      "quote": "una gastronomia trasformata in bistrot con un eccellente San Daniele di prosciutteria artigianale e pane del Micropanificio agricolo Triticum — gestita dai Stramaccioni, gentili e appassionati",
+      "quote_lang": "it",
+      "dishes": [
+        "panino con speck e gorgonzola naturale",
+        "polpo con peperoni",
+        "finocchi al burro con olive e arancia"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8815898,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "La Cornucopia Bistrot",
+      "geo_skip": false,
+      "lng": 12.5084176,
+      "geo_source": "photon",
+      "language_pool": "it"
+    },
+    {
+      "name": "Crazy Pizza",
+      "neighbourhood": "Tridente",
+      "address": "Via Veneto, Roma",
+      "cuisine": "Pizza",
+      "quote": "una pizza in teglia molto sottile, pomodoro e mozzarella piuttosto anonimi — per un risultato migliore conviene chiedere la Napoli con le acciughe che sanno di alici vere",
+      "quote_lang": "it",
+      "dishes": [
+        "pizza in teglia",
+        "pizza Napoli con acciughe"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.9085237,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Crazy Pizza",
+      "geo_skip": false,
+      "lng": 12.4892939,
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Antico Caffè Greco",
+      "neighbourhood": "Tridente",
+      "address": "Via dei Condotti 86, 00187 Roma",
+      "cuisine": "Café-historic",
+      "quote": "il locale più antico di Roma, 264 anni di storia — ci sono i proprietari della licenza tutelati da 4 vincoli del Ministero dei Beni Culturali sui circa 300 quadri, statue, cimeli",
+      "quote_lang": "it",
+      "dishes": [
+        "tramezzini",
+        "paste da forno"
+      ],
+      "sources": [
+        "S3"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": null,
+      "lon": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "it"
+    },
+    {
+      "name": "Santo Palato",
+      "neighbourhood": "San Giovanni",
+      "address": null,
+      "cuisine": "Roman-offal",
+      "quote": "chef Sarah Ciccolini serves at Santo Palato — her carbonara is pretty spectacular, as well as her take on offal",
+      "quote_lang": "en",
+      "dishes": [
+        "carbonara",
+        "offal"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8812538,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Santo Palato",
+      "geo_skip": false,
+      "lng": 12.5098365,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Mazzo",
+      "neighbourhood": "Centocelle",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "After a 5-year hiatus, Mazzo has returned to the fold and the vibes and food are 10/10",
+      "quote_lang": "en",
+      "dishes": [
+        "Roman classics"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": null,
+      "lon": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "en"
+    },
+    {
+      "name": "Menabò",
+      "neighbourhood": "Centocelle",
+      "address": null,
+      "cuisine": "Neo-bistro",
+      "quote": "Menabò, a neo-bistro in Centocelle is really excellent, plus a trip will get you out of the center",
+      "quote_lang": "en",
+      "dishes": [
+        "neo-bistro fare"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8890095,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Menabó Vino e Cucina",
+      "geo_skip": false,
+      "lng": 12.5640419,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Agustarello",
+      "neighbourhood": "Testaccio",
+      "address": null,
+      "cuisine": "Roman-offal",
+      "quote": "Agustarello down the street from Piatto Romano is another solid spot with an offal-forward menu for anyone who loves the fifth quarter",
+      "quote_lang": "en",
+      "dishes": [
+        "offal",
+        "quinto quarto"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8795671,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Agustarello a Testaccio",
+      "geo_skip": false,
+      "lng": 12.4736006,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Osteria Bonelli",
+      "neighbourhood": "Torpignattara",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "For affordable, abundant comfort food, I visit the raucous Osteria Bonelli in Torpignattara",
+      "quote_lang": "en",
+      "dishes": [
+        "Roman comfort food"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8761503,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria Bonelli",
+      "geo_skip": false,
+      "lng": 12.5472856,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Al Moro",
+      "neighbourhood": "Centro Storico",
+      "address": "Vicolo delle Bollette 13, Roma",
+      "cuisine": "Roman",
+      "quote": "I also love Al Moro near the Trevi Fountain for that super old school vibe and consistently reliable cucina romana",
+      "quote_lang": "en",
+      "dishes": [
+        "Roman classics"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.9005906,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Al Moro",
+      "geo_skip": false,
+      "lng": 12.4825609,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Roscioli",
+      "neighbourhood": "Campo de Fiori",
+      "address": "Via dei Giubbonari 21, Roma",
+      "cuisine": "Roman-Italian deli",
+      "quote": "you'd be hard-pressed to find a better carbonara than that at Roscioli, one of Rome's great all-around destinations",
+      "quote_lang": "en",
+      "dishes": [
+        "carbonara"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8941094,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Roscioli",
+      "geo_skip": false,
+      "lng": 12.5028572,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Baccano",
+      "neighbourhood": "Centro Storico",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "chef Nabil Hadj Hassen was at Roscioli for 18 years and now runs the kitchen at Baccano, bringing with him the carbonara and cacio e pepe",
+      "quote_lang": "en",
+      "dishes": [
+        "carbonara",
+        "cacio e pepe"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.9003672,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Baccano",
+      "geo_skip": false,
+      "lng": 12.4823634,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Tempio di Iside",
+      "neighbourhood": "Celio",
+      "address": null,
+      "cuisine": "Seafood",
+      "quote": "the move is to eat the finest fish in town at Tempio di Iside — raw fish, excellent fried fish, and wonderful seafood pasta",
+      "quote_lang": "en",
+      "dishes": [
+        "raw fish",
+        "fried fish",
+        "seafood pasta"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8899337,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Tempio di Iside a via Labicana",
+      "geo_skip": false,
+      "lng": 12.5011566,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Trattoria Monti",
+      "neighbourhood": "Esquilino",
+      "address": "Via di San Vito 13a, Roma",
+      "cuisine": "Marchigiana",
+      "quote": "Trattoria Monti is wonderful for specialties from Le Marche, run by the Camerucci family for decades",
+      "quote_lang": "en",
+      "dishes": [
+        "Le Marche specialties"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8956651,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Monti",
+      "geo_skip": false,
+      "lng": 12.502029,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Tram Tram",
+      "neighbourhood": "San Lorenzo",
+      "address": null,
+      "cuisine": "Pugliese",
+      "quote": "Tram Tram is great for fish and vegetable classics from Puglia in a setting that feels genuinely neighborhood",
+      "quote_lang": "en",
+      "dishes": [
+        "Puglia fish and vegetable classics"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8979404,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Tram Tram",
+      "geo_skip": false,
+      "lng": 12.518951,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Colline Emiliane",
+      "neighbourhood": "Tridente",
+      "address": null,
+      "cuisine": "Emilian",
+      "quote": "Colline Emiliane does amazing food from around Bologna like tortellini in brodo and tagliatelle al ragù",
+      "quote_lang": "en",
+      "dishes": [
+        "tortellini in brodo",
+        "tagliatelle al ragù"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.9029795,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Colline Emiliane",
+      "geo_skip": false,
+      "lng": 12.4873924,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "La Torricella",
+      "neighbourhood": "Testaccio",
+      "address": null,
+      "cuisine": "Roman-Abruzzese",
+      "quote": "There are influences from Abruzzo at La Torricella in Testaccio, particularly in the lamb dishes and the wine list",
+      "quote_lang": "en",
+      "dishes": [
+        "Abruzzese specialties",
+        "lamb"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8670075,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "La Torricella 2",
+      "geo_skip": false,
+      "lng": 12.4879052,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Himalaya Palace",
+      "neighbourhood": "Monteverde",
+      "address": null,
+      "cuisine": "Himalayan-Nepalese",
+      "quote": "the soulful dishes of Himalaya Palace near Villa Pamphilj got me through lockdown, consistently excellent Himalayan and Nepalese cooking",
+      "quote_lang": "en",
+      "dishes": [
+        "Himalayan and Nepalese cuisine"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8769524,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Himalaya Palace",
+      "geo_skip": false,
+      "lng": 12.4421076,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Enqutatash",
+      "neighbourhood": "Prenestino",
+      "address": "Via Prenestina, Roma",
+      "cuisine": "Ethiopian-Eritrean",
+      "quote": "There is incredible Ethiopian and Eritrean food at Enqutatash on the Via Prenestina",
+      "quote_lang": "en",
+      "dishes": [
+        "Ethiopian and Eritrean cuisine"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8946397,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Enqutatash",
+      "geo_skip": false,
+      "lng": 12.5462514,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Sinosteria",
+      "neighbourhood": "Ostiense",
+      "address": "Viale Marconi, Roma",
+      "cuisine": "Chinese regional",
+      "quote": "Sinosteria in Viale Marconi does ace Chinese regional cuisines and has a very good wine list",
+      "quote_lang": "en",
+      "dishes": [
+        "Chinese regional cuisine"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8546489,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Sinosteria",
+      "geo_skip": false,
+      "lng": 12.4718709,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Carnal",
+      "neighbourhood": "Prati",
+      "address": null,
+      "cuisine": "Latin American",
+      "quote": "Roy Caceres' Carnal does good tacos and arepas in Prati, a welcome addition to Rome's Latin American scene",
+      "quote_lang": "en",
+      "dishes": [
+        "tacos",
+        "arepas"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8949799,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Carnale",
+      "geo_skip": false,
+      "lng": 12.4481142,
+      "geo_source": "photon",
+      "language_pool": "en"
+    },
+    {
+      "name": "El Jalapeño",
+      "neighbourhood": "Trionfale",
+      "address": "Mercato Irnerio, Via Aurelia, Roma",
+      "cuisine": "Mexican",
+      "quote": "El Jalapeño does very tasty tacos in the Mercato Irnerio up on the Via Aurelia",
+      "quote_lang": "en",
+      "dishes": [
+        "tacos"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": null,
+      "lon": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "en"
+    },
+    {
+      "name": "Tianci Chongqing Farm Hotpot",
+      "neighbourhood": "Centro Storico",
+      "address": null,
+      "cuisine": "Chinese (Chongqing)",
+      "quote": "Tianci Chongqing Farm Hotpot does really excellent Chongqing-style hot pot, one of the best Chinese restaurants in Rome",
+      "quote_lang": "en",
+      "dishes": [
+        "Chongqing-style hot pot"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": null,
+      "lon": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "en"
+    },
+    {
+      "name": "JiaMo Lab",
+      "neighbourhood": "Salario",
+      "address": "Piazza Fiume, Roma",
+      "cuisine": "Chinese (Northwestern)",
+      "quote": "JiaMo Lab in Piazza Fiume makes delectable northwestern Chinese sandwiches, a rare regional Chinese offering in Rome",
+      "quote_lang": "en",
+      "dishes": [
+        "northwestern Chinese sandwiches"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.9113081,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "JiaMo Labs",
+      "geo_skip": false,
+      "lng": 12.499471,
+      "geo_source": "photon",
+      "language_pool": "en"
+    },
+    {
+      "name": "I Quintili",
+      "neighbourhood": "Furio Camillo",
+      "address": null,
+      "cuisine": "Neapolitan pizza",
+      "quote": "Neapolitan import I Quintili is fun and does delicious fritti alongside their excellent Neapolitan pizza",
+      "quote_lang": "en",
+      "dishes": [
+        "Neapolitan pizza",
+        "fritti"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8754687,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Pizzeria I Quintili",
+      "geo_skip": false,
+      "lng": 12.6439413,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Seu Pizza Illuminati",
+      "neighbourhood": "Trastevere",
+      "address": null,
+      "cuisine": "Pizza (avant-garde)",
+      "quote": "Seu Pizza Illuminati at the edge of Trastevere serves avant-garde pizzas in an open space, one of Rome's most creative pizzerias",
+      "quote_lang": "en",
+      "dishes": [
+        "avant-garde pizza"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8796972,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Seu Pizza Illuminati",
+      "geo_skip": false,
+      "lng": 12.4683992,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Mordi e Vai",
+      "neighbourhood": "Testaccio",
+      "address": "Mercato di Testaccio, Roma",
+      "cuisine": "Roman (sandwich counter)",
+      "quote": "Go to Mordi e Vai in the Mercato di Testaccio for brisket and chicory sandwiches, artichoke and pecorino, and kidney and onion",
+      "quote_lang": "en",
+      "dishes": [
+        "brisket and chicory sandwich",
+        "artichoke and pecorino sandwich"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8775657,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Mordi e Vai",
+      "geo_skip": false,
+      "lng": 12.4733496,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Supplì",
+      "neighbourhood": "Trastevere",
+      "address": null,
+      "cuisine": "Roman (street food)",
+      "quote": "Supplì, the institution in Trastevere, serves very good supplì — the definitive Roman fried rice ball",
+      "quote_lang": "en",
+      "dishes": [
+        "supplì"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.914095,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "La casa del supplì",
+      "geo_skip": false,
+      "lng": 12.5049493,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Legs",
+      "neighbourhood": "Centocelle",
+      "address": null,
+      "cuisine": "Fried chicken",
+      "quote": "Legs in Centocelle serves the city's best fried chicken sandwiches",
+      "quote_lang": "en",
+      "dishes": [
+        "fried chicken sandwiches"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": null,
+      "lon": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "en"
+    },
+    {
+      "name": "I-Gio",
+      "neighbourhood": "Trastevere",
+      "address": null,
+      "cuisine": "Korean",
+      "quote": "Korean restaurant I-Gio in Trastevere is delightful and opens at 6:30PM, one of the city's best Asian restaurants",
+      "quote_lang": "en",
+      "dishes": [
+        "Korean cuisine"
+      ],
+      "sources": [
+        "S1"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8968667,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Gio vision",
+      "geo_skip": false,
+      "lng": 12.5016517,
+      "geo_source": "photon",
+      "language_pool": "en"
+    },
+    {
+      "name": "Cuoco e Camicia",
+      "neighbourhood": "Monti",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "plates assembled and presented with care, with options ranging from more traditional to experimental — a beautiful spot in the cobbled streets close to the Colosseum",
+      "quote_lang": "en",
+      "dishes": [
+        "traditional and experimental Roman plates"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8944391,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Cuoco e Camicia",
+      "geo_skip": false,
+      "lng": 12.4937406,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Pizza della Madonna dei Monti",
+      "neighbourhood": "Monti",
+      "address": null,
+      "cuisine": "Pizza (by weight)",
+      "quote": "great take out pizza and supplì place perfect for a quick lunch — pizza is sold by weight all day long",
+      "quote_lang": "en",
+      "dishes": [
+        "pizza by weight",
+        "supplì"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8948973,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Piazza della Madonna dei Monti",
+      "geo_skip": false,
+      "lng": 12.490882,
+      "geo_source": "photon",
+      "language_pool": "en"
+    },
+    {
+      "name": "La Taverna dei Monti",
+      "neighbourhood": "Monti",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "excellent and popular traditional trattoria in Monti, ideal to taste Rome staples — carbonara, cacio e pepe, lamb and more",
+      "quote_lang": "en",
+      "dishes": [
+        "carbonara",
+        "cacio e pepe",
+        "lamb"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8939729,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "La Taverna dei Fori Imperiali",
+      "geo_skip": false,
+      "lng": 12.4883814,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Temakinho",
+      "neighbourhood": "Monti",
+      "address": null,
+      "cuisine": "Brazilian-Japanese",
+      "quote": "fun, colorful, tasty Brazilian-Japanese fusion restaurant, perfect for when you need a break from Italian cuisine",
+      "quote_lang": "en",
+      "dishes": [
+        "Brazilian-Japanese fusion",
+        "temaki"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8955961,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Temakinho Rome Monti",
+      "geo_skip": false,
+      "lng": 12.4903169,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Maharaja",
+      "neighbourhood": "Monti",
+      "address": null,
+      "cuisine": "Indian",
+      "quote": "popular Indian restaurant in Monti that has been operating for decades — one of the best addresses for Indian food in the center of Rome",
+      "quote_lang": "en",
+      "dishes": [
+        "Indian cuisine"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8961092,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Maharajah",
+      "geo_skip": false,
+      "lng": 12.4903266,
+      "geo_source": "photon",
+      "language_pool": "en"
+    },
+    {
+      "name": "Polpetta",
+      "neighbourhood": "Monti",
+      "address": null,
+      "cuisine": "Italian (polpette)",
+      "quote": "fun, good quality, informal restaurant with an unusual mission: to showcase you can make all types of food into a tasty ball",
+      "quote_lang": "en",
+      "dishes": [
+        "polpette (various meat and vegetable balls)"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": null,
+      "lon": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "en"
+    },
+    {
+      "name": "Fuorinorma",
+      "neighbourhood": "Monti",
+      "address": null,
+      "cuisine": "Italian (sandwiches)",
+      "quote": "great little place for lunch or aperitivo, with sandwiches — try the porchetta one — platters, beer and wine",
+      "quote_lang": "en",
+      "dishes": [
+        "porchetta sandwich",
+        "aperitivo platters"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8943032,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Fuorinorma",
+      "geo_skip": false,
+      "lng": 12.4908025,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Camillo a Piazza Navona dal 1890",
+      "neighbourhood": "Centro Storico",
+      "address": null,
+      "cuisine": "Roman-fusion",
+      "quote": "the restaurant has lovely dishes that mix traditional roman staples such as carbonara with some Asian inspired dishes",
+      "quote_lang": "en",
+      "dishes": [
+        "carbonara",
+        "Asian-inspired Roman fusion"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": null,
+      "lon": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
+      "geo_source": null,
+      "language_pool": "en"
+    },
+    {
+      "name": "Mimi e Coco",
+      "neighbourhood": "Centro Storico",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "one of the best restaurants in this area if you want to taste real carbonara — I have tried many and theirs truly is special",
+      "quote_lang": "en",
+      "dishes": [
+        "carbonara"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.898144,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Mimì e Cocò",
+      "geo_skip": false,
+      "lng": 12.4712757,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Taverna Agape",
+      "neighbourhood": "Centro Storico",
+      "address": null,
+      "cuisine": "Roman-Seafood",
+      "quote": "serves traditional roman staples — cacio e pepe, gricia, oxtail and more — but also a good selection of seafood based dishes",
+      "quote_lang": "en",
+      "dishes": [
+        "cacio e pepe",
+        "gricia",
+        "oxtail",
+        "seafood dishes"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.9006891,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Taverna Agàpe",
+      "geo_skip": false,
+      "lng": 12.470805,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Felice a Testaccio",
+      "neighbourhood": "Testaccio",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "the dish is made right in front of you, so you can see how the smooth cacio cream comes to be — a Testaccio institution for Roman classics",
+      "quote_lang": "en",
+      "dishes": [
+        "cacio e pepe",
+        "tonnarelli"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8785014,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Felice a Testaccio",
+      "geo_skip": false,
+      "lng": 12.4774658,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Spirito Divino",
+      "neighbourhood": "Trastevere",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "the restaurant still has an ancient Trastevere cellar open to visitors where you can see thousands of bottles with highly selected wines",
+      "quote_lang": "en",
+      "dishes": [
+        "Roman classics",
+        "curated wine cellar"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8878293,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Spirito Divino",
+      "geo_skip": false,
+      "lng": 12.4767765,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Antica Pesa",
+      "neighbourhood": "Trastevere",
+      "address": null,
+      "cuisine": "Roman",
+      "quote": "The restaurant still retains the ancient charm of this special location but mixes it with elegant ambiance — one of Trastevere's most storied dining rooms",
+      "quote_lang": "en",
+      "dishes": [
+        "Roman classics"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8905423,
+      "lon": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Antica Pesa",
+      "geo_skip": false,
+      "lng": 12.466481,
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Romeow Cat Bistro",
+      "neighbourhood": "Testaccio",
+      "address": null,
+      "cuisine": "Plant-based",
+      "quote": "Playful, creative, and fully plant-based, this bistro is lovely, welcoming, and a truly unique Roman experience",
+      "quote_lang": "en",
+      "dishes": [
+        "plant-based Roman dishes"
+      ],
+      "sources": [
+        "S4"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "open_status": "open",
+      "lat": 41.8705693,
+      "lon": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Romeow Cat Bistrot",
+      "geo_skip": false,
+      "lng": 12.4816961,
+      "geo_source": "photon",
+      "language_pool": "en"
+    }
+  ],
+  "source_recency": "2023-2026",
+  "centroids": {
+    "Esquilino": [
+      41.8957,
+      12.502
+    ],
+    "Trionfale": [
+      41.9355,
+      12.4002
+    ],
+    "Centro Storico": [
+      41.8959,
+      12.4839
+    ],
+    "Centocelle": [
+      41.8993,
+      12.5453
+    ],
+    "Monti": [
+      41.8949,
+      12.4907
+    ]
+  }
+}

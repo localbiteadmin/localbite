@@ -130,7 +130,7 @@
       "notes": ""
     },
     {
-      "city": "C\u00f3rdoba",
+      "city": "Córdoba",
       "country": "Spain",
       "city_slug": "cordoba-spain",
       "pipeline": "localbite-v7.1",
@@ -172,7 +172,7 @@
       "notes": ""
     },
     {
-      "city": "M\u00e1laga",
+      "city": "Málaga",
       "country": "Spain",
       "city_slug": "malaga-spain",
       "pipeline": "localbite-v7.1",
@@ -214,7 +214,7 @@
       "notes": ""
     },
     {
-      "city": "San Sebasti\u00e1n",
+      "city": "San Sebastián",
       "country": "Spain",
       "city_slug": "san-sebastian-spain",
       "pipeline": "localbite-v7.1",
@@ -224,7 +224,7 @@
       "source_count": 6,
       "file": "localbite-san-sebastian-2023-2026.json",
       "status": "complete",
-      "notes": "24 restaurants from 6 sources. 23 entries carry open_status_check due to 2023 Infatuation source. No ES-language primary source found \u2014 structural characteristic of city media landscape."
+      "notes": "24 restaurants from 6 sources. 23 entries carry open_status_check due to 2023 Infatuation source. No ES-language primary source found — structural characteristic of city media landscape."
     },
     {
       "city": "Zaragoza",
@@ -311,7 +311,7 @@
       "notes": ""
     },
     {
-      "city": "Logro\u00f1o",
+      "city": "Logroño",
       "country": "Spain",
       "city_slug": "logrono-spain",
       "pipeline": "localbite-v7.1",
@@ -353,7 +353,7 @@
       "notes": ""
     },
     {
-      "city": "A Coru\u00f1a",
+      "city": "A Coruña",
       "country": "Spain",
       "city_slug": "a-coruna-spain",
       "pipeline": "localbite-v7.1",
@@ -371,14 +371,14 @@
       "country": "Italy",
       "city_slug": "rome-italy",
       "pipeline": "localbite-v7.1",
-      "built": null,
-      "restaurant_count": 0,
+      "built": "2026-04-27",
+      "restaurant_count": 64,
       "both_pool_count": 0,
-      "source_count": 0,
+      "source_count": 4,
       "file": "localbite-rome-italy-2023-2026.json",
-      "status": "coming_soon",
+      "status": "complete",
       "open_status_check_count": 0,
-      "notes": "Italy Batch A \u2014 Part 1 file committed 2026-04-27"
+      "notes": ""
     },
     {
       "city": "Milan",
@@ -392,7 +392,7 @@
       "file": "localbite-milan-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch B \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch B — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Florence",
@@ -406,7 +406,7 @@
       "file": "localbite-florence-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch C \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch C — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Naples",
@@ -420,7 +420,7 @@
       "file": "localbite-naples-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch C \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch C — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Bologna",
@@ -434,7 +434,7 @@
       "file": "localbite-bologna-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch D \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch D — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Turin",
@@ -448,7 +448,7 @@
       "file": "localbite-turin-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch D \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch D — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Venice",
@@ -462,7 +462,7 @@
       "file": "localbite-venice-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch E \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch E — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Palermo",
@@ -476,7 +476,7 @@
       "file": "localbite-palermo-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch E \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch E — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Verona",
@@ -490,7 +490,7 @@
       "file": "localbite-verona-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch E \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch E — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Genoa",
@@ -504,7 +504,7 @@
       "file": "localbite-genoa-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch F \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch F — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Bari",
@@ -518,7 +518,7 @@
       "file": "localbite-bari-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch F \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch F — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Modena",
@@ -532,7 +532,7 @@
       "file": "localbite-modena-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch F \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch F — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Lecce",
@@ -546,7 +546,7 @@
       "file": "localbite-lecce-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch F \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch F — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Catania",
@@ -560,7 +560,7 @@
       "file": "localbite-catania-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch G \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch G — Part 1 file committed 2026-04-27"
     },
     {
       "city": "Trieste",
@@ -574,7 +574,7 @@
       "file": "localbite-trieste-italy-2023-2026.json",
       "status": "coming_soon",
       "open_status_check_count": 0,
-      "notes": "Italy Batch G \u2014 Part 1 file committed 2026-04-27"
+      "notes": "Italy Batch G — Part 1 file committed 2026-04-27"
     }
   ]
 }

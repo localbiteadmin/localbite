@@ -1,0 +1,11 @@
+[p0] "katieparla.com/where-to-eat-drink-shop-rome/" → 200+CAPTCHA via Jina | —ch | FAILED (Jina) — Cloudflare robot challenge; retried via direct WebFetch
+[p0] "katieparla.com/where-to-eat-drink-shop-rome/" → 200 | ~12000ch | ACCEPTED — direct fetch succeeded; article "Where to Eat & Drink & Shop for Food in Rome in 2024", updated June 6 2024; Katie Parla named author confirmed
+[p0] "katieparla.com/city-guides/rome/" → 200+CAPTCHA via Jina | —ch | SKIPPED — will check for overlap after extracting main guide
+[p0] "elizabethminchilli.com/category/rome-restaurants/" → 200 | partial | FAILED — category page shows only 2016-2019 posts; no 2023+ Rome restaurant posts confirmed on any EM category or /restaurants/ page; source does not meet YEAR_RANGE criteria
+[p1b] camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-piatto-romano/ → 200 | ACCEPTED — Camilla Baresani, Feb 21 2024, IT; Piatto Romano (Testaccio) full review confirmed
+[p1b] camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-crazy-pizza/ → 200 | ACCEPTED — Camilla Baresani, Aug 9 2024, IT; Crazy Pizza (Via Veneto) review confirmed
+[p1b] camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-bistrot-la-differenza/ → 200 | ACCEPTED — Camilla Baresani, Aug 9 2024, IT; Bistrot La Differenza (San Giovanni) confirmed
+[p1b] camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-trattoria-della-barchetta/ → 200 | ACCEPTED — Camilla Baresani, Aug 9 2024, IT; Trattoria della Barchetta (Prati) confirmed
+[p1b] camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-antico-caffe-greco/ → 200 | ACCEPTED — Camilla Baresani, Aug 9 2024, IT; Antico Caffè Greco (Centro Storico) confirmed
+[p1b] mamalovesrome.com/where-to-eat-in-monti-restaurants/ → 200 | ACCEPTED — Marta Correale, Nov 8 2024, EN; 9 Monti restaurants confirmed
+[p1b] mamalovesrome.com/restaurants-near-piazza-navona-rome/ → 200 | ACCEPTED — Marta Correale, Jan 7 2025, EN; 10 Piazza Navona area restaurants confirmed
