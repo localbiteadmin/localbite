@@ -1,0 +1,138 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Catania, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Catania
+COUNTRY: Italy
+CITY_SLUG: catania-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €15pp (street food, mercato della Pescheria, rosticceria)
+  2 = €15–40pp (trattoria, osteria, casual seafood)
+  3 = €40–80pp (modern Sicilian, tasting menu entry)
+  4 = over €80pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Centro Storico (Piazza del Duomo, Via Etnea, Pescheria market),
+  Borgo, San Cristoforo
+
+TIER_2_NEIGHBOURHOODS:
+  Picanello, Ognina, San Giovanni Galermo, Nesima
+
+TIER_3_NEIGHBOURHOODS:
+  Librino, San Giorgio, Cibali, San Leone
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Catania city municipality (Comune di Catania) only.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Taormina (~50km north — St. George by Heinz Beck 1★ is here,
+    separate municipality, auto-excluded by bounding box),
+  Acireale, Nicolosi, Zafferana Etnea (Etna wine country),
+  Ragusa (~110km west — Duomo 1★ is here),
+  Siracusa (~60km south — separate city),
+  or any location described as "near Catania", "on the Etna slopes",
+  "on the Ionian coast", or "in the Catania province."
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed. "Catania" is unambiguous.
+  "Catania Italy" is safe in English queries. No significant
+  toponym collision risk.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-catania-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-catania-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-catania-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-catania-italy-raw.json
+OUTPUT_WORKING:       ./localbite-catania-italy-working.json
+OUTPUT_FINAL:         ./localbite-catania-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-catania-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-catania-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  None confirmed for Phase 0. Proceed directly to Phase 1 search.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — standard named-author source,
+    no COI.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS — None in Catania city or Sicily
+
+  — 2 STARS — None in Catania city
+  NOTE: I Tenerumi (new 2026 2★) is on Isola di Vulcano —
+    a separate island municipality, auto-excluded by bounding box.
+
+  — 1 STAR in CATANIA CITY (2026 guide) —
+  Coria (Catania city)
+  Sapio (Catania city — Chef Alessandro Angiulla, confirmed 2026)
+  NOTE: Sapio also won the Michelin Passion Dessert award 2026.
+
+  — 1 STAR OUTSIDE CATANIA CITY (auto-excluded by bounding box) —
+  Taormina – St. George by Heinz Beck
+  Taormina – La Capinera
+  Taormina – Otto Geleng
+  Taormina – Principe Cerami
+  Taormina – Vineria Modì
+  Bagheria – Lìmù
+  Bagheria – I Pupi
+  Archi – Zash
+  Linguaglossa – Shalai
+  Malfa – Signum (Salina island)
+  Marina di Ragusa – Votavota
+  Noto – Crocifisso
+  Palermo – Mec Restaurant
+  Ragusa – Locanda Don Serafino
+  Siracusa – Cortile Spirito Santo
+  Isola Vulcano – Il Cappero
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  None identified.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — CATANIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠ THIN CITY RISK: Catania has limited English-language food media
+compared to Palermo. May approach ≥10R threshold margin. Monitor
+restaurant count during Phase 2.
+
+Italian-language sources: Phase 1 should search for:
+  "migliori ristoranti Catania osterie trattorie 2024 2025"
+  "dove mangiare Catania guida gastronomica 2025"
+  "Catania ristoranti consigliati critico gastronomico 2025"
+  Named IT Catania/Sicily food writers and bloggers
+
+Catanese food identity: Catania has a proud, distinctive street
+food culture different from Palermo. The pipeline should target:
+  - Arancine/arancini (rice balls — the spelling debate is local
+    culture; Catania uses masculine arancino)
+  - Granita con brioche (Catania's defining breakfast)
+  - Pasta alla Norma (eggplant, tomato, ricotta salata —
+    invented in Catania, named after Bellini's opera)
+  - Pesce spada (swordfish) from the Pescheria fish market
+  - Horsemeat (cavallo) — a Catania specialty
+  - Rosticceria (fried street food shops)
+
+Taormina contamination: Taormina is heavily marketed alongside
+Catania (same province, ~50km north) and has 5 Michelin-starred
+restaurants. All are outside the city bounding box. Any restaurant
+described as "in Taormina", "overlooking the bay of Naxos",
+or "on the Etna coast near Taormina" must be rejected.
+
+Both-pool requirements: No Phase 0 sources confirmed. Phase 1
+must find qualifying EN and IT sources. Different publishers,
+different languages — qualifies for both-pool.

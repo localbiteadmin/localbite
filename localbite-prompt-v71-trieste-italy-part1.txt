@@ -1,0 +1,126 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Trieste, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Trieste
+COUNTRY: Italy
+CITY_SLUG: trieste-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €20pp (buffet triestino, osmize, caffè storico)
+  2 = €20–50pp (trattoria, osteria, seafood casual)
+  3 = €50–100pp (modern Triestino, tasting menu entry)
+  4 = over €100pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Centro (Piazza Unità d'Italia, Canale Grande, Borgo Teresiano),
+  Città Vecchia, San Giacomo
+
+TIER_2_NEIGHBOURHOODS:
+  Roiano, Barcola, Gretta, Chiadino, Rozzol
+
+TIER_3_NEIGHBOURHOODS:
+  Opicina (Carso plateau — within city limits, osmize territory),
+  Prosecco, Santa Croce
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Trieste city municipality (Comune di Trieste) only.
+  Include the Carso plateau districts (Opicina, Prosecco) —
+  these are within the Comune di Trieste and home to osmize
+  (seasonal farmhouse wine-and-food stops), which are a unique
+  Triestine institution worth including if a named writer
+  recommends them.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Gorizia, Udine, Monfalcone, Muggia (separate municipality
+    immediately south of Trieste — exclude despite proximity),
+  Duino-Aurisina, or any location described as "near Trieste",
+  "in the Carso outside Trieste", or "in Friuli-Venezia Giulia
+  but not in Trieste."
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed. "Trieste" is unambiguous.
+  "Trieste Italy" is safe in English queries.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-trieste-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-trieste-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-trieste-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-trieste-italy-raw.json
+OUTPUT_WORKING:       ./localbite-trieste-italy-working.json
+OUTPUT_FINAL:         ./localbite-trieste-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-trieste-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-trieste-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  None confirmed for Phase 0. Proceed directly to Phase 1 search.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — standard named-author source,
+    no COI.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS — None in Trieste city or Friuli-Venezia Giulia
+
+  — 2 STARS (exclude entirely) —
+  Harry's Piccolo (Trieste city — the only 2★ in Trieste and
+    in all of Friuli-Venezia Giulia)
+
+  — 1 STAR in TRIESTE CITY —
+  NONE confirmed. All Friuli-Venezia Giulia 1★ restaurants are
+  in other municipalities: La Subida (Cormòns), L'Argine a Vencò
+  (Dolegna del Collio), Osteria Altran (Ruda), La Primula
+  (San Quirino), Laite (Sappada), Agli Amici (Godia/Udine).
+  None are in Trieste city.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  None identified.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — TRIESTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠ THIN CITY RISK: Trieste is a small city with limited
+English-language food media. May fall below ≥10R publish
+threshold. Monitor restaurant count during Phase 2.
+
+Italian-language sources: Phase 1 should search for:
+  "migliori ristoranti Trieste osterie 2024 2025"
+  "dove mangiare Trieste guida gastronomica 2025"
+  "Trieste ristoranti consigliati critico gastronomico 2025"
+  Named IT Trieste food writers and local food bloggers
+
+Triestine food identity: Trieste has a unique food culture
+shaped by its Habsburg history and position on the border
+of Italy, Slovenia, and the Adriatic. The pipeline should target:
+  - Buffet triestino (traditional Triestine buffet restaurants
+    serving boiled meats, sauerkraut, musetto — a local tradition
+    unique to Trieste)
+  - Osmize (seasonal farmhouse wine bars on the Carso plateau —
+    only open a few weeks per year each, but a defining institution)
+  - Jota (bean and sauerkraut soup)
+  - Boreto alla graisana (Grado-style fish stew)
+  - Caffè storici (historic cafés — Caffè San Marco, Caffè degli
+    Specchi — coffee culture is integral to Triestine identity)
+  - Central European influences: goulash, strudel, Wiener Schnitzel
+
+Multilingual note: Trieste has Slovenian-speaking communities
+and some food writers may cover the city in Slovenian. Italian
+and English are the target source languages per pipeline rules.
+
+Both-pool requirements: No Phase 0 sources confirmed. Phase 1
+must find qualifying EN and IT sources. If fewer than 10R can
+be reached, document as thin city and park.
