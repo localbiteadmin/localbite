@@ -1,0 +1,142 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Turin, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Turin
+COUNTRY: Italy
+CITY_SLUG: turin-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €20pp (piola, osteria, mercato di Porta Palazzo)
+  2 = €20–50pp (mid-range trattoria, wine bar with kitchen)
+  3 = €50–100pp (modern Piedmontese, tasting menu entry)
+  4 = over €100pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Centro (Piazza Castello, Piazza San Carlo, Via Roma),
+  Quadrilatero Romano, Crocetta, Vanchiglia
+
+TIER_2_NEIGHBOURHOODS:
+  San Salvario, Borgo Po, Lingotto, Aurora, Barriera di Milano
+
+TIER_3_NEIGHBOURHOODS:
+  Mirafiori, Borgo Vittoria, Rebaudengo, Falchera
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Turin city municipality (Comune di Torino) only.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Venaria Reale (Dolce Stil Novo 1★ is here — outside city),
+  San Maurizio Canavese (La Credenza 1★ — outside city),
+  Rivoli, Moncalieri, Nichelino, Collegno, Grugliasco, Settimo
+  Torinese, or any location described as "near Turin", "in the
+  Turin province", or "in the Piedmont hills."
+  The Langhe (Alba, Barolo, Barbaresco wine region) is 60km away
+  and entirely outside the bounding box.
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed. "Torino" in Italian queries and
+  "Turin Italy" in English queries are unambiguous.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-turin-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-turin-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-turin-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-turin-italy-raw.json
+OUTPUT_WORKING:       ./localbite-turin-italy-working.json
+OUTPUT_FINAL:         ./localbite-turin-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-turin-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-turin-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  https://airmail.news/arts-intel/highlights/mimi-thorissons-guide-to-turin
+    NOTE: Mimi Thorisson, EN, cookbook author (Old World Italian,
+    A Kitchen in Italy 2025), long-term Turin resident. This guide
+    was published May 2025 in Airmail News (Arts Intel Report section).
+    Named author confirmed. This is editorial content hosted on
+    Airmail News — NOT a single-author site; apply standard editorial
+    source rules (prose quotes sufficient, no single-author bonus).
+    Restaurants mentioned include Caffè Mulassano, Magazzino 52,
+    Consorzio, Al Gatto Nero. Fetch and extract all qualifying
+    restaurants with editorial prose quotes.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — standard named-author source,
+    no COI.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS — None in Turin city
+
+  — 2 STARS — None in Turin city
+
+  — 1 STAR in TURIN CITY (2026 guide — 8 restaurants) —
+  Turin had 9 starred restaurants in 2025; Magorabin (Chef Marcello
+  Trentini) closed February 2025 and is no longer in the 2026 guide.
+  Turin now has 8 starred restaurants:
+  Andrea Larossa (Via Umberto Cosmo 6)
+  Del Cambio (Piazza Carignano 2)
+  Vintage 1997 (Via Sabaudia 4)
+  Carignano (Via Carlo Alberto 35)
+  Condividere (Via Bologna 20)
+  Piano35 (Grattacielo Intesa Sanpaolo, Corso Inghilterra 3)
+  Cannavacciuolo Bistrot (Via Lorenzo Valerio 5b)
+  Unforgettable (Piazza Solferino 16/H)
+
+  — 1 STAR OUTSIDE TURIN CITY (auto-excluded by bounding box) —
+  Dolce Stil Novo alla Reggia (Venaria Reale)
+  La Credenza (San Maurizio Canavese)
+  NOTE: La Rei Natura by Michelangelo Mammoliti (new 3★ 2026) is
+  in Serralunga d'Alba — far outside the Turin bounding box.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  None identified.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — TURIN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EN source gap: Mimi Thorisson (Airmail News, May 2025) is the only
+confirmed EN Phase 0 source for Turin. Her guide names specific
+restaurants with clear prose context. The pipeline should extract
+from this source in Phase 0 before proceeding to Phase 1.
+
+Italian-language sources: Turin has limited dedicated IT food media
+compared to Milan or Rome. Phase 1 should search for:
+  "migliori ristoranti Torino osterie piole 2024 2025"
+  "dove mangiare Torino guida gastronomica 2025"
+  "Torino ristoranti consigliati critico gastronomico 2025"
+  Named IT Turin food writers and local bloggers
+
+Piedmontese food identity: Turin is the capital of one of Italy's
+greatest food regions. The pipeline should target:
+  - Piole (traditional Piedmontese wine bars/osterie)
+  - Tajarin (thin egg pasta with butter and truffles)
+  - Agnolotti del plin (tiny stuffed pasta)
+  - Vitello tonnato (cold veal with tuna sauce)
+  - Bagna cauda (anchovy and garlic warm dip)
+  - Bicerin (traditional Turin hot drink — coffee, chocolate, cream)
+  - Natural wine bars in the Quadrilatero Romano
+  - Porta Palazzo market area restaurants
+
+Turin food culture note: Multiple food writers (including Mimi
+Thorisson) have noted that finding great food in Turin is harder
+than expected given the quality of the surrounding region. This
+reinforces the value of a curated LocalBite pack over generic
+searches. Prioritise sources that have deep local knowledge.
+
+Both-pool requirements: Mimi Thorisson (EN, Airmail News) + any
+qualifying IT source from Phase 1 would form a both-pool pair.
+Different publishers, different languages — qualifies.

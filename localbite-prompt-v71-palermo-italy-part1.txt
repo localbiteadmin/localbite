@@ -1,0 +1,134 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Palermo, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Palermo
+COUNTRY: Italy
+CITY_SLUG: palermo-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €15pp (street food, mercato, friggitoria)
+  2 = €15–40pp (trattoria, osteria, casual seafood)
+  3 = €40–80pp (modern Sicilian, tasting menu entry)
+  4 = over €80pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Centro Storico (Ballarò, Vucciria, Capo, Novarese),
+  Kalsa, Mondello (seafood restaurants)
+
+TIER_2_NEIGHBOURHOODS:
+  Politeama, Libertà, Malaspina, Zisa
+
+TIER_3_NEIGHBOURHOODS:
+  Brancaccio, Zen, Tommaso Natale, Partanna-Mondello
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Palermo city municipality (Comune di Palermo) only.
+  Include Mondello beach area — it is within the Comune di Palermo
+  and a key seafood restaurant destination.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Bagheria (Lìmù 1★ and I Pupi 1★ are here — different municipality,
+  auto-excluded by bounding box), Monreale, Cefalù, Trapani,
+  Agrigento, or any location described as "near Palermo", "day trip
+  from Palermo", or "in the Palermo province."
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed. "Palermo" is unambiguous. "Palermo Italy"
+  is safe in English queries. No significant toponym collision risk.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-palermo-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-palermo-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-palermo-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-palermo-italy-raw.json
+OUTPUT_WORKING:       ./localbite-palermo-italy-working.json
+OUTPUT_FINAL:         ./localbite-palermo-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-palermo-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-palermo-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  https://culinarybackstreets.com/cities-category/palermo/
+    NOTE: Culinary Backstreets, EN, established independent food
+    travel publication with named writers and editorial standards.
+    Palermo coverage confirmed active 2024. Multiple named authors
+    across their Palermo articles — apply standard editorial source
+    rules (require named byline on each article used). Fetch the
+    Palermo category page and extract restaurants from articles
+    dated 2023 or later with named authors. Prioritise articles
+    with strong editorial prose.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — standard named-author source,
+    no COI.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS — None in Palermo city or Sicily (Palermo province)
+
+  — 2 STARS — None in Palermo city
+
+  — 1 STAR in PALERMO CITY (2026 guide) —
+  Mec Restaurant (Palermo city)
+
+  — 1 STAR OUTSIDE PALERMO CITY (auto-excluded by bounding box) —
+  NOTE: Bagheria has two 1★ restaurants that will appear in
+  Palermo-area searches:
+  Lìmù (Bagheria — different municipality, ~15km from Palermo)
+  I Pupi (Bagheria — different municipality, ~15km from Palermo)
+  Both are outside the Palermo city bounding box. Reject any
+  Bagheria restaurant at extraction stage.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  None identified.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — PALERMO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EN source gap: Culinary Backstreets is the confirmed Phase 0 source.
+No dedicated single-author EN food writer for Palermo was identified
+in pre-research. If the CB fetch yields fewer than 8 qualifying
+restaurants, Phase 1 must search aggressively for additional EN
+sources before proceeding to IT sources.
+
+Italian-language sources: Phase 1 should search for:
+  "migliori ristoranti Palermo guida gastronomica 2024 2025"
+  "dove mangiare Palermo critico gastronomico blog 2025"
+  "Palermo osterie trattorie consigliate 2025"
+  Named IT Palermo/Sicily food writers and bloggers
+  Luciano Pignataro covers Sicilian food — check if he has
+    Palermo city content (he is primarily Naples-based)
+
+Palermitan food identity: Palermo is one of Italy's great street
+food cities. The pipeline should target:
+  - Street food markets (Ballarò, Vucciria, Capo) — arancine,
+    panelle, sfincione, pani câ meusa (spleen sandwich)
+  - Seafood restaurants (tonno, pesce spada, sarde a beccafico)
+  - Modern Sicilian cuisine (Arab-Norman culinary heritage)
+  - Casual tratorie serving pasta con le sarde, caponata
+  - Cannoli and cassata from historic pastry shops
+
+Bagheria exclusion: Bagheria is consistently grouped with Palermo
+in food media but is a separate municipality. Any restaurant
+described as being "in Bagheria", "outside Palermo in Bagheria",
+or "near Palermo in the province" must be excluded regardless of
+recommendation. The two starred restaurants (Lìmù, I Pupi) are both
+in Bagheria — the bounding box should catch these, but apply
+editorial rejection as well.
+
+Both-pool requirements: Culinary Backstreets (EN) + any qualifying
+IT source from Phase 1 would form a both-pool pair. Different
+publishers, different languages — qualifies.

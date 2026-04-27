@@ -1,0 +1,133 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Verona, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Verona
+COUNTRY: Italy
+CITY_SLUG: verona-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €20pp (osteria, trattoria, wine bar)
+  2 = €20–50pp (mid-range trattoria, enoteca with kitchen)
+  3 = €50–100pp (modern Veronese, tasting menu entry)
+  4 = over €100pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Centro Storico (Piazza Erbe, Piazza dei Signori, Piazza Brà),
+  Veronetta, Borgo Trento
+
+TIER_2_NEIGHBOURHOODS:
+  San Zeno, Cittadella, Golosine, Quinzano
+
+TIER_3_NEIGHBOURHOODS:
+  Borgo Milano, Avesa, Parona, Montorio
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Verona city municipality (Comune di Verona) only.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Valpolicella area (Corrubbio — Amistà 1★, and other wine estate
+    restaurants — outside city bounding box),
+  Cavaion Veronese (Oseleta 1★ — outside city),
+  Oppeano (Famiglia Rana 2★ — outside city),
+  Bardolino, Lazise, Peschiera del Garda (Lake Garda towns —
+    outside city), Soave, San Pietro in Cariano, or any location
+    described as "near Verona", "in the Valpolicella", "on Lake Garda",
+    or "in the Verona province."
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed. "Verona" is unambiguous. "Verona Italy"
+  is safe in English queries. Note that Verona, Wisconsin (USA) exists
+  but generates negligible food media contamination at search level.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-verona-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-verona-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-verona-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-verona-italy-raw.json
+OUTPUT_WORKING:       ./localbite-verona-italy-working.json
+OUTPUT_FINAL:         ./localbite-verona-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-verona-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-verona-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  None confirmed for Phase 0. Proceed directly to Phase 1 search.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — standard named-author source,
+    no COI.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS (exclude entirely) —
+  Casa Perbellini 12 Apostoli (Chef Giancarlo Perbellini,
+    Vicolo Corticella San Marco 3, Verona)
+    Received 3★ in the 2025 Michelin Guide (announced November 2024).
+    Confirmed at 3★ in the 2026 guide. Historic restaurant — the
+    12 Apostoli has been in Verona since the 18th century; Perbellini
+    took over in 2023. The combined name reflects this heritage.
+
+  — 2 STARS (auto-excluded by bounding box) —
+  Famiglia Rana (Oppeano — outside Verona city)
+
+  — 1 STAR in VERONA CITY (2026 guide) —
+  Iris Ristorante (Verona city)
+  Il Desco (Verona city)
+
+  — 1 STAR OUTSIDE VERONA CITY (auto-excluded by bounding box) —
+  Oseleta (Cavaion Veronese — Bardolino area, ~20km from city)
+  Amistà (Corrubbio di Negarine — Valpolicella, ~15km from city)
+  Nin (Brenzone sul Garda — Lake Garda, ~40km from city)
+  Malcesine (Malcesine Vecchia — Lake Garda, ~50km from city)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  None identified.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — VERONA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Both-pool requirement: No Phase 0 sources confirmed in pre-research
+for either EN or IT. The pipeline must find at least one qualifying
+EN source AND one qualifying IT source via Phase 1 to form a
+both-pool. Both must be different publishers, different languages.
+
+Phase 1 should search for:
+  EN: "best restaurants Verona Italy food writer guide 2024 2025"
+      "Verona Italy where to eat guide journalist 2025"
+  IT: "migliori ristoranti Verona osterie trattorie 2024 2025"
+      "dove mangiare Verona critico gastronomico blog 2025"
+      "Verona ristoranti consigliati guida 2025"
+
+Veronese food identity: Verona is the capital of one of Italy's
+great wine regions. The pipeline should target:
+  - Osterie and trattorias in the centro storico
+  - Restaurants pairing local Valpolicella, Amarone, Soave wines
+  - Traditional dishes: pastissada de caval (horse meat stew),
+    risotto all'Amarone, pearà (pepper sauce), lesso e pearà
+  - Wine bars (enoteche) in the historic centre
+  - Restaurants near Piazza Erbe and Piazza dei Signori
+
+Romeo and Juliet warning: Verona is heavily touristed due to its
+Shakespeare association. Sources that explicitly recommend restaurants
+away from the tourist circuit are to be prioritised. Avoid extracting
+restaurants that writers describe as "tourist traps" or "near the
+Arena" if positioned as tourist destinations.
+
+Province contamination: Valpolicella wine estates and Lake Garda
+restaurants frequently appear in Verona food guides as "day trips
+from Verona" or "in the Verona area." Any restaurant requiring a
+car to reach from Verona city centre should be treated as outside
+the bounding box unless confirmed to be within the Comune di Verona.
