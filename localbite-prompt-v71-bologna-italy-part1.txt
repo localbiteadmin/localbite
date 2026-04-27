@@ -1,0 +1,134 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Bologna, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Bologna
+COUNTRY: Italy
+CITY_SLUG: bologna-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €20pp (osteria, trattoria, mercato, tortellini bar)
+  2 = €20–45pp (mid-range trattoria, wine bar with kitchen)
+  3 = €45–90pp (modern Bolognese, tasting menu entry)
+  4 = over €90pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Centro Storico (Quadrilatero, Piazza Maggiore, Via dell'Indipendenza),
+  Santo Stefano, Saragozza, Bolognina
+
+TIER_2_NEIGHBOURHOODS:
+  San Donato, Navile, Porto, San Vitale,
+  Mazzini, Savena
+
+TIER_3_NEIGHBOURHOODS:
+  Reno, Borgo Panigale, Corticella, Lame
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Bologna city municipality (Comune di Bologna) only.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Imola (35km from Bologna — San Domenico 2★ is here, auto-excluded),
+  Sasso Marconi (Casa Mazzucchelli 1★ is here, auto-excluded),
+  Castel Maggiore (Villa Zarri 1★ is here, auto-excluded),
+  Savigno (Trattoria Amerigo is here, auto-excluded),
+  Nonantola, Zola Predosa, Casalecchio di Reno,
+  or any location described as "near Bologna", "outside Bologna",
+  or "in the province of Bologna."
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed. "Bologna" is unambiguous in both
+  Italian and English queries. "Bologna" the city dominates over
+  the deli meat association. Use "Bologna Italia" in Italian queries
+  where needed to distinguish from province results.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-bologna-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-bologna-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-bologna-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-bologna-italy-raw.json
+OUTPUT_WORKING:       ./localbite-bologna-italy-working.json
+OUTPUT_FINAL:         ./localbite-bologna-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-bologna-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-bologna-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  https://katieparla.com/city-guides/bologna/
+    NOTE: Katie Parla, EN, named food writer and NYT contributor,
+    Italy-based. Bologna city guide confirmed active, updated
+    August 2024. Single-author site; apply single-author site rule.
+    Fetch and extract all qualifying restaurants.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — standard named-author source,
+    no COI.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS — None in Bologna city or province
+
+  — 2 STARS — None in Bologna city
+  San Domenico (Imola) — outside Bologna city, auto-excluded by
+    bounding box. Listed here for awareness.
+
+  — 1 STAR in BOLOGNA CITY —
+  I Portici (Chef Nicolò Annunziata, Via Indipendenza 69,
+    Palazzo Maccaferri — the only starred restaurant in Bologna
+    historic centre per 2026 guide)
+
+  ⚠ VERIFY: Ahimè (Bologna) — holds a Michelin Green Star for
+    sustainability. Unclear whether it also holds a regular Michelin
+    star. If Ahimè has a regular star, exclude it. If Green Star only
+    (no regular star), it is NOT excluded under the Michelin rule.
+    Check guide.michelin.com/it/emilia-romagna/bologna before or
+    during Phase 0.
+
+  — 1 STAR OUTSIDE BOLOGNA CITY (auto-excluded by bounding box) —
+  Casa Mazzucchelli (Chef Aurora Mazzucchelli, Sasso Marconi)
+  Villa Zarri (Chef Agostino Iacobucci, Castel Maggiore)
+  Trattoria Amerigo (Savigno — Apennine hills, outside city)
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  None identified.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — BOLOGNA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Italian-language sources: Bologna has strong local food media.
+Phase 1 should search for:
+  "migliori ristoranti Bologna critico gastronomico blog 2024 2025"
+  "dove mangiare Bologna guida 2024 2025"
+  "trattorie osterie Bologna consigliate giornalista 2025"
+  Named IT Bologna food critics and bloggers
+
+Bolognese food identity: Bologna is called "La Grassa" (the fat one)
+for good reason. The pipeline should target:
+  - Traditional tagliatelle al ragù bolognese (not spaghetti bolognese)
+  - Tortellini in brodo di cappone
+  - Lasagne al forno (green pasta, béchamel, ragù)
+  - Mortadella (at the Quadrilatero market)
+  - Natural wine bars and modern osterie
+  - Restaurants in the Quadrilatero market area
+
+Imola warning: San Domenico (2★) is frequently described as
+"a Bologna restaurant" by English-language travel media because
+Imola is in the province of Bologna. It is 35km from the city.
+The bounding box will exclude it geocoding-wise, but any source
+that mentions it as a "Bologna restaurant" must have that entry
+rejected at extraction stage.
+
+Both-pool requirements: Katie Parla (EN) from Phase 0 + any
+qualifying IT-language source from Phase 1 or the CiboToday/
+Gambero Rosso blog would form a both-pool pair.

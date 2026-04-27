@@ -1,0 +1,138 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Modena, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Modena
+COUNTRY: Italy
+CITY_SLUG: modena-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €20pp (osteria, trattoria, mercato)
+  2 = €20–45pp (mid-range trattoria, salumeria with kitchen)
+  3 = €45–90pp (modern Modenese, tasting menu entry)
+  4 = over €90pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Centro Storico (Piazza Grande, Via Emilia, Mercato Albinelli area),
+  San Faustino, Crocetta
+
+TIER_2_NEIGHBOURHOODS:
+  Sant'Agnese, Buon Pastore, Sacca
+
+TIER_3_NEIGHBOURHOODS:
+  Quattro Ville, Saliceta San Giuliano, Lesignana
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Modena city municipality (Comune di Modena) only.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Nonantola (Casa Maria Luigia — Bottura's hotel restaurant is here,
+    ~10km from Modena city — auto-excluded by bounding box),
+  Rubiera (Arnaldo Clinica Gastronomica 1★ is here, auto-excluded),
+  Finale Emilia, Maranello (Cavallino 1★ is here, auto-excluded),
+  Castelfranco Emilia, or any location described as "near Modena",
+  "in the Modena province", or "outside Modena."
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed. "Modena" is unambiguous.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-modena-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-modena-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-modena-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-modena-italy-raw.json
+OUTPUT_WORKING:       ./localbite-modena-italy-working.json
+OUTPUT_FINAL:         ./localbite-modena-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-modena-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-modena-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  https://katieparla.com/city-guides/modena/
+    NOTE: Katie Parla, EN, named food writer and NYT contributor,
+    Italy-based. Modena city guide confirmed active, updated
+    November 2025. Single-author site; apply single-author site rule.
+    Fetch and extract all qualifying restaurants. Note: Katie's guide
+    mentions Osteria Francescana (exclude as 3★) and some nearby
+    Emilian towns (exclude as outside city limits).
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — standard named-author source,
+    no COI.
+  Slow Food Osterie d'Italia — independent guide, no COI
+  Aceto Balsamico Tradizionale di Modena DOP — local balsamic
+    vinegar producers are not a restaurant award; ignore.
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS (exclude entirely) —
+  Osteria Francescana (Chef Massimo Bottura, Via Stella 22, Modena)
+    The world's most famous restaurant. Exclude regardless of source.
+    Katie Parla's own guide notes "you don't have to go."
+
+  — 2 STARS — None in Modena city
+
+  — 1 STAR in MODENA CITY —
+  Al Gatto Verde (Chef Jessica Rosval, Modena — new 1★ in 2025
+    Michelin guide, retained in 2026. Bottura-backed operation.
+    Excluded on Michelin grounds.)
+
+  — 1 STAR OUTSIDE MODENA CITY (auto-excluded by bounding box) —
+  Cavallino (Maranello — Bottura/Forapani collaboration, new 2025)
+  Arnaldo Clinica Gastronomica (Rubiera, ~15km from Modena)
+  Casa Maria Luigia restaurant (Nonantola, ~10km from Modena,
+    Bottura's hotel — holds 1★)
+  NOTE: Franceschetta 58 (Modena) — Bottura's casual brasserie.
+    NOT starred as of 2026 guide. Does not require exclusion on
+    Michelin grounds. Include if recommended by a named writer.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  None identified. (Al Gatto Verde has a Bottura connection but is
+  excluded on Michelin grounds, so the COI question is moot.)
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — MODENA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Italian-language sources: Modena has strong local food coverage
+given its Emilian food identity. Phase 1 should search for:
+  "migliori ristoranti Modena trattorie osterie 2024 2025"
+  "dove mangiare Modena guida gastronomica 2025"
+  Named IT Modena food writers and local food bloggers
+  Luciano Pignataro may have covered Modena — check.
+
+Modenese food identity: Modena is known globally for Osteria
+Francescana but locals eat very differently. The pipeline should
+target non-starred restaurants serving:
+  - Tortellini in brodo (the Modenese version)
+  - Tagliatelle al ragù modenese
+  - Tigelle and gnocco fritto (local flatbreads)
+  - Lambrusco wine pairings
+  - Aceto Balsamico Tradizionale di Modena DOP in cooking
+  - Cotechino and zampone (local cured meats)
+  - Sandwiches at Bar Schiavoni in Mercato Albinelli
+
+Non-starred restaurant focus: This city has a once-in-a-generation
+fine dining restaurant at the top (Osteria Francescana) but the
+real food culture is in unpretentious trattorie and markets.
+The pipeline should actively seek these out via Phase 1.
+
+Province contamination: Maranello (Ferrari/Bottura's Cavallino),
+Rubiera, Nonantola, and other Modena province municipalities will
+appear in search results as "Modena restaurants." Reject these
+at extraction stage if outside city bounding box.
+
+Both-pool requirements: Katie Parla (EN) from Phase 0 + any
+qualifying IT source from Phase 1 would form a both-pool pair.
+The Emilia-Romagna food media ecosystem is well-developed — good
+prospects for finding a named IT critic via Phase 1.

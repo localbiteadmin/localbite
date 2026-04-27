@@ -1,0 +1,155 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Venice, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Venice
+COUNTRY: Italy
+CITY_SLUG: venice-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €30pp (bacaro, cicchetti bar, osteria)
+  2 = €30–60pp (mid-range trattoria, seafood restaurant)
+  3 = €60–110pp (modern Venetian, tasting menu entry)
+  4 = over €110pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  San Marco, Cannaregio, Castello
+
+TIER_2_NEIGHBOURHOODS:
+  Dorsoduro, Santa Croce (Venezia), San Polo, Giudecca
+
+TIER_3_NEIGHBOURHOODS:
+  Burano, Mazzorbo, Murano
+  (Note: these outer lagoon islands are a long vaporetto ride from
+  the main island — include if a named writer explicitly recommends
+  a restaurant there in a Venice city guide context)
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Venice island (Venezia insulare) ONLY. This includes the main
+  island, Giudecca, San Giorgio Maggiore, and the outer lagoon
+  islands (Murano, Burano, Mazzorbo) IF explicitly included in
+  a named writer's Venice city guide.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  ⚠ CRITICAL — Mestre is part of the Comune di Venezia
+  administratively but is a completely different place geographically.
+  It is on the mainland across the causeway. ALL Mestre restaurants
+  must be excluded. Mestre is approximately at lat 45.47–45.50,
+  lng 12.22–12.26. The Venice island bounding box does NOT include
+  Mestre.
+
+  Also exclude: Marghera, Favaro Veneto, Tessera, Mira, Dolo,
+  or any location described as "on the mainland", "near Mestre",
+  "in terraferma Venice", or "accessible by car."
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed. "Venezia" in Italian queries and
+  "Venice Italy" in English queries are unambiguous. No significant
+  toponym collision risk.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-venice-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-venice-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-venice-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-venice-italy-raw.json
+OUTPUT_WORKING:       ./localbite-venice-italy-working.json
+OUTPUT_FINAL:         ./localbite-venice-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-venice-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-venice-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  https://katieparla.com/city-guides/venice/
+    NOTE: Katie Parla, EN, named food writer and NYT contributor,
+    Italy-based. Venice city guide confirmed (February 2023, within
+    YEAR_RANGE 2023-2026). Single-author site; apply single-author
+    site rule. Fetch and extract all qualifying restaurants.
+
+  https://www.elizabethminchilli.com/category/venice-restaurants/
+    NOTE: Elizabeth Minchilli, EN, named food writer, long-term
+    Italy resident. Venice restaurant category page confirmed active.
+    Single-author site; apply single-author site rule. Fetch the
+    category page and extract restaurants from individual posts
+    dated 2023 or later. If the page returns a list of post links,
+    fetch the 3 most recent individual posts.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — standard named-author source,
+    no COI.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS — None in Venice
+
+  — 2 STARS (exclude entirely) —
+  Glam Enrico Bartolini (Venice island)
+
+  — 1 STAR (exclude entirely — apply blanket rule) —
+  All one-star restaurants in Venice (lagoon islands, 2026 guide):
+  Quadri (Piazza San Marco)
+  Local (Venice island)
+  Oro Restaurant (Hotel Cipriani, Giudecca island)
+  Wistèria (Venice island)
+  Palais Royal Restaurant (Venice island)
+  Agli Amici Dopolavoro (new 2026, on Isola delle Rose in lagoon)
+  Venissa (Burano / Mazzorbo island)
+
+  NOTE: Agli Amici Dopolavoro opened by the Scarello family,
+  described as being on "Isola delle Rose" — a small island in the
+  Venice lagoon. Include in exclusions regardless of exact lagoon
+  island location.
+
+  NOTE: Venissa (Burano/Mazzorbo) is a lagoon island restaurant far
+  from the main Venice island — it will likely be outside a tight
+  Venice bounding box. Include in exclusions for blanket coverage.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  None identified.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — VENICE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MESTRE EXCLUSION — READ BEFORE ANY EXTRACTION:
+Mestre is frequently described as "Venice" by travel media because
+it is administratively part of the Comune di Venezia. Any restaurant
+accessible by car, bus, or tram (not boat) is in Mestre/terraferma
+and must be excluded. All Venice island restaurants require arrival
+by vaporetto, water taxi, or foot across the Rialto/Accademia bridges.
+Apply this as an editorial test at extraction stage.
+
+Italian-language sources: Phase 1 should search for:
+  "migliori ristoranti Venezia osterie bacari 2024 2025"
+  "dove mangiare Venezia guida gastronomica 2025"
+  Named IT Venice food writers and bloggers
+
+Venetian food identity: Venice has a distinct food culture.
+The pipeline should target:
+  - Cicchetti (Venetian tapas, served at bacari wine bars)
+  - Bacari (traditional wine bars with small plates)
+  - Sarde in saor (sweet-sour sardines)
+  - Baccalà mantecato (whipped salt cod)
+  - Risotto al nero di seppia (squid ink risotto)
+  - Fegato alla veneziana (calves' liver with onions)
+  - Seafood from the Rialto market
+
+Overcrowding note: Venice suffers from extreme tourist pressure.
+Sources that explicitly recommend "where locals eat" or restaurants
+away from the tourist circuit (Cannaregio, Castello, Giudecca,
+outer islands) should be prioritised over Piazza San Marco area.
+
+Both-pool requirements: Katie Parla (EN) + Elizabeth Minchilli (EN)
+are both confirmed as Phase 0 sources but they are the same language.
+For both-pool, at least one IT-language source is needed from Phase 1.
+The pipeline should actively search for IT Venice food writers.
