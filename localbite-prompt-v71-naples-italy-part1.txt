@@ -1,0 +1,200 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Naples, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Naples
+COUNTRY: Italy
+CITY_SLUG: naples-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €20pp (pizzeria, friggitoria, trattoria, sfogliatelle)
+  2 = €20–45pp (mid-range trattoria, seafood restaurant)
+  3 = €45–90pp (modern Neapolitan, tasting menu entry)
+  4 = over €90pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Centro Storico (Spaccanapoli, Via dei Tribunali, Decumani),
+  Chiaia, Posillipo, Vomero, Quartieri Spagnoli
+
+TIER_2_NEIGHBOURHOODS:
+  Mergellina, Pozzuoli (within city limits), Fuorigrotta,
+  Secondigliano, Bagnoli
+
+TIER_3_NEIGHBOURHOODS:
+  San Carlo all'Arena, Stella, Avvocata,
+  Poggioreale, Pianura
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  Naples city municipality (Comune di Napoli) only. Include all
+  quartieri from Centro Storico to Posillipo, Vomero, Chiaia,
+  Fuorigrotta, and the seafront.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  ⚠ CRITICAL — Naples province is enormous and contains dozens of
+  starred restaurants that are NOT in the city. Exclude ALL of:
+  Ischia (island — outside city), Capri / Anacapri (island — outside),
+  Procida (island — outside), Amalfi Coast (Positano, Ravello, Amalfi,
+  Praiano, Conca dei Marini — all outside city bounding box),
+  Sorrento, Sant'Agata sui Due Golfi, Vico Equense, Massa Lubrense,
+  Nerano (where Quattro Passi 3★ is located — outside city),
+  Castellammare di Stabia, Pompei, Nola, Brusciano, Pozzuoli
+  (verify if within Comune di Napoli or separate municipality —
+  if separate, exclude), Bacoli, Quarto.
+  Any restaurant described as "on the Amalfi Coast", "on Capri",
+  "on Ischia", "in Sorrento", "outside Naples", or "on the peninsula"
+  must be excluded regardless of writer recommendation.
+
+GEOGRAPHY_DISAMBIGUATION:
+  ⚠ MANDATORY — SEVERE CONTAMINATION RISK.
+  Naples Florida (USA) generates significant search result
+  contamination even when "Italy" is included in queries.
+  This was confirmed empirically in pre-research.
+
+  ALL search queries MUST use one of these forms:
+    Italian queries: "Napoli" (never "Naples" in Italian-language queries)
+    English queries: "Naples Italy" or "Napoli Italy" (never bare "Naples")
+
+  NEVER use bare "Naples" in any search query — results will be
+  contaminated with Naples, Florida restaurant content.
+
+  If a search result clearly refers to Naples, Florida, skip it
+  immediately. Do not attempt to extract restaurants from it.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-naples-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-naples-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-naples-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-naples-italy-raw.json
+OUTPUT_WORKING:       ./localbite-naples-italy-working.json
+OUTPUT_FINAL:         ./localbite-naples-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-naples-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-naples-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  https://katieparla.com/city-guides/naples/
+    NOTE: Katie Parla, EN, independent food writer and NYT contributor,
+    Italy-based. Naples city guide confirmed active. Single-author site;
+    apply single-author site rule. Fetch and extract all qualifying
+    restaurants. Note: Katie's guide explicitly mentions some Amalfi
+    Coast and day-trip destinations — extract ONLY Naples city
+    restaurants (see GEOGRAPHIC_BOUNDARY_EXCLUDE above).
+
+  https://www.lucianopignataro.it/a/dove/campania/napoli/
+    NOTE: Luciano Pignataro, IT, major Italian food and wine journalist,
+    Naples-based. Active through April 2026. Named author throughout.
+    Single-author site confirmed; apply single-author site rule.
+    The /a/dove/campania/napoli/ URL is the Naples restaurant directory
+    section of his blog. Fetch and look for restaurant guide articles
+    or roundups from 2023-2026. If the page lists articles, fetch the
+    3 most recent qualifying articles from the Naples section.
+    This is the primary IT-language source for Naples.
+
+  https://www.lucianopignataro.it/a/guida-michelin-tutte-le-stelle-della-campania/207656/
+    NOTE: Luciano Pignataro, IT, same author as above. This specific
+    article lists all Campania starred restaurants for 2025 (published
+    November 2024). Use only to confirm MICHELIN exclusions — do NOT
+    extract restaurants from this article (it covers the whole province,
+    not just Naples city). Document as fetch for verification purposes.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — no known Città del gusto
+    commercial conflict in Naples city specifically; include
+    Gambero Rosso sources normally unless otherwise discovered.
+    Verify during Phase 0 if any COI is found.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS (exclude entirely) —
+  NONE in Naples city.
+  NOTE: Quattro Passi (Nerano, Sorrento peninsula) holds 3★ but is
+  in a separate municipality well outside Naples city bounding box —
+  auto-excluded by geography.
+
+  — 2 STARS (exclude entirely) —
+  George Restaurant (Naples city — the only 2★ in the city)
+
+  — 2 STARS OUTSIDE CITY (auto-excluded by bounding box — listed
+  for pipeline awareness):
+  L'Olivo (Anacapri/Capri island — outside city)
+  Taverna Estia (Brusciano — outside city)
+  Piazzetta Milù (Castellammare di Stabia — outside city)
+  Daní Maison (Ischia island — outside city)
+  Krèsios (Telese Terme, Benevento province — outside city)
+  Torre del Saracino (Vico Equense/Marina Equa — outside city)
+
+  — 1 STAR (exclude entirely — apply blanket rule) —
+  IN NAPLES CITY (2026 guide — 3 restaurants):
+  ARIA (Chef Paolo Barrale)
+  Veritas (Chef Marco Caputi)
+  Il Ristorante Alain Ducasse Napoli (new 2026, at Hotel Romeo,
+    Executive Chef Alessandro Lucassino)
+
+  OUTSIDE CITY (auto-excluded by bounding box — listed for
+  pipeline awareness — Campania has 40 one-star restaurants
+  in the province, the vast majority outside Naples city):
+  Amalfi – Sensi, Amalfi – La Caravella dal 1959, Amalfi – Glicine,
+  Amalfi – Alici, Forio/Ischia – Umberto a Mare, Furore – Bluh Furore,
+  Gragnano – O Me O Il Mare, Lacco Ameno – Indaco, Massa Lubrense –
+  Relais Blu, Marina del Cantone – Taverna del Capitano, Nola – Re Santi
+  e Leoni, Paestum – Tre Olivi, Paestum – Le Trabe, Pompei – President,
+  Positano – Zass, Positano – Li Galli, Praiano – Un Piano nel Cielo,
+  Ravello – Rossellinis, Ravello – Il Flauto di Pan, Sant'Agata sui Due
+  Golfi – Don Alfonso 1890, Sant'Agnello – Don Geppi, Somma Vesuviana –
+  Contaminazioni Restaurant, Sorrento – Il Buco, Sorrento – Terrazza
+  Bosquet, Sorrento – Lorelei, Telese – La Locanda del Borgo,
+  Ticciano – Cannavacciuolo Countryside, Vallesaccarda – Oasis Sapori
+  Antichi, Vico Equense – Antica Osteria Nonna Rosa,
+  Vietri sul Mare – Le Volte del Fuenti, and others.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  No specific commercial conflicts identified for Naples in pre-research.
+  Gambero Rosso should be treated as a standard source (verify COI
+  during pipeline if found).
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — NAPLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DISAMBIGUATION ENFORCEMENT — READ BEFORE ANY SEARCH:
+All queries in Phase 1 MUST use "Napoli" (Italian) or "Naples Italy"
+(English). NEVER use bare "Naples". This is the single most important
+instruction for this pipeline. Contamination with Naples, Florida
+results is severe and confirmed. The search log should reflect this.
+
+Neapolitan food identity: Naples is the birthplace of pizza. The
+pipeline should target:
+  - Pizzerias (Neapolitan pizza — the authentic style)
+  - Seafood restaurants (Posillipo, Mergellina seafront)
+  - Frittura / street food (cuoppo, sfogliatelle, frittatine)
+  - Classic Neapolitan trattorie (pasta e patate, ragù napoletano,
+    genovese di cipolla, sartù di riso)
+  - Restaurants in the Centro Storico residential neighbourhoods
+
+Italian-language sources: Phase 1 should search for:
+  "migliori ristoranti Napoli critico gastronomico blog 2024 2025"
+  "Napoli dove mangiare guida gastronomica 2025"
+  "ristoranti Napoli quartieri 2024 2025 raccomandati"
+  Named IT Naples food writers beyond Luciano Pignataro
+
+Both-pool requirements: Katie Parla (EN) from Phase 0 + Luciano
+Pignataro (IT) from Phase 0 = immediate both-pool potential if
+they recommend the same restaurants. Different publishers, different
+languages — qualifies.
+
+Province contamination: If any source lists restaurants in Ischia,
+Capri, Amalfi, or the Sorrento peninsula as "Naples restaurants",
+these must be rejected. The bounding box will catch geocoding errors
+but the extraction step must also apply editorial rejection for any
+restaurant outside Naples city regardless of how the source frames it.

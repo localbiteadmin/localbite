@@ -1,0 +1,173 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Florence, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Florence
+COUNTRY: Italy
+CITY_SLUG: florence-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €25pp (trattoria, osteria, mercato)
+  2 = €25–55pp (mid-range trattoria, wine bar with kitchen)
+  3 = €55–110pp (modern Tuscan, bistecca restaurants)
+  4 = over €110pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Oltrarno, Santa Croce, Sant'Ambrogio, Centro Storico,
+  San Lorenzo, San Frediano
+
+TIER_2_NEIGHBOURHOODS:
+  Prato, Porta Romana, Piazza della Repubblica area,
+  Piazza Beccaria, Settignano (if explicitly in city guide),
+  Lungarno area
+
+TIER_3_NEIGHBOURHOODS:
+  Gavinana, Rifredi, Isolotto, Brozzi,
+  Peretola area (close to airport but within city limits)
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  All Florence city municipality (Comune di Firenze).
+  Include Oltrarno, Trastevere equivalent areas, and residential
+  neighbourhoods south of the Arno. Include Settignano if a named
+  writer explicitly recommends a restaurant there as part of a
+  Florence city guide.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Fiesole (separate municipality — exclude even though geographically
+  close; Coquinarius Fiesole is outside boundary), Chianti, Greve
+  in Chianti, Impruneta, San Casciano, Bagno a Ripoli (if outside
+  city limits), Siena, Arezzo, San Gimignano, or any location
+  described as "day trip from Florence", "outside Florence",
+  "in Tuscany but not Florence", or "in the hills above Florence."
+  NOTE: Serrae Villa Fiesole (1★ Michelin) is in Fiesole — outside
+  Florence city boundary — auto-excluded by geography.
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed. "Firenze" in Italian queries and
+  "Florence Italy" in English queries are unambiguous. Note that
+  Florence, South Carolina and Florence, Alabama exist but do not
+  generate meaningful food media contamination at search level.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-florence-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-florence-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-florence-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-florence-italy-raw.json
+OUTPUT_WORKING:       ./localbite-florence-italy-working.json
+OUTPUT_FINAL:         ./localbite-florence-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-florence-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-florence-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  https://emikodavies.substack.com/p/where-to-eat-and-stay-in-florence
+    NOTE: Emiko Davies, EN, named food writer and cookbook author,
+    long-term Florence resident (now based in Tuscany but continues
+    Florence coverage). Guide published October 2023 — within
+    YEAR_RANGE 2023-2026. Single-author site confirmed; apply
+    single-author site rule. Rich editorial prose quotes throughout.
+    Fetch and extract all qualifying restaurants dated 2023+.
+
+  https://www.emikodavies.com/how-to-eat-and-travel-more-sustainably-in-florence/
+    NOTE: Emiko Davies, EN, same author as above. Published January 2025.
+    Supplementary source with additional restaurant recommendations.
+    Skip if content overlaps entirely with the Substack guide above.
+
+  https://leonardoromanelli.it
+    NOTE: Leonardo Romanelli, IT, named Italian food critic ("Gusto Critico"),
+    Florence-based writer covering restaurant openings and food scene.
+    Active through December 2025. Confirm from About page that Leonardo
+    Romanelli is the sole named author; apply single-author site rule if
+    confirmed. Fetch the homepage and look for restaurant guide articles
+    or recommendation posts from 2023-2026. If no qualifying guide-format
+    articles found with prose quotes, document as Phase 0 failure and
+    move to Phase 1 for IT Florence sources.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — NOTE: Gambero Rosso operates
+    the Città del gusto commercial food school network in Italy.
+    Verify if a Città del gusto operates in Florence specifically.
+    If confirmed, flag any Gambero Rosso Florence sources with ⚠ coi.
+    Do not reject — include transparently.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  [SOURCE: Michelin Guide Italy 2026, announced 19 November 2025]
+
+  — 3 STARS (exclude entirely) —
+  Enoteca Pinchiorri (Chef Riccardo Monco, Via Ghibellina 87)
+    Historic Florence institution, held 3 stars since 2004.
+
+  — 2 STARS (exclude entirely) —
+  Santa Elisabetta (Chef Rocco de Santis, at Hotel Brunelleschi,
+    Piazza Santa Elisabetta 3 — inside the Byzantine Torre della Pagliazza)
+
+  — 1 STAR (exclude entirely — apply blanket rule) —
+  All one-star restaurants in Florence city (2026 guide — 7 total):
+  Gucci Osteria da Massimo Bottura (Piazza della Signoria 10)
+  Il Palagio (Four Seasons Hotel Firenze, Borgo Pinti 99)
+  Borgo San Jacopo (at Portrait Firenze hotel, Lungarno degli Acciaiuoli)
+  Saporium Firenze (Lungarno Benvenuto Cellini 69r)
+  Atto di Vito Mollica (Palazzo Portinari Salviati)
+  Luca's by Paulo Airaudo (new 2026, at La Gemma hotel)
+
+  IN FIESOLE (outside Florence city bounding box — auto-excluded):
+  Serrae Villa Fiesole (new 2025, in Fiesole municipality — will be
+    auto-excluded by bounding box; listed here for completeness)
+
+  NOTE: Florence city has 9 total starred restaurants in the 2026 guide
+  (1 three-star, 1 two-star, 7 one-stars). Tuscany region has 45 total
+  starred, but most are outside Florence city and auto-excluded by
+  bounding box.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  Gambero Rosso — verify Città del gusto presence in Florence.
+    Flag any Gambero Rosso sources with ⚠ coi if confirmed.
+  Gucci Osteria — owned by Gucci (fashion house) and affiliated with
+    Massimo Bottura. This is a commercial entity, but it is also
+    Michelin-starred and therefore excluded regardless of COI.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — FLORENCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Italian-language sources: Florence has strong IT food media.
+Phase 1 should search for:
+  - Named Italian food critics and bloggers covering Florence
+  - Leonardo Romanelli (leonardoromanelli.it) — check Phase 0 first
+  - Dissapore, Gambero Rosso blog (flag COI), local Florence food media
+  - Florentine food blogs in Italian
+
+Florentine food identity: Bistecca alla Fiorentina, ribollita, pappa
+al pomodoro, lampredotto (tripe sandwiches), crostini di fegatini.
+Emiko Davies explicitly recommends seeking out lampredotto, trattorie
+in Sant'Ambrogio market area, and wine bars in Oltrarno. These are
+the kind of restaurants the pipeline should prioritise — places locals
+eat, not tourist-facing restaurants near Ponte Vecchio.
+
+Overtourism note: Emiko Davies has written extensively about how
+Florence's restaurant scene is pressured by mass tourism. Restaurants
+explicitly recommended by named writers as "local" or "away from
+tourists" should be prioritised. Avoid extracting restaurants that
+writers flag as tourist traps.
+
+Both-pool requirements: Emiko Davies (EN/emikodavies.substack.com) and
+any IT source from Phase 1 would form a both-pool pair if different
+publishers and different languages. If Leonardo Romanelli (IT) confirms
+as a qualifying source in Phase 0, the pipeline has immediate both-pool
+potential.
+
+Fiesole exclusion: Any restaurant described as being "in Fiesole",
+"above Florence in Fiesole", or "overlooking Florence from Fiesole" is
+outside the city bounding box and must be excluded regardless of writer
+recommendation. This includes Coquinarius Fiesole and Serrae Villa
+Fiesole (1★ Michelin — also excluded on Michelin grounds).
