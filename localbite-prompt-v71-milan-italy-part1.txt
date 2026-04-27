@@ -1,0 +1,185 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Milan, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Milan
+COUNTRY: Italy
+CITY_SLUG: milan-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €25pp (trattoria, osteria, lunch spot)
+  2 = €25–55pp (mid-range, neo-trattoria, wine bar with kitchen)
+  3 = €55–110pp (modern Milanese, tasting menu entry)
+  4 = over €110pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Navigli, Brera, Porta Venezia, Isola, Tortona, Sempione,
+  Chinatown (Sarpi area)
+
+TIER_2_NEIGHBOURHOODS:
+  Porta Romana, Moscova, Garibaldi, Porta Genova, Ticinese,
+  NoLo (North of Loreto), Lambrate
+
+TIER_3_NEIGHBOURHOODS:
+  Città Studi, Dergano, Affori, Niguarda, Lorenteggio,
+  Vigentino, Corvetto
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  All municipio 1–9 of Milan city (Comune di Milano). Include
+  Navigli, Brera, Isola, Tortona, Porta Venezia, Porta Romana,
+  NoLo, Lambrate, Città Studi and other residential neighbourhoods.
+  Include Zona Garibaldi / Porta Nuova.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Monza, Sesto San Giovanni, Cinisello Balsamo, Rho, Pero,
+  Cornaredo, Buccinasco, Pieve Emanuele, or any location described
+  as "near Milan", "outside Milan", "day trip from Milan",
+  or "in the province of Milan" unless the restaurant is explicitly
+  within the Comune di Milano administrative boundary.
+  NOTE: Olmo (1★) is in Cornaredo — outside Milan city limits —
+  confirm exclusion by address.
+
+GEOGRAPHY_DISAMBIGUATION:
+  No disambiguation needed for Milan. Queries using "Milano" in
+  Italian or "Milan Italy" in English are unambiguous.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-milan-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-milan-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-milan-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-milan-italy-raw.json
+OUTPUT_WORKING:       ./localbite-milan-italy-working.json
+OUTPUT_FINAL:         ./localbite-milan-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-milan-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-milan-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  https://asignorinainmilan.com/restaurants-milan-june-2025/
+    NOTE: Jaclyn DeGiorgio, EN, named food writer and food tour guide,
+    Milan-based. "6 Memorable June 2025 Meals in Milan." Single-author
+    site — the About page confirms Jaclyn DeGiorgio as sole author;
+    apply single-author site rule to all posts. Monthly roundups
+    qualify as editorial content with prose quotes.
+
+  https://asignorinainmilan.com/restaurants-milan-july-2025/
+    NOTE: Jaclyn DeGiorgio, EN, same author as above.
+    "5 Memorable July 2025 Meals in Milan." If this URL 404s,
+    check asignorinainmilan.com for the July 2025 monthly post
+    and use the correct URL. Alternatively skip if June 2025 post
+    already provides sufficient restaurants.
+
+  https://asignorinainmilan.com/restaurants-milan-june-2024/
+    NOTE: Jaclyn DeGiorgio, EN, same author as above.
+    "5 Noteworthy June 2024 Meals." Use as supplementary source
+    to increase restaurant count. All within YEAR_RANGE 2023-2026.
+
+  https://www.theinfatuation.com/milan/guides/best-restaurants-milan
+    NOTE: The Infatuation, EN. "25 Best Restaurants in Milan."
+    Updated January 2026. This is a JS-only site (SPA shell returned
+    to automated fetch — known pattern as with Bilbao, Lisbon etc).
+    Phase 0 fetch will likely return minimal content. Document as
+    JS-only in fetch log. The article_url is confirmed from this URL —
+    use as article_url for The Infatuation Milan source regardless of
+    fetch outcome. If any content is returned, extract qualifying
+    restaurants.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — NOTE: Gambero Rosso operates
+    Città del gusto commercial cooking schools in Italy and may have
+    a Milan presence. ⚠ VERIFY if a Città del gusto operates in
+    Milan before including any Gambero Rosso sources. If confirmed,
+    flag with ⚠ coi in writer_profile. Do not reject — include
+    transparently.
+  Slow Food Osterie d'Italia — independent guide, no COI
+  Identità Golose — Milan-based food congress and guide
+
+MICHELIN_STARRED_EXCLUSIONS:
+  — 3 STARS (exclude entirely) —
+  Enrico Bartolini at MUDEC (Chef Enrico Bartolini, MUDEC Museum,
+    Viale Stelvio 1, Milan) — Milan's only 3-star restaurant.
+    Received third star in 2020. Italy's most-starred chef overall
+    (13 stars across multiple restaurants) — only this 3-star location
+    is in Milan city.
+
+  — 2 STARS (exclude entirely) —
+  ⚠ VERIFY ALL FOUR 2-STAR NAMES at guide.michelin.com/it/lombardia/milano
+    before launching the pipeline. The 2025 Michelin guide lists 4
+    two-star restaurants in Milan but their names were not fully
+    confirmed in pre-research. Do not proceed without this verification.
+    Known possibilities from research context: check Il Luogo di Aimo
+    e Nadia, Seta (Four Seasons Milan), and others.
+
+  — 1 STAR (exclude entirely — apply blanket rule) —
+  Milan has 14 one-star restaurants in the 2025 guide. Verify the
+  complete list at guide.michelin.com/it/lombardia/milano and add all
+  names here before launching the pipeline. Known 1-star restaurants
+  include (partial — confirm completeness):
+  Aalto (Chef Takeshi Iwai), Contraste (Chef Matias Perdomo),
+  Berton (Chef Andrea Berton), Cracco (Chef Carlo Cracco),
+  Felix Lo Basso home & restaurant (Chef Felice Lo Basso),
+  Il Luogo di Aimo e Nadia (Chefs Negrini and Pisani),
+  Horto (Chef Alberto Toè), Iyo (Chef Michele Biassoni),
+  Moebius Sperimentale (Enrico Croatti), Sadler (Chef Claudio Sadler),
+  Sine by Di Pinto (Chef Roberto Di Pinto),
+  Anima at Milano Verticale Hotel,
+  Olmo (Chef Davide Oldani — NOTE: in Cornaredo, outside city limits,
+    verify address before including in exclusion list vs. auto-excluded
+    by geography).
+  Joia (Chef Pietro Leeman) — CLOSED end of 2024, do not exclude.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  Gambero Rosso — verify if Città del gusto operates in Milan.
+    If yes, flag any Gambero Rosso Milan sources with ⚠ coi.
+  MUDEC Museum — Enrico Bartolini restaurant is inside a public museum.
+    No COI for the museum itself; the restaurant is excluded on
+    Michelin grounds only.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — MILAN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Italian-language sources: Milan has strong IT food media. Phase 1
+should actively search for:
+  - Dissapore (dissapore.com) — Italian food media with named writers,
+    covers Milan extensively. Check for named bylines.
+  - Gambero Rosso blog/magazine (flag COI if Città del gusto confirmed)
+  - Local Milan food blogs in Italian
+  - Named Italian food critics covering Milan restaurants
+  - ItalyEat or similar IT food media
+
+Both-pool requirements: The Jaclyn DeGiorgio (A Signorina in Milan)
+monthly roundup posts are EN. The Infatuation is EN. Both are from
+different publishers, qualifying both-pool between them if restaurants
+overlap. However, for true language diversity, the pipeline should also
+find an IT-language source. Phase 1 should prioritise finding a named
+IT Milan food writer to enable IT/EN both-pool.
+
+A Signorina in Milan note: Monthly roundup posts list 5–6 restaurants
+each. The pipeline should fetch multiple monthly posts (2023-2025) to
+build a sufficient restaurant pool. The DIRECT_FETCH_SOURCES above
+cover June 2024, June 2025, July 2025 — supplement with additional
+monthly posts if the restaurant count is low after Phase 0.
+
+Milanese food identity: Milan is known for risotto alla Milanese
+(saffron), cotoletta, ossobuco, panettone, Aperol Spritz birthplace
+(Campari). Restaurants in the neo-trattoria movement (Trippa etc.) are
+prime targets. The Navigli canal district and Isola neighbourhood are
+active food areas. Chinese food scene (Sarpi area) is internationally
+recognised.
+
+Exclusion reminders:
+  - Enrico Bartolini at MUDEC (3★) — EXCLUDE
+  - All 4 two-star restaurants (names to be verified) — EXCLUDE
+  - All 14 one-star restaurants (listed partially above) — EXCLUDE
+  - Olmo (Cornaredo) — likely auto-excluded by geography; verify address
+  - Joia (closed 2024) — do not include or exclude; irrelevant

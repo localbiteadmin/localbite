@@ -1,0 +1,154 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART 1 — CITY VARIABLES
+LocalBite v7.1 — Rome, Italy
+Prepared: 2026-04-27
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Rome
+COUNTRY: Italy
+CITY_SLUG: rome-italy
+YEAR_RANGE: 2023-2026
+CITY_LANGUAGE: IT
+SOURCE_LANGUAGE_PRIORITY: Italian first, then English
+
+PRICE_CURRENCY: €
+PRICE_LEVELS:
+  1 = under €25pp (osteria, trattoria, pizza, casual)
+  2 = €25–50pp (mid-range trattoria, wine bar with kitchen)
+  3 = €50–100pp (modern Roman, tasting menu entry)
+  4 = over €100pp (fine dining)
+
+TIER_1_NEIGHBOURHOODS:
+  Trastevere, Testaccio, Centro Storico, Prati, Campo de Fiori,
+  Monti, Pigneto
+
+TIER_2_NEIGHBOURHOODS:
+  Ostiense, Parioli, Flaminio, Nomentano, Esquilino,
+  Torpignattara, San Giovanni
+
+TIER_3_NEIGHBOURHOODS:
+  Prenestino, Trionfale, Garbatella, Garbatella, Centocelle,
+  Tor Pignattara, Tiburtino
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+  All municipio I–XV of Rome city (Comune di Roma). Include
+  Trastevere, Testaccio, Ostiense, Flaminio, Pigneto, Parioli,
+  Torpignattara and other residential neighbourhoods.
+
+GEOGRAPHIC_BOUNDARY_EXCLUDE:
+  Fiumicino, Ostia, Frascati, Grottaferrata, Marino,
+  Albano Laziale, Tivoli, Castel Gandolfo, or any location
+  described as "near Rome", "day trip from Rome", "outside Rome",
+  or "in the Castelli Romani". Exclude Vatican City restaurants
+  if they primarily serve tourists (include if independently
+  recommended by a named writer as a local favourite).
+
+GEOGRAPHY_DISAMBIGUATION:
+  Rome Georgia (USA) — LOW RISK. "Roma ristoranti" searches return
+  Italy overwhelmingly. Use "Rome Italy" in all EN search queries
+  as standard practice. Use "Roma" in all IT search queries.
+  No special disambiguation instruction needed beyond standard
+  practice.
+
+OUTPUT_SEARCH_PLAN:   ./localbite-rome-italy-search-plan.txt
+OUTPUT_SEARCH_LOG:    ./localbite-rome-italy-search-log.txt
+OUTPUT_FETCH_LOG:     ./localbite-rome-italy-fetch-log.txt
+OUTPUT_RAW:           ./localbite-rome-italy-raw.json
+OUTPUT_WORKING:       ./localbite-rome-italy-working.json
+OUTPUT_FINAL:         ./localbite-rome-italy-2023-2026.json
+OUTPUT_AUDIT:         ./localbite-rome-italy-audit.txt
+OUTPUT_FAILED_SOURCES: ./localbite-rome-italy-failed-sources.txt
+
+DIRECT_FETCH_SOURCES:
+  https://katieparla.com/where-to-eat-drink-shop-rome/
+    NOTE: Katie Parla, EN, independent food writer and NYT contributor,
+    Rome-based. Guide updated June 2024. Single-author site — confirmed
+    named author from About page; apply single-author site rule.
+    This is an extensive guide with many restaurant recommendations
+    and prose quotes. Fetch and extract all qualifying restaurants.
+
+  https://katieparla.com/city-guides/rome/
+    NOTE: Katie Parla, EN, same author as above. City guide index page.
+    Fetch to extract any restaurants listed here not already in the
+    main guide above. Skip if content overlaps entirely.
+
+  https://www.elizabethminchilli.com/category/rome-restaurants/
+    NOTE: Elizabeth Minchilli, EN, independent food writer, long-term
+    Rome resident. Category archive page. May return paginated list of
+    individual restaurant posts — fetch the category page and extract
+    restaurant names and quotes. If the page returns a list of posts,
+    fetch the 3 most recent individual posts dated 2023 or later.
+    Single-author site — confirmed named author from About page;
+    apply single-author site rule.
+
+NAMED_AWARDS:
+  50 Top Italy (50topitaly.it) — annual guide, independent
+  L'Espresso Ristoranti d'Italia (annual guide)
+  Gambero Rosso Ristoranti d'Italia — NOTE: Gambero Rosso operates
+    a Città del gusto commercial food school in Rome. Flag all
+    Gambero Rosso sources with ⚠ coi in writer_profile. Do not
+    reject — include transparently.
+  Slow Food Osterie d'Italia — independent guide, no COI
+
+MICHELIN_STARRED_EXCLUSIONS:
+  — 3 STARS (exclude entirely) —
+  La Pergola (Chef Heinz Beck, Via Alberto Cadlolo 101, Rome Cavalieri
+    Waldorf Astoria hotel, Monte Mario) — Rome's only 3-star restaurant.
+    Has held 3 stars since 2005.
+
+  — 2 STARS (exclude entirely) —
+  Il Pagliaccio (Chef Anthony Genovese, Via dei Banchi Vecchi 129/a)
+  Acquolina (confirm full address at guide.michelin.com/it/lazio/roma)
+  ⚠ VERIFY third Rome 2-star: likely Il Convivio Troiani — confirm
+    name and address at guide.michelin.com/it/lazio/roma before launch.
+
+  — 1 STAR (exclude entirely — apply blanket rule) —
+  Rome has 14 one-star restaurants in the 2025 guide. Verify the
+  complete list at guide.michelin.com/it/lazio/roma and add all
+  names here before launching the pipeline. Do not proceed with the
+  pipeline until this list is complete. Known 1-star restaurants
+  include (partial, confirm completeness):
+  Pipero Roma, Tordomatto, Glass Hostaria, Per Me Giulio Terrinoni,
+  Imago, Enoteca La Torre, Aroma, Moma, Ad Hoc — verify all.
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  Gambero Rosso — operates Città del gusto commercial cooking school
+    in Rome. Flag any Gambero Rosso source with ⚠ coi. Include
+    transparently with COI note.
+
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE-SPECIFIC NOTES — ROME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Italian-language sources: Rome has a rich IT-language food media
+ecosystem. Phase 1 should actively search for:
+  - Named Italian food critics covering Rome (cerca i giornalisti
+    gastronomici a Roma)
+  - Blogs written by Rome-based food writers in Italian
+  - Italian food publications covering Rome restaurants
+  - Dissapore, Gambero Rosso blog (with COI flag), Identità Golose
+
+Both-pool requirements: To qualify for both-pool, need at least one
+EN source AND one IT/other-language source from different publishers.
+The two Katie Parla URLs above are from the same publisher (katieparla.com)
+and count as ONE source for pool purposes. The pipeline must find at
+least one independent IT-language source for both-pool to be achievable.
+
+Cucina romana: Focus on traditional Roman dishes — carbonara, cacio e pepe,
+amatriciana, coda alla vaccinara, carciofi alla giudia, supplì, pizza
+al taglio, gelato. Restaurants serving these with independent editorial
+endorsement are the target.
+
+Neighbourhood focus: Do NOT over-concentrate on Centro Storico tourist
+traps. Prioritise sources that recommend restaurants in Testaccio,
+Trastevere, Pigneto, Ostiense, Tor Pignattara — where Romans actually eat.
+
+Exclusion reminders:
+  - All Michelin-starred restaurants (listed above) MUST be excluded
+  - Tourist board content = reject
+  - Aggregator content (TripAdvisor, Google, TheFork) = reject
+  - PR-generated content = reject
+  - Anonymous editorial team credits = reject (no named human author)
