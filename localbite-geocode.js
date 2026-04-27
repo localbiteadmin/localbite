@@ -91,6 +91,37 @@ const CITY_BOXES = {
   'Zaragoza':       { latMin: 41.60, latMax: 41.70, lngMin: -0.95, lngMax: -0.75 },
   'San Sebastian':  { latMin: 43.28, latMax: 43.34, lngMin:  -2.04, lngMax:  -1.89 },
   'San Sebastián':  { latMin: 43.28, latMax: 43.34, lngMin:  -2.04, lngMax:  -1.89 },
+  // ── ITALIAN CITIES (Batches A–G) ──
+  // BATCH A
+  'Rome':           { latMin: 41.79, latMax: 41.99, lngMin:  12.35, lngMax:  12.65 },
+
+  // BATCH B
+  'Milan':          { latMin: 45.39, latMax: 45.54, lngMin:   9.04, lngMax:   9.28 },
+
+  // BATCH C
+  'Florence':       { latMin: 43.73, latMax: 43.84, lngMin:  11.18, lngMax:  11.33 },
+  'Naples':         { latMin: 40.79, latMax: 40.92, lngMin:  14.15, lngMax:  14.35 },
+
+  // BATCH D
+  'Bologna':        { latMin: 44.46, latMax: 44.55, lngMin:  11.27, lngMax:  11.41 },
+  'Turin':          { latMin: 45.01, latMax: 45.12, lngMin:   7.58, lngMax:   7.74 },
+
+  // BATCH E
+  // Venice: islands only — Mestre (mainland) excluded; outer lagoon islands included
+  'Venice':         { latMin: 45.39, latMax: 45.51, lngMin:  12.27, lngMax:  12.47 },
+  'Palermo':        { latMin: 38.08, latMax: 38.18, lngMin:  13.28, lngMax:  13.42 },
+  'Verona':         { latMin: 45.41, latMax: 45.48, lngMin:  10.94, lngMax:  11.06 },
+
+  // BATCH F
+  // Genoa: elongated coastal city — wide lng range intentional
+  'Genoa':          { latMin: 44.37, latMax: 44.47, lngMin:   8.77, lngMax:   9.05 },
+  'Bari':           { latMin: 41.08, latMax: 41.16, lngMin:  16.82, lngMax:  16.92 },
+  'Modena':         { latMin: 44.63, latMax: 44.68, lngMin:  10.89, lngMax:  10.97 },
+  'Lecce':          { latMin: 40.33, latMax: 40.40, lngMin:  18.13, lngMax:  18.20 },
+
+  // BATCH G
+  'Catania':        { latMin: 37.48, latMax: 37.56, lngMin:  15.03, lngMax:  15.12 },
+  'Trieste':        { latMin: 45.62, latMax: 45.69, lngMin:  13.73, lngMax:  13.82 },
 };
 
 const COUNTRY_BOXES = {

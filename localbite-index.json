@@ -1,7 +1,7 @@
 {
   "project": "LocalBite",
   "description": "Curated restaurant packs built from named food writers, 2025-2026 sources only",
-  "last_updated": "2026-04-26",
+  "last_updated": "2026-04-27",
   "cities": [
     {
       "city": "Barcelona",
@@ -78,7 +78,7 @@
       "country": "Morocco",
       "city_slug": "rabat-morocco",
       "pipeline": "localbite-v7.1",
-      "built": "2026-04-26",
+      "built": "2026-04-27",
       "restaurant_count": 5,
       "both_pool_count": 0,
       "source_count": 2,
@@ -130,7 +130,7 @@
       "notes": ""
     },
     {
-      "city": "Córdoba",
+      "city": "C\u00f3rdoba",
       "country": "Spain",
       "city_slug": "cordoba-spain",
       "pipeline": "localbite-v7.1",
@@ -172,7 +172,7 @@
       "notes": ""
     },
     {
-      "city": "Málaga",
+      "city": "M\u00e1laga",
       "country": "Spain",
       "city_slug": "malaga-spain",
       "pipeline": "localbite-v7.1",
@@ -214,7 +214,7 @@
       "notes": ""
     },
     {
-      "city": "San Sebastián",
+      "city": "San Sebasti\u00e1n",
       "country": "Spain",
       "city_slug": "san-sebastian-spain",
       "pipeline": "localbite-v7.1",
@@ -224,7 +224,7 @@
       "source_count": 6,
       "file": "localbite-san-sebastian-2023-2026.json",
       "status": "complete",
-      "notes": "24 restaurants from 6 sources. 23 entries carry open_status_check due to 2023 Infatuation source. No ES-language primary source found — structural characteristic of city media landscape."
+      "notes": "24 restaurants from 6 sources. 23 entries carry open_status_check due to 2023 Infatuation source. No ES-language primary source found \u2014 structural characteristic of city media landscape."
     },
     {
       "city": "Zaragoza",
@@ -245,7 +245,7 @@
       "country": "Spain",
       "city_slug": "valladolid-spain",
       "pipeline": "localbite-v7.1",
-      "built": "2026-04-21",
+      "built": "2026-04-27",
       "restaurant_count": 30,
       "both_pool_count": 0,
       "source_count": 5,
@@ -311,7 +311,7 @@
       "notes": ""
     },
     {
-      "city": "Logroño",
+      "city": "Logro\u00f1o",
       "country": "Spain",
       "city_slug": "logrono-spain",
       "pipeline": "localbite-v7.1",
@@ -353,7 +353,7 @@
       "notes": ""
     },
     {
-      "city": "A Coruña",
+      "city": "A Coru\u00f1a",
       "country": "Spain",
       "city_slug": "a-coruna-spain",
       "pipeline": "localbite-v7.1",
@@ -365,6 +365,216 @@
       "status": "complete",
       "open_status_check_count": 25,
       "notes": ""
+    },
+    {
+      "city": "Rome",
+      "country": "Italy",
+      "city_slug": "rome-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-rome-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch A \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Milan",
+      "country": "Italy",
+      "city_slug": "milan-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-milan-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch B \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Florence",
+      "country": "Italy",
+      "city_slug": "florence-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-florence-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch C \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Naples",
+      "country": "Italy",
+      "city_slug": "naples-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-naples-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch C \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Bologna",
+      "country": "Italy",
+      "city_slug": "bologna-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-bologna-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch D \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Turin",
+      "country": "Italy",
+      "city_slug": "turin-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-turin-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch D \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Venice",
+      "country": "Italy",
+      "city_slug": "venice-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-venice-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch E \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Palermo",
+      "country": "Italy",
+      "city_slug": "palermo-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-palermo-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch E \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Verona",
+      "country": "Italy",
+      "city_slug": "verona-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-verona-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch E \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Genoa",
+      "country": "Italy",
+      "city_slug": "genoa-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-genoa-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch F \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Bari",
+      "country": "Italy",
+      "city_slug": "bari-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-bari-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch F \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Modena",
+      "country": "Italy",
+      "city_slug": "modena-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-modena-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch F \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Lecce",
+      "country": "Italy",
+      "city_slug": "lecce-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-lecce-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch F \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Catania",
+      "country": "Italy",
+      "city_slug": "catania-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-catania-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch G \u2014 Part 1 file committed 2026-04-27"
+    },
+    {
+      "city": "Trieste",
+      "country": "Italy",
+      "city_slug": "trieste-italy",
+      "pipeline": "localbite-v7.1",
+      "built": null,
+      "restaurant_count": 0,
+      "both_pool_count": 0,
+      "source_count": 0,
+      "file": "localbite-trieste-italy-2023-2026.json",
+      "status": "coming_soon",
+      "open_status_check_count": 0,
+      "notes": "Italy Batch G \u2014 Part 1 file committed 2026-04-27"
     }
   ]
 }
