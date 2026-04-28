@@ -1065,7 +1065,7 @@ function priceSymbol(level, currency) {
 }
 
 function poolLabel(pool) {
-  const map = { both:'EN + Local', 'both-pool':'EN + Local', 'multi-source':'EN + Local', en:'English', fr:'French', ar:'Arabic', es:'Spanish', ca:'Catalan', pt:'Portuguese' };
+  const map = { both:'EN + Local', 'both-pool':'EN + Local', 'multi-source':'EN + Local', en:'English', fr:'French', ar:'Arabic', es:'Spanish', ca:'Catalan', pt:'Portuguese', it:'Italian' };
   return map[pool] || pool;
 }
 
@@ -1078,7 +1078,7 @@ function poolClass(pool) {
 }
 
 function langLabel(code) {
-  const map = { en:'EN', fr:'FR', ar:'AR', es:'ES', ca:'CA', pt:'PT' };
+  const map = { en:'EN', fr:'FR', ar:'AR', es:'ES', ca:'CA', pt:'PT', it:'IT' };
   return map[code] || code.toUpperCase();
 }
 
@@ -1321,6 +1321,7 @@ function buildFilters(restaurants, data) {
       ['','Source language'],
       ['both','Two languages confirmed'],
       ['en','English sources'],
+      ['it','Italian sources'],
       ['fr','French sources'],
       ['ar','Arabic sources'],
       ['es','Spanish sources'],

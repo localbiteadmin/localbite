@@ -237,7 +237,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Ravioleria Sarpi",
@@ -266,7 +266,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Bar Basso",
@@ -295,7 +295,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Rovello 18",
@@ -325,7 +325,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "28 Posti",
@@ -351,7 +351,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Erba Brusca",
@@ -377,7 +377,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "La Baia",
@@ -407,7 +407,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Shiro",
@@ -440,7 +440,7 @@
       ],
       "both_pool": false,
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Pastamadre",
@@ -469,7 +469,7 @@
       ],
       "both_pool": false,
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Pavé",
@@ -497,7 +497,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Giolina",
@@ -524,7 +524,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "La Latteria",
@@ -552,7 +552,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Dongiò",
@@ -581,7 +581,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Cavoli a Merenda",
@@ -609,7 +609,7 @@
       "both_pool": false,
       "geo_source": "photon",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Tipografia Alimentare",
@@ -634,7 +634,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Altatto",
@@ -659,7 +659,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Trattoria Mirta",
@@ -684,7 +684,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Berberè",
@@ -709,7 +709,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Ratanà",
@@ -734,7 +734,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Ristorante Ribot",
@@ -759,7 +759,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Osteria del Treno",
@@ -784,7 +784,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Yoshinobu",
@@ -812,7 +812,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Nún",
@@ -840,7 +840,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Osteria Alla Concorrenza",
@@ -868,7 +868,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Zia Esterina Sorbillo",
@@ -895,7 +895,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Gastronomia Yamamoto",
@@ -922,7 +922,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Bentoteca",
@@ -949,7 +949,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Enoteca Naturale",
@@ -974,7 +974,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Macelleria Popolare",
@@ -1001,7 +1001,7 @@
       "both_pool": false,
       "geo_source": "photon",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Li-Sei Deli",
@@ -1026,7 +1026,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Cantina Urbana",
@@ -1051,7 +1051,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "en"
     },
     {
       "name": "Fat Sam at the Winery",
@@ -1077,7 +1077,7 @@
       ],
       "both_pool": false,
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Bites",
@@ -1102,7 +1102,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "La via della seta",
@@ -1128,7 +1128,7 @@
       ],
       "both_pool": false,
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Autem",
@@ -1153,7 +1153,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Luckyman Noodles",
@@ -1180,7 +1180,7 @@
       "both_pool": false,
       "geo_source": "photon",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Silvano vini e cibi al banco",
@@ -1204,7 +1204,7 @@
       ],
       "both_pool": false,
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Onda",
@@ -1231,7 +1231,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Sandì",
@@ -1256,7 +1256,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Lafa",
@@ -1280,7 +1280,7 @@
       ],
       "both_pool": false,
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "June Collective",
@@ -1304,7 +1304,7 @@
       ],
       "both_pool": false,
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Lacerba",
@@ -1331,7 +1331,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Giulio Pane e Ojo",
@@ -1358,7 +1358,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Antica Pizzeria Fiorentina",
@@ -1386,7 +1386,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "VegAmore",
@@ -1417,7 +1417,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Mahone's Restaurant",
@@ -1447,7 +1447,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Dhole",
@@ -1476,7 +1476,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Yuzu",
@@ -1503,7 +1503,7 @@
       ],
       "both_pool": false,
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Madama Bistrot",
@@ -1533,7 +1533,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Osteria dell'Acqua Bella",
@@ -1563,7 +1563,7 @@
       "both_pool": false,
       "geo_source": "photon",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Albertone Fraschetta Romana",
@@ -1590,7 +1590,7 @@
       ],
       "both_pool": false,
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Fujita",
@@ -1616,7 +1616,7 @@
       ],
       "both_pool": false,
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Norah Was Drunk",
@@ -1646,7 +1646,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Pizzeria Trattoria Anthony",
@@ -1673,7 +1673,7 @@
       "both_pool": false,
       "geo_source": "photon",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Joybar Milano",
@@ -1703,7 +1703,7 @@
       "both_pool": false,
       "geo_source": "photon",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "La Cappelletta",
@@ -1731,7 +1731,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     },
     {
       "name": "Osteria al Piccolo Molo",
@@ -1761,7 +1761,7 @@
       "both_pool": false,
       "geo_source": "nominatim",
       "confidence_tier": "B",
-      "language_pool": "es"
+      "language_pool": "it"
     }
   ],
   "city_slug": "milan-italy",
