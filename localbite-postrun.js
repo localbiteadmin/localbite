@@ -159,7 +159,7 @@ function isThinProfile(profile) {
     ? (Array.isArray(data.sources) ? data.sources.length : Object.keys(data.sources).length)
     : 0;
 
-  console.log(`\nLocalBite Post-Pipeline Script v3.3`);
+  console.log(`\nLocalBite Post-Pipeline Script v3.4`);
   console.log(`══════════════════════════════════════════════`);
   console.log(`City:     ${city}, ${country}`);
   console.log(`File:     ${file}`);
