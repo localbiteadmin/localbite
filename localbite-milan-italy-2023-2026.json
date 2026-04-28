@@ -146,7 +146,7 @@
       "both_pool": true,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "es"
+      "language_pool": "both"
     },
     {
       "name": "Alba Pasta Bar",
@@ -177,7 +177,7 @@
       "both_pool": true,
       "geo_source": "photon",
       "confidence_tier": "A",
-      "language_pool": "es"
+      "language_pool": "both"
     },
     {
       "name": "Botoi",
@@ -208,7 +208,7 @@
       ],
       "both_pool": true,
       "confidence_tier": "A",
-      "language_pool": "es"
+      "language_pool": "both"
     },
     {
       "name": "Denis",
