@@ -1,0 +1,2158 @@
+{
+  "city": "Naples",
+  "city_slug": "naples-italy",
+  "country": "Italy",
+  "pipeline": "localbite-v7.1",
+  "year_range": "2023-2026",
+  "date": "2026-04-28",
+  "stats": {
+    "sources_confirmed": 5,
+    "both_pool_count": 6,
+    "tier_a": 8,
+    "tier_b": 54,
+    "tier_c_removed": 2,
+    "final_count": 62
+  },
+  "sources": [
+    {
+      "source_id": "src-katieparla-parla",
+      "writer": "Katie Parla",
+      "publication": "katieparla.com",
+      "language": "en",
+      "article_url": null,
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "source_type": "primary",
+      "id": "src-katieparla-parla",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food and travel writer Katie Parla shares expert insights on Italian cuisine and dining culture through her website katieparla.com. Her coverage includes in-depth guides to eating and drinking in Italy's major food destinations like Naples, offering readers authentic local dining recommendations."
+    },
+    {
+      "source_id": "src-lucianopignataro-disalvo-trattorie",
+      "writer": "Santa di Salvo",
+      "publication": "lucianopignataro.it",
+      "language": "it",
+      "article_url": null,
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "source_type": "primary",
+      "id": "src-lucianopignataro-disalvo-trattorie",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer and restaurant critic Santa di Salvo contributes to lucianopignataro.it, covering the vibrant culinary scene of Naples and beyond. Her expertise focuses on traditional trattorias and neighborhood dining establishments, providing detailed guides to help locals and visitors discover authentic Italian dining experiences."
+    },
+    {
+      "source_id": "src-inviaggiodasola-bancale",
+      "writer": "Diana Bancale",
+      "publication": "inviaggiodasola.com",
+      "language": "it",
+      "article_url": null,
+      "article_date": "2025-06-28",
+      "article_title": "Dove mangiare a Napoli, le migliori trattorie e ristoranti tipici",
+      "source_type": "primary",
+      "id": "src-inviaggiodasola-bancale",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Travel and food writer specializing in authentic local dining experiences, with particular expertise in Italian cuisine and regional specialties. Diana Bancale contributes to inviaggiodasola.com, a travel publication focused on solo travel adventures and destination dining guides. Her work highlights traditional trattorias and typical restaurants that showcase the genuine flavors of Italy's culinary landscape."
+    },
+    {
+      "source_id": "src-timeout-proietti",
+      "writer": "Gabriela Proietti",
+      "publication": "timeout.com",
+      "language": "en",
+      "article_url": null,
+      "article_date": "2025-02-28",
+      "article_title": "16 Best Restaurants in Naples for 2025",
+      "source_type": "secondary",
+      "id": "src-timeout-proietti",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for Time Out, specializing in restaurant discovery and dining recommendations. Her recent work includes comprehensive guides to Naples' top dining destinations, helping readers navigate the city's culinary landscape with expert insights on the best restaurants for 2025."
+    },
+    {
+      "source_id": "src-lucianopignataro-disalvo-terrazza",
+      "writer": "Santa di Salvo",
+      "publication": "lucianopignataro.it",
+      "language": "it",
+      "article_url": "https://www.lucianopignataro.it/a/terrazza-calabritto-25-anni-al-top-napoli-e-milano-senza-inseguire-o-peggio-sognare-la-stella-michelin/293111/",
+      "article_date": "2026-04-24",
+      "article_title": "Terrazza Calabritto 25 anni al top Napoli e Milano senza inseguire o, peggio, sognare la stella Michelin",
+      "source_type": "primary",
+      "id": "src-lucianopignataro-disalvo-terrazza",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for lucianopignataro.it, covering the Italian restaurant scene with focus on established dining destinations. Santa di Salvo writes about notable restaurants and their evolution in the culinary landscape, including coverage of venues that have maintained excellence over decades."
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Attilio",
+      "name_variants": [
+        "Pizzeria da Attilio"
+      ],
+      "neighbourhood": "Pignasecca",
+      "cuisine": "pizza",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Attilio is the best. Don't believe the Da Michele and Sorbillo hype. The volume they do has led to a major decline in the consistency of their product. Attilio, on the other hand, is perfect.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_source": "nominatim",
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "language_pool": "en",
+      "lon": null,
+      "geo_skip": true
+    },
+    {
+      "name": "50 Kalò",
+      "name_variants": [
+        "Cinquanta Kalò",
+        "50 Kalo"
+      ],
+      "neighbourhood": "Mergellina",
+      "cuisine": "pizza",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Ciro Salvo's 50 Kalò in Mergellina – it's nice to walk there along the sea from Chiaia.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "lat": 40.8317029,
+      "lng": 14.2255084,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "50 kalò",
+      "language_pool": "en"
+    },
+    {
+      "name": "La Notizia",
+      "name_variants": [
+        "Pizzeria La Notizia",
+        "PizzAria La Notizia"
+      ],
+      "neighbourhood": "Fuorigrotta",
+      "cuisine": "pizza",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Head to the other spots I mentioned or up to Enzo Coccia's La Notizia instead.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "lat": 40.8356722,
+      "lng": 14.2097953,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Notizia",
+      "language_pool": "en"
+    },
+    {
+      "name": "Isabelle De Cham Pizza Fritta",
+      "name_variants": [
+        "Isabella De Cham",
+        "Isabella De Cham Pizza Fritta"
+      ],
+      "neighbourhood": "La Sanità",
+      "cuisine": "pizza fritta",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pizza fritta"
+      ],
+      "signature_dish": "pizza fritta",
+      "quote": "Isabelle De Cham Pizza Fritta, a fried pizza joint in La Sanità, is epic. And I know everyone talks about Concettina ai Tre Santi (pizza is fine, marketing and graphic design both 10/10) but if you go there and skip this pizza fritta spot, you're playing yourself.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "geo_skip": true,
+      "language_pool": "en"
+    },
+    {
+      "name": "I Decumani",
+      "name_variants": [
+        "Pizzeria I Decumani",
+        "iDecumani"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "pizza, fritti",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fritti",
+        "pizza a portafoglio"
+      ],
+      "signature_dish": null,
+      "quote": "I Decumani (Via dei Tribunali 58-61) does good fritti as well. I Decumani is also open Sundays, so it's good for a pizza when a lot of spots are closed.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "lat": 40.850915,
+      "lng": 14.2568505,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pizzeria i Decumani",
+      "language_pool": "en"
+    },
+    {
+      "name": "Friggitoria Vomero",
+      "name_variants": [
+        "Friggitoria al Vomero"
+      ],
+      "neighbourhood": "Vomero",
+      "cuisine": "friggitoria, street food",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cuoppo"
+      ],
+      "signature_dish": "cuoppo",
+      "quote": "Friggitoria Vomero is worth a hike up to Vomero for a cuoppo (cone of fried snacks).",
+      "quote_language": "original",
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "lat": 40.8428218,
+      "lng": 14.2328223,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Friggitoria Vomero",
+      "language_pool": "en"
+    },
+    {
+      "name": "Caseari Cautero",
+      "name_variants": [
+        "Cautero",
+        "Caseificio Cautero"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "wine bar, salumi, formaggi",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cheeses",
+        "cured fish",
+        "cured meats"
+      ],
+      "signature_dish": null,
+      "quote": "Caseari Cautero (Piazzetta Pontecorvo) stocks 550 labels and pours them alongside excellent cheeses and cured fish and meats mainly from Campania and Spain. Proprietor Salvatore Cautero is a fourth-generation food purveyor – the family was in the baccalà business – and though he has no formal kitchen, he serves a handful of delectable dishes in a small dining room with a large communal table.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "lat": 40.8526912,
+      "lng": 14.2452711,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Salvatore Cautero Champagne",
+      "language_pool": "en"
+    },
+    {
+      "name": "Salumeria Malinconico",
+      "name_variants": [
+        "Malinconico"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "salumeria, deli",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "sandwiches",
+        "parmigiana di melanzane",
+        "sartù di riso"
+      ],
+      "signature_dish": null,
+      "quote": "Salumeria Malinconico makes excellent sandwiches, as well as eggplant parm and sartù di riso. If you're nice they'll set you up at a table up front near the till to enjoy your snacks.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "lat": 40.8498967,
+      "lng": 14.2415326,
+      "geo_source": "nominatim",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Antica Salumeria Malinconico",
+      "language_pool": "en"
+    },
+    {
+      "name": "Donna Teresa",
+      "name_variants": [
+        "Osteria Donna Teresa"
+      ],
+      "neighbourhood": "Vomero",
+      "cuisine": "osteria, cucina napoletana",
+      "opening_year": 1913,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta e ceci",
+        "alici fritte",
+        "baccalà",
+        "braciole"
+      ],
+      "signature_dish": null,
+      "quote": "pasta e ceci, le alici fritte, il baccalà, ci sono le braciole",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": true,
+      "confidence_tier": "A",
+      "sources": [
+        "src-katieparla-parla",
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8437621,
+      "lng": 14.2328956,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Donna Teresa",
+      "language_pool": "both"
+    },
+    {
+      "name": "Nennella",
+      "name_variants": [
+        "Trattoria Da Nennella",
+        "Da Nennella"
+      ],
+      "neighbourhood": "Quartieri Spagnoli",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": 1949,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta e patate con provola",
+        "scarola imbottita",
+        "crocchè",
+        "arancini"
+      ],
+      "signature_dish": null,
+      "quote": "pasta e patate con la provola, scarola imbottita, crocchè e arancini come specialità della tradizione",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": true,
+      "confidence_tier": "A",
+      "sources": [
+        "src-katieparla-parla",
+        "src-lucianopignataro-disalvo-trattorie",
+        "src-inviaggiodasola-bancale"
+      ],
+      "lat": 40.844612,
+      "lng": 14.2497722,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria da Nennella",
+      "language_pool": "both"
+    },
+    {
+      "name": "Cibi Cotti",
+      "name_variants": [],
+      "neighbourhood": "Chiaia",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "For simple Neapolitan fare with a big dose of folklore: Donna Teresa (Via Kerbaker 58), Nennella, and Cibi Cotti (Via Ferdinando Galiani 30/14 – Mercatino Rionale Torretta).",
+      "quote_language": "original",
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "lat": 40.8312306,
+      "lng": 14.2237911,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Nonna Anna - Cibi cotti",
+      "language_pool": "en"
+    },
+    {
+      "name": "Mimì alla Ferrovia",
+      "name_variants": [
+        "Mimi alla Ferrovia"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": 1943,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "parmigiana di melanzane",
+        "crocchè di patate",
+        "alici mbuttunate",
+        "pasta alla genovese",
+        "spaghetti con le vongole"
+      ],
+      "signature_dish": null,
+      "quote": "Mimì alla Ferrovia is near the main train station; not as solid as it used to be and they are known to treat non-regulars like garbagio, but it remains an institution.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "open_status_check": false,
+      "both_pool": true,
+      "confidence_tier": "A",
+      "sources": [
+        "src-katieparla-parla",
+        "src-inviaggiodasola-bancale"
+      ],
+      "lat": 40.853415,
+      "lng": 14.267262,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Mimi alla Ferrovia",
+      "language_pool": "both"
+    },
+    {
+      "name": "Pescheria Azzurra",
+      "name_variants": [
+        "Peschiera Azzurra"
+      ],
+      "neighbourhood": "Quartieri Spagnoli",
+      "cuisine": "pesce, crudo di mare",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crudi di mare",
+        "pesce marinato",
+        "fritture di pesce",
+        "fried calamari",
+        "spaghetti with clams"
+      ],
+      "signature_dish": null,
+      "quote": "Pescheria Azzurra serves simple raw and marinated catch, as well as delicious fish-based primi and fritture.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "A",
+      "sources": [
+        "src-katieparla-parla",
+        "src-timeout-proietti"
+      ],
+      "lat": 40.8466283,
+      "lng": 14.2471116,
+      "geo_source": "nominatim",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Pescheria Azzurra",
+      "language_pool": "en"
+    },
+    {
+      "name": "Persika",
+      "name_variants": [],
+      "neighbourhood": "Chiaia",
+      "cuisine": "cucina contemporanea",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Persika is doing some of the most exciting ingredient-driven cooking in the city right now. The kitchen takes Campanian produce seriously, letting the ingredients lead, and the results are quietly stunning. It is proof that Naples can do tradition and modernity with equal conviction.",
+      "quote_language": "original",
+      "article_date": "undated",
+      "article_title": "Eating & Drinking in Naples",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "geo_skip": true,
+      "language_pool": "en"
+    },
+    {
+      "name": "Al 53",
+      "name_variants": [
+        "AL 53"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "zuppa di soffritto",
+        "minestra maritata",
+        "parmigiana",
+        "insalata di polpo"
+      ],
+      "signature_dish": null,
+      "quote": "a trattoria storica con antipasti 'travolgenti' tra cui la zuppa di soffritto e la minestra maritata, la parmigiana e l'insalata di polpo",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_source": "nominatim",
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "language_pool": "it",
+      "lon": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Antica Capri",
+      "name_variants": [
+        "ANTICA CAPRI"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta e fagioli con le cozze",
+        "ragù",
+        "genovese"
+      ],
+      "signature_dish": null,
+      "quote": "pasta e fagioli con le cozze servita in una pentola rivestita di pasta di pizza, un ottimo ragù e un'altrettanto buona genovese",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8388949,
+      "lng": 14.2473898,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Antica Capri",
+      "language_pool": "it"
+    },
+    {
+      "name": "Antichi Sapori Partenopei",
+      "name_variants": [
+        "ANTICHI SAPORI PARTENOPEI"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "spaghetti alla Nerano",
+        "gnocchi al ragù",
+        "rigatoni alla genovese"
+      ],
+      "signature_dish": null,
+      "quote": "piatti classici come gli spaghetti alla Nerano, gli gnocchi al ragù, i rigatoni alla genovese",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8357323,
+      "lng": 14.2434726,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Antichi Sapori Partenopei",
+      "language_pool": "it"
+    },
+    {
+      "name": "Antica Osteria da Tonino",
+      "name_variants": [
+        "ANTICA OSTERIA DA TONINO"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": 1880,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crocchè",
+        "mozzarella in carrozza",
+        "arancini",
+        "zeppoline"
+      ],
+      "signature_dish": null,
+      "quote": "Azienda familiare ultracentenaria, fondata nel 1880, con eccellenti fritti come i crocchè, la mozzarella in carrozza, gli arancini e le zeppoline",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8358574,
+      "lng": 14.2360532,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Osteria da Tonino",
+      "language_pool": "it"
+    },
+    {
+      "name": "Antica Osteria Pisano",
+      "name_variants": [
+        "ANTICA OSTERIA PISANO",
+        "Osteria Pisano"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "cucina di mare, trattoria",
+      "opening_year": 1947,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "linguine al coccio",
+        "spaghetti con vongole",
+        "scialatielli ai frutti di mare",
+        "antipasti di mare"
+      ],
+      "signature_dish": null,
+      "quote": "Presidio della cucina povera e popolare dal lontano 1947, con linguine al coccio, spaghetti con vongole e scialatielli ai frutti di mare",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "A",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie",
+        "src-inviaggiodasola-bancale"
+      ],
+      "lat": 40.8502856,
+      "lng": 14.2604986,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Antica Osteria Pisano",
+      "language_pool": "it"
+    },
+    {
+      "name": "'A Taverna d'o Re",
+      "name_variants": [
+        "A Taverna do Re",
+        "'A TAVERNA D'O RE"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Cucina napoletana doc con grande rispetto dei sapori e delle ricette della tradizione",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8659476,
+      "lng": 14.252555,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "La Taverna del Re",
+      "language_pool": "it"
+    },
+    {
+      "name": "Buatta",
+      "name_variants": [
+        "BUATTA"
+      ],
+      "neighbourhood": "Vomero",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ziti alla genovese",
+        "spaghetti alici limone e pecorino",
+        "casarecce con pesto di melanzane"
+      ],
+      "signature_dish": null,
+      "quote": "ziti alla genovese, spaghetti alici limone e pecorino, casarecce con pesto di melanzane",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8458713,
+      "lng": 14.2307735,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Buatta - Trattoria di Conversazione",
+      "language_pool": "it"
+    },
+    {
+      "name": "Cantina La Barbera",
+      "name_variants": [
+        "CANTINA LA BARBERA"
+      ],
+      "neighbourhood": "Quartieri Spagnoli",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ravioloni ripieni di ragù",
+        "ziti alla genovese",
+        "spaghettone con seppioline"
+      ],
+      "signature_dish": null,
+      "quote": "ravioloni ripieni di ragù, gli ziti alla genovese, lo spaghettone con seppioline",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8444456,
+      "lng": 14.2339632,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Cantina La Barbera",
+      "language_pool": "it"
+    },
+    {
+      "name": "Cap'Alice",
+      "name_variants": [
+        "CAP'ALICE",
+        "Cap Alice"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "osteria, vini naturali",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "capafritto",
+        "alici",
+        "baccalà",
+        "calamari",
+        "genovese con cipolla"
+      ],
+      "signature_dish": null,
+      "quote": "il 'capafritto' con alici, baccalà, calamari, pesce bandiera, e la genovese con cipolla di Alife",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "geo_skip": true,
+      "language_pool": "it"
+    },
+    {
+      "name": "Da Alfredo",
+      "name_variants": [
+        "DA ALFREDO"
+      ],
+      "neighbourhood": "Fuorigrotta",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bucatini al soffritto",
+        "pasta e patate con provola"
+      ],
+      "signature_dish": null,
+      "quote": "tradizione familiare fedele alla cucina popolare, con bucatini al soffritto e pasta e patate con provola",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_source": "nominatim",
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "language_pool": "it",
+      "lon": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Da Donato",
+      "name_variants": [
+        "DA DONATO",
+        "Trattoria Da Donato"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "parmigiana di melanzane",
+        "parmigiana di zucchine",
+        "parmigiana di patate",
+        "forno a legna"
+      ],
+      "signature_dish": null,
+      "quote": "parmigiane di melanzane, zucchine, patate, zucca e finocchi cotte nel forno a legna",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8505751,
+      "lng": 14.2693802,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Antica Trattoria e Pizzeria Da Donato",
+      "language_pool": "it"
+    },
+    {
+      "name": "Diego",
+      "name_variants": [
+        "DIEGO"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "pesce fresco, cucina di stagione",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crudi",
+        "carpaccio di salmone",
+        "fish",
+        "shellfish",
+        "seafood"
+      ],
+      "signature_dish": null,
+      "quote": "Il menu si cambia ogni giorno a seconda del pescato, con crudi eccellenti come il carpaccio di salmone",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": true,
+      "confidence_tier": "A",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie",
+        "src-timeout-proietti"
+      ],
+      "lat": 40.83602,
+      "lng": 14.234479,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Diego",
+      "language_pool": "both"
+    },
+    {
+      "name": "E' Pronto 'O Mangia'",
+      "name_variants": [
+        "E PRONTO O MANGIA"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina di mare",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "spaghetto di mare con cozze e vongole e polpo",
+        "linguine al cartoccio"
+      ],
+      "signature_dish": null,
+      "quote": "spaghetto di mare con cozze, vongole e polpo e le sontuose linguine al cartoccio",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8550263,
+      "lng": 14.2658476,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "E Pronto o Magnia",
+      "language_pool": "it"
+    },
+    {
+      "name": "Galleria Navarra",
+      "name_variants": [
+        "GALLERIA NAVARRA"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "polpette di carne e melanzane",
+        "montanarine",
+        "scarpariello",
+        "Nerano",
+        "genovese"
+      ],
+      "signature_dish": null,
+      "quote": "polpette di carne e melanzane, le montanarine, i primi di giornata come lo scarpariello, la Nerano e la genovese",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8343763,
+      "lng": 14.2422061,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Galleria Navarra Rossopomodoro",
+      "language_pool": "it"
+    },
+    {
+      "name": "Hostaria dalle Sorelle",
+      "name_variants": [
+        "HOSTARIA DALLE SORELLE"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": 1910,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crocchè",
+        "arancini",
+        "fiorilli"
+      ],
+      "signature_dish": null,
+      "quote": "Dal lontano 1910, cucina tipica napoletana con buoni fritti tipo crocchè, arancini e fiorilli",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8598381,
+      "lng": 14.270332,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "hostaria dalle sorelle",
+      "language_pool": "it"
+    },
+    {
+      "name": "Hosteria Toledo 1951",
+      "name_variants": [
+        "HOSTERIA TOLEDO 1951",
+        "Hosteria Toledo"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": 1951,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "mozzarella in carrozza",
+        "baccalà fritto"
+      ],
+      "signature_dish": null,
+      "quote": "antipasti classici, dalla mozzarella in carrozza al baccalà fritto, in un locale storico fondato nel 1951",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8409855,
+      "lng": 14.2479365,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Hosteria Toledo",
+      "language_pool": "it"
+    },
+    {
+      "name": "Ieri Oggi Domani",
+      "name_variants": [
+        "IERI OGGI DOMANI"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "genovese",
+        "pasta e patate azzeccosa",
+        "spaghetto alla Nerano"
+      ],
+      "signature_dish": null,
+      "quote": "splendida genovese, la pasta e patate 'azzeccosa', lo spaghetto alla Nerano",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8548797,
+      "lng": 14.2740791,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Ieri",
+      "language_pool": "it"
+    },
+    {
+      "name": "Il Basilico",
+      "name_variants": [
+        "IL BASILICO"
+      ],
+      "neighbourhood": "Vomero",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "genovese",
+        "ragù",
+        "spaghetto alici e pecorino"
+      ],
+      "signature_dish": null,
+      "quote": "ottima genovese, un eccellente ragù, lo spaghetto alici e pecorino",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "geo_skip": true,
+      "language_pool": "it"
+    },
+    {
+      "name": "Il Gambero Rotto",
+      "name_variants": [
+        "IL GAMBERO ROTTO"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "cucina di mare, trattoria",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cacio e pepe con cozze",
+        "gnocchi con scampi e calamarelle"
+      ],
+      "signature_dish": null,
+      "quote": "cacio e pepe con cozze, gli gnocchi con gli scampi e le calamarelle",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "geo_skip": true,
+      "language_pool": "it"
+    },
+    {
+      "name": "La Cantina dei Lazzari",
+      "name_variants": [
+        "LA CANTINA DEI LAZZARI"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "crudo di mare, cucina moderna",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tartare",
+        "sashimi",
+        "crudi di pesce"
+      ],
+      "signature_dish": null,
+      "quote": "tartare, i sashimi e in generale i crudi di pesce con influenze orientali",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8306248,
+      "lng": 14.2488673,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Cantina dei Lazzari",
+      "language_pool": "it"
+    },
+    {
+      "name": "La Cucina di Elvira",
+      "name_variants": [
+        "LA CUCINA DI ELVIRA"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "cucina casalinga, trattoria",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "genovese",
+        "polpette",
+        "alici",
+        "pasta e patate",
+        "pasta e fagioli"
+      ],
+      "signature_dish": null,
+      "quote": "genovese e le polpette, poi alici, pasta e patate, pasta e fagioli della cucina casalinga napoletana",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8501303,
+      "lng": 14.2505994,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "La cucina di Giufà",
+      "language_pool": "it"
+    },
+    {
+      "name": "Locanda Gesù Vecchio",
+      "name_variants": [
+        "LOCANDA GESU' VECCHIO",
+        "La Locanda Gesù Vecchio",
+        "Locanda Gesu Vecchio"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "genovese",
+        "lasagna",
+        "paccheri ripieni e fritti con ragù napoletano",
+        "pasta and peas",
+        "eggplant parmigiana"
+      ],
+      "signature_dish": null,
+      "quote": "Food is proper, no-fuss, exceptionally executed Neapolitan classics like pasta and peas or eggplant parmigiana.",
+      "quote_language": "original",
+      "article_date": "2025-02-28",
+      "article_title": "16 Best Restaurants in Naples for 2025",
+      "open_status_check": false,
+      "both_pool": true,
+      "confidence_tier": "A",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie",
+        "src-timeout-proietti"
+      ],
+      "lat": 40.8471951,
+      "lng": 14.2571354,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Locanda Gesu Vecchio",
+      "language_pool": "both"
+    },
+    {
+      "name": "Locanda 'Ntretella",
+      "name_variants": [
+        "LOCANDA 'NTRETELLA",
+        "Locanda Ntretella"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pizza fritta con cicoli",
+        "genovese"
+      ],
+      "signature_dish": null,
+      "quote": "pizza fritta con ripieno di cicoli e la genovese come specialità della casa",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8369741,
+      "lng": 14.2468071,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Locanda Ntretella",
+      "language_pool": "it"
+    },
+    {
+      "name": "Il Miracolo dei Pesci",
+      "name_variants": [
+        "IL MIRACOLO DEI PESCI"
+      ],
+      "neighbourhood": "Posillipo",
+      "cuisine": "cucina di mare, trattoria",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crudi di mare",
+        "scialatielli al nero di seppia",
+        "gnocchetti con frutti di mare"
+      ],
+      "signature_dish": null,
+      "quote": "crudi di mare, scialatielli al nero di seppia, gnocchetti con i frutti di mare",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8232335,
+      "lng": 14.2173803,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Il Miracolo dei Pesci",
+      "language_pool": "it"
+    },
+    {
+      "name": "La Campagnola",
+      "name_variants": [
+        "LA CAMPAGNOLA"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta patate e provola",
+        "peperoni ripieni con ricotta"
+      ],
+      "signature_dish": null,
+      "quote": "pasta patate e provola, peperoni ripieni con la ricotta della cucina napoletana",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8483765,
+      "lng": 14.255981,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Campagnola",
+      "language_pool": "it"
+    },
+    {
+      "name": "La Chitarra",
+      "name_variants": [
+        "LA CHITARRA"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "polpette con uva passa e pinoli",
+        "genovese"
+      ],
+      "signature_dish": "genovese",
+      "quote": "polpette con uva passa e pinoli e la genovese come must assoluto della casa",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8457519,
+      "lng": 14.2562961,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria La chitarra",
+      "language_pool": "it"
+    },
+    {
+      "name": "La Locanda del Cerriglio",
+      "name_variants": [
+        "LA LOCANDA DEL CERRIGLIO",
+        "Locanda del Cerriglio"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "parmigiana",
+        "peperone imbottito",
+        "seppie arrosto",
+        "bavette con cozze"
+      ],
+      "signature_dish": null,
+      "quote": "parmigiana, il peperone imbottito, le seppie arrosto, le bavette con cozze",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8440326,
+      "lng": 14.2541379,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Locanda del cerriglio",
+      "language_pool": "it"
+    },
+    {
+      "name": "Manfredi",
+      "name_variants": [
+        "MANFREDI"
+      ],
+      "neighbourhood": "La Sanità",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "polpo all'insalata",
+        "pasta e patate con provola",
+        "spaghetto con le vongole"
+      ],
+      "signature_dish": null,
+      "quote": "polpo all'insalata, pasta e patate con la provola, lo spaghetto con le vongole",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_source": "nominatim",
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "language_pool": "it",
+      "lon": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Osteria Mattozzi",
+      "name_variants": [
+        "OSTERIA MATTOZZI",
+        "Ristorante Europeo Mattozzi",
+        "Mattozzi"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crocchè",
+        "fiori di zucca",
+        "alici fritte",
+        "parmigiana",
+        "polpo all'insalata",
+        "spaghetti alle vongole",
+        "ricciola arrosto",
+        "baccalà",
+        "filetti di dentice in crosta di patate"
+      ],
+      "signature_dish": null,
+      "quote": "Mattozzi's food is consistently authentic, the outside patio is cozy, and the staff feels like family.",
+      "quote_language": "original",
+      "article_date": "2025-02-28",
+      "article_title": "16 Best Restaurants in Naples for 2025",
+      "open_status_check": false,
+      "both_pool": true,
+      "confidence_tier": "A",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie",
+        "src-inviaggiodasola-bancale",
+        "src-timeout-proietti"
+      ],
+      "lat": 40.8360939,
+      "lng": 14.2407733,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Mattozzi",
+      "language_pool": "both"
+    },
+    {
+      "name": "Osteria Mediterranea",
+      "name_variants": [
+        "OSTERIA MEDITERRANEA"
+      ],
+      "neighbourhood": "Posillipo",
+      "cuisine": "trattoria, cucina di mare",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "scialatielli ai frutti di mare",
+        "genovese di totano"
+      ],
+      "signature_dish": null,
+      "quote": "scialatielli ai frutti di mare o con la genovese di totano",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8253702,
+      "lng": 14.2196888,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria Mediterranea",
+      "language_pool": "it"
+    },
+    {
+      "name": "Ostaria Pignatelli",
+      "name_variants": [
+        "OSTARIA PIGNATELLI"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "trattoria napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "genovese",
+        "pasta e piselli",
+        "spaghetti alla luciana",
+        "spaghetti alla Nerano"
+      ],
+      "signature_dish": null,
+      "quote": "genovese, pasta e piselli, spaghetti alla luciana o alla Nerano in una tipica trattoria napoletana",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_source": "photon",
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "language_pool": "it",
+      "lon": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Salumeria Upnea",
+      "name_variants": [
+        "SALUMERIA UPNEA",
+        "Upnea"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "salumeria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "genovese",
+        "ragù",
+        "cozzetiello di pane cafone"
+      ],
+      "signature_dish": null,
+      "quote": "genovese e ragù servito anche nel 'cozzetiello' di pane cafone",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8392282,
+      "lng": 14.2494985,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Salumeria Regina",
+      "language_pool": "it"
+    },
+    {
+      "name": "Tavernetta Colauri",
+      "name_variants": [
+        "TAVERNETTA COLAURI"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "genovese",
+        "pasta e fagioli con provola e tartufo nero"
+      ],
+      "signature_dish": null,
+      "quote": "magnifica genovese, pasta e fagioli con provola e tartufo nero come specialità della casa",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8454796,
+      "lng": 14.2600754,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "La tavernetta",
+      "language_pool": "it"
+    },
+    {
+      "name": "Trattoria San Ferdinando",
+      "name_variants": [
+        "TRATTORIA SAN FERDINANDO"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ragù edoardiano",
+        "spaghettoni col soffritto",
+        "bucatini allo scarpariello"
+      ],
+      "signature_dish": null,
+      "quote": "ragù edoardiano, gli spaghettoni col soffritto, i bucatini allo scarpariello",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8388967,
+      "lng": 14.250995,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Pizzeria i DDuje Scugnizzi",
+      "language_pool": "it"
+    },
+    {
+      "name": "Seafront Pasta Bar",
+      "name_variants": [
+        "SEAFRONT PASTA BAR",
+        "Sea Front PastaBar"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "pasta, cucina contemporanea",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "spaghetti al pomodoro",
+        "linguine alle vongole e fumo d'olivo"
+      ],
+      "signature_dish": null,
+      "quote": "spaghetti al pomodoro e linguine alle vongole e fumo d'olivo, tutte le potenzialità della sua gamma",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "geo_skip": true,
+      "language_pool": "it"
+    },
+    {
+      "name": "Tandem",
+      "name_variants": [
+        "TANDEM",
+        "Tandem Ragù"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria specializzata in ragù",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ragù",
+        "ziti",
+        "gnocchi",
+        "spaghetti",
+        "rigatoni",
+        "genovese"
+      ],
+      "signature_dish": "ragù napoletano",
+      "quote": "specializzato in ragù con ziti, gnocchi, spaghetti, rigatoni e un'ottima genovese",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8461431,
+      "lng": 14.2514205,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Tandem",
+      "language_pool": "it"
+    },
+    {
+      "name": "Taverna a Santa Chiara",
+      "name_variants": [
+        "TAVERNA A SANTA CHIARA"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "riso con verza cipolla e pancetta",
+        "mezzannelli allardiati",
+        "pasta patate"
+      ],
+      "signature_dish": null,
+      "quote": "riso con verza cipolla e pancetta, mezzannelli allardiati, pasta patate nella tradizione napoletana",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8473602,
+      "lng": 14.25323,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "La Taverna di Santa Chiara",
+      "language_pool": "it"
+    },
+    {
+      "name": "Taverna dell'Arte",
+      "name_variants": [
+        "TAVERNA DELL'ARTE"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "genovese",
+        "agnolotti con genovese",
+        "baccalà fritto con cipolle di Tropea"
+      ],
+      "signature_dish": null,
+      "quote": "genovese come ripieno agli agnolotti, baccalà fritto con cipolle di Tropea",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8457244,
+      "lng": 14.2562068,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Taverna dell'arte",
+      "language_pool": "it"
+    },
+    {
+      "name": "Taverna d'e Zoccole",
+      "name_variants": [
+        "TAVERNA D'E ZOCCOLE",
+        "Taverna de Zoccole"
+      ],
+      "neighbourhood": "Quartieri Spagnoli",
+      "cuisine": "trattoria, cucina di mare",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "scialatiello con calamari finocchietto olive e foglie di cappero"
+      ],
+      "signature_dish": null,
+      "quote": "scialatiello con calamari finocchietto olive e foglie di cappero",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8418864,
+      "lng": 14.2481372,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "'A Taverna d''e Zoccole",
+      "language_pool": "it"
+    },
+    {
+      "name": "Trattoria dell'Oca",
+      "name_variants": [
+        "TRATTORIA DELL'OCA"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "scarpariello",
+        "ziti alla genovese"
+      ],
+      "signature_dish": null,
+      "quote": "scarpariello e ziti alla genovese, due specialità della tradizione napoletana",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8358391,
+      "lng": 14.2345969,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria dell'oca",
+      "language_pool": "it"
+    },
+    {
+      "name": "Trattoria Gerolomini",
+      "name_variants": [
+        "TRATTORIA GEROLOMINI"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "spaghetto pop al doppio pomodoro",
+        "fritto"
+      ],
+      "signature_dish": null,
+      "quote": "spaghetto pop al doppio pomodoro, un fritto molto ricco e speciale",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "geo_skip": true,
+      "language_pool": "it"
+    },
+    {
+      "name": "Trattoria Speranzella",
+      "name_variants": [
+        "TRATTORIA SPERANZELLA"
+      ],
+      "neighbourhood": "Quartieri Spagnoli",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ragù con lavanella",
+        "pasta fresca con farina e patate"
+      ],
+      "signature_dish": null,
+      "quote": "ragù con la 'lavanella', pasta fresca impastata con farina e patate della cucina povera napoletana",
+      "quote_language": "original",
+      "article_date": "2025-01-04",
+      "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-trattorie"
+      ],
+      "lat": 40.8384184,
+      "lng": 14.2473391,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Speranzella",
+      "language_pool": "it"
+    },
+    {
+      "name": "Trattoria Scugnizzi",
+      "name_variants": [
+        "Scugnizzi"
+      ],
+      "neighbourhood": "Vomero",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crocchè di patate",
+        "ragù napoletano"
+      ],
+      "signature_dish": null,
+      "quote": "Dai crocchè di patate giganti al ragù napoletano, cotto rigorosamente per ore ed ore a fuoco lento",
+      "quote_language": "original",
+      "article_date": "2025-06-28",
+      "article_title": "Dove mangiare a Napoli, le migliori trattorie e ristoranti tipici",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-inviaggiodasola-bancale"
+      ],
+      "lat": 40.8388967,
+      "lng": 14.250995,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Pizzeria i DDuje Scugnizzi",
+      "language_pool": "it"
+    },
+    {
+      "name": "Trattoria Antonio La Trippa",
+      "name_variants": [
+        "Antonio La Trippa",
+        "La Trippa"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "trattoria, cucina napoletana",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "zuppa di verza",
+        "polpettone",
+        "panino con ricotta e cicoli"
+      ],
+      "signature_dish": null,
+      "quote": "piatti serviti direttamente nel tegame come la zuppa di verza, il polpettone e il panino con ricotta e cicoli",
+      "quote_language": "original",
+      "article_date": "2025-06-28",
+      "article_title": "Dove mangiare a Napoli, le migliori trattorie e ristoranti tipici",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-inviaggiodasola-bancale"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_source": "photon",
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "language_pool": "it",
+      "lon": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Ristorante Zì Teresa",
+      "name_variants": [
+        "Zi Teresa",
+        "Zì Teresa"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "cucina di mare, trattoria napoletana",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "scialatielli ai frutti di mare",
+        "fritto di paranza",
+        "impepata di cozze"
+      ],
+      "signature_dish": null,
+      "quote": "La terrazza di Zì Teresa si trova praticamente sul mare di fronte al Castel dell'Ovo",
+      "quote_language": "original",
+      "article_date": "2025-06-28",
+      "article_title": "Dove mangiare a Napoli, le migliori trattorie e ristoranti tipici",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-inviaggiodasola-bancale"
+      ],
+      "lat": 40.8296736,
+      "lng": 14.2481323,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Zi' Teresa dal 1860",
+      "language_pool": "it"
+    },
+    {
+      "name": "Palazzo Petrucci",
+      "name_variants": [
+        "Ristorante Palazzo Petrucci"
+      ],
+      "neighbourhood": "Posillipo",
+      "cuisine": "cucina moderna napoletana",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ragù di mare",
+        "crudo di scampi"
+      ],
+      "signature_dish": null,
+      "quote": "piatti della tradizione rivisitati in chiave moderna come per esempio il ragù di mare o il crudo di scampi",
+      "quote_language": "original",
+      "article_date": "2025-06-28",
+      "article_title": "Dove mangiare a Napoli, le migliori trattorie e ristoranti tipici",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-inviaggiodasola-bancale"
+      ],
+      "lat": 40.8485281,
+      "lng": 14.2545645,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Palazzo Petrucci",
+      "language_pool": "it"
+    },
+    {
+      "name": "Crudo Re",
+      "name_variants": [
+        "CrudoRe"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "crudo di mare, cucina contemporanea",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "spaghetti con cannolicchi",
+        "fettucce con soffritto di mare"
+      ],
+      "signature_dish": null,
+      "quote": "Location elegante e moderna, piatti che sono delle vere opere d'arte realizzati con materie prime di grande qualità",
+      "quote_language": "original",
+      "article_date": "2025-06-28",
+      "article_title": "Dove mangiare a Napoli, le migliori trattorie e ristoranti tipici",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-inviaggiodasola-bancale"
+      ],
+      "lat": 40.8338109,
+      "lng": 14.237921,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Crudo Rè",
+      "language_pool": "it"
+    },
+    {
+      "name": "Terrazza Calabritto",
+      "name_variants": [
+        "Terrazza Calabritto Napoli"
+      ],
+      "neighbourhood": "Chiaia",
+      "cuisine": "cucina di mare raffinata, cucina napoletana",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "granseola con vermicelli in ragù di crostacei"
+      ],
+      "signature_dish": null,
+      "quote": "Al centro di tutto c'è l'oste, il padrone di casa che sa accoglierti. Venticinque anni al top senza inseguire o, peggio, sognare la stella Michelin.",
+      "quote_language": "original",
+      "article_date": "2026-04-24",
+      "article_title": "Terrazza Calabritto 25 anni al top Napoli e Milano senza inseguire o, peggio, sognare la stella Michelin",
+      "open_status_check": false,
+      "both_pool": false,
+      "confidence_tier": "B",
+      "sources": [
+        "src-lucianopignataro-disalvo-terrazza"
+      ],
+      "lat": 40.8335411,
+      "lng": 14.241525,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Palazzo Calabritto",
+      "language_pool": "it"
+    }
+  ],
+  "source_recency": "2023-2026",
+  "centroids": {
+    "Pignasecca": [
+      40.8491,
+      14.2456
+    ],
+    "La Sanità": [
+      40.859,
+      14.2467
+    ],
+    "Chiaia": [
+      40.8348,
+      14.2417
+    ],
+    "Fuorigrotta": [
+      40.8357,
+      14.2098
+    ],
+    "Vomero": [
+      40.8428,
+      14.2369
+    ],
+    "Centro Storico": [
+      40.8491,
+      14.2563
+    ]
+  }
+}

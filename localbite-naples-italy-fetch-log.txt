@@ -1,0 +1,9 @@
+[p0] "katieparla.com/city-guides/naples/" → CAPTCHA | —ch | FAILED — robot challenge screen; no article content returned
+[p0] "web.archive.org/web/2026/katieparla.com/city-guides/naples/" → 451 | —ch | FAILED — unavailable for legal/geo reasons
+[p0] "katieparla.com/restaurants/naples/" → 200 | ~3500ch | ACCEPTED — Katie Parla confirmed single-author, EN, Naples restaurant guide active
+[p0] "lucianopignataro.it/a/dove/campania/napoli/" → 200 | ~2800ch | SKIPPED — directory/navigation page, not an extractable article
+[p0] "lucianopignataro.it/.../terrazza-calabritto.../293111/" → 200 | ~2200ch | ACCEPTED — Santa di Salvo byline confirmed, April 24 2026, single restaurant review
+[p0] "lucianopignataro.it/.../napoli-osteria-il-soldino.../293113/" → 200 | ~1800ch | ACCEPTED — Santa di Salvo byline confirmed, April 24 2026, qualifying quotes present
+[p0] "lucianopignataro.it/.../napoli-altogrado-vineria.../292396/" → 200 | ~1600ch | PARTIAL — Emanuela Sorrentino byline confirmed; vineria (wine bar) not restaurant — deferred to Phase 2 decision
+[p0] "lucianopignataro.it/.../pizza-a-ruota-di-carro.../231117/" → 200 | ~2500ch | PARTIAL — Antonella Amodio byline confirmed; 16 Naples-city pizzerias listed; minimal description per entry — quote quality uncertain
+[p0] "lucianopignataro.it/.../guida-michelin-tutte-le-stelle.../207656/" → 200 | ~3000ch | SKIPPED — Michelin exclusion confirmation only; not for extraction per Part 1

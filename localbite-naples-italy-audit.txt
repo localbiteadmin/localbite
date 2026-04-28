@@ -1,0 +1,147 @@
+LocalBite v7.1 — Naples, Italy — Audit Log
+Generated: 2026-04-28
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PIPELINE SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+City: Naples, Italy (Comune di Napoli)
+Year range: 2023-2026
+Pipeline: localbite-v7.1
+Date: 2026-04-28
+
+Sources confirmed: 5
+Raw extractions: 74
+Unique after deduplication: 64
+Tier C removed: 2
+Final restaurants: 62
+
+Both-pool: 6
+Tier A total: 8
+Tier B: 54
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIER C AUTO-REJECTIONS (UNATTENDED_MODE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. L'Antica Pizzeria Da Michele
+   Reason: negative-only mention (Katie Parla)
+   Quote: "Don't believe the Da Michele and Sorbillo hype. The volume they do has led to a major decline in the consistency of their product."
+   Source: src-katieparla-parla
+
+2. Sorbillo (Gino Sorbillo)
+   Reason: dismissive/negative mention (Katie Parla)
+   Quote: "Sorbillo (Via dei Tribunali 32) is super famous but these days it's only really interesting as a study in marketing and brand partnerships."
+   Source: src-katieparla-parla
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MICHELIN EXCLUSIONS (confirmed, not extracted)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2★: George Restaurant (Naples city)
+1★: ARIA, Veritas, Il Ristorante Alain Ducasse Napoli
+
+Confirmation source: lucianopignataro.it/a/guida-michelin-tutte-le-stelle-della-campania/207656/
+(Fetched Phase 0, used for exclusion confirmation only — not for extraction)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PARTIAL SOURCES — 0 EXTRACTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Antonella Amodio / lucianopignataro.it
+   Article: "Pizza a ruota di carro: 20 pizzerie dove mangiare la madre di tutte le pizze" (April 13 2026)
+   Reason: pure listicle — 16 Naples-city pizzerias listed with names and addresses only.
+   No entry met the 15-word minimum + specific detail quote quality rule.
+   Source ID: not assigned (0 qualifying extractions)
+
+2. Emanuela Sorrentino / lucianopignataro.it
+   Article: Altogrado Vineria review (April 12 2026)
+   Reason: venue is a vineria (wine bar) with no food kitchen — excluded from extraction
+   per pipeline scope rules (bars without food service are out of scope).
+   Source ID: not assigned
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MISSING EXTRACTION — Osteria Il Soldino
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Phase 0 status: Santa di Salvo, April 24 2026, Osteria Il Soldino, Quartieri Spagnoli — ACCEPTED
+URL confirmed from Phase 0 fetch log: https://www.lucianopignataro.it/a/napoli-osteria-il-soldino-nei-quartieri/293113/
+Reason for missing: Session context exhaustion during Phase 2 — source accepted in Phase 0
+but extraction did not complete before session ended and was not carried forward.
+Source ID would have been: src-lucianopignataro-disalvo-soldino
+Action: Not included in final output.
+Recommendation: User may wish to manually add this restaurant from the confirmed article.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SOURCE CONCENTRATION FLAG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+lucianopignataro.it — Santa di Salvo trattorie guide (src-lucianopignataro-disalvo-trattorie)
+contributes 38 of 62 final restaurants (61%). This exceeds the 30% single-source cap guideline.
+
+Explanation: The Naples food writing landscape has very few qualifying named-author primary sources.
+25+ search queries across neighbourhood, cross-cutting, and supplementary angles failed to find
+additional qualifying named-author sources. Gambero Rosso, Dissapore, Scatti di Gusto,
+napolidavivere.it — all rejected for missing bylines. viadeigourmet.it rejected for
+pre-2023 publication dates.
+
+The LP trattorie guide is authored by Santa di Salvo (confirmed byline, April 2025 updated date
+confirmed from article, January 2025 article date in data). It is published by lucianopignataro.it,
+Italy's leading independent food publication. The concentration reflects a genuine structural
+characteristic of Naples food media — not a data quality issue. Documented for transparency.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GEOGRAPHY — DISAMBIGUATION APPLIED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Naples Florida contamination confirmed empirically on query:
+  "new restaurant openings Naples Italy 2025 2026" → all results about Naples, Florida
+All subsequent EN queries used "Naples Italy" (explicit). IT queries used "Napoli" throughout.
+Search query 27 documented the contamination in the search log.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GEOGRAPHIC EXCLUSIONS APPLIED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Pozzuoli: confirmed separate municipality (Comune di Pozzuoli) — excluded from all queries
+Ischia, Capri, Amalfi Coast, Sorrento peninsula: all outside Comune di Napoli — not queried
+No restaurants from excluded areas appeared in confirmed sources.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+LUCIANOPIGNATARO.IT — MULTI-AUTHOR CORRECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Part 1 pre-research classified lucianopignataro.it as a single-author site (Luciano Pignataro).
+Phase 0 fetches confirmed it is a multi-author publication with named contributors:
+  Santa di Salvo (trattorie guide, Terrazza Calabritto, Osteria Il Soldino articles)
+  Emanuela Sorrentino (Altogrado Vineria article)
+  Antonella Amodio (pizza roundup article)
+
+Correction applied: article-level bylines required and used throughout.
+All LP.it entries are attributed to their confirmed article-level author.
+Single-author rule was NOT applied. No extractions used "Luciano Pignataro" as the attributed author.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BOTH-POOL ENTRIES (6)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Donna Teresa — Katie Parla (EN) + Santa di Salvo LP trattorie (IT)
+2. Nennella — Katie Parla (EN) + Santa di Salvo LP trattorie (IT) + Diana Bancale (IT)
+3. Mimì alla Ferrovia — Katie Parla (EN) + Diana Bancale (IT)
+4. Diego — Santa di Salvo LP trattorie (IT) + Gabriela Proietti Time Out (EN)
+5. Locanda Gesù Vecchio — Santa di Salvo LP trattorie (IT) + Gabriela Proietti Time Out (EN)
+6. Osteria Mattozzi — Santa di Salvo LP trattorie (IT) + Diana Bancale (IT) + Gabriela Proietti Time Out (EN)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REJECTED SOURCES — SEARCH PHASE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+gamberorosso.it — no named author on Naples articles; REJECTED
+dissapore.com — no named author on Naples articles (La Notizia article April 2023 confirmed no byline); REJECTED
+scattidigusto.it — multi-author site; specific Naples articles have no byline visible; REJECTED
+roamandthrive.com — no named author (anonymous site); REJECTED
+napolidavivere.it — staff byline only (not a full named author); REJECTED
+viadeigourmet.it — reviews confirmed outside YEAR_RANGE (La Notizia 2017, 50 Kalò 2014); REJECTED
+50topitaly.it — aggregate ranking list, no named article author; REJECTED
+Timeout.com Naples (Gabriela Proietti) — ACCEPTED as secondary source only
+Slow Food Osterie d'Italia — list source, no named article author; used for cross-validation only (confirms La Chitarra, La Notizia, Taverna a Santa Chiara as Naples Chiocciole)

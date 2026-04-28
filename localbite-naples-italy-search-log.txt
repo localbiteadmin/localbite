@@ -1,0 +1,40 @@
+[phase-0] "https://katieparla.com/city-guides/naples/" → CAPTCHA block; Jina returned robot challenge screen
+[phase-0] "https://web.archive.org/web/2026/https://katieparla.com/city-guides/naples/" → 451 unavailable for legal/geo reasons
+[phase-0] "https://katieparla.com/restaurants/naples/" → 200 | good content | ACCEPTED — Katie Parla single-author, EN, Naples restaurant guide with 15+ qualifying restaurants
+[phase-0] "https://www.lucianopignataro.it/a/dove/campania/napoli/" → 200 | directory page | NAVIGATED — identified 24 Naples-area articles; confirmed multi-author site (not single-author as pre-researched)
+[phase-0] "https://www.lucianopignataro.it/a/terrazza-calabritto-25-anni-al-top-napoli-e-milano-senza-inseguire-o-peggio-sognare-la-stella-michelin/293111/" → 200 | article | ACCEPTED — Santa di Salvo (full name), April 24 2026, Terrazza Calabritto, Chiaia
+[phase-0] "https://www.lucianopignataro.it/a/napoli-osteria-il-soldino-nei-quartieri/293113/" → 200 | article | ACCEPTED — Santa di Salvo, April 24 2026, Osteria Il Soldino, Quartieri Spagnoli
+[phase-0] "https://www.lucianopignataro.it/a/napoli-altogrado-vineria-dove-le-bottiglie-aprono-conversazioni/292396/" → 200 | article | PARTIAL — Emanuela Sorrentino, April 12 2026, Altogrado Vineria (wine bar — uncertain restaurant qualification)
+[phase-0] "https://www.lucianopignataro.it/a/pizza-a-ruota-di-carro-20-pizzerie-dove-mangiare-la-madre-di-tutte-le-pizze/231117/" → 200 | article | PARTIAL — Antonella Amodio, April 13 2026, 16 Naples-city pizzerias listed with addresses; minimal per-pizzeria description — quote extraction uncertain
+[phase-0] "https://www.lucianopignataro.it/a/guida-michelin-tutte-le-stelle-della-campania/207656/" → 200 | article | EXCLUSIONS-ONLY — confirmed: 2★ George Restaurant (Naples city); 1★ ARIA, Veritas, Alain Ducasse Napoli; all others outside city. NOT for extraction.
+[neighbourhood-CentroStorico] "ristoranti Napoli Centro Storico Spaccanapoli guida 2023 2024" → scattidigusto.it 50 restaurants (no byline), livenapoli.com, booking sites; no new named-author sources
+[neighbourhood-CentroStorico] "best restaurants Naples Italy Centro Storico Decumani 2025" → TripAdvisor, Yelp, OpenTable, timeout.com Naples; no new named-author primary sources
+[neighbourhood-Chiaia] "ristoranti Chiaia Napoli gastronomia critico 2024" → agrodolce.it (2016, out of date), booking sites; no qualifying sources
+[neighbourhood-Chiaia] "restaurants Chiaia Naples Italy neighbourhood guide 2025 2026" → curiousspoon.app (app/algo), devourtours.com (tour company), fodors.com (secondary); no qualifying sources
+[neighbourhood-Posillipo] "ristoranti Posillipo Napoli pesce vista mare 2023 2024" → booking/directory sites; no qualifying named-author sources
+[neighbourhood-Vomero] "ristoranti Vomero Napoli dove mangiare consigliati 2024" → agrodolce.it (2016), napoliving.it, booking sites; no qualifying sources
+[neighbourhood-QuartieriSpagnoli] "ristoranti Quartieri Spagnoli Napoli guida gastronomica 2023 2024" → gamberorosso.it (secondary, no byline), scattidigusto.it (no byline), LP.it trattorie article confirmed
+[neighbourhood-Mergellina] "ristoranti Mergellina Napoli pesce pizzeria consigliati 2023 2024" → booking sites; no new qualifying sources
+[cross-2] "migliori ristoranti Napoli critico gastronomico blog 2024 2025" → gamberorosso.it (no byline), napolidavivere.it (50 Top Italy article), universofood.net; no new qualifying primary sources
+[cross-2] "Napoli dove mangiare guida gastronomica 2023 2024" → scattidigusto.it (no byline), lostinfood.it; no new qualifying sources
+[cross-2] "ristoranti Napoli quartieri 2025 2026 raccomandati giornalista" → LP.it trattorie confirmed, oraviaggiando.it (aggregator); no new qualifying primary sources
+[cross-4] "50 Top Italy Napoli ristoranti 2024 2025" → napolidavivere.it (50 Top article), 50topitaly.it, sky.it; no qualifying named-author primary sources for Naples
+[cross-3] "food writer Naples Italy restaurant recommendations blog" → roamandthrive.com confirmed (NO named author, REJECTED), Katie Parla confirmed
+[cross-3] "giornalista gastronomico Napoli ristoranti blog recensioni" → viadeigourmet.it confirmed (reviews pre-2023, REJECTED), lucianopignataro.it confirmed
+[cross-5] "nuovi ristoranti Napoli aperture 2024 2025" → scattidigusto.it tag found, italiangourmet.it, napolitoday.it; no new qualifying sources
+[cross-7] "pizzerie napoletane Napoli consigliate critico pizza verace" → gamberorosso.it (secondary no byline), trolleygirl.it, guide.michelin.com; no qualifying primary sources
+[cross-4] "L'Espresso Ristoranti d'Italia Napoli 2024 2025" → scattidigusto.it articles, italiangourmet.it, napolitoday.it; no qualifying primary sources
+[cross-5] "new restaurant openings Naples Italy 2025 2026" → NAPLES FLORIDA CONTAMINATION — all results about Naples Florida. Disambiguation confirmed critical.
+[cross-4] "Slow Food Osterie d'Italia Napoli 2023 2024" → napolitoday.it (no byline), carlozucchetti.it, virtuquotidiane.it; Slow Food 2024 confirms La Chitarra, La Notizia, Taverna a Santa Chiara as Naples Chiocciole
+[cross-8] "rivista gastronomica indipendente Napoli ristoranti guida" → passionegourmet.it (Naples reviews pre-2023), cibiamonapoli.it (unknown author), identita golose; no new qualifying sources
+[cross-7] "ristoranti pesce frutti di mare Napoli consigliati scrittore" → LP.it seafood guide (no byline confirmed), gamberorosso.it; no new qualifying sources
+[cross-8] "supplemento gastronomia giornale Napoli dove mangiare recensioni" → scattidigusto.it, gamberorosso.it, same known sources; no new qualifying sources
+[cross-1] "best restaurants Naples Italy food writer guide 2025 2026" → roamandthrive.com (no byline REJECTED), timeout.com Naples (Gabriela Proietti CONFIRMED secondary)
+[cross-2] "Napoli migliori ristoranti trattorie 2025 blog gastronomia locale" → napolidavivere.it (staff byline REJECTED), scattidigusto.it (no byline REJECTED); LP.it trattorie guide confirmed
+[neighbourhood-Fuorigrotta] "ristoranti Fuorigrotta Bagnoli Napoli dove mangiare 2024 2025" → booking/directory sites only; no qualifying sources
+[cross-1] "blog gastronomico Napoli autore napoletano ristoranti 2024 2025 guida" → Diana Bancale (inviaggiodasola.com) CONFIRMED — Naples-born journalist, IT, June 2025 article
+[cross-3-supp] "Diana Bancale dove mangiare Napoli guida ristoranti blog" → inviaggiodasola.com confirmed, multiple Naples food articles
+[cross-1-supp] "ristoranti Napoli 2024 guida blogger autore locale indipendente pesce trattoria" → Diana Bancale confirmed, no additional new sources
+[phase-1b-crossval] "La Notizia Napoli recensione critica blog gastronomico" → dissapore.com April 2023 article (no byline REJECTED), gamberorosso.it (secondary no byline); no new qualifying primary sources
+[phase-1b-crossval] "Trattoria Nennella Napoli raccomandazione critico ristorante" → timeout.com review (secondary), booking sites; no new qualifying primary sources
+[phase-1b-crossval] "Donna Teresa Vomero Napoli trattoria consigliata giornalista" → scattidigusto.it individual article (no byline REJECTED), LP.it old article; no new qualifying primary sources

@@ -1,0 +1,103 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LocalBite v7.1 — Naples, Italy — Search Plan
+Prepared: 2026-04-28
+
+GEOGRAPHY NOTE: ALL queries use "Napoli" (Italian) or "Naples Italy" (English). NEVER bare "Naples". Naples Florida contamination is severe and confirmed.
+
+PHASE 0 FINDINGS:
+- Katie Parla (katieparla.com/restaurants/naples/) — ACCEPTED, EN, single-author confirmed
+- lucianopignataro.it — multi-author publication (Santa di Salvo, Emanuela Sorrentino, Antonella Amodio confirmed as contributors — NOT single-author as pre-researched)
+  * Terrazza Calabritto (Santa di Salvo, April 24 2026)
+  * Osteria Il Soldino (Santa di Salvo, April 24 2026)
+  * Pizza roundup (Antonella Amodio, April 13 2026)
+
+WRITERS CONFIRMED FOR PHASE 1 QUERIES:
+- Katie Parla
+- Santa di Salvo
+- Emanuela Sorrentino
+- Antonella Amodio
+- Luciano Pignataro (editor; may have authored articles not yet found)
+
+YEAR DISTRIBUTION CHECK:
+- Earlier years target (2023, 2024): queries 1, 3, 5, 7, 9, 11, 13, 16, 18, 20, 22, 23, 26, 28, 30, 33
+- Later years target (2025, 2026): queries 2, 4, 6, 8, 10, 12, 14, 17, 19, 21, 24, 25, 27, 29, 31, 34
+- No-year queries: Cross-3, Cross-7, Cross-8 (acceptable)
+[year-distribution-check] PASSED — 16 queries reference earlier years, 16 queries reference recent years, 7 queries have no year term.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART A — NEIGHBOURHOOD COVERAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TIER 1 — 5 areas × 2 queries = 10 queries
+
+1. [neighbourhood-CentroStorico] "ristoranti Napoli Centro Storico Spaccanapoli guida 2023 2024"
+2. [neighbourhood-CentroStorico] "best restaurants Naples Italy Centro Storico Decumani 2025"
+3. [neighbourhood-Chiaia] "ristoranti Chiaia Napoli gastronomia critico 2024"
+4. [neighbourhood-Chiaia] "restaurants Chiaia Naples Italy neighbourhood guide 2025 2026"
+5. [neighbourhood-Posillipo] "ristoranti Posillipo Napoli pesce vista mare 2023 2024"
+6. [neighbourhood-Posillipo] "restaurants Posillipo Naples Italy seafood guide 2025"
+7. [neighbourhood-Vomero] "ristoranti Vomero Napoli dove mangiare consigliati 2024"
+8. [neighbourhood-Vomero] "best restaurants Vomero Naples Italy food writer 2025 2026"
+9. [neighbourhood-QuartieriSpagnoli] "ristoranti Quartieri Spagnoli Napoli guida gastronomica 2023 2024"
+10. [neighbourhood-QuartieriSpagnoli] "restaurants Quartieri Spagnoli Naples Italy local guide 2025"
+
+TIER 2 — 4 areas × 2 queries = 8 queries
+(Pozzuoli excluded — confirmed separate municipality)
+
+11. [neighbourhood-Mergellina] "ristoranti Mergellina Napoli pesce pizzeria consigliati 2023 2024"
+12. [neighbourhood-Mergellina] "restaurants Mergellina Naples Italy food guide 2025"
+13. [neighbourhood-Fuorigrotta] "ristoranti Fuorigrotta Napoli dove mangiare 2024 2025"
+14. [neighbourhood-Fuorigrotta] "restaurants Fuorigrotta Naples Italy dining guide 2023"
+15. [neighbourhood-Secondigliano] "ristoranti Secondigliano Napoli gastronomia locale 2024"
+16. [neighbourhood-Secondigliano] "restaurants Secondigliano Naples Italy food 2023 2025"
+17. [neighbourhood-Bagnoli] "ristoranti Bagnoli Napoli dove mangiare 2024 2025"
+18. [neighbourhood-Bagnoli] "restaurants Bagnoli Naples Italy guide 2023"
+
+TIER 3 — 5 areas × 1 query = 5 queries
+
+19. [neighbourhood-SanCarlo] "ristoranti San Carlo all'Arena Napoli 2024"
+20. [neighbourhood-Stella] "ristoranti quartiere Stella Napoli gastronomia 2025"
+21. [neighbourhood-Avvocata] "ristoranti Avvocata Napoli dove mangiare 2024 2025"
+22. [neighbourhood-Poggioreale] "ristoranti Poggioreale Napoli consigliati 2023"
+23. [neighbourhood-Pianura] "ristoranti Pianura Napoli gastronomia locale 2024"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART B — CROSS-CUTTING ANGLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cross-1 — City-wide EN: 2 queries
+24. "best restaurants Naples Italy food writer guide 2025 2026"
+25. "where to eat in Naples Italy local recommendations 2023 2024"
+
+Cross-2 — City-wide IT: 3 queries
+26. "migliori ristoranti Napoli critico gastronomico blog 2024 2025"
+27. "Napoli dove mangiare guida gastronomica 2023 2024"
+28. "ristoranti Napoli quartieri 2025 2026 raccomandati giornalista"
+
+Cross-3 — Generic writer-first: 2 queries (no year term)
+29. "food writer Naples Italy restaurant recommendations blog"
+30. "giornalista gastronomico Napoli ristoranti blog recensioni"
+
+Cross-4 — Named awards: 3 queries
+31. "50 Top Italy Napoli ristoranti 2024 2025"
+32. "L'Espresso Ristoranti d'Italia Napoli 2024 2025"
+33. "Slow Food Osterie d'Italia Napoli 2023 2024"
+
+Cross-5 — Recent openings: 2 queries
+34. "nuovi ristoranti Napoli aperture 2024 2025"
+35. "new restaurant openings Naples Italy 2025 2026"
+
+Cross-6 — LOCAL_FOOD_VOCABULARY: SKIP (not defined in Part 1)
+
+Cross-7 — Cuisine and community: 2 queries (no year term)
+36. "pizzerie napoletane Napoli consigliate critico pizza verace"
+37. "ristoranti pesce frutti di mare Napoli consigliati scrittore"
+
+Cross-8 — Publication-category IT: 2 queries (no year term)
+38. "rivista gastronomica indipendente Napoli ristoranti guida"
+39. "supplemento gastronomia giornale Napoli dove mangiare recensioni"
+
+TOTAL PLANNED: 39 queries (within 45 soft ceiling)
+
+STOPPING RULE: If last 8 consecutive queries return only known sources or no qualifying new sources, stop early.

@@ -1,0 +1,79 @@
+LocalBite v7.1 — Naples, Italy — Failed and Partial Sources
+Generated: 2026-04-28
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 0 FETCH FAILURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+katieparla.com/city-guides/naples/
+  Status: CAPTCHA block — Jina returned robot challenge screen
+  Fallback attempted: web.archive.org/web/2026/katieparla.com/city-guides/naples/
+  Fallback result: 451 — unavailable for legal/geo reasons
+  Resolution: Alternative URL katieparla.com/restaurants/naples/ found and confirmed (200, ~3500ch)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PARTIAL SOURCES — ACCEPTED BUT 0 EXTRACTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+lucianopignataro.it — Antonella Amodio
+  Article: "Pizza a ruota di carro: 20 pizzerie dove mangiare la madre di tutte le pizze" (April 13 2026)
+  Fetch result: 200 | ~2500ch | PARTIAL
+  Reason for 0 extractions: Pure listicle — 16 Naples-city pizzerias listed with names and
+  addresses only. No per-pizzeria description meets 15-word minimum + specific detail rule.
+  Decision: Source accepted in Phase 0, 0 qualifying quotes at extraction.
+
+lucianopignataro.it — Emanuela Sorrentino
+  Article: Altogrado Vineria (April 12 2026)
+  Fetch result: 200 | ~1600ch | PARTIAL — wine bar (vineria) not restaurant
+  Reason: Venue is a wine bar without food kitchen. Out of scope.
+  Decision: Deferred to Phase 2 decision → excluded from extraction.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REJECTED SOURCES — NO NAMED AUTHOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+gamberorosso.it — multiple Naples queries returned results with no named author byline
+dissapore.com — Naples La Notizia article (April 2023) confirmed no byline
+scattidigusto.it — multi-author site; specific Naples "50 ristoranti" article has no visible byline
+roamandthrive.com — no named author; anonymous site
+napolidavivere.it — "staff" byline only; not a full named author
+50topitaly.it — aggregate ranking; no named article author
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REJECTED SOURCES — OUT OF YEAR RANGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+viadeigourmet.it — Naples reviews confirmed outside 2023-2026
+  La Notizia review: 2017
+  50 Kalò review: 2014
+  No recent Naples articles found on this site.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SEARCH DEAD ENDS — NO QUALIFYING NEW SOURCES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[neighbourhood-CentroStorico] — booking/directory sites only; no named-author primary sources
+[neighbourhood-Chiaia] — agrodolce.it (2016, out of date); no qualifying sources
+[neighbourhood-Posillipo] — booking/directory sites only
+[neighbourhood-Vomero] — agrodolce.it (2016); no qualifying sources
+[neighbourhood-Mergellina] — booking/directory sites only
+[neighbourhood-Fuorigrotta] — booking/directory sites only
+[neighbourhood-Secondigliano] — no results
+[neighbourhood-Bagnoli] — no results
+[cross-4] 50 Top Italy — napolidavivere.it (staff byline); no qualifying primary sources
+[cross-7] pizzerie — gamberorosso.it (no byline); no qualifying primary sources
+[cross-7] pesce — LP.it (no byline on seafood article); no qualifying primary sources
+
+Stopping rule triggered after 30+ queries with 8 consecutive returns of only known sources.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MISSING EXTRACTION — Osteria Il Soldino
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+URL: https://www.lucianopignataro.it/a/napoli-osteria-il-soldino-nei-quartieri/293113/
+Author: Santa di Salvo
+Date: April 24 2026
+Location: Quartieri Spagnoli
+Phase 0 status: ACCEPTED — qualifying quotes confirmed
+Reason missing: Session context exhaustion during Phase 2 before extraction completed
+Action needed: Manual extraction recommended
