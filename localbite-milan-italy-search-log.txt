@@ -1,0 +1,75 @@
+PHASE 0 COMPLETE — 4 sources fetched, 4 accepted, 0 failed
+Writers confirmed: Jaclyn DeGiorgio (A Signorina in Milan), Elizabeth De Filippo-Jones (The Infatuation)
+
+[neighbourhood-Navigli] "ristoranti Navigli Milano 2023 2024 guida" → TheFork, TripAdvisor, Gambero Rosso Navigli guide, eataliantraveler, scattidigusto — no new qualifying sources; gamberorosso.it Navigli guide noted (Redazione byline on guides)
+[neighbourhood-Navigli] "best restaurants Navigli Milan 2025 2026" → timeout.com (always secondary), eatingeurope.com (food tour commercial), Nebbia and Erba Brusca mentioned — Erba Brusca already in Infatuation/Eater pool
+[neighbourhood-Brera] "dove mangiare Brera Milano 2024 ristoranti" → puntarellarossa.it/2024/08/04 Brera article; gamberorosso.it Brera guide; milanfoodieinsider.com
+[neighbourhood-Brera] "best restaurants Brera Milan 2025" → gamberorossointernational.com Brera guide; milanfoodieinsider.com; various booking sites
+[neighbourhood-PortaVenezia] "ristoranti Porta Venezia Milano 2023 2024" → milanfoodieinsider.com; milanotoday.it; amilanopuoi.com
+[neighbourhood-PortaVenezia] "best places to eat Porta Venezia Milan 2025 2026" → asignorinainmilan.com/via-melzo (same publisher); Røst bistrot and Osteria alla Concorrenza mentioned
+[neighbourhood-Isola] "ristoranti Isola Milano 2024 2025 consigli" → conoscounposto.com Isola guide; milanfoodieinsider.com; coolinmilan.it
+[neighbourhood-Isola] "best restaurants Isola Milan 2023 2024" → gamberorossointernational.com Isola guide; milanfoodieinsider.com (2020 article — outside YEAR_RANGE)
+[neighbourhood-Tortona] "dove mangiare quartiere Tortona Milano 2023 2024" → milanfoodieinsider.com; conoscounposto.com Solari; milanotoday.it
+[neighbourhood-Tortona] "best restaurants Tortona Milan 2025 2026" → cozymeal.com; opumo.com; opentable; timeout.com
+[neighbourhood-Sempione] "ristoranti Sempione Milano 2024 guida" → conoscounposto.com/migliori-ristoranti-a-milano-2023-e-wishlist-2024; milanotoday.it
+[neighbourhood-Sempione] "where to eat Sempione Milan 2023 2024" → TripAdvisor, OpenTable, booking sites only
+[neighbourhood-Chinatown] "ristoranti zona Sarpi Chinatown Milano 2024 2025" → conoscounposto.com Sarpi guide; milanfoodieinsider.com; morsimagazine.com; Bokok, Ravioleria Sarpi, Ramenamano mentioned
+[neighbourhood-Chinatown] "best restaurants Chinatown Sarpi Milan 2025 2026" → asignorinainmilan.com/best-chinese-restaurants (same publisher); gamberorossointernational.com Paolo Sarpi guide; theinfatuation.com/milan/guides/best-chinese-food — same publisher as Phase 0 Infatuation source
+[neighbourhood-PortaRomana] "ristoranti Porta Romana Milano 2023 2024" → puntarellarossa.it/2023/03/20 Porta Romana (Redazione — rejected); milanfoodieinsider.com; imbruttito.com Porta Romana (March 2024 — Davide Frigoli confirmed); gamberorosso.it Porta Romana guide
+[neighbourhood-PortaRomana] "best restaurants Porta Romana Milan 2025" → asignorinainmilan.com Porta Romana guide (same publisher); milanfoodieinsider.com Porta Romana
+[neighbourhood-Moscova] "restaurants Moscova Milan 2023 2024" → asignorinainmilan.com/new-restaurants-design-week-2024 (same publisher); OpenTable, booking sites; rockfork.it new openings 2024
+[neighbourhood-Garibaldi] "ristoranti zona Garibaldi Porta Nuova Milano 2023 2024" → milanfoodieinsider.com; milanofoodspirit.com; conoscounposto.com/nuovi-ristoranti-marzo-2024; coolinmilan.it
+[neighbourhood-NoLo] "ristoranti NoLo Milano quartiere 2024 2025" → gamberorosso.it NoLo guide; imbruttito.com/2024/02/02 NoLo (no named author — rejected); conoscounposto.com Nolo; cibotoday.it Statt article
+[neighbourhood-Lambrate] "dove mangiare Lambrate Milano 2023 2024" → imbruttito.com/2024/04/19 Lambrate (Davide Frigoli confirmed); conoscounposto.com Lambrate; puntarellarossa.it/2023/06/20 Lambrate (Redazione — rejected); milanotoday.it
+[cross-1] "best restaurants Milan Italy editorial guide 2025 2026" → timeout.com (always secondary); roamandthrive.com; travelup.com — no new qualifying sources
+[cross-1] "Milan Italy restaurants worth visiting personal recommendations 2023 2024" → spritzience.com/best-restaurants-in-milan; andershusa.com — need to check
+[cross-2] "i migliori ristoranti di Milano 2025 critica gastronomica" → conoscounposto.com/i-10-migliori-ristoranti-del-2025 (Caterina Zanzi confirmed); puntarellarossa.it/2025/01/28 (Redazione — rejected); gamberorosso.it/notizie/migliori-ristoranti-milano-2026; thefoodzilla.it/2025/04/03 referencing Eater
+[cross-2] "dove mangiare bene a Milano 2023 2024 consigliato" → conoscounposto.com/migliori-ristoranti-a-milano-2023 (Caterina Zanzi); puntarellarossa.it/2024/02/01 best of 2024 (Redazione — rejected); imbruttito.com/2024/04/05 (Davide Frigoli confirmed)
+[cross-2] "Milano guida ristoranti 2026 nuove aperture cucina" → scattidigusto.it; finedininglovers.it; puntarellarossa.it new openings 2026; italiangourmet.it 2026
+[cross-3] "food writer blogger Milano 2024 2025 raccomandazioni personali" → confirmed Caterina Zanzi = Conosco un posto; milanfoodieinsider.com (team, no single author); asignorinainmilan.com
+[cross-3] "best restaurants Milan Italy 2025 2026 local guide personal" → timeout.com; spritzience.com; various travel sites
+[cross-4] "50 Top Italy Milano ristoranti 2024 2025 premiati" → reportergourmet.com; carlozucchetti.it; 50topitaly.it — award lists but not articles with restaurant descriptions
+[cross-4] "Gambero Rosso Milano ristoranti 2024 2025 firma autore" → gamberorosso.it awards articles; Valentina Marino as curator noted; individual articles appear to use Redazione
+[cross-4] [query not run — covered in cross-2 for Identità Golose]
+[cross-5] "nuove aperture ristoranti Milano 2025 2026" → scattidigusto.it; finedininglovers.it; puntarellarossa.it new openings; cibotoday.it — no qualifying named-author sources
+[cross-5] "new restaurant openings Milan 2024 2025" → asignorinainmilan.com/new-restaurants-design-week-2024 (same publisher); wwd.com Milan hot spots 2024; rockfork.it
+[cross-7] "neo-trattoria contemporanea Milano critica 2023 2024" → cookinc.it Trattoria Contemporanea; commestibile.substack.com; milanotoday.it trattorie moderne
+[cross-7] "Gambero Rosso Milano 2025 migliori ristoranti" — [not run, covered in cross-4]
+[cross-8] "rivista gastronomia Milano blog food 2024 2025" → milanfoodieinsider.com; influenxer.it — no new qualifying sources
+[cross-8] "supplemento gastronomia giornale Milano ristoranti 2025 2026" — [not run separately, covered in cross-2 searches]
+
+CANDIDATE VERIFICATION FETCHES:
+[p1-verify] "puntarellarossa.it/2024/08/04 Brera" → 200 | ~4000ch | REJECTED-byline — author listed as "Redazione" (editorial team), no named individual
+[p1-verify] "puntarellarossa.it/2025/01/28 best of 2025" → 200 | ~5000ch | REJECTED-byline — author "Redazione"
+[p1-verify] "conoscounposto.com/i-10-migliori-ristoranti-del-2025" → 200 | ~4800ch | ACCEPTED — Caterina Zanzi named, Dec 15, 2025; 4-5 Milan qualifying restaurants
+[p1-verify] "conoscounposto.com/10-ristoranti-del-cuore-milano-2024" → 200 | ~4500ch | ACCEPTED — Caterina Zanzi named, Dec 19, 2024; 8 qualifying Milan restaurants
+[p1-verify] "dissapore.com/ristoranti/6-ristoranti-da-provare-per-capire-il-2024" → 404 | —ch | FAILED — article not found
+[p1-verify] "puntarellarossa.it/2023/06/20 Lambrate" → 200 | ~3500ch | REJECTED-byline — author "Redazione"
+[p1-verify] "imbruttito.com/2024/03/29 Porta Romana" → 200 | ~4200ch | ACCEPTED — Davide Frigoli named author, March 29, 2024; 9 restaurants (quotes need Phase 2 detail)
+[p1-verify] "imbruttito.com/2024/04/19 Lambrate" → 200 | ~4000ch | ACCEPTED — Davide Frigoli named author, April 19, 2024; 9 entries
+[p1-verify] "imbruttito.com/2024/02/02 NoLo" → 200 | ~3800ch | REJECTED-byline — no named author in article
+[p1-verify] "eater.com/maps/best-milan-restaurants-38" → 200 | ~7800ch | ACCEPTED — Elizabeth De Filippo-Jones, last updated March 24, 2025; 37 restaurants (3 Michelin excluded)
+[p1-verify] "milanfoodieinsider.com/en/dinner/best-restaurants-isola-milan/" → 200 | ~3000ch | REJECTED-date — article dated July 2020, outside YEAR_RANGE 2023-2026
+[p1-verify] "thefoodzilla.it/2025/04/03 Eater Milan" → 200 | ~3200ch | ACCEPTED for reference — confirmed Eater Milan URL as https://www.eater.com/maps/best-milan-restaurants-38
+[p1-verify] "puntarellarossa.it/2023/05/19 Botoi" → 200 | ~3000ch | REJECTED-byline — author "Redazione"
+[p1-verify] "passionegourmet.it/2025/09/13/trippa-milano" → 200 | ~5500ch | ACCEPTED — Davide Scapin Giordani named author, Sept 13, 2025; Trippa restaurant review
+
+PHASE 1B CROSS-VALIDATION:
+[phase-1b-crossval] "Trippa Milano ristorante Diego Rossi recensione critica" → passionegourmet.it (Davide Scapin Giordani, 2025); dissapore.com Trippa review; scattidigusto.it Trippa — found Passione Gourmet as new qualifying source
+[phase-1b-crossval] "Botoi ristorante Milano Porta Venezia recensione critica" → theinfatuation.com/milan/reviews/botoi (same publisher); puntarellarossa.it Botoi (Redazione, rejected); conoscounposto.com/ristoranti-milano-marzo-2024 (same publisher) — no new sources
+[phase-1b-crossval] "Rovello 18 Milano ristorante recensione critica" → Michelin guide listing, TripAdvisor, passionegourmet.it 2010 review (outside YEAR_RANGE), yelp — no new qualifying sources
+
+PUBLISHER CONCENTRATION FLAGS:
+[publisher-concentration] A Signorina in Milan — 3 articles contributing 60% of EN pool. Supplementary searches attempted; found Eater (different publisher, same author) as additional EN source. Structural characteristic: A Signorina is the primary independent EN-language local food blog in Milan.
+[coi-check] A Signorina in Milan — commercial conflict: NO
+[coi-check] The Infatuation — commercial conflict: NO
+[coi-check] Eater — commercial conflict: NO
+[coi-check] Conosco un posto — commercial conflict: NO
+[coi-check] Imbruttito — commercial conflict: NO
+[coi-check] Passione Gourmet — commercial conflict: NO
+[single-author-confirmed] A Signorina in Milan — About page confirms Jaclyn DeGiorgio as sole author. Article-level byline not required for June/July 2025 posts. June 2024 post has explicit article-level byline.
+[sibling-check] The Infatuation (EN) and Eater (EN) — independently produced: YES — evidence: The Infatuation owned by The Infatuation Inc., Eater owned by Vox Media; separate editorial operations, different article content, both authored by Elizabeth De Filippo-Jones for Milan city coverage.
+[year-distribution-check] PASSED — queries referenced years 2023-2024 (~25 queries), 2025-2026 (~20 queries), no year term (~5 queries).
+[stopping-rule] NOT triggered — Phase 1B found new source (Passione Gourmet).
+
+TOTAL SEARCHES RUN: 49 (at soft ceiling; stopping rule not triggered)

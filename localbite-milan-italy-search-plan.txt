@@ -1,0 +1,102 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LocalBite v7.1 — Milan, Italy — Search Plan
+Prepared: 2026-04-28
+
+Phase 0 confirmed sources:
+- A Signorina in Milan (Jaclyn DeGiorgio) — June 2025 article
+- A Signorina in Milan (Jaclyn DeGiorgio) — July 2025 article
+- A Signorina in Milan (Jaclyn DeGiorgio) — June 2024 article
+- The Infatuation (Elizabeth De Filippo-Jones) — Oct 2024 article
+
+Phase 1 search plan — 51 queries total
+
+YEAR DISTRIBUTION CHECK:
+- Queries referencing 2023-2024: ~25
+- Queries referencing 2025-2026: ~25
+- Queries with no year term: ~1
+[year-distribution-check] PASSED — balanced distribution across full YEAR_RANGE
+
+============================
+PART A — NEIGHBOURHOOD COVERAGE
+============================
+
+TIER 1 (7 areas × 2 = 14 queries):
+1.  [neighbourhood-Navigli] IT: ristoranti Navigli Milano 2023 2024 guida
+2.  [neighbourhood-Navigli] EN: best restaurants Navigli Milan 2025 2026
+3.  [neighbourhood-Brera] IT: dove mangiare Brera Milano 2024 ristoranti
+4.  [neighbourhood-Brera] EN: best restaurants Brera Milan 2025
+5.  [neighbourhood-PortaVenezia] IT: ristoranti Porta Venezia Milano 2023 2024
+6.  [neighbourhood-PortaVenezia] EN: best places to eat Porta Venezia Milan 2025 2026
+7.  [neighbourhood-Isola] IT: ristoranti Isola Milano 2024 2025 consigli
+8.  [neighbourhood-Isola] EN: best restaurants Isola Milan 2023 2024
+9.  [neighbourhood-Tortona] IT: dove mangiare quartiere Tortona Milano 2023 2024
+10. [neighbourhood-Tortona] EN: best restaurants Tortona Milan 2025 2026
+11. [neighbourhood-Sempione] IT: ristoranti Sempione Milano 2024 guida
+12. [neighbourhood-Sempione] EN: where to eat Sempione Milan 2023 2024
+13. [neighbourhood-Chinatown] IT: ristoranti zona Sarpi Chinatown Milano 2024 2025
+14. [neighbourhood-Chinatown] EN: best restaurants Chinatown Sarpi Milan 2025 2026
+
+TIER 2 (7 areas × 2 = 14 queries):
+15. [neighbourhood-PortaRomana] IT: ristoranti Porta Romana Milano 2023 2024
+16. [neighbourhood-PortaRomana] EN: best restaurants Porta Romana Milan 2025
+17. [neighbourhood-Moscova] IT: dove mangiare Moscova Milano 2024 2025
+18. [neighbourhood-Moscova] EN: restaurants Moscova Milan 2023 2024
+19. [neighbourhood-Garibaldi] IT: ristoranti zona Garibaldi Porta Nuova Milano 2023 2024
+20. [neighbourhood-Garibaldi] EN: best restaurants Garibaldi Milan 2025 2026
+21. [neighbourhood-PortaGenova] IT: ristoranti Porta Genova Milano 2024 2025
+22. [neighbourhood-PortaGenova] EN: where to eat Porta Genova Milan 2023 2024
+23. [neighbourhood-Ticinese] IT: ristoranti Ticinese Milano 2023 2024
+24. [neighbourhood-Ticinese] EN: best restaurants Ticinese Milan 2025 2026
+25. [neighbourhood-NoLo] IT: ristoranti NoLo Milano quartiere 2024 2025
+26. [neighbourhood-NoLo] EN: best restaurants NoLo Milan 2025 2026
+27. [neighbourhood-Lambrate] IT: dove mangiare Lambrate Milano 2023 2024
+28. [neighbourhood-Lambrate] EN: restaurants Lambrate Milan 2025
+
+TIER 3 (7 areas × 1 = 7 queries):
+29. [neighbourhood-CittaStudi] IT: ristoranti Città Studi Milano 2024
+30. [neighbourhood-Dergano] IT: dove mangiare Dergano Milano 2023 2024
+31. [neighbourhood-Affori] IT: ristoranti quartiere Affori Milano 2024 2025
+32. [neighbourhood-Niguarda] IT: dove mangiare Niguarda Milano 2024
+33. [neighbourhood-Lorenteggio] IT: ristoranti Lorenteggio Milano 2023 2024
+34. [neighbourhood-Vigentino] IT: dove mangiare Vigentino Milano 2024
+35. [neighbourhood-Corvetto] IT: ristoranti Corvetto Milano 2024 2025
+
+============================
+PART B — CROSS-CUTTING ANGLES
+============================
+
+Cross-1 — City-wide EN (2 queries):
+36. [cross-1] best restaurants Milan Italy editorial guide 2025 2026
+37. [cross-1] Milan Italy restaurants worth visiting personal recommendations 2023 2024
+
+Cross-2 — City-wide IT (3 queries):
+38. [cross-2] i migliori ristoranti di Milano 2025 critica gastronomica
+39. [cross-2] dove mangiare bene a Milano 2023 2024 consigliato
+40. [cross-2] Milano guida ristoranti 2026 nuove aperture cucina
+
+Cross-3 — Generic writer-first (2 queries):
+41. [cross-3] food writer Milano ristoranti 2024 2025 blog critica
+42. [cross-3] Milan food blogger restaurant recommendations 2025 2026
+
+Cross-4 — Named awards (3 queries):
+43. [cross-4] 50 Top Italy Milano ristoranti 2024 2025 premiati
+44. [cross-4] Identità Golose Milano 2024 ristoranti consigliati
+45. [cross-4] Gambero Rosso Milano 2025 migliori ristoranti
+
+Cross-5 — Recent openings (2 queries):
+46. [cross-5] nuove aperture ristoranti Milano 2025 2026
+47. [cross-5] new restaurant openings Milan 2024 2025
+
+Cross-6 — LOCAL_FOOD_VOCABULARY: blank → SKIPPED
+
+Cross-7 — Cuisine and community (2 queries):
+48. [cross-7] cucina cinese milanese Sarpi Milano ristorante critica 2024 2025
+49. [cross-7] neo-trattoria contemporanea Milano critica 2023 2024
+
+Cross-8 — Publication-category IT (2 queries):
+50. [cross-8] rivista gastronomia Milano blog food 2024 2025
+51. [cross-8] supplemento gastronomia giornale Milano ristoranti 2025 2026
+
+STOPPING RULE: If last 8 consecutive queries yield no new qualifying sources, stop.
+QUERY CEILING: Soft 45, hard 55.

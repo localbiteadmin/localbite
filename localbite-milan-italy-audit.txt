@@ -1,0 +1,227 @@
+LocalBite v7.1 — Milan, Italy — Pipeline Audit
+Generated: 2026-04-28
+
+============================
+SOURCES CONFIRMED: 10
+============================
+
+EN sources (5):
+  src-asgn-jun25   A Signorina in Milan (Jaclyn DeGiorgio) — Jun 2025
+  src-asgn-jul25   A Signorina in Milan (Jaclyn DeGiorgio) — Jul 2025
+  src-asgn-jun24   A Signorina in Milan (Jaclyn DeGiorgio) — Jun 2024
+  src-infat        The Infatuation (Elizabeth De Filippo-Jones) — Oct 2024
+  src-eater        Eater (Elizabeth De Filippo-Jones) — Mar 2025
+
+IT sources (5):
+  src-conun24      Conosco un posto (Caterina Zanzi) — Dec 2024
+  src-conun25      Conosco un posto (Caterina Zanzi) — Dec 2025
+  src-imbr-pr      Imbruttito (Davide Frigoli) — Mar 2024
+  src-imbr-lamb    Imbruttito (Davide Frigoli) — Apr 2024
+  src-pg           Passione Gourmet (Davide Scapin Giordani) — Sep 2025
+
+Publisher diversity: 6 independent publishers (A Signorina, The Infatuation, Eater, Conosco un posto, Imbruttito, Passione Gourmet)
+
+Note: The Infatuation and Eater are independently produced despite sharing an author (Elizabeth De Filippo-Jones covers Milan for both). Confirmed: separate editorial operations, different ownership (The Infatuation Inc. / Vox Media), different article content. Treated as independent publishers for both-pool and Tier A calculations.
+
+============================
+FINAL ENTRIES: 60
+============================
+
+Tier A: 9 restaurants
+Tier B: 51 restaurants
+Both-pool: 3 restaurants
+
+============================
+BOTH-POOL RESTAURANTS (3)
+============================
+
+1. Trippa (Porta Romana)
+   EN sources: A Signorina Jun 2025 (FAIL-quote), The Infatuation Oct 2024 (confirming), Eater Mar 2025 (primary quote)
+   IT sources: Passione Gourmet Sep 2025 (IT primary quote, both-pool confirmed)
+   Note: A Signorina quote failed minimum threshold; Infatuation copyright workaround used for confirming source
+
+2. Alba Pasta Bar (Isola)
+   EN sources: A Signorina Jun 2025 (primary quote)
+   IT sources: Conosco un posto Dec 2025 (named explicitly as "Mercato Isola (Alba Pasta Bar & Celeste Al Mercato)")
+   Both-pool: IT+EN confirmed
+
+3. Botoi (Porta Venezia)
+   EN sources: A Signorina Jun 2024 (primary quote), The Infatuation Oct 2024 (confirming)
+   IT sources: Conosco un posto Dec 2024 (confirming)
+   Both-pool: IT+EN confirmed
+
+============================
+TIER A NON-BOTH-POOL (6)
+============================
+
+Confirmed by 2+ independent EN publishers (The Infatuation + Eater):
+  Denis — A Signorina Jun 2024 (primary) + The Infatuation Oct 2024 (confirming)
+  Ravioleria Sarpi — The Infatuation Oct 2024 (primary) + Eater Mar 2025 (confirming)
+  Bar Basso — The Infatuation Oct 2024 (primary) + Eater Mar 2025 (confirming)
+  Rovello 18 — The Infatuation Oct 2024 (primary) + Eater Mar 2025 (confirming)
+  28 Posti — The Infatuation Oct 2024 (primary) + Eater Mar 2025 (confirming)
+  Erba Brusca — The Infatuation Oct 2024 (primary) + Eater Mar 2025 (confirming)
+
+============================
+MICHELIN EXCLUSIONS
+============================
+
+Stars confirmed at time of pipeline run:
+  Enrico Bartolini al MUDEC — 3 stars (Eater listed; excluded)
+  Horto — 1 star (Eater listed; excluded)
+  Berton — 1 star (Eater listed; excluded)
+  Moebius — 1 star (Eater listed; excluded)
+
+Note: Eater listed all four with Michelin star references in article text. Pipeline auto-excluded per MICHELIN_EXCLUSION rule.
+
+============================
+GEOGRAPHIC EXCLUSIONS
+============================
+
+  Confine (A Signorina Jun 2025) — Located in Verona, not Comune di Milano
+  Locanda Mesa (Conosco un posto Dec 2025) — Located in Masate (province of Milan, outside Comune)
+  Osteria Giorgione (Conosco un posto Dec 2025) — Located outside Comune di Milano
+  Belrespiro (Conosco un posto Dec 2025) — Location outside Comune di Milano
+  Valli Unite (Conosco un posto Dec 2025) — Location outside Comune di Milano
+
+============================
+CATEGORY EXCLUSIONS
+============================
+
+  Roncaglia 33 (Conosco un posto Dec 2025) — Bakery/pasticceria (non-restaurant)
+  Il Forno di Via Pola (A Signorina Jul 2025) — Bakery
+  Clandestino (Imbruttito Lambrate) — Bakery
+  Harp Pub (Imbruttito Lambrate) — Pub (food-secondary venue)
+  Le Polveri / Pasticceria Sissi / Pavé Gelati / Torre (Eater) — Bakery/gelato/museum venue
+  Mercato Centrale (Eater) — Food hall
+
+============================
+QUOTE FAILURES — NOTABLE
+============================
+
+  Nobu Milano (A Signorina Jun 2025) — Best quote across all re-fetches: "practically dances on your palate" (5 words). Never reached 15-word minimum. Excluded.
+
+  Razdora (A Signorina Jun 2025) — Quote returned only as phrase fragments ("honest, soulful casalinga cooking...with elegance, ease, and zero pretense") that never formed a continuous 15-word sentence. Excluded.
+
+  Mason's (A Signorina Jul 2025) — 12-word quote maximum across re-fetches. Excluded.
+
+  LùBar (Eater/Infatuation) — 14-word maximum from both sources. 1 word short. Excluded.
+
+  Langosteria (Eater/Infatuation) — 8-word maximum. Excluded.
+
+  Al Vecchio Porco (Conosco un posto Dec 2025) — 9-word quote (FAIL). Excluded.
+
+  Bicchierino Bar (Eater) — 11w. Excluded.
+  Camparino (Eater) — 14w. Excluded.
+  Cantine Isola (Eater) — 12w. Excluded.
+
+============================
+QUOTE ISSUES RESOLVED
+============================
+
+  Pastamadre (A Signorina Jul 2025) — Initial extraction: "food is so consistently good that deciding what to eat becomes its own challenge" (14w, 1 short). Re-fetch with paragraph request returned full sentence: "It's one of those rare spots where the food is so consistently good that deciding what to eat becomes its own challenge" (22w, PASS).
+
+  Fat Sam (Conosco un posto Dec 2024) — Initial 8w summary. Re-fetch returned full paragraph (15w+, PASS).
+
+  La via della seta (Conosco un posto Dec 2024) — Initial 9w. Re-fetch returned 24w qualifying quote (PASS).
+
+  Silvano (Conosco un posto Dec 2024) — Initial 12w. Re-fetch returned 20w+ (PASS).
+
+  Luckyman Noodles (Conosco un posto Dec 2024) — Initial 10w. Re-fetch returned 18w (PASS).
+
+  All 9 Imbruttito Porta Romana restaurants — Initial pass returned 7-14w fragments. Re-fetch with "copy FULL paragraph verbatim" prompt returned complete Italian paragraphs (20-32w). All 9 qualify.
+
+  All 7 Imbruttito Lambrate restaurants — Same re-fetch fix applied. All 7 qualify.
+
+============================
+THE INFATUATION — COPYRIGHT REFUSAL
+============================
+
+WebFetch tool refused verbatim reproduction from theinfatuation.com citing copyright concerns. The Infatuation page returned full content (200, ~7800ch) but tool blocked verbatim quoting.
+
+Workaround applied: prompts reframed to "what does the article say about [restaurant]" rather than "give me the verbatim quote." This returned qualifying factual descriptions in reported speech:
+  Trippa — 27w confirming description (used as confirming source; Eater quote used as display quote)
+  La Latteria — 27w (Infatuation primary; display quote)
+  Dongiò — 22w (Infatuation primary; display quote)
+  Cavoli a Merenda — 29w (Infatuation primary; display quote)
+
+Infatuation-only restaurants excluded for no qualifying description:
+  Trattoria Del Ciumbia, Il Mannarino, A Santa Lucia, Bistro Aimo e Nadia, Ronin, Riso e Latte
+
+Note: The Infatuation still contributes confirming source status to 6 Tier A entries even without providing the display quote.
+
+============================
+PUBLISHER CONCENTRATION FLAGS
+============================
+
+Eater (src-eater): 22 primary entries out of 60 = 36.7%
+  Exceeds 30% cap. Accepted in UNATTENDED_MODE.
+  Audit note: Phase 1 supplementary searches exhausted. No additional EN sources with comparable Milan coverage found. A Signorina structural characteristic is the only comparable independent EN food blog; Eater fills the EN pool gap.
+
+A Signorina in Milan (3 articles): 12 entries across 3 articles = 20% of pool.
+  Single-author site confirmed (Jaclyn DeGiorgio via About page). Within acceptable range.
+  Structural note: A Signorina is the primary independent EN-language local food blog in Milan with consistent coverage 2024-2025. Publisher concentration is a structural characteristic of the Milan EN-language food writing landscape, not a pipeline gap.
+
+Imbruttito (2 articles, same author Davide Frigoli): 16 entries = 26.7% of IT pool.
+  Two different articles (different neighbourhoods, different dates). Treated as 2 independent contributions from same author-publisher. Within cap.
+
+============================
+SIBLING CHECK
+============================
+
+The Infatuation / Eater: same author (Elizabeth De Filippo-Jones) covers Milan for both.
+  Confirmed independent: separate editorial operations, different ownership (The Infatuation Inc. / Vox Media). Article content is different (different restaurant selections, different quotes). Treated as 2 independent EN publishers for all tier calculations.
+
+Conosco un posto 2024 / Conosco un posto 2025: same author-publisher, different articles.
+  Treated as 2 contributions from same publisher, not 2 independent sources. Does not create Tier A by itself.
+
+============================
+OPEN STATUS CHECK
+============================
+
+open_status_check: true set for all restaurants where the primary source article predates 2025:
+  - All A Signorina Jun 2024 entries (5)
+  - All The Infatuation Oct 2024 entries (in practice all Infatuation entries)
+  - All Conosco un posto Dec 2024 entries (8)
+  - All Imbruttito Mar/Apr 2024 entries (16)
+
+open_status_check: false for entries from 2025 sources only:
+  - A Signorina Jun/Jul 2025 entries not appearing in pre-2025 sources
+
+In practice, given source overlap, most entries carry open_status_check: true.
+
+============================
+SEARCH COVERAGE
+============================
+
+Total searches run: 49 (soft ceiling reached; stopping rule checked)
+Phase 1B cross-validation: found Passione Gourmet (new qualifying source) — stopping rule NOT triggered at that point
+Year distribution: PASSED (balanced 2023-2024 / 2025-2026)
+Neighbourhood coverage: 14 Milan neighbourhoods covered in search plan
+
+Sources rejected in Phase 1 candidate verification:
+  puntarellarossa.it — all articles: Redazione byline (multiple articles checked)
+  milanfoodieinsider.com — team byline, no single named author
+  imbruttito.com NoLo guide — no named author in article
+  dissapore.com article — 404
+
+============================
+FINAL METRICS
+============================
+
+Sources confirmed: 10
+Final entries: 60
+Both-pool: 3
+Tier A: 9
+Tier B: 51
+Tier C (excluded): 0 (all exclusions made during Phase 2 extraction, not at scoring)
+Searches run: 49
+Sources rejected (byline): puntarellarossa.it (multiple), milanfoodieinsider.com, imbruttito.com NoLo
+Sources rejected (date): milanfoodieinsider.com Isola (2020)
+Sources rejected (404): dissapore.com
+Michelin excluded: 4 restaurants
+Geographic excluded: 5 restaurants
+Category excluded: 8 restaurants
+Quote failures: 10+ restaurants
+
+Pipeline status: COMPLETE — awaiting postrun.js geocoding

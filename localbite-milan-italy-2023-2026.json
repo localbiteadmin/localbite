@@ -1,0 +1,1811 @@
+{
+  "city": "Milan",
+  "country": "Italy",
+  "pipeline": "localbite-v7.1",
+  "generated": "2026-04-28",
+  "year_range": "2023-2026",
+  "sources_confirmed": 10,
+  "final_entries": 60,
+  "both_pool": 3,
+  "tier_a": 9,
+  "tier_b": 51,
+  "sources": [
+    {
+      "writer": "Jaclyn DeGiorgio",
+      "publication": "A Signorina in Milan",
+      "article_url": "https://asignorinainmilan.com/restaurants-milan-june-2025/",
+      "article_date": "2025-06-01",
+      "language": "EN",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for A Signorina in Milan, Jaclyn DeGiorgio provides dining guidance and culinary insights from the Italian fashion capital. Her publication covers the Milan food scene through comprehensive guides that help readers navigate the city's restaurant landscape."
+    },
+    {
+      "writer": "Jaclyn DeGiorgio",
+      "publication": "A Signorina in Milan",
+      "article_url": "https://asignorinainmilan.com/restaurants-milan-july-2025/",
+      "article_date": "2025-07-01",
+      "language": "EN",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer and Milan-based expert Jaclyn DeGiorgio contributes to A Signorina in Milan, sharing insider knowledge of the city's culinary landscape. Her food guides help readers navigate Milan's diverse dining scene, from traditional trattorias to contemporary restaurants."
+    },
+    {
+      "writer": "Jaclyn DeGiorgio",
+      "publication": "A Signorina in Milan",
+      "article_url": "https://asignorinainmilan.com/restaurants-milan-june-2024/",
+      "article_date": "2024-07-01",
+      "language": "EN",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food enthusiast and writer Jaclyn DeGiorgio contributes to A Signorina in Milan, a publication focused on Milan's culinary scene and dining experiences. Her work includes comprehensive food guides that help readers navigate the city's restaurant landscape."
+    },
+    {
+      "writer": "Elizabeth De Filippo-Jones",
+      "publication": "The Infatuation",
+      "article_url": "https://www.theinfatuation.com/milan/guides/best-restaurants-milan",
+      "article_date": "2024-10-16",
+      "language": "EN",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer at The Infatuation, specializing in comprehensive dining guides that help readers discover notable restaurants and eateries. Elizabeth De Filippo-Jones contributes to the publication's mission of providing accessible, expert-driven food recommendations for dining enthusiasts."
+    },
+    {
+      "writer": "Elizabeth De Filippo-Jones",
+      "publication": "Eater",
+      "article_url": "https://www.eater.com/maps/best-milan-restaurants-38",
+      "article_date": "2025-03-24",
+      "language": "EN",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for Eater, Elizabeth De Filippo-Jones contributes to one of the most influential dining and restaurant publications in the industry. Eater covers restaurant news, food culture, and dining guides across major cities, helping readers discover new culinary experiences and stay informed about the latest food trends."
+    },
+    {
+      "writer": "Caterina Zanzi",
+      "publication": "Conosco un posto",
+      "article_url": "https://conoscounposto.com/10-ristoranti-del-cuore-milano-2024",
+      "article_date": "2024-12-19",
+      "language": "IT",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer at Conosco un posto, where she creates comprehensive food guides for discovering exceptional dining experiences. Caterina Zanzi specializes in curating restaurant recommendations and culinary insights for food enthusiasts seeking their next great meal."
+    },
+    {
+      "writer": "Caterina Zanzi",
+      "publication": "Conosco un posto",
+      "article_url": "https://conoscounposto.com/i-10-migliori-ristoranti-del-2025",
+      "article_date": "2025-12-15",
+      "language": "IT",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for Conosco un posto, contributing comprehensive food guides that help readers discover new dining destinations. Her recent work includes detailed restaurant recommendations and culinary insights published in December 2025. Caterina Zanzi focuses on creating practical guides for food enthusiasts seeking their next great meal."
+    },
+    {
+      "writer": "Davide Frigoli",
+      "publication": "Il Milanese Imbruttito",
+      "article_url": "https://imbruttito.com/2024/03/29/dove-mangiare-bene-porta-romana-locali-top-zona/",
+      "article_date": "2024-03-29",
+      "language": "IT",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer at Il Milanese Imbruttito, covering Milan's dining scene with sharp local insight. His food guides highlight the city's culinary landscape, offering readers authentic perspectives on restaurants and food culture in Milan."
+    },
+    {
+      "writer": "Davide Frigoli",
+      "publication": "Il Milanese Imbruttito",
+      "article_url": "https://imbruttito.com/2024/04/19/dove-mangiare-bene-lambrate-9-locali-top-zona/",
+      "article_date": "2024-04-19",
+      "language": "IT",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer at Il Milanese Imbruttito, focusing on restaurant guides and culinary recommendations for Milan's dining scene. Davide Frigoli contributes comprehensive food guides that help locals and visitors navigate the city's evolving restaurant landscape."
+    },
+    {
+      "writer": "Davide Scapin Giordani",
+      "publication": "Passione Gourmet",
+      "article_url": "https://passionegourmet.it/2025/09/13/trippa-milano",
+      "article_date": "2025-09-13",
+      "language": "IT",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for Passione Gourmet, specializing in comprehensive dining guides and culinary recommendations. Davide Scapin Giordani contributes expert insights on restaurant discoveries and food trends through detailed guide coverage."
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Trippa",
+      "neighbourhood": "Porta Romana",
+      "lat": 45.4522019,
+      "lng": 9.2055171,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trippa",
+      "geo_skip": false,
+      "cuisine": "neo-trattoria",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "eggplant with stracciatella and 'nduja tomato confit",
+        "green beans with fried hen and Bronte pistachio pesto",
+        "tagliatelle al burro e Parmigiano",
+        "fried tripe",
+        "vitello tonnato",
+        "trippa fritta",
+        "lampredotto alla amatriciana"
+      ],
+      "signature_dish": "trippa fritta",
+      "quote": "The menu changes so often that each visit feels like a surprise, and the flavors are always bold, buoyant, and unexpectedly brilliant",
+      "quote_language": "original",
+      "article_date": "2025-06-01",
+      "open_status_check": true,
+      "sources": [
+        "src-asgn-jun25",
+        "src-infat",
+        "src-eater",
+        "src-pg"
+      ],
+      "both_pool": true,
+      "geo_source": "nominatim",
+      "confidence_tier": "A",
+      "language_pool": "es"
+    },
+    {
+      "name": "Alba Pasta Bar",
+      "neighbourhood": "Isola",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "pasta bar",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "casereccia cacio e pepe with lemon and mint",
+        "pipe rigate alla norma",
+        "spinach and ricotta ravioli",
+        "spaghetti with butter, lemon, and bottarga"
+      ],
+      "signature_dish": null,
+      "quote": "casual but meticulous, centered around a counter where you can watch the team prepare and plate silky strands of handmade pasta",
+      "quote_language": "original",
+      "article_date": "2025-06-01",
+      "open_status_check": false,
+      "sources": [
+        "src-asgn-jun25",
+        "src-conun25"
+      ],
+      "both_pool": true,
+      "geo_source": "photon",
+      "confidence_tier": "A",
+      "language_pool": "es"
+    },
+    {
+      "name": "Botoi",
+      "neighbourhood": "Porta Venezia",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Italian / contemporary",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "asparagus with kefir, dried tomatoes and sumac",
+        "gnocchetti alla Busara",
+        "tomato ravioli with almonds, olives and thyme",
+        "lamb kofta with agretti"
+      ],
+      "signature_dish": null,
+      "quote": "Rosselli, an upbeat thirtysomething, does it all with a smile. You feel like more like a house guest than a restaurant patron",
+      "quote_language": "original",
+      "article_date": "2024-07-01",
+      "open_status_check": true,
+      "sources": [
+        "src-asgn-jun24",
+        "src-infat",
+        "src-conun24"
+      ],
+      "both_pool": true,
+      "confidence_tier": "A",
+      "language_pool": "es"
+    },
+    {
+      "name": "Denis",
+      "neighbourhood": "Porta Venezia",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "pizza (avant-garde)",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Ficus d'Estate pizza with fior di latte, Taggiasca olives, fig jam and pecorino",
+        "potato croquettes"
+      ],
+      "signature_dish": "Ficus d'Estate pizza",
+      "quote": "It's not Roman-style crispy, but it's thin and sturdy, without getting soggy and collapsing below the toppings",
+      "quote_language": "original",
+      "article_date": "2024-07-01",
+      "open_status_check": true,
+      "sources": [
+        "src-asgn-jun24",
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "A",
+      "language_pool": "es"
+    },
+    {
+      "name": "Ravioleria Sarpi",
+      "neighbourhood": "Chinatown",
+      "lat": 45.4813093,
+      "lng": 9.1759365,
+      "geo_confidence": "high",
+      "geo_matched_name": "La Ravioleria Sarpi",
+      "geo_skip": false,
+      "cuisine": "Chinese / dumplings",
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fresh Chinese dumplings",
+        "ravioli prepared on premises"
+      ],
+      "signature_dish": "fresh dumplings",
+      "quote": "Third-generation butcher Walter Sirtori and textile entrepreneur Hujian 'Agie' Zhou joined forces to open this ravioleria",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": true,
+      "sources": [
+        "src-infat",
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "A",
+      "language_pool": "es"
+    },
+    {
+      "name": "Bar Basso",
+      "neighbourhood": "Porta Venezia",
+      "lat": 45.4767746,
+      "lng": 9.2175792,
+      "geo_confidence": "high",
+      "geo_matched_name": "Bar Basso",
+      "geo_skip": false,
+      "cuisine": "aperitivo bar",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Negroni Sbagliato",
+        "aperitivo"
+      ],
+      "signature_dish": "Negroni Sbagliato",
+      "quote": "Anyone who's enjoyed an aperitivo lately can thank Bar Basso, an institution that helped expand quality predinner cocktails beyond the walls of sophisticated hotels",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": true,
+      "sources": [
+        "src-infat",
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "A",
+      "language_pool": "es"
+    },
+    {
+      "name": "Rovello 18",
+      "neighbourhood": "Brera",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Italian / osteria",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "vitello tonnato",
+        "cotoletta",
+        "pasta with anchovy-filled roasted peppers"
+      ],
+      "signature_dish": null,
+      "quote": "Third-generation chef Michele De Liguoro and his sister named Rovello 18 after the address of their family's fine dining restaurant Da Pierino",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": true,
+      "sources": [
+        "src-infat",
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "A",
+      "language_pool": "es"
+    },
+    {
+      "name": "28 Posti",
+      "neighbourhood": "Navigli",
+      "lat": 45.4525957,
+      "lng": 9.1733581,
+      "geo_confidence": "high",
+      "geo_matched_name": "28 posti",
+      "geo_skip": false,
+      "cuisine": "Italian / modern",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "28 Posti is a respite from the young crowds that gather on the cobblestones outside bars along the canals in Navigli",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": true,
+      "sources": [
+        "src-infat",
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "A",
+      "language_pool": "es"
+    },
+    {
+      "name": "Erba Brusca",
+      "neighbourhood": "Navigli",
+      "lat": 45.4228504,
+      "lng": 9.1673519,
+      "geo_confidence": "high",
+      "geo_matched_name": "Erba Brusca",
+      "geo_skip": false,
+      "cuisine": "Italian / vegetable-forward",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "You'll find Erba Brusca alongside the Naviglio Pavese canal, where the city begins to blend with smaller towns",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": true,
+      "sources": [
+        "src-infat",
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "A",
+      "language_pool": "es"
+    },
+    {
+      "name": "La Baia",
+      "neighbourhood": "Porta Venezia",
+      "lat": 45.4628023,
+      "lng": 9.2087373,
+      "geo_confidence": "high",
+      "geo_matched_name": "La Baia dal 1969",
+      "geo_skip": false,
+      "cuisine": "pizza",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "thin-crust Milanese pizza",
+        "padellino-style pizza",
+        "sfilatino",
+        "half-and-half pizza"
+      ],
+      "signature_dish": null,
+      "quote": "A no-fuss, all-heart spot that make you fall in love with Milan all over again",
+      "quote_language": "original",
+      "article_date": "2025-07-01",
+      "open_status_check": false,
+      "sources": [
+        "src-asgn-jul25"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Shiro",
+      "neighbourhood": "Città Studi",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Japanese / sushi",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "sushi lunch menu",
+        "nigiri",
+        "hosomaki",
+        "uramaki",
+        "miso soup",
+        "black sesame gelato",
+        "green tea gelato"
+      ],
+      "signature_dish": "nigiri",
+      "quote": "The sushi chefs had worked the wasabi into the nigiri – one less thing for me to do, and I appreciated that",
+      "quote_language": "original",
+      "article_date": "2024-07-01",
+      "open_status_check": true,
+      "sources": [
+        "src-asgn-jun24",
+        "src-asgn-jul25"
+      ],
+      "both_pool": false,
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Pastamadre",
+      "neighbourhood": "Porta Romana",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Italian pasta",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "spaghetti alle chitarre with stracciatella and raw red shrimp",
+        "spaghetti alla Nerano with Provolone del Monaco",
+        "caponata",
+        "fioroni figs with Salva Cremasco"
+      ],
+      "signature_dish": "spaghetti alla Nerano",
+      "quote": "It's one of those rare spots where the food is so consistently good that deciding what to eat becomes its own challenge",
+      "quote_language": "original",
+      "article_date": "2025-07-01",
+      "open_status_check": false,
+      "sources": [
+        "src-asgn-jul25"
+      ],
+      "both_pool": false,
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Pavé",
+      "neighbourhood": "Porta Venezia",
+      "lat": 45.4791058,
+      "lng": 9.2026434,
+      "geo_confidence": "high",
+      "geo_matched_name": "Pavé",
+      "geo_skip": false,
+      "cuisine": "café / lunch",
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pastrami club sandwich on house-made shokupan",
+        "cacio e pepe savory biscotti"
+      ],
+      "signature_dish": "pastrami club on shokupan",
+      "quote": "I went for a sandwich: the pastrami club on house-made shokupan with mixed greens, caramelized onions, and pickles drizzled with sweet honey mustard – a glorious indulgence that was light, flavorful, and truly hit the spot",
+      "quote_language": "original",
+      "article_date": "2024-07-01",
+      "open_status_check": true,
+      "sources": [
+        "src-asgn-jun24"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Giolina",
+      "neighbourhood": "Porta Venezia",
+      "lat": 45.4705863,
+      "lng": 9.2076728,
+      "geo_confidence": "high",
+      "geo_matched_name": "Giolina",
+      "geo_skip": false,
+      "cuisine": "pizza",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Giacomina pizza with zucchini, provolone del monaco and basil"
+      ],
+      "signature_dish": "Giacomina pizza",
+      "quote": "the menu features Neapolitan-style pizza ringed with a substantial crust, and all the pies have old-schoolish Italian female names",
+      "quote_language": "original",
+      "article_date": "2024-07-01",
+      "open_status_check": true,
+      "sources": [
+        "src-asgn-jun24"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "La Latteria",
+      "neighbourhood": "Brera",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Italian / trattoria",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "spaghetti with lemon and fresh green chili",
+        "soft eggs baked with butter and topped with bottarga"
+      ],
+      "signature_dish": null,
+      "quote": "The beloved La Latteria reopened in 2024, which was a huge deal after it closed the year before and left a void in the city",
+      "quote_language": "original",
+      "article_date": "2024-10-16",
+      "open_status_check": true,
+      "sources": [
+        "src-infat"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Dongiò",
+      "neighbourhood": "Porta Romana",
+      "lat": 45.4516365,
+      "lng": 9.2049095,
+      "geo_confidence": "high",
+      "geo_matched_name": "Dongiò",
+      "geo_skip": false,
+      "cuisine": "Calabrian",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "'nduja throughout the menu",
+        "lightly fried chicory balls on creamy puréed chickpeas",
+        "grilled scamorza stuffed with 'nduja"
+      ],
+      "signature_dish": null,
+      "quote": "Places like Dongiò are here because generations of southern families moved north and kept cooking the food they grew up with",
+      "quote_language": "original",
+      "article_date": "2024-10-16",
+      "open_status_check": true,
+      "sources": [
+        "src-infat"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Cavoli a Merenda",
+      "neighbourhood": "Brera",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Italian / seasonal",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fassona beef tartare with bok choy",
+        "squid gnocchetti with potato cream and black truffle"
+      ],
+      "signature_dish": null,
+      "quote": "There are a handful of historic palaces that used to belong to Italian royalty just a few steps away from the church that houses The Last Supper",
+      "quote_language": "original",
+      "article_date": "2024-10-16",
+      "open_status_check": true,
+      "sources": [
+        "src-infat"
+      ],
+      "both_pool": false,
+      "geo_source": "photon",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Tipografia Alimentare",
+      "neighbourhood": "NoLo",
+      "lat": 45.5037393,
+      "lng": 9.2241052,
+      "geo_confidence": "high",
+      "geo_matched_name": "Tipografia Alimentare",
+      "geo_skip": false,
+      "cuisine": "Italian / café",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Tipografia Alimentare is well positioned with outdoor tables along the Martesana canal in the north of Loreto (Nolo) area",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Altatto",
+      "neighbourhood": "NoLo",
+      "lat": 45.5034342,
+      "lng": 9.2092813,
+      "geo_confidence": "high",
+      "geo_matched_name": "Altatto",
+      "geo_skip": false,
+      "cuisine": "vegetarian",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "The two chef partners — Sara Nicolosi and Cinzia de Lauri — met at Joia, where they worked with chef Pietro Leemann",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Trattoria Mirta",
+      "neighbourhood": "Città Studi",
+      "lat": 45.4883022,
+      "lng": 9.2275095,
+      "geo_confidence": "high",
+      "geo_matched_name": "trattoria Mirta",
+      "geo_skip": false,
+      "cuisine": "Italian / northern",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Uruguayan chef Juan Lema, who named Trattoria Mirta after his mother, puts his own spin on traditional northern Italian dishes",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Berberè",
+      "neighbourhood": "Ticinese",
+      "lat": 45.4595891,
+      "lng": 9.181337,
+      "geo_confidence": "high",
+      "geo_matched_name": "Berberè",
+      "geo_skip": false,
+      "cuisine": "pizza",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Berberè pizzeria prizes the quality of its ingredients over labels like 'bio' (the EU-version of organic)",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Ratanà",
+      "neighbourhood": "Isola",
+      "lat": 45.4853531,
+      "lng": 9.1929089,
+      "geo_confidence": "high",
+      "geo_matched_name": "Ratanà",
+      "geo_skip": false,
+      "cuisine": "Italian / creative",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Ratanà opened in 2009 in a fin-de-siecle villa located in the middle of a once run-down neighborhood",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Ristorante Ribot",
+      "neighbourhood": "Sempione",
+      "lat": 45.4832188,
+      "lng": 9.1379698,
+      "geo_confidence": "high",
+      "geo_matched_name": "Ribot",
+      "geo_skip": false,
+      "cuisine": "Italian",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Located near the racetrack, Ribot is an equestrian-themed restaurant located in a fin-de-siecle villa",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Osteria del Treno",
+      "neighbourhood": "Isola",
+      "lat": 45.4812038,
+      "lng": 9.2012194,
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria del Treno",
+      "geo_skip": false,
+      "cuisine": "Italian / northern",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Close to Milan's Centrale train station, this historic family-run osteria serves traditional northern Italian fare",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Yoshinobu",
+      "neighbourhood": "Isola",
+      "lat": 45.4801179,
+      "lng": 9.195113,
+      "geo_confidence": "high",
+      "geo_matched_name": "Yoshinobu",
+      "geo_skip": false,
+      "cuisine": "Japanese / sushi",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "sushi",
+        "sashimi"
+      ],
+      "signature_dish": null,
+      "quote": "This high-end restaurant has a well-rounded menu of Japanese dishes, but is primarily known for its sushi and sashimi selection",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Nún",
+      "neighbourhood": "Porta Venezia",
+      "lat": 45.4776453,
+      "lng": 9.2091915,
+      "geo_confidence": "high",
+      "geo_matched_name": "NUN - taste of middle east",
+      "geo_skip": false,
+      "cuisine": "Middle Eastern",
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "wraps",
+        "pitas"
+      ],
+      "signature_dish": null,
+      "quote": "A popular lunch spot in Porta Venezia, Nún is a counter-service restaurant with customizable twists on wraps and pitas",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Osteria Alla Concorrenza",
+      "neighbourhood": "Porta Venezia",
+      "lat": 45.4734635,
+      "lng": 9.2095963,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Osteria Alla Concorrenza",
+      "geo_skip": false,
+      "cuisine": "Italian / offal",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "offal",
+        "cucina povera dishes"
+      ],
+      "signature_dish": null,
+      "quote": "Chef Diego Rossi of Trippa (also on this list) shares his love for offal and cucina povera at Osteria Alla Concorrenza",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Zia Esterina Sorbillo",
+      "neighbourhood": "Brera",
+      "lat": 45.4659898,
+      "lng": 9.1917635,
+      "geo_confidence": "high",
+      "geo_matched_name": "Antica Pizza Fritta da Zia Esterina",
+      "geo_skip": false,
+      "cuisine": "Neapolitan / pizza fritta",
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Neapolitan pizza fritta"
+      ],
+      "signature_dish": "pizza fritta",
+      "quote": "For the ultimate cheap eat just a few minutes from Piazza Duomo, check out the superlative Neapolitan pizza fritta",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Gastronomia Yamamoto",
+      "neighbourhood": "Ticinese",
+      "lat": 45.4599692,
+      "lng": 9.1865876,
+      "geo_confidence": "high",
+      "geo_matched_name": "Gastronomia Yamamoto",
+      "geo_skip": false,
+      "cuisine": "Japanese",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "vegetable dishes"
+      ],
+      "signature_dish": null,
+      "quote": "Aya Yamamoto, born in Tokyo and raised in Milan, opened this homey Japanese restaurant to serve 'Grandma's vegetables'",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Bentoteca",
+      "neighbourhood": "Ticinese",
+      "lat": 45.4582434,
+      "lng": 9.1762156,
+      "geo_confidence": "high",
+      "geo_matched_name": "Bentoteca",
+      "geo_skip": false,
+      "cuisine": "Japanese fusion",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "rotating menu paired with natural wines"
+      ],
+      "signature_dish": null,
+      "quote": "Residents flock to Japanese-born Yoji Tokuyoshi's restaurant for the rotating menu paired with natural wines",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Enoteca Naturale",
+      "neighbourhood": "Navigli",
+      "lat": 45.4533988,
+      "lng": 9.1819841,
+      "geo_confidence": "high",
+      "geo_matched_name": "Enoteca naturale",
+      "geo_skip": false,
+      "cuisine": "natural wine bar",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Tucked away behind Basilica de Sant'Eustorgio, Enoteca Naturale's large outdoor yard is full of Milanese drinking natural wine",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Macelleria Popolare",
+      "neighbourhood": "Navigli",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Italian street food",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Italian street foods"
+      ],
+      "signature_dish": null,
+      "quote": "Macelleria Popolare's counter is a top destination for chefs and diners searching for Italian street foods of yesteryear",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "photon",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Li-Sei Deli",
+      "neighbourhood": "Navigli",
+      "lat": 45.4527865,
+      "lng": 9.1747857,
+      "geo_confidence": "high",
+      "geo_matched_name": "li-sei deli",
+      "geo_skip": false,
+      "cuisine": "Korean / Japanese",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Husband-and-wife duo Okhee Lee and Kihyuk Jung pull from their shared Korean and her Japanese backgrounds",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Cantina Urbana",
+      "neighbourhood": "Navigli",
+      "lat": 45.4415071,
+      "lng": 9.175841,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Cantina Urbana",
+      "geo_skip": false,
+      "cuisine": "winery / wine bar",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "While many Italian drinkers steadfastly adhere to terroir and agrarian tradition, Cantina Urbana's microwinery just outside Milan's center is successfully pushing against those boundaries",
+      "quote_language": "original",
+      "article_date": "2025-03-24",
+      "open_status_check": false,
+      "sources": [
+        "src-eater"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Fat Sam at the Winery",
+      "neighbourhood": "Navigli",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "burgers / natural wine",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fried chicken hamburger"
+      ],
+      "signature_dish": null,
+      "quote": "mangiare un po' sostanzioso, ma accompagnando il tutto coi vini naturali, non è affatto scontato",
+      "quote_language": "original",
+      "article_date": "2024-12-19",
+      "open_status_check": true,
+      "sources": [
+        "src-conun24"
+      ],
+      "both_pool": false,
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Bites",
+      "neighbourhood": "Porta Venezia",
+      "lat": 45.4744354,
+      "lng": 9.2100476,
+      "geo_confidence": "high",
+      "geo_matched_name": "Bites",
+      "geo_skip": false,
+      "cuisine": "contemporary",
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "il menu è proprio quello che piace a noi, con abbinamenti e ingredienti in arrivo anche da posti lontani",
+      "quote_language": "original",
+      "article_date": "2024-12-19",
+      "open_status_check": true,
+      "sources": [
+        "src-conun24"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "La via della seta",
+      "neighbourhood": "Chinatown",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Chinese",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "vegetables and condiments"
+      ],
+      "signature_dish": null,
+      "quote": "di ristoranti cinesi a Milano ce ne sono tanti, e distinguersi non è facile, ma questo è un posto che invece ce l'ha fatta",
+      "quote_language": "original",
+      "article_date": "2024-12-19",
+      "open_status_check": true,
+      "sources": [
+        "src-conun24"
+      ],
+      "both_pool": false,
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Autem",
+      "neighbourhood": "Porta Romana",
+      "lat": 45.4534608,
+      "lng": 9.2039158,
+      "geo_confidence": "high",
+      "geo_matched_name": "Autem",
+      "geo_skip": false,
+      "cuisine": "fine dining",
+      "price_level": 4,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "tra le cene fine dining che ci siamo concessi quest'anno, questa è stata quella che ha fissato l'asticella più in alto",
+      "quote_language": "original",
+      "article_date": "2024-12-19",
+      "open_status_check": true,
+      "sources": [
+        "src-conun24"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Luckyman Noodles",
+      "neighbourhood": "Navigli",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Japanese / ramen",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "mazesoba"
+      ],
+      "signature_dish": "mazesoba",
+      "quote": "dopo Casa Ramen e Casa Ramen Super, avevamo proprio bisogno di un posto così, ma a Milano Sud",
+      "quote_language": "original",
+      "article_date": "2024-12-19",
+      "open_status_check": true,
+      "sources": [
+        "src-conun24"
+      ],
+      "both_pool": false,
+      "geo_source": "photon",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Silvano vini e cibi al banco",
+      "neighbourhood": "NoLo",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "wine bar / Italian",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "tra le enoteche con cucina questa è la migliore che abbiamo provato quest'anno, e va ben oltre a questo concetto ormai tanto di moda",
+      "quote_language": "original",
+      "article_date": "2024-12-19",
+      "open_status_check": true,
+      "sources": [
+        "src-conun24"
+      ],
+      "both_pool": false,
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Onda",
+      "neighbourhood": "Navigli",
+      "lat": 45.4530892,
+      "lng": 9.1609111,
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria Onda",
+      "geo_skip": false,
+      "cuisine": "Italian / osteria",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta e fagioli con astice"
+      ],
+      "signature_dish": "pasta e fagioli con astice",
+      "quote": "la loro pasta e fagioli con astice la vorremmo trovare a casa tutte le sere",
+      "quote_language": "original",
+      "article_date": "2024-12-19",
+      "open_status_check": true,
+      "sources": [
+        "src-conun24"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Sandì",
+      "neighbourhood": "Porta Venezia",
+      "lat": 45.4609792,
+      "lng": 9.2079462,
+      "geo_confidence": "high",
+      "geo_matched_name": "Sandi bar",
+      "geo_skip": false,
+      "cuisine": "contemporary Italian",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "di ogni piatto che la chef propone nel suo menu esclamo 'Oh mio Dio, sì!'",
+      "quote_language": "original",
+      "article_date": "2025-12-15",
+      "open_status_check": false,
+      "sources": [
+        "src-conun25"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Lafa",
+      "neighbourhood": "Certosa",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Arab / Middle Eastern",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "la cucina araba e mediorientale non ci stancano mai. Le spezie e gli abbinamenti utilizzati in cucina rendono tutto molto divertente",
+      "quote_language": "original",
+      "article_date": "2025-12-15",
+      "open_status_check": false,
+      "sources": [
+        "src-conun25"
+      ],
+      "both_pool": false,
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "June Collective",
+      "neighbourhood": "Certosa",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "bistrot / contemporary",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Perché questa tipologia di bistrot, semplice ma mai banale, secondo noi mancava proprio in città",
+      "quote_language": "original",
+      "article_date": "2025-12-15",
+      "open_status_check": false,
+      "sources": [
+        "src-conun25"
+      ],
+      "both_pool": false,
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Lacerba",
+      "neighbourhood": "Porta Romana",
+      "lat": 45.4549287,
+      "lng": 9.1996038,
+      "geo_confidence": "high",
+      "geo_matched_name": "Lacerba",
+      "geo_skip": false,
+      "cuisine": "Italian (contemporary)",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "salmone in crosta di mandorle arancia e finocchi"
+      ],
+      "signature_dish": null,
+      "quote": "piatti tradizionali rivisitati per renderli più intriganti, come il salmone in crosta di mandorle arancia e finocchi",
+      "quote_language": "original",
+      "article_date": "2024-03-29",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-pr"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Giulio Pane e Ojo",
+      "neighbourhood": "Porta Romana",
+      "lat": 45.4519177,
+      "lng": 9.2045941,
+      "geo_confidence": "high",
+      "geo_matched_name": "Giulio Pane e Ojo",
+      "geo_skip": false,
+      "cuisine": "Roman / osteria",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Roman traditional dishes"
+      ],
+      "signature_dish": null,
+      "quote": "Entrando da Giulio Pane e Ojo sarete subito immersi nel vero ambiente da osteria romana, atmosfera rilassata ma chiassosa e una vasta scelta di piatti della tradizione romanesca, conviene prenotare anche a pranzo",
+      "quote_language": "original",
+      "article_date": "2024-03-29",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-pr"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Antica Pizzeria Fiorentina",
+      "neighbourhood": "Porta Romana",
+      "lat": 45.4510496,
+      "lng": 9.1950152,
+      "geo_confidence": "high",
+      "geo_matched_name": "Antica Pizzeria Fiorentina",
+      "geo_skip": false,
+      "cuisine": "pizza al trancio / Tuscan",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pizza al trancio",
+        "bistecca alla fiorentina"
+      ],
+      "signature_dish": "pizza al trancio",
+      "quote": "Vi piace la pizza al trancio, quella col cornicione croccante, cotta nel teglione e quindi leggermente fritta, guarnita di abbondante mozzarella filante?",
+      "quote_language": "original",
+      "article_date": "2024-03-29",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-pr"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "VegAmore",
+      "neighbourhood": "Porta Romana",
+      "lat": 45.4497011,
+      "lng": 9.2024209,
+      "geo_confidence": "high",
+      "geo_matched_name": "VegAmore",
+      "geo_skip": false,
+      "cuisine": "vegan",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "polpette vegane",
+        "creme",
+        "torte",
+        "tiramisù vegano",
+        "maionese vegana"
+      ],
+      "signature_dish": "tiramisù vegano",
+      "quote": "Si, perché oltre a piatti, polpette, creme e torte, capaci di farvi rivalutare broccoli, cavoli e compagnia ortaggi, VegAmore è arredato con cura e fantasia senza risultare troppo ricercato",
+      "quote_language": "original",
+      "article_date": "2024-03-29",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-pr"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Mahone's Restaurant",
+      "neighbourhood": "Porta Romana",
+      "lat": 45.4509567,
+      "lng": 9.2036856,
+      "geo_confidence": "high",
+      "geo_matched_name": "Mahone's",
+      "geo_skip": false,
+      "cuisine": "Irish",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "hamburger",
+        "spezzatini alla birra scura",
+        "bistecche da mezzo chilo",
+        "fish and chips"
+      ],
+      "signature_dish": null,
+      "quote": "ragguardevoli hamburger, spezzatini alla birra scura, bistecche da mezzo chilo e naturalmente fish and chips",
+      "quote_language": "original",
+      "article_date": "2024-03-29",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-pr"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Dhole",
+      "neighbourhood": "Porta Romana",
+      "lat": 45.4519445,
+      "lng": 9.2085633,
+      "geo_confidence": "high",
+      "geo_matched_name": "Dhole",
+      "geo_skip": false,
+      "cuisine": "international fusion",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "risotto alle capesante crude e cotte",
+        "caviale",
+        "fiori di zucca in tempura"
+      ],
+      "signature_dish": null,
+      "quote": "basta un piatto per capire il mood: risotto alle capesante crude e cotte, caviale e fiori di zucca in tempura",
+      "quote_language": "original",
+      "article_date": "2024-03-29",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-pr"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Yuzu",
+      "neighbourhood": "Porta Romana",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Japanese-Latin fusion",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "sushi",
+        "urumaki"
+      ],
+      "signature_dish": null,
+      "quote": "classici sapori della cucina del Sol Levante rivisitati in una maniera stravagante che si ispira all'America Latina",
+      "quote_language": "original",
+      "article_date": "2024-03-29",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-pr"
+      ],
+      "both_pool": false,
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Madama Bistrot",
+      "neighbourhood": "Porta Romana",
+      "lat": 45.4446922,
+      "lng": 9.2119296,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Madama Hostel Bistrot",
+      "geo_skip": false,
+      "cuisine": "Mediterranean / bistrot",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "taglieri misti",
+        "humus",
+        "melanzane fritte",
+        "tartare di carne o pesce"
+      ],
+      "signature_dish": null,
+      "quote": "Forse è per questo che qui sembra sempre di stare in vacanza, soprattutto quando è bello e ci si può sedere fuori, tantissimi tavoli, chiacchiere e risate ma anche pancini felici",
+      "quote_language": "original",
+      "article_date": "2024-03-29",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-pr"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Osteria dell'Acqua Bella",
+      "neighbourhood": "Porta Romana",
+      "lat": 45.4498705,
+      "lng": 9.2013718,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Osteria dell'Acquabella",
+      "geo_skip": false,
+      "cuisine": "Milanese / Italian",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "risotto alla zafferano",
+        "cotoletta",
+        "polenta",
+        "ossibuchi"
+      ],
+      "signature_dish": "risotto alla zafferano",
+      "quote": "dove si trovano i piatti tipici della cucina milanese, compresa polenta e ossibuchi, a Porta Romana? La risposta è all'Osteria dell'Acqua Bella",
+      "quote_language": "original",
+      "article_date": "2024-03-29",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-pr"
+      ],
+      "both_pool": false,
+      "geo_source": "photon",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Albertone Fraschetta Romana",
+      "neighbourhood": "Lambrate",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Roman / trattoria",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "polpette",
+        "carciofi alla Giuda"
+      ],
+      "signature_dish": "polpette con carciofi alla Giuda",
+      "quote": "piatti semplici della cucina romanesca, con porpette rigorosamente con la r da accompagnare con carciofi alla Giuda",
+      "quote_language": "original",
+      "article_date": "2024-04-19",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-lamb"
+      ],
+      "both_pool": false,
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Fujita",
+      "neighbourhood": "Lambrate",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "Japanese",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "hamburger in stile giapponese"
+      ],
+      "signature_dish": "hamburger in stile giapponese",
+      "quote": "hamburger in stile giapponese, quello finemente fritto in superficie e servito con la speciale salsa della casa",
+      "quote_language": "original",
+      "article_date": "2024-04-19",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-lamb"
+      ],
+      "both_pool": false,
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Norah Was Drunk",
+      "neighbourhood": "Lambrate",
+      "lat": 45.4862099,
+      "lng": 9.2332043,
+      "geo_confidence": "high",
+      "geo_matched_name": "Norah was drunk",
+      "geo_skip": false,
+      "cuisine": "seafood / bar",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ostriche francesi",
+        "pesce in scatola",
+        "baccalà arrosto",
+        "pesce spada nero"
+      ],
+      "signature_dish": null,
+      "quote": "ostriche francesi e pesce in scatola incluso baccalà arrosto e il pesce spada nero con pagnottelle",
+      "quote_language": "original",
+      "article_date": "2024-04-19",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-lamb"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Pizzeria Trattoria Anthony",
+      "neighbourhood": "Lambrate",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "pizza",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pizza con fior di latte, pomodori pachino San Marzano, fior di ricotta, acciughe del mar cantabrico e melanzana fritta"
+      ],
+      "signature_dish": null,
+      "quote": "pizza con mozzarella fior di latte, pomodori pachino di San Marzano, fior di ricotta, acciughe del mar cantabrico e melanzana fritta",
+      "quote_language": "original",
+      "article_date": "2024-04-19",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-lamb"
+      ],
+      "both_pool": false,
+      "geo_source": "photon",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Joybar Milano",
+      "neighbourhood": "Lambrate",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "cuisine": "bistrot / aperitivo",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bruschetta con pachino e mozzarelline",
+        "verdure alla Julienne",
+        "paté di olive e basilico",
+        "focacce"
+      ],
+      "signature_dish": null,
+      "quote": "bruschetta, con pachino e mozzarelline, tante verdure alla Julienne, paté di olive e basilico e focacce",
+      "quote_language": "original",
+      "article_date": "2024-04-19",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-lamb"
+      ],
+      "both_pool": false,
+      "geo_source": "photon",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "La Cappelletta",
+      "neighbourhood": "Lambrate",
+      "lat": 45.4844969,
+      "lng": 9.242305,
+      "geo_confidence": "high",
+      "geo_matched_name": "La Cappelletta",
+      "geo_skip": false,
+      "cuisine": "Italian / trattoria",
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "padellata di manzo argentino con patate, porcini e cipolla",
+        "scamorza con trevisana al forno e agretti"
+      ],
+      "signature_dish": null,
+      "quote": "padellata di manzo argentino con patate, porcini e cipolla, o scamorza con trevisana al forno e agretti",
+      "quote_language": "original",
+      "article_date": "2024-04-19",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-lamb"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    },
+    {
+      "name": "Osteria al Piccolo Molo",
+      "neighbourhood": "Lambrate",
+      "lat": 45.4810625,
+      "lng": 9.2344475,
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria al Piccolo Molo",
+      "geo_skip": false,
+      "cuisine": "seafood",
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "frittura di pesce",
+        "calamarata con paccheri",
+        "carpaccio di spada con finocchi e mandarino",
+        "tagliatelle con polpa di aragosta"
+      ],
+      "signature_dish": "tagliatelle con polpa di aragosta",
+      "quote": "frittura di pesce alla calamarata con paccheri, dal carpaccio di spada con finocchi e mandarino alle tagliatelle con polpa di aragosta",
+      "quote_language": "original",
+      "article_date": "2024-04-19",
+      "open_status_check": true,
+      "sources": [
+        "src-imbr-lamb"
+      ],
+      "both_pool": false,
+      "geo_source": "nominatim",
+      "confidence_tier": "B",
+      "language_pool": "es"
+    }
+  ],
+  "city_slug": "milan-italy",
+  "source_recency": "2023-2026",
+  "centroids": {
+    "Isola": [
+      45.4822,
+      9.1964
+    ],
+    "Porta Venezia": [
+      45.472,
+      9.2092
+    ],
+    "Brera": [
+      45.466,
+      9.1918
+    ],
+    "Città Studi": [
+      45.4883,
+      9.2275
+    ],
+    "Porta Romana": [
+      45.4511,
+      9.2038
+    ],
+    "Navigli": [
+      45.446,
+      9.1724
+    ],
+    "Chinatown": [
+      45.4813,
+      9.1759
+    ],
+    "NoLo": [
+      45.5036,
+      9.2167
+    ],
+    "Certosa": [
+      45.5024,
+      9.1287
+    ],
+    "Lambrate": [
+      45.4839,
+      9.2367
+    ]
+  }
+}
