@@ -90,7 +90,8 @@
       "geo_skip": false,
       "lng": 12.476199,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Piatto Romano",
@@ -123,7 +124,8 @@
       "geo_skip": false,
       "lng": 12.4760207,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Tavernaccia Da Bruno",
@@ -153,7 +155,8 @@
       "geo_skip": false,
       "lng": 12.4686308,
       "geo_source": "photon",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Giano",
@@ -181,7 +184,8 @@
       "geo_skip": true,
       "lng": null,
       "geo_source": null,
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Trattoria Trecca",
@@ -208,7 +212,8 @@
       "geo_skip": false,
       "lng": 12.5063628,
       "geo_source": "photon",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "L'Elementare",
@@ -236,7 +241,8 @@
       "geo_skip": false,
       "lng": 12.5667348,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Romanè",
@@ -263,7 +269,8 @@
       "geo_skip": false,
       "lng": 12.4451473,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Grappolo d'Oro",
@@ -289,7 +296,8 @@
       "geo_skip": false,
       "lng": 12.5015929,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Capo Boi",
@@ -315,7 +323,8 @@
       "geo_skip": false,
       "lng": 12.5007912,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 3
     },
     {
       "name": "Dal Toscano",
@@ -342,7 +351,8 @@
       "geo_skip": false,
       "lng": 12.491934,
       "geo_source": "photon",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Antico Forno Roscioli",
@@ -371,7 +381,8 @@
       "geo_skip": false,
       "lng": 12.4745854,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Da Dante",
@@ -398,7 +409,8 @@
       "geo_skip": true,
       "lng": null,
       "geo_source": null,
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Trattoria Da Enzo Al 29",
@@ -426,7 +438,8 @@
       "geo_skip": false,
       "lng": 12.477807,
       "geo_source": "photon",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Trattoria Ai Due Ponti",
@@ -454,7 +467,8 @@
       "geo_skip": false,
       "lng": 12.4851051,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Ristorante Rocco",
@@ -480,7 +494,8 @@
       "geo_skip": true,
       "lng": null,
       "geo_source": null,
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Trattoria Penestri",
@@ -509,7 +524,8 @@
       "geo_skip": false,
       "lng": 12.4798767,
       "geo_source": "photon",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Pecorino",
@@ -536,7 +552,8 @@
       "geo_skip": false,
       "lng": 12.4740135,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "La Matriciana Dal 1870",
@@ -561,7 +578,8 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Siciliainbocca",
@@ -588,7 +606,8 @@
       "geo_skip": false,
       "lng": 12.4675588,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Dar Filettaro",
@@ -614,7 +633,8 @@
       "geo_skip": false,
       "lng": 12.473696,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Trattoria della Barchetta",
@@ -641,7 +661,8 @@
       "geo_skip": false,
       "lng": 12.4688074,
       "geo_source": "photon",
-      "language_pool": "it"
+      "language_pool": "it",
+      "price_level": 2
     },
     {
       "name": "Bistrot La Differenza",
@@ -668,7 +689,8 @@
       "geo_skip": false,
       "lng": 12.5084176,
       "geo_source": "photon",
-      "language_pool": "it"
+      "language_pool": "it",
+      "price_level": 1
     },
     {
       "name": "Crazy Pizza",
@@ -694,7 +716,8 @@
       "geo_skip": false,
       "lng": 12.4892939,
       "geo_source": "nominatim",
-      "language_pool": "it"
+      "language_pool": "it",
+      "price_level": 1
     },
     {
       "name": "Antico Caffè Greco",
@@ -720,7 +743,8 @@
       "geo_skip": true,
       "lng": null,
       "geo_source": null,
-      "language_pool": "it"
+      "language_pool": "it",
+      "price_level": 1
     },
     {
       "name": "Santo Palato",
@@ -746,7 +770,8 @@
       "geo_skip": false,
       "lng": 12.5098365,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Mazzo",
@@ -771,7 +796,8 @@
       "geo_skip": true,
       "lng": null,
       "geo_source": null,
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Menabò",
@@ -796,7 +822,8 @@
       "geo_skip": false,
       "lng": 12.5640419,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Agustarello",
@@ -822,7 +849,8 @@
       "geo_skip": false,
       "lng": 12.4736006,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Osteria Bonelli",
@@ -847,7 +875,8 @@
       "geo_skip": false,
       "lng": 12.5472856,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Al Moro",
@@ -872,7 +901,8 @@
       "geo_skip": false,
       "lng": 12.4825609,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Roscioli",
@@ -897,7 +927,8 @@
       "geo_skip": false,
       "lng": 12.5028572,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 3
     },
     {
       "name": "Baccano",
@@ -923,7 +954,8 @@
       "geo_skip": false,
       "lng": 12.4823634,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Tempio di Iside",
@@ -950,7 +982,8 @@
       "geo_skip": false,
       "lng": 12.5011566,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 3
     },
     {
       "name": "Trattoria Monti",
@@ -975,7 +1008,8 @@
       "geo_skip": false,
       "lng": 12.502029,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Tram Tram",
@@ -1000,7 +1034,8 @@
       "geo_skip": false,
       "lng": 12.518951,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Colline Emiliane",
@@ -1026,7 +1061,8 @@
       "geo_skip": false,
       "lng": 12.4873924,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "La Torricella",
@@ -1052,7 +1088,8 @@
       "geo_skip": false,
       "lng": 12.4879052,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Himalaya Palace",
@@ -1077,7 +1114,8 @@
       "geo_skip": false,
       "lng": 12.4421076,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Enqutatash",
@@ -1102,7 +1140,8 @@
       "geo_skip": false,
       "lng": 12.5462514,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Sinosteria",
@@ -1127,7 +1166,8 @@
       "geo_skip": false,
       "lng": 12.4718709,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Carnal",
@@ -1153,7 +1193,8 @@
       "geo_skip": false,
       "lng": 12.4481142,
       "geo_source": "photon",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "El Jalapeño",
@@ -1176,7 +1217,8 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Tianci Chongqing Farm Hotpot",
@@ -1199,7 +1241,8 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "JiaMo Lab",
@@ -1224,7 +1267,8 @@
       "geo_skip": false,
       "lng": 12.499471,
       "geo_source": "photon",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "I Quintili",
@@ -1250,7 +1294,8 @@
       "geo_skip": false,
       "lng": 12.6439413,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Seu Pizza Illuminati",
@@ -1275,7 +1320,8 @@
       "geo_skip": false,
       "lng": 12.4683992,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Mordi e Vai",
@@ -1301,7 +1347,8 @@
       "geo_skip": false,
       "lng": 12.4733496,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Supplì",
@@ -1326,7 +1373,8 @@
       "geo_skip": false,
       "lng": 12.5049493,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Legs",
@@ -1349,7 +1397,8 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "I-Gio",
@@ -1374,7 +1423,8 @@
       "geo_skip": false,
       "lng": 12.5016517,
       "geo_source": "photon",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Cuoco e Camicia",
@@ -1399,7 +1449,8 @@
       "geo_skip": false,
       "lng": 12.4937406,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Pizza della Madonna dei Monti",
@@ -1425,7 +1476,8 @@
       "geo_skip": false,
       "lng": 12.490882,
       "geo_source": "photon",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "La Taverna dei Monti",
@@ -1452,7 +1504,8 @@
       "geo_skip": false,
       "lng": 12.4883814,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Temakinho",
@@ -1478,7 +1531,8 @@
       "geo_skip": false,
       "lng": 12.4903169,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Maharaja",
@@ -1503,7 +1557,8 @@
       "geo_skip": false,
       "lng": 12.4903266,
       "geo_source": "photon",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Polpetta",
@@ -1526,7 +1581,8 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Fuorinorma",
@@ -1552,7 +1608,8 @@
       "geo_skip": false,
       "lng": 12.4908025,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 1
     },
     {
       "name": "Camillo a Piazza Navona dal 1890",
@@ -1578,7 +1635,8 @@
       "geo_skip": true,
       "lng": null,
       "geo_source": null,
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Mimi e Coco",
@@ -1603,7 +1661,8 @@
       "geo_skip": false,
       "lng": 12.4712757,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Taverna Agape",
@@ -1631,7 +1690,8 @@
       "geo_skip": false,
       "lng": 12.470805,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Felice a Testaccio",
@@ -1657,7 +1717,8 @@
       "geo_skip": false,
       "lng": 12.4774658,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Spirito Divino",
@@ -1683,7 +1744,8 @@
       "geo_skip": false,
       "lng": 12.4767765,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     },
     {
       "name": "Antica Pesa",
@@ -1708,7 +1770,8 @@
       "geo_skip": false,
       "lng": 12.466481,
       "geo_source": "nominatim",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 3
     },
     {
       "name": "Romeow Cat Bistro",
@@ -1733,7 +1796,8 @@
       "geo_skip": false,
       "lng": 12.4816961,
       "geo_source": "photon",
-      "language_pool": "en"
+      "language_pool": "en",
+      "price_level": 2
     }
   ],
   "source_recency": "2023-2026",
