@@ -91,7 +91,8 @@
       "lng": 12.476199,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "amatriciana"
     },
     {
       "name": "Piatto Romano",
@@ -125,7 +126,8 @@
       "lng": 12.4760207,
       "geo_source": "nominatim",
       "language_pool": "both",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "misticanza selvatica e portulaca in salsa di alici e sommacco"
     },
     {
       "name": "Tavernaccia Da Bruno",
@@ -156,7 +158,8 @@
       "lng": 12.4686308,
       "geo_source": "photon",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "eggplant parmigiana"
     },
     {
       "name": "Giano",
@@ -185,7 +188,8 @@
       "lng": null,
       "geo_source": null,
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "whipped ricotta with olive oil"
     },
     {
       "name": "Trattoria Trecca",
@@ -213,7 +217,8 @@
       "lng": 12.5063628,
       "geo_source": "photon",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "regaje di pollo e patate"
     },
     {
       "name": "L'Elementare",
@@ -242,7 +247,8 @@
       "lng": null,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "marinara doppia"
     },
     {
       "name": "Romanè",
@@ -270,7 +276,8 @@
       "lng": 12.4451473,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "carbonara with crispy guanciale"
     },
     {
       "name": "Grappolo d'Oro",
@@ -297,7 +304,8 @@
       "lng": null,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "locally sourced Roman classics"
     },
     {
       "name": "Capo Boi",
@@ -324,7 +332,8 @@
       "lng": 12.5007912,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 3
+      "price_level": 3,
+      "signature_dish": "pane carasau with bottarga"
     },
     {
       "name": "Dal Toscano",
@@ -352,7 +361,8 @@
       "lng": null,
       "geo_source": "photon",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "fettuccine with white ragù"
     },
     {
       "name": "Antico Forno Roscioli",
@@ -382,7 +392,8 @@
       "lng": 12.4745854,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "pizza rossa"
     },
     {
       "name": "Da Dante",
@@ -410,7 +421,8 @@
       "lng": null,
       "geo_source": null,
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "seafood spaghetti"
     },
     {
       "name": "Trattoria Da Enzo Al 29",
@@ -439,7 +451,8 @@
       "lng": 12.477807,
       "geo_source": "photon",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "crispy artichokes"
     },
     {
       "name": "Trattoria Ai Due Ponti",
@@ -468,7 +481,8 @@
       "lng": 12.4851051,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "assorted salami"
     },
     {
       "name": "Ristorante Rocco",
@@ -495,7 +509,8 @@
       "lng": null,
       "geo_source": null,
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "cacio e pepe"
     },
     {
       "name": "Trattoria Penestri",
@@ -525,7 +540,8 @@
       "lng": 12.4798767,
       "geo_source": "photon",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "carbonara"
     },
     {
       "name": "Pecorino",
@@ -553,7 +569,8 @@
       "lng": 12.4740135,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "carbonara"
     },
     {
       "name": "La Matriciana Dal 1870",
@@ -579,7 +596,8 @@
       "geo_matched_name": null,
       "geo_skip": true,
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "amatriciana"
     },
     {
       "name": "Siciliainbocca",
@@ -607,7 +625,8 @@
       "lng": null,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "eggplant caponata"
     },
     {
       "name": "Dar Filettaro",
@@ -634,7 +653,8 @@
       "lng": 12.473696,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "baccalà (fried salted cod)"
     },
     {
       "name": "Trattoria della Barchetta",
@@ -662,7 +682,8 @@
       "lng": 12.4688074,
       "geo_source": "photon",
       "language_pool": "it",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "pizzelle con scarola"
     },
     {
       "name": "Bistrot La Differenza",
@@ -690,7 +711,8 @@
       "lng": 12.5084176,
       "geo_source": "photon",
       "language_pool": "it",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "panino con speck e gorgonzola naturale"
     },
     {
       "name": "Crazy Pizza",
@@ -717,7 +739,8 @@
       "lng": 12.4892939,
       "geo_source": "nominatim",
       "language_pool": "it",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "pizza in teglia"
     },
     {
       "name": "Antico Caffè Greco",
@@ -744,7 +767,8 @@
       "lng": null,
       "geo_source": null,
       "language_pool": "it",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "tramezzini"
     },
     {
       "name": "Santo Palato",
@@ -771,7 +795,8 @@
       "lng": 12.5098365,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "carbonara"
     },
     {
       "name": "Mazzo",
@@ -797,7 +822,8 @@
       "lng": null,
       "geo_source": null,
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "Roman classics"
     },
     {
       "name": "Menabò",
@@ -823,7 +849,8 @@
       "lng": 12.5640419,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "neo-bistro fare"
     },
     {
       "name": "Agustarello",
@@ -850,7 +877,8 @@
       "lng": 12.4736006,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "offal"
     },
     {
       "name": "Osteria Bonelli",
@@ -876,7 +904,8 @@
       "lng": 12.5472856,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "Roman comfort food"
     },
     {
       "name": "Al Moro",
@@ -902,7 +931,8 @@
       "lng": 12.4825609,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "Roman classics"
     },
     {
       "name": "Roscioli",
@@ -928,7 +958,8 @@
       "lng": null,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 3
+      "price_level": 3,
+      "signature_dish": "carbonara"
     },
     {
       "name": "Baccano",
@@ -955,7 +986,8 @@
       "lng": 12.4823634,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "carbonara"
     },
     {
       "name": "Tempio di Iside",
@@ -983,7 +1015,8 @@
       "lng": 12.5011566,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 3
+      "price_level": 3,
+      "signature_dish": "raw fish"
     },
     {
       "name": "Trattoria Monti",
@@ -1009,7 +1042,8 @@
       "lng": 12.502029,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "Le Marche specialties"
     },
     {
       "name": "Tram Tram",
@@ -1035,7 +1069,8 @@
       "lng": 12.518951,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "Puglia fish and vegetable classics"
     },
     {
       "name": "Colline Emiliane",
@@ -1062,7 +1097,8 @@
       "lng": 12.4873924,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "tortellini in brodo"
     },
     {
       "name": "La Torricella",
@@ -1089,7 +1125,8 @@
       "lng": 12.4879052,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "Abruzzese specialties"
     },
     {
       "name": "Himalaya Palace",
@@ -1115,7 +1152,8 @@
       "lng": 12.4421076,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "Himalayan and Nepalese cuisine"
     },
     {
       "name": "Enqutatash",
@@ -1141,7 +1179,8 @@
       "lng": 12.5462514,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "Ethiopian and Eritrean cuisine"
     },
     {
       "name": "Sinosteria",
@@ -1167,7 +1206,8 @@
       "lng": 12.4718709,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "Chinese regional cuisine"
     },
     {
       "name": "Carnal",
@@ -1194,7 +1234,8 @@
       "lng": 12.4481142,
       "geo_source": "photon",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "tacos"
     },
     {
       "name": "El Jalapeño",
@@ -1218,7 +1259,8 @@
       "geo_matched_name": null,
       "geo_skip": true,
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "tacos"
     },
     {
       "name": "Tianci Chongqing Farm Hotpot",
@@ -1242,7 +1284,8 @@
       "geo_matched_name": null,
       "geo_skip": true,
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "Chongqing-style hot pot"
     },
     {
       "name": "JiaMo Lab",
@@ -1268,7 +1311,8 @@
       "lng": 12.499471,
       "geo_source": "photon",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "northwestern Chinese sandwiches"
     },
     {
       "name": "I Quintili",
@@ -1295,7 +1339,8 @@
       "lng": 12.6439413,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "Neapolitan pizza"
     },
     {
       "name": "Seu Pizza Illuminati",
@@ -1321,7 +1366,8 @@
       "lng": 12.4683992,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "avant-garde pizza"
     },
     {
       "name": "Mordi e Vai",
@@ -1348,7 +1394,8 @@
       "lng": 12.4733496,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "brisket and chicory sandwich"
     },
     {
       "name": "Supplì",
@@ -1374,7 +1421,8 @@
       "lng": null,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "supplì"
     },
     {
       "name": "Legs",
@@ -1398,7 +1446,8 @@
       "geo_matched_name": null,
       "geo_skip": true,
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "fried chicken sandwiches"
     },
     {
       "name": "I-Gio",
@@ -1424,7 +1473,8 @@
       "lng": null,
       "geo_source": "photon",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "Korean cuisine"
     },
     {
       "name": "Cuoco e Camicia",
@@ -1450,7 +1500,8 @@
       "lng": 12.4937406,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "traditional and experimental Roman plates"
     },
     {
       "name": "Pizza della Madonna dei Monti",
@@ -1477,7 +1528,8 @@
       "lng": 12.490882,
       "geo_source": "photon",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "pizza by weight"
     },
     {
       "name": "La Taverna dei Monti",
@@ -1505,7 +1557,8 @@
       "lng": 12.4883814,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "carbonara"
     },
     {
       "name": "Temakinho",
@@ -1532,7 +1585,8 @@
       "lng": 12.4903169,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "Brazilian-Japanese fusion"
     },
     {
       "name": "Maharaja",
@@ -1558,7 +1612,8 @@
       "lng": 12.4903266,
       "geo_source": "photon",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "Indian cuisine"
     },
     {
       "name": "Polpetta",
@@ -1582,7 +1637,8 @@
       "geo_matched_name": null,
       "geo_skip": true,
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "polpette (various meat and vegetable balls)"
     },
     {
       "name": "Fuorinorma",
@@ -1609,7 +1665,8 @@
       "lng": 12.4908025,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 1
+      "price_level": 1,
+      "signature_dish": "porchetta sandwich"
     },
     {
       "name": "Camillo a Piazza Navona dal 1890",
@@ -1636,7 +1693,8 @@
       "lng": null,
       "geo_source": null,
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "carbonara"
     },
     {
       "name": "Mimi e Coco",
@@ -1662,7 +1720,8 @@
       "lng": 12.4712757,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "carbonara"
     },
     {
       "name": "Taverna Agape",
@@ -1691,7 +1750,8 @@
       "lng": 12.470805,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "cacio e pepe"
     },
     {
       "name": "Felice a Testaccio",
@@ -1718,7 +1778,8 @@
       "lng": 12.4774658,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "cacio e pepe"
     },
     {
       "name": "Spirito Divino",
@@ -1745,7 +1806,8 @@
       "lng": 12.4767765,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "Roman classics"
     },
     {
       "name": "Antica Pesa",
@@ -1771,7 +1833,8 @@
       "lng": 12.466481,
       "geo_source": "nominatim",
       "language_pool": "en",
-      "price_level": 3
+      "price_level": 3,
+      "signature_dish": "Roman classics"
     },
     {
       "name": "Romeow Cat Bistro",
@@ -1797,7 +1860,8 @@
       "lng": 12.4816961,
       "geo_source": "photon",
       "language_pool": "en",
-      "price_level": 2
+      "price_level": 2,
+      "signature_dish": "plant-based Roman dishes"
     }
   ],
   "source_recency": "2023-2026",
