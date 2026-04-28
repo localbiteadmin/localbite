@@ -1,7 +1,7 @@
 {
   "project": "LocalBite",
   "description": "Curated restaurant packs built from named food writers, 2025-2026 sources only",
-  "last_updated": "2026-04-27",
+  "last_updated": "2026-04-28",
   "cities": [
     {
       "city": "Barcelona",
@@ -371,7 +371,7 @@
       "country": "Italy",
       "city_slug": "rome-italy",
       "pipeline": "localbite-v7.1",
-      "built": "2026-04-27",
+      "built": "2026-04-28",
       "restaurant_count": 64,
       "both_pool_count": 0,
       "source_count": 4,

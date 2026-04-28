@@ -124,7 +124,7 @@
       "geo_skip": false,
       "lng": 12.4760207,
       "geo_source": "nominatim",
-      "language_pool": "en",
+      "language_pool": "both",
       "price_level": 2
     },
     {
@@ -234,12 +234,12 @@
       "confidence_tier": "A",
       "both_pool": false,
       "open_status": "open",
-      "lat": 41.8561511,
+      "lat": null,
       "lon": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "L'elementare",
-      "geo_skip": false,
-      "lng": 12.5667348,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
       "geo_source": "nominatim",
       "language_pool": "en",
       "price_level": 1
@@ -289,12 +289,12 @@
       "confidence_tier": "A",
       "both_pool": false,
       "open_status": "open",
-      "lat": 41.9072293,
+      "lat": null,
       "lon": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Al grappolo d'oro",
-      "geo_skip": false,
-      "lng": 12.5015929,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
       "geo_source": "nominatim",
       "language_pool": "en",
       "price_level": 2
@@ -344,12 +344,12 @@
       "confidence_tier": "B",
       "both_pool": false,
       "open_status": "open",
-      "lat": 41.9053401,
+      "lat": null,
       "lon": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Toscano",
-      "geo_skip": false,
-      "lng": 12.491934,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
       "geo_source": "photon",
       "language_pool": "en",
       "price_level": 2
@@ -599,12 +599,12 @@
       "confidence_tier": "B",
       "both_pool": false,
       "open_status": "open",
-      "lat": 41.9326793,
+      "lat": null,
       "lon": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Siciliainbocca",
-      "geo_skip": false,
-      "lng": 12.4675588,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
       "geo_source": "nominatim",
       "language_pool": "en",
       "price_level": 1
@@ -920,12 +920,12 @@
       "confidence_tier": "B",
       "both_pool": false,
       "open_status": "open",
-      "lat": 41.8941094,
+      "lat": null,
       "lon": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Roscioli",
-      "geo_skip": false,
-      "lng": 12.5028572,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
       "geo_source": "nominatim",
       "language_pool": "en",
       "price_level": 3
@@ -1366,12 +1366,12 @@
       "confidence_tier": "B",
       "both_pool": false,
       "open_status": "open",
-      "lat": 41.914095,
+      "lat": null,
       "lon": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "La casa del supplì",
-      "geo_skip": false,
-      "lng": 12.5049493,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
       "geo_source": "nominatim",
       "language_pool": "en",
       "price_level": 1
@@ -1416,12 +1416,12 @@
       "confidence_tier": "B",
       "both_pool": false,
       "open_status": "open",
-      "lat": 41.8968667,
+      "lat": null,
       "lon": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Gio vision",
-      "geo_skip": false,
-      "lng": 12.5016517,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
       "geo_source": "photon",
       "language_pool": "en",
       "price_level": 1
@@ -1811,16 +1811,36 @@
       12.4002
     ],
     "Centro Storico": [
-      41.8959,
-      12.4839
+      41.8998,
+      12.4766
     ],
     "Centocelle": [
-      41.8993,
-      12.5453
+      41.889,
+      12.564
     ],
     "Monti": [
       41.8949,
       12.4907
+    ],
+    "Ludovisi": [
+      41.9075,
+      12.4894
+    ],
+    "Trastevere": [
+      41.8841,
+      12.4716
+    ],
+    "Campo de Fiori": [
+      41.8947,
+      12.4741
+    ],
+    "Prati": [
+      41.899,
+      12.454
+    ],
+    "Tridente": [
+      41.9058,
+      12.4883
     ]
   }
 }
