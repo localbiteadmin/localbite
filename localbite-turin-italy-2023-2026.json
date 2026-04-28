@@ -14,8 +14,8 @@
     "final_count": 23
   },
   "source_recency": "2023-2026",
-  "sources": {
-    "src-airmail-thorisson": {
+  "sources": [
+    {
       "source_id": "src-airmail-thorisson",
       "writer": "Mimi Thorisson",
       "publication": "Airmail News",
@@ -29,7 +29,7 @@
       "writer_profile": "Food writer and cookbook author Mimi Thorisson has written extensively about French and Basque cuisine and co-hosts the food travel series Manger. She contributes food and lifestyle pieces to Airmail News, where her October 2024 piece on Turin covers the city's historic cafés and traditional trattorias.",
       "id": "src-airmail-thorisson"
     },
-    "src-gamberorosso-marino": {
+    {
       "source_id": "src-gamberorosso-marino",
       "writer": "Valentina Marino",
       "publication": "Gambero Rosso",
@@ -43,7 +43,7 @@
       "writer_profile": "Valentina Marino is a food and wine journalist at Gambero Rosso, Italy's leading gastronomic publication. Her October 2024 guide to Turin's best piole — the city's traditional wine-bar-kitchens — identifies the essential addresses across the Quadrilatero Romano and San Salvario neighbourhoods.",
       "id": "src-gamberorosso-marino"
     },
-    "src-cibotoday-bragaglia": {
+    {
       "source_id": "src-cibotoday-bragaglia",
       "writer": "Dario Bragaglia",
       "publication": "CiboToday",
@@ -57,7 +57,7 @@
       "writer_profile": "Dario Bragaglia writes about food and the city for CiboToday, the food section of the Citynews network's Turin edition. His May 2024 map of Turin's piole and osterie offers street-level coverage of the city's traditional eating culture, neighbourhood by neighbourhood.",
       "id": "src-cibotoday-bragaglia"
     },
-    "src-finedininglovers-bruno": {
+    {
       "source_id": "src-finedininglovers-bruno",
       "writer": "Mariarosaria Bruno",
       "publication": "Fine Dining Lovers",
@@ -71,7 +71,7 @@
       "writer_profile": "Mariarosaria Bruno is a food writer for Fine Dining Lovers, the editorial magazine of S.Pellegrino. Her June 2025 guide to Turin's trattorias covers classic Piedmontese restaurants from the historic Quadrilatero Romano to the residential neighbourhoods south of the city centre.",
       "id": "src-finedininglovers-bruno"
     }
-  },
+  ],
   "restaurants": [
     {
       "name": "Barbagusto",
