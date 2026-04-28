@@ -635,7 +635,10 @@ EXTRACTION RULES
     neighbourhood (canonical from GEOGRAPHIC_BOUNDARY_INCLUDE)
     cuisine type
     opening_year (if mentioned)
-    price_level
+    price_level (use PRICE_LEVELS scale from Part 1; if price is not
+      explicitly stated in the article, infer from cuisine type,
+      neighbourhood tier, and dishes mentioned — do not leave null
+      unless there is genuinely no basis for estimation)
     dishes_mentioned (array of ALL dishes named in article text —
       use empty array [] if none mentioned)
     signature_dish (only if writer explicitly singles one out —
