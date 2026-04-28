@@ -1,0 +1,879 @@
+{
+  "city": "Turin",
+  "country": "Italy",
+  "city_slug": "turin-italy",
+  "pipeline": "localbite-v7.1",
+  "year_range": "2023-2026",
+  "date": "2026-04-28",
+  "stats": {
+    "sources_confirmed": 4,
+    "both_pool_count": 0,
+    "tier_a": 6,
+    "tier_b": 17,
+    "tier_c_removed": 5,
+    "final_count": 23
+  },
+  "source_recency": "2023-2026",
+  "sources": {
+    "src-airmail-thorisson": {
+      "source_id": "src-airmail-thorisson",
+      "writer": "Mimi Thorisson",
+      "publication": "Airmail News",
+      "language": "EN",
+      "article_url": "https://airmail.news/arts-intel/highlights/mimi-thorissons-guide-to-turin",
+      "article_title": "Mimi Thorisson's Guide to Turin",
+      "article_date": "2024-10-22",
+      "source_type": "primary",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer and cookbook author Mimi Thorisson has written extensively about French and Basque cuisine and co-hosts the food travel series Manger. She contributes food and lifestyle pieces to Airmail News, where her October 2024 piece on Turin covers the city's historic cafés and traditional trattorias.",
+      "id": "src-airmail-thorisson"
+    },
+    "src-gamberorosso-marino": {
+      "source_id": "src-gamberorosso-marino",
+      "writer": "Valentina Marino",
+      "publication": "Gambero Rosso",
+      "language": "IT",
+      "article_url": "https://www.gamberorosso.it/rubriche/miniguide/migliori-piole-di-torino/",
+      "article_title": "Le migliori piole di Torino",
+      "article_date": "2024-10-20",
+      "source_type": "primary",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Valentina Marino is a food and wine journalist at Gambero Rosso, Italy's leading gastronomic publication. Her October 2024 guide to Turin's best piole — the city's traditional wine-bar-kitchens — identifies the essential addresses across the Quadrilatero Romano and San Salvario neighbourhoods.",
+      "id": "src-gamberorosso-marino"
+    },
+    "src-cibotoday-bragaglia": {
+      "source_id": "src-cibotoday-bragaglia",
+      "writer": "Dario Bragaglia",
+      "publication": "CiboToday",
+      "language": "IT",
+      "article_url": "https://www.cibotoday.it/mappe/dove-mangiare-nelle-piole-osterie-torino.html",
+      "article_title": "La mappa delle migliori osterie e piole di Torino",
+      "article_date": "2024-05-05",
+      "source_type": "primary",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Dario Bragaglia writes about food and the city for CiboToday, the food section of the Citynews network's Turin edition. His May 2024 map of Turin's piole and osterie offers street-level coverage of the city's traditional eating culture, neighbourhood by neighbourhood.",
+      "id": "src-cibotoday-bragaglia"
+    },
+    "src-finedininglovers-bruno": {
+      "source_id": "src-finedininglovers-bruno",
+      "writer": "Mariarosaria Bruno",
+      "publication": "Fine Dining Lovers",
+      "language": "IT",
+      "article_url": "https://www.finedininglovers.it/esplora/articoli/guida-trattorie-torino",
+      "article_title": "Guida alle trattorie di Torino",
+      "article_date": "2025-06-13",
+      "source_type": "primary",
+      "commercial_conflict": true,
+      "commercial_conflict_note": "Fine Dining Lovers is the content marketing magazine of S.Pellegrino / Acqua Panna (Nestlé Waters). Coverage may reflect commercial relationships with featured restaurants.",
+      "writer_profile": "Mariarosaria Bruno is a food writer for Fine Dining Lovers, the editorial magazine of S.Pellegrino. Her June 2025 guide to Turin's trattorias covers classic Piedmontese restaurants from the historic Quadrilatero Romano to the residential neighbourhoods south of the city centre.",
+      "id": "src-finedininglovers-bruno"
+    }
+  },
+  "restaurants": [
+    {
+      "name": "Barbagusto",
+      "name_variants": [],
+      "neighbourhood": "San Salvario",
+      "cuisine": "Piola / osteria piemontese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "insalata russa",
+        "tomini",
+        "acciughe al verde",
+        "salsiccia di Bra",
+        "tortino di alici",
+        "ravioli del plin",
+        "bagna cauda"
+      ],
+      "signature_dish": null,
+      "quote": "Localino con pochi tavoli in un isolato tranquillo, appena fuori dal caos della movida cittadina, valido anche solo per un bicchiere di vino e uno spuntino, da stuzzicare appollaiati su uno sgabello in un clima di familiarità, cortesia e informalità. Gli antipastini infatti sono anche disponibili in versione tapas e quasi tutti i piatti possono essere ordinati anche nella mezza porzione. A farla da padrona la tradizione piemontese (insalata russa, tomini e acciughe al verde, salsiccia di Bra e via dicendo).",
+      "quote_language": "original",
+      "article_date": "2024-10-20",
+      "article_title": "Le migliori piole di Torino",
+      "open_status_check": false,
+      "sources": [
+        "src-gamberorosso-marino",
+        "src-finedininglovers-bruno"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0553331,
+      "lng": 7.6788048,
+      "geo_confidence": "high",
+      "geo_matched_name": "Barbagusto",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Trattoria Coco's",
+      "name_variants": [
+        "Coco's"
+      ],
+      "neighbourhood": "San Salvario",
+      "cuisine": "Cucina popolare torinese / piola",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta e fagioli",
+        "ceci e costine",
+        "risotti",
+        "gnocchi",
+        "carne cruda",
+        "acciughe al verde",
+        "trippa",
+        "cotolette impanate"
+      ],
+      "signature_dish": null,
+      "quote": "A pochi metri dal mercato di piazza Madama Cristina, Coco's è un classico della cucina popolare torinese. Lo scorso anno ha festeggiato 50 anni di attività a suon di pasta e fagioli, ceci e costine, risotti, gnocchi, carne cruda, acciughe al verde, trippa, cotolette impanate. È un rifugio sicuro per molti residenti del quartiere San Salvario, per la gente del mercato e per la varia umanità che ormai arriva anche da fuori.",
+      "quote_language": "original",
+      "article_date": "2024-05-05",
+      "article_title": "La mappa delle migliori osterie e piole di Torino",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-bragaglia",
+        "src-finedininglovers-bruno"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0589038,
+      "lng": 7.684783,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Coco’s",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "La Taverna del Bergé",
+      "name_variants": [
+        "Bergé",
+        "Taverna del Bergé"
+      ],
+      "neighbourhood": "San Donato",
+      "cuisine": "Osteria piemontese / piola",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "lingua al verde",
+        "salame cotto con toma del Lago Nero",
+        "agnolotti di fassona",
+        "polenta con Reblochon e speck d'anatra",
+        "formaggi delle valli circostanti",
+        "melighe e torcetti"
+      ],
+      "signature_dish": null,
+      "quote": "Bergé in piemontese vuol dire 'pastore', e alcuni prodotti caseari arrivano infatti direttamente dalla Valle di Susa da cui provengono i proprietari. Le due stanzette sono spesso molto affollate, anche a pranzo, perché — come è giusto che sia per un'osteria — l'indirizzo è molto apprezzato da chi lavora in zona.",
+      "quote_language": "original",
+      "article_date": "2024-05-05",
+      "article_title": "La mappa delle migliori osterie e piole di Torino",
+      "open_status_check": true,
+      "sources": [
+        "src-gamberorosso-marino",
+        "src-cibotoday-bragaglia"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0821269,
+      "lng": 7.6709951,
+      "geo_confidence": "high",
+      "geo_matched_name": "La Taverna del Bergè",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Osteria Le Ramine",
+      "name_variants": [
+        "Le Ramin-e"
+      ],
+      "neighbourhood": "Borgo San Paolo",
+      "cuisine": "Osteria piemontese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "battuta di Fassone con sedani funghi e robiola",
+        "peperoni di Carmagnola con salsa d'acciughe",
+        "insalata russa",
+        "agnolotti al sugo d'arrosto",
+        "trota marinata al ginepro",
+        "caponet",
+        "agnolotti di toma di Conca Cialancia"
+      ],
+      "signature_dish": null,
+      "quote": "Proposta tradizionale, piatti ben curati, materie prime del territorio, principalmente della Val Chisone, terra natìa dell'oste. Largo quindi a battuta di Fassone con sedani funghi e robiola contadina; tortino di peperoni di Carmagnola e salsa d'acciughe; insalata russa; agnolotti al sugo d'arrosto. A cena il menu è più elaborato, con un occhio al contemporaneo mentre a pranzo regna la semplicità. Vini in quantità e varietà idonea, compresa qualche etichetta importante.",
+      "quote_language": "original",
+      "article_date": "2024-10-20",
+      "article_title": "Le migliori piole di Torino",
+      "open_status_check": true,
+      "sources": [
+        "src-gamberorosso-marino",
+        "src-cibotoday-bragaglia"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0638903,
+      "lng": 7.6388706,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Le Ramine",
+      "geo_source": "photon"
+    },
+    {
+      "name": "Caffè Vini Emilio Ranzini",
+      "name_variants": [
+        "Emilio Ranzini",
+        "Caffè-Vini Emilio Ranzini"
+      ],
+      "neighbourhood": "Quadrilatero Romano",
+      "cuisine": "Enoteca / piola / merenda sinoira",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "uova sode",
+        "acciughe al verde",
+        "giardiniera",
+        "friciulin",
+        "lingua",
+        "vitello tonnato",
+        "merenda sinoira"
+      ],
+      "signature_dish": "merenda sinoira",
+      "quote": "Per molti questa è LA Piola per eccellenza, impossibile dimenticarla in una qualsiasi top ten della categoria. Intanto l'indirizzo: il cuore di Torino, fra piazza Palazzo di Città e il Duomo, pieno Quadrilatero Romano. Il nome 'caffè' sull'insegna ci ricorda che si può entrare anche soltanto per consumare qualcosa al banco. Una volta seduti si potranno invece provare i classici da piola di un tempo: uova sode, acciughe al verde, giardiniera, friciulin, lingua, vitello tonnato. E i non piemontesi scopriranno qualcosa in più sul rito subalpino della merenda sinoira.",
+      "quote_language": "original",
+      "article_date": "2024-05-05",
+      "article_title": "La mappa delle migliori osterie e piole di Torino",
+      "open_status_check": true,
+      "sources": [
+        "src-gamberorosso-marino",
+        "src-cibotoday-bragaglia"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0731896,
+      "lng": 7.6832461,
+      "geo_confidence": "high",
+      "geo_matched_name": "Caffè-Vini Emilio Ranzini",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Piola Da Celso",
+      "name_variants": [
+        "Da Celso"
+      ],
+      "neighbourhood": "Crocetta",
+      "cuisine": "Piola storica / cucina piemontese",
+      "opening_year": 1905,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "insalata russa",
+        "peperoni con le acciughe",
+        "tomini",
+        "vitello tonnato",
+        "albese",
+        "agnolotti",
+        "gnocchi",
+        "brasato",
+        "bunet",
+        "panna cotta",
+        "pesche ripiene"
+      ],
+      "signature_dish": null,
+      "quote": "Siamo in zona Cenischia. Celso Chiantello, il mitico fondatore, è mancato 96enne a novembre dello scorso anno, ma già da tempo la piola era guidata dalle figlie Elisabetta e Marina e dai nipoti. Allegria, battute, dialetto piemontese come lasciapassare sono sempre stati gli elementi salienti del colore locale. Quasi una litania: insalata russa, peperoni con le acciughe, tomini, vitello tonnato, albese, agnolotti, gnocchi, brasato, bunet, panna cotta, pesche ripiene. Ma è bello avere dei punti fermi, che ti fanno venir voglia di tornare e tornare ancora.",
+      "quote_language": "original",
+      "article_date": "2024-05-05",
+      "article_title": "La mappa delle migliori osterie e piole di Torino",
+      "open_status_check": true,
+      "sources": [
+        "src-gamberorosso-marino",
+        "src-cibotoday-bragaglia"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0669239,
+      "lng": 7.6473156,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Da Celso",
+      "geo_source": "photon"
+    },
+    {
+      "name": "Caffè Mulassano",
+      "name_variants": [
+        "Caffe Mulassano"
+      ],
+      "neighbourhood": "Centro",
+      "cuisine": "Historic café / tramezzini / Bicerin",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tramezzino",
+        "tramezzino con mascarpone e tartufo",
+        "Bicerin"
+      ],
+      "signature_dish": "tramezzino con mascarpone e tartufo",
+      "quote": "Their tramezzini are out of this world—the bread is light and fluffy, and each sandwich is served on a silver platter. My favorite is the one with mascarpone and truffle. And be sure to order the Bicerin, Turin's most famous drink—a rich blend of espresso, hot chocolate, and cream served in layers that capture the essence of the city's coffee culture.",
+      "quote_language": "original",
+      "article_date": "2024-10-22",
+      "article_title": "Mimi Thorisson's Guide to Turin",
+      "open_status_check": true,
+      "sources": [
+        "src-airmail-thorisson"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "en",
+      "lat": 45.0698461,
+      "lng": 7.6868085,
+      "geo_confidence": "high",
+      "geo_matched_name": "Caffè Mulassano",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Alberto Marchetti",
+      "name_variants": [
+        "Alberto Marchetti Gelaterie",
+        "Gelateria Alberto Marchetti"
+      ],
+      "neighbourhood": "Centro",
+      "cuisine": "Gelateria",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "gelato zabaione",
+        "panna fresca"
+      ],
+      "signature_dish": "gelato allo zabaione con panna fresca",
+      "quote": "I tell everyone this, but Turin has the best ice cream in Italy. The gelato at Alberto Marchetti, made with the finest locally sourced ingredients, comes in a variety of decadent flavors. My favorite is the zabaione with a scoop of panna fresca.",
+      "quote_language": "original",
+      "article_date": "2024-10-22",
+      "article_title": "Mimi Thorisson's Guide to Turin",
+      "open_status_check": true,
+      "sources": [
+        "src-airmail-thorisson"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "en",
+      "lat": 45.0712515,
+      "lng": 7.6610396,
+      "geo_confidence": "high",
+      "geo_matched_name": "Alberto Marchetti",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Caffè Platti",
+      "name_variants": [
+        "Caffe Platti"
+      ],
+      "neighbourhood": "Centro",
+      "cuisine": "Historic café / pasticceria",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "petit fours alle mandorle",
+        "succo di melograno al banco"
+      ],
+      "signature_dish": null,
+      "quote": "After a fun shopping spree, walk over to Caffè Platti for their almond petits fours and a pomegranate juice al banco.",
+      "quote_language": "original",
+      "article_date": "2024-10-22",
+      "article_title": "Mimi Thorisson's Guide to Turin",
+      "open_status_check": true,
+      "sources": [
+        "src-airmail-thorisson"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "en",
+      "lat": 45.0647706,
+      "lng": 7.6746001,
+      "geo_confidence": "high",
+      "geo_matched_name": "Platti",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Trattoria Fermata Nizza",
+      "name_variants": [],
+      "neighbourhood": "San Salvario",
+      "cuisine": "Piola / osteria piemontese",
+      "opening_year": 2018,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "piatti tipici piemontesi"
+      ],
+      "signature_dish": null,
+      "quote": "Sorge sulle ceneri di un ristorante preesistente con una nuova gestione, che dal 2018 l'ha reso un locale di stretta tradizione che si è conquistato una larga schiera di affezionati. Posizione centrale e menu organizzato in diverse formule e incentrato sui piatti tipici i suoi punti di forza, insieme a una gran cura nella scelta delle materie prime. Ci sono anche opzioni vegetariane e il servizio è gentile e alla mano.",
+      "quote_language": "original",
+      "article_date": "2024-10-20",
+      "article_title": "Le migliori piole di Torino",
+      "open_status_check": true,
+      "sources": [
+        "src-gamberorosso-marino"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0508929,
+      "lng": 7.6750018,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Fermata Nizza",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Bar Pietro",
+      "name_variants": [],
+      "neighbourhood": "Quadrilatero Romano",
+      "cuisine": "Piola / cucina piemontese-sarda",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fregola alla campidanese",
+        "fegato alla veneziana",
+        "sarde in saor",
+        "acciughe al verde",
+        "tomini"
+      ],
+      "signature_dish": null,
+      "quote": "Non stupitevi se in lavagna trovate anche la fregola alla campidanese, il fegato alla veneziana e le sarde in saor. Qui la tradizione piemontese e quella sarda vanno d'amore e d'accordo in un contenitore che è una piola a tutti gli effetti, casereccia e vecchio stile. Ci sono altresì taglieri in varie dimensioni secondo appetito e numero di commensali, e piatti local come le acciughe al verde o i tomini, di pari soddisfazione.",
+      "quote_language": "original",
+      "article_date": "2024-10-20",
+      "article_title": "Le migliori piole di Torino",
+      "open_status_check": true,
+      "sources": [
+        "src-gamberorosso-marino"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0766354,
+      "lng": 7.6750325,
+      "geo_confidence": "high",
+      "geo_matched_name": "Bar Pietro",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Osteria Antiche Sere",
+      "name_variants": [],
+      "neighbourhood": "Borgo San Paolo",
+      "cuisine": "Trattoria piemontese casalinga",
+      "opening_year": 1990,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tajarin con ragù di maiale e fegatini di pollo",
+        "agnolotti con sugo d'arrosto",
+        "brasato con polenta al Nebbiolo",
+        "tapulon"
+      ],
+      "signature_dish": "tapulon",
+      "quote": "Tre salette dall'atmosfera rétro in zona Borgo San Paolo. Dal 1990 punto di riferimento per la cucina locale di impronta casalinga. I protagonisti sono i fratelli Antonella e Daniele Rota. I piatti includono tajarin con ragù di maiale e fegatini di pollo, agnolotti con sugo d'arrosto, brasato con polenta preparato con carne marinata nel Nebbiolo, e tapulon — stracotto d'asino con polenta.",
+      "quote_language": "original",
+      "article_date": "2025-06-13",
+      "article_title": "Guida alle trattorie di Torino",
+      "open_status_check": false,
+      "sources": [
+        "src-finedininglovers-bruno"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0709845,
+      "lng": 7.6428825,
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria Antiche Sere",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Locanda San Giors",
+      "name_variants": [],
+      "neighbourhood": "Aurora",
+      "cuisine": "Trattoria piemontese storica",
+      "opening_year": 1904,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bollito misto",
+        "bagnetto verde al prezzemolo",
+        "cognà"
+      ],
+      "signature_dish": "bollito misto",
+      "quote": "Locale storico attestato nell'attuale sede dal 1904, a ridosso del mercato di Porta Palazzo. Pavimenti in legno che cigolano e mobili vintage. Specialità: bollito misto preparato con sette tagli diversi di carne, servito con bagnetto verde al prezzemolo e cognà — composta di frutta cotta nel mosto d'uva tipica delle Langhe.",
+      "quote_language": "original",
+      "article_date": "2025-06-13",
+      "article_title": "Guida alle trattorie di Torino",
+      "open_status_check": false,
+      "sources": [
+        "src-finedininglovers-bruno"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0786211,
+      "lng": 7.6840264,
+      "geo_confidence": "medium",
+      "geo_matched_name": "San Giors",
+      "geo_source": "photon"
+    },
+    {
+      "name": "Madama Piola",
+      "name_variants": [
+        "Madama Piola Vini e Piattini"
+      ],
+      "neighbourhood": "San Salvario",
+      "cuisine": "Piola / trattoria piemontese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "vitello tonnato",
+        "cipolla al forno ripiena di salsiccia amaretti e fonduta di Grana Padano",
+        "ravioli del plin",
+        "gnocchi"
+      ],
+      "signature_dish": "cipolla al forno ripiena di salsiccia, amaretti e fonduta di Grana Padano",
+      "quote": "Considerata un'istituzione a Torino. La filosofia è 'la stessa di 50 anni fa in chiave dovutamente moderna'. Ricette cult includono tonnato e cipolla al forno ripiena di salsiccia, amaretti e fonduta di Grana Padano.",
+      "quote_language": "original",
+      "article_date": "2025-06-13",
+      "article_title": "Guida alle trattorie di Torino",
+      "open_status_check": false,
+      "sources": [
+        "src-finedininglovers-bruno"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0713884,
+      "lng": 7.6958912,
+      "geo_confidence": "high",
+      "geo_matched_name": "Madama Piola",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Consorzio",
+      "name_variants": [],
+      "neighbourhood": "Quadrilatero Romano",
+      "cuisine": "Cucina piemontese contemporanea",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "agnolotti gobbi ripieni di carne",
+        "ravioli di finanziera",
+        "tagliatelle integrali con ragù di cuore",
+        "trippa di agnello a tajarin"
+      ],
+      "signature_dish": null,
+      "quote": "Ristorante che interpreta la cucina piemontese con piglio moderno. Ambiente semplice ma curato. Piatti: agnolotti gobbi ripieni di carne, ravioli di finanziera, tagliatelle integrali con ragù di cuore, trippa di agnello servita a mo' di tajarin.",
+      "quote_language": "original",
+      "article_date": "2025-06-13",
+      "article_title": "Guida alle trattorie di Torino",
+      "open_status_check": false,
+      "sources": [
+        "src-finedininglovers-bruno"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0714943,
+      "lng": 7.6793467,
+      "geo_confidence": "high",
+      "geo_matched_name": "Consorzio",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Tre Galline",
+      "name_variants": [],
+      "neighbourhood": "Quadrilatero Romano",
+      "cuisine": "Ristorante piemontese storico",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bollito misto al carrello",
+        "agnolotti al sugo d'arrosto",
+        "peperone ripieno di tomino piemontese su lattuga brasata e nocciole",
+        "fritto misto alla piemontese"
+      ],
+      "signature_dish": "bollito misto al carrello",
+      "quote": "Storico indirizzo tra i più antichi della città. Legno della boiserie, parquet, travi a vista, tovagliati bianchi. Conserva sincerità nella fedeltà alla cultura gastronomica locale e atmosfera rétro. Must: bollito misto al carrello, agnolotti al sugo d'arrosto, peperone ripieno di tomino piemontese su lattuga brasata e nocciole, fritto misto alla piemontese.",
+      "quote_language": "original",
+      "article_date": "2025-06-13",
+      "article_title": "Guida alle trattorie di Torino",
+      "open_status_check": false,
+      "sources": [
+        "src-finedininglovers-bruno"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0759789,
+      "lng": 7.6818547,
+      "geo_confidence": "high",
+      "geo_matched_name": "Tre Galline",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Le Vitel Etonné",
+      "name_variants": [
+        "Vitel Etonné"
+      ],
+      "neighbourhood": "Centro",
+      "cuisine": "Bistrot piemontese / cucina di mercato",
+      "opening_year": 2001,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "vitello tonnato",
+        "tajarin 36 tuorli d'uovo con carciofi e baccalà"
+      ],
+      "signature_dish": "vitello tonnato",
+      "quote": "Aperto nel 2001 da Luisa Pandolfi. Piatto iconico: vitello tonnato — gioco di parole franco-piemontese. Cucina aperta 12.00-23.30. Prodotti locali: carne de 'La Granda', verdure dei contadini, uova della 'Cascina Mana'. Alternativa: Tajarin 36 tuorli d'uovo con carciofi e baccalà.",
+      "quote_language": "original",
+      "article_date": "2025-06-13",
+      "article_title": "Guida alle trattorie di Torino",
+      "open_status_check": false,
+      "sources": [
+        "src-finedininglovers-bruno"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0682331,
+      "lng": 7.6887287,
+      "geo_confidence": "high",
+      "geo_matched_name": "Le Vitel Étonné",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Contesto Alimentare",
+      "name_variants": [],
+      "neighbourhood": "San Salvario",
+      "cuisine": "Trattoria urbana",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "baccalà mantecato con patate e finocchi in salamoia",
+        "tajarin al ragù rosso di vitello con cannella noce moscata e chiodi di garofano",
+        "selezione di formaggi"
+      ],
+      "signature_dish": null,
+      "quote": "\"Trattoria urbana\" nata da idea di Francesca Sgandurra (cucina) e Matteo per coniugare cibo e cultura. Nome tributo all'antropologo Marc Augé. Piatti: baccalà mantecato solo olio evo con patate schiacciate e finocchi dolci in salamoia, tajarin al ragù rosso di vitello con cannella noce moscata e chiodi di garofano, selezione di formaggi.",
+      "quote_language": "original",
+      "article_date": "2025-06-13",
+      "article_title": "Guida alle trattorie di Torino",
+      "open_status_check": false,
+      "sources": [
+        "src-finedininglovers-bruno"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.062325,
+      "lng": 7.6862182,
+      "geo_confidence": "high",
+      "geo_matched_name": "Contesto Alimentare",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Maison de Chef Rinoò",
+      "name_variants": [
+        "Rinoò"
+      ],
+      "neighbourhood": "Centro",
+      "cuisine": "Trattoria di quartiere / osteria",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "gnocchi",
+        "tajarin",
+        "agnolotti",
+        "polpette",
+        "brasati",
+        "coniglio",
+        "zuccherini imbevuti nell'alcol"
+      ],
+      "signature_dish": "zuccherini imbevuti nell'alcol",
+      "quote": "E dove lo si trova più un posto così, in pieno centro, a cinque minuti da piazza Castello? Locale piccolo, ruspantissimo — si aspetta al banco l'assegnazione dell'agognato posto a tavola e poi non rimane che godersi i piatti e l'atmosfera di questo indirizzo d'altri tempi, chiudendo l'esperienza con il caffè accompagnato dai mitici zuccherini imbevuti nell'alcol.",
+      "quote_language": "original",
+      "article_date": "2024-05-05",
+      "article_title": "La mappa delle migliori osterie e piole di Torino",
+      "open_status_check": true,
+      "sources": [
+        "src-cibotoday-bragaglia"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_source": null,
+      "geo_skip": true
+    },
+    {
+      "name": "La Piola d'le due Sörele",
+      "name_variants": [
+        "Piola delle due Sorelle"
+      ],
+      "neighbourhood": "Falchera",
+      "cuisine": "Piola tradizionale",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tajarin",
+        "vitello tonnato",
+        "peperoni con bagna caoda",
+        "risotti mantecati con formaggi regionali",
+        "trippa con i fagioli",
+        "funghi",
+        "asparagi"
+      ],
+      "signature_dish": "trippa con i fagioli",
+      "quote": "Come suggerisce il nome, questa piola un po' periferica — ma sono in tanti ad affrontare il viaggio — prende il nome da Gessica (in sala) e Susanna (in cucina), le due sorelle. Qui trovate i grandi classici della cucina piemontese dai tajarin al vitello tonnato, dai peperoni con bagna caoda ai risotti della casa mantecati con formaggi regionali. Un punto di forza è la trippa con i fagioli.",
+      "quote_language": "original",
+      "article_date": "2024-05-05",
+      "article_title": "La mappa delle migliori osterie e piole di Torino",
+      "open_status_check": true,
+      "sources": [
+        "src-cibotoday-bragaglia"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0962561,
+      "lng": 7.7275419,
+      "geo_confidence": "medium",
+      "geo_matched_name": "La Piola d’le 2 Sorele",
+      "geo_source": "photon"
+    },
+    {
+      "name": "Cantinone San Paolo",
+      "name_variants": [],
+      "neighbourhood": "Borgo San Paolo",
+      "cuisine": "Bottiglieria / osteria piemontese-ligure",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pes coi",
+        "tajarin con funghi",
+        "gnocchi",
+        "plin al sugo d'arrosto",
+        "stracotto di vitello",
+        "vini sfusi"
+      ],
+      "signature_dish": "pes coi",
+      "quote": "Il Cantinone è l'esempio di come una verace bottiglieria di quartiere dove già oltre quarant'anni fa si azzannavano panini e acciughe, si sia trasformata, senza snaturarsi, in un locale dove si mangia molto meglio di un tempo senza aver perso l'atmosfera e l'autenticità. Il merito è di Giorgia (in sala) e Luigi (in cucina), gli osti che hanno salvato il Cantinone dal rischio chiusura e dall'oblio.",
+      "quote_language": "original",
+      "article_date": "2024-05-05",
+      "article_title": "La mappa delle migliori osterie e piole di Torino",
+      "open_status_check": true,
+      "sources": [
+        "src-cibotoday-bragaglia"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.066509,
+      "lng": 7.6525822,
+      "geo_confidence": "high",
+      "geo_matched_name": "Cantinone San Paolo",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Pescheria Gallina",
+      "name_variants": [
+        "Pescheria Gallina Porta Palazzo",
+        "Beppe Gallina"
+      ],
+      "neighbourhood": "Aurora",
+      "cuisine": "Pescheria / bistrot di mare",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "frittura mista"
+      ],
+      "signature_dish": "frittura mista",
+      "quote": "Beppe Gallina, il re del pesce al mercato alimentare di Porta Palazzo (la sua famiglia è presente dal 1920), è piemontesissimo e se entrate nel locale che è suddiviso tra il bancone del pesce per l'asporto e gli spazi del bistrot per mangiare sul posto, converrete che l'atmosfera è quella giusta. Il grande classico è la frittura mista che, con un bicchiere di vino, la focaccia e l'acqua, viene offerta a 17€.",
+      "quote_language": "original",
+      "article_date": "2024-05-05",
+      "article_title": "La mappa delle migliori osterie e piole di Torino",
+      "open_status_check": true,
+      "sources": [
+        "src-cibotoday-bragaglia"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0771221,
+      "lng": 7.6851235,
+      "geo_confidence": "high",
+      "geo_matched_name": "Pescheria Ristorante Gallina",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Osteria La Cantina VB",
+      "name_variants": [
+        "La Cantina VB"
+      ],
+      "neighbourhood": "Vanchiglia",
+      "cuisine": "Piola / osteria piemontese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "antipasto alla piemontese",
+        "battuta di fassone",
+        "insalata russa",
+        "tomino",
+        "acciughe con bagnetto verde",
+        "tajarin",
+        "grissinopoli",
+        "agnolotti",
+        "spiedino di salsiccia al Barbera"
+      ],
+      "signature_dish": "antipasto alla piemontese",
+      "quote": "In posizione centralissima, a pochi passi da Piazza Vittorio Veneto, si trova questa piola ben conosciuta da chi frequenta la zona. Il bel bancone, l'ambiente caldo e famigliare e le bottiglie di vino agli scaffali sono il preludio all'arrivo di una cucina piemontese ben eseguita in tavola. Tra i cavalli di battaglia, l'antipasto alla piemontese, un piatto con battuta di fassone, insalata russa, tomino e acciughe con bagnetto verde.",
+      "quote_language": "original",
+      "article_date": "2024-05-05",
+      "article_title": "La mappa delle migliori osterie e piole di Torino",
+      "open_status_check": true,
+      "sources": [
+        "src-cibotoday-bragaglia"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "language_pool": "it",
+      "lat": 45.0662473,
+      "lng": 7.6923838,
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria la Cantina vb",
+      "geo_source": "nominatim"
+    }
+  ],
+  "centroids": {
+    "Centro": [
+      45.0685,
+      7.6778
+    ]
+  }
+}

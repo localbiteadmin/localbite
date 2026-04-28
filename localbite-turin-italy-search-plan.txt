@@ -1,0 +1,114 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LOCALBITE v7.1 — TURIN, ITALY — SEARCH PLAN
+Prepared: 2026-04-28
+YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: Italian (IT)
+SECONDARY_LANGUAGE: English (EN)
+
+═══════════════════════════════════════════
+PHASE 0 — DIRECT FETCH
+═══════════════════════════════════════════
+URL: https://airmail.news/arts-intel/highlights/mimi-thorissons-guide-to-turin
+Writer: Mimi Thorisson (confirmed, named author, long-term Turin resident)
+Expected: Caffè Mulassano, Trattoria Al Gatto Nero, Alberto Marchetti Gelaterie, Caffè Platti + others
+
+═══════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+═══════════════════════════════════════════
+
+TIER 1 — Centro (Piazza Castello, Piazza San Carlo, Via Roma)
+Q1  [IT] migliori ristoranti centro Torino Piazza Castello San Carlo 2023 2024
+Q2  [EN] best restaurants Turin city centre Piazza Castello Via Roma 2025 2026
+
+TIER 1 — Quadrilatero Romano
+Q3  [IT] ristoranti Quadrilatero Romano Torino migliori 2023 2024
+Q4  [EN] restaurants Quadrilatero Romano Turin guide 2025 2026
+
+TIER 1 — Crocetta
+Q5  [IT] ristoranti Crocetta Torino dove mangiare 2025
+Q6  [EN] restaurants Crocetta neighbourhood Turin recommendations 2023
+
+TIER 1 — Vanchiglia
+Q7  [IT] ristoranti Vanchiglia Torino guida gastronomica 2024
+Q8  [EN] best places to eat Vanchiglia Turin 2025
+
+TIER 2 — San Salvario
+Q9  [IT] ristoranti San Salvario Torino recensioni 2025
+Q10 [EN] restaurants San Salvario Turin food guide 2024
+
+TIER 2 — Borgo Po
+Q11 [IT] ristoranti Borgo Po Torino consigliati 2024 2025
+Q12 [EN] Borgo Po Turin restaurants recommendations 2025
+
+TIER 2 — Lingotto
+Q13 [IT] ristoranti Lingotto Torino dove mangiare 2023 2024
+Q14 [EN] restaurants Lingotto Turin guide 2025
+
+TIER 2 — Aurora
+Q15 [IT] ristoranti Aurora Torino quartiere gastronomia 2025
+Q16 [EN] best restaurants Aurora neighbourhood Turin 2023
+
+TIER 2 — Barriera di Milano
+Q17 [IT] ristoranti Barriera di Milano Torino mangiare 2024
+Q18 [EN] Barriera di Milano Turin restaurants food 2025
+
+TIER 3 — Mirafiori
+Q19 [IT] ristoranti Mirafiori Torino 2024 2025
+
+TIER 3 — Borgo Vittoria
+Q20 [IT] ristoranti Borgo Vittoria Torino dove mangiare 2023
+
+TIER 3 — Rebaudengo
+Q21 [IT] ristoranti Rebaudengo Torino 2024
+
+TIER 3 — Falchera
+Q22 [IT] ristoranti Falchera Torino 2025
+
+═══════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+═══════════════════════════════════════════
+
+Cross-1 (EN city-wide):
+Q23 [EN] best restaurants Turin Italy food guide 2025 2026
+Q24 [EN] where to eat Turin Italy personal recommendations local
+
+Cross-2 (IT city-wide):
+Q25 [IT] migliori ristoranti Torino critica gastronomica 2025
+Q26 [IT] dove mangiare Torino guida gastronomica quartieri 2023 2024
+Q27 [IT] ristoranti consigliati Torino critico gastronomico 2024 2025
+
+Cross-3 (Generic writer-first):
+Q28 [IT] critico gastronomico Torino ristoranti recensioni blog
+Q29 [EN] Turin Italy food writer restaurant guide local knowledge
+
+Cross-4 (Named awards):
+Q30 50 Top Italy Torino ristoranti migliori classifica
+Q31 L'Espresso ristoranti Torino premiati guida 2024 2025
+Q32 Slow Food Osterie Italia Torino piole osterie
+
+Cross-5 (Recent openings):
+Q33 [IT] nuove aperture ristoranti Torino 2024 2025
+Q34 [EN] new restaurant openings Turin Italy 2025 2026
+
+Cross-6: SKIP — LOCAL_FOOD_VOCABULARY not defined in Part 1
+
+Cross-7 (Cuisine and community):
+Q35 [IT] piole Torino tradizionali migliori dove mangiare cucina piemontese
+Q36 [EN] Piedmontese cuisine piola osteria Turin traditional food guide
+
+Cross-8 (Publication-category):
+Q37 [IT] rivista gastronomica Torino independent food magazine ristoranti 2025
+Q38 [IT] supplemento gastronomia giornale Torino ristoranti 2024
+
+═══════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+═══════════════════════════════════════════
+Earlier years (2023-2024): Q1, Q3, Q6, Q7, Q10, Q13, Q16, Q17, Q20, Q21, Q26, Q38 = 12 queries
+Later years (2025-2026): Q2, Q4, Q5, Q8, Q9, Q12, Q14, Q15, Q18, Q22, Q23, Q25, Q34, Q37 = 14 queries
+No year term: Q24, Q28, Q29, Q30, Q32, Q35, Q36 = 7 queries
+Both years: Q11, Q19, Q27, Q31, Q33 = 5 queries
+
+[year-distribution-check] PASSED — 12 queries reference earlier years (2023-2024), 14 queries reference recent years (2025-2026), 7 queries have no year term.
+
+TOTAL PLANNED: 38 queries (under 45 soft ceiling, under 55 hard ceiling)

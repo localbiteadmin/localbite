@@ -1,0 +1,164 @@
+LOCALBITE v7.1 — TURIN, ITALY — AUDIT FILE
+Pipeline run: 2026-04-28
+City slug: turin-italy
+Year range: 2023-2026
+
+═══════════════════════════════════════════
+PHASE 1 — REJECTED SOURCES
+═══════════════════════════════════════════
+
+EN CANDIDATES REJECTED:
+
+Girls Gotta Drink (girlsgottadrink.com/turin-food-guide/)
+  REASON: Author byline is first name only ("Serena" or similar) — full surname not confirmed. Named-author requirement: full first + surname mandatory.
+
+TastingTable (tastingtable.com)
+  REASON: No named author byline — staff-produced content.
+
+Fearlessly Italy (fearlesslyitaly.com)
+  REASON: No named author byline.
+
+Italy Segreta "Torino a Tavola" (italysegreta.com/torino-a-tavola/)
+  REASON: No named author byline; article dated 2022 (outside 2023-2026 range).
+
+Italy Segreta "Turin's Piole" (italysegreta.com/turins-piole/)
+  REASON: No named author byline.
+
+The Italian Interpreter (theitalianinterpreter.co.uk)
+  REASON: Author is first name only ("Rachel"); full surname not confirmed. Article dated July 2025 — within range but name check failed.
+
+Slow Food Travelers (slowfoodtravelers.com/turin)
+  REASON: No named author byline.
+
+Barrett & the Boys Substack (barrettandtheboys.substack.com)
+  REASON: No named author byline for the Turin food section.
+
+Laura Dolci Travels (lauradolcitravels.com/turin-food/)
+  REASON: Thin content — article is primarily a list of hyperlinks with insufficient prose quotation to meet the 15-word minimum with ≥1 specific detail. (Note: Laura Dolci is confirmed as named author; content quality fail only.)
+
+Torino Magazine speciale food (torinomagazine.it)
+  REASON: No named author byline — editorial staff content.
+
+Dissapore (dissapore.com/ristoranti/i-100-migliori-ristoranti-di-torino-da-provare-nel-2025/)
+  REASON: No named individual author — editorial staff content.
+
+Scatti di Gusto (scattidigusto.it/torino-11-piole-migliori)
+  REASON: Article dated 2022 — outside 2023-2026 year range.
+
+Buonissimatorino.it / Barbagusto verification
+  REASON: Verification-only fetch; buonissimatorino.it has no named author — rejected as source. (Barbagusto confirmed at this URL for cross-validation only.)
+
+Agrodolce.it / Barbagusto (agrodolce.it/locale/barbagusto-torino)
+  REASON: Article dated 2018 — outside 2023-2026 year range.
+
+Gambero Rosso Aurora article (gamberorosso.it/notizie/rubriche/itinerari/quartiere-aurora-torino-dove-mangiare/)
+  REASON: HTTP 403 Forbidden — access denied. Not a new source; different article on same publication (GR already confirmed via piole article).
+
+IT CANDIDATES REJECTED:
+
+Dissapore (I Cento 2025 coverage)
+  REASON: No named individual author — editorial staff content.
+
+Turismodelgusto.com
+  REASON: Editorial board attribution only — no individual named author confirmed.
+
+World's 50 Best Discovery Turin (theworlds50best.com/discovery/sitemap/italy/turin)
+  REASON: No named editorial author — institutional/directory content.
+
+MyItalianDiaries.com
+  REASON: Jina fetch returned CAPTCHA/verification placeholder — no content accessible.
+
+TasteBologna (tastebologna.net/blog/eat-in-turin)
+  REASON: Named author not confirmed; site's primary focus is Bologna.
+
+Conoscounposto.com (conoscounposto.com/torino-dove-pranzare/)
+  REASON: Article dated 2017 — outside 2023-2026 year range.
+
+═══════════════════════════════════════════
+PHASE 2 — EXTRACTION-TIME REJECTIONS
+═══════════════════════════════════════════
+
+GEOGRAPHIC EXCLUSIONS (Michelin-starred, excluded per Part 1):
+  Del Cambio — 1 Michelin star (2026 guide). Excluded.
+  [Note: Del Cambio appeared in search results (L'Espresso 4 cappelli) but was not extracted from any confirmed source article; Michelin star status would require exclusion if encountered.]
+
+No additional extraction-time geo exclusions were triggered. All restaurant addresses confirmed within Comune di Torino municipal boundary.
+
+═══════════════════════════════════════════
+PHASE 3 — RECOMMENDED AND APPLIED REMOVALS
+═══════════════════════════════════════════
+
+1. AUTO-REMOVAL: Trattoria Al Gatto Nero
+   Rule: Tier B entry, single source (src-airmail-thorisson), neighbourhood = null, no explicit city district reference in quote.
+   Quote reviewed: "Blending culinary excellence with tradition, the trattoria has been beloved by local families for generations. The owner, Andrea Vannelli, is a master storyteller, adding a personal touch to each meal." — No neighbourhood or district reference. AUTO-REMOVAL confirmed.
+   Action: REMOVED (auto-accepted, UNATTENDED_MODE).
+
+2. RECOMMENDED REMOVAL: Rossorubino
+   Reason: Recent concept pivot — CiboToday article explicitly notes Rossorubino "ha ampliato negli ultimi mesi l'offerta gastronomica" (expanded food offering in recent months). The restaurant is primarily an enoteca that recently added food; the piola framing in the article is aspirational rather than established. Quote lacks specific food detail at the level expected for a piola recommendation. Single source.
+   Action: REMOVED (auto-accepted, UNATTENDED_MODE).
+
+═══════════════════════════════════════════
+PHASE 3 — CONCENTRATION CAP REMOVALS
+═══════════════════════════════════════════
+
+Source: Fine Dining Lovers (src-finedininglovers-bruno)
+Commercial conflict: YES (S.Pellegrino/Nestlé Waters content marketing)
+Cap calculation: After removing Al Gatto Nero and Rossorubino, total = 26 entries.
+30% cap = 26 × 0.30 = 7.8 → max 7 FDL single-source entries.
+FDL single-source before cap: 10 entries.
+Entries to remove: 3 lowest-confidence FDL-only entries.
+
+Removed (lowest quote specificity / weakest locality signal):
+
+3. La Via del Sale (Via S. Francesco da Paola 2)
+   Reason: Lowest locality specificity — "cucina ligure-piemontese" framing is generic; no specific chef, story, or distinctive Turin anchoring beyond address. Removed as #8 of 10.
+
+4. Ballatoio Bistrot di Ringhiera (Via Principe Amedeo 22)
+   Reason: Thin quote — menu description is a generic "cambia spesso" list without storytelling or distinctive local identity. Removed as #9 of 10.
+
+5. Cianci / Piola da Cianci (Largo 4 marzo 9/b)
+   Reason: Quote is dominated by the slogan ("La vita è breve, liberate in fretta i tavoli!") rather than food specifics. Low descriptive content. Removed as #10 of 10.
+
+Post-cap FDL single-source count: 7 of 23 = 30.4% — right at cap limit. ✓
+
+═══════════════════════════════════════════
+PHASE 1B — CROSS-VALIDATION RESULTS
+═══════════════════════════════════════════
+
+3 cross-validation queries run (lines 40-42 of search log):
+  Q40: "Piola Da Celso Torino recensione consiglio gastronomico" — TripAdvisor only; no new qualifying sources.
+  Q41: "Caffè Vini Emilio Ranzini Torino osteria recensione locale" — TripAdvisor; no new qualifying sources.
+  Q42: "Barbagusto Torino ristorante consiglio piola" — agrodolce.it (2018, out of range); buonissimatorino.it (no named author). No new qualifying sources.
+
+Phase 1B result: 0 new sources identified. Source list unchanged.
+
+═══════════════════════════════════════════
+BOTH-POOL ANALYSIS
+═══════════════════════════════════════════
+
+Both-pool count: 0 (structural characteristic)
+
+Analysis: The single confirmed EN source (Mimi Thorisson, Airmail News) covers Turin's historic cafés and upscale trattorias (Caffè Mulassano, Alberto Marchetti, Caffè Platti, Trattoria Al Gatto Nero). All three IT sources (Gambero Rosso, CiboToday, Fine Dining Lovers) focus on the piola and osteria tradition. There is no cross-language overlap in covered establishments. This is a structural characteristic of Turin food writing: EN coverage focuses on tourist-facing luxury experiences; IT coverage focuses on the piola subculture accessible mainly to local-language readers. Both-pool = 0 is documented rather than a quality failure.
+
+═══════════════════════════════════════════
+DIVERSITY GATE — CONFIRMED
+═══════════════════════════════════════════
+
+✓ IT primary sources: Valentina Marino (Gambero Rosso), Dario Bragaglia (CiboToday), Mariarosaria Bruno (Fine Dining Lovers)
+✓ EN primary source: Mimi Thorisson (Airmail News)
+✓ Secondary/COI cap: 1 source with commercial conflict (FDL) — within max 2 secondary cap
+✓ Publisher concentration: no single publisher contributes 2+ articles
+
+═══════════════════════════════════════════
+FINAL TALLIES
+═══════════════════════════════════════════
+
+Sources confirmed: 4
+Searches run: 42 (38 planned + 3 Phase 1B + 1 Phase 0 = 42 logged; plan was 38 + 3 = 41)
+Raw extractions: 34 total (4 Phase 0 + 30 Phase 1)
+After deduplication: 28 unique entries
+Phase 3 removals: 5 (1 auto-removal + 1 recommended removal + 3 concentration cap)
+Final entries: 23
+Tier A: 6
+Tier B: 17
+Both-pool: 0

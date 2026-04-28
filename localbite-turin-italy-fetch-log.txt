@@ -1,0 +1,24 @@
+[p0] "https://airmail.news/arts-intel/highlights/mimi-thorissons-guide-to-turin" → 200 | 5100ch | ACCEPTED — Mimi Thorisson, named author confirmed, article dated 2024-10-22, full food guide content
+[p1-verify] "https://www.gamberorosso.it/rubriche/miniguide/migliori-piole-di-torino/" → 200 | 3891ch | ACCEPTED — Valentina Marino, named author confirmed, article dated 2024-10-20, 7 restaurants extracted
+[p1-verify] "https://www.cibotoday.it/mappe/dove-mangiare-nelle-piole-osterie-torino.html" → 200 | 11484ch | ACCEPTED — Dario Bragaglia, named author confirmed, article dated 2024-05-05, 11 restaurants extracted
+[p1-verify] "https://www.finedininglovers.it/esplora/articoli/guida-trattorie-torino" → 200 | 4904ch | ACCEPTED — Mariarosaria Bruno, named author confirmed, article dated 2025-06-13, 12 restaurants extracted; COI flagged (S.Pellegrino/Nestlé Waters)
+[p1-reject] "https://www.gamberorosso.it/notizie/rubriche/itinerari/quartiere-aurora-torino-dove-mangiare/" → 403 FAILED — different GR article; piole guide already accepted
+[p1-reject] "https://www.scattidigusto.it/torino-11-piole-migliori" → 200 | article dated 2022 — OUTSIDE YEAR RANGE
+[p1-reject] "https://fearlesslyitaly.com/best-restaurants-in-turin-for-first-timers/" → 200 | no named author — REJECTED
+[p1-reject] "https://girlsgottadrink.com/turin-food-guide/" → 200 | author first name only — REJECTED (named-author rule)
+[p1-reject] "https://www.torinomagazine.it/speciale-food-estate-2025-torino-ristoranti-enoteche-nuovi-concept/" → 200 | no named author — REJECTED
+[p1-reject] "https://www.dissapore.com/ristoranti/i-100-migliori-ristoranti-di-torino-da-provare-nel-2025/" → 200 | no named individual author — REJECTED (staff content)
+[p1-reject] "https://italysegreta.com/torino-a-tavola/" → 200 | no named author, article 2022 — REJECTED
+[p1-reject] "https://italysegreta.com/turins-piole/" → 200 | no named author — REJECTED
+[p1-reject] "https://theitalianinterpreter.co.uk/2025/07/27/eat-like-a-local-in-turin-best-piola-in-turin/" → 200 | first name only — REJECTED
+[p1-reject] "https://lauradolcitravels.com/turin-food/" → 200 | named author confirmed (Laura Dolci) but thin content — REJECTED (primarily hyperlinks, no qualifying prose quotes)
+[p1-reject] "https://slowfoodtravelers.com/turin" → 200 | no named author — REJECTED
+[p1-reject] "https://barrettandtheboys.substack.com/p/our-food-and-drink-guide-for-turin" → 200 | no named author — REJECTED
+[p1-reject] "https://www.tastingtable.com/1289961/best-restaurants-turin/" → 200 | no named author — REJECTED
+[p1-reject] "https://www.myitaliandiaries.com/great-restaurants-in-turin/" → FAILED (CAPTCHA/verification placeholder — no content accessible)
+[p1-reject] "https://www.theworlds50best.com/discovery/sitemap/italy/turin" → 200 | institutional/directory — no named author
+[p1-reject] "https://www.conoscounposto.com/torino-dove-pranzare/" → 200 | article dated 2017 — OUTSIDE YEAR RANGE
+[p1-reject] "https://www.turismodelgusto.com/attualita/torino-2025-la-guida-gastronomica-che-evolve-con-la-citta/" → 200 | editorial board attribution only — no individual named author
+[p1-reject] "https://buonissimatorino.it/en/restaurants/barbagusto/" → 200 | cross-validation only — buonissimatorino.it no named author
+[p1-reject] "https://www.agrodolce.it/locale/barbagusto-torino" → 200 | article dated 2018 — OUTSIDE YEAR RANGE
+[p1-reject] "https://www.tastebologna.net/blog/eat-in-turin" → 200 | named author not confirmed; site primary focus is Bologna

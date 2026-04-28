@@ -1,0 +1,42 @@
+[phase-0] "https://airmail.news/arts-intel/highlights/mimi-thorissons-guide-to-turin" → ACCEPTED: Mimi Thorisson, Oct 2024, 4 qualifying food entries (Caffè Mulassano, Al Gatto Nero, Alberto Marchetti Gelaterie, Caffè Platti); Porta Palazzo excluded (market, not restaurant); Teatro Regio bar auto-rejected (quote under 15 words, no food detail)
+[neighbourhood-Centro] "migliori ristoranti centro Torino Piazza Castello San Carlo 2023 2024" → Del Cambio, Tre Galline, guidatorino.com candidate; booking/directory sites not useful
+[neighbourhood-Centro] "best restaurants Turin city centre Piazza Castello Via Roma 2025 2026" → Caffè Mulassano confirmed, Baratti & Milano, Piola da Cianci; mostly booking/directory results
+[neighbourhood-Quadrilatero Romano] "ristoranti Quadrilatero Romano Torino migliori 2023 2024" → torinomagazine.it Ristoguida mentioned; TheFork/directories; Michelin guide editorial mention
+[neighbourhood-Quadrilatero Romano] "restaurants Quadrilatero Romano Turin guide 2025 2026" → Tre Galline, Consorzio context found; miomyitaly.com editorial mention; mostly aggregators
+[neighbourhood-Crocetta] "ristoranti Crocetta Torino dove mangiare 2025" → Trattoria Torricelli, Ristorante Quattro Soldi; Accademia della Cucina entry; mainly directories
+[neighbourhood-Crocetta] "restaurants Crocetta neighbourhood Turin recommendations 2023" → TheFork/TripAdvisor aggregators; limited editorial sources
+[neighbourhood-Vanchiglia] "ristoranti Vanchiglia Torino guida gastronomica 2024" → conoscounposto.com (2017, out of range); buonissimatorino.it editorial; Osteria Vanchiglia page
+[neighbourhood-Vanchiglia] "best places to eat Vanchiglia Turin 2025" → italysegreta.com candidate found; Goja Ristoro named; mainly aggregators
+[neighbourhood-San Salvario] "ristoranti San Salvario Torino recensioni 2025" → torinotoday.it San Salvario map (Martina Di Iorio/CiboToday); Scannabue editorial mention; TheFork/TripAdvisor
+[neighbourhood-San Salvario] "restaurants San Salvario Turin food guide 2024" → Scannabue noted (Condé Nast UK secondary); fearlesslyitaly.com candidate; ESCP blog (outside range)
+[neighbourhood-Borgo Po] "ristoranti Borgo Po Torino consigliati 2024 2025" → dissapore.com appeared (I Cento 2024); Borgo Po named restaurants found; le-strade.com
+[neighbourhood-Borgo Po] "Borgo Po Turin restaurants recommendations 2025" → mostly aggregators; no new editorial sources
+[neighbourhood-Lingotto] "ristoranti Lingotto Torino dove mangiare 2023 2024" → Eataly Lingotto (commercial); La Pista (Michelin starred, excluded); directory sites
+[neighbourhood-Lingotto] "restaurants Lingotto Turin guide 2025" → La Pista (starred, excluded); La Pista bistrot mentioned; mostly aggregators
+[neighbourhood-Aurora] "ristoranti Aurora Torino quartiere gastronomia 2025" → gamberorosso.it Aurora article found (403 later); Muro Osteria Contemporanea; Mercato Centrale
+[neighbourhood-Aurora] "best restaurants Aurora neighbourhood Turin 2023" → Consorzio and Magazzino 52 context found; turinitalyguide.com (2018, out of range); livguine.com candidate
+[neighbourhood-Barriera di Milano] "ristoranti Barriera di Milano Torino mangiare 2024" → Muro Osteria at Museo Fico; mangiaebevi.it editorial; cibotoday.it Muro article
+[neighbourhood-Barriera di Milano] "Barriera di Milano Turin restaurants food 2025" → few qualifying results; mostly local directories
+[neighbourhood-Mirafiori] "ristoranti Mirafiori Torino 2024 2025" → dissapore.com appeared again; I Cento 2025 piola winner Trattoria Le Tre Nuvole Mirafiori noted; turismodelgusto.com
+[neighbourhood-Borgo Vittoria] "ristoranti Borgo Vittoria Torino dove mangiare 2023" → vivotorino.it Cantine Vittoria review; few new sources; directory results
+[neighbourhood-Rebaudengo] "ristoranti Rebaudengo Torino 2024" → Spazio7 at Fondazione Sandretto; mostly directory results; effettofood.com
+[neighbourhood-Falchera] "ristoranti Falchera Torino 2025" → Cascina Falchera; 2 total restaurants listed; no editorial sources
+[cross-1] "best restaurants Turin Italy food guide 2025 2026" → tastingtable.com candidate; World's 50 Best Discovery Turin; girlsgottadrink.com candidate; Magazzino 52 description found
+[cross-1] "where to eat Turin Italy personal recommendations local" → plinius-homes.com; girlsgottadrink.com reappeared; turinitalyguide.com (2018); barrettandtheboys.substack.com candidate
+[cross-2] "migliori ristoranti Torino critica gastronomica 2025" → I Cento Top 10 confirmed (incl. Al Gatto Nero, Magazzino 52); foodblog.it; Gambero Rosso 2025 awards (Scannabue)
+[cross-2] "dove mangiare Torino guida gastronomica quartieri 2023 2024" → dissapore.com I Cento 2024 article; cibotoday.it piole map; guidatorino.com piole article; scattidigusto.it (2022)
+[cross-2] "ristoranti consigliati Torino critico gastronomico 2024 2025" → turismodelgusto.com (editorial board, no author); dissapore.com again; I Cento 2025 authors confirmed
+[cross-3] "critico gastronomico Torino ristoranti recensioni blog" → I Cento guide by Cavallito, Lamacchia, Iaccarino confirmed; dissapore.com again; ristorantetorino.wordpress (no content)
+[cross-3] "Turin Italy food writer restaurant guide local knowledge" → lauradolcitravels.com (Laura Dolci) candidate; slowfoodtravelers.com candidate; vibrantworldventures.com; Anna Lebedeva mentioned
+[cross-4] "50 Top Italy Torino ristoranti migliori classifica" → Condividere #8 in 50 Top Italy 2025; dissapore.com I Cento 2026 appeared; scattidigusto.it I Cento 2023
+[cross-4] "L'Espresso ristoranti Torino premiati guida 2024 2025" → Del Cambio 4 cappelli; 500 restaurants in guide; piemonteexpo coverage
+[cross-4] "Slow Food Osterie Italia Torino piole osterie" → Caffè Vini Emilio Ranzini named as authentic piola; torinotoday.it Slow Food coverage; scattidigusto.it chiocciole 2025
+[cross-5] "nuove aperture ristoranti Torino 2024 2025" → torinomagazine.it multiple new openings articles found; cibotoday.it Muro article; le-strade.com new openings
+[cross-5] "new restaurant openings Turin Italy 2025 2026" → mostly World's 50 Best ceremony coverage; existing restaurants; no new editorial sources
+[cross-7] "piole Torino tradizionali migliori dove mangiare cucina piemontese" → gamberorosso.it piole guide confirmed (Valentina Marino); sonoinvacanzadaunavita.it (personal blog); guidatorino.com piole
+[cross-7] "Piedmontese cuisine piola osteria Turin traditional food guide" → girlsgottadrink.com reappeared; italysegreta.com/turins-piole/ candidate; italyfoodies.com Piedmont guide; theitalianinterpreter.co.uk (July 2025)
+[cross-8] "rivista gastronomica Torino independent food magazine ristoranti 2025" → torinomagazine.it speciale food estate (no named author); I Cento guide authors named
+[cross-8] "supplemento gastronomia giornale Torino ristoranti 2024" → torinomagazine.it nuove aperture 2024; dissapore.com Michelin 2024; mole24.it (Gambero Rosso results coverage)
+[phase-1b-crossval] "Piola Da Celso Torino recensione consiglio gastronomico" → TripAdvisor reviews only; torinomagazine.it entry (no named author); no new qualifying sources
+[phase-1b-crossval] "Caffè Vini Emilio Ranzini Torino osteria recensione locale" → TripAdvisor reviews; torinomagazine.it entry; no new qualifying sources
+[phase-1b-crossval] "Barbagusto Torino ristorante consiglio piola" → agrodolce.it (2018, out of range); buonissimatorino.it (no named author); no new qualifying sources

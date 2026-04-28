@@ -441,14 +441,14 @@
       "country": "Italy",
       "city_slug": "turin-italy",
       "pipeline": "localbite-v7.1",
-      "built": null,
-      "restaurant_count": 0,
+      "built": "2026-04-28",
+      "restaurant_count": 23,
       "both_pool_count": 0,
-      "source_count": 0,
+      "source_count": 4,
       "file": "localbite-turin-italy-2023-2026.json",
-      "status": "coming_soon",
-      "open_status_check_count": 0,
-      "notes": "Italy Batch D — Part 1 file committed 2026-04-27"
+      "status": "complete",
+      "open_status_check_count": 14,
+      "notes": ""
     },
     {
       "city": "Venice",
