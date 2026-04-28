@@ -745,8 +745,8 @@ Working file entry structure:
 {
   "_source_id": "src-slug",
   "name": "string",
-  "name_variants": [],
   "neighbourhood": "canonical form or null",
+  "name_variants": [],
   "cuisine": "string or null",
   "opening_year": "number or null",
   "price_level": "number or null",

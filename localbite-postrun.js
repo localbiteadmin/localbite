@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// LocalBite Post-Pipeline Script v3.3
+// LocalBite Post-Pipeline Script v3.4
 //
 // Changes from v2.0:
 //   - Step 1.5 (new): Schema validation — checks required field names
@@ -287,7 +287,7 @@ function isThinProfile(profile) {
     const langs = new Set(rSourceIds.map(sid => sourceLangMap[sid]).filter(Boolean));
     if (langs.size > 0) {
       let derived;
-      if (langs.has('en') && (langs.has('es') || langs.has('pt') || langs.has('fr') || langs.has('ca') || langs.has('ar'))) {
+      if (langs.has('en') && (langs.has('it') || langs.has('es') || langs.has('pt') || langs.has('fr') || langs.has('ca') || langs.has('ar'))) {
         derived = 'both';
       } else if (langs.has('en')) {
         derived = 'en';
