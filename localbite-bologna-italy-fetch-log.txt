@@ -1,0 +1,20 @@
+[p0] "katieparla.com/city-guides/bologna/" → 200 | ~3000ch | PARTIAL — Jina CAPTCHA blocked; direct WebFetch recovered content; named author Katie Parla confirmed; restaurant entries extracted
+[p2] "katieparla.com/city-guides/bologna/" → 200 | partial | PARTIAL — multiple fetch attempts; WebFetch tool returning AI summaries rather than verbatim text; restaurant list confirmed, quotes limited to brief summaries; best quotes under 15 words for most entries
+[p0-wayback] "web.archive.org/web/2026/katieparla.com/city-guides/bologna/" → 451 | — | FAILED — Wayback geo-restricted
+[p1] "guide.michelin.com/it/emilia-romagna/bologna/restaurants" → 200+CAPTCHA | — | FAILED — JavaScript challenge; Ahimè status confirmed via web search: Green Star + Bib Gourmand only, no regular star
+[p1] "foodnotesfrombologna.substack.com/p/via-emilia-where-to-eat-in-bologna" → 200 | ~2500ch | PARTIAL — content is reference list format; About page confirms Monica Campagnoli as sole author (single-author site rule applied); limited quotes extracted
+[p1] "thecuriousappetite.com/2024/12/10/best-food-in-bologna-italy/" → 200+PAYWALL | — | REJECTED-date — December 2024 article behind paywall; switched to free Jan 2026 article
+[p1] "thecuriousappetite.com/2026/01/21/food-drink-restaurants-bologna-italy/" → 200 | ~8000ch | ACCEPTED — Coral Sisk, named author confirmed, Jan 2026, full restaurant list with qualifying quotes
+[p1] "fionabeckett.substack.com/p/a-first-timers-food-guide-to-bologna" → 200+PAYWALL | — | REJECTED-byline — restaurant details behind paywall for paid subscribers; cannot extract qualifying content
+[p1] "scattidigusto.it/2023/03/03/migliori-trattorie-bologna-mangi-bene-spendi-poco" → 200 | ~5000ch | REJECTED-byline — March 2023, no named author anywhere on page
+[p1] "dissapore.com/trattorie/le-migliori-trattorie-di-bologna/" → 200 | ~4000ch | REJECTED-date — May 2022, outside YEAR_RANGE; also no named author
+[p1] "dissapore.com/trattorie/trattoria-di-via-serra-a-bologna-la-recensione-una-grande-cucina-a-servizio-della-tradizione/" → 200 | ~3000ch | REJECTED-byline+date — April 2022, no named author
+[p1] "sidestreetstyle.com/2024/09/where-to-eat-best-pasta-in-bologna.html" → 200 | ~3000ch | REJECTED-byline — Sep 2024, author identified as 'Laura' only (no surname); full name requirement not met
+[p1] "www.cibotoday.it/dove-mangiare/dove-mangiare-a-bologna.html" → 200 | ~8000ch | ACCEPTED — Carolina Pozzi, named author confirmed byline, June 2023, 16 restaurants with qualifying quotes
+[p1] "identitagolose.it/sito/it/44/41321/.../dove-mangiare-a-bologna" → 200 | ~5000ch | REJECTED-byline — March 2026, editorial team credit only, no named author
+[p1] "puntarellarossa.it/2024/07/23/nuove-aperture-a-bologna-estate-2024" → 200 | ~3000ch | REJECTED-byline — July 2024, no named author
+[p1] "everysteph.com/bologna-food-guide/" → 200 | ~4000ch | REJECTED-date+byline — April 2020, outside YEAR_RANGE; author 'Haley' (no surname)
+[p1] "gastrodelirio.it/fabio-riccio/i-mattarelli-bologna-pasta-fresca-artigianale/2025/10/" → 200 | ~3000ch | ACCEPTED — Fabio Riccio, named author confirmed, Oct 2025, single-restaurant review (I Mattarelli)
+[p1] "viadeigourmet.it/ristoranti/osteria-bottega-bologna.html" → 200 | ~3000ch | REJECTED-date — Simone Rosti, Jan 2015, outside YEAR_RANGE
+[p1b] "lucianopignataro.it/a/la-trattoria-di-via-serra-a-bologna/.../251700/" → 200 | ~3000ch | ACCEPTED — Floriana Barone, named author confirmed, April 2024, single-restaurant review (Trattoria di Via Serra); note most direct quotes from restaurant owners, journalist prose extracted
+[p1b] "passionegourmet.it/2025/07/25/ristorante-al-cambio/" → 200 | ~3000ch | ACCEPTED — Valerio De Cristofaro, named author confirmed, July 2025, single-restaurant review (Al Cambio)

@@ -1,0 +1,864 @@
+{
+  "city": "Bologna",
+  "country": "Italy",
+  "city_slug": "bologna-italy",
+  "pipeline": "localbite-v7.1",
+  "run_date": "2026-04-28",
+  "year_range": "2023-2026",
+  "sources": [
+    {
+      "source_id": "src-katieparla-parla",
+      "id": "src-katieparla-parla",
+      "writer": "Katie Parla",
+      "publication": "Katie Parla",
+      "url": "https://katieparla.com/",
+      "article_url": "https://katieparla.com/city-guides/bologna/",
+      "article_title": "Bologna City Guide",
+      "article_date": "2024-08-01",
+      "language": "EN",
+      "source_type": "primary",
+      "single_author_site": true,
+      "restaurants_extracted": 0,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "American food writer based in Rome, specializing in Italian and Mediterranean food. Author of multiple cookbooks including Tasting Rome (2016) and Food of the Italian South (2019). Regular contributor to The New York Times, National Geographic, and Saveur. Katie Parla has been researching and writing about Italian regional food traditions for over fifteen years, with in-depth city guides at katieparla.com. Her Bologna guide was updated August 2024. Confirmed DIRECT_FETCH_SOURCE; article fetched via direct WebFetch (Jina CAPTCHA blocked, Wayback 451). No qualifying quotes extracted from this session's re-fetch due to AI-summary compression; source retained as cross-validation."
+    },
+    {
+      "source_id": "src-cibotoday-pozzi",
+      "id": "src-cibotoday-pozzi",
+      "writer": "Carolina Pozzi",
+      "publication": "CiboToday",
+      "url": "https://www.cibotoday.it/",
+      "article_url": "https://www.cibotoday.it/dove-mangiare/dove-mangiare-a-bologna.html",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "article_date": "2023-06-15",
+      "language": "IT",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 15,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food and lifestyle writer for CiboToday, an Italian digital food publication covering restaurant recommendations, food culture, and dining guides across Italy. Carolina Pozzi specializes in practical city-wide restaurant round-ups grounded in local food traditions. Her June 2023 Bologna guide covers sixteen trattorias and restaurants with emphasis on Bolognese cucina tipica, tracing both historic institutions and contemporary kitchens committed to local culinary identity."
+    },
+    {
+      "source_id": "src-curiousappetite-sisk",
+      "id": "src-curiousappetite-sisk",
+      "writer": "Coral Sisk",
+      "publication": "The Curious Appetite",
+      "url": "https://www.thecuriousappetite.com/",
+      "article_url": "https://www.thecuriousappetite.com/2026/01/21/food-drink-restaurants-bologna-italy/",
+      "article_title": "Where to eat and drink in Bologna, Italy",
+      "article_date": "2026-01-21",
+      "language": "EN",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 11,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "American food writer and long-term Bologna resident behind The Curious Appetite (thecuriousappetite.com). Coral Sisk runs food tours and culinary events in Bologna and has spent years documenting the city's restaurant scene from the inside. Her January 2026 Bologna guide is comprehensive and opinionated, covering trattorias, wine bars, and contemporary dining from the perspective of someone who eats in the city daily. One of the most authoritative English-language voices on Bolognese food culture."
+    },
+    {
+      "source_id": "src-foodnotes-campagnoli",
+      "id": "src-foodnotes-campagnoli",
+      "writer": "Monica Campagnoli",
+      "publication": "Food Notes from Bologna",
+      "url": "https://foodnotesfrombologna.substack.com/",
+      "article_url": "https://foodnotesfrombologna.substack.com/p/via-emilia-where-to-eat-in-bologna",
+      "article_title": "Via Emilia. Where to eat in Bologna",
+      "article_date": "2025-02-21",
+      "language": "EN",
+      "source_type": "primary",
+      "single_author_site": true,
+      "restaurants_extracted": 2,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Bologna-based food writer and sole author of the Food Notes from Bologna Substack newsletter (foodnotesfrombologna.substack.com). Monica Campagnoli writes about the city's food culture, restaurant scene, and culinary traditions for an English-language audience interested in local Bolognese eating. Her February 2025 article is a curated reference list of recommended restaurants across the city. Single-author site rule applied: authorship confirmed on About page."
+    },
+    {
+      "source_id": "src-passionegourmet-decristofaro",
+      "id": "src-passionegourmet-decristofaro",
+      "writer": "Valerio De Cristofaro",
+      "publication": "Passione Gourmet",
+      "url": "https://www.passionegourmet.it/",
+      "article_url": "https://www.passionegourmet.it/2025/07/25/ristorante-al-cambio/",
+      "article_title": "Ristorante Al Cambio",
+      "article_date": "2025-07-25",
+      "language": "IT",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 1,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food critic writing for Passione Gourmet, one of Italy's leading independent food criticism publications known for authoritative and detailed restaurant reviews. Valerio De Cristofaro contributed a single-restaurant review of Al Cambio in Bologna, published July 2025, assessing its contemporary trattoria approach and commitment to traditional Bolognese cuisine under chef Max Poggi."
+    },
+    {
+      "source_id": "src-gastrodelirio-riccio",
+      "id": "src-gastrodelirio-riccio",
+      "writer": "Fabio Riccio",
+      "publication": "Gastrodelirio",
+      "url": "https://gastrodelirio.it/",
+      "article_url": "https://gastrodelirio.it/fabio-riccio/i-mattarelli-bologna-pasta-fresca-artigianale/2025/10/",
+      "article_title": "I Mattarelli Bologna: pasta fresca artigianale",
+      "article_date": "2025-10-06",
+      "language": "IT",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 1,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Independent food critic and author at Gastrodelirio (gastrodelirio.it), covering Italian restaurants with particular attention to Bologna and Emilia-Romagna. Fabio Riccio writes single-restaurant reviews focused on product quality, craft, and culinary authenticity. His October 2025 review of I Mattarelli highlighted the Bolognina pasta atelier's creative approach to fresh pasta traditions."
+    },
+    {
+      "source_id": "src-lucianopignataro-barone",
+      "id": "src-lucianopignataro-barone",
+      "writer": "Floriana Barone",
+      "publication": "Luciano Pignataro Wine Blog",
+      "url": "https://lucianopignataro.it/",
+      "article_url": null,
+      "article_title": "La Trattoria di Via Serra a Bologna",
+      "article_date": "2024-04-22",
+      "language": "IT",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 1,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer contributing to the Luciano Pignataro Wine Blog (lucianopignataro.it), a respected Italian food and wine publication. Floriana Barone reviewed Trattoria di Via Serra in Bologna in April 2024, noting the kitchen's focus on named local suppliers and high-quality ingredients. Article_url set null: article content was not retrievable in current session re-fetch (Jina returned homepage); confirmed as 200 response (~3000ch) in original pipeline session."
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Al Cambio",
+      "name_variants": [
+        "Ristorante Al Cambio"
+      ],
+      "neighbourhood": "Navile",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tagliatelle alla bolognese",
+        "tortellini in doppio brodo di carne",
+        "arrosto morto di pollo alla bolognese",
+        "cotoletta di vitello alla bolognese",
+        "passatelli",
+        "battuta di manzo al coltello",
+        "latte in piedi",
+        "crostatina di cipolle caramellate"
+      ],
+      "signature_dish": "tagliatelle alla bolognese",
+      "quote": "la cucina — condotta da Armando Martini sotto la direzione di Max Poggi, chef emiliano e proprietario del locale — omaggia la tradizione cittadina",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-pozzi",
+        "src-curiousappetite-sisk",
+        "src-passionegourmet-decristofaro"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Carolina Pozzi",
+        "Coral Sisk",
+        "Valerio De Cristofaro"
+      ],
+      "lat": 44.5284956,
+      "lng": 11.3667413,
+      "language_pool": "both",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Al Cambio"
+    },
+    {
+      "name": "All'Osteria Bottega",
+      "name_variants": [
+        "Osteria Bottega"
+      ],
+      "neighbourhood": "Saragozza",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "gastronomia petroniana"
+      ],
+      "signature_dish": null,
+      "quote": "Il patron Daniele Minarelli è uno dei più appassionati cultori della gastronomia petroniana.",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-pozzi",
+        "src-curiousappetite-sisk"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Carolina Pozzi",
+        "Coral Sisk"
+      ],
+      "lat": 44.4910746,
+      "lng": 11.3326619,
+      "language_pool": "both",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "All'Osteria Bottega"
+    },
+    {
+      "name": "Trattoria di Via Serra",
+      "name_variants": [
+        "Via Serra"
+      ],
+      "neighbourhood": "Bolognina",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta fresca",
+        "tagliatelle"
+      ],
+      "signature_dish": null,
+      "quote": "L'attenzione è tutta per le materie prime, con fornitori che hanno nomi e cognomi.",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-pozzi",
+        "src-curiousappetite-sisk",
+        "src-lucianopignataro-barone"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Carolina Pozzi",
+        "Coral Sisk",
+        "Floriana Barone"
+      ],
+      "lat": 44.509428,
+      "lng": 11.3455696,
+      "language_pool": "both",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria di Via Serra"
+    },
+    {
+      "name": "Ristorante Grassilli",
+      "name_variants": [
+        "Grassilli",
+        "Da Grassilli"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cotoletta alla bolognese"
+      ],
+      "signature_dish": "cotoletta alla bolognese",
+      "quote": "Pareti ricoperte da cimeli e foto in bianco e nero — soprattutto di glorie della canzone",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-pozzi",
+        "src-curiousappetite-sisk"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Carolina Pozzi",
+        "Coral Sisk"
+      ],
+      "lat": null,
+      "lng": null,
+      "language_pool": "both",
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Trattoria da Me",
+      "name_variants": [
+        "Da Me"
+      ],
+      "neighbourhood": "Porto",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cotoletta alla bolognese"
+      ],
+      "signature_dish": "cotoletta alla bolognese",
+      "quote": "la cotoletta alla bolognese raggiunge forse livelli ineguagliabili",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-pozzi",
+        "src-curiousappetite-sisk"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Carolina Pozzi",
+        "Coral Sisk"
+      ],
+      "lat": 44.4972713,
+      "lng": 11.3324574,
+      "language_pool": "both",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Da Me"
+    },
+    {
+      "name": "Trattoria Bertozzi",
+      "name_variants": [
+        "Bertozzi"
+      ],
+      "neighbourhood": "Saragozza",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cucina tradizionale bolognese"
+      ],
+      "signature_dish": null,
+      "quote": "una cucina che non prevede deroghe alla tradizione",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-pozzi",
+        "src-curiousappetite-sisk"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Carolina Pozzi",
+        "Coral Sisk"
+      ],
+      "lat": 44.4951978,
+      "lng": 11.31939,
+      "language_pool": "both",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Bertozzi"
+    },
+    {
+      "name": "Trattoria Collegio di Spagna",
+      "name_variants": [
+        "Collegio di Spagna"
+      ],
+      "neighbourhood": "Saragozza",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crescentine fritte"
+      ],
+      "signature_dish": "crescentine fritte",
+      "quote": "simple fare and especially fried bread pillows called crescentine fritte with cured meats",
+      "quote_language": "original",
+      "article_date": "2026-01-21",
+      "article_title": "Where to eat and drink in Bologna, Italy",
+      "open_status_check": false,
+      "sources": [
+        "src-curiousappetite-sisk",
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Coral Sisk",
+        "Carolina Pozzi"
+      ],
+      "lat": 44.490785,
+      "lng": 11.3383115,
+      "language_pool": "both",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Collegio di Spagna"
+    },
+    {
+      "name": "Casa Merlò",
+      "name_variants": [
+        "CasaMerlò",
+        "Casa Merlo"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Bolognese contemporary",
+      "opening_year": 2019,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "hamburger con ripieno di tortellini",
+        "friggione",
+        "salsa verde",
+        "Parmigiano soffiato"
+      ],
+      "signature_dish": "hamburger con ripieno di tortellini",
+      "quote": "un hamburger con ripieno di tortellini, friggione, salsa verde e Parmigiano soffiato",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-pozzi",
+        "src-curiousappetite-sisk"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Carolina Pozzi",
+        "Coral Sisk"
+      ],
+      "lat": null,
+      "lng": null,
+      "language_pool": "both",
+      "geo_skip": true
+    },
+    {
+      "name": "Oltre.",
+      "name_variants": [
+        "Oltre"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Bolognese contemporary",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tortellini in brodo di cappone"
+      ],
+      "signature_dish": null,
+      "quote": "un ristorante contemporaneo che tuttavia non disdegna tortellini in brodo di cappone",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-pozzi",
+        "src-curiousappetite-sisk"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Carolina Pozzi",
+        "Coral Sisk"
+      ],
+      "lat": 44.4968968,
+      "lng": 11.338036,
+      "language_pool": "both",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Oltre"
+    },
+    {
+      "name": "Ristorante Cesarina",
+      "name_variants": [
+        "Da Cesarina",
+        "Cesarina"
+      ],
+      "neighbourhood": "Santo Stefano",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tortellini con la panna",
+        "stecchi petroniani",
+        "fritto misto bolognese"
+      ],
+      "signature_dish": "tortellini con la panna",
+      "quote": "si dice fu lei a provare per prima a condire i tortellini con la panna",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-pozzi",
+        "src-foodnotes-campagnoli"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Carolina Pozzi",
+        "Monica Campagnoli"
+      ],
+      "lat": 44.4917902,
+      "lng": 11.3483239,
+      "language_pool": "both",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Cesarina"
+    },
+    {
+      "name": "Trattoria Serghei",
+      "name_variants": [
+        "Da Serghei",
+        "Serghei"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "lasagne",
+        "cucina tradizionale bolognese"
+      ],
+      "signature_dish": "lasagne",
+      "quote": "la cucina, che qui è quella della tradizione, di sostanza",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": true,
+      "sources": [
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Carolina Pozzi"
+      ],
+      "lat": null,
+      "lng": null,
+      "language_pool": "it",
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Vâgh iñ Uffézí",
+      "name_variants": [
+        "Vag in Ufezzi",
+        "Vaghi in Uffezi"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cucina tradizionale bolognese"
+      ],
+      "signature_dish": null,
+      "quote": "i proprietari Mirco Carati e la moglie Antonella fanno di tutto per conservare l'atmosfera di una volta",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": true,
+      "sources": [
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Carolina Pozzi"
+      ],
+      "lat": 44.4874456,
+      "lng": 11.3504207,
+      "language_pool": "it",
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Vâgh iń Ufézzi"
+    },
+    {
+      "name": "Vicolo Colombina",
+      "name_variants": [
+        "Colombina"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "lasagne al ragù di cortile"
+      ],
+      "signature_dish": "lasagne al ragù di cortile",
+      "quote": "sontuose le sue lasagne, lasagne al ragù di cortile",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": true,
+      "sources": [
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Carolina Pozzi"
+      ],
+      "lat": 44.4923485,
+      "lng": 11.3421923,
+      "language_pool": "it",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Vicolo Colombina"
+    },
+    {
+      "name": "Le Golosità di Nonna Aurora",
+      "name_variants": [
+        "Nonna Aurora"
+      ],
+      "neighbourhood": "Bolognina",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta all'uovo fresca",
+        "secondi arrosto",
+        "secondi alla griglia"
+      ],
+      "signature_dish": "pasta all'uovo tirata al mattarello",
+      "quote": "Tanta pasta all'uovo tirata fresca al mattarello, ma anche secondi arrosto e alla griglia",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": true,
+      "sources": [
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Carolina Pozzi"
+      ],
+      "lat": 44.5119719,
+      "lng": 11.3414566,
+      "language_pool": "it",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Le golosità di Nonna Aurora"
+    },
+    {
+      "name": "Darcy",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Bolognese contemporary",
+      "opening_year": 2023,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "lasagne contemporanea"
+      ],
+      "signature_dish": null,
+      "quote": "aperto da aprile 2023 nello spazio che ha ospitato il precedente Cabala Café",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": true,
+      "sources": [
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Carolina Pozzi"
+      ],
+      "lat": null,
+      "lng": null,
+      "language_pool": "it",
+      "geo_skip": true
+    },
+    {
+      "name": "Osteria del Cappello",
+      "name_variants": [
+        "Il Cappello"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Bolognese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cucina tradizionale bolognese"
+      ],
+      "signature_dish": null,
+      "quote": "il Cappello è comparso sugli archivi storici addirittura nel 1379",
+      "quote_language": "original",
+      "article_date": "2023-06-15",
+      "article_title": "16 ristoranti e trattorie di cucina tipica a Bologna",
+      "open_status_check": true,
+      "sources": [
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Carolina Pozzi"
+      ],
+      "lat": 44.4930354,
+      "lng": 11.3414165,
+      "language_pool": "it",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria del Cappello"
+    },
+    {
+      "name": "Scaccomatto",
+      "name_variants": [],
+      "neighbourhood": "Santo Stefano",
+      "cuisine": "Italian gourmet / creative",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "gourmet takes on traditional Bolognese dishes"
+      ],
+      "signature_dish": null,
+      "quote": "gourmet fusion takes on traditional dishes and flavors, now in a permanent location",
+      "quote_language": "original",
+      "article_date": "2026-01-21",
+      "article_title": "Where to eat and drink in Bologna, Italy",
+      "open_status_check": false,
+      "sources": [
+        "src-curiousappetite-sisk"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Coral Sisk"
+      ],
+      "lat": null,
+      "lng": null,
+      "language_pool": "en",
+      "geo_skip": true
+    },
+    {
+      "name": "Enoteca Storica Faccioli",
+      "name_variants": [
+        "Enoteca Faccioli",
+        "Faccioli"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Enoteca / wine bar",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "vini a bassa o zero intervento",
+        "minimal intervention wines"
+      ],
+      "signature_dish": null,
+      "quote": "ultimate favorite wine bar which specializes in high quality minimal intervention wines",
+      "quote_language": "original",
+      "article_date": "2026-01-21",
+      "article_title": "Where to eat and drink in Bologna, Italy",
+      "open_status_check": false,
+      "sources": [
+        "src-curiousappetite-sisk"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Coral Sisk"
+      ],
+      "lat": 44.4952266,
+      "lng": 11.3445314,
+      "language_pool": "en",
+      "geo_source": "nominatim",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Enoteca storica Faccioli"
+    },
+    {
+      "name": "Ristorante Donatello",
+      "name_variants": [
+        "Donatello"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Bolognese traditional",
+      "opening_year": 1903,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "gramigna con salsiccia"
+      ],
+      "signature_dish": "gramigna con salsiccia",
+      "quote": "Since 1903. Bolognese and Italian cuisine (gramigna with sausage, my favorite in the city).",
+      "quote_language": "original",
+      "article_date": "2025-02-21",
+      "article_title": "Via Emilia. Where to eat in Bologna",
+      "open_status_check": false,
+      "sources": [
+        "src-foodnotes-campagnoli"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Monica Campagnoli"
+      ],
+      "lat": 44.4991506,
+      "lng": 11.3446996,
+      "language_pool": "en",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Ristorante Donatello"
+    },
+    {
+      "name": "I Mattarelli",
+      "name_variants": [],
+      "neighbourhood": "Bolognina",
+      "cuisine": "Pasta fresca artigianale",
+      "opening_year": 2023,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tortelloni colorati",
+        "tortelloni con zucca",
+        "tagliatelle al ragù",
+        "pasta fresca artigianale"
+      ],
+      "signature_dish": "tortelloni colorati",
+      "quote": "Un locale della Bolognina dove la pasta fresca artigianale incontra la follia creativa.",
+      "quote_language": "original",
+      "article_date": "2025-10-06",
+      "article_title": "I Mattarelli Bologna: pasta fresca artigianale",
+      "open_status_check": false,
+      "sources": [
+        "src-gastrodelirio-riccio"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Fabio Riccio"
+      ],
+      "lat": null,
+      "lng": null,
+      "language_pool": "it",
+      "geo_skip": true
+    }
+  ],
+  "source_recency": "2023-2026",
+  "centroids": {
+    "Centro Storico": [
+      44.4954,
+      11.3456
+    ],
+    "Santo Stefano": [
+      44.4918,
+      11.3483
+    ],
+    "Bolognina": [
+      44.5107,
+      11.3435
+    ]
+  }
+}

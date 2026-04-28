@@ -1,0 +1,37 @@
+[phase-0] "https://katieparla.com/city-guides/bologna/" → Katie Parla Bologna guide fetched via direct WebFetch; initial Jina blocked by CAPTCHA; Wayback 451. Named author confirmed, food content confirmed, article date 2022-12-25 per fetched text (Part 1 notes August 2024 update).
+[neighbourhood-Centro Storico] "ristoranti Centro Storico Bologna Quadrilatero critico gastronomico 2023 2024" → gourmettoria.it (openings 2023), thegirlnextkitchen.com (new locali 2023), tasteoffreedom.it (new openings) found; no new qualified primary sources
+[neighbourhood-Centro Storico] "best restaurants Bologna historic centre food writer guide 2024 2025" → thecuriousappetite.com (Coral Sisk, Dec 2024 + updated Jan 2026) confirmed; timeout.com (secondary); eatingeurope.com (COI food tour)
+[neighbourhood-Santo Stefano] "ristoranti quartiere Santo Stefano Bologna dove mangiare 2023 2024" → cibotoday.it, agrodolce.it; Scacco Matto (Aug 2023 relocation to Orti di Orfeo) noted
+[neighbourhood-Santo Stefano] "Santo Stefano Bologna restaurants eating neighbourhood 2025" → katieparla.com confirmed; Vineria Favalli and Da Cesarina noted
+[neighbourhood-Saragozza] "ristoranti Saragozza Bologna mangiare quartiere 2024 2025" → Trattoria Amedeo, Berberè, new openings 2024-2026; no new qualified primary sources
+[neighbourhood-Saragozza] "Saragozza Bologna restaurants food guide 2023 2024" → chefdenise.com, everysteph.com (date 2020, outside range), tastebologna.net (food tour company - COI)
+[neighbourhood-Bolognina] "ristoranti Bolognina Bologna dove mangiare quartiere emergente 2024 2025" → thegirlnextkitchen.com, I Mattarelli noted, Trattoria di Via Serra (Gambero Rosso/Slow Food award noted)
+[neighbourhood-Bolognina] "Bolognina Bologna restaurants neighbourhood food 2023 2024" → thecuriousappetite.com (Coral Sisk) confirmed again; sidestreetstyle.com (Sep 2024, author 'Laura' - no surname); lizzielikes.com (Feb 2024, needs check)
+[neighbourhood-San Donato] "ristoranti San Donato Bologna dove mangiare 2023 2024" → mostly directories and Tripadvisor; Il Portico di San Donato noted
+[neighbourhood-San Donato] "San Donato Bologna restaurants eating 2024 2025" → Tripadvisor/booking sites; no new qualified primary sources
+[neighbourhood-Navile] "ristoranti Navile Bologna mangiare quartiere 2024 2025" → Da Sandro al Navile (opened 1861) noted; no new qualified primary sources
+[neighbourhood-Porto] "ristoranti Porto Bologna dove mangiare osteria 2023 2024" → identitagolose.it, dissapore.com, ilrestodelcarlino.it (Slow Food 2024) found; I Mattarelli (late 2023) noted
+[neighbourhood-Porto] "Porto Bologna restaurants food guide 2025" → fionabeckett.substack.com (Nov 2025, Fiona Beckett) found; thecuriousappetite.com (Jan 2026) confirmed
+[neighbourhood-San Vitale] "ristoranti San Vitale Bologna consigli gastronomia 2024 2025" → mostly Tripadvisor and directories; Trattoria Leonida noted
+[neighbourhood-Mazzini+Savena] "ristoranti Mazzini Savena Bologna dove mangiare 2023 2024" → inviaggioconmattia.it, Circolo Mazzini noted; no new qualified primary sources
+[neighbourhood-Tier3] "ristoranti Reno Borgo Panigale Corticella Lame Bologna dove mangiare 2024 2025" → inviaggioconmattia.it; Da Sandro (Corticella) noted; no qualified primary sources for Tier 3
+[cross-2] "migliori ristoranti Bologna critico gastronomico guida 2024 2025" → gourmettoria.it, Michelin 2026 confirmed I Portici (starred, excluded); Bib Gourmand list noted (Al Cambio, Trattoria di Via Serra, Osteria Bartolini)
+[cross-2] "dove mangiare Bologna consigli quartiere trattoria 2023 2024" → scattidigusto.it (March 2023, no named author - rejected); dissapore.com, inviaggioconmattia.it found
+[cross-2] "trattorie osterie Bologna consigliate giornalista blog gastronomia 2025" → cibotoday.it (Carolina Pozzi Feb 2025 guide confirmed); Slow Food 2024: Osteria Bottega + Trattoria di Via Serra get chiocciole
+[cross-1] "Bologna food writer restaurant blog personal recommendations 2024" → thecuriousappetite.com (Coral Sisk confirmed); foodnotesfrombologna.substack.com found (Monica Campagnoli, Feb 2025)
+[cross-3] "giornalista gastronomico Bologna ristoranti consigli blog 2023 2024" → identitagolose.it, viadeigourmet.it found; Antonio Paolini (Gambero Rosso) noted
+[cross-4] "\"50 Top Italy\" Bologna 2024 2025 selezionati vincitori ristoranti" → Al Cambio (7th in Trattorie e Bistrò Moderni 2025); carlozucchetti.it (award lists)
+[cross-4] "Slow Food \"Osterie d'Italia\" Bologna 2024 chiocciole segnalati" → Osteria Bottega + Trattoria di Via Serra: chiocciole; Al Cambio + Trattoria Collegio di Spagna: noted
+[cross-4] "\"Gambero Rosso\" Bologna ristoranti trattorie migliori 2024 2025" → Osteria Bottega (tre gamberi), Ahimè (tre tavole), Al Cambio confirmed; 2025 guide structure confirmed
+[cross-5] "nuovi ristoranti aperture Bologna 2024 2025" → thegirlnextkitchen.com (IT blogger, new openings 2024-2025); I Mattarelli (late 2023) confirmed
+[cross-5] "new restaurant openings Bologna 2024 2025" → thegirlnextkitchen.com confirmed; mostly directories
+[cross-7] "enoteca naturale Bologna vino naturale ristorante consiglio 2024 2025" → Enoteca Storica Faccioli confirmed; Il Pollaio (Mercato Albani) confirmed; scattidigusto.it (wine bars article)
+[cross-8] "blog gastronomia Bologna rivista indipendente critica ristoranti 2024" → gastrodelirio.it (Fabio Riccio, independent food critic) found; passionegourmet.it noted
+[cross-7] "Quadrilatero mercato Bologna ristorante osteria migliore 2023 2024" → dissapore.com (Bologna openings autumn-winter 2023); Osteria del Sole (1465) noted
+[cross-8] "supplemento gastronomia giornale Bologna ristoranti consigli 2023 2024" → dissapore.com, gourmettoria.it confirmed; thegirlnextkitchen.com (new locali 2023-2024) confirmed
+[cross-1] "best restaurants Bologna Italy food guide local 2024 2025" → thecuriousappetite.com confirmed; Trattoria Anna Maria, Da Cesari, Osteria de' Poeti noted
+[cross-6] "tagliatelle ragù tortellini Bologna ristorante migliore critico gastronomico 2023 2024" → scattidigusto.it (no named author); Serghei noted; dissapore.com (Michelin 2023 content)
+[cross-3] "Fabio Riccio gastrodelirio Bologna ristoranti 2024 2025" → gastrodelirio.it (I Mattarelli Oct 2025, La pizzetta alla pescarese Nov 2024) confirmed
+[phase-1b-crossval] "\"Osteria Bottega\" Bologna critica recensione recommendation 2024 2025" → viadeigourmet.it (Simone Rosti, 2015 - outside range); passionegourmet.it (2019 - outside range); cibovagare.it noted
+[phase-1b-crossval] "\"Trattoria di Via Serra\" Bologna critica 2023 2024 2025" → lucianopignataro.it (Floriana Barone, April 22 2024) QUALIFIED; Yelp 'closed' flag noted (likely error - Michelin 2026 still lists)
+[phase-1b-crossval] "\"Al Cambio\" Bologna ristorante critica review 2024 2025" → passionegourmet.it (Valerio De Cristofaro, July 25 2025) QUALIFIED; lucianopignataro.it (Al Cambio review found)

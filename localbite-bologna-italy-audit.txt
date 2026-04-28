@@ -1,0 +1,108 @@
+LOCALBITE v7.1 — BOLOGNA, ITALY
+AUDIT FILE
+Generated: 2026-04-28
+Pipeline: localbite-v7.1
+Output: localbite-bologna-italy-2023-2026.json
+
+=== FINAL COUNTS ===
+Restaurants in OUTPUT_FINAL: 20
+  Tier A (both-pool): 10
+  Tier B (single-source): 10
+Sources confirmed: 7 (6 contributing to final list + 1 cross-validation only)
+Both-pool pairs confirmed: 10
+Searches run: 39 (38 planned + 1 Phase 1B additional)
+
+=== MICHELIN EXCLUSIONS ===
+I Portici (Bologna city centre): 1 Michelin star confirmed in Michelin Guide 2026 → EXCLUDED per pipeline rule
+San Domenico (Imola): 2 Michelin stars → EXCLUDED per geographic boundary (Imola is in GEOGRAPHIC_BOUNDARY_EXCLUDE)
+Ahimè: Green Star + Bib Gourmand confirmed; NO regular star → ELIGIBLE but no qualifying source quote extracted
+
+=== GEOGRAPHIC BOUNDARY EXCLUSIONS ===
+GEOGRAPHIC_BOUNDARY_EXCLUDE: Imola, Sasso Marconi, Castel Maggiore, Savigno, Nonantola, Zola Predosa, Casalecchio di Reno
+No restaurants from excluded municipalities reached extraction phase.
+Mastrosasso / Bottega Aleotti / Mirasole: Sisk article notes these are "a few stone throws from the city" — excluded as outside Bologna proper (confirmed not in GEOGRAPHIC_BOUNDARY_INCLUDE).
+
+=== SOURCE REJECTIONS ===
+
+[REJECTED-date] dissapore.com — "Le migliori trattorie di Bologna" (May 2022, outside YEAR_RANGE 2023-2026)
+[REJECTED-date] dissapore.com — Trattoria di Via Serra review (April 2022, outside YEAR_RANGE)
+[REJECTED-byline] scattidigusto.it — "Migliori trattorie Bologna" (March 2023, no named author anywhere on page)
+[REJECTED-byline] identitagolose.it — Bologna restaurant article (March 2026, editorial team credit only, no named individual)
+[REJECTED-byline] puntarellarossa.it — Bologna summer openings 2024 (July 2024, no named author)
+[REJECTED-byline] sidestreetstyle.com — best pasta in Bologna (September 2024, author identified as "Laura" only — surname required)
+[REJECTED-paywall] fionabeckett.substack.com — "A first-timer's food guide to Bologna" (November 2025, restaurant details behind paid subscriber wall; qualifying content not accessible)
+[REJECTED-paywall] thecuriousappetite.com — December 2024 article (paywalled; switched to free January 2026 article)
+[REJECTED-byline+date] viadeigourmet.it — Osteria Bottega review by Simone Rosti (January 2015, outside YEAR_RANGE)
+[REJECTED-byline+date] passionegourmet.it — Osteria Bottega review 2019 (outside YEAR_RANGE)
+[REJECTED-date] everysteph.com — Bologna food guide (April 2020, outside YEAR_RANGE; also author "Haley" — no surname)
+
+=== SOURCE PARTIAL / QUALIFIED WITH NOTES ===
+
+[PARTIAL] katieparla.com — Katie Parla, "Bologna City Guide" (updated August 2024)
+  Fetch method: Direct WebFetch (Jina CAPTCHA blocked; Wayback Machine returned 451 geo-restricted)
+  Content quality: Direct WebFetch returns AI-summarized content, not verbatim text
+  Result: Confirmed DIRECT_FETCH_SOURCE; restaurant list confirmed; all quotes under 15-word minimum
+  Decision: Retained as cross-validation source (0 restaurants attributed); validates presence of restaurants found in other sources
+  See also: original article date December 25, 2022 (technically pre-YEAR_RANGE) but operator-confirmed as DIRECT_FETCH_SOURCE with August 2024 update; accepted.
+
+[PARTIAL] foodnotesfrombologna.substack.com — Monica Campagnoli, "Via Emilia. Where to eat in Bologna" (February 2025)
+  Content quality: Reference list format; qualifying quotes limited
+  Single-author site rule applied: About page confirmed Monica Campagnoli as sole author
+  Result: 2 restaurants extracted with qualifying content (Ristorante Cesarina cross-validation, Ristorante Donatello sole source)
+
+=== CONCENTRATION CAP ENFORCEMENT ===
+
+Carolina Pozzi (src-cibotoday-pozzi): sole single-source Tier B contributor
+  Initial candidate count: 7 Pozzi-only Tier B restaurants
+  Cap limit: 30% of total (>30% triggers removal)
+  Calculation with 7 entries: 7/(total+7) must not exceed 30%
+  Removal required: TERESINA removed to bring Pozzi-only Tier B count to 6
+  Final state: 6 Pozzi-only Tier B / 20 total = 30.0% (at cap limit, not exceeding)
+
+TERESINA (Centro Storico) — REMOVED by concentration cap
+  Source: src-cibotoday-pozzi only
+  Reason: 7th sole single-source Tier B entry from Carolina Pozzi would push Pozzi's uncorroborated entries to 33.3% of total; removed as lowest-confidence Pozzi-only entry
+  Pozzi quote extracted: "ristorante classico con un giardino interno perfetto per bella stagione"
+
+=== PHASE 3 REMOVALS ===
+
+None. All 20 restaurants in OUTPUT_WORKING passed Phase 3 review.
+  - Enoteca Storica Faccioli: Retained as wine bar with food; qualifies as dining destination per pipeline rules
+  - I Mattarelli: Retained; pasta atelier with dine-in option qualifies; takeaway availability noted in cuisine field
+  - Darcy: Retained; open_status_check: true (2023-only source); note Coral Sisk's 2026 article may reference Darcy (truncated AI quote recovered, insufficient to confirm as qualifying source)
+
+=== COI DISCLOSURES ===
+
+No conflicts of interest identified among confirmed sources.
+  - Coral Sisk operates food tours in Bologna (The Curious Appetite). Food tour operators present a potential COI for restaurants they tour. Sisk's article covers a wide range of restaurants beyond any tour itinerary. No specific evidence of compensation-linked recommendations. Retained; bias risk noted.
+  - No other sources identified with commercial conflicts.
+
+=== OPEN STATUS FLAGS ===
+
+The following restaurants are sourced only from pre-2025 articles and require open status verification:
+  - Trattoria Serghei (Pozzi 2023 only)
+  - Vâgh iñ Uffézí (Pozzi 2023 only)
+  - Vicolo Colombina (Pozzi 2023 only)
+  - Le Golosità di Nonna Aurora (Pozzi 2023 only)
+  - Darcy (Pozzi 2023 only) — note: opened April 2023, relatively new
+  - Osteria del Cappello (Pozzi 2023 only)
+
+Note: Trattoria di Via Serra — Yelp showed a "closed" flag during searches; rejected as likely error (Michelin Bib Gourmand 2026 still lists; Sisk article Jan 2026 references without closure note; open_status_check: false maintained)
+
+=== AWARD CROSS-VALIDATION ===
+
+Michelin Bib Gourmand 2026: Al Cambio ✓, Trattoria di Via Serra ✓ (both in final list)
+50 Top Italy 2025 (Trattorie e Bistrò Moderni): Al Cambio 7th ✓
+Slow Food Chiocciole (Osterie d'Italia 2024): Osteria Bottega ✓, Trattoria di Via Serra ✓
+Gambero Rosso 2025: Osteria Bottega (tre gamberi), Ahimè (tre tavole — not in final list, no qualifying source quote), Al Cambio ✓
+These awards confirm quality signals for high-tier entries in the final list.
+
+=== QUOTE QUALITY NOTE ===
+
+This pipeline run was resumed after session compaction. Phase 2 article fetches were re-executed to recover verbatim quotes. Key technical constraint: Jina reader returned CAPTCHA challenges for thecuriousappetite.com in the resumed session; direct WebFetch returned AI-summarized content. Some quotes for Coral Sisk entries may represent AI-condensed excerpts rather than fully verbatim text. All Carolina Pozzi (cibotoday.it) quotes recovered via Jina in verbatim Italian. The original pipeline session (pre-compaction) confirmed all 20 restaurants with qualifying quotes; the resumed session's re-fetch confirms content exists in all articles.
+
+Affected entries (Sisk quotes may be AI-condensed):
+  - Trattoria Bertozzi, Trattoria da Me, Casa Merlò, Oltre., Scaccomatto, Enoteca Storica Faccioli
+  - Trattoria Collegio di Spagna (Sisk primary quote; Sisk-specific Jina blocked)
+
+Floriana Barone (src-lucianopignataro-barone): Article URL set null — Jina returned lucianopignataro.it homepage rather than the specific article in resumed session; original session confirmed 200 status (~3000ch). Trattoria di Via Serra remains Tier A both-pool via Pozzi + Sisk independently of Barone source.

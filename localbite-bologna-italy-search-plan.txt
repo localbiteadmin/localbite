@@ -1,0 +1,110 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LOCALBITE v7.1 — BOLOGNA, ITALY
+SEARCH PLAN
+Prepared: 2026-04-28
+
+PRIMARY_LANGUAGE: Italian (IT)
+SECONDARY_LANGUAGE: English (EN)
+YEAR_RANGE: 2023-2026
+
+=== PART A — NEIGHBOURHOOD COVERAGE ===
+
+TIER_1 NEIGHBOURHOODS (2 queries each: IT + EN)
+
+Centro Storico:
+  A-01 [IT]: ristoranti Centro Storico Bologna Quadrilatero critico gastronomico 2023 2024
+  A-02 [EN]: best restaurants Bologna historic centre food writer guide 2024 2025
+
+Santo Stefano:
+  A-03 [IT]: ristoranti quartiere Santo Stefano Bologna dove mangiare 2023 2024
+  A-04 [EN]: Santo Stefano Bologna restaurants eating neighbourhood 2025
+
+Saragozza:
+  A-05 [IT]: ristoranti Saragozza Bologna mangiare quartiere 2024 2025
+  A-06 [EN]: Saragozza Bologna restaurants food guide 2023 2024
+
+Bolognina:
+  A-07 [IT]: ristoranti Bolognina Bologna dove mangiare quartiere emergente 2024 2025
+  A-08 [EN]: Bolognina Bologna restaurants neighbourhood food 2023 2024
+
+TIER_2 NEIGHBOURHOODS (2 queries each: IT + EN)
+
+San Donato:
+  A-09 [IT]: ristoranti San Donato Bologna dove mangiare 2023 2024
+  A-10 [EN]: San Donato Bologna restaurants eating 2024 2025
+
+Navile:
+  A-11 [IT]: ristoranti Navile Bologna mangiare quartiere 2024 2025
+  A-12 [EN]: Navile Bologna restaurants neighbourhood 2023 2024
+
+Porto:
+  A-13 [IT]: ristoranti Porto Bologna dove mangiare osteria 2023 2024
+  A-14 [EN]: Porto Bologna restaurants food guide 2025
+
+San Vitale:
+  A-15 [IT]: ristoranti San Vitale Bologna consigli gastronomia 2024 2025
+  A-16 [EN]: San Vitale Bologna restaurants eating guide 2023 2024
+
+Mazzini:
+  A-17 [IT]: ristoranti Mazzini Bologna dove mangiare 2023 2024
+  A-18 [EN]: Mazzini Bologna restaurants 2024 2025
+
+Savena:
+  A-19 [IT]: ristoranti Savena Bologna dove mangiare quartiere 2023 2024
+  A-20 [EN]: Savena Bologna restaurants eating 2024 2025
+
+TIER_3 NEIGHBOURHOODS (1 query each: IT only)
+
+  A-21 [IT]: ristoranti Reno Bologna dove mangiare 2024 2025
+  A-22 [IT]: ristoranti Borgo Panigale Bologna dove mangiare 2025
+  A-23 [IT]: ristoranti Corticella Bologna dove mangiare 2023 2024
+  A-24 [IT]: ristoranti Lame Bologna mangiare quartiere 2024 2025
+
+=== PART B — CROSS-CUTTING ANGLES ===
+
+Cross-1 — City-wide EN (2 queries):
+  B-01 [EN]: best restaurants Bologna Italy food guide local recommendations 2024 2025
+  B-02 [EN]: where to eat Bologna Italy food writer honest review 2023 2024
+
+Cross-2 — City-wide IT (3 queries):
+  B-03 [IT]: migliori ristoranti Bologna critico gastronomico guida 2024 2025
+  B-04 [IT]: dove mangiare Bologna consigli quartiere trattoria 2023 2024
+  B-05 [IT]: trattorie osterie Bologna consigliate giornalista blog gastronomia 2025
+
+Cross-3 — Generic writer-first (2 queries):
+  B-06 [EN]: Bologna food writer restaurant blog personal recommendations 2024
+  B-07 [IT]: giornalista gastronomico Bologna ristoranti consigli blog 2023 2024
+
+Cross-4 — Named awards (3 queries):
+  B-08 [IT]: "50 Top Italy" Bologna 2024 2025 selezionati vincitori ristoranti
+  B-09 [IT]: "Guida Espresso" Bologna ristoranti premiati segnalati 2023 2024
+  B-10 [IT]: "Gambero Rosso" Bologna tre forchette 2024 2025
+
+Cross-5 — Recent openings (2 queries):
+  B-11 [IT]: nuovi ristoranti aperture Bologna 2024 2025
+  B-12 [EN]: new restaurant openings Bologna 2024 2025
+
+Cross-6 — Vocabulary-specific IT (2 queries, using Bolognese food identity terms):
+  B-13 [IT]: tagliatelle ragù tortellini brodo Bologna ristorante migliore critico 2023 2024
+  B-14 [IT]: mortadella Quadrilatero Bologna osteria naturale consiglio giornalista 2024 2025
+
+Cross-7 — Cuisine and community (2 queries):
+  B-15 [IT]: enoteca naturale Bologna vino naturale ristorante 2024 2025
+  B-16 [IT]: mercato Quadrilatero Bologna ristorante osteria mangiare 2023 2024
+
+Cross-8 — Publication category IT (2 queries):
+  B-17 [IT]: blog gastronomia Bologna rivista indipendente critica ristoranti 2024
+  B-18 [IT]: supplemento gastronomia giornale Bologna ristoranti consigli 2023 2024
+
+TOTAL QUERIES PLANNED: 42
+
+YEAR DISTRIBUTION CHECK:
+- Queries referencing 2023 or 2023-2024: A-01, A-03, A-06, A-08, A-09, A-12, A-13, A-16, A-17, A-19, A-23, B-02, B-04, B-07, B-09, B-13, B-16, B-18 = 18 queries
+- Queries referencing 2024-2025 or 2025: A-02, A-04, A-05, A-07, A-10, A-11, A-14, A-15, A-18, A-20, A-21, A-22, A-24, B-01, B-03, B-05, B-10, B-11, B-12, B-14, B-15, B-17 = 22 queries
+- Mixed year or no year: B-06, B-08 = 2 queries
+
+[year-distribution-check] PASSED — 18 queries reference earlier years (2023-2024), 22 queries reference recent years (2024-2025), 2 queries reference both or have no year term.
+
+STOPPING RULE: If last 8 consecutive queries return no new qualifying sources, stop searching and proceed to Step 3.
+QUERY CEILING: Hard ceiling 55 queries.
