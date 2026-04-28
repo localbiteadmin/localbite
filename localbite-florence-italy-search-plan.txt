@@ -1,0 +1,94 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LocalBite v7.1 — Florence, Italy
+Search Plan — 2026-04-28
+
+PRIMARY_LANGUAGE: Italian (IT)
+SECONDARY_LANGUAGE: English (EN)
+YEAR_RANGE: 2023-2026
+
+YEAR DISTRIBUTION CHECK (pre-run):
+- Queries referencing 2023-2024: ~18
+- Queries referencing 2025-2026: ~17
+- Queries with no year term: ~8
+[year-distribution-check] PASSED — year references distributed across full 2023-2026 range.
+
+═══════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+═══════════════════════════════════════
+
+TIER 1 (6 areas × 2 languages = 12 queries):
+
+A-01 [IT] "Oltrarno Firenze ristoranti consiglio critica gastronomica 2023"
+A-02 [EN] "Oltrarno Florence best restaurants food guide 2024"
+A-03 [IT] "Santa Croce Firenze ristoranti migliori guida 2024"
+A-04 [EN] "Santa Croce Florence restaurants worth visiting 2025"
+A-05 [IT] "Sant'Ambrogio Firenze ristoranti mercato cena 2023"
+A-06 [EN] "Sant'Ambrogio Florence restaurants neighbourhood guide 2024"
+A-07 [IT] "Centro Storico Firenze ristoranti autentici consigli 2025"
+A-08 [EN] "Florence historic centre authentic restaurants local guide 2023"
+A-09 [IT] "San Lorenzo Firenze ristoranti osterie trattorie 2024"
+A-10 [EN] "San Lorenzo Florence restaurants food guide 2025"
+A-11 [IT] "San Frediano Firenze ristoranti dove mangiare 2024"
+A-12 [EN] "San Frediano Florence where to eat local guide 2025"
+
+TIER 2 (5 areas × 2 languages = 10 queries):
+
+A-13 [IT] "Porta Romana Firenze ristoranti trattorie osterie 2023"
+A-14 [EN] "Porta Romana Florence restaurants food 2024"
+A-15 [IT] "Piazza Repubblica Firenze ristoranti aperitivo 2025"
+A-16 [EN] "Piazza della Repubblica Florence restaurants bars 2023"
+A-17 [IT] "Piazza Beccaria Firenze ristoranti locali 2024"
+A-18 [EN] "Piazza Beccaria Florence food neighbourhood 2025"
+A-19 [IT] "Settignano Firenze ristoranti consiglio 2024"
+A-20 [EN] "Settignano Florence restaurant local recommendation 2025"
+A-21 [IT] "Lungarno Firenze ristoranti cena vista Arno 2023"
+A-22 [EN] "Lungarno area Florence restaurants dining 2024"
+
+TIER 3 (5 areas × 1 IT language = 5 queries):
+
+A-23 [IT] "Gavinana Firenze ristoranti 2024"
+A-24 [IT] "Rifredi Firenze ristoranti consiglio locale 2023"
+A-25 [IT] "Isolotto Firenze ristoranti 2025"
+A-26 [IT] "Brozzi Firenze ristoranti locali 2024"
+A-27 [IT] "Peretola Firenze ristoranti osterie 2023"
+
+═══════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+═══════════════════════════════════════
+
+Cross-1 (EN city-wide, 2 queries):
+B-28 [EN] "best restaurants Florence Italy named food writer guide 2024"
+B-29 [EN] "where to eat Florence Italy local recommendations hidden gems 2023"
+
+Cross-2 (IT city-wide, 3 queries):
+B-30 [IT] "migliori ristoranti Firenze 2025 critica gastronomica"
+B-31 [IT] "dove mangiare Firenze quartieri locali consigli 2024"
+B-32 [IT] "guida gastronomica Firenze 2023 trattorie osterie autentiche"
+
+Cross-3 (generic writer-first, 2 queries):
+B-33 [EN] "food writer restaurant recommendations Florence Italy 2025"
+B-34 [IT] "blogger gastronomico Firenze ristoranti consigli personali 2024"
+
+Cross-4 (named awards, 3 queries):
+B-35 [IT] "50 Top Italy 2024 2025 Firenze ristoranti premiati"
+B-36 [IT] "Guida Espresso Ristoranti d'Italia Firenze 2023 2024"
+B-37 [IT] "Slow Food Osterie d'Italia Firenze 2024 2025"
+
+Cross-5 (recent openings, 2 queries):
+B-38 [EN] "new restaurant openings Florence Italy 2025"
+B-39 [IT] "nuovi ristoranti aperture Firenze 2024 2025"
+
+Cross-6: SKIPPED — LOCAL_FOOD_VOCABULARY not defined in Part 1.
+
+Cross-7 (cuisine and community, 2 queries):
+B-40 [IT] "lampredotto trippaio Firenze consigli migliore 2024"
+B-41 [IT] "bistecca fiorentina Firenze ristoranti consiglio critica 2025"
+
+Cross-8 (publication category, 2 queries):
+B-42 [IT] "rivista gastronomica Firenze guida ristoranti indipendente 2024"
+B-43 [IT] "supplemento gastronomia quotidiano Firenze ristoranti consiglio 2023"
+
+TOTAL PLANNED: 43 queries (under soft ceiling of 45)
+
+STOPPING RULE: If last 8 consecutive queries return no new qualifying sources, stop early.

@@ -1,0 +1,52 @@
+LocalBite v7.1 — Florence, Italy — Audit Log
+Pipeline run: 2026-04-28
+Format: restaurant name | tier | reason | source
+
+--- PHASE 2 — EXTRACTION-TIME REJECTS ---
+
+Trattoria Marione | C | quote-short | src-ioamofirenze-farinelli — "Cucina toscana, buona la ciccia, personale alla mano" (8 words, under 15-word minimum)
+
+Ora d'Aria | C | michelin-exclude | src-ioamofirenze-farinelli — Michelin 1★ restaurant, blanket exclusion rule
+Il Palagio | C | michelin-exclude | src-girlinflorence-jupe — Michelin 1★ restaurant (Four Seasons), blanket exclusion rule
+Saporium | C | michelin-exclude | extracted — Michelin 1★ (Borgo Santo Pietro Firenze), blanket exclusion rule
+La Leggenda dei Frati | C | michelin-exclude | src-ioamofirenze-farinelli — Michelin 1★ restaurant, blanket exclusion rule
+Gucci Osteria | C | michelin-exclude | source mention — Michelin 1★ (Massimo Bottura), blanket exclusion rule
+Enoteca Pinchiorri | C | michelin-exclude | source mention — Michelin 3★ restaurant, blanket exclusion rule
+Santa Elisabetta | C | michelin-exclude | source mention — Michelin 1★ (Hotel Brunelleschi), blanket exclusion rule
+Borgo San Jacopo | C | michelin-exclude | source mention — Michelin 1★ (Hotel Lungarno), blanket exclusion rule
+
+Coquinarius (Fiesole location) | C | geography | src — Fiesole is a separate comune, not Florence
+Le Tre Rane | C | geography | source mention — located in Grassina, outside Florence comune boundary
+Vitique | C | geography | source mention — located in Greve in Chianti, outside Florence
+
+--- PHASE 3 — RECOMMENDED REMOVALS (auto-accepted, UNATTENDED_MODE: YES) ---
+
+Tripperia Pollini | removed | street-food-cart | src-emikodavies-substack — mobile food van with no seating ("tripe van"); not a restaurant; quote describes standing-up street food experience
+Caffe Desiderio | removed | geography | src-emikodavies-substack — located in Settignano, hilltop village ~4km northeast of Florence city centre; outside practical GEOGRAPHIC_BOUNDARY_INCLUDE; Emiko Davies herself flags it as "non-touristy" and outside the city pattern
+
+[unattended-mode] auto-accepted 2 recommended removals
+
+--- PHASE 3 — NEIGHBOURHOOD CORRECTIONS ---
+
+Trattoria Da Burde | neighbourhood fixed | "Centro Storico" → "Rifredi" — restaurant is at Via Pistoiese 154, a northwestern Florence street in the Rifredi district, well outside the historic centre; confirmed from Gambero Rosso source description of location
+Irene | neighbourhood normalised | "Piazza della Repubblica area" → "Centro Storico" — Piazza della Repubblica is within the historic centre
+
+--- PHASE 3 — FINAL COUNTS ---
+
+Total before dedup: 56 working entries
+Total after dedup: 44 unique restaurants
+Merges made: 9 (12 working entries collapsed)
+Recommended removals (auto-accepted): 2
+Final output: 42 restaurants
+
+Confidence tier breakdown:
+  Tier A both-pool: 5 (Trattoria Sergio Gozzi, Trattoria Sostanza, Trattoria Da Burde, Il Santo Bevitore, I'Brindellone)
+  Tier A multi-source: 4 (Gunè, Cuculia, Io Osteria Personale, Osteria Tripperia Il Magazzino)
+  Tier B: 33
+
+Source breakdown (final):
+  src-ioamofirenze-farinelli (Elena Farinelli, IT primary): 18 working entries → 11 sole-source Tier B + contributes to 7 merged entries
+  src-gamberorosso-desantis (Antonella De Santis, IT primary): 5 working entries → 2 sole-source Tier B + contributes to 3 merged entries
+  src-emikodavies-substack (Emiko Davies, EN primary): 7 working entries → 3 sole-source Tier B + contributes to 2 merged entries (2 removed: Tripperia Pollini, Caffe Desiderio)
+  src-girlinflorence-jupe (Georgette Jupe, EN primary): 12 working entries → 8 sole-source Tier B + contributes to 4 merged entries
+  src-cibotoday-petrini (Vivian Petrini, IT secondary): 14 working entries → 9 sole-source Tier B + contributes to 4 merged entries

@@ -1,0 +1,21 @@
+[p0] "emikodavies.substack.com/p/where-to-eat-and-stay-in-florence" → 200 | ~30000ch | ACCEPTED — Emiko Davies, named author confirmed, October 2023, rich restaurant content
+[p0] "emikodavies.com/how-to-eat-and-travel-more-sustainably-in-florence/" → 200 | ~12000ch | PARTIAL — Emiko Davies, named author, August 2024, Florence + Tuscany content, several entries outside city boundary
+[p0] "leonardoromanelli.it" → 200+CAPTCHA | ~500ch | FAILED — security verification screen, no readable content
+[wayback] "leonardoromanelli.it" → 451 | —ch | FAILED — Unavailable For Legal Reasons
+[p1-verify] "girlinflorence.com/2024/01/24/restaurantsnightlife-list/" → 200 | ~45000ch | ACCEPTED — Georgette Jupe, named author, Jan 2024 updated 2026, very rich content
+[p1-verify] "firenzemadeintuscany.com/it/articolo/i-migliori-ristoranti-di-firenze/" → 200 | ~8000ch | REJECTED-byline — no named author, editorial site
+[p1-verify] "cibotoday.it/mappe/dove-mangiare-ristoranti-san-frediano-firenze.html" → 200 | ~12000ch | ACCEPTED — Vivian Petrini editor, April 2024, secondary IT source
+[p1-verify] "gamberorosso.it/notizie/rubriche/miniguide/migliori-trattorie-firenze/" → 200 | ~10000ch | ACCEPTED — Antonella De Santis, Jan 2026, 5 detailed restaurant profiles
+[p1-verify] "ioamofirenze.it/mi-consigli-un-ristorante/" → 200 | ~5000ch | ACCEPTED — Elena Farinelli, Jan 2025, single-author confirmed, full IT text
+[p1-verify] "puntarellarossa.it/2025/05/12/dove-mangiare-firenze-migliori-ristoranti-locali/" → 200 | ~8000ch | REJECTED-byline — no named author
+[p1-verify] "dissapore.com/trattorie/trattorie-firenze-10-senza-rivali/" → 200 | ~6000ch | REJECTED-date — published June 2020, outside YEAR_RANGE
+[p1-verify] "dissapore.com/ristoranti/ristoranti-a-firenze-gli-chef-under-35-da-tenere-docchio-nel-2024/" → 200 | ~5000ch | REJECTED-byline — no named author
+[p1-verify] "noncieromaistata.com/2024/07/21/dove-pranzare-a-firenze/" → 200 | ~4000ch | REJECTED-quote — 8 restaurants, quotes too short/weak for extraction
+[p1-verify] "noncieromaistata.com/2024/01/25/mangiare-miglior-street-food-firenze/" → 200 | ~3000ch | REJECTED-quote — street food/vendors only, 1 sit-down restaurant
+[p1-verify] "ioamofirenze.it/" — single-author About page confirmed: Elena Farinelli
+[p1-verify] "ilforchettiere.it/classifica-dove-vanno-giornalisti-enogastronomici-foodblogger-fiorentini/" → 200 | ~3000ch | REJECTED-date — November 2016, outside YEAR_RANGE
+[p2] "emikodavies.substack.com/p/where-to-eat-and-stay-in-florence" → 200 | ~15000ch | ACCEPTED — Emiko Davies, Oct 2023, content partially paraphrased by tool
+[p2] "emikodavies.com/how-to-eat-and-travel-more-sustainably-in-florence/" → 200 | ~5000ch | PARTIAL — Emiko Davies, Aug 2024, limited Florence city content, quotes too short for most entries
+[p2] "ioamofirenze.it/mi-consigli-un-ristorante/" → 200 | ~5000ch | ACCEPTED — Elena Farinelli, Jan 2025, full Italian text returned
+[p2] "gamberorosso.it/notizie/rubriche/miniguide/migliori-trattorie-firenze/" → 200 | ~10000ch | ACCEPTED — Antonella De Santis, Jan 2026, detailed descriptions for 5 restaurants
+[p2] "girlinflorence.com/2024/01/24/restaurantsnightlife-list/" → 200 | ~45000ch | ACCEPTED — Georgette Jupe, Jan 2024, extensive content, quotes available

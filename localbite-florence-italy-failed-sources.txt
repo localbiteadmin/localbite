@@ -1,0 +1,4 @@
+LocalBite v7.1 — Florence, Italy — Failed Sources Log
+Pipeline run: 2026-04-28
+
+[phase-0] leonardoromanelli.it — FAILED: security/captcha block on homepage, no content returned. Chars: ~500. Wayback retry pending.

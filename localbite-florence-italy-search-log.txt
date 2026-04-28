@@ -1,0 +1,3 @@
+[phase-0] "https://emikodavies.substack.com/p/where-to-eat-and-stay-in-florence" → Emiko Davies, "Where to eat and stay in Florence 2023", Oct 2023, ~30 restaurants listed, ACCEPTED
+[phase-0] "https://www.emikodavies.com/how-to-eat-and-travel-more-sustainably-in-florence/" → Emiko Davies, "How to eat and travel more sustainably in Florence", Aug 2024, Florence + regional content, supplementary assessment needed
+[phase-0] "https://leonardoromanelli.it" → security captcha block, no content returned, FAILED

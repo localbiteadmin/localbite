@@ -1,0 +1,1593 @@
+{
+  "city": "Florence",
+  "country": "Italy",
+  "city_slug": "florence-italy",
+  "pipeline": "localbite-v7.1",
+  "run_date": "2026-04-28",
+  "year_range": "2023-2026",
+  "sources": [
+    {
+      "source_id": "src-ioamofirenze-farinelli",
+      "writer": "Elena Farinelli",
+      "publication": "IO AMO Firenze",
+      "url": "https://www.ioamofirenze.it/",
+      "article_url": "https://www.ioamofirenze.it/mi-consigli-un-ristorante/",
+      "article_title": "Mi consigli un ristorante?",
+      "article_date": "2025-01-30",
+      "language": "IT",
+      "source_type": "primary",
+      "single_author_site": true,
+      "restaurants_extracted": 18,
+      "id": "src-ioamofirenze-farinelli",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer at IO AMO Firenze, a publication focused on Florence's culinary scene and local dining culture. Elena Farinelli specializes in restaurant recommendations and guides readers through the city's diverse food landscape."
+    },
+    {
+      "source_id": "src-gamberorosso-desantis",
+      "writer": "Antonella De Santis",
+      "publication": "Gambero Rosso",
+      "url": "https://www.gamberorosso.it/",
+      "article_url": "https://www.gamberorosso.it/notizie/rubriche/miniguide/migliori-trattorie-firenze/",
+      "article_title": "Le migliori trattorie di Firenze: tradizione, lampredotto e nuove tavole",
+      "article_date": "2026-01-29",
+      "language": "IT",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 5,
+      "id": "src-gamberorosso-desantis",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for Gambero Rosso, Italy's leading culinary publication known for its authoritative restaurant guides and wine ratings. Antonella De Santis specializes in exploring traditional Italian dining establishments, with recent coverage focusing on Florence's best trattorias and the evolution of Tuscan culinary traditions."
+    },
+    {
+      "source_id": "src-emikodavies-substack",
+      "writer": "Emiko Davies",
+      "publication": "Emiko Davies on Substack",
+      "url": "https://emikodavies.substack.com/",
+      "article_url": "https://emikodavies.substack.com/p/where-to-eat-and-stay-in-florence",
+      "article_title": "Where to eat and stay in Florence 2023",
+      "article_date": "2023-10-30",
+      "language": "EN",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 7,
+      "id": "src-emikodavies-substack",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer and cookbook author covering authentic Italian cuisine and travel through her dedicated Substack publication. Emiko Davies specializes in regional Italian cooking and provides insider guides to dining and accommodations in Italy's most beloved cities. Her work combines culinary expertise with practical travel advice for food-focused travelers exploring Italy."
+    },
+    {
+      "source_id": "src-girlinflorence-jupe",
+      "writer": "Georgette Jupe",
+      "publication": "Girl in Florence",
+      "url": "https://girlinflorence.com/",
+      "article_url": "https://girlinflorence.com/2024/01/24/restaurantsnightlife-list/",
+      "article_title": "Florence Food Guide 2026: Best Restaurants, Bars & Street Food (Local's Picks)",
+      "article_date": "2024-01-24",
+      "language": "EN",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 12,
+      "id": "src-girlinflorence-jupe",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer and Florence expert at Girl in Florence, specializing in comprehensive local dining guides for Italy's Renaissance capital. Georgette Jupe creates detailed restaurant recommendations covering everything from fine dining establishments to authentic street food, helping visitors discover the best of Florence's culinary scene through a local's perspective."
+    },
+    {
+      "source_id": "src-cibotoday-petrini",
+      "writer": "Vivian Petrini",
+      "publication": "CiboToday",
+      "url": "https://www.cibotoday.it/",
+      "article_url": "https://www.cibotoday.it/mappe/dove-mangiare-ristoranti-san-frediano-firenze.html",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "article_date": "2024-04-05",
+      "language": "IT",
+      "source_type": "secondary",
+      "single_author_site": false,
+      "restaurants_extracted": 14,
+      "id": "src-cibotoday-petrini",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for CiboToday, specializing in local restaurant discovery and neighborhood dining guides. Vivian Petrini focuses on uncovering the best culinary experiences in specific areas, including detailed coverage of Florence's Oltrarno district dining scene."
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Trattoria Sergio Gozzi",
+      "name_variants": [
+        "Da Sergio",
+        "Sergio Gozzi"
+      ],
+      "neighbourhood": "San Lorenzo",
+      "cuisine": "Tuscan",
+      "opening_year": 1915,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "braciole rifatte",
+        "pappa al pomodoro"
+      ],
+      "signature_dish": "pappa al pomodoro",
+      "quote": "One of the best local options serving traditional Tuscan fare since 1915 — open for lunch-only, sadly depriving the city of its immense talents at all other times.",
+      "quote_language": "original",
+      "article_date": "2024-01-24",
+      "article_title": "Florence Food Guide 2026: Best Restaurants, Bars & Street Food (Local's Picks)",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli",
+        "src-girlinflorence-jupe"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Elena Farinelli",
+        "Georgette Jupe"
+      ],
+      "lat": 43.775356,
+      "lng": 11.2542751,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Sergio Gozzi",
+      "geo_source": "nominatim",
+      "language_pool": "both"
+    },
+    {
+      "name": "Trattoria Sostanza",
+      "name_variants": [
+        "Sostanza",
+        "Il Troia",
+        "i'Troia",
+        "Trattoria Sostanza detto il Troia"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Tuscan",
+      "opening_year": 1869,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tortino di carciofi",
+        "pollo al burro",
+        "crostini con fegatini",
+        "crostini con lampredotto",
+        "bistecca alla brace"
+      ],
+      "signature_dish": "tortino di carciofi",
+      "quote": "Una trattoria che vanta 150 anni: venne fondata nel 1869, all'epoca di Firenze Capitale del Regno d'Italia, da Pasquale Campolmi che rilevò una macelleria per metter su la tipica osteria con mescita di vini e pizzicheria.",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli",
+        "src-gamberorosso-desantis",
+        "src-emikodavies-substack"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Elena Farinelli",
+        "Antonella De Santis",
+        "Emiko Davies"
+      ],
+      "lat": 43.7726743,
+      "lng": 11.2471498,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Sostanza",
+      "geo_source": "nominatim",
+      "language_pool": "both"
+    },
+    {
+      "name": "Trattoria Da Burde",
+      "name_variants": [
+        "Da Burde",
+        "Burde"
+      ],
+      "neighbourhood": "Rifredi",
+      "cuisine": "Tuscan",
+      "opening_year": 1901,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ribollita",
+        "pasta e fagioli",
+        "chickpea cacciucco",
+        "Chianina steak",
+        "bollito",
+        "schiacciata"
+      ],
+      "signature_dish": null,
+      "quote": "One of my favourite places for true Tuscan food in Florence — the Gori brothers are well known around town and it is mainly open for lunch.",
+      "quote_language": "original",
+      "article_date": "2023-10-30",
+      "article_title": "Where to eat and stay in Florence 2023",
+      "open_status_check": false,
+      "sources": [
+        "src-gamberorosso-desantis",
+        "src-emikodavies-substack",
+        "src-girlinflorence-jupe"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Antonella De Santis",
+        "Emiko Davies",
+        "Georgette Jupe"
+      ],
+      "lat": 43.7941266,
+      "lng": 11.1858298,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria da Burde",
+      "geo_source": "nominatim",
+      "language_pool": "both"
+    },
+    {
+      "name": "Il Santo Bevitore",
+      "name_variants": [
+        "Santo Bevitore"
+      ],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Tuscan, Italian",
+      "opening_year": 2002,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "terrina di fegatini"
+      ],
+      "signature_dish": "terrina di fegatini",
+      "quote": "Negli anni questo ristorante è cresciuto molto, pur mantenendo la sua identità. Si mangia in un ambiente molto romantico, con piatti gustosi, e si beve molto bene.",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli",
+        "src-cibotoday-petrini",
+        "src-girlinflorence-jupe"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Elena Farinelli",
+        "Vivian Petrini",
+        "Georgette Jupe"
+      ],
+      "lat": 43.769037,
+      "lng": 11.24676,
+      "geo_confidence": "high",
+      "geo_matched_name": "Il Santo Bevitore",
+      "geo_source": "nominatim",
+      "language_pool": "both"
+    },
+    {
+      "name": "I'Brindellone",
+      "name_variants": [
+        "Il Brindellone",
+        "L'Brindellone",
+        "Brindellone"
+      ],
+      "neighbourhood": "San Frediano",
+      "cuisine": "Tuscan",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fried coccoli",
+        "truffle pasta",
+        "fried artichokes",
+        "ribollita",
+        "ravioli",
+        "pappa al pomodoro"
+      ],
+      "signature_dish": null,
+      "quote": "True no-frills experience with rustic atmosphere and hearty food — fried coccoli, truffle pasta, fried artichokes, ribollita and pappa al pomodoro in a locals' joint in Piazza Piattellina.",
+      "quote_language": "original",
+      "article_date": "2024-01-24",
+      "article_title": "Florence Food Guide 2026: Best Restaurants, Bars & Street Food (Local's Picks)",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli",
+        "src-girlinflorence-jupe"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Elena Farinelli",
+        "Georgette Jupe"
+      ],
+      "lat": 43.7686458,
+      "lng": 11.2427483,
+      "geo_confidence": "high",
+      "geo_matched_name": "I' Brindellone",
+      "geo_source": "nominatim",
+      "language_pool": "both"
+    },
+    {
+      "name": "Gunè",
+      "name_variants": [
+        "Gunè San Frediano"
+      ],
+      "neighbourhood": "San Frediano",
+      "cuisine": "Lucanian-Tuscan fusion, gourmet",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Haute cuisine fusing Basilicata and Tuscan traditions with three tasting menus at €55–120, plus a cocktail bar called Next Door for pre- and post-dinner drinks.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-05",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli",
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli",
+        "Vivian Petrini"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "it"
+    },
+    {
+      "name": "Cuculia",
+      "name_variants": [],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "International, contemporary",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Elegant international restaurant with Venezuelan-French-Spanish influences by chef Oliver Betancourt, serving tasting menus at €90–110 in a refined space at Via dei Serragli 3.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-05",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli",
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli",
+        "Vivian Petrini"
+      ],
+      "lat": 43.7682049,
+      "lng": 11.2461562,
+      "geo_confidence": "high",
+      "geo_matched_name": "Cuculia",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Io Osteria Personale",
+      "name_variants": [
+        "IO Osteria Personale"
+      ],
+      "neighbourhood": "San Frediano",
+      "cuisine": "Contemporary Tuscan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Seasonal dishes that depart from traditional Tuscan cuisine to become more contemporary and creative, with tasting menus at €50–66 in a former delicatessen at Borgo San Frediano.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-05",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli",
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli",
+        "Vivian Petrini"
+      ],
+      "lat": 43.7703781,
+      "lng": 11.2406481,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Osteria Personale",
+      "geo_source": "photon",
+      "language_pool": "it"
+    },
+    {
+      "name": "Osteria Tripperia Il Magazzino",
+      "name_variants": [
+        "Il Magazzino",
+        "Tripperia Il Magazzino"
+      ],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Tuscan, offal, tripperia",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "lampredotto meatballs",
+        "beef tongue carpaccio",
+        "duck pappardelle",
+        "peposo",
+        "cantucci con vinsanto",
+        "sushi del trippaio",
+        "hosomaki con lampredotto"
+      ],
+      "signature_dish": "sushi del trippaio",
+      "quote": "A temple dedicated to organ meats situated between Santo Spirito basilica, Palazzo Pitti, and the Lungarno, with exposed brick vaulted ceilings and uncompromising Tuscan cooking at reasonable prices; signature dishes include beef tongue carpaccio, lampredotto meatballs, and duck pappardelle.",
+      "quote_language": "translated from Italian",
+      "article_date": "2026-01-29",
+      "article_title": "Le migliori trattorie di Firenze: tradizione, lampredotto e nuove tavole",
+      "open_status_check": false,
+      "sources": [
+        "src-gamberorosso-desantis",
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "writers": [
+        "Antonella De Santis",
+        "Vivian Petrini"
+      ],
+      "lat": 43.7672336,
+      "lng": 11.2503504,
+      "geo_confidence": "high",
+      "geo_matched_name": "Il Magazzino Osteria Tripperia",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Trattoria Mario",
+      "name_variants": [
+        "Mario",
+        "Da Mario"
+      ],
+      "neighbourhood": "San Lorenzo",
+      "cuisine": "Tuscan",
+      "opening_year": 1953,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bistecca"
+      ],
+      "signature_dish": "bistecca",
+      "quote": "non puoi venire a Firenze senza provare Mario. Esercizio storico dietro al mercato di San Lorenzo, aperto solo a pranzo, negli anni pre-pandemia era inavvicinabile a causa delle lunghe code.",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli"
+      ],
+      "lat": 43.7765666,
+      "lng": 11.2545454,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Mario",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Trattoria Sabatino",
+      "name_variants": [
+        "Sabatino",
+        "Il Sabatino"
+      ],
+      "neighbourhood": "San Frediano",
+      "cuisine": "Tuscan",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "rosbif con patate",
+        "quarti di pollo",
+        "minestrone",
+        "verdure condite"
+      ],
+      "signature_dish": "rosbif con patate",
+      "quote": "Prezzi così bassi non si trovano facilmente a Firenze. E neppure un menù che ti fa pensare di essere a casa della nonna, fra quarti di pollo, minestrone e verdure condite.",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli"
+      ],
+      "lat": 43.7707491,
+      "lng": 11.2400329,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Sabatino",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Antica Trattoria da Tito",
+      "name_variants": [
+        "Da Tito",
+        "Trattoria da Tito"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Tuscan",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "baccalà del venerdì"
+      ],
+      "signature_dish": "baccalà del venerdì",
+      "quote": "Nell'allegro e informale servizio di questa trattoria spicca la simpatia del suo proprietario Bobo. Mentre aspettate la comanda guardatevi intorno, tanti spunti per far sorridere.",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli"
+      ],
+      "lat": 43.7820009,
+      "lng": 11.2604353,
+      "geo_confidence": "high",
+      "geo_matched_name": "Antica Trattoria da Tito dal 1913",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Il Guscio",
+      "name_variants": [
+        "Ristorante Il Guscio"
+      ],
+      "neighbourhood": "San Frediano",
+      "cuisine": "Tuscan, seafood",
+      "opening_year": 1986,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Anche se più giovane di altri nomi storici (aperta dal 1986) questa ex tripperia si è guadagnata un pubblico di fidelizzati nel quartiere di San Frediano. Propone anche piatti di pesce.",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli"
+      ],
+      "lat": 43.7690751,
+      "lng": 11.2404463,
+      "geo_confidence": "high",
+      "geo_matched_name": "Il Guscio",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Le Volte",
+      "name_variants": [],
+      "neighbourhood": "San Frediano",
+      "cuisine": "Tuscan, meat",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tagliata",
+        "tartare"
+      ],
+      "signature_dish": null,
+      "quote": "Se amate la carne questo posto è per voi. Il proprietario è il figlio dei macellai all'angolo. Da provare: oltre alla tagliata, la tartare.",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli"
+      ],
+      "lat": 43.7686343,
+      "lng": 11.2423967,
+      "geo_confidence": "high",
+      "geo_matched_name": "le Volte",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Trattoria Napoleone",
+      "name_variants": [],
+      "neighbourhood": "San Frediano",
+      "cuisine": "Tuscan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "piatti a base di tartufo"
+      ],
+      "signature_dish": "piatti a base di tartufo",
+      "quote": "Bello sia in estate, quando si mangia con la vista sulla chiesa, che in inverno, nelle belle sale interne. Da provare: i piatti a base di tartufo.",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli"
+      ],
+      "lat": 43.7690826,
+      "lng": 11.2440156,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Napoleone",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Osteria di Giovanni",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Tuscan",
+      "opening_year": 2004,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "piccione"
+      ],
+      "signature_dish": "piccione",
+      "quote": "Giovanni è uno dei figli di Narcisio Latini che nel 2004 ha aperto a poca distanza un ristorante di cucina toscana con qualche innovazione.",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli"
+      ],
+      "lat": 43.7712861,
+      "lng": 11.2483138,
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria di Giovanni",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Boccanegra",
+      "name_variants": [],
+      "neighbourhood": "Santa Croce",
+      "cuisine": "Tuscan, pizza, meat",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pappardelle al cinghiale"
+      ],
+      "signature_dish": "pappardelle al cinghiale",
+      "quote": "Un ristorante con più anime: l'osteria toscana, la pizza, la carne, e le sale per gli eventi. Su tutto una grande qualità degli ingredienti e un servizio professionale.",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli"
+      ],
+      "lat": 43.7703458,
+      "lng": 11.2613701,
+      "geo_confidence": "high",
+      "geo_matched_name": "Simon Boccanegra",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "La Giostra",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Tuscan, Italian",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "orecchio di elefante"
+      ],
+      "signature_dish": "orecchio di elefante",
+      "quote": "Nascosto in una strada defilata, questo ristorante dall'atmosfera suggestiva – bellissime le lucine sul soffitto – ha visto passare attori, cantanti e personaggi famosi. Forse perchè è gestito dal Principe Soldano Kunz Asburgo Lorena?",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli"
+      ],
+      "lat": 43.7719944,
+      "lng": 11.2619946,
+      "geo_confidence": "high",
+      "geo_matched_name": "La Giostra",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Da Ruggero",
+      "name_variants": [
+        "Trattoria da Ruggero",
+        "Trattoria Ruggero"
+      ],
+      "neighbourhood": "Porta Romana",
+      "cuisine": "Tuscan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "arista"
+      ],
+      "signature_dish": "arista",
+      "quote": "su per la salita di via Senese, che da porta Romana si avvia verso fuori città, questa trattoria è un punto di riferimento per i locali e quei turisti che si avventurano fuori dal centro storico.",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli"
+      ],
+      "lat": 43.7573364,
+      "lng": 11.2406881,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria da Ruggero",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Irene",
+      "name_variants": [
+        "Bistrot Irene",
+        "Irene Hotel Savoy"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Italian, bistrot",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Seduti fra i tavolini di piazza Repubblica o negli splendidi interni del 5 stelle del gruppo Rocco Forte, nel bistrò Irene potete assaporare i piatti ideati dalla direzione di Fulvio Pierangelini.",
+      "quote_language": "original",
+      "article_date": "2025-01-30",
+      "article_title": "Mi consigli un ristorante?",
+      "open_status_check": false,
+      "sources": [
+        "src-ioamofirenze-farinelli"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Elena Farinelli"
+      ],
+      "lat": 43.7718971,
+      "lng": 11.2545448,
+      "geo_confidence": "high",
+      "geo_matched_name": "Irene Firenze",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "L'Ortone",
+      "name_variants": [
+        "Ortone"
+      ],
+      "neighbourhood": "Sant'Ambrogio",
+      "cuisine": "Contemporary Tuscan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fried tongue with caramelized onion and lime yogurt",
+        "agnolotti plin with pigeon ragù",
+        "crispy octopus with pea purée",
+        "bistecca alla fiorentina"
+      ],
+      "signature_dish": null,
+      "quote": "Owner Federico Tacconi oversees a welcoming space at Sant'Ambrogio market square; the kitchen shows territorial attention and contemporary sensibility with seasonal ingredients — including fried tongue with caramelized onion and lime yogurt, and crispy octopus with pea purée and feta foam.",
+      "quote_language": "translated from Italian",
+      "article_date": "2026-01-29",
+      "article_title": "Le migliori trattorie di Firenze: tradizione, lampredotto e nuove tavole",
+      "open_status_check": false,
+      "sources": [
+        "src-gamberorosso-desantis"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Antonella De Santis"
+      ],
+      "lat": 43.770545,
+      "lng": 11.2674877,
+      "geo_confidence": "high",
+      "geo_matched_name": "L'Ortone",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Cecchini in città",
+      "name_variants": [
+        "Cecchini in Città nel 25hours Hotel"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Tuscan, grilled meats",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bistecca fiorentina",
+        "tartare",
+        "carpaccio",
+        "octopus cavatelli"
+      ],
+      "signature_dish": "bistecca fiorentina",
+      "quote": "Chef Dario Cecchini's first Florence restaurant at the 25hours Hotel near Santa Maria Novella, featuring a central grill and two formats: the fixed Cecchini Griglia (tartare, carpaccio, bistecca fiorentina at €70) and an à la carte Famiglia option with fresh pasta.",
+      "quote_language": "translated from Italian",
+      "article_date": "2026-01-29",
+      "article_title": "Le migliori trattorie di Firenze: tradizione, lampredotto e nuove tavole",
+      "open_status_check": false,
+      "sources": [
+        "src-gamberorosso-desantis"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Antonella De Santis"
+      ],
+      "lat": 43.7728139,
+      "lng": 11.2482164,
+      "geo_confidence": "high",
+      "geo_matched_name": "Cecchini in città",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Procacci",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Wine bar, aperitivo",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "truffled panini",
+        "Virgin Mary"
+      ],
+      "signature_dish": "truffled panini",
+      "quote": "Go here for a fancy aperitivo of truffled panini and great Virgin Marys.",
+      "quote_language": "original",
+      "article_date": "2023-10-30",
+      "article_title": "Where to eat and stay in Florence 2023",
+      "open_status_check": true,
+      "sources": [
+        "src-emikodavies-substack"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Emiko Davies"
+      ],
+      "lat": 43.7717806,
+      "lng": 11.2514738,
+      "geo_confidence": "high",
+      "geo_matched_name": "Procacci",
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Le Volpi e l'Uva",
+      "name_variants": [
+        "Le Volpi e L'uva"
+      ],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Wine bar",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crostoni",
+        "French cheeses"
+      ],
+      "signature_dish": null,
+      "quote": "My long-standing favorite since 2005 — the perfect small wine bar in Florence, where owner Ciro expertly guides you through the list.",
+      "quote_language": "original",
+      "article_date": "2023-10-30",
+      "article_title": "Where to eat and stay in Florence 2023",
+      "open_status_check": true,
+      "sources": [
+        "src-emikodavies-substack"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Emiko Davies"
+      ],
+      "lat": 43.7669929,
+      "lng": 11.2527824,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Le Volpi e L'uva",
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Regina Bistecca",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Tuscan, steakhouse",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bistecca"
+      ],
+      "signature_dish": "bistecca",
+      "quote": "Go here for the works or a special night out — with a great bar for pre-dinner drinks in a space that opened inside a former antiquarian bookshop.",
+      "quote_language": "original",
+      "article_date": "2023-10-30",
+      "article_title": "Where to eat and stay in Florence 2023",
+      "open_status_check": true,
+      "sources": [
+        "src-emikodavies-substack"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Emiko Davies"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_source": "photon",
+      "language_pool": "en",
+      "lon": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Alassio",
+      "name_variants": [
+        "Alassio Restaurant"
+      ],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Italian, international",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "beef tartare with seed mustard",
+        "wild-boar-stuffed ravioli"
+      ],
+      "signature_dish": null,
+      "quote": "Chef Luca Marin, formerly of Il Santo Bevitore, does polished comfort cooking: beef tartare with seed mustard and wild-boar-stuffed ravioli in a relaxed, buzzing space.",
+      "quote_language": "original",
+      "article_date": "2024-01-24",
+      "article_title": "Florence Food Guide 2026: Best Restaurants, Bars & Street Food (Local's Picks)",
+      "open_status_check": false,
+      "sources": [
+        "src-girlinflorence-jupe"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Georgette Jupe"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "en"
+    },
+    {
+      "name": "Semel",
+      "name_variants": [],
+      "neighbourhood": "Sant'Ambrogio",
+      "cuisine": "Sandwiches, wine bar",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "sandwiches with anchovies, fennel and orange"
+      ],
+      "signature_dish": null,
+      "quote": "Quintessential Florentine spot — think cubby holes for tiny wine glasses and small sandwiches with high-quality ingredients like anchovies, fennel and orange eaten standing up.",
+      "quote_language": "original",
+      "article_date": "2024-01-24",
+      "article_title": "Florence Food Guide 2026: Best Restaurants, Bars & Street Food (Local's Picks)",
+      "open_status_check": false,
+      "sources": [
+        "src-girlinflorence-jupe"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Georgette Jupe"
+      ],
+      "lat": 43.7710049,
+      "lng": 11.2668963,
+      "geo_confidence": "high",
+      "geo_matched_name": "Semel",
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Teatro del Sale",
+      "name_variants": [],
+      "neighbourhood": "Santa Croce",
+      "cuisine": "Tuscan, buffet",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Casual atmosphere served buffet style with an abundance of fantastic food — cheap and wonderful, and a true Florence institution beloved by locals.",
+      "quote_language": "original",
+      "article_date": "2024-01-24",
+      "article_title": "Florence Food Guide 2026: Best Restaurants, Bars & Street Food (Local's Picks)",
+      "open_status_check": false,
+      "sources": [
+        "src-girlinflorence-jupe"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Georgette Jupe"
+      ],
+      "lat": 43.7710578,
+      "lng": 11.2662051,
+      "geo_confidence": "high",
+      "geo_matched_name": "Teatro del Sale",
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Zeb",
+      "name_variants": [
+        "Zeb in San Niccolo",
+        "Zeb Gastronomia"
+      ],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Contemporary Tuscan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fresh pastas"
+      ],
+      "signature_dish": null,
+      "quote": "Refined Tuscan cuisine in a cozy yet contemporary ambiance — seasonal menu, fresh pastas, and great people-watching from the bar at Via San Miniato.",
+      "quote_language": "original",
+      "article_date": "2024-01-24",
+      "article_title": "Florence Food Guide 2026: Best Restaurants, Bars & Street Food (Local's Picks)",
+      "open_status_check": false,
+      "sources": [
+        "src-girlinflorence-jupe"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Georgette Jupe"
+      ],
+      "lat": 43.7641019,
+      "lng": 11.2613198,
+      "geo_confidence": "high",
+      "geo_matched_name": "Zeb",
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Osteria dell'Enoteca",
+      "name_variants": [
+        "Enoteca dell'Osteria"
+      ],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Tuscan",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fresh pasta",
+        "fave bean and pecorino cheese tortelli",
+        "baccalà on polenta",
+        "grilled meats"
+      ],
+      "signature_dish": null,
+      "quote": "Focuses on Tuscan food with a little flair — fresh pasta, fave bean and pecorino cheese tortelli, baccalà on polenta, and a special exclusive grilled meats and steak menu.",
+      "quote_language": "original",
+      "article_date": "2024-01-24",
+      "article_title": "Florence Food Guide 2026: Best Restaurants, Bars & Street Food (Local's Picks)",
+      "open_status_check": false,
+      "sources": [
+        "src-girlinflorence-jupe"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Georgette Jupe"
+      ],
+      "lat": 43.7640246,
+      "lng": 11.2458613,
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria dell'Enoteca",
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Trattoria La Casalinga",
+      "name_variants": [
+        "La Casalinga"
+      ],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Tuscan",
+      "opening_year": 1963,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "penne all'arrabiata",
+        "fettunta",
+        "ribollita"
+      ],
+      "signature_dish": null,
+      "quote": "True Tuscan institution and one of my favorite places — penne all'arrabiata, fettunta appetizers, ribollita, with pasta starting around 7€.",
+      "quote_language": "original",
+      "article_date": "2024-01-24",
+      "article_title": "Florence Food Guide 2026: Best Restaurants, Bars & Street Food (Local's Picks)",
+      "open_status_check": false,
+      "sources": [
+        "src-girlinflorence-jupe"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Georgette Jupe"
+      ],
+      "lat": 43.7666478,
+      "lng": 11.2484656,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria La Casalinga",
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Trattoria Dell'Orto",
+      "name_variants": [],
+      "neighbourhood": "San Frediano",
+      "cuisine": "Tuscan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bistecca alla fiorentina"
+      ],
+      "signature_dish": "bistecca alla fiorentina",
+      "quote": "Where you want to go to eat traditional Tuscan food in a rustic ambiance — fantastic steak in the Via dell'Orto.",
+      "quote_language": "original",
+      "article_date": "2024-01-24",
+      "article_title": "Florence Food Guide 2026: Best Restaurants, Bars & Street Food (Local's Picks)",
+      "open_status_check": false,
+      "sources": [
+        "src-girlinflorence-jupe"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Georgette Jupe"
+      ],
+      "lat": 43.7690029,
+      "lng": 11.2407568,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria dell'Orto",
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Trattoria Giovanni",
+      "name_variants": [],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Italian",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Menu impressively affordable and changes seasonally — around 11 euros for first course, second course, side dish and water at Via Sant'Agostino.",
+      "quote_language": "original",
+      "article_date": "2024-01-24",
+      "article_title": "Florence Food Guide 2026: Best Restaurants, Bars & Street Food (Local's Picks)",
+      "open_status_check": false,
+      "sources": [
+        "src-girlinflorence-jupe"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Georgette Jupe"
+      ],
+      "lat": 43.7675776,
+      "lng": 11.245927,
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Giovanni",
+      "geo_source": "nominatim",
+      "language_pool": "en"
+    },
+    {
+      "name": "Essenziale",
+      "name_variants": [],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Contemporary Italian, fine dining",
+      "opening_year": 2016,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Chef Simone Cipriani's project in Piazza di Cestello offers three gastronomic experiences: a 7-course casual fine dining tasting menu at €80, a fast-casual option at €8–18, and thematic communal dinners at €35.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-05",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Vivian Petrini"
+      ],
+      "lat": 43.7703404,
+      "lng": 11.2434205,
+      "geo_confidence": "high",
+      "geo_matched_name": "Essenziale",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "L'OV Osteria Vegetariana",
+      "name_variants": [],
+      "neighbourhood": "San Frediano",
+      "cuisine": "Vegetarian",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "avocado ceviche"
+      ],
+      "signature_dish": null,
+      "quote": "One of Florence's most reliable addresses for vegetarian cuisine, with creative seasonal dishes like avocado ceviche at Piazza del Carmine.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-05",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Vivian Petrini"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_source": "photon",
+      "language_pool": "it",
+      "lon": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Cestello Firenze",
+      "name_variants": [],
+      "neighbourhood": "San Frediano",
+      "cuisine": "Seafood",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crudo"
+      ],
+      "signature_dish": null,
+      "quote": "Seafood specialist emphasizing raw preparations with a 'Crudo' tasting menu at €130, in a space overlooking the historic San Frediano church at Piazza di Cestello.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-05",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Vivian Petrini"
+      ],
+      "lat": 43.7699592,
+      "lng": 11.2440048,
+      "geo_confidence": "high",
+      "geo_matched_name": "Chiesa di San Frediano in Cestello",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "All'Antico Ristoro di Cambi",
+      "name_variants": [
+        "Antico Ristoro di Cambi",
+        "Ristoro di Cambi"
+      ],
+      "neighbourhood": "San Frediano",
+      "cuisine": "Tuscan",
+      "opening_year": 1950,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bistecca alla fiorentina",
+        "lampredotto",
+        "pici pasta"
+      ],
+      "signature_dish": "bistecca alla fiorentina",
+      "quote": "Historic tavern founded in 1950 in a brick-vaulted dining room, renowned for bistecca alla fiorentina and traditional offal dishes including lampredotto, with excellent pici pasta.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-05",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Vivian Petrini"
+      ],
+      "lat": 43.7704199,
+      "lng": 11.2420415,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Antico Ristoro di Cambi",
+      "geo_source": "photon",
+      "language_pool": "it"
+    },
+    {
+      "name": "5 e Cinque",
+      "name_variants": [
+        "Cinque e Cinque"
+      ],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Vegetarian, Ligurian",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cecina",
+        "focaccia di Recco",
+        "homemade pasta"
+      ],
+      "signature_dish": "cecina",
+      "quote": "Simple vegetarian cuisine featuring cecina (chickpea flatbread), Ligurian focaccia di Recco, and organic seasonal homemade pasta in a neighbourhood spot near Borgo San Frediano.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-05",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Vivian Petrini"
+      ],
+      "lat": 43.7673258,
+      "lng": 11.2504033,
+      "geo_confidence": "high",
+      "geo_matched_name": "5 e Cinque",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Cucina",
+      "name_variants": [],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Contemporary bistro, Moroccan-Tuscan",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Contemporary bistrot opened in Oltrarno with a menu conceived each morning after shopping, blending Moroccan and Oriental influences on Tuscan tradition with quality seasonal ingredients.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-05",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Vivian Petrini"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_source": "nominatim",
+      "language_pool": "it",
+      "lon": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Gurdulù",
+      "name_variants": [
+        "Gurdulù Gastronomia"
+      ],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Tuscan, offal, enoteca",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "offal",
+        "fresh pasta"
+      ],
+      "signature_dish": null,
+      "quote": "Hybrid restaurant-enoteca-deli serving traditional offal dishes, daily vegetable specials, and fresh pasta in a space that doubles as a neighbourhood gastronomia.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-05",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Vivian Petrini"
+      ],
+      "lat": 43.765979,
+      "lng": 11.246827,
+      "geo_confidence": "high",
+      "geo_matched_name": "gurdulu",
+      "geo_source": "nominatim",
+      "language_pool": "it"
+    },
+    {
+      "name": "Dalla Lola",
+      "name_variants": [],
+      "neighbourhood": "Oltrarno",
+      "cuisine": "Tuscan, contemporary",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Young trattoria run by chef Matilde Pettini highlighting forgotten Tuscan traditions, with evolving menus that bring international spice influences to classic Florentine ingredients.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-05",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Vivian Petrini"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_source": "photon",
+      "language_pool": "it",
+      "lon": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Momoyama",
+      "name_variants": [],
+      "neighbourhood": "San Frediano",
+      "cuisine": "Japanese",
+      "opening_year": 1998,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "sushi",
+        "sashimi",
+        "gyoza",
+        "tempura"
+      ],
+      "signature_dish": null,
+      "quote": "Japanese fusion restaurant established in 1998 at Borgo San Frediano, offering sushi, sashimi, and cooked dishes including gyoza and tempura with an extensive sake and wine selection.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-05",
+      "article_title": "I migliori ristoranti dove mangiare in Oltrarno a Firenze tra San Frediano e Santo Spirito",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-petrini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Vivian Petrini"
+      ],
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "language_pool": "it"
+    }
+  ],
+  "neighbourhood_centroids": {},
+  "run_metrics": {
+    "city": "florence-italy",
+    "date": "2026-04-28",
+    "pipeline": "localbite-v7.1",
+    "sources_confirmed": 5,
+    "final_entries": 42,
+    "both_pool": 5,
+    "tier_a": 9,
+    "tier_b": 33,
+    "tier_c": null,
+    "searches_run": 43,
+    "open_status_check": 3,
+    "tokens": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "tool_uses": null,
+    "run_time_seconds": null
+  },
+  "source_recency": "2023-2026",
+  "centroids": {
+    "San Frediano": [
+      43.7712,
+      11.244
+    ],
+    "Oltrarno": [
+      43.7698,
+      11.2516
+    ]
+  }
+}
