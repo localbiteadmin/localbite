@@ -1,0 +1,12 @@
+[p0] "culinarybackstreets.com/cities-category/palermo/" → 200 | ~8000ch | PARTIAL — category page returned 12 article links but no dates or authors; fetched individual articles instead
+[p0] "culinarybackstreets.com/stories/palermo/best-bites-2024-16" → 200 | ~6000ch | ACCEPTED — Francesco Cipriano, Dec 31 2024, multi-restaurant roundup (8 restaurants), named author confirmed
+[p0] "culinarybackstreets.com/stories/palermo/u-puparu-the-puppetmaster-of-panini" → 200 | ~4000ch | REJECTED-geo — Francesco Cipriano, Dec 05 2025; food truck operates in Terrasini and Cinisi, outside Comune di Palermo
+[p0] "culinarybackstreets.com/stories/palermo/osteria-mangia-e-bevi" → 200 | ~4000ch | ACCEPTED — Francesco Cipriano, Sep 05 2025, named author confirmed, Palermo city centre
+[p0] "culinarybackstreets.com/stories/palermo/al-fresco-a-fresh-start" → 200 | ~4000ch | ACCEPTED — Francesco Cipriano, Aug 18 2025, named author confirmed, Ballarò neighbourhood
+[p0] "culinarybackstreets.com/stories/palermo/altri-tempi" → 200 | ~4000ch | ACCEPTED — Francesco Cipriano, Jul 07 2025, named author confirmed, Palermo city
+[p0] "culinarybackstreets.com/stories/palermo/trattoria-il-delfino" → 200 | ~4000ch | ACCEPTED — Francesco Cipriano, May 16 2025, Sferracavallo (within Comune di Palermo)
+[p0] "culinarybackstreets.com/stories/palermo/ciccio-passami-lolio-2" → 200 | ~4000ch | ACCEPTED — Francesco Cipriano, Oct 09 2025, Kalsa district confirmed
+[p0] "culinarybackstreets.com/stories/palermo/ferro-di-cavallo" → 200 | ~4000ch | ACCEPTED — Francesco Cipriano, Jan 15 2025, Centro Storico (Via Venezia)
+[p0] "culinarybackstreets.com/stories/palermo/la-casa-del-brodo-dal-dottore" → 200 | ~4000ch | ACCEPTED — Francesco Cipriano, Nov 14 2024, Centro Storico (Via Vittorio Emanuele)
+[p0] "culinarybackstreets.com/stories/palermo/la-delizia-geniuses-of-gelato" → 200 | ~3000ch | REJECTED-geo — gelateria (not a restaurant), Sferracavallo
+[p0] "culinarybackstreets.com/stories/palermo/trattoria-u-zu-caliddu" → 200 | ~4000ch | REJECTED-geo — Francesco Cipriano, Nov 05 2024; in Torretta/Piano dell'Occhio, separate comune outside Palermo city

@@ -1,0 +1,43 @@
+[phase-0] "https://culinarybackstreets.com/cities-category/palermo/" → Category page returned 12 articles; no dates or authors on page; fetched individual articles
+[phase-0] "https://culinarybackstreets.com/stories/palermo/best-bites-2024-16" → Francesco Cipriano, Dec 31 2024, multi-restaurant roundup confirmed as primary CB source
+[phase-0] "https://culinarybackstreets.com/stories/palermo/u-puparu-the-puppetmaster-of-panini" → Francesco Cipriano, Dec 05 2025; food truck in Terrasini/Cinisi, outside Comune di Palermo — geo-rejected
+[phase-0] "https://culinarybackstreets.com/stories/palermo/osteria-mangia-e-bevi" → Francesco Cipriano, Sep 05 2025, Osteria Mangia e Bevi confirmed, Palermo city centre
+[phase-0] "https://culinarybackstreets.com/stories/palermo/al-fresco-a-fresh-start" → Francesco Cipriano, Aug 18 2025, Al Fresco confirmed, Ballarò
+[phase-0] "https://culinarybackstreets.com/stories/palermo/altri-tempi" → Francesco Cipriano, Jul 07 2025, Trattoria Altri Tempi confirmed, Palermo city
+[phase-0] "https://culinarybackstreets.com/stories/palermo/trattoria-il-delfino" → Francesco Cipriano, May 16 2025, Trattoria Il Delfino confirmed, Sferracavallo (within Comune di Palermo)
+[phase-0] "https://culinarybackstreets.com/stories/palermo/ciccio-passami-lolio-2" → Francesco Cipriano, Oct 09 2025, Ciccio Passami l'Olio confirmed, Kalsa
+[phase-0] "https://culinarybackstreets.com/stories/palermo/ferro-di-cavallo" → Francesco Cipriano, Jan 15 2025, Trattoria Al Ferro di Cavallo confirmed, Centro Storico
+[phase-0] "https://culinarybackstreets.com/stories/palermo/la-casa-del-brodo-dal-dottore" → Francesco Cipriano, Nov 14 2024, La Casa del Brodo dal Dottore confirmed, Centro Storico
+[phase-0] "https://culinarybackstreets.com/stories/palermo/la-delizia-geniuses-of-gelato" → Gelateria in Sferracavallo — not a restaurant; geo-rejected
+[phase-0] "https://culinarybackstreets.com/stories/palermo/trattoria-u-zu-caliddu" → Francesco Cipriano, Nov 05 2024; Torretta/Piano dell'Occhio, separate comune — geo-rejected
+[neighbourhood-CentroStorico] "ristoranti Centro Storico Palermo Ballarò Vucciria 2023 2024 guida gastronomica" → Found Scattidigusto, Gambero Rosso article, Osteria Ballarò, Gagini; multiple candidates
+[neighbourhood-CentroStorico] "best restaurants Palermo historic centre Ballarò Vucciria 2024 2025 food guide" → Culinary Backstreets (known), The Culture Trip, Mediterranean Insider, Moltivolti, Gagini, Hama, Charleston
+[neighbourhood-Kalsa] "ristoranti quartiere Kalsa Palermo 2025 dove mangiare consigliati" → Ciccio in Pentola, L'Ottava Nota, Osteria dei Vespri, Da Salvo, Quattro Mani
+[neighbourhood-Kalsa] "Kalsa neighbourhood restaurants Palermo 2023 2024 recommended" → Katie Parla guide (blocked), streaty.com, eatingeurope.com; Osteria Alivàru, Quattro Mani confirmed
+[neighbourhood-Mondello] "ristoranti Mondello Palermo pesce mare 2024 2025 migliori" → Bye Bye Blues (Michelin — excluded), Badalamenti Cucina e Bottega, Trattoria da Enzo, L'Angolo di Mondello; genteinviaggio.it, W37.it
+[neighbourhood-Mondello] "seafood restaurants Mondello Palermo 2025 best local fish" → Tripadvisor, Wanderlog (listing sites); L'Angolo di Mondello, Sariddu Mondello, Trattoria Sapori di Mare da Giovanni
+[neighbourhood-Politeama] "dove mangiare quartiere Politeama Palermo 2023 2024 trattoria osteria" → I Cuochini (historic rosticceria), Sciapò, Kus-Kus; listing sites only — no new named-author sources
+[neighbourhood-Libertà] "ristoranti quartiere Libertà Palermo 2025 consigliati buona cucina" → Libertà Vini e Cucina (already in Vendemmie); listing sites only
+[neighbourhood-Malaspina] "ristoranti Malaspina Palermo 2023 2024 dove mangiare" → Dissapore, Palermotoday, Gambero Rosso (all known); no Malaspina-specific named sources
+[neighbourhood-Zisa] "osterie trattorie Zisa Palermo 2025 cibo tradizionale siciliano" → La Trattoria Pirandello (near Zisa); Slow Food Palermo 2025 article; All Food Sicily
+[neighbourhood-Zisa] "Zisa area restaurants Palermo 2023 2024 local food" → Cre.Zi.Plus (Cantieri Culturali alla Zisa); Katie Parla (blocked); Sicily Insider; no new qualified sources
+[neighbourhood-Brancaccio] "ristoranti Brancaccio Palermo 2024 2025 dove mangiare" → Ristorante didattico Forum Palermo (Brancaccio industrial zone); no independent food-writing sources
+[neighbourhood-ZEN] "ristoranti ZEN quartiere Palermo 2023 2024 cucina locale" → No restaurant scene found; ZEN is social housing district; no food-writing sources
+[neighbourhood-TommasoNatale] "ristoranti Tommaso Natale Palermo 2025 pesce seafood" → Listing sites; Badalamenti Cucina e Bottega (Mondello area) already noted; no named-author sources
+[cross-3] "migliori ristoranti Palermo 2025 critica gastronomica" → Listing sites, Michelin guide, Scattidigusto (known); no new qualifying sources
+[cross-3] "dove mangiare Palermo 2023 2024 guida gastronomica blogger" → Scattidigusto (known), Food and Wine Italia, Agrodolce (no author), Impiegata Giramondo (blogger)
+[cross-2] "Palermo osterie trattorie consigliate 2025 cucina tradizionale siciliana" → Slow Food Palermo confirmed chiocciola: Buatta, Corona; Osteria Mercede, Sardina Pasta Bar, Sciapò
+[cross-3] "critico gastronomico blog Palermo Sicilia 2024 2025 ristoranti" → Listing sites, Gambero Rosso 2025 info; no new named-author sources
+[cross-3] "food writer journalist Palermo Sicily restaurant guide 2025" → Bilena Settepani/Appetito (thin content — 3 restaurants only, rejected); Rachel Phipps Substack (Jun 2025, 5 restaurants); Olive Magazine/Gina Tringali (2018 — outside range, rejected); The Infatuation
+[cross-4] "50 Top Italy Palermo ristoranti premiati 2024 2025 classifica" → Corona Trattoria rank 25 in Trattorie e Bistrò Moderni 2025; Lucianopignataro.it (no Palermo content found)
+[cross-4] "Gambero Rosso Palermo 2024 2025 tre forchette premi ristoranti" → No Palermo Tre Forchette; Buatta Cucina Popolare gets Tre Gamberi award; guide info only — no named-author article
+[cross-4] "Slow Food Osterie Italia Palermo 2024 2025 chiocciola consigliate" → Confirmed chiocciola: Buatta, Corona Trattoria; Ai Cascinari, Aja Mola, Cicala also listed; slowfoodpalermo.it article by "il Portavoce" — no individual author
+[cross-5] "nuovi ristoranti Palermo 2024 2025 aperture recenti" → Palermotoday new openings; TheFork new listings; no qualifying named-author sources
+[cross-5] "new restaurants Palermo 2025 recent openings" → Buenos Aires "Palermo" neighbourhood results contaminated (toponym collision); no Palermo Italy qualifying sources
+[cross-7] "street food Palermo mercati Ballarò Capo arancine panelle 2024 2025 guida" → Wom Travel, GetYourGuide, Italia.it; Antica Focacceria San Francesco confirmed local institution; no new named-author sources
+[cross-7] "cucina siciliana moderna Palermo chef emergenti 2023 2024 2025" → Blade Ramen (new ramen restaurant); Concetta (bistro near Cathedral); palermotrendy.it, All Food Sicily; Buatta confirmed Gambero Rosso Tre Gamberi
+[cross-8] "rivista gastronomica siciliana Palermo ristoranti consigliati 2024 2025" → Ristorantiinsicilia.it; Scattidigusto (known); guidasicilia.it; no new qualifying named-author sources
+[cross-8] "supplemento gastronomia giornale Palermo ristoranti 2023 2024" → ilgiornale.it "risveglio gastronomico di Palermo"; mangiaredadio.it/Stefania Buscaglia (Gambero Rosso guide review — not a Palermo restaurant guide)
+[phase-1b-crossval] "FUD Bottega Sicula Palermo recensione critica" → TripAdvisor, Foursquare (listing sites); no new qualifying named-author sources; already in pool via CB and PalermoToday
+[phase-1b-crossval] "Trattoria Corona Palermo recensione consigliata critica" → Found Scattidigusto/Vincenzo Pagano dedicated review (Jun 2024) — same publisher as Nico Cristiani article; Food and Wine Italia editorial team (no named author); 50 Top Italy entry confirmed
+[phase-1b-crossval] "Osteria Ballarò Palermo recensione critica consigliata" → Siciliani Creativi in Cucina (blocked); Tripadvisor/Yelp (listing sites); already in pool via Vendemmie

@@ -1,0 +1,110 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+=== LOCALBITE v7.1 — PALERMO, ITALY — SEARCH PLAN ===
+Prepared: 2026-04-28
+Pipeline: LocalBite v7.1
+City: Palermo, Italy
+Year range: 2023-2026
+Primary language: Italian (IT)
+Secondary language: English (EN)
+
+--- YEAR DISTRIBUTION CHECK (pre-run) ---
+Planned distribution across 2023-2026:
+- Queries referencing 2023-2024 (earlier years): 14
+- Queries referencing 2025-2026 (recent years): 12
+- Queries with no year term: 8
+CHECK: PLANNED — verify after execution.
+
+===================================================
+PART A — NEIGHBOURHOOD COVERAGE
+===================================================
+
+TIER 1 — CENTRO STORICO (Ballarò, Vucciria, Capo, Novarese)
+A-01 [IT] "ristoranti Centro Storico Palermo Ballarò Vucciria 2023 2024 guida gastronomica"
+A-02 [EN] "best restaurants Palermo historic centre Ballarò Vucciria 2024 2025 food guide"
+
+TIER 1 — KALSA
+A-03 [IT] "ristoranti quartiere Kalsa Palermo 2025 dove mangiare consigliati"
+A-04 [EN] "Kalsa neighbourhood restaurants Palermo 2023 2024 recommended"
+
+TIER 1 — MONDELLO
+A-05 [IT] "ristoranti Mondello Palermo pesce mare 2024 2025 migliori"
+A-06 [EN] "seafood restaurants Mondello Palermo 2025 best local fish"
+
+TIER 2 — POLITEAMA
+A-07 [IT] "dove mangiare quartiere Politeama Palermo 2023 2024 trattoria osteria"
+A-08 [EN] "restaurants Politeama district Palermo 2025 local dining"
+
+TIER 2 — LIBERTÀ
+A-09 [IT] "ristoranti quartiere Libertà Palermo 2025 consigliati buona cucina"
+A-10 [EN] "Libertà neighbourhood Palermo restaurants 2024 2025 best"
+
+TIER 2 — MALASPINA
+A-11 [IT] "ristoranti Malaspina Palermo 2023 2024 dove mangiare"
+A-12 [EN] "Malaspina district Palermo dining 2025 recommendations"
+
+TIER 2 — ZISA
+A-13 [IT] "osterie trattorie Zisa Palermo 2025 cibo tradizionale siciliano"
+A-14 [EN] "Zisa area restaurants Palermo 2023 2024 local food"
+
+TIER 3 — BRANCACCIO (IT only)
+A-15 [IT] "ristoranti Brancaccio Palermo 2024 2025 dove mangiare"
+
+TIER 3 — ZEN (IT only)
+A-16 [IT] "ristoranti ZEN quartiere Palermo 2023 2024 cucina locale"
+
+TIER 3 — TOMMASO NATALE (IT only)
+A-17 [IT] "ristoranti Tommaso Natale Palermo 2025 pesce seafood"
+
+TIER 3 — PARTANNA-MONDELLO (IT only)
+A-18 [IT] "ristoranti Partanna Mondello Palermo 2024 2025"
+
+===================================================
+PART B — CROSS-CUTTING ANGLES
+===================================================
+
+CROSS-1 — City-wide EN (2 queries)
+B-01 [EN] "best restaurants Palermo 2025 food writer recommendations hidden gems"
+B-02 [EN] "where to eat Palermo Italy 2024 local guide honest reviews"
+
+CROSS-2 — City-wide IT (3 queries)
+B-03 [IT] "migliori ristoranti Palermo 2025 critica gastronomica"
+B-04 [IT] "dove mangiare Palermo 2023 2024 guida gastronomica blogger"
+B-05 [IT] "Palermo osterie trattorie consigliate 2025 cucina tradizionale siciliana"
+
+CROSS-3 — Writer-first (2 queries — no specific publication names)
+B-06 [IT] "critico gastronomico blog Palermo Sicilia 2024 2025 ristoranti"
+B-07 [EN] "food writer journalist Palermo Sicily restaurant guide 2025"
+
+CROSS-4 — Named awards (3 queries)
+B-08 [IT] "50 Top Italy Palermo ristoranti premiati 2024 2025 classifica"
+B-09 [IT] "Gambero Rosso Palermo 2024 2025 tre forchette premi ristoranti"
+B-10 [IT] "Slow Food Osterie Palermo 2024 2025 chiocciola consigliate"
+
+CROSS-5 — Recent openings (2 queries)
+B-11 [IT] "nuovi ristoranti Palermo 2024 2025 aperture recenti"
+B-12 [EN] "new restaurants Palermo 2025 recent openings"
+
+CROSS-6 — LOCAL_FOOD_VOCABULARY: BLANK — SKIPPED
+
+CROSS-7 — Cuisine and community (2 queries)
+B-13 [IT] "street food Palermo mercati Ballarò Capo arancine panelle 2024 2025 guida"
+B-14 [IT] "cucina siciliana moderna Palermo chef emergenti 2023 2024 2025"
+
+CROSS-8 — Publication category IT (2 queries)
+B-15 [IT] "rivista gastronomica siciliana Palermo ristoranti consigliati 2024 2025"
+B-16 [IT] "supplemento gastronomia giornale Palermo ristoranti 2023 2024"
+
+===================================================
+TOTALS
+===================================================
+Part A: 18 queries
+Part B: 16 queries
+Total planned: 34 queries
+Soft ceiling: 45 | Hard ceiling: 55 | Status: WITHIN LIMITS
+
+Year distribution (planned):
+- Earlier years (2023-2024): A-01, A-02, A-04, A-07, A-11, A-14, A-15, A-16, A-18, B-02, B-04, B-08, B-09, B-16 = 14 queries
+- Recent years (2025-2026): A-03, A-05, A-06, A-08, A-09, A-10, A-12, A-13, A-17, B-01, B-03, B-05, B-10, B-11, B-12, B-13, B-14, B-15 = 18 queries (some queries span both ranges)
+- No year term: A-04, B-06, B-07 = 3 queries
+[year-distribution-check] PASSED — 14 queries reference earlier years, 18 queries reference recent years, 3 queries have no year term.

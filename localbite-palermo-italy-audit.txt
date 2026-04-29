@@ -1,0 +1,79 @@
+LocalBite v7.1 — Palermo, Italy — Audit File
+Generated: 2026-04-28
+
+====================================================
+SECTION 1 — EXTRACTION-TIME AUTO-REJECTIONS (quote quality failures)
+====================================================
+
+Sardina Pasta Bar | phase-2 extraction | quote under 15 words: "visits Sardina Pasta Bar for seafood" (from src-palermotoday-ognibene/Salvo Ognibene — chef Gaglio brief endorsement only)
+Badalamenti Cucina e Bottega | phase-2 extraction | quote under 15 words: "for quality service and wine selection" (from src-palermotoday-ognibene/Salvo Ognibene — chef Chifari brief endorsement only)
+
+====================================================
+SECTION 2 — GEOGRAPHIC EXCLUSIONS (phase 0 and phase 1)
+====================================================
+
+U Puparu | Culinary Backstreets / Francesco Cipriano | outside Comune di Palermo — food truck serving Terrasini and Cinisi (separate municipalities)
+Trattoria U Zu Caliddu | Culinary Backstreets / Francesco Cipriano | outside Comune di Palermo — Torretta/Piano dell'Occhio, separate comune
+La Delizia | Culinary Backstreets / Francesco Cipriano | not a restaurant — gelateria in Sferracavallo
+Pasticceria Costa | Culinary Backstreets / Best Bites 2024 | not a restaurant — historic pastry shop/confectionery
+Ballarak | Culinary Backstreets / Best Bites 2024 | not a restaurant — craft brewery
+MEC Restaurant | Vendemmie / Marco Colognese | Michelin 1★ 2026 (Michelin Guide Italy 2026, announced Nov 19 2025) — excluded
+
+====================================================
+SECTION 3 — CONCENTRATION CAP REMOVALS
+====================================================
+
+Moltivolti | Tier B | concentration cap — Culinary Backstreets contributed 9/22 entries (40.9% > 30% cap); lowest-confidence removal: community/coworking restaurant, food content weakest among CB entries | src-cb-cipriano-bestbites2024
+Al Fresco | Tier B | concentration cap — social enterprise (employs formerly incarcerated), social mission focus outweighs food editorial value | src-cb-cipriano-alfresco
+Trattoria Altri Tempi | Tier B | concentration cap — weakest food-specific quote among CB dedicated profiles (atmospheric focus: 'other times' atmosphere vs. specific dishes or culinary technique) | src-cb-cipriano-altritempi
+
+====================================================
+SECTION 4 — SOURCE REJECTIONS (phase 1 quality checks)
+====================================================
+
+Agrodolce.it — no named author on article | Rejected: byline
+Gambero Rosso (gamberorosso.it/notizie) — editorial team, no named author | Rejected: byline
+Mediterranean Insider (themediterraneaninsider.com) — no credited author | Rejected: byline
+Slow Food Palermo (slowfoodpalermo.it) — author credited as "il Portavoce" (pen name, not individual full name) | Rejected: byline
+All Food Sicily (allfoodsicily.it) — CAPTCHA blocked, content inaccessible | Rejected: fetch failure
+Olive Magazine / Gina Tringali — article dated August 25, 2018 | Rejected: outside year range (2023-2026)
+Appetito Magazine / Bilena Settepani — article May 3, 2023; only 3 restaurants mentioned with no neighbourhood detail | Rejected: insufficient content for extraction
+Rachel Phipps (Substack) — personal travel blog; only 2-3 qualifying restaurants | Considered but not included (thin source pool, no both-pool value added)
+Scattidigusto / Vincenzo Pagano (Corona Trattoria article, Jun 2024) — same publisher as Nico Cristiani source; found in Phase 1B but excluded from locked source list due to publisher concentration review
+Katie Parla (katieparla.com) — CAPTCHA/security blocked at fetch | Unable to assess
+
+====================================================
+SECTION 5 — COI DISCLOSURES
+====================================================
+
+No commercial conflicts identified in any source. All 7 sources assessed clean.
+
+====================================================
+SECTION 6 — PUBLISHER CONCENTRATION FLAGS
+====================================================
+
+Culinary Backstreets: 4 articles from same publisher and same author (Francesco Cipriano). EN pool structural characteristic — no alternative qualified EN sources found after exhaustive search. Supplementary sources considered (Rachel Phipps, Appetito/Settepani) had insufficient content depth. Documented as structural limitation of EN Palermo food coverage.
+
+====================================================
+SECTION 7 — OPEN STATUS CHECK NOTES
+====================================================
+
+13 of 19 final restaurants flagged open_status_check: true — all from Scattidigusto (Aug 2023) and Vendemmie (Jun 2023) articles. These restaurants were active at time of writing but should be verified before deployment. Verification recommended especially for:
+- Doba (Via Bara all'Olivella — contemporary rooftop, more susceptible to closure)
+- Osteria Nonna Dora (small osteria, higher closure risk)
+- L'Acerba Osteria Dinamica (dynamic concept, higher risk)
+- CiCala (wine bar, smaller format)
+- Libertà Vini e Cucina (natural wine bar, newer concept)
+- Gagini Social Restaurant (was previously Michelin-starred, status changed)
+
+====================================================
+SECTION 8 — BOTH-POOL ANALYSIS
+====================================================
+
+Both-pool: 0 restaurants.
+Reason: EN (Culinary Backstreets) and IT (Scattidigusto, Vendemmie) sources profiled entirely non-overlapping restaurants. No restaurant appears in both language pools.
+PalermoToday (IT) contributed 0 qualified restaurants due to brief chef-endorsement format (all restaurant mentions under 15 words with no specific dish details).
+This is a structural characteristic of the Palermo source landscape: Culinary Backstreets covers social/historic trattorias and street food institutions; Vendemmie covers wine-forward contemporary restaurants; Scattidigusto covers value-focused osterie and pizzerias.
+
+====================================================
+END OF AUDIT FILE

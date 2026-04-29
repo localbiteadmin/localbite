@@ -1,0 +1,803 @@
+{
+  "city": "Palermo",
+  "country": "Italy",
+  "city_slug": "palermo-italy",
+  "pipeline": "localbite-v7.1",
+  "run_date": "2026-04-28",
+  "year_range": "2023-2026",
+  "source_recency": "2023-2026",
+  "sources": [
+    {
+      "source_id": "src-cb-cipriano-bestbites2024",
+      "id": "src-cb-cipriano-bestbites2024",
+      "writer": "Francesco Cipriano",
+      "publication": "Culinary Backstreets",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2024-12-31",
+      "article_title": "Best Bites 2024: Palermo",
+      "article_url": "https://culinarybackstreets.com/stories/palermo/best-bites-2024-16",
+      "restaurants_extracted": 6,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Francesco Cipriano is a food and travel writer based in Palermo, contributing regularly to Culinary Backstreets. His writing covers the traditional dining culture of Sicily, focusing on multi-generational family restaurants, street food institutions, and the social fabric of Palermitan neighbourhoods."
+    },
+    {
+      "source_id": "src-cb-cipriano-alfresco",
+      "id": "src-cb-cipriano-alfresco",
+      "writer": "Francesco Cipriano",
+      "publication": "Culinary Backstreets",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2025-08-18",
+      "article_title": "Al Fresco: A Fresh Start",
+      "article_url": "https://culinarybackstreets.com/stories/palermo/al-fresco-a-fresh-start",
+      "restaurants_extracted": 0,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Francesco Cipriano is a food and travel writer based in Palermo, contributing regularly to Culinary Backstreets. His writing covers the traditional dining culture of Sicily, focusing on multi-generational family restaurants, street food institutions, and the social fabric of Palermitan neighbourhoods."
+    },
+    {
+      "source_id": "src-cb-cipriano-altritempi",
+      "id": "src-cb-cipriano-altritempi",
+      "writer": "Francesco Cipriano",
+      "publication": "Culinary Backstreets",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2025-07-07",
+      "article_title": "Altri Tempi: Trattoria Time Machine",
+      "article_url": "https://culinarybackstreets.com/stories/palermo/altri-tempi",
+      "restaurants_extracted": 0,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Francesco Cipriano is a food and travel writer based in Palermo, contributing regularly to Culinary Backstreets. His writing covers the traditional dining culture of Sicily, focusing on multi-generational family restaurants, street food institutions, and the social fabric of Palermitan neighbourhoods."
+    },
+    {
+      "source_id": "src-cb-cipriano-ildelfino",
+      "id": "src-cb-cipriano-ildelfino",
+      "writer": "Francesco Cipriano",
+      "publication": "Culinary Backstreets",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2025-05-16",
+      "article_title": "Trattoria Il Delfino: Sicilian Seafood Haven",
+      "article_url": "https://culinarybackstreets.com/stories/palermo/trattoria-il-delfino",
+      "restaurants_extracted": 1,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Francesco Cipriano is a food and travel writer based in Palermo, contributing regularly to Culinary Backstreets. His writing covers the traditional dining culture of Sicily, focusing on multi-generational family restaurants, street food institutions, and the social fabric of Palermitan neighbourhoods."
+    },
+    {
+      "source_id": "src-scattidigusto-cristiani",
+      "id": "src-scattidigusto-cristiani",
+      "writer": "Nico Cristiani",
+      "publication": "Scatti di Gusto",
+      "language": "it",
+      "source_type": "primary",
+      "article_date": "2023-08-18",
+      "article_title": "Dove mangiare a Palermo: i 5 ristoranti migliori per qualità e prezzo",
+      "article_url": null,
+      "restaurants_extracted": 5,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Nico Cristiani is a food journalist and critic writing for Scatti di Gusto, a leading Italian food publication covering restaurant recommendations and culinary culture nationwide. His Palermo coverage focuses on value-for-money dining, traditional osterie, and contemporary dining across the city's diverse neighbourhoods."
+    },
+    {
+      "source_id": "src-vendemmie-colognese",
+      "id": "src-vendemmie-colognese",
+      "writer": "Marco Colognese",
+      "publication": "Vendemmie",
+      "language": "it",
+      "source_type": "primary",
+      "article_date": "2023-06-07",
+      "article_title": "La magia di Palermo: dieci luoghi del gusto dove mangiare e bere bene",
+      "article_url": null,
+      "restaurants_extracted": 8,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Marco Colognese is a wine and food journalist writing for Vendemmie, an Italian publication dedicated to wine culture and gastronomic travel. His coverage of Palermo highlights wine-forward restaurants, contemporary Sicilian cuisine, and the city's evolving dining scene."
+    },
+    {
+      "source_id": "src-palermotoday-ognibene",
+      "id": "src-palermotoday-ognibene",
+      "writer": "Salvo Ognibene",
+      "publication": "PalermoToday",
+      "language": "it",
+      "source_type": "primary",
+      "article_date": "2024-04-03",
+      "article_title": "Ristoranti a Palermo: le trattorie migliori per colazione",
+      "article_url": null,
+      "restaurants_extracted": 0,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Salvo Ognibene is a journalist at PalermoToday, the leading local news platform for Palermo. His restaurant coverage includes endorsements from local chefs and hospitality professionals, providing insider perspectives on the city's dining scene."
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Casa del Brodo dal Dottore",
+      "name_variants": [
+        "La Casa del Brodo dal Dottore"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Sicilian / broth",
+      "opening_year": 1890,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "meat broth",
+        "boiled meat",
+        "tripe",
+        "fava bean purée with wild fennel",
+        "pasta with sardines"
+      ],
+      "signature_dish": "veal bone broth with celery, carrots and onions",
+      "quote": "The oldest eatery in Palermo and one of the longest-lived in southern Italy, La Casa del Brodo dal Dottore has operated since 1890, specialising in meat broth and boiled meat — the therapeutic qualities of a hot broth are undeniable, says owner Gaetano Romeres.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-12-31",
+      "article_title": "Best Bites 2024: Palermo",
+      "open_status_check": false,
+      "sources": [
+        "src-cb-cipriano-bestbites2024"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Francesco Cipriano"
+      ],
+      "language_pool": "en",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_source": null,
+      "geo_skip": true
+    },
+    {
+      "name": "FUD Bottega Sicula",
+      "name_variants": [
+        "FUD",
+        "Fud Bottega Sicula"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Sicilian fast food / burgers",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Sicilian burgers",
+        "local sausage",
+        "Sicilian cheeses"
+      ],
+      "signature_dish": null,
+      "quote": "Andrea Graziano offers Sicilian interpretations of American fast food at FUD Bottega Sicula, prioritising local sourcing — 90% of ingredients come from small Sicilian producers, making every burger a product of the island.",
+      "quote_language": "original",
+      "article_date": "2024-12-31",
+      "article_title": "Best Bites 2024: Palermo",
+      "open_status_check": false,
+      "sources": [
+        "src-cb-cipriano-bestbites2024"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Francesco Cipriano"
+      ],
+      "language_pool": "en",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_source": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Osteria Mangia e Bevi",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Sicilian home cooking",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta fritta",
+        "sarde a beccafico",
+        "purpiceddi murati",
+        "mangia e bevi"
+      ],
+      "signature_dish": "pasta fritta (fried leftover pasta with olive oil)",
+      "quote": "I am for tradition. No gourmet dishes, only typical home cooking: each dish on the menu is a piece of Sicilian history, says co-founder Nico Virga, who with cousin Angelo Fascetta honours the recipes of grandmother Antonietta — garlic-free throughout, as she never used it.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-12-31",
+      "article_title": "Best Bites 2024: Palermo",
+      "open_status_check": false,
+      "sources": [
+        "src-cb-cipriano-bestbites2024"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Francesco Cipriano"
+      ],
+      "language_pool": "en",
+      "lat": 38.1200157,
+      "lng": 13.3639305,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Osteria Mangia & Bevi",
+      "geo_source": "photon"
+    },
+    {
+      "name": "Ciccio Passami l'Olio",
+      "name_variants": [],
+      "neighbourhood": "Kalsa",
+      "cuisine": "Pizzeria / Sicilian",
+      "opening_year": 2013,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "donzelle (fried pizzas)",
+        "apple caponata",
+        "sea urchin pizza",
+        "margherita"
+      ],
+      "signature_dish": null,
+      "quote": "To see if someone can cook, you don't need elaborate dishes, but a simple plate of spaghetti with garlic and oil — so simple that it's almost complicated to make it, explains Francesco Leone, who left textiles to open this neighbourhood pizzeria in Piazza Magione in the Kalsa district.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-12-31",
+      "article_title": "Best Bites 2024: Palermo",
+      "open_status_check": false,
+      "sources": [
+        "src-cb-cipriano-bestbites2024"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Francesco Cipriano"
+      ],
+      "language_pool": "en",
+      "lat": 38.1141735,
+      "lng": 13.3689709,
+      "geo_confidence": "high",
+      "geo_matched_name": "Ciccio Passami l'Olio",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Trattoria Al Ferro di Cavallo",
+      "name_variants": [
+        "Ferro di Cavallo"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Sicilian",
+      "opening_year": 1944,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta con le sarde",
+        "pasta alla norma",
+        "nero di seppia",
+        "calamaro ripieno",
+        "beans with celery",
+        "broad beans with vegetables"
+      ],
+      "signature_dish": "pasta with sardines with wild fennel, raisins, pine nuts and breadcrumbs",
+      "quote": "Operating since 1944 and now in its third generation, Trattoria Al Ferro di Cavallo preserves postwar Palermitan traditions — tall flames and hot oil, stacked plates and searing pans, shouting and laughter, serving dishes once affordable to poor Palermitans like beans with celery.",
+      "quote_language": "original",
+      "article_date": "2024-12-31",
+      "article_title": "Best Bites 2024: Palermo",
+      "open_status_check": false,
+      "sources": [
+        "src-cb-cipriano-bestbites2024"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Francesco Cipriano"
+      ],
+      "language_pool": "en",
+      "lat": 38.11711,
+      "lng": 13.3626747,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Trattoria Ferro di cavallo",
+      "geo_source": "photon"
+    },
+    {
+      "name": "Trattoria Il Delfino",
+      "name_variants": [
+        "Il Delfino"
+      ],
+      "neighbourhood": "Sferracavallo",
+      "cuisine": "Seafood",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "mixed fried seafood",
+        "oysters",
+        "swordfish caponata",
+        "triglia ravioli",
+        "pumpkin-shrimp risotto",
+        "spaghetti with clams",
+        "grilled catch-of-the-day",
+        "steamed lobster"
+      ],
+      "signature_dish": null,
+      "quote": "Operating for over fifty years in Sferracavallo, owner Nino Billeci sources fish from a dedicated fisherman in Porticello and visits the market daily: I argue with the suppliers because I want to be sure the fish is always top quality — butter and cream never appear, pasta is handmade daily.",
+      "quote_language": "original",
+      "article_date": "2025-05-16",
+      "article_title": "Trattoria Il Delfino: Sicilian Seafood Haven",
+      "open_status_check": false,
+      "sources": [
+        "src-cb-cipriano-ildelfino"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Francesco Cipriano"
+      ],
+      "language_pool": "en",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_source": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Osteria Nonna Dora",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Sicilian",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta con le sarde"
+      ],
+      "signature_dish": "pasta con le sarde",
+      "quote": "È solo una piccola osteria in zona Porto, ma gli osti sanno cosa significa accogliere con calore. Senza contare che non troverete un posto migliore per qualità e prezzo in tutta Palermo — you won't find a better place for quality and price in all of Palermo, guaranteed.",
+      "quote_language": "translated from Italian",
+      "article_date": "2023-08-18",
+      "article_title": "Dove mangiare a Palermo: i 5 ristoranti migliori per qualità e prezzo",
+      "open_status_check": true,
+      "sources": [
+        "src-scattidigusto-cristiani"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Nico Cristiani"
+      ],
+      "language_pool": "it",
+      "lat": 38.1216544,
+      "lng": 13.361617,
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria Nonna Dora",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Doba",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Contemporary Sicilian",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "beef tartare toast",
+        "tagliatelle"
+      ],
+      "signature_dish": null,
+      "quote": "Sembra di entrare in un speakeasy più che in un ristorante — it feels like entering a speakeasy rather than a restaurant — with a rooftop offering an extraordinary 360-degree panorama revealing bell towers and domes across Palermo. Chef Domenico Basile supervises a contemporary menu with strong local ingredient focus.",
+      "quote_language": "translated from Italian",
+      "article_date": "2023-08-18",
+      "article_title": "Dove mangiare a Palermo: i 5 ristoranti migliori per qualità e prezzo",
+      "open_status_check": true,
+      "sources": [
+        "src-scattidigusto-cristiani"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Nico Cristiani"
+      ],
+      "language_pool": "it",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_source": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Maqueda Bistrot",
+      "name_variants": [
+        "Al Maqueda Bistrot"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Sicilian bistro",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta alla norma",
+        "pasta ricciola e bottarga",
+        "caponata",
+        "sarde a beccafico",
+        "Sicilian wines"
+      ],
+      "signature_dish": null,
+      "quote": "La prima cosa sorprendente è la parete di vini siciliani che vi accoglie — the first surprising thing is the wall of Sicilian wines greeting you, with bottles at a €7 markup; solid and unpretentious typical Sicilian dishes at around €20 average.",
+      "quote_language": "translated from Italian",
+      "article_date": "2023-08-18",
+      "article_title": "Dove mangiare a Palermo: i 5 ristoranti migliori per qualità e prezzo",
+      "open_status_check": true,
+      "sources": [
+        "src-scattidigusto-cristiani"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Nico Cristiani"
+      ],
+      "language_pool": "it",
+      "lat": 38.1166416,
+      "lng": 13.3609133,
+      "geo_confidence": "high",
+      "geo_matched_name": "Maqueda Bistrot",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "L'Acerba Osteria Dinamica",
+      "name_variants": [
+        "L'Acerba"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Seafood",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tuna steak with citrus sauce",
+        "square spaghetti with bottarga"
+      ],
+      "signature_dish": null,
+      "quote": "A paradise for seafood lovers in a courtyard near the Mercato del Capo filled with vintage divans, tables and chairs — tuna steak with citrus sauce at €18 and square spaghetti with bottarga at €20, at around €40 for three courses.",
+      "quote_language": "translated from Italian",
+      "article_date": "2023-08-18",
+      "article_title": "Dove mangiare a Palermo: i 5 ristoranti migliori per qualità e prezzo",
+      "open_status_check": true,
+      "sources": [
+        "src-scattidigusto-cristiani"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Nico Cristiani"
+      ],
+      "language_pool": "it",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_source": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Archestrato di Gela",
+      "name_variants": [],
+      "neighbourhood": "Libertà",
+      "cuisine": "Pizzeria",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Piano Notaro pizza",
+        "Piano Mendola pizza"
+      ],
+      "signature_dish": null,
+      "quote": "Non è un ristorante, ma una pizzeria in rapida ascesa tra le migliori di Palermo — not a restaurant, but a rapidly rising pizzeria among Palermo's best, on Via Notarbartolo near Via della Libertà, with contemporary ambiance and an extensive craft beer selection.",
+      "quote_language": "translated from Italian",
+      "article_date": "2023-08-18",
+      "article_title": "Dove mangiare a Palermo: i 5 ristoranti migliori per qualità e prezzo",
+      "open_status_check": true,
+      "sources": [
+        "src-scattidigusto-cristiani"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Nico Cristiani"
+      ],
+      "language_pool": "it",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_source": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Osteria Ballarò",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Sicilian",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "timballo di anelletti",
+        "polpettine di polpo",
+        "street food dishes",
+        "seasonal Sicilian cuisine"
+      ],
+      "signature_dish": "timballo di anelletti (oven-baked pasta with aubergine)",
+      "quote": "Built in the former stables of Palazzo Cattolica near the historic Jewish quarter, Osteria Ballarò serves as an authentic Sicilian putìa — chef Calogero Branca presents street food alongside traditional dishes, with wine curator Gianluca Enzo Buono managing 600 labels of exclusively territorial products.",
+      "quote_language": "translated from Italian",
+      "article_date": "2023-06-07",
+      "article_title": "La magia di Palermo: dieci luoghi del gusto dove mangiare e bere bene",
+      "open_status_check": true,
+      "sources": [
+        "src-vendemmie-colognese"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Marco Colognese"
+      ],
+      "language_pool": "it",
+      "lat": 38.1159675,
+      "lng": 13.3654403,
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria Ballaro",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "CiCala",
+      "name_variants": [
+        "Cicala",
+        "Cicala da Filippo Cosentino"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Wine bar / Sicilian tapas",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "spaghettoni al nero di seppie locali",
+        "tapas",
+        "Sicilian wines"
+      ],
+      "signature_dish": "spaghettoni al nero di seppie locali",
+      "quote": "An intimate wine bar and restaurant on Via Sant'Alessandro where owner Filippo Cosentino, a well-travelled bartender, earned Slow Food recognition for his wine selection — featuring spaghettoni al nero di seppie locali alongside carefully curated Sicilian and natural wines.",
+      "quote_language": "translated from Italian",
+      "article_date": "2023-06-07",
+      "article_title": "La magia di Palermo: dieci luoghi del gusto dove mangiare e bere bene",
+      "open_status_check": true,
+      "sources": [
+        "src-vendemmie-colognese"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Marco Colognese"
+      ],
+      "language_pool": "it",
+      "lat": 38.1208979,
+      "lng": 13.3645598,
+      "geo_confidence": "high",
+      "geo_matched_name": "CiCala",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Libertà Vini e Cucina",
+      "name_variants": [
+        "Libertà"
+      ],
+      "neighbourhood": "Libertà",
+      "cuisine": "Natural wine bar / Sicilian",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "regional Sicilian cuisine",
+        "natural wines"
+      ],
+      "signature_dish": null,
+      "quote": "A casual space in the Libertà neighbourhood showcasing natural wines as 'storie e percorsi di vita' — stories and life paths — where chef Alessandro Fanara prepares regional Sicilian cuisine with contemporary presentation in a room with 1950s décor and outdoor seating.",
+      "quote_language": "translated from Italian",
+      "article_date": "2023-06-07",
+      "article_title": "La magia di Palermo: dieci luoghi del gusto dove mangiare e bere bene",
+      "open_status_check": true,
+      "sources": [
+        "src-vendemmie-colognese"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Marco Colognese"
+      ],
+      "language_pool": "it",
+      "lat": null,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_source": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Trattoria Corona",
+      "name_variants": [
+        "Corona Trattoria",
+        "Corona"
+      ],
+      "neighbourhood": "Politeama",
+      "cuisine": "Seafood trattoria",
+      "opening_year": 2015,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta Margherita con il pomodoro e l'anciova",
+        "gamberetto di nassa marinato",
+        "tartara del giorno",
+        "panelle",
+        "spaghetti ai ricci",
+        "polpi fritti",
+        "cotoletta di pescespada",
+        "tonno ammuttunato"
+      ],
+      "signature_dish": "pasta Margherita con il pomodoro e l'anciova",
+      "quote": "La nostra è una solida cucina di mare che proviene da un'antica memoria familiare — ours is a solid seafood kitchen rooted in ancient family memory — with the objective of guaranteeing customers the best fish and the pleasure of the table, says owner Gianni Corona, who runs the trattoria with wife Angela and sons Orazio and Alessandro.",
+      "quote_language": "translated from Italian",
+      "article_date": "2023-06-07",
+      "article_title": "La magia di Palermo: dieci luoghi del gusto dove mangiare e bere bene",
+      "open_status_check": true,
+      "sources": [
+        "src-vendemmie-colognese"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Marco Colognese"
+      ],
+      "language_pool": "it",
+      "lat": 38.1257185,
+      "lng": 13.3501616,
+      "geo_confidence": "high",
+      "geo_matched_name": "Corona Trattoria",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Le Angeliche",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Sicilian bistro",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Sicilian and Mediterranean recipes",
+        "traditional home cooking"
+      ],
+      "signature_dish": null,
+      "quote": "A small bistro managed by four women in a historic alley of the Capo market, where chef Veronica Schiera offers ricette siciliane e mediterranee di grande gusto — great-tasting Sicilian and Mediterranean recipes — with a small, exclusively regional wine list and charming outdoor seating.",
+      "quote_language": "translated from Italian",
+      "article_date": "2023-06-07",
+      "article_title": "La magia di Palermo: dieci luoghi del gusto dove mangiare e bere bene",
+      "open_status_check": true,
+      "sources": [
+        "src-vendemmie-colognese"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Marco Colognese"
+      ],
+      "language_pool": "it",
+      "lat": 38.1180151,
+      "lng": 13.3540565,
+      "geo_confidence": "high",
+      "geo_matched_name": "Le Angeliche",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Quattroventi",
+      "name_variants": [
+        "Quattro Venti",
+        "Quattroventi Comfort Food"
+      ],
+      "neighbourhood": "Politeama",
+      "cuisine": "Comfort food / Sicilian",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "comfort food",
+        "seasonal Sicilian dishes"
+      ],
+      "signature_dish": null,
+      "quote": "Between the port and the city centre, Quattroventi offers aperitivos and cucina confortevole e realizzata con materie prime di valore — comforting cuisine made with quality ingredients — where sommelier Gabriele Amato maintains 150–240 rotating wine selections paired with chef Filippo Ventimiglia's dishes.",
+      "quote_language": "translated from Italian",
+      "article_date": "2023-06-07",
+      "article_title": "La magia di Palermo: dieci luoghi del gusto dove mangiare e bere bene",
+      "open_status_check": true,
+      "sources": [
+        "src-vendemmie-colognese"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Marco Colognese"
+      ],
+      "language_pool": "it",
+      "lat": 38.1310438,
+      "lng": 13.3575781,
+      "geo_confidence": "high",
+      "geo_matched_name": "Quattroventi Comfort Food",
+      "geo_source": "nominatim"
+    },
+    {
+      "name": "Osteria dei Vespri",
+      "name_variants": [],
+      "neighbourhood": "Kalsa",
+      "cuisine": "Contemporary Sicilian",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "seasonal tasting menu",
+        "slow-cooked meats",
+        "fresh pasta",
+        "seafood"
+      ],
+      "signature_dish": null,
+      "quote": "Located in Palazzo Gangi — where Visconti filmed The Leopard — Osteria dei Vespri has evolved from an enoteca into a gourmet restaurant during Palermo's cultural renaissance, with big, confident flavours and fresh pasta; brothers Andrea and Alberto Rizzo manage 650 wine references at Piazza Croce dei Vespri.",
+      "quote_language": "translated from Italian",
+      "article_date": "2023-06-07",
+      "article_title": "La magia di Palermo: dieci luoghi del gusto dove mangiare e bere bene",
+      "open_status_check": true,
+      "sources": [
+        "src-vendemmie-colognese"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Marco Colognese"
+      ],
+      "language_pool": "it",
+      "lat": 38.1146708,
+      "lng": 13.365816,
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria dei Vespri",
+      "geo_source": "nominatim"
+    }
+  ],
+  "neighbourhood_centroids": {},
+  "centroids": {
+    "Centro Storico": [
+      38.1186,
+      13.3619
+    ],
+    "Libertà": [
+      38.1392,
+      13.3463
+    ]
+  },
+  "run_metrics": {
+    "city": "palermo-italy",
+    "date": "2026-04-28",
+    "pipeline": "localbite-v7.1",
+    "sources_confirmed": 7,
+    "final_entries": 19,
+    "both_pool": 0,
+    "tier_a": 0,
+    "tier_b": 19,
+    "tier_c": null,
+    "searches_run": 35,
+    "open_status_check": 13,
+    "tokens": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "tool_uses": null,
+    "run_time_seconds": null
+  }
+}
