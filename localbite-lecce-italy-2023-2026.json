@@ -1,0 +1,1067 @@
+{
+  "city": "Lecce",
+  "country": "Italy",
+  "city_slug": "lecce-italy",
+  "built": "2026-04-29",
+  "source_recency": "2023-2026",
+  "pipeline": "localbite-v7.1",
+  "confidence_tiers": {
+    "auto_approved": 6,
+    "reviewed_kept": 21,
+    "auto_removed": 0,
+    "user_removed": 0,
+    "auto_rejected": 0,
+    "concentration_cap_applied": 3
+  },
+  "sources": {
+    "src-gamberorossointl-alajmo": {
+      "id": "src-gamberorossointl-alajmo",
+      "publication": "Gambero Rosso International",
+      "writer": "Marina Alajmo",
+      "writer_profile": "Marina Alajmo writes for Gambero Rosso International, the English-language arm of Italy's most authoritative food and wine publication. Her 2023 guide to Lecce draws on the Gambero Rosso guide's independent editorial criteria and direct restaurant assessment, covering the city's most significant dining destinations from its historic trattorias to its contemporary fine dining.",
+      "url": "https://www.gamberorossointernational.com",
+      "article_url": "https://www.gamberorossointernational.com/news/where-to-eat-in-lecce-the-best-restaurants-according-to-gambero-rosso/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2023-10-26",
+      "article_title": "Where to eat in Lecce, the best restaurants according to Gambero Rosso",
+      "fetch_status": "good",
+      "fetch_chars": 3200,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    "src-roamandthrive-wieteska": {
+      "id": "src-roamandthrive-wieteska",
+      "publication": "Roam & Thrive",
+      "writer": "Alex Wieteska",
+      "writer_profile": "Alex Wieteska is a travel writer and editor based in Puglia, Italy, whose blog Roam & Thrive focuses on health-conscious and culturally immersive travel across Southern Europe. Her restaurant guide to Lecce draws on firsthand dining experience across the city's historic center and quieter residential streets, with particular attention to local Salentine ingredients, traditional cooking techniques, and dining atmosphere.",
+      "url": "https://roamandthrive.com",
+      "article_url": "https://roamandthrive.com/best-restaurants-lecce-italy/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2025-05-03",
+      "article_title": "16 Best Restaurants in Lecce, Italy",
+      "fetch_status": "good",
+      "fetch_chars": 12500,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    "src-cibotoday-interlandi": {
+      "id": "src-cibotoday-interlandi",
+      "publication": "CiboToday",
+      "writer": "Valentino Interlandi",
+      "writer_profile": "Valentino Interlandi is a journalist specializing in Italian food and wine culture, writing for CiboToday, a national food publication with regional correspondents across Italy. Based in the south, he focuses on the authentic stories behind small local restaurants, documenting the traditional trattorias and osterie that define Salentine dining culture for a local and national readership.",
+      "url": "https://www.cibotoday.it",
+      "article_url": "https://www.cibotoday.it/mappe/dove-mangiare-trattorie-osterie-lecce-salento.html",
+      "language": "it",
+      "source_type": "primary",
+      "article_date": "2025-06-13",
+      "article_title": "La mappa delle migliori trattorie e osterie di Lecce",
+      "fetch_status": "good",
+      "fetch_chars": 8500,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    "src-italyunseen-coti": {
+      "id": "src-italyunseen-coti",
+      "publication": "Italy Unseen",
+      "writer": "Renata Coti",
+      "writer_profile": "Renata Coti is the founder of Italy Unseen, a travel and food site dedicated to off-the-beaten-path destinations across Italy. A resident of Lecce, she writes with the deep familiarity of a local food enthusiast who has spent years discovering the city's restaurants, cafés, and food culture—from neighbourhood osterie to the best pasticciotti, sharing the insider perspective that most visitor guides miss.",
+      "url": "https://italyunseen.com",
+      "article_url": "https://italyunseen.com/where-and-what-to-eat-in-lecce/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2023-11-02",
+      "article_title": "Where And What To Eat In Lecce",
+      "fetch_status": "good",
+      "fetch_chars": 45000,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    "src-wheresemmanow-myrick": {
+      "id": "src-wheresemmanow-myrick",
+      "publication": "Where's Emma Now",
+      "writer": "Emma Myrick",
+      "writer_profile": "Emma Myrick is the author of Where's Emma Now, a travel blog covering food, accommodation, and experiences across Southern Europe and beyond. Her Lecce guide was written following a personal visit to the city, with an emphasis on the restaurants and café spots she personally tried, focusing on traditional Pugliese food and locally loved spots.",
+      "url": "https://wheresemmanow.com",
+      "article_url": "https://wheresemmanow.com/where-to-eat-in-lecce-puglia/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2024-04-20",
+      "article_title": "Where to Eat in Lecce, Puglia",
+      "fetch_status": "good",
+      "fetch_chars": 4200,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    "src-2night-giannini": {
+      "id": "src-2night-giannini",
+      "publication": "2night.it",
+      "writer": "Maria Teresa Giannini",
+      "writer_profile": "Maria Teresa Giannini is a journalist covering the Lecce food and nightlife scene for 2night.it, a local events and dining publication active across Puglia and southern Italy. Her neighbourhood restaurant guide focuses on the trattorias and osterie in Lecce's residential districts beyond the historic center, writing for a local audience seeking authentic dining away from tourist routes.",
+      "url": "https://2night.it",
+      "article_url": "https://2night.it/f9b63e-/osterie-trattorie-di-quartiere-dove-scoprire-lecce-fuori-dal-centro-storico.html",
+      "language": "it",
+      "source_type": "primary",
+      "article_date": "2025-11-09",
+      "article_title": "Lecce da local: le osterie di quartiere fuori dal centro storico",
+      "fetch_status": "good",
+      "fetch_chars": 8500,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    }
+  },
+  "restaurants": [
+    {
+      "name": "Mezzo Quinto Osteria",
+      "name_variants": [
+        "Mezzo Quinto"
+      ],
+      "neighbourhood": "Rudiae",
+      "cuisine": "traditional Salentine",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "antipasto della casa",
+        "spaghetti alle cozze",
+        "maritati con polpette",
+        "polpette al sugo",
+        "eggplant parmigiana",
+        "horse meat"
+      ],
+      "signature_dish": null,
+      "quote": "Mezzo Quinto Osteria hasn't been open long, but it's already my new obsession! It's the perfect spot for a casual dinner, especially if you're looking for authentic Salento cooking without the fuss.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-italyunseen-coti",
+        "src-2night-giannini"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-en + primary-it",
+      "article_date": "2025-11-09",
+      "article_title": "Lecce da local: le osterie di quartiere fuori dal centro storico",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 40.3519445,
+      "lng": 18.1709309,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Mezzo Quinto"
+    },
+    {
+      "name": "Osteria Da Angiulino",
+      "name_variants": [
+        "Da Angiulino",
+        "Osteria da Angiulino"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "traditional Salentine",
+      "opening_year": 1976,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ciceri e tria",
+        "bombette",
+        "antipasto tris"
+      ],
+      "signature_dish": "ciceri e tria",
+      "quote": "Osteria Da Angiulino is one of those Lecce restaurants I keep going back to, not because it's trendy or buzzy, but because the food is just solid. If you're after the kind of meal that feels like it's been cooked by someone's nonno in a back kitchen, this is where you want to be. The ciceri e tria was everything: crispy, comforting, and delicious. The bombette? Meltingly soft.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 3,
+      "sources": [
+        "src-roamandthrive-wieteska",
+        "src-cibotoday-interlandi",
+        "src-italyunseen-coti"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-en × 2 + primary-it",
+      "article_date": "2025-06-13",
+      "article_title": "La mappa delle migliori trattorie e osterie di Lecce",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 40.3563085,
+      "lng": 18.170651,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria Da Angiulino"
+    },
+    {
+      "name": "Osteria degli Spiriti",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "refined Salentine osteria",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "antipasto del mare",
+        "orecchiette with white ragù",
+        "lamb chops",
+        "orecchiette al ragù bianco d'agnello e fonduta di caciocavallo"
+      ],
+      "signature_dish": "antipasto del mare",
+      "quote": "Osteria degli Spiriti leans into elegance without being too formal—it's the kind of Lecce dining spot where you dress up just a little, sip something cold and crisp, and settle in for a long, memorable meal. Start with the antipasto del mare—a stunning, ice-cold platter of raw seafood that might just ruin you for all other starters. It's fresh, bright, and sets the tone for what's to come.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-roamandthrive-wieteska",
+        "src-cibotoday-interlandi"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-en + primary-it",
+      "article_date": "2025-06-13",
+      "article_title": "La mappa delle migliori trattorie e osterie di Lecce",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 40.3544936,
+      "lng": 18.1767397,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria degli Spiriti"
+    },
+    {
+      "name": "Trattoria Le Zie",
+      "name_variants": [
+        "Le Zie",
+        "Le Zie Trattoria Casereccia"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "traditional Salentine",
+      "opening_year": 1966,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fave e cicorie",
+        "ciceri e tria",
+        "stuffed zucchini flowers",
+        "meatballs",
+        "pittule",
+        "sagne 'ncannulate",
+        "polpo in pignata"
+      ],
+      "signature_dish": "ciceri e tria",
+      "quote": "Trattoria Le Zie is the best restaurant in Lecce for local, traditional Salentine cuisine, hands down. You'd walk right past if you didn't know what you were looking for: tucked behind an unmarked door on a quiet residential street, no frills, no fuss, just grandma-level cooking that knocks it out of the park every single time. Expect classic Lecce dishes done properly: silky fave e cicorie, ciceri e tria, stuffed zucchini flowers, and tender meatballs (made from horsemeat) in sauce that tastes like they've been simmering all day.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-roamandthrive-wieteska",
+        "src-cibotoday-interlandi"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-en + primary-it",
+      "article_date": "2025-06-13",
+      "article_title": "La mappa delle migliori trattorie e osterie di Lecce",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 40.3573787,
+      "lng": 18.1749594,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Le Zie"
+    },
+    {
+      "name": "Alle Due Corti",
+      "name_variants": [
+        "Le Due Corti"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "traditional Salentine trattoria",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cream of broad beans with chicory",
+        "lagane e ceci",
+        "orecchiette con le cime di rapa",
+        "aubergine cucole",
+        "lasagna ncannulata",
+        "lamb with onions",
+        "ciceri e tria",
+        "fave e cicorie"
+      ],
+      "signature_dish": null,
+      "quote": "If you are looking for a traditional trattoria, Alle Due Corti, owned by Giorgio and Marinella Grassi, is the right place, with a menu written in Salento and handmade pasta. A historic trattoria, where you can enjoy traditional dishes, mostly 'di terra': cream of broad beans with chicory, the very old 'lagane e ceci', 'orecchiette con le cime di rapa', the wonderful aubergine cucole (meatballs), lasagna ncannulata, lamb with onions.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "src-gamberorossointl-alajmo",
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-en × 2",
+      "article_date": "2025-05-03",
+      "article_title": "16 Best Restaurants in Lecce, Italy",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 40.3546561,
+      "lng": 18.1705432,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Alle due Corti"
+    },
+    {
+      "name": "Caffè storico Alvino",
+      "name_variants": [
+        "Caffè Alvino",
+        "Caffe Alvino"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "café, pasticceria",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasticciotto",
+        "almond-flavoured coffee on ice",
+        "puccia",
+        "sfogliata leccese",
+        "panzerotto",
+        "rustico leccese"
+      ],
+      "signature_dish": "pasticciotto",
+      "quote": "Everyone usually meets here and it's a ritual to stop at the historic Caffè Alvino, where Lecce personalities from the worlds of culture, politics and business used to meet. Families come to rediscover the goodness of home, both sweet and savoury, seated at tables overlooking the amphitheatre.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 2,
+      "sources": [
+        "src-gamberorossointl-alajmo",
+        "src-italyunseen-coti"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-en × 2",
+      "article_date": "2023-11-02",
+      "article_title": "Where And What To Eat In Lecce",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 40.352829,
+      "lng": 18.1731169,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Caffè Alvino"
+    },
+    {
+      "name": "Alex",
+      "name_variants": [
+        "Alex Ristorante"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "seafood",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "oysters",
+        "tagliolini with lemon, stracciatella and raw shrimp"
+      ],
+      "signature_dish": "tagliolini with lemon, stracciatella and raw shrimp",
+      "quote": "At Alex Ristorante, seafood is the undeniable star of the table. The kitchen draws from both sides of Salento—the Adriatic and the Ionian—so the catch arrives impossibly fresh, often tasting like it left the sea mere hours earlier. The oysters alone are worth the visit: briny, plump, and served simply enough to let their purity shine.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-03",
+      "article_title": "16 Best Restaurants in Lecce, Italy",
+      "open_status_check": false,
+      "flagged": true,
+      "lat": 40.3520574,
+      "lng": 18.1734479,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Alex Ristorante"
+    },
+    {
+      "name": "Al Verde – Cucina ricreativa",
+      "name_variants": [
+        "Al Verde"
+      ],
+      "neighbourhood": "Leuca",
+      "cuisine": "contemporary Italian / international",
+      "opening_year": 2023,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Opened August 2023 by Ciccio Mignogna and Martina Caracciolo, this intimate restaurant emphasizes quality small-producer ingredients with seasonal, regionally-inspired menus featuring both Italian and international influences.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-2night-giannini"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2025-11-09",
+      "article_title": "Lecce da local: le osterie di quartiere fuori dal centro storico",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "aTipica-Trattoria Moderna",
+      "name_variants": [
+        "aTipica",
+        "Tipica Trattoria Moderna"
+      ],
+      "neighbourhood": "San Lazzaro",
+      "cuisine": "contemporary Salentine / gourmet pizza",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "gourmet pizzas with 78-hour fermentation"
+      ],
+      "signature_dish": null,
+      "quote": "From the creators of 'Napul'è' pizzeria, this spacious venue blends traditional Salentian dishes with contemporary presentations and gourmet pizzas made with 78-hour fermentation, with seating for 120 covers.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-2night-giannini"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2025-11-09",
+      "article_title": "Lecce da local: le osterie di quartiere fuori dal centro storico",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Buonifico",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "traditional Salentine trattoria",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "In addition to the fine dining Red, the chef also runs Buonifico, a wholesome trattoria with traditional Salento dishes. The hotel definitely wanted to open itself to the city, as well as to world travellers. Therefore the restaurants, as well as the cocktail bar, and breakfast, are open to outside guests too.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-gamberorossointl-alajmo"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2023-10-26",
+      "article_title": "Where to eat in Lecce, the best restaurants according to Gambero Rosso",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Dall'Antiquario",
+      "name_variants": [
+        "Dall'antiquario"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "traditional Salentine",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "taieddhra leccese",
+        "turcinieddhri"
+      ],
+      "signature_dish": null,
+      "quote": "A few steps from the church of Santa Chiara, amid period furniture and antique objects, Dall'Antiquario comes to life—a trattoria that takes its name from the passion of Gianni Gerardi, a collector and vintage enthusiast.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-cibotoday-interlandi"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2025-06-13",
+      "article_title": "La mappa delle migliori trattorie e osterie di Lecce",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 40.3515886,
+      "lng": 18.1724039,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Dall'Antiquario"
+    },
+    {
+      "name": "Dedo Osteria",
+      "name_variants": [],
+      "neighbourhood": "Stadio",
+      "cuisine": "contemporary gourmet",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "potato and prawn magnums with lime mayo",
+        "tagliolini with purple prawns"
+      ],
+      "signature_dish": "potato and prawn magnums",
+      "quote": "Chef Edoardo Cannarozzo creates refined gourmet dishes using fresh local ingredients. Signature plates include potato and prawn 'magnums' with lime mayo and distinctive tagliolini with purple prawns, with a wine selection of the highest quality.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-2night-giannini"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2025-11-09",
+      "article_title": "Lecce da local: le osterie di quartiere fuori dal centro storico",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": "photon",
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Duo Ristorante",
+      "name_variants": [
+        "Duo Restaurante",
+        "Duo"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "modern Apulian",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "My sea I don't know you (lemon mousse, caper meringue, anchovies)"
+      ],
+      "signature_dish": "My sea I don't know you",
+      "quote": "Located on Via Giuseppe Garibaldi, this Michelin-recommended gem offers a modern take on Apulian cuisine that's both inventive and deeply rooted in tradition. Chef Fabiano Viva brings a unique flair to the kitchen, drawing inspiration from his land, sea, and memories. His approach is evident in dishes like the 'My sea I don't know you' dessert—a lemon mousse with caper meringue and anchovies.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-03",
+      "article_title": "16 Best Restaurants in Lecce, Italy",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 40.3561271,
+      "lng": 18.1756457,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Duo Ristorante"
+    },
+    {
+      "name": "Er Polpetta 1987",
+      "name_variants": [
+        "Er Polpetta"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Roman",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "This restaurant started in Rome, and only recently they brought the same recipes straight down here to Lecce. Generous portions of Roman classics in a cozy, lively, informal and welcoming atmosphere in front of Teatro Apollo.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-italyunseen-coti"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2023-11-02",
+      "article_title": "Where And What To Eat In Lecce",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 40.3532572,
+      "lng": 18.1749385,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Er Polpetta"
+    },
+    {
+      "name": "I Latini",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "modern Mediterranean / Puglian",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "polpettine di melanzane",
+        "burratina di bufala with confit cherry tomatoes and crispy capocollo",
+        "sagna incannulata with fresh tomato, ricotta forte and burnt leek",
+        "millefoglie di polpo with purple potatoes"
+      ],
+      "signature_dish": "millefoglie di polpo",
+      "quote": "Start your meal with their polpettine di melanzane, a delightful take on eggplant meatballs, or the burratina di bufala accompanied by confit cherry tomatoes and crispy capocollo. For the main course, the sagna incannulata—a traditional rolled pasta served with fresh tomato, ricotta forte, and burnt leek—is a standout. Seafood enthusiasts might opt for the millefoglie di polpo, featuring layers of octopus and purple potatoes with basil drops.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-03",
+      "article_title": "16 Best Restaurants in Lecce, Italy",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 40.3544295,
+      "lng": 18.1685184,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "I Latini"
+    },
+    {
+      "name": "Il Vico del Gusto",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "seafood",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "seafood antipasto tasting"
+      ],
+      "signature_dish": "seafood antipasto tasting",
+      "quote": "When I'm in the mood for top-quality seafood in Lecce, Il Vico del Gusto is always my go-to! Fresh local seafood served in an elegant yet cozy setting with white linen tablecloths—the seafood antipasto tasting is not to be missed.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-italyunseen-coti"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2023-11-02",
+      "article_title": "Where And What To Eat In Lecce",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 40.3559445,
+      "lng": 18.1735644,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Il Vico del Gusto1"
+    },
+    {
+      "name": "La Bocca",
+      "name_variants": [
+        "La Bocca Restaurant"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "contemporary Mediterranean",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Inside the beautifully restored Palazzo Zimara, La Bocca Restaurant offers one of Lecce's more polished dining experiences. The contemporary Mediterranean restaurant focuses on seasonal, locally sourced ingredients and a thoughtful interpretation of regional cuisine, served either in an elegant dining room or in the intimate inner courtyard that feels like a secret garden in the middle of the historic center.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-03",
+      "article_title": "16 Best Restaurants in Lecce, Italy",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "La Cucina di Mamma Elvira",
+      "name_variants": [
+        "Mamma Elvira"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "casual Salentine bistro",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ciceri e tria",
+        "pezzetti di cavallo",
+        "ravioli with pistachio and shrimp",
+        "eggplant polpette",
+        "burrata with wild chicory",
+        "baccalà",
+        "pezzetti di cavallo al sugo"
+      ],
+      "signature_dish": null,
+      "quote": "This charming eatery offers a menu that pays homage to Salento's culinary traditions, with dishes like ciceri e tria (pasta with chickpeas) and pezzetti di cavallo (horse meat stew). The atmosphere is relaxed and welcoming, making it an ideal place to unwind after a day of exploring the city.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-03",
+      "article_title": "16 Best Restaurants in Lecce, Italy",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 40.3513944,
+      "lng": 18.1737006,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Cucina di Mamma Elvira"
+    },
+    {
+      "name": "Osteria 203",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "modern osteria with Puglian classics",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cozze gratin",
+        "orecchiette con sugo di braciole"
+      ],
+      "signature_dish": null,
+      "quote": "Osteria 203 is a low-key gem that blends classic Lecce comfort food with just enough modern flair to keep things interesting. Go for the cozze gratin (mussels gratin) to start, then dive into their rich, handmade orecchiette con sugo di braciole—a true local favorite and a must-try in Puglia. Portions are generous, flavors are bold, and the vibe is effortlessly relaxed.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-03",
+      "article_title": "16 Best Restaurants in Lecce, Italy",
+      "open_status_check": false,
+      "flagged": true,
+      "lat": 40.3505361,
+      "lng": 18.1738575,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria 203"
+    },
+    {
+      "name": "Osteria Da Cosimino e Figli",
+      "name_variants": [
+        "Lu Cosiminu",
+        "Da Cosimino"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "traditional Salentine",
+      "opening_year": 1960,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "antipasto della casa",
+        "frittini misti",
+        "purè di fave con cicorie selvatiche",
+        "foglie di ulivo pasta with porcini and wild arugula",
+        "tris di arrosto"
+      ],
+      "signature_dish": null,
+      "quote": "Affectionately known by locals as 'Lu Cosiminu', this family-run osteria has been serving up traditional Salentine fare since 1960. The menu is a celebration of regional classics: start with the antipasto della casa, featuring delights like frittini misti, roasted peppers, and purè di fave con cicorie selvatiche. For mains, the handmade foglie di ulivo pasta with porcini mushrooms and wild arugula is a standout, as is the tris di arrosto—a trio of grilled meats including sausage, skewers, and pork neck.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-03",
+      "article_title": "16 Best Restaurants in Lecce, Italy",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "RED Restaurant",
+      "name_variants": [
+        "Ristorante RED"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "contemporary Salentine",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Simone De Siato, a native of Salento, with a refined, contemporary take on the flavours 'dellu Salentu'. Simone is a fine interpreter of signature cuisine, without overdoing it, professionally confirming a personal style that is consistent with the territory. Taste remains the main character, never disappointing, dish after dish.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-gamberorossointl-alajmo"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2023-10-26",
+      "article_title": "Where to eat in Lecce, the best restaurants according to Gambero Rosso",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "63 Osteria Contemporanea",
+      "name_variants": [
+        "63"
+      ],
+      "neighbourhood": "Rudiae",
+      "cuisine": "contemporary Salentine osteria",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "selezione di salumi e formaggi locali",
+        "orecchiette al Primitivo del Salento",
+        "minchiareddhi"
+      ],
+      "signature_dish": null,
+      "quote": "On Viale dell'Università between the city's two gates, Napoli and Rudiae, just outside the historic center, sits a contemporary osteria led by chef Anna Cotardo, where the taste of Salentine tradition meets a modern touch.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-cibotoday-interlandi"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2025-06-13",
+      "article_title": "La mappa delle migliori trattorie e osterie di Lecce",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 40.3539474,
+      "lng": 18.1652533,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "63 Osteria Contemporanea"
+    },
+    {
+      "name": "Tabisca il Vico dei Tagliati",
+      "name_variants": [
+        "Tabisca",
+        "Il Vico dei Tagliati"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Italian grilled meat",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "meat skewers",
+        "pork shank with porcini"
+      ],
+      "signature_dish": null,
+      "quote": "This spot is all about the art of Italian grilling in an intimate, rustic setting. Quality meat, expertly grilled—with specialties like meat skewers and pork shank with porcini, paired with a curated wine selection.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-italyunseen-coti"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2023-11-02",
+      "article_title": "Where And What To Eat In Lecce",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Trattoria Nonna Tetti",
+      "name_variants": [
+        "Nonna Tetti"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "traditional Salentine",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ciceri e tria",
+        "grilled horse meat",
+        "mixed meat skewers"
+      ],
+      "signature_dish": "ciceri e tria",
+      "quote": "Trattoria Nonna Tetti is one of my go-to spots in Lecce when I'm craving simple, down-to-earth Salentine food that hits all the right notes. Tucked into a quiet corner of the historic center, it's a place where the vaulted stone ceilings and rustic wooden furniture make you feel like you've stepped into Nonna's home. The ciceri e tria—a local chickpea and pasta dish with crispy fried noodles—is a standout.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-03",
+      "article_title": "16 Best Restaurants in Lecce, Italy",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 40.3502248,
+      "lng": 18.1715181,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Nonna Tetti"
+    },
+    {
+      "name": "Trattoria San Lazzaro",
+      "name_variants": [],
+      "neighbourhood": "San Lazzaro",
+      "cuisine": "traditional Salentine",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "sagne 'ncannulate with cod and bottarga",
+        "strozzapreti with peas and artichokes",
+        "octopus in earthenware pots"
+      ],
+      "signature_dish": null,
+      "quote": "The staff pamper guests with dishes refined through years of customer dialogue. The menu includes fresh sagne 'ncannulate with cod and bottarga, strozzapreti with peas and artichokes, and octopus in earthenware pots.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-2night-giannini"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2025-11-09",
+      "article_title": "Lecce da local: le osterie di quartiere fuori dal centro storico",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": "photon",
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Varius Osteria Moderna",
+      "name_variants": [
+        "Varius"
+      ],
+      "neighbourhood": "Rudiae",
+      "cuisine": "modern Salentine",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ciceri e tria with mussels, clams and raw prawns"
+      ],
+      "signature_dish": "ciceri e tria (reimagined)",
+      "quote": "Chef Michele Lazoi earned Tripadvisor's 2025 Travelers' Choice Best of the Best award (top 1% globally). The kitchen reimagines tradition—ciceri e tria is transformed by combining chickpea pasta with mussels, clams, and raw prawns.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-2night-giannini"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2025-11-09",
+      "article_title": "Lecce da local: le osterie di quartiere fuori dal centro storico",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 40.3467617,
+      "lng": 18.1549308,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Varius Osteria Moderna"
+    }
+  ],
+  "centroids": {
+    "Leuca": [
+      40.345,
+      18.168
+    ],
+    "San Lazzaro": [
+      40.352,
+      18.183
+    ],
+    "Centro Storico": [
+      40.3537,
+      18.1731
+    ],
+    "Stadio": [
+      40.362,
+      18.175
+    ]
+  }
+}

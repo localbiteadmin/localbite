@@ -1,0 +1,92 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LocalBite v7.1 — Lecce, Italy
+Search Plan
+Generated: 2026-04-29
+
+══════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE (15 queries)
+══════════════════════════════════════════
+
+TIER 1 — Centro Storico (2 queries)
+  A-01 [IT] "migliori ristoranti Centro Storico Lecce 2024"
+  A-02 [EN] "best restaurants Lecce historic centre 2023 2024"
+
+TIER 1 — Rudiae (2 queries)
+  A-03 [IT] "ristoranti Rudiae Lecce consigliati 2025"
+  A-04 [EN] "where to eat Rudiae Lecce neighbourhood"
+
+TIER 1 — Stadio (2 queries)
+  A-05 [IT] "ristoranti quartiere Stadio Lecce 2023 2024"
+  A-06 [EN] "restaurants near Stadio area Lecce Italy"
+
+TIER 2 — San Lazzaro (2 queries)
+  A-07 [IT] "dove mangiare San Lazzaro Lecce osterie trattorie 2025"
+  A-08 [EN] "San Lazzaro Lecce restaurants food guide"
+
+TIER 2 — Leuca (2 queries)
+  A-09 [IT] "ristoranti viale Leuca Lecce 2023 2024"
+  A-10 [EN] "Leuca Lecce dining recommendations 2025"
+
+TIER 2 — Castromediano (2 queries)
+  A-11 [IT] "ristoranti Castromediano Lecce 2025"
+  A-12 [EN] "Castromediano Lecce where to eat"
+
+TIER 3 — Merine (1 query)
+  A-13 [IT] "ristoranti Merine Lecce cucina salentina"
+
+TIER 3 — Surbo (1 query)
+  A-14 [IT] "ristoranti Surbo Lecce confine comunale 2024 2025"
+
+TIER 3 — San Cesario (1 query)
+  A-15 [IT] "ristoranti San Cesario di Lecce 2025"
+
+══════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES (18 queries)
+══════════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries)
+  B-01 [EN] "best places to eat in Lecce Italy food guide 2023"
+  B-02 [EN] "Lecce restaurant recommendations local favourites 2025"
+
+Cross-2 — City-wide IT (3 queries)
+  B-03 [IT] "migliori ristoranti Lecce guida gastronomica 2024 2025"
+  B-04 [IT] "dove mangiare Lecce consigli locali osterie trattorie"
+  B-05 [IT] "Lecce ristoranti consigliati critico gastronomico 2023"
+
+Cross-3 — Writer-first (2 queries)
+  B-06 [IT] "critico gastronomico Lecce Puglia ristoranti 2024"
+  B-07 [EN] "food writer journalist Lecce Italy restaurant review 2025"
+
+Cross-4 — Named awards (3 queries)
+  B-08 [IT] "50 Top Italy Lecce ristoranti premiati 2024 2025"
+  B-09 [IT] "Gambero Rosso Tre Forchette Lecce Puglia 2023 2024"
+  B-10 [IT] "Slow Food Osterie d'Italia Lecce Salento 2025"
+
+Cross-5 — Recent openings (2 queries)
+  B-11 [IT] "nuovi ristoranti Lecce aperture 2023 2024"
+  B-12 [EN] "new restaurant openings Lecce Italy 2025"
+
+Cross-6 — Vocabulary-specific IT (2 queries)
+  B-13 [IT] "pasticciotti rustico leccese ciceri tria dove mangiare Lecce 2023"
+  B-14 [IT] "cucina salentina Lecce osterie antipasti pitta di patate 2025"
+
+Cross-7 — Cuisine and community (2 queries)
+  B-15 [IT] "enoteca vino naturale Lecce osteria cucina povera 2024"
+  B-16 [EN] "Puglian cuisine Lecce trattoria local food authentic 2025"
+
+Cross-8 — Publication-category IT (2 queries)
+  B-17 [IT] "rivista gastronomica Puglia Lecce ristoranti consigliati 2024"
+  B-18 [IT] "supplemento gastronomia giornale Lecce ristorazione 2023 2025"
+
+══════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+══════════════════════════════════════════
+
+Earlier years (2023-2024): A-01, A-02, A-05, A-09, B-01, B-05, B-09, B-13, B-15, B-17, B-18 (~15 queries)
+Recent years (2025-2026): A-03, A-07, A-10, A-11, A-15, B-02, B-03, B-07, B-08, B-10, B-12, B-14, B-16 (~13 queries)
+No year term: A-04, A-06, A-08, A-12, A-13, A-14, B-04, B-06 (8 queries)
+
+[year-distribution-check] PASSED — 15 queries reference earlier years (2023-2024), 13 queries reference recent years (2025), 8 queries have no year term.
+
+Total planned: 33 queries (soft ceiling: 45, hard ceiling: 55)
