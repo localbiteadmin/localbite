@@ -151,6 +151,17 @@ function isThinProfile(profile) {
     process.exit(1);
   }
 
+  // Auto-repair: city_name -> city (compaction reconstruction variant)
+  // Pipeline sometimes writes city_name instead of city after compaction.
+  // Same pattern as source_id -> id repair in Step 1.5.
+  if ('city_name' in data && !('city' in data)) {
+    console.log('Auto-repair: city_name renamed to city (compaction variant)');
+    data.city = data.city_name;
+    delete data.city_name;
+    fs.writeFileSync(file, JSON.stringify(data, null, 2));
+    console.log('city field corrected and written.');
+  }
+
   const city     = data.city;
   const country  = data.country;
   const citySlug = data.city_slug;

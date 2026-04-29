@@ -120,7 +120,7 @@ function formatCoords(coords) {
       console.log(`  ⚠ NO RESULT — Nominatim returned nothing. Manual entry required.`);
     }
 
-    console.log(`  Null-coord restaurants: ${entry.null_coord_restaurants.join(', ')}`);
+    console.log(`  Null-coord restaurants: ${(entry.null_coord_restaurants || []).join(', ')}`);
     console.log('');
 
     let answer;
