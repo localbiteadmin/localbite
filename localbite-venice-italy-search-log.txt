@@ -1,0 +1,42 @@
+[phase-0] "katieparla.com/city-guides/venice/" → ACCEPTED — Katie Parla, single-author confirmed, Feb 25 2023, 34 venues in Venice island guide
+[phase-0] "elizabethminchilli.com/category/venice-restaurants/" → FAILED — all visible posts 2012-2016, outside YEAR_RANGE 2023-2026
+[neighbourhood-San Marco] "migliori ristoranti San Marco Venezia critica gastronomica 2023 2024" → TripAdvisor, TheFork, W37 IT guide; no new named-author candidate confirmed
+[neighbourhood-San Marco] "best restaurants San Marco Venice guide 2024 2025" → The Infatuation (Gillian McGuire/Carlo Mantuano, but 2022), Angela Hartnett delicious (2014); both rejected for date
+[neighbourhood-Cannaregio] "dove mangiare Cannaregio Venezia ristoranti consigli 2025" → dissapore.com Cannaregio, agrodolce.it Cannaregio; candidate verification pending
+[neighbourhood-Cannaregio] "Cannaregio Venice restaurants local food guide 2023" → topographickitchens.substack.com Nic Miller (404 later confirmed), thecreativeadventurer.com
+[neighbourhood-Castello] "ristoranti Castello Venezia guida gastronomica 2024 2025" → listing aggregators only; no new named-author candidate
+[neighbourhood-Castello] "Castello Venice dining recommendations food writer 2024" → The Infatuation Venice (2022 date), Angela Hartnett (2014 date); both rejected
+[neighbourhood-Dorsoduro] "ristoranti Dorsoduro Venezia dove mangiare 2024 2025" → agrodolce.it Dorsoduro, mangiarebenevenezia.it Dorsoduro; candidates noted
+[neighbourhood-Dorsoduro] "Dorsoduro Venice restaurants neighbourhood guide 2023 2024" → listing sites, no new named-author candidate
+[neighbourhood-Santa Croce] "dove mangiare Santa Croce Venezia ristoranti osterie 2025" → dissapore.com Santa Croce; no named author on hub page
+[neighbourhood-Santa Croce] "Santa Croce Venice best restaurants local recommendations 2024" → listing sites only
+[neighbourhood-San Polo] "ristoranti San Polo Venezia mercato Rialto osterie 2023" → mangiarebenevenezia.it San Polo; no named author confirmed
+[neighbourhood-San Polo] "San Polo Venice restaurants Rialto market food guide 2025" → eatingarounditaly.com; no named author confirmed at verification
+[neighbourhood-Giudecca] "ristoranti Giudecca Venezia dove mangiare 2024 2025" → cibotoday.it Giudecca; no named author confirmed
+[neighbourhood-Giudecca] "Giudecca Venice restaurants recommendations 2023 2024" → matchingfoodandwine.com (Fiona Beckett, 2008) rejected-date
+[neighbourhood-Burano] "ristoranti Burano Venezia pesce fresco guida 2024" → listing sites, no new named-author candidate
+[neighbourhood-Mazzorbo] "ristoranti Mazzorbo Venezia laguna 2023 2024" → Venissa (Michelin 1 star, excluded); dissapore.com Venissa review
+[neighbourhood-Murano] "ristoranti Murano Venezia dove mangiare isola 2025" → mangiarebenevenezia.it Murano; no named author confirmed
+[cross-1] "best Venice restaurants honest guide food writer 2024 2025" → timeout.com Julia Buckley (local expert Venice, updated Jul 4 2025) — ACCEPTED as secondary EN
+[cross-1] "where to eat Venice like a local recommendations 2023" → Katie Parla reconfirmed; veneziaautentica.com noted
+[cross-2] "migliori ristoranti Venezia critica gastronomica 2025 guida" → gamberorosso.it Venice guide (Elisa Bologna, May 27 2025) — ACCEPTED as secondary IT
+[cross-2] "dove mangiare Venezia cucina veneziana autentica 2023 2024" → lucianopignataro.it Venice guide (Giulia Gavagnin, Aug 29 2025) — ACCEPTED as primary IT
+[cross-2] "Venezia ristoranti gastronomia giornale 2024 guida enogastronomica" → identitagolose.it Venice Veneziani guide (Chiara Pavan & Francesco Brutto, May 17 2023) — ACCEPTED as primary IT with COI flag; salteditions.it Venice guide (Silvia Cannas Simontacchi, Dec 12 2024) — ACCEPTED as independent IT
+[cross-3] "giornalista gastronomico Venezia consigli ristoranti 2024" → assaggidiviaggio.it (March 2024); to verify
+[cross-3] "food writer Venice Italy restaurant recommendations 2025" → timeout.com reconfirmed; mamalovesitaly.com noted
+[cross-4] "50 Top Italy Venezia migliori ristoranti 2024 2025" → lucianopignataro.it reconfirmed; no new sources
+[cross-4] "Gambero Rosso Venezia ristoranti migliori 2023 2024" → gamberorosso.it reconfirmed
+[cross-4] "L'Espresso Ristoranti d'Italia Venezia premiati 2024" — NOT SEARCHED (absorbed into gamberorosso cross-2 results)
+[cross-5] "nuovi ristoranti Venezia aperture 2024 2025" → dissapore.com Venice new openings (no named author on article); Identità Golose reconfirmed
+[cross-5] "new restaurant openings Venice Italy 2024 2025" → no new named-author candidates
+[cross-6] "migliori bacari Venezia cicchetti ombre guida 2024 2025" → lecosmopolite.it Roberta Ferrazzi (bacari guide); lucianopignataro.it bacari (Giulia Gavagnin site reconfirmed)
+[cross-6] "osterie veneziane tradizionali baccalà mantecato sarde in saor 2023" → gamberorosso.it bacari guide; rafaroundtheworld.com Nov 2023
+[cross-7] "pesce mercato Rialto ristoranti Venezia frutto di mare 2024" → listing/market info sites only
+[cross-7] "Venice seafood restaurants Rialto market guide critics 2025" → timeout.com reconfirmed
+[cross-8] "rivista gastronomica italiana Venezia ristoranti consigliati 2023" → W37 Food and Wine (422 error, failed); Gambero Rosso reconfirmed
+[cross-8] "supplemento gastronomia giornale italiano Venezia cucina 2024" → no named-author Venice guide found
+[cross-8] "Venice seafood restaurants Rialto market guide critics 2025" → timeout.com reconfirmed (extra query, already logged)
+[year-distribution-check] PASSED — 17 queries reference earlier years (2023-2024), 17 queries reference later years (2025-2026)
+[phase-1b-crossval] "Osteria Giorgione da Masa Venezia recensione critica" → thefoodzilla.it Alfonso Isinelli, June 23 2023 — ACCEPTED as new primary IT source
+[phase-1b-crossval] "Antiche Carampane Venezia ristorante recensione critica" → dissapore.com (no byline, April 2022) — REJECTED; thegastronome.net noted
+[phase-1b-crossval] "Anice Stellato Venezia ristorante recensione" → dissapore.com (no byline) — REJECTED; venezia.italiani.it (first name only) — REJECTED

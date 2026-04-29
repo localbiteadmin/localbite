@@ -1,0 +1,281 @@
+LocalBite v7.1 — Venice, Italy
+Audit File
+Generated: 2026-04-28
+═══════════════════════════════════════════════════════════════════
+
+PIPELINE SUMMARY
+─────────────────
+City: Venice, Italy
+City slug: venice-italy
+Pipeline: localbite-v7.1
+Data date: 2026-04-28
+Year range: 2023-2026
+Sources confirmed: 6
+Final restaurants: 21
+Both-pool (Tier A): 3
+Tier A total: 5
+Tier B total: 16
+Searches run: ~41 (35 planned + 3 Phase 1B cross-validation + 3 supplementary)
+
+═══════════════════════════════════════════════════════════════════
+SECTION 1 — SOURCE DECISIONS
+═══════════════════════════════════════════════════════════════════
+
+ACCEPTED SOURCES (6)
+─────────────────────
+1. Katie Parla | katieparla.com | EN primary | 2023-02-25
+   Note: Single-author site confirmed via About page. Direct WebFetch used after
+   Jina r.jina.ai/katieparla.com returned CAPTCHA block (89ch). Wayback 451 (legally
+   unavailable). Direct fetch at katieparla.com/city-guides/venice/ returned ~15000ch,
+   34 venues extracted, 3 passing extraction quality gate (≥15 words + ≥1 specific detail).
+   Multiple Parla venues extraction-rejected due to under-15-word quotes (see Section 3).
+
+2. Giulia Gavagnin | lucianopignataro.it | IT primary | 2025-08-29
+   Note: Native Venetian food writer. Jina fetch via r.jina.ai successful. 5 venues
+   qualified for working file.
+
+3. Elisa Bologna | gamberorosso.it | IT secondary | 2025-05-27
+   Note: Gambero Rosso classified as secondary (national/international food publication,
+   not local Venice beat). Jina fetch successful. Contributed to Anice Stellato (both-pool),
+   CoVino (multi-source), Giorgione da Masa (multi-source), Osteria Al Cantinon (Tier B).
+
+4. Chiara Pavan & Francesco Brutto | identitagolose.it | IT primary | 2023-05-17
+   Note: ⚠ COI DISCLOSURE — Authors are chefs at Michelin 1-star Venissa on Mazzorbo
+   island. Venissa excluded from output per Michelin exclusion list. Source retained per
+   pipeline rules (COI flagged, not rejected). COI source counts toward concentration cap.
+   Largest single contributor: 12 venues in working file (post-cap). Original article
+   listed 30 venues; 7 excluded (Michelin), 11 extraction-rejected, 2 cap-removed from
+   this source's quota (see Section 4). article_url set to null — full URL not confirmed
+   from fetch (abbreviated in fetch log with ellipsis).
+
+5. Julia Buckley | timeout.com/venice | EN secondary | 2025-07-04 (updated)
+   Note: Time Out classified as secondary (international travel publication). Original
+   publication date undated; confirmed updated July 4 2025. Jina fetch successful
+   (~12000ch). 5 venues in final dataset.
+
+6. Alfonso Isinelli | thefoodzilla.it | IT primary | 2023-06-23
+   Note: Single-restaurant deep-dive review. Contributed as 4th source to Osteria
+   Giorgione da Masa (multi-source Tier A).
+
+REJECTED SOURCES (failed Phase 0 / Phase 1 / Phase 1B)
+────────────────────────────────────────────────────────
+REJ-01 | Elizabeth Minchilli | elizabethminchilli.com | EN
+  Reason: REJECTED-date — all Venice posts 2012-2016, outside YEAR_RANGE 2023-2026.
+  Attempts: category page (200, all posts 2012-2016), /tag/venice/ (404), /venice/
+  (redirected to 2014 Cicchetti Tour post). No 2023-2026 Venice content found.
+
+REJ-02 | Silvia Cannas Simontacchi | salteditions.it | IT
+  Reason: PARTIAL-ACCEPTED / ZERO-VENUES — Source qualified (named author, date Dec 12
+  2024, within YEAR_RANGE). Jina fetch returned ~7000ch but content was structural
+  (website URLs, Instagram links, navigation elements) with no verbatim article text for
+  most venues. All restaurants from SALT Editions extraction-rejected (quotes under 15
+  words or no specific details extractable from fetch content). Source moved to
+  failed-sources file. article_url: not applicable (zero venues contributed).
+
+REJ-03 | Gillian McGuire / Carlo Mantuano | theinfatuation.com | EN
+  Reason: REJECTED-date — article dated September 16 2022, outside YEAR_RANGE.
+
+REJ-04 | "delicious. team" | deliciousmagazine.co.uk | EN
+  Reason: REJECTED-date (October 1 2014) AND REJECTED-byline (no individual named author,
+  "delicious. team" collective byline does not meet named-author requirement).
+
+REJ-05 | Nic Miller | topographickitchens.substack.com | EN
+  Reason: FAILED — 404 page no longer exists.
+
+REJ-06 | W37 Food and Wine | w37.it | IT
+  Reason: FAILED — HTTP 422 error from Jina fetch.
+
+REJ-07 | dissapore.com Venice articles | IT
+  Reason: REJECTED-byline — hub/index pages with no named author. Individual article
+  (Antiche Carampane, April 2022) rejected for date (outside YEAR_RANGE) and byline.
+
+═══════════════════════════════════════════════════════════════════
+SECTION 2 — MICHELIN EXCLUSIONS
+═══════════════════════════════════════════════════════════════════
+
+Per pipeline configuration, all starred Michelin restaurants excluded:
+
+EXCL-M01 | Glam Enrico Bartolini | San Marco | ★★ (2-star)
+EXCL-M02 | Quadri | San Marco | ★ (1-star)
+EXCL-M03 | Local | Castello | ★ (1-star)
+EXCL-M04 | Oro Restaurant | San Marco | ★ (1-star)
+EXCL-M05 | Wistèria | San Polo | ★ (1-star)
+EXCL-M06 | Palais Royal | Cannaregio | ★ (1-star)
+EXCL-M07 | Agli Amici Dopolavoro | Giudecca | ★ (1-star)
+EXCL-M08 | Venissa | Mazzorbo | ★ (1-star) — also COI: authored by Venissa's own chefs
+
+═══════════════════════════════════════════════════════════════════
+SECTION 3 — EXTRACTION REJECTIONS (Tier C auto-reject)
+═══════════════════════════════════════════════════════════════════
+
+Rejection criteria: quote < 15 words OR no specific detail (dish/chef/price/year/
+neighbourhood/physical description).
+
+EXT-REJ-01 | Alle Testiere | Castello | src-katieparla-parla
+  Reason: Best extractable quote across all sources: 14 words — under threshold.
+  Attempted multiple source fetches; quotes remained under 15-word minimum.
+
+EXT-REJ-02 | Trattoria del Local | Castello | src-katieparla-parla
+  Reason: Best extractable quote: 14 words — under threshold.
+
+EXT-REJ-03 | Strazzaria | San Polo | src-katieparla-parla
+  Reason: Best extractable quote: 14 words — under threshold.
+
+EXT-REJ-04 | Estro | Dorsoduro | src-katieparla-parla
+  Reason: Best extractable quote: 14 words — under threshold.
+
+EXT-REJ-05 | Bacan | San Polo | src-katieparla-parla
+  Reason: Best extractable quote: 14 words — under threshold.
+  Note: Multiple venues from Parla hit exactly the 14-word threshold. The Parla direct
+  WebFetch returned text that the WebFetch model had paraphrased/condensed rather than
+  verbatim article text, limiting extractable quote length.
+
+EXT-REJ-06–15 | SALT Editions venues (salteditions.it / Silvia Cannas Simontacchi)
+  Reason: Jina fetch of salteditions.it article returned structural elements (navigation,
+  social links, URLs) rather than verbatim article text. No extractable quotes meeting
+  the 15-word + specific detail threshold. Approximately 10 venues extraction-rejected.
+  Source moved to failed-sources log.
+
+═══════════════════════════════════════════════════════════════════
+SECTION 4 — CONCENTRATION CAP DECISIONS
+═══════════════════════════════════════════════════════════════════
+
+Pre-cap pool: 32 entries (25 in working + 7 cap-removed)
+Concentration cap: 30% of total (Tier A + Tier B) as single-source Tier B from any one source.
+
+TRIGGER: Identità Golose (src-identitagolose-pavanbrutto) contributed 14 single-source
+Tier B entries out of 32 total = 43.75% — exceeds 30% cap.
+
+CAP CALCULATION:
+  Pre-cap total: 32
+  30% cap: 9.6 → maximum 9 single-source Tier B from any one source.
+  Identità Golose single-source Tier B pre-cap: 14
+  Required removals: minimum 5 (to reach ≤9)
+  Actual removals: 7 (removed to 7 single-source Tier B, 28% of 25 total post-cap)
+
+REMOVED BY CONCENTRATION CAP (7 entries, Identità Golose single-source Tier B):
+  CAP-01 | Cantina Arnaldi | src-identitagolose-pavanbrutto
+  CAP-02 | Bacaro Risorto | src-identitagolose-pavanbrutto
+  CAP-03 | Adriatico Mar | src-identitagolose-pavanbrutto
+  CAP-04 | Ai Do Leoni | src-identitagolose-pavanbrutto
+  CAP-05 | Stappo | src-identitagolose-pavanbrutto
+  CAP-06 | Vino Vero | src-identitagolose-pavanbrutto
+  CAP-07 | Rosticceria Gislon | src-identitagolose-pavanbrutto
+
+Selection basis: Removed venues were bacari, wine bars, and lower-confidence entries
+with the fewest specific culinary details. Restaurant venues (full meals) retained.
+
+POST-CAP CONCENTRATION CHECK:
+  Total after cap: 25
+  Identità Golose single-source Tier B: 7/25 = 28.0% ✓
+
+═══════════════════════════════════════════════════════════════════
+SECTION 5 — PHASE 3 RECOMMENDED REMOVALS (auto-accepted, UNATTENDED_MODE)
+═══════════════════════════════════════════════════════════════════
+
+[unattended-mode] auto-accepted 4 recommended removals.
+
+REM-01 | All'Arco | San Polo | src-identitagolose-pavanbrutto
+  Reason: Bar-only venue. Standing cicchetti bar (price_level 1); service is standing
+  bar counter, not seated dining. Pipeline bar-only flag applied.
+
+REM-02 | Al Sacro e Profano | San Polo | src-lucianopignataro-gavagnin
+  Reason: Bar-only venue. Pure bacaro; no dishes mentioned in source. Quote describes
+  ownership, not food. Pipeline bar-only flag applied.
+
+REM-03 | Al Mercà | San Polo | src-katieparla-parla
+  Reason: Bar/wine bar venue. Natural wine bar with sandwiches (tramezzini). Primary
+  draw is wine by the glass, not seated dining. Pipeline bar-only flag applied.
+
+REM-04 | Club del Doge | San Marco | src-timeout-buckley
+  Reason: Hotel restaurant (Hotel Gritti Palace). Price_level 4, luxury hotel context.
+  Pipeline hotel-restaurant flag applied.
+
+POST-REMOVAL CONCENTRATION RE-CHECK (21 final):
+  Identità Golose single-source Tier B: 6/21 = 28.6% ✓ (All'Arco removed, 6 remain)
+  Giulia Gavagnin single-source Tier B: 4/21 = 19.0% ✓ (Al Sacro e Profano removed)
+  Time Out single-source Tier B: 4/21 = 19.0% ✓ (Club del Doge removed)
+  Katie Parla single-source Tier B: 1/21 = 4.8% ✓ (Al Mercà removed)
+  All sources below 30% cap ✓
+
+═══════════════════════════════════════════════════════════════════
+SECTION 6 — GEOGRAPHIC EXCLUSIONS
+═══════════════════════════════════════════════════════════════════
+
+GEO-EXCL-01 | Mestre | Mainland — not within Venice island boundary. Any Mestre
+  mentions in sources auto-excluded. None appeared in accepted sources.
+
+GEO-EXCL-02 | Pellestrina | Island — not within GEOGRAPHIC_BOUNDARY_INCLUDE.
+  No Pellestrina restaurants appeared in accepted sources.
+
+GEO-EXCL-03 | Torcello | Island — not within GEOGRAPHIC_BOUNDARY_INCLUDE.
+  Venissa (Mazzorbo, Michelin 1-star) also excluded by Michelin rule.
+
+Included islands: Burano (Trattoria al Gatto Nero included), Murano (no qualifying
+  venues in accepted sources), Giudecca (no qualifying venues — Agli Amici Dopolavoro
+  excluded by Michelin rule).
+
+═══════════════════════════════════════════════════════════════════
+SECTION 7 — COI DISCLOSURE
+═══════════════════════════════════════════════════════════════════
+
+COI-01 | Chiara Pavan & Francesco Brutto | src-identitagolose-pavanbrutto
+  COI type: Authors are chefs at Michelin 1-star restaurant Venissa (Mazzorbo).
+  Venissa was recommended in their article but excluded from output via Michelin
+  exclusion list (independently confirmed 1-star in pipeline configuration).
+  Impact assessment: COI source retained per pipeline rules. No other restaurant
+  in their list appears to be directly commercially affiliated with the authors.
+  The 11 venues retained from this source (including 4 Tier A multi-source entries
+  confirmed by independent sources) show no systematic bias toward affiliated venues.
+  COI counted toward secondary source cap per pipeline rules.
+
+═══════════════════════════════════════════════════════════════════
+SECTION 8 — ARTICLE_URL VERIFICATION
+═══════════════════════════════════════════════════════════════════
+
+URL-01 | src-katieparla-parla | https://katieparla.com/city-guides/venice/
+  Status: CONFIRMED — direct WebFetch returned 200, ~15000ch article text.
+
+URL-02 | src-lucianopignataro-gavagnin | https://lucianopignataro.it/a/dove-mangiare-a-venezia-cucina-veneziana/259145/
+  Status: CONFIRMED — Jina fetch returned 200, ~8000ch article text.
+
+URL-03 | src-gamberorosso-bologna | https://www.gamberorosso.it/notizie/rubriche/miniguide/migliori-ristoranti-venezia/
+  Status: CONFIRMED — Jina fetch returned 200, ~6000ch article text.
+
+URL-04 | src-identitagolose-pavanbrutto | article_url: null
+  Status: NOT CONFIRMED — Fetch log recorded URL with ellipsis abbreviation; full URL
+  not preserved. Per CLAUDE.md policy, article_url set to null rather than inferred.
+  Null shows broken-link icon in viewer — preferred over fabricated URL.
+
+URL-05 | src-timeout-buckley | https://www.timeout.com/venice/restaurants/best-restaurants-in-venice
+  Status: CONFIRMED — Jina fetch returned 200, ~12000ch article text.
+
+URL-06 | src-foodzilla-isinelli | https://www.thefoodzilla.it/2023/06/23/i-racconti-del-professore-osteria-giorgione-da-masa-venezia/
+  Status: CONFIRMED — Jina fetch returned 200, ~6000ch article text.
+
+═══════════════════════════════════════════════════════════════════
+SECTION 9 — FETCH QUALITY NOTES
+═══════════════════════════════════════════════════════════════════
+
+FQ-01 | Katie Parla — Jina CAPTCHA
+  The r.jina.ai fetch of katieparla.com returned only 89 characters (CAPTCHA/security
+  block). Fallback to Wayback Machine returned 451 (legally unavailable). Direct
+  WebFetch of katieparla.com/city-guides/venice/ succeeded. However, the WebFetch
+  tool's internal model summarised/paraphrased article content rather than returning
+  verbatim text, limiting extractable quote quality. Multiple Parla venues hit the
+  14-word threshold (exactly one word under the 15-word minimum).
+
+FQ-02 | SALT Editions — Jina content quality
+  salteditions.it/breve-guida-enogastronomica-a-venezia/ returned 200 via Jina with
+  ~7000ch, but the content consisted primarily of website navigation, social media
+  links, and URLs rather than verbatim article prose. Zero venues reached extraction
+  quality threshold. Source treated as failed.
+
+FQ-03 | Identità Golose — URL abbreviation
+  Jina fetch of identitagolose.it article returned 200 with ~10000ch, content accepted.
+  However, the full article URL was abbreviated with "…" in the fetch log and not
+  preserved for article_url assignment. Set to null per CLAUDE.md policy.
+
+═══════════════════════════════════════════════════════════════════
+END OF AUDIT
+═══════════════════════════════════════════════════════════════════

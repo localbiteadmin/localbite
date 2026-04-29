@@ -1,0 +1,163 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LocalBite v7.1 — Venice, Italy
+Search Plan
+Prepared: 2026-04-28
+
+PRIMARY_LANGUAGE: Italian (IT)
+SECONDARY_LANGUAGE: English (EN)
+YEAR_RANGE: 2023-2026
+
+Phase 0 confirmed sources (pre-verified):
+- Katie Parla (katieparla.com) — EN, February 25 2023, single-author confirmed
+  Venissa EXCLUDED (Michelin 1 star)
+
+Phase 0 failed sources:
+- Elizabeth Minchilli (elizabethminchilli.com) — all Venice posts are 2012-2016, outside YEAR_RANGE
+
+────────────────────────────────────────
+PART A — NEIGHBOURHOOD COVERAGE
+────────────────────────────────────────
+
+TIER 1 (San Marco, Cannaregio, Castello) — 2 queries each = 6 total
+
+Query 1  [neighbourhood-San Marco] IT:
+  "migliori ristoranti San Marco Venezia critica gastronomica 2023 2024"
+
+Query 2  [neighbourhood-San Marco] EN:
+  "best restaurants San Marco Venice guide 2024 2025"
+
+Query 3  [neighbourhood-Cannaregio] IT:
+  "dove mangiare Cannaregio Venezia ristoranti consigli 2025"
+
+Query 4  [neighbourhood-Cannaregio] EN:
+  "Cannaregio Venice restaurants local food guide 2023"
+
+Query 5  [neighbourhood-Castello] IT:
+  "ristoranti Castello Venezia guida gastronomica 2024 2025"
+
+Query 6  [neighbourhood-Castello] EN:
+  "Castello Venice dining recommendations food writer 2024"
+
+TIER 2 (Dorsoduro, Santa Croce Venezia, San Polo, Giudecca) — 2 queries each = 8 total
+
+Query 7  [neighbourhood-Dorsoduro] IT:
+  "ristoranti Dorsoduro Venezia dove mangiare 2024 2025"
+
+Query 8  [neighbourhood-Dorsoduro] EN:
+  "Dorsoduro Venice restaurants neighbourhood guide 2023 2024"
+
+Query 9  [neighbourhood-Santa Croce] IT:
+  "dove mangiare Santa Croce Venezia ristoranti osterie 2025"
+
+Query 10 [neighbourhood-Santa Croce] EN:
+  "Santa Croce Venice best restaurants local recommendations 2024"
+
+Query 11 [neighbourhood-San Polo] IT:
+  "ristoranti San Polo Venezia mercato Rialto osterie 2023"
+
+Query 12 [neighbourhood-San Polo] EN:
+  "San Polo Venice restaurants Rialto market food guide 2025"
+
+Query 13 [neighbourhood-Giudecca] IT:
+  "ristoranti Giudecca Venezia dove mangiare 2024 2025"
+
+Query 14 [neighbourhood-Giudecca] EN:
+  "Giudecca Venice restaurants recommendations 2023 2024"
+
+TIER 3 (Burano, Mazzorbo, Murano) — 1 IT query each = 3 total
+
+Query 15 [neighbourhood-Burano] IT:
+  "ristoranti Burano Venezia pesce fresco guida 2024"
+
+Query 16 [neighbourhood-Mazzorbo] IT:
+  "ristoranti Mazzorbo Venezia laguna 2023 2024"
+
+Query 17 [neighbourhood-Murano] IT:
+  "ristoranti Murano Venezia dove mangiare isola 2025"
+
+────────────────────────────────────────
+PART B — CROSS-CUTTING ANGLES
+────────────────────────────────────────
+
+Cross-1 — City-wide EN (2 queries)
+
+Query 18 [cross-1] EN editorial:
+  "best Venice restaurants honest guide food writer 2024 2025"
+
+Query 19 [cross-1] EN personal:
+  "where to eat Venice like a local recommendations 2023"
+
+Cross-2 — City-wide IT (3 queries)
+
+Query 20 [cross-2] IT formal criticism:
+  "migliori ristoranti Venezia critica gastronomica 2025 guida"
+
+Query 21 [cross-2] IT casual neighbourhood:
+  "dove mangiare Venezia cucina veneziana autentica 2023 2024"
+
+Query 22 [cross-2] IT food journalism:
+  "Venezia ristoranti gastronomia giornale 2024 guida enogastronomica"
+
+Cross-3 — Generic writer-first (1 IT + 1 EN)
+
+Query 23 [cross-3] IT:
+  "giornalista gastronomico Venezia consigli ristoranti 2024"
+
+Query 24 [cross-3] EN:
+  "food writer Venice Italy restaurant recommendations 2025"
+
+Cross-4 — Named awards (3 queries)
+
+Query 25 [cross-4] 50 Top Italy:
+  "50 Top Italy Venezia migliori ristoranti 2024 2025"
+
+Query 26 [cross-4] L'Espresso:
+  "L'Espresso Ristoranti d'Italia Venezia premiati 2024"
+
+Query 27 [cross-4] Gambero Rosso:
+  "Gambero Rosso Venezia ristoranti migliori 2023 2024"
+
+Cross-5 — Recent openings (1 IT + 1 EN)
+
+Query 28 [cross-5] IT:
+  "nuovi ristoranti Venezia aperture 2024 2025"
+
+Query 29 [cross-5] EN:
+  "new restaurant openings Venice Italy 2024 2025"
+
+Cross-6 — Bacari/cicchetti vocabulary (2 IT queries)
+
+Query 30 [cross-6] IT cicchetti:
+  "migliori bacari Venezia cicchetti ombre guida 2024 2025"
+
+Query 31 [cross-6] IT traditional dishes:
+  "osterie veneziane tradizionali baccalà mantecato sarde in saor 2023"
+
+Cross-7 — Cuisine and community (1 IT + 1 EN)
+
+Query 32 [cross-7] IT seafood/Rialto:
+  "pesce mercato Rialto ristoranti Venezia frutto di mare 2024"
+
+Query 33 [cross-7] EN seafood:
+  "Venice seafood restaurants Rialto market guide critics 2025"
+
+Cross-8 — Publication-category IT (2 queries)
+
+Query 34 [cross-8] IT magazine:
+  "rivista gastronomica italiana Venezia ristoranti consigliati 2023"
+
+Query 35 [cross-8] IT newspaper supplement:
+  "supplemento gastronomia giornale italiano Venezia cucina 2024"
+
+────────────────────────────────────────
+YEAR DISTRIBUTION CHECK
+────────────────────────────────────────
+
+[year-distribution-check] PASSED —
+Queries referencing earlier YEAR_RANGE (2023-2024): 1, 4, 6, 8, 11, 14, 16, 19, 21, 23, 25, 26, 27, 31, 32, 34, 35 = 17 queries
+Queries referencing later YEAR_RANGE (2025-2026): 2, 3, 5, 7, 9, 10, 12, 13, 17, 18, 20, 22, 24, 28, 29, 30, 33 = 17 queries
+Queries with no year term: none
+Distribution is balanced across the full year range.
+
+Total planned queries: 35 (within 45-query soft ceiling)

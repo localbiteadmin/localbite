@@ -1,7 +1,7 @@
 {
   "project": "LocalBite",
   "description": "Curated restaurant packs built from named food writers, 2025-2026 sources only",
-  "last_updated": "2026-04-28",
+  "last_updated": "2026-04-29",
   "cities": [
     {
       "city": "Barcelona",
@@ -455,14 +455,14 @@
       "country": "Italy",
       "city_slug": "venice-italy",
       "pipeline": "localbite-v7.1",
-      "built": null,
-      "restaurant_count": 0,
-      "both_pool_count": 0,
-      "source_count": 0,
+      "built": "2026-04-29",
+      "restaurant_count": 21,
+      "both_pool_count": 3,
+      "source_count": 6,
       "file": "localbite-venice-italy-2023-2026.json",
-      "status": "coming_soon",
-      "open_status_check_count": 0,
-      "notes": "Italy Batch E — Part 1 file committed 2026-04-27"
+      "status": "complete",
+      "open_status_check_count": 7,
+      "notes": ""
     },
     {
       "city": "Palermo",

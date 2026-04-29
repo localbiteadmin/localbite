@@ -1,0 +1,19 @@
+[p0] "r.jina.ai/katieparla.com/city-guides/venice/" → CAPTCHA | 89ch | FAILED — security/CAPTCHA block via Jina
+[p0] "elizabethminchilli.com/category/venice-restaurants/" → 200 | 8847ch | REJECTED-date — all 12 visible posts are 2012-2016, outside YEAR_RANGE 2023-2026
+[p0] "r.jina.ai/web.archive.org/web/2026/katieparla.com/city-guides/venice/" → 451 | —ch | FAILED — legally unavailable via Wayback
+[p0] "elizabethminchilli.com/tag/venice/" → 404 | —ch | FAILED — page does not exist
+[p0] "elizabethminchilli.com/venice/" → 200 | ~3000ch | FAILED — redirected to 2014 blog post about Cicchetti Tour, not a 2023-2026 Venice guide
+[p0] "katieparla.com/city-guides/venice/ (direct)" → 200 | ~15000ch | ACCEPTED — "Eating & Drinking in Venice", Katie Parla, February 25 2023, 34 venues extracted. Single-author site confirmed.
+[p1-verify] "r.jina.ai/lucianopignataro.it/a/dove-mangiare-a-venezia-cucina-veneziana/259145/" → 200 | ~8000ch | ACCEPTED — Giulia Gavagnin, IT Venice native guide, Aug 29 2025
+[p1-verify] "r.jina.ai/gamberorosso.it/notizie/rubriche/miniguide/migliori-ristoranti-venezia/" → 200 | ~6000ch | ACCEPTED — Elisa Bologna, Gambero Rosso, May 27 2025, 11 restaurants
+[p1-verify] "r.jina.ai/identitagolose.it/…/la-venezia-dei-veneziani-30-indirizzi…" → 200 | ~10000ch | ACCEPTED — Chiara Pavan & Francesco Brutto, May 17 2023, 30 venues; ⚠ COI (chefs at Venissa 1*)
+[p1-verify] "r.jina.ai/theinfatuation.com/venice/guides/best-restaurants-hotels-venice-italy" → 200 | ~8000ch | REJECTED-date — publication date September 16 2022, outside YEAR_RANGE
+[p1-verify] "r.jina.ai/deliciousmagazine.co.uk/venice/" → 200 | ~5000ch | REJECTED-date — October 1 2014, outside YEAR_RANGE; also byline "delicious. team"
+[p1-verify] "r.jina.ai/salteditions.it/breve-guida-enogastronomica-a-venezia/" → 200 | ~7000ch | ACCEPTED — Silvia Cannas Simontacchi, SALT Editions, December 12 2024
+[p1-verify] "w37.it/i-20-migliori-ristoranti-di-venezia-guida-completa-2023/" → 422 | —ch | FAILED — HTTP 422 error
+[p1-verify] "r.jina.ai/timeout.com/venice/restaurants/best-restaurants-in-venice" → 200 | ~12000ch | ACCEPTED — Julia Buckley, Time Out Venice, updated July 4 2025, undated original
+[p1-verify] "topographickitchens.substack.com/p/hungry-in-cannaregio" → 404 | —ch | FAILED — page no longer exists
+[p1-verify] "r.jina.ai/matchingfoodandwine.com/…/venice-restaurants-eating-off-the-beaten-track/" → 200 | ~5000ch | REJECTED-date — April 30 2008, outside YEAR_RANGE
+[p1-verify] "r.jina.ai/dissapore.com/venezia/" → 200 | ~4000ch | REJECTED-byline — hub/index page, no named author
+[p1b] "r.jina.ai/thefoodzilla.it/2023/06/23/i-racconti-del-professore-osteria-giorgione-da-masa-venezia/" → 200 | ~6000ch | ACCEPTED — Alfonso Isinelli, The Foodzilla, June 23 2023, single-restaurant review
+[p1b] "r.jina.ai/dissapore.com/ristoranti/antiche-carampane-a-venezia-recensione-…/" → 200 | ~5000ch | REJECTED-date — April 23 2022, outside YEAR_RANGE; also no named author
