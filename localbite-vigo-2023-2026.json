@@ -7,8 +7,8 @@
   "generated_date": "2026-04-23",
   "both_pool": false,
   "language_pool": "es",
-  "sources": [
-    {
+  "sources": {
+    "src-metropolitano-cifuentes": {
       "source_id": "src-metropolitano-cifuentes",
       "author": "Carolina Cifuentes",
       "article_url": null,
@@ -25,7 +25,7 @@
       "writer_profile": "Food writer for Metropolitano.gal, a metropolitan publication covering the Galician region. Cifuentes specializes in identifying quality restaurants that offer exceptional cuisine at reasonable prices, focusing on establishments in Vigo and the surrounding area.",
       "writer": "Cifuentes"
     },
-    {
+    "src-treintayseis-picatoste": {
       "source_id": "src-treintayseis-picatoste",
       "author": "Mauro Picatoste",
       "article_url": null,
@@ -42,7 +42,7 @@
       "writer_profile": "Food writer at El Español and Treintayseis who covers restaurant recommendations and dining guides across Spain. Picatoste specializes in analyzing prestigious culinary rankings, including coverage of Michelin Guide-level establishments and regional dining scenes like Vigo's restaurant landscape.",
       "writer": "Picatoste"
     },
-    {
+    "src-theobjective-alonso": {
       "source_id": "src-theobjective-alonso",
       "author": "Brenda Alonso",
       "article_url": null,
@@ -59,7 +59,7 @@
       "writer_profile": "Food writer Alonso contributes to The Objective, focusing on local dining recommendations and restaurant coverage. His work includes comprehensive guides to the best dining establishments in Spanish cities, featuring restaurants recommended by local residents.",
       "writer": "Alonso"
     }
-  ],
+  },
   "restaurants": [
     {
       "id": "vigo-spain-001",
