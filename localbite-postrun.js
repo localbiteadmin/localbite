@@ -685,11 +685,10 @@ function isThinProfile(profile) {
     if (boundsHasCity) {
       console.log(`✓ CITY_BOUNDS  — '${city}' already present.`);
     } else if (bbox) {
-      // Use tighter bounds for viewer (geocode.js has wider tolerance boxes)
-      // Shrink each edge by 20% of the range for a tighter viewer bound
+      // Use geocode.js bbox directly — no padding (tighter bounds clip edge restaurants)
       const latRange = bbox.latMax - bbox.latMin;
       const lngRange = bbox.lngMax - bbox.lngMin;
-      const pad = 0.20;
+      const pad = 0.0;
       const minLat = (bbox.latMin + latRange * pad).toFixed(2);
       const maxLat = (bbox.latMax - latRange * pad).toFixed(2);
       const minLng = (bbox.lngMin + lngRange * pad).toFixed(2);
