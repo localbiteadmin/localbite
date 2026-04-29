@@ -1,0 +1,461 @@
+{
+  "city": "Modena",
+  "country": "Italy",
+  "city_slug": "modena-italy",
+  "pipeline": "localbite-v7.1",
+  "run_date": "2026-04-29",
+  "year_range": "2023-2026",
+  "sources": {
+    "src-katieparla-parla": {
+      "source_id": "src-katieparla-parla",
+      "id": "src-katieparla-parla",
+      "writer": "Katie Parla",
+      "publication": "Katie Parla",
+      "url": "https://katieparla.com/",
+      "article_url": "https://katieparla.com/city-guides/modena/",
+      "article_title": "Eating & Drinking in Modena | Katie Parla City Guide",
+      "article_date": "2022-12-24",
+      "language": "EN",
+      "source_type": "primary",
+      "single_author_site": true,
+      "restaurants_extracted": 4,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "American food writer based in Rome, specializing in Italian and Mediterranean food. Author of multiple cookbooks including Tasting Rome (2016) and Food of the Italian South (2019). Regular contributor to The New York Times, National Geographic, and Saveur. Katie Parla has been researching and writing about Italian regional food traditions for over fifteen years, with in-depth city guides at katieparla.com. Her Modena guide is dated 2022-12-24 but the Part 1 operator confirms it was updated November 2025. Confirmed as DIRECT_FETCH_SOURCE; initial Jina fetch blocked by CAPTCHA, Wayback Machine returned 451; article obtained via direct WebFetch (200). One entry removed in Phase 3 (Bar Schiavoni: market stall, not a sit-down restaurant)."
+    },
+    "src-cibotoday-gibertini": {
+      "source_id": "src-cibotoday-gibertini",
+      "id": "src-cibotoday-gibertini",
+      "writer": "Carlo Gibertini",
+      "publication": "Cibo Today",
+      "url": "https://www.cibotoday.it/",
+      "article_url": "https://www.cibotoday.it/mappe/trattorie-modena-dove-mangiare.html",
+      "article_title": "Le migliori trattorie di Modena dove mangiare bene spendendo il giusto",
+      "article_date": "2023-11-22",
+      "language": "IT",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 10,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Carlo Gibertini is a food and culture writer at Cibo Today (cibotoday.it), an Italian food and lifestyle website covering restaurant guides, recipes, and food culture. His November 2023 Modena guide surveys traditional trattorie across the historic centre, with specific dishes, prices, and neighbourhood context for each."
+    },
+    "src-scattidigusto-cristiani": {
+      "source_id": "src-scattidigusto-cristiani",
+      "id": "src-scattidigusto-cristiani",
+      "writer": "Nico Cristiani",
+      "publication": "Scatti di Gusto",
+      "url": "https://www.scattidigusto.it/",
+      "article_url": "https://www.scattidigusto.it/dove-mangiare-a-modena-spendendo-poco-trattorie",
+      "article_title": "Dove mangiare a Modena spendendo poco. 5 trattorie",
+      "article_date": "2023-11-04",
+      "language": "IT",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 3,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Nico Cristiani is a food writer at Scatti di Gusto (scattidigusto.it), an established Italian food and restaurant website with national coverage. His November 2023 Modena guide focuses on budget-friendly trattorie. Two extractions auto-rejected at Phase 2: Il Fantino (quote 13 words, below 15-word minimum) and Trattoria Bianca (quote under 15 words with no specific detail). Three restaurants extracted; Bottega Mamma Puglia subsequently removed in Phase 3 for non-local Pugliese cuisine."
+    },
+    "src-errantedelgusto-scainelli": {
+      "source_id": "src-errantedelgusto-scainelli",
+      "id": "src-errantedelgusto-scainelli",
+      "writer": "Luca Scainelli",
+      "publication": "Errante del Gusto",
+      "url": "https://www.errantedelgusto.it/",
+      "article_url": "https://www.errantedelgusto.it/post/aldina-modena-recensione-trattoria/",
+      "article_title": "Aldina, Modena: la luce riflessa che non illumina più",
+      "article_date": "2026-03-17",
+      "language": "IT",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 1,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Luca Scainelli is a food critic at Errante del Gusto (errantedelgusto.it), an Italian food review site. His March 2026 critical review of Trattoria Aldina finds the kitchen has lost some precision in its classic preparations — a perspective that offers a counterpoint to more celebratory coverage of this Modena institution."
+    }
+  },
+  "restaurants": [
+    {
+      "name": "Archer",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Wine bar / small plates",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "hard boiled eggs with tuna sauce",
+        "Cantabrian anchovies with butter and toast"
+      ],
+      "signature_dish": null,
+      "quote": "This natural wine bar pours amazing vino from Italy, France, and Slovenia alongside delicious cheese, cured meats, and other gourmet treats. I love the hard boiled eggs with tuna sauce and the Cantabrian anchovies with butter and toast. I could eat and drink here every day of my life and when I'm in Modena, I do.",
+      "quote_language": "original",
+      "article_date": "2022-12-24",
+      "article_title": "Eating & Drinking in Modena | Katie Parla City Guide",
+      "open_status_check": true,
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Katie Parla"
+      ],
+      "lat": 44.647767,
+      "lng": 10.9268968,
+      "language_pool": "en",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Archer"
+    },
+    {
+      "name": "Franceschetta 58",
+      "name_variants": [
+        "La Franceschetta",
+        "Franceschetta58"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Modenese brasserie",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cured meats",
+        "tortellini with Parmigiano-Reggiano cream"
+      ],
+      "signature_dish": null,
+      "quote": "The Osteria Francescana-affiliated brasserie, helmed by Francesco Vicenzi, serves exceptionally good cured meats and tortellini with the traditional Parmigiano-Reggiano cream. Go here for a taste of the Francescana philosophy at reasonable prices.",
+      "quote_language": "original",
+      "article_date": "2022-12-24",
+      "article_title": "Eating & Drinking in Modena | Katie Parla City Guide",
+      "open_status_check": true,
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Katie Parla"
+      ],
+      "lat": null,
+      "lng": null,
+      "language_pool": "en",
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Hosteria Giusti",
+      "name_variants": [
+        "Osteria Giusti",
+        "Hostaria Giusti"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Modenese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tagliatelle",
+        "tortellini",
+        "braised veal cheek",
+        "cotechino"
+      ],
+      "signature_dish": null,
+      "quote": "Accessed via an alley off of Via Emilia, Hosteria Giusti is a 4-table institution serving traditional modenese fare, like tagliatelle and tortellini and a range of meaty mains like braised veal cheek and cotechino.",
+      "quote_language": "original",
+      "article_date": "2022-12-24",
+      "article_title": "Eating & Drinking in Modena | Katie Parla City Guide",
+      "open_status_check": true,
+      "sources": [
+        "src-katieparla-parla"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Katie Parla"
+      ],
+      "lat": 44.6473468,
+      "lng": 10.9280079,
+      "language_pool": "en",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Hosteria Giusti"
+    },
+    {
+      "name": "Trattoria Urbana Gnock & Roll",
+      "name_variants": [
+        "Gnock & Roll"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Modenese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "gnocco fritto",
+        "borlengo",
+        "tigelle"
+      ],
+      "signature_dish": "gnocco fritto",
+      "quote": "La combinazione fortunata è tra la più stretta tradizione modenese, quella del (premiato) gnocco fritto, del borlengo e delle tigelle con piatti più contemporanei.",
+      "quote_language": "original",
+      "article_date": "2023-11-04",
+      "article_title": "Dove mangiare a Modena spendendo poco. 5 trattorie",
+      "open_status_check": false,
+      "sources": [
+        "src-scattidigusto-cristiani"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Nico Cristiani"
+      ],
+      "lat": null,
+      "lng": null,
+      "language_pool": "it",
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Trattoria Tagliatella",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Modenese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tagliatella al ragù",
+        "tagliatella al prosciutto crudo e piselli",
+        "tagliatella ai funghi porcini",
+        "tagliatella al ragù di coniglio",
+        "pappardella al cinghiale",
+        "risotto con battuto di pancetta e rosmarino",
+        "tigelle",
+        "gnocco fritto"
+      ],
+      "signature_dish": "tagliatella al ragù",
+      "quote": "Come spiega il nome, questa trattoria ha un core business molto preciso: la tagliatella all'uovo – al ragù, al prosciutto crudo e piselli, ai funghi porcini, al ragù di coniglio o in versione pappardella al cinghiale (tutte a 11€). Si trova in un vicolo del centro storico adiacente alla via Gallucci.",
+      "quote_language": "original",
+      "article_date": "2023-11-22",
+      "article_title": "Le migliori trattorie di Modena dove mangiare bene spendendo il giusto",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-gibertini",
+        "src-scattidigusto-cristiani"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "writers": [
+        "Carlo Gibertini",
+        "Nico Cristiani"
+      ],
+      "lat": 44.6438793,
+      "lng": 10.9288295,
+      "language_pool": "it",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Tagliatella"
+    },
+    {
+      "name": "Trattoria Aldina",
+      "name_variants": [
+        "L'Aldina",
+        "Aldina"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Modenese",
+      "opening_year": 1970,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tagliatelle al ragù",
+        "gramigna al ragù di salsiccia",
+        "flan di zucca"
+      ],
+      "signature_dish": "flan di zucca",
+      "quote": "'L'Aldina', come viene chiamata affettuosamente da tutti i modenesi, è più di una trattoria, è un salto indietro nel tempo. Le tagliatelle al ragù e la gramigna al ragù di salsiccia (entrambe 8€) sono notevoli, ma non fatevi mancare il flan di zucca alla fine, è introvabile altrove.",
+      "quote_language": "original",
+      "article_date": "2023-11-22",
+      "article_title": "Le migliori trattorie di Modena dove mangiare bene spendendo il giusto",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-gibertini",
+        "src-errantedelgusto-scainelli"
+      ],
+      "confidence_tier": "A",
+      "both_pool": false,
+      "writers": [
+        "Carlo Gibertini",
+        "Luca Scainelli"
+      ],
+      "lat": 44.6446694,
+      "lng": 10.9249662,
+      "language_pool": "it",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Aldina"
+    },
+    {
+      "name": "Trattoria Madonnina",
+      "name_variants": [
+        "Trattoria Madonnina Modena",
+        "Locanda Madonnina"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Modenese",
+      "opening_year": 1974,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "gnocco fritto",
+        "tigelle",
+        "pollo alla cacciatora",
+        "fagioli in umido"
+      ],
+      "signature_dish": "tigelle",
+      "quote": "A fronte di un'altissima qualità dei prodotti e dei contorni (pollo alla cacciatora e fagioli in umido, che ormai pochissimi ristoranti propongono come accompagnamento alle tigelle), lo scontrino vi farà sentire come se viveste in un'epoca non corrotta da inflazione e crisi energetica: il menu fisso costa solo 20€ bevande e caffè esclusi.",
+      "quote_language": "original",
+      "article_date": "2023-11-22",
+      "article_title": "Le migliori trattorie di Modena dove mangiare bene spendendo il giusto",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-gibertini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Carlo Gibertini"
+      ],
+      "lat": 44.6557371,
+      "lng": 10.9045306,
+      "language_pool": "it",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Madonnina"
+    },
+    {
+      "name": "Trattoria Ermes",
+      "name_variants": [
+        "Ermes",
+        "Osteria Ermes"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Modenese",
+      "opening_year": 1964,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "passatelli in brodo",
+        "scaloppine all'aceto balsamico con patate",
+        "zuppa inglese"
+      ],
+      "signature_dish": "passatelli in brodo",
+      "quote": "Aperta dal 1964, la trattoria convince per la sua atmosfera da pranzo del sabato con gli amici: è bello concedersi un bicchiere di lambrusco per sgrassare i piatti della tradizione. La Bruna, vedova di Ermes, aiuta ancora lo staff del ristorante ed è amata da tutti. Il menu cambia ogni giorno, ma consigliamo i passatelli in brodo (9€), le scaloppine all'aceto balsamico con patate (10€) e la loro zuppa inglese fatta in casa (3€). I prezzi, com'è evidente, sono inferiori rispetto alla media.",
+      "quote_language": "original",
+      "article_date": "2023-11-22",
+      "article_title": "Le migliori trattorie di Modena dove mangiare bene spendendo il giusto",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-gibertini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Carlo Gibertini"
+      ],
+      "lat": 44.6494353,
+      "lng": 10.9253873,
+      "language_pool": "it",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Ermes"
+    },
+    {
+      "name": "Zemiàn Piccola Osteria",
+      "name_variants": [
+        "Zemiàn",
+        "Zemian"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Modenese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "gnocco fritto",
+        "tigelle con affettati misti",
+        "pesto di lardo",
+        "stracchino e rucola",
+        "friggione bolognese",
+        "costine di maiale glassate al miele"
+      ],
+      "signature_dish": "costine di maiale glassate al miele",
+      "quote": "Zemiàn — dal nome dialettale del patrono San Geminiano — è una realtà molto piccola, ha poche decine di coperti e per questo mantiene sempre un clima molto intimo e gradevole. Davide Crivellaro è il suo giovane oste e sommelier. Menzione d'onore al gnocco fritto e tigelle con affettati misti, pesto di lardo, stracchino e rucola e friggione bolognese (15€) e le costine di maiale glassate al miele con le patate della Giovanna (14€).",
+      "quote_language": "original",
+      "article_date": "2023-11-22",
+      "article_title": "Le migliori trattorie di Modena dove mangiare bene spendendo il giusto",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-gibertini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Carlo Gibertini"
+      ],
+      "lat": 44.6483232,
+      "lng": 10.927788,
+      "language_pool": "it",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Piccola Osteria Zemiàn"
+    },
+    {
+      "name": "Vecchia Pirri",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Modenese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cotoletta alla bolognese",
+        "passatelli asciutti con riduzione di Parmigiano Reggiano e aceto balsamico",
+        "gramigna salsiccia e panna al torchio"
+      ],
+      "signature_dish": "cotoletta alla bolognese",
+      "quote": "La Vecchia Pirri è uno dei locali tra i più conosciuti del centro di Modena. È rinomato per la cotoletta alla bolognese (12,50€) e per i primi rigorosamente fatti a mano, dai passatelli asciutti con riduzione di Parmigiano Reggiano e aceto balsamico (9,50€) alla gramigna salsiccia e panna al torchio (8,70€). Carla e Raoul sono i proprietari, aiutati da rezdore che tre volte a settimana preparano la pasta fresca.",
+      "quote_language": "original",
+      "article_date": "2023-11-22",
+      "article_title": "Le migliori trattorie di Modena dove mangiare bene spendendo il giusto",
+      "open_status_check": false,
+      "sources": [
+        "src-cibotoday-gibertini"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Carlo Gibertini"
+      ],
+      "lat": 44.6428231,
+      "lng": 10.9324725,
+      "language_pool": "it",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Vecchia Pirri"
+    }
+  ],
+  "source_recency": "2023-2026",
+  "centroids": {
+    "Centro Storico": [
+      44.6475,
+      10.9249
+    ]
+  }
+}

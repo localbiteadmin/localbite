@@ -1,0 +1,35 @@
+[phase-0] "https://katieparla.com/city-guides/modena/" → Katie Parla Modena guide fetched via direct URL after Jina CAPTCHA; 4 qualifying restaurants extracted; single-author site confirmed per Part 1 operator note
+[neighbourhood-Centro Storico] "migliori ristoranti trattorie Centro Storico Modena 2023 2024" → cibotoday.it and gamberorosso.it articles found; candidate IT sources; restaurants Il Fantino, Aldina, Ermes noted
+[neighbourhood-Centro Storico] "best restaurants Centro Storico Modena food guide 2025" → Katie Parla guide again; ciaobella.co (Erica Firpo); Da Danilo and Aldina mentioned in EN sources
+[neighbourhood-San Faustino] "ristoranti osterie quartiere San Faustino Modena 2024" → Cucina di Quartiere - Trattoria in San Faustino; directory sources only; no qualifying named-author articles
+[neighbourhood-San Faustino] "San Faustino Modena restaurants where to eat" → theitalianontour.com and 2foodtrippers.com appear; Cucina di Quartiere again; no qualifying EN sources
+[neighbourhood-Crocetta] "ristoranti dove mangiare Crocetta Modena 2024 2025" → Gambero Rosso 2025 street food guide (La Chersenta noted); mymodenadiary.it; no Crocetta-specific named-author sources
+[neighbourhood-Crocetta] "Crocetta Modena dining restaurant recommendations" → Da Danilo mentioned; wheresemmanow.com appears; no qualifying EN Crocetta sources
+[neighbourhood-Sant'Agnese] "ristoranti locali quartiere Sant'Agnese Modena" → directory results; Da Danilo and Da Enzo on Via Coltellini; no named-author food writing
+[neighbourhood-Sant'Agnese] "Sant'Agnese Modena restaurants food 2023 2024" → Forno Pasticceria Sant'Agnese; street mapping sites; no qualifying sources
+[neighbourhood-Buon Pastore] "mangiare bene Buon Pastore Modena ristorante 2024 2025" → viedelgusto.it; w37.it; no Buon Pastore specific named-author food writing
+[neighbourhood-Buon Pastore] "Buon Pastore neighbourhood Modena where to eat" → general Modena results; no qualifying sources
+[neighbourhood-Sacca] "ristoranti Sacca Modena locale osteria trattoria 2023 2024" → gazzettadimodena.it 2024 Slow Food article; ilrestodelcarlino.it; Sacca trattorie: Bianca, La Stalla, La Scarpetta
+[neighbourhood-Sacca] "Sacca Modena restaurant guide food" → general results; 2foodtrippers.com again; no qualifying sources
+[neighbourhood-Quattro Ville] "ristoranti Quattro Ville Modena locale" → directory results; Locanda Quattro Stagioni; 4 Ristoranti TV show; no qualifying sources
+[neighbourhood-Saliceta San Giuliano] "ristorante Saliceta San Giuliano Modena 2023 2024" → Ristorante Pizzeria Saliceta (TripAdvisor 2.8/5); directory results; no qualifying sources
+[neighbourhood-Lesignana] "ristorante Lesignana Modena trattoria" → Trattoria Grano; Casa da Beppe; Inbaraca Ostaria; no named-author food writing
+[cross-1] "best restaurants Modena Italy food guide 2025 local favorites" → Katie Parla; italyfoodies.com (Angelo Sorrentino); Trattoria Tagliatella and Antica Moka mentioned; Michelin Where Chefs Go (Stefano Secchi recommends Hosteria Giusti)
+[cross-1] "where to eat in Modena Italy authentic recommendations 2023 2024" → tastebologna.net (Andrea, no surname); theitalianontour.com (no author); Trattoria Pomposa and Aldina mentioned
+[cross-2] "migliori ristoranti Modena 2025 guida gastronomica" → emiliaromagnasegreta.com; gazzettadimodena.it; Gambero Rosso; Da Danilo and Antica Moka confirmed with specific details
+[cross-2] "dove mangiare Modena trattorie osterie consigli locali 2024" → scattidigusto.it (Nico Cristiani confirmed); gazzettadimodena.it 2024 Slow Food; Historic Shops confirmed: Aldina, Ermes, Oreste, Carducci, Hosteria Giusti
+[cross-2] "migliori trattorie osterie Modena cucina modenese 2023 2024" → gazzettadelgusto.it (candidate); Zemiàn confirmed; Trattoria San Pietro confirmed (opened Jan 31, 2023); Ermes confirmed; Slow Food 2024 chiocciole all outside city
+[cross-3] "critica gastronomica Modena giornalista scrittrice cibo 2023 2024" → Roberta Schira, Eleonora Cozzella, Anna Prandoni (national critics); viadeigourmet.it; no Modena-specific food critics identified
+[cross-3] "food writer Modena Italy restaurant guide critic 2025" → Katie Parla; Gambero Rosso International 2025; Michelin article "Where Chefs Go" Stefano Secchi; globalgluttons.com
+[cross-4] "50 Top Italy Modena ristoranti migliori premiati" → lucianopignataro.it confirmed; Osteria Francescana top (excluded); no non-starred city restaurants in 50 Top
+[cross-4] "Gambero Rosso Ristoranti Italia Modena 2024 2025 tre forchette" → Tre Forchette: Osteria Francescana and Al Gatto Verde only (both excluded); scattidigusto.it covers these awards
+[cross-4] "Slow Food Osterie d'Italia Modena chiocciola 2023 2024" → 2023: 5 chiocciole, ALL outside city; 2024: 4 chiocciole, ALL outside city — structural characteristic confirmed
+[cross-5] "nuove aperture ristoranti Modena 2024 2025 inaugurazione" → Doppio Malto chain (exclude); Ristorante Sottoluce (Luca Marchini + RMH hotel, new 2024); RARE Beyond Steak; reportergourmet.com confirmed as IT food journalism site
+[cross-5] "new restaurant openings Modena Italy 2024 2025" → reportergourmet.com (Bib Gourmand article); pizzeria expansion in Via del Taglio; theworlds50best.com discovery
+[cross-7] "cucina modenese autentica tortellini ragù tigelle ristoranti 2023 2024" → scattidigusto.it appears again; Trattoria Tagliatella confirmed; Damedeo mentioned for tigelle; Ristorante San Pietro confirmed
+[cross-7] "Emilian cuisine Modena food culture trattoria osteria guide 2024 2025" → emiliadelizia.com; thetaste.ie (Sarah Clayton-Lea, Emilia-Romagna guide); nestitaly.com; Bloom gelateria new location 2024
+[cross-8] "rivista gastronomica italiana ristoranti Modena segnalazione 2024 2025" → reportergourmet.com confirmed; La Madia Travelfood (Italian food magazine); Touring Club guide 2025; foodandwineitalia.com
+[cross-8] "supplemento gastronomia giornale Modena cucina emiliana ristoranti 2023 2024" → tg24.sky.it "Modena on the road" April 2023 (a cura di Costanza Ruggeri, editorial credit, rejected); gazzettadimodena.it (local paper); virtuquotidiane.it (food journalism)
+[phase-1b-crossval] "Hosteria Giusti Modena recensione critica consiglio" → TripAdvisor, Yelp dominant; deskrib.com (2020, outside YEAR_RANGE); shaneasavours.com (unchecked); no new qualifying sources
+[phase-1b-crossval] "Trattoria Aldina Modena recensione critica" → errantedelgusto.it (Luca Scainelli, March 2026) FOUND — critical review, named author confirmed; also TripAdvisor reviews
+[phase-1b-crossval] "Ristorante Da Danilo Modena recensione critica" → TripAdvisor, Sluurpy, Pagine Gialle; no named-author food writing sources found

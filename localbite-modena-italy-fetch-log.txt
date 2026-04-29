@@ -1,0 +1,20 @@
+[p0] "https://r.jina.ai/https://katieparla.com/city-guides/modena/" → 200+CAPTCHA | —ch | FAILED — Jina returned robot challenge screen, content blocked
+[p0] "https://r.jina.ai/https://web.archive.org/web/2026/https://katieparla.com/city-guides/modena/" → 451 | —ch | FAILED — Wayback Machine blocked via Jina
+[p0] "https://katieparla.com/city-guides/modena/" → 200 | ~5000ch | ACCEPTED — Katie Parla, single-author confirmed per Part 1 operator note, full restaurant guide with verbatim quotes extracted, article date 2022-12-24 (noted: Part 1 confirms updated November 2025)
+[single-author-confirmed] katieparla.com — About page / site name confirms Katie Parla as sole author. Article-level byline not required. Confirmed by Part 1 operator verification and site structure (personal site).
+[p1] "https://r.jina.ai/https://www.gamberorosso.it/attualita/dove-mangiare-a-modena-i-migliori-locali-per-tutte-le-tasche-bistrot-street-food-enoteche-trattorie-e-pizzerie/" → 200 | ~4000ch | REJECTED-byline — no named author found; editorial team credit only
+[p1] "https://r.jina.ai/https://theitalianontour.com/where-to-eat-in-modena/" → 200 | ~3000ch | REJECTED-byline — no named author in article; editorial team only
+[p1] "https://r.jina.ai/https://www.scattidigusto.it/dove-mangiare-a-modena-spendendo-poco-trattorie" → 200 | ~4000ch | ACCEPTED — Nico Cristiani, named author confirmed, date 2023-11-04, 5 restaurants extracted (1 auto-rejected: Il Fantino, quote under 15 words)
+[p1] "https://www.scattidigusto.it/dove-mangiare-a-modena-spendendo-poco-trattorie" → 200 | ~5000ch | ACCEPTED — full article verbatim quotes confirmed via direct fetch
+[p1] "https://r.jina.ai/https://tg24.sky.it/lifestyle/2023/04/15/ristoranti-modena" → 200 | ~4000ch | REJECTED-byline — credit is "a cura di Costanza Ruggeri" (editorial/curatorial, not named author byline)
+[p1] "https://r.jina.ai/https://www.cibotoday.it/mappe/trattorie-modena-dove-mangiare.html" → 200 | ~6000ch | ACCEPTED — Carlo Gibertini, named author confirmed, date 2023-11-22, 10 restaurants extracted
+[p1] "https://www.cibotoday.it/mappe/trattorie-modena-dove-mangiare.html" → 403 | —ch | FAILED — direct fetch blocked; Jina fetch used instead
+[p1] "https://r.jina.ai/https://www.2foodtrippers.com/modena-restaurants/" → 200 | ~4000ch | REJECTED-date — named authors Daryl and Mindi Hirsch confirmed but article date December 26, 2019 is outside YEAR_RANGE (2023-2026)
+[p1] "https://r.jina.ai/https://www.tastebologna.net/blog/modena-day-trip" → 200 | ~2500ch | REJECTED-byline — author credit is first name only "Andrea" (no surname); pipeline requires full first name AND surname
+[p1] "https://r.jina.ai/https://globalgluttons.com/guides/modena-glutton-guide/" → 200 | ~3000ch | REJECTED-byline — no named author; article date August 2019 also outside YEAR_RANGE
+[p1] "https://r.jina.ai/https://www.baconismagic.ca/italy/where-to-eat-in-modena/" → 200 | ~2000ch | REJECTED-byline — no named author; date January 2015 outside YEAR_RANGE
+[p1] "https://r.jina.ai/https://www.lucianopignataro.it/a/dove/emilia-romagna/modena/" → 200 | ~3000ch | REJECTED-geo — all restaurants found are Michelin-starred or outside Modena city limits; no qualifying non-starred in-city restaurants
+[p1] "https://r.jina.ai/https://www.italyfoodies.com/blog/what-to-eat-in-modena-food-guide" → 200 | ~3000ch | PARTIAL — Angelo Sorrentino named author confirmed, date August 2025; only Bar Schiavoni qualifies (already in pool from Katie Parla); rejected as non-additive
+[p1] "https://ciaobella.co/destination-modena/" → 200 | ~3000ch | REJECTED-date — Erica Firpo named author confirmed but article date: undated; cannot confirm within YEAR_RANGE (2023-2026)
+[p1b] "https://r.jina.ai/https://www.errantedelgusto.it/post/aldina-modena-recensione-trattoria/" → 200 | ~3000ch | ACCEPTED — Luca Scainelli, named author confirmed, date 2026-03-17, critical review of Trattoria Aldina; 1 restaurant extracted
+[p1b] "https://www.errantedelgusto.it/post/aldina-modena-recensione-trattoria/" → 200 | ~4000ch | ACCEPTED — full verbatim quotes confirmed via direct fetch

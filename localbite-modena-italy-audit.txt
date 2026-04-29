@@ -1,0 +1,194 @@
+LocalBite v7.1 — Modena, Italy
+Audit File — generated 2026-04-29
+Pipeline: localbite-v7.1
+===================================================
+
+SECTION 1 — SOURCE PIPELINE DECISIONS
+
+ACCEPTED SOURCES (4):
+
+[src-katieparla-parla]
+  Writer: Katie Parla
+  Publication: katieparla.com (single-author site)
+  Language: EN
+  Article date: 2022-12-24 (operator note: updated November 2025)
+  Article URL: https://katieparla.com/city-guides/modena/
+  Fetch method: Direct WebFetch (200 ~5000ch)
+    - Jina attempt 1: https://r.jina.ai/https://katieparla.com/city-guides/modena/ → 200+CAPTCHA FAILED (robot challenge screen)
+    - Jina attempt 2 (Wayback): https://r.jina.ai/https://web.archive.org/web/2026/https://katieparla.com/city-guides/modena/ → 451 FAILED
+    - Direct fetch: https://katieparla.com/city-guides/modena/ → 200 ACCEPTED
+  Single-author site: confirmed per Part 1 operator note
+  Restaurants extracted: 4
+  Notes: Article date 2022-12-24 is outside YEAR_RANGE 2023-2026; accepted as DIRECT_FETCH_SOURCE per Part 1 pre-verification and operator note confirming November 2025 update. All 4 entries flagged open_status_check: true per pre-2025 date rule.
+
+[src-cibotoday-gibertini]
+  Writer: Carlo Gibertini
+  Publication: cibotoday.it
+  Language: IT
+  Article date: 2023-11-22
+  Article URL: https://www.cibotoday.it/mappe/trattorie-modena-dove-mangiare.html
+  Fetch method: Jina reader proxy (200 ~6000ch)
+    - Direct fetch: https://www.cibotoday.it/mappe/trattorie-modena-dove-mangiare.html → 403 FAILED
+    - Jina fetch: https://r.jina.ai/https://www.cibotoday.it/mappe/trattorie-modena-dove-mangiare.html → 200 ACCEPTED
+  Byline: Carlo Gibertini, named author confirmed
+  Restaurants extracted: 10
+  Publisher concentration cap applied: 8 single-source Tier B → 4 retained (≤30% rule)
+
+[src-scattidigusto-cristiani]
+  Writer: Nico Cristiani
+  Publication: scattidigusto.it
+  Language: IT
+  Article date: 2023-11-04
+  Article URL: https://www.scattidigusto.it/dove-mangiare-a-modena-spendendo-poco-trattorie
+  Fetch method: Jina reader proxy (200 ~4000ch) + direct confirm (200 ~5000ch)
+  Byline: Nico Cristiani, named author confirmed
+  Restaurants extracted: 3 (2 auto-rejected at extraction, 1 removed Phase 3)
+
+[src-errantedelgusto-scainelli]
+  Writer: Luca Scainelli
+  Publication: errantedelgusto.it
+  Language: IT
+  Article date: 2026-03-17
+  Article URL: https://www.errantedelgusto.it/post/aldina-modena-recensione-trattoria/
+  Fetch method: Jina reader proxy (200 ~3000ch) + direct confirm (200 ~4000ch)
+  Byline: Luca Scainelli, named author confirmed
+  Restaurants extracted: 1
+  Notes: Critical/negative review of Trattoria Aldina. Sole contribution is Aldina, which also appears in cibotoday.it → Tier A. No COI.
+
+---
+
+SECTION 2 — REJECTED SOURCES (15 URLs evaluated)
+
+[REJECTED-byline] https://www.gamberorosso.it/attualita/dove-mangiare-a-modena-i-migliori-locali-per-tutte-le-tasche-bistrot-street-food-enoteche-trattorie-e-pizzerie/
+  Reason: No named author; editorial team credit only
+
+[REJECTED-byline] https://theitalianontour.com/where-to-eat-in-modena/
+  Reason: No named author in article; editorial team only
+
+[REJECTED-byline] https://tg24.sky.it/lifestyle/2023/04/15/ristoranti-modena
+  Reason: Credit "a cura di Costanza Ruggeri" is editorial/curatorial, not a named author byline
+
+[REJECTED-date] https://www.2foodtrippers.com/modena-restaurants/
+  Reason: Named authors Daryl and Mindi Hirsch confirmed but article date December 26, 2019 outside YEAR_RANGE 2023-2026
+
+[REJECTED-byline] https://www.tastebologna.net/blog/modena-day-trip
+  Reason: Author credit is first name only "Andrea" (no surname); pipeline requires full first name AND surname
+
+[REJECTED-byline] https://globalgluttons.com/guides/modena-glutton-guide/
+  Reason: No named author; article date August 2019 also outside YEAR_RANGE
+
+[REJECTED-byline] https://www.baconismagic.ca/italy/where-to-eat-in-modena/
+  Reason: No named author; date January 2015 outside YEAR_RANGE
+
+[REJECTED-geo] https://www.lucianopignataro.it/a/dove/emilia-romagna/modena/
+  Reason: All restaurants found are Michelin-starred or outside Modena city limits; no qualifying non-starred in-city restaurants
+
+[REJECTED-non-additive] https://www.italyfoodies.com/blog/what-to-eat-in-modena-food-guide
+  Named author Angelo Sorrentino confirmed; date August 2025 valid; only qualifying restaurant is Bar Schiavoni (already in pool from Katie Parla but subsequently removed Phase 3). Non-additive.
+
+[REJECTED-date] https://ciaobella.co/destination-modena/
+  Reason: Erica Firpo named author confirmed but article undated; cannot confirm within YEAR_RANGE 2023-2026
+
+[REJECTED-CAPTCHA+451] https://r.jina.ai/https://katieparla.com/city-guides/modena/ and Wayback fallback
+  Resolved via direct WebFetch; see accepted sources above.
+
+---
+
+SECTION 3 — EXTRACTION-TIME AUTO-REJECTIONS
+
+[src-scattidigusto-cristiani] Il Fantino
+  Rejection: Quote 13 words ("Eccellente locale storico di Modena") — below 15-word minimum
+  Note: Il Fantino subsequently found in cibotoday.it with a passing quote; included in raw pool (later removed by concentration cap)
+
+[src-scattidigusto-cristiani] Trattoria Bianca
+  Rejection: Quote 19 words but no specific detail (no dish name, chef, price, year, or neighbourhood)
+
+---
+
+SECTION 4 — PHASE 3 REMOVALS
+
+[REMOVED — not a restaurant] Bar Schiavoni (src-katieparla-parla)
+  Reason: Described as "This sandwich shop in the historic Mercato Albinelli" — a market stall/stand, not a sit-down restaurant. Open from early morning until early afternoon only.
+
+[REMOVED — non-local cuisine] Bottega Mamma Puglia (src-scattidigusto-cristiani)
+  Reason: Pugliese street food (puccia salentina, focaccia barese, bombette di Martina Franca) not representative of Modenese dining. Noted: owner is ex-Morricone violinist — distinctive backstory but cuisine is foreign to the city guide scope.
+
+[REMOVED — concentration cap] Ristorante Sirenella (src-cibotoday-gibertini)
+  Reason: cibotoday single-source Tier B count exceeded 30% threshold; Sirenella has null neighbourhood (weakest map display value of the 8)
+
+[REMOVED — concentration cap] Trattoria Il Fantino (src-cibotoday-gibertini)
+  Reason: Concentration cap; thematic overlap with Trattoria Ermes — both are historic trattorie founded in the early-to-mid 20th century; Ermes has richer personal narrative (La Bruna)
+
+[REMOVED — concentration cap] Trattoria Del Giardinetto (src-cibotoday-gibertini)
+  Reason: Concentration cap; no named persons, no opening year; least distinctive narrative of the 8 cibotoday single-source entries
+
+[REMOVED — concentration cap] Trattoria San Pietro (src-cibotoday-gibertini)
+  Reason: Concentration cap; newest opening (2023), highest closure risk under cap pressure; chef Marco Notari named but recency concern tips balance
+
+---
+
+SECTION 5 — GEOGRAPHIC EXCLUSIONS
+
+Michelin exclusions (per Part 1):
+  - Osteria Francescana (3★) — excluded globally
+  - Al Gatto Verde (1★, city) — excluded
+
+Slow Food Osterie d'Italia: structural characteristic documented
+  - 2023 chiocciole: ALL outside Modena city (Finale Emilia, Nonantola, Bomporto, Zocca)
+  - 2024 chiocciole: ALL outside Modena city
+  - No Slow Food chiocciola entries qualify for the city bounding box
+
+50 Top Italy / Gambero Rosso Tre Forchette: only starred restaurants qualify (excluded)
+
+---
+
+SECTION 6 — BOTH-POOL STATUS
+
+Both-pool (EN + IT): 0 entries
+  Reason: No restaurant appears in both Katie Parla (EN) and any IT source. EN source search found 10+ candidates but all either pre-2023, no named author, or undated. Documented as structural characteristic: EN food writing on Modena focuses overwhelmingly on Osteria Francescana and the Massimo Bottura galaxy. Authentic non-starred Modenese trattorie are covered almost exclusively by Italian-language publications.
+
+---
+
+SECTION 7 — COI DISCLOSURES
+
+Luca Scainelli / Errante del Gusto: Critical review of Trattoria Aldina. No commercial conflict. Negative assessment noted in writer profile. Positive quote (cibotoday) used as primary display quote.
+
+Franceschetta 58: Affiliated with Osteria Francescana (Massimo Bottura). Not Michelin-starred itself; explicitly included in Part 1 as non-excluded. Katie Parla's recommendation is primary assessment. Affiliation disclosed in writer_profile note.
+
+---
+
+SECTION 8 — OPEN STATUS FLAGS
+
+4 entries flagged open_status_check: true (all from Katie Parla, article date 2022-12-24):
+  - Archer
+  - Franceschetta 58
+  - Hosteria Giusti
+  (Bar Schiavoni also flagged but removed Phase 3)
+
+These entries require confirmation that the restaurants are still open before display. Recommend checking current operating status post-pipeline.
+
+---
+
+SECTION 9 — CONCENTRATION CAP SUMMARY
+
+Publisher: cibotoday.it (Carlo Gibertini)
+  Total extracted: 10
+  Tier A (multi-source): 2 (Tagliatella, Aldina)
+  Single-source Tier B pre-cap: 8
+  Cap calculation: total final pool 14 × 30% = 4.2 → max 4 single-source Tier B
+  Single-source Tier B retained: 4 (Madonnina, Ermes, Zemiàn, Vecchia Pirri)
+  Single-source Tier B removed: 4 (Sirenella, Il Fantino, Del Giardinetto, San Pietro)
+
+---
+
+SECTION 10 — SEARCH SCOPE SUMMARY
+
+Total searches run: 34 (Phase 0: 1, Phase A neighbourhood: 15, Phase B cross-cutting: 16 [Cross-6 skipped], Phase 1B cross-validation: 3)
+Total URLs fetched: 20 (including Jina + direct fallbacks)
+Sources accepted: 4
+Sources rejected: 11 (byline: 5, date: 2, geo: 1, non-additive: 1, captcha/blocked: 2)
+Restaurants in raw pool (post-dedup): 16
+Restaurants in final output: 10
+
+---
+END AUDIT
