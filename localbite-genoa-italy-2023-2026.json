@@ -1,0 +1,1061 @@
+{
+  "city": "Genoa",
+  "country": "Italy",
+  "city_slug": "genoa-italy",
+  "pipeline": "localbite-v7.1",
+  "run_date": "2026-04-29",
+  "year_range": "2023-2026",
+  "sources": {
+    "src-monzani-seafood": {
+      "source_id": "src-monzani-seafood",
+      "id": "src-monzani-seafood",
+      "writer": "Enrica Monzani",
+      "publication": "A Small Kitchen in Genoa",
+      "url": "https://www.asmallkitcheningenoa.com/",
+      "article_url": "https://www.asmallkitcheningenoa.com/seafood-restaurants-genoa/",
+      "article_title": "Seafood restaurants in Genoa: the local's guide",
+      "article_date": "2026-04-13",
+      "language": "EN",
+      "source_type": "primary",
+      "single_author_site": true,
+      "restaurants_extracted": 10,
+      "commercial_conflict": false,
+      "commercial_conflict_note": "Author runs culinary experiences and cooking courses in Genova; potential COI for venues she collaborates with professionally. All recommendations assessed on their own merits.",
+      "writer_profile": "Enrica Monzani is a Liguria-born culinary researcher, cook instructor, and food experience curator based in Genova. She is the sole author of asmallkitcheningenoa.com, an English-language food blog dedicated to Genoese and Ligurian cuisine, cooking traditions, and restaurant recommendations written from a local expert's perspective. Her April 2026 seafood restaurant guide covers ten trattorias and restaurants focused on fresh local catch across Genova's neighbourhoods, excluding Michelin-starred establishments. Single-author site: byline confirmed on homepage ('Enrica Monzani, Liguria culinary researcher, cook instructor and food experience curator based in Genoa')."
+    },
+    "src-monzani-traditional": {
+      "source_id": "src-monzani-traditional",
+      "id": "src-monzani-traditional",
+      "writer": "Enrica Monzani",
+      "publication": "A Small Kitchen in Genoa",
+      "url": "https://www.asmallkitcheningenoa.com/",
+      "article_url": "https://www.asmallkitcheningenoa.com/traditional-restaurant-genoa/",
+      "article_title": "My best traditional restaurants in Genoa (local picks + food guide & Experiences)",
+      "article_date": "2026-03-26",
+      "language": "EN",
+      "source_type": "primary",
+      "single_author_site": true,
+      "restaurants_extracted": 8,
+      "commercial_conflict": false,
+      "commercial_conflict_note": "Same author and site as src-monzani-seafood. Same COI considerations apply.",
+      "writer_profile": "Second article by Enrica Monzani at asmallkitcheningenoa.com, published March 2026. This guide focuses on traditional Genoese trattorias with long histories — from 17th-century institutions to family-run spots known for pesto, farinata, and classic Ligurian dishes. It complements her seafood article with a distinct set of eight restaurants weighted toward the historic caruggi. Single-author site rule applied."
+    },
+    "src-caporale-giornaledelcibo": {
+      "source_id": "src-caporale-giornaledelcibo",
+      "id": "src-caporale-giornaledelcibo",
+      "writer": "Angela Caporale",
+      "publication": "Il Giornale del Cibo",
+      "url": "https://www.ilgiornaledelcibo.it/",
+      "article_url": "https://www.ilgiornaledelcibo.it/trattorie-genovesi/",
+      "article_title": "6 ristoranti e trattorie genovesi da provare: i nostri consigli",
+      "article_date": "2023-08-11",
+      "language": "IT",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 6,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer for Il Giornale del Cibo (ilgiornaledelcibo.it), a leading Italian food journalism platform covering regional Italian cuisines, recipes, and restaurant recommendations. Angela Caporale's August 2023 guide to Genoese trattorias presents six restaurants selected for their connection to authentic Ligurian tradition, covering both historic institutions and newer venues committed to the city's gastronomic identity."
+    },
+    "src-bruno-finedininglovers": {
+      "source_id": "src-bruno-finedininglovers",
+      "id": "src-bruno-finedininglovers",
+      "writer": "Mariarosaria Bruno",
+      "publication": "Fine Dining Lovers Italia",
+      "url": "https://www.finedininglovers.it/",
+      "article_url": null,
+      "article_title": "I migliori ristoranti di Genova",
+      "article_date": "undated",
+      "language": "IT",
+      "source_type": "primary",
+      "single_author_site": false,
+      "restaurants_extracted": 10,
+      "commercial_conflict": false,
+      "commercial_conflict_note": "Fine Dining Lovers is a S.Pellegrino/Nestlé-affiliated food platform. Broad commercial relationships with the restaurant industry possible at platform level; no identified direct conflicts for specific Genova restaurants listed. Article date could not be confirmed from article text; Jina metadata showed today's page-load timestamp. Set to undated.",
+      "writer_profile": "Mariarosaria Bruno is a journalist (giornalista) writing for Fine Dining Lovers Italia (finedininglovers.it), the Italian edition of the S.Pellegrino fine dining platform. Her guide to the best restaurants in Genova covers ten venues spanning seafood spots on the Ligurian coast, traditional trattorias, and contemporary dining rooms in the city centre and waterfront. Il Marin (Michelin 1★) was listed but excluded per pipeline rules."
+    }
+  },
+  "restaurants": [
+    {
+      "name": "Trattoria della Raibetta",
+      "name_variants": [
+        "La Raibetta"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "trenette avvantaggiate",
+        "pesto",
+        "sepia",
+        "shrimp"
+      ],
+      "signature_dish": "trenette avvantaggiate al pesto",
+      "quote": "edificio del Settecento, conserva arredi rustici e le volte di mattoni, servendo piatti della tradizione",
+      "quote_language": "it",
+      "article_date": "2023-08-11",
+      "article_title": "6 ristoranti e trattorie genovesi da provare: i nostri consigli",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-traditional",
+        "src-caporale-giornaledelcibo"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Enrica Monzani",
+        "Angela Caporale"
+      ],
+      "address": "Vico Caprettari 10R",
+      "lat": 44.4080101,
+      "lng": 8.9292031,
+      "language_pool": "both",
+      "geo_skip": false,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria della Raibetta"
+    },
+    {
+      "name": "Trattoria Ugo",
+      "name_variants": [
+        "Trattoria Ugo dal 1969"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian traditional",
+      "opening_year": 1969,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fettuccine verdi al pesto con patate e fagiolini",
+        "trippa alla genovese",
+        "stoccafisso",
+        "pansotti al sugo di noci",
+        "minestrone",
+        "buridda"
+      ],
+      "signature_dish": "fettuccine verdi al pesto con patate e fagiolini",
+      "quote": "uno dei locali più storici della città, famosissima per il suo pesto; le fettuccine verdi al pesto con patate e fagiolini, mercoledì trippa alla genovese, venerdì stoccafisso",
+      "quote_language": "it",
+      "article_date": "2023-08-11",
+      "article_title": "6 ristoranti e trattorie genovesi da provare: i nostri consigli",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-traditional",
+        "src-caporale-giornaledelcibo"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Enrica Monzani",
+        "Angela Caporale"
+      ],
+      "address": "Via dei Giustiniani 86R",
+      "lat": 44.4063733,
+      "lng": 8.9315544,
+      "language_pool": "both",
+      "geo_skip": false,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria da Ugo"
+    },
+    {
+      "name": "Sà Pesta",
+      "name_variants": [
+        "Sa Pesta",
+        "Sa' Pesta"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian street food and traditional",
+      "opening_year": 1889,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "trofie al pesto",
+        "pansotti",
+        "cima",
+        "farinata",
+        "focaccia al formaggio",
+        "torta di verdure",
+        "torta di riso",
+        "torta di cipolle"
+      ],
+      "signature_dish": "farinata",
+      "quote": "dal 1889, quando vinse una gara cittadina con la sua torta di carciofi; trofie, pansotti e cima fatta in casa; Sa pesta significa sale pestato",
+      "quote_language": "it",
+      "article_date": "2023-08-11",
+      "article_title": "6 ristoranti e trattorie genovesi da provare: i nostri consigli",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-traditional",
+        "src-caporale-giornaledelcibo"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Enrica Monzani",
+        "Angela Caporale"
+      ],
+      "address": "Via dei Giustiniani 16R",
+      "lat": 44.407215,
+      "lng": 8.9295936,
+      "language_pool": "both",
+      "geo_skip": false,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Sà Pesta"
+    },
+    {
+      "name": "Ristorante Ippogrifo",
+      "name_variants": [
+        "Ippogrifo"
+      ],
+      "neighbourhood": "Foce",
+      "cuisine": "Mediterranean seafood, Ligurian",
+      "opening_year": 1982,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cappon magro",
+        "fish soup"
+      ],
+      "signature_dish": null,
+      "quote": "Un vero e proprio tempio della cucina mediterranea lontano dalle solite rotte, in zona Foce",
+      "quote_language": "it",
+      "article_date": "undated",
+      "article_title": "I migliori ristoranti di Genova",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-seafood",
+        "src-bruno-finedininglovers"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Enrica Monzani",
+        "Mariarosaria Bruno"
+      ],
+      "address": "Via Raffaele Gestro 9/1r",
+      "lat": 44.39738,
+      "lng": 8.9452037,
+      "language_pool": "both",
+      "geo_skip": false,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Ristorante Ippogrifo"
+    },
+    {
+      "name": "Trattoria dell'Acciughetta",
+      "name_variants": [
+        "L'Acciughetta",
+        "Acciughetta"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian seafood, pesce azzurro",
+      "opening_year": 2015,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pesce azzurro",
+        "anchovies",
+        "pescato del giorno"
+      ],
+      "signature_dish": "anchovies",
+      "quote": "pesce azzurro basato sul pescato del giorno, con piccola sala arredata in stile marinaresco",
+      "quote_language": "it",
+      "article_date": "2023-08-11",
+      "article_title": "6 ristoranti e trattorie genovesi da provare: i nostri consigli",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-seafood",
+        "src-caporale-giornaledelcibo"
+      ],
+      "confidence_tier": "A",
+      "both_pool": true,
+      "writers": [
+        "Enrica Monzani",
+        "Angela Caporale"
+      ],
+      "address": "Piazza Sant'Elena",
+      "lat": 44.4146605,
+      "lng": 8.9248869,
+      "language_pool": "both",
+      "geo_skip": false,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria dell'Acciughetta"
+    },
+    {
+      "name": "Antica Osteria di Vico Palla",
+      "name_variants": [
+        "Vico Palla"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian traditional seafood",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "codfish",
+        "cappon magro"
+      ],
+      "signature_dish": null,
+      "quote": null,
+      "quote_language": null,
+      "article_date": "2026-03-26",
+      "article_title": "My best traditional restaurants in Genoa (local picks + food guide & Experiences)",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-traditional"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Enrica Monzani"
+      ],
+      "address": "Vico Palla 15R",
+      "lat": 44.4071128,
+      "lng": 8.9260096,
+      "language_pool": "en",
+      "geo_skip": false,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Osteria di Vico Palla"
+    },
+    {
+      "name": "Hostaria Ducale",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian contemporary",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "La cucina trae ispirazione dalla tradizione del territorio, che viene reinterpretata con fantasia e in chiave moderna, dal mood raffinato ed elegante",
+      "quote_language": "it",
+      "article_date": "undated",
+      "article_title": "I migliori ristoranti di Genova",
+      "open_status_check": false,
+      "sources": [
+        "src-bruno-finedininglovers"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Mariarosaria Bruno"
+      ],
+      "address": null,
+      "lat": 44.4079122,
+      "lng": 8.9334808,
+      "language_pool": "it",
+      "geo_skip": false,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Hostaria Ducale"
+    },
+    {
+      "name": "I Cuochi",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian creative",
+      "opening_year": 2016,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "local squids sauté with pesto sauce"
+      ],
+      "signature_dish": null,
+      "quote": null,
+      "quote_language": null,
+      "article_date": "2026-04-13",
+      "article_title": "Seafood restaurants in Genoa: the local's guide",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-seafood"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Enrica Monzani"
+      ],
+      "chef": "Julian Mane",
+      "address": "Vico del Fieno 18R",
+      "lat": null,
+      "lng": null,
+      "language_pool": "en",
+      "geo_skip": true
+    },
+    {
+      "name": "Il Pesciolino",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Creative seafood",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fried prawn in almonds crust",
+        "shrimp ravioli"
+      ],
+      "signature_dish": null,
+      "quote": null,
+      "quote_language": null,
+      "article_date": "2026-04-13",
+      "article_title": "Seafood restaurants in Genoa: the local's guide",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-seafood"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Enrica Monzani"
+      ],
+      "chef": "Mirco Cogo",
+      "address": "Via San Sebastiano 6",
+      "lat": 44.4092715,
+      "lng": 8.9352785,
+      "language_pool": "en",
+      "geo_skip": false,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Locanda Pesciolino"
+    },
+    {
+      "name": "L'Embriaco",
+      "name_variants": [
+        "Embriaco"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian creative",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Un ristorante guidato dallo chef Sebastiano Stasi, dall'atmosfera intima e raffinata",
+      "quote_language": "it",
+      "article_date": "undated",
+      "article_title": "I migliori ristoranti di Genova",
+      "open_status_check": false,
+      "sources": [
+        "src-bruno-finedininglovers"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Mariarosaria Bruno"
+      ],
+      "chef": "Sebastiano Stasi",
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "language_pool": "it",
+      "geo_skip": true,
+      "geo_source": "nominatim",
+      "geo_confidence": null,
+      "geo_matched_name": null
+    },
+    {
+      "name": "L'Ostaia de Zena",
+      "name_variants": [
+        "Ostaia de Zena"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian gourmet, market-to-table",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "un ristorantino che unisce la tradizione genovese con la cucina gourmet; tutti i prodotti del menù stagionale – che cambia ogni tre mesi – provengono dai banchi del mercato",
+      "quote_language": "it",
+      "article_date": "2023-08-11",
+      "article_title": "6 ristoranti e trattorie genovesi da provare: i nostri consigli",
+      "open_status_check": false,
+      "sources": [
+        "src-caporale-giornaledelcibo"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Angela Caporale"
+      ],
+      "address": "Via XX Settembre 75A (Mercato Orientale MOG, top floor)",
+      "lat": 44.4141419,
+      "lng": 8.9256598,
+      "language_pool": "it",
+      "geo_skip": false,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "L'Ostaia in darsena"
+    },
+    {
+      "name": "Le Cicale in Città",
+      "name_variants": [
+        "Le Cicale"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Mediterranean, seafood",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Uno spazio dagli ambienti colorati e raffinati, che ammalia tra specchi, cornici rétro e applique",
+      "quote_language": "it",
+      "article_date": "undated",
+      "article_title": "I migliori ristoranti di Genova",
+      "open_status_check": false,
+      "sources": [
+        "src-bruno-finedininglovers"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Mariarosaria Bruno"
+      ],
+      "address": null,
+      "lat": 44.4021981,
+      "lng": 8.9417806,
+      "language_pool": "it",
+      "geo_skip": false,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Ristorante Le Cicale in città"
+    },
+    {
+      "name": "Ristorante Enoteca Migone",
+      "name_variants": [
+        "Enoteca Migone"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian traditional, wine bar",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "piatti tipici della cucina ligure con una carta di vini lunga e molto curata e la gentilezza dei titolari e del personale",
+      "quote_language": "it",
+      "article_date": "2023-08-11",
+      "article_title": "6 ristoranti e trattorie genovesi da provare: i nostri consigli",
+      "open_status_check": false,
+      "sources": [
+        "src-caporale-giornaledelcibo"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Angela Caporale"
+      ],
+      "address": "Piazza di San Matteo 4/6R",
+      "lat": 44.4082441,
+      "lng": 8.932743,
+      "language_pool": "it",
+      "geo_skip": false,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Enoteca Migone"
+    },
+    {
+      "name": "Soho",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian seafood, fine dining",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cappon magro",
+        "raw fish preparations"
+      ],
+      "signature_dish": null,
+      "quote": null,
+      "quote_language": null,
+      "article_date": "undated",
+      "article_title": "I migliori ristoranti di Genova",
+      "open_status_check": false,
+      "sources": [
+        "src-bruno-finedininglovers"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Mariarosaria Bruno"
+      ],
+      "address": null,
+      "lat": 44.411895,
+      "lng": 8.9288275,
+      "language_pool": "it",
+      "geo_skip": false,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Soho"
+    },
+    {
+      "name": "Trattoria da Maria",
+      "name_variants": [
+        "Da Maria"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian traditional",
+      "opening_year": 1926,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": null,
+      "quote_language": null,
+      "article_date": "2026-03-26",
+      "article_title": "My best traditional restaurants in Genoa (local picks + food guide & Experiences)",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-traditional"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Enrica Monzani"
+      ],
+      "address": "Vico Testadoro 14R",
+      "lat": 44.4097149,
+      "lng": 8.9353123,
+      "language_pool": "en",
+      "geo_skip": false,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria da Maria"
+    },
+    {
+      "name": "Trattoria Rosmarino",
+      "name_variants": [
+        "Rosmarino"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pansoti al brandacujun"
+      ],
+      "signature_dish": "pansoti al brandacujun",
+      "quote": "Qui si fa cucina ligure tipica, trattata con sensibilità e stile moderni, passando dai pansoti al brandacujun",
+      "quote_language": "it",
+      "article_date": "undated",
+      "article_title": "I migliori ristoranti di Genova",
+      "open_status_check": false,
+      "sources": [
+        "src-bruno-finedininglovers"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Mariarosaria Bruno"
+      ],
+      "address": null,
+      "lat": 44.4076271,
+      "lng": 8.9335445,
+      "language_pool": "it",
+      "geo_skip": false,
+      "notes": "Michelin Bib Gourmand designation noted by source",
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Rosmarino"
+    },
+    {
+      "name": "Montallegro",
+      "name_variants": [],
+      "neighbourhood": "Castelletto",
+      "cuisine": "Ligurian traditional, pizza, farinata",
+      "opening_year": 1913,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pizza",
+        "farinata"
+      ],
+      "signature_dish": null,
+      "quote": null,
+      "quote_language": null,
+      "article_date": "2026-03-26",
+      "article_title": "My best traditional restaurants in Genoa (local picks + food guide & Experiences)",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-traditional"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Enrica Monzani"
+      ],
+      "address": "Via Mura delle Chiappe 30R",
+      "lat": null,
+      "lng": null,
+      "language_pool": "en",
+      "geo_skip": true,
+      "geo_source": "nominatim",
+      "geo_confidence": null,
+      "geo_matched_name": null
+    },
+    {
+      "name": "Volta la Carta",
+      "name_variants": [],
+      "neighbourhood": "Castelletto",
+      "cuisine": "Ligurian creative seafood",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": null,
+      "quote_language": null,
+      "article_date": "2026-04-13",
+      "article_title": "Seafood restaurants in Genoa: the local's guide",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-seafood"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Enrica Monzani"
+      ],
+      "address": "Via Assarotti 60R",
+      "lat": null,
+      "lng": null,
+      "language_pool": "en",
+      "geo_skip": true
+    },
+    {
+      "name": "Osteria della Foce",
+      "name_variants": [],
+      "neighbourhood": "Foce",
+      "cuisine": "Ligurian contemporary",
+      "opening_year": 2017,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Filosofia ai fornelli basata sul cosiddetto Kilometro giusto: la selezione dei migliori prodotti a seconda dei territori di provenienza",
+      "quote_language": "it",
+      "article_date": "undated",
+      "article_title": "I migliori ristoranti di Genova",
+      "open_status_check": false,
+      "sources": [
+        "src-bruno-finedininglovers"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Mariarosaria Bruno"
+      ],
+      "chef": "Giovanni Rocca",
+      "address": null,
+      "lat": 44.3984448,
+      "lng": 8.947776,
+      "language_pool": "it",
+      "geo_skip": false,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Antica Osteria Foce"
+    },
+    {
+      "name": "Capo Santa Chiara",
+      "name_variants": [],
+      "neighbourhood": "Albaro",
+      "cuisine": "Ligurian seafood",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Qui si mangia con vista, affacciati sulla caratteristica spiaggia di Boccadasse, in un luogo pittoresco; lo spazio è moderno ed elegante, perfetto anche per cene romantiche, ritmate soprattutto da piatti di pesce",
+      "quote_language": "it",
+      "article_date": "undated",
+      "article_title": "I migliori ristoranti di Genova",
+      "open_status_check": false,
+      "sources": [
+        "src-bruno-finedininglovers"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Mariarosaria Bruno"
+      ],
+      "address": null,
+      "lat": 44.3899148,
+      "lng": 8.9750737,
+      "language_pool": "it",
+      "geo_skip": false,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Ristorante Capo Santa Chiara"
+    },
+    {
+      "name": "Teresa dal 1986",
+      "name_variants": [
+        "Teresa"
+      ],
+      "neighbourhood": "Albaro",
+      "cuisine": "Ligurian seafood",
+      "opening_year": 1986,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": null,
+      "quote_language": null,
+      "article_date": "2026-04-13",
+      "article_title": "Seafood restaurants in Genoa: the local's guide",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-seafood"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Enrica Monzani"
+      ],
+      "address": "Piazza Lido 5-6R",
+      "lat": null,
+      "lng": null,
+      "language_pool": "en",
+      "geo_skip": true,
+      "geo_source": "nominatim",
+      "geo_confidence": null,
+      "geo_matched_name": null
+    },
+    {
+      "name": "Trattoria da Osvaldo",
+      "name_variants": [
+        "Da Osvaldo"
+      ],
+      "neighbourhood": "Albaro",
+      "cuisine": "Ligurian traditional",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": null,
+      "quote_language": null,
+      "article_date": "2026-03-26",
+      "article_title": "My best traditional restaurants in Genoa (local picks + food guide & Experiences)",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-traditional"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Enrica Monzani"
+      ],
+      "address": "Via della Casa 2, Boccadasse",
+      "lat": 44.3903905,
+      "lng": 8.9748546,
+      "language_pool": "en",
+      "geo_skip": false,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Trattoria Osvaldo"
+    },
+    {
+      "name": "Coco Sul Mare",
+      "name_variants": [
+        "Cocò sul Mare"
+      ],
+      "neighbourhood": "Albaro",
+      "cuisine": "Ligurian seafood, Italian-French fusion",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Cucina sul mare, fatta di sapori italiani e sinceri, non priva di influenze provenienti da altre culture",
+      "quote_language": "it",
+      "article_date": "undated",
+      "article_title": "I migliori ristoranti di Genova",
+      "open_status_check": false,
+      "sources": [
+        "src-bruno-finedininglovers"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Mariarosaria Bruno"
+      ],
+      "chef": "Nicolò Fadda",
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "language_pool": "it",
+      "geo_skip": true,
+      "geo_source": "photon",
+      "geo_confidence": null,
+      "geo_matched_name": null
+    },
+    {
+      "name": "Il Genovese",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pesto",
+        "minestrone",
+        "ravioli",
+        "codfish"
+      ],
+      "signature_dish": "pesto",
+      "quote": null,
+      "quote_language": null,
+      "article_date": "2026-03-26",
+      "article_title": "My best traditional restaurants in Genoa (local picks + food guide & Experiences)",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-traditional"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Enrica Monzani"
+      ],
+      "chef": "Roberto Panizza (co-owner, World Pesto Championship organizer)",
+      "address": "Via Galata 35R",
+      "lat": 44.4056224,
+      "lng": 8.942799,
+      "language_pool": "en",
+      "geo_skip": false,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Il Genovese"
+    },
+    {
+      "name": "Antica Osteria Toe Drue",
+      "name_variants": [
+        "Toe Drue"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian seafood",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "cappon magro",
+        "fish soup"
+      ],
+      "signature_dish": "cappon magro",
+      "quote": null,
+      "quote_language": null,
+      "article_date": "2026-04-13",
+      "article_title": "Seafood restaurants in Genoa: the local's guide",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-seafood"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Enrica Monzani"
+      ],
+      "address": "Via Carlo Corsi 44R",
+      "lat": null,
+      "lng": null,
+      "language_pool": "en",
+      "geo_skip": true
+    },
+    {
+      "name": "Trattoria Barisone",
+      "name_variants": [
+        "Barisone"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Ligurian traditional",
+      "opening_year": 1945,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "anchovies (ten preparations)",
+        "octopus salad"
+      ],
+      "signature_dish": "anchovies",
+      "quote": null,
+      "quote_language": null,
+      "article_date": "2026-04-13",
+      "article_title": "Seafood restaurants in Genoa: the local's guide",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-seafood"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Enrica Monzani"
+      ],
+      "address": "Via Siracusa 2R",
+      "lat": null,
+      "lng": null,
+      "language_pool": "en",
+      "geo_skip": true,
+      "geo_source": "photon",
+      "geo_confidence": null,
+      "geo_matched_name": null
+    },
+    {
+      "name": "La Voglia Matta",
+      "name_variants": [],
+      "neighbourhood": "Voltri",
+      "cuisine": "Ligurian traditional, pesce azzurro",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pesce azzurro",
+        "bluefish"
+      ],
+      "signature_dish": null,
+      "quote": null,
+      "quote_language": null,
+      "article_date": "2026-04-13",
+      "article_title": "Seafood restaurants in Genoa: the local's guide",
+      "open_status_check": false,
+      "sources": [
+        "src-monzani-seafood"
+      ],
+      "confidence_tier": "B",
+      "both_pool": false,
+      "writers": [
+        "Enrica Monzani"
+      ],
+      "address": "Via Cerusa 63R",
+      "lat": null,
+      "lng": null,
+      "language_pool": "en",
+      "geo_skip": true,
+      "geo_source": "nominatim",
+      "geo_confidence": null,
+      "geo_matched_name": null
+    }
+  ],
+  "source_recency": "2023-2026",
+  "centroids": {
+    "Centro Storico": [
+      44.4086,
+      8.9322
+    ],
+    "Castelletto": [
+      44.4155,
+      8.9404
+    ],
+    "Albaro": [
+      44.3902,
+      8.975
+    ]
+  }
+}

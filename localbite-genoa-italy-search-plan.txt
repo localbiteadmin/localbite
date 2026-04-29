@@ -1,0 +1,117 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LocalBite v7.1 — Genoa, Italy
+Search Plan | Generated: 2026-04-29
+
+PRIMARY_LANGUAGE: Italian (IT)
+SECONDARY_LANGUAGE: English (EN)
+YEAR_RANGE: 2023-2026
+SOFT CEILING: 45 queries | HARD CEILING: 55 queries
+
+══════════════════════════════════════════
+PART A — NEIGHBOURHOOD COVERAGE
+══════════════════════════════════════════
+
+TIER 1 — Centro Storico (Caruggi, Piazza De Ferrari, Porto Antico)
+Q01 [neighbourhood-Centro-Storico] "migliori ristoranti Centro Storico Genova caruggi 2024 2025" (IT)
+Q02 [neighbourhood-Centro-Storico] "best restaurants Genoa Centro Storico historic quarter food guide 2023" (EN)
+
+TIER 1 — Castelletto
+Q03 [neighbourhood-Castelletto] "ristoranti Castelletto Genova consigliati 2024 2025" (IT)
+Q04 [neighbourhood-Castelletto] "restaurants Castelletto Genoa neighbourhood recommendations 2023" (EN)
+
+TIER 1 — Foce
+Q05 [neighbourhood-Foce] "dove mangiare Foce Genova ristoranti 2023 2024" (IT)
+Q06 [neighbourhood-Foce] "best places to eat Foce Genoa 2024 2025" (EN)
+
+TIER 2 — Sampierdarena
+Q07 [neighbourhood-Sampierdarena] "ristoranti Sampierdarena Genova 2024 2025 consigliati" (IT)
+Q08 [neighbourhood-Sampierdarena] "restaurants Sampierdarena Genoa local guide 2023 2024" (EN)
+
+TIER 2 — San Fruttuoso
+Q09 [neighbourhood-San-Fruttuoso] "dove mangiare San Fruttuoso Genova trattorie 2023 2024" (IT)
+Q10 [neighbourhood-San-Fruttuoso] "best restaurants San Fruttuoso Genoa neighbourhood 2024 2025" (EN)
+
+TIER 2 — Quinto al Mare
+Q11 [neighbourhood-Quinto-al-Mare] "ristoranti Quinto al Mare Genova 2023 2024" (IT)
+Q12 [neighbourhood-Quinto-al-Mare] "restaurants Quinto al Mare Genoa 2024 2025" (EN)
+
+TIER 2 — Nervi
+Q13 [neighbourhood-Nervi] "dove mangiare Nervi Genova ristoranti locali 2023 2024" (IT)
+Q14 [neighbourhood-Nervi] "Nervi Genoa restaurants food guide 2024 2025" (EN)
+
+TIER 2 — Albaro
+Q15 [neighbourhood-Albaro] "ristoranti Albaro Genova consigliati 2024 2025" (IT)
+Q16 [neighbourhood-Albaro] "best restaurants Albaro Genoa 2023 2024" (EN)
+
+TIER 2 — Sturla
+Q17 [neighbourhood-Sturla] "ristoranti Sturla Genova dove mangiare 2023 2024" (IT)
+Q18 [neighbourhood-Sturla] "Sturla Genoa restaurants local recommendations 2024 2025" (EN)
+
+TIER 3 — Sestri Ponente
+Q19 [neighbourhood-Sestri-Ponente] "ristoranti Sestri Ponente Genova 2024 2025" (IT)
+
+TIER 3 — Cornigliano
+Q20 [neighbourhood-Cornigliano] "ristoranti Cornigliano Genova mangiare 2023 2024" (IT)
+
+TIER 3 — Pontedecimo
+Q21 [neighbourhood-Pontedecimo] "ristoranti Pontedecimo Genova 2023 2024" (IT)
+
+TIER 3 — Voltri
+Q22 [neighbourhood-Voltri] "ristoranti Voltri Genova dove mangiare 2024 2025" (IT)
+
+══════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+══════════════════════════════════════════
+
+Cross-1 — City-wide EN (2 queries, 1 earlier / 1 later)
+Q23 [cross-1] "best restaurants Genoa Italy 2024 2025 local food guide" (EN) — editorial guide, later
+Q24 [cross-1] "where to eat in Genoa Italy personal recommendations 2023" (EN) — personal rec, earlier
+
+Cross-2 — City-wide IT (3 queries, ≥1 earlier)
+Q25 [cross-2] "migliori ristoranti Genova guida gastronomica 2025" (IT) — formal criticism, later
+Q26 [cross-2] "dove mangiare Genova consigliati dai genovesi trattorie osterie 2023 2024" (IT) — casual, earlier
+Q27 [cross-2] "Genova ristoranti consigliati critico gastronomico giornalista 2024" (IT) — journalism, earlier-mid
+
+Cross-3 — Generic writer-first (2 queries, 1 each language)
+Q28 [cross-3] "food writer Genoa Italy restaurants recommendations 2024 2025" (EN) — later
+Q29 [cross-3] "critico gastronomico Genova ristoranti articolo 2023 2024" (IT) — earlier
+
+Cross-4 — Named awards (3 queries, distributed)
+Q30 [cross-4] "50 Top Italy Genova ristoranti classificati 2024 2025" (IT) — 50 Top Italy
+Q31 [cross-4] "Gambero Rosso ristoranti Genova tre forchette 2024" (IT) — Gambero Rosso
+Q32 [cross-4] "Guida Espresso ristoranti Genova 2023 2024" (IT) — L'Espresso / Slow Food
+
+Cross-5 — Recent openings (2 queries, 1 earlier / 1 later)
+Q33 [cross-5] "nuovi ristoranti Genova aperture 2023 2024" (IT) — earlier
+Q34 [cross-5] "new restaurant openings Genoa Italy 2025 2026" (EN) — later
+
+Cross-6 — Vocabulary-specific IT (2 queries, 1 earlier / 1 later)
+Q35 [cross-6] "focaccia genovese farinata caruggi trattoria Genova mangiare 2023 2024" (IT) — earlier
+Q36 [cross-6] "cucina ligure pesto genovese ristoranti tipici Genova 2025" (IT) — later
+
+Cross-7 — Cuisine and community (2 queries, 1 earlier / 1 later)
+Q37 [cross-7] "seafood Ligurian cuisine restaurants Genoa Porto Antico 2024 2025" (EN) — later
+Q38 [cross-7] "cappon magro zimino ceci cucina genovese ristoranti Genova 2023" (IT) — earlier
+
+Cross-8 — Publication-category IT (2 queries, 1 earlier / 1 later)
+Q39 [cross-8] "rivista gastronomica ligure Genova ristoranti articolo 2024 2025" (IT) — later
+Q40 [cross-8] "giornale supplemento gastronomia Genova ristoranti consigliati 2023 2024" (IT) — earlier
+
+══════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+══════════════════════════════════════════
+
+[year-distribution-check] PASSED
+  Earlier years (2023/2024 primary reference): Q02, Q04, Q05, Q08, Q09, Q11, Q13, Q16, Q17, Q20, Q21, Q24, Q26, Q27, Q29, Q31, Q32, Q33, Q35, Q38, Q40 = 21 queries
+  Later years (2025/2026 primary reference): Q01, Q03, Q06, Q07, Q10, Q12, Q14, Q15, Q18, Q19, Q22, Q23, Q25, Q28, Q30, Q34, Q36, Q37, Q39 = 19 queries
+  No year term: None
+  Total planned: 40 queries (under soft ceiling of 45)
+
+All 2-query angles: one earlier, one later — CONFIRMED
+3-query Cross-2: at least one earlier reference — CONFIRMED (Q26, Q27)
+
+══════════════════════════════════════════
+STOPPING RULE
+══════════════════════════════════════════
+If the last 8 consecutive queries return only sources already in the candidate pool or no qualifying new sources, stop and proceed to Step 3 even if not all angles are complete.

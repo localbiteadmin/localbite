@@ -1,0 +1,48 @@
+[PHASE 1 — CANDIDATE VERIFICATION FETCHES]
+[fetch-01] asmallkitcheningenoa.com/seafood-restaurants-genoa/ → SUCCESS — single-author site confirmed (Enrica Monzani); 10 seafood restaurants extracted; April 13, 2026; CONFIRMED SOURCE
+[fetch-02] asmallkitcheningenoa.com/ (homepage) → SUCCESS — single-author confirmed: "Enrica Monzani, Liguria culinary researcher, cook instructor and food experience curator based in Genoa"
+[fetch-03] asmallkitcheningenoa.com/traditional-restaurant-genoa/ → SUCCESS — same single-author site; 8 traditional restaurants extracted; March 26, 2026; CONFIRMED SOURCE
+[fetch-04] ilgiornaledelcibo.it/trattorie-genovesi/ → SUCCESS — Angela Caporale named author; August 11, 2023; 6 restaurants; CONFIRMED SOURCE
+[fetch-05] finedininglovers.it/esplora/liste/migliori-ristoranti-genova → SUCCESS (attempt 1) — Mariarosaria Bruno named author; date not visible in article text; 10 restaurants listed
+[fetch-06] finedininglovers.it/esplora/liste/migliori-ristoranti-genova → SUCCESS (attempt 2) — same result; date still not confirmed; CONFIRMED SOURCE with article_date: undated
+[fetch-07] finedininglovers.it/esplora/liste/migliori-ristoranti-genova → SUCCESS (attempt 3) — Jina metadata showed 2026-04-29 (today's fetch timestamp, not editorial date); CONFIRMED article_date: undated
+[fetch-08] gamberorosso.it/notizie/dove-mangiare-genova/ → FAIL 403/CAPTCHA
+[fetch-09] gamberorosso.it/attualita/dove-mangiare-la-focaccia-a-genova/ → FAIL 403/CAPTCHA
+[fetch-10] gamberorosso.it/rubriche/miniguide/dove-mangiare-genova/ → SUCCESS but no named individual author (editorial staff byline); REJECT
+[fetch-11] w37.it/dove-mangiare-a-genova-guida-alle-migliori-trattorie-e-ristoranti-della-citta/ → FAIL 422 (three attempts)
+[fetch-12] flavorofitaly.com (Wendy Holloway Genoa article) → SUCCESS but authors listed as "Andrea and Marta" (no surnames); REJECT
+[fetch-13] discovergenoa.com (Andrea Semonella articles) → SUCCESS on category page; all specific articles fetched returned 2019 dates; outside year range; REJECT
+[fetch-14] lucianopignataro.it/a/dove/liguria/genova/ → SUCCESS — category/index page; not a single dateable article; declined
+[fetch-15] reportergourmet.com Liguria gourmet article → SUCCESS but no named author; REJECT
+[fetch-16] slowfoodtravelers.com/genoa → SUCCESS but no named author; REJECT
+[fetch-17] themediterraneaninsider.com/eat-drink/genoas-best-restaurants-and-must-try-dishes/ → FAIL (verification screen); REJECT
+[fetch-18] foodandtravel.com rising-to-the-occasion gourmet guide to Genoa → SUCCESS — Marina Spironetti named; article date April 2022; REJECT (outside 2023-2026 year range)
+[fetch-19] eataliantraveler.com/where-to-eat-in-genoa/ → FAIL CAPTCHA
+[fetch-20] dissapore.com/ristoranti/genova-le-nuove-aperture-da-provare-fino-a-fine-2023/ → SUCCESS but no named individual author; REJECT
+[fetch-21] italyfoodies.com/blog/genoa-food-guide → FAIL 404
+[fetch-22] fooddrinkdestinations.com/ligurian-food-guide/ → FAIL 404
+[fetch-23] blogdiviaggi.com/2025/12/16/genova-5-ristoranti-dove-mangiare-bene-spendendo-il-giusto/ → FAIL 403 CAPTCHA
+[fetch-24] italysegreta.com/it/genova-a-tavola-i-migliori-ristoranti-di-genova/ → SUCCESS but no named author; REJECT
+[fetch-25] goamagazine.it/nuove-aperture-a-genova-alla-scoperta-delle-vetrine-che-inaugureranno-nel-2024/ → SUCCESS — Alessia Spinola named; Dec 2023; content primarily cafes/pastry shops; declined (thin restaurant content)
+
+[PHASE 2 — FULL EXTRACTION FETCHES]
+[fetch-26] asmallkitcheningenoa.com/seafood-restaurants-genoa/ (Phase 2 extraction) → SUCCESS — full extraction: 10 restaurants with addresses, prices, dishes; Il Marin excluded (Michelin 1★)
+[fetch-27] asmallkitcheningenoa.com/traditional-restaurant-genoa/ (Phase 2 extraction) → SUCCESS — full extraction: 8 restaurants with addresses, prices, dishes
+[fetch-28] ilgiornaledelcibo.it/trattorie-genovesi/ (Phase 2 extraction) → SUCCESS — full extraction: 6 restaurants; verbatim Italian quotes retrieved
+[fetch-29] finedininglovers.it/esplora/liste/migliori-ristoranti-genova (Phase 2 extraction) → SUCCESS — full extraction: 10 restaurants; Il Marin excluded (Michelin 1★); InFusion excluded (concentration cap); verbatim Italian quotes retrieved
+[fetch-30] ilgiornaledelcibo.it/trattorie-genovesi/ (verbatim quote extraction) → SUCCESS — verbatim Italian text confirmed for all 6 restaurants
+[fetch-31] finedininglovers.it/esplora/liste/migliori-ristoranti-genova (verbatim quote extraction) → SUCCESS — verbatim Italian text confirmed for all 10 restaurants
+
+[MICHELIN EXCLUSIONS]
+Il Marin (1★) — excluded from all extractions
+San Giorgio (1★) — not encountered in confirmed sources
+The Cook — lost Michelin star; includable but not encountered in confirmed source articles during Phase 2
+
+[CONCENTRATION CAP REMOVALS]
+Ristorante Scalvini (Source src-monzani-seafood, Pontedecimo, Tier 3) — removed; source contributed 10 restaurants to 29-restaurant pool (34.5%); cap applied
+InFusion (Source src-bruno-finedininglovers) — removed; source contributed 10 restaurants to 29-restaurant pool (34.5%); cap applied
+
+[GEOGRAPHIC EXCLUSIONS]
+No geographic exclusions applied — all 27 final restaurants are within Genova municipality bounds
+La Voglia Matta (Voltri, Tier 3) — VALID; Voltri is a district within Genova municipality
+Trattoria da Osvaldo (Boccadasse) — VALID; Boccadasse is a neighbourhood within Genova municipality

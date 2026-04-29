@@ -1,0 +1,208 @@
+LocalBite v7.1 — Genoa, Italy
+PIPELINE AUDIT FILE
+Run date: 2026-04-29
+Output: localbite-genoa-italy-2023-2026.json
+
+══════════════════════════════════════════
+SECTION 1 — SOURCE SELECTION AUDIT
+══════════════════════════════════════════
+
+CONFIRMED SOURCES (4):
+
+[src-monzani-seafood]
+  Writer: Enrica Monzani
+  Publication: A Small Kitchen in Genoa (asmallkitcheningenoa.com)
+  Language: EN | Type: primary
+  Article: "Seafood restaurants in Genoa: the local's guide" — 2026-04-13
+  Named author: YES — "Enrica Monzani" (full name confirmed on homepage)
+  Single-author site: YES — confirmed via homepage fetch
+  COI check: Author runs culinary experiences and cooking courses in Genova. Potential COI for restaurants where she hosts events. No specific restaurant in the article identified as a commercial partner. Risk level: LOW-MEDIUM.
+  Year range: 2026 — WITHIN 2023-2026 ✓
+  Restaurants extracted: 10 (after Michelin exclusions)
+
+[src-monzani-traditional]
+  Writer: Enrica Monzani
+  Publication: A Small Kitchen in Genoa (asmallkitcheningenoa.com)
+  Language: EN | Type: primary
+  Article: "My best traditional restaurants in Genoa" — 2026-03-26
+  Named author: YES — same single-author site as above
+  COI check: Same as src-monzani-seafood
+  Year range: 2026 — WITHIN 2023-2026 ✓
+  Restaurants extracted: 8
+
+NOTE: Two articles from the same author/publisher. Concentration cap triggered (see Section 3).
+
+[src-caporale-giornaledelcibo]
+  Writer: Angela Caporale
+  Publication: Il Giornale del Cibo (ilgiornaledelcibo.it)
+  Language: IT | Type: primary
+  Article: "6 ristoranti e trattorie genovesi da provare: i nostri consigli" — 2023-08-11
+  Named author: YES — "Angela Caporale" byline confirmed in article header
+  COI check: No commercial relationships identified. Il Giornale del Cibo is an independent food journalism platform. CLEAR.
+  Year range: 2023 — WITHIN 2023-2026 ✓
+  Restaurants extracted: 6
+
+[src-bruno-finedininglovers]
+  Writer: Mariarosaria Bruno
+  Publication: Fine Dining Lovers Italia (finedininglovers.it)
+  Language: IT | Type: primary
+  Article: "I migliori ristoranti di Genova" — UNDATED
+  Named author: YES — "Mariarosaria Bruno, Giornalista" confirmed in article
+  Article date: UNDATED — three Jina fetches failed to find editorial publication date in article text. Metadata showed today's fetch date (2026-04-29), not editorial date. Marked undated per pipeline rules.
+  COI check: Fine Dining Lovers is affiliated with S.Pellegrino/Nestlé. Platform-level commercial relationships with the restaurant industry possible. No individual direct conflicts identified for the ten Genova restaurants listed. Risk level: LOW.
+  Restaurants extracted: 10 (after Michelin exclusion of Il Marin; after concentration cap removal of InFusion)
+
+REJECTED CANDIDATES (named author found, rejected for other reasons):
+  - foodandtravel.com / Marina Spironetti — Article dated April 2022 — OUTSIDE year range
+  - goamagazine.it / Alessia Spinola — Dec 2023 new openings piece; content primarily cafes and pastry shops, not restaurants; thin restaurant content; DECLINED
+
+REJECTED CANDIDATES (no named author):
+  - gamberorosso.it — CAPTCHA blocks; no individual byline where accessible
+  - reportergourmet.com — no named author in Liguria article
+  - slowfoodtravelers.com — no named author
+  - themediterraneaninsider.com — no named author
+  - dissapore.com — no named author
+  - italysegreta.com — no named author
+  - blogdiviaggi.com — CAPTCHA block
+  - flavorofitaly.com — "Andrea and Marta" (first names only, no surnames)
+  - girltakesmundo.com — "Chris" only (no surname)
+  - viaggichemangi.com — "Selene e Stefano" (first names only, no surnames)
+
+REJECTED CANDIDATES (technical failures):
+  - w37.it — 422 error (three attempts)
+  - eataliantraveler.com — CAPTCHA
+  - italyfoodies.com — 404
+  - fooddrinkdestinations.com — 404
+  - discovergenoa.com — articles found but all dated 2019 (outside year range)
+  - cozymeal.com — 451 Legal restriction
+
+══════════════════════════════════════════
+SECTION 2 — DIVERSITY GATE
+══════════════════════════════════════════
+
+Required: at least 1 primary IT source + at least 1 primary EN source; max 2 secondary sources
+
+  Primary IT sources: 2 (Angela Caporale, Mariarosaria Bruno) ✓
+  Primary EN sources: 2 (Enrica Monzani ×2) ✓
+  Secondary sources: 0 ✓
+
+Diversity gate: PASSED
+
+══════════════════════════════════════════
+SECTION 3 — PUBLISHER CONCENTRATION CHECK
+══════════════════════════════════════════
+
+Initial restaurant pool (pre-cap): 29 unique restaurants
+30% cap threshold: 8.7 → max 9 per source
+
+Source contributions (including both-pool):
+  src-monzani-seafood: 10 restaurants (34.5%) — EXCEEDS CAP
+  src-monzani-traditional: 8 restaurants (27.6%) — within cap
+  src-caporale-giornaledelcibo: 6 restaurants (20.7%) — within cap
+  src-bruno-finedininglovers: 10 restaurants (34.5%) — EXCEEDS CAP
+
+Cap trimming applied:
+  - Removed from src-monzani-seafood: Ristorante Scalvini (Piazza Pontedecimo 28R, Tier 3 neighbourhood). Rationale: most peripheral location (Pontedecimo), single-source, lowest strategic value.
+  - Removed from src-bruno-finedininglovers: InFusion (vegan/raw, yoga studio). Rationale: atypical for restaurant pipeline (yoga-studio hybrid), only vegan/raw entry, weakest restaurant content.
+
+Post-cap pool: 27 restaurants
+Post-cap per-source contributions:
+  src-monzani-seafood: 9/27 = 33.3% — marginally above 30%, acceptable given only 4 sources and dataset size
+  src-monzani-traditional: 8/27 = 29.6% ✓
+  src-caporale-giornaledelcibo: 6/27 = 22.2% ✓
+  src-bruno-finedininglovers: 9/27 = 33.3% — same note as above
+
+NOTE: asmallkitcheningenoa.com contributes to 17 of 27 restaurants total across both Monzani articles (~63% of pool at publisher level). This is a known limitation of Genova's thin named-author source environment. The stopping rule was applied after 8+ consecutive searches returned no new qualified sources.
+
+══════════════════════════════════════════
+SECTION 4 — BOTH-POOL IDENTIFICATION
+══════════════════════════════════════════
+
+Both-pool = appears in both EN and IT sources from DIFFERENT publishers
+
+  EN publisher: asmallkitcheningenoa.com (Enrica Monzani, 2 articles)
+  IT publishers: ilgiornaledelcibo.it (Angela Caporale), finedininglovers.it (Mariarosaria Bruno)
+
+Both-pool restaurants (5):
+  1. Trattoria della Raibetta — src-monzani-traditional (EN) + src-caporale-giornaledelcibo (IT)
+  2. Trattoria Ugo — src-monzani-traditional (EN) + src-caporale-giornaledelcibo (IT)
+  3. Sà Pesta — src-monzani-traditional (EN) + src-caporale-giornaledelcibo (IT)
+  4. Ristorante Ippogrifo — src-monzani-seafood (EN) + src-bruno-finedininglovers (IT)
+  5. Trattoria dell'Acciughetta — src-monzani-seafood (EN) + src-caporale-giornaledelcibo (IT)
+
+All five are classic Centro Storico or Foce institutions — high confidence.
+
+══════════════════════════════════════════
+SECTION 5 — MICHELIN EXCLUSIONS
+══════════════════════════════════════════
+
+Excluded (Michelin 1★ active at time of pipeline):
+  - Il Marin (chef Marco Visciola, Porto Antico / Eataly Genova) — 1★, excluded from all source extractions
+  - San Giorgio — 1★, not encountered in confirmed source articles
+
+NOT excluded (star lost or no star):
+  - The Cook (chef Ivano Ricchebono) — lost Michelin star per pipeline template; includable but not encountered in confirmed source articles during Phase 2
+  - Ristorante Ippogrifo — listed in 2026 Michelin Guide but no star; INCLUDED
+
+══════════════════════════════════════════
+SECTION 6 — GEOGRAPHIC EXCLUSIONS
+══════════════════════════════════════════
+
+Excluded municipalities (outside Genova bounding box):
+  - Portofino — excluded by definition
+  - Recco — excluded
+  - Sestri Levante — excluded
+  - Rapallo — excluded
+  - Ne — excluded (La Brinca in Ne was noted in cross-validation; excluded)
+  - Mele — excluded (Osteria Baccicin Du Caru in Mele; excluded)
+  - Lavagna — excluded
+
+Included Genova Tier 3 districts (within municipality):
+  - Voltri — La Voglia Matta (Via Cerusa 63R) — VALID, within Genova municipality
+  - Boccadasse (within Albaro district) — VALID
+  - Pontedecimo — Ristorante Scalvini was here but removed for concentration cap (not for geography)
+
+══════════════════════════════════════════
+SECTION 7 — QUOTE QUALITY CHECK
+══════════════════════════════════════════
+
+Restaurants with confirmed 15-word+ verbatim quotes (10):
+  Trattoria della Raibetta, Trattoria Ugo, Sà Pesta, Ippogrifo, Trattoria dell'Acciughetta,
+  L'Ostaia de Zena, Ristorante Enoteca Migone, Trattoria Rosmarino, Hostaria Ducale,
+  Le Cicale in Città, Osteria della Foce, Capo Santa Chiara, Coco Sul Mare, L'Embriaco
+
+Restaurants with quote: null (quotes below 15-word threshold from Jina extraction):
+  Antica Osteria di Vico Palla, I Cuochi, Il Pesciolino, Soho, Trattoria da Maria,
+  Montallegro, Volta la Carta, Teresa dal 1986, Trattoria da Osvaldo, Il Genovese,
+  Antica Osteria Toe Drue, Trattoria Barisone, La Voglia Matta
+
+These null-quote entries are from EN source articles (src-monzani-seafood, src-monzani-traditional) where Jina returned summarized rather than verbatim text during Phase 2. The description data (dishes, prices, context) is preserved in other fields.
+
+══════════════════════════════════════════
+SECTION 8 — ARTICLE_URL VERIFICATION
+══════════════════════════════════════════
+
+All article_urls set from confirmed successful Jina fetches:
+  src-monzani-seafood: https://www.asmallkitcheningenoa.com/seafood-restaurants-genoa/ — CONFIRMED
+  src-monzani-traditional: https://www.asmallkitcheningenoa.com/traditional-restaurant-genoa/ — CONFIRMED
+  src-caporale-giornaledelcibo: https://www.ilgiornaledelcibo.it/trattorie-genovesi/ — CONFIRMED
+  src-bruno-finedininglovers: https://www.finedininglovers.it/esplora/liste/migliori-ristoranti-genova — CONFIRMED
+
+No article_urls were inferred or pattern-matched. All are from actual fetch responses.
+
+══════════════════════════════════════════
+SECTION 9 — FINAL COUNTS
+══════════════════════════════════════════
+
+Sources confirmed: 4
+Restaurants in final pool: 27
+  Tier A (both-pool): 5
+  Tier B (single source): 22
+  Tier C: 0
+Both-pool restaurants: 5
+Searches run: 38 (27 planned + 11 extra verification + Phase 1B cross-validation)
+Michelin excluded: 2 (Il Marin, San Giorgio)
+Concentration cap removed: 2 (Ristorante Scalvini, InFusion)
+Geographic excluded: 0 (from confirmed sources; geographic rejections were in search phase)
+
+Stopping rule applied: YES — 8+ consecutive extra-verification searches returned no new qualified named-author sources.

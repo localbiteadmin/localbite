@@ -1,0 +1,38 @@
+[neighbourhood-Centro-Storico] "migliori ristoranti Centro Storico Genova caruggi 2024 2025" → Several listing sites (genovatoday.it, sluurpy, quandoo); w37.it food guide; mentelocale.it Gambero Rosso coverage
+[neighbourhood-Centro-Storico] "best restaurants Genoa Centro Storico historic quarter food guide 2023" → asmallkitcheningenoa.com personal restaurant guide; foodandtravel.com gourmet guide; slowfoodtravelers.com; lonelyplanet.com; fooddrinkdestinations.com
+[neighbourhood-Castelletto] "ristoranti Castelletto Genova consigliati 2024 2025" → Mostly listing sites (genovatoday, thefork, sluurpy, tripadvisor); no new editorial writers found
+[neighbourhood-Castelletto] "restaurants Castelletto Genoa neighbourhood recommendations 2023" → Listing sites (quandoo, tripadvisor); no new editorial writers found
+[neighbourhood-Foce] "dove mangiare Foce Genova ristoranti 2023 2024" → genovatoday.it neighbourhood guide; Michelin-listed Osteria della Foce; mentelocale.it Gambero Rosso Genova guide link
+[neighbourhood-Foce] "best places to eat Foce Genoa 2024 2025" → themediterraneaninsider.com; flavorofitaly.com (Wendy Holloway, named author confirmed in snippet); priorworld.com editorial; eataliantraveler.com
+[neighbourhood-Sampierdarena] "ristoranti Sampierdarena Genova consigliati 2024 2025" → Listing directories only (genovatoday, tripadvisor, paginegialle); no editorial writers
+[neighbourhood-San-Fruttuoso] "dove mangiare San Fruttuoso Genova trattorie 2023 2024" → Listing directories only (paginegialle, genova-servizi, reteimprese); no editorial writers
+[neighbourhood-Nervi] "dove mangiare Nervi Genova ristoranti locali 2023 2024" → lecinqueterre.org; genovatoday.it; listing sites; no named editorial writers
+[neighbourhood-Albaro] "ristoranti Albaro Genova consigliati 2024 2025" → genovatoday.it neighbourhood guide; listing sites; no named editorial writers found
+[cross-1] "best restaurants Genoa Italy 2024 2025 local food guide" → asmallkitcheningenoa.com (again, strong EN candidate); discovergenoa.com local site; eataliantraveler.com; themediterraneaninsider.com
+[cross-2] "migliori ristoranti Genova guida gastronomica 2025" → gamberorosso.it/notizie/dove-mangiare-genova/ strong IT candidate; finedininglovers.it; cibotoday.it; blogdiviaggi.com (Dec 2025)
+[cross-2] "dove mangiare Genova consigliati dai genovesi trattorie osterie 2023 2024" → dissapore.com (established Italian food platform); slowfish.slowfood.it/dove-mangiare-a-genova/; genovaturismo.it; mentelocale.it
+[cross-3] "food writer Genoa Italy restaurants recommendations 2024 2025" → flavorofitaly.com Wendy Holloway (again); discovergenoa.com; girltakesmundo.com personal blog
+[cross-4] "50 Top Italy Genova ristoranti classificati 2024 2025" → 50topitaly.it official; lucianopignataro.it (named critic Luciano Pignataro); universofood.net; mentelocale.it 50 Top coverage
+[cross-2] "Genova ristoranti consigliati critico gastronomico giornalista 2024" → italysegreta.com; volagratis.com magazine; finedininglovers.it; basilico.it; no strong new candidates
+[cross-4] "Gambero Rosso ristoranti Genova tre forchette 2024" → gamberorosso.it (two articles confirmed); genova24.it local coverage; genovatoday.it; no Genova Tre Forchette winners found
+[cross-6] "focaccia genovese farinata caruggi trattoria Genova mangiare 2023 2024" → w37.it/dove-mangiare-a-genova (again, strong IT candidate); gamberorosso.it focaccia guide; italysegreta.com; lavocedigenova.it
+[cross-7] "seafood Ligurian cuisine restaurants Genoa Porto Antico 2024 2025" → asmallkitcheningenoa.com/seafood-restaurants-genoa/ (fourth appearance); eataliantraveler.com; listing sites
+[cross-5] "nuovi ristoranti Genova aperture 2023 2024" → dissapore.com/ristoranti/genova-le-nuove-aperture-da-provare-fino-a-fine-2023/ (confirmed article); goamagazine.it Genova new openings 2024; le-strade.com local Genoa platform
+[cross-6] "cucina ligure pesto genovese ristoranti tipici Genova 2025" → gamberorosso.it/ristoranti/ristoranti-tipici-di-genova (strong IT candidate); localistorici.it entroterra (likely outside city); le-strade.com
+[cross-8] "rivista gastronomica ligure Genova ristoranti articolo 2024 2025" → reportergourmet.com (Italian gourmet publication); lavocedigenova.it local news; liguriaday.it regional news; mentelocale.it Michelin 2025 coverage
+[cross-5] "new restaurant openings Genoa Italy 2025 2026" → discovergenoa.com (again); girltakesmundo.com/8-genoa-foodie-hotspots (2026); theupcoming.co.uk Macellaio RC article
+[cross-7] "cappon magro zimino ceci cucina genovese ristoranti Genova 2023" → storienogastronomiche.it/specialmente-genova/ Italian food history site; asmallkitcheningenoa.com Italian article (fifth appearance)
+[cross-8] "giornale supplemento gastronomia Genova ristoranti consigliati 2023 2024" → dissapore.com (again); gamberorosso.it (again); genovatoday.it TavoleDOC 2023 coverage
+[cross-2] "Slow Food dove mangiare Genova ristoranti osterie 2023 2024" → slowfood.it/slowfood-travel/genova dove-mangiare/ official Slow Food list; slowfish.slowfood.it/dove-mangiare-a-genova/ (Slow Fish 2025); genovatoday.it Osterie d'Italia 2023 coverage
+[cross-3] "where to eat Genoa Italy blog personal recommendations 2023 2024" → slowfoodtravelers.com/genoa; fooddrinkdestinations.com Ligurian food guide; italyfoodies.com/blog/genoa-food-guide; discovergenoa.com (again)
+[extra-verification] "ilgiornaledelcibo.it Genova ristoranti 2023 2024 2025" → only one Genova article confirmed (already in pool); no new named-author articles
+[extra-verification] "reportergourmet.com Genova ristoranti 2023 2024" → Liguria gourmet article found but no named author; REJECT
+[extra-verification] "lucianopignataro.it Genova ristoranti liguria 2023 2024 2025" → Luciano Pignataro category page; individual articles about Recco/Mele not Genova city; no dateable single city article
+[extra-verification] "goamagazine.it Genova ristoranti 2024 migliori aperture" → Alessia Spinola named; Dec 2023 article primarily cafes/pastry shops; thin restaurant content; declined
+[extra-verification] "blogdiviaggi.com Genova ristoranti 2025 consigliati" → Dec 2025 article found; CAPTCHA blocked on fetch; no named author visible
+[extra-verification] "themediterraneaninsider.com Genoa restaurants food guide" → article found (May 2025) but no named author; REJECT
+[extra-verification] "viaggichemangi.com ristoranti mare Genova autore 2024 2025" → Selene e Stefano (first names only, no surnames); REJECT
+[phase-1B] "Sa Pesta Genova trattoria consigliato recensione 2023 2024 2025" → cross-validation PASS; confirmed as consistently recommended traditional trattoria
+[phase-1B] "Trattoria Ugo Genova ristorante consigliato 2023 2024" → cross-validation PASS; Trattoria Ugo dal 1969 widely recommended
+[phase-1B] "Ippogrifo Genova ristorante Foce consigliato recensione 2024 2025" → cross-validation PASS; Ippogrifo (Foce, 1982) confirmed top seafood destination; in 2026 Michelin guide (no star)
+[stopping-rule] 8+ consecutive extra-verification searches returned no new qualified named-author sources; stopping Phase 1 per stopping rule
