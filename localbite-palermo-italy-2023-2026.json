@@ -6,8 +6,8 @@
   "run_date": "2026-04-28",
   "year_range": "2023-2026",
   "source_recency": "2023-2026",
-  "sources": [
-    {
+  "sources": {
+    "src-cb-cipriano-bestbites2024": {
       "source_id": "src-cb-cipriano-bestbites2024",
       "id": "src-cb-cipriano-bestbites2024",
       "writer": "Francesco Cipriano",
@@ -22,37 +22,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Francesco Cipriano is a food and travel writer based in Palermo, contributing regularly to Culinary Backstreets. His writing covers the traditional dining culture of Sicily, focusing on multi-generational family restaurants, street food institutions, and the social fabric of Palermitan neighbourhoods."
     },
-    {
-      "source_id": "src-cb-cipriano-alfresco",
-      "id": "src-cb-cipriano-alfresco",
-      "writer": "Francesco Cipriano",
-      "publication": "Culinary Backstreets",
-      "language": "en",
-      "source_type": "primary",
-      "article_date": "2025-08-18",
-      "article_title": "Al Fresco: A Fresh Start",
-      "article_url": "https://culinarybackstreets.com/stories/palermo/al-fresco-a-fresh-start",
-      "restaurants_extracted": 0,
-      "commercial_conflict": false,
-      "commercial_conflict_note": null,
-      "writer_profile": "Francesco Cipriano is a food and travel writer based in Palermo, contributing regularly to Culinary Backstreets. His writing covers the traditional dining culture of Sicily, focusing on multi-generational family restaurants, street food institutions, and the social fabric of Palermitan neighbourhoods."
-    },
-    {
-      "source_id": "src-cb-cipriano-altritempi",
-      "id": "src-cb-cipriano-altritempi",
-      "writer": "Francesco Cipriano",
-      "publication": "Culinary Backstreets",
-      "language": "en",
-      "source_type": "primary",
-      "article_date": "2025-07-07",
-      "article_title": "Altri Tempi: Trattoria Time Machine",
-      "article_url": "https://culinarybackstreets.com/stories/palermo/altri-tempi",
-      "restaurants_extracted": 0,
-      "commercial_conflict": false,
-      "commercial_conflict_note": null,
-      "writer_profile": "Francesco Cipriano is a food and travel writer based in Palermo, contributing regularly to Culinary Backstreets. His writing covers the traditional dining culture of Sicily, focusing on multi-generational family restaurants, street food institutions, and the social fabric of Palermitan neighbourhoods."
-    },
-    {
+    "src-cb-cipriano-ildelfino": {
       "source_id": "src-cb-cipriano-ildelfino",
       "id": "src-cb-cipriano-ildelfino",
       "writer": "Francesco Cipriano",
@@ -67,7 +37,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Francesco Cipriano is a food and travel writer based in Palermo, contributing regularly to Culinary Backstreets. His writing covers the traditional dining culture of Sicily, focusing on multi-generational family restaurants, street food institutions, and the social fabric of Palermitan neighbourhoods."
     },
-    {
+    "src-scattidigusto-cristiani": {
       "source_id": "src-scattidigusto-cristiani",
       "id": "src-scattidigusto-cristiani",
       "writer": "Nico Cristiani",
@@ -82,7 +52,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Nico Cristiani is a food journalist and critic writing for Scatti di Gusto, a leading Italian food publication covering restaurant recommendations and culinary culture nationwide. His Palermo coverage focuses on value-for-money dining, traditional osterie, and contemporary dining across the city's diverse neighbourhoods."
     },
-    {
+    "src-vendemmie-colognese": {
       "source_id": "src-vendemmie-colognese",
       "id": "src-vendemmie-colognese",
       "writer": "Marco Colognese",
@@ -97,7 +67,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Marco Colognese is a wine and food journalist writing for Vendemmie, an Italian publication dedicated to wine culture and gastronomic travel. His coverage of Palermo highlights wine-forward restaurants, contemporary Sicilian cuisine, and the city's evolving dining scene."
     },
-    {
+    "src-palermotoday-ognibene": {
       "source_id": "src-palermotoday-ognibene",
       "id": "src-palermotoday-ognibene",
       "writer": "Salvo Ognibene",
@@ -112,7 +82,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Salvo Ognibene is a journalist at PalermoToday, the leading local news platform for Palermo. His restaurant coverage includes endorsements from local chefs and hospitality professionals, providing insider perspectives on the city's dining scene."
     }
-  ],
+  },
   "restaurants": [
     {
       "name": "Casa del Brodo dal Dottore",

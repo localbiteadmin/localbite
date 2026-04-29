@@ -13,8 +13,8 @@
     "auto_rejected": 0,
     "concentration_cap_applied": 0
   },
-  "sources": [
-    {
+  "sources": {
+    "src-spanishsabores-aloise": {
       "id": "src-spanishsabores-aloise",
       "publication": "Spanish Sabores",
       "writer": "Lauren Aloise",
@@ -34,7 +34,7 @@
       "publisher_concentration_flag": false,
       "found_via": "phase-1"
     },
-    {
+    "src-mlwot-reina": {
       "id": "src-mlwot-reina",
       "publication": "My Little World of Travelling",
       "writer": "Cristina Reina",
@@ -54,7 +54,7 @@
       "publisher_concentration_flag": false,
       "found_via": "phase-1"
     },
-    {
+    "src-elespanol-gaspar": {
       "id": "src-elespanol-gaspar",
       "publication": "El Español Málaga",
       "writer": "Rocío Gaspar",
@@ -74,7 +74,7 @@
       "publisher_concentration_flag": true,
       "found_via": "phase-1"
     },
-    {
+    "src-elespanol-navarro": {
       "id": "src-elespanol-navarro",
       "publication": "El Español Málaga",
       "writer": "Carlos Navarro",
@@ -94,7 +94,7 @@
       "publisher_concentration_flag": true,
       "found_via": "phase-1"
     },
-    {
+    "src-ewn-newton": {
       "id": "src-ewn-newton",
       "publication": "Euro Weekly News",
       "writer": "Jehane Newton",
@@ -114,7 +114,7 @@
       "publisher_concentration_flag": false,
       "found_via": "phase-1"
     },
-    {
+    "src-natgeo-heras": {
       "id": "src-natgeo-heras",
       "publication": "National Geographic España (Viajes)",
       "writer": "Jaime de las Heras Martín",
@@ -134,7 +134,7 @@
       "publisher_concentration_flag": false,
       "found_via": "phase-1"
     }
-  ],
+  },
   "restaurants": [
     {
       "name": "Beluga",
