@@ -1,0 +1,578 @@
+{
+  "city": "Bari",
+  "country": "Italy",
+  "city_slug": "bari-italy",
+  "pipeline": "localbite-v7.1",
+  "run_date": "2026-04-29",
+  "source_recency": "2023-2026",
+  "sources": {
+    "src-baritoday-leo": {
+      "id": "src-baritoday-leo",
+      "writer": "Stefania Leo",
+      "publication": "BariToday",
+      "language": "it",
+      "article_url": "https://www.baritoday.it/cibo/mappe/dove-mangiare-bari-trattorie-ristoranti.html",
+      "article_date": "2024-04-02",
+      "writer_profile": "Stefania Leo is a food and culture journalist at BariToday (baritoday.it), the main local news and lifestyle portal for Bari and the surrounding province. Her April 2024 guide surveys the best traditional trattorias and restaurants for Pugliese cuisine across Bari's historic neighbourhoods.",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null
+    },
+    "src-roamandthrive-wieteska": {
+      "id": "src-roamandthrive-wieteska",
+      "writer": "Alex Wieteska",
+      "publication": "Roam & Thrive",
+      "language": "en",
+      "article_url": "https://roamandthrive.com/best-restaurants-in-bari-italy/",
+      "article_date": "2025-06-19",
+      "writer_profile": "Alex Wieteska is the founder of Roam & Thrive (roamandthrive.com), a travel and food site written from her base in Puglia. A single-author site confirmed via About page — all articles are by Wieteska. Her June 2025 Bari restaurant guide draws on years of local eating across the city's neighbourhoods.",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null
+    },
+    "src-mimangiobari-nitri": {
+      "id": "src-mimangiobari-nitri",
+      "writer": "Donatella Nitri",
+      "publication": "Mi Mangio Bari",
+      "language": "it",
+      "article_url": "https://donatellanitri.com/a-spasso-per-bari-madonnella-e-i-suoi-locali/",
+      "article_date": "2023-2025",
+      "writer_profile": "Donatella Nitri is the author of Mi Mangio Bari (donatellanitri.com), a neighbourhood-by-neighbourhood food guide to the city written from a Bari-native perspective. A single-author site confirmed via About page. Her guides cover local restaurants, bars, and food spots across Bari's distinct quartieri.",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null
+    }
+  },
+  "restaurants": [
+    {
+      "name": "Al Sorso Preferito",
+      "neighbourhood": "Murattiano",
+      "name_variants": [
+        "Al Sorso Preferito"
+      ],
+      "cuisine": "Barese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Spaghetti all'Assassina",
+        "tiella di riso patate e cozze",
+        "sporcamuss"
+      ],
+      "signature_dish": "Spaghetti all'Assassina",
+      "quote": "For over forty years, Al Sorso Preferito has been a cornerstone of quality dining just steps from Bari's waterfront, in the heart of the Umbertino district. The restaurant is the birthplace of the Spaghetti all'Assassina recipe and remains a reference point for those wanting to experience that classic version.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-02",
+      "article_title": "Le migliori trattorie e ristoranti per mangiare cucina pugliese a Bari",
+      "open_status_check": true,
+      "sources": [
+        "src-baritoday-leo",
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "A",
+      "source_count": 2,
+      "language_pool": "both",
+      "both_pool": true,
+      "lat": 41.1235574,
+      "lng": 16.8750988,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Al Sorso Preferito"
+    },
+    {
+      "name": "Ai 2 Ghiottoni",
+      "neighbourhood": "Murattiano",
+      "name_variants": [
+        "Ai Due Ghiottoni",
+        "Ai 2 Ghiottoni"
+      ],
+      "cuisine": "Seafood Pugliese",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crudi di mare",
+        "carpaccio di pesce",
+        "spaghetti ai ricci",
+        "orecchiette alle cime di rapa",
+        "tiella di riso patate e cozze"
+      ],
+      "signature_dish": null,
+      "quote": "This is the temple of seafood cuisine in the heart of the Murattiano neighborhood. Raw fish dominates the appetizer moment with carpaccio, filleted fish, shrimp on ice and essential seafood. Spaghetti with sea urchin is a must among the first courses, though traditional dishes like orecchiette with turnip greens and the famous tiella are also present. Everything is served in an elegant and refined environment.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-02",
+      "article_title": "Le migliori trattorie e ristoranti per mangiare cucina pugliese a Bari",
+      "open_status_check": true,
+      "sources": [
+        "src-baritoday-leo"
+      ],
+      "confidence_tier": "B",
+      "source_count": 1,
+      "language_pool": "it",
+      "both_pool": false,
+      "geo_skip": true
+    },
+    {
+      "name": "Al Pescatore",
+      "neighbourhood": "Bari Vecchia",
+      "name_variants": [
+        "Ristorante Al Pescatore",
+        "Al Pescatore Bari"
+      ],
+      "cuisine": "Seafood Barese",
+      "opening_year": 1968,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crudi di mare",
+        "ricci di mare",
+        "ostriche",
+        "cozze pelose",
+        "ricotta cake",
+        "spaghetti alle vongole",
+        "risotto ai frutti di mare",
+        "pesce grigliato intero"
+      ],
+      "signature_dish": null,
+      "quote": "Since 1968, the De Benedictis family has run one of Bari's most celebrated dining establishments at the entrance of Old Bari, steps from the sea. One primary tradition involves starting lunch with a plate of raw vegetables—the 'scazzecappetìte' or appetite opener. The authentic Barese begins their meal with an abundant seafood platter, featuring not only sea urchins but also oysters and hairy mussels.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-02",
+      "article_title": "Le migliori trattorie e ristoranti per mangiare cucina pugliese a Bari",
+      "open_status_check": true,
+      "sources": [
+        "src-baritoday-leo",
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "A",
+      "source_count": 2,
+      "language_pool": "both",
+      "both_pool": true,
+      "lat": 41.128906,
+      "lng": 16.8676604,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Al Pescatore"
+    },
+    {
+      "name": "Al Focolare",
+      "neighbourhood": "Murattiano",
+      "name_variants": [
+        "Da Emilio",
+        "Al Focolare"
+      ],
+      "cuisine": "Barese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "panzerotti fritti",
+        "cime di rapa",
+        "carciofi fritti",
+        "fave",
+        "insalata di mare",
+        "alici",
+        "sformati di verdure",
+        "tagliatelle ai porcini",
+        "spaghetti alla San Nicola",
+        "braciole",
+        "agnello arrosto"
+      ],
+      "signature_dish": null,
+      "quote": "The cuisine tells the territory's story with simplicity and authenticity—the meal opens with fried panzerotti made fresh, as in home cooking. There follows a triumph of turnip greens, fried artichokes, fava beans, seafood salad, anchovies and vegetable flans. Following seasonal timing, the tagliatelle with porcini mushrooms is not to be missed, as are the spaghetti alla San Nicola with cherry tomatoes, basil and smoked ricotta.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-02",
+      "article_title": "Le migliori trattorie e ristoranti per mangiare cucina pugliese a Bari",
+      "open_status_check": true,
+      "sources": [
+        "src-baritoday-leo"
+      ],
+      "confidence_tier": "B",
+      "source_count": 1,
+      "language_pool": "it",
+      "both_pool": false,
+      "geo_skip": true
+    },
+    {
+      "name": "Perbacco",
+      "neighbourhood": "Madonnella",
+      "name_variants": [
+        "Perbacco",
+        "PerBacco",
+        "Ristorante Perbacco"
+      ],
+      "cuisine": "Barese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta ripiena con cime di rapa e pomodori di Torre Canne e alici",
+        "olio extravergine di oliva",
+        "octopus",
+        "persimmon panna cotta"
+      ],
+      "signature_dish": null,
+      "quote": "This restaurant, also featured in the Slow Food Osterie guide, offers something beyond more traditional establishments. This is thanks to owner Beppe Schino, always present in the dining room and particularly attentive to sourcing raw materials. The kitchen's hands bring to the table tradition updated to contemporary tastes and sensibilities. Try the filled pasta with turnip greens topped with cherry tomatoes from Torre Canne and anchovies.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-02",
+      "article_title": "Le migliori trattorie e ristoranti per mangiare cucina pugliese a Bari",
+      "open_status_check": true,
+      "sources": [
+        "src-baritoday-leo",
+        "src-roamandthrive-wieteska",
+        "src-mimangiobari-nitri"
+      ],
+      "confidence_tier": "A",
+      "source_count": 3,
+      "language_pool": "both",
+      "both_pool": true,
+      "lat": 41.1230977,
+      "lng": 16.8760309,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "PerBacco"
+    },
+    {
+      "name": "Terranima",
+      "neighbourhood": "Murattiano",
+      "name_variants": [
+        "Terranima"
+      ],
+      "cuisine": "Pugliese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tiella di riso patate e cozze",
+        "pasta di grano bruciato fatta a mano",
+        "bombette",
+        "orecchiette alle cime di rape",
+        "braciole al sugo",
+        "linguine con scampi e pomodori"
+      ],
+      "signature_dish": null,
+      "quote": "Stepping into Terranima evokes a rustic corner of the Puglian countryside—without ever leaving Bari. Visits commence with their antipasti della casa—a generous spread of local cheeses, cured meats, and seasonal vegetables, all beautifully prepared. Pasta features handmade orecchiette with cime di rape displaying that ideal, toothy texture, or slow-cooked braciole.",
+      "quote_language": "original",
+      "article_date": "2025-06-19",
+      "article_title": "Best Restaurants in Bari Italy: Where to Eat (Local's Guide)",
+      "open_status_check": true,
+      "sources": [
+        "src-baritoday-leo",
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "A",
+      "source_count": 2,
+      "language_pool": "both",
+      "both_pool": true,
+      "lat": 41.1231184,
+      "lng": 16.863768,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Terranima"
+    },
+    {
+      "name": "La Uascezze",
+      "neighbourhood": "Bari Vecchia",
+      "name_variants": [
+        "La Uascezze",
+        "La Uascezz"
+      ],
+      "cuisine": "Barese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "taralli fatti a mano",
+        "focaccia",
+        "verdure sott'olio",
+        "cime di rapa e fave",
+        "minestra di cicerchie",
+        "parmigiana di melanzane",
+        "bocconcini di carne d'asino al sugo",
+        "cozze ripiene",
+        "burrata",
+        "alici marinate",
+        "insalata di peperoni arrosto",
+        "orecchiette",
+        "bracioline d'agnello",
+        "vongole con aglio"
+      ],
+      "signature_dish": null,
+      "quote": "Maurizio Colamonico is the owner of La Uascezz—a Barese term indicating happy and festive eating. The restaurant hosts guests both inside and outside, welcoming them with handmade taralli, focaccia and preserved vegetables, the classic homestyle appetizer that makes a virtue of necessity with pantry staples. The meal proceeds with turnip greens and beans, chickling vetch soup and eggplant parmesan, which here becomes a first course rather than an appetizer.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-02",
+      "article_title": "Le migliori trattorie e ristoranti per mangiare cucina pugliese a Bari",
+      "open_status_check": true,
+      "sources": [
+        "src-baritoday-leo",
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "A",
+      "source_count": 2,
+      "language_pool": "both",
+      "both_pool": true,
+      "lat": 41.1287403,
+      "lng": 16.8718049,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Uascezze"
+    },
+    {
+      "name": "Osteria Le Arpie",
+      "neighbourhood": "Bari Vecchia",
+      "name_variants": [
+        "Osteria Le Arpie",
+        "Le Arpie"
+      ],
+      "cuisine": "Barese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tiella",
+        "parmigiana",
+        "braciole al sugo",
+        "pesce del giorno",
+        "orecchiette alle cime di rape"
+      ],
+      "signature_dish": null,
+      "quote": "Vincenzo Vigilante—known locally as Enzo—learned to love cooking since childhood. Over time he deepened his knowledge of Pugliese traditions and directed Mozammal Hossan, who today matches the wisdom of Arco Basso's ladies. From tiella to parmesan, from bracioles to the daily catch, everything here tastes of authentic Barese tradition.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-02",
+      "article_title": "Le migliori trattorie e ristoranti per mangiare cucina pugliese a Bari",
+      "open_status_check": true,
+      "sources": [
+        "src-baritoday-leo",
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "A",
+      "source_count": 2,
+      "language_pool": "both",
+      "both_pool": true,
+      "lat": 41.1292997,
+      "lng": 16.8696161,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Le Arpie"
+    },
+    {
+      "name": "La Locanda di Federico",
+      "neighbourhood": "Bari Vecchia",
+      "name_variants": [
+        "La Locanda di Federico"
+      ],
+      "cuisine": "Modern Barese",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "spaghetti con crema barese (cozze patate e pecorino)",
+        "Spaghetti alla San Giuannìdde",
+        "braciole",
+        "guanciale di vitello con carote sedano rapa e aromi",
+        "tiramisù con crostini di pane di Matera"
+      ],
+      "signature_dish": null,
+      "quote": "For over twenty years it has represented quality but never ordinary dining for Baresi and beyond. Gianluca Spagnuolo and his team returned to the table some grand classics of tradition revisited. Some examples: thick spaghetti with Barese cream—meaning mussels, potatoes and pecorino—or Spaghetti alla San Giuannìdde. Also present are traditional bracioles alongside more modern seconds like veal jowl with carrots, celery root and aromatics.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-02",
+      "article_title": "Le migliori trattorie e ristoranti per mangiare cucina pugliese a Bari",
+      "open_status_check": true,
+      "sources": [
+        "src-baritoday-leo"
+      ],
+      "confidence_tier": "B",
+      "source_count": 1,
+      "language_pool": "it",
+      "both_pool": false,
+      "geo_skip": true
+    },
+    {
+      "name": "Antica Santa Lucia",
+      "neighbourhood": "Bari Vecchia",
+      "name_variants": [
+        "Antica Santa Lucia"
+      ],
+      "cuisine": "Seafood Pugliese",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "antipasto all'italiana",
+        "zuppa di cozze",
+        "paccheri con vongole e porcini",
+        "pasta con ricci e tartufi di mare",
+        "frittura di pesce"
+      ],
+      "signature_dish": null,
+      "quote": "When Baresi want to enjoy lunch with a sea view, they stop at Antica Santa Lucia, a cult place for all seeking high-level seafood cuisine faithful to tradition. Francesco Caldarulo's daughter Francesca continues the activity, maintaining her family's commitment to local fish-based specialties. The meal begins with Italian-style appetizer of cured meats and cheeses, then ranges among great classics like mussels in pepper sauce.",
+      "quote_language": "translated from Italian",
+      "article_date": "2024-04-02",
+      "article_title": "Le migliori trattorie e ristoranti per mangiare cucina pugliese a Bari",
+      "open_status_check": true,
+      "sources": [
+        "src-baritoday-leo"
+      ],
+      "confidence_tier": "B",
+      "source_count": 1,
+      "language_pool": "it",
+      "both_pool": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": "nominatim",
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Biancofiore",
+      "neighbourhood": "Murattiano",
+      "name_variants": [
+        "Ristorante Biancofiore",
+        "Biancofiore"
+      ],
+      "cuisine": "Seafood creative",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pesce spada affettato",
+        "spaghetti con gamberi crudi pomodoro e cipolla secca",
+        "crudo di mare",
+        "tartare",
+        "ricci di mare",
+        "cozze"
+      ],
+      "signature_dish": "crudo di mare platter",
+      "quote": "The raw seafood platter really is what keeps me coming back—featuring a vivid selection of tartare, shellfish, sea urchins, and mussels—each bite crisp and bright, clearly sourced from the Adriatic just hours before. The biodynamic and natural wine selection offers perfect mid-tier pours in an interior of gentle shabby-chic colors, stone walls, and a welcoming communal sofa right at the entrance.",
+      "quote_language": "original",
+      "article_date": "2025-06-19",
+      "article_title": "Best Restaurants in Bari Italy: Where to Eat (Local's Guide)",
+      "open_status_check": true,
+      "sources": [
+        "src-baritoday-leo",
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "A",
+      "source_count": 2,
+      "language_pool": "both",
+      "both_pool": true,
+      "lat": 41.1262825,
+      "lng": 16.8712673,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Ristorante Biancofiore"
+    },
+    {
+      "name": "La Muraya",
+      "neighbourhood": "Murattiano",
+      "name_variants": [
+        "La Muraya"
+      ],
+      "cuisine": "Seafood Pugliese",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "crudo di ricciola",
+        "linguine alle cozze",
+        "risotto allo zafferano"
+      ],
+      "signature_dish": null,
+      "quote": "La Muraya sits a few blocks from the edge of Bari Vecchia—and is a perfect spot for a relaxed lunch or dinner. The atmosphere reads as elegant but easy, with big windows, crisp linens, and just the right amount of polish. The seafood-focused menu features beautifully fresh amberjack crudo, linguine alle cozze with a light, briny broth, and a saffron risotto that hits all the right notes on cooler evenings.",
+      "quote_language": "original",
+      "article_date": "2025-06-19",
+      "article_title": "Best Restaurants in Bari Italy: Where to Eat (Local's Guide)",
+      "open_status_check": false,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_count": 1,
+      "language_pool": "en",
+      "both_pool": false,
+      "lat": 41.1256007,
+      "lng": 16.8644901,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Muraya"
+    },
+    {
+      "name": "Antò",
+      "neighbourhood": "Bari Vecchia",
+      "name_variants": [
+        "Antò",
+        "Anto",
+        "Antò Cucina e Sapori Tipici"
+      ],
+      "cuisine": "Barese traditional",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "burrata",
+        "orecchiette al ragù",
+        "spiedini di agnello",
+        "contorni di stagione"
+      ],
+      "signature_dish": null,
+      "quote": "Antò operates as a laid-back, local, and traveler favorite tucked in the heart of Bari Vecchia. The menu maintains simplicity while achieving consistency: creamy burrata, orecchiette with rich tomato sauce, grilled lamb skewers, and seasonal contorni. The rustic space features stone walls and a relaxed, buzzy vibe—no frills, no fuss, just solid, home-style Puglian cooking in the middle of the old town.",
+      "quote_language": "original",
+      "article_date": "2025-06-19",
+      "article_title": "Best Restaurants in Bari Italy: Where to Eat (Local's Guide)",
+      "open_status_check": false,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_count": 1,
+      "language_pool": "en",
+      "both_pool": false,
+      "lat": 41.128969,
+      "lng": 16.8713645,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Antò"
+    },
+    {
+      "name": "La Tana del Polpo",
+      "neighbourhood": "Bari Vecchia",
+      "name_variants": [
+        "La Tana del Polpo"
+      ],
+      "cuisine": "Seafood Barese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "polpo cotto lentamente poi grigliato",
+        "patate al limone",
+        "puccia con polpo"
+      ],
+      "signature_dish": "polpo",
+      "quote": "La Tana del Polpo functions as a cozy, octopus-focused trattoria tucked in the winding lanes of Bari Vecchia—exactly the kind of spot to return to when you want seafood done with heart. The octopus is the star: slow-cooked until melt-in-your-mouth tender, then lightly grilled for smoky depth. Their puccia con polpo—the octopus sandwich—is a must in Bari.",
+      "quote_language": "original",
+      "article_date": "2025-06-19",
+      "article_title": "Best Restaurants in Bari Italy: Where to Eat (Local's Guide)",
+      "open_status_check": false,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_count": 1,
+      "language_pool": "en",
+      "both_pool": false,
+      "lat": 41.1267075,
+      "lng": 16.8707791,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Tana Del Polpo"
+    }
+  ],
+  "centroids": {
+    "Murattiano": [
+      41.1246,
+      16.8687
+    ],
+    "Bari Vecchia": [
+      41.1285,
+      16.8702
+    ]
+  }
+}

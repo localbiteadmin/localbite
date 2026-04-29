@@ -1,0 +1,97 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+=== LocalBite v7.1 — Bari, Italy — Search Plan ===
+Prepared: 2026-04-29
+YEAR_RANGE: 2023–2026
+PRIMARY_LANGUAGE: Italian (IT)
+SECONDARY_LANGUAGE: English (EN)
+
+YEAR DISTRIBUTION PRE-CHECK:
+- Queries referencing earlier years (2023–2024): ~18 queries
+- Queries referencing recent years (2025–2026): ~12 queries
+- Queries with no year term: ~6 queries
+Distribution: PASSES — no more than half reference only the most recent year.
+
+NOTE: Province contamination risk is HIGH. Puglia guides often bundle Bari
+with Polignano a Mare, Valle d'Itria, etc. All results must be vetted against
+GEOGRAPHIC_BOUNDARY_INCLUDE (Bari city municipality only).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART A — NEIGHBOURHOOD COVERAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TIER_1 QUERIES (2 per area = 8 queries):
+
+A-1 [IT] "Bari Vecchia ristoranti migliori dove mangiare 2024 2025"
+A-2 [EN] "Bari Vecchia old town best restaurants eat 2023 2024"
+A-3 [IT] "Murattiano Bari ristoranti osterie trattorie 2023 2024"
+A-4 [EN] "Murattiano Bari restaurants dining guide 2025"
+A-5 [IT] "quartiere Libertà Bari ristoranti consigliati 2023 2024"
+A-6 [EN] "Libertà neighbourhood Bari restaurants where to eat 2025"
+A-7 [IT] "Carrassi Bari ristoranti locali dove mangiare 2025"
+A-8 [EN] "Carrassi Bari restaurants food guide 2023 2024"
+
+TIER_2 QUERIES (2 per area = 8 queries):
+
+A-9  [IT] "San Pasquale Bari ristoranti recensioni 2024 2025"
+A-10 [EN] "San Pasquale Bari restaurants local eats 2023"
+A-11 [IT] "Poggiofranco Bari ristoranti dove mangiare 2023 2024"
+A-12 [EN] "Poggiofranco Bari restaurants guide 2025"
+A-13 [IT] "Japigia Bari ristoranti consigliati 2024 2025"
+A-14 [EN] "Japigia Bari restaurants food 2023"
+A-15 [IT] "Madonnella Bari ristoranti migliori 2023 2024"
+A-16 [EN] "Madonnella Bari restaurants dining 2025"
+
+TIER_3 QUERIES (1 per area = 4 queries):
+
+A-17 [IT] "Loseto Bari ristoranti 2024 2025"
+A-18 [IT] "Carbonara di Bari ristoranti dove mangiare 2023"
+A-19 [IT] "Ceglie del Campo Bari ristoranti 2024"
+A-20 [IT] "Palese Bari ristoranti locali 2023 2025"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART B — CROSS-CUTTING ANGLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cross-1 — City-wide EN (2 queries):
+B-1 [EN] "best restaurants Bari Italy guide 2024 2025"
+B-2 [EN] "where to eat in Bari Italy food recommendations 2023"
+
+Cross-2 — City-wide IT (3 queries):
+B-3 [IT] "migliori ristoranti Bari guida gastronomica 2025"
+B-4 [IT] "dove mangiare a Bari osterie trattorie consigli 2023 2024"
+B-5 [IT] "Bari ristoranti consigliati critico gastronomico 2024"
+
+Cross-3 — Writer-first discovery (2 queries):
+B-6 [EN] "food writer blogger Bari Italy restaurant guide 2024 2025"
+B-7 [IT] "giornalista gastronomico Bari ristoranti recensioni 2023"
+
+Cross-4 — Named awards (3 queries):
+B-8  [IT] "50 Top Italy Bari ristoranti premiati 2024 2025"
+B-9  [IT] "Espresso Ristoranti d'Italia Bari 2023 2024"
+B-10 [IT] "Gambero Rosso Bari ristoranti tre forchette 2024 2025"
+
+Cross-5 — Recent openings (2 queries):
+B-11 [IT] "nuove aperture ristoranti Bari 2024 2025"
+B-12 [EN] "new restaurant openings Bari Italy 2024 2025"
+
+Cross-6 — LOCAL_FOOD_VOCABULARY: not defined in Part 1 → SKIP
+
+Cross-7 — Cuisine and community (2 queries):
+B-13 [IT] "orecchiette barese focaccia sgagliozze dove mangiare Bari 2024"
+B-14 [IT] "cucina pugliese Bari ristoranti autentici prodotti tipici 2023 2025"
+
+Cross-8 — Publication category IT (2 queries):
+B-15 [IT] "rivista gastronomica italiana migliori ristoranti Bari 2024"
+B-16 [IT] "supplemento gastronomico giornale Bari dove mangiare 2023 2024"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TOTALS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Part A: 20 queries
+Part B: 16 queries
+Grand total planned: 36 queries (under 45 soft ceiling)
+Stopping rule: halt if last 8 consecutive queries yield only known sources
+
+[year-distribution-check] PASSED — ~18 queries reference earlier years (2023–2024),
+~12 queries reference recent years (2025–2026), ~6 queries have no year term.

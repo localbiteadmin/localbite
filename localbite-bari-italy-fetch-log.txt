@@ -1,0 +1,13 @@
+[p2] "baritoday.it/cibo/mappe/dove-mangiare-bari-trattorie-ristoranti.html" → 200 | ~18500ch | ACCEPTED — Stefania Leo, April 2024, 13 Bari city restaurants with detailed descriptions, retries: 0, wayback: false
+[p2] "roamandthrive.com/best-restaurants-in-bari-italy/" → 200 | ~18500ch | ACCEPTED — Alex Wieteska, June 2025, single-author confirmed, 12 qualifying Bari restaurants with first-person quotes, retries: 0, wayback: false
+[p2] "donatellanitri.com/guide-di-quartiere-carrassi/" → 200 | ~4895ch | PARTIAL — Donatella Nitri, ~2023, mostly bakeries/pizzerias/bars; limited restaurant-quality entries for extraction; changed to Madonnella guide as primary article_url
+[p2] "donatellanitri.com/a-spasso-per-bari-madonnella-e-i-suoi-locali/" → 200 | ~8500ch | ACCEPTED — Donatella Nitri, undated (~2022-2023), Madonnella neighbourhood guide; 2 qualifying restaurant entries (Perbacco, Taverna Verde); retries: 0, wayback: false
+[p1-verify] "gamberorosso.it/ristoranti/dove-mangiare-bari-vecchia-migliori-ristoranti/" → 451 | —ch | FAILED — geo/paywall block on first attempt
+[p1-verify-wayback] "web.archive.org/web/2026/gamberorosso.it Bari Vecchia" → 451 | —ch | FAILED — Wayback also blocked; logged to failed sources
+[p1-verify] "gamberorossointernational.com/news/where-to-eat-in-bari-vecchia-the-best-restaurants/" → 200 | ~8500ch | REJECTED-byline — no named author anywhere in article; same publisher as IT edition
+[p1-verify] "lucianopignataro.it/a/bari-ristorante-la-bul/.../24534/" → 200 | ~8500ch | REJECTED-date — Luciano Pignataro review confirmed, but published May 20, 2011, outside YEAR_RANGE 2023-2026
+[p1-verify] "dissapore.com/grande-notizia/bari-10-trattorie-senza-rivali/" → 200 | ~8500ch | REJECTED-date — no named author; published May 29, 2015, outside YEAR_RANGE
+[p1-verify] "agrodolce.it/dove-mangiare-bari-nuove-aperture-2023" → 200 | ~8500ch | REJECTED-byline — no named author in article; published Oct 11, 2023
+[p1-verify] "linkiesta.it/2023/09/dove-mangiare-ristoranti-migliori-bari/" → 200 | ~8500ch | REJECTED-byline — no named author in article; published Sep 16, 2023
+[p1-verify] "roamandthrive.com (About page)" → 200 | confirmed | Alex Wieteska, founder and sole author; single-author rule applied
+[p1-verify] "donatellanitri.com/donatella-2/" → 200 | confirmed | Donatella Nitri, born late 1970s Bari, single-author food blog; single-author rule confirmed

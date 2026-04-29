@@ -1,0 +1,103 @@
+LocalBite v7.1 — Bari, Italy — Audit File
+Generated: 2026-04-29
+
+═══════════════════════════════════════════════════════
+EXTRACTION-TIME AUTO-REJECTIONS (quote quality failures)
+═══════════════════════════════════════════════════════
+
+Taverna Verde | Tier C (extraction reject) | quote under 15 words: "ristorante fermo ancora agli anni 80 come arredamento ma con una cucina casalinga" (13 words) | src-mimangiobari-nitri
+Doa 23 | Tier C (extraction reject) | quote under 15 words: "propone invece una cucina raffinata e particolare in un ambiente molto elegante" (13 words) | src-mimangiobari-nitri
+
+Non-restaurant auto-rejections (extraction time):
+Mostofiore | Tier C | wine bar/enoteca, not a restaurant; simple snacks only | src-roamandthrive-wieteska
+Santa Rita Bakery | Tier C | bakery, not a restaurant | src-roamandthrive-wieteska
+Panificio Fiore | Tier C | bakery, not a restaurant | src-roamandthrive-wieteska
+Rosticceria Dirello | Tier C | takeaway rosticceria, not sit-down restaurant | src-roamandthrive-wieteska
+All Carrassi guide bakeries/bars/gelaterias | Tier C | not restaurants | src-mimangiobari-nitri
+All Madonnella guide bars/wine bars/pastry shops/pizzerias-to-go | Tier C | not qualifying restaurants | src-mimangiobari-nitri
+All San Pasquale guide bakeries/pubs | Tier C | not qualifying restaurants | src-mimangiobari-nitri
+
+═══════════════════════════════════════════════════════
+PHASE 3 TIER C AUTO-REJECTIONS (post-dedup)
+═══════════════════════════════════════════════════════
+
+None — all remaining entries reached Phase 3 as Tier A or Tier B.
+
+═══════════════════════════════════════════════════════
+PHASE 3 AUTO-REMOVALS (recommended Tier B, UNATTENDED_MODE)
+═══════════════════════════════════════════════════════
+
+La Bul | Tier B → removed | NULL neighbourhood + source_count: 1 (auto-removal rule); roamandthrive.com article does not specify district; city confirmed but no district reference in quote | src-roamandthrive-wieteska
+Vettor | Tier B → removed | NULL neighbourhood + source_count: 1 (auto-removal rule); roamandthrive.com article does not specify district | src-roamandthrive-wieteska
+Pizzeria di Cosimo | Tier B → removed | pizzeria classification; not clearly a full restaurant per pipeline criteria; also within concentration cap boundary | src-roamandthrive-wieteska
+Damé | Tier B → removed | concentration cap (baritoday.it single-source Tier B exceeded 30%); zero dishes_mentioned; weakest baritoday.it entry | src-baritoday-leo
+Bella Bari | Tier B → removed | concentration cap (baritoday.it single-source Tier B exceeded 30%); thematic overlap with Ai 2 Ghiottoni and Antica Santa Lucia (Murattiano seafood) | src-baritoday-leo
+
+[unattended-mode] auto-accepted 5 recommended removals.
+
+═══════════════════════════════════════════════════════
+CONCENTRATION CAP DECISIONS
+═══════════════════════════════════════════════════════
+
+baritoday.it (Stefania Leo): After null-neighbourhood and non-restaurant removals, baritoday.it single-source Tier B entries = 6 / 17 total = 35.3% > 30% cap.
+Cap applied: removed Damé (no dishes_mentioned, weakest) and Bella Bari (thematic overlap with other Murattiano seafood entries). Result: 4/14 = 28.6% ≤ 30%. ✓
+
+roamandthrive.com (Alex Wieteska): After null-neighbourhood and non-restaurant removals, roamandthrive.com single-source Tier B entries = 3 / 14 total = 21.4% ≤ 30%. No cap applied. ✓
+
+═══════════════════════════════════════════════════════
+GEOGRAPHIC EXCLUSIONS
+═══════════════════════════════════════════════════════
+
+Province contamination check applied across all search results. The following were identified in search results but auto-excluded because they are outside Bari city municipality:
+- Pashà (Conversano) — Tre Forchette Gambero Rosso 2025, ~25km south
+- Paolina Osteria Sincera (Putignano) — ~40km south
+- Botteghe Antiche (Putignano) — ~40km south
+- Trattoria Rosso (Polignano a Mare) — ~30km south
+- Orto Ristorante (Monopoli) — ~40km south
+- Mezza Pagnotta (Ruvo di Puglia) — Bari province but not city municipality
+- Evviva Maria (Conversano) — ~25km south
+- Quintessenza (Trani) — ~40km north
+- All other Puglia provincial restaurants mentioned in award guides
+
+═══════════════════════════════════════════════════════
+COI DISCLOSURES
+═══════════════════════════════════════════════════════
+
+No commercial conflicts identified for any confirmed source.
+
+═══════════════════════════════════════════════════════
+SOURCE REJECTION LOG
+═══════════════════════════════════════════════════════
+
+gamberorosso.it — inaccessible (HTTP 451, Wayback Machine also 451)
+gamberorossointernational.com — no named author
+pugliaguys.com — contributor identified as "Andrea" (first name only, no surname)
+backpacksandbubbly.com — "Tory" (first name only, no surname)
+dissapore.com — May 2015, outside YEAR_RANGE (2023-2026)
+goaskalocal.com — December 2022, outside YEAR_RANGE
+thiswaytoitaly.com — December 2022, outside YEAR_RANGE + no byline
+agrodolce.it — no named author
+linkiesta.it — no named author
+finedininglovers.it — no named author
+veloservice.org — "VeloService Team," no named individual
+elizabethminchilli.com — 2022, outside YEAR_RANGE
+lucianopignataro.it La Bul review — May 2011, outside YEAR_RANGE
+scattidigusto.it — Adele Pupella, March 2022, outside YEAR_RANGE
+oraviaggiando.it — no named author
+
+═══════════════════════════════════════════════════════
+NULL NEIGHBOURHOOD NOTES
+═══════════════════════════════════════════════════════
+
+La Bul: null neighbourhood → auto-removed (see above)
+Vettor: null neighbourhood → auto-removed (see above)
+Pizzeria di Cosimo: neighbourhood assigned "Bari Vecchia" was an inference; removed by cap
+
+═══════════════════════════════════════════════════════
+STRUCTURAL NOTES
+═══════════════════════════════════════════════════════
+
+- EN source pool is thin for Bari: major English food publications covering Italy do not provide named author bylines for Bari articles; most travel bloggers provide only first names. This is a structural characteristic of Bari's limited international food media.
+- Gambero Rosso is inaccessible (HTTP 451 on direct fetch and Wayback). The GR Bari Vecchia guide (13 restaurants) could not be extracted. This is a permanent limitation.
+- Luciano Pignataro covers Bari on his blog but his available Bari-specific review (La Bul) is from 2011, outside YEAR_RANGE. More recent Bari content exists on his site but requires navigating per-restaurant URLs (not a practical extraction target for this pipeline run).
+- Bari has zero Michelin-starred restaurants as of 2026, confirmed in MICHELIN_STARRED_EXCLUSIONS section of Part 1.

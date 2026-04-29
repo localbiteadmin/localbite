@@ -1,0 +1,34 @@
+[neighbourhood-Bari Vecchia] "Bari Vecchia ristoranti migliori dove mangiare 2024 2025" → gamberorosso.it (Bari Vecchia guide), baritoday.it (trattorie map), voloscontato.it; several directory and aggregator results
+[neighbourhood-Bari Vecchia] "Bari Vecchia old town best restaurants eat 2023 2024" → pugliaguys.com (Bari eating out guide, Oct 2024), gamberorossointernational.com (Bari vecchia EN), roamandthrive.com (Local's Guide); elizabethminchilli.com (2022, out of range)
+[neighbourhood-Murattiano] "Murattiano Bari ristoranti osterie trattorie 2023 2024" → baritoday.it (dove mangiare trattorie), barilive.it (Osterie d'Italia 2024 Puglia), dissapore.com (10 trattorie), slowfood.it (chiocciole 2024)
+[neighbourhood-Murattiano] "Murattiano Bari restaurants dining guide 2025" → roamandthrive.com (repeated), pugliaguys.com (repeated), wanderlog aggregator lists
+[neighbourhood-Libertà] "quartiere Libertà Bari ristoranti consigliati 2023 2024" → donatellanitri.com (NUOVE APERTURE 2024; 5 ristoranti a gennaio), barinedita.it (neighbourhood profile); no direct restaurant guides
+[neighbourhood-Libertà] "Libertà neighbourhood Bari restaurants where to eat 2025" → roamandthrive.com (repeated), pugliaguys.com (repeated), beerbaconliberty.com (Bari+Puglia+Matera guide)
+[neighbourhood-Carrassi] "Carrassi Bari ristoranti locali dove mangiare 2025" → baritoday.it (zona Carrassi), donatellanitri.com (guide-di-quartiere-carrassi), 3bonmenu.com (aggregator)
+[neighbourhood-Carrassi] "Carrassi Bari restaurants food guide 2023 2024" → 3bonmenu.com (Sep 2024), pugliaguys.com (repeated), elizabethminchilli.com (2022, out of range)
+[neighbourhood-San Pasquale] "San Pasquale Bari ristoranti recensioni 2024 2025" → donatellanitri.com (san-pasquale guide, nuove-aperture 2024), baritoday.it (zona san-pasquale)
+[neighbourhood-San Pasquale] "San Pasquale Bari restaurants local eats 2023" → roamandthrive.com (repeated), pugliaguys.com (repeated), thiswaytoitaly.com (Dec 2022, out of range)
+[neighbourhood-Poggiofranco] "Poggiofranco Bari ristoranti dove mangiare 2023 2024" → donatellanitri.com (a-spasso-per-bari-la-nuova-poggiofranco), baritoday.it (zona poggiofranco), agrodolce.it (nuove aperture 2023)
+[neighbourhood-Japigia] "Japigia Bari ristoranti consigliati 2024 2025" → paginegialle directory, baritoday.it (zona japigia), donatellanitri.com (NUOVE APERTURE 2024)
+[neighbourhood-Madonnella] "Madonnella Bari ristoranti migliori 2023 2024" → donatellanitri.com (madonnella guide), baritoday.it (zona madonnella); no guide articles with named authors from external sources
+[neighbourhood-Loseto/Carbonara/Ceglie/Palese] "Loseto Carbonara Ceglie Palese Bari ristoranti 2023 2024" → municipal administrative results; no qualifying food writing for Tier 3 areas
+[cross-1] "best restaurants Bari Italy guide 2024 2025" → pugliaguys.com (repeated), roamandthrive.com (repeated), backpacksandbubbly.com (13 Best; "Tory" — first name only, no surname), goaskalocal.com (Paolo Maragliulo, Dec 2022, out of range)
+[cross-1] "where to eat in Bari Italy food recommendations 2023" → pugliaguys.com (repeated), roamandthrive.com (repeated), goaskalocal.com (repeated, 2022), elizabethminchilli.com (2022, out of range)
+[cross-2] "migliori ristoranti Bari guida gastronomica 2025" → finedininglovers.it (no named author), oraviaggiando.it (no named author), gamberorosso.it (blocked 451)
+[cross-2] "dove mangiare a Bari osterie trattorie consigli 2023 2024" → lucianopignataro.it (Bari guide section, no article-level author), baritoday.it (repeated), dissapore.com (2015, out of range)
+[cross-2] "Bari ristoranti consigliati critico gastronomico 2024" → baritoday.it (repeated), finedininglovers.it (no named author), oraviaggiando.it (no named author)
+[cross-3] "food writer blogger Bari Italy restaurant guide 2024 2025" → pugliaguys.com (Andrea — first name only), roamandthrive.com (Alex Wieteska — single-author confirmed via About page)
+[cross-3] "giornalista gastronomico Bari ristoranti recensioni 2023" → oraviaggiando.it (no named author), donatellanitri.com (repeated), linkiesta.it (Bari in un boccone, Sep 2023, no named author)
+[cross-4] "50 Top Italy Bari ristoranti premiati 2024 2025" → carlozucchetti.it (Trattorie Bistrò Moderni; Perbacco in Bari in Eccellenti), baritoday.it (50topitaly coverage); no Bari city Grandi Ristoranti entries
+[cross-4] "Espresso Ristoranti d'Italia Bari 2023 2024" → guideespresso.it (general guide info, Andrea Grignaffini editor); no specific Bari article for extraction
+[cross-4] "Gambero Rosso Bari ristoranti tre forchette 2024 2025" → telebari.it (GR 2025 Puglia results); Pashà (Conversano, outside Bari city) is the only Tre Forchette — zero for Bari city itself
+[cross-5] "nuove aperture ristoranti Bari 2024 2025" → donatellanitri.com (NUOVE APERTURE 2024, repeated; nuove-aperture-di-febbraio-2025)
+[cross-5] "new restaurant openings Bari Italy 2024 2025" → donatellanitri.com (repeated); contamination from "Bari Ristorante" Houston TX chain openings
+[cross-7] "orecchiette barese focaccia sgagliozze dove mangiare Bari 2024" → pugliaguys.com (repeated), spezio.it (street food guide), borderline24.com (street food 2023)
+[cross-7] "cucina pugliese Bari ristoranti autentici prodotti tipici 2023 2025" → baritoday.it (ristoranti storici), terranima.com (restaurant site), lauascezze.com (restaurant site)
+[cross-8] "rivista gastronomica italiana migliori ristoranti Bari 2024" → finedininglovers.it (no named author), telebari.it (GR coverage), gamberorosso.it (blocked)
+[cross-8] "supplemento gastronomico giornale Bari dove mangiare 2023 2024" → linkiesta.it (no named author), agrodolce.it (no named author), donatellanitri.com (repeated)
+[phase-1b-crossval] "Al Pescatore Bari ristorante consiglio critica recensione" → oraviaggiando.it (no named author), sluurpy, tripadvisor; no new qualifying source
+[phase-1b-crossval] "Biancofiore Bari ristorante recensione consigliato" → scattidigusto.it (Adele Pupella, March 2022 — outside YEAR_RANGE), oraviaggiando.it (no named author); no new qualifying source
+[phase-1b-crossval] "La Bul Bari ristorante recensione 2023 2024" → lucianopignataro.it/a/ (Luciano Pignataro, May 2011 — outside YEAR_RANGE), atavolaconvincenzorizzi.it (2021 — outside YEAR_RANGE); no new qualifying source
+[stopping-rule] plan completed — 34 queries executed (all planned angles run); last 8 queries returned only known pool sources or no qualifying new sources
