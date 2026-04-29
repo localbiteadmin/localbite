@@ -483,14 +483,14 @@
       "country": "Italy",
       "city_slug": "verona-italy",
       "pipeline": "localbite-v7.1",
-      "built": null,
-      "restaurant_count": 0,
-      "both_pool_count": 0,
-      "source_count": 0,
+      "built": "2026-04-29",
+      "restaurant_count": 35,
+      "both_pool_count": 5,
+      "source_count": 6,
       "file": "localbite-verona-italy-2023-2026.json",
-      "status": "coming_soon",
-      "open_status_check_count": 0,
-      "notes": "Italy Batch E — Part 1 file committed 2026-04-27"
+      "status": "complete",
+      "open_status_check_count": 6,
+      "notes": ""
     },
     {
       "city": "Genoa",

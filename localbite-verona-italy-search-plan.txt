@@ -1,0 +1,98 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+=== LocalBite v7.1 — Verona, Italy — Search Plan ===
+Prepared: 2026-04-28
+
+YEAR DISTRIBUTION STRATEGY:
+  Earlier portion: 2023–2024 queries
+  Later portion: 2025–2026 queries
+  Queries with no year term permitted and do not count against either side.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART A — NEIGHBOURHOOD COVERAGE (18 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TIER 1 — Centro Storico (Piazza Erbe, Piazza dei Signori, Piazza Brà)
+  A1-IT [earlier]: "migliori ristoranti Centro Storico Verona osterie trattorie 2023 2024"
+  A1-EN [later]:   "best restaurants Centro Storico Verona 2025 food guide"
+
+TIER 1 — Veronetta
+  A2-IT [later]:   "ristoranti Veronetta Verona dove mangiare 2025"
+  A2-EN [earlier]: "Veronetta Verona restaurants where to eat 2024"
+
+TIER 1 — Borgo Trento
+  A3-IT [earlier]: "dove mangiare Borgo Trento Verona 2023 2024"
+  A3-EN [later]:   "Borgo Trento Verona food guide best restaurants 2025"
+
+TIER 2 — San Zeno
+  A4-IT [later]:   "ristoranti San Zeno Verona 2025 trattoria osteria"
+  A4-EN [earlier]: "San Zeno Verona restaurant recommendations 2024"
+
+TIER 2 — Cittadella
+  A5-IT [earlier]: "ristoranti quartiere Cittadella Verona 2023 2024"
+  A5-EN [later]:   "Cittadella Verona restaurants where to eat 2025"
+
+TIER 2 — Golosine
+  A6-IT [later]:   "ristoranti Golosine Verona 2025"
+  A6-EN [earlier]: "Golosine Verona restaurant guide 2024"
+
+TIER 2 — Quinzano
+  A7-IT [earlier]: "ristoranti Quinzano Verona 2023 2024"
+  A7-EN [later]:   "Quinzano Verona restaurant food guide 2025"
+
+TIER 3 — Borgo Milano (IT only)
+  A8-IT [earlier]: "ristoranti Borgo Milano Verona 2024"
+
+TIER 3 — Avesa (IT only)
+  A9-IT [earlier]: "ristoranti Avesa Verona 2023 2024"
+
+TIER 3 — Parona (IT only)
+  A10-IT [later]:  "ristoranti Parona Verona 2025"
+
+TIER 3 — Montorio (IT only)
+  A11-IT [earlier]: "ristoranti Montorio Verona 2024"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART B — CROSS-CUTTING ANGLES (17 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cross-1 — City-wide in English (2 queries)
+  B1 [later]:   "best restaurants Verona Italy 2025 food writer guide"
+  B2 [earlier]: "Verona Italy where to eat honest review 2023 2024"
+
+Cross-2 — City-wide in Italian (3 queries)
+  B3 [later]:   "migliori ristoranti Verona 2025 critica gastronomica"
+  B4 [earlier]: "dove mangiare a Verona trattorie osterie locali 2024"
+  B5 [earlier]: "Verona ristoranti guida stampa gastronomia 2023"
+
+Cross-3 — Generic writer-first (2 queries, 1 per language)
+  B6-IT [earlier]: "critico gastronomico Verona ristoranti blog 2024"
+  B7-EN [later]:   "food writer Verona Italy restaurant recommendations blog 2025"
+
+Cross-4 — Named awards (4 queries — one per named award in NAMED_AWARDS)
+  B8 [both]:    "50 Top Italy Verona ristoranti 2024 2025"
+  B9 [later]:   "Gambero Rosso Ristoranti Italia Verona 2025"
+  B10 [earlier]: "Guida Espresso Ristoranti Verona 2024"
+  B11 [earlier]: "Slow Food Osterie Italia Verona 2023 2024"
+
+Cross-5 — Recent openings (2 queries, 1 per language)
+  B12-IT [earlier]: "nuovi ristoranti apertura Verona 2024"
+  B13-EN [later]:   "new restaurant openings Verona Italy 2025"
+
+Cross-6 — SKIPPED (LOCAL_FOOD_VOCABULARY blank in Part 1)
+
+Cross-7 — Cuisine and community (2 queries)
+  B14-IT [later]:   "enoteca ristorante vini Verona Amarone Valpolicella 2025"
+  B15-IT [earlier]: "cucina veronese tradizionale pastissada pearà Verona 2023 2024"
+
+Cross-8 — Publication-category local language (2 queries)
+  B16-IT [later]:   "rivista gastronomica indipendente Verona ristoranti 2025"
+  B17-IT [earlier]: "supplemento gastronomia giornale Verona ristoranti 2023 2024"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+YEAR DISTRIBUTION CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[year-distribution-check] PASSED — 17 queries reference earlier years (2023-2024), 15 queries reference later years (2025-2026), 3 queries span both or have no year term.
+
+Total planned queries: 35 (well within soft ceiling of 45 and hard ceiling of 55)

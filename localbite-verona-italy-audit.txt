@@ -1,0 +1,106 @@
+LocalBite v7.1 — Verona, Italy — Audit Log
+Generated: 2026-04-28
+Pipeline run: localbite-v7.1
+Final JSON: localbite-verona-italy-2023-2026.json
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TIER C AUTO-REJECTIONS (Phase 3) — 2 entries
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Osteria Il Bertoldo | Tier C | quote 12 words — under 15-word minimum, caught at Phase 3 (should have been caught at extraction) | src-roamandthrive-wieteska
+Trattoria I Masenini | Tier C | quote 13 words — under 15-word minimum, caught at Phase 3 (should have been caught at extraction) | src-cibotoday-pozzi
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RECOMMENDED TIER B REMOVALS — AUTO-ACCEPTED (UNATTENDED_MODE: YES) — 8 entries
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Null neighbourhood, single source — 7 entries:
+Osteria Le Petarine | Tier B | auto-removed — null neighbourhood, single source, no district reference in quote | src-veronasera-dona
+Osteria Da Ugo | Tier B | auto-removed — null neighbourhood, single source, no district reference in quote | src-veronasera-dona
+Osteria da Morandin | Tier B | auto-removed — null neighbourhood, single source, no district reference in quote | src-veronasera-dona
+Osteria Magna e Tasi | Tier B | auto-removed — null neighbourhood, single source, no district reference in quote | src-veronasera-dona
+Ristorante Greppia | Tier B | auto-removed — null neighbourhood, single source, no district reference in quote | src-wheresemmanow-myrick
+Santa Felicita Ristorante | Tier B | auto-removed — null neighbourhood, single source, no district reference in quote | src-wheresemmanow-myrick
+Osteria del Bugiardo | Tier B | auto-removed — null neighbourhood, single source, no district reference in quote | src-wheresemmanow-myrick
+
+Concentration cap — 1 entry:
+Osteria Verona Antica | Tier B | source concentration cap — src-veronasera-dona contributed 15 single-source Tier B entries (34.9% of 43 total); lowest-confidence entry (generic description, Via Sottoriva duplicate description) removed to bring within 30% cap | src-veronasera-dona
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+EXTRACTION-TIME AUTO-REJECTIONS (never reached working.json) — 6 entries
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+L'Oste Scuro | extraction-reject | quote 13 words — under 15-word minimum | src-wheresemmanow-myrick
+Dal Zovo Wine Bar | extraction-reject | quote 14 words — under 15-word minimum; drinks-only establishment | src-wheresemmanow-myrick
+La Figaccia | extraction-reject | street food/focaccia shop — not a sit-down restaurant | src-viaggieritratti-lanari
+Antico Panificio Forti | extraction-reject | bakery — not a restaurant | src-wheresemmanow-myrick
+Caffe Scala | extraction-reject | coffee bar — not a restaurant | src-wheresemmanow-myrick
+The Soda Jerk | extraction-reject | cocktail bar — not a restaurant | src-wheresemmanow-myrick
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PHASE 1 SOURCE REJECTIONS — 18 candidates rejected
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+carrotsandtigers.com (Alexandra) | phase-1-reject | REJECTED-byline — author first name "Alexandra" only; no surname found on About page; single-author rule requires full name
+girlsgottadrink.com | phase-1-reject | REJECTED-date — published February 2018; outside YEAR_RANGE 2023-2026
+gamberorosso.it miniguida | phase-1-reject | REJECTED-byline — no article-level byline; multi-author publication without individual attribution
+2foodtrippers.com (Daryl & Mindi Hirsch) | phase-1-reject | REJECTED-date — published December 2019; outside YEAR_RANGE 2023-2026
+starwinelist.com | phase-1-reject | REJECTED-byline — no named author; thin content
+theitalianinterpreter.co.uk (Amedea) | phase-1-reject | REJECTED-byline — author first name "Amedea" only; no surname found on About page
+veronatravelblog.com | phase-1-reject | FAILED — CAPTCHA security block; 287 chars returned
+spritzience.com | phase-1-reject | REJECTED-byline — no named author; published April 2025
+winewithourfamily.com | phase-1-reject | REJECTED-byline — no named author; published November 2024
+kiltiefish.com | phase-1-reject | FAILED — HTTP 422 error
+visititaly.eu (Simone Spolitu) | phase-1-reject | PARTIAL — named author confirmed but majority of 10 restaurants outside geographic boundary (Valpolicella, Lake Garda, Oppeano); only 4 in-city restaurants; insufficient qualifying content
+veronatomorrow.it | phase-1-reject | REJECTED-byline — "Redazione" (editorial team) byline; anonymous editorial rejected per named-author rule
+reportergourmet.com | phase-1-reject | REJECTED-byline — no named author; published April 2025
+cucineditalia.com | phase-1-reject | REJECTED-byline — no named author; published April 2026
+marcopoloblog.com | phase-1-reject | REJECTED-byline — no named author; published September 2025
+doctorwine.it (Iolanda Maggio) | phase-1-reject | REJECTED-date — author confirmed but published May 2022; outside YEAR_RANGE
+bernabei.it/magazine | phase-1-reject | REJECTED-byline — no named author; approx 2024 date
+w37.it | phase-1-reject | FAILED — HTTP 422 error
+niamondo.it | phase-1-reject | FAILED — CAPTCHA block; 187 chars returned
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+COI DISCLOSURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Pizzeria Du De Cope | COI-note | Restaurant is affiliated with/branded by Giancarlo Perbellini (chef of excluded 3★ Casa Perbellini 12 Apostoli). Source (Scatti di Gusto, Vincenzo Pagano) is independent — no commercial conflict at source level. Du De Cope is a separate establishment, not excluded by Michelin exclusion rules. Retained in final JSON without flag.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GEOGRAPHIC EXCLUSION NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+visititaly.eu article contained Valpolicella and Lake Garda restaurants (Amistà, Famiglia Rana area) — auto-excluded per GEOGRAPHIC_BOUNDARY_EXCLUDE before source was selected.
+Trattoria La Pesa (Via Poiano, 131) is within Comune di Verona but in Poiano/Avesa (rural frazione in hills north of city). Retained as within geographic boundary; neighbourhood set to Avesa.
+San Basilio alla Pergola (Via Antonio Pisano, 9) is outside old city walls but within Comune di Verona. Retained; neighbourhood assigned Golosine.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+OPEN STATUS CHECK FLAGS (6 entries in final JSON)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Caffè Monte Baldo | open_status_check: true | source src-wheresemmanow-myrick dated 2023-02-12 (pre-2025)
+Trattoria La Molinara | open_status_check: true | source src-wheresemmanow-myrick dated 2023-02-12 (pre-2025)
+Redentore | open_status_check: true | source src-viaggieritratti-lanari dated 2024-02-12 (pre-2025)
+Trattoria dalla Bruna | open_status_check: true | source src-viaggieritratti-lanari dated 2024-02-12 (pre-2025)
+L'Evangelista | open_status_check: true | source src-viaggieritratti-lanari dated 2024-02-12 (pre-2025)
+Pizzeria Da Vincenzo | open_status_check: true | source src-viaggieritratti-lanari dated 2024-02-12 (pre-2025)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BORDERLINE QUOTE LENGTH NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The following entries have quotes at or near the 15-word minimum. The extraction model (WebFetch) compressed quotes from the original articles. These quotes reflect model summarisation; original article text is likely longer.
+
+Trattoria Alla Fedeltà | 14 words | accepted — specific dishes named (gnocchi fatti in casa, pearà) meet quality threshold despite borderline word count
+San Basilio alla Pergola | 14 words | accepted (secondary source) — specific details: chef name (Gian Maria Bicego) + 2 dishes meet secondary source requirement
+Locanda 4 Cuochi | 14 words | accepted (secondary source) — specific details: 2 dishes meet secondary source requirement
+Al Bersagliere | 14 words | accepted (secondary source) — specific details: founding year (1928) + 3 dishes meet secondary source requirement
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MICHELIN EXCLUSION LOG
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Casa Perbellini 12 Apostoli (3★) — excluded entirely per MICHELIN_STARRED_EXCLUSIONS. Appeared in roamandthrive.com source; not extracted.
+Iris Ristorante (1★, in-city) — NOT excluded per Part 1 instructions. Included in final JSON (Tier B, src-roamandthrive-wieteska).
+Il Desco (1★, in-city) — not mentioned in any confirmed source; not extracted.

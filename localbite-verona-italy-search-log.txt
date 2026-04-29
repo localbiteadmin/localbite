@@ -1,0 +1,38 @@
+[neighbourhood-Centro Storico] "migliori ristoranti Centro Storico Verona osterie trattorie 2023 2024" → scattidigusto.it, cibotoday.it, Michelin guide trattorie page, sparkling magazine (bernabei.it), veronasera.it local news; several directory/aggregator sites
+[neighbourhood-Centro Storico] "best restaurants Centro Storico Verona 2025 food guide" → carrotsandtigers.com (2024-11-18 article), spritzience.com, 2foodtrippers.com, starwinelist.com wine guide 2025, veronatravelblog.com, girlsgottadrink.com
+[neighbourhood-Veronetta] "ristoranti Veronetta Verona dove mangiare 2025" → sanmarco.vr.it/blog, cibotoday.it aggregator; no named-author individual articles surfaced
+[neighbourhood-Veronetta] "Veronetta Verona restaurants where to eat 2024" → carrotsandtigers.com (2024-11-18), girlsgottadrink.com, veronatravelblog.com, visititaly.eu 2024 article
+[neighbourhood-Borgo Trento] "dove mangiare Borgo Trento Verona 2023 2024" → cittadiverona.it (Flor Osteria Moderna listing), ilgolosario.it food guide, 2night.it local lifestyle
+[neighbourhood-Borgo Trento] "Borgo Trento Verona food guide best restaurants 2025" → Quandoo, Expedia, OpenTable; no named-author food writing articles
+[neighbourhood-San Zeno] "ristoranti San Zeno Verona 2025 trattoria osteria" → directory listings (PagineGialle, Virgilio, TuttoCittà); no named-author articles
+[neighbourhood-San Zeno] "San Zeno Verona restaurant recommendations 2024" → Quandoo, Rick Steves forum, 50Best Discovery (Casa Perbellini — 3★ excluded)
+[neighbourhood-Cittadella] "ristoranti quartiere Cittadella Verona 2023 2024" → cucineditalia.com (Vinitaly 2026 article), Al Capitan listing; cibotoday.it
+[neighbourhood-Cittadella] "Cittadella Verona restaurants where to eat 2025" → Michelin guide (Al Capitan), Wanderlog, TripAdvisor; note: some Cittadella results are for Cittadella (Padua) not Verona neighbourhood — contamination risk
+[neighbourhood-Golosine] "ristoranti Golosine Verona 2025" → directory listings only; veronafoodofficial Instagram mentioned
+[neighbourhood-Golosine] "Golosine Verona restaurant guide 2024" → carrotsandtigers.com (again), girlsgottadrink.com (again), visititaly.eu
+[neighbourhood-Quinzano] "ristoranti Quinzano Verona 2023 2024" → Sluurpy (aggregator), TripAdvisor nearby; visititaly.eu 2024 article
+[neighbourhood-Quinzano] "Quinzano Verona restaurant food guide 2025" → roamandthrive.com (new candidate), girlsgottadrink.com, kiltiefish.com (2025-05-30 article), 2foodtrippers.com
+[neighbourhood-Borgo Milano] "ristoranti Borgo Milano Verona 2024" → veronasera.it directory, Quandoo (Osteria al Borgo); no named-author food writing
+[neighbourhood-Avesa] "ristoranti Avesa Verona 2023 2024" → Sluurpy aggregator, TripAdvisor; no named-author articles
+[neighbourhood-Parona] "ristoranti Parona Verona 2025" → Yelp, individual restaurant sites; no named-author food writing
+[neighbourhood-Montorio] "ristoranti Montorio Verona 2024" → montorioveronese.it utility page, Sluurpy; no named-author food writing
+[cross-1] "best restaurants Verona Italy 2025 food writer guide" → roamandthrive.com (May 2025, Alex Wieteska confirmed), veronatravelblog.com (CAPTCHA blocked), winewithourfamily.com (Nov 2024, no author), italymammamia.com, 2foodtrippers.com (2019, out of range)
+[cross-1] "Verona Italy where to eat honest review 2023 2024" → carrotsandtigers.com (Nov 2024, no surname found), veronatravelblog.com (CAPTCHA), 2foodtrippers.com (2019), visititaly.eu (Jul 2024, Simone Spolitu)
+[cross-2] "migliori ristoranti Verona 2025 critica gastronomica" → guide.michelin.com (editorial), finedininglovers.it (editorial), oraviaggiando.it, veronasera.it (multiple articles)
+[cross-2] "dove mangiare a Verona trattorie osterie locali 2024" → scattidigusto.it (Vincenzo Pagano confirmed single-author), niamondo.it (CAPTCHA blocked 187ch), bernabei.it Sparkling (no author), reportergourmet.com (Apr 2025, no author), cronachedigusto.it (no author)
+[cross-2] "Verona ristoranti guida stampa gastronomia 2023" → gamberorosso.it miniguida (2023-03-30, no byline visible), veronasera.it, dissapore.com (no author)
+[cross-3] "critico gastronomico Verona ristoranti blog 2024" → niamondo.it (CAPTCHA blocked), veronasera.it Manuela Donà article visible
+[cross-3] "food writer Verona Italy restaurant recommendations blog 2025" → wheresemmanow.com (Emma Myrick confirmed, 2023), roamandthrive.com (Alex Wieteska), theitalianinterpreter.co.uk (Amedea, no surname), veronatravelblog.com (CAPTCHA)
+[cross-4] "50 Top Italy Verona ristoranti 2024 2025" → veronaoggi.it (local news, 50 Top Italy 2025 article), lucianopignataro.it (Luciano Pignataro, article about 50 Top Italy 2024)
+[cross-4] "Gambero Rosso Ristoranti Italia Verona 2025" → primadituttoverona.it (local Verona news), veronatomorrow.it (editorial 2024-10-28), larena.it (Gambero Rosso article), gamberorosso.it itself
+[cross-4] "Guida Espresso Ristoranti Verona 2024" → scattidigusto.it (Guida Espresso article), guideespresso.it, primadituttoverona.it; specific Verona entries not surfaced in search
+[cross-4] "Slow Food Osterie Italia Verona 2023 2024" → veronasera.it (Osterie d'Italia Verona winners), cronachedigusto.it (311 chiocciole list article); no individual Verona osteria profile with named author found
+[cross-5] "nuovi ristoranti apertura Verona 2024" → visitverona.net (Sep 2024 new openings article), 2night.it (new openings article), thefork.it (aggregator)
+[cross-5] "new restaurant openings Verona Italy 2025" → Montclair Girl results (Verona NJ contamination — Wisconsin/NJ Verona — not Italy); roamandthrive.com; no Italy-specific opening guide with named author
+[cross-7] "enoteca ristorante vini Verona Amarone Valpolicella 2025" → gamberorosso.it Bottega article (no byline on article page), enoteche della Valpolicella results (Fumane = outside city)
+[cross-7] "cucina veronese tradizionale pastissada pearà Verona 2023 2024" → w37.it (422 error), larena.it Monica Sommacampagna (dishes article, no restaurant recommendations), viaggieritratti.it Chiara Lanari confirmed Feb 2024
+[cross-8] "rivista gastronomica indipendente Verona ristoranti 2025" → reportergourmet.com (no author), italiangourmet.it; no Verona-specific independent magazine found
+[cross-8] "supplemento gastronomia giornale Verona ristoranti 2023 2024" → veronasera.it Manuela Donà article, scattidigusto.it Vincenzo Pagano
+[phase-1b-crossval] "Osteria al Duca Verona recensione critica gastronomica" → marcopoloblog.com (Sep 2025, no author), doctorwine.it Iolanda Maggio (May 2022 - out of range), terroirsense.com (no author checked yet)
+[phase-1b-crossval] "Caffè Monte Baldo Verona recensione consiglio osteria" → direct restaurant site, TripAdvisor, Yelp, winenews.it; no new named-author articles found
+[phase-1b-crossval] "Trattoria al Pompiere Verona critica gastronomica recensione" → passionegourmet.it (2020, out of range), ilmangione.it (no date check); no new qualifying sources

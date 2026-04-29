@@ -1,0 +1,1324 @@
+{
+  "city": "Verona",
+  "country": "Italy",
+  "city_slug": "verona-italy",
+  "built": "2026-04-28",
+  "source_recency": "2023-2026",
+  "pipeline": "localbite-v7.1",
+  "confidence_tiers": {
+    "auto_approved": 7,
+    "reviewed_kept": 28,
+    "auto_removed": 8,
+    "user_removed": 0,
+    "auto_rejected": 2,
+    "concentration_cap_applied": 1
+  },
+  "sources": [
+    {
+      "id": "src-scattidigusto-pagano",
+      "publication": "Scatti di Gusto",
+      "writer": "Vincenzo Pagano",
+      "writer_profile": "Vincenzo Pagano is the founder and editor of Scatti di Gusto, one of Italy's longest-running independent food blogs. He covers osterie and trattorias across Italy with a focus on value and authenticity. His Verona guide targets places where locals eat rather than tourist-facing restaurants.",
+      "url": "https://www.scattidigusto.it/",
+      "article_url": "https://www.scattidigusto.it/dove-mangiare-a-verona-spendendo-poco-osterie-trattorie",
+      "language": "it",
+      "source_type": "primary",
+      "article_date": "2026-04-11",
+      "article_title": null,
+      "fetch_status": "good",
+      "fetch_chars": 86247,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    {
+      "id": "src-veronasera-dona",
+      "publication": "Verona Sera",
+      "writer": "Manuela Donà",
+      "writer_profile": "Manuela Donà writes food and lifestyle coverage for Verona Sera, the main local news outlet serving the city of Verona. Her osteria guide draws on direct knowledge of the neighbourhood dining scene and prioritises establishments frequented by residents over tourist-facing places.",
+      "url": "https://www.veronasera.it/",
+      "article_url": "https://www.veronasera.it/social/migliori-osterie-tipiche-verona.html",
+      "language": "it",
+      "source_type": "primary",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "fetch_status": "good",
+      "fetch_chars": 16847,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    {
+      "id": "src-cibotoday-pozzi",
+      "publication": "CiboToday",
+      "writer": "Carolina Pozzi",
+      "writer_profile": "Carolina Pozzi is a food editor at CiboToday, an Italian national food and dining platform. Her Verona guide focuses on restaurants serving traditional Veronese cuisine, written for readers seeking authentic regional cooking and locally sourced ingredients.",
+      "url": "https://www.cibotoday.it/",
+      "article_url": "https://www.cibotoday.it/mappe/dove-mangiare-cucina-tipica-verona-ristoranti-osterie.html",
+      "language": "it",
+      "source_type": "secondary",
+      "article_date": "2025-04-04",
+      "article_title": null,
+      "fetch_status": "good",
+      "fetch_chars": 18500,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    {
+      "id": "src-viaggieritratti-lanari",
+      "publication": "Viaggi e Ritratti",
+      "writer": "Chiara Lanari",
+      "writer_profile": "Chiara Lanari writes for Viaggi e Ritratti, an Italian travel and food blog. Her Verona restaurant guide, published in February 2024, prioritises places offering strong value and authentic Veronese cuisine aimed at visitors who want to eat well without paying tourist prices.",
+      "url": "https://www.viaggieritratti.it/",
+      "article_url": "https://www.viaggieritratti.it/dove-mangiare-a-verona/",
+      "language": "it",
+      "source_type": "primary",
+      "article_date": "2024-02-12",
+      "article_title": null,
+      "fetch_status": "good",
+      "fetch_chars": 18500,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    {
+      "id": "src-roamandthrive-wieteska",
+      "publication": "Roam and Thrive",
+      "writer": "Alex Wieteska",
+      "writer_profile": "Alex Wieteska is a travel writer and editor who runs Roam and Thrive, a travel blog with a sustained focus on Italy. Her Verona guide, published in May 2025, combines first-person tasting notes with practical advice for navigating the city's historic restaurant scene.",
+      "url": "https://roamandthrive.com/",
+      "article_url": "https://roamandthrive.com/best-restaurants-in-verona-italy/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2025-05-16",
+      "article_title": null,
+      "fetch_status": "good",
+      "fetch_chars": 42847,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    {
+      "id": "src-wheresemmanow-myrick",
+      "publication": "Where's Emma Now",
+      "writer": "Emma Myrick",
+      "writer_profile": "Emma Myrick is the author of Where's Emma Now, a travel blog documenting her experiences living across Europe, including five years based in Italy. Her Verona restaurant guide reflects the perspective of a long-term resident rather than a visitor, published in February 2023.",
+      "url": "https://wheresemmanow.com/",
+      "article_url": "https://wheresemmanow.com/best-verona-restaurants-bars/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2023-02-12",
+      "article_title": null,
+      "fetch_status": "good",
+      "fetch_chars": 11847,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "Osteria al Duca",
+      "name_variants": [
+        "Al Duca",
+        "Osteria Al Duca"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "polenta",
+        "local meats"
+      ],
+      "signature_dish": null,
+      "quote": "Set meals at €26 get you a primo and secondo of your choice, featuring polenta and local meats.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 3,
+      "sources": [
+        "src-scattidigusto-pagano",
+        "src-veronasera-dona",
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-IT + primary-IT + primary-EN",
+      "article_date": "2025-05-16",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4434505,
+      "lng": 10.9993864,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria al Duca"
+    },
+    {
+      "name": "Caffè Monte Baldo",
+      "name_variants": [
+        "Osteria Caffè Monte Baldo",
+        "Caffe Monte Baldo",
+        "Osteria Caffe Monte Baldo"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": 1909,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "tartine"
+      ],
+      "signature_dish": "tartine",
+      "quote": "Established in 1909, it transitions from aperitivo spot to osteria with signature tartine rivaling Venetian cicchetti.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 3,
+      "sources": [
+        "src-scattidigusto-pagano",
+        "src-roamandthrive-wieteska",
+        "src-wheresemmanow-myrick"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-IT + primary-EN + primary-EN",
+      "article_date": "2025-05-16",
+      "article_title": null,
+      "open_status_check": true,
+      "flagged": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Trattoria al Pompiere",
+      "name_variants": [
+        "Al Pompiere"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "veal tongue with pear sauce",
+        "rabbit ragù tagliatelle",
+        "guinea fowl ravioli"
+      ],
+      "signature_dish": null,
+      "quote": "White ragù made with three kinds of game meat, it was rich, earthy, and completely unforgettable.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-cibotoday-pozzi",
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "secondary-IT + primary-EN",
+      "article_date": "2025-05-16",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4419491,
+      "lng": 10.9979381,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Al Pompiere"
+    },
+    {
+      "name": "Osteria Trattoria al Duomo",
+      "name_variants": [
+        "Osteria Trattoria Al Duomo",
+        "Trattoria al Duomo"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bigoli al musso",
+        "pastissada de caval",
+        "polenta"
+      ],
+      "signature_dish": null,
+      "quote": "Hearty Veronese classics like bigoli al musso with donkey ragù and pastissada de caval served with polenta.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-veronasera-dona",
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-IT + primary-EN",
+      "article_date": "2025-05-16",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Trattoria La Molinara",
+      "name_variants": [
+        "Osteria La Molinara",
+        "La Molinara"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "gnocchi di patate"
+      ],
+      "signature_dish": null,
+      "quote": "poco lontano dalla centralissima Piazza Brà, nella piccola piazzetta Ottolini, ci sono i piatti di una volta",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-veronasera-dona",
+        "src-wheresemmanow-myrick"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-IT + primary-EN",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 45.4447629,
+      "lng": 10.9941807,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "La Molinara"
+    },
+    {
+      "name": "Hostaria Vecchia Fontanina",
+      "name_variants": [
+        "Vecchia Fontanina"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "si trova in piazzetta Chiavica, in una piccola sala da pranzo vengono serviti piatti genuini a prezzi più che onesti",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 2,
+      "sources": [
+        "src-scattidigusto-pagano",
+        "src-veronasera-dona"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-IT + primary-IT",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4440476,
+      "lng": 10.9999865,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Hosteria La Vecchia Fontanina"
+    },
+    {
+      "name": "Osteria Mondo d'Oro",
+      "name_variants": [
+        "Mondo d'Oro"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Italian",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "beef polpette",
+        "calf brain fritter",
+        "risotto with mushrooms"
+      ],
+      "signature_dish": null,
+      "quote": "Osteria dedicata alla tradizione italiana, with beef polpette, calf brain fritter, and risotto with mushrooms.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 2,
+      "sources": [
+        "src-veronasera-dona",
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-IT + secondary-IT",
+      "article_date": "2025-04-04",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4421226,
+      "lng": 10.9962803,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria Mondo d'Oro"
+    },
+    {
+      "name": "Al Bersagliere",
+      "name_variants": [
+        "Trattoria al Bersagliere"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": 1928,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bigoli with duck",
+        "Amarone risotto",
+        "stewed horse meat"
+      ],
+      "signature_dish": null,
+      "quote": "Family-run trattoria since 1928 serving bigoli with duck, Amarone risotto, and stewed horse meat",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary-IT",
+      "article_date": "2025-04-04",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4363044,
+      "lng": 10.9980386,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Al Bersagliere"
+    },
+    {
+      "name": "Alcova del Frate",
+      "name_variants": [
+        "Enoteca Alcova del Frate"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "carni selezionate"
+      ],
+      "signature_dish": null,
+      "quote": "Una cantina con quasi 1.500 etichette, alcune visibili nelle pareti, piatti molto appetitosi che puntano sulle carni ben selezionate",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-scattidigusto-pagano"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2026-04-11",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4468484,
+      "lng": 10.9995711,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Alcova del Frate"
+    },
+    {
+      "name": "Antica Amelia Bistrot",
+      "name_variants": [
+        "Amelia Bistrot"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Contemporary Italian",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "vitello tonnato"
+      ],
+      "signature_dish": null,
+      "quote": "Chef Micol Zorzella's dishes like vitello tonnato showcase Italian tradition with global inspiration and careful plating.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-EN",
+      "article_date": "2025-05-16",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Antica Bottega del Vino",
+      "name_variants": [
+        "Bottega del Vino"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Dark wood interiors, candlelit tables, and walls lined floor-to-ceiling with bottles create timeless elegance.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-EN",
+      "article_date": "2025-05-16",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4416426,
+      "lng": 10.9971086,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bottega Vini"
+    },
+    {
+      "name": "Iris Ristorante",
+      "name_variants": [
+        "Iris"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Contemporary Italian",
+      "opening_year": null,
+      "price_level": 4,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Chef Giacomo Sacchetto emphasizes sustainability and regional flavors in a setting with 14th-century wine cellar.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-EN",
+      "article_date": "2025-05-16",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4398369,
+      "lng": 11.0001029,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Iris Ristorante"
+    },
+    {
+      "name": "La Taverna di Via Stella",
+      "name_variants": [
+        "Taverna di Via Stella"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "risotto all'Amarone",
+        "polenta",
+        "luccio in salsa",
+        "carne di cavallo"
+      ],
+      "signature_dish": "risotto all'Amarone",
+      "quote": "Risotto all'Amarone (15€), uno dei più apprezzati della città, con menù che include polenta, luccio in salsa e preparazioni di carne di cavallo",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary-IT",
+      "article_date": "2025-04-04",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4417659,
+      "lng": 10.9989269,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Taverna"
+    },
+    {
+      "name": "Le Vecete",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "risotto al tartufo nero"
+      ],
+      "signature_dish": "risotto al tartufo nero",
+      "quote": "il ristorante in via Pellicciai, è l'evoluzione della vecchia osteria, in menù risotto al tartufo nero",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-veronasera-dona"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4421233,
+      "lng": 10.9956148,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria le Vecete"
+    },
+    {
+      "name": "L'Evangelista",
+      "name_variants": [
+        "Evangelista",
+        "L'Evangelista Ristorante & Enoteca"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Contemporary Italian",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "More than dinner, an experience. Features up to three carefully curated tasting menus across every aspect",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-viaggieritratti-lanari"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2024-02-12",
+      "article_title": null,
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 45.43934,
+      "lng": 10.9918585,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "L'Evangelista"
+    },
+    {
+      "name": "Locanda 4 Cuochi",
+      "name_variants": [
+        "4 Cuochi"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Italian",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "rabbit ragù tagliatelle",
+        "lacquered pork shank"
+      ],
+      "signature_dish": null,
+      "quote": "Four friends opened this convivial inn with rabbit ragù tagliatelle and lacquered pork shank",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary-IT",
+      "article_date": "2025-04-04",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4401801,
+      "lng": 10.9937928,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Locanda 4 Cuochi"
+    },
+    {
+      "name": "Locanda di Castelvecchio",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bolliti",
+        "roasted meats"
+      ],
+      "signature_dish": "carrello dei bolliti",
+      "quote": "The star attraction is the carrello dei bolliti—a trolley laden with boiled and roasted meats, served tableside.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-EN",
+      "article_date": "2025-05-16",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4389894,
+      "lng": 10.9873216,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Locanda Castelvecchio"
+    },
+    {
+      "name": "Osteria A La Carega",
+      "name_variants": [
+        "A La Carega",
+        "Osteria alla Carega"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "polpette",
+        "baccalà con polenta"
+      ],
+      "signature_dish": null,
+      "quote": "Polpette—tender little meatballs—and baccalà con polenta, which was comforting, creamy, and deeply satisfying.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-EN",
+      "article_date": "2025-05-16",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4451823,
+      "lng": 10.9945604,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria a la Carega"
+    },
+    {
+      "name": "Osteria ai Osei",
+      "name_variants": [
+        "Ai Osei"
+      ],
+      "neighbourhood": "Golosine",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta fatta in casa"
+      ],
+      "signature_dish": null,
+      "quote": "un locale ancora autentico, dove è rimasto il meglio del passato. Le loro specialità sono: pasta fatta in casa",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-veronasera-dona"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4398534,
+      "lng": 11.0128233,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria ai Osei"
+    },
+    {
+      "name": "Osteria al Carroarmato",
+      "name_variants": [
+        "Al Carroarmato"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "una delle osterie più antiche di Verona, si trova in vicolo Gatto. Propone una cucina casalinga",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-veronasera-dona"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4444092,
+      "lng": 10.9999291,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Osteria Carroarmato"
+    },
+    {
+      "name": "Osteria all'Organetto",
+      "name_variants": [
+        "All'Organetto",
+        "Osteria all Organetto"
+      ],
+      "neighbourhood": "San Zeno",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Un posto caratteristico, oggi guidato dalla gestione giovane e intraprendente che valorizza la tradizione veronese",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-scattidigusto-pagano"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2026-04-11",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Osteria Il Ciottolo",
+      "name_variants": [
+        "Il Ciottolo"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "in corso Cavour si trova la cucina rustica veronese e con la bella stagione si mangia anche all'aperto",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-veronasera-dona"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.440103,
+      "lng": 10.9898384,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Il Ciottolo"
+    },
+    {
+      "name": "Osteria Pericotti",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta"
+      ],
+      "signature_dish": null,
+      "quote": "la vera trattoria, ambiente semplice ma curato, vini eccellenti da una delle migliori cantine della Valpolicella",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-veronasera-dona"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Osteria Sottoriva",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "una delle osterie più conosciute e frequentate della città, situata sotto gli archi di una delle vie più suggestive",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-veronasera-dona"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4444996,
+      "lng": 11.0003816,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria Sottoriva"
+    },
+    {
+      "name": "Ostregheteria Sottoriva 23",
+      "name_variants": [
+        "Sottoriva 23"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Italian",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Amarone risotto"
+      ],
+      "signature_dish": "Amarone risotto",
+      "quote": "Amarone risotto, which I have to admit was one of the best I tried in Verona.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-roamandthrive-wieteska"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-EN",
+      "article_date": "2025-05-16",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4451016,
+      "lng": 11.0004575,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Ostregheteria Sottoriva 23"
+    },
+    {
+      "name": "Pizzeria Da Vincenzo",
+      "name_variants": [
+        "Da Vincenzo"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Pizza",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pizza"
+      ],
+      "signature_dish": null,
+      "quote": "one of Verona's finest pizzerias. Expect pizza where flour, fermentation, and ingredient quality are paramount",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-viaggieritratti-lanari"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2024-02-12",
+      "article_title": null,
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 45.4402259,
+      "lng": 10.9965639,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pizzeria da Vincenzo"
+    },
+    {
+      "name": "Pizzeria Du De Cope",
+      "name_variants": [
+        "Du De Cope"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Pizza",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pizza tonda classica"
+      ],
+      "signature_dish": null,
+      "quote": "Pizze tonde classiche nel senso moderno del termine, con diametro contenuto e cornicione ben presente",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-scattidigusto-pagano"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2026-04-11",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4418562,
+      "lng": 10.9949948,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pizzeria Du De Cope"
+    },
+    {
+      "name": "Redentore",
+      "name_variants": [],
+      "neighbourhood": "Veronetta",
+      "cuisine": "Italian",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pizza"
+      ],
+      "signature_dish": null,
+      "quote": "offers both typical dishes and common fare, plus excellent pizzas, all in a welcoming and informal setting",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-viaggieritratti-lanari"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2024-02-12",
+      "article_title": null,
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 45.4467999,
+      "lng": 11.0020003,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Redentore"
+    },
+    {
+      "name": "San Basilio alla Pergola",
+      "name_variants": [],
+      "neighbourhood": "Golosine",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "ricotta-spinach cannelloni",
+        "lamb chops"
+      ],
+      "signature_dish": null,
+      "quote": "Rustic dining rooms where chef Gian Maria Bicego serves ricotta-spinach cannelloni and lamb chops",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary-IT",
+      "article_date": "2025-04-04",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Trattoria Alla Fedeltà",
+      "name_variants": [
+        "Alla Fedeltà",
+        "Alla Fedelta"
+      ],
+      "neighbourhood": "Veronetta",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "gnocchi fatti in casa",
+        "pearà"
+      ],
+      "signature_dish": "gnocchi fatti in casa",
+      "quote": "è il posto migliore dove mangiare sugosi, morbidi gnocchi fatti in casa, pearà sublime",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-veronasera-dona"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Trattoria dalla Bruna",
+      "name_variants": [
+        "Dalla Bruna"
+      ],
+      "neighbourhood": "Golosine",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "bollito",
+        "pearà"
+      ],
+      "signature_dish": "bollito con pearà",
+      "quote": "one of the best places to eat bollito with pearà in Verona and taste typical Veronese dishes at fair prices",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-viaggieritratti-lanari"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2024-02-12",
+      "article_title": null,
+      "open_status_check": true,
+      "flagged": true,
+      "lat": 45.4583212,
+      "lng": 10.9769049,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Dalla Bruna"
+    },
+    {
+      "name": "Trattoria La Pesa",
+      "name_variants": [
+        "La Pesa"
+      ],
+      "neighbourhood": "Avesa",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pasta e fagioli",
+        "polenta"
+      ],
+      "signature_dish": null,
+      "quote": "si beve e si mangia bene al giusto prezzo. Pasta e fagioli, secondi serviti con la polenta",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-veronasera-dona"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4737673,
+      "lng": 11.0168422,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria La Pesa"
+    },
+    {
+      "name": "Trattoria Pane e Vino",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "un locale classico e curato, si trova in via Garibaldi e propone una cucina regionale",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-veronasera-dona"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4458897,
+      "lng": 10.9955794,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Pane e Vino"
+    },
+    {
+      "name": "Trattoria Trota da Luciano",
+      "name_variants": [
+        "Da Luciano"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "carni alla griglia"
+      ],
+      "signature_dish": null,
+      "quote": "una delle ultime vecchie trattorie rimaste in piazzetta Pescheria. Offre una cucina rustica, basata su carni alla griglia",
+      "quote_language": "original",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-veronasera-dona"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-IT",
+      "article_date": "2025-10-10",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4437039,
+      "lng": 11.0002059,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Trattoria Trota da Luciano"
+    },
+    {
+      "name": "Vescovo Moro",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Veronese",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "pike in sauce",
+        "horse meat stew"
+      ],
+      "signature_dish": null,
+      "quote": "Restaurant and wine bar in renovated former garage offering pike in sauce and horse meat stew",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-cibotoday-pozzi"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "secondary-IT",
+      "article_date": "2025-04-04",
+      "article_title": null,
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 45.4435261,
+      "lng": 10.9778044,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Vescovo Moro"
+    }
+  ],
+  "centroids": {
+    "Centro Storico": [
+      45.4424,
+      10.9959
+    ],
+    "Golosine": [
+      45.4491,
+      10.9949
+    ],
+    "Veronetta": [
+      45.4468,
+      11.002
+    ],
+    "San Zeno": [
+      45.442,
+      10.982
+    ]
+  }
+}
