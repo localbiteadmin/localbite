@@ -1235,13 +1235,13 @@ async function loadCity(meta) {
 
     currentCityData = data;
     allRestaurants = data.restaurants || [];
-    (data.sources || []).forEach(s => { const key = s.id || s.source_id; if (key) currentSources[key] = s; });
+    const srcArr = Array.isArray(data.sources) ? data.sources : Object.values(data.sources || {}); srcArr.forEach(s => { const key = s.id || s.source_id; if (key) currentSources[key] = s; });
 
     renderHero(data, meta);
     buildFilters(allRestaurants, data);
     resetFilters();
     renderCards(allRestaurants);
-    renderCredits(data.sources || []);
+    renderCredits(Array.isArray(data.sources) ? data.sources : Object.values(data.sources || {}));
 
     document.getElementById('loading').style.display = 'none';
     document.getElementById('city-hero').style.display = 'block';
