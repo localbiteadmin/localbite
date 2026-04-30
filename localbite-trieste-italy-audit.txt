@@ -1,0 +1,129 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+LocalBite v7.1 — Trieste, Italy
+AUDIT FILE
+Generated: 2026-04-30
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PIPELINE SUMMARY
+────────────────
+Sources confirmed in Phase 1: 7
+  Sources fetching successfully: 7
+  Sources contributing ≥1 restaurant: 6
+  Sources contributing 0 restaurants: 1 (fionadunlop-dunlop — see geographic exclusion below)
+
+Working file entries (pre-dedup): 32
+After deduplication: 25 unique restaurants
+Tier A (auto-approved): 4
+Tier B (kept): 10
+Recommended removals (auto-accepted, UNATTENDED_MODE): 11
+Auto-rejected Tier C (Phase 3): 0
+Extraction-time auto-rejections: 8 (see section below)
+Final restaurant count: 14
+Both-pool entries: 2 (Buffet da Pepi, Chimera di Bacco)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1 — GEOGRAPHIC EXCLUSIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Fabec Franc osmiza | EXTRACTION-REJECT | geographic boundary — Malchina village described as "inland from the riviera between Sistiana and Duino"; Duino-Aurisina is explicitly excluded per GEOGRAPHIC_BOUNDARY_EXCLUDE | src-fionadunlop-dunlop
+
+Note: fionadunlop-dunlop (Fiona Dunlop, May 26, 2023) was confirmed as a primary EN source in Phase 1. Phase 2 fetch succeeded (2,850 chars). However, the sole restaurant extracted (Fabec Franc at Malchina) was auto-rejected at extraction time due to geographic boundary violation — Malchina (Mavhinje) is a locality within the Comune di Duino-Aurisina, which is explicitly excluded. Source contributed 0 restaurants and is not included in the final sources array.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2 — MICHELIN EXCLUSION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Harry's Piccolo | MICHELIN-EXCLUDE | 2★ Michelin (Michelin Guide Italy 2026) — per Part 1 MICHELIN_STARRED_EXCLUSIONS; excluded at extraction despite being mentioned in milanowineweek article | src-milanowineweek-colognese
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3 — EXTRACTION-TIME AUTO-REJECTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Format: name | reason | source
+
+Enoteca Nanut | wine bar, quote under 15 words | src-milanowineweek-colognese
+Buffet Birreria Rudy | quote under 15 words (13 words) | src-souvenirdiviaggio-nuzzaci
+Trattoria Mara | quote under 15 words (9 words) | src-souvenirdiviaggio-nuzzaci
+Pier | bar-only, no restaurant food menu | src-wheresemmanow-myrick
+Gelateria Zampoli | gelateria, not a restaurant | src-wheresemmanow-myrick
+Gelato Marco | gelateria, not a restaurant | src-wheresemmanow-myrick
+Castello di Miramare bar | café/bar-only, no restaurant food | src-finedininglovers-concas
+[pipeline-resume note] aMano, Buffet Clai, Da Siora Rosa were initially noted in fetch log as quote-under-threshold from gamberorosso source during prior session; upon pipeline resume and re-fetch, full paragraph text was recovered (40+ words each). All three re-extracted successfully and appear in final working file and output.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4 — PHASE 3 AUTO-REMOVED (UNATTENDED_MODE)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Format: name | reason | tier | source
+
+[A] Café/bar-only — not a restaurant:
+Lovat Caffè | café inside a bookshop, coffee only | Tier B | src-liveinitalymag-salcedo
+Antico Caffè Torinese | café/bar, Spritz and coffee only | Tier B | src-liveinitalymag-salcedo
+Caffè degli Specchi | historic café, coffee and pastries only | Tier B | src-finedininglovers-concas
+
+[B] Null-neighbourhood single-source (no explicit district reference in quote):
+Menarosti | null neighbourhood, 1 source, "in città" (generic) | Tier B | src-milanowineweek-colognese
+NerodiSeppia | null neighbourhood, 1 source, "sulla piazza triestina" (generic) | Tier B | src-milanowineweek-colognese
+Osteria Al Tempo Perso | null neighbourhood, 1 source, "in periferia nei pressi della ferrovia" (descriptive but not a canonical district) | Tier B | src-souvenirdiviaggio-nuzzaci
+Hostaria Malcanton | null neighbourhood, 1 source, no location reference in quote | Tier B | src-wheresemmanow-myrick
+Trattoria Mara | null neighbourhood, 1 source, no location reference in quote | Tier B | src-wheresemmanow-myrick
+Osteria da Scarpon | null neighbourhood, 1 source, no location reference in quote | Tier B | src-liveinitalymag-salcedo
+Buffet da Rudy | null neighbourhood, 1 source, no location reference in quote | Tier B | src-liveinitalymag-salcedo
+Al Civicosei | null neighbourhood, 1 source, no location reference in quote | Tier B | src-finedininglovers-concas
+
+Total auto-removed: 11
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5 — COI DISCLOSURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+src-gamberorosso-becchi (secondary, IT):
+  Gambero Rosso is Italy's leading food media company and publisher of the annual Gambero Rosso Ristoranti d'Italia guide. Michela Becchi writes as a staff journalist for the same commercial publisher. Classified as secondary source; contributes to diversity gate count. Restaurants from this source appearing in final pack: aMano, Buffet L'Approdo (sole source); also confirmed Buffet Clai and Da Siora Rosa (multi-source, primary IT source also confirms).
+
+src-finedininglovers-concas (secondary, EN):
+  Fine Dining Lovers is an editorial platform associated with S.Pellegrino and Acqua Panna (Nestlé Waters brands). Classified as secondary source; contributes to diversity gate count. Restaurants from this source appearing in final pack: La Bottega dell'Antiquario, Trattoria Le Barettine (sole source); also confirmed Buffet da Pepi and Chimera di Bacco (multi-source).
+
+Diversity gate: ≥1 primary IT (milanowineweek, souvenirdiviaggio) ✓ | ≥1 primary EN (wheresemmanow, liveinitalymag) ✓ | ≤2 secondary/COI (gamberorosso, finedininglovers) ✓ — PASSED
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 6 — CONCENTRATION CAP REPORT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cap threshold: 30% of total Tier A + B entries (25 pre-removal)
+= 7.5 → cap triggers at 8 single-source Tier B entries from one publisher
+
+milanowineweek-colognese: 7 single-source Tier B entries (28%) → within cap ✓
+All other publishers: ≤4 single-source Tier B entries → within cap ✓
+
+Concentration cap not triggered. No entries removed.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 7 — PHASE 1 SOURCE REJECTIONS (summary)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Sources rejected in Phase 1 source selection:
+gamberorosso.it (ristoranti tipici) | REJECTED-date | Michela Becchi, Feb 18, 2020 — outside YEAR_RANGE 2023-2026
+liciasangermano.it | REJECTED-date | Jun 13, 2022 — outside YEAR_RANGE 2023-2026
+mammamiaindeed.com | REJECTED-byline | authors "Kat" and "Raf" only, no surnames; dual-author site
+valentinastravelguide.com | REJECTED-byline | author "Valentina" only, no surname available on About page
+travelsonpoint.com | REJECTED-byline | "Nancy H." — initials-only byline
+silversea.com | REJECTED-coi | Laura Lazzaroni author confirmed; dropped: COI flag (cruise company) and only 2 extractable Trieste restaurants after geographic exclusions
+linkiesta.it/2023/09 | REJECTED-byline | Sep 14, 2023, within range, but no author byline
+decanter.com | REJECTED-byline | Feb 11, 2026, within range, but no author byline
+gamberorossointernational.com | REJECTED-byline | "Gambero Rosso" team credit; same publisher as IT edition; sibling-check failed
+slowfood.it/slowfood-travel | REJECTED-byline | no named author, no publication date
+falstaff.com | REJECTED-byline | no author byline, no publication date
+triesteprima.it | REJECTED-byline | "Redazione" (editorial team) credit
+triesteallnews.it | REJECTED — aggregated ratings concern, no named editorial voice
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 8 — OPEN STATUS CHECK FLAGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+All 14 restaurants in final pack have open_status_check: true.
+This reflects that 5 of 6 contributing sources are from 2023 or 2024.
+One source (liveinitalymag, Apr 2026) is current; its Buffet da Pepi entry
+does not independently require open status check, but the merged entry
+retains open_status_check: true due to its other pre-2025 sources.
+
+Pre-verification recommended before deployment:
+  All 14 restaurants should be verified open before pack goes live.
+  Priority: Da Siora Rosa (note: closed mid-2023, reopened by '040 Group' per Jun 2024 source).

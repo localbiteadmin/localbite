@@ -1,0 +1,109 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+LocalBite v7.1 — Trieste, Italy
+Search Plan
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CITY: Trieste | COUNTRY: Italy | CITY_SLUG: trieste-italy
+YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: Italian (IT) | SECONDARY_LANGUAGE: English (EN)
+SINGLE_LANGUAGE_CITY: NO
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART A — NEIGHBOURHOOD COVERAGE (19 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TIER 1 — Centro (Piazza Unità d'Italia, Canale Grande, Borgo Teresiano)
+A-1  [neighbourhood-Centro]    "migliori ristoranti Centro Trieste Piazza Unità 2023 2024"          [IT, earlier]
+A-2  [neighbourhood-Centro]    "best restaurants Centro Trieste Borgo Teresiano 2025 2026"          [EN, later]
+
+TIER 1 — Città Vecchia
+A-3  [neighbourhood-CittàVecchia]  "ristoranti Città Vecchia Trieste consigliati 2024"              [IT, earlier]
+A-4  [neighbourhood-CittàVecchia]  "where to eat Città Vecchia Trieste old town 2025"              [EN, later]
+
+TIER 1 — San Giacomo
+A-5  [neighbourhood-SanGiacomo]   "ristoranti San Giacomo Trieste 2025"                            [IT, later]
+A-6  [neighbourhood-SanGiacomo]   "restaurants San Giacomo Trieste neighbourhood 2023 2024"        [EN, earlier]
+
+TIER 2 — Roiano
+A-7  [neighbourhood-Roiano]   "ristoranti Roiano Trieste 2024"                                     [IT, earlier]
+A-8  [neighbourhood-Roiano]   "restaurants Roiano Trieste 2025"                                    [EN, later]
+
+TIER 2 — Barcola
+A-9  [neighbourhood-Barcola]  "dove mangiare Barcola Trieste 2023"                                 [IT, earlier]
+A-10 [neighbourhood-Barcola]  "best places to eat Barcola Trieste 2025"                            [EN, later]
+
+TIER 2 — Gretta
+A-11 [neighbourhood-Gretta]   "ristoranti Gretta Trieste 2025"                                     [IT, later]
+A-12 [neighbourhood-Gretta]   "restaurants Gretta Trieste 2024"                                    [EN, earlier]
+
+TIER 2 — Chiadino
+A-13 [neighbourhood-Chiadino] "ristoranti Chiadino Trieste 2024"                                   [IT, earlier]
+A-14 [neighbourhood-Chiadino] "food dining Chiadino Trieste 2025"                                  [EN, later]
+
+TIER 2 — Rozzol
+A-15 [neighbourhood-Rozzol]   "ristoranti Rozzol Trieste"                                          [IT, no year]
+A-16 [neighbourhood-Rozzol]   "restaurants Rozzol Trieste 2025"                                    [EN, later]
+
+TIER 3 — Opicina
+A-17 [neighbourhood-Opicina]  "osmize Opicina Trieste Carso consigliati 2024 2025"                 [IT]
+
+TIER 3 — Prosecco
+A-18 [neighbourhood-Prosecco] "ristoranti Prosecco Trieste Carso 2025"                             [IT, later]
+
+TIER 3 — Santa Croce
+A-19 [neighbourhood-SantaCroce] "ristoranti Santa Croce Trieste 2024"                             [IT, earlier]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PART B — CROSS-CUTTING ANGLES (18 queries)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Cross-1 — City-wide EN (2 queries)
+B-1  [cross-1] "best restaurants Trieste Italy 2025 food guide"                                    [EN, editorial, later]
+B-2  [cross-1] "where to eat in Trieste Italy local recommendations 2023 2024"                     [EN, personal, earlier]
+
+Cross-2 — City-wide IT (3 queries)
+B-3  [cross-2] "migliori ristoranti Trieste 2025 guida gastronomica"                               [IT, formal, later]
+B-4  [cross-2] "dove mangiare a Trieste quartiere consigli 2023 2024"                              [IT, casual, earlier]
+B-5  [cross-2] "Trieste ristoranti consigliati critico gastronomico 2025 2026"                     [IT, press guide, later]
+
+Cross-3 — Generic writer-first (2 queries)
+B-6  [cross-3] "food writer Trieste Italy restaurant guide 2024 2025"                              [EN]
+B-7  [cross-3] "giornalista gastronomico Trieste guida ristoranti 2024"                            [IT]
+
+Cross-4 — Named awards (3 queries)
+B-8  [cross-4] "50 Top Italy Trieste ristoranti premiati 2024 2025"                                [IT]
+B-9  [cross-4] "Gambero Rosso Trieste ristoranti tre forchette 2024 2025"                          [IT]
+B-10 [cross-4] "Slow Food Osterie d'Italia Trieste trattoria consigliata 2023 2024"                [IT]
+
+Cross-5 — Recent openings (2 queries)
+B-11 [cross-5] "nuovi ristoranti Trieste aperture 2024 2025"                                       [IT, later]
+B-12 [cross-5] "new restaurant openings Trieste 2025 2026"                                        [EN, later]
+
+Cross-6 — Vocabulary-specific IT (2 queries)
+B-13 [cross-6] "buffet triestino migliore Trieste carni bollite musetto 2024 2025"                 [IT - buffet triestino]
+B-14 [cross-6] "osmize migliori Carso Trieste vino cibo 2023 2025"                                 [IT - osmize]
+
+Cross-7 — Cuisine and community (2 queries)
+B-15 [cross-7] "cucina asburgica mitteleuropea Trieste ristoranti goulash strudel 2024"            [IT - Habsburg]
+B-16 [cross-7] "caffè storico Trieste letterario tradizione 2023 2025"                             [IT - historic cafés]
+
+Cross-8 — Publication category IT (2 queries)
+B-17 [cross-8] "rivista gastronomica italiana ristoranti Trieste consigliati 2025"                 [IT - food magazine]
+B-18 [cross-8] "supplemento gastronomia giornale locale Trieste ristoranti 2024 2025"              [IT - newspaper supplement]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUERY COUNT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Part A: 19 queries
+Part B: 18 queries
+Total planned: 37 queries
+Soft ceiling: 45 | Hard ceiling: 55
+
+YEAR DISTRIBUTION CHECK:
+Queries referencing 2023 or 2024 (earlier portion): A-1, A-3, A-6, A-7, A-9, A-12, A-13, A-19, B-2, B-4, B-7, B-10, B-15 = 13 queries
+Queries referencing 2025 or 2026 (later portion):   A-2, A-4, A-5, A-8, A-10, A-11, A-14, A-16, A-17, A-18, B-1, B-3, B-5, B-6, B-8, B-9, B-11, B-12, B-13, B-14, B-16, B-17, B-18 = 23 queries
+Queries with no year term: A-15 = 1 query
+
+[year-distribution-check] PASSED — 13 queries reference earlier years (2023/2024), 23 queries reference recent years (2025/2026), 1 query has no year term.

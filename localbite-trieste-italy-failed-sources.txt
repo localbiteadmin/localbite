@@ -1,0 +1,19 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+LocalBite v7.1 — Trieste, Italy
+FAILED SOURCES
+Generated: 2026-04-30
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+No permanent fetch failures in this pipeline run.
+
+All 7 sources confirmed in Phase 1 returned 200 responses via Jina.
+No source required retries (Retry 1, Retry 2, or Wayback fallback).
+
+Zero-restaurant source note:
+  fionadunlop-dunlop (Fiona Dunlop, fionadunlop.com, May 2023)
+  Fetch succeeded (2,850 chars). Zero restaurants extracted.
+  Reason: sole restaurant (Fabec Franc osmiza, Malchina) auto-rejected
+  at extraction time — geographic boundary violation (Duino-Aurisina
+  municipality, explicitly excluded per GEOGRAPHIC_BOUNDARY_EXCLUDE).
+  This is not a fetch failure; it is an extraction-time geographic
+  exclusion. Documented in audit file, Section 1.
