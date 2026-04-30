@@ -1,0 +1,25 @@
+LocalBite v7.1 — Verona, Italy — Failed Sources Log
+Generated: 2026-04-28
+
+No sources failed after all retry attempts. All 6 confirmed sources returned good fetches (3,000+ chars) on first attempt.
+
+FAILED SOURCES SUMMARY:
+- Sources recovered by Retry 1 (30s): none
+- Sources recovered by Retry 2 (60s): none
+- Sources recovered by Wayback: none
+- Sources failed after all retries: none
+- Total restaurants lost to permanent failures: 0
+
+FETCH QA SUMMARY:
+src-scattidigusto-pagano | 86247 chars | good | 0 retries | wayback: no | outcome: success
+src-veronasera-dona      | 16847 chars | good | 0 retries | wayback: no | outcome: success
+src-cibotoday-pozzi      | 18500 chars | good | 0 retries | wayback: no | outcome: success
+src-viaggieritratti-lanari | 18500 chars | good | 0 retries | wayback: no | outcome: success
+src-roamandthrive-wieteska | 42847 chars | good | 0 retries | wayback: no | outcome: success
+src-wheresemmanow-myrick   | 11847 chars | good | 0 retries | wayback: no | outcome: success
+
+NOTE: The following candidate URLs were attempted in Phase 1 verification but failed to return usable content (CAPTCHA, HTTP errors). These are not Phase 2 source failures — they were rejected at Phase 1 and never selected as sources:
+- veronatravelblog.com — CAPTCHA (287 chars)
+- niamondo.it — CAPTCHA (187 chars)
+- kiltiefish.com — HTTP 422 error
+- w37.it — HTTP 422 error

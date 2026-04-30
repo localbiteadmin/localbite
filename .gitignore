@@ -9,3 +9,47 @@ h600*/
 tiles/
 *.pages
 .env
+
+# Pipeline working files — never commit
+*-working.json
+*-raw.json
+*-geocoded-backup.json
+*-geocoding-stats.json
+
+# Generated full prompt files — local only
+*-italy-full.txt
+
+# Fix and patch scripts — local only
+fix-*.py
+patch-*.py
+reconstruct-*.py
+enrich-*.py
+diagnose-*.py
+read-for-fixes.py
+build-*.py
+get-*.py
+add-*.py
+combine-italy-prompts.py
+test-engineering-fixes.js
+
+# Old global instructions versions — keep only current in project knowledge
+localbite-global-instructions-2026-04-2[0-8]*.md
+localbite-global-instructions-delta-*.md
+localbite-insights-*.md
+localbite-session-journal-*.md
+localbite-session-2026-*.md
+localbite-journal-entry-*.md
+localbite-next-session-plan-*.md
+localbite-italy-*.md
+
+# HTML reports and PDFs — local only
+*.html
+localbite-fetch-status-analysis.pdf
+localbite-url-verification-report.pdf
+
+# Other local-only files
+localbite-part1-preresearch-template.txt
+localbite-phase0-prepipeline-template.txt
+apply-*.py
+localbite-global-instructions-2026-*.md
+journal-entry-*.md

@@ -1,0 +1,62 @@
+LocalBite v7.1 — Venice, Italy
+Failed / Partial Sources Log
+Generated: 2026-04-28
+═══════════════════════════════════════════════════════════════════
+
+FULLY FAILED SOURCES (0 qualifying venues extracted)
+──────────────────────────────────────────────────────
+
+FAIL-01 | Elizabeth Minchilli | elizabethminchilli.com | EN
+  Author: Elizabeth Minchilli
+  Attempt dates: 2026-04-28
+  Failure reason: REJECTED-date — all Venice restaurant posts are 2012-2016, outside
+    YEAR_RANGE 2023-2026. No Venice content updated within the required range.
+  URLs attempted:
+    - elizabethminchilli.com/category/venice-restaurants/ → 200, all posts 2012-2016
+    - elizabethminchilli.com/tag/venice/ → 404 (page does not exist)
+    - elizabethminchilli.com/venice/ → 200, redirected to 2014 Cicchetti Tour post
+  Recommendation: Re-check in future pipeline runs; author is a well-known Venice expert
+    and may publish new Venice content within YEAR_RANGE.
+
+FAIL-02 | Unknown author | w37.it | IT
+  URL attempted: w37.it/i-20-migliori-ristoranti-di-venezia-guida-completa-2023/
+  Failure reason: HTTP 422 error — Jina fetch returned error, page inaccessible.
+  Note: W37 Food and Wine is an Italian food publication that may have had qualifying
+    content. Source abandoned after single fetch failure.
+
+FAIL-03 | Nic Miller | topographickitchens.substack.com | EN
+  URL attempted: topographickitchens.substack.com/p/hungry-in-cannaregio
+  Failure reason: 404 — page no longer exists. Article about dining in Cannaregio
+    was surfaced in search results but the URL has since been removed or restructured.
+
+FAIL-04 | Gillian McGuire / Carlo Mantuano | theinfatuation.com | EN
+  URL attempted: r.jina.ai/theinfatuation.com/venice/guides/best-restaurants-hotels-venice-italy
+  Failure reason: REJECTED-date — article dated September 16 2022, outside YEAR_RANGE.
+  Note: The Infatuation Venice guide would otherwise have qualified (named byline,
+    editorial standards). Check for updated version in future pipeline runs.
+
+FAIL-05 | "delicious. team" | deliciousmagazine.co.uk | EN
+  URL attempted: r.jina.ai/deliciousmagazine.co.uk/venice/
+  Failure reason: REJECTED-date (October 1 2014) AND REJECTED-byline (collective
+    "delicious. team" byline does not meet named individual author requirement).
+
+PARTIAL FAILED SOURCES (qualified but 0 venues extracted due to fetch quality)
+────────────────────────────────────────────────────────────────────────────────
+
+PARTIAL-01 | Silvia Cannas Simontacchi | salteditions.it | IT
+  Author: Silvia Cannas Simontacchi
+  Article: "Breve guida enogastronomica a Venezia"
+  Article date: 2024-12-12
+  URL attempted: r.jina.ai/salteditions.it/breve-guida-enogastronomica-a-venezia/
+  Fetch result: 200 | ~7000ch | ACCEPTED at source level (named author, within YEAR_RANGE)
+  Failure reason: Jina fetch content consisted primarily of website navigation elements,
+    social media links (Instagram handles), and URLs rather than verbatim article prose.
+    No restaurant entry reached the extraction quality threshold (≥15 words + ≥1 specific
+    detail). Approximately 10 restaurants mentioned in article structure but not extractable
+    from fetch content.
+  Impact: Source moved to failed-sources log. Zero venues contributed to final dataset.
+  Recommendation: Retry with direct WebFetch or different fetch strategy in future runs.
+    SALT Editions is a legitimate IT food publication; the content barrier was technical.
+═══════════════════════════════════════════════════════════════════
+END OF FAILED SOURCES LOG
+═══════════════════════════════════════════════════════════════════

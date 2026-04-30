@@ -1,0 +1,45 @@
+LocalBite v7.1 — Modena, Italy
+Failed / Rejected Sources Log — 2026-04-29
+===================================================
+
+[CAPTCHA] https://r.jina.ai/https://katieparla.com/city-guides/modena/
+  Status: 200+CAPTCHA | Reason: Jina returned robot challenge screen, content blocked
+  Resolution: Direct WebFetch succeeded
+
+[HTTP-451] https://r.jina.ai/https://web.archive.org/web/2026/https://katieparla.com/city-guides/modena/
+  Status: 451 | Reason: Wayback Machine blocked via Jina
+  Resolution: Direct WebFetch to original URL succeeded
+
+[REJECTED-byline] https://r.jina.ai/https://www.gamberorosso.it/attualita/dove-mangiare-a-modena-i-migliori-locali-per-tutte-le-tasche-bistrot-street-food-enoteche-trattorie-e-pizzerie/
+  Status: 200 | Reason: No named author; editorial team credit only
+
+[REJECTED-byline] https://r.jina.ai/https://theitalianontour.com/where-to-eat-in-modena/
+  Status: 200 | Reason: No named author in article; editorial team credit only
+
+[REJECTED-byline] https://r.jina.ai/https://tg24.sky.it/lifestyle/2023/04/15/ristoranti-modena
+  Status: 200 | Reason: Credit "a cura di Costanza Ruggeri" is editorial/curatorial, not a named byline
+
+[REJECTED-date] https://r.jina.ai/https://www.2foodtrippers.com/modena-restaurants/
+  Status: 200 | Named authors: Daryl and Mindi Hirsch (confirmed) | Date: 2019-12-26 — outside YEAR_RANGE 2023-2026
+
+[REJECTED-byline] https://r.jina.ai/https://www.tastebologna.net/blog/modena-day-trip
+  Status: 200 | Reason: Author "Andrea" — first name only, no surname; pipeline requires full first name AND surname
+
+[REJECTED-byline] https://r.jina.ai/https://globalgluttons.com/guides/modena-glutton-guide/
+  Status: 200 | Reason: No named author; date August 2019 outside YEAR_RANGE
+
+[REJECTED-byline] https://r.jina.ai/https://www.baconismagic.ca/italy/where-to-eat-in-modena/
+  Status: 200 | Reason: No named author; date January 2015 outside YEAR_RANGE
+
+[REJECTED-geo] https://r.jina.ai/https://www.lucianopignataro.it/a/dove/emilia-romagna/modena/
+  Status: 200 | Reason: All restaurants found are Michelin-starred or outside Modena city limits
+
+[REJECTED-non-additive] https://r.jina.ai/https://www.italyfoodies.com/blog/what-to-eat-in-modena-food-guide
+  Status: 200 | Author: Angelo Sorrentino (confirmed) | Date: August 2025 (valid)
+  Reason: Only qualifying restaurant is Bar Schiavoni, already in pool from Katie Parla and subsequently removed Phase 3; non-additive
+
+[REJECTED-date] https://ciaobella.co/destination-modena/
+  Status: 200 | Author: Erica Firpo (confirmed) | Reason: Undated article — cannot confirm within YEAR_RANGE 2023-2026
+
+[HTTP-403] https://www.cibotoday.it/mappe/trattorie-modena-dove-mangiare.html
+  Status: 403 (direct fetch) | Resolution: Jina fetch succeeded (200 ~6000ch) — source accepted via Jina
