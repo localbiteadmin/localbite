@@ -1,0 +1,40 @@
+[neighbourhood-Centro Storico] "migliori ristoranti Centro Storico Catania 2024 2025 guida" → Multiple candidates: gamberorosso.it (Valentina Marino), finedininglovers.it, generazioneviaggio.it; Gambero Rosso confirmed top candidate.
+[neighbourhood-Centro Storico] "best restaurants Centro Storico Catania Italy 2024 2025" → New EN candidates: mypersonalsicily.com, goaskalocal.com, casamiatours.com, authenticfoodquest.com.
+[neighbourhood-Borgo] "ristoranti quartiere Borgo Catania dove mangiare 2023 2024" → agrodolce.it (2023 guide) flagged as candidate; no other editorial sources found.
+[neighbourhood-Borgo] "restaurants Borgo Catania food guide 2024 2025" → thebellaboot.com, deeph2oh.com/thebug (Gentry Travels) identified; no new editorial sources vs Q01-Q03.
+[neighbourhood-San Cristoforo] "ristoranti San Cristoforo Catania gastronomia 2024 2025" → gamberorosso.it confirmed; siciliadagustare.com noted (no named author on general pages).
+[neighbourhood-San Cristoforo] "restaurants San Cristoforo Catania dining 2023 2024" → travelingitalian.com, italysegreta.com noted; goaskalocal.com appears again.
+[neighbourhood-Picanello] "ristoranti Picanello Catania dove mangiare osterie 2024 2025" → finedininglovers.it confirmed again; dissapore.com (Slow Food list) noted.
+[neighbourhood-Ognina] "migliori ristoranti Ognina Catania pesce trattorie 2023 2024" → gamberorosso.it seafood article found (separate from main guide).
+[neighbourhood-Ognina] "restaurants Ognina Catania seafood dining 2024 2025" → seafoodslurps.com noted; no new editorial sources.
+[neighbourhood-San Giovanni Galermo] "ristoranti San Giovanni Galermo Catania 2023 2024" → Only directory listings (paginegialle, virgilio); no editorial sources.
+[neighbourhood-Nesima] "ristoranti Nesima Catania dove mangiare 2024 2025" → No editorial sources specific to Nesima.
+[neighbourhood-Librino] "ristoranti Librino Catania 2024" → No editorial sources; peripheral residential area.
+[neighbourhood-San Giorgio] "trattorie osterie San Giorgio Catania 2023 2024" → allfoodsicily.it Slow Food coverage noted; no new named-author sources.
+[neighbourhood-Cibali] "ristoranti Cibali Catania dove mangiare 2024" → No editorial sources specific to Cibali.
+[neighbourhood-San Leone] "ristoranti San Leone Catania gastronomia 2025" → Results returned San Leone (Agrigento), not Catania; no applicable sources.
+[cross-1] "best restaurants Catania Italy 2025 food guide review" → italysegreta.com, travelingitalian.com, idealmagazine.co.uk, thebellaboot.com, authenticfoodquest.com identified; postcardsfromsanantonio.com first appears.
+[cross-1] "where to eat Catania Italy local food recommendations 2023 2024" → streaty.com, thebellaboot.com, goaskalocal.com, deeph2oh.com confirmed; luggageandlife.com (2020) too old.
+[cross-2] "critica gastronomica Catania ristoranti consigliati 2024 2025" → gamberorosso.it dominant; italysegreta.com IT version confirmed no named author.
+[cross-2] "dove mangiare a Catania osterie trattorie consigli 2024" → gamberorosso.it seafood article (second piece); magazine.bernabei.it noted as no-author candidate.
+[cross-2] "guida ristoranti Catania giornalismo gastronomico 2023 2024" → passionegourmet.it Sapio article (2024) found — but Sapio is Michelin excluded; mangiaredadio.it Gambero Rosso coverage noted.
+[cross-3] "critico gastronomico Catania blog gastronomia Sicilia 2025" → allfoodsicily.it confirmed multi-author; Sicily named European Region of Gastronomy 2025.
+[cross-3] "food writer Catania Sicily restaurant guide 2024" → trailsofsicily.com, katieparla.com Sicily guide, thebellaboot.com; pizzagirlpatrol.com digital guide noted.
+[cross-4] "50 Top Italy Catania ristoranti premiati 2024 2025" → Scirocco won 50 Top Italy street food 2024 award; carlozucchetti.it awards lists found.
+[cross-4] "Gambero Rosso ristoranti Catania 2024 2025 premiati" → scattidigusto.it Gambero Rosso winners list found; cataniatoday.it article on 3 new Catania entries.
+[cross-4] "Slow Food Osterie d'Italia Catania 2024 2025" → cultureandterroir.com (Paolo Li Rosi, Dec 2023) identified — ACCEPTED. Me Cumpari Turiddu confirmed Chiocciola.
+[cross-5] "nuovi ristoranti aperture Catania 2024 2025" → Bavetta (2024 opening, chef Marco Cannizzaro) noted.
+[cross-5] "new restaurant openings Catania Sicily 2024 2025" → No new editorial sources found.
+[cross-6] "arancino granita brioche trattoria Catania 2024 guida gastronomica autore" → scattidigusto.it arancini article (Nico Cristiani, Jan 2024) identified.
+[cross-6] "pasta alla Norma pescheria pesce spada rosticceria Catania 2025 ristoranti" → gamberorosso.it pasta alla Norma article (403 blocked); cibotoday.it pescheria map.
+[cross-7] "street food rosticceria Catania guida 2024 2025 critico blogger" → vivicatania.altervista.org noted; cataniatoday.it Gambero Rosso street food guide.
+[cross-7] "Catania street food arancini market guide food writer 2024" → travellingjezebel.com, whereisthemarket.com, deeph2oh.com all confirmed no named author.
+[cross-8] "rivista gastronomica siciliana ristoranti Catania guida 2024 2025" → guidasicilia.it, siciliareport.it, siciliafan.it; no new named-author Catania sources.
+[cross-8] "supplemento gastronomia giornale siciliano Catania ristoranti 2023 2024" → allfoodsicily.it confirmed multi-author; no specific named-author Catania sources.
+[cross-1] "Catania food guide named author blog 2023 2024 2025 Sicily restaurant" → thesavvyladylike.com (Janey — no surname); no new qualified EN sources.
+[cross-2] "ristoranti Catania 2024 autore Sicilia gastronomia guida locale magazine" → oraviaggiando.it noted; no new named-author sources beyond existing pool.
+[phase-1b-crossval] "Me Cumpari Turiddu Catania recensione critica gastronomica" → siciliasecrets.com (Lavinia Colonna Preti, Mar 2023) — single restaurant; allfoodsicily.it article (CAPTCHA blocked).
+[phase-1b-crossval] "Vuciata Kitchen Market Catania critico recensione 2024" → Only TripAdvisor, TheFork, directory listings; no new named-author editorial sources.
+[phase-1b-crossval] "Osteria Antica Marina Catania critica gastronomica 2024" → Only review platforms; no new named-author editorial sources.
+[cross-3] "Catania ristoranti guida 2024 2025 giornalista firma articolo recensione" → No new named-author sources beyond existing pool.
+[stopping-rule] triggered after 44 queries — last 8+ consecutive queries returned no new qualifying sources.

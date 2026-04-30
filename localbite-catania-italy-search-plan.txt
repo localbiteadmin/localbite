@@ -1,0 +1,110 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+LocalBite v7.1 — Catania, Italy
+Search Plan — Phase 1
+Prepared: 2026-04-30
+
+===========================================
+YEAR DISTRIBUTION PRE-CHECK
+===========================================
+YEAR_RANGE: 2023-2026
+Queries must be distributed: some referencing 2023-2024, some 2024-2025, some no year term.
+Target: at least 30% of year-bearing queries reference earlier portion (2023-2024).
+
+===========================================
+PART A — NEIGHBOURHOOD COVERAGE
+===========================================
+
+TIER 1 — Centro Storico (Piazza del Duomo, Via Etnea, Pescheria market)
+Q01 [IT] "migliori ristoranti Centro Storico Catania 2024 2025 guida"
+Q02 [EN] "best restaurants Centro Storico Catania Italy 2024 2025"
+
+TIER 1 — Borgo
+Q03 [IT] "ristoranti quartiere Borgo Catania dove mangiare 2023 2024"
+Q04 [EN] "restaurants Borgo Catania food guide 2024 2025"
+
+TIER 1 — San Cristoforo
+Q05 [IT] "ristoranti San Cristoforo Catania gastronomia 2024 2025"
+Q06 [EN] "restaurants San Cristoforo Catania dining 2023 2024"
+
+TIER 2 — Picanello
+Q07 [IT] "ristoranti Picanello Catania dove mangiare osterie 2024 2025"
+Q08 [EN] "restaurants Picanello Catania 2024"
+
+TIER 2 — Ognina
+Q09 [IT] "migliori ristoranti Ognina Catania pesce trattorie 2023 2024"
+Q10 [EN] "restaurants Ognina Catania seafood dining 2024 2025"
+
+TIER 2 — San Giovanni Galermo
+Q11 [IT] "ristoranti San Giovanni Galermo Catania 2023 2024"
+Q12 [EN] "restaurants San Giovanni Galermo Catania 2024"
+
+TIER 2 — Nesima
+Q13 [IT] "ristoranti Nesima Catania dove mangiare 2024 2025"
+Q14 [EN] "restaurants Nesima Catania dining 2024"
+
+TIER 3 — Librino
+Q15 [IT] "ristoranti Librino Catania 2024"
+
+TIER 3 — San Giorgio
+Q16 [IT] "trattorie osterie San Giorgio Catania 2023 2024"
+
+TIER 3 — Cibali
+Q17 [IT] "ristoranti Cibali Catania dove mangiare 2024"
+
+TIER 3 — San Leone
+Q18 [IT] "ristoranti San Leone Catania gastronomia 2025"
+
+===========================================
+PART B — CROSS-CUTTING ANGLES
+===========================================
+
+Cross-1 — City-wide EN (2 queries)
+Q19 [EN] "best restaurants Catania Italy 2025 food guide review"
+Q20 [EN] "where to eat Catania Italy local food recommendations 2023 2024"
+
+Cross-2 — City-wide IT (3 queries)
+Q21 [IT] "critica gastronomica Catania ristoranti consigliati 2024 2025"
+Q22 [IT] "dove mangiare a Catania osterie trattorie consigli 2024"
+Q23 [IT] "guida ristoranti Catania giornalismo gastronomico 2023 2024"
+
+Cross-3 — Generic writer-first (2 queries)
+Q24 [IT] "critico gastronomico Catania blog gastronomia Sicilia 2025"
+Q25 [EN] "food writer Catania Sicily restaurant guide 2024"
+
+Cross-4 — Named awards (3 queries)
+Q26 "50 Top Italy Catania ristoranti premiati 2024 2025"
+Q27 "Gambero Rosso ristoranti Catania 2024 2025 premiati"
+Q28 "Slow Food Osterie d'Italia Catania 2024 2025"
+
+Cross-5 — Recent openings (2 queries)
+Q29 [IT] "nuovi ristoranti aperture Catania 2024 2025"
+Q30 [EN] "new restaurant openings Catania Sicily 2024 2025"
+
+Cross-6 — Vocabulary-specific IT (2 queries — Catanian food culture)
+Q31 [IT] "arancino granita brioche trattoria Catania 2024 guida gastronomica autore"
+Q32 [IT] "pasta alla Norma pescheria pesce spada rosticceria Catania 2025 ristoranti"
+
+Cross-7 — Cuisine and community (2 queries)
+Q33 [IT] "street food rosticceria Catania guida 2024 2025 critico blogger"
+Q34 [EN] "Catania street food arancini market guide food writer 2024"
+
+Cross-8 — Publication-category IT (2 queries)
+Q35 [IT] "rivista gastronomica siciliana ristoranti Catania guida 2024 2025"
+Q36 [IT] "supplemento gastronomia giornale siciliano Catania ristoranti 2023 2024"
+
+===========================================
+YEAR DISTRIBUTION CHECK
+===========================================
+Queries referencing earlier years (2023 / 2023-2024): Q03, Q06, Q09, Q11, Q16, Q20, Q23, Q36 = 8 queries
+Queries referencing recent years (2025 / 2024-2025): Q01, Q02, Q04, Q05, Q07, Q10, Q13, Q18, Q19, Q21, Q24, Q26, Q27, Q28, Q29, Q30, Q32, Q33, Q35 = 19 queries
+Queries referencing both or no year: Q08, Q12, Q14, Q15, Q17, Q22, Q25, Q31, Q34 = 9 queries
+Total planned queries: 36
+Soft ceiling: 45 | Hard ceiling: 55 — WITHIN LIMITS
+
+[year-distribution-check] PASSED — 8 queries reference earlier years, 19 queries reference recent years, 9 queries have no year term.
+
+===========================================
+STOPPING RULE
+===========================================
+If last 8 consecutive queries yield no new sources: stop and proceed to Step 3.

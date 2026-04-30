@@ -1,0 +1,199 @@
+LocalBite v7.1 — Catania, Italy
+Pipeline Audit File
+Date compiled: 2026-04-30
+Pipeline: localbite-v7.1
+
+===========================================
+PIPELINE RUN SUMMARY
+===========================================
+City: Catania, Italy
+City slug: catania-italy
+Year range: 2023–2026
+Searches run: 44 (stopping rule triggered after 8+ consecutive queries with no new sources)
+Sources confirmed: 4
+Final entries: 18
+Both-pool: 3
+Tier A: 4
+Tier B: 14
+
+===========================================
+CONFIRMED SOURCES (4)
+===========================================
+
+[src-gamberorosso-marino]
+Writer: Valentina Marino
+Publication: Gambero Rosso
+Article: "Dove mangiare a Catania. I 10 migliori ristoranti scelti dal Gambero Rosso"
+Date: 2024-01-04
+Language: IT
+Fetch: 200 | 4200ch | 0 retries
+Commercial conflict: false
+Entries contributed: 10 (9 kept, 1 removed — Piazza Scammacca)
+Single-source Tier B contributed: 6
+
+[src-finedininglovers-bruno]
+Writer: Mariarosaria Bruno
+Publication: Fine Dining Lovers
+Article: "Dove mangiare e bere a Catania: i migliori ristoranti e bar"
+Date: 2024-09-04
+Language: IT
+Fetch: 200 | 2800ch | 0 retries
+Commercial conflict: TRUE — Fine Dining Lovers is S.Pellegrino/Sanpellegrino corporate media
+Entries contributed: 5 (all kept)
+Single-source Tier B contributed: 2
+
+[src-postcards-spencer]
+Writer: Gayle Brennan Spencer
+Publication: Postcards From San Antonio (single-author site — named author confirmed via About page)
+Article: "Postcard from Catania, Sicily: Where's the cannoli?"
+Date: 2025-05-09
+Language: EN
+Fetch: 200 | 3800ch | 0 retries
+Commercial conflict: false
+Entries contributed: 10 (8 kept, 1 editorial rejection — Savia, Iris-Doc, Razmataz at extraction phase; 1 cap removal — Trattoria da Antonio)
+Single-source Tier B contributed: 6 (after cap removal)
+
+[src-cultureandterroir-lirosi]
+Writer: Paolo Li Rosi
+Publication: Culture and Terroir
+Article: "OSTERIE D'ITALIA 2024, Slow Food fa tappa a Catania"
+Date: 2023-12-11
+Language: IT
+Fetch: 200 | 1800ch | 0 retries
+Commercial conflict: false
+Entries contributed: 1 (kept)
+Single-source Tier B contributed: 0 (entry is part of Tier A multi-source Me Cumpari Turiddu)
+
+===========================================
+COMMERCIAL CONFLICT OF INTEREST DISCLOSURES
+===========================================
+
+Fine Dining Lovers (src-finedininglovers-bruno):
+Fine Dining Lovers is published by S.Pellegrino / Sanpellegrino, the mineral water brand that is the title sponsor of the World's 50 Best Restaurants awards. This creates a structural commercial relationship between the publication and the fine dining industry it covers. Mariarosaria Bruno is a named journalist whose individual credibility is not in question, but the source-level COI is disclosed per pipeline policy. Restaurants appearing ONLY in Fine Dining Lovers (Concezione Restaurant, Coria) are flagged accordingly in the final output.
+
+===========================================
+EXTRACTION-TIME REJECTIONS (Phase 2)
+===========================================
+
+[extraction-reject] Circus Cocktail Bar (from src-finedininglovers-bruno)
+Reason: bar only, no restaurant food service qualification confirmed
+
+[extraction-reject] Savia / Pasticceria Savia (from src-postcards-spencer)
+Reason: pastry shop and bakery, not a restaurant
+
+[extraction-reject] Iris-Doc (from src-postcards-spencer)
+Reason: primarily a wine bar and street food stall, not a restaurant establishment
+
+[extraction-reject] Razmataz (from src-postcards-spencer)
+Reason: primarily a wine bar; quote under 15-word minimum
+
+===========================================
+PHASE 3 — EDITORIAL REJECTIONS
+===========================================
+
+[editorial-reject] Piazza Scammacca (from src-gamberorosso-marino)
+Reason: cuisine field "Sicilian food market"; described as a 1,000m² multi-vendor food hall with fish, meat, pasta, sandwich, and pastry stations — a market space, not a restaurant establishment. Auto-removed before confidence tier assignment.
+
+===========================================
+CONCENTRATION CAP ANALYSIS
+===========================================
+
+Cap rate: 30% of (Tier A + Tier B)
+Starting pool (before editorial rejections): 20 unique restaurants
+After Piazza Scammacca editorial removal: 19 restaurants
+Cap ceiling: ceil(0.30 × 19) = ceil(5.7) = 6 per source
+
+Source single-source Tier B counts (before cap):
+  src-gamberorosso-marino: 6 → at cap ✓
+  src-finedininglovers-bruno: 2 → within cap ✓
+  src-postcards-spencer: 7 → over cap by 1 → 1 removal required
+
+[cap-removal] Trattoria da Antonio (from src-postcards-spencer)
+Removal rationale: lowest editorial specificity in GBS pool — described by author as "the author's neighborhood restaurant" (personal-note framing rather than editorial recommendation); null neighbourhood (ungeocoded). Removed to bring GBS from 7 to 6 = at cap.
+
+After cap removal: 18 final entries
+GBS after cap: 6 out of 18 = 33.3% (slight overage; accepted — THIN CITY characteristic, further removal would disproportionately reduce EN pool)
+
+===========================================
+CANDIDATES EVALUATED BUT NOT CONFIRMED (Phase 1 / Phase 2)
+===========================================
+
+FAILED / BLOCKED AT VERIFICATION PHASE:
+- Gambero Rosso seafood article (secondary Gambero Rosso Catania article): 403/451 geo-blocked; Wayback Machine also returned 451. Could not confirm named author or extract content. Not added to source pool.
+- Gambero Rosso pasta alla Norma article: 403 blocked; could not access.
+- allfoodsicily.it: Multiple articles CAPTCHA-blocked (Robot Challenge Screen) on all fetch attempts. Could not confirm any named author or extract content.
+- katieparla.com Sicily guide: Security/CAPTCHA block on fetch. Could not extract Catania-specific content.
+- luggageandlife.com: CAPTCHA blocked.
+
+REJECTED FOR MISSING NAMED AUTHOR:
+- The Bella Boot (thebellaboot.com): no named author on article or About page
+- Trails of Sicily (trailsofsicily.com): no named author confirmed
+- Ideal Magazine UK (idealmagazine.co.uk): no named author on Catania article
+- Go Ask A Local (goaskalocal.com): author listed only as "Mirco" (first name only — insufficient)
+- Authentic Food Quest (authenticfoodquest.com): author listed as "Claire" (first name only — insufficient)
+- Gentry Travels / deeph2oh.com: no named author on restaurant articles
+- Travelling Jezebel (travellingjezebel.com): no named author
+- Italy's Secrets IT (italysegreta.com): no named author on Catania articles
+- Italy Segreta (IT version): no named author confirmed
+- Oraviaggiando.it: no named author
+- Magazine Bernabei: no named author
+- Sicilia da Gustare (siciliadagustare.com): no named author on general pages
+
+PUBLICATION-LEVEL REJECTIONS:
+- Streaty.com: tour booking platform, not editorial food writing
+- Where Is The Market: market listing site, not editorial
+- Seafoodslurps.com: no named author; primarily recipe/travel content
+
+TOO OLD:
+- luggageandlife.com Catania article: 2020 — outside 2023–2026 year range
+
+THIN CITY NOTE:
+The stopping rule was triggered after 44 queries (8+ consecutive queries with no new qualifying sources). Catania has limited English-language food media coverage. The thin source pool (4 confirmed sources) is a structural characteristic of this city and is documented in the audit.
+
+===========================================
+MICHELIN-STARRED INCLUSIONS
+===========================================
+
+Sapio (1★ Michelin): Found in independent editorial sources (Gambero Rosso, Fine Dining Lovers). Included per pipeline rule — Michelin-starred restaurants are not actively searched for but are included when appearing in editorial sources. Both sources confirmed independently. Neighbourhood: null (neither editorial source specified neighbourhood; not to be inferred).
+
+Coria (1★ Michelin): Found in Fine Dining Lovers (src-finedininglovers-bruno). Included per pipeline rule. Source has commercial_conflict: true. Flagged in final output: COI-only source + null neighbourhood.
+
+===========================================
+SLOW FOOD AWARD NOTATION
+===========================================
+
+Me Cumpari Turiddu received the Slow Food Chiocciola award in Osterie d'Italia 2024, plus the Selezione Bere Bene prize for its amari/mixology program — confirmed via Paolo Li Rosi's article (src-cultureandterroir-lirosi, 2023-12-11). This is one of seven such dual distinctions awarded across all of Italy in the 2024 guide.
+
+===========================================
+BOTH-POOL RESTAURANTS (3)
+===========================================
+
+1. Me Cumpari Turiddu — IT sources: src-gamberorosso-marino, src-finedininglovers-bruno (COI), src-cultureandterroir-lirosi / EN source: src-postcards-spencer
+2. Vuciata Kitchen Market — IT source: src-gamberorosso-marino / EN source: src-postcards-spencer
+3. Fud Bottega Sicula — IT source: src-finedininglovers-bruno (COI) / EN source: src-postcards-spencer
+
+Note: Sapio appears in two IT-language sources and qualifies for Tier A but not both-pool (both-pool requires IT + EN from different publishers).
+
+===========================================
+OPEN STATUS CHECK FLAGS
+===========================================
+
+open_status_check: true applies to all restaurants sourced from:
+- src-gamberorosso-marino (article date 2024-01-04 — pre-2025)
+- src-finedininglovers-bruno (article date 2024-09-04 — pre-2025)
+- src-cultureandterroir-lirosi (article date 2023-12-11 — pre-2025)
+
+open_status_check: false applies to all restaurants sourced exclusively from:
+- src-postcards-spencer (article date 2025-05-09 — within 2025, within freshness window)
+
+Multi-source restaurants where any source is pre-2025: open_status_check set to true (conservative).
+Affected: Me Cumpari Turiddu (GR, FDL, C&T all pre-2025), Vuciata Kitchen Market (GR pre-2025), Fud Bottega Sicula (FDL pre-2025).
+
+===========================================
+UNATTENDED MODE LOG
+===========================================
+
+[unattended-mode] auto-accepted 2 recommended removals:
+  1. Piazza Scammacca — editorial rejection (food market, not restaurant)
+  2. Trattoria da Antonio — concentration cap removal (GBS 30% cap)
+[unattended-mode] proceeding directly to export

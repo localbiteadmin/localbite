@@ -1,0 +1,8 @@
+[p2] "gamberorosso.it/ristoranti/dove-mangiare-a-catania-migliori-ristoranti/" → 200 | 4200ch | ACCEPTED — Valentina Marino, named author confirmed, 2024-01-04, 10 restaurants extracted
+[p2] "finedininglovers.it/esplora/liste/migliori-ristoranti-catania" → 200 | 2800ch | ACCEPTED — Mariarosaria Bruno, named author confirmed, 2024-09-04, 6 establishments extracted (5 restaurants, 1 bar rejected)
+[p2] "postcardsfromsanantonio.com/2025/05/09/postcard-from-catania-sicily-wheres-the-cannoli/" → 200 | 3800ch | ACCEPTED — Gayle Brennan Spencer, single-author site confirmed, 2025-05-09, 13 establishments reviewed (10 restaurants extracted, 3 rejected)
+[p2] "cultureandterroir.com/osterie-ditalia-2024-slow-food-fa-tappa-a-catania/" → 200 | 1800ch | ACCEPTED — Paolo Li Rosi, named author confirmed, 2023-12-11, 1 qualifying Catania city restaurant extracted
+[extraction-reject] Circus Cocktail Bar from finedininglovers.it — bar only, no restaurant food qualification
+[extraction-reject] Savia (Pasticceria Savia) from postcardsfromsanantonio.com — pastry shop/bakery, not a restaurant
+[extraction-reject] Iris-Doc from postcardsfromsanantonio.com — primarily a wine bar and street food stall, not a restaurant
+[extraction-reject] Razmataz from postcardsfromsanantonio.com — primarily a wine bar; quote under 15 words

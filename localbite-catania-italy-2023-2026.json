@@ -1,0 +1,683 @@
+{
+  "city": "Catania",
+  "country": "Italy",
+  "city_slug": "catania-italy",
+  "built": "2026-04-30",
+  "source_recency": "2023-2026",
+  "pipeline": "localbite-v7.1",
+  "confidence_tiers": {
+    "auto_approved": 4,
+    "reviewed_kept": 14,
+    "auto_removed": 1,
+    "user_removed": 0,
+    "auto_rejected": 0,
+    "concentration_cap_applied": 1
+  },
+  "sources": {
+    "src-gamberorosso-marino": {
+      "id": "src-gamberorosso-marino",
+      "publication": "Gambero Rosso",
+      "writer": "Valentina Marino",
+      "writer_profile": "Valentina Marino is a food journalist and contributor at Gambero Rosso, Italy's leading culinary publication and restaurant guide. Her January 2024 Catania guide surveys ten restaurants selected by independent editorial criteria across price levels and cuisine categories, covering the city's historic seafood tables through contemporary bistrots.",
+      "url": "https://www.gamberorosso.it",
+      "article_url": "https://www.gamberorosso.it/ristoranti/dove-mangiare-a-catania-migliori-ristoranti/",
+      "language": "it",
+      "source_type": "primary",
+      "article_date": "2024-01-04",
+      "article_title": "Dove mangiare a Catania. I 10 migliori ristoranti scelti dal Gambero Rosso",
+      "fetch_status": "good",
+      "fetch_chars": 4200,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    "src-finedininglovers-bruno": {
+      "id": "src-finedininglovers-bruno",
+      "publication": "Fine Dining Lovers",
+      "writer": "Mariarosaria Bruno",
+      "writer_profile": "Mariarosaria Bruno is a named contributor to Fine Dining Lovers Italia. Her September 2024 Catania guide covers restaurants and bars. Source flagged for commercial conflict: Fine Dining Lovers is published by S.Pellegrino/Sanpellegrino, the title sponsor of the World's 50 Best Restaurants awards, creating a structural relationship with the fine dining industry the publication covers.",
+      "url": "https://www.finedininglovers.it",
+      "article_url": "https://www.finedininglovers.it/esplora/liste/migliori-ristoranti-catania",
+      "language": "it",
+      "source_type": "primary",
+      "article_date": "2024-09-04",
+      "article_title": "Dove mangiare e bere a Catania: i migliori ristoranti e bar",
+      "fetch_status": "good",
+      "fetch_chars": 2800,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": true,
+      "commercial_conflict_note": "Fine Dining Lovers is S.Pellegrino/Sanpellegrino corporate media. Parent company sponsors World's 50 Best Restaurants. Disclosed per pipeline COI policy.",
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    "src-postcards-spencer": {
+      "id": "src-postcards-spencer",
+      "publication": "Postcards From San Antonio",
+      "writer": "Gayle Brennan Spencer",
+      "writer_profile": "Gayle Brennan Spencer is the sole named author of Postcards From San Antonio, a personal travel and food blog. Named author confirmed via the site's About page (single-author site rule applied — byline on About page only, not on individual article headers). Her May 2025 Catania article covers ten restaurants visited during a stay, with specific dish-level detail and personal assessment.",
+      "url": "https://www.postcardsfromsanantonio.com",
+      "article_url": "https://www.postcardsfromsanantonio.com/2025/05/09/postcard-from-catania-sicily-wheres-the-cannoli/",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2025-05-09",
+      "article_title": "Postcard from Catania, Sicily: Where's the cannoli?",
+      "fetch_status": "good",
+      "fetch_chars": 3800,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    },
+    "src-cultureandterroir-lirosi": {
+      "id": "src-cultureandterroir-lirosi",
+      "publication": "Culture and Terroir",
+      "writer": "Paolo Li Rosi",
+      "writer_profile": "Paolo Li Rosi is a named author at Culture and Terroir, an Italian food and wine culture publication. His December 2023 article covers the Slow Food Osterie d'Italia 2024 guide launch in Catania, documenting Me Cumpari Turiddu's receipt of the Chiocciola award and the Selezione Bere Bene prize.",
+      "url": "https://www.cultureandterroir.com",
+      "article_url": "https://www.cultureandterroir.com/osterie-ditalia-2024-slow-food-fa-tappa-a-catania/",
+      "language": "it",
+      "source_type": "primary",
+      "article_date": "2023-12-11",
+      "article_title": "OSTERIE D'ITALIA 2024, Slow Food fa tappa a Catania",
+      "fetch_status": "good",
+      "fetch_chars": 1800,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-1"
+    }
+  },
+  "restaurants": [
+    {
+      "name": "Me Cumpari Turiddu",
+      "name_variants": [
+        "Mé Cumpari Turiddu",
+        "Me cumpari Turiddu"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Traditional Sicilian bistrot",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "home-made breads",
+        "poached egg on toasted bread with fried leeks",
+        "grilled vegetables",
+        "swordfish spiedini",
+        "donkey carpaccio",
+        "crispella with anchovies and orange aioli",
+        "Sformatino di Cavolo Trunzo",
+        "Sunday sauce meat",
+        "grandmother's lemon cream"
+      ],
+      "signature_dish": "donkey carpaccio",
+      "quote": "Named after emigrant memories and grandmother's kitchen expressions, this bistrot features deeply rooted and identity-driven Sicilian dishes, from home-made breads to creative appetizers and poached egg on toasted bread with fried leeks.",
+      "quote_language": "translated from Italian",
+      "language_pool": "both",
+      "source_count": 4,
+      "sources": [
+        "src-gamberorosso-marino",
+        "src-finedininglovers-bruno",
+        "src-postcards-spencer",
+        "src-cultureandterroir-lirosi"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-it + primary-it (COI) + primary-en + primary-it",
+      "article_date": "2025-05-09",
+      "article_title": "Postcard from Catania, Sicily: Where's the cannoli?",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 37.5063381,
+      "lng": 15.0884727,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Me Cumpari Turiddu"
+    },
+    {
+      "name": "Vuciata Kitchen Market",
+      "name_variants": [
+        "Vuciata – Kitchen Market",
+        "Vuciata"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Sicilian seafood, market cuisine",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "marinated swordfish carpaccio",
+        "daily mixed fry",
+        "bottarga spaghetti",
+        "fish soup",
+        "caponata",
+        "pasta with clams and mussels"
+      ],
+      "signature_dish": null,
+      "quote": "Located in Catania's fish market and operated by two pairs of brothers, the kitchen serves as a hymn to the soul and market products, with marinated swordfish carpaccio, daily mixed fry, and bottarga spaghetti.",
+      "quote_language": "translated from Italian",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-gamberorosso-marino",
+        "src-postcards-spencer"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-it + primary-en",
+      "article_date": "2025-05-09",
+      "article_title": "Postcard from Catania, Sicily: Where's the cannoli?",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Fud Bottega Sicula",
+      "name_variants": [
+        "Fud",
+        "FUD"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Sicilian casual dining",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "hamburgers",
+        "Sicilian-style burgers",
+        "blue cheese burgers",
+        "buffalo burgers",
+        "gorgonzola and pear salad"
+      ],
+      "signature_dish": null,
+      "quote": "Visited twice — blue cheese burgers, buffalo burgers, and vegetable variations, plus a gorgonzola and pear salad that speaks well of Sicilian quality ingredients in a burger format.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-finedininglovers-bruno",
+        "src-postcards-spencer"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary-it (COI) + primary-en",
+      "article_date": "2025-05-09",
+      "article_title": "Postcard from Catania, Sicily: Where's the cannoli?",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Amocù",
+      "name_variants": [
+        "Amocù Catania"
+      ],
+      "neighbourhood": "Ognina",
+      "cuisine": "Asian fusion",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Tradition guides the Japanese line but the menu circles around the world — quality base products, comprehensive wine list, and attentive service make this a distinctive dining destination in Ognina.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-gamberorosso-marino"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2024-01-04",
+      "article_title": "Dove mangiare a Catania. I 10 migliori ristoranti scelti dal Gambero Rosso",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Osteria Antica Marina",
+      "name_variants": [
+        "Antica Marina"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Sicilian seafood",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "antipasti di pesce"
+      ],
+      "signature_dish": null,
+      "quote": "Located in the heart of the Pescheria fish market, this iconic venue serves solid historic dishes tied to local sourcing, with an impressive antipasti spread in a recently renovated space with Sicilian wines.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-gamberorosso-marino"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2024-01-04",
+      "article_title": "Dove mangiare a Catania. I 10 migliori ristoranti scelti dal Gambero Rosso",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 37.5015477,
+      "lng": 15.086853,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Antica Marina"
+    },
+    {
+      "name": "Materia Spazio Cucina",
+      "name_variants": [
+        "Materia | Spazio Cucina",
+        "Materia Spazio Cucina di Habitat Boutique Hotel"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Modern Sicilian",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "A hospitality project featuring a journey among small Sicilian excellences, with breakfast using local products, short lunch menus, and full gourmet dinners organized by ingredient — fish market, butchery, vegetables, desserts.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-gamberorosso-marino"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2024-01-04",
+      "article_title": "Dove mangiare a Catania. I 10 migliori ristoranti scelti dal Gambero Rosso",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Pamochã",
+      "name_variants": [
+        "Pamocha"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Contemporary bistrot / champagne bar",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "oysters",
+        "tartares",
+        "duck breast",
+        "Irish beef"
+      ],
+      "signature_dish": null,
+      "quote": "An acronym for Bread, Mortadella and Champagne, this young welcoming venue operates as a champagne bar serving oysters, tartares, duck breast, and Irish beef with outdoor seating and skilled service.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-gamberorosso-marino"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2024-01-04",
+      "article_title": "Dove mangiare a Catania. I 10 migliori ristoranti scelti dal Gambero Rosso",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 37.5092998,
+      "lng": 15.0867543,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Pamochã"
+    },
+    {
+      "name": "Le Tre Bocche",
+      "name_variants": [],
+      "neighbourhood": "Picanello",
+      "cuisine": "Sicilian seafood",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "antipasti di pesce",
+        "raw seafood preparations",
+        "cooked seafood preparations"
+      ],
+      "signature_dish": null,
+      "quote": "A steadfast seafood table with first-quality catch and engaging staff, featuring extensive antipasti service with raw and cooked preparations, thoughtfully selected wines, and a classical comfortable ambiance.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-gamberorosso-marino"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2024-01-04",
+      "article_title": "Dove mangiare a Catania. I 10 migliori ristoranti scelti dal Gambero Rosso",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": 37.5233682,
+      "lng": 15.0825018,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Tre Bocche"
+    },
+    {
+      "name": "Uzeta Bistrò Siciliano",
+      "name_variants": [
+        "Uzeta",
+        "Uzeta Bistrò siciliano"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Contemporary Sicilian bistrot",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "arancino with nonna's spiced sauce",
+        "panelle chips",
+        "tartares",
+        "fresh pastas"
+      ],
+      "signature_dish": "arancino with nonna's spiced sauce",
+      "quote": "In constant evolution, this contemporary bistrot serves as a laboratory with international profile, where chef Francesco Di Stefano experiments with reinterpreted street food classics like arancino with nonna's spiced sauce, panelle chips, tartares, and seafood preparations.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-gamberorosso-marino"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it",
+      "article_date": "2024-01-04",
+      "article_title": "Dove mangiare a Catania. I 10 migliori ristoranti scelti dal Gambero Rosso",
+      "open_status_check": true,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Concezione Restaurant",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Creative Sicilian",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Under chef Manuel Tropea's direction, this minimalist space focuses on creative Sicilian cuisine with new visions on local tradition and Sicilian recipes, reinterpreting the island's gastronomic heritage with a contemporary eye.",
+      "quote_language": "translated from Italian",
+      "language_pool": "it",
+      "source_count": 1,
+      "sources": [
+        "src-finedininglovers-bruno"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-it (COI)",
+      "article_date": "2024-09-04",
+      "article_title": "Dove mangiare e bere a Catania: i migliori ristoranti e bar",
+      "open_status_check": true,
+      "flagged": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Bat il Trattore",
+      "name_variants": [],
+      "neighbourhood": "Borgo",
+      "cuisine": "Traditional Sicilian trattoria",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "sardines beneficcata",
+        "insalata nonna",
+        "pasta alla Norma"
+      ],
+      "signature_dish": null,
+      "quote": "A family-run establishment in the Monserrato district featuring sardines beneficcata, insalata nonna with truly vine-ripened tomatoes, and pasta alla Norma — warmly traditional Sicilian home cooking.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-postcards-spencer"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-09",
+      "article_title": "Postcard from Catania, Sicily: Where's the cannoli?",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Bavetta l'Osteria d'Oggi",
+      "name_variants": [
+        "Bavetta",
+        "Osteria Bavetta"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Contemporary Sicilian osteria",
+      "opening_year": 2024,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "squash blossoms with ricotta and anchovies",
+        "roasted onions with mint",
+        "pasta with lemon mint pesto and tuna bottarga"
+      ],
+      "signature_dish": null,
+      "quote": "Chef Marco Cannizzaro's contemporary neighborhood tavern, requiring reservations, serves squash blossoms with ricotta and anchovies, roasted onions with mint, and pasta with lemon mint pesto and tuna bottarga.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-postcards-spencer"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-09",
+      "article_title": "Postcard from Catania, Sicily: Where's the cannoli?",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "Osteria Acqualavica",
+      "name_variants": [
+        "Acqualavica"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Modern Sicilian osteria",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "eggplant polpette",
+        "seared tuna with mint",
+        "tuna risotto"
+      ],
+      "signature_dish": null,
+      "quote": "Upscale wine cellar atmosphere with stone-arched ceilings offering eggplant polpette, seared tuna with mint, and an ultra-lemony tuna risotto.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-postcards-spencer"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-09",
+      "article_title": "Postcard from Catania, Sicily: Where's the cannoli?",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 37.502132,
+      "lng": 15.0885159,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Osteria Acqualavica"
+    },
+    {
+      "name": "Scirocco Sicilian Fish Lab",
+      "name_variants": [
+        "Scirocco"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Seafood street food",
+      "opening_year": null,
+      "price_level": 1,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "seafood couscous",
+        "fried seafood cones"
+      ],
+      "signature_dish": "fried seafood cone",
+      "quote": "Casual spot near the fish market offering seafood couscous and fried seafood cones at budget prices — elbow your way in to partake of the house specialties.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-postcards-spencer"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-09",
+      "article_title": "Postcard from Catania, Sicily: Where's the cannoli?",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 37.5018599,
+      "lng": 15.0867727,
+      "geo_source": "photon",
+      "geo_confidence": "medium",
+      "geo_matched_name": "Scirocco"
+    },
+    {
+      "name": "Tantikkia Cucina e Vino",
+      "name_variants": [],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Contemporary Sicilian wine restaurant",
+      "opening_year": null,
+      "price_level": 3,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "Tuscan kale sides",
+        "sesame-crusted tuna in green tea sauce",
+        "pasta with anchovies"
+      ],
+      "signature_dish": "sesame-crusted tuna in green tea sauce",
+      "quote": "A handsome interior feeling like a comforting cocoon, featuring Tuscan kale sides, sesame-crusted tuna in green tea sauce, and pasta with anchovies.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-postcards-spencer"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-09",
+      "article_title": "Postcard from Catania, Sicily: Where's the cannoli?",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true
+    },
+    {
+      "name": "La Pentolaccia",
+      "name_variants": [
+        "La Pentolaccia Trattoria"
+      ],
+      "neighbourhood": "Centro Storico",
+      "cuisine": "Sicilian trattoria",
+      "opening_year": null,
+      "price_level": 2,
+      "price_currency": "€",
+      "dishes_mentioned": [
+        "fennel and orange salad",
+        "seafood risotto"
+      ],
+      "signature_dish": null,
+      "quote": "A Catania trattoria in the historic centre featuring fennel and orange salad and seafood risotto — reliable neighbourhood cooking with consistent quality.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-postcards-spencer"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary-en",
+      "article_date": "2025-05-09",
+      "article_title": "Postcard from Catania, Sicily: Where's the cannoli?",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 37.5055051,
+      "lng": 15.0895766,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Pentolaccia"
+    }
+  ],
+  "centroids": {
+    "Centro Storico": [
+      37.5044,
+      15.0878
+    ],
+    "Ognina": [
+      37.5291,
+      15.1132
+    ],
+    "Borgo": [
+      37.5218,
+      15.0847
+    ]
+  }
+}
