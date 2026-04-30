@@ -230,6 +230,25 @@ function isThinProfile(profile) {
   const REQUIRED_SOURCE_FIELDS    = ['writer', 'publication', 'commercial_conflict', 'writer_profile'];
   const REQUIRED_RESTAURANT_FIELDS = ['name', 'language_pool', 'quote', 'sources'];
 
+  // ── Fix 2: Auto-repair sources list → dict (compaction reconstruction variant) ──
+  if (Array.isArray(data.sources)) {
+    const newDict = {};
+    let dropped = 0;
+    for (const s of data.sources) {
+      const key = s.id || s.source_id;
+      if (key) {
+        newDict[key] = s;
+      } else {
+        dropped++;
+      }
+    }
+    if (dropped > 0) {
+      console.log(`  ⚠ sources list→dict: ${dropped} source(s) dropped (missing id/source_id field)`);
+    }
+    data.sources = newDict;
+    console.log('  ✓ Auto-repair: sources list converted to dict');
+  }
+
   const sourcesArray = Array.isArray(data.sources) ? data.sources : Object.values(data.sources || {});
 
   // ── Auto-repair known compaction drift patterns ──────────────────────────
