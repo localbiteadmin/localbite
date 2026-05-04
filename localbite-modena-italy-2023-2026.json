@@ -21,7 +21,7 @@
       "restaurants_extracted": 4,
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "American food writer based in Rome, specializing in Italian and Mediterranean food. Author of multiple cookbooks including Tasting Rome (2016) and Food of the Italian South (2019). Regular contributor to The New York Times, National Geographic, and Saveur. Katie Parla has been researching and writing about Italian regional food traditions for over fifteen years, with in-depth city guides at katieparla.com. Her Modena guide is dated 2022-12-24 but the Part 1 operator confirms it was updated November 2025. Confirmed as DIRECT_FETCH_SOURCE; initial Jina fetch blocked by CAPTCHA, Wayback Machine returned 451; article obtained via direct WebFetch (200). One entry removed in Phase 3 (Bar Schiavoni: market stall, not a sit-down restaurant)."
+      "writer_profile": "American food writer based in Rome, specializing in Italian and Mediterranean food. Author of multiple cookbooks including Tasting Rome (2016) and Food of the Italian South (2019). Regular contributor to The New York Times, National Geographic, and Saveur. Katie Parla has been researching and writing about Italian regional food traditions for over fifteen years, with in-depth city guides at katieparla.com. Her Modena guide covers the city's trattoria tradition and was updated November 2025."
     },
     "src-cibotoday-gibertini": {
       "source_id": "src-cibotoday-gibertini",
@@ -55,7 +55,7 @@
       "restaurants_extracted": 3,
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Nico Cristiani is a food writer at Scatti di Gusto (scattidigusto.it), an established Italian food and restaurant website with national coverage. His November 2023 Modena guide focuses on budget-friendly trattorie. Two extractions auto-rejected at Phase 2: Il Fantino (quote 13 words, below 15-word minimum) and Trattoria Bianca (quote under 15 words with no specific detail). Three restaurants extracted; Bottega Mamma Puglia subsequently removed in Phase 3 for non-local Pugliese cuisine."
+      "writer_profile": "Nico Cristiani is a food writer at Scatti di Gusto (scattidigusto.it), an established Italian food and restaurant website with national coverage. His November 2023 Modena guide focuses on budget-friendly trattorie in the city centre."
     },
     "src-errantedelgusto-scainelli": {
       "source_id": "src-errantedelgusto-scainelli",

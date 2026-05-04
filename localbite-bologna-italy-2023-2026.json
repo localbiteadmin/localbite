@@ -21,7 +21,7 @@
       "restaurants_extracted": 0,
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "American food writer based in Rome, specializing in Italian and Mediterranean food. Author of multiple cookbooks including Tasting Rome (2016) and Food of the Italian South (2019). Regular contributor to The New York Times, National Geographic, and Saveur. Katie Parla has been researching and writing about Italian regional food traditions for over fifteen years, with in-depth city guides at katieparla.com. Her Bologna guide was updated August 2024. Confirmed DIRECT_FETCH_SOURCE; article fetched via direct WebFetch (Jina CAPTCHA blocked, Wayback 451). No qualifying quotes extracted from this session's re-fetch due to AI-summary compression; source retained as cross-validation."
+      "writer_profile": "American food writer based in Rome, specializing in Italian and Mediterranean food. Author of multiple cookbooks including Tasting Rome (2016) and Food of the Italian South (2019). Regular contributor to The New York Times, National Geographic, and Saveur. Katie Parla has been researching and writing about Italian regional food traditions for over fifteen years, with in-depth city guides at katieparla.com. Her Bologna guide was updated August 2024."
     },
     "src-cibotoday-pozzi": {
       "source_id": "src-cibotoday-pozzi",
@@ -123,7 +123,7 @@
       "restaurants_extracted": 1,
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer contributing to the Luciano Pignataro Wine Blog (lucianopignataro.it), a respected Italian food and wine publication. Floriana Barone reviewed Trattoria di Via Serra in Bologna in April 2024, noting the kitchen's focus on named local suppliers and high-quality ingredients. Article_url set null: article content was not retrievable in current session re-fetch (Jina returned homepage); confirmed as 200 response (~3000ch) in original pipeline session."
+      "writer_profile": "Food writer contributing to the Luciano Pignataro Wine Blog (lucianopignataro.it), a respected Italian food and wine publication. Floriana Barone reviewed Trattoria di Via Serra in Bologna in April 2024, noting the kitchen's focus on named local suppliers and high-quality ingredients."
     }
   },
   "restaurants": [
