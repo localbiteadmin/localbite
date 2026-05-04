@@ -18,7 +18,8 @@
       "language": "EN",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer for A Signorina in Milan, Jaclyn DeGiorgio provides dining guidance and culinary insights from the Italian fashion capital. Her publication covers the Milan food scene through comprehensive guides that help readers navigate the city's restaurant landscape."
+      "writer_profile": "Food writer for A Signorina in Milan, Jaclyn DeGiorgio provides dining guidance and culinary insights from the Italian fashion capital. Her publication covers the Milan food scene through comprehensive guides that help readers navigate the city's restaurant landscape.",
+      "id": "src-asgn-jun25"
     },
     "src-asgn-jul25": {
       "writer": "Jaclyn DeGiorgio",
@@ -28,7 +29,8 @@
       "language": "EN",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer and Milan-based expert Jaclyn DeGiorgio contributes to A Signorina in Milan, sharing insider knowledge of the city's culinary landscape. Her food guides help readers navigate Milan's diverse dining scene, from traditional trattorias to contemporary restaurants."
+      "writer_profile": "Food writer and Milan-based expert Jaclyn DeGiorgio contributes to A Signorina in Milan, sharing insider knowledge of the city's culinary landscape. Her food guides help readers navigate Milan's diverse dining scene, from traditional trattorias to contemporary restaurants.",
+      "id": "src-asgn-jul25"
     },
     "src-asgn-jun24": {
       "writer": "Jaclyn DeGiorgio",
@@ -38,7 +40,8 @@
       "language": "EN",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food enthusiast and writer Jaclyn DeGiorgio contributes to A Signorina in Milan, a publication focused on Milan's culinary scene and dining experiences. Her work includes comprehensive food guides that help readers navigate the city's restaurant landscape."
+      "writer_profile": "Food enthusiast and writer Jaclyn DeGiorgio contributes to A Signorina in Milan, a publication focused on Milan's culinary scene and dining experiences. Her work includes comprehensive food guides that help readers navigate the city's restaurant landscape.",
+      "id": "src-asgn-jun24"
     },
     "src-infat": {
       "writer": "Elizabeth De Filippo-Jones",
@@ -48,7 +51,8 @@
       "language": "EN",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer at The Infatuation, specializing in comprehensive dining guides that help readers discover notable restaurants and eateries. Elizabeth De Filippo-Jones contributes to the publication's mission of providing accessible, expert-driven food recommendations for dining enthusiasts."
+      "writer_profile": "Food writer at The Infatuation, specializing in comprehensive dining guides that help readers discover notable restaurants and eateries. Elizabeth De Filippo-Jones contributes to the publication's mission of providing accessible, expert-driven food recommendations for dining enthusiasts.",
+      "id": "src-infat"
     },
     "src-eater": {
       "writer": "Elizabeth De Filippo-Jones",
@@ -58,7 +62,8 @@
       "language": "EN",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer for Eater, Elizabeth De Filippo-Jones contributes to one of the most influential dining and restaurant publications in the industry. Eater covers restaurant news, food culture, and dining guides across major cities, helping readers discover new culinary experiences and stay informed about the latest food trends."
+      "writer_profile": "Food writer for Eater, Elizabeth De Filippo-Jones contributes to one of the most influential dining and restaurant publications in the industry. Eater covers restaurant news, food culture, and dining guides across major cities, helping readers discover new culinary experiences and stay informed about the latest food trends.",
+      "id": "src-eater"
     },
     "src-conun24": {
       "writer": "Caterina Zanzi",
@@ -68,7 +73,8 @@
       "language": "IT",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer at Conosco un posto, where she creates comprehensive food guides for discovering exceptional dining experiences. Caterina Zanzi specializes in curating restaurant recommendations and culinary insights for food enthusiasts seeking their next great meal."
+      "writer_profile": "Food writer at Conosco un posto, where she creates comprehensive food guides for discovering exceptional dining experiences. Caterina Zanzi specializes in curating restaurant recommendations and culinary insights for food enthusiasts seeking their next great meal.",
+      "id": "src-conun24"
     },
     "src-conun25": {
       "writer": "Caterina Zanzi",
@@ -78,7 +84,8 @@
       "language": "IT",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer for Conosco un posto, contributing comprehensive food guides that help readers discover new dining destinations. Her recent work includes detailed restaurant recommendations and culinary insights published in December 2025. Caterina Zanzi focuses on creating practical guides for food enthusiasts seeking their next great meal."
+      "writer_profile": "Food writer for Conosco un posto, contributing comprehensive food guides that help readers discover new dining destinations. Her recent work includes detailed restaurant recommendations and culinary insights published in December 2025. Caterina Zanzi focuses on creating practical guides for food enthusiasts seeking their next great meal.",
+      "id": "src-conun25"
     },
     "src-imbr-pr": {
       "writer": "Davide Frigoli",
@@ -88,7 +95,8 @@
       "language": "IT",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer at Il Milanese Imbruttito, covering Milan's dining scene with sharp local insight. His food guides highlight the city's culinary landscape, offering readers authentic perspectives on restaurants and food culture in Milan."
+      "writer_profile": "Food writer at Il Milanese Imbruttito, covering Milan's dining scene with sharp local insight. His food guides highlight the city's culinary landscape, offering readers authentic perspectives on restaurants and food culture in Milan.",
+      "id": "src-imbr-pr"
     },
     "src-imbr-lamb": {
       "writer": "Davide Frigoli",
@@ -98,7 +106,8 @@
       "language": "IT",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer at Il Milanese Imbruttito, focusing on restaurant guides and culinary recommendations for Milan's dining scene. Davide Frigoli contributes comprehensive food guides that help locals and visitors navigate the city's evolving restaurant landscape."
+      "writer_profile": "Food writer at Il Milanese Imbruttito, focusing on restaurant guides and culinary recommendations for Milan's dining scene. Davide Frigoli contributes comprehensive food guides that help locals and visitors navigate the city's evolving restaurant landscape.",
+      "id": "src-imbr-lamb"
     },
     "src-pg": {
       "writer": "Davide Scapin Giordani",
@@ -108,7 +117,8 @@
       "language": "IT",
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer for Passione Gourmet, specializing in comprehensive dining guides and culinary recommendations. Davide Scapin Giordani contributes expert insights on restaurant discoveries and food trends through detailed guide coverage."
+      "writer_profile": "Food writer for Passione Gourmet, specializing in comprehensive dining guides and culinary recommendations. Davide Scapin Giordani contributes expert insights on restaurant discoveries and food trends through detailed guide coverage.",
+      "id": "src-pg"
     }
   },
   "restaurants": [
