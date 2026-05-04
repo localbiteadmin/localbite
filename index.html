@@ -687,6 +687,14 @@
     padding: 1px 7px;
     font-size: 10px;
   }
+  a.source-chip {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a.source-chip:hover {
+    background: var(--border);
+  }
 
   .city-hero-actions {
     display: flex;
@@ -1433,13 +1441,7 @@ function renderCards(restaurants) {
 
   grid.innerHTML = sorted.map(r => cardHTML(r)).join('');
 
-  grid.querySelectorAll('.writer-profile-toggle').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const content = this.nextElementSibling;
-      const isOpen = content.classList.toggle('open');
-      this.textContent = isOpen ? 'Hide writer ↑' : 'About this writer ↓';
-    });
-  });
+
 }
 
 function cardHTML(r) {
@@ -1467,15 +1469,15 @@ function cardHTML(r) {
   const quoteLangLabel = r.quote_language && r.quote_language !== 'original'
     ? `<span class="quote-lang">${escHtml(r.quote_language)}</span>` : '';
 
-  const writerProfile = primarySrc && primarySrc.writer_profile
-    ? `<button class="writer-profile-toggle">About this writer ↓</button>
-       <div class="writer-profile-content">${escHtml(primarySrc.writer_profile)}</div>`
-    : '';
 
-  const sourceChips = r.sources && r.sources.length > 1
+  const sourceChips = r.sources && r.sources.length > 0
     ? `<div class="all-sources">${r.sources.map(id => {
         const s = currentSources[id];
-        return s ? `<span class="source-chip">${escHtml(s.publication)}</span>` : '';
+        if (!s) return '';
+        const chipUrl = s.article_url || null;
+        return chipUrl
+          ? `<a class="source-chip" href="${escHtml(chipUrl)}" target="_blank" rel="noopener">${escHtml(s.publication)}</a>`
+          : `<span class="source-chip">${escHtml(s.publication)}</span>`;
       }).join('')}</div>` : '';
 
   const badgeLabel = pool === 'multi-source' ? '' : (isBoth ? 'Consensus pick' : poolLabel(pool));
@@ -1498,10 +1500,9 @@ function cardHTML(r) {
       <div class="card-footer">
         <div class="card-attribution">
           <span class="card-writer">${escHtml(writerLabel)}</span>
-          ${sourceUrl ? `<a class="card-source-link" href="${escHtml(sourceUrl)}" target="_blank" rel="noopener">Source ↗</a>` : ''}
+
         </div>
         ${sourceChips}
-        ${writerProfile}
       </div>
     </article>
   `;
@@ -1999,13 +2000,7 @@ function openSheet(r) {
   const content = document.getElementById('sheet-content');
   content.innerHTML = cardHTML(r);
   // Reattach interactive elements — update if cardHTML gains new handlers
-  content.querySelectorAll('.writer-profile-toggle').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      const el = this.nextElementSibling;
-      const isOpen = el.classList.toggle('open');
-      this.textContent = isOpen ? 'Hide writer ↑' : 'About this writer ↓';
-    });
-  });
+
   document.getElementById('bottom-sheet').classList.add('open');
 
   // Scroll lock — prevents map scroll bleeding through sheet on mobile.
