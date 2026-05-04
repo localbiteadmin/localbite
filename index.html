@@ -1426,7 +1426,9 @@ function renderCards(restaurants) {
     const ap = (a.language_pool==='both'||a.language_pool==='both-pool'||a.language_pool==='multi-source') ? 0 : 1;
     const bp = (b.language_pool==='both'||b.language_pool==='both-pool'||b.language_pool==='multi-source') ? 0 : 1;
     if (ap !== bp) return ap - bp;
-    const sc = (b.source_count||0) - (a.source_count||0);
+    const aSc = a.source_count != null ? a.source_count : (a.sources ? a.sources.length : 0);
+    const bSc = b.source_count != null ? b.source_count : (b.sources ? b.sources.length : 0);
+    const sc = bSc - aSc;
     if (sc !== 0) return sc;
     return (a.name||"").localeCompare(b.name||"");
   });
