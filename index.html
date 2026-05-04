@@ -426,6 +426,8 @@
 
   .filter-select:focus, .filter-select:hover { border-color: var(--terra); }
   .filter-select.active { border-color: var(--terra); background-color: var(--terra-light); }
+  .filter-toggle { background-image: none; padding-right: 12px; }
+  .filter-toggle.active { background: var(--both-pool-bg); color: var(--both-pool); border-color: var(--both-pool); background-image: none; }
 
   .filter-clear {
     font-family: 'DM Sans', sans-serif;
@@ -938,6 +940,7 @@
       padding: 5px 4px;
       padding-right: 16px;
     }
+    .mobile-row-2 .filter-toggle { padding-right: 4px; }
     /* Hide desktop-only elements on mobile */
     #f-cuisine { display: none; }
     .desktop-only { display: none; }
@@ -1010,9 +1013,7 @@
       <select class="filter-select" id="f-price" aria-label="Filter by price">
         <option value="">Any price</option>
       </select>
-      <select class="filter-select" id="f-pool" aria-label="Filter by source language">
-        <option value="">Language</option>
-      </select>
+      <button class="filter-select filter-toggle" id="f-consensus" aria-label="Show consensus picks only" style="display:none">Consensus picks</button>
     </div>
     <!-- Desktop-only elements -->
     <select class="filter-select desktop-only" id="f-cuisine" aria-label="Filter by cuisine">
@@ -1316,36 +1317,23 @@ function buildFilters(restaurants, data) {
        <option value="3">${priceSym}${priceSym}${priceSym} Higher-end</option>
        <option value="4">${priceSym}${priceSym}${priceSym}${priceSym} Special occasion</option>`;
 
-  const pools = [...new Set(restaurants.map(r=>r.language_pool).filter(Boolean))];
-  const isMonolingual = pools.every(p => p === 'en' || p === 'multi-source');
-  const poolSel = document.getElementById('f-pool');
-  if (isMonolingual) {
-    poolSel.style.display = 'none';
-    poolSel.value = '';
-  } else {
-    poolSel.style.display = '';
-    const poolOptions = [
-      ['','Source language'],
-      ['both','Two languages confirmed'],
-      ['en','English sources'],
-      ['it','Italian sources'],
-      ['fr','French sources'],
-      ['ar','Arabic sources'],
-      ['es','Spanish sources'],
-      ['ca','Catalan sources'],
-      ['pt','Portuguese sources'],
-    ].filter(([v]) => v==='' || pools.some(p => v==='both' ? (p==='both'||p==='both-pool'||p==='multi-source') : p===v));
-    poolSel.innerHTML =
-      poolOptions.map(([v,l])=>`<option value="${v}">${escHtml(l)}</option>`).join('');
-  }
+  const hasBothPool = restaurants.some(r => r.language_pool === 'both' || r.language_pool === 'both-pool' || r.language_pool === 'multi-source');
+  const consensusBtn = document.getElementById('f-consensus');
+  consensusBtn.style.display = hasBothPool ? '' : 'none';
+  consensusBtn.classList.remove('active');
+  consensusOnly = false;
 }
+
+let consensusOnly = false;
 
 function resetFilters() {
   document.getElementById('search-input').value = '';
-  ['f-neighbourhood','f-cuisine','f-price','f-pool'].forEach(id => {
+  ['f-neighbourhood','f-cuisine','f-price'].forEach(id => {
     const el = document.getElementById(id);
     if (el) { el.value = ''; el.classList.remove('active'); }
   });
+  consensusOnly = false;
+  document.getElementById('f-consensus').classList.remove('active');
   document.getElementById('filter-clear').classList.remove('visible');
 }
 
@@ -1354,11 +1342,10 @@ function getFilteredRestaurants() {
   const nb = document.getElementById('f-neighbourhood').value;
   const cui = document.getElementById('f-cuisine').value;
   const price = document.getElementById('f-price').value;
-  const pool = document.getElementById('f-pool').value;
-  const hasFilter = q || nb || cui || price || pool;
+  const hasFilter = q || nb || cui || price || consensusOnly;
 
   document.getElementById('filter-clear').classList.toggle('visible', !!hasFilter);
-  ['f-neighbourhood','f-cuisine','f-price','f-pool'].forEach(id => {
+  ['f-neighbourhood','f-cuisine','f-price'].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.classList.toggle('active', !!el.value);
   });
@@ -1367,10 +1354,9 @@ function getFilteredRestaurants() {
     if (nb && r.neighbourhood !== nb) return false;
     if (cui && r.cuisine !== cui) return false;
     if (price && r.price_level != null && String(r.price_level) !== price) return false;
-    if (pool) {
+    if (consensusOnly) {
       const p = r.language_pool || '';
-      if (pool === 'both' && p !== 'both' && p !== 'both-pool' && p !== 'multi-source') return false;
-      if (pool !== 'both' && p !== pool && !(pool === 'en' && p === 'multi-source')) return false;
+      if (p !== 'both' && p !== 'both-pool' && p !== 'multi-source') return false;
     }
     if (q) {
       const hay = [r.name, r.neighbourhood, r.cuisine, r.quote, r.signature_dish]
@@ -1388,9 +1374,14 @@ function applyFilters() {
 }
 
 document.getElementById('search-input').addEventListener('input', applyFilters);
-['f-neighbourhood','f-cuisine','f-price','f-pool'].forEach(id => {
+['f-neighbourhood','f-cuisine','f-price'].forEach(id => {
   const el = document.getElementById(id);
   if (el) el.addEventListener('change', applyFilters);
+});
+document.getElementById('f-consensus').addEventListener('click', function() {
+  consensusOnly = !consensusOnly;
+  this.classList.toggle('active', consensusOnly);
+  applyFilters();
 });
 
 document.getElementById('filter-clear').addEventListener('click', () => {
@@ -1435,7 +1426,9 @@ function renderCards(restaurants) {
     const ap = (a.language_pool==='both'||a.language_pool==='both-pool'||a.language_pool==='multi-source') ? 0 : 1;
     const bp = (b.language_pool==='both'||b.language_pool==='both-pool'||b.language_pool==='multi-source') ? 0 : 1;
     if (ap !== bp) return ap - bp;
-    return (b.source_count||0) - (a.source_count||0);
+    const sc = (b.source_count||0) - (a.source_count||0);
+    if (sc !== 0) return sc;
+    return (a.name||"").localeCompare(b.name||"");
   });
 
   grid.innerHTML = sorted.map(r => cardHTML(r)).join('');
