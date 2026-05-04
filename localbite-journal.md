@@ -9077,3 +9077,253 @@ git push
 - Valladolid: Recomiendo Valladolid URL specificity
 
 *Fleet: 41 cities, 1,288R, 119CP (9.2%) — estimated 248CP (19.2%) after definition change*
+
+## Session — 2026-05-04 (Both-pool definition confirmed, 119→233 consensus picks, Objective 3 UI complete)
+
+### Overview
+
+The longest and most consequential session in the project's history. Three major workstreams completed: (1) both-pool definition change confirmed and implemented across the full fleet simultaneously, (2) five contaminated writer profiles repaired, (3) full Objective 3 UI overhaul shipped. Fleet consensus pick rate doubled from 9.2% to 18.1% with no new pipeline runs.
+
+---
+
+### Both-Pool Definition Change — Implemented
+
+**Decision:** Publisher independence only. Language is no longer a criterion. A consensus pick requires two or more editorially independent sources from different publishers, in any language.
+
+**Three simultaneous changes implemented:**
+
+1. **postrun.js Fix 4** — language_pool derivation changed from language-diversity to publisher-diversity logic. `language_pool = 'both'` now means cross-publisher (≥2 distinct publications), not cross-language. Field rename to `publisher_pool` scheduled for Next.js migration. Code comment added. Backup: localbite-postrun.js.bak.
+
+2. **Pipeline template** — Both-pool definition updated in two places: LANGUAGE_POOL FIELD "both" definition and BOTH-POOL DEFINITION block in Phase 3. Backup: localbite-prompt-v7-template.txt.bak.
+
+3. **Recomputation script** — `localbite-recompute-both-pool.py` run across all 41 cities. Derives both_pool and language_pool from publisher diversity (distinct `publication` values). Dry-run on Bologna (10BP preserved), Turin (0→6BP gained), Madrid (6→19BP gained), Florence (5→9BP), Barcelona (14→15BP) before fleet-wide write.
+
+**Fleet result:** 119BP (9.2%) → 233BP (18.1%), net +114 consensus picks. 31 cities changed, 10 unchanged (structural gaps confirmed: Alicante, Bari, Bologna, Catania, Chefchaouen, Genoa, Granada, Palermo, Seville, Toronto).
+
+**Test methodology:** postrun.js patch applied first, tested on Bologna (confirmed 10BP preserved), then recomputation applied. Both verified consistent — postrun.js will not overwrite recomputed values on future runs.
+
+**Key finding during testing:** Barcelona showed `lang=EN` (uppercase) in source language field. Language normalisation fix applied in recomputation script (`lang.lower().strip()`).
+
+**Key finding during testing:** Bilbao had restaurants with `language_pool='both'` but `both_pool=False` — the boolean field was not consistently maintained. Recomputation script sets both fields correctly for all 1,288 restaurants.
+
+**Both-pool note:** The `language_pool` field is semantically wrong after this change (it now means cross-publisher, not cross-language). Field rename to `publisher_pool` or `source_pool` deferred to Next.js migration. Code comment added to postrun.js. Tech debt documented.
+
+**Commit:** 280b0de
+
+---
+
+### Writer Profile Contamination Repair
+
+**Diagnostic:** `check-price-and-profiles.py` identified 14 flagged profiles. 9 were correctly-placed COI flags (intentional per source quality rules, not contamination). 5 were genuine contamination with pipeline internals:
+
+| City | Writer | Terms found |
+|------|--------|-------------|
+| Bologna | Katie Parla | DIRECT_FETCH |
+| Bologna | Floriana Barone | pipeline |
+| Genoa | Mariarosaria Bruno | pipeline |
+| Modena | Katie Parla | Phase 3, DIRECT_FETCH |
+| Modena | Nico Cristiani | Phase 2, Phase 3, auto-reject |
+
+**Fix:** `localbite-fix-writer-profiles.py` applied clean profiles to all 5. Committed 31885a4.
+
+**Note:** The diagnostic script incorrectly included 'coi' and '⚠ coi' as prohibited terms. These are intentional per source quality rules. The script's prohibited term list was corrected for future use.
+
+---
+
+### Price Filter Diagnostic
+
+**Diagnostic:** `check-price-and-profiles.py` and `check-price-distribution.py` confirmed 8 cities with 100% null price_level: Barcelona, Logroño, Málaga, Marrakesh, Porto, Seville, Toronto, Valencia.
+
+**Root cause:** All 35 cities without address data are v7.1 — pipeline rebuilds will not help, sources simply don't mention prices. 6 cities with price data (Genoa, Madrid, Murcia, Rome, Seville, Toronto) had it extracted directly from source text.
+
+**Decision:** No action. Price filter showing empty results for those cities is a cosmetic issue, not a data integrity issue. Will be fixed at natural rebuild cycle.
+
+---
+
+### Objective 3 UI Changes — Shipped
+
+All changes implemented via targeted patch scripts with dry-run-first pattern and git backstop.
+
+**Badge text (commit 5f1b1ca):**
+- "Green border = confirmed in two languages" → "Green border = consensus pick"
+- Card badge: "Two languages" → "Consensus pick"
+- Map popup single restaurant: "Two languages" → "Consensus pick"
+- Map popup neighbourhood cluster: "Two languages" → "Consensus pick"
+
+**Source chips + card cleanup (commit 9805e8c):**
+- Source chips now show for ALL sources (not just 2+)
+- Chips clickable when article_url exists (`<a>` tag), non-clickable when null (`<span>`)
+- CSS added: `a.source-chip` with hover state
+- Source ↗ link removed entirely
+- "About this writer" button and toggle removed from cards (writer profiles remain in Sources panel)
+- Writer-profile-toggle event listeners removed from both grid and map sheet
+
+**Alignment + tooltip fix (commits 3fe9d73, d24e7a4):**
+- hero-sources-btn padding: 4px → 5px (matches both-pool-banner)
+- both-pool-banner margin-top: 10px removed (container handles spacing)
+- Tooltip text updated: "two different language communities" → "publisher independence" language
+
+**Consensus picks toggle + sort (commit 4ef9eb5):**
+- Language filter dropdown removed entirely
+- Consensus picks toggle button added (hidden for cities with 0 consensus picks)
+- Toggle state: `let consensusOnly = false` — resets on city switch and filter-clear
+- Sort order fixed permanently: both-pool first → source count desc → A-Z tiebreaker
+- `buildFilters()` poolSel block replaced with hasBothPool + consensusBtn logic
+- `resetFilters()`, `getFilteredRestaurants()`, event listeners all updated
+- 9 replacements, all verified: `f-pool` fully removed (0 remaining references)
+
+**Sort fix (commit 3c0156a):**
+- `source_count` confirmed null for all 1,288 restaurants
+- Sort now uses `sources.length` as fallback when `source_count` is null
+- Lana (3 sources) correctly sorts above Lakasa (2 sources) in Madrid
+
+**Writer attribution removal (commit bb984a9):**
+- Writer name · Publication line removed from all cards
+- `primaryId`, `primarySrc`, `sourceUrl`, `writerLabel` JS variables removed (all unused)
+- `.card-attribution` and `.card-writer` CSS removed
+- Sources panel retains full writer detail
+- index.html: 2,348 lines (was 2,380 at session start, net -32)
+
+**Milan source id fix (commit c8520d5):**
+- Diagnostic revealed Milan's 10 source objects had no `id` or `source_id` field
+- `currentSources` lookup failed silently — chips not rendering on any Milan card
+- Fix: `localbite-fix-milan-source-ids.py` added `id = dict_key` to all 10 source objects
+- Fleet-wide check confirmed Milan-only issue
+
+**Tooltip CDN propagation:** File confirmed correct via grep. GitHub Pages CDN may take 10 minutes to propagate. Private browsing may also serve cached version during propagation window.
+
+---
+
+### Address Field Assessment
+
+**Diagnostic:** `check-address-field.py` confirmed 187 restaurants across 6 cities have address data (Genoa 70%, Madrid 71%, Murcia 100%, Rome 23%, Seville 50%, Toronto 96%). All 35 other cities have zero addresses.
+
+**Root cause:** All 35 zero-address cities are v7.1 — sources don't mention addresses. Pipeline rebuilds will not help.
+
+**Options evaluated:**
+- Reverse geocoding: excluded (decided against)
+- Google Maps deep link: excluded (decided against)
+- Plain text display where available: tabled for future session
+- Do nothing: current state
+
+**Decision:** Change 5 (address field) tabled. Revisit when clearer path to broader coverage exists.
+
+---
+
+### Both-Pool by City — Updated Fleet Table
+
+| City | R | BP | BP% |
+|------|---|----|----|
+| A Coruña | 25 | 11 | 44% |
+| Alicante | 9 | 1 | 11% |
+| Barcelona | 110 | 15 | 14% |
+| Bari | 14 | 7 | 50% |
+| Bilbao | 23 | 4 | 17% |
+| Bologna | 20 | 10 | 50% |
+| Catania | 16 | 3 | 19% |
+| Chefchaouen | 2 | 0 | 0% |
+| Córdoba | 40 | 9 | 23% |
+| Fes | 21 | 5 | 24% |
+| Florence | 42 | 9 | 21% |
+| Genoa | 27 | 5 | 19% |
+| Granada | 4 | 2 | 50% |
+| Lecce | 26 | 6 | 23% |
+| Lisbon | 24 | 9 | 38% |
+| Logroño | 15 | 2 | 13% |
+| Madrid | 116 | 19 | 16% |
+| Málaga | 34 | 5 | 15% |
+| Marrakesh | 42 | 8 | 19% |
+| Milan | 60 | 9 | 15% |
+| Modena | 10 | 2 | 20% |
+| Murcia | 10 | 3 | 30% |
+| Naples | 62 | 8 | 13% |
+| Palermo | 18 | 0 | 0% |
+| Palma de Mallorca | 33 | 7 | 21% |
+| Pamplona | 24 | 3 | 13% |
+| Porto | 17 | 2 | 12% |
+| Rabat | 5 | 1 | 20% |
+| Rome | 64 | 8 | 13% |
+| San Sebastián | 24 | 9 | 38% |
+| Santiago de Compostela | 27 | 8 | 30% |
+| Seville | 22 | 0 | 0% |
+| Toronto | 52 | 0 | 0% |
+| Trieste | 14 | 4 | 29% |
+| Turin | 23 | 6 | 26% |
+| Valencia | 78 | 11 | 14% |
+| Valladolid | 30 | 3 | 10% |
+| Venice | 21 | 5 | 24% |
+| Verona | 35 | 7 | 20% |
+| Vigo | 10 | 2 | 20% |
+| Zaragoza | 39 | 5 | 13% |
+
+---
+
+### Key Decisions
+
+1. Both-pool definition confirmed: publisher independence only, language irrelevant. Effective 2026-05-04.
+2. `language_pool` field name kept for backward compatibility — semantically means cross-publisher. Rename to `publisher_pool` at Next.js migration.
+3. Price filter: no action. Deferred to rebuild cycle.
+4. Writer attribution line: removed from cards. Writer credit lives in Sources panel and chips.
+5. Change 5 (address field): tabled. No reverse geocoding, no Google Maps links. Revisit with broader data coverage.
+6. Pipeline rebuilds: only justified for Rome (concentration), Madrid (3 new sources), Barcelona (HIGH SPREAD trigger). Venice, Trieste, Turin, Málaga deferred.
+7. Script standard confirmed: all Python commands as files, saved directly to localbite directory, no -c one-liners.
+8. CiboToday vs Cibo Today naming inconsistency noted (Modena vs other cities) — data cleanup at next rebuild.
+
+---
+
+### Files Produced or Updated
+
+**Scripts (all in localbite directory, not committed):**
+- localbite-recompute-both-pool.py — fleet-wide both_pool recomputation
+- localbite-patch-postrun-fix4.py — postrun.js Fix 4 patch
+- localbite-patch-template-bothpool.py — pipeline template patch
+- localbite-fix-writer-profiles.py — writer profile contamination repair
+- localbite-fix-milan-source-ids.py — Milan source id fix
+- localbite-patch-badge-text.py — badge text patch
+- localbite-patch-cards.py — source chips + About this writer removal
+- localbite-patch-hero-alignment.py — hero button alignment + tooltip
+- localbite-patch-banner-margin.py — banner margin fix
+- localbite-patch-change3.py — consensus picks toggle + sort
+- localbite-patch-sort-fix.py — sort sources.length fallback
+- localbite-patch-remove-attribution.py — writer attribution removal
+- check-*.py, show-*.py, assess-*.py, find-*.py — diagnostic scripts
+
+**Committed changes (10 commits):**
+- 280b0de: feat: both-pool definition change
+- 31885a4: fix: writer profiles Bologna, Genoa, Modena
+- 5f1b1ca: fix: badge text Two languages → Consensus pick
+- 9805e8c: feat: clickable chips, remove Source arrow and About this writer
+- 3fe9d73: fix: alignment + tooltip text
+- d24e7a4: fix: banner margin-top
+- 4ef9eb5: feat: consensus picks toggle, sort order
+- 3c0156a: fix: sort sources.length fallback
+- c8520d5: fix: Milan source id fields
+- bb984a9: feat: remove writer attribution from cards
+
+---
+
+### Outstanding Items
+
+**Engineering P0 (before any pipeline runs):**
+- Fix 2: postrun.js sources list→dict auto-repair
+- Fix 3: geocode.js false positive detection (Italian cities)
+- Pre-research template: Add Search 8 and Search 9
+
+**Data fixes:**
+- Rome: Antico Caffè Greco permanently closed — remove before next commit
+- Trieste: viewer smoke test pending
+- CiboToday vs Cibo Today naming inconsistency (Modena vs other cities)
+
+**Pipeline rebuilds (when ready):**
+- Rome: add Puntarella Rossa / Guerrini + remove Antico Caffè Greco
+- Madrid: add Maribona + Agüero + Ferrandis
+- Barcelona: add Regol + fix Eixample HIGH SPREAD centroid
+
+**Deferred:**
+- Change 5 (address field) — tabled
+- Venice, Trieste, Turin, Málaga Part 1 updates — deferred
+- Next.js migration — unchanged
+- language_pool → publisher_pool rename — at Next.js migration
+
+*Fleet: 41 cities, 1,288R, 233BP (18.1%), index.html 2,348 lines*
+
