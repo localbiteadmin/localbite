@@ -623,18 +623,6 @@
     gap: 4px;
   }
 
-  .card-attribution {
-    font-size: 11px;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-
-  .card-writer { font-weight: 500; color: var(--mid); }
-
   .card-source-link {
     font-size: 11px;
     color: var(--terra);
@@ -1453,12 +1441,7 @@ function cardHTML(r) {
 
   const metaParts = [r.neighbourhood, r.cuisine, r.price_level ? priceSymbol(r.price_level, currency) : null].filter(Boolean);
 
-  const primaryId = r.sources && r.sources[0];
-  const primarySrc = primaryId && currentSources[primaryId];
-  const sourceUrl = primarySrc ? (primarySrc.article_url || primarySrc.url || null) : null;
-  const writerLabel = primarySrc
-    ? (primarySrc.writer ? primarySrc.writer + ' · ' + primarySrc.publication : primarySrc.publication)
-    : '';
+
 
   const quoteLangLabel = r.quote_language && r.quote_language !== 'original'
     ? `<span class="quote-lang">${escHtml(r.quote_language)}</span>` : '';
@@ -1492,10 +1475,6 @@ function cardHTML(r) {
       <blockquote class="card-quote">${escHtml(r.quote||'')}${quoteLangLabel}</blockquote>
       ${r.signature_dish ? `<div class="card-dish">${escHtml(r.signature_dish)}</div>` : ''}
       <div class="card-footer">
-        <div class="card-attribution">
-          <span class="card-writer">${escHtml(writerLabel)}</span>
-
-        </div>
         ${sourceChips}
       </div>
     </article>
