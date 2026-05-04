@@ -323,7 +323,7 @@
         "src-cibotoday-petrini"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "writers": [
         "Elena Farinelli",
         "Vivian Petrini"
@@ -333,7 +333,7 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "it"
+      "language_pool": "both"
     },
     {
       "name": "Cuculia",
@@ -355,7 +355,7 @@
         "src-cibotoday-petrini"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "writers": [
         "Elena Farinelli",
         "Vivian Petrini"
@@ -365,7 +365,7 @@
       "geo_confidence": "high",
       "geo_matched_name": "Cuculia",
       "geo_source": "nominatim",
-      "language_pool": "it"
+      "language_pool": "both"
     },
     {
       "name": "Io Osteria Personale",
@@ -389,7 +389,7 @@
         "src-cibotoday-petrini"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "writers": [
         "Elena Farinelli",
         "Vivian Petrini"
@@ -399,7 +399,7 @@
       "geo_confidence": "medium",
       "geo_matched_name": "Osteria Personale",
       "geo_source": "photon",
-      "language_pool": "it"
+      "language_pool": "both"
     },
     {
       "name": "Osteria Tripperia Il Magazzino",
@@ -432,7 +432,7 @@
         "src-cibotoday-petrini"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "writers": [
         "Antonella De Santis",
         "Vivian Petrini"
@@ -442,7 +442,7 @@
       "geo_confidence": "high",
       "geo_matched_name": "Il Magazzino Osteria Tripperia",
       "geo_source": "nominatim",
-      "language_pool": "it"
+      "language_pool": "both"
     },
     {
       "name": "Trattoria Mario",

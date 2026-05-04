@@ -210,7 +210,8 @@
       "lng": -4.779239,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bar Santos"
+      "geo_matched_name": "Bar Santos",
+      "both_pool": true
     },
     {
       "name": "Casa Pepe de La Judería",
@@ -244,7 +245,8 @@
       "lng": -4.7812529,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Casa Pepe de la Judería"
+      "geo_matched_name": "Casa Pepe de la Judería",
+      "both_pool": true
     },
     {
       "name": "Almatea",
@@ -278,7 +280,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "La Regadera",
@@ -312,7 +315,8 @@
       "lng": -4.7774464,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Regadera"
+      "geo_matched_name": "La Regadera",
+      "both_pool": true
     },
     {
       "name": "Taberna La Viuda",
@@ -350,7 +354,8 @@
       "lng": -4.7852337,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Taberna La Viuda"
+      "geo_matched_name": "Taberna La Viuda",
+      "both_pool": true
     },
     {
       "name": "El Astronauta",
@@ -382,7 +387,8 @@
       "lng": -4.7764814,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Astronauta"
+      "geo_matched_name": "El Astronauta",
+      "both_pool": true
     },
     {
       "name": "Taberna Montillana",
@@ -401,7 +407,7 @@
       "signature_dish": "flamenquín",
       "quote": "We had to try a Cordoba Flamenquín so after getting a couple of ice cold beers we ordered. Some crispy regañas were placed on our table by the friendly waiter. The flamenquin was delicious — nothing fancy, just traditional Cordoba bar food. The wine selection is huge.",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-piccavey-piccavey",
@@ -417,7 +423,8 @@
       "lng": -4.779818,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Taberna La Montillana"
+      "geo_matched_name": "Taberna La Montillana",
+      "both_pool": true
     },
     {
       "name": "Taberna Los Merengueles",
@@ -439,7 +446,7 @@
       "signature_dish": "ensaladilla rusa",
       "quote": "El plato de huevos estrellados elaborado con huevos rotos con jamón y patatas es una opción indulgente que seguramente satisfará tus antojos. El servicio amable y rápido es otro aspecto destacado de este lugar.",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-theobjective-alonso",
@@ -456,7 +463,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Sociedad Plateros María Auxiliadora",
@@ -478,7 +486,7 @@
       "signature_dish": null,
       "quote": "Uno de los lugares más históricos, emblemáticos y relevantes de la gastronomía cordobesa, con platos como el salmorejo, las berenjenas fritas con miel o el flamenquín.",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-cordopolis-jimenez",
@@ -494,7 +502,8 @@
       "lng": -4.7669608,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Sociedad de Plateros María Auxiliadora"
+      "geo_matched_name": "Sociedad de Plateros María Auxiliadora",
+      "both_pool": true
     },
     {
       "name": "La Contentura",
@@ -529,7 +538,8 @@
       "lng": -4.7758401,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Contentura"
+      "geo_matched_name": "La Contentura",
+      "both_pool": false
     },
     {
       "name": "Taberna La Sacristía",
@@ -562,7 +572,8 @@
       "lng": -4.774856,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "La Sacristía"
+      "geo_matched_name": "La Sacristía",
+      "both_pool": false
     },
     {
       "name": "El Patio de María",
@@ -598,7 +609,8 @@
       "lng": -4.7724864,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Patio de María"
+      "geo_matched_name": "El Patio de María",
+      "both_pool": false
     },
     {
       "name": "Mesón San Basilio",
@@ -632,7 +644,8 @@
       "lng": -4.783808,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Mesón San Basilio"
+      "geo_matched_name": "Mesón San Basilio",
+      "both_pool": false
     },
     {
       "name": "La Tinaja",
@@ -666,7 +679,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Taberna del Rio",
@@ -699,7 +713,8 @@
       "lng": -4.7742543,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Taberna del Rio"
+      "geo_matched_name": "Taberna del Rio",
+      "both_pool": false
     },
     {
       "name": "La Boca",
@@ -732,7 +747,8 @@
       "lng": -4.7763714,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Boca"
+      "geo_matched_name": "La Boca",
+      "both_pool": false
     },
     {
       "name": "Bodegas Campos",
@@ -768,7 +784,8 @@
       "lng": -4.7740519,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bodegas Campos"
+      "geo_matched_name": "Bodegas Campos",
+      "both_pool": false
     },
     {
       "name": "La Maceta",
@@ -797,7 +814,8 @@
       "lng": -4.7838449,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Maceta"
+      "geo_matched_name": "La Maceta",
+      "both_pool": false
     },
     {
       "name": "La Cazuela de la Esparteria",
@@ -831,7 +849,8 @@
       "lng": -4.775356,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Taberna La Cazuela de la Esparteria"
+      "geo_matched_name": "Taberna La Cazuela de la Esparteria",
+      "both_pool": false
     },
     {
       "name": "Taberna El Nº10",
@@ -867,7 +886,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Taberna El Abanico",
@@ -898,7 +918,8 @@
       "lng": -4.7800225,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Taberna El Abanico"
+      "geo_matched_name": "Taberna El Abanico",
+      "both_pool": false
     },
     {
       "name": "Casa Rubio",
@@ -929,7 +950,8 @@
       "lng": -4.7838236,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Casa Rubio"
+      "geo_matched_name": "Casa Rubio",
+      "both_pool": false
     },
     {
       "name": "Los Patios de La Marquesa",
@@ -961,7 +983,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Taberna Góngora",
@@ -992,7 +1015,8 @@
       "lng": -4.7787781,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Taberna Góngora"
+      "geo_matched_name": "Taberna Góngora",
+      "both_pool": false
     },
     {
       "name": "Bodegas Mezquita Corregidor",
@@ -1023,7 +1047,8 @@
       "lng": -4.7755551,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Bodegas Mezquita"
+      "geo_matched_name": "Bodegas Mezquita",
+      "both_pool": false
     },
     {
       "name": "Garum 2.1",
@@ -1054,7 +1079,8 @@
       "lng": -4.7756386,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Garum 2.1"
+      "geo_matched_name": "Garum 2.1",
+      "both_pool": false
     },
     {
       "name": "Taberna Salinas",
@@ -1087,7 +1113,8 @@
       "lng": -4.775967,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Taberna Salinas"
+      "geo_matched_name": "Taberna Salinas",
+      "both_pool": false
     },
     {
       "name": "La Taberna de Almodovar",
@@ -1119,7 +1146,8 @@
       "lng": -4.7823501,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Taberna de Almodóvar"
+      "geo_matched_name": "La Taberna de Almodóvar",
+      "both_pool": false
     },
     {
       "name": "Arbequina",
@@ -1153,7 +1181,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Casa de Manolete Bistró",
@@ -1187,7 +1216,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Almudaina",
@@ -1222,7 +1252,8 @@
       "lng": -4.7819062,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Restaurante Almudaina"
+      "geo_matched_name": "Restaurante Almudaina",
+      "both_pool": false
     },
     {
       "name": "Asador Central",
@@ -1254,7 +1285,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "El Lindero Gastro Taberna",
@@ -1286,7 +1318,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Atmósfera Gastrobar",
@@ -1320,7 +1353,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "La Esquinita de la Judería",
@@ -1353,7 +1387,8 @@
       "lng": -4.7802586,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Esquinita de la Judería"
+      "geo_matched_name": "La Esquinita de la Judería",
+      "both_pool": false
     },
     {
       "name": "Tu Pescaito",
@@ -1385,7 +1420,8 @@
       "lng": -4.7751387,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Tu Pescaito"
+      "geo_matched_name": "Tu Pescaito",
+      "both_pool": false
     },
     {
       "name": "La Compañía",
@@ -1419,7 +1455,8 @@
       "lng": -4.7778966,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Compañía"
+      "geo_matched_name": "La Compañía",
+      "both_pool": false
     },
     {
       "name": "La Lianta de Quini",
@@ -1451,7 +1488,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Terra Olea",
@@ -1481,7 +1519,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Lamundi",
@@ -1512,7 +1551,8 @@
       "lng": -4.7831,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Lamundi"
+      "geo_matched_name": "Lamundi",
+      "both_pool": false
     }
   ],
   "centroids": {

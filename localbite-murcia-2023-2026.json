@@ -218,7 +218,7 @@
       "quote_language": "original",
       "article_date": "2024-12-12",
       "open_status_check": false,
-      "language_pool": "es",
+      "language_pool": "both",
       "flagged": false,
       "flag_reason": null,
       "lat": null,
@@ -233,7 +233,8 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "confidence_tier": "A",
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Frases",
@@ -257,7 +258,7 @@
       "quote_language": "original",
       "article_date": "2023-10-01",
       "open_status_check": true,
-      "language_pool": "es",
+      "language_pool": "both",
       "flagged": true,
       "flag_reason": "Restaurant relocated from Calle Soledad, 1 to Calle San Lorenzo (former Maza y Cerón space) — new address must be confirmed before deployment. 1 Michelin star awarded November 2024 (announced for 2025 guide). Menus: Origen €75, Tierra €100.",
       "lat": null,
@@ -271,7 +272,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "confidence_tier": "A"
+      "confidence_tier": "A",
+      "both_pool": true
     },
     {
       "name": "Mapa",
@@ -296,7 +298,7 @@
       "quote_language": "translated",
       "article_date": "2023-01-31",
       "open_status_check": true,
-      "language_pool": "es",
+      "language_pool": "both",
       "flagged": true,
       "flag_reason": "open_status_check — oldest source dated 2023-01-31; verify still open before deployment. Quote translated from Spanish by Jina AI model.",
       "lat": null,
@@ -311,7 +313,8 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "confidence_tier": "A",
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Tándem",
@@ -346,7 +349,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "confidence_tier": "B"
+      "confidence_tier": "B",
+      "both_pool": false
     },
     {
       "name": "El Huésped",
@@ -381,7 +385,8 @@
       "geo_source": "nominatim",
       "geo_confidence": "high",
       "geo_matched_name": "El Huésped",
-      "confidence_tier": "B"
+      "confidence_tier": "B",
+      "both_pool": false
     },
     {
       "name": "Federal Café",
@@ -416,7 +421,8 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "confidence_tier": "B",
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Pepe Juan",
@@ -451,7 +457,8 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "confidence_tier": "B",
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Almo",
@@ -484,7 +491,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "confidence_tier": "B"
+      "confidence_tier": "B",
+      "both_pool": false
     },
     {
       "name": "Cabaña Buenavista",
@@ -516,7 +524,8 @@
       "geo_source": "nominatim",
       "geo_confidence": "high",
       "geo_matched_name": "La Cabaña de la Finca Buenavista",
-      "confidence_tier": "B"
+      "confidence_tier": "B",
+      "both_pool": false
     },
     {
       "name": "Pura Cepa",
@@ -549,7 +558,8 @@
       "geo_source": "nominatim",
       "geo_confidence": "high",
       "geo_matched_name": "Pura Cepa",
-      "confidence_tier": "B"
+      "confidence_tier": "B",
+      "both_pool": false
     }
   ],
   "centroids": {

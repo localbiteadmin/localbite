@@ -149,7 +149,7 @@
         }
       ],
       "confidence": "A",
-      "both_pool": false,
+      "both_pool": true,
       "riad_flag": false,
       "geo_lat": null,
       "geo_lng": null,
@@ -159,7 +159,7 @@
       "lat": 31.6292152,
       "lng": -7.986435,
       "geo_source": "nominatim",
-      "language_pool": "en",
+      "language_pool": "both",
       "quote": "Their lamb tagine is tender enough to eat with a spoon, and the couscous dishes are always perfectly fluffy."
     },
     {
@@ -573,7 +573,7 @@
         }
       ],
       "confidence": "A",
-      "both_pool": false,
+      "both_pool": true,
       "riad_flag": false,
       "geo_lat": null,
       "geo_lng": null,
@@ -583,7 +583,7 @@
       "lat": 31.6390715,
       "lng": -8.0137562,
       "geo_source": "nominatim",
-      "language_pool": "en",
+      "language_pool": "both",
       "quote": "they serve one of the best couscous dishes in Marrakech (around 50 MAD), available only on Fridays."
     },
     {
@@ -785,7 +785,7 @@
         }
       ],
       "confidence": "A",
-      "both_pool": false,
+      "both_pool": true,
       "riad_flag": false,
       "geo_lat": null,
       "geo_lng": null,
@@ -795,7 +795,7 @@
       "lat": 31.63384,
       "lng": -8.0151742,
       "geo_source": "nominatim",
-      "language_pool": "en",
+      "language_pool": "both",
       "quote": "The Art Deco-style bar feels like an old English gentlemen's club: soft lighting, live musicians on some evenings, cigars, and a working fireplace."
     },
     {

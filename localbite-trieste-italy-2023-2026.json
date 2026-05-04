@@ -185,7 +185,8 @@
       "lng": 13.770336,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Buffet da Pepi"
+      "geo_matched_name": "Buffet da Pepi",
+      "both_pool": true
     },
     {
       "name": "Chimera di Bacco",
@@ -222,7 +223,8 @@
       "lng": 13.7698378,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Chimera di Bacco"
+      "geo_matched_name": "La Chimera di Bacco",
+      "both_pool": true
     },
     {
       "name": "Buffet Clai",
@@ -242,7 +244,7 @@
       "signature_dish": null,
       "quote": "Sempre molto affollato, il Buffet Clai è il luogo perfetto sia per una pausa al volo, in piedi al banco, che per una sosta più rilassata nel dehors. Ci si lascia tentare volentieri dai fiori di zucca fritti, dalle gustose mozzarelle in carrozza o dai panzerotti al tartufo.",
       "quote_language": "original",
-      "language_pool": "it",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-souvenirdiviaggio-nuzzaci",
@@ -258,7 +260,8 @@
       "lng": 13.7809046,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Buffet Clai"
+      "geo_matched_name": "Buffet Clai",
+      "both_pool": true
     },
     {
       "name": "Da Siora Rosa",
@@ -284,7 +287,7 @@
       "signature_dish": null,
       "quote": "A metà 2023 sembrava definitivamente chiuso, poi '040 Group' ha rilevato e riaperto questa centenaria insegna restituendola alla città nel segno della continuità. Una istituzione, emblema della tradizione locale dove gustare i tipici piatti triestini 'da caldaia'.",
       "quote_language": "original",
-      "language_pool": "it",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-souvenirdiviaggio-nuzzaci",
@@ -300,7 +303,8 @@
       "lng": 13.7643713,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Siora Rosa"
+      "geo_matched_name": "Siora Rosa",
+      "both_pool": true
     },
     {
       "name": "Al Bagatto",
@@ -334,7 +338,8 @@
       "lng": 13.7651848,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Al Bagatto"
+      "geo_matched_name": "Al Bagatto",
+      "both_pool": false
     },
     {
       "name": "Al Barattolo",
@@ -367,7 +372,8 @@
       "lng": 13.7740084,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Pizzeria al Barattolo"
+      "geo_matched_name": "Pizzeria al Barattolo",
+      "both_pool": false
     },
     {
       "name": "Al Petes",
@@ -399,7 +405,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "aMano",
@@ -436,7 +443,8 @@
       "lng": 13.7789046,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Amano"
+      "geo_matched_name": "Amano",
+      "both_pool": false
     },
     {
       "name": "Antica Ghiacceretta",
@@ -468,7 +476,8 @@
       "lng": 13.7662501,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Antica Ghiacceretta"
+      "geo_matched_name": "Antica Ghiacceretta",
+      "both_pool": false
     },
     {
       "name": "Antica Trattoria Suban",
@@ -500,7 +509,8 @@
       "lng": 13.8082035,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Suban"
+      "geo_matched_name": "Suban",
+      "both_pool": false
     },
     {
       "name": "Buffet L'Approdo",
@@ -541,7 +551,8 @@
       "lng": 13.7782576,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Buffet L'Approdo"
+      "geo_matched_name": "Buffet L'Approdo",
+      "both_pool": false
     },
     {
       "name": "La Bottega dell'Antiquario",
@@ -575,7 +586,8 @@
       "lng": 13.7701638,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "La Bottega dello Antiquario"
+      "geo_matched_name": "La Bottega dello Antiquario",
+      "both_pool": false
     },
     {
       "name": "Le Bollicine",
@@ -608,7 +620,8 @@
       "lng": 13.7737596,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Le Bollicine"
+      "geo_matched_name": "Le Bollicine",
+      "both_pool": false
     },
     {
       "name": "Trattoria Le Barettine",
@@ -646,7 +659,8 @@
       "lng": 13.7672659,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Antica Trattoria Le Barettine"
+      "geo_matched_name": "Antica Trattoria Le Barettine",
+      "both_pool": false
     }
   ],
   "centroids": {

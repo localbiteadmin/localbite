@@ -5,8 +5,8 @@
   "pipeline": "localbite-v7.1",
   "run_date": "2026-04-28",
   "year_range": "2023-2026",
-  "sources": [
-    {
+  "sources": {
+    "src-katieparla-parla": {
       "source_id": "src-katieparla-parla",
       "id": "src-katieparla-parla",
       "writer": "Katie Parla",
@@ -23,7 +23,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "American food writer based in Rome, specializing in Italian and Mediterranean food. Author of multiple cookbooks including Tasting Rome (2016) and Food of the Italian South (2019). Regular contributor to The New York Times, National Geographic, and Saveur. Katie Parla has been researching and writing about Italian regional food traditions for over fifteen years, with in-depth city guides at katieparla.com. Her Bologna guide was updated August 2024. Confirmed DIRECT_FETCH_SOURCE; article fetched via direct WebFetch (Jina CAPTCHA blocked, Wayback 451). No qualifying quotes extracted from this session's re-fetch due to AI-summary compression; source retained as cross-validation."
     },
-    {
+    "src-cibotoday-pozzi": {
       "source_id": "src-cibotoday-pozzi",
       "id": "src-cibotoday-pozzi",
       "writer": "Carolina Pozzi",
@@ -40,7 +40,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Food and lifestyle writer for CiboToday, an Italian digital food publication covering restaurant recommendations, food culture, and dining guides across Italy. Carolina Pozzi specializes in practical city-wide restaurant round-ups grounded in local food traditions. Her June 2023 Bologna guide covers sixteen trattorias and restaurants with emphasis on Bolognese cucina tipica, tracing both historic institutions and contemporary kitchens committed to local culinary identity."
     },
-    {
+    "src-curiousappetite-sisk": {
       "source_id": "src-curiousappetite-sisk",
       "id": "src-curiousappetite-sisk",
       "writer": "Coral Sisk",
@@ -57,7 +57,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "American food writer and long-term Bologna resident behind The Curious Appetite (thecuriousappetite.com). Coral Sisk runs food tours and culinary events in Bologna and has spent years documenting the city's restaurant scene from the inside. Her January 2026 Bologna guide is comprehensive and opinionated, covering trattorias, wine bars, and contemporary dining from the perspective of someone who eats in the city daily. One of the most authoritative English-language voices on Bolognese food culture."
     },
-    {
+    "src-foodnotes-campagnoli": {
       "source_id": "src-foodnotes-campagnoli",
       "id": "src-foodnotes-campagnoli",
       "writer": "Monica Campagnoli",
@@ -74,7 +74,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Bologna-based food writer and sole author of the Food Notes from Bologna Substack newsletter (foodnotesfrombologna.substack.com). Monica Campagnoli writes about the city's food culture, restaurant scene, and culinary traditions for an English-language audience interested in local Bolognese eating. Her February 2025 article is a curated reference list of recommended restaurants across the city. Single-author site rule applied: authorship confirmed on About page."
     },
-    {
+    "src-passionegourmet-decristofaro": {
       "source_id": "src-passionegourmet-decristofaro",
       "id": "src-passionegourmet-decristofaro",
       "writer": "Valerio De Cristofaro",
@@ -91,7 +91,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Food critic writing for Passione Gourmet, one of Italy's leading independent food criticism publications known for authoritative and detailed restaurant reviews. Valerio De Cristofaro contributed a single-restaurant review of Al Cambio in Bologna, published July 2025, assessing its contemporary trattoria approach and commitment to traditional Bolognese cuisine under chef Max Poggi."
     },
-    {
+    "src-gastrodelirio-riccio": {
       "source_id": "src-gastrodelirio-riccio",
       "id": "src-gastrodelirio-riccio",
       "writer": "Fabio Riccio",
@@ -108,7 +108,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Independent food critic and author at Gastrodelirio (gastrodelirio.it), covering Italian restaurants with particular attention to Bologna and Emilia-Romagna. Fabio Riccio writes single-restaurant reviews focused on product quality, craft, and culinary authenticity. His October 2025 review of I Mattarelli highlighted the Bolognina pasta atelier's creative approach to fresh pasta traditions."
     },
-    {
+    "src-lucianopignataro-barone": {
       "source_id": "src-lucianopignataro-barone",
       "id": "src-lucianopignataro-barone",
       "writer": "Floriana Barone",
@@ -125,7 +125,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Food writer contributing to the Luciano Pignataro Wine Blog (lucianopignataro.it), a respected Italian food and wine publication. Floriana Barone reviewed Trattoria di Via Serra in Bologna in April 2024, noting the kitchen's focus on named local suppliers and high-quality ingredients. Article_url set null: article content was not retrievable in current session re-fetch (Jina returned homepage); confirmed as 200 response (~3000ch) in original pipeline session."
     }
-  ],
+  },
   "restaurants": [
     {
       "name": "Al Cambio",
@@ -860,5 +860,55 @@
       44.5107,
       11.3435
     ]
+  },
+  "centroids_proposed": {
+    "Centro Storico": {
+      "coords": [
+        44.494,
+        11.3435
+      ],
+      "source": "averaged",
+      "restaurant_count": 6,
+      "high_spread": true,
+      "lat_spread": 0.0117,
+      "lng_spread": 0.0124,
+      "requires_verification": true,
+      "null_coord_restaurants": [
+        "Ristorante Grassilli",
+        "Casa Merlò",
+        "Trattoria Serghei",
+        "Darcy"
+      ]
+    },
+    "Santo Stefano": {
+      "coords": [
+        44.4918,
+        11.3483
+      ],
+      "source": "averaged",
+      "restaurant_count": 1,
+      "high_spread": false,
+      "lat_spread": 0,
+      "lng_spread": 0,
+      "requires_verification": false,
+      "null_coord_restaurants": [
+        "Scaccomatto"
+      ]
+    },
+    "Bolognina": {
+      "coords": [
+        44.5107,
+        11.3435
+      ],
+      "source": "averaged",
+      "restaurant_count": 2,
+      "high_spread": false,
+      "lat_spread": 0.0025,
+      "lng_spread": 0.0041,
+      "requires_verification": false,
+      "null_coord_restaurants": [
+        "I Mattarelli"
+      ]
+    }
   }
 }

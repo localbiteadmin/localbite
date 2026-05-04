@@ -234,10 +234,10 @@
         "src-asgn-jun24",
         "src-eater"
       ],
-      "both_pool": false,
+      "both_pool": true,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "en"
+      "language_pool": "both"
     },
     {
       "name": "Ravioleria Sarpi",
@@ -263,10 +263,10 @@
         "src-infat",
         "src-eater"
       ],
-      "both_pool": false,
+      "both_pool": true,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "en"
+      "language_pool": "both"
     },
     {
       "name": "Bar Basso",
@@ -292,10 +292,10 @@
         "src-infat",
         "src-eater"
       ],
-      "both_pool": false,
+      "both_pool": true,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "en"
+      "language_pool": "both"
     },
     {
       "name": "Rovello 18",
@@ -322,10 +322,10 @@
         "src-infat",
         "src-eater"
       ],
-      "both_pool": false,
+      "both_pool": true,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "en"
+      "language_pool": "both"
     },
     {
       "name": "28 Posti",
@@ -348,10 +348,10 @@
         "src-infat",
         "src-eater"
       ],
-      "both_pool": false,
+      "both_pool": true,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "en"
+      "language_pool": "both"
     },
     {
       "name": "Erba Brusca",
@@ -374,10 +374,10 @@
         "src-infat",
         "src-eater"
       ],
-      "both_pool": false,
+      "both_pool": true,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "en"
+      "language_pool": "both"
     },
     {
       "name": "La Baia",

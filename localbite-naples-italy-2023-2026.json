@@ -494,7 +494,7 @@
       "article_date": "undated",
       "article_title": "Eating & Drinking in Naples",
       "open_status_check": false,
-      "both_pool": false,
+      "both_pool": true,
       "confidence_tier": "A",
       "sources": [
         "src-katieparla-parla",
@@ -505,7 +505,7 @@
       "geo_source": "nominatim",
       "geo_confidence": "medium",
       "geo_matched_name": "Pescheria Azzurra",
-      "language_pool": "en"
+      "language_pool": "both"
     },
     {
       "name": "Persika",
@@ -689,7 +689,7 @@
       "article_date": "2025-01-04",
       "article_title": "le migliori trattorie di Napoli città, la mappa dei quartieri",
       "open_status_check": false,
-      "both_pool": false,
+      "both_pool": true,
       "confidence_tier": "A",
       "sources": [
         "src-lucianopignataro-disalvo-trattorie",
@@ -700,7 +700,7 @@
       "geo_source": "nominatim",
       "geo_confidence": "high",
       "geo_matched_name": "Antica Osteria Pisano",
-      "language_pool": "it"
+      "language_pool": "both"
     },
     {
       "name": "'A Taverna d'o Re",

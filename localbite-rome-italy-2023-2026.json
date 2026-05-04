@@ -81,7 +81,7 @@
         "S4"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "open_status": "open",
       "lat": 41.8990605,
       "lon": null,
@@ -90,7 +90,7 @@
       "geo_skip": false,
       "lng": 12.476199,
       "geo_source": "nominatim",
-      "language_pool": "en",
+      "language_pool": "both",
       "price_level": 2,
       "signature_dish": "amatriciana"
     },
@@ -148,7 +148,7 @@
         "S2"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "open_status": "open",
       "lat": 41.8740974,
       "lon": null,
@@ -157,7 +157,7 @@
       "geo_skip": false,
       "lng": 12.4686308,
       "geo_source": "photon",
-      "language_pool": "en",
+      "language_pool": "both",
       "price_level": 2,
       "signature_dish": "eggplant parmigiana"
     },
@@ -178,7 +178,7 @@
         "S2"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "open_status": "open",
       "lat": null,
       "lon": null,
@@ -187,7 +187,7 @@
       "geo_skip": true,
       "lng": null,
       "geo_source": null,
-      "language_pool": "en",
+      "language_pool": "both",
       "price_level": 2,
       "signature_dish": "whipped ricotta with olive oil"
     },
@@ -207,7 +207,7 @@
         "S2"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "open_status": "open",
       "lat": 41.8906915,
       "lon": null,
@@ -216,7 +216,7 @@
       "geo_skip": false,
       "lng": 12.5063628,
       "geo_source": "photon",
-      "language_pool": "en",
+      "language_pool": "both",
       "price_level": 1,
       "signature_dish": "regaje di pollo e patate"
     },
@@ -237,7 +237,7 @@
         "S2"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "open_status": "open",
       "lat": null,
       "lon": null,
@@ -246,7 +246,7 @@
       "geo_skip": true,
       "lng": null,
       "geo_source": "nominatim",
-      "language_pool": "en",
+      "language_pool": "both",
       "price_level": 1,
       "signature_dish": "marinara doppia"
     },
@@ -266,7 +266,7 @@
         "S2"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "open_status": "open",
       "lat": 41.9058434,
       "lon": null,
@@ -275,7 +275,7 @@
       "geo_skip": false,
       "lng": 12.4451473,
       "geo_source": "nominatim",
-      "language_pool": "en",
+      "language_pool": "both",
       "price_level": 1,
       "signature_dish": "carbonara with crispy guanciale"
     },
@@ -294,7 +294,7 @@
         "S4"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "open_status": "open",
       "lat": null,
       "lon": null,
@@ -303,7 +303,7 @@
       "geo_skip": true,
       "lng": null,
       "geo_source": "nominatim",
-      "language_pool": "en",
+      "language_pool": "both",
       "price_level": 2,
       "signature_dish": "locally sourced Roman classics"
     },

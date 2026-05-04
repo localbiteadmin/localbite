@@ -109,7 +109,7 @@
       "quote": "su plato más emblemático durante más de diez años, la Piedra de Foie: mousse de foie con yogur cubierto de chocolate presentado junto a piedras reales, obra del chef Alvar Hinojal con una estrella Michelin",
       "quote_language": "translated from Spanish",
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "sources": [
         "src-diariodevalladolid-sanchez",
         "src-recomiendovalladolid-lazaro",
@@ -122,7 +122,7 @@
       "lng": -4.7402827,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "language_pool": "es",
+      "language_pool": "both",
       "geo_matched_name": "Laboratorio de las Artes de Valladolid"
     },
     {
@@ -148,7 +148,7 @@
       "quote": "sirve lechazo con certificación IGP elaborado a fuego lento en hornos de leña tradicionales, con precios de 25 euros la media paleta para una persona y 50 euros el cuarto para dos",
       "quote_language": "translated from Spanish",
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "sources": [
         "src-diariodevalladolid-gonzalez",
         "src-theobjective-alonso"
@@ -161,7 +161,7 @@
       "geo_source": "nominatim",
       "geo_confidence": "high",
       "geo_matched_name": "La Parrilla de San Lorenzo",
-      "language_pool": "es"
+      "language_pool": "both"
     },
     {
       "id": "valladolid-spain-niza",
@@ -183,7 +183,7 @@
       "quote": "Uno de sus platos destacados es el pulpo a la brasa, que combina la textura perfecta con ingredientes frescos, en un ambiente elegante que lo convierte en una opción para cenas especiales",
       "quote_language": "original",
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "sources": [
         "src-diariodevalladolid-sanchez",
         "src-theobjective-alonso"
@@ -196,7 +196,7 @@
       "geo_source": "nominatim",
       "geo_confidence": "high",
       "geo_matched_name": "Niza",
-      "language_pool": "es"
+      "language_pool": "both"
     },
     {
       "id": "valladolid-spain-el-figon-de-recoletos",

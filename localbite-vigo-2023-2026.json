@@ -88,8 +88,8 @@
       "article_title": "Tres restaurantes top en Vigo y área premiados por su cocina de calidad a precios razonables",
       "open_status_check": true,
       "source_count": 2,
-      "language_pool": "es",
-      "both_pool": false,
+      "language_pool": "both",
+      "both_pool": true,
       "sources": [
         "src-metropolitano-cifuentes",
         "src-theobjective-alonso"
@@ -126,8 +126,8 @@
       "article_title": "Estos son los restaurantes recomendados por la Guía Repsol en Vigo",
       "open_status_check": true,
       "source_count": 2,
-      "language_pool": "es",
-      "both_pool": false,
+      "language_pool": "both",
+      "both_pool": true,
       "sources": [
         "src-metropolitano-cifuentes",
         "src-treintayseis-picatoste"

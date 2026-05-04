@@ -231,7 +231,7 @@
         }
       ],
       "confidence": "A",
-      "both_pool": false,
+      "both_pool": true,
       "geo_lat": null,
       "geo_lng": null,
       "geo_confidence": "high",
@@ -240,7 +240,7 @@
       "lat": 41.1406086,
       "lng": -8.6116991,
       "geo_source": "nominatim",
-      "language_pool": "en",
+      "language_pool": "both",
       "quote": "offers a slightly more polished take on seafood dining, with a strong focus on codfish and oysters"
     },
     {
@@ -297,7 +297,7 @@
         }
       ],
       "confidence": "A",
-      "both_pool": false,
+      "both_pool": true,
       "geo_lat": null,
       "geo_lng": null,
       "geo_confidence": "high",
@@ -306,7 +306,7 @@
       "lat": 41.1487206,
       "lng": -8.6153341,
       "geo_source": "nominatim",
-      "language_pool": "en",
+      "language_pool": "both",
       "quote": "This unassuming tavern retains its traditional charm, serving delicacies and snacks at its stainless steel counter, with timeless favorites such as beef liver with onions, cod escabeche, and rojão sandwiches."
     },
     {

@@ -173,7 +173,8 @@
       "lng": 18.1709309,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Mezzo Quinto"
+      "geo_matched_name": "Mezzo Quinto",
+      "both_pool": true
     },
     {
       "name": "Osteria Da Angiulino",
@@ -211,7 +212,8 @@
       "lng": 18.170651,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Osteria Da Angiulino"
+      "geo_matched_name": "Osteria Da Angiulino",
+      "both_pool": true
     },
     {
       "name": "Osteria degli Spiriti",
@@ -246,7 +248,8 @@
       "lng": 18.1767397,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Osteria degli Spiriti"
+      "geo_matched_name": "Osteria degli Spiriti",
+      "both_pool": true
     },
     {
       "name": "Trattoria Le Zie",
@@ -287,7 +290,8 @@
       "lng": 18.1749594,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Trattoria Le Zie"
+      "geo_matched_name": "Trattoria Le Zie",
+      "both_pool": true
     },
     {
       "name": "Alle Due Corti",
@@ -312,7 +316,7 @@
       "signature_dish": null,
       "quote": "If you are looking for a traditional trattoria, Alle Due Corti, owned by Giorgio and Marinella Grassi, is the right place, with a menu written in Salento and handmade pasta. A historic trattoria, where you can enjoy traditional dishes, mostly 'di terra': cream of broad beans with chicory, the very old 'lagane e ceci', 'orecchiette con le cime di rapa', the wonderful aubergine cucole (meatballs), lasagna ncannulata, lamb with onions.",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-gamberorossointl-alajmo",
@@ -328,7 +332,8 @@
       "lng": 18.1705432,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Alle due Corti"
+      "geo_matched_name": "Alle due Corti",
+      "both_pool": true
     },
     {
       "name": "Caffè storico Alvino",
@@ -352,7 +357,7 @@
       "signature_dish": "pasticciotto",
       "quote": "Everyone usually meets here and it's a ritual to stop at the historic Caffè Alvino, where Lecce personalities from the worlds of culture, politics and business used to meet. Families come to rediscover the goodness of home, both sweet and savoury, seated at tables overlooking the amphitheatre.",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-gamberorossointl-alajmo",
@@ -368,7 +373,8 @@
       "lng": 18.1731169,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Caffè Alvino"
+      "geo_matched_name": "Caffè Alvino",
+      "both_pool": true
     },
     {
       "name": "Alex",
@@ -402,7 +408,8 @@
       "lng": 18.1734479,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Alex Ristorante"
+      "geo_matched_name": "Alex Ristorante",
+      "both_pool": false
     },
     {
       "name": "Al Verde – Cucina ricreativa",
@@ -434,7 +441,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "aTipica-Trattoria Moderna",
@@ -469,7 +477,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Buonifico",
@@ -499,7 +508,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Dall'Antiquario",
@@ -533,7 +543,8 @@
       "lng": 18.1724039,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Dall'Antiquario"
+      "geo_matched_name": "Dall'Antiquario",
+      "both_pool": false
     },
     {
       "name": "Dedo Osteria",
@@ -566,7 +577,8 @@
       "geo_source": "photon",
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Duo Ristorante",
@@ -600,7 +612,8 @@
       "lng": 18.1756457,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Duo Ristorante"
+      "geo_matched_name": "Duo Ristorante",
+      "both_pool": false
     },
     {
       "name": "Er Polpetta 1987",
@@ -631,7 +644,8 @@
       "lng": 18.1749385,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Er Polpetta"
+      "geo_matched_name": "Er Polpetta",
+      "both_pool": false
     },
     {
       "name": "I Latini",
@@ -665,7 +679,8 @@
       "lng": 18.1685184,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "I Latini"
+      "geo_matched_name": "I Latini",
+      "both_pool": false
     },
     {
       "name": "Il Vico del Gusto",
@@ -696,7 +711,8 @@
       "lng": 18.1735644,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Il Vico del Gusto1"
+      "geo_matched_name": "Il Vico del Gusto1",
+      "both_pool": false
     },
     {
       "name": "La Bocca",
@@ -728,7 +744,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "La Cucina di Mamma Elvira",
@@ -767,7 +784,8 @@
       "lng": 18.1737006,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Cucina di Mamma Elvira"
+      "geo_matched_name": "La Cucina di Mamma Elvira",
+      "both_pool": false
     },
     {
       "name": "Osteria 203",
@@ -799,7 +817,8 @@
       "lng": 18.1738575,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Osteria 203"
+      "geo_matched_name": "Osteria 203",
+      "both_pool": false
     },
     {
       "name": "Osteria Da Cosimino e Figli",
@@ -838,7 +857,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "RED Restaurant",
@@ -870,7 +890,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "63 Osteria Contemporanea",
@@ -905,7 +926,8 @@
       "lng": 18.1652533,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "63 Osteria Contemporanea"
+      "geo_matched_name": "63 Osteria Contemporanea",
+      "both_pool": false
     },
     {
       "name": "Tabisca il Vico dei Tagliati",
@@ -941,7 +963,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Trattoria Nonna Tetti",
@@ -976,7 +999,8 @@
       "lng": 18.1715181,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Trattoria Nonna Tetti"
+      "geo_matched_name": "Trattoria Nonna Tetti",
+      "both_pool": false
     },
     {
       "name": "Trattoria San Lazzaro",
@@ -1010,7 +1034,8 @@
       "geo_source": "photon",
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Varius Osteria Moderna",
@@ -1043,7 +1068,8 @@
       "lng": 18.1549308,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Varius Osteria Moderna"
+      "geo_matched_name": "Varius Osteria Moderna",
+      "both_pool": false
     }
   ],
   "centroids": {

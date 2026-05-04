@@ -175,7 +175,8 @@
       "lng": -2.4486453,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bar el Muro"
+      "geo_matched_name": "Bar el Muro",
+      "both_pool": true
     },
     {
       "name": "Bar Soriano",
@@ -195,7 +196,7 @@
       "signature_dish": "Champis — trio of mushrooms with prawn on baguette in garlic oil",
       "quote": "A trio of local mushrooms topped with a tiny prawn is skewered onto a slice of baguette and covered in an unholy amount of garlic oil",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-saucemag-brown",
@@ -211,7 +212,8 @@
       "lng": -2.4491277,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Soriano"
+      "geo_matched_name": "Soriano",
+      "both_pool": true
     },
     {
       "name": "Arsa",
@@ -253,7 +255,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Bar Ángel",
@@ -287,7 +290,8 @@
       "lng": -2.4482521,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bar Angel"
+      "geo_matched_name": "Bar Angel",
+      "both_pool": false
     },
     {
       "name": "Bar Donosti",
@@ -321,7 +325,8 @@
       "lng": -2.4482118,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Donosti"
+      "geo_matched_name": "Donosti",
+      "both_pool": false
     },
     {
       "name": "Bar El Perchas",
@@ -356,7 +361,8 @@
       "lng": -2.4491905,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Perchas"
+      "geo_matched_name": "El Perchas",
+      "both_pool": false
     },
     {
       "name": "Bar Jubera",
@@ -389,7 +395,8 @@
       "lng": -2.448736,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bar Jubera"
+      "geo_matched_name": "Bar Jubera",
+      "both_pool": false
     },
     {
       "name": "Bar San Lorenzo",
@@ -424,7 +431,8 @@
       "lng": -2.4491496,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Bar Lorenzo \"Tio Agus\""
+      "geo_matched_name": "Bar Lorenzo \"Tio Agus\"",
+      "both_pool": false
     },
     {
       "name": "Bar Sebas",
@@ -458,7 +466,8 @@
       "lng": -2.4485212,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Sebas"
+      "geo_matched_name": "Sebas",
+      "both_pool": false
     },
     {
       "name": "El Soldado de Tudelilla",
@@ -496,7 +505,8 @@
       "lng": -2.4494335,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Soldado de Tudelilla"
+      "geo_matched_name": "El Soldado de Tudelilla",
+      "both_pool": false
     },
     {
       "name": "Entretapas 941",
@@ -534,7 +544,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "La Casita",
@@ -571,7 +582,8 @@
       "lng": -2.4492491,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Casita"
+      "geo_matched_name": "La Casita",
+      "both_pool": false
     },
     {
       "name": "Las Gildas de La Laurel",
@@ -607,7 +619,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Pata Negra",
@@ -641,7 +654,8 @@
       "lng": -2.4490822,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Pata Negra"
+      "geo_matched_name": "Pata Negra",
+      "both_pool": false
     },
     {
       "name": "Taberna de Baco",
@@ -675,7 +689,8 @@
       "lng": -2.449344,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Taberna de Baco"
+      "geo_matched_name": "La Taberna de Baco",
+      "both_pool": false
     }
   ],
   "centroids": {

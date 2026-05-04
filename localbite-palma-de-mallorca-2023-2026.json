@@ -165,7 +165,8 @@
       "lng": 2.6371979,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Isaan Thai Cuisine"
+      "geo_matched_name": "Isaan Thai Cuisine",
+      "both_pool": false
     },
     {
       "name": "El Camino",
@@ -182,7 +183,7 @@
       "signature_dish": "Padrón peppers",
       "quote": "Order as you go while watching the chefs working away in the open kitchen. Some sizzling Padrón peppers, delicately fried zucchini flowers.",
       "quote_language": "en",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-helencummins-cummins",
@@ -198,7 +199,8 @@
       "lng": 2.6478593,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Camino"
+      "geo_matched_name": "El Camino",
+      "both_pool": true
     },
     {
       "name": "Marui Sushi",
@@ -230,7 +232,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Kasui",
@@ -264,7 +267,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Brasa Madre",
@@ -297,7 +301,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Restaurant Kaizen",
@@ -328,7 +333,8 @@
       "lng": 2.6512448,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Kaizen"
+      "geo_matched_name": "Kaizen",
+      "both_pool": false
     },
     {
       "name": "Mouna",
@@ -358,7 +364,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Bistro Esencia",
@@ -390,7 +397,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Arume",
@@ -422,7 +430,8 @@
       "lng": 2.6406433,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Arume Sake Bar"
+      "geo_matched_name": "Arume Sake Bar",
+      "both_pool": true
     },
     {
       "name": "OSMA",
@@ -452,7 +461,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "De Tokio a Lima",
@@ -484,7 +494,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Fera",
@@ -501,7 +512,7 @@
       "signature_dish": "beets plated with ponzu and goat cheese",
       "quote": "Fera's Austrian chef is best known for mixing Mallorcan produce with pan-Asian flavors—think beets plated with ponzu and goat cheese.",
       "quote_language": "en",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-helencummins-cummins",
@@ -517,7 +528,8 @@
       "lng": 2.6465625,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Fera"
+      "geo_matched_name": "Fera",
+      "both_pool": true
     },
     {
       "name": "Nus",
@@ -551,7 +563,8 @@
       "lng": 2.6390893,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Nus"
+      "geo_matched_name": "Nus",
+      "both_pool": false
     },
     {
       "name": "Nagami Nikkei",
@@ -583,7 +596,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Bar La Sang",
@@ -619,7 +633,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "La Rosa Vermutería",
@@ -655,7 +670,8 @@
       "lng": 2.6496798,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Vermuteria La Rosa"
+      "geo_matched_name": "Vermuteria La Rosa",
+      "both_pool": false
     },
     {
       "name": "Stagier",
@@ -692,7 +708,8 @@
       "lng": 2.634507,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Stagier"
+      "geo_matched_name": "Stagier",
+      "both_pool": true
     },
     {
       "name": "Bodega La Rambla",
@@ -730,7 +747,8 @@
       "lng": 2.6473627,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bodega La Rambla"
+      "geo_matched_name": "Bodega La Rambla",
+      "both_pool": false
     },
     {
       "name": "El Perrito",
@@ -759,7 +777,8 @@
       "lng": 2.638813,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Perrito"
+      "geo_matched_name": "El Perrito",
+      "both_pool": false
     },
     {
       "name": "Toque De Queda",
@@ -793,7 +812,8 @@
       "lng": 2.6467979,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Toque de Queda"
+      "geo_matched_name": "Toque de Queda",
+      "both_pool": false
     },
     {
       "name": "Bar Espanya",
@@ -828,7 +848,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Botànic",
@@ -860,7 +881,8 @@
       "lng": 2.644461,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Botànic"
+      "geo_matched_name": "Botànic",
+      "both_pool": false
     },
     {
       "name": "Vandal",
@@ -894,7 +916,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Aromata",
@@ -925,7 +948,8 @@
       "lng": 2.6463214,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Aromata"
+      "geo_matched_name": "Aromata",
+      "both_pool": false
     },
     {
       "name": "La Vieja",
@@ -958,7 +982,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "La Cuadra del Maño",
@@ -991,7 +1016,8 @@
       "lng": 2.6525529,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Cuadra del Maño"
+      "geo_matched_name": "La Cuadra del Maño",
+      "both_pool": false
     },
     {
       "name": "A GoGò Pizza Bar",
@@ -1025,7 +1051,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Mamas Pepper",
@@ -1058,7 +1085,8 @@
       "lng": 2.6523595,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Mama's Pepper"
+      "geo_matched_name": "Mama's Pepper",
+      "both_pool": false
     },
     {
       "name": "Cuina Vivant",
@@ -1088,7 +1116,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Quina Creu",
@@ -1119,7 +1148,8 @@
       "lng": 2.6527441,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Quina creu"
+      "geo_matched_name": "Quina creu",
+      "both_pool": false
     },
     {
       "name": "Mesón Ca'n Pedro",
@@ -1156,7 +1186,8 @@
       "lng": 2.6001418,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Ca'n Pedro"
+      "geo_matched_name": "Ca'n Pedro",
+      "both_pool": false
     },
     {
       "name": "Sa Fulla",
@@ -1187,7 +1218,8 @@
       "lng": 2.637033,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Sa fulla"
+      "geo_matched_name": "Sa fulla",
+      "both_pool": false
     },
     {
       "name": "Tast Club",
@@ -1218,7 +1250,8 @@
       "lng": 2.6480062,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Tast"
+      "geo_matched_name": "Tast",
+      "both_pool": false
     }
   ],
   "centroids": {

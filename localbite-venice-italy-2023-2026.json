@@ -129,7 +129,8 @@
       "geo_matched_name": "Al Covo",
       "geo_skip": false,
       "lng": 12.3475727,
-      "language_pool": "both"
+      "language_pool": "both",
+      "both_pool": true
     },
     {
       "name": "Orient Experience",
@@ -163,7 +164,8 @@
       "geo_matched_name": "Orient Experience",
       "geo_skip": false,
       "lng": 12.3230726,
-      "language_pool": "both"
+      "language_pool": "both",
+      "both_pool": true
     },
     {
       "name": "Osteria Anice Stellato",
@@ -205,7 +207,8 @@
       "geo_matched_name": "Anice Stellato",
       "geo_skip": false,
       "lng": 12.3286539,
-      "language_pool": "both"
+      "language_pool": "both",
+      "both_pool": true
     },
     {
       "name": "Osteria Giorgione da Masa",
@@ -254,7 +257,8 @@
       "geo_matched_name": "Osteria Giorgione da MASA",
       "geo_skip": false,
       "lng": 12.337192,
-      "language_pool": "it"
+      "language_pool": "both",
+      "both_pool": true
     },
     {
       "name": "CoVino",
@@ -292,7 +296,8 @@
       "geo_matched_name": "CoVino",
       "geo_skip": false,
       "lng": 12.3477262,
-      "language_pool": "it"
+      "language_pool": "both",
+      "both_pool": true
     },
     {
       "name": "Antiche Carampane",
@@ -328,7 +333,8 @@
       "geo_matched_name": "Trattoria Antiche Carampane",
       "geo_skip": false,
       "lng": 12.3311229,
-      "language_pool": "it"
+      "language_pool": "it",
+      "both_pool": false
     },
     {
       "name": "Birraria La Corte",
@@ -360,7 +366,8 @@
       "geo_matched_name": "Birraria La Corte",
       "geo_skip": false,
       "lng": 12.3297683,
-      "language_pool": "it"
+      "language_pool": "it",
+      "both_pool": false
     },
     {
       "name": "Dama",
@@ -388,7 +395,8 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "language_pool": "it"
+      "language_pool": "it",
+      "both_pool": false
     },
     {
       "name": "Rioba",
@@ -420,7 +428,8 @@
       "geo_matched_name": "Osteria da Rioba",
       "geo_skip": false,
       "lng": 12.331736,
-      "language_pool": "it"
+      "language_pool": "it",
+      "both_pool": false
     },
     {
       "name": "Trattoria Da Bepi già 54",
@@ -457,7 +466,8 @@
       "geo_matched_name": "Trattoria da Bepi Gia \"54\"",
       "geo_skip": false,
       "lng": 12.3364906,
-      "language_pool": "it"
+      "language_pool": "it",
+      "both_pool": false
     },
     {
       "name": "Vini da Gigio",
@@ -488,7 +498,8 @@
       "geo_matched_name": "Vini da Gigio",
       "geo_skip": false,
       "lng": 12.3337418,
-      "language_pool": "it"
+      "language_pool": "it",
+      "both_pool": false
     },
     {
       "name": "Aciugheta",
@@ -519,7 +530,8 @@
       "geo_matched_name": "Aciugheta",
       "geo_skip": false,
       "lng": 12.3416264,
-      "language_pool": "it"
+      "language_pool": "it",
+      "both_pool": false
     },
     {
       "name": "Ai Mercanti",
@@ -551,7 +563,8 @@
       "geo_matched_name": "Ai Mercanti",
       "geo_skip": false,
       "lng": 12.3352263,
-      "language_pool": "it"
+      "language_pool": "it",
+      "both_pool": false
     },
     {
       "name": "Algiubagiò",
@@ -590,7 +603,8 @@
       "geo_matched_name": "Algiubagio",
       "geo_skip": false,
       "lng": 12.3403008,
-      "language_pool": "it"
+      "language_pool": "it",
+      "both_pool": false
     },
     {
       "name": "Lineadombra",
@@ -619,7 +633,8 @@
       "geo_matched_name": "Lineadombra",
       "geo_skip": false,
       "lng": 12.3346992,
-      "language_pool": "it"
+      "language_pool": "it",
+      "both_pool": false
     },
     {
       "name": "Osteria Al Cantinon",
@@ -650,7 +665,8 @@
       "geo_matched_name": "Osteria al Cantinon",
       "geo_skip": false,
       "lng": 12.3314805,
-      "language_pool": "it"
+      "language_pool": "it",
+      "both_pool": false
     },
     {
       "name": "Bepi Antico",
@@ -682,7 +698,8 @@
       "geo_matched_name": null,
       "geo_skip": true,
       "lng": null,
-      "language_pool": "en"
+      "language_pool": "en",
+      "both_pool": false
     },
     {
       "name": "Trattoria al Gatto Nero",
@@ -716,7 +733,8 @@
       "geo_matched_name": "Trattoria al Gatto Nero",
       "geo_skip": false,
       "lng": 12.4163604,
-      "language_pool": "en"
+      "language_pool": "en",
+      "both_pool": false
     },
     {
       "name": "La Zucca",
@@ -749,7 +767,8 @@
       "geo_matched_name": "La Zucca",
       "geo_skip": false,
       "lng": 12.3285187,
-      "language_pool": "en"
+      "language_pool": "en",
+      "both_pool": false
     },
     {
       "name": "Oke",
@@ -782,7 +801,8 @@
       "geo_matched_name": "Pizzeria OKE",
       "geo_skip": false,
       "lng": 12.3227818,
-      "language_pool": "en"
+      "language_pool": "en",
+      "both_pool": false
     },
     {
       "name": "Taverna La Fenice",
@@ -813,7 +833,8 @@
       "geo_matched_name": null,
       "geo_skip": true,
       "lng": null,
-      "language_pool": "en"
+      "language_pool": "en",
+      "both_pool": false
     }
   ],
   "city": "Venice",

@@ -708,9 +708,13 @@ Do not invent neighbourhoods not in GEOGRAPHIC_BOUNDARY_INCLUDE.
 LANGUAGE_POOL FIELD:
 Set language_pool as a plain string — never a list or array.
 Rules:
-  "both"         → restaurant appears in sources from 2+ different
-                   language pools from DIFFERENT publishers.
-                   Same-publisher cross-language editions do NOT qualify.
+  "both"         → restaurant appears in sources from 2+ DIFFERENT
+                   publishers (editorially independent, no shared ownership,
+                   brand relationship, or licensing arrangement).
+                   Language is irrelevant — same-language sources from
+                   different publishers qualify.
+                   Same-publisher editions do NOT qualify regardless of
+                   whether editorial teams differ.
   "en"           → English-language sources only
   "es"           → Spanish-language sources only
   "ca"           → Catalan-language sources only
@@ -782,13 +786,14 @@ Report: total before dedup / total after / merges made.
 STEP 2 — Assign confidence tier
 
 BOTH-POOL DEFINITION (strict):
-A restaurant qualifies as both-pool ONLY if it appears in:
-- At least one source in language pool A, AND
-- At least one source in language pool B, AND
-- The two sources are from DIFFERENT publishers with no shared
-  ownership, brand relationship, or licensing arrangement.
-Same-publisher cross-language editions do NOT qualify as
-both-pool even if they have different editorial teams.
+A restaurant qualifies as both-pool if it appears in sources
+from 2 or more DIFFERENT publishers. Publisher independence
+requires: no shared ownership, no shared editorial direction,
+no brand relationship or licensing arrangement.
+Language is irrelevant — same-language sources from different
+publishers qualify. Same-publisher editions (e.g. Time Out EN
++ Time Out PT) do NOT qualify regardless of editorial separation.
+Definition confirmed 2026-05-04.
 
 TIER A — Auto-approve:
 - 2 or more independent sources, OR

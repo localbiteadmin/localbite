@@ -159,7 +159,7 @@
       "signature_dish": null,
       "quote": "where you can order hot dishes like a celebrated Idiazabal puntalette (made with the treasured local goat's milk cheese)",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 4,
       "sources": [
         "src-spanishsabores-aloise",
@@ -178,7 +178,8 @@
       "lng": -1.983818,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Borda berri"
+      "geo_matched_name": "Borda berri",
+      "both_pool": true
     },
     {
       "name": "Casa Urola",
@@ -199,7 +200,7 @@
       "signature_dish": null,
       "quote": "a humble artichoke served with grilled Navarre cardoon, ham cream and salted almond praline feels like a warm hug",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 4,
       "sources": [
         "src-spanishsabores-aloise",
@@ -218,7 +219,8 @@
       "lng": -1.9844106,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Casa Urola"
+      "geo_matched_name": "Casa Urola",
+      "both_pool": true
     },
     {
       "name": "La Cuchara de San Telmo",
@@ -239,7 +241,7 @@
       "signature_dish": "foie a la plancha",
       "quote": "the passage of time has not diminished the fame of its foie cooked on the griddle, served with apple marmalade",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 4,
       "sources": [
         "src-spanishsabores-aloise",
@@ -258,7 +260,8 @@
       "lng": -1.9852992,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Cuchara de San Telmo"
+      "geo_matched_name": "La Cuchara de San Telmo",
+      "both_pool": true
     },
     {
       "name": "La Viña",
@@ -277,7 +280,7 @@
       "signature_dish": "tarta de queso vasca",
       "quote": "Basque cheesecake is unique in that it's baked without a crust and often has a burnt/caramelized look to the outside.",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 5,
       "sources": [
         "src-spanishsabores-aloise",
@@ -297,7 +300,8 @@
       "lng": -1.9847417,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Viña"
+      "geo_matched_name": "La Viña",
+      "both_pool": true
     },
     {
       "name": "Muka",
@@ -361,7 +365,7 @@
       "signature_dish": "seasonal mushroom pintxo",
       "quote": "something as simple as seasonal mushrooms, sautéed with oil and garlic and served with egg yolk, can leave you speechless",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-culinarybackstreets-correa",
@@ -378,7 +382,8 @@
       "lng": -1.9855317,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Ganbara"
+      "geo_matched_name": "Ganbara",
+      "both_pool": true
     },
     {
       "name": "Antonio Bar",
@@ -438,7 +443,7 @@
       "signature_dish": "la delicia",
       "quote": "Opened in 1928, currently run by fourth generation, packed all day with locals and tourists.",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-theinfatuation-buckley",
@@ -455,7 +460,8 @@
       "lng": -1.9840265,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Espiga"
+      "geo_matched_name": "La Espiga",
+      "both_pool": true
     },
     {
       "name": "Bar Txepetxa",
@@ -474,7 +480,7 @@
       "signature_dish": "anchovy pintxos",
       "quote": "Classic bar devoted to tiny fish—famous for converting 99% of anchovy-haters since 1972—with vinegar-cured boquerón anchovies as the house specialty.",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 3,
       "sources": [
         "src-culinarybackstreets-correa",
@@ -492,7 +498,8 @@
       "lng": -1.9839776,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Txepetxa"
+      "geo_matched_name": "Txepetxa",
+      "both_pool": true
     },
     {
       "name": "Bar Nestor",
@@ -528,7 +535,8 @@
       "lng": -1.9837014,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Nestor"
+      "geo_matched_name": "Nestor",
+      "both_pool": false
     },
     {
       "name": "Bodegón Alejandro",
@@ -562,7 +570,8 @@
       "lng": -1.9833802,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bodegon Alejandro"
+      "geo_matched_name": "Bodegon Alejandro",
+      "both_pool": false
     },
     {
       "name": "La Mejillonera",
@@ -596,7 +605,8 @@
       "lng": -1.9865311,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Mejillonera"
+      "geo_matched_name": "La Mejillonera",
+      "both_pool": false
     },
     {
       "name": "Txuleta",
@@ -629,7 +639,8 @@
       "lng": -1.9859021,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Txuleta"
+      "geo_matched_name": "Txuleta",
+      "both_pool": false
     },
     {
       "name": "Bar Haizea",
@@ -664,7 +675,8 @@
       "lng": -1.9822053,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Haizea"
+      "geo_matched_name": "Haizea",
+      "both_pool": false
     },
     {
       "name": "Aratz",
@@ -697,7 +709,8 @@
       "lng": -2.0080655,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Aratz erretegia"
+      "geo_matched_name": "Aratz erretegia",
+      "both_pool": false
     },
     {
       "name": "Maun",
@@ -731,7 +744,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "Arzak",
@@ -765,7 +779,8 @@
       "lng": -1.9491721,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Arzak Jatetxea"
+      "geo_matched_name": "Arzak Jatetxea",
+      "both_pool": false
     },
     {
       "name": "R Restaurante Bar",
@@ -801,7 +816,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "Bar Urkabe",
@@ -835,7 +851,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "Bar Martínez",
@@ -870,7 +887,8 @@
       "lng": -1.9851963,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bar Martínez"
+      "geo_matched_name": "Bar Martínez",
+      "both_pool": false
     },
     {
       "name": "La Cepa",
@@ -903,7 +921,8 @@
       "lng": -1.9849176,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Cepa"
+      "geo_matched_name": "La Cepa",
+      "both_pool": false
     },
     {
       "name": "Bar Desy",
@@ -941,7 +960,8 @@
       "lng": -1.9765262,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Desy"
+      "geo_matched_name": "Desy",
+      "both_pool": false
     },
     {
       "name": "Kbzon Haundi",
@@ -977,7 +997,8 @@
       "lng": -1.9702453,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "El Kbzón"
+      "geo_matched_name": "El Kbzón",
+      "both_pool": false
     },
     {
       "name": "Aldapeta Gastrobar",
@@ -1011,7 +1032,8 @@
       "lng": -1.9893244,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Calzada de Aldapeta"
+      "geo_matched_name": "Calzada de Aldapeta",
+      "both_pool": false
     }
   ]
 }

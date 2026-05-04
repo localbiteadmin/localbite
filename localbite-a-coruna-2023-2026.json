@@ -135,7 +135,7 @@
       "signature_dish": "arroces",
       "quote": "Casual à la carte establishment led by chef Quique Vázquez and Ana Señarís. The restaurant ranks first on A Coruña's TripAdvisor list and earned Michelin Bib Gourmand recognition for potential star-level dining.",
       "quote_language": "translated-from-es",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 3,
       "sources": [
         "src-elig-quiroga",
@@ -153,7 +153,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Artabria",
@@ -171,7 +172,7 @@
       "signature_dish": "zamburiñas con crema de nécora",
       "quote": "Traditional cooking with modern touches receives Michelin Bib Gourmand honors. The establishment is noted for zamburiña baskets and seafood preparations that have cultivated a dedicated local following.",
       "quote_language": "translated-from-es",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-elig-quiroga",
@@ -187,7 +188,8 @@
       "lng": -8.4132635,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Artabria"
+      "geo_matched_name": "Artabria",
+      "both_pool": true
     },
     {
       "name": "El de Alberto",
@@ -209,7 +211,7 @@
       "signature_dish": "arroces",
       "quote": "Uno de esos eternos favoritos a llevarse algún día el Sol. Un restaurante consolidado y prestigioso que destaca por su cocina contemporánea de gran nivel. De la carta destacan sus arroces y la originalidad de su propuesta de entrantes.",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 4,
       "sources": [
         "src-elig-quiroga",
@@ -227,7 +229,8 @@
       "lng": -8.4047274,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El de Alberto"
+      "geo_matched_name": "El de Alberto",
+      "both_pool": true
     },
     {
       "name": "NaDo",
@@ -244,7 +247,7 @@
       "signature_dish": null,
       "quote": "Iván Domínguez's 'Atlantic militancy' concept showcases seasonal, local products with marine focus. Critic Carlos Capel noted the restaurant 'is so good it can do whatever it wants.'",
       "quote_language": "translated-from-es",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-elig-quiroga",
@@ -261,7 +264,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Omakase",
@@ -280,7 +284,7 @@
       "signature_dish": "menú omakase diario",
       "quote": "A Coruña's first traditional omakase sushi restaurant, run by chef Adrián Figueroa — single tasting menus adjusted daily by fish market availability.",
       "quote_language": "translated-from-es",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-elig-quiroga",
@@ -297,7 +301,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Pracer",
@@ -314,7 +319,7 @@
       "signature_dish": "croqueta de centolla",
       "quote": "Música y cocina se dan la mano en un local con una estética y una propuesta rompedora. Una cocina moderna, desenfadada y atrevida de la mano de los chefs Moncho Bargo y Javi Freijeiro. Entre sus imprescindibles está la famosa croqueta de centolla.",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-elig-quiroga",
@@ -330,7 +335,8 @@
       "lng": -8.400571,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Pracer"
+      "geo_matched_name": "Pracer",
+      "both_pool": true
     },
     {
       "name": "O Lagar da Estrella",
@@ -352,7 +358,7 @@
       "signature_dish": "bocadillo de churrasco",
       "quote": "Este restaurante propone una cocina informal y gustosa en la céntrica calle de la Estrella. A destacar sus arroces y creaciones que ya son emblemáticas en la ciudad como su bocadillo de churrasco. Local elegante y decorado con gusto.",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-qm-lede",
@@ -368,7 +374,8 @@
       "lng": -8.403479,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "O Lagar da Estrella"
+      "geo_matched_name": "O Lagar da Estrella",
+      "both_pool": true
     },
     {
       "name": "A Mundiña",
@@ -389,7 +396,7 @@
       "signature_dish": "caldeirada de pescados de roca",
       "quote": "Ubicado entre las céntricas calle Real y avenida de la Marina, nos encontramos uno de los templos de la ciudad para disfrutar de los mariscos y los pescados. A destacar la caldeirada de pescados de roca.",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 3,
       "sources": [
         "src-qm-lede",
@@ -406,7 +413,8 @@
       "lng": -8.4015153,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "A Mundiña"
+      "geo_matched_name": "A Mundiña",
+      "both_pool": true
     },
     {
       "name": "Miga",
@@ -427,7 +435,7 @@
       "signature_dish": "callos",
       "quote": "El chef Adrián Felípez dirige su propio proyecto basado en la cocina de temporada y los platos informales. Situado en un céntrico local de la plaza de España, tiene una carta con buena calidad-precio que mezcla la cocina tradicional y moderna. A destacar sus geniales callos.",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 3,
       "sources": [
         "src-qm-lede",
@@ -445,7 +453,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Eclectic",
@@ -463,7 +472,7 @@
       "signature_dish": null,
       "quote": "Contemporary cuisine establishment featuring 'investigación histórica' as a fundamental element. The restaurant offers two rotating tasting menus updated quarterly — Menú Victoria at 96€ and Menú Totora at 82€.",
       "quote_language": "translated-from-es",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-qm-moreno",
@@ -479,7 +488,8 @@
       "lng": -8.3983907,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Eclectic Lar Gastronómico"
+      "geo_matched_name": "Eclectic Lar Gastronómico",
+      "both_pool": true
     },
     {
       "name": "Salitre",
@@ -499,7 +509,7 @@
       "signature_dish": "caldeirada de pescado",
       "quote": "En Salitre, no vienes a sorprenderte, sino a comer bien.",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-qm-moreno",
@@ -515,7 +525,8 @@
       "lng": -8.3942225,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Salitre"
+      "geo_matched_name": "Salitre",
+      "both_pool": true
     },
     {
       "name": "Millo",
@@ -549,7 +560,8 @@
       "lng": -8.4032478,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Millo"
+      "geo_matched_name": "Millo",
+      "both_pool": false
     },
     {
       "name": "Peculiar",
@@ -582,7 +594,8 @@
       "lng": -8.4001442,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Peculiar"
+      "geo_matched_name": "Peculiar",
+      "both_pool": false
     },
     {
       "name": "La Escondita",
@@ -616,7 +629,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "El Charrúa",
@@ -651,7 +665,8 @@
       "lng": -8.4031687,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Charrúa"
+      "geo_matched_name": "Charrúa",
+      "both_pool": false
     },
     {
       "name": "Pulpeira de Melide",
@@ -683,7 +698,8 @@
       "lng": -8.3972293,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Pulpeira de Melide"
+      "geo_matched_name": "Pulpeira de Melide",
+      "both_pool": false
     },
     {
       "name": "Pablo Gallego",
@@ -716,7 +732,8 @@
       "lng": -8.3948437,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Restaurante Pablo Gallego"
+      "geo_matched_name": "Restaurante Pablo Gallego",
+      "both_pool": false
     },
     {
       "name": "Tira do Playa",
@@ -749,7 +766,8 @@
       "lng": -8.4134771,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Tira do Playa"
+      "geo_matched_name": "Tira do Playa",
+      "both_pool": false
     },
     {
       "name": "La Penela",
@@ -781,7 +799,8 @@
       "lng": -8.3955144,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Restaurante A Penela"
+      "geo_matched_name": "Restaurante A Penela",
+      "both_pool": false
     },
     {
       "name": "Taberna 5 Mares",
@@ -816,7 +835,8 @@
       "lng": -8.433032,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Taberna 5 Mares"
+      "geo_matched_name": "Taberna 5 Mares",
+      "both_pool": false
     },
     {
       "name": "Culuca Cociña",
@@ -850,7 +870,8 @@
       "lng": -8.4090422,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Culuca"
+      "geo_matched_name": "Culuca",
+      "both_pool": false
     },
     {
       "name": "A Espiga",
@@ -884,7 +905,8 @@
       "lng": -8.3948545,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "A Espiga"
+      "geo_matched_name": "A Espiga",
+      "both_pool": false
     },
     {
       "name": "Pulpería O Rueiro",
@@ -918,7 +940,8 @@
       "lng": -8.3975933,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Pulpeira O Rueiro"
+      "geo_matched_name": "Pulpeira O Rueiro",
+      "both_pool": false
     },
     {
       "name": "Casa Pardo",
@@ -951,7 +974,8 @@
       "lng": -8.3997401,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Casa Pardo"
+      "geo_matched_name": "Casa Pardo",
+      "both_pool": false
     },
     {
       "name": "Basílico",
@@ -985,7 +1009,8 @@
       "lng": -8.4193053,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Basilico"
+      "geo_matched_name": "Basilico",
+      "both_pool": false
     }
   ],
   "centroids": {

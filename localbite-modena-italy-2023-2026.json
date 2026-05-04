@@ -250,14 +250,14 @@
         "src-scattidigusto-cristiani"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "writers": [
         "Carlo Gibertini",
         "Nico Cristiani"
       ],
       "lat": 44.6438793,
       "lng": 10.9288295,
-      "language_pool": "it",
+      "language_pool": "both",
       "geo_source": "nominatim",
       "geo_confidence": "high",
       "geo_matched_name": "Trattoria Tagliatella"
@@ -289,14 +289,14 @@
         "src-errantedelgusto-scainelli"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "writers": [
         "Carlo Gibertini",
         "Luca Scainelli"
       ],
       "lat": 44.6446694,
       "lng": 10.9249662,
-      "language_pool": "it",
+      "language_pool": "both",
       "geo_source": "nominatim",
       "geo_confidence": "high",
       "geo_matched_name": "Trattoria Aldina"

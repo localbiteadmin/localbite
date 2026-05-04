@@ -309,26 +309,29 @@ function isThinProfile(profile) {
     const sid = src.id || src.source_id;
     if (sid && src.language) sourceLangMap[sid] = (src.language || '').toLowerCase().trim();
   }
-  // Fix 4 — language_pool: always recalculate from source languages
+  // Fix 4 — language_pool: recalculate from publisher diversity (definition change 2026-05-04)
+  // language_pool = 'both' means cross-publisher (≥2 distinct publications), NOT cross-language.
+  // Field rename to 'publisher_pool' scheduled for Next.js migration.
   // r.sources may be array of strings OR array of {source_id, quote, ...} objects
+  const sourcePubMap = {};
+  for (const src of sourcesArray) {
+    const sid = src.id || src.source_id;
+    if (sid && src.publication) sourcePubMap[sid] = src.publication;
+  }
   for (const r of data.restaurants) {
     const rSources = Array.isArray(r.sources) ? r.sources : [];
     const rSourceIds = rSources.map(s => typeof s === 'string' ? s : (s.source_id || s.id || ''));
+    const pubs = new Set(rSourceIds.map(sid => sourcePubMap[sid]).filter(Boolean));
     const langs = new Set(rSourceIds.map(sid => sourceLangMap[sid]).filter(Boolean));
-    if (langs.size > 0) {
-      let derived;
-      if (langs.has('en') && (langs.has('it') || langs.has('es') || langs.has('pt') || langs.has('fr') || langs.has('ca') || langs.has('ar'))) {
-        derived = 'both';
-      } else if (langs.has('en')) {
-        derived = 'en';
-      } else {
-        derived = [...langs][0];
-      }
-      if (r.language_pool !== derived) { r.language_pool = derived; autoRepaired++; }
-    } else if (!r.language_pool) {
-      r.language_pool = 'es'; // fallback only if no source language info and field missing
-      autoRepaired++;
+    let derived;
+    if (pubs.size >= 2) {
+      derived = 'both'; // cross-publisher consensus pick
+    } else if (langs.size > 0) {
+      derived = [...langs][0]; // single-publisher: use source language
+    } else {
+      derived = r.language_pool || 'en'; // no source info: preserve existing or default en
     }
+    if (r.language_pool !== derived) { r.language_pool = derived; autoRepaired++; }
   }
   if (autoRepaired > 0) {
     fs.writeFileSync(file, JSON.stringify(data, null, 2));

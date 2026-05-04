@@ -174,7 +174,8 @@
       "lng": -4.4219753,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Beluga"
+      "geo_matched_name": "Beluga",
+      "both_pool": true
     },
     {
       "name": "Casa Aranda",
@@ -207,7 +208,8 @@
       "lng": -4.4232825,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Casa Aranda"
+      "geo_matched_name": "Casa Aranda",
+      "both_pool": true
     },
     {
       "name": "El Pimpi",
@@ -234,7 +236,7 @@
       "signature_dish": "fritura mixta",
       "quote": "You can have some of the most traditional dishes in Malaga province. The menu changes with seasons but some favourites are always available — salmorejo, ensaladilla rusa and my personal favourite, the fritura mixta.",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 3,
       "sources": [
         "src-spanishsabores-aloise",
@@ -251,7 +253,8 @@
       "lng": -4.4180421,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bodega Bar El Pimpi"
+      "geo_matched_name": "Bodega Bar El Pimpi",
+      "both_pool": true
     },
     {
       "name": "Los Patios de Beatas",
@@ -272,7 +275,7 @@
       "signature_dish": null,
       "quote": "From fried calamari to Thai-style mussels or black garlic buttered anchovies, each dish encompasses the charm of Andalusia and its delicious cuisine — accompanied by over 500 wines from the cellar.",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-spanishsabores-aloise",
@@ -288,7 +291,8 @@
       "lng": -4.4187429,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Los Patios de Beatas"
+      "geo_matched_name": "Los Patios de Beatas",
+      "both_pool": true
     },
     {
       "name": "Taberna Uvedoble",
@@ -310,7 +314,7 @@
       "signature_dish": "ajo blanco",
       "quote": "Enjoy a variety of delicious tapas-style dishes such as ensaladilla rusa, smoked sardines or Iberian sirloin. The chefs use local ingredients to prepare a wide selection of mouth-watering flavours.",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-spanishsabores-aloise",
@@ -326,7 +330,8 @@
       "lng": -4.4175283,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Uvedoble Taverna"
+      "geo_matched_name": "Uvedoble Taverna",
+      "both_pool": true
     },
     {
       "name": "Antigua Casa de Guardia",
@@ -359,7 +364,8 @@
       "lng": -4.4233107,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Antigua Casa de Guardia"
+      "geo_matched_name": "Antigua Casa de Guardia",
+      "both_pool": false
     },
     {
       "name": "Araboka",
@@ -391,7 +397,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Balausta",
@@ -427,7 +434,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Bar La Comba",
@@ -459,7 +467,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Casa Lola Strachan",
@@ -496,7 +505,8 @@
       "lng": -4.4203945,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Casa Lola"
+      "geo_matched_name": "Casa Lola",
+      "both_pool": false
     },
     {
       "name": "Cávala",
@@ -530,7 +540,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Da Saveria",
@@ -564,7 +575,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "El Cabra",
@@ -596,7 +608,8 @@
       "lng": -4.3769065,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Merendero El Cabra Ovidio playa"
+      "geo_matched_name": "Merendero El Cabra Ovidio playa",
+      "both_pool": false
     },
     {
       "name": "El Tapeo de Cervantes",
@@ -631,7 +644,8 @@
       "lng": -4.4193094,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Tapeo de Cervantes"
+      "geo_matched_name": "Tapeo de Cervantes",
+      "both_pool": false
     },
     {
       "name": "El Tintero",
@@ -665,7 +679,8 @@
       "lng": -4.3480936,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Tintero"
+      "geo_matched_name": "El Tintero",
+      "both_pool": false
     },
     {
       "name": "EME de Mariano",
@@ -700,7 +715,8 @@
       "lng": -4.4177807,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Restaurante EME de Mariano RS"
+      "geo_matched_name": "Restaurante EME de Mariano RS",
+      "both_pool": false
     },
     {
       "name": "FOMO Bar",
@@ -733,7 +749,8 @@
       "lng": -4.4240035,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "FOMO Bar"
+      "geo_matched_name": "FOMO Bar",
+      "both_pool": false
     },
     {
       "name": "Kraken",
@@ -767,7 +784,8 @@
       "lng": -4.4219961,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Kraken Centro"
+      "geo_matched_name": "Kraken Centro",
+      "both_pool": false
     },
     {
       "name": "La Antxoeta",
@@ -803,7 +821,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "La Cosmo",
@@ -838,7 +857,8 @@
       "lng": -4.4180618,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Cosmo"
+      "geo_matched_name": "La Cosmo",
+      "both_pool": false
     },
     {
       "name": "La Cosmopolita",
@@ -871,7 +891,8 @@
       "lng": -4.4199633,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Cosmopolita"
+      "geo_matched_name": "La Cosmopolita",
+      "both_pool": false
     },
     {
       "name": "La Taberna de Mike Palmer",
@@ -908,7 +929,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Los Cuñaos",
@@ -943,7 +965,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Los Gatos",
@@ -975,7 +998,8 @@
       "lng": -4.4198696,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Los Gatos"
+      "geo_matched_name": "Los Gatos",
+      "both_pool": false
     },
     {
       "name": "Los Mellizos",
@@ -1009,7 +1033,8 @@
       "lng": -4.4209792,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Los Mellizos Málaga"
+      "geo_matched_name": "Los Mellizos Málaga",
+      "both_pool": false
     },
     {
       "name": "Marisquería Casa Vicente",
@@ -1043,7 +1068,8 @@
       "lng": -4.4223056,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Marisqueria Casa Vicente"
+      "geo_matched_name": "Marisqueria Casa Vicente",
+      "both_pool": false
     },
     {
       "name": "Mesón Mariano",
@@ -1077,7 +1103,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Palodú",
@@ -1112,7 +1139,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Restaurante El Jardín",
@@ -1147,7 +1175,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Restaurante Mexicano Tulum",
@@ -1181,7 +1210,8 @@
       "lng": -4.4189139,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Restaurante Mexicano Tulum"
+      "geo_matched_name": "Restaurante Mexicano Tulum",
+      "both_pool": false
     },
     {
       "name": "Rincón Catedral",
@@ -1213,7 +1243,8 @@
       "lng": -4.4186357,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Rincón Catedral"
+      "geo_matched_name": "Rincón Catedral",
+      "both_pool": false
     },
     {
       "name": "Ta-Kumi",
@@ -1248,7 +1279,8 @@
       "lng": -4.4162121,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Ta-Kumi"
+      "geo_matched_name": "Ta-Kumi",
+      "both_pool": false
     },
     {
       "name": "Taberna La Pechá",
@@ -1282,7 +1314,8 @@
       "lng": -4.4242967,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "La Pechá"
+      "geo_matched_name": "La Pechá",
+      "both_pool": false
     },
     {
       "name": "Verum — el Asador de Málaga",
@@ -1322,7 +1355,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     }
   ],
   "centroids": {

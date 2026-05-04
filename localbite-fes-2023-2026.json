@@ -134,7 +134,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Le Tarbouche",
@@ -172,7 +173,8 @@
       "lng": -4.9809009,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Le tarbouche"
+      "geo_matched_name": "Le tarbouche",
+      "both_pool": true
     },
     {
       "name": "Mom's Touch",
@@ -212,7 +214,8 @@
       "lng": -4.9825509,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Mom's Touch"
+      "geo_matched_name": "Mom's Touch",
+      "both_pool": true
     },
     {
       "name": "Café Clock",
@@ -234,7 +237,7 @@
       "signature_dish": "camel burger",
       "quote": "fusion dishes please the palates of locals and travelers alike. The Clock offers a uniquely seasoned camel burger as the house specialty",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-anitasfeast-breland",
@@ -250,7 +253,8 @@
       "lng": -4.9831172,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Café Clock"
+      "geo_matched_name": "Café Clock",
+      "both_pool": true
     },
     {
       "name": "The Ruined Garden",
@@ -271,7 +275,7 @@
       "signature_dish": "seven-hour lamb Mechwi",
       "quote": "Modern Moroccan dinners include a seven-hour lamb 'Mechwi' or, my favorite, a yummy chicken pastilla",
       "quote_language": "original",
-      "language_pool": "en",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-anitasfeast-breland",
@@ -287,7 +291,8 @@
       "lng": -4.9774646,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "The Ruined Garden"
+      "geo_matched_name": "The Ruined Garden",
+      "both_pool": true
     },
     {
       "name": "Bistro Laaroussa",
@@ -323,7 +328,8 @@
       "lng": -4.9792615,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Riad Laaroussa"
+      "geo_matched_name": "Riad Laaroussa",
+      "both_pool": false
     },
     {
       "name": "Restaurant Almandar",
@@ -364,7 +370,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "La Maison Bleue",
@@ -398,7 +405,8 @@
       "lng": -4.9818415,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Maison Bleue"
+      "geo_matched_name": "La Maison Bleue",
+      "both_pool": false
     },
     {
       "name": "Darori Resto",
@@ -434,7 +442,8 @@
       "lng": -4.9737372,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Darori Resto"
+      "geo_matched_name": "Darori Resto",
+      "both_pool": false
     },
     {
       "name": "Dar Roumana",
@@ -469,7 +478,8 @@
       "lng": -4.9781907,
       "geo_source": "nominatim",
       "geo_confidence": "medium",
-      "geo_matched_name": "Dar Roumana"
+      "geo_matched_name": "Dar Roumana",
+      "both_pool": false
     },
     {
       "name": "Dar Hammad",
@@ -502,7 +512,8 @@
       "lng": -4.9782156,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "DAR HAMMAD"
+      "geo_matched_name": "DAR HAMMAD",
+      "both_pool": false
     },
     {
       "name": "Fondouk Bazaar",
@@ -539,7 +550,8 @@
       "lng": -4.9795588,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Fondouk Bazaar"
+      "geo_matched_name": "Fondouk Bazaar",
+      "both_pool": false
     },
     {
       "name": "Restaurant Dar Hatim",
@@ -576,7 +588,8 @@
       "lng": -4.9738478,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Dar Hatim"
+      "geo_matched_name": "Dar Hatim",
+      "both_pool": false
     },
     {
       "name": "Restaurant Gayza",
@@ -614,7 +627,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Restaurant Lounge MB",
@@ -651,7 +665,8 @@
       "lng": -5.004426,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "MB Restaurant Lounge"
+      "geo_matched_name": "MB Restaurant Lounge",
+      "both_pool": false
     },
     {
       "name": "Café-restaurant Moulay Idriss",
@@ -688,7 +703,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Restaurant Palais Laraichi",
@@ -729,7 +745,8 @@
       "lng": -4.9802428,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Palais Laraichi"
+      "geo_matched_name": "Palais Laraichi",
+      "both_pool": false
     },
     {
       "name": "La Morille Dar Diafa",
@@ -767,7 +784,8 @@
       "lng": -5.0055526,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Morille Dar Diafa"
+      "geo_matched_name": "La Morille Dar Diafa",
+      "both_pool": false
     },
     {
       "name": "Restaurant L'Amandier",
@@ -804,7 +822,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Restaurant Benyamna",
@@ -839,7 +858,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Bistrot des Saveurs",
@@ -874,7 +894,8 @@
       "lng": -5.0014096,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bistrot des saveurs"
+      "geo_matched_name": "Bistrot des saveurs",
+      "both_pool": false
     }
   ],
   "centroids": {

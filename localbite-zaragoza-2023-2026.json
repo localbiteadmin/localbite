@@ -185,7 +185,7 @@
       "signature_dish": null,
       "quote": "El Chalet propone el menú degustación completo a 80 euros y el Menú Esencia a 50, con steak tartar, fideúa de sepia y carpaccio de ternasco entre sus referencias más celebradas por la crítica aragonesa",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 3,
       "sources": [
         "src-theobjective-alonso-2024",
@@ -203,7 +203,8 @@
       "lng": -0.8937039,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Chalet"
+      "geo_matched_name": "El Chalet",
+      "both_pool": true
     },
     {
       "name": "Gamberro",
@@ -220,7 +221,7 @@
       "signature_dish": null,
       "quote": "Gamberro, en la calle Bolonia 26, propone un menú ciego de 17 pasos por 70 euros de la mano del chef Franchesko Vera y la sumiller Flor García, una experiencia de tres horas articulada en torno al producto, la técnica y el concepto",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-aragondigital-benedicto-2024",
@@ -237,7 +238,8 @@
       "lng": -0.8830211,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Gamberro"
+      "geo_matched_name": "Gamberro",
+      "both_pool": true
     },
     {
       "name": "Maite",
@@ -255,7 +257,7 @@
       "signature_dish": null,
       "quote": "Maite ofrece un menú de 13 pasos a 58 euros en el que el jabalí al tomillo con salsa de miel y castañas, el ternasco en canelón Stroganoff y la lubina curada con ginebra y eneldo concentran una cocina de alta emoción en sólo seis mesas del Grupo Loira",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-aragondigital-benedicto-2024",
@@ -272,7 +274,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": true
     },
     {
       "name": "Bistrónomo",
@@ -290,7 +293,7 @@
       "signature_dish": null,
       "quote": "Bistrónomo, en Previsión Social 19 en San José y abierto desde 2018, adapta la tradición del bistró francés con verduras de la Ribera del Ebro y ofrece menús de 26 euros a mediodía y 30 euros por la noche",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-aragondigital-benedicto-2024",
@@ -307,7 +310,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": true
     },
     {
       "name": "Brasería Fire",
@@ -326,7 +330,7 @@
       "signature_dish": "Magañico",
       "quote": "Brasería Fire, en la calle Santiago 12, fusiona la cocina japonesa, americana, mexicana y vascofrancesa bajo la dirección de Adrián García, con el Magañico —un ternasco Magnum caliente— como pieza estelar de una carta que no se parece a ninguna otra en Zaragoza",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-enjoyzaragoza-gil-2023",
@@ -343,7 +347,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": true
     },
     {
       "name": "Absinthium",
@@ -377,7 +382,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "La Flor de Lis",
@@ -417,7 +423,8 @@
       "lng": -0.8776743,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Flor de Lis"
+      "geo_matched_name": "La Flor de Lis",
+      "both_pool": false
     },
     {
       "name": "El Disfrutón",
@@ -452,7 +459,8 @@
       "lng": -0.8780987,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Disfrutón"
+      "geo_matched_name": "El Disfrutón",
+      "both_pool": false
     },
     {
       "name": "Melí Meló",
@@ -487,7 +495,8 @@
       "lng": -0.8757515,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Meli-Melo"
+      "geo_matched_name": "Meli-Melo",
+      "both_pool": false
     },
     {
       "name": "La Republicana",
@@ -522,7 +531,8 @@
       "lng": -0.87872,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Republicana"
+      "geo_matched_name": "La Republicana",
+      "both_pool": false
     },
     {
       "name": "Zalamero",
@@ -552,7 +562,8 @@
       "lng": -0.8898793,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Zalamero"
+      "geo_matched_name": "Zalamero",
+      "both_pool": false
     },
     {
       "name": "Casa LAC",
@@ -586,7 +597,8 @@
       "lng": -0.8801159,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Restaurante Casa Lac"
+      "geo_matched_name": "Restaurante Casa Lac",
+      "both_pool": false
     },
     {
       "name": "Carnívoro Wine & Grill",
@@ -623,7 +635,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "La Jamada del Tubo",
@@ -655,7 +668,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "La Ternasca",
@@ -689,7 +703,8 @@
       "lng": -0.8668123,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Ternasca"
+      "geo_matched_name": "La Ternasca",
+      "both_pool": false
     },
     {
       "name": "Casa Pedro",
@@ -724,7 +739,8 @@
       "lng": -0.8757561,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Casa Pedro"
+      "geo_matched_name": "Casa Pedro",
+      "both_pool": false
     },
     {
       "name": "Moonlight Experimental Bar",
@@ -756,7 +772,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "La Doris",
@@ -788,7 +805,8 @@
       "lng": -0.8754811,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Doris"
+      "geo_matched_name": "La Doris",
+      "both_pool": false
     },
     {
       "name": "Novodabo",
@@ -821,7 +839,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "Panzzer Grill",
@@ -854,7 +873,8 @@
       "lng": -0.8925762,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Panzzer Grill"
+      "geo_matched_name": "Panzzer Grill",
+      "both_pool": false
     },
     {
       "name": "Marengo",
@@ -888,7 +908,8 @@
       "lng": -0.8817068,
       "geo_source": "nominatim",
       "geo_confidence": "medium",
-      "geo_matched_name": "Marengo"
+      "geo_matched_name": "Marengo",
+      "both_pool": false
     },
     {
       "name": "La Scala",
@@ -922,7 +943,8 @@
       "lng": -0.8823185,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Scala"
+      "geo_matched_name": "La Scala",
+      "both_pool": false
     },
     {
       "name": "Boulevardier",
@@ -957,7 +979,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "Quema",
@@ -991,7 +1014,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "Crudo",
@@ -1026,7 +1050,8 @@
       "lng": -0.8905921,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Taberna gastronómica Crudo"
+      "geo_matched_name": "Taberna gastronómica Crudo",
+      "both_pool": false
     },
     {
       "name": "Birabola",
@@ -1061,7 +1086,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "Ramen Shifu",
@@ -1097,7 +1123,8 @@
       "lng": -0.8961077,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Ramen Shifu"
+      "geo_matched_name": "Ramen Shifu",
+      "both_pool": false
     },
     {
       "name": "Kentya Restaurante",
@@ -1134,7 +1161,8 @@
       "lng": -0.9183395,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Kentya"
+      "geo_matched_name": "Kentya",
+      "both_pool": false
     },
     {
       "name": "Tribu",
@@ -1168,7 +1196,8 @@
       "lng": -0.9093698,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Tribu Restaurante Zaragoza"
+      "geo_matched_name": "Tribu Restaurante Zaragoza",
+      "both_pool": false
     },
     {
       "name": "Sophia Bistro",
@@ -1202,7 +1231,8 @@
       "lng": -0.8823287,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Sophia"
+      "geo_matched_name": "Sophia",
+      "both_pool": false
     },
     {
       "name": "El Foro",
@@ -1234,7 +1264,8 @@
       "lng": -0.9031697,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Restaurante el foro"
+      "geo_matched_name": "Restaurante el foro",
+      "both_pool": false
     },
     {
       "name": "Sr. Cachopo",
@@ -1272,7 +1303,8 @@
       "lng": -0.8954723,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Sr. Cachopo"
+      "geo_matched_name": "Sr. Cachopo",
+      "both_pool": false
     },
     {
       "name": "Gente Rara",
@@ -1302,7 +1334,8 @@
       "lng": -0.8706131,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Gente Rara"
+      "geo_matched_name": "Gente Rara",
+      "both_pool": false
     },
     {
       "name": "Artisan Real Food",
@@ -1334,7 +1367,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "Mazmorra by Macera",
@@ -1367,7 +1401,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "Matisse River Café",
@@ -1400,7 +1435,8 @@
       "lng": -0.8755948,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Matisse Riveracafe"
+      "geo_matched_name": "Matisse Riveracafe",
+      "both_pool": false
     },
     {
       "name": "La Cocina de Keyla",
@@ -1430,7 +1466,8 @@
       "lng": -0.8776675,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Cocina de Keyla"
+      "geo_matched_name": "La Cocina de Keyla",
+      "both_pool": false
     },
     {
       "name": "Bistró Casa y Tinelo",
@@ -1462,7 +1499,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     },
     {
       "name": "Don Gourmet Oisi",
@@ -1499,7 +1537,8 @@
       "lng": null,
       "geo_source": null,
       "geo_confidence": null,
-      "geo_matched_name": null
+      "geo_matched_name": null,
+      "both_pool": false
     }
   ],
   "centroids": {

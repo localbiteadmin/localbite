@@ -171,7 +171,8 @@
       "lng": -2.9256809,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Taberna Basaras"
+      "geo_matched_name": "Taberna Basaras",
+      "both_pool": true
     },
     {
       "name": "Bodega Joserra",
@@ -204,7 +205,8 @@
       "lng": -2.9232635,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bodega Joserra"
+      "geo_matched_name": "Bodega Joserra",
+      "both_pool": true
     },
     {
       "name": "Gure Toki",
@@ -240,7 +242,8 @@
       "lng": -2.9223102,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Gure Toki"
+      "geo_matched_name": "Gure Toki",
+      "both_pool": true
     },
     {
       "name": "Víctor Montes",
@@ -261,7 +264,7 @@
       "signature_dish": "txangurro",
       "quote": "El pintxo de txangurro es un imprescindible en Víctor Montes, y su oferta de mariscos es especialmente destacable en la Plaza Nueva.",
       "quote_language": "original",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-bh-gomez",
@@ -277,7 +280,8 @@
       "lng": -2.9223246,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Victor Montes"
+      "geo_matched_name": "Victor Montes",
+      "both_pool": true
     },
     {
       "name": "Café Iruña",
@@ -313,7 +317,8 @@
       "lng": -2.928092,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Iruña"
+      "geo_matched_name": "Iruña",
+      "both_pool": false
     },
     {
       "name": "Asador Indusi",
@@ -349,7 +354,8 @@
       "lng": -2.9389463,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Asador Indusi"
+      "geo_matched_name": "Asador Indusi",
+      "both_pool": false
     },
     {
       "name": "Restaurante Asador Txakoli Simón",
@@ -387,7 +393,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Rio-Oja",
@@ -420,7 +427,8 @@
       "lng": -2.9245498,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Restaurante Bar Rio-Oja"
+      "geo_matched_name": "Restaurante Bar Rio-Oja",
+      "both_pool": false
     },
     {
       "name": "El Eme",
@@ -454,7 +462,8 @@
       "lng": -2.9344176,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "El Eme"
+      "geo_matched_name": "El Eme",
+      "both_pool": false
     },
     {
       "name": "Irrintzi",
@@ -487,7 +496,8 @@
       "lng": -2.9260796,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Irrintzi"
+      "geo_matched_name": "Irrintzi",
+      "both_pool": false
     },
     {
       "name": "Bikandi Etxea",
@@ -521,7 +531,8 @@
       "lng": -2.9244492,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bikandi Etxea"
+      "geo_matched_name": "Bikandi Etxea",
+      "both_pool": false
     },
     {
       "name": "Café Bar Bilbao",
@@ -559,7 +570,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Charly",
@@ -593,7 +605,8 @@
       "lng": -2.9223358,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Charly"
+      "geo_matched_name": "Charly",
+      "both_pool": false
     },
     {
       "name": "Bacaicoa",
@@ -627,7 +640,8 @@
       "lng": -2.9212089,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bacaicoa"
+      "geo_matched_name": "Bacaicoa",
+      "both_pool": false
     },
     {
       "name": "Berton",
@@ -662,7 +676,8 @@
       "lng": -2.9247733,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Berton"
+      "geo_matched_name": "Berton",
+      "both_pool": false
     },
     {
       "name": "Fermín",
@@ -695,7 +710,8 @@
       "lng": -2.9212698,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Fermín"
+      "geo_matched_name": "Fermín",
+      "both_pool": false
     },
     {
       "name": "Con B de Bilbao",
@@ -726,7 +742,8 @@
       "lng": -2.9259376,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Con B de Bilbao"
+      "geo_matched_name": "Con B de Bilbao",
+      "both_pool": false
     },
     {
       "name": "Kali Orexi",
@@ -761,7 +778,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Ramen Shimoji",
@@ -796,7 +814,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "La Sausería",
@@ -827,7 +846,8 @@
       "lng": -2.9352871,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Sausería"
+      "geo_matched_name": "La Sausería",
+      "both_pool": false
     },
     {
       "name": "Bocadero",
@@ -860,7 +880,8 @@
       "lng": -2.9312332,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bocadero"
+      "geo_matched_name": "Bocadero",
+      "both_pool": false
     },
     {
       "name": "Sua San",
@@ -894,7 +915,8 @@
       "lng": -2.9352196,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Sua San"
+      "geo_matched_name": "Sua San",
+      "both_pool": false
     },
     {
       "name": "Porrue",
@@ -930,7 +952,8 @@
       "lng": -2.9333293,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Porrue"
+      "geo_matched_name": "Porrue",
+      "both_pool": false
     }
   ],
   "centroids": {

@@ -193,7 +193,7 @@
       "geo_matched_name": null,
       "geo_skip": true,
       "confidence_tier": "A",
-      "language_pool": "ca",
+      "language_pool": "both",
       "quote": "Mediterranean design with 'reinterpreted Catalan dishes with personality'; one of the most admired new restaurants of 2025 in the Raval."
     },
     {
@@ -217,7 +217,7 @@
       "geo_matched_name": null,
       "geo_skip": true,
       "confidence_tier": "A",
-      "language_pool": "ca",
+      "language_pool": "both",
       "quote": "A ceremonial Japanese omakase experience that became one of 2025's most-discussed new restaurants among Barcelona food writers."
     },
     {
@@ -244,7 +244,7 @@
       "lng": 2.1798565,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "ca",
+      "language_pool": "both",
       "quote": "Recently relaunched by Banco de Boquerones group; intimate spaces with distinct colour zones; philosophy 'a Barcelona perspective on contemporary Japan: approachable, aesthetic, fresh and honest.' Gyoza, teriyaki skewers, and white chocolate matcha tiramisu."
     },
     {
@@ -324,7 +324,7 @@
       "lng": 2.180301,
       "geo_source": "nominatim",
       "confidence_tier": "A",
-      "language_pool": "ca",
+      "language_pool": "both",
       "quote": "Updated traditional Catalan cuisine paired with contemporary cocktails; a neighbourhood Born restaurant that found its audience quickly in 2025."
     },
     {
@@ -496,7 +496,7 @@
         "tnbp-torrents-barcelona",
         "repsol-barcelona"
       ],
-      "both_pool": false,
+      "both_pool": true,
       "language_pools": [
         "ES"
       ],
@@ -507,7 +507,7 @@
       "geo_matched_name": null,
       "geo_skip": true,
       "confidence_tier": "A",
-      "language_pool": "es",
+      "language_pool": "both",
       "quote": "Chef Artur Martínez presents a short menu of Catalan recipes in tapas version with personal interpretation; features trinxat and mollejas at Còrsega 232."
     },
     {

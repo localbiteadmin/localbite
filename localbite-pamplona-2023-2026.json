@@ -135,7 +135,8 @@
       "lng": -1.6418586,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Chez Belagua"
+      "geo_matched_name": "Chez Belagua",
+      "both_pool": true
     },
     {
       "name": "Bar Maxi Izurde",
@@ -157,7 +158,7 @@
       "signature_dish": "piruleta de micuit bañada en chocolate blanco",
       "quote": "Bar castizo, sencillo, que no llama la atención por el ambiente pero sí por la calidad de sus pinchos: menú de 55 euros que comienza con piruleta de micuit bañada en chocolate blanco y croqueta de queso Larra con membrillo y nueces",
       "quote_language": "es",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-navarracapital-ochoa-menus",
@@ -174,7 +175,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Les Amis",
@@ -193,7 +195,7 @@
       "signature_dish": "untamorros de cordero",
       "quote": "Cocina francesa contemporánea con toques de fusión asiática y peruana del chef Eduardo Llop: bikini trufado, untamorros de cordero y lentejas caviar con chipirón — reconocida en la Guía Repsol 2023 y la Guía Michelin 2024-2025",
       "quote_language": "es",
-      "language_pool": "es",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-navarracapital-ochoa-emergentes",
@@ -210,7 +212,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Koku",
@@ -247,7 +250,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Bar Avenida",
@@ -282,7 +286,8 @@
       "lng": -1.6281167,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bar Avenida"
+      "geo_matched_name": "Bar Avenida",
+      "both_pool": false
     },
     {
       "name": "Casa Amparo",
@@ -321,7 +326,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Gastrobar Moka",
@@ -359,7 +365,8 @@
       "lng": -1.6374922,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Gastrobar Moka"
+      "geo_matched_name": "Gastrobar Moka",
+      "both_pool": false
     },
     {
       "name": "Casa Manolo",
@@ -390,7 +397,8 @@
       "lng": -1.6434115,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Casa Manolo"
+      "geo_matched_name": "Casa Manolo",
+      "both_pool": false
     },
     {
       "name": "Anttonenea",
@@ -428,7 +436,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "La Cuchara de Martín",
@@ -466,7 +475,8 @@
       "lng": -1.649598,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Cuchara de Martín"
+      "geo_matched_name": "La Cuchara de Martín",
+      "both_pool": false
     },
     {
       "name": "Lomobajo",
@@ -500,7 +510,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Arostegui",
@@ -533,7 +544,8 @@
       "lng": -1.6404178,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Arostegui"
+      "geo_matched_name": "Arostegui",
+      "both_pool": false
     },
     {
       "name": "Nómada",
@@ -570,7 +582,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Zurita Barra y Mantel",
@@ -607,7 +620,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Don Mérito Essencia",
@@ -643,7 +657,8 @@
       "lng": -1.6623519,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Don Mérito"
+      "geo_matched_name": "Don Mérito",
+      "both_pool": false
     },
     {
       "name": "Picaflor",
@@ -679,7 +694,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Akari Gastroteka",
@@ -712,7 +728,8 @@
       "lng": -1.6288576,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Akari Gastroteka"
+      "geo_matched_name": "Akari Gastroteka",
+      "both_pool": false
     },
     {
       "name": "Bar Binies",
@@ -748,7 +765,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Restaurante Alma",
@@ -785,7 +803,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Baserriberri",
@@ -818,7 +837,8 @@
       "lng": -1.6445903,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Baserriberri"
+      "geo_matched_name": "Baserriberri",
+      "both_pool": false
     },
     {
       "name": "Kiliki Taberna",
@@ -852,7 +872,8 @@
       "lng": -1.6502854,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Kiliki"
+      "geo_matched_name": "Kiliki",
+      "both_pool": false
     },
     {
       "name": "New Trujal",
@@ -886,7 +907,8 @@
       "lng": -1.6412255,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "New Trujal"
+      "geo_matched_name": "New Trujal",
+      "both_pool": false
     },
     {
       "name": "Churrería La Mañueta",
@@ -920,7 +942,8 @@
       "lng": -1.64325,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Churrería La Mañueta"
+      "geo_matched_name": "Churrería La Mañueta",
+      "both_pool": false
     },
     {
       "name": "Baviera",
@@ -954,7 +977,8 @@
       "lng": -1.6420968,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bar Baviera"
+      "geo_matched_name": "Bar Baviera",
+      "both_pool": false
     }
   ],
   "centroids": {

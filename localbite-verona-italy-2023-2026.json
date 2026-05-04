@@ -171,7 +171,8 @@
       "lng": 10.9993864,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Osteria al Duca"
+      "geo_matched_name": "Osteria al Duca",
+      "both_pool": true
     },
     {
       "name": "Caffè Monte Baldo",
@@ -209,7 +210,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Trattoria al Pompiere",
@@ -245,7 +247,8 @@
       "lng": 10.9979381,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Al Pompiere"
+      "geo_matched_name": "Al Pompiere",
+      "both_pool": true
     },
     {
       "name": "Osteria Trattoria al Duomo",
@@ -283,7 +286,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": true
     },
     {
       "name": "Trattoria La Molinara",
@@ -318,7 +322,8 @@
       "lng": 10.9941807,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "La Molinara"
+      "geo_matched_name": "La Molinara",
+      "both_pool": true
     },
     {
       "name": "Hostaria Vecchia Fontanina",
@@ -334,7 +339,7 @@
       "signature_dish": null,
       "quote": "si trova in piazzetta Chiavica, in una piccola sala da pranzo vengono serviti piatti genuini a prezzi più che onesti",
       "quote_language": "original",
-      "language_pool": "it",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-scattidigusto-pagano",
@@ -350,7 +355,8 @@
       "lng": 10.9999865,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Hosteria La Vecchia Fontanina"
+      "geo_matched_name": "Hosteria La Vecchia Fontanina",
+      "both_pool": true
     },
     {
       "name": "Osteria Mondo d'Oro",
@@ -370,7 +376,7 @@
       "signature_dish": null,
       "quote": "Osteria dedicata alla tradizione italiana, with beef polpette, calf brain fritter, and risotto with mushrooms.",
       "quote_language": "translated from Italian",
-      "language_pool": "it",
+      "language_pool": "both",
       "source_count": 2,
       "sources": [
         "src-veronasera-dona",
@@ -386,7 +392,8 @@
       "lng": 10.9962803,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Osteria Mondo d'Oro"
+      "geo_matched_name": "Osteria Mondo d'Oro",
+      "both_pool": true
     },
     {
       "name": "Al Bersagliere",
@@ -421,7 +428,8 @@
       "lng": 10.9980386,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Trattoria Al Bersagliere"
+      "geo_matched_name": "Trattoria Al Bersagliere",
+      "both_pool": false
     },
     {
       "name": "Alcova del Frate",
@@ -454,7 +462,8 @@
       "lng": 10.9995711,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Alcova del Frate"
+      "geo_matched_name": "Alcova del Frate",
+      "both_pool": false
     },
     {
       "name": "Antica Amelia Bistrot",
@@ -488,7 +497,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Antica Bottega del Vino",
@@ -519,7 +529,8 @@
       "lng": 10.9971086,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Bottega Vini"
+      "geo_matched_name": "Bottega Vini",
+      "both_pool": false
     },
     {
       "name": "Iris Ristorante",
@@ -550,7 +561,8 @@
       "lng": 11.0001029,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Iris Ristorante"
+      "geo_matched_name": "Iris Ristorante",
+      "both_pool": false
     },
     {
       "name": "La Taverna di Via Stella",
@@ -586,7 +598,8 @@
       "lng": 10.9989269,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "La Taverna"
+      "geo_matched_name": "La Taverna",
+      "both_pool": false
     },
     {
       "name": "Le Vecete",
@@ -617,7 +630,8 @@
       "lng": 10.9956148,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Osteria le Vecete"
+      "geo_matched_name": "Osteria le Vecete",
+      "both_pool": false
     },
     {
       "name": "L'Evangelista",
@@ -649,7 +663,8 @@
       "lng": 10.9918585,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "L'Evangelista"
+      "geo_matched_name": "L'Evangelista",
+      "both_pool": false
     },
     {
       "name": "Locanda 4 Cuochi",
@@ -683,7 +698,8 @@
       "lng": 10.9937928,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Locanda 4 Cuochi"
+      "geo_matched_name": "Locanda 4 Cuochi",
+      "both_pool": false
     },
     {
       "name": "Locanda di Castelvecchio",
@@ -715,7 +731,8 @@
       "lng": 10.9873216,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Locanda Castelvecchio"
+      "geo_matched_name": "Locanda Castelvecchio",
+      "both_pool": false
     },
     {
       "name": "Osteria A La Carega",
@@ -750,7 +767,8 @@
       "lng": 10.9945604,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Osteria a la Carega"
+      "geo_matched_name": "Osteria a la Carega",
+      "both_pool": false
     },
     {
       "name": "Osteria ai Osei",
@@ -783,7 +801,8 @@
       "lng": 11.0128233,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Osteria ai Osei"
+      "geo_matched_name": "Osteria ai Osei",
+      "both_pool": false
     },
     {
       "name": "Osteria al Carroarmato",
@@ -814,7 +833,8 @@
       "lng": 10.9999291,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Osteria Carroarmato"
+      "geo_matched_name": "Osteria Carroarmato",
+      "both_pool": false
     },
     {
       "name": "Osteria all'Organetto",
@@ -847,7 +867,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Osteria Il Ciottolo",
@@ -878,7 +899,8 @@
       "lng": 10.9898384,
       "geo_source": "photon",
       "geo_confidence": "medium",
-      "geo_matched_name": "Il Ciottolo"
+      "geo_matched_name": "Il Ciottolo",
+      "both_pool": false
     },
     {
       "name": "Osteria Pericotti",
@@ -910,7 +932,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Osteria Sottoriva",
@@ -939,7 +962,8 @@
       "lng": 11.0003816,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Osteria Sottoriva"
+      "geo_matched_name": "Osteria Sottoriva",
+      "both_pool": false
     },
     {
       "name": "Ostregheteria Sottoriva 23",
@@ -972,7 +996,8 @@
       "lng": 11.0004575,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Ostregheteria Sottoriva 23"
+      "geo_matched_name": "Ostregheteria Sottoriva 23",
+      "both_pool": false
     },
     {
       "name": "Pizzeria Da Vincenzo",
@@ -1005,7 +1030,8 @@
       "lng": 10.9965639,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Pizzeria da Vincenzo"
+      "geo_matched_name": "Pizzeria da Vincenzo",
+      "both_pool": false
     },
     {
       "name": "Pizzeria Du De Cope",
@@ -1038,7 +1064,8 @@
       "lng": 10.9949948,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Pizzeria Du De Cope"
+      "geo_matched_name": "Pizzeria Du De Cope",
+      "both_pool": false
     },
     {
       "name": "Redentore",
@@ -1069,7 +1096,8 @@
       "lng": 11.0020003,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Redentore"
+      "geo_matched_name": "Redentore",
+      "both_pool": false
     },
     {
       "name": "San Basilio alla Pergola",
@@ -1102,7 +1130,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Trattoria Alla Fedeltà",
@@ -1138,7 +1167,8 @@
       "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
-      "geo_skip": true
+      "geo_skip": true,
+      "both_pool": false
     },
     {
       "name": "Trattoria dalla Bruna",
@@ -1172,7 +1202,8 @@
       "lng": 10.9769049,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Trattoria Dalla Bruna"
+      "geo_matched_name": "Trattoria Dalla Bruna",
+      "both_pool": false
     },
     {
       "name": "Trattoria La Pesa",
@@ -1206,7 +1237,8 @@
       "lng": 11.0168422,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Trattoria La Pesa"
+      "geo_matched_name": "Trattoria La Pesa",
+      "both_pool": false
     },
     {
       "name": "Trattoria Pane e Vino",
@@ -1235,7 +1267,8 @@
       "lng": 10.9955794,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Trattoria Pane e Vino"
+      "geo_matched_name": "Trattoria Pane e Vino",
+      "both_pool": false
     },
     {
       "name": "Trattoria Trota da Luciano",
@@ -1268,7 +1301,8 @@
       "lng": 11.0002059,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Trattoria Trota da Luciano"
+      "geo_matched_name": "Trattoria Trota da Luciano",
+      "both_pool": false
     },
     {
       "name": "Vescovo Moro",
@@ -1300,7 +1334,8 @@
       "lng": 10.9778044,
       "geo_source": "nominatim",
       "geo_confidence": "high",
-      "geo_matched_name": "Vescovo Moro"
+      "geo_matched_name": "Vescovo Moro",
+      "both_pool": false
     }
   ],
   "centroids": {
