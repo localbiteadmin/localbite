@@ -1108,7 +1108,7 @@ function openCredits() {
   panel.classList.add('open');
   document.getElementById('credits-btn').textContent = 'Sources ↑';
   document.getElementById('hero-sources-btn').textContent = 'Sources ↑';
-  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function closeCredits() {
