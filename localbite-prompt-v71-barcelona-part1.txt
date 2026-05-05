@@ -133,9 +133,29 @@ DIRECT_FETCH_SOURCES:
     (/hit-list-best-new-restaurants-barcelona) which was updated in 2025.
     Confirm article date from fetched text before extracting.
 
+11. Observación Gastronómica — Philippe Regol (ES) [NEW — 2026-05-04]
+    URL: https://observaciongastronomica2.blogspot.com/
+    Writer: Philippe Regol
+    Language: ES (some entries in CA)
+    Find: Philippe Regol's most recent Barcelona restaurant guide or
+    individual restaurant reviews (2023 or later). Fetch the blog
+    homepage and navigate to Barcelona-specific content. Author byline
+    "Philippe Regol" appears consistently — confirmed named author.
+    Confirmed fetchable as of 2026-05-04.
+    Pack overlap confirmed: Franca, Arraval, Casa Fiero, Finorri — all
+    currently single-source in the v7.1 pack. Adding Regol is expected
+    to convert these four to consensus picks immediately.
+    Publisher independence: Regol's independent personal blog —
+    completely independent from all existing DIRECT_FETCH_SOURCES.
+    Cannot create same-publisher conflict with any current source.
+    Note: Regol is a respected Barcelona food critic with decades of
+    coverage. Do not apply single-author site rule formally — confirm
+    Regol byline in fetched text before extracting.
+    COI: None.
+
 ADDITIONAL PHASE 0 ATTEMPT (lower confidence — attempt after the above):
 
-11. Ara.cat Mengem
+12. Ara.cat Mengem
     URL: https://www.ara.cat/mengem/
     Writer: Rosa Rodón (confirmed in v4 run, though earlier v3 run had
       byline issues — article-level byline verification required)

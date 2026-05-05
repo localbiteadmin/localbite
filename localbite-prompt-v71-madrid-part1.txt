@@ -216,6 +216,52 @@ PHASE 0 SOURCE LIST:
     apply single-author site rule and accept. If first name only:
     reject under named-author requirements.
 
+13. ABC / Salsa de Chiles — Carlos Maribona (ES) [NEW — 2026-05-04]
+    Site: abc.es
+    Find: Carlos Maribona's "Salsa de Chiles" column. Fetch
+    https://www.abc.es/gastronomia/ and search for Maribona byline,
+    or search "Carlos Maribona Salsa de Chiles Madrid restaurantes
+    2024 2025" to locate his most recent guide.
+    Fetch limitation: abc.es returns 403 from automated fetch (Vocento
+    geo-block pattern) but is user-accessible in browser. If Phase 0
+    fetch fails with 403: log as fetch-limitation in fetch log, set
+    article_url: null for this source. Do not spend multiple attempts.
+    Writer identity confirmed independently of fetch success.
+    Pack overlap confirmed: Haramboure, La Tasquita (2026-05-04).
+    Vocento conflict check: ABC is a Vocento group paper. No other
+    Vocento paper is in the Madrid source pool — safe under the
+    one-Vocento-per-city rule.
+    COI: None.
+
+14. Complicidad Gastronómica — Isaac Agüero Fuentes (ES) [NEW — 2026-05-04]
+    Site: http://www.complicidadgastronomica.es/
+    Find: Fetch the Madrid restaurant archive at
+    http://www.complicidadgastronomica.es/category/restaurantes/madrid/
+    and extract restaurants from Isaac Agüero Fuentes' most recent
+    reviews (2023 or later). Author byline "Isaac Agüero Fuentes"
+    appears on all posts — confirmed named author.
+    Confirmed fetchable as of 2026-05-04.
+    Pack overlap confirmed: Haramboure, La Tasquita, Sacha.
+    Note: Agüero covers some Michelin-starred venues (Gofio, Ugo Chan)
+    — exclude these per MICHELIN_STARRED_EXCLUSIONS. Extract all
+    non-starred qualifying restaurants from his reviews.
+    Publisher independence: fully independent of all existing sources.
+    COI: None.
+
+15. La Razón — Tatiana Ferrandis (ES) [NEW — fetch-limitation — 2026-05-04]
+    Site: larazon.es
+    Find: Tatiana Ferrandis' Madrid restaurant coverage 2023–2026.
+    Fetch limitation: larazon.es is site-blocked to automated fetch.
+    Action: Attempt fetch in Phase 0. If blocked: log as fetch-limitation
+    in fetch log, create source entry with article_url: null. Do not
+    spend multiple fetch attempts.
+    Writer identity and article existence confirmed via Muck Rack
+    as of 2026-05-04.
+    Note: Named author confirmed (Tatiana Ferrandis). Independent news
+    outlet. Null article_url is the correct honest response to a
+    confirmed fetch-limitation — do not fabricate a URL.
+    COI: None.
+
 ════════════════════════════════════════
 ADDITIONAL PHASE 1 CANDIDATE SOURCES
 ════════════════════════════════════════

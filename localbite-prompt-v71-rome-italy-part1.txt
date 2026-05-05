@@ -81,6 +81,21 @@ DIRECT_FETCH_SOURCES:
     Single-author site — confirmed named author from About page;
     apply single-author site rule.
 
+  https://www.puntarella-rossa.it/
+    NOTE: Veronica Guerrini, IT, independent Italian food publisher.
+    Confirmed fetchable as of 2026-05-04. An October 2024 article
+    covering Grappolo d'Oro (already in the Rome pack) was confirmed
+    at this site. Fetch the most recent Rome restaurant guide or
+    best-of list (2023 or later) with Veronica Guerrini byline.
+    This is a new IT-language publisher not in the current v7.1 pack —
+    adding this source is the primary mechanism for improving both-pool
+    and reducing Katie Parla's concentration in this rebuild.
+    Confirm named byline (Veronica Guerrini) in fetched text.
+    Publisher independence: confirmed independent of all existing
+    DIRECT_FETCH_SOURCES.
+    COI: None.
+    [NEW — 2026-05-04]
+
 NAMED_AWARDS:
   50 Top Italy (50topitaly.it) — annual guide, independent
   L'Espresso Ristoranti d'Italia (annual guide)
@@ -150,6 +165,16 @@ EN source AND one IT/other-language source from different publishers.
 The two Katie Parla URLs above are from the same publisher (katieparla.com)
 and count as ONE source for pool purposes. The pipeline must find at
 least one independent IT-language source for both-pool to be achievable.
+
+CONCENTRATION CAP — v7.1 REBUILD NOTE:
+The v7.1 pack had Katie Parla at 64% of single-source restaurants —
+accepted as structural but flagged as the primary rebuild trigger.
+The addition of Puntarella Rossa (Veronica Guerrini, IT) is specifically
+intended to reduce this concentration. Apply the 30% concentration cap
+as a quality signal during Phase 3 review. If Parla still exceeds 30%
+after including Guerrini: flag clearly in the Phase 3 summary, but do
+NOT trim Parla entries to hit the cap — the goal is to add IT coverage,
+not remove EN coverage.
 
 Cucina romana: Focus on traditional Roman dishes — carbonara, cacio e pepe,
 amatriciana, coda alla vaccinara, carciofi alla giudia, supplì, pizza
