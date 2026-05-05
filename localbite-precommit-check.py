@@ -192,7 +192,7 @@ def run_checks(filepath):
 
     # Sources format
     if isinstance(sources_raw, list):
-        error(f'sources field is a LIST ({len(sources_raw)} items) — Fix 2 should have converted this in postrun. Convert manually before committing.')
+        warn(f'sources field is LIST format ({len(sources_raw)} sources) — viewer handles both formats correctly (Array.isArray). Will auto-convert to dict at next rebuild via postrun.js Fix 2. No action needed for existing pre-Fix-2 packs.')
     else:
         n_sources = len(sources_raw)
         ok(f'sources field: dict format ({n_sources} sources)')
