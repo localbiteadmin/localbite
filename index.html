@@ -207,6 +207,8 @@
   }
 
   .credits-panel.open { display: block; }
+  body.sources-open #filters-bar,
+  body.sources-open #main { display: none !important; }
 
   .credits-inner {
     max-width: 1200px;
@@ -1102,16 +1104,18 @@ function showToast(message, durationMs = 4000) {
 // ── CREDITS PANEL ──
 function openCredits() {
   const panel = document.getElementById('credits-panel');
+  document.body.classList.add('sources-open');
   panel.classList.add('open');
   document.getElementById('credits-btn').textContent = 'Sources ↑';
   document.getElementById('hero-sources-btn').textContent = 'Sources ↑';
-  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function closeCredits() {
   document.getElementById('credits-panel').classList.remove('open');
   document.getElementById('credits-btn').textContent = 'Sources ↓';
   document.getElementById('hero-sources-btn').textContent = 'Sources ↓';
+  document.body.classList.remove('sources-open');
 }
 
 document.getElementById('credits-btn').addEventListener('click', function() {
@@ -1213,6 +1217,7 @@ async function loadCity(meta) {
   document.getElementById('credits-panel').classList.remove('open');
   document.getElementById('credits-btn').textContent = 'Sources ↓';
   document.getElementById('hero-sources-btn').textContent = 'Sources ↓';
+  document.body.classList.remove('sources-open');
 
   try {
     const url = BASE + (meta.file || ('localbite-' + (meta.city_slug||meta.slug) + '-2023-2026.json'));
