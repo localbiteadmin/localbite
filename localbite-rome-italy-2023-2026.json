@@ -7,8 +7,8 @@
   "year_range": "2023-2026",
   "city_language": "IT",
   "price_currency": "EUR",
-  "sources": [
-    {
+  "sources": {
+    "S1": {
       "source_id": "S1",
       "writer": "Katie Parla",
       "publication": "katieparla.com",
@@ -21,7 +21,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Food expert Katie Parla shares insider dining recommendations and culinary insights through her website katieparla.com. Her coverage focuses on authentic local food experiences, including comprehensive guides to eating, drinking, and food shopping in major culinary destinations like Rome."
     },
-    {
+    "S2": {
       "source_id": "S2",
       "writer": "Annie Replogle",
       "publication": "theinfatuation.com",
@@ -34,7 +34,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Food writer at The Infatuation, a popular restaurant discovery platform known for its honest, accessible reviews and dining recommendations. Annie Replogle covers international dining destinations, offering insider perspectives on the best places to eat in major cities around the world."
     },
-    {
+    "S3": {
       "source_id": "S3",
       "writer": "Camilla Baresani",
       "publication": "camillabaresani.com",
@@ -47,7 +47,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Food critic and journalist who contributes to Corriere della Sera, Italy's leading national newspaper. Her work on camillabaresani.com features comprehensive restaurant reviews across Rome's dining scene, offering insights into the capital's culinary landscape."
     },
-    {
+    "S4": {
       "source_id": "S4",
       "writer": "Marta Correale",
       "publication": "mamalovesrome.com",
@@ -60,7 +60,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Food writer for mamalovesrome.com, specializing in Rome's dining scene with detailed neighborhood restaurant guides. Marta Correale creates comprehensive local food recommendations, covering everything from historic districts like Monti to iconic areas near major landmarks. Her work focuses on helping readers discover authentic Roman dining experiences across the city's diverse culinary landscape."
     }
-  ],
+  },
   "restaurants": [
     {
       "name": "Armando al Pantheon",
@@ -741,34 +741,6 @@
       "language_pool": "it",
       "price_level": 1,
       "signature_dish": "pizza in teglia"
-    },
-    {
-      "name": "Antico Caffè Greco",
-      "neighbourhood": "Tridente",
-      "address": "Via dei Condotti 86, 00187 Roma",
-      "cuisine": "Café-historic",
-      "quote": "il locale più antico di Roma, 264 anni di storia — ci sono i proprietari della licenza tutelati da 4 vincoli del Ministero dei Beni Culturali sui circa 300 quadri, statue, cimeli",
-      "quote_lang": "it",
-      "dishes": [
-        "tramezzini",
-        "paste da forno"
-      ],
-      "sources": [
-        "S3"
-      ],
-      "confidence_tier": "B",
-      "both_pool": false,
-      "open_status": "open",
-      "lat": null,
-      "lon": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lng": null,
-      "geo_source": null,
-      "language_pool": "it",
-      "price_level": 1,
-      "signature_dish": "tramezzini"
     },
     {
       "name": "Santo Palato",
@@ -1520,12 +1492,12 @@
       "confidence_tier": "B",
       "both_pool": false,
       "open_status": "open",
-      "lat": 41.8948973,
+      "lat": null,
       "lon": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Piazza della Madonna dei Monti",
-      "geo_skip": false,
-      "lng": 12.490882,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lng": null,
       "geo_source": "photon",
       "language_pool": "en",
       "price_level": 1,
