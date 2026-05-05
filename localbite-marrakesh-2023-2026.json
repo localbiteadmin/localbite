@@ -6,8 +6,8 @@
   "pack_date": "2026-04-23",
   "year_range": "2023-2026",
   "currency": "MAD",
-  "sources": [
-    {
+  "sources": {
+    "src-blondieinmorocco-barcaite": {
       "source_id": "src-blondieinmorocco-barcaite",
       "publication": "Blondie in Morocco",
       "publication_type": "single-author blog",
@@ -25,7 +25,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Food writer for Blondie in Morocco, where Rasa Barcaite creates comprehensive food guides exploring the culinary landscape of Morocco. Her recent work includes detailed restaurant and dining recommendations that help travelers and locals discover authentic Moroccan cuisine and dining experiences."
     },
-    {
+    "src-bewilderedinmorocco-mizinskamomcilovic": {
       "source_id": "src-bewilderedinmorocco-mizinskamomcilovic",
       "publication": "Bewildered in Morocco",
       "publication_type": "single-author blog",
@@ -43,7 +43,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "A food writer for Bewildered in Morocco, Monika Mizińska-Momčilović contributes culinary guides that help navigate Morocco's dining landscape. Her work focuses on providing practical food guidance for those exploring Moroccan cuisine and restaurant culture."
     },
-    {
+    "src-marrakechmadame-durant": {
       "source_id": "src-marrakechmadame-durant",
       "publication": "Marrakech Madame",
       "publication_type": "multi-author blog",
@@ -61,7 +61,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Food writer for Marrakech Madame, contributing comprehensive dining guides that explore the culinary landscape of Morocco's vibrant food scene. Camille Durant specializes in creating detailed restaurant recommendations and food guides for travelers and locals seeking authentic dining experiences in Marrakech."
     },
-    {
+    "src-timeout-hardykirby": {
       "source_id": "src-timeout-hardykirby",
       "publication": "Time Out Marrakech",
       "publication_type": "multi-author media outlet",
@@ -80,7 +80,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Food writer for Time Out Marrakech, specializing in the city's vibrant culinary landscape and dining scene. Paula Hardy provides insider guides to help locals and travelers discover the best restaurants, street food, and hidden culinary gems throughout Morocco's cultural capital."
     },
-    {
+    "src-midnightblueelephant-ziehen": {
       "source_id": "src-midnightblueelephant-ziehen",
       "publication": "The Midnight Blue Elephant",
       "publication_type": "single-author blog",
@@ -98,7 +98,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Food writer for The Midnight Blue Elephant, Annika Ziehen creates comprehensive dining guides to help readers navigate the culinary landscape. Her recent food guide work focuses on curating restaurant recommendations and dining insights. Through The Midnight Blue Elephant, she provides practical food and restaurant coverage for local diners."
     },
-    {
+    "src-anoushkaprobyn-probyn": {
       "source_id": "src-anoushkaprobyn-probyn",
       "publication": "Anoushka Probyn",
       "publication_type": "single-author blog",
@@ -116,7 +116,7 @@
       "commercial_conflict_note": null,
       "writer_profile": "Food writer who creates comprehensive dining guides for LocalBite users. Her publication focuses on curating essential restaurant recommendations and culinary insights to help diners discover their next great meal."
     }
-  ],
+  },
   "restaurants": [
     {
       "name": "L'Mida",
@@ -1025,11 +1025,11 @@
       "riad_flag": false,
       "geo_lat": null,
       "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Beldi Marrakech",
-      "geo_skip": false,
-      "lat": 31.5753657,
-      "lng": -8.0166295,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lat": null,
+      "lng": null,
       "geo_source": "photon",
       "language_pool": "fr",
       "quote": "Les recettes traditionnelles revisitées, où les saveurs beldi rencontrent des influences contemporaines, aussi bien dans l'assiette qu'en termes d'ambiance."
@@ -1261,11 +1261,11 @@
       "riad_flag": false,
       "geo_lat": null,
       "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Le Jardin",
-      "geo_skip": false,
-      "lat": 31.6712223,
-      "lng": -7.9850067,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "lat": null,
+      "lng": null,
       "geo_source": "nominatim",
       "language_pool": "both",
       "quote": "La cuisine proposée est à la fois marocaine et méditerranéenne, avec des plats frais, colorés et bien exécutés."
@@ -1512,12 +1512,12 @@
   "source_recency": "2023-2026",
   "centroids": {
     "Medina": [
-      31.6331,
-      -7.9896
+      31.6301,
+      -7.9899
     ],
     "Gueliz": [
-      31.6269,
-      -8.0115
+      31.6326,
+      -8.011
     ],
     "Hivernage": [
       31.6253,

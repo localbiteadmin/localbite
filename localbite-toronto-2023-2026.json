@@ -5,8 +5,8 @@
   "built": "2026-04-25",
   "source_recency": "2023-2026",
   "pipeline": "localbite-v7.1",
-  "sources": [
-    {
+  "sources": {
+    "s1": {
       "id": "s1",
       "publication": "Eater Toronto",
       "domain": "eater.com",
@@ -19,7 +19,7 @@
       "commercial_conflict": false,
       "commercial_conflict_note": null
     },
-    {
+    "s2": {
       "id": "s2",
       "publication": "Foodism",
       "domain": "foodism.ca",
@@ -33,7 +33,7 @@
       "commercial_conflict_note": "Twenty Two Media (publisher) operates commercial partnership programs with restaurants. Article content appears editorial. COI cannot be confirmed or ruled out.",
       "coi_note": "Publisher Twenty Two Media operates commercial partnership programs with restaurants"
     },
-    {
+    "s3": {
       "id": "s3",
       "publication": "NOW Toronto",
       "domain": "nowtoronto.com",
@@ -46,7 +46,7 @@
       "commercial_conflict": false,
       "commercial_conflict_note": null
     },
-    {
+    "s4": {
       "id": "s4",
       "publication": "Diary of a Toronto Girl",
       "domain": "diaryofatorontogirl.com",
@@ -59,7 +59,7 @@
       "commercial_conflict": false,
       "commercial_conflict_note": null
     }
-  ],
+  },
   "restaurants": [
     {
       "id": "r001",
@@ -499,12 +499,13 @@
       "language_pool": "en",
       "confidence": "tier_c",
       "both_pool": false,
-      "lat": 43.7706119,
-      "lng": -79.3314924,
+      "lat": null,
+      "lng": null,
       "geo_source": "photon",
-      "geo_confidence": "medium",
-      "geo_matched_name": "Yan Yu Chinese Dining",
-      "open_status_check": false
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "open_status_check": false,
+      "geo_skip": true
     },
     {
       "id": "r021",
@@ -1261,8 +1262,8 @@
       -79.5656
     ],
     "West End": [
-      43.639,
-      -79.4453
+      43.6655,
+      -79.4636
     ],
     "Little Italy": [
       43.6551,
@@ -1303,6 +1304,10 @@
     "Entertainment District": [
       43.6466,
       -79.3897
+    ],
+    "Chinatown": [
+      43.6515,
+      -79.3971
     ]
   }
 }
