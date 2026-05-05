@@ -277,7 +277,7 @@
         "S5"
       ],
       "confidence_tier": "A",
-      "both_pool": false,
+      "both_pool": true,
       "language_pool": "both",
       "open_status": "open",
       "open_status_check": false,
@@ -371,7 +371,7 @@
         "S3"
       ],
       "confidence_tier": "B",
-      "both_pool": false,
+      "both_pool": true,
       "language_pool": "both",
       "open_status": "open",
       "open_status_check": true,
@@ -402,18 +402,18 @@
         "S3"
       ],
       "confidence_tier": "B",
-      "both_pool": false,
+      "both_pool": true,
       "language_pool": "both",
       "open_status": "open",
       "open_status_check": true,
       "price_level": 2,
       "signature_dish": null,
-      "lat": 41.8561511,
+      "lat": null,
       "lon": null,
-      "lng": 12.5667348,
-      "geo_confidence": "high",
-      "geo_matched_name": "L'elementare",
-      "geo_skip": false,
+      "lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
       "geo_source": "nominatim"
     },
     {
@@ -433,7 +433,7 @@
         "S3"
       ],
       "confidence_tier": "B",
-      "both_pool": false,
+      "both_pool": true,
       "language_pool": "both",
       "open_status": "open",
       "open_status_check": false,
@@ -464,7 +464,7 @@
         "S3"
       ],
       "confidence_tier": "B",
-      "both_pool": false,
+      "both_pool": true,
       "language_pool": "both",
       "open_status": "open",
       "open_status_check": false,
@@ -494,7 +494,7 @@
         "S3"
       ],
       "confidence_tier": "B",
-      "both_pool": false,
+      "both_pool": true,
       "language_pool": "both",
       "open_status": "open",
       "open_status_check": true,
@@ -525,7 +525,7 @@
         "S5"
       ],
       "confidence_tier": "B",
-      "both_pool": false,
+      "both_pool": true,
       "language_pool": "both",
       "open_status": "open",
       "open_status_check": false,
@@ -556,7 +556,7 @@
         "S5"
       ],
       "confidence_tier": "B",
-      "both_pool": false,
+      "both_pool": true,
       "language_pool": "both",
       "open_status": "open",
       "open_status_check": false,
@@ -587,7 +587,7 @@
         "S3"
       ],
       "confidence_tier": "B",
-      "both_pool": false,
+      "both_pool": true,
       "language_pool": "both",
       "open_status": "open",
       "open_status_check": false,
@@ -618,7 +618,7 @@
         "S3"
       ],
       "confidence_tier": "B",
-      "both_pool": false,
+      "both_pool": true,
       "language_pool": "both",
       "open_status": "open",
       "open_status_check": false,
@@ -649,7 +649,7 @@
         "S6"
       ],
       "confidence_tier": "B",
-      "both_pool": false,
+      "both_pool": true,
       "language_pool": "both",
       "open_status": "open",
       "open_status_check": true,
@@ -2491,24 +2491,60 @@
   "source_recency": "2023-2026",
   "centroids": {
     "Centro Storico": [
-      41.8948,
-      12.485
+      41.895,
+      12.4852
     ],
     "Trastevere": [
-      41.8866,
-      12.4821
+      41.8875,
+      12.4712
     ],
     "Appio-Latino": [
       41.8821,
       12.5109
     ],
     "Prati": [
-      41.8977,
-      12.4855
+      41.9034,
+      12.4823
     ],
     "Esquilino": [
       41.8997,
       12.5027
+    ],
+    "San Giovanni": [
+      41.8856,
+      12.5103
+    ],
+    "Bufalotta": [
+      41.9808,
+      12.5523
+    ],
+    "Balduina": [
+      41.9202,
+      12.442
+    ],
+    "Vigna Clara": [
+      41.9493,
+      12.4714
+    ],
+    "Parioli": [
+      41.9311,
+      12.4886
+    ],
+    "San Lorenzo": [
+      41.8979,
+      12.519
+    ],
+    "Trieste": [
+      41.9279,
+      12.5158
+    ],
+    "Garbatella": [
+      41.8663,
+      12.4831
+    ],
+    "Furio Camillo": [
+      41.8747,
+      12.523
     ]
   }
 }
