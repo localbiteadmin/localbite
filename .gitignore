@@ -32,6 +32,25 @@ add-*.py
 combine-italy-prompts.py
 test-engineering-fixes.js
 
+# Diagnostic and check scripts — local only
+check-*.py
+assess-*.py
+show-*.py
+find-*.py
+localbite-fix*.py
+localbite-patch-*.py
+localbite-preresearch-template-patch.py
+localbite-gitignore-cleanup.py
+localbite-recompute-*.py
+localbite-rome-*.py
+
+# Backup files
+*.bak
+
+# Temporary text outputs
+recompute-dryrun.txt
+localbite-italian-cities-fetch-report-*.md
+
 # Old global instructions versions — keep only current in project knowledge
 localbite-global-instructions-2026-04-2[0-8]*.md
 localbite-global-instructions-delta-*.md
