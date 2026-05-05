@@ -1,54 +1,48 @@
 # LocalBite Barcelona v7.1 — Search Log
-# Started: 2026-04-25
+# Started: 2026-05-05
 # Format: [phase] "query or URL" → result summary
 
-[phase-0] "https://r.jina.ai/https://www.barcelonafoodexperience.com/best-restaurants-barcelona/" → 404 (URL moved); retried via /blog/best-restaurants-in-barcelona-right-now — confirmed, Feb 24 2026, 18,000 chars, Maria (single-author rule applied)
-[phase-0] "https://r.jina.ai/https://www.barcelonafoodexperience.com/blog/best-tapas" → confirmed, Feb 27 2026, ~28,000 chars, Maria (same source, second article)
-[phase-0] "https://r.jina.ai/https://beteve.cat/estils-de-vida/bars-restaurants-museu-teatre-cinema/" → confirmed, Apr 10 2026, ~8,500 chars, Carmen Cortés Vidal
-[phase-0] "https://r.jina.ai/https://beteve.cat/estils-de-vida/biquini-trufat-20-anys-tapas-24/" → confirmed, Apr 7 2026, ~8,500 chars, Carmen Cortés Vidal (same source, Tapas 24 feature)
-[phase-0] "https://r.jina.ai/https://culinarybackstreets.com/stories/barcelona/best-bites-2024-15" → confirmed, Dec 30 2024, ~3,200 chars body, Paula Mourenza; 2 Barcelona restaurants + 1 possible (Ultramarinos Marín, Fat Veggies, Buriti)
-[phase-0] "https://r.jina.ai/https://www.gastronosfera.com/top-lists/5-nuevos-restaurantes-en-barcelona-de-2024-para-anadir-tu-lista" → confirmed, Dec 12 2024, ~17,800 chars, Eric Morgado; 5 new Barcelona restaurants
-[phase-0] "https://r.jina.ai/https://www.gastronosfera.com/top-lists/los-5-mejores-restaurantes-de-sant-andreu-y-la-sagrera" → confirmed, Dec 21 2024, ~6,800 chars, Eric Morgado; 5 Sant Andreu restaurants (same source, second article)
-[phase-0] "https://r.jina.ai/https://www.thenewbarcelonapost.com/los-grandes-restaurantes-de-2025-y-los-que-estan-por-venir/" → confirmed, Jan 11 2026, ~8,500 chars, Anna Torrents
-[phase-0] "https://r.jina.ai/https://www.thenewbarcelonapost.com/cuatro-restaurantes-en-el-centro-de-barcelona-donde-la-ciudad-aun-se-saborea-con-calma/" → confirmed, Mar 19 2026, ~2,200 chars body, P. Ribot (Baco & Boca); same publisher as Torrents
-[phase-0] "https://r.jina.ai/https://inandoutbarcelona.net/top-2025-mejores-bares-restaurantes-barcelona/" → confirmed, Dec 29 2025, ~18,500 chars, Stefania Talento
-[phase-0] "https://r.jina.ai/https://www.guiarepsol.com/es/comer/nuestros-favoritos/aperturas-restaurantes-barcelona/" → confirmed, Mar 24 2026, ~2,200 chars body, Lourdes López; 4 Barcelona restaurants (Hernández in Sant Boi excluded)
-[phase-0] "https://r.jina.ai/https://www.elnacional.cat/ca/gourmeteria/llistes/millors-restaurants-catalunya-2024-ruta-gastronomica-farcida-estrelles_1338493_102.html" → FAILED 451 (geo-restricted)
-[phase-0] WAYBACK RETRY ElNacional.cat → FAILED 451
-[phase-0] "https://www.elnacional.cat/ca/gourmeteria/llistes/4-restaurants-impressionants-barcelona-unica-cantonada-eixample_1379702_102.html" → FAILED 403 (direct access also blocked)
-[phase-0] "https://r.jina.ai/https://www.theinfatuation.com/barcelona/guides/hit-list-best-new-restaurants-barcelona" → FAILED 404 (URL moved); searched and found new URL
-[phase-0] WAYBACK RETRY Infatuation → FAILED 451
-[phase-0] "https://r.jina.ai/https://www.theinfatuation.com/barcelona/guides/best-new-barcelona-restaurants-hit-list" → confirmed, May 20 2025, ~16,500 chars, Isabelle Kliger; 11 restaurants
-[phase-0] "https://r.jina.ai/https://www.ara.cat/mengem/" → FAILED 404 (section deleted — Ara.cat Mengem section no longer exists)
+[phase-0] "barcelonafoodexperience.com/best-restaurants-barcelona/" → 404; retried /blog/best-restaurants-in-barcelona-right-now → ACCEPTED: Maria (single-author site), 2026-02-24, 20+ restaurants, 29,847ch
+[phase-0] "beteve.cat/estils-de-vida/guia-slow-food-barcelona-2026/" → ACCEPTED: Carmen Cortés Vidal, 2025-11-05, Slow Food Barcelona 2026 guide, 30+ restaurants listed
+[phase-0] "culinarybackstreets.com/cities-category/barcelona/" → hub page; navigated to /2025/the-essentials-5 → ACCEPTED: Paula Mourenza, 2025-02-07, 9+ restaurants
+[phase-0] "gastronosfera.com/top-lists/5-nuevos-restaurantes-en-barcelona-de-2024-para-anadir-tu-lista" → ACCEPTED: Eric Morgado, 2024-12-12, 5 new restaurants
+[phase-0] "thenewbarcelonapost.com/" → 422 error; navigated to /los-grandes-restaurantes-de-2025-y-los-que-estan-por-venir/ → ACCEPTED: Anna Torrents, 2026-01-11, 33+ restaurants
+[phase-0] "thenewbarcelonapost.com/cuatro-restaurantes-en-el-centro-de-barcelona..." → ACCEPTED: Patricia Castán ("P. Ribot"/Baco&Boca), 2026-03-19, 4+ restaurants — same publisher as Anna Torrents
+[phase-0] "inandoutbarcelona.net/top-2025-mejores-bares-restaurantes-barcelona/" → ACCEPTED: Stefania Talento, 2025-12-29, 24 entries (mix restaurants/bars)
+[phase-0] "guiarepsol.com/es/comer/nuestros-favoritos/restaurante-brabo-barcelona/" → ACCEPTED: Lourdes López, updated 2025-04-01, single restaurant review (Brabo, Gràcia)
+[phase-0] "elnacional.cat/es/gourmeteria/listas/mejores-restaurantes-barcelona-2024..." → ACCEPTED: Jordi Tubella, 2024-12-31, 9 restaurants (some outside boundary or Michelin starred)
+[phase-0] "theinfatuation.com/barcelona/guides/hit-list-best-new-restaurants-barcelona" → 404; correct URL: /best-new-barcelona-restaurants-hit-list → ACCEPTED: Isabelle Kliger, 2025-05-20, 12 restaurants
+[phase-0] "observaciongastronomica2.blogspot.com/" → 404 (URL moved); found correct URL observaciongastronomica.com → ACCEPTED: Philippe Regol, 2025-2026 multiple individual reviews, 86,200ch homepage
+[phase-0] "ara.cat/mengem/" → 404 — FAILED: URL dead, no Wayback content found
 
-[single-author-confirmed] barcelonafoodexperience.com — About page confirms Maria as sole author. Article-level byline not required. Source confirmed per Part 1 single-author site rule.
-
-[phase-1b-crossval] "Pompa Barcelona restaurante critica gastronomica recomendacion" → observaciongastronomica.com (Philippe Regol, Aug 30 2025, ~1,100 chars body) — REJECTED: under 2,000 char minimum; Infatuation individual review (already in pool). No new sources.
-[phase-1b-crossval] "Franca restaurant Barcelona critica gastronomica recomendacion" → gastroactitud.com (José Carlos Capel, Mar 12 2026, ~3,500 chars) — REJECTED: single-restaurant review only, no multi-restaurant guide on site. No new sources.
-[phase-1b-crossval] "Fukamura Barcelona omakase restaurant critica recomendacion periodista" → foodie-culture.com (Anna Torrents, Jun 10 2025, ~2,100 chars body) — REJECTED: single-restaurant review, covers only Fukamura. No new sources.
-[phase-1b-complete] Cross-validation queries run: 3. New qualifying sources: 0. Pool locked at 9 sources, 8 unique publishers.
-[unattended-mode] Phase 1 auto-proceeding to Phase 2.
-
-[phase-2-fetch] "https://r.jina.ai/https://www.barcelonafoodexperience.com/blog/best-restaurants-in-barcelona-right-now" → confirmed, Feb 24 2026, 21 restaurants listed; Suto (Michelin-starred) and Enoteca Paco Perez (Michelin ⭐⭐) excluded; 19 qualifying
-[phase-2-fetch] "https://r.jina.ai/https://www.barcelonafoodexperience.com/blog/best-tapas" → confirmed, Feb 27 2026, 42 bars listed; Mont Bar (Michelin-starred) excluded, La Cova Fumada counted under BFE-best-restaurants; 40 new qualifying
-[phase-2-fetch] "https://r.jina.ai/https://beteve.cat/estils-de-vida/bars-restaurants-museu-teatre-cinema/" → confirmed, Apr 10 2026, Carmen Cortés Vidal; ~18 restaurants/bars qualifying
-[phase-2-fetch] "https://r.jina.ai/https://beteve.cat/estils-de-vida/biquini-trufat-20-anys-tapas-24/" → confirmed, Apr 7 2026, Carmen Cortés Vidal; single-restaurant profile of Tapas 24 by Carles Abellán; 1 entry
-[phase-2-fetch] "https://r.jina.ai/https://culinarybackstreets.com/stories/barcelona/best-bites-2024-15" → confirmed, Dec 30 2024; El Hostal dels Ossos (Girona) and Bitadorna (Galicia) excluded outside boundary; 3 qualifying
-[phase-2-fetch] "https://r.jina.ai/https://www.gastronosfera.com/top-lists/5-nuevos-restaurantes-en-barcelona-de-2024-para-anadir-tu-lista" → confirmed, Dec 12 2024; 5 qualifying
-[phase-2-fetch] "https://r.jina.ai/https://www.gastronosfera.com/top-lists/los-5-mejores-restaurantes-de-sant-andreu-y-la-sagrera" → confirmed, Dec 21 2024; 5 qualifying (Sant Andreu/La Sagrera within boundary)
-[phase-2-fetch] "https://r.jina.ai/https://www.thenewbarcelonapost.com/los-grandes-restaurantes-de-2025-y-los-que-estan-por-venir/" → confirmed, Jan 11 2026, Anna Torrents; ~25 qualifying (Hernández excluded; Aürt treated as same project as Trü from Repsol)
-[phase-2-fetch] "https://r.jina.ai/https://www.thenewbarcelonapost.com/cuatro-restaurantes-en-el-centro-de-barcelona-donde-la-ciudad-aun-se-saborea-con-calma/" → confirmed, Mar 19 2026, P. Ribot; 4 qualifying
-[phase-2-fetch] "https://r.jina.ai/https://inandoutbarcelona.net/top-2025-mejores-bares-restaurantes-barcelona/" → confirmed, Dec 29 2025, Stefania Talento; 11 restaurants + 4 qualifying bars
-[phase-2-fetch] "https://r.jina.ai/https://www.guiarepsol.com/es/comer/nuestros-favoritos/aperturas-restaurantes-barcelona/" → FAILED 429 on first attempt; retried → confirmed, Mar 24 2026, Lourdes López; Trü, Barra Oso, Bar Alegría-Gràcia, Barra M qualifying; Hernández (Sant Boi) excluded; 4 qualifying
-[phase-2-fetch] "https://r.jina.ai/https://www.theinfatuation.com/barcelona/guides/best-new-barcelona-restaurants-hit-list" → confirmed, May 20 2025, Isabelle Kliger; 11 qualifying
-
-[phase-3-dedup] Merged 149 working entries → 110 unique restaurants after deduplication
-[phase-3-both-pool] 14 both-pool entries: Pompa (EN+ES), Franca (EN+ES), Arraval (CA+ES), Fukamura (CA+ES), Sophie Kai (CA+ES), Fino Bar (EN+CA), Finorri (EN+CA+ES), Bornès (CA+ES), Bar Cañete (EN+CA), Tapas 24 (EN+CA), Lora (EN+ES), Casa Fiero (EN+ES), Cerveseria 640 (EN+ES), Ultramarinos Marín (EN+ES)
-[phase-3-tier-a] 15 Tier A entries: 14 both-pool + Trü (TNBP+Repsol, same language multi-source)
-[phase-3-tier-b] 95 Tier B entries
-[phase-3-concentration-cap] BFE single-source Tier B capped at 33/110 (30.0%); 22 BFE tapas entries removed — see audit log
-[phase-3-exclusions] Michelin-starred: Suto, Enoteca Paco Perez, Mont Bar excluded; outside boundary: Hernández, El Hostal dels Ossos, Bitadorna excluded
-[phase-3-open-status] 23 entries flagged open_status_check: true (CB pre-2025, Gastronosfera pre-2025, TNBP upcoming openings)
-[pipeline-complete] localbite-barcelona-2023-2026.json written; 110 entries, 9 sources, 14 both-pool, 15 Tier A, 95 Tier B
-[metrics-appended] localbite-run-metrics.log updated; tool_uses and run_time_seconds null pending postrun.js STEP 5.5
-
+[neighbourhood-Eixample] "mejores restaurantes Eixample Barcelona crítica gastronómica escritor local 2024" → aggregators, hotel sites, no new named-author sources
+[neighbourhood-Eixample] "best restaurants Eixample Barcelona local food writer guide 2025" → Infatuation (in pool), worldofmouth, generic travel blogs — no new qualifiers
+[neighbourhood-Born] "restaurants El Born Sant Pere Santa Caterina Barcelona recomanació crítica 2025" → Time Out (secondary), vadegust.cat (no named author visible), Devour Tours (COI, rejected) — no new primary sources
+[neighbourhood-Born] "El Born Barcelona neighborhood restaurants critic review food guide 2024" → generic travel blogs, no new qualifiers
+[neighbourhood-Gracia] "mejores restaurantes Gràcia Barcelona recomendación bloguero gastronómico 2023" → aggregators, locabarcelona, mana75, huleymantel — no named-author qualifiers
+[neighbourhood-Gracia] "Gràcia Barcelona restaurants best local food guide authentic 2025" → barcelonafoodexperience (in pool), Devour Tours (COI), no new qualifiers
+[neighbourhood-Raval] "restaurants Raval Sant Antoni Poble Sec Barcelona cronista gastronomic guia 2024" → Time Out CA (secondary), restaurantscat.cat (no byline), barcelonafoodexperience (in pool)
+[neighbourhood-Raval] "El Raval Poble Sec Sant Antoni Barcelona food critics local recommendations 2025" → foodieinbarcelona.com (unknown author), barcelonafoodexperience (in pool), no new qualifiers
+[neighbourhood-Poblenou] "nous restaurants Poblenou Sant Martí Barcelona guia gastronomica 2024 2025" → huleymantel.com (author unclear), gastronosfera (in pool), poblenouurbandistrict (no named author)
+[neighbourhood-Sarria] "mejores restaurantes Sarrià Sant Gervasi Barcelona zona alta 2023 2024" → aggregators, mana75, quesecueceenbcn.com (no byline) — no new qualifiers
+[cross-1] "Barcelona food critic essential restaurants guide local favorites 2024" → spanishsabores (national scope, secondary), barcelonafoodexperience (in pool), no new primary sources
+[cross-2] "mejores restaurantes Barcelona 2024 2025 bloguero gastronómico independiente" → thenewbarcelonapost (in pool), gastronosfera (in pool), thelastbitemedia ("Redacción" — REJECTED), bcnfoodieguide (no byline visible)
+[cross-2] "periodista gastronómico Barcelona recomendaciones restaurantes 2023 2024" → elnacional.cat (in pool), gastronosfera (in pool), barcelonasecreta.com (no named author visible)
+[cross-2] "millors restaurants Barcelona 2025 crítica gastronòmica periodista local" → thenewbarcelonapost.cat (CA version, same publisher), elnacional.cat CA article (451 error — FAILED)
+[cross-2] "guia restaurants Barcelona 2024 gastronomia locals recomanats" → guiarepsol (in pool), beteve.cat (in pool), barcelona.cat official guide (no named editorial author)
+[cross-3] "crítico gastronómico Barcelona blogger comida reseñas restaurantes independiente" → observaciongastronomica (in pool), yummybarcelona (no named author in snippet), sitedicenquecomi (Yolanda Marcos — candidate)
+[cross-4] "Cargols Slow Food Barcelona premis restaurants guia 2025 2026" → beteve.cat (in pool), slowfood.barcelona (official body, not editorial source)
+[cross-2] "Barcelona aperturas restaurantes nuevos 2025 crítica local gastronomía" → thenewbarcelonapost (in pool), 7canibales (no byline — REJECTED), viaempresa.cat (needs check)
+[cross-5] "noves obertures restaurants Barcelona 2025 recomanació gastronomica obrir" → elnacional.cat CA (451 — FAILED), thenewbarcelonapost.cat (same publisher), barcelonafoodexperience (in pool)
+[cross-7] "cuina catalana contemporania restaurants Barcelona 2024 critics recomanats" → metropoliabierta.cat (article exists, no byline confirmed), restaurantscat.cat (personal blog, no byline)
+[cross-8] "revista gastronomica digital independent Barcelona restaurants 2024 recomanador" → gastromarkit.es (needs check), 7canibales (no byline), conmuchagula (national scope)
+[cross-5] "new restaurant openings Barcelona 2024 local recommendations worth visiting" → barcelonafoodexperience (in pool), infatuation (in pool), en.ara.cat (needs byline check), foodieinbarcelona (unknown author)
+[cross-8] "seccio gastronomia diari catala Barcelona millors restaurants critica 2025" → 3cat.cat (broadcast, no individual writer byline), naciodigital.cat (single restaurant, needs check), diaricatalunya.cat (needs check)
+[cross-3] "Barcelona food journalists writers restaurant column blog local coverage English" → foodbarcelona.com (Steve Tallantyre — inactive since 2020, REJECTED), marielaaroundtheworld (no Barcelona residency confirmed)
+[cross-4] "Soles Repsol Barcelona restaurantes destacados 2024 guia crítica escritor" → guiarepsol (in pool), no new named-author guides
+[cross-4] "Michelin Bib Gourmand Barcelona restaurants 2025 recommended food guide" → barcelonafoodexperience (in pool), official Michelin guide — used for exclusion verification only
+[cross-7] "Barcelona creative cuisine food community bloggers Mediterranean independent 2025" → feedspot aggregator lists, bcnfoodieguide (no byline), no new qualifiers
+[stopping-rule] triggered after 27 queries — last 10 consecutive queries returning only pool sources or no qualifying new sources
+[phase-1b-crossval] "Franca Barcelona restaurante recomendación crítica gastronomía" → gastroactitud.com review found (pool at max), no new qualifying sources
+[phase-1b-crossval] "Berbena Barcelona restaurant recomanació crítica gastronòmica" → gastroactitud.com + foodieinbarcelona (unknown author) — Bib Gourmand confirmed, no new qualifying sources; Culinary Backstreets review is 2021 (outside range)
+[phase-1b-crossval] "Pompa Barcelona restaurante recomendación crítica" → observaciongastronomica.com/2025/08/30/pompa-barcelona/ (Regol — in pool), elnacional.cat new Pompa article (Tubella — in pool), no new sources

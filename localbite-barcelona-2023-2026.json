@@ -1,2869 +1,2149 @@
 {
-  "pipeline": "localbite-v7.1",
   "city": "Barcelona",
   "country": "Spain",
-  "generated": "2026-04-25",
-  "year_range": "2023-2026",
-  "sources": [
-    {
-      "id": "bfe-barcelona",
-      "writer": "Maria",
-      "language": "EN",
-      "type": "primary",
-      "article_date": "2026-02-24",
-      "article_url": "https://www.barcelonafoodexperience.com/blog/best-restaurants-in-barcelona-right-now",
+  "city_slug": "barcelona-spain",
+  "built": "2026-05-05",
+  "source_recency": "2023-2026",
+  "pipeline": "localbite-v7.1",
+  "confidence_tiers": {
+    "auto_approved": 58,
+    "reviewed_kept": 0,
+    "auto_removed": 51,
+    "user_removed": 0,
+    "auto_rejected": 0,
+    "concentration_cap_applied": 0
+  },
+  "sources": {
+    "src-barcelonafoodexperience-maria": {
+      "id": "src-barcelonafoodexperience-maria",
       "publication": "Barcelona Food Experience",
+      "writer": "Maria",
+      "writer_profile": "Maria writes Barcelona Food Experience, a single-author English-language food blog dedicated to Barcelona dining. Her guides focus on modern restaurants and neighbourhood favorites, drawing on personal visits and deep local knowledge of the city's evolving food scene.",
+      "url": "https://www.barcelonafoodexperience.com",
+      "article_url": "https://www.barcelonafoodexperience.com/blog/best-restaurants-in-barcelona-right-now",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "fetch_status": "good",
+      "fetch_chars": 29847,
+      "retries_attempted": 2,
+      "wayback_attempted": false,
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer Maria contributes to Barcelona Food Experience, a publication dedicated to exploring the vibrant culinary scene of Barcelona. Her work includes comprehensive food guides that help readers navigate the city's diverse dining landscape."
+      "publisher_concentration_flag": false,
+      "found_via": "phase-0"
     },
-    {
-      "id": "beteve-barcelona",
-      "writer": "Carmen Cortés Vidal",
-      "language": "CA",
-      "type": "primary",
-      "article_date": "2026-04-10",
-      "article_url": "https://beteve.cat/estils-de-vida/guia-slow-food-barcelona-2026/",
+    "src-beteve-cortésvidal": {
+      "id": "src-beteve-cortésvidal",
       "publication": "Beteve",
+      "writer": "Carmen Cortés Vidal",
+      "writer_profile": "Carmen Cortés Vidal writes for Beteve, the Barcelona metropolitan television channel's online editorial arm. Her November 2025 guide covers the Slow Food Barcelona 2026 guide, documenting new additions and Premi Cargol award recipients — establishments recognized for placing producers at the centre of their approach.",
+      "url": "https://beteve.cat",
+      "article_url": "https://beteve.cat/estils-de-vida/guia-slow-food-barcelona-2026/",
+      "language": "ca",
+      "source_type": "primary",
+      "article_date": "2025-11-05",
+      "article_title": "Guia Slow Food Barcelona 2026",
+      "fetch_status": "good",
+      "fetch_chars": 3247,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "A seasoned food writer for Beteve, Carmen Cortés Vidal specializes in comprehensive restaurant guides that help diners navigate the local culinary scene. Her expertise shines through detailed food guides that showcase the best dining experiences in the region."
+      "publisher_concentration_flag": false,
+      "found_via": "phase-0"
     },
-    {
-      "id": "cb-barcelona",
-      "writer": "Paula Mourenza",
-      "language": "EN",
-      "type": "primary",
-      "article_date": "2024-12-30",
-      "article_url": "https://culinarybackstreets.com/stories/barcelona/best-bites-2024-15",
+    "src-culinarybackstreets-mourenza": {
+      "id": "src-culinarybackstreets-mourenza",
       "publication": "Culinary Backstreets",
-      "commercial_conflict": false,
-      "commercial_conflict_note": null,
-      "writer_profile": "Food writer Paula Mourenza contributes to Culinary Backstreets, a publication that explores authentic local food cultures and hidden culinary gems around the world. She specializes in creating comprehensive food guides that help travelers and food enthusiasts discover off-the-beaten-path dining experiences. Her work focuses on uncovering the stories behind neighborhood eateries and traditional food scenes that define local communities."
+      "writer": "Paula Mourenza",
+      "writer_profile": "Paula Mourenza is a Barcelona-based food journalist and correspondent for Culinary Backstreets, where she covers the city's traditional and emerging restaurant scene. Her February 2025 essentials guide focuses on neighbourhood dining, market culture, and the stories behind local establishments. Note: Culinary Backstreets operates food tours in Barcelona, creating a conflict of interest with recommendations.",
+      "url": "https://culinarybackstreets.com",
+      "article_url": "https://culinarybackstreets.com/cities-category/barcelona/2025/the-essentials-5",
+      "language": "en",
+      "source_type": "primary",
+      "article_date": "2025-02-07",
+      "article_title": "The Essentials: Where to Eat in Barcelona",
+      "fetch_status": "good",
+      "fetch_chars": 15000,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
+      "commercial_conflict": true,
+      "commercial_conflict_note": "Culinary Backstreets operates Barcelona food tours, creating a potential conflict of interest with restaurant recommendations",
+      "publisher_concentration_flag": false,
+      "found_via": "phase-0"
     },
-    {
-      "id": "gastronosfera-barcelona",
-      "writer": "Eric Morgado",
-      "language": "ES",
-      "type": "primary",
-      "article_date": "2024-12-12",
-      "article_url": "https://www.gastronosfera.com/top-lists/5-nuevos-restaurantes-en-barcelona-de-2024-para-anadir-tu-lista",
+    "src-gastronosfera-morgado": {
+      "id": "src-gastronosfera-morgado",
       "publication": "Gastronosfera",
+      "writer": "Eric Morgado",
+      "writer_profile": "Eric Morgado is a food writer for Gastronosfera, a Spanish-language digital food publication covering Spain's restaurant scene. His December 2024 roundup covers five notable new Barcelona restaurant openings, with focused descriptions of each establishment.",
+      "url": "https://www.gastronosfera.com",
+      "article_url": "https://www.gastronosfera.com/top-lists/5-nuevos-restaurantes-en-barcelona-de-2024-para-anadir-tu-lista",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2024-12-12",
+      "article_title": "5 nuevos restaurantes en Barcelona de 2024 para añadir tu lista",
+      "fetch_status": "good",
+      "fetch_chars": 5000,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer Eric Morgado contributes to Gastronosfera, a publication focused on culinary exploration and dining experiences. His recent work includes comprehensive food guides that help readers discover noteworthy restaurants and culinary destinations."
+      "publisher_concentration_flag": false,
+      "found_via": "phase-0"
     },
-    {
-      "id": "tnbp-torrents-barcelona",
+    "src-newbarcelonapost-torrents": {
+      "id": "src-newbarcelonapost-torrents",
+      "publication": "The New Barcelona Post",
       "writer": "Anna Torrents",
-      "language": "ES",
-      "type": "primary",
-      "article_date": "2026-01-11",
+      "writer_profile": "Anna Torrents is a food and culture journalist at The New Barcelona Post, a bilingual Barcelona-based digital publication. Her January 2026 annual roundup surveys the best restaurants of 2025 and notable upcoming openings, drawing on sustained coverage of the city's culinary landscape.",
+      "url": "https://www.thenewbarcelonapost.com",
       "article_url": "https://www.thenewbarcelonapost.com/los-grandes-restaurantes-de-2025-y-los-que-estan-por-venir/",
-      "publication": "The New Barcelona Post",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2026-01-11",
+      "article_title": "Los grandes restaurantes de 2025 y los que están por venir",
+      "fetch_status": "good",
+      "fetch_chars": 5847,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer at The New Barcelona Post, Anna Torrents specializes in creating comprehensive dining guides for Barcelona's culinary scene. Her recent work includes detailed food guides that help readers discover the city's diverse restaurant landscape. The New Barcelona Post features her expertise in navigating Barcelona's dynamic food culture."
+      "publisher_concentration_flag": false,
+      "found_via": "phase-0"
     },
-    {
-      "id": "tnbp-ribot-barcelona",
-      "writer": "P. Ribot (Baco & Boca)",
-      "language": "ES",
-      "type": "primary",
-      "article_date": "2026-03-19",
+    "src-newbarcelonapost-castan": {
+      "id": "src-newbarcelonapost-castan",
+      "publication": "The New Barcelona Post",
+      "writer": "Patricia Castán",
+      "writer_profile": "Patricia Castán writes the Baco & Boca gastronomy column at The New Barcelona Post under the pen name P. Ribot. Her March 2026 article focuses on four central Barcelona restaurants where traditional local dining culture persists amid the city's rapid evolution.",
+      "url": "https://www.thenewbarcelonapost.com",
       "article_url": "https://www.thenewbarcelonapost.com/cuatro-restaurantes-en-el-centro-de-barcelona-donde-la-ciudad-aun-se-saborea-con-calma/",
-      "publication": "The New Barcelona Post",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2026-03-19",
+      "article_title": "Cuatro restaurantes en el centro de Barcelona donde la ciudad aún se saborea con calma",
+      "fetch_status": "good",
+      "fetch_chars": 4000,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer P. Ribot contributes to The New Barcelona Post through the Baco & Boca column, focusing on culinary guides and restaurant discoveries. The publication covers Barcelona's dining scene, with Ribot's recent work including comprehensive food guides for the city's evolving restaurant landscape."
+      "publisher_concentration_flag": true,
+      "found_via": "phase-0"
     },
-    {
-      "id": "inout-barcelona",
-      "writer": "Stefania Talento",
-      "language": "ES",
-      "type": "primary",
-      "article_date": "2025-12-29",
-      "article_url": "https://inandoutbarcelona.net/top-2025-mejores-bares-restaurantes-barcelona/",
+    "src-inandout-talento": {
+      "id": "src-inandout-talento",
       "publication": "In and Out Barcelona",
+      "writer": "Stefania Talento",
+      "writer_profile": "Stefania Talento is a food writer for In and Out Barcelona, a Barcelona lifestyle and dining publication. Her December 2025 annual roundup covers the best bars and restaurants of 2025, surveying a wide range of neighbourhoods and price points across the city.",
+      "url": "https://inandoutbarcelona.net",
+      "article_url": "https://inandoutbarcelona.net/top-2025-mejores-bares-restaurantes-barcelona/",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2025-12-29",
+      "article_title": "Top 2025: Mejores bares y restaurantes de Barcelona",
+      "fetch_status": "good",
+      "fetch_chars": 2847,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer Stefania Talento contributes to In and Out Barcelona, a publication focused on Barcelona's dining and culinary scene. Her recent work includes comprehensive food guides that help readers navigate the city's restaurant landscape."
+      "publisher_concentration_flag": false,
+      "found_via": "phase-0"
     },
-    {
-      "id": "repsol-barcelona",
-      "writer": "Lourdes López",
-      "language": "ES",
-      "type": "secondary",
-      "article_date": "2026-03-24",
-      "article_url": "https://www.guiarepsol.com/es/comer/nuestros-favoritos/aperturas-restaurantes-barcelona/",
+    "src-guiarepsol-lopez": {
+      "id": "src-guiarepsol-lopez",
       "publication": "Guía Repsol",
+      "writer": "Lourdes López",
+      "writer_profile": "Lourdes López writes for Guía Repsol, Spain's national travel and food guide. Her April 2025 review of Brabo covers the restaurant's brasa-focused cooking and locally sourced ingredients. Repsol is classified as a secondary source for Barcelona due to its national audience scope.",
+      "url": "https://www.guiarepsol.com",
+      "article_url": "https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurante-brabo-barcelona/",
+      "language": "es",
+      "source_type": "secondary",
+      "article_date": "2025-04-01",
+      "article_title": "Restaurante Brabo Barcelona",
+      "fetch_status": "good",
+      "fetch_chars": 8847,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer for Guía Repsol, Spain's prestigious culinary guide that showcases exceptional restaurants and gastronomic experiences. Lourdes López contributes expert restaurant reviews and dining recommendations to help food enthusiasts discover outstanding culinary destinations across Spain."
+      "publisher_concentration_flag": false,
+      "found_via": "phase-0"
     },
-    {
-      "id": "infatuation-barcelona",
-      "writer": "Isabelle Kliger",
-      "language": "EN",
-      "type": "secondary",
-      "article_date": "2025-05-20",
-      "article_url": "https://www.theinfatuation.com/barcelona/guides/best-new-barcelona-restaurants-hit-list",
+    "src-infatuation-kliger": {
+      "id": "src-infatuation-kliger",
       "publication": "The Infatuation",
+      "writer": "Isabelle Kliger",
+      "writer_profile": "Isabelle Kliger writes for The Infatuation, an international restaurant recommendation platform. Her May 2025 Barcelona hit list covers new restaurant openings across the city. Note: The Infatuation has commercial relationships with restaurant industry partners, creating a conflict of interest. Used only as secondary cross-validation source.",
+      "url": "https://www.theinfatuation.com",
+      "article_url": "https://www.theinfatuation.com/barcelona/guides/best-new-barcelona-restaurants-hit-list",
+      "language": "en",
+      "source_type": "secondary",
+      "article_date": "2025-05-20",
+      "article_title": "Best New Barcelona Restaurants Hit List",
+      "fetch_status": "good",
+      "fetch_chars": 17847,
+      "retries_attempted": 1,
+      "wayback_attempted": false,
+      "commercial_conflict": true,
+      "commercial_conflict_note": "The Infatuation has commercial relationships with restaurant industry partners; used only as secondary cross-validation source",
+      "publisher_concentration_flag": false,
+      "found_via": "phase-0"
+    },
+    "src-observaciongastronomica-regol": {
+      "id": "src-observaciongastronomica-regol",
+      "publication": "Observación Gastronómica",
+      "writer": "Philippe Regol",
+      "writer_profile": "Philippe Regol is a Barcelona-based independent food critic and writer at Observación Gastronómica, a long-running Spanish-language gastronomy blog known for rigorous, detailed restaurant reviews. His coverage spans individual restaurant visits and roundup posts, with a focus on technique, ingredients, and culinary context.",
+      "url": "https://observaciongastronomica.com",
+      "article_url": "https://observaciongastronomica.com/",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2026-05-05",
+      "article_title": "Observación Gastronómica — various 2025-2026 Barcelona reviews",
+      "fetch_status": "good",
+      "fetch_chars": 86200,
+      "retries_attempted": 0,
+      "wayback_attempted": false,
       "commercial_conflict": false,
       "commercial_conflict_note": null,
-      "writer_profile": "Food writer for The Infatuation, contributing expert guides that help diners discover notable restaurants and dining experiences. Isabelle Kliger specializes in creating comprehensive food guides that showcase the best culinary destinations and hidden gems in the dining scene."
+      "publisher_concentration_flag": false,
+      "found_via": "phase-0"
+    },
+    "src-elnacional-tubella": {
+      "id": "src-elnacional-tubella",
+      "publication": "ElNacional.cat",
+      "writer": "Jordi Tubella",
+      "writer_profile": "Jordi Tubella is a gastronomy journalist at ElNacional.cat, a Barcelona-based Catalan digital newspaper. His December 2024 best-restaurants article was accessible in Phase 0 but returned HTTP 451 (geographic/legal restriction) on both Phase 2 fetch attempts. Restaurants from this source are lost for this pipeline run.",
+      "url": "https://www.elnacional.cat",
+      "article_url": "https://www.elnacional.cat/es/gourmeteria/listas/mejores-restaurantes-barcelona-2024-ruta-gastronomica-rellena-estrellas_1338493_102.html",
+      "language": "es",
+      "source_type": "primary",
+      "article_date": "2024-12-31",
+      "article_title": "Los mejores restaurantes de Barcelona 2024: ruta gastronómica rellena de estrellas",
+      "fetch_status": "failed",
+      "fetch_chars": 0,
+      "retries_attempted": 2,
+      "wayback_attempted": false,
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "publisher_concentration_flag": false,
+      "found_via": "phase-0"
     }
-  ],
+  },
   "restaurants": [
     {
+      "name": "Franca",
+      "name_variants": null,
+      "neighbourhood": "Eixample Dreta",
+      "cuisine": "Modern Catalan",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Franca takes Catalan dishes and reworks them in thrilling, modern ways. The space feels welcoming and cozy, and the food always surprises in a good way: you never know what the dish you ordered will look like when it lands on your table.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 4,
+      "sources": [
+        "src-barcelonafoodexperience-maria",
+        "src-beteve-cortésvidal",
+        "src-newbarcelonapost-torrents",
+        "src-inandout-talento"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": true
+    },
+    {
       "name": "Pompa",
+      "name_variants": null,
       "neighbourhood": "Gràcia",
       "cuisine": "Contemporary / Wine Bar",
-      "description": "Hake pil-pil made with cheeks and exceptional cheese and charcuterie selection; the casual sibling of Berbena that became one of 2025's most talked-about neighbourhood openings.",
-      "sources": [
-        "infatuation-barcelona",
-        "tnbp-torrents-barcelona",
-        "inout-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "EN",
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "bio pompas",
-      "geo_skip": false,
-      "lat": 41.4005903,
-      "lng": 2.1538788,
-      "geo_source": "photon",
-      "confidence_tier": "A",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "es un Bar à Vins con buenos platitos. Carles y solo dos cocineras sacan decenas de platos en dos servicios, a un ritmo endiablado",
+      "quote_language": "original",
       "language_pool": "both",
-      "quote": "Hake pil-pil made with cheeks and an exceptional cheese and charcuterie selection; the casual sibling of Berbena that has become a neighbourhood essential."
-    },
-    {
-      "name": "Franca",
-      "neighbourhood": "Eixample Dreta",
-      "cuisine": "Modern Catalan",
-      "description": "Reworks traditional Catalan dishes in compelling modern ways; curious and different—one of 2025's most exciting and original special-occasion openings.",
+      "source_count": 5,
       "sources": [
-        "bfe-barcelona",
-        "tnbp-torrents-barcelona",
-        "inout-barcelona"
+        "src-beteve-cortésvidal",
+        "src-newbarcelonapost-torrents",
+        "src-inandout-talento",
+        "src-observaciongastronomica-regol",
+        "src-infatuation-kliger"
       ],
-      "both_pool": true,
-      "language_pools": [
-        "EN",
-        "ES"
-      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "article_date": "2025-08-30",
+      "article_title": "Pompa Barcelona",
       "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
+      "flagged": true,
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "'Curious and different' special-occasion restaurant; one of 2025's most distinctive openings for those seeking something genuinely original in Eixample."
-    },
-    {
-      "name": "Arraval",
-      "neighbourhood": "El Raval",
-      "cuisine": "Modern Catalan",
-      "description": "Mediterranean design with reinterpreted Catalan dishes with personality; urban, spice-forward traditional cooking that made it one of the most admired Raval openings of 2025.",
-      "sources": [
-        "beteve-barcelona",
-        "tnbp-torrents-barcelona",
-        "inout-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "CA",
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "Mediterranean design with 'reinterpreted Catalan dishes with personality'; one of the most admired new restaurants of 2025 in the Raval."
-    },
-    {
-      "name": "Fukamura",
-      "neighbourhood": "Eixample Esquerra",
-      "cuisine": "Japanese Omakase",
-      "description": "Omakase Japanese restaurant at Còrsega 479 offering a ceremonial chef's selection tasting menu; one of Barcelona's most talked-about Japanese dining experiences of 2025.",
-      "sources": [
-        "beteve-barcelona",
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "CA",
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "A ceremonial Japanese omakase experience that became one of 2025's most-discussed new restaurants among Barcelona food writers."
-    },
-    {
-      "name": "Sophie Kai",
-      "neighbourhood": "Sant Pere",
-      "cuisine": "Japanese-Mediterranean",
-      "description": "A Barcelona perspective on contemporary Japan: approachable, aesthetic, fresh and honest. Gyoza, teriyaki skewers, kimchi croquettes, and white chocolate matcha tiramisu at Rec Comtal 12.",
-      "sources": [
-        "beteve-barcelona",
-        "tnbp-ribot-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "CA",
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Sophie Kai",
-      "geo_skip": false,
-      "lat": 41.3895741,
-      "lng": 2.1798565,
-      "geo_source": "nominatim",
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "Recently relaunched by Banco de Boquerones group; intimate spaces with distinct colour zones; philosophy 'a Barcelona perspective on contemporary Japan: approachable, aesthetic, fresh and honest.' Gyoza, teriyaki skewers, and white chocolate matcha tiramisu."
-    },
-    {
-      "name": "Fino Bar",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Spanish Tapas",
-      "description": "Innovative, yet down-to-earth small plates at this Gràcia bar on Torrent de les Flors; Andalusian-Catalan flavours executed with a personal, unfussy touch.",
-      "sources": [
-        "bfe-barcelona",
-        "beteve-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "EN",
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Casa Fino",
-      "geo_skip": false,
-      "lat": 41.4052021,
-      "lng": 2.2023483,
-      "geo_source": "nominatim",
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "Small plates and traditional fare at Torrent de les Flors 113; recommended as a pre- or post-cinema stop near Cinema Phenomena in Gràcia."
-    },
-    {
-      "name": "Finorri",
-      "neighbourhood": "El Raval",
-      "cuisine": "Catalan / Spanish",
-      "description": "Cantabrian anchovies, seasonal mushrooms, and rice bursting with fresh seafood; territory-focused Catalan cooking near La Boqueria and the Liceu opera house.",
-      "sources": [
-        "infatuation-barcelona",
-        "beteve-barcelona",
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "EN",
-        "CA",
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "Cantabrian anchovies, seasonal mushrooms, and rice bursting with fresh seafood; upscale Spanish-Catalan cooking in a Gothic Quarter setting."
-    },
-    {
-      "name": "Bornès",
-      "neighbourhood": "El Born",
-      "cuisine": "Traditional Catalan",
-      "description": "Updated traditional Catalan cuisine paired with contemporary cocktails at Carassa 2 in the Born; a neighbourhood restaurant that found its audience quickly in 2025.",
-      "sources": [
-        "beteve-barcelona",
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "CA",
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Bornēs",
-      "geo_skip": false,
-      "lat": 41.3844766,
-      "lng": 2.180301,
-      "geo_source": "nominatim",
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "Updated traditional Catalan cuisine paired with contemporary cocktails; a neighbourhood Born restaurant that found its audience quickly in 2025."
-    },
-    {
-      "name": "Bar Cañete",
-      "neighbourhood": "El Raval",
-      "cuisine": "Seafood Tapas",
-      "description": "Quality seafood tapas at this well-regarded Raval institution on Carrer Unió 17; consistently one of the most reliable bars in the area.",
-      "sources": [
-        "bfe-barcelona",
-        "beteve-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "EN",
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Bar Cañete",
-      "geo_skip": false,
-      "lat": 41.3791405,
-      "lng": 2.173138,
-      "geo_source": "nominatim",
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "Well-regarded Raval tapas bar at Carrer Unió 17; recommended as a top dining option near La Filmoteca cinema."
-    },
-    {
-      "name": "Tapas 24",
-      "neighbourhood": "Eixample Dreta",
-      "cuisine": "Gourmet Tapas",
-      "description": "Carles Abellán's iconic gourmet tapas bar at Diputació 269; home of the truffle biquini sandwich—a dish the chef made entirely his own over 20 years of cooking.",
-      "sources": [
-        "bfe-barcelona",
-        "beteve-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "EN",
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Tapas 24",
-      "geo_skip": false,
-      "lat": 41.3908686,
-      "lng": 2.1674705,
-      "geo_source": "nominatim",
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "Chef Carles Abellán describes himself as 'un home de barra enamorat de les tapes'; his iconic truffle biquini sandwich originated at El Bulli with Ferran Adrià."
-    },
-    {
-      "name": "Lora",
-      "neighbourhood": "Eixample",
-      "cuisine": "Middle Eastern",
-      "description": "Fattoush salad that crunches and bursts with freshness, and shoulder of lamb glazed in pomegranate; the SLS Barcelona hotel restaurant that stood out as 2025's top brunch destination.",
-      "sources": [
-        "infatuation-barcelona",
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "EN",
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "Fattoush salad that crunches and bursts with freshness, and a shoulder of lamb glazed in pomegranate; the SLS Barcelona hotel restaurant that earned its place on the hit list."
-    },
-    {
-      "name": "Casa Fiero",
-      "neighbourhood": "Eixample",
-      "cuisine": "Contemporary",
-      "description": "1970s diner throwback featuring French bistro classics and upscale tapas; known for the decadent, gratinated macaroni and a social, energetic atmosphere.",
-      "sources": [
-        "infatuation-barcelona",
-        "tnbp-torrents-barcelona",
-        "inout-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "EN",
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "1970s diner throwback featuring French bistro classics and upscale tapas; known for the decadent, gratinated macaroni that keeps regulars coming back."
-    },
-    {
-      "name": "Cerveseria 640",
-      "neighbourhood": "Eixample",
-      "cuisine": "Spanish Tapas",
-      "description": "Sister to Colmado Wilmot offering classic tapas served fried, grilled, or raw with zero fuss; impeccable execution in a spacious beer-hall setting.",
-      "sources": [
-        "infatuation-barcelona",
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "EN",
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "Sister location to Colmado Wilmot offering classic tapas served fried, grilled, or raw with zero fuss in a spacious beer-hall setting."
-    },
-    {
-      "name": "Ultramarinos Marín",
-      "neighbourhood": "Sarrià-Sant Gervasi",
-      "cuisine": "Neo-Traditional Spanish",
-      "description": "Owners Borja Garcia and Adria Castro prepare cured fish and grilled leg of lamb using refined curing, pickling, and roasting techniques—traditional dishes without unnecessary flourishes.",
-      "sources": [
-        "cb-barcelona",
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "EN",
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Ultramarinos Marin",
-      "geo_skip": false,
-      "lat": 41.396684,
-      "lng": 2.1527708,
-      "geo_source": "nominatim",
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "Hybrid bar, butcher, and charcuterie temple; representative of the charcuterie-forward dining trend that defined Barcelona's 2025 food scene."
-    },
-    {
-      "name": "Trü",
-      "neighbourhood": "Eixample Esquerra",
-      "cuisine": "Modern Catalan Tapas",
-      "description": "Chef Artur Martínez presents a short menu of Catalan recipes in tapas version with personal interpretation; features trinxat and mollejas at Còrsega 232.",
-      "sources": [
-        "tnbp-torrents-barcelona",
-        "repsol-barcelona"
-      ],
-      "both_pool": true,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "A",
-      "language_pool": "both",
-      "quote": "Chef Artur Martínez presents a short menu of Catalan recipes in tapas version with personal interpretation; features trinxat and mollejas at Còrsega 232."
+      "both_pool": true
     },
     {
       "name": "Berbena",
+      "name_variants": null,
       "neighbourhood": "Gràcia",
       "cuisine": "Modern Catalan",
-      "description": "Seasonal, local ingredients come together with great precision at this Gràcia restaurant; everything works in perfect harmony across the menu.",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "everything at Berbena, down to the beer, coffee, wine and bread, are specially sourced. The exceptional dishes are based on the 'one-two-three' method of the masters: two ingredients and a third one to prop them up.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 3,
       "sources": [
-        "bfe-barcelona"
+        "src-barcelonafoodexperience-maria",
+        "src-culinarybackstreets-mourenza",
+        "src-beteve-cortésvidal"
       ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary",
+      "article_date": "2025-02-07",
+      "article_title": "The Essentials: Where to Eat in Barcelona",
       "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Berbena",
-      "geo_skip": false,
+      "flagged": true,
       "lat": 41.396421,
       "lng": 2.1565457,
       "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Seasonal, local ingredients come together with great precision at this Gràcia restaurant; the kitchen works in perfect harmony with its neighbourhood feel."
-    },
-    {
-      "name": "Âme",
-      "neighbourhood": "Eixample Esquerra",
-      "cuisine": "French-Mediterranean",
-      "description": "Blends French culinary technique with Mediterranean flavours in a warm, welcoming Eixample Esquerra setting.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Blends French culinary technique with Mediterranean flavours in a warm, welcoming Eixample Esquerra setting."
-    },
-    {
-      "name": "Besta",
-      "neighbourhood": "Eixample Esquerra",
-      "cuisine": "Creative Seafood",
-      "description": "Creative seafood dishes paired with a strong natural wine selection; one of Eixample Esquerra's most essential addresses.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Creative seafood dishes paired with a strong natural wine selection make this Eixample Esquerra spot essential."
-    },
-    {
-      "name": "Suru Bar",
-      "neighbourhood": "Eixample Esquerra",
-      "cuisine": "Contemporary",
-      "description": "Unusual ingredient combinations that remain approachable and exciting; one of Eixample Esquerra's most interesting new tables.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Unusual ingredient combinations that somehow remain approachable and exciting; one of Eixample Esquerra's most interesting new tables."
-    },
-    {
-      "name": "El Rectangle",
-      "neighbourhood": "Sant Antoni",
-      "cuisine": "Contemporary",
-      "description": "Young, exciting cooking described as thrilling and approachable; captures the energy of the Sant Antoni dining scene right now.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Young, exciting cooking described as thrilling and approachable; captures the energy of the Sant Antoni dining scene right now."
-    },
-    {
-      "name": "Bardeni",
-      "neighbourhood": "Eixample Dreta",
-      "cuisine": "Meat-focused",
-      "description": "Chef-driven approach to meat with quality and technique at the forefront; a serious address for carnivores in Eixample Dreta.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
       "geo_confidence": "high",
-      "geo_matched_name": "Bardeni el meatbar - Caldeni",
-      "geo_skip": false,
-      "lat": 41.4029445,
-      "lng": 2.1771469,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Chef-driven approach to meat with quality and technique at the forefront; a serious address for carnivores in Eixample Dreta."
-    },
-    {
-      "name": "Maleducat",
-      "neighbourhood": "Sant Antoni",
-      "cuisine": "Contemporary Catalan",
-      "description": "Captures the energy and spirit of Barcelona right now; one of the most alive spots in Sant Antoni's buzzing dining scene.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Maleducat",
-      "geo_skip": false,
-      "lat": 41.377259,
-      "lng": 2.1615867,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Captures the energy and spirit of Barcelona right now; one of the most alive spots in Sant Antoni's buzzing dining scene."
-    },
-    {
-      "name": "Alapar",
-      "neighbourhood": "Poble Sec",
-      "cuisine": "Mediterranean-Japanese",
-      "description": "Confident cooking with clear direction combines Mediterranean and Japanese cuisines with impressive, cohesive results in Poble Sec.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Confident cooking with clear direction combines two cuisines—Mediterranean and Japanese—with impressive, cohesive results in Poble Sec."
-    },
-    {
-      "name": "Contracorrent Bar & Bistro",
-      "neighbourhood": "Sant Pere",
-      "cuisine": "Natural Wine / Italian",
-      "description": "Passion-driven Italian ownership with an excellent natural wine focus; one of the most personal and welcoming neighbourhood bistros near Arc de Triomf.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Contracorrent",
-      "geo_skip": false,
-      "lat": 41.3955456,
-      "lng": 2.181968,
-      "geo_source": "photon",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Passion-driven Italian ownership with an excellent natural wine focus; one of the most personal and welcoming neighbourhood bistros near Arc de Triomf."
-    },
-    {
-      "name": "Mikan",
-      "neighbourhood": "Eixample Esquerra",
-      "cuisine": "North-East Asian",
-      "description": "North-east Asian lunch boxes and small plates paired with low-intervention natural wines in a relaxed Eixample Esquerra setting.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "North-east Asian lunch boxes and small plates paired with low-intervention natural wines in a relaxed Eixample Esquerra setting."
-    },
-    {
-      "name": "Masa Vins",
-      "neighbourhood": "Poblenou",
-      "cuisine": "Natural Wine Bar",
-      "description": "'Your living room but with a fridge full of natural wines'—the most relaxed and welcoming natural wine bar in Poblenou.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "D. O Vins i Platllos",
-      "geo_skip": false,
-      "lat": 41.4040511,
-      "lng": 2.1567248,
-      "geo_source": "photon",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "'Your living room but with a fridge full of natural wines'—the most relaxed and welcoming natural wine bar in Poblenou."
-    },
-    {
-      "name": "Ona",
-      "neighbourhood": "Eixample",
-      "cuisine": "Contemporary Tasting Menu",
-      "description": "An intimate six-seat venue with a constantly changing tasting menu; one of Barcelona's most singular and personal dining experiences.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Ona",
-      "geo_skip": false,
-      "lat": 41.390378,
-      "lng": 2.1704577,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "An intimate six-seat venue with a constantly changing tasting menu; one of Barcelona's most singular and personal dining experiences."
-    },
-    {
-      "name": "Fishology",
-      "neighbourhood": "Eixample Esquerra",
-      "cuisine": "Innovative Seafood",
-      "description": "Uses a nose-to-tail fish philosophy with age-old fish cooking methods revived for a modern Eixample Esquerra audience.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Uses a nose-to-tail fish philosophy with age-old fish cooking methods revived for a modern Eixample Esquerra audience."
-    },
-    {
-      "name": "Fonda Pepa",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Catalan-Mexican",
-      "description": "Catalan classics sprinkled with Mexican-inspired surprises; a genuinely original combination that works brilliantly in this Gràcia setting.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Fonda Pepa",
-      "geo_skip": false,
-      "lat": 41.402044,
-      "lng": 2.1621698,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Catalan classics sprinkled with Mexican-inspired surprises; a genuinely original combination that works brilliantly in this Gràcia setting."
-    },
-    {
-      "name": "Lluritu",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Seafood Tapas",
-      "description": "Straightforward yet flavourful seafood dishes in a casual Gràcia spot beloved by locals; no fuss, all flavour.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Lluritu 3",
-      "geo_skip": false,
-      "lat": 41.3971462,
-      "lng": 2.1730758,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Straightforward yet flavourful seafood dishes in a casual Gràcia spot beloved by locals; no fuss, all flavour."
-    },
-    {
-      "name": "La Cova Fumada",
-      "neighbourhood": "Barceloneta",
-      "cuisine": "Seafood Tapas",
-      "description": "Long-established Barceloneta institution representing the real Barcelona—cash only, no reservations, and some of the freshest seafood in the city.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "La Cova Fumada",
-      "geo_skip": false,
-      "lat": 41.3792983,
-      "lng": 2.1891943,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Long-established Barceloneta institution representing the real Barcelona—cash only, no reservations, and some of the freshest seafood in the city."
-    },
-    {
-      "name": "Can Fisher",
-      "neighbourhood": "Poblenou",
-      "cuisine": "Seafood / Paella",
-      "description": "Beachfront Poblenou venue featuring fresh seafood and paella specialties with an authentic neighbourhood feel and proximity to the sea.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Can Fisher",
-      "geo_skip": false,
-      "lat": 41.3946058,
-      "lng": 2.2062439,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Beachfront Poblenou venue featuring fresh seafood and paella specialties with an authentic neighbourhood feel and proximity to the sea."
-    },
-    {
-      "name": "Morro Fi",
-      "neighbourhood": "Eixample",
-      "cuisine": "Vermut / Tapas",
-      "description": "Represents the contemporary vermut scene at its best, with quality tapas and impeccable house vermouth at multiple city locations.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Morro Fi",
-      "geo_skip": false,
-      "lat": 41.4012224,
-      "lng": 2.1240569,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Represents the contemporary vermut scene at its best, with quality tapas and impeccable house vermouth at multiple city locations."
-    },
-    {
-      "name": "Bar La Plata",
-      "neighbourhood": "Barri Gòtic",
-      "cuisine": "Traditional Spanish",
-      "description": "Operating since 1945 and still serving the same four tapas; an irreplaceable Gothic Quarter institution with zero pretension.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "La Plata",
-      "geo_skip": false,
-      "lat": 41.3804049,
-      "lng": 2.1805946,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Operating since 1945 and still serving the same four tapas; an irreplaceable Gothic Quarter institution with zero pretension."
-    },
-    {
-      "name": "Quimet y Quimet",
-      "neighbourhood": "Poble Sec",
-      "cuisine": "Classic Tapas",
-      "description": "Always packed Poble Sec classic famous for the salmon and cream cheese tapa; a standing-room-only institution that never disappoints.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Quimet",
-      "geo_skip": false,
-      "lat": 41.4115393,
-      "lng": 2.1417446,
-      "geo_source": "photon",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Always packed Poble Sec classic famous for the salmon and cream cheese tapa; a standing-room-only institution that never disappoints."
-    },
-    {
-      "name": "Vaso de Oro",
-      "neighbourhood": "Barceloneta",
-      "cuisine": "Spanish / Craft Beer",
-      "description": "Barceloneta specialty is solomillo con foie, served alongside the house-brewed craft beer; a standing-room institution with irreplaceable character.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "El Vaso de Oro",
-      "geo_skip": false,
-      "lat": 41.3818636,
-      "lng": 2.1872472,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Barceloneta specialty is solomillo con foie, served alongside the house-brewed craft beer; a standing-room institution with character."
-    },
-    {
-      "name": "Cal Pep",
-      "neighbourhood": "El Born",
-      "cuisine": "Seafood Tapas",
-      "description": "If you are into seafood, you must go to this Born classic; counter service and fresh fish define a decades-long Barcelona institution.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Cal Pep",
-      "geo_skip": false,
-      "lat": 41.3961542,
-      "lng": 2.1489229,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "If you are into seafood, you must go to this Born classic; counter service and fresh fish define a decades-long Barcelona institution."
-    },
-    {
-      "name": "Hermós, Bar de Peix",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Seafood Tapas",
-      "description": "Fantastic seafood dishes and natural wines inside the Llibertat market in Gràcia; one of the city's best market-counter experiences.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Fantastic seafood dishes and natural wines inside the Llibertat market in Gràcia; one of the city's best market-counter experiences."
-    },
-    {
-      "name": "Alnorte",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Northern Spanish",
-      "description": "Wonderfully charming Gràcia bar specialising in northern Spanish food with traditional cider service; a joyful neighbourhood discovery.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Wonderfully charming Gràcia bar specialising in northern Spanish food with traditional cider service; a joyful neighbourhood discovery."
-    },
-    {
-      "name": "Antunez",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Gourmet Tapas",
-      "description": "Friendly, laid-back Gràcia atmosphere with the duck and foie canelón as the signature dish worth ordering every single time.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Antunez",
-      "geo_skip": false,
-      "lat": 41.3979417,
-      "lng": 2.1546769,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Friendly, laid-back Gràcia atmosphere with the duck and foie canelón as the signature dish worth ordering every time."
-    },
-    {
-      "name": "Bar Bodega l'Electricitat",
-      "neighbourhood": "Barceloneta",
-      "cuisine": "Traditional Spanish",
-      "description": "Wine poured straight from the barrel; a genuine old-timer Barceloneta spot that has changed almost nothing since it opened.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "L'Electricitat",
-      "geo_skip": false,
-      "lat": 41.379349,
-      "lng": 2.190017,
-      "geo_source": "photon",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Wine poured straight from the barrel; a genuine old-timer Barceloneta spot that has changed almost nothing since it opened."
-    },
-    {
-      "name": "Entrepanes Diaz",
-      "neighbourhood": "Eixample Dreta",
-      "cuisine": "Spanish Sandwiches",
-      "description": "Old-school Eixample Dreta aesthetic with bocata de calamares as the must-order specialty; a brilliant sandwich institution.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Entrepanes Díaz",
-      "geo_skip": false,
-      "lat": 41.3972943,
-      "lng": 2.1609117,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Old-school Eixample Dreta aesthetic with bocata de calamares as the must-order specialty; a brilliant sandwich institution."
-    },
-    {
-      "name": "El Quim de la Boqueria",
-      "neighbourhood": "El Raval",
-      "cuisine": "Market Tapas",
-      "description": "Delightful market tapas cooked to order inside the Boqueria; one of the most atmospheric eating spots in Barcelona.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "El Quim De La Boqueria",
-      "geo_skip": false,
-      "lat": 41.3819517,
-      "lng": 2.1721675,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Delightful market tapas cooked to order inside the Boqueria Market; one of the most atmospheric eating spots in Barcelona."
-    },
-    {
-      "name": "La Bombeta",
-      "neighbourhood": "Barceloneta",
-      "cuisine": "Traditional Spanish",
-      "description": "Good quality tapas at this classic Barceloneta spot; famous for the bomba—the fried meat croquette that likely originated here.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "La Bombeta",
-      "geo_skip": false,
-      "lat": 41.3805658,
-      "lng": 2.1877114,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Good quality tapas at this classic Barceloneta neighbourhood spot; famous for the bomba (fried meat croquette) that likely originated here."
-    },
-    {
-      "name": "Can Paixano",
-      "neighbourhood": "Barceloneta",
-      "cuisine": "Spanish Classics",
-      "description": "A true Barceloneta classic with cheap, quality cava and simple, tasty tapas; always heaving and always worth the jostle.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Can Paixano",
-      "geo_skip": false,
-      "lat": 41.3817618,
-      "lng": 2.1834151,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "A true Barceloneta classic with cheap, quality cava and simple, tasty tapas; always heaving and always worth the jostle."
-    },
-    {
-      "name": "Bar Bocata",
-      "neighbourhood": "Sarrià-Sant Gervasi",
-      "cuisine": "Spanish Tapas",
-      "description": "Famous for its tortilla with caramelised onion; vintage charm and a loyal neighbourhood following in Sarrià-Sant Gervasi.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Bar Bocata",
-      "geo_skip": false,
-      "lat": 41.3977401,
-      "lng": 2.1523249,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Famous for its tortilla with caramelised onion; vintage charm and a loyal neighbourhood following in Sarrià-Sant Gervasi."
-    },
-    {
-      "name": "Bar Canyí",
-      "neighbourhood": "Sant Antoni",
-      "cuisine": "Modern Tapas",
-      "description": "High-quality tapas with a relaxed, welcoming vibe at this popular Sant Antoni neighbourhood bar.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "High-quality tapas with a relaxed, welcoming vibe at this popular Sant Antoni neighbourhood bar."
-    },
-    {
-      "name": "Tangana",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Modern Tapas",
-      "description": "Tasty tapas made with great ingredients matched with good wines; a solid and convivial Gràcia address.",
-      "sources": [
-        "bfe-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Tangana",
-      "geo_skip": false,
-      "lat": 41.3975354,
-      "lng": 2.1569575,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Tasty tapas made with great ingredients and matched with good wines; a solid and convivial Gràcia address."
-    },
-    {
-      "name": "Bar Restaurant Ginés",
-      "neighbourhood": "Horta-Guinardó",
-      "cuisine": "Seafood / Fish",
-      "description": "Platters of shellfish and fish at good prices—'safates de marisc i peix a bon preu'—at this reliable neighbourhood seafood bar near Cinema Phenomena.",
-      "sources": [
-        "beteve-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "ca",
-      "quote": "Platters of shellfish and fish at good prices—'safates de marisc i peix a bon preu'—at this reliable neighbourhood seafood bar near Phenomena Cinema."
-    },
-    {
-      "name": "Bodega Can Ros",
-      "neighbourhood": "Horta-Guinardó",
-      "cuisine": "Traditional Spanish",
-      "description": "Historic establishment since 1971 serving calamars a la romana, bunyols de bacallà, and truites de patates near Cinema Phenomena.",
-      "sources": [
-        "beteve-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Can Ros",
-      "geo_skip": false,
-      "lat": 41.4049984,
-      "lng": 2.1642241,
-      "geo_source": "photon",
-      "confidence_tier": "B",
-      "language_pool": "ca",
-      "quote": "Historic establishment since 1971 serving calamars a la romana, bunyols de bacallà, and truites de patates near Cinema Phenomena."
-    },
-    {
-      "name": "Sartoria Panatieri",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Neapolitan Pizza",
-      "description": "Named second-best pizzeria in the world in 2024; the Encarnació 51 address by Rafa Panatieri and Jorge Sastre is among the world's most acclaimed.",
-      "sources": [
-        "beteve-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Sartoria Panatieri",
-      "geo_skip": false,
-      "lat": 41.3971753,
-      "lng": 2.1649105,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "ca",
-      "quote": "Named second-best pizzeria in the world in 2024; the Encarnació 51 address by Rafa Panatieri and Jorge Sastre is unmissable."
-    },
-    {
-      "name": "Assalto",
-      "neighbourhood": "El Raval",
-      "cuisine": "Catalan",
-      "description": "Catalan small plates and wine at Nou de la Rambla 44, with continuous kitchen service Friday through Monday near La Filmoteca.",
-      "sources": [
-        "beteve-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "ca",
-      "quote": "Wine and Catalan small plates at Nou de la Rambla 44, with continuous kitchen service Friday through Monday near La Filmoteca."
-    },
-    {
-      "name": "Casa Leopoldo",
-      "neighbourhood": "El Raval",
-      "cuisine": "Traditional Catalan",
-      "description": "Historic Raval dining room at Sant Rafael 24; a long-standing institution in the neighbourhood that predates the area's transformation.",
-      "sources": [
-        "beteve-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Casa Leopoldo",
-      "geo_skip": false,
-      "lat": 41.3792715,
-      "lng": 2.1695103,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "ca",
-      "quote": "Historic Raval dining room at Sant Rafael 24; a long-standing institution in the neighbourhood that predates the area's gentrification."
-    },
-    {
-      "name": "Suculent",
-      "neighbourhood": "El Raval",
-      "cuisine": "Contemporary Catalan",
-      "description": "Contemporary Catalan cooking at Rambla del Raval 45; a quality dining option near La Filmoteca with a loyal following.",
-      "sources": [
-        "beteve-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Suculent",
-      "geo_skip": false,
-      "lat": 41.3781976,
-      "lng": 2.1704377,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "ca",
-      "quote": "Contemporary Catalan cooking at Rambla del Raval 45; a quality dining option recommended for the area near La Filmoteca."
-    },
-    {
-      "name": "Louro",
-      "neighbourhood": "El Raval",
-      "cuisine": "Galician",
-      "description": "Best Galician gastronomy in an overlooked corner—'racó desconegut'—at the Centre Gallec on Rambla dels Caputxins; a genuine neighbourhood secret.",
-      "sources": [
-        "beteve-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "ca",
-      "quote": "Best Galician gastronomy in an overlooked corner—'racó desconegut'—at the Centre Gallec on Rambla dels Caputxins; a genuine neighbourhood secret."
-    },
-    {
-      "name": "Casa Xica",
-      "neighbourhood": "Poble Sec",
-      "cuisine": "Asian-Catalan Fusion",
-      "description": "A creative blend of Asian and Catalan cooking—'cuina asiàtica i catalana'—at França Xica 20 in Poble Sec near Montjuïc venues.",
-      "sources": [
-        "beteve-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Casa Xica",
-      "geo_skip": false,
-      "lat": 41.3722776,
-      "lng": 2.1594142,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "ca",
-      "quote": "A creative blend of Asian and Catalan cooking—'cuina asiàtica i catalana'—at França Xica 20 in Poble Sec near Montjuïc venues."
-    },
-    {
-      "name": "Margarit",
-      "neighbourhood": "Poble Sec",
-      "cuisine": "Mediterranean / Greek",
-      "description": "Greek and Mediterranean coastal cuisine—'cuina grega i de tota la llera del Mediterrani'—at Margarit 58 in Poble Sec.",
-      "sources": [
-        "beteve-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Margarit",
-      "geo_skip": false,
-      "lat": 41.3723023,
-      "lng": 2.1629951,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "ca",
-      "quote": "Greek and Mediterranean coastal cuisine—'cuina grega i de tota la llera del Mediterrani'—at Margarit 58 in Poble Sec."
-    },
-    {
-      "name": "Petit Montjuïc",
-      "neighbourhood": "Poble Sec",
-      "cuisine": "Algerian-Catalan",
-      "description": "Algerian-Catalan fusion cooking—'cuina algerianocatalana'—at Sant Isidre 2 in Poble Sec; a genuinely original combination unique to Barcelona.",
-      "sources": [
-        "beteve-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Petit Montjuic",
-      "geo_skip": false,
-      "lat": 41.3709606,
-      "lng": 2.158546,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "ca",
-      "quote": "Algerian-Catalan fusion cooking—'cuina algerianocatalana'—at Sant Isidre 2 in Poble Sec; a genuinely original combination unique to Barcelona."
-    },
-    {
-      "name": "Zaytun",
-      "neighbourhood": "Sants",
-      "cuisine": "Mediterranean",
-      "description": "An excellent gastronomic proposition—'proposta gastronòmica excel·lent'—at Guadiana 40 in Sants, near the Sala Flyhard theatre.",
-      "sources": [
-        "beteve-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "CA"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "ca",
-      "quote": "An excellent gastronomic proposition—'proposta gastronòmica excel·lent'—at Guadiana 40 in Sants, near the Sala Flyhard theatre."
-    },
-    {
-      "name": "Fat Veggies",
-      "neighbourhood": "Eixample",
-      "cuisine": "Plant-based",
-      "description": "Run by Venezuelans Juan and Aquiles Martini using locally sourced organic vegetables and natural wines; 'like a cult, converting meat-eaters into devout veggie lovers.'",
-      "sources": [
-        "cb-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Fat Veggies",
-      "geo_skip": false,
-      "lat": 41.3962525,
-      "lng": 2.1712885,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Run by Venezuelans Juan and Aquiles Martini using locally sourced organic vegetables and natural wines; 'like a cult, converting meat-eaters into devout veggie lovers.'"
-    },
-    {
-      "name": "Buriti",
-      "neighbourhood": "Poblenou",
-      "cuisine": "Brazilian",
-      "description": "Authentic Brazilian cuisine including moqueca, picanha, acarajés, and feijoada; 'a balm for saudade' with elevated quality and professional execution.",
-      "sources": [
-        "cb-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Buriti - Poblenou",
-      "geo_skip": false,
-      "lat": 41.4021886,
-      "lng": 2.2051979,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Authentic Brazilian cuisine including moqueca, picanha, acarajés, and feijoada; 'a balm for saudade' with elevated quality and genuine professionalism."
-    },
-    {
-      "name": "Bruma",
-      "neighbourhood": "Eixample Esquerra",
-      "cuisine": "Spanish-Catalan",
-      "description": "Created by Soma founders at Aribau 31; 'fusiona la cocina española y la catalana' with minimalist presentation and accessible pricing.",
-      "sources": [
-        "gastronosfera-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Bruma",
-      "geo_skip": false,
-      "lat": 41.3871222,
-      "lng": 2.1608301,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Created by Soma founders, this Aribau 31 restaurant 'fusiona la cocina española y la catalana' with minimalist presentation and accessible pricing."
-    },
-    {
-      "name": "Fidelio",
-      "neighbourhood": "Sarrià-Sant Gervasi",
-      "cuisine": "Italian",
-      "description": "Trendy, family-oriented trattoria at Beethoven 14 featuring New York-style pizza and pasta dishes; 'desenfadado' and very Instagrammable.",
-      "sources": [
-        "gastronosfera-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Trendy, family-oriented trattoria at Beethoven 14 featuring New York-style pizza and pasta dishes; 'desenfadado' and very Instagrammable."
-    },
-    {
-      "name": "Garum",
-      "neighbourhood": "Sarrià-Sant Gervasi",
-      "cuisine": "Traditional Catalan",
-      "description": "A neighbourhood restaurant at Vilarós 3 offering 'elaboradísimas croquetas' and seasonal dishes, with a weekday lunch menu at €16.",
-      "sources": [
-        "gastronosfera-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "A neighbourhood restaurant offering 'elaboradísimas croquetas' and seasonal dishes, with a weekday lunch menu at €16 on Carrer de Vilarós."
-    },
-    {
-      "name": "Casa Chiquita",
-      "neighbourhood": "Les Corts",
-      "cuisine": "Mediterranean Tapas",
-      "description": "Terrace spot on Av. Diagonal 557 featuring classic tapas and vermut in a tranquil, unhurried atmosphere in Les Corts.",
-      "sources": [
-        "gastronosfera-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Terrace spot on Av. Diagonal 557 featuring classic tapas and vermut in a tranquil, unhurried atmosphere—'ambiente tranquilo'—in Les Corts."
-    },
-    {
-      "name": "Aüc Bar",
-      "neighbourhood": "Sarrià-Sant Gervasi",
-      "cuisine": "Catalan Gastrobar",
-      "description": "By Joan Martínez and Takeshi Somekawa, honouring 'las tapas y los platos catalanes más icónicos' with local products at Plaça del Camp 7.",
-      "sources": [
-        "gastronosfera-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "By Joan Martínez and Takeshi Somekawa, honouring 'las tapas y los platos catalanes más icónicos' with local products at Plaça del Camp 7."
-    },
-    {
-      "name": "Fogón del Castellano y Leonés",
-      "neighbourhood": "Sant Andreu",
-      "cuisine": "Castilian-Leonese",
-      "description": "Regional classics like torreznos and callos alongside contemporary dishes; daily menu €16 and weekend menu €27 at Passeig de Torras i Bages 139.",
-      "sources": [
-        "gastronosfera-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Regional classics like torreznos and callos alongside contemporary dishes; daily menu €16 and weekend menu €27 at Passeig de Torras i Bages 139."
-    },
-    {
-      "name": "La Bodegueta de Sant Andreu",
-      "neighbourhood": "Sant Andreu",
-      "cuisine": "Spanish Tapas",
-      "description": "Recently awarded the Barcelona Restauració prize for neighbourhood integration; known for multiple croqueta varieties and artisanal local products on Rambla de Fabra i Puig.",
-      "sources": [
-        "gastronosfera-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Recently awarded the Barcelona Restauració prize for neighbourhood integration; known for multiple croqueta varieties and artisanal local products on Rambla de Fabra i Puig."
-    },
-    {
-      "name": "L'Empanat",
-      "neighbourhood": "Sant Andreu",
-      "cuisine": "Spanish / Josper Grill",
-      "description": "Combines traditional patatas bravas and eggs with charcoal Josper-oven hamburgers and seasonal offerings at Carrer de Monlau 60.",
-      "sources": [
-        "gastronosfera-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Combines traditional patatas bravas and eggs with charcoal Josper-oven hamburgers and seasonal offerings at Carrer de Monlau 60 in Sant Andreu."
-    },
-    {
-      "name": "L'Arrossat de l'Empanat",
-      "neighbourhood": "Sant Andreu",
-      "cuisine": "Rice / Mediterranean",
-      "description": "Specialises in paella variants and fideuà at Plaça de Masadas 1; 'each grain reflecting Mediterranean essence' according to the kitchen's philosophy.",
-      "sources": [
-        "gastronosfera-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Specialises in paella variants and fideuà at Plaça de Masadas 1; 'each grain reflecting Mediterranean essence' according to the kitchen's philosophy."
-    },
-    {
-      "name": "La Marcelina",
-      "neighbourhood": "La Sagrera",
-      "cuisine": "Traditional Catalan",
-      "description": "One Repsol Guide star; daily menu at €17.50; chef-led tribute to 'authentic, honest cooking' using proximity-sourced ingredients at Costa Rica 24.",
-      "sources": [
-        "gastronosfera-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "One Repsol Guide star; daily menu at €17.50; chef-led tribute to 'authentic, honest cooking' using proximity-sourced ingredients at Costa Rica 24."
-    },
-    {
-      "name": "Atipical",
-      "neighbourhood": "Eixample",
-      "cuisine": "Contemporary",
-      "description": "By Matteo Bertozzi; 'cocina con ingenio, técnica y sensibilidad'—one of the notable openings of 2025 that impressed Barcelona food writers.",
-      "sources": [
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "By Matteo Bertozzi; 'cocina con ingenio, técnica y sensibilidad'—one of the notable new openings of 2025 according to Barcelona food writers."
+      "geo_matched_name": "Berbena",
+      "geo_skip": null,
+      "both_pool": true
     },
     {
       "name": "Direkte",
+      "name_variants": null,
       "neighbourhood": "Eixample",
       "cuisine": "Contemporary",
-      "description": "By Arnau Muñío; the relocated and expanded format of this much-praised restaurant on Carrer de París, with greater ambition in the new space.",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "ha dado el salto del rincón de la Boqueria a la calle París y, sin perder el pulso, ya juega en modo restaurante con todas las letras...una carta directa e irreverente, con ambición e inventiva",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
       "sources": [
-        "tnbp-torrents-barcelona"
+        "src-beteve-cortésvidal",
+        "src-newbarcelonapost-torrents"
       ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary",
+      "article_date": "2026-01-11",
+      "article_title": "Los grandes restaurantes de 2025 y los que están por venir",
       "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Direkte",
-      "geo_skip": false,
+      "flagged": false,
       "lat": 41.3814374,
       "lng": 2.1720836,
       "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "By Arnau Muñío; the relocated and expanded format of this much-praised Barcelona restaurant, now with greater ambition and larger premises on Carrer de París."
+      "geo_confidence": "high",
+      "geo_matched_name": "Direkte",
+      "geo_skip": null,
+      "both_pool": true
     },
     {
-      "name": "Agreste Mar",
-      "neighbourhood": "El Born",
-      "cuisine": "Italian-Catalan",
-      "description": "Mediterranean-inspired Italian-Catalan fusion at the Serras Barcelona Hotel in the Born; one of 2025's notable new hotel restaurant openings.",
+      "name": "Contracorrent",
+      "name_variants": [
+        "Contracorrent Bar",
+        "Contracorrent Bistro"
+      ],
+      "neighbourhood": "Gràcia",
+      "cuisine": "Italian / Natural Wine",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Both are run with a lot of passion and care by an Italian duo, Niko and Anna, chef and sommelier. The atmosphere in both is inviting, with recycled interior details and shelves with bottles of natural wine. An absolute must-visit.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
       "sources": [
-        "tnbp-torrents-barcelona"
+        "src-barcelonafoodexperience-maria",
+        "src-beteve-cortésvidal"
       ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
       "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Mediterranean-inspired Italian-Catalan fusion at the Serras Barcelona Hotel; one of 2025's notable new dining openings in the Born area."
+      "flagged": false,
+      "lat": 41.3955456,
+      "lng": 2.181968,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Contracorrent",
+      "geo_skip": null,
+      "both_pool": true
     },
     {
-      "name": "Fonda Balmes",
+      "name": "Suru Bar",
+      "name_variants": [
+        "Suru"
+      ],
       "neighbourhood": "Eixample Esquerra",
-      "cuisine": "Traditional Catalan",
-      "description": "A traditional Catalan restaurant on Balmes that grew steadily in popularity throughout 2025; solid neighbourhood cooking at honest prices.",
+      "cuisine": "Contemporary / Natural Wine",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "unusual ingredients and combinations with counter seating to take part in all the action; frequently changing menu paired with diverse wine selections",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
       "sources": [
-        "tnbp-torrents-barcelona"
+        "src-barcelonafoodexperience-maria",
+        "src-beteve-cortésvidal"
       ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
       "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "A traditional Catalan restaurant on Balmes that grew steadily in popularity throughout 2025; solid neighbourhood cooking at honest prices."
+      "both_pool": true
     },
     {
-      "name": "Ippudo",
-      "neighbourhood": "Eixample",
-      "cuisine": "Japanese Ramen",
-      "description": "The global ramen chain's Barcelona interpretation; widely noted among 2025's notable new openings for bringing serious Japanese ramen culture to the city.",
+      "name": "Agreste de Fabio & Roser",
+      "name_variants": [
+        "Agreste"
+      ],
+      "neighbourhood": "El Coll",
+      "cuisine": "Contemporary / Meat",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "beef marrow inside the bone",
+        "organic T-bone steak raw mince"
+      ],
+      "signature_dish": null,
+      "quote": "The meat main was truly spectacular, equal parts feral and elegant: beef marrow served inside the bone and covered with raw mince made from an organic T-bone steak.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
       "sources": [
-        "tnbp-torrents-barcelona"
+        "src-culinarybackstreets-mourenza",
+        "src-beteve-cortésvidal"
       ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary",
+      "article_date": "2025-02-07",
+      "article_title": "The Essentials: Where to Eat in Barcelona",
       "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "IPPUDO",
-      "geo_skip": false,
-      "lat": 41.3836008,
-      "lng": 2.1582506,
+      "flagged": true,
+      "lat": 41.4197431,
+      "lng": 2.1487167,
       "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "The global ramen chain's Barcelona interpretation; widely noted among 2025's notable new openings for bringing serious Japanese ramen culture to the city."
+      "geo_confidence": "high",
+      "geo_matched_name": "Agreste de Fabio & Roser",
+      "geo_skip": null,
+      "both_pool": true
     },
     {
-      "name": "Fronda Pasaje",
+      "name": "Casa Fiero",
+      "name_variants": null,
       "neighbourhood": "Barcelona",
+      "cuisine": "Modern Catalan / Neo-bistro",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "It's a 1970s Catalan diner throwback that takes the city's current Catalan grandma food trend and switches it up to maximum effect.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-newbarcelonapost-torrents",
+        "src-infatuation-kliger"
+      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "article_date": "2026-01-11",
+      "article_title": "Los grandes restaurantes de 2025 y los que están por venir",
+      "open_status_check": false,
+      "flagged": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": true
+    },
+    {
+      "name": "Finorri",
+      "name_variants": null,
+      "neighbourhood": "Barri Gòtic",
       "cuisine": "Contemporary",
-      "description": "'Un espacio on el menjar i el coneixement van de bracet'—a space where food and knowledge walk together; a cultural-gastronomy hybrid address.",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "With a colorful, velvet-clad interior worthy of a Soho House designer's Pinterest page, Finorri doesn't just look the part.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
       "sources": [
-        "tnbp-torrents-barcelona"
+        "src-newbarcelonapost-torrents",
+        "src-infatuation-kliger"
       ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "article_date": "2026-01-11",
+      "article_title": "Los grandes restaurantes de 2025 y los que están por venir",
       "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Fronda Pasaje BCN",
-      "geo_skip": false,
-      "lat": 41.3840215,
-      "lng": 2.1814732,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "'Un espacio on el menjar i el coneixement van de bracet'—a Barcelona space where food and knowledge walk together; a cultural-gastronomy hybrid."
+      "flagged": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": true
     },
     {
-      "name": "Provisions Gresca",
+      "name": "Cerveseria 640",
+      "name_variants": [
+        "Seis Cuarenta"
+      ],
       "neighbourhood": "Eixample",
-      "cuisine": "Charcuterie",
-      "description": "Curated cured meats by the team behind Gresca; a focused charcuterie specialist that became a key address in the 2025 bar-food revival.",
+      "cuisine": "Contemporary Tapas",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "ha convertido su espacio en uno de esos lugares que se llenan porque sí, con sala impecable y clásicos hechos con oficio",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
       "sources": [
-        "tnbp-torrents-barcelona"
+        "src-newbarcelonapost-torrents",
+        "src-infatuation-kliger"
       ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "article_date": "2026-01-11",
+      "article_title": "Los grandes restaurantes de 2025 y los que están por venir",
       "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Gresca",
-      "geo_skip": false,
-      "lat": 41.3913198,
-      "lng": 2.1572168,
-      "geo_source": "photon",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Curated cured meats by the team behind Gresca; a focused charcuterie specialist that became a key address in the 2025 bar-food revival."
-    },
-    {
-      "name": "Mineral",
-      "neighbourhood": "Barcelona",
-      "cuisine": "Contemporary",
-      "description": "Project by Oliver Peña and Cristina Losada; a highly anticipated 2026 opening from two of Barcelona's most respected young chefs.",
-      "sources": [
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Don Mineral",
-      "geo_skip": false,
-      "lat": 41.3821937,
-      "lng": 2.1759819,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Project by Oliver Peña and Cristina Losada; a highly anticipated 2026 opening from two of Barcelona's most respected young chefs."
-    },
-    {
-      "name": "Orobianco Barcelona",
-      "neighbourhood": "Barcelona",
-      "cuisine": "Fine Dining",
-      "description": "Fine dining project with Paolo Casagrande (of Lasarte) as gastronomic director; one of the most anticipated openings of early 2026.",
-      "sources": [
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
+      "flagged": true,
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Fine dining project with Paolo Casagrande (of Lasarte) as gastronomic director; one of the most anticipated openings of early 2026."
-    },
-    {
-      "name": "La Parada Torres",
-      "neighbourhood": "Sant Pere",
-      "cuisine": "Mediterranean",
-      "description": "Collaboration between Sergio and Javier Torres at Mercat de Santa Caterina; a spring 2026 debut from two celebrated Catalan chefs.",
-      "sources": [
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Collaboration between Sergio and Javier Torres opening at Mercat de Santa Caterina; a spring 2026 debut from two celebrated Catalan chefs."
+      "both_pool": true
     },
     {
-      "name": "Masia del Tibidabo",
-      "neighbourhood": "Sarrià-Sant Gervasi",
-      "cuisine": "Contemporary Catalan",
-      "description": "Rafa Zafra's Tibidabo project focusing on seasonal, local ingredients in a landmark hilltop setting above the city.",
-      "sources": [
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Rafa Zafra's Tibidabo project focusing on seasonal, local ingredients in a landmark hilltop setting above the city."
-    },
-    {
-      "name": "Hermanos Alam's Taco",
-      "neighbourhood": "Barcelona",
-      "cuisine": "Mexican",
-      "description": "'Un templo del taco al pastor' with specialised salsas; a Barcelona taquería bringing genuine Mexican taco culture to the city.",
-      "sources": [
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "'Un templo del taco al pastor' with specialised salsas; a Barcelona taquería bringing genuine Mexican taco culture to the city."
-    },
-    {
-      "name": "Finca Nebot",
-      "neighbourhood": "Poblenou",
-      "cuisine": "Catalan",
-      "description": "By Leo Chechelnitskiy; a Poblenou restaurant with emphasis on classic Catalan dishes and a commitment to quality local products.",
-      "sources": [
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Nebot",
-      "geo_skip": false,
-      "lat": 41.4010794,
-      "lng": 2.1857974,
-      "geo_source": "photon",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "By Leo Chechelnitskiy; a Poblenou restaurant with emphasis on classic Catalan dishes and a commitment to product quality."
-    },
-    {
-      "name": "Super Auto",
+      "name": "Lora",
+      "name_variants": null,
       "neighbourhood": "Eixample",
-      "cuisine": "Contemporary",
-      "description": "By Ronit Stern; a 2026 opening in Eixample that generated early buzz among Barcelona food writers and restaurant professionals.",
-      "sources": [
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "By Ronit Stern; a 2026 opening in Eixample that generated early buzz among Barcelona food writers and restaurant professionals."
-    },
-    {
-      "name": "Mercado Central",
-      "neighbourhood": "Poble Sec",
-      "cuisine": "Peruvian Ceviche",
-      "description": "Cevichería by Pablo Ortega in Poble Sec; a focused Peruvian concept built around ceviche and the marine traditions of Lima.",
-      "sources": [
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Cevichería by Pablo Ortega in Poble Sec; a focused Peruvian concept built around ceviche and the marine traditions of Lima."
-    },
-    {
-      "name": "Bottega Bernacca",
-      "neighbourhood": "Barcelona",
-      "cuisine": "Fusion",
-      "description": "By Gerard Barberan with Michelin-level experience from Brazil; a fusion project blending European and South American culinary sensibilities.",
-      "sources": [
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "By Gerard Barberan with Michelin-level experience from Brazil; a fusion project that blends European and South American culinary sensibilities."
-    },
-    {
-      "name": "Cresta Negra",
-      "neighbourhood": "Barcelona",
-      "cuisine": "Peruvian",
-      "description": "Omar Malpartida's roasted chicken-focused Peruvian concept; a more casual and accessible counterpart to his other Barcelona projects.",
-      "sources": [
-        "tnbp-torrents-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": true,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Omar Malpartida's roasted chicken-focused Peruvian concept; a more casual and accessible counterpart to his other Barcelona projects."
-    },
-    {
-      "name": "Arcano",
-      "neighbourhood": "El Born",
-      "cuisine": "Contemporary Catalan",
-      "description": "Occupies 17th-century former cathedral stables at Mercaders 10; chef Nicolás Limarino updates historic Catalan recipes—brioche with country sausage, braised beef cheeks in rancio wine—with modern technique.",
-      "sources": [
-        "tnbp-ribot-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Arcano Restaurant Barcelona",
-      "geo_skip": false,
-      "lat": 41.3850046,
-      "lng": 2.1786227,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Occupies 17th-century former cathedral stables at Mercaders 10; chef Nicolás Limarino updates historic Catalan recipes—brioche with country sausage, braised beef cheeks in rancio wine—with modern technique."
-    },
-    {
-      "name": "Kiosko Universal",
-      "neighbourhood": "El Raval",
-      "cuisine": "Market Cuisine",
-      "description": "Over 50 years operating inside La Boqueria under third-generation management; fresh tuna tataki, razor clams with foie, and grilled Galician-style octopus.",
-      "sources": [
-        "tnbp-ribot-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Kiosko universal",
-      "geo_skip": false,
-      "lat": 41.3817361,
-      "lng": 2.171352,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Over 50 years operating inside La Boqueria under third-generation management; fresh tuna tataki, razor clams with foie, and grilled Galician-style octopus from market stall to plate."
-    },
-    {
-      "name": "Tapas Lobito",
-      "neighbourhood": "Sant Pere",
-      "cuisine": "Spanish Tapas",
-      "description": "Recently opened by Grupo Tragaluz at Porxos d'en Xifré; bar combining Iberian ham croquettes and fried artichokes with a dedicated sushi counter and foosball table.",
-      "sources": [
-        "tnbp-ribot-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Recently opened by Grupo Tragaluz at Porxos d'en Xifré; bar concept combining Iberian ham croquettes and fried artichokes with a dedicated sushi counter and foosball table."
-    },
-    {
-      "name": "Jazminos",
-      "neighbourhood": "Sarrià-Sant Gervasi",
       "cuisine": "Middle Eastern",
-      "description": "Small and welcoming Middle Eastern restaurant with an elegant approach and dinner menu under €30; a neighbourhood secret in Putxet.",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "It's a special occasion-coded Middle Eastern eatery. In a space so polished it reads like a Manhattan members' club.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
       "sources": [
-        "inout-barcelona"
+        "src-newbarcelonapost-torrents",
+        "src-infatuation-kliger"
       ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "article_date": "2026-01-11",
+      "article_title": "Los grandes restaurantes de 2025 y los que están por venir",
       "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Small and welcoming Middle Eastern restaurant with an elegant approach and dinner menu under €30; a neighbourhood secret in Putxet."
-    },
-    {
-      "name": "Bar Fischer",
-      "neighbourhood": "Eixample",
-      "cuisine": "Traditional Spanish",
-      "description": "Honest cooking at affordable prices with charming, attentive staff; a reliable 2025 Eixample find that delivers quality without pretension.",
-      "sources": [
-        "inout-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Fischer",
-      "geo_skip": false,
-      "lat": 41.3961005,
-      "lng": 2.1906673,
-      "geo_source": "photon",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Honest cooking at affordable prices with charming, attentive staff; a 2025 Eixample find that delivers reliable quality without pretension."
-    },
-    {
-      "name": "Vibeyard",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Natural Wine / Portuguese",
-      "description": "Original menu with Portuguese touches and 10 house wines sourced directly from Lisbon vineyards; a singular natural wine bar in Gràcia.",
-      "sources": [
-        "inout-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Original menu with Portuguese touches and 10 house wines sourced directly from Lisbon vineyards; a singular natural wine bar in Gràcia."
-    },
-    {
-      "name": "Fiffty-Fiffty",
-      "neighbourhood": "Poblenou",
-      "cuisine": "Burgers / Fish & Chips",
-      "description": "Quality fast food better than the famous competitors; a Poblenou spot that elevated the burger-and-chips format with noticeably better ingredients.",
-      "sources": [
-        "inout-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Quality fast food better than the famous competitors; a Poblenou spot that elevated the burger-and-chips format with noticeably better ingredients."
-    },
-    {
-      "name": "Esnaf",
-      "neighbourhood": "Poblenou",
-      "cuisine": "Healthy / Varied",
-      "description": "Daily-changing healthy plates with a strong takeaway focus; reflects Poblenou's growing appetite for honest, wholesome food.",
-      "sources": [
-        "inout-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Daily-changing healthy plates with a strong takeaway focus; a Poblenou spot that reflects the neighbourhood's growing creative-class appetite for honest, wholesome food."
-    },
-    {
-      "name": "Bar Veracruz",
-      "neighbourhood": "Eixample",
-      "cuisine": "Traditional Spanish",
-      "description": "Historic décor preserved intact; known for generous fork breakfasts and excellent midday dishes that honour the classic Barcelona bar tradition.",
-      "sources": [
-        "inout-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Historic décor preserved intact; known for generous fork breakfasts and excellent midday dishes that honour the classic Barcelona bar tradition."
-    },
-    {
-      "name": "Bodega Manolo",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Traditional Spanish",
-      "description": "Classic Gràcia tavern with noticeably improved dishes under new ownership; the neighbourhood bodega format done with greater care and quality.",
-      "sources": [
-        "inout-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Bodega Manolo",
-      "geo_skip": false,
-      "lat": 41.4080783,
-      "lng": 2.1582624,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Classic Gràcia tavern with noticeably improved dishes under new ownership; the neighbourhood bodega format done with greater care and quality."
-    },
-    {
-      "name": "Bar Casi",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Traditional Spanish",
-      "description": "Perfect for lunch; respects the historic character of its Gràcia space with honest traditional cooking and a loyal neighbourhood clientele.",
-      "sources": [
-        "inout-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Bar Casi",
-      "geo_skip": false,
-      "lat": 41.4091892,
-      "lng": 2.1558181,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Perfect for lunch; respects the historic character of its Gràcia space with honest traditional cooking and a loyal neighbourhood clientele."
-    },
-    {
-      "name": "Bodega Nulles",
-      "neighbourhood": "Eixample",
-      "cuisine": "Vermut Bar",
-      "description": "Authentic vermut selection with traditional tapas; one of 2025's recommended Eixample aperitif bars for a genuine vermouth ritual.",
-      "sources": [
-        "inout-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Authentic vermut selection with traditional tapas; one of 2025's recommended Eixample aperitif bars for a genuine vermouth ritual."
-    },
-    {
-      "name": "Bar Bruno",
-      "neighbourhood": "Sarrià-Sant Gervasi",
-      "cuisine": "Wine Bar",
-      "description": "Small and welcoming Sarrià-Sant Gervasi wine bar with an excellent selection; the kind of neighbourhood bar you want to discover yourself.",
-      "sources": [
-        "inout-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
+      "flagged": true,
       "lat": null,
       "lng": null,
       "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Small and welcoming Sarrià-Sant Gervasi wine bar with an excellent selection; the kind of neighbourhood bar you want to discover yourself."
-    },
-    {
-      "name": "Barra Oso",
-      "neighbourhood": "Sarrià-Sant Gervasi",
-      "cuisine": "Marine Gastronomy",
-      "description": "Óscar Álvarez's intimate ten-seat seafood bar at Muntaner 248 with candlelit atmosphere; focuses on creative preparations like cured serviola alongside fresh fish dishes.",
-      "sources": [
-        "repsol-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Óscar Álvarez's intimate ten-seat seafood bar at Muntaner 248 with candlelit atmosphere; focuses on fish dishes and creative preparations like cured serviola."
-    },
-    {
-      "name": "Bar Alegría",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Traditional Catalan",
-      "description": "Tomás Abellán's Gràcia location at Torrent de l'olla 77, maintaining the '1970s allure' of the original; features ibérico pork, cockles, and Maresme peas with butifarra.",
-      "sources": [
-        "repsol-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Tomás Abellán's Gràcia location at Torrent de l'olla 77, maintaining the '1970s allure' of the original; features ibérico pork, cockles, and Maresme peas with butifarra."
-    },
-    {
-      "name": "Barra M",
-      "neighbourhood": "Eixample Esquerra",
-      "cuisine": "Peruvian-Japanese (Nikkei)",
-      "description": "Omar Malpartida's intimate ten-seat bar at Viladomat 249 'revindicating omakase through a deep Nikkei perspective' blending Japanese technique with vibrant Peruvian ingredients.",
-      "sources": [
-        "repsol-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "ES"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Barra Perelló 1898",
-      "geo_skip": false,
-      "lat": 41.3884097,
-      "lng": 2.1544818,
-      "geo_source": "photon",
-      "confidence_tier": "B",
-      "language_pool": "es",
-      "quote": "Omar Malpartida's intimate ten-seat bar at Viladomat 249 'revindicating omakase through a deep Nikkei perspective' blending Japanese technique with vibrant Peruvian ingredients."
-    },
-    {
-      "name": "Taberna Nardi",
-      "neighbourhood": "El Born",
-      "cuisine": "Seafood",
-      "description": "Like a rowdy fish-market stall: fresh razor clams, mussels with parsley butter, and chargrilled red tuna neck in a tiny Born bar.",
-      "sources": [
-        "infatuation-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Like a rowdy fish-market stall: fresh razor clams, mussels with parsley butter, and chargrilled red tuna neck in a tiny Born bar."
-    },
-    {
-      "name": "Mundial Bar",
-      "neighbourhood": "Barceloneta",
-      "cuisine": "Seafood",
-      "description": "Historic haunt relaunched as affordable seafood bar; dinner for two costs €50, with vintage literary and boxing memorabilia setting the scene.",
-      "sources": [
-        "infatuation-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": null,
-      "geo_matched_name": null,
-      "geo_skip": true,
-      "lat": null,
-      "lng": null,
-      "geo_source": null,
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Historic haunt relaunched as affordable seafood bar; dinner for two costs €50, with vintage literary and boxing memorabilia setting the scene."
-    },
-    {
-      "name": "Al Grano Bistro",
-      "neighbourhood": "Eixample",
-      "cuisine": "Italian",
-      "description": "Cosy Eixample spot featuring rich wild boar pappardelle, pillowy ossobuco ravioli, and house-made tiramisu; serious Italian cooking in an unfussy setting.",
-      "sources": [
-        "infatuation-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Al Grano",
-      "geo_skip": false,
-      "lat": 41.3760916,
-      "lng": 2.1578561,
-      "geo_source": "photon",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Cosy Eixample spot featuring rich wild boar pappardelle, pillowy ossobuco ravioli, and house-made tiramisu; serious Italian cooking in an unfussy setting."
+      "both_pool": true
     },
     {
       "name": "Bar Super",
-      "neighbourhood": "Sant Pere",
-      "cuisine": "Natural Wine / Modern",
-      "description": "Sister to Bar Brutal; cured horsemeat cecina with wildly expressive cloudy orange wines from €4.50—the best value natural wine bar in the Santa Caterina area.",
+      "name_variants": null,
+      "neighbourhood": "El Born",
+      "cuisine": "Contemporary / Wine Bar",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "If Bar Brutal is the grungy natural wine bar with food, then Bar Super is the restaurant with wine.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
       "sources": [
-        "infatuation-barcelona"
+        "src-beteve-cortésvidal",
+        "src-infatuation-kliger"
       ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
+      "confidence_tier": "A",
+      "source_type_combination": "primary+secondary",
+      "article_date": "2025-11-05",
+      "article_title": "Guia Slow Food Barcelona 2026",
       "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "high",
-      "geo_matched_name": "Súper tropical",
-      "geo_skip": false,
-      "lat": 41.3626179,
-      "lng": 2.1048892,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Sister to Bar Brutal; cured horsemeat cecina with wildly expressive cloudy orange wines from €4.50—the best value natural wine bar in the Santa Caterina area."
-    },
-    {
-      "name": "Paloma",
-      "neighbourhood": "Gràcia",
-      "cuisine": "Mexican",
-      "description": "Modern Mexican featuring green seabass aguachile with authentic Oaxacan cheese; serious Mexican flavours executed with ambition in an elegant Gràcia setting.",
-      "sources": [
-        "infatuation-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
-      "geo_confidence": "medium",
-      "geo_matched_name": "Paloma",
-      "geo_skip": false,
-      "lat": 41.4081536,
-      "lng": 2.1882712,
-      "geo_source": "nominatim",
-      "confidence_tier": "B",
-      "language_pool": "en",
-      "quote": "Modern Mexican featuring green seabass aguachile with authentic Oaxacan cheese; serious Mexican flavours in an elegant Gràcia setting."
-    },
-    {
-      "name": "Chambacú",
-      "neighbourhood": "Eixample",
-      "cuisine": "Colombian",
-      "description": "Tasting menu €55–€95; 'modern interpretation of Colombian cooking' fusing Indigenous, Spanish, and African flavours with ambition and considerable technique.",
-      "sources": [
-        "infatuation-barcelona"
-      ],
-      "both_pool": false,
-      "language_pools": [
-        "EN"
-      ],
-      "open_status_check": false,
-      "geo_lat": null,
-      "geo_lng": null,
+      "flagged": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
+      "both_pool": true
+    },
+    {
+      "name": "Arraval",
+      "name_variants": null,
+      "neighbourhood": "El Raval",
+      "cuisine": "Modern Catalan",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "abre sus puertas como una rara avis de barrio, catalana y urbana, con especias y guisos que viajan pero siempre acaban volviendo a casa. Una 'tradición inventada'",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-newbarcelonapost-torrents",
+        "src-inandout-talento"
+      ],
       "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "article_date": "2026-01-11",
+      "article_title": "Los grandes restaurantes de 2025 y los que están por venir",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Fonda Pepa",
+      "name_variants": null,
+      "neighbourhood": "Gràcia",
+      "cuisine": "Catalan-Mexican Fusion",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "The restaurant has the easygoing vibe of a village canteen, with the flavors of a royal kitchen. Its recipes — seasonal, traditional Catalan dishes with Mexican influences — are prepared with premium local ingredients.",
+      "quote_language": "original",
+      "language_pool": "both",
+      "source_count": 2,
+      "sources": [
+        "src-barcelonafoodexperience-maria",
+        "src-culinarybackstreets-mourenza"
+      ],
+      "confidence_tier": "B",
+      "source_type_combination": "primary",
+      "article_date": "2025-02-07",
+      "article_title": "The Essentials: Where to Eat in Barcelona",
+      "open_status_check": false,
+      "flagged": true,
+      "lat": 41.402044,
+      "lng": 2.1621698,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Fonda Pepa",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Âme",
+      "name_variants": null,
+      "neighbourhood": "Eixample Esquerra",
+      "cuisine": "French-Mediterranean",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "French technique with Mediterranean flavors in a way that feels welcoming and never formal",
+      "quote_language": "original",
       "language_pool": "en",
-      "quote": "Tasting menu €55–€95; 'modern interpretation of Colombian cooking' fusing Indigenous, Spanish, and African flavours with ambition and technique."
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Alapar",
+      "name_variants": null,
+      "neighbourhood": "Poble Sec",
+      "cuisine": "Mediterranean-Japanese Fusion",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Alapar combines Mediterranean and Japanese influences, which could easily feel messy, but it's quite the contrary. The food is exciting, the experience is intimate, and the cooking is confident with a clear direction.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Bardeni",
+      "name_variants": null,
+      "neighbourhood": "Eixample Dreta",
+      "cuisine": "Meat-focused / Contemporary",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Bardeni is for people who love meat. Chef Dani Lechuga knows exactly what he's doing, and the menu shows it. It's not a steakhouse in the traditional sense, but if you care about quality and technique, this is your place.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.4029445,
+      "lng": 2.1771469,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bardeni el meatbar - Caldeni",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Besta",
+      "name_variants": null,
+      "neighbourhood": "Eixample Esquerra",
+      "cuisine": "Creative Seafood",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Besta focuses heavily on seafood, but not in a traditional way. The dishes are creative without being complicated, and the wine list is strong. It's somewhere you can sit down, enjoy, and take your time.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Can Fisher",
+      "name_variants": null,
+      "neighbourhood": "Poblenou",
+      "cuisine": "Seafood / Paella",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "grilled clams",
+        "red prawns",
+        "sea urchins",
+        "paella"
+      ],
+      "signature_dish": null,
+      "quote": "Can Fisher offers a delightful seafood experience with stunning sea views right by the beach. Their menu boasts fresh seafood, grilled delights, and a variety of rice dishes and paellas. Don't miss their grilled clams, red prawns, or the seasonal sea urchins.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.3946058,
+      "lng": 2.2062439,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Can Fisher",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "El Rectangle",
+      "name_variants": null,
+      "neighbourhood": "Sant Antoni",
+      "cuisine": "Contemporary",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "El Rectangle has quickly become a favourite among chefs and locals alike. The food is young and exciting, the place has energy, and sitting at the bar gives you a full view of the action.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "La Cova Fumada",
+      "name_variants": null,
+      "neighbourhood": "Barceloneta",
+      "cuisine": "Traditional Seafood Tapas",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "A Barceloneta institution, La Cova Fumada has been serving seafood tapas for decades. The menu changes daily, written on a blackboard, and the room is as authentic as it gets.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.3792983,
+      "lng": 2.1891943,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "La Cova Fumada",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Lluritu",
+      "name_variants": null,
+      "neighbourhood": "Gràcia",
+      "cuisine": "Seafood Tapas",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "dried octopus"
+      ],
+      "signature_dish": "dried octopus",
+      "quote": "Lluritu is a perfect, casual seafood eatery, delivering a delightful array of fish and seafood tapas. With its 'bar de toda la vida' atmosphere infused with a touch of cool, Lluritu offers a relaxed and enjoyable experience. Don't miss their must-try dried octopus, it's something truly special.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.3971462,
+      "lng": 2.1730758,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Lluritu 3",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Maleducat",
+      "name_variants": null,
+      "neighbourhood": "Sant Antoni",
+      "cuisine": "Creative / Seasonal",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Maleducat in Sant Antoni is a vibrant hotspot led by a young team, earning its place as a local favorite in just a couple of years. Their creative dishes, rooted in local traditions and seasonal ingredients, offer an exhilarating and delicious experience.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.377259,
+      "lng": 2.1615867,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Maleducat",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Masa Vins",
+      "name_variants": null,
+      "neighbourhood": "Poblenou",
+      "cuisine": "Natural Wine Bar / Small Plates",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "This vibrant newcomer proudly identifies as 'Your living room but with a fridge full of natural wines.' As soon as they open their doors, the cozy space fills with thirsty guests who come to have a good time, drink some good wines, and share some dishes.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Mikan",
+      "name_variants": null,
+      "neighbourhood": "Eixample Esquerra",
+      "cuisine": "North-East Asian / Natural Wine",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Mikan evolved from a lunch-box service into a vibrant brick-and-mortar establishment featuring North-East Asian cuisine paired with low-intervention wines with weekend DJ events.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Morro Fi",
+      "name_variants": null,
+      "neighbourhood": "Eixample",
+      "cuisine": "Vermut / Tapas",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Morro Fi represents modern vermut culture in Barcelona. Excellent ingredients, well-executed tapas, and a casual setting that fills up quickly with locals. It's simple, but done properly.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.3833069,
+      "lng": 2.1550311,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Morro fi",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Ona",
+      "name_variants": null,
+      "neighbourhood": "Barcelona",
+      "cuisine": "Omakase / Seasonal",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Ona is small and intimate, with only six seats. The menu changes constantly depending on what's available that week and what talented chef Jack Tonkin is drawn to. The interaction with the chef is part of the experience.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-barcelonafoodexperience-maria"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-02-24",
+      "article_title": "Best Restaurants in Barcelona Right Now",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Denassus",
+      "name_variants": null,
+      "neighbourhood": "Poble Sec",
+      "cuisine": "Natural Wine / Contemporary",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "It's not easy to find a place that blends quality and fair prices, tradition and modernity, identity and open vision into one easy-going style. A wine menu with 150 names, 70% dedicated to biodynamic and natural wines.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-culinarybackstreets-mourenza"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-02-07",
+      "article_title": "The Essentials: Where to Eat in Barcelona",
+      "open_status_check": false,
+      "flagged": true,
+      "lat": 41.3742854,
+      "lng": 2.1627613,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Denassus",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "El Racó de l'Agüir",
+      "name_variants": null,
+      "neighbourhood": "Sant Antoni",
+      "cuisine": "Catalan-Valencian / Rice",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "seafood rice",
+        "arròs caldós",
+        "arroz a banda"
+      ],
+      "signature_dish": null,
+      "quote": "Catalan-Valencian recipes that deftly navigate between familiarity and modernity. El Racó de l'Agüir is renowned for their rice dishes — seafood rice, arròs caldós, arroz a banda and other seasonal rice dishes created on the go.",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-culinarybackstreets-mourenza"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-02-07",
+      "article_title": "The Essentials: Where to Eat in Barcelona",
+      "open_status_check": false,
+      "flagged": true,
+      "lat": 41.3766297,
+      "lng": 2.1580841,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "El racó de l'agüir",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Hermós Bar de Peix",
+      "name_variants": null,
+      "neighbourhood": "Gràcia",
+      "cuisine": "Seafood / Market Bar",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "a tribute to the magnificence of the Catalan fishing tradition, celebrated here with fire, casseroles and bottles of wine in a little bar inside La Llibertat Market, right next to its fishmonger",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-culinarybackstreets-mourenza"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-02-07",
+      "article_title": "The Essentials: Where to Eat in Barcelona",
+      "open_status_check": false,
+      "flagged": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Taberna Noroeste",
+      "name_variants": null,
+      "neighbourhood": "Barcelona",
+      "cuisine": "Contemporary Tapas / Robata",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Taberna Noroeste has a small yet powerful menu of 15 tapas. Some carry the common thread of smoke from their Robata grill, which is fueled with sarmiento (vine branches).",
+      "quote_language": "original",
+      "language_pool": "en",
+      "source_count": 1,
+      "sources": [
+        "src-culinarybackstreets-mourenza"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-02-07",
+      "article_title": "The Essentials: Where to Eat in Barcelona",
+      "open_status_check": false,
+      "flagged": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Bruma",
+      "name_variants": null,
+      "neighbourhood": "Eixample",
+      "cuisine": "Catalan-Spanish Fusion",
+      "opening_year": 2024,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "fusiona la cocina española y la catalana, reinterpretando los platos tradicionales con toques muy personales",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-gastronosfera-morgado"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2024-12-12",
+      "article_title": "5 nuevos restaurantes en Barcelona de 2024 para añadir tu lista",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.3871222,
+      "lng": 2.1608301,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bruma",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Fidelio Trattoria",
+      "name_variants": null,
+      "neighbourhood": "Sarrià-Sant Gervasi",
+      "cuisine": "Italian / Trattoria",
+      "opening_year": 2024,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "NY-style pizza",
+        "carbonara"
+      ],
+      "signature_dish": null,
+      "quote": "ambiente familiar, trendy y muy instagrameable, tanto por su cuidado interiorismo como por sus vistosos platos",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-gastronosfera-morgado"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2024-12-12",
+      "article_title": "5 nuevos restaurantes en Barcelona de 2024 para añadir tu lista",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Atipical",
+      "name_variants": null,
+      "neighbourhood": "Barcelona",
+      "cuisine": "Contemporary",
+      "opening_year": 2025,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "una cocina con ingenio, técnica y sensibilidad, y uno de los menús de mediodía mejor pensados de la ciudad",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-newbarcelonapost-torrents"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-01-11",
+      "article_title": "Los grandes restaurantes de 2025 y los que están por venir",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Agreste Mar",
+      "name_variants": null,
+      "neighbourhood": "El Born",
+      "cuisine": "Italian-Catalan Fusion",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "con nuevos platos que tienden un puente entre Italia y Catalunya, con sabor a viaje y a casa",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-newbarcelonapost-torrents"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-01-11",
+      "article_title": "Los grandes restaurantes de 2025 y los que están por venir",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Bornès",
+      "name_variants": null,
+      "neighbourhood": "El Born",
+      "cuisine": "Contemporary Catalan",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "toma la cocina de siempre y la pone a correr un poco, sin perderla por el camino",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-newbarcelonapost-torrents"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-01-11",
+      "article_title": "Los grandes restaurantes de 2025 y los que están por venir",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.3844766,
+      "lng": 2.180301,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bornēs",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Arcano",
+      "name_variants": null,
+      "neighbourhood": "El Born",
+      "cuisine": "Medieval Catalan / Contemporary",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "celebra este año su 14º aniversario bajo la batuta del Grupo Quibuch, con una singular premisa gastronómica que conecta la memoria de la cocina catalana medieval con dosis adecuadas de innovación. Ocupa lo que fueron las antiguas cuadras de la Catedral, en el siglo XVII",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-newbarcelonapost-castan"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-03-19",
+      "article_title": "Cuatro restaurantes en el centro de Barcelona donde la ciudad aún se saborea con calma",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.3850046,
+      "lng": 2.1786227,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Arcano Restaurant Barcelona",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Kiosko Universal",
+      "name_variants": null,
+      "neighbourhood": "La Rambla",
+      "cuisine": "Traditional Seafood / Market Bar",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "el Kiosko Universal es uno de las barras más auténticas del recinto. Suma más de medio siglo de historia",
+      "quote_language": "original",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-newbarcelonapost-castan"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-03-19",
+      "article_title": "Cuatro restaurantes en el centro de Barcelona donde la ciudad aún se saborea con calma",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.3817361,
+      "lng": 2.171352,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Kiosko universal",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Bar Casi",
+      "name_variants": null,
+      "neighbourhood": "Gràcia",
+      "cuisine": "Traditional Catalan",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "reopens with new owners who respected its history. Perfect small restaurant for lunch or fork breakfast; reservation recommended.",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-inandout-talento"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-12-29",
+      "article_title": "Top 2025: Mejores bares y restaurantes de Barcelona",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.4091892,
+      "lng": 2.1558181,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bar Casi",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Bar Veracruz",
+      "name_variants": null,
+      "neighbourhood": "Eixample",
+      "cuisine": "Traditional Bar / Tapas",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "French omelette flute"
+      ],
+      "signature_dish": "French omelette flute",
+      "quote": "Maintains its original decoration intact with fork breakfasts and midday dishes. French omelette flute highly recommended.",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-inandout-talento"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-12-29",
+      "article_title": "Top 2025: Mejores bares y restaurantes de Barcelona",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Bodega Manolo",
+      "name_variants": null,
+      "neighbourhood": "Gràcia",
+      "cuisine": "Traditional Bodega / Tapas",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "New owners are doing great work. They've maintained the traditional soul and the dishes taste even better.",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-inandout-talento"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-12-29",
+      "article_title": "Top 2025: Mejores bares y restaurantes de Barcelona",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.4080783,
+      "lng": 2.1582624,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Bodega Manolo",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Bodega Nulles",
+      "name_variants": null,
+      "neighbourhood": "Eixample",
+      "cuisine": "Vermouth Bar / Traditional Tapas",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Finding an authentic and extensive vermouth venue isn't easy, but Bodega Nulles succeeds. Good vermouth, traditional tapas and affordable prices from the Bodega Quimet owner's brother.",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-inandout-talento"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-12-29",
+      "article_title": "Top 2025: Mejores bares y restaurantes de Barcelona",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Esnaf",
+      "name_variants": null,
+      "neighbourhood": "Poblenou",
+      "cuisine": "Healthy / Daily Menu",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "healthy, varied dishes that change daily. You order what you want and take it. Practical, delicious and well-thought-out.",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-inandout-talento"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-12-29",
+      "article_title": "Top 2025: Mejores bares y restaurantes de Barcelona",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Fiffty-Fiffty",
+      "name_variants": null,
+      "neighbourhood": "Poblenou",
+      "cuisine": "Casual / Burgers / Fish & Chips",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "burgers",
+        "fish & chips"
+      ],
+      "signature_dish": null,
+      "quote": "excellent option for quick, quality dining with affordable, well-made burgers and fish & chips, honestly much better than other more famous options",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-inandout-talento"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-12-29",
+      "article_title": "Top 2025: Mejores bares y restaurantes de Barcelona",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Jazminos",
+      "name_variants": null,
+      "neighbourhood": "Sarrià-Sant Gervasi",
+      "cuisine": "Middle Eastern",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "small and welcoming restaurant of Middle Eastern cuisine; simple, delicate and elegant, with quality dining under €30",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-inandout-talento"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-12-29",
+      "article_title": "Top 2025: Mejores bares y restaurantes de Barcelona",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Vibeyard",
+      "name_variants": null,
+      "neighbourhood": "Gràcia",
+      "cuisine": "Wine Bar / Portuguese",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "more original menu than average with Portuguese influences and ten wine references from vineyards near Lisbon",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-inandout-talento"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-12-29",
+      "article_title": "Top 2025: Mejores bares y restaurantes de Barcelona",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Brabo",
+      "name_variants": null,
+      "neighbourhood": "Gràcia",
+      "cuisine": "Contemporary / Brasa",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "the brasa evolves. It is elegance, subtlety in each bite — whether meat or not — with locally-sourced products carefully tended in the embers.",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-guiarepsol-lopez"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "secondary",
+      "article_date": "2025-04-01",
+      "article_title": "Restaurante Brabo Barcelona",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Bistró Nou",
+      "name_variants": null,
+      "neighbourhood": "Poblenou",
+      "cuisine": "French-Latin American-Mediterranean",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "'Borderless cuisine' respecting Eprendre's French background with Latin American touches and Mediterranean elements; daily €18 lunch menu from a small kitchen with one stove and plancha, no fourth-range products.",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-observaciongastronomica-regol"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-05-05",
+      "article_title": "Observación Gastronómica — various 2025-2026 Barcelona reviews",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Bodega Bonay",
+      "name_variants": null,
+      "neighbourhood": "Eixample",
+      "cuisine": "Italian Bistro",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "illustrated salads",
+        "homemade fresh pasta",
+        "chocolate tart"
+      ],
+      "signature_dish": "chocolate tart",
+      "quote": "illustrated salads and homemade fresh pastas demonstrating 'undeniable mastery.' The chocolate tart represents 'probably the best chocolate cake in Barcelona and beyond,' surpassing even L'Ambroisie's famous version.",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-observaciongastronomica-regol"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-05-05",
+      "article_title": "Observación Gastronómica — various 2025-2026 Barcelona reviews",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Imprevisto",
+      "name_variants": null,
+      "neighbourhood": "Eixample",
+      "cuisine": "Contemporary / Fine Dining",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "squab"
+      ],
+      "signature_dish": null,
+      "quote": "'Every plate is delicious.' Moves from bistronomia to fine dining trajectory: 'Popular code ascending to haute cuisine without losing Barcelona urban memory.' Squab: 'Perfect cooking, exemplary texture.'",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-observaciongastronomica-regol"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-05-05",
+      "article_title": "Observación Gastronómica — various 2025-2026 Barcelona reviews",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.3971764,
+      "lng": 2.170543,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Imprevist",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Mantis",
+      "name_variants": null,
+      "neighbourhood": "Barcelona",
+      "cuisine": "Asian-influenced / Brasa",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "nixtamalized toast with calçot and romesco",
+        "ibérico presa with carabinero"
+      ],
+      "signature_dish": null,
+      "quote": "'Cooking as we see fit.' Nixtamalized toast with calçot and romesco: 'Really tastes like calçotada!' Primary techniques: wok and brasa. Ibérico presa with carabinero: 'excellent surf-and-turf.'",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-observaciongastronomica-regol"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-05-05",
+      "article_title": "Observación Gastronómica — various 2025-2026 Barcelona reviews",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Romo",
+      "name_variants": null,
+      "neighbourhood": "Eixample",
+      "cuisine": "Roman-style Pizza",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [
+        "marinara pizza",
+        "porchetta"
+      ],
+      "signature_dish": "marinara pizza",
+      "quote": "'magnificent in perfect simplicity' (marinara pizza). Porchetta: 'Delicious dish with crispy exterior, intense umami and juiciness — platter I'd return for.' Cured pork from ecologically-managed Solsona farm.",
+      "quote_language": "translated from ES",
+      "language_pool": "es",
+      "source_count": 1,
+      "sources": [
+        "src-observaciongastronomica-regol"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2026-05-05",
+      "article_title": "Observación Gastronómica — various 2025-2026 Barcelona reviews",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Allium",
+      "name_variants": null,
+      "neighbourhood": "Barri Gòtic",
+      "cuisine": "Contemporary (Slow Food)",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Premi Cargol Slow Food: establiment que posiciona els productors al centre, assegura la traçabilitat i reivindica la biodiversitat gastronòmica",
+      "quote_language": "original",
+      "language_pool": "ca",
+      "source_count": 1,
+      "sources": [
+        "src-beteve-cortésvidal"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-11-05",
+      "article_title": "Guia Slow Food Barcelona 2026",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Can Culleres",
+      "name_variants": null,
+      "neighbourhood": "Barri Gòtic",
+      "cuisine": "Traditional Catalan",
+      "opening_year": 1786,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Premi Cargol Slow Food: establiment que posiciona els productors al centre, assegura la traçabilitat i reivindica la biodiversitat gastronòmica",
+      "quote_language": "original",
+      "language_pool": "ca",
+      "source_count": 1,
+      "sources": [
+        "src-beteve-cortésvidal"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-11-05",
+      "article_title": "Guia Slow Food Barcelona 2026",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": null,
+      "lng": null,
+      "geo_source": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "both_pool": false
+    },
+    {
+      "name": "Llamber",
+      "name_variants": null,
+      "neighbourhood": "El Born",
+      "cuisine": "Contemporary Catalan",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Premi Cargol Slow Food: establiment que posiciona els productors al centre, assegura la traçabilitat i reivindica la biodiversitat gastronòmica",
+      "quote_language": "original",
+      "language_pool": "ca",
+      "source_count": 1,
+      "sources": [
+        "src-beteve-cortésvidal"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-11-05",
+      "article_title": "Guia Slow Food Barcelona 2026",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.3864386,
+      "lng": 2.1831448,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Llamber",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Rasoterra",
+      "name_variants": null,
+      "neighbourhood": "Barri Gòtic",
+      "cuisine": "Vegan / Plant-based",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Premi Cargol Slow Food: establiment que posiciona els productors al centre, assegura la traçabilitat i reivindica la biodiversitat gastronòmica",
+      "quote_language": "original",
+      "language_pool": "ca",
+      "source_count": 1,
+      "sources": [
+        "src-beteve-cortésvidal"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-11-05",
+      "article_title": "Guia Slow Food Barcelona 2026",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.381234,
+      "lng": 2.1780994,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Rasoterra",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Sartoria Panatieri Eixample",
+      "name_variants": [
+        "Sartoria Panatieri"
+      ],
+      "neighbourhood": "Eixample",
+      "cuisine": "Neapolitan Pizza",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Premi Cargol Slow Food: establiment que posiciona els productors al centre, assegura la traçabilitat i reivindica la biodiversitat gastronòmica",
+      "quote_language": "original",
+      "language_pool": "ca",
+      "source_count": 1,
+      "sources": [
+        "src-beteve-cortésvidal"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-11-05",
+      "article_title": "Guia Slow Food Barcelona 2026",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.3971753,
+      "lng": 2.1649105,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Sartoria Panatieri",
+      "geo_skip": null,
+      "both_pool": false
+    },
+    {
+      "name": "Xavier Pellicer",
+      "name_variants": null,
+      "neighbourhood": "Eixample",
+      "cuisine": "Vegetarian / Plant-based",
+      "opening_year": null,
+      "price_level": null,
+      "price_currency": "EUR",
+      "dishes_mentioned": [],
+      "signature_dish": null,
+      "quote": "Premi Cargol Slow Food: establiment que posiciona els productors al centre, assegura la traçabilitat i reivindica la biodiversitat gastronòmica",
+      "quote_language": "original",
+      "language_pool": "ca",
+      "source_count": 1,
+      "sources": [
+        "src-beteve-cortésvidal"
+      ],
+      "confidence_tier": "C",
+      "source_type_combination": "primary",
+      "article_date": "2025-11-05",
+      "article_title": "Guia Slow Food Barcelona 2026",
+      "open_status_check": false,
+      "flagged": false,
+      "lat": 41.3960492,
+      "lng": 2.1634011,
+      "geo_source": "nominatim",
+      "geo_confidence": "high",
+      "geo_matched_name": "Xavier Pellicer",
+      "geo_skip": null,
+      "both_pool": false
     }
   ],
-  "city_slug": "-spain",
-  "source_recency": "2023-2026",
   "centroids": {
-    "Eixample Dreta": [
-      41.397,
-      2.1685
-    ],
-    "El Raval": [
-      41.3801,
-      2.1713
-    ],
     "Eixample Esquerra": [
-      41.3878,
-      2.1577
-    ],
-    "Eixample": [
-      41.4029,
-      2.1876
-    ],
-    "Sant Antoni": [
-      41.3773,
-      2.1616
-    ],
-    "Poble Sec": [
-      41.3818,
-      2.1557
-    ],
-    "Gràcia": [
-      41.4018,
-      2.1661
-    ],
-    "Horta-Guinardó": [
-      41.405,
-      2.1642
-    ],
-    "Sants": [
-      41.3753,
-      2.1349
-    ],
-    "Sarrià-Sant Gervasi": [
-      41.3972,
-      2.1525
-    ],
-    "Les Corts": [
-      41.3872,
-      2.1205
-    ],
-    "Sant Andreu": [
-      41.4372,
-      2.1955
-    ],
-    "La Sagrera": [
-      41.4226,
-      2.187
-    ],
-    "El Born": [
-      41.3885,
-      2.1693
+      41.39,
+      2.155
     ],
     "Barcelona": [
-      41.3831,
-      2.1787
+      41.3904,
+      2.1705
     ],
-    "Sant Pere": [
-      41.3826,
-      2.1556
+    "Barri Gòtic": [
+      41.3812,
+      2.1781
+    ],
+    "El Raval": [
+      41.3798,
+      2.1687
+    ],
+    "Poble Sec": [
+      41.3743,
+      2.1628
+    ],
+    "Sant Antoni": [
+      41.3769,
+      2.1598
+    ],
+    "El Born": [
+      41.3853,
+      2.1807
+    ],
+    "Eixample": [
+      41.3904,
+      2.1645
     ],
     "Poblenou": [
-      41.4005,
-      2.1885
+      41.393,
+      2.1612
     ],
-    "Barceloneta": [
-      41.3806,
-      2.1875
+    "Sarrià-Sant Gervasi": [
+      41.3873,
+      2.1676
+    ],
+    "Gràcia": [
+      41.3996,
+      2.1668
     ]
   }
 }

@@ -1,50 +1,152 @@
 # LocalBite Barcelona v7.1 — Audit Log
-# Started: 2026-04-25
-# Format: restaurant name | tier | reason | source
+# Date: 2026-05-05
+# Format: restaurant name | decision | reason | source(s)
 
-# MICHELIN-STARRED EXCLUSIONS (pre-extraction)
-Suto | excluded | Michelin-starred omakase — explicit label in article | Barcelona Food Experience
-Enoteca Paco Perez | excluded | Michelin ⭐⭐ — explicit label in article | Barcelona Food Experience
-Mont Bar | excluded | Michelin-starred — explicit label in article | Barcelona Food Experience
+## PHASE 3 DECISIONS
 
-# GEOGRAPHIC BOUNDARY EXCLUSIONS (pre-extraction)
-Hernández | excluded | Sant Boi de Llobregat — outside Barcelona boundary | Guía Repsol / The New Barcelona Post
-El Hostal dels Ossos | excluded | Sant Cristòfol de les Fonts, Girona — outside boundary | Culinary Backstreets
-Bitadorna | excluded | A Guarda, Pontevedra, Galicia — outside boundary | Culinary Backstreets
+### TIER ASSIGNMENTS
 
-# PHASE 1B REJECTIONS (single-restaurant reviews, no multi-restaurant guide)
-Pompa (observaciongastronomica.com) | excluded | under 2,000 char minimum (1,100 chars); Philippe Regol review | observaciongastronomica.com
-Franca (gastroactitud.com) | excluded | single-restaurant review only; José Carlos Capel | gastroactitud.com
-Fukamura (foodie-culture.com) | excluded | single-restaurant review only; Anna Torrents (different publisher) | foodie-culture.com
+TIER A (both-pool — 2+ independent sources, different languages):
+1.  Franca | Tier A | EN (BFE) + CA (Beteve) + ES (NBP-Torrents, In&Out) | both-pool ✓ (EN+CA+ES)
+2.  Pompa | Tier A | CA (Beteve) + ES (NBP-T, In&Out, Regol) + EN (Infatuation-COI) | both-pool ✓ (CA+ES+EN)
+3.  Berbena | Tier A | EN (BFE, CB-COI) + CA (Beteve) | both-pool ✓ (EN+CA)
+4.  Direkte | Tier A | CA (Beteve) + ES (NBP-Torrents) | both-pool ✓ (CA+ES)
+5.  Contracorrent | Tier A | EN (BFE) + CA (Beteve) | both-pool ✓ (EN+CA)
+6.  Suru Bar | Tier A | EN (BFE) + CA (Beteve) | both-pool ✓ (EN+CA) [Beteve: "Suru"]
+7.  Agreste de Fabio & Roser | Tier A | EN-COI (CB) + CA (Beteve) | both-pool ✓ (EN+CA) [CB COI flagged]
+8.  Casa Fiero | Tier A | ES (NBP-Torrents) + EN-COI (Infatuation) | both-pool ✓ (ES+EN) [Infatuation secondary+COI]
+9.  Finorri | Tier A | ES (NBP-Torrents) + EN-COI (Infatuation) | both-pool ✓ (ES+EN) [Infatuation secondary+COI]
+10. Cerveseria 640 | Tier A | ES (NBP-Torrents) + EN-COI (Infatuation) | both-pool ✓ (ES+EN) [also called Seis Cuarenta; Infatuation secondary+COI]
+11. Lora | Tier A | ES (NBP-Torrents) + EN-COI (Infatuation) | both-pool ✓ (ES+EN) [Infatuation secondary+COI; hotel restaurant SLS Barcelona]
+12. Bar Super | Tier A | CA (Beteve) + EN-COI (Infatuation) | both-pool ✓ (CA+EN) [Infatuation secondary+COI]
 
-# CONCENTRATION CAP REMOVALS — BFE tapas (30% single-source cap applied)
-# BFE single-source Tier B entries capped at 33 (30% of 110 total entries)
-# BFE best-restaurants contributes 18 single-source Tier B entries
-# BFE tapas capped at 15 additional single-source Tier B entries
-# 22 BFE tapas entries removed (lowest specificity of description):
-Oído | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Bar Anita | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Per Feina Per Plaer | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-El Puestu | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Bar Alegría (Eixample Esquerra) | tier-B removed | BFE concentration cap (30%) — note: Gràcia location (Repsol) retained | Barcelona Food Experience
-El Maravillas | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Rabbit's Bar | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Bar Malasang | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Tapeo | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Bodega La Puntual | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Betlem Miscellánia Gastronomica | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-La Esquinica | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Can Maño | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Bar Remedios | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Casa Inés | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Bar Omar | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-O Retorno | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Bar Mut | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Paco Meralgo | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Bambarol | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Bodega Quimet | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
-Extra Bar | tier-B removed | BFE concentration cap (30%) — tapas bar, thin description | Barcelona Food Experience
+TIER B (2 sources, same language, no both-pool):
+1. Arraval | Tier B | ES (NBP-Torrents) + ES (In&Out) | same language, no both-pool
+2. Fonda Pepa | Tier B | EN (BFE) + EN-COI (CB) | same language, no both-pool
 
-# UNATTENDED_MODE: YES — all Phase 3 removals auto-accepted
-# Final pack: 110 entries, 15 Tier A (14 both-pool + 1 multi-source), 95 Tier B
-# BFE single-source Tier B: 33 entries = 30.0% of 110 total ✓
+TIER C (single source, quality passes):
+[BFE primary EN — 14 entries]
+Âme, Alapar, Bardeni, Besta, Can Fisher, El Rectangle, La Cova Fumada, Lluritu, Maleducat, Masa Vins, Mikan, Morro Fi, Ona, Suru Bar
+[CB primary EN-COI — 4 entries]
+Denassus, El Racó de l'Agüir, Hermós Bar de Peix, Taberna Noroeste
+[Gastronosfera primary ES — 2 entries]
+Bruma, Fidelio Trattoria
+[NBP-Torrents primary ES — 3 entries]
+Atipical, Agreste Mar, Bornès
+[NBP-Castán primary ES (same publisher) — 2 entries]
+Arcano, Kiosko Universal
+[In&Out primary ES — 8 entries]
+Bar Casi, Bar Veracruz, Bodega Manolo, Bodega Nulles, Esnaf, Fiffty-Fiffty, Jazminos, Vibeyard
+[Repsol secondary ES — 1 entry]
+Brabo
+[Regol primary ES — 5 entries]
+Bistró Nou, Bodega Bonay, Imprevisto, Mantis, Romo
+[Beteve primary CA, confirmed Barcelona location — 6 entries]
+Allium, Can Culleres, Llamber, Rasoterra, Sartoria Panatieri Eixample, Xavier Pellicer
+
+TOTAL INCLUDED: 12 (A) + 2 (B) + 45 (C) = 59 restaurants
+
+---
+
+### AUTO-ACCEPTED REMOVALS (UNATTENDED_MODE: YES)
+
+[MICHELIN EXCLUSION — Phase 2]
+Suto | EXCLUDED | Michelin starred | src-barcelonafoodexperience-maria
+Fishølogy | EXCLUDED | Michelin starred | src-barcelonafoodexperience-maria, src-beteve-cortésvidal
+Enoteca Paco Perez | EXCLUDED | 2 Michelin stars | src-barcelonafoodexperience-maria
+Aürt | EXCLUDED | Michelin starred | src-newbarcelonapost-torrents
+
+[GEOGRAPHIC BOUNDARY]
+Cal Siscu | EXCLUDED | Hospitalet de Llobregat (outside boundary) | src-culinarybackstreets-mourenza
+La Salseta | EXCLUDED | Vilanova i la Geltrú (outside boundary) | src-beteve-cortésvidal
+Lasal del Varador | EXCLUDED | Outside boundary (Varador toponym) | src-beteve-cortésvidal
+Lluerna | EXCLUDED | Santa Coloma de Gramenet (outside boundary) | src-beteve-cortésvidal
+Marimorena | EXCLUDED | Sant Boi de Llobregat (outside boundary) | src-beteve-cortésvidal
+Hernández | EXCLUDED | Parc de la Muntanyeta de Sant Boi (outside boundary) | src-newbarcelonapost-torrents
+
+[CLOSED]
+Bellafila | EXCLUDED | CLOSED March 2026 (Regol review confirms chef departed, restaurant closed) | src-observaciongastronomica-regol
+
+[NOT A RESTAURANT]
+Mamá Heladera | EXCLUDED | Ice cream / gelato shop, not a restaurant | src-culinarybackstreets-mourenza
+L'Artesana Poblenou | EXCLUDED | Artisanal deli/food shop, not a restaurant | src-beteve-cortésvidal
+Colmado Puntal | EXCLUDED | Food shop (colmado), not a restaurant | src-beteve-cortésvidal
+Forno Bomba | EXCLUDED | Bakery, not a restaurant | src-beteve-cortésvidal
+
+[SHORT QUOTE — primary source, under 15 words, single source]
+Aüc Bar | EXCLUDED | 11-word quote, single source (Gastronosfera) | src-gastronosfera-morgado
+Casa Chiquita | EXCLUDED | 10-word quote, single source (Gastronosfera) | src-gastronosfera-morgado
+Garum | EXCLUDED | 12-word quote, single source (Gastronosfera) | src-gastronosfera-morgado
+Sophie Kai | EXCLUDED | 11-word quote, single source (NBP-Castán) | src-newbarcelonapost-castan
+Bar Fischer | EXCLUDED | 14-word quote (under 15 threshold), single source | src-inandout-talento
+
+[SECONDARY SOURCE ONLY — no cross-validation]
+Al Grano Bistro | EXCLUDED | Secondary/COI source only (Infatuation), no cross-validation | src-infatuation-kliger
+Chambacu | EXCLUDED | Secondary/COI source only (Infatuation), no cross-validation | src-infatuation-kliger
+Mundial Bar | EXCLUDED | Secondary/COI source only (Infatuation); primarily a wine bar | src-infatuation-kliger
+Paloma | EXCLUDED | Secondary/COI source only (Infatuation), no cross-validation | src-infatuation-kliger
+Taberna Nardi | EXCLUDED | Secondary/COI source only (Infatuation), no cross-validation | src-infatuation-kliger
+
+[NO QUALITY QUOTE]
+Tapas Lobito | EXCLUDED | No quality quote (announcement only, no food description) | src-newbarcelonapost-castan
+
+[LOCATION UNCERTAIN / BOUNDARY RISK — Beteve single-source TBD location]
+Almarge | EXCLUDED | Location TBD, cannot verify Barcelona boundary | src-beteve-cortésvidal
+Bar Donzell | EXCLUDED | Location TBD | src-beteve-cortésvidal
+Can Campanyà | EXCLUDED | Location TBD, cannot verify boundary | src-beteve-cortésvidal
+Capicua | EXCLUDED | Location TBD | src-beteve-cortésvidal
+Deliri | EXCLUDED | Location TBD | src-beteve-cortésvidal
+El Ciri | EXCLUDED | Location TBD | src-beteve-cortésvidal
+El Dinou | EXCLUDED | Location TBD | src-beteve-cortésvidal
+El Filete Ruso | EXCLUDED | Location TBD | src-beteve-cortésvidal
+Espai Puntal | EXCLUDED | Location TBD, possible boundary issue | src-beteve-cortésvidal
+Gatblau | EXCLUDED | Location TBD | src-beteve-cortésvidal
+Gina Balmesina | EXCLUDED | Location TBD | src-beteve-cortésvidal
+Glug | EXCLUDED | Location TBD | src-beteve-cortésvidal
+La Gormanda | EXCLUDED | Location TBD | src-beteve-cortésvidal
+La Sosenga | EXCLUDED | Location TBD, possible boundary issue | src-beteve-cortésvidal
+Mecànic | EXCLUDED | Location TBD | src-beteve-cortésvidal
+Olivos Comida y Vinos | EXCLUDED | Location TBD | src-beteve-cortésvidal
+Teòric Taverna Gastronómica | EXCLUDED | Location TBD | src-beteve-cortésvidal
+Vereda Bar | EXCLUDED | Location TBD | src-beteve-cortésvidal
+
+[UPCOMING OPENINGS — not confirmed open at article date]
+Mineral | EXCLUDED | Upcoming opening (prevista finales de febrero 2026) at article date Jan 2026 | src-newbarcelonapost-torrents
+Orobianco | EXCLUDED | Upcoming (replacing Teatro), not confirmed open | src-newbarcelonapost-torrents
+La Parada Torres | EXCLUDED | Upcoming concept at Mercat de Santa Caterina | src-newbarcelonapost-torrents
+Finca Nebot | EXCLUDED | Upcoming opening | src-newbarcelonapost-torrents
+Super Auto | EXCLUDED | Upcoming opening (replacing Auto Rosellón) | src-newbarcelonapost-torrents
+Bottega Bernacca | EXCLUDED | Upcoming opening | src-newbarcelonapost-torrents
+Cresta Negra | EXCLUDED | Upcoming opening | src-newbarcelonapost-torrents
+Taco al Pastor | EXCLUDED | Upcoming opening | src-newbarcelonapost-torrents
+Time Out Market proposals | EXCLUDED | Upcoming concepts, no named establishments | src-newbarcelonapost-torrents
+Mercado Central | EXCLUDED | Upcoming opening | src-newbarcelonapost-torrents
+
+[COI DISCLOSURES — included in final output, flagged]
+Paula Mourenza (Culinary Backstreets) | COI | Culinary Backstreets tours = food tourism conflict; entries included, flagged
+Isabelle Kliger (The Infatuation) | COI | The Infatuation restaurant partnerships; source accepted as secondary; entries included, flagged
+Note: Infatuation used only for both-pool cross-validation (EN source); Infatuation-only entries excluded above
+
+[FAILED SOURCE]
+Jordi Tubella (ElNacional.cat) | FAILED | HTTP 451 on both Phase 2 fetch attempts; restaurants lost
+
+[SAME PUBLISHER NOTE]
+Anna Torrents + Patricia Castán | same publisher (The New Barcelona Post) | counted as one publisher for both-pool purposes; both accepted as separate named-author sources
+
+---
+
+### CONCENTRATION CAP CHECK
+Total Tier A+B = 14 restaurants
+30% cap = 4.2 → threshold = 4 single-source Tier B per source
+Tier B entries: Arraval (2 sources), Fonda Pepa (2 sources)
+No single-source Tier B entries present → concentration cap: PASSED
+
+---
+
+### YEAR DISTRIBUTION (final output)
+2023: 0 restaurants
+2024: 6+ restaurants (Gastronosfera 2024-12-12, ElNacional 2024-12-31 [FAILED])
+2025: 35+ restaurants
+2026: 10+ restaurants
+Distribution adequate across YEAR_RANGE 2023-2026
+

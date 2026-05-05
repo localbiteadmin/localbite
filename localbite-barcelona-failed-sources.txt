@@ -1,3 +1,39 @@
 # LocalBite Barcelona v7.1 — Failed Sources
-# Started: 2026-04-25
+# Date: 2026-05-05
+
+[p2-failed] src-elnacional-tubella | Jordi Tubella | ES | primary
+  URL: https://www.elnacional.cat/es/gourmeteria/listas/mejores-restaurantes-barcelona-2024-ruta-gastronomica-rellena-estrellas_1338493_102.html
+  HTTP 451 on both Phase 2 fetch attempts. Previously confirmed 200 | 4847ch in Phase 0.
+  Content unavailable due to geographic/legal restriction at time of extraction.
+  Restaurants lost: unknown (article title: best Barcelona restaurants 2024, 9 listed). No Wayback fallback attempted.
+
+[p2-excluded] Bellafila | Barri Gòtic | src-observaciongastronomica-regol
+  Regol review (May 2026) confirms chef Jordi Parramon departed and restaurant is CLOSED since March 2026.
+  Excluded from extraction. Audit note: closed before pipeline completion date.
+
+[p2-excluded] Cal Siscu | Hospitalet de Llobregat | src-culinarybackstreets-mourenza
+  Located in Hospitalet de Llobregat, outside Barcelona city boundary.
+
+[p2-excluded] La Salseta | Vilanova i la Geltrú | src-beteve-cortésvidal
+  Located in Vilanova i la Geltrú, outside Barcelona city boundary.
+
+[p2-excluded] Lasal del Varador | Location TBD | src-beteve-cortésvidal
+  Suspected outside Barcelona city boundary based on "Varador" toponym.
+
+[p2-excluded] Lluerna | Santa Coloma de Gramenet | src-beteve-cortésvidal
+  Located in Santa Coloma de Gramenet (Victor Torres restaurant), outside Barcelona city boundary.
+
+[p2-excluded] Marimorena | Sant Boi de Llobregat | src-beteve-cortésvidal
+  Located in Sant Boi de Llobregat, outside Barcelona city boundary.
+
+[p2-excluded] Mamá Heladera | Poblenou | src-culinarybackstreets-mourenza
+  Ice cream / gelato shop. Not a restaurant. Excluded per pipeline scope.
+
+[p2-excluded] Tapas Lobito | Porxos d'en Xifré | src-newbarcelonapost-castan
+  No quality quote (announcement text only; description of group concept, no food review).
+
+[p2-excluded-michelin] Suto | src-barcelonafoodexperience-maria — Michelin starred
+[p2-excluded-michelin] Fishølogy | src-barcelonafoodexperience-maria + src-beteve-cortésvidal — Michelin starred
+[p2-excluded-michelin] Enoteca Paco Perez | src-barcelonafoodexperience-maria — 2 Michelin stars
+[p2-excluded-michelin] Aürt | src-newbarcelonapost-torrents — Michelin starred
 

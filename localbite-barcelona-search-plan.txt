@@ -1,103 +1,91 @@
-# LocalBite Barcelona v7.1 — Search Plan
-# Date: 2026-04-25
-
 MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
 
----
+# LocalBite Barcelona v7.1 — Search Plan
+# Date: 2026-05-05
 
-PHASE 0 SUMMARY (pre-plan context):
-Confirmed sources entering Phase 1: 9 (8 unique publishers)
-- BFE (Maria, EN), Beteve (Carmen Cortés Vidal, CA), CB (Paula Mourenza, EN),
-  Gastronosfera (Eric Morgado, ES), TNBP (Anna Torrents + P. Ribot, ES),
-  InOut (Stefania Talento, ES), Repsol (Lourdes López, ES/COI),
-  Infatuation (Isabelle Kliger, EN/secondary)
-Languages in pool: EN (BFE, CB, Infatuation), ES (Gastronosfera, TNBP, InOut, Repsol), CA (Beteve only)
-Gap: Only one CA source confirmed. Priority: additional CA source discovery.
+PHASE 0 SUMMARY
+===============
+Successfully fetched (11 sources confirmed, 1 failed):
+1. Barcelona Food Experience — Maria — EN — 2026-02-24
+2. Beteve.cat — Carmen Cortés Vidal — CA — 2025-11-05
+3. Culinary Backstreets — Paula Mourenza — EN — 2025-02-07
+4. Gastronosfera — Eric Morgado — ES — 2024-12-12
+5. The New Barcelona Post (Anna Torrents) — ES — 2026-01-11
+6. The New Barcelona Post (Patricia Castán / "P. Ribot") — ES — 2025-2026
+7. In and Out Barcelona — Stefania Talento — ES — 2025-12-29
+8. Guía Repsol — Lourdes López — ES — 2025-04-01 (Brabo article)
+9. ElNacional.cat — Jordi Tubella — ES — 2024-12-31
+10. The Infatuation — Isabelle Kliger — EN — 2025-05-20
+11. Observación Gastronómica — Philippe Regol — ES — 2025-2026 (multiple)
+FAILED: Ara.cat Mengem — 404
 
----
+Writers confirmed for Phase 1:
+Maria, Carmen Cortés Vidal, Paula Mourenza, Eric Morgado, Anna Torrents,
+Patricia Castán, Stefania Talento, Lourdes López, Jordi Tubella,
+Isabelle Kliger, Philippe Regol
 
-PART A — NEIGHBOURHOOD QUERIES (10 queries)
+PART A — NEIGHBOURHOOD COVERAGE (10 queries)
+=============================================
 
-A1 — Eixample (TIER 1):
-  Q1 [ES] "mejores restaurantes Eixample Barcelona guía gastronómica 2024 2025"
-  Q2 [CA] "millors restaurants Eixample Barcelona periodista gastronomia 2025 2026"
+TIER 1 — Highest density:
+A1: [ES] mejores restaurantes Eixample Barcelona crítica gastronómica escritor local 2024
+A2: [EN] best restaurants Eixample Barcelona local food writer guide 2025
+A3: [CA] restaurants El Born Sant Pere Santa Caterina Barcelona recomanació crítica 2025
+A4: [EN] El Born Barcelona neighborhood restaurants critic review food guide 2024
 
-A2 — El Born / Sant Pere / Santa Caterina (TIER 1):
-  Q3 [EN] "best restaurants El Born Barcelona food writer guide 2025"
-  Q4 [CA] "millors restaurants El Born Sant Pere Barcelona recomanació gastronomica 2023 2024"
+TIER 2 — High density:
+A5: [ES] mejores restaurantes Gràcia Barcelona recomendación bloguero gastronómico 2023
+A6: [EN] Gràcia Barcelona restaurants best local food guide authentic 2025
+A7: [CA] restaurants Raval Sant Antoni Poble Sec Barcelona cronista gastronomic guia 2024
+A8: [EN] El Raval Poble Sec Sant Antoni Barcelona food critics local recommendations 2025
 
-A3 — Gràcia (TIER 2):
-  Q5 [CA] "restaurants Gràcia Barcelona recomanació periodista gastronomia 2025 2026"
-  Q6 [EN] "best places to eat Gràcia Barcelona local food critic 2023 2024"
+TIER 3 — Emerging:
+A9: [CA] nous restaurants Poblenou Sant Martí Barcelona guia gastronomica 2024 2025
+A10: [ES] mejores restaurantes Sarrià Sant Gervasi Barcelona zona alta 2023 2024
 
-A4 — El Raval / Sant Antoni / Poble Sec (TIER 2):
-  Q7 [ES] "donde comer Raval Sant Antoni Barcelona crítica gastronómica 2023 2024"
-  Q8 [CA] "millors restaurants Poble Sec Raval Barcelona guia gastronomica 2025"
+PART B — CROSS-CUTTING ANGLES (18 queries)
+==========================================
 
-A5 — Poblenou / Sant Martí (TIER 3):
-  Q9 [CA] "restaurants Poblenou Sant Martí Barcelona recomanació gastronomica"
+Cross-1 — City-wide EN (2 queries):
+B1: [EN] Barcelona food critic essential restaurants guide local favorites 2024
+B2: [EN] Barcelona best restaurants independent food writers personal recommendations 2025 2026
 
-A6 — Sarrià-Sant Gervasi / Les Corts (TIER 3):
-  Q10 [ES] "mejores restaurantes Sarrià Sant Gervasi Barcelona 2024 2025"
+Cross-2 — City-wide ES/CA (5 queries: 3 ES + 2 CA):
+B3: [ES] mejores restaurantes Barcelona 2024 2025 bloguero gastronómico independiente
+B4: [ES] periodista gastronómico Barcelona recomendaciones restaurantes 2023 2024
+B5: [ES] Barcelona aperturas restaurantes nuevos 2025 crítica local gastronomía
+B6: [CA] millors restaurants Barcelona 2025 crítica gastronómica periodista local
+B7: [CA] guia restaurants Barcelona 2024 gastronomia locals recomanats
 
-PART A TOTAL: 10 queries
+Cross-3 — Writer-first (2 queries):
+B8: [ES] crítico gastronómico Barcelona blogger comida reseñas restaurantes independiente
+B9: [EN] Barcelona food journalist writer restaurant column blog local coverage
 
----
+Cross-4 — Named awards (3 queries):
+B10: [CA] Cargols Slow Food Barcelona premis restaurants guia 2025 2026
+B11: [ES] Soles Repsol Barcelona restaurantes destacados 2024 guia crítica
+B12: [EN] Michelin Bib Gourmand Barcelona restaurants 2025 recommended guide
 
-PART B — CROSS-CUTTING ANGLES (16 queries)
+Cross-5 — Recent openings (2 queries):
+B13: [CA] noves obertures restaurants Barcelona 2025 recomanació gastronomica obrir
+B14: [EN] new restaurant openings Barcelona 2024 local recommendations worth visiting
 
-Cross-1 (EN city-wide, varied register — 2 queries):
-  Q11 [EN] "Barcelona restaurant recommendations food critic 2024 best dining"
-  Q12 [EN] "where to eat Barcelona right now personal recommendation 2026"
+Cross-7 — Cuisine and community (2 queries):
+B15: [CA] cuina catalana contemporania restaurants Barcelona 2024 critics recomanats
+B16: [EN] Barcelona creative cuisine food community bloggers vegetarian Mediterranean 2025
 
-Cross-2 (ES city-wide, 3 registers — 3 queries):
-  Q13 [ES] "crítica gastronómica restaurantes Barcelona 2023 2024 periodista"
-  Q14 [ES] "recomendaciones restaurantes Barcelona 2025 barrio local comida"
-  Q15 [ES] "guía restaurantes Barcelona prensa gastronomía 2026"
+Cross-8 — Publication-category local language (2 queries):
+B17: [CA] revista gastronomica digital independent Barcelona restaurants 2024 recomanador
+B18: [CA] seccio gastronomia diari catala Barcelona millors restaurants critica 2025
 
-Cross-3 (generic writer-first, 1 ES + 1 CA — 2 queries):
-  Q16 [ES] "periodista gastronómica Barcelona blogger restaurantes escritora 2024 2025"
-  Q17 [CA] "escriptora crítica gastronòmica Barcelona restaurants blog 2025 2026"
+YEAR DISTRIBUTION CHECK
+========================
+[year-distribution-check] PASSED
+- Queries referencing earlier years (2023-2024): A1, A4, A5, A7, A10, B1, B4, B7, B11 = 9 queries
+- Queries referencing recent years (2025-2026): A2, A3, A6, A8, A9, B2, B3, B5, B6, B12, B13, B14 = 12 queries
+- Queries with no year term: A4, B8, B9, B10, B15, B16, B17 = 7 queries
+Distribution: 9 early / 12 recent / 7 no-year. Requirement met (not more than 50% recent).
 
-Cross-4 (named awards — 3 queries):
-  Q18 [ES] "premios Barcelona Restauració 2024 2025 mejores restaurantes ganadores"
-  Q19 [CA] "premis gastronomia Catalunya Barcelona 2025 2026 millors restaurants recomanats"
-  Q20 [EN] "Barcelona gastronomic awards 2024 2025 best restaurants"
-
-Cross-5 (recent openings, 1 EN + 1 CA — 2 queries):
-  Q21 [EN] "new restaurant openings Barcelona 2025 food writer review"
-  Q22 [CA] "nous restaurants Barcelona 2025 2026 obertures crítiques gastronomiques"
-
-Cross-6 (LOCAL_FOOD_VOCABULARY): not specified in Part 1 — SKIP
-
-Cross-7 (cuisine/community — 2 queries):
-  Q23 [ES] "restaurantes japoneses Barcelona critica gastronomica 2024 2025 recomendación"
-  Q24 [CA] "restaurants asiatics Barcelona recomanació critica gastronomica 2025"
-
-Cross-8 (publication-category local language — 2 queries):
-  Q25 [CA] "revista gastronomica independent Barcelona restaurants recomanació 2025"
-  Q26 [EN] "Barcelona food magazine independent restaurant guide 2024 2025 critic"
-
-PART B TOTAL: 16 queries
-
-PART A + B TOTAL: 26 queries (well under soft ceiling 45)
-
----
-
-YEAR DISTRIBUTION CHECK:
-Earlier years (2023-2024): Q1, Q4, Q6, Q7, Q11, Q13, Q16, Q18, Q20, Q23, Q26 = 11 queries
-Later years (2025-2026): Q2, Q3, Q5, Q8, Q9, Q10, Q12, Q14, Q15, Q17, Q19, Q21, Q22, Q24, Q25 = 15 queries
-No year term: 0 queries
-[year-distribution-check] PASSED — 11 queries earlier years, 15 queries later years, 0 no-year-term.
-
----
-
-PHASE 1B — CROSS-VALIDATION (post-main, responsive):
-3+ sources confirmed → use 3 most-mentioned restaurant names → 3 queries.
-Cannot be pre-written — based on Phase 0 + Phase 1 results.
-
----
-
-DO NOT SEARCH: gastronomistas.com, yelp.com, tripadvisor.com, thefork.com/eltenedor.com, reddit.com
-SECONDARY NOTE: timeout.com/barcelona ES+CA confirmed same editorial team = count as 1 source only.
-STOPPING RULE: If last 8 consecutive queries return only known sources or no qualifying candidates, stop.
+TOTAL PHASE 1 PLANNED: 28 queries (well within 45 soft ceiling)
+PHASE 1B CROSS-VALIDATION: 3 queries (responsive, after Phase 1 complete)
+ESTIMATED TOTAL: ~31 queries

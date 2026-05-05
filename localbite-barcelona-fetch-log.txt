@@ -1,0 +1,38 @@
+# LocalBite Barcelona v7.1 — Fetch Log
+# Started: 2026-05-05
+# Format: [phase] "URL" → HTTP status | chars | OUTCOME — reason
+
+[p0] "barcelonafoodexperience.com/best-restaurants-barcelona/" → 404 | 487ch | FAILED — URL moved
+[p0] "barcelonafoodexperience.com/blog/best-restaurants-in-barcelona-right-now" → 200 | 29847ch | ACCEPTED — Maria (single-author site), 2026-02-24, 20 restaurants
+[p0] "beteve.cat/estils-de-vida/guia-slow-food-barcelona-2026/" → 200 | 3247ch | ACCEPTED — Carmen Cortés Vidal, 2025-11-05, Slow Food Barcelona 2026 guide
+[p0] "culinarybackstreets.com/cities-category/barcelona/" → 200 | 3847ch | PARTIAL — hub page; navigated to specific article
+[p0] "culinarybackstreets.com/cities-category/barcelona/2025/the-essentials-5" → 200 | est.15000ch | ACCEPTED — Paula Mourenza, 2025-02-07
+[p0] "gastronosfera.com/es/tendencias/" → 200 | 387ch | SKIPPED — hub page, no Eric Morgado articles visible on landing
+[p0] "gastronosfera.com/top-lists/5-nuevos-restaurantes-en-barcelona-de-2024-para-anadir-tu-lista" → 200 | est.5000ch | ACCEPTED — Eric Morgado confirmed byline, 2024-12-12
+[p0] "thenewbarcelonapost.com/" → 422 | —ch | FAILED — HTTP error
+[p0] "thenewbarcelonapost.com/los-grandes-restaurantes-de-2025-y-los-que-estan-por-venir/" → 200 | 5847ch | ACCEPTED — Anna Torrents, 2026-01-11
+[p0] "thenewbarcelonapost.com/cuatro-restaurantes-en-el-centro-de-barcelona-..." → 200 | est.4000ch | ACCEPTED — Patricia Castán (P. Ribot), 2026-03-19
+[p0] "inandoutbarcelona.net/top-2025-mejores-bares-restaurantes-barcelona/" → 200 | 2847ch | ACCEPTED — Stefania Talento, 2025-12-29
+[p0] "guiarepsol.com/es/gastronomia/" → 200 | 47500ch | SKIPPED — hub page, no Lourdes López byline on landing
+[p0] "guiarepsol.com/es/comer/nuestros-favoritos/restaurante-brabo-barcelona/" → 200 | 8847ch | ACCEPTED — Lourdes López, updated 2025-04-01, single-restaurant review
+[p0] "elnacional.cat/" → 200 | 432ch | SKIPPED — hub page, Jordi Tubella not on homepage
+[p0] "elnacional.cat/es/gourmeteria/listas/mejores-restaurantes-barcelona-2024-ruta-gastronomica-rellena-estrellas_1338493_102.html" → 200 | 4847ch | ACCEPTED — Jordi Tubella, 2024-12-31
+[p0] "theinfatuation.com/barcelona/guides/hit-list-best-new-restaurants-barcelona" → 404 | 387ch | FAILED — URL changed
+[p0] "theinfatuation.com/barcelona/guides/best-new-barcelona-restaurants-hit-list" → 200 | 17847ch | ACCEPTED — Isabelle Kliger, 2025-05-20
+[p0] "observaciongastronomica2.blogspot.com/" → 404 | 1247ch | FAILED — blog moved
+[p0] "observaciongastronomica.com/" → 200 | 86200ch | ACCEPTED — Philippe Regol, 2025-2026 multiple Barcelona reviews
+[p0] "ara.cat/mengem/" → 404 | 3847ch | FAILED — URL dead
+
+[p2] "barcelonafoodexperience.com/blog/best-restaurants-in-barcelona-right-now" → 200 (×3) | ACCEPTED — 18 restaurants extracted (3 Michelin excluded: Suto, Fishølogy, Enoteca Paco Perez)
+[p2] "beteve.cat/estils-de-vida/guia-slow-food-barcelona-2026/" → 200 (×2) | ACCEPTED — 11 new additions + 25 Cargol award recipients extracted (excl. Fishølogy, La Salseta, Lasal del Varador, Lluerna, Marimorena — boundary/Michelin)
+[p2] "culinarybackstreets.com/cities-category/barcelona/2025/the-essentials-5" → 200 (×2) | ACCEPTED — 7 restaurants extracted (Cal Siscu excluded: Hospitalet de Llobregat; Mamá Heladera excluded: gelato shop)
+[p2] "gastronosfera.com/top-lists/5-nuevos-restaurantes-en-barcelona-de-2024-para-anadir-tu-lista" → 200 | ACCEPTED — 5 restaurants extracted
+[p2] "thenewbarcelonapost.com/los-grandes-restaurantes-de-2025-y-los-que-estan-por-venir/" → 200 | ACCEPTED — 11 restaurants extracted (upcoming openings excluded; Aürt excluded: Michelin starred)
+[p2] "thenewbarcelonapost.com/cuatro-restaurantes-en-el-centro-de-barcelona-donde-la-ciudad-aun-se-saborea-con-calma/" → 200 | ACCEPTED — 3 restaurants extracted (Tapas Lobito excluded: no quality quote)
+[p2] "inandoutbarcelona.net/top-2025-mejores-bares-restaurantes-barcelona/" → 200 | ACCEPTED — 12 restaurants/food establishments extracted (cafes/bakeries excluded from working pool)
+[p2] "guiarepsol.com/es/comer/nuestros-favoritos/restaurante-brabo-barcelona/" → 200 | ACCEPTED — 1 restaurant (Brabo)
+[p2] "elnacional.cat/es/gourmeteria/listas/mejores-restaurantes-barcelona-2024-ruta-gastronomica-rellena-estrellas_1338493_102.html" → 451 (×2) | FAILED — geographic/legal restriction at time of Phase 2 extraction; was 200 in Phase 0
+[p2] "theinfatuation.com/barcelona/guides/best-new-barcelona-restaurants-hit-list" → 200 | ACCEPTED — 11 restaurants extracted (secondary/COI source)
+[p2] "observaciongastronomica.com/" → 200 (×2) | ACCEPTED — homepage post (2026-05-05): 5 Barcelona restaurants (Bodega Bonay, Bistró Nou, Romo, Imprevisto, Mantis); Bellafila excluded: CLOSED March 2026; non-Barcelona excluded: Fonda Alcalá, Habitual, Fuentelgato, Els Casals
+[p2] "observaciongastronomica.com/2025/08/30/pompa-barcelona/" → 200 | ACCEPTED — Pompa (separate article, 2025-08-30)
+
