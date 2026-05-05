@@ -190,7 +190,7 @@ function httpGet(url, headers = {}) {
 
 // ── NON-RESTAURANT ENTITY DETECTION ──
 // Patterns for streets, squares, parks, landmarks, and transit.
-// Language coverage: Spanish, Portuguese, French, Catalan, Basque,
+// Language coverage: Spanish, Portuguese, French, Catalan, Basque, Italian,
 // English, Arabic (romanised). Add new languages as new cities are added.
 const NON_RESTAURANT_PATTERNS = [
   // ── Spanish ──
@@ -241,6 +241,31 @@ const NON_RESTAURANT_PATTERNS = [
   /\betorbidea\b/i,
   /\bpasealekua\b/i,
   /\benparantza\b/i,
+  // ── Italian ──
+  /^Via [A-Z]/,                          // streets — Via Attilio Micheluzzi, Via Alfredo Capelli etc
+  /^Viale /i,                            // avenues
+  /^Vicolo /i,                           // alleys
+  /^Corso [A-Z]/,                        // main streets/boulevards
+  /^Lungotevere /i,                      // riverside roads (Rome)
+  /^Lungarno /i,                         // riverside roads (Florence)
+  /^Lungomare /i,                        // seafront roads
+  /^Piazza (di |del |della |d')/i,       // squares
+  /^Piazzale /i,                         // large squares
+  /^Piazzetta /i,                        // small squares — Piazzetta Barisone (Genoa)
+  /^Ponte [A-Z]/,                        // bridges — Ponte Embriaco (Genoa)
+  /^Chiesa/i,                            // churches — Chiesa (Genoa)
+  /^Basilica/i,                          // basilicas
+  /^Duomo/i,                             // cathedrals
+  /^Cattedrale/i,                        // cathedrals
+  /^Museo (di |del |della |d')/i,        // museums
+  /^Villa [A-Z]/,                        // villas — Villa Pignatelli (Naples), Villa Montallegro (Genoa)
+  /^Palazzo (di |del |della |d')/i,      // palaces
+  /^Teatro (?!del |della |degli |delle )/i, // theatres — Teatro La Fenice (Venice); excludes Teatro del Sale
+  /\bCimitero\b/i,                       // cemeteries — Antico Cimitero ebraico (Venice)
+  /^Casa di cura/i,                      // clinics — Casa di cura Villa Montallegro (Genoa)
+  /^Parco (di |del |della |d')/i,        // parks
+  /^Giardini/i,                          // gardens
+  /^Contrada /i,                         // historic district name (Southern Italy)
   // ── General / cross-language ──
   /\bEstació\b/i,
   /\bEstación\b/i,
