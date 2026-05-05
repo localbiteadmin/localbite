@@ -266,6 +266,8 @@ const NON_RESTAURANT_PATTERNS = [
   /^Parco (di |del |della |d')/i,        // parks
   /^Giardini/i,                          // gardens
   /^Contrada /i,                         // historic district name (Southern Italy)
+  /^Via (della |del |di |d')/i,          // streets with prepositions — Via della Barchetta (Rome)
+  /^Largo /i,                             // piazzas/wide streets — Largo Guido Mazzoni (Rome)
   // ── General / cross-language ──
   /\bEstació\b/i,
   /\bEstación\b/i,
