@@ -17,7 +17,7 @@ tiles/
 *-geocoding-stats.json
 
 # Generated full prompt files — local only
-*-italy-full.txt
+*-full.txt
 
 # Fix and patch scripts — local only
 fix-*.py
@@ -40,9 +40,12 @@ find-*.py
 localbite-fix*.py
 localbite-patch-*.py
 localbite-preresearch-template-patch.py
-localbite-gitignore-cleanup.py
+localbite-gitignore-*.py
 localbite-recompute-*.py
 localbite-rome-*.py
+localbite-fleet-*.py
+localbite-highspread-*.py
+localbite-fleet-diagnostic-*.txt
 
 # Backup files
 *.bak
