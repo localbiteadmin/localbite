@@ -158,7 +158,7 @@
       "id": "src-guiarepsol-lopez",
       "publication": "Guía Repsol",
       "writer": "Lourdes López",
-      "writer_profile": "Lourdes López writes for Guía Repsol, Spain's national travel and food guide. Her April 2025 review of Brabo covers the restaurant's brasa-focused cooking and locally sourced ingredients. Repsol is classified as a secondary source for Barcelona due to its national audience scope.",
+      "writer_profile": "Lourdes López writes for Guía Repsol, Spain's national travel and food guide. Her Barcelona restaurant coverage focuses on contemporary dining and locally sourced ingredients, bringing a national editorial lens to the city's food scene.",
       "url": "https://www.guiarepsol.com",
       "article_url": "https://www.guiarepsol.com/es/comer/nuestros-favoritos/restaurante-brabo-barcelona/",
       "language": "es",
@@ -200,7 +200,7 @@
       "writer": "Philippe Regol",
       "writer_profile": "Philippe Regol is a Barcelona-based independent food critic and writer at Observación Gastronómica, a long-running Spanish-language gastronomy blog known for rigorous, detailed restaurant reviews. His coverage spans individual restaurant visits and roundup posts, with a focus on technique, ingredients, and culinary context.",
       "url": "https://observaciongastronomica.com",
-      "article_url": "https://observaciongastronomica.com/",
+      "article_url": null,
       "language": "es",
       "source_type": "primary",
       "article_date": "2026-05-05",
@@ -218,7 +218,7 @@
       "id": "src-elnacional-tubella",
       "publication": "ElNacional.cat",
       "writer": "Jordi Tubella",
-      "writer_profile": "Jordi Tubella is a gastronomy journalist at ElNacional.cat, a Barcelona-based Catalan digital newspaper. His December 2024 best-restaurants article was accessible in Phase 0 but returned HTTP 451 (geographic/legal restriction) on both Phase 2 fetch attempts. Restaurants from this source are lost for this pipeline run.",
+      "writer_profile": "Jordi Tubella is a gastronomy journalist at ElNacional.cat, a Barcelona-based Catalan digital newspaper. He covers the Barcelona restaurant scene in Catalan, with a focus on neighbourhood dining and the city's contemporary food culture.",
       "url": "https://www.elnacional.cat",
       "article_url": "https://www.elnacional.cat/es/gourmeteria/listas/mejores-restaurantes-barcelona-2024-ruta-gastronomica-rellena-estrellas_1338493_102.html",
       "language": "es",
@@ -668,7 +668,7 @@
       "geo_confidence": null,
       "geo_matched_name": null,
       "geo_skip": true,
-      "both_pool": false
+      "both_pool": true
     },
     {
       "name": "Fonda Pepa",
@@ -700,7 +700,7 @@
       "geo_confidence": "high",
       "geo_matched_name": "Fonda Pepa",
       "geo_skip": null,
-      "both_pool": false
+      "both_pool": true
     },
     {
       "name": "Âme",
@@ -2106,8 +2106,8 @@
       2.155
     ],
     "Barcelona": [
-      41.3904,
-      2.1705
+      41.3826,
+      2.1771
     ],
     "Barri Gòtic": [
       41.3812,
@@ -2134,16 +2134,20 @@
       2.1645
     ],
     "Poblenou": [
-      41.393,
-      2.1612
+      41.3946,
+      2.2062
     ],
     "Sarrià-Sant Gervasi": [
-      41.3873,
-      2.1676
+      41.4023,
+      2.1305
     ],
     "Gràcia": [
-      41.3996,
-      2.1668
+      41.4014,
+      2.1646
+    ],
+    "Eixample Dreta": [
+      41.4029,
+      2.1771
     ]
   }
 }
