@@ -245,6 +245,17 @@
     line-height: 1.5;
   }
 
+  .credits-methodology {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    margin: 16px 0 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    line-height: 1.6;
+  }
+
   .credits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -882,19 +893,6 @@
     #map { height: 380px; }
   }
 
-  .site-footer {
-    border-top: 1px solid var(--border);
-    padding: 20px 24px;
-    text-align: center;
-    font-size: 11px;
-    color: var(--muted);
-    background: var(--warm-white);
-    line-height: 2;
-  }
-
-  .site-footer a { color: var(--terra); text-decoration: none; }
-  .site-footer a:hover { text-decoration: underline; }
-
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .cards-grid { grid-template-columns: repeat(2, 1fr); }
@@ -991,6 +989,7 @@
     </div>
     <p class="credits-description">A consensus pick means at least two named writers from different independent publications recommended the same restaurant.</p>
     <div class="credits-grid" id="credits-grid"></div>
+    <p class="credits-methodology">All recommendations explicitly named in independently edited source articles · 2023–2026</p>
   </div>
 </div>
 
@@ -1040,11 +1039,6 @@
   </div>
 </main>
 
-<footer class="site-footer">
-  Every restaurant on LocalBite was explicitly named in a fetched source article — not inferred.
-  <br>
-  Sources are linked on every card · Data covers 2023–2026 articles only
-</footer>
 
 <script>
 const BASE = 'https://localbiteadmin.github.io/localbite/';
@@ -1266,16 +1260,18 @@ function renderHero(data, meta) {
     (emoji ? emoji + ' ' : '') + (data.city||meta.city||'') + ', ' + (data.country||meta.country||'');
 
   const restCount = allRestaurants.length;
-  const srcCount = (data.sources||[]).length;
-  const pipeline = (data.pipeline||'').replace('localbite-middle-path-','v');
+  const srcCount  = Array.isArray(data.sources)
+    ? data.sources.length
+    : Object.keys(data.sources || {}).length;
+  const cpCount   = allRestaurants.filter(
+    r => r.language_pool==='both' || r.language_pool==='both-pool' || r.language_pool==='multi-source'
+  ).length;
 
   document.getElementById('city-meta').innerHTML = `
     <span class="city-meta-item">${restCount} restaurant${restCount!==1?'s':''}</span>
     <span class="city-meta-dot"></span>
     <span class="city-meta-item">${srcCount} source${srcCount!==1?'s':''}</span>
-    <span class="city-meta-dot"></span>
-    <span class="city-meta-item">${escHtml(data.source_recency || '2023–2026')} only</span>
-    ${pipeline ? `<span class="city-meta-dot"></span><span class="city-meta-item">Pipeline ${escHtml(pipeline)}</span>` : ''}
+    ${cpCount > 0 ? `<span class="city-meta-dot"></span><span class="city-meta-item">${cpCount} consensus pick${cpCount!==1?'s':''}</span>` : ''}
   `;
 
   const hasBoth = allRestaurants.some(r => r.language_pool==='both'||r.language_pool==='both-pool'||r.language_pool==='multi-source');
