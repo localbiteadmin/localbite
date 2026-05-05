@@ -1,11 +1,49 @@
-[p0] "katieparla.com/where-to-eat-drink-shop-rome/" → 200+CAPTCHA via Jina | —ch | FAILED (Jina) — Cloudflare robot challenge; retried via direct WebFetch
-[p0] "katieparla.com/where-to-eat-drink-shop-rome/" → 200 | ~12000ch | ACCEPTED — direct fetch succeeded; article "Where to Eat & Drink & Shop for Food in Rome in 2024", updated June 6 2024; Katie Parla named author confirmed
-[p0] "katieparla.com/city-guides/rome/" → 200+CAPTCHA via Jina | —ch | SKIPPED — will check for overlap after extracting main guide
-[p0] "elizabethminchilli.com/category/rome-restaurants/" → 200 | partial | FAILED — category page shows only 2016-2019 posts; no 2023+ Rome restaurant posts confirmed on any EM category or /restaurants/ page; source does not meet YEAR_RANGE criteria
-[p1b] camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-piatto-romano/ → 200 | ACCEPTED — Camilla Baresani, Feb 21 2024, IT; Piatto Romano (Testaccio) full review confirmed
-[p1b] camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-crazy-pizza/ → 200 | ACCEPTED — Camilla Baresani, Aug 9 2024, IT; Crazy Pizza (Via Veneto) review confirmed
-[p1b] camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-bistrot-la-differenza/ → 200 | ACCEPTED — Camilla Baresani, Aug 9 2024, IT; Bistrot La Differenza (San Giovanni) confirmed
-[p1b] camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-trattoria-della-barchetta/ → 200 | ACCEPTED — Camilla Baresani, Aug 9 2024, IT; Trattoria della Barchetta (Prati) confirmed
-[p1b] camillabaresani.com/i-miei-articoli/ristoranti/lazio/roma-antico-caffe-greco/ → 200 | ACCEPTED — Camilla Baresani, Aug 9 2024, IT; Antico Caffè Greco (Centro Storico) confirmed
-[p1b] mamalovesrome.com/where-to-eat-in-monti-restaurants/ → 200 | ACCEPTED — Marta Correale, Nov 8 2024, EN; 9 Monti restaurants confirmed
-[p1b] mamalovesrome.com/restaurants-near-piazza-navona-rome/ → 200 | ACCEPTED — Marta Correale, Jan 7 2025, EN; 10 Piazza Navona area restaurants confirmed
+[p0] "https://katieparla.com/where-to-eat-drink-shop-rome/" → CAPTCHA via Jina | —ch | RETRY: direct WebFetch | 200 | ~9000ch | ACCEPTED — Katie Parla named author confirmed, June 6 2024, extensive Rome guide
+[p0] "https://r.jina.ai/https://web.archive.org/web/2026/https://katieparla.com/where-to-eat-drink-shop-rome/" → 451 | —ch | FAILED — Wayback blocked (owner opted out)
+[p0] "https://katieparla.com/city-guides/rome/" → CAPTCHA via Jina | —ch | RETRY: direct WebFetch | 200 | ~1800ch | SKIPPED — content overlaps entirely with main guide (same restaurant list, condensed)
+[p0] "https://www.elizabethminchilli.com/category/rome-restaurants/" → 200 | ~1200ch | REJECTED-date — all posts 2016-2019, none within 2023-2026 year range; homepage confirms no Rome restaurant reviews published since 2019
+[p0] "https://www.puntarella-rossa.it/" → 400 | —ch | FAILED — incorrect hyphenated URL; correct domain is puntarellarossa.it (no hyphen)
+[p0] "https://r.jina.ai/https://www.puntarellarossa.it/author/veronica-guerrini/" → 200 | ~4000ch | ACCEPTED — Veronica Guerrini author page confirmed; 9 qualifying Rome restaurant articles within 2023-2026
+[p0] "https://r.jina.ai/https://www.puntarellarossa.it/2024/10/11/hosteria-grappolo-doro-roma-centro-cucina-romana/" → 200 | ~2200ch | ACCEPTED — byline Veronica Guerrini confirmed, October 11 2024
+[p1v] "https://r.jina.ai/https://theinfatuation.com/rome/guides/best-restaurants-testaccio" → 200 | ~2000ch | ACCEPTED — Annie Replogle, Feb 3 2026, 14 Testaccio restaurants confirmed
+[p1v] "https://r.jina.ai/https://theinfatuation.com/rome/guides/best-trastevere-restaurants-rome" → 200 | ~2000ch | ACCEPTED — Annie Replogle, Nov 7 2024, 18 Trastevere restaurants confirmed
+[p1v] "https://r.jina.ai/https://lucianopignataro.it/a/migliori-ristoranti-roma/117557/" → 200 | ~2500ch | ACCEPTED — Virginia Di Falco byline confirmed, April 27 2023, 12 Rome + 4 outside-Rome (excluded)
+[p1v] "https://r.jina.ai/https://www.anamericaninrome.com/2024/restaurants/" → 200 | ~1200ch | REJECTED-date — Jan 14 2019, outside year range; also no surname for author "Natalie"
+[p1v] "https://r.jina.ai/https://theinfatuation.com/rome/guides/best-restaurants-prati-rome" → 404 | —ch | FAILED — guide does not exist
+[p1v] "https://r.jina.ai/https://theinfatuation.com/rome/guides/best-restaurants-monti-rome" → 200 | ~800ch | REJECTED-byline — author "Team Infatuation" (anonymous), April 21 2023
+[p1v] "https://r.jina.ai/https://www.dissapore.com/ristoranti/dove-mangiare-a-roma/" → 404 | —ch | FAILED — URL dead
+[p1v] "https://r.jina.ai/https://theinfatuation.com/rome/guides/best-rome-restaurants" → 200 | ~2500ch | REJECTED-date — Jan 21 2022, outside year range (same Annie Replogle but pre-2023)
+[p1v] "https://r.jina.ai/https://theinfatuation.com/rome/guides/classic-rome-restaurants-worth-the-hype" → 200 | ~1500ch | ACCEPTED — Annie Replogle, Nov 13 2025, 10 classic Rome restaurants
+[p1v] "https://r.jina.ai/https://reportergourmet.com/it/news/7955-i-migliori-piatti-del-2024-per-marco-colognese" → 200 | ~2000ch | REJECTED-byline — Marco Colognese named in title but no formal article byline; Rome entries are Michelin-starred (excluded)
+[p1v] "https://r.jina.ai/https://www.romeing.it/it/i-ristoranti-da-scoprire-nel-2024-a-roma/" → 200 | ~2000ch | REJECTED-pub — Francesca Feresin named author Dec 31 2023; REJECTED — romeing.it is commercially oriented tourism hybrid with hotel partnerships; publication integrity insufficient
+[p1v] "https://r.jina.ai/https://www.lunediacolazione.it/2023/10/23/dove-mangiare-bene-a-roma-spendendo-poco/" → 200 | ~1000ch | REJECTED-byline — no named author, anonymous staff
+[p1v] "https://r.jina.ai/https://lostinfood.it/dove-mangiare-a-roma/" → 200 | ~1000ch | REJECTED-date — March 12 2017, outside year range; also no named author
+[p1v] "https://r.jina.ai/https://www.femalefoodie.com/restaurant-reviews/rome-restaurants/" → 200 | ~1500ch | REJECTED-date — Feb 28 2022, outside year range; also no byline
+[p1v] "https://r.jina.ai/https://www.dissapore.com/ristoranti/ristoranti-da-provare-per-capire-il-2024-gastronomico/" → 200 | ~1000ch | REJECTED-geo — no Rome restaurants (Naples, Milan, Florence, Rimini); also no byline
+[p1v] "https://r.jina.ai/https://www.timeout.com/rome/restaurants/best-restaurants-in-rome" → 200 | ~2500ch | ACCEPTED — Livia Hengel, May 15 2025, Time Out Rome best restaurants (secondary source)
+[p1v] "https://r.jina.ai/https://www.romeing.it/about/" → 404 | —ch | FAILED — About page not found; external evidence confirms commercial tourism hybrid
+[p1v] "https://r.jina.ai/https://reportergourmet.com/it/news/2701-i-20-ristoranti-da-provare-a-roma-secondo-forbes" → 200 | ~1500ch | REJECTED-date — Feb 13 2020, outside year range; also no byline
+[p1v] "https://r.jina.ai/https://racheleats.wordpress.com/" → 200 | ~800ch | REJECTED-date — blog inactive since Dec 2019; last post 2019
+[p1v] "thegannet.co/places/rachel-roddys-rome-address-book/" → 200+CAPTCHA | —ch | FAILED — CAPTCHA/security block
+[p1v] "https://r.jina.ai/https://www.thegoodfoodguide.co.uk/editorial/local-guide/where-to-eat-in-testaccio-rome" → 200 | ~2000ch | REJECTED-date — Oct 10 2022, Rachel Roddy named but outside year range
+[p1v] "https://r.jina.ai/https://livguine.com/where-to-eat-in-rome/" → 200 | ~1200ch | REJECTED-byline — author byline shows only "livguine" (site name), no full human name
+[p1v] "https://r.jina.ai/https://massimobernardi.substack.com/p/best-of-2025" → 200 | ~2000ch | REJECTED-geo — Italy-wide list Dec 11 2025; Rome entries (Imàgo) Michelin-starred (excluded); not Rome-specific
+[p1v] "https://r.jina.ai/https://www.linkiesta.it/2026/01/ristoranti-migliori-2025-2026-prandoni-preferiti/" → 200 | ~800ch | REJECTED-byline — no named author, anonymous; Jan 3 2026
+[p1v] "https://r.jina.ai/https://www.scattidigusto.it/trattoria-da-cesare-al-casaletto-a-roma" → 200 | ~1200ch | REJECTED-byline — no named author, Feb 21 2025
+[p1v] "https://r.jina.ai/https://www.linkiesta.it/2024/12/migliori-ristoranti-preferiti-italia-2024/" → 200 | ~800ch | REJECTED-byline — no named author; Dec 30 2024
+[p1v] "https://r.jina.ai/https://www.romeing.it/it/i-ristoranti-da-scoprire-nel-2025-a-roma/" → 200 | ~1200ch | REJECTED-byline — no named author, Jan 6 2025
+[p1v] "https://r.jina.ai/https://www.ristorantiroma.it/articoli/" → 200 | ~800ch | REJECTED-byline — no named authors in any articles, anonymous directory site
+[p1v] "https://r.jina.ai/https://mamalovesitaly.com/where-to-eat-in-rome/" → 200 | ~2500ch | REJECTED-byline — no individual author (Mama Loves Italy brand only), June 6 2025
+[p1v] "https://r.jina.ai/https://www.identitagolose.it/sito/it/59/36629/storie-di-gola/roma-nei-confini-dellappio-latino-13-indirizzi-tra-perimetro-e-sostanza.html" → 200 | ~2500ch | ACCEPTED — Andrea Martina Di Lena byline confirmed, April 22 2024 (Identità Golose 2024 guide), 13 Appio-Latino venues
+[p1v] "https://r.jina.ai/https://www.identitagolose.it/sito/it/207/36664/" → 200 | ~1000ch | ACCEPTED (date confirmation) — April 22 2024 confirmed as guide online publication date
+[p1v] "https://r.jina.ai/https://www.cibotoday.it/citta/roma/nuovi-ristoranti-aperture-aprile-2025.html" → 200 | ~2000ch | REJECTED-quote — Lavinia Martini byline confirmed April 4 2025, but content is new-openings roundup lacking critical editorial depth; does not meet source quality threshold
+[p1v] "https://r.jina.ai/https://www.puntarellarossa.it/2026/03/17/dieci-ristoranti-da-provare-a-roma-nel-2026/" → 200 | ~1200ch | REJECTED-byline — anonymous, no named author, March 17 2026
+[p1v] "https://r.jina.ai/https://www.puntarellarossa.it/author/alessandro/" → 200 | ~800ch | REJECTED-byline — only first name "Alessandro" visible, full surname not confirmed; writes primarily Milan content
+[coi-check] katieparla.com — commercial conflict: NO (stated policy: funds all meals, no comps, no press invites)
+[coi-check] puntarellarossa.it/Guerrini — commercial conflict: NO (independent Italian food publication)
+[coi-check] theinfatuation.com/Replogle — commercial conflict: NO (editorial independence claimed, no sponsored content policy)
+[coi-check] lucianopignataro.it/Di Falco — commercial conflict: NO (editorial food criticism platform)
+[coi-check] timeout.com/Hengel — commercial conflict: NO (commercial publication but editorial food guide)
+[coi-check] identitagolose.it/Di Lena — commercial conflict: NO (independent Italian food journalism guide)
+[sibling-check] timeout.com EN — no IT sibling in source pool; no cross-language sibling issue
+[publisher-concentration] No single publisher contributes 2+ articles or 50%+ of either language pool — 6 publishers, 1 article each (Infatuation counts as 1 source with 3 articles from same writer)

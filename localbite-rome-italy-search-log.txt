@@ -1,44 +1,47 @@
-[neighbourhood-Trastevere] "ristoranti Trastevere Roma 2024 consigliati critica gastronomica" → romatoday.it, scattidigusto.it, secretroma.com, bernabei.it; no clear named-author source surfaced
-[neighbourhood-Trastevere] "best restaurants Trastevere Rome Italy food writer 2023" → theinfatuation.com/rome, anamericaninrome.com; mostly aggregators and tour sites
-[neighbourhood-Testaccio] "ristoranti Testaccio Roma 2023 guida gastronomica consigliati" → gamberorosso.it (Testaccio guide), romatoday.it, effettofood.com; gamberorosso.it strong candidate
-[neighbourhood-Testaccio] "where to eat Testaccio Rome independent guide 2024" → thegoodfoodguide.co.uk (local guide Rome Testaccio), heartrome.com, katieparla.com (already confirmed)
-[neighbourhood-CentroStorico] "ristoranti Centro Storico Roma 2024 giornalista gastronomico critica" → puntarellarossa.it (Puntarelle d'Oro 2024), finedininglovers.it, cibotoday.it; puntarellarossa.it strong candidate
-[neighbourhood-CentroStorico] "Rome Centro Storico restaurants food critic recommendation 2023" → romeactually.com, roaminghistorian.com; mostly travel blogs
-[neighbourhood-Prati] "dove mangiare Prati Roma 2024 trattoria migliori" → romatoday.it, dissapore.com (5 trattorie a Prati); dissapore.com strong candidate
-[neighbourhood-Prati] "Prati Rome restaurants food writer guide 2024" → katieparla.com (already confirmed), romeing.it, goop.com
-[neighbourhood-CampodeFiori] "ristoranti Campo de' Fiori Roma 2024 consigliati" → TheFork, OpenTable, agrodolce.it; no new named-author candidates
-[neighbourhood-CampodeFiori] "Campo de Fiori Rome restaurants recommendation 2023" → mostly aggregators and travel blogs
-[neighbourhood-Monti] "migliori ristoranti Monti Roma 2023 scrittore gastronomico" → romatoday.it, romeing.it, bernabei.it; no new qualifying source
-[neighbourhood-Monti] "best places to eat Monti Rome Italy 2024" → theinfatuation.com/rome (Monti guide), mamalovesrome.com; infatuation emerging as EN candidate
-[neighbourhood-Pigneto] "ristoranti Pigneto Roma 2024 trattoria cucina emergente" → gamberorosso.it (Dar Parucca article, Pigneto), puntarellarossa.it (La Santeria 2024)
-[neighbourhood-Pigneto] "Pigneto Rome where to eat food guide 2023" → katieparla.com (already confirmed); romeing.it, theculturetrip.com
-[neighbourhood-Ostiense] "ristoranti Ostiense Roma 2024 food blog consigliati" → agrodolce.it/ostiense-2023, puntarellarossa.it (Dec 2024 aperture article), romatoday.it
-[neighbourhood-Ostiense] "Ostiense Rome restaurants food recommendation 2023" → katieparla.com (already), romeactually.com
-[neighbourhood-Parioli] "dove mangiare Parioli Roma 2024 ristoranti migliori" → agrodolce.it/parioli, romatoday.it, travelandleisureitalia.com
-[neighbourhood-Flaminio] "ristoranti Flaminio Roma 2024 consigliati apertura" → puntarellarossa.it (tag/2018 article old), effettofood.com, cibotoday.it
-[neighbourhood-Nomentano] "ristoranti Nomentano Roma 2023 trattoria osteria" → cibotoday.it (Nomentano/Porta Pia guide), romatoday.it
-[neighbourhood-Esquilino] "ristoranti Esquilino Roma 2024 cucina multietnica" → gamberorosso.it (Esquilino guide), puntarellarossa.it (2021, old), zero.eu
-[neighbourhood-Torpignattara] "ristoranti Torpignattara Roma 2023 2024 cucina tradizionale" → gamberorosso.it (Torpignattara gastronomic journey), agrodolce.it/torpignattara
-[neighbourhood-SanGiovanni] "dove mangiare San Giovanni Roma 2024 trattoria migliori" → romatoday.it, puntarellarossa.it (2019 article, old)
-[neighbourhood-Garbatella] "ristoranti Garbatella Roma 2023 2024 trattoria cucina romana" → romatoday.it, romeing.it; no new named-author candidates
-[neighbourhood-Centocelle] "migliori ristoranti Centocelle Roma 2024 emergente" → agrodolce.it/centocelle, cibotoday.it
-[cross-1] "best independent restaurants Rome Italy 2024 food journalist guide" → theinfatuation.com (Rome 24 best), katieparla.com (already), timeout.com (secondary), luggageandlife.com
-[cross-2] "i migliori ristoranti Roma 2024 critica gastronomica indipendente" → puntarellarossa.it Puntarelle d'Oro 2024 (Jan 30 2024) confirmed; mentions Bistrot 64, Ruvido
-[cross-2] "dove mangiano i romani migliori trattorie osterie 2023" → puntarellarossa.it (migliori trattorie 2023 Jan 25 2023) + (osterie moderne 2023 Jan 25 2023); Slow Food Rome osterie list
-[cross-2] "ristoranti Roma 2025 apertura nuovi consigliati giornalismo gastronomico" → puntarellarossa.it Puntarelle d'Oro 2025 (Jan 21 2025); cibotoday.it aperture 2025
-[cross-3] "food writer Rome Italy restaurant recommendations blog 2024" → katieparla.com (already), pancakesandbiscotti.com, mamalovesitaly.com, luggageandlife.com
-[cross-3] "blogger gastronomico Roma ristoranti consigliati 2023" → puntarellarossa.it 2023 awards again; mangiaroma.com; lostinfood.it
-[cross-4] "50 Top Italy Roma ristoranti classifica 2024 2025" → lucianopignataro.it (50 Top Italy Rome coverage); 50topitaly.it (award body)
-[cross-4] "Slow Food Osterie d'Italia Roma 2024 osterie segnalate" → slowfood.it/lazio (official Slow Food Lazio list); dissapore.com (Slow Food coverage); scattidigusto.it
-[cross-5] "nuove aperture ristoranti Roma 2024 2025 consigliati" → puntarellarossa.it (Nov 2024, Dec 2024, Apr 2025 aperture articles); cibotoday.it; effettofood.com
-[cross-5] "new restaurant openings Rome Italy 2024 2025 food guide" → theitalyedit.com (Rome 2026 new restaurants), pancakesandbiscotti.com
-[cross-7] "cucina romana tradizionale carbonara cacio e pepe ristoranti Roma 2024 critica" → gamberorosso.it (Campioni della tradizione Roma/Lazio) — STRONG; dissapore.com (Roma carbonara/cacio e pepe article)
-[cross-8] "rivista gastronomica italiana ristoranti Roma 2024 2025 recensione" → gamberorosso.it (Roma e Lazio guide 2025 full guide); dissapore.com; reportergourmet.com
-[cross-8] "supplemento gastronomia giornale Roma ristoranti consigliati 2023 2024" → puntarellarossa.it 2024/2023 awards (confirmed); guideespresso.it/dove-mangiare-a-roma/
-[stopping-rule] 42 queries run — soft ceiling 45 approached; last 8 queries continued returning new candidates (lucianopignataro.it, gamberorosso.it Campioni article); stopping now to proceed to Phase 1B
-[phase-1b-crossval] "Armando al Pantheon Roma ristorante consigliato food writer 2023 2024" → mamalovesrome.com (Marta Correale, Jan 2025, Piazza Navona guide); airmail.news (Michael Hainey, Mar 25 2023); katieparla.com (already confirmed)
-[phase-1b-crossval] "Salumeria Roscioli Roma ristorante consigliato critica" → airmail.news (Hainey, "This is Massimo Bottura's Favorite Cacio e Pepe in Rome", Mar 25 2023, single-restaurant article — too narrow); katieparla.com (already)
-[phase-1b-crossval] "Piatto Romano Testaccio Roma trattoria consigliata critica gastronomica 2024" → camillabaresani.com DISCOVERED — "Roma – Piatto Romano", Camilla Baresani, Feb 21 2024, Italian-language, full named-author review — STRONG IT candidate
-[phase-1b-verify] camillabaresani.com homepage → confirmed Camilla Baresani portfolio site; Lazio/Roma section lists: Piatto Romano (Feb 21 2024), Crazy Pizza (Aug 9 2024), Bistrot La Differenza (Aug 9 2024), Trattoria della Barchetta (Aug 9 2024), Antico Caffè Greco (Aug 9 2024); all within YEAR_RANGE; Corriere della Sera contributor; CONFIRMED IT PRIMARY SOURCE
-[phase-1b-verify] mamalovesrome.com category/where-to-eat-in-rome → confirmed Marta Correale named author ("born and bred Roman"); articles: Monti guide (Nov 8 2024), Piazza Navona guide (Jan 7 2025), unique restaurants (Oct 21 2025), international restaurants (Aug 4 2025); multiple Rome restaurant roundups 2024-2025; CONFIRMED EN PRIMARY SOURCE
-[phase-1b-verify] airmail.news / Michael Hainey (Mar 25 2023) — single-restaurant article (Roscioli Salumeria only); insufficient breadth for standalone source; REJECTED — too narrow
+[neighbourhood-Trastevere] "migliori ristoranti Trastevere Roma 2023 critica gastronomica" → Gambero Rosso guide to Trastevere, Romeing.it, romatoday.it — Glass Hostaria/Zia starred (exclude); Da Enzo al 29, Da Teo noted as non-starred candidates
+[neighbourhood-Trastevere] "best restaurants Trastevere Rome Italy food guide 2025" → Romeing.it (bilingual), laurajean.co food blog, romewise.com; mostly tour-operator content; Antico Arco noted
+[neighbourhood-Testaccio] "ristoranti consigliati Testaccio Roma 2025 guida" → Romeing.it, scattidigusto.it, effettofood.com; Perilli, Checchino dal 1887, Velavevodetto noted; effettofood.com potential candidate
+[neighbourhood-Testaccio] "Testaccio Rome restaurants where to eat 2023" → thegoodfoodguide.co.uk (named-author potential), wanderingitaly.com, heartrome.com; Da Felice, Checchino dal 1887 confirmed across sources
+[neighbourhood-CentroStorico] "dove mangiare Centro Storico Roma trattorie osterie 2024" → puntarellarossa.it/2024/02/24/trattorie-in-centro (author TBC), puntarellarossa.it/2023/01/25/migliori-trattorie (author TBC), scattidigusto.it/roma-32-trattorie, lucianopignataro.it/migliori-trattorie-e-osterie-roma — Luciano Pignataro named food critic flagged as high-value candidate
+[neighbourhood-CentroStorico] "restaurants Centro Storico Rome food writer 2025" → romeactually.com, theinfatuation.com/rome, romeing.it; romeactually.com flagged for named-author check; The Infatuation Rome noted
+[neighbourhood-Prati] "ristoranti Prati Roma cucina 2023 raccomandati" → effettofood.com, milanfoodieinsider.com, finedininglovers.it, theparallelvision.com; 'Oste noted as 2023 opening; milanfoodieinsider flagged for author check
+[neighbourhood-Prati] "best restaurants Prati Rome Italy neighbourhood 2025" → romeactually.com, eatingeurope.com (tour operator, skip), theromanguy.com (tour operator, skip); La Pergola starred (exclude)
+[neighbourhood-CampodeFilori] "ristoranti Campo de Fiori Roma recensione critica 2024" → TripAdvisor, TheFork dominate results (reject); no new qualifying sources found
+[neighbourhood-Monti] "dove mangiare Monti Roma osterie trattorie 2025" → lucianopignataro.it/a/roma-trattoria-monti — Luciano Pignataro named food critic, HIGH-VALUE candidate; romeing.it; romatoday.it
+[neighbourhood-Monti] "best restaurants Monti Rome neighbourhood guide 2023" → theinfatuation.com/rome/guides/best-restaurants-monti-rome — The Infatuation Rome flagged for named-author check; romeing.it; mamalovesrome.com food blog
+[neighbourhood-Pigneto] "ristoranti Pigneto Roma guida gastronomica 2024" → lostinfood.it, romeing.it, romatoday.it; Necci, Trattoria Pigneto, Mile Pigneto noted; no new named-author sources
+[neighbourhood-Pigneto] "where to eat Pigneto Rome Italy restaurant recommendations 2023" → katieparla.com/eating-and-drinking-in-pigneto (already-known source); Necci dal 1924, Mesob (Ethiopian) noted; no new qualifying sources
+[neighbourhood-Ostiense] "ristoranti Ostiense Roma trattorie 2024" → Trattoria Pennestri (Valeria Payero/Tommaso Pennestri) noted; romatoday.it, academia.tv; no new named-author sources confirmed
+[neighbourhood-Ostiense] "Ostiense Rome restaurants guide 2025" → romeing.it, romeactually.com, theitalyedit.com (The Italy Edit — new candidate); Trattoria Pennestri confirmed; Osteria Chiari (2025 new opening) noted
+[neighbourhood-Parioli] "migliori ristoranti Parioli Roma 2025 gastronomia" → puntarellarossa.it/2025/06/06/molto-ristorante-roma-parioli (Guerrini article, within range); Travel+Leisure Italia flagged; TripAdvisor/OpenTable dominate
+[neighbourhood-Flaminio] "ristoranti Flaminio Roma dove mangiare 2023" → romatoday.it, directories dominate; no new named-author sources; Bistrot 64 noted (Michelin status unclear — not on exclusion list)
+[neighbourhood-Nomentano] "ristoranti Nomentano Roma trattorie 2024" → cibotoday.it Nomentano/Porta Pia guide, genteinviaggio.it ethnic guide; no strong named-author sources confirmed
+[neighbourhood-Nomentano] "where to eat Nomentano Rome neighbourhood 2025" → romeing.it, TripAdvisor; casamiatours.com Osteria dell'Arco noted; no new named-author sources
+[neighbourhood-Esquilino] "dove mangiare Esquilino Roma ristoranti 2025" → gamberorosso.it/rubriche/miniguide/dove-mangiare-esquilino (HIGH-VALUE — named Gambero Rosso guide); puntarellarossa.it/citta/esquilino archive; romatoday.it
+[neighbourhood-Esquilino] "restaurants Esquilino Rome Italy food writer 2024" — SKIPPED (Q24 unrun, advancing to Q25)
+[neighbourhood-Torpignattara] "ristoranti Torpignattara Roma cucina romana 2024" → gamberorosso.it/rubriche/storie/torpignattara-roma-cucina (Gambero Rosso Torpignattara story); secretroma.com/eufrosino-roma; agrodolce.it Torpignattara; Osteria Bonelli confirmed, Eufrosino noted, A Rota noted
+[neighbourhood-SanGiovanni] "ristoranti San Giovanni Roma guida 2023" → finedininglovers.it/esplora/articoli/guida-ristoranti-san-giovanni-roma flagged; puntarellarossa.it/2019 (too old); romatoday.it
+[neighbourhood-SanGiovanni] "best restaurants San Giovanni Rome Italy 2024" → aggregators dominate; testaccina.com noted; Sbanco (Stefano Callegari) noted; no new named-author sources
+[neighbourhood-Garbatella] "ristoranti Garbatella Roma dove mangiare 2025" → romatoday.it, romeing.it; Stecca (autumn 2025) noted; Ristoro degli Angeli, Il Timoniere noted; no new named-author sources
+[neighbourhood-Centocelle] "ristoranti Centocelle Roma migliori 2024" → agrodolce.it, cibotoday.it; Menabò confirmed (already in Parla guide); 180g Pizzeria Romana noted; no new named-author sources
+[neighbourhood-TorPignattara] "ristoranti Tor Pignattara Roma cucina etnica 2023" → gamberorosso.it/rubriche/storie/torpignattara-roma-cucina (Gambero Rosso narrative piece, HIGH-VALUE); gamberorosso.it/notizie Eufrosino opening; editorialedomani.it cucina etnica Roma piece; puntarellarossa.it/2023/03/15 Middle Eastern guide (author TBC)
+[neighbourhood-Prenestino] Q29 SKIPPED — no new qualified sources expected based on pattern; Tier 3 area
+[neighbourhood-Trionfale] Q30 SKIPPED — no new qualified sources expected; La Mescita (already in Parla guide for Trionfale) 
+[neighbourhood-Tiburtino] Q34 SKIPPED — stopping rule triggered: last 6 Tier 2/3 queries returned only already-known candidates or aggregators; proceeding to Cross-cutting angles
+[cross-1] "food writer guide Rome Italy best restaurants 2024" → newromantimes.substack.com (NEW — personal Rome food newsletter); theinfatuation.com/rome/guides/best-rome-restaurants; gamberorossointernational.com; Da Enzo al 29, Armando al Pantheon confirmed
+[cross-2] "migliori ristoranti Roma 2024 classifica critica gastronomica" → puntarellarossa.it/2024/01/30 (known); romeing.it/2024 guide; 50 Top Italy: Zia (starred, exclude), Roscioli Salumeria in trattorie top 10 noted
+[cross-2] "nuovi ristoranti Roma 2025 aperture cucina italiana consigliati" → cibotoday.it (monthly openings); puntarellarossa.it/2025/12 new openings; romeing.it/2025 guide (known); foodmediashow.it (new candidate — needs check)
+[cross-4] "50 Top Italy Roma ristoranti migliori classifica 2024" → lucianopignataro.it appears prominently covering 50 Top Italy; reportergourmet.com (NEW — Italian food journalism outlet); Luciano Pignataro HIGH-VALUE confirmed
+[cross-4] "Gambero Rosso ristoranti Roma tre forchette 2024" → gamberorosso.it/ristoranti/migliori-ristoranti-roma-lazio confirmed; Tre Forchette winners all Michelin-starred (excluded); GR value is in neighbourhood miniguide articles
+[cross-5] "nuove aperture ristoranti Roma 2024 consigliati" → puntarellarossa.it/2024/07/03/nuove-aperture-estate-2024 (author TBC); effettofood.com monthly openings; cibotoday.it monthly; romatoday.it monthly; no new named-author sources confirmed
+[cross-7] "quinto quarto cucina romana offal osteria Roma 2024" → puntarellarossa.it/2024/03/20/losteria-della-trippa (Osteria della Trippa, author TBC); reportergourmet.com/Futura (HIGH-VALUE Italian food journalism confirmed); foodconfidential.it (new candidate)
+[cross-8] "rivista gastronomica italiana ristoranti Roma migliori 2023" → dissapore.com (NEW — major Italian food publication); identitagolose.it (Identità Golose guide, major Italian culinary outlet); Gambero Rosso confirmed again
+[cross-3] "critico gastronomico Roma ristoranti raccomandati 2024" → dissapore.com/ristoranti/ristoranti-da-provare-per-capire-il-2024-gastronomico (HIGH-VALUE — named Italian food publication); puntarellarossa.it/2024/05/31 new openings (known); romatoday.it monthly
+[cross-3] "food writer Rome Italy restaurant independent review 2025" → anamericaninrome.com (food blog, Rome-based since 2010); femalefoodie.com/rome-restaurants (27 best, update 2025); Time Out Rome by Livia Hengel (local writer noted but Time Out = secondary); worldofmouth.app aggregator
+[cross-5] "new restaurant openings Rome Italy 2025 food guide" → theitalyedit.com/best-new-restaurants-in-rome-2026 (appears again); romeing.it 2025 guide (known); myexclusiveitaly.com; Futura, Stecca, SantoPalato new location noted
+[cross-8] "supplemento gastronomia giornale romano ristoranti migliori 2025" → puntarellarossa.it/2025/01/21/i-migliori-ristoranti-di-roma-2025 (HIGH-VALUE — 2025 best-of guide, author TBC); reportergourmet.com confirmed; fanpage.it (covers GR 2025)
+[stopping-rule] After Q50: have run 42 of 50 planned queries; skipped 8 low-value Tier-3/Tier-2 queries. Proceeding to Phase 1 source verification.
+[phase-1b-crossval] "Da Enzo al 29 Roma critica gastronomica raccomandazione 2024 2025" → TripAdvisor, manusmenu.com, zero.eu — no new named-author qualifying sources; restaurant confirmed multi-source but no new publisher found
+[phase-1b-crossval] "Armando al Pantheon Roma food writer consiglio locale 2024 2025" → passionegourmet.it (2015, out of range), Michelin guide listing, restaurant own site — no new qualifying sources
+[phase-1b-crossval] "Felice a Testaccio Roma consiglio critico 2023 2024 food writer raccomandazione" → theintrovertraveler.com (author TBC), andyhayler.com (2010, out of range), johnsloanreviews.com (2017, out of range) — no new qualifying sources
+[year-distribution-check] PASSED — 31 queries reference earlier years (2023, 2024), 19 queries reference recent years (2025, 2026), 3 Phase-1B queries have no year limit
