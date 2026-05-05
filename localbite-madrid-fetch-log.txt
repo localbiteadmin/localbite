@@ -1,0 +1,24 @@
+LOCALBITE MADRID v7.1 — FETCH LOG
+Generated: 2026-05-05
+
+[p0] "epicureanways.com/blog/paul-richardsons-guide-to-eating-in-madrid" → 200 | 45000+ch | ACCEPTED — Paul Richardson, named author confirmed, May 29 2025 article, ~30 restaurants
+[p0] "timeout.es/madrid/es/restaurantes/los-100-mejores-restaurantes-de-madrid-top-100" → 200 | 20000+ch | ACCEPTED — Gorka Elorrieta confirmed, April 8 2026, 50 restaurants; ⚠ coi Time Out Market Madrid
+[p0] "theinfatuation.com/madrid/guides/where-to-eat-madrid" → 200 | 15000+ch | ACCEPTED — Lori Zaino confirmed, Nov 7 2025, ~11 restaurants
+[p0] "eldiario.es/madrid/somos/caminando-por-madrid/casas-comidas-sobreviven-madrid-15-negocios-clasicos..." → 200 | 10000+ch | ACCEPTED — Carlos Osorio confirmed, Nov 8 2025, 17 casas de comidas
+[p0] "lagastronoma.com/28-nuevos-restaurantes-para-redescubrir-madrid-este-otono/" → 200 | 15000+ch | PARTIAL — Mapi Hermida single-author confirmed via About page; quotes short but source valid
+[p0] "elblogdegastromadrid.com/mejores-restaurantes-abiertos-agosto-en-madrid-2024" → 200 | 8000+ch | ACCEPTED — Julián Acebes byline confirmed in article text, Jul 12 2024
+[p0] "theobjective.com/gastronomia/2024-11-27/restaurantes-madrid-agotan-reservas-cada-mes/" → 200 | 8000+ch | ACCEPTED — Brenda Alonso byline confirmed, Nov 27 2024
+[p0] "complicidadgastronomica.es/category/restaurantes/madrid/" → 200 | 5000+ch | ACCEPTED — Isaac Agüero Fuentes confirmed as sole author of all posts
+[p0] "complicidadgastronomica.es/2026/04/kuoco/" → 200 | 5000+ch | ACCEPTED — Isaac Agüero Fuentes, Apr 27 2026, Kuoco non-starred
+[p0] "complicidadgastronomica.es/2026/04/chiribita-tacos/" → 200 | 4000+ch | ACCEPTED — Isaac Agüero Fuentes, Apr 5 2026, Chiribita Tacos non-starred
+[p0] "spanishsabores.com/madrid-gastro-guide-where-to-eat-in-madrid/" → 200 | 20000+ch | ACCEPTED — Lauren Aloise single-author confirmed via web search; Jul 5 2023; ⚠ coi Devour Tours
+[p0] "spanishsabores.com/about/" → 451 | —ch | SKIPPED — GDPR geo-block; author confirmed via external search instead
+[p0] "abcblogs.abc.es/gastronomia/otros-temas/mi-lista-de-madrid-2023.html" → 200 | 3000+ch | PARTIAL — Carlos Maribona confirmed, Jan 9 2024; ranked list only, no per-restaurant quotes
+[p0] "gastroactitud.com/restaurante/rambal-madrid/" → 200 | 5000+ch | ACCEPTED — José Carlos Capel byline confirmed, Nov 27 2025, Rambal Lavapiés
+[p0] "themakingofmadrid.com/2025/08/18/a-foodies-guide-to-usera-madrids-hidden-culinary-paradise/" → 200 | 10000+ch | ACCEPTED — Felicity Hughes single-author confirmed; Aug 18 2025; 15 Usera restaurants
+[p0] "7canibales.com/restaurantes/gran-duke/" → 200 | 3000+ch | REJECTED-byline — multi-author site; Alberto Luchini not in article text
+[p0] "7canibales.com/restaurantes/tetsu-madrid/" → 200 | 3000+ch | REJECTED-byline — multi-author site; no byline in article text
+[p0] "7canibales.com/noticias/mejores-restaurantes-madrid-agosto/" → 200 | 4000+ch | REJECTED-byline — multi-author site; no byline visible
+[p0] "conelmorrofino.com/" → CAPTCHA | —ch | FAILED — Cloudflare security check; author full name not confirmed
+[p0] "larazon.es/" → 200+DYNAMIC | partial | FAILED — site blocks content per instructions; article_url: null; writer Tatiana Ferrandis identity confirmed via Muck Rack independently
+[p0] "abcblogs.abc.es/salsa-de-chiles/" → 404 | —ch | FAILED — blog URL dead; alternative URL used
