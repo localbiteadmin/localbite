@@ -1,62 +1,9 @@
 LOCALBITE MADRID v7.1 — FAILED SOURCES LOG
-Generated: 2026-04-26
+Generated: 2026-05-05
 
-════════════════════════════════════════
-PHASE 0 FAILURES
-════════════════════════════════════════
-
-[FAIL] 7 Canibales / Alberto Luchini (ES)
-Site: 7canibales.com
-Reason: No guide-format Madrid restaurant article with confirmed
-Luchini byline found within 2023-2026 year range.
-Attempts:
-  — "Matando Madrid con Luchini" — last entry 2015, out of range
-  — "Guias Canibales" (Mar 2026) — covers Community of Madrid
-    but only outside-capital restaurants (La Cabra Marbella, etc.)
-  — "Seis direcciones secretas Madrid" (Nov 2025) — anonymous, no byline
-  — Italian food guide (Feb 2025) — no byline, off-topic
-Recommended: Search again in future run for current Luchini output.
-
-[FAIL] Gastroactitud / José Carlos Capel (ES)
-Site: gastroactitud.com
-Reason: All Madrid restaurant articles use editorial "we" language
-("Hemos seleccionado", "nos gusta", "preferimos"). Multi-author site
-(Capel + Julia Pérez Lozano). Cannot confirm Capel on specific
-restaurant recommendation articles. Named-author requirement unmet.
-
-[SKIP] Con El Morro Fino (ES)
-Site: conelmorrhofino.com
-Reason: Site returned 400 errors. Search found TWO authors (David
-Maldonado + Juan David Fuertes) — not a single-author site.
-Single-author rule does not apply. Would need article-level full-name
-bylines. Not pursued further.
-
-[SKIP] DOD Magazine (ES)
-Reason: Article at dodmagazine.es blocked by CAPTCHA.
-
-════════════════════════════════════════
-PHASE 1 NON-QUALIFYING
-════════════════════════════════════════
-
-[REJECT] The Local Spain — no confirmed named author on Madrid
-  restaurant articles found in year range.
-[REJECT] El Mundo food section — multiple searches, no Madrid
-  restaurant guide with confirmed named critic found.
-[REJECT] Various ES food blogs — required named author not met.
-
-════════════════════════════════════════
-BOTH-POOL SHORTFALL EXPLANATION
-════════════════════════════════════════
-
-Both-pool: 6 (minimum met; target 8-12 not met)
-
-Primary causes:
-1. Infatuation fetch truncated (11 of ~30 entries returned)
-   — Lana, Lakasa, Tripea likely in full article → would add 3 both-pool
-2. 7 Canibales failed — major ES source loss
-3. Gastroactitud failed — second major ES source loss
-
-Recommend for next run:
-— Re-fetch Infatuation full article with alternative Jina strategy
-— Continue 7 Canibales search with current Luchini content
-— Check El Pais Gastro for Madrid named-critic articles
+[FAILED] 7canibales.com/restaurantes/gran-duke/ — REJECTED-byline: multi-author site, Alberto Luchini byline not visible in article text
+[FAILED] 7canibales.com/restaurantes/tetsu-madrid/ — REJECTED-byline: same
+[FAILED] 7canibales.com/noticias/mejores-restaurantes-madrid-agosto/ — REJECTED-byline: same
+[FAILED] conelmorrofino.com — CAPTCHA/BLOCKED: Cloudflare security check; author full name not confirmed
+[FETCH-LIMITATION] larazon.es — site blocks automated fetch per Part 1 instructions; Tatiana Ferrandis identity confirmed via Muck Rack; article_url: null
+[EXCLUDED] spanishsabores.com — secondary cap (3rd secondary exceeds 2-max for bilingual city); also HTTP 451 GDPR geo-block on fetch; COI (Devour Tours); pre-2025 date

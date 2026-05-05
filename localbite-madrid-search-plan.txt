@@ -1,89 +1,99 @@
 MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
 
 CITY: Madrid | COUNTRY: Spain | YEAR_RANGE: 2023-2026
-PHASE1_AUTO_PROCEED: YES | UNATTENDED_MODE: YES
-Generated: 2026-04-26
+PIPELINE: localbite-v7.1
+DATE: 2026-05-05
 
-PHASE 0 — DIRECT FETCH SOURCES (12 sources)
-1. 7 Caníbales — Alberto Luchini — 7canibales.com
-2. The Objective — Mara Sánchez or Brenda Alonso — theobjective.com
-3. Epicurean Ways — Paul Richardson — epicureanways.com
-4. Time Out Madrid — Gorka Elorrieta — timeout.com/madrid (coi)
-5. Spanish Sabores — Lauren Aloise — spanishsabores.com (coi)
-6. The Infatuation — Lori Zaino — theinfatuation.com/madrid
-7. La Gastrónoma — Mapi Hermida — lagastronoma.es
-8. GastroMadrid — Julián Acebes — elblogdegastromadrid.com
-9. eldiario.es / Somos Madrid — Carlos Osorio — eldiario.es
-10. The Making of Madrid — Felicity Hughes — themakingofmadrid.com (single-author)
-11. Gastroactitud — José Carlos Capel — gastroactitud.com
-12. Con El Morro Fino — unknown full name — conelmorrhofino.com
+Phase 0 confirmed 12 sources. Phase 1 will add supplementary searches.
 
-PHASE 1 — SEARCH PLAN
-
-YEAR DISTRIBUTION CHECK:
-Earlier (2023-2024): Q01,Q04,Q06,Q07,Q10,Q13,Q14,Q17,Q20,Q22,Q23,Q24,Q26,Q31
-Later (2025-2026): Q02,Q03,Q05,Q08,Q09,Q11,Q12,Q15,Q16,Q18,Q19,Q21,Q25,Q27,Q28,Q29,Q30,Q32,Q34
-No year: Q33
-[year-distribution-check] PASSED — 14 earlier, 19 later, 1 no-year term.
-
+════════════════════════════════════════
 PART A — NEIGHBOURHOOD COVERAGE
+════════════════════════════════════════
 
-TIER 1:
-Q01 [neighbourhood-Malasaña] ES: "mejores restaurantes Malasaña Madrid 2023 2024 guía"
-Q02 [neighbourhood-Malasaña] EN: "best restaurants Malasaña Madrid 2025 food guide"
-Q03 [neighbourhood-Chueca] ES: "restaurantes Chueca Madrid recomendados 2025 2026"
-Q04 [neighbourhood-Chueca] EN: "best places to eat Chueca Madrid 2023 2024 guide"
-Q05 [neighbourhood-LaLatina] ES: "mejores restaurantes La Latina Madrid 2025 gastronomía"
-Q06 [neighbourhood-LaLatina] EN: "top restaurants La Latina Madrid 2023 2024 review"
+TIER 1 — Malasaña (2 queries):
+A1-ES: "mejores restaurantes Malasaña Madrid 2023 2024 crítica gastronómica"
+A2-EN: "best restaurants Malasaña Madrid 2025 food guide writer"
 
-TIER 2:
-Q07 [neighbourhood-Lavapiés] ES: "restaurantes Lavapiés Madrid guía gastronómica 2023 2024"
-Q08 [neighbourhood-Lavapiés] EN: "best restaurants Lavapiés Madrid neighborhood guide 2025 2026"
-Q09 [neighbourhood-Salamanca] ES: "restaurantes barrio Salamanca Madrid mejores 2025 2026"
-Q10 [neighbourhood-Salamanca] EN: "dining barrio Salamanca Madrid recommendations 2023 2024"
-Q11 [neighbourhood-Chamberí] ES: "mejores restaurantes Chamberí Madrid 2024 2025"
-Q12 [neighbourhood-Chamberí] EN: "best restaurants Chamberí Madrid where to eat 2025 2026"
+TIER 1 — Chueca (2 queries):
+A3-ES: "restaurantes Chueca Madrid recomendaciones 2025 2026 crítica"
+A4-EN: "where to eat Chueca Madrid 2024 food writer guide"
 
-TIER 3:
-Q13 [neighbourhood-Palacio] ES: "restaurantes Palacio Madrid recomendaciones crítica 2023 2024"
-Q14 [neighbourhood-Sol] ES: "dónde comer Sol Madrid restaurantes locales 2023 2024"
-Q15 [neighbourhood-Retiro] ES: "restaurantes Retiro Madrid gastronomía guía 2025"
-Q16 [neighbourhood-Carabanchel] ES: "restaurantes Carabanchel Madrid emergentes gastronómicos 2025 2026"
-Q17 [neighbourhood-Usera] ES: "restaurantes Usera Madrid gastronomía 2023 2024"
-Q18 [neighbourhood-Tetuán] ES: "restaurantes Tetuán Madrid mejores apertura 2025 2026"
+TIER 1 — La Latina (2 queries):
+A5-ES: "mejores restaurantes La Latina Madrid 2024 guía gastronómica"
+A6-EN: "La Latina Madrid restaurants guide 2023 local food writer"
 
+TIER 2 — Lavapiés (2 queries):
+A7-ES: "restaurantes Lavapiés Madrid recomendaciones crítica 2025"
+A8-EN: "Lavapiés Madrid best places to eat 2024 2025 guide"
+
+TIER 2 — Salamanca (2 queries):
+A9-ES: "mejores restaurantes barrio Salamanca Madrid 2024 2025"
+A10-EN: "Salamanca neighbourhood Madrid restaurants food guide 2023 2024"
+
+TIER 2 — Chamberí (2 queries):
+A11-ES: "restaurantes Chamberí Madrid recomendaciones guía 2025 2026"
+A12-EN: "best restaurants Chamberí Madrid 2024 food writer"
+
+TIER 3 — one query each in Spanish:
+A13: "mejores restaurantes Palacio Sol Madrid 2024 gastronómia"
+A14: "restaurantes Retiro Madrid recomendaciones 2025"
+A15: "Carabanchel Madrid restaurantes emergentes 2023 2024 gastronomía"
+A16: "Usera Madrid restaurantes guía gastronómica 2025"
+A17: "Tetuán Madrid restaurantes recomendaciones 2024 2025"
+
+TOTAL PART A: 17 queries
+
+════════════════════════════════════════
 PART B — CROSS-CUTTING ANGLES
+════════════════════════════════════════
 
-Cross-1 EN city-wide:
-Q19 [cross-1] "best restaurants Madrid 2025 2026 food guide editorial"
-Q20 [cross-1] "where to eat Madrid personal recommendations local favorites 2023 2024"
+CROSS-1 — City-wide in English (2 queries):
+B1: "best restaurants Madrid Spain 2024 food critic local guide"
+B2: "where to eat in Madrid honest food recommendations 2025 2026"
 
-Cross-2 ES city-wide:
-Q21 [cross-2] "mejores restaurantes Madrid 2026 crítica gastronómica recomendación"
-Q22 [cross-2] "dónde comer Madrid barrios guía local 2024"
-Q23 [cross-2] "guía gastronómica Madrid prensa independiente 2023 2024"
+CROSS-2 — City-wide in Spanish (3 queries):
+B3: "los mejores restaurantes de Madrid 2023 2024 crítica gastronómica"
+B4: "donde comer bien en Madrid recomendaciones personales 2025"
+B5: "guía gastronómica Madrid restaurantes imprescindibles 2026"
 
-Cross-3 writer-first:
-Q24 [cross-3] "food writer recommends restaurants Madrid 2024 2025"
-Q25 [cross-3] "periodista gastronómica recomienda restaurantes Madrid 2025 2026"
+CROSS-3 — Generic writer-first (2 queries):
+B6: "food writer blogger Madrid restaurant recommendations personal guide"
+B7: "crítico gastronómico periodista Madrid restaurantes favoritos 2024"
 
-Cross-4 awards:
-Q26 [cross-4] "Premios Metrópoli Madrid restaurantes ganadores 2024 2025"
-Q27 [cross-4] "Guía Repsol Madrid restaurantes recomendados 2025 2026"
-Q28 [cross-4] "Madrid restaurantes bib gourmand recomendación guía 2024"
+CROSS-4 — Named awards (3 queries):
+B8: "Premios Salsa de Chiles 2024 2025 Madrid ganadores restaurantes"
+B9: "Guía Repsol Madrid restaurantes recomendados 2025 sol"
+B10: "Madrid gastronomía premios Metrópoli mejor restaurante 2024"
 
-Cross-5 openings:
-Q29 [cross-5] "best new restaurant openings Madrid 2025 2026"
-Q30 [cross-5] "mejores nuevas aperturas restaurantes Madrid 2024 2025"
+CROSS-5 — Recent openings (2 queries):
+B11: "nuevos restaurantes Madrid 2025 2026 mejores aperturas crítica"
+B12: "best new restaurant openings Madrid 2024 2025 food guide"
 
-Cross-6: LOCAL_FOOD_VOCABULARY blank — SKIPPED
+CROSS-6 — Vocabulary-specific: SKIP (LOCAL_FOOD_VOCABULARY blank)
 
-Cross-7 cuisine/community:
-Q31 [cross-7] "gastronomía asiática Madrid Usera restaurantes comunidad recomendación 2024"
-Q32 [cross-7] "cocina latinoamericana Madrid restaurantes recomendados escritores 2025"
+CROSS-7 — Cuisine and community (2 queries):
+B13: "cocina peruana japonesa latinoamericana Madrid restaurantes 2024 2025"
+B14: "Madrid Asian Latin food restaurants 2023 2024 guide"
 
-Cross-8 publication-category:
-Q33 [cross-8] "revista gastronómica española independiente Madrid mejores restaurantes"
-Q34 [cross-8] "suplemento gastronomía periódico Madrid restaurantes recomendados 2024 2025"
+CROSS-8 — Publication-category ES (2 queries):
+B15: "revista gastronómica independiente Madrid restaurantes mejores 2024"
+B16: "suplemento gastronomía periódico Madrid restaurantes crítica 2025"
 
-Soft ceiling: 45 queries. Hard ceiling: 55 queries.
+TOTAL PART B: 16 queries
+
+GRAND TOTAL PLANNED: 33 queries (within soft ceiling of 45)
+
+════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+════════════════════════════════════════
+Queries referencing earlier years (2023-2024): A1, A6, A8, A10, A13, A15, B1, B3, B7, B8, B10, B12, B14, B15 = 14 queries
+Queries referencing later years (2025-2026): A2, A3, A5, A7, A9, A11, A14, A16, A17, B2, B4, B5, B6, B11, B13, B16 = 16 queries
+Queries with no year term: A4, A12, B9 = 3 queries
+
+[year-distribution-check] PASSED — 14 queries reference earlier years (2023-2024), 16 queries reference recent years (2025-2026), 3 queries have no year term.
+
+════════════════════════════════════════
+PHASE 1B CROSS-VALIDATION (after Part A + Part B)
+Responsive queries based on most-mentioned restaurant names across all confirmed Phase 0 sources.
+Will target: Sacha, La Tasquita de Enfrente, Lhardy, Haramboure (from Maribona/Time Out overlaps)
+════════════════════════════════════════

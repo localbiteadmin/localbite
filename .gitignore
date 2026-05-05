@@ -45,6 +45,7 @@ localbite-recompute-*.py
 localbite-rome-*.py
 localbite-barcelona-*.py
 localbite-ciboToday-*.py
+localbite-madrid-*.py
 localbite-fleet-*.py
 localbite-highspread-*.py
 localbite-fleet-diagnostic-*.txt

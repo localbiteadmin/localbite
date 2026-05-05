@@ -1,137 +1,43 @@
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-LOCALBITE MADRID v7.1 — PHASE 3 AUDIT
-Generated: 2026-04-26
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+LOCALBITE MADRID v7.1 — AUDIT LOG
+Generated: 2026-05-05
 
-PIPELINE: localbite-v7.1
-CITY: Madrid, Spain
-YEAR_RANGE: 2023–2026
 
-════════════════════════════════════════
-FINAL PACK SUMMARY
-════════════════════════════════════════
+FAILED / EXCLUDED SOURCES:
 
-Total restaurants:    116
-Both-pool entries:      6   (target: 8–12; minimum: 6) AT MINIMUM
-Tier A:                19
-Tier B:                97
-Tier C:                 0
-Sources confirmed:      9
-Sources failed:         2 (7 Caníbales/Luchini, Gastroactitud/Capel)
+7 Caníbales / Alberto Luchini — REJECTED: multi-author site, byline not visible in article text (3 articles attempted)
+Con El Morro Fino — FAILED: Cloudflare CAPTCHA, author full name not confirmed
+La Razón / Tatiana Ferrandis — FETCH-LIMITATION: site blocks automated fetch; article_url: null; writer identity confirmed via Muck Rack
+Spanish Sabores / Lauren Aloise — EXCLUDED from extraction: secondary cap exceeded (2 max for bilingual city); article also returned HTTP 451 GDPR geo-block on fetch attempt
 
-════════════════════════════════════════
-SOURCES CONFIRMED (9)
-════════════════════════════════════════
+MICHELIN EXCLUSIONS APPLIED (not extracted):
+3★: DiverXO
+2★: Ramón Freixa Atelier, Deessa, Coque, DSTAgE, Paco Roncero Restaurante, Smoked Room
+1★: A'Barra, La Tasquería, Desde 1911, Ugo Chan, Chispa Bistró, Èter, EMi, Pabú, El Invernadero, VelascoAbellà, Gofio, Saddle, Kabuki Wellington, Lúa, Corral de la Morería Gastronómico, OSA, Cebo, La Candela Restó, Santerra, La Terraza del Casino
 
-1. Richardson / Epicurean Ways / EN / May 2025
-   14 working entries. Named author confirmed. Full guide format.
+GEOGRAPHIC EXCLUSIONS:
+Montia (San Lorenzo de El Escorial) — satellite town
+Inmigrante (Boadilla del Monte) — satellite town
 
-2. Elorrieta / Time Out Madrid / ES / Apr 2026 (COI flagged)
-   34 working entries. Sibling edition rule applied (same author
-   on ES and EN editions — counted as ONE source).
-   Concentration cap: 22 unique Tier B (cap: 35) — PASSED.
+PHASE 3 QUALITY GATE EXCLUSIONS:
+Playing Solo, Angelita, Tripea, Bolboreta, Roostiq, Soy Kitchen, Taberna Verdejo, Allégorie — single secondary source, no verbatim qualifying quote (Time Out fragments < 15 words, no primary cross-source)
+Badila, Macareno, Casa Fidel — flagged: paraphrased quotes in extraction, no verbatim text confirmed
+Haramboure, Bascoat — both_pool but no verbatim qualifying quote from any source (WebFetch fragments 3-5 words from both sources)
 
-3. Aloise / Spanish Sabores / EN / Jul 2023 (COI flagged)
-   19 working entries. Single-author site confirmed.
-   open_status_check: TRUE on all entries (Jul 2023 source).
+FINAL COUNTS:
+  Total restaurants: 89
+  Both-pool: 15
+  Tier A: 15 | Tier B: 68 | Tier C: 6
+  Sources confirmed: 11
 
-4. Zaino / The Infatuation / EN / Nov 2025
-   8 working entries. TRUNCATED FETCH — Jina reader returned
-   11 of ~30 entries. This is the primary reason both-pool is
-   at minimum rather than target. Recommend full re-fetch next run.
-
-5. Hermida / La Gastronoma / ES / Sep 2025
-   18 working entries. Single-author site confirmed.
-   Geographic exclusion: Inmigrante (Boadilla del Monte).
-   Michelin exclusion: EMi (1★).
-
-6. Osorio / eldiario.es Somos Madrid / ES / Nov 2025
-   11 working entries → 10 final. Named author confirmed.
-
-7. Acebes / GastroMadrid / ES / Jan 2024
-   13 working entries. open_status_check: TRUE.
-   Michelin exclusions: Coque, El Invernadero, Lua, Quimbaya,
-   Saddle, Smoked Room.
-
-8. Hughes / The Making of Madrid / EN / Aug 2025
-   8 working entries. Usera neighbourhood only. Single-author confirmed.
-
-9. Alonso / The Objective / ES / Mar 2025
-   8 working entries. Named author confirmed.
-   Michelin exclusions: Sen Omakase, Pabu, VelascoAbella,
-   La Tasqueria, Cebo.
-
-════════════════════════════════════════
-SOURCES FAILED (2)
-════════════════════════════════════════
-
-F1. 7 Canibales / Alberto Luchini
-    No guide-format article with Luchini byline in 2023-2026 range.
-    Tried: "Matando Madrid" series (2015), "Guias Canibales" (Mar 2026,
-    outside-capital only), anonymous articles (no byline). FAILED.
-
-F2. Gastroactitud / Jose Carlos Capel
-    All Madrid articles use editorial "we" language — multi-author site,
-    Capel not confirmed on specific articles. Named-author requirement
-    not met. FAILED.
-
-════════════════════════════════════════
-BOTH-POOL ENTRIES (6)
-════════════════════════════════════════
-
-1. Angelita         Richardson(EN) note: actually Aloise(EN) + Elorrieta(ES)
-2. Casa Salvador    Richardson(EN) + Osorio(ES)
-3. Estimar          Richardson(EN)* + Elorrieta(ES)
-4. La Tasquita de Enfrente  Richardson(EN) + Elorrieta(ES)
-5. Sacha            Richardson(EN) + Elorrieta(ES)
-6. Sala de Despiece Zaino(EN) + Acebes(ES)
-
-*Estimar/Richardson: AI summary compressed quote to "Shellfish temple."
-Accepted on basis that Richardson included it in a named curated guide.
-Flag for verification if article re-fetched.
-
-Why at minimum not target: Infatuation fetch truncated; 7 Canibales
-and Gastroactitud both failed. Together these reduced ES pool.
-
-════════════════════════════════════════
-MICHELIN EXCLUSIONS
-════════════════════════════════════════
-
-~23 exclusion events applied across all 9 sources. All 31 starred
-restaurants from 2026 guide either not found in source articles or
-excluded on detection. Blanket rule applied consistently.
-
-Notable: Ramón Freixa disambiguation applied.
-  — Ramón Freixa Atelier (2★) excluded
-  — Ramón Freixa Tradición (non-starred concept) INCLUDED (Tier A)
-
-════════════════════════════════════════
-GEOGRAPHIC EXCLUSIONS
-════════════════════════════════════════
-
-Montia (San Lorenzo de El Escorial) — outside Madrid capital. EXCLUDED.
-Inmigrante (Boadilla del Monte) — satellite town. EXCLUDED.
-Rocacho Valdebebas — Valdebebas is within Madrid municipal boundaries
-  (Hortaleza district). RETAINED.
-
-════════════════════════════════════════
-NEIGHBOURHOOD DISTRIBUTION
-════════════════════════════════════════
-
-Chamberi: 38 | Sol: 19 | Salamanca: 12 | La Latina: 11 | Usera: 8
-Chueca: 7 | Lavapiés: 6 | Malasaña: 6 | Palacio: 3 | Retiro: 2
-Chamartin: 2 | Carabanchel: 1 | Tetuan: 1
-
-All three neighbourhood tiers represented. Chamberi concentration
-reflects GastroMadrid Chamberi-specific guide + Time Out density.
-
-════════════════════════════════════════
-UNATTENDED MODE
-════════════════════════════════════════
-
-No Phase 3 removals recommended. All sources passed quality gates.
-No concentration cap breach. Pack accepted as-is.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-END AUDIT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SOURCE BREAKDOWN:
+  Epicurean Ways / Paul Richardson (primary, 2025-05-29): 20 restaurants
+  Time Out Madrid / Gorka Elorrieta (secondary, 2026-04-08): 8 restaurants
+  The Infatuation / Lori Zaino (secondary, 2025-11-07): 9 restaurants
+  eldiario.es / Somos Madrid / Carlos Osorio (primary, 2025-11-08): 12 restaurants
+  La Gastrónoma / Mapi Hermida (primary, 2025-09-24): 23 restaurants
+  El Blog de Gastro Madrid / Julián Acebes (primary, 2024-07-12): 10 restaurants
+  The Objective / Brenda Alonso (primary, 2024-11-27): 3 restaurants
+  Complicidad Gastronómica / Isaac Agüero Fuentes (primary, 2026-04-27): 2 restaurants
+  ABC / Salsa de Chiles / Carlos Maribona (primary, 2024-01-09): 6 restaurants
+  Gastroactitud / José Carlos Capel (primary, 2025-11-27): 1 restaurants
+  The Making of Madrid / Felicity Hughes (primary, 2025-08-18): 13 restaurants
