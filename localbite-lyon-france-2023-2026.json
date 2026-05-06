@@ -1,0 +1,1784 @@
+{
+  "pipeline": "localbite-v7.1",
+  "city": "Lyon",
+  "country": "France",
+  "city_slug": "lyon-france",
+  "run_date": "2026-05-06",
+  "year_range": "2023-2026",
+  "geo_centre": {
+    "lat": 45.764,
+    "lng": 4.8357
+  },
+  "geo_bbox": {
+    "lat_min": 45.7,
+    "lat_max": 45.83,
+    "lng_min": 4.79,
+    "lng_max": 4.94
+  },
+  "sources": {
+    "tdl-mailhes": {
+      "source_id": "tdl-mailhes",
+      "publication": "Tribune de Lyon",
+      "writer": "François Mailhes",
+      "source_type": "primary",
+      "language": "fr",
+      "article_url": "https://tribunedelyon.fr/auteur/francois-mailhes/",
+      "restaurants_count": 10,
+      "note": "Individual restaurant reviews; 782 total published articles confirmed; article_url is author index page; individual article URLs in each restaurant entry",
+      "id": "tdl-mailhes",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "A food writer at Tribune de Lyon, François Mailhes covers the culinary scene across France's gastronomic capital. Tribune de Lyon provides local news and cultural coverage for the Lyon metropolitan area. His recent work includes comprehensive food guides highlighting the city's diverse restaurant landscape."
+    },
+    "timeout-lyon": {
+      "source_id": "timeout-lyon",
+      "publication": "Time Out",
+      "writer": "Anna Richards",
+      "source_type": "secondary",
+      "language": "en",
+      "article_url": "https://www.timeout.com/france/best-restaurants-in-lyon",
+      "article_date": "2025-04-15",
+      "restaurants_count": 12,
+      "id": "timeout-lyon",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer at Time Out, Anna Richards specializes in comprehensive dining guides that help readers navigate the best culinary experiences in their cities. Her recent food guide work for Time Out demonstrates her expertise in curating restaurant recommendations and food scene insights for urban diners."
+    },
+    "signeture-living": {
+      "source_id": "signeture-living",
+      "publication": "Signeture Living",
+      "writer": "Signe Meirane",
+      "source_type": "primary",
+      "language": "en",
+      "article_url": "https://signeture.living/travle-lyon/2024/7/5/restaurants",
+      "article_date": "2024-07-29",
+      "restaurants_count": 13,
+      "note": "Single-author personal blog; About page confirms Signe Meirane (also known as Signe Vanaga) as sole author and Lyon resident; single-author site rule applied",
+      "id": "signeture-living",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "A contributor to Signeture Living, Signe Meirane writes comprehensive food guides that help readers navigate dining experiences. Her work focuses on curating culinary recommendations and insights for the publication's lifestyle-focused audience."
+    },
+    "infatuation-lyon": {
+      "source_id": "infatuation-lyon",
+      "publication": "The Infatuation",
+      "writer": "Anna Richards",
+      "source_type": "secondary",
+      "language": "en",
+      "article_url": "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon",
+      "article_date": "2023-09-09",
+      "restaurants_count": 13,
+      "note": "24 raw extractions; 4 excluded (Michelin starred); 7 excluded (concentration cap, brought publisher share to ~30%); Anna Richards also writes for Time Out — confirmed independently produced, qualifies for both-pool",
+      "id": "infatuation-lyon",
+      "commercial_conflict": false,
+      "commercial_conflict_note": null,
+      "writer_profile": "Food writer at The Infatuation, Anna Richards contributes to comprehensive dining guides that help readers discover noteworthy restaurants and eateries. The Infatuation specializes in accessible restaurant recommendations and food culture coverage across various cities and neighborhoods."
+    }
+  },
+  "restaurants": [
+    {
+      "id": "lyon-france-001",
+      "name": "Ayla",
+      "address": "11 place de l'Europe",
+      "postcode": "69006",
+      "neighbourhood": "Brotteaux",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Franco-Lebanese",
+      "notable_dishes": [
+        "tempura vine leaves on labneh",
+        "sepia with beef marrow and wild garlic",
+        "beef tartare with bulgur",
+        "squid with shiitake mushrooms"
+      ],
+      "writers": [
+        "François Mailhes",
+        "Anna Richards"
+      ],
+      "sources": [
+        "tdl-mailhes",
+        "timeout-lyon",
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://tribunedelyon.fr/restaurants-gastronomie/lyon-6e-ayla-grand-mezze-civilisationnel/",
+        "https://www.timeout.com/france/best-restaurants-in-lyon",
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": "4/4",
+      "tdl_article_date": "2023-06-16",
+      "both_pool": true,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Ayla",
+      "geo_skip": false,
+      "lat": 45.7640516,
+      "lng": 4.8495579,
+      "geo_source": "nominatim",
+      "quote": "Franco-Lebanese small-plates restaurant from chefs Najem Atmeh and Corinne Bec; seasonal produce in an open kitchen with tempura vine leaves on labneh and sepia with beef marrow; extensive French and Lebanese wine selection",
+      "confidence_tier": "A",
+      "language_pool": "both"
+    },
+    {
+      "id": "lyon-france-002",
+      "name": "Kitchen",
+      "address": "34 rue Chevreul",
+      "postcode": "69007",
+      "neighbourhood": "Guillotière",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Bistronomie / fermented-focused",
+      "notable_dishes": [
+        "fermented tomato ceviche of red sea bream",
+        "oyster mushrooms with fermented asparagus",
+        "beet with citron, star anise, and trout roe",
+        "salsify with celery and wild garlic"
+      ],
+      "writers": [
+        "François Mailhes",
+        "Anna Richards"
+      ],
+      "sources": [
+        "tdl-mailhes",
+        "timeout-lyon"
+      ],
+      "article_urls": [
+        "https://tribunedelyon.fr/restaurants-gastronomie/lyon-7e-restaurant-kitchen/",
+        "https://www.timeout.com/france/best-restaurants-in-lyon"
+      ],
+      "tdl_rating": "4/4",
+      "tdl_article_date": "2026-02-13",
+      "both_pool": true,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Johnny's Kitchen",
+      "geo_skip": false,
+      "lat": 45.7575704,
+      "lng": 4.8248577,
+      "geo_source": "nominatim",
+      "quote": "Intimate bistro from chef Connie Zagora built around fermentation and locavore produce; daily changing menu open Friday to Monday for lunch and brunch; fermented tomato ceviche of red sea bream is a signature",
+      "confidence_tier": "A",
+      "language_pool": "both"
+    },
+    {
+      "id": "lyon-france-003",
+      "name": "Daniel et Denise",
+      "address": "156 rue de Créqui",
+      "postcode": "69003",
+      "neighbourhood": "Part-Dieu",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Bouchon lyonnais",
+      "notable_dishes": [
+        "pâté en croûte",
+        "calf head",
+        "Bresse chicken",
+        "foie gras"
+      ],
+      "writers": [
+        "Anna Richards",
+        "Signe Meirane"
+      ],
+      "sources": [
+        "timeout-lyon",
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://www.timeout.com/france/best-restaurants-in-lyon",
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": true,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_skip": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": "nominatim",
+      "quote": "Lyon bouchon institution since 1968 with four city locations; world-champion pâté en croûte (2009) alongside classic Lyonnais specialties including calf head and Bresse chicken",
+      "confidence_tier": "A",
+      "language_pool": "both"
+    },
+    {
+      "id": "lyon-france-004",
+      "name": "L'Établi",
+      "address": "22 rue Remparts d'Ainay",
+      "postcode": "69002",
+      "neighbourhood": "Presqu'île",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Modern French",
+      "notable_dishes": [
+        "confit egg yolk",
+        "squid ink risotto",
+        "black sesame butter bread"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "timeout-lyon",
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://www.timeout.com/france/best-restaurants-in-lyon",
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": true,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "L'Établi",
+      "geo_skip": false,
+      "lat": 45.752857,
+      "lng": 4.8302195,
+      "geo_source": "nominatim",
+      "quote": "Refined seasonal set-menu restaurant in the 2nd arrondissement; three, six, or seven-course menus with varied textures; carpenter's bench-themed tables and confit egg yolk and squid ink risotto among the standouts",
+      "confidence_tier": "B",
+      "language_pool": "both"
+    },
+    {
+      "id": "lyon-france-005",
+      "name": "Amicus",
+      "address": "158 rue de Créqui",
+      "postcode": "69003",
+      "neighbourhood": "Part-Dieu",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Bistronomie",
+      "notable_dishes": [
+        "mackerel in escabeche with pickled radishes, fennel, shallots, cauliflower",
+        "black pollock with confit celery root and pastis sauce",
+        "vanilla cremeux with mascarpone and citrus marmalade"
+      ],
+      "writers": [
+        "François Mailhes"
+      ],
+      "sources": [
+        "tdl-mailhes"
+      ],
+      "article_urls": [
+        "https://tribunedelyon.fr/restaurants-gastronomie/lyon-3e-amicus/"
+      ],
+      "tdl_rating": "4/4",
+      "tdl_article_date": "2026-03-13",
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "quote": "Neighbourhood bistro near the courthouse from chef Clément; refined seasonal plates with mackerel in escabeche praised as exalted; black pollock with pastis sauce and vanilla cremeux with citrus marmalade",
+      "confidence_tier": "B",
+      "language_pool": "fr"
+    },
+    {
+      "id": "lyon-france-006",
+      "name": "La Famille",
+      "address": "18 rue Duviard",
+      "postcode": "69004",
+      "neighbourhood": "Croix-Rousse",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Bistronomie",
+      "notable_dishes": [
+        "veal breast",
+        "pâté-croûte",
+        "escargots with star anise",
+        "skrei with crayfish bisque",
+        "shrimp tartare Thai"
+      ],
+      "writers": [
+        "François Mailhes"
+      ],
+      "sources": [
+        "tdl-mailhes"
+      ],
+      "article_urls": [
+        "https://tribunedelyon.fr/restaurants-gastronomie/lyon-4e-cuisine-de-cuisinier-la-famille/"
+      ],
+      "tdl_rating": "4/4",
+      "tdl_article_date": "2026-02-06",
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "La Famille",
+      "geo_skip": false,
+      "lat": 45.753946,
+      "lng": 4.8595656,
+      "geo_source": "nominatim",
+      "quote": "Croix-Rousse bistro from chef Alexandre Gauthier delivering craftsman's cooking; veal breast, pâté-croûte, and skrei with crayfish bisque among the highlights",
+      "confidence_tier": "B",
+      "language_pool": "fr"
+    },
+    {
+      "id": "lyon-france-007",
+      "name": "Bonbec",
+      "address": "7 rue de la Part-Dieu",
+      "postcode": "69003",
+      "neighbourhood": "Part-Dieu",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Bistronomie",
+      "notable_dishes": [
+        "œufs mayo",
+        "poireaux vinaigrette",
+        "choux with moules and chorizo",
+        "sea bass carpaccio"
+      ],
+      "writers": [
+        "François Mailhes"
+      ],
+      "sources": [
+        "tdl-mailhes"
+      ],
+      "article_urls": [
+        "https://tribunedelyon.fr/restaurants-gastronomie/lyon-3e-bonbec-restaurant-amuse-classiques/"
+      ],
+      "tdl_rating": "4/4",
+      "tdl_article_date": "2026-01-30",
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Bonbec",
+      "geo_skip": false,
+      "lat": 45.7592666,
+      "lng": 4.8417953,
+      "geo_source": "nominatim",
+      "quote": "Cheerful Part-Dieu bistro playing affectionately with French classics; œufs mayo and poireaux vinaigrette executed with care alongside choux with moules and chorizo",
+      "confidence_tier": "B",
+      "language_pool": "fr"
+    },
+    {
+      "id": "lyon-france-008",
+      "name": "Cinq mains",
+      "address": "12 rue Mgr-Lavarenne",
+      "postcode": "69005",
+      "neighbourhood": "Vieux-Lyon",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Bistronomie",
+      "notable_dishes": [
+        "thyme pita with fennel caviar",
+        "roasted sucrine lettuce with hollandaise and yeast powder",
+        "pork chop with shallot compote and crushed potatoes",
+        "roasted cauliflower"
+      ],
+      "writers": [
+        "François Mailhes"
+      ],
+      "sources": [
+        "tdl-mailhes"
+      ],
+      "article_urls": [
+        "https://tribunedelyon.fr/restaurants-gastronomie/lyon-5e-cinq-mains-restaurant/"
+      ],
+      "tdl_rating": "4/4",
+      "tdl_article_date": "2026-02-20",
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Cinq Mains",
+      "geo_skip": false,
+      "lat": 45.758934,
+      "lng": 4.8266858,
+      "geo_source": "nominatim",
+      "quote": "Vieux-Lyon bistro from Michelin Bib Gourmand chef Wandrille Beaugrand; thyme pita with fennel caviar and pork chop with shallot compote; lunch from €28, dinner from €41",
+      "confidence_tier": "B",
+      "language_pool": "fr"
+    },
+    {
+      "id": "lyon-france-009",
+      "name": "Kuro",
+      "address": "13 rue Professeur Weill",
+      "postcode": "69006",
+      "neighbourhood": "Brotteaux",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Asian fusion",
+      "notable_dishes": [
+        "foie gras with sake and onion-ginger-citrus chutney",
+        "salmon gravlax with miso",
+        "duck filet glazed with hoisin sauce",
+        "butternut squash velouté with satay"
+      ],
+      "writers": [
+        "François Mailhes"
+      ],
+      "sources": [
+        "tdl-mailhes"
+      ],
+      "article_urls": [
+        "https://tribunedelyon.fr/restaurants-gastronomie/lyon-6e-kuro-asie-en-fusion/"
+      ],
+      "tdl_rating": "4/4",
+      "tdl_article_date": "2026-04-17",
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Kuro",
+      "geo_skip": false,
+      "lat": 45.7688383,
+      "lng": 4.8564219,
+      "geo_source": "nominatim",
+      "quote": "Brotteaux restaurant from Lyon-born David Siong (Chinese heritage) and Peka Sourignavong (Laotian heritage); joyful open kitchen with foie gras with sake and Norwegian salmon gravlax with miso",
+      "confidence_tier": "B",
+      "language_pool": "fr"
+    },
+    {
+      "id": "lyon-france-010",
+      "name": "Le Petit Abuluzi",
+      "address": "8 rue Longue",
+      "postcode": "69001",
+      "neighbourhood": "Presqu'île",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Franco-Tibetan",
+      "notable_dishes": [
+        "Tibetan momos (beef, seafood, vegetarian)",
+        "ravioles salad with beetroot, edamame, cashews, chorizo",
+        "Charolais entrecôte with Tibetan morels",
+        "chicken curry"
+      ],
+      "writers": [
+        "François Mailhes"
+      ],
+      "sources": [
+        "tdl-mailhes"
+      ],
+      "article_urls": [
+        "https://tribunedelyon.fr/restaurants-gastronomie/lyon-1er-le-petit-abuluzi-momos-tibetains/"
+      ],
+      "tdl_rating": "3/4",
+      "tdl_article_date": "2026-04-24",
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_skip": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": "photon",
+      "quote": "Presqu'île restaurant from chef Migmar (ex-Paul Bocuse) serving Tibetan momos alongside French bistro dishes; beef, seafood, and vegetarian momos available alongside Charolais entrecôte with Tibetan morels",
+      "confidence_tier": "B",
+      "language_pool": "fr"
+    },
+    {
+      "id": "lyon-france-011",
+      "name": "L'Osteria Saint-Nizier",
+      "address": "5 place Saint-Nizier",
+      "postcode": "69002",
+      "neighbourhood": "Presqu'île",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Italian",
+      "notable_dishes": [
+        "salsiccia piccante pizza",
+        "vitello tonnato",
+        "orecchiette with beef and lemon",
+        "panna cotta"
+      ],
+      "writers": [
+        "François Mailhes"
+      ],
+      "sources": [
+        "tdl-mailhes"
+      ],
+      "article_urls": [
+        "https://tribunedelyon.fr/restaurants-gastronomie/lyon-2e-invasion-pizzas-geantes-osteria-saint-nizier/"
+      ],
+      "tdl_rating": "3/4",
+      "tdl_article_date": "2026-05-01",
+      "both_pool": false,
+      "open_status_check": false,
+      "flag": "chain-origin (German parent company noted by Mailhes)",
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "L'Osteria",
+      "geo_skip": false,
+      "lat": 45.764446,
+      "lng": 4.8329484,
+      "geo_source": "nominatim",
+      "quote": "Place Saint-Nizier Italian with outsized bicycle-wheel-diameter pizzas and straightforward pasta; vitello tonnato and salsiccia piccante pizza; open daily until midnight on weekends",
+      "confidence_tier": "B",
+      "language_pool": "fr"
+    },
+    {
+      "id": "lyon-france-012",
+      "name": "Majorelle",
+      "address": "50 cours Docteur-Long",
+      "postcode": "69003",
+      "neighbourhood": "Part-Dieu",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Bistronomie",
+      "notable_dishes": [
+        "egg with mushrooms, truffle cream, and bacon",
+        "foie gras with corn bread and vanilla parsnip purée",
+        "scallops with black miso-citron sauce and lobster espuma",
+        "orange tartlet and chocolate entremets"
+      ],
+      "writers": [
+        "François Mailhes"
+      ],
+      "sources": [
+        "tdl-mailhes"
+      ],
+      "article_urls": [
+        "https://tribunedelyon.fr/restaurants-gastronomie/lyon-3e-desserts-affectueux-chez-majorelle/"
+      ],
+      "tdl_rating": "2.5/4",
+      "tdl_article_date": "2026-01-23",
+      "both_pool": false,
+      "open_status_check": false,
+      "flag": "mixed review (2.5/4)",
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_skip": true,
+      "lat": null,
+      "lng": null,
+      "geo_source": "nominatim",
+      "quote": "Part-Dieu bistronomic restaurant from chef Benjamin with a monthly seasonal menu; ambitious dessert programme including scallops with black miso-citron sauce; mixed review from Mailhes (2.5/4)",
+      "confidence_tier": "B",
+      "language_pool": "fr"
+    },
+    {
+      "id": "lyon-france-013",
+      "name": "Café Terroir",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Lyonnais",
+      "notable_dishes": [
+        "tartare",
+        "lentils with sausage",
+        "snails",
+        "whole baked chicken"
+      ],
+      "writers": [
+        "Signe Meirane"
+      ],
+      "sources": [
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Café Terroir",
+      "geo_skip": false,
+      "lat": 45.7592017,
+      "lng": 4.8317494,
+      "geo_source": "nominatim",
+      "quote": "Very local, typical Lyonnais food including tartare, lentils with sausage, snails, and whole baked chicken; a neighbourhood institution recommended by Lyon resident Signe Meirane",
+      "confidence_tier": "B",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-014",
+      "name": "Breizh",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Breton crêpes",
+      "notable_dishes": [
+        "galettes",
+        "crêpes"
+      ],
+      "writers": [
+        "Signe Meirane"
+      ],
+      "sources": [
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Breizh Café",
+      "geo_skip": false,
+      "lat": 45.7670576,
+      "lng": 4.856577,
+      "geo_source": "nominatim",
+      "quote": "Simple Brittany-style galettes and crêpes served all day with a generous variety of fillings; a reliable casual address",
+      "confidence_tier": "B",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-015",
+      "name": "Bel Ami",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Spanish tapas",
+      "notable_dishes": [
+        "hummus",
+        "sausages",
+        "octopus"
+      ],
+      "writers": [
+        "Signe Meirane"
+      ],
+      "sources": [
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Bel Ami",
+      "geo_skip": false,
+      "lat": 45.7687265,
+      "lng": 4.8302253,
+      "geo_source": "nominatim",
+      "quote": "Simple sharing plates with hummus, sausages, and octopus alongside a local wine selection; relaxed atmosphere",
+      "confidence_tier": "B",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-016",
+      "name": "Madamann",
+      "address": "Halles de la Martinière",
+      "postcode": "69001",
+      "neighbourhood": "Presqu'île",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Crêpes / galettes",
+      "notable_dishes": [
+        "organic crêpes",
+        "organic galettes"
+      ],
+      "writers": [
+        "Signe Meirane"
+      ],
+      "sources": [
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Madamann",
+      "geo_skip": false,
+      "lat": 45.7683486,
+      "lng": 4.8299017,
+      "geo_source": "nominatim",
+      "quote": "Organic and local produce crêperie inside the Halles de la Martinière; a popular choice for weekend brunch in the 1st arrondissement",
+      "confidence_tier": "B",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-017",
+      "name": "Le Troquet",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "French seasonal",
+      "notable_dishes": null,
+      "writers": [
+        "Signe Meirane"
+      ],
+      "sources": [
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Le Troquet des Sens",
+      "geo_skip": false,
+      "lat": 45.7525027,
+      "lng": 4.8316449,
+      "geo_source": "nominatim",
+      "quote": "Local and organic produce restaurant with a frequently changing menu of shareable seasonal plates; a neighbourhood favourite",
+      "confidence_tier": "B",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-018",
+      "name": "Chez Pimmouse",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "neighbourhood_hint": "by river Saône",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Regional French",
+      "notable_dishes": null,
+      "writers": [
+        "Signe Meirane"
+      ],
+      "sources": [
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Chez Pimousse",
+      "geo_skip": false,
+      "lat": 45.7683939,
+      "lng": 4.823037,
+      "geo_source": "photon",
+      "quote": "Romantic restaurant on the Saône riverbank; light and elegant, recommended by Signe Meirane for special occasions",
+      "confidence_tier": "B",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-019",
+      "name": "Le Bistrot du Potager Stalingrad",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": "Villeurbanne",
+      "neighbourhood_hint": "border of 6th arrondissement and Villeurbanne",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "French bistro",
+      "notable_dishes": [
+        "grilled meat"
+      ],
+      "writers": [
+        "Signe Meirane"
+      ],
+      "sources": [
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "quote": "Local neighbourhood gathering spot on the 6th–Villeurbanne border emphasising grilled meat and seasonal produce",
+      "confidence_tier": "B",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-020",
+      "name": "Le Bistrot Gerland",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": "Gerland",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "French seasonal",
+      "notable_dishes": null,
+      "writers": [
+        "Signe Meirane"
+      ],
+      "sources": [
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": null,
+      "geo_matched_name": null,
+      "geo_skip": true,
+      "quote": "More elegant sister location of Le Bistrot du Potager in Gerland; modern, lighter interior with a seasonal menu",
+      "confidence_tier": "B",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-021",
+      "name": "Casareccio",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "neighbourhood_hint": "city centre",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Pizza",
+      "notable_dishes": [
+        "sourdough pizza"
+      ],
+      "writers": [
+        "Signe Meirane"
+      ],
+      "sources": [
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Casareccio",
+      "geo_skip": false,
+      "lat": 45.7696756,
+      "lng": 4.8470197,
+      "geo_source": "nominatim",
+      "quote": "City centre sourdough pizza with simple, very delicious toppings; accessible on foot from the centre of Lyon",
+      "confidence_tier": "B",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-022",
+      "name": "Leptine",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": "Presqu'île",
+      "neighbourhood_hint": "border of 1st and 2nd arrondissements",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "French-Asian fusion",
+      "notable_dishes": null,
+      "writers": [
+        "Signe Meirane"
+      ],
+      "sources": [
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Leptine",
+      "geo_skip": false,
+      "lat": 45.7680012,
+      "lng": 4.8306028,
+      "geo_source": "nominatim",
+      "quote": "Reservation-recommended restaurant blending French and Asian culinary traditions; on the border of the 1st and 2nd arrondissements",
+      "confidence_tier": "B",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-023",
+      "name": "Junk",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "American burgers",
+      "notable_dishes": [
+        "smash burgers",
+        "crispy chicken"
+      ],
+      "writers": [
+        "Signe Meirane"
+      ],
+      "sources": [
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Junk",
+      "geo_skip": false,
+      "lat": 45.7620754,
+      "lng": 4.8350054,
+      "geo_source": "nominatim",
+      "quote": "Smash burgers and crispy fried chicken; a local favourite for American-style fast food recommended by Lyon resident Signe Meirane",
+      "confidence_tier": "B",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-024",
+      "name": "Le Bistrot d'Abel",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Modern Lyonnais",
+      "notable_dishes": [
+        "Lyonnaise salad",
+        "veal liver"
+      ],
+      "writers": [
+        "Signe Meirane"
+      ],
+      "sources": [
+        "signeture-living"
+      ],
+      "article_urls": [
+        "https://signeture.living/travle-lyon/2024/7/5/restaurants"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Le Bistrot d'Abel",
+      "geo_skip": false,
+      "lat": 45.7640013,
+      "lng": 4.8369242,
+      "geo_source": "nominatim",
+      "quote": "Classic heavy Lyonnaise cuisine reinterpreted in a lighter, modern bistro style; notable for Lyonnaise salad and veal liver",
+      "confidence_tier": "B",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-025",
+      "name": "La Maison Cobalte",
+      "address": "23 rue René Leynaud",
+      "postcode": "69001",
+      "neighbourhood": "Presqu'île",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "French bistro",
+      "notable_dishes": null,
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "timeout-lyon"
+      ],
+      "article_urls": [
+        "https://www.timeout.com/france/best-restaurants-in-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "medium",
+      "geo_matched_name": "Maison Cobalte",
+      "geo_skip": false,
+      "lat": 45.769888,
+      "lng": 4.833577,
+      "geo_source": "photon",
+      "quote": "Restaurant, café, and bar hybrid in the 1st arrondissement serving classic-with-a-twist dishes and an extensive dessert selection",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-026",
+      "name": "Maria",
+      "address": "1-3 rue des Pierres Plantées",
+      "postcode": "69001",
+      "neighbourhood": "Presqu'île",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Neapolitan pizza",
+      "notable_dishes": [
+        "wood-fired Neapolitan pizza"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "timeout-lyon"
+      ],
+      "article_urls": [
+        "https://www.timeout.com/france/best-restaurants-in-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Pizza Maria",
+      "geo_skip": false,
+      "lat": 45.7735366,
+      "lng": 4.8322165,
+      "geo_source": "nominatim",
+      "quote": "Wood-fired Neapolitan pizza in the 1st arrondissement; eight varieties on the menu plus weekly rotating specials",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-027",
+      "name": "Sapnà",
+      "address": "7 rue de la Martinière",
+      "postcode": "69001",
+      "neighbourhood": "Presqu'île",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Asian fusion",
+      "notable_dishes": [
+        "smoked trout gyoza",
+        "lamb satay bao"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "timeout-lyon"
+      ],
+      "article_urls": [
+        "https://www.timeout.com/france/best-restaurants-in-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "SAPNÀ",
+      "geo_skip": false,
+      "lat": 45.7682936,
+      "lng": 4.8290223,
+      "geo_source": "nominatim",
+      "quote": "Globe-trotting menu with smoked trout gyoza, lamb satay bao, and an on-site pastry bar in the 1st arrondissement",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-028",
+      "name": "Söma",
+      "address": "9 place Saint-Paul",
+      "postcode": "69005",
+      "neighbourhood": "Vieux-Lyon",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Franco-Middle Eastern",
+      "notable_dishes": [
+        "tempura dates",
+        "cauliflower tabbouleh"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "timeout-lyon"
+      ],
+      "article_urls": [
+        "https://www.timeout.com/france/best-restaurants-in-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Söma",
+      "geo_skip": false,
+      "lat": 45.7663395,
+      "lng": 4.8276118,
+      "geo_source": "nominatim",
+      "quote": "Minimalist Vieux-Lyon restaurant with a seasonal menu; tempura dates and cauliflower tabbouleh among the signature dishes",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-029",
+      "name": "Boleh Lah",
+      "address": "11 rue Salomon-Reinach",
+      "postcode": "69007",
+      "neighbourhood": "Gerland",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Malaysian",
+      "notable_dishes": [
+        "roti flatbread",
+        "beef rendang",
+        "nasi goreng"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "timeout-lyon"
+      ],
+      "article_urls": [
+        "https://www.timeout.com/france/best-restaurants-in-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Boleh Lah",
+      "geo_skip": false,
+      "lat": 45.7524997,
+      "lng": 4.8390921,
+      "geo_source": "nominatim",
+      "quote": "Malaysian mamak street food in the 7th; roti flatbread, beef rendang, and nasi goreng; mains from €14",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-030",
+      "name": "Canard de Rue",
+      "address": "2bis rue Saint Maximin",
+      "postcode": "69003",
+      "neighbourhood": "Part-Dieu",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Duck specialties",
+      "notable_dishes": [
+        "duck burger",
+        "duck hot dog"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "timeout-lyon"
+      ],
+      "article_urls": [
+        "https://www.timeout.com/france/best-restaurants-in-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Canard De Rue",
+      "geo_skip": false,
+      "lat": 45.749752,
+      "lng": 4.8644189,
+      "geo_source": "nominatim",
+      "quote": "Duck-themed restaurant in the 3rd serving duck burgers and duck hot dogs in a casual bar atmosphere; from €15.50",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-031",
+      "name": "Groom",
+      "address": "6 rue Roger Violi",
+      "postcode": "69001",
+      "neighbourhood": "Presqu'île",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Cocktail bar / live music",
+      "notable_dishes": [
+        "charcuterie boards"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "timeout-lyon"
+      ],
+      "article_urls": [
+        "https://www.timeout.com/france/best-restaurants-in-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Groom",
+      "geo_skip": false,
+      "lat": 45.7706062,
+      "lng": 4.8370066,
+      "geo_source": "nominatim",
+      "quote": "Basement neon cocktail den in the 1st with craft spirits, charcuterie boards, and live music nights; cocktails from €11",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-032",
+      "name": "La Madone",
+      "address": "1-3 place des Capucins",
+      "postcode": "69001",
+      "neighbourhood": "Presqu'île",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Bar / snacks",
+      "notable_dishes": [
+        "cheese boards",
+        "charcuterie boards"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "timeout-lyon"
+      ],
+      "article_urls": [
+        "https://www.timeout.com/france/best-restaurants-in-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": false,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "La Madone",
+      "geo_skip": false,
+      "lat": 45.7689426,
+      "lng": 4.8324435,
+      "geo_source": "nominatim",
+      "quote": "Former rectory in the 1st converted into a relaxed bar serving craft beer, cocktails, and cheese and charcuterie boards; tapas from €6",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-033",
+      "name": "Circle",
+      "address": null,
+      "postcode": "69001",
+      "neighbourhood": "Presqu'île",
+      "neighbourhood_hint": "1st arrondissement",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Modern French",
+      "notable_dishes": [
+        "okonomiyaki with hazelnut-satay sauce",
+        "lobster bisque",
+        "deconstructed makroud"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Circle",
+      "geo_skip": false,
+      "lat": 45.7649592,
+      "lng": 4.8324473,
+      "geo_source": "nominatim",
+      "quote": "Creative tasting menu restaurant in the 1st with seasonal and international-influenced preparations; six or eight courses with okonomiyaki-hazelnut satay sauce and deconstructed makroud",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-034",
+      "name": "Alebrije",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Mexican",
+      "notable_dishes": [
+        "tacos with edible flowers",
+        "guava and root vegetables in mole",
+        "spicy margaritas"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Alebrije",
+      "geo_skip": false,
+      "lat": 45.7759534,
+      "lng": 4.8349755,
+      "geo_source": "nominatim",
+      "quote": "Mexican restaurant balancing hearty classics with beautiful presentation; tacos with edible flowers, guava in mole, and spicy margaritas",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-035",
+      "name": "Chez Paul",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Bouchon lyonnais",
+      "notable_dishes": [
+        "tripe",
+        "andouillette"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Chez Paul",
+      "geo_skip": false,
+      "lat": 45.7666942,
+      "lng": 4.8326542,
+      "geo_source": "nominatim",
+      "quote": "Classic Lyon bouchon with long communal tables, a boisterous atmosphere, and sharing wine carafes; tripe and andouillette on the menu",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-036",
+      "name": "Becbec",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Vegetarian wine bar",
+      "notable_dishes": [
+        "kimchi cheese toasties",
+        "patatas bravas",
+        "cheese platters"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Becbec",
+      "geo_skip": false,
+      "lat": 45.7567784,
+      "lng": 4.8656941,
+      "geo_source": "nominatim",
+      "quote": "Affordable neighbourhood vegetarian wine bar with hearty portions; kimchi cheese toasties, patatas bravas, and cheese platters in a casual artsy setting",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-037",
+      "name": "Brasserie Georges",
+      "address": null,
+      "postcode": "69002",
+      "neighbourhood": "Presqu'île",
+      "neighbourhood_hint": "2nd arrondissement",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Traditional French brasserie",
+      "notable_dishes": null,
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Brasserie Georges",
+      "geo_skip": false,
+      "lat": 45.7483221,
+      "lng": 4.8283428,
+      "geo_source": "nominatim",
+      "quote": "Lyon brasserie institution since 1836 with Art Deco chandeliers and a celebratory atmosphere; a landmark address for traditional French brasserie classics",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-038",
+      "name": "Nafas",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Syrian",
+      "notable_dishes": [
+        "falafel",
+        "shawarma",
+        "diverse dips"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Nafas",
+      "geo_skip": false,
+      "lat": 45.7698509,
+      "lng": 4.8331424,
+      "geo_source": "nominatim",
+      "quote": "Refugee-run Syrian restaurant with generous portions at low prices and a sprawling terrace; falafel, shawarma, and diverse dips under €13",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-039",
+      "name": "Regain",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "French",
+      "notable_dishes": [
+        "lamb tartare",
+        "barbecued squid",
+        "rose-infused meringue"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Regain",
+      "geo_skip": false,
+      "lat": 45.767083,
+      "lng": 4.8302355,
+      "geo_source": "nominatim",
+      "quote": "Beige cellar-like dining room with beautifully presented seasonal plates; lamb tartare, barbecued squid, and rose-infused meringue; set menus €25–€75",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-040",
+      "name": "Les Muses de l'Opéra",
+      "address": null,
+      "postcode": "69001",
+      "neighbourhood": "Presqu'île",
+      "neighbourhood_hint": "rooftop of Opéra de Lyon, 1st arrondissement",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Contemporary French / rooftop bar",
+      "notable_dishes": [
+        "charcuterie",
+        "truffle sausage",
+        "eggplant caviar"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Les Muses de l'Opéra",
+      "geo_skip": false,
+      "lat": 45.7678384,
+      "lng": 4.8363191,
+      "geo_source": "nominatim",
+      "quote": "Seasonal rooftop terrace atop the Opéra de Lyon open May to September; the city's best sunset views with charcuterie, truffle sausage, and eggplant caviar",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-041",
+      "name": "Les Mauvaises Herbes",
+      "address": null,
+      "postcode": "69001",
+      "neighbourhood": "Presqu'île",
+      "neighbourhood_hint": "1st arrondissement",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Vegetarian fine dining",
+      "notable_dishes": [
+        "zucchini-pomelo ceviche",
+        "romaine leaf tacos",
+        "papas arrugadas"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Les Mauvaises Herbes",
+      "geo_skip": false,
+      "lat": 45.7697154,
+      "lng": 4.8297787,
+      "geo_source": "nominatim",
+      "quote": "Split-level plant-filled vegetarian fine dining restaurant open since 2018; won over both vegetarians and carnivores; zucchini-pomelo ceviche and romaine leaf tacos",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-042",
+      "name": "Flair",
+      "address": null,
+      "postcode": "69002",
+      "neighbourhood": "Presqu'île",
+      "neighbourhood_hint": "2nd arrondissement",
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "French-Japanese fusion",
+      "notable_dishes": [
+        "parsnip three ways",
+        "foie gras with bamboo-tofu sauce",
+        "grilled octopus in ponzu"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Flair",
+      "geo_skip": false,
+      "lat": 45.7494812,
+      "lng": 4.8296986,
+      "geo_source": "nominatim",
+      "quote": "Value-focused French-Japanese fusion in the 2nd; parsnip three ways, foie gras with bamboo-tofu sauce, and grilled octopus in ponzu; lunch from €27",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    },
+    {
+      "id": "lyon-france-043",
+      "name": "Les Marmottes",
+      "address": null,
+      "postcode": null,
+      "neighbourhood": null,
+      "city": "Lyon",
+      "country": "France",
+      "cuisine": "Savoyard",
+      "notable_dishes": [
+        "all-you-can-eat raclette",
+        "wild garlic fondue",
+        "tartiflette with boletus mushrooms"
+      ],
+      "writers": [
+        "Anna Richards"
+      ],
+      "sources": [
+        "infatuation-lyon"
+      ],
+      "article_urls": [
+        "https://www.theinfatuation.com/lyon/guides/best-restaurants-lyon"
+      ],
+      "tdl_rating": null,
+      "tdl_article_date": null,
+      "both_pool": false,
+      "open_status_check": true,
+      "geo_lat": null,
+      "geo_lng": null,
+      "geo_confidence": "high",
+      "geo_matched_name": "Les Marmottes",
+      "geo_skip": false,
+      "lat": 45.7548697,
+      "lng": 4.8477881,
+      "geo_source": "nominatim",
+      "quote": "Chalet-aesthetic Savoyard restaurant with all-you-can-eat raclette; wild garlic fondue and tartiflette with boletus mushrooms in a wood-panelled warm setting",
+      "confidence_tier": "C",
+      "language_pool": "en"
+    }
+  ],
+  "centroids": {
+    "Part-Dieu": [
+      45.7545,
+      4.8531
+    ],
+    "Presqu'île": [
+      45.7647,
+      4.8318
+    ],
+    "Villeurbanne": [
+      45.7734,
+      4.8868
+    ],
+    "Gerland": [
+      45.7525,
+      4.8391
+    ]
+  },
+  "run_metrics": {
+    "city": "Lyon",
+    "country": "France",
+    "city_slug": "lyon-france",
+    "run_date": "2026-05-06",
+    "pipeline": "localbite-v7.1",
+    "sources_confirmed": 4,
+    "final_entries": 43,
+    "both_pool": 4,
+    "tier_a": 3,
+    "tier_b": 21,
+    "tier_c": 19,
+    "searches_run": 39,
+    "open_status_check": true,
+    "phase1b_candidates_checked": 15,
+    "phase1b_rejected": 11,
+    "phase2_fetches": 19,
+    "phase2_failed": 3,
+    "michelin_excluded": 4,
+    "negative_review_excluded": 1,
+    "concentration_cap_excluded": 7,
+    "publisher_concentration_flag": "FR pool: Tribune de Lyon 100% (structural gap — no other named FR food critics identified)",
+    "tokens": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "tool_uses": null,
+    "run_time_seconds": null
+  },
+  "source_recency": "2023-2026"
+}

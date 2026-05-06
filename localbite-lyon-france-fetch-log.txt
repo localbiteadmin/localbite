@@ -1,0 +1,31 @@
+# Lyon France Fetch Log — LocalBite v7.1
+# Started: 2026-05-06
+
+[p0] "tribunedelyon.fr/restaurants-gastronomie/" → 200 | 8500ch | ACCEPTED — section page with 14 restaurant articles from April-May 2026, multiple within YEAR_RANGE
+[p0] "culinarybackstreets.com/cities-category/lyon/" → 404 | 15800ch | FAILED — 404 page not found, Lyon section does not exist at this URL
+[p0] "web.archive.org/web/2026/culinarybackstreets.com/cities-category/lyon/" → 451 | —ch | FAILED — GDPR/access blocked via Wayback, no usable content
+[p0] "timeout.com/france/best-restaurants-in-lyon" → 200 | 18500ch | ACCEPTED — Anna Richards April 2025 byline confirmed, 12 restaurants with descriptions
+[p0] "signeture.living/travle-lyon" → 200 | 12500ch | ACCEPTED — category page confirmed, multiple 2024-2025 Lyon food articles by Signe Meirane
+[p0] "tribunedelyon.fr/restaurants-gastronomie/lyon-2e-falcone-une-certaine-idee-de-litalie/" → 200 | 3500ch | PARTIAL — François Mailhes byline confirmed; article date 2022-09-02 outside YEAR_RANGE (updated 2025)
+[p0] "tribunedelyon.fr/auteur/francois-mailhes/" → 200 | 5000ch | ACCEPTED — 782 articles confirmed, full list of 2025-2026 individual restaurant review articles shown
+[p0] "tribunedelyon.fr/restaurants-gastronomie/lyon-3e-amicus/" → 200 | 3500ch | ACCEPTED — Mailhes byline confirmed, date 2026-03-13 within YEAR_RANGE, good review content
+[p0] "signeture.living/travle-lyon/2024/7/5/restaurants" → 200 | 8000ch | ACCEPTED — 13 Lyon restaurants with descriptions, July 2024, single-author site confirmed
+[p0] "signeture.living/about" → 200 | 4000ch | ACCEPTED — confirms Signe Meirane (Vanaga) as sole author, Lyon resident confirmed
+
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-4e-cuisine-de-cuisinier-la-famille/" → 200 | 3500ch | ACCEPTED — Mailhes 2026-02-06; La Famille 18 rue Duviard Lyon 4e; chef Alexandre Gauthier; bistronomie; 4/4
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-3e-bonbec-restaurant-amuse-classiques/" → 200 | 3200ch | ACCEPTED — Mailhes 2026-01-30; Bonbec 7 rue de la Part-Dieu Lyon 3e; bistronomie; 4/4
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-6e-ayla-grand-mezze-civilisationnel/" → 200 | 3800ch | ACCEPTED — Mailhes 2023-06-16; Ayla 11 place de l'Europe Lyon 6e; Franco-Lebanese; 4/4
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-7e-restaurant-kitchen/" → 503 | —ch | FAILED — server error; retry 1
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-5e-cinq-mains-restaurant/" → 200 | 3200ch | ACCEPTED — Mailhes 2026-02-20; Cinq mains 12 rue Mgr-Lavarenne Lyon 5e; chef Wandrille Beaugrand; bistronomie; 4/4
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-6e-kuro-asie-en-fusion/" → 200 | 3500ch | ACCEPTED — Mailhes 2026-04-17; Kuro 13 rue Professeur Weill Lyon 6e; Asian fusion; 4/4
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-1er-le-petit-abuluzi-momos-tibetains/" → 200 | 3000ch | ACCEPTED — Mailhes 2026-04-24; Le Petit Abuluzi 8 rue Longue Lyon 1er; Franco-Tibetan; 3/4
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-2e-invasion-pizzas-geantes-osteria-saint-nizier/" → 200 | 3200ch | ACCEPTED — Mailhes 2026-05-01; Osteria Saint-Nizier 5 place Saint-Nizier Lyon 2e; Italian; 3/4
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-3e-desserts-affectueux-chez-majorelle/" → 200 | 3200ch | ACCEPTED — Mailhes 2026-01-23; Majorelle 50 cours Docteur-Long Lyon 3e; bistronomie; 2.5/4
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-2e-maison-gloria/" → 200 | 3000ch | ACCEPTED — Mailhes 2026-02-27; Maison Gloria 24 rue de la République Lyon 2e; international; 1/4 — EXCLUDED (negative review, not a recommendation)
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-7e-restaurant-kitchen/" → 503 | —ch | FAILED — server error; retry 2
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-3e-amicus/" → 200 | 3500ch | ACCEPTED — Mailhes 2026-03-13; Amicus 158 rue de Créqui Lyon 3e; chef Clément; bistronomie; 4/4 (re-fetch for full extraction)
+[p2] "tribunedelyon.fr/restaurants-gastronomie/lyon-7e-restaurant-kitchen/" → 200 | 3800ch | ACCEPTED — Mailhes 2026-02-13; Kitchen 34 rue Chevreul Lyon 7e; chef Connie Zagora; fermentation-focused bistronomie; 4/4 (retry 3 success)
+[p2] "timeout.com/france/best-restaurants-in-lyon" → 200 | 18500ch | ACCEPTED — Anna Richards 2025-04-15; 12 restaurants confirmed
+[p2] "signeture.living/travle-lyon/2024/7/5/restaurants" → 200 | 8000ch | ACCEPTED — Signe Meirane (single-author) 2024-07-29; 13 restaurants confirmed
+[p2] "theinfatuation.com/lyon/guides/best-restaurants-in-lyon" → 404 | —ch | FAILED — URL slug incorrect
+[p2] "theinfatuation.com/lyon/guides/best-restaurants-lyon" → 200 | 22000ch | ACCEPTED — Anna Richards 2023-09-09; 24 restaurants; 4 excluded (Michelin starred: La Mère Brazier, Ombellule, Takao Takano, L'Atelier des Augustins)

@@ -1,0 +1,117 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+CITY: Lyon, France
+PRIMARY_LANGUAGE: French (fr)
+SECONDARY_LANGUAGE: English (en)
+SINGLE_LANGUAGE_CITY: NO
+YEAR_RANGE: 2023-2026
+PRICE_CURRENCY: EUR
+
+TIER_1_NEIGHBOURHOODS (central/tourist): Presqu'île, Vieux-Lyon, Croix-Rousse, Confluence
+TIER_2_NEIGHBOURHOODS (residential): Brotteaux, Guillotière, Part-Dieu, Gerland, Villeurbanne, Vaise
+TIER_3_NEIGHBOURHOODS (emerging): Monplaisir
+
+GEOGRAPHIC_BOUNDARY_INCLUDE:
+Presqu'île (1er, 2e), Vieux-Lyon (5e), Croix-Rousse (1er, 4e), Part-Dieu (3e),
+Guillotière (7e), Confluence (2e), Gerland (7e), Brotteaux (6e),
+Monplaisir (8e), Villeurbanne, Vaise (9e)
+
+---
+YEAR DISTRIBUTION CHECK (pre-execution):
+Earlier years (2023-2024) referenced in: queries 1, 4, 6, 8, 9, 12, 15, 17, 21, 23, 28, 32, 34 = 13 queries
+Later years (2025-2026) referenced in: queries 2, 3, 5, 7, 10, 11, 13, 14, 16, 18, 22, 24, 25, 27, 29, 30, 33 = 17 queries
+No year term: queries 19, 20, 26, 31, 35, 36, 37 = 7 queries
+Distribution: PASSED — earlier years well represented.
+[year-distribution-check] PASSED — 13 queries reference earlier years, 17 reference later years, 7 have no year term.
+
+---
+PART A — NEIGHBOURHOOD QUERIES
+
+TIER 1:
+
+Presqu'île:
+Q1 [neighbourhood-Presquile]: "restaurants Presqu'île Lyon critique gastronomique 2024" (FR, earlier)
+Q2 [neighbourhood-Presquile]: "best restaurants Lyon Presquile Bellecour food guide 2025" (EN, later)
+
+Vieux-Lyon:
+Q3 [neighbourhood-Vieux-Lyon]: "meilleures tables Vieux-Lyon bouchon lyonnais critique 2025" (FR, later)
+Q4 [neighbourhood-Vieux-Lyon]: "where to eat Vieux Lyon restaurants authentic bouchon 2023 2024" (EN, earlier)
+
+Croix-Rousse:
+Q5 [neighbourhood-Croix-Rousse]: "restaurants Croix-Rousse Lyon guide gastronomique 2025 2026" (FR, later)
+Q6 [neighbourhood-Croix-Rousse]: "Croix-Rousse Lyon restaurants food writer recommendations 2023 2024" (EN, earlier)
+
+Confluence:
+Q7 [neighbourhood-Confluence]: "restaurants Confluence Lyon 2e arrondissement sélection 2025" (FR, later)
+Q8 [neighbourhood-Confluence]: "Lyon Confluence quarter restaurants food guide 2024" (EN, earlier)
+
+TIER 2:
+
+Brotteaux:
+Q9 [neighbourhood-Brotteaux]: "restaurants Brotteaux Lyon 6e arrondissement critique 2023 2024" (FR, earlier)
+Q10 [neighbourhood-Brotteaux]: "Brotteaux Lyon restaurants food guide 6th arrondissement 2025" (EN, later)
+
+Guillotière:
+Q11 [neighbourhood-Guillotiere]: "restaurants Guillotière Lyon 7e adresses cuisine monde 2025" (FR, later)
+Q12 [neighbourhood-Guillotiere]: "Guillotière Lyon restaurants international food 2024" (EN, earlier)
+
+Part-Dieu:
+Q13 [neighbourhood-Part-Dieu]: "restaurants Part-Dieu Lyon 3e bistronomie nouvelles adresses 2025" (FR, later)
+Q14 [neighbourhood-Part-Dieu]: "Part-Dieu Lyon 3rd arrondissement restaurants review 2024" (EN, earlier)
+
+Gerland:
+Q15 [neighbourhood-Gerland]: "restaurants Gerland Lyon 7e gastronomie adresses 2023 2024" (FR, earlier)
+Q16 [neighbourhood-Gerland]: "Gerland Lyon restaurants food recommendations 2025" (EN, later)
+
+Villeurbanne:
+Q17 [neighbourhood-Villeurbanne]: "restaurants Villeurbanne meilleures adresses 2023 2024" (FR, earlier)
+Q18 [neighbourhood-Villeurbanne]: "Villeurbanne restaurants guide food 2025" (EN, later)
+
+Vaise:
+Q19 [neighbourhood-Vaise]: "restaurants Vaise Lyon 9e adresses gastronomie" (FR, no year)
+Q20 [neighbourhood-Vaise]: "Vaise Lyon 9th arrondissement restaurants food guide" (EN, no year)
+
+TIER 3:
+
+Monplaisir:
+Q21 [neighbourhood-Monplaisir]: "restaurants Monplaisir Lyon 8e arrondissement 2023 2024" (FR, earlier)
+
+---
+PART B — CROSS-CUTTING ANGLES
+
+Cross-1 (City-wide EN): 2 queries
+Q22 [cross-1]: "best restaurants Lyon France independent food guide 2024 2025" (later)
+Q23 [cross-1]: "Lyon France where to eat local personal recommendations food 2024" (earlier)
+
+Cross-2 (City-wide FR): 3 queries
+Q24 [cross-2]: "meilleures tables lyonnaises critique gastronomique indépendant 2025 2026" (later)
+Q25 [cross-2]: "où manger à Lyon sélection restaurant quartier par arrondissement 2025" (later)
+Q26 [cross-2]: "Lyon restaurant gastronomie incontournable sélection" (no year, FR)
+
+Cross-3 (Writer-first): 2 queries
+Q27 [cross-3]: "food writer Lyon France restaurant recommendations expat 2025" (later)
+Q28 [cross-3]: "critique gastronomique Lyon indépendant blog restaurant 2023 2024" (earlier)
+
+Cross-4 (Named awards — generic): 3 queries
+Q29 [cross-4]: "Gault Millau Lyon restaurant lauréats récompensés 2025 2026" (later)
+Q30 [cross-4]: "Lyon restaurants Bib Gourmand Michelin critique sélection 2025" (later)
+Q31 [cross-4]: "Fooding Lyon meilleures adresses restaurant sélection" (no year)
+
+Cross-5 (Recent openings): 2 queries
+Q32 [cross-5]: "nouveaux restaurants Lyon ouverture 2023 2024 à tester" (earlier)
+Q33 [cross-5]: "new restaurant openings Lyon 2025 food writer review" (later)
+
+Cross-6 (Local vocabulary — bouchon): 2 queries
+Q34 [cross-6]: "bouchon lyonnais authentique critique sélection incontournable 2023 2024" (earlier)
+Q35 [cross-6]: "mâchon Lyon bouchon traditionnel adresse recommandée 2025" (later/no year)
+
+Cross-7 (Cuisine and community): 2 queries
+Q36 [cross-7]: "cuisine asiatique Lyon Guillotière restaurants authentique critique 2024" (no year)
+Q37 [cross-7]: "bistronomie Lyon chef indépendant restaurant 2024 2025" (no year)
+
+Cross-8 (Publication category FR): 2 queries
+Q38 [cross-8]: "magazine gastronomique lyonnais indépendant restaurant critique sélection 2024" (earlier)
+Q39 [cross-8]: "presse locale Lyon restaurant sélection gastronomie 2025" (later)
+
+TOTAL PLANNED QUERIES: 39 (within 45 soft ceiling)
+STOPPING RULE: If last 8 consecutive queries return no new qualifying sources, stop early.
