@@ -1,0 +1,105 @@
+CITY: Montpellier
+COUNTRY: France
+CITY_SLUG: montpellier-france
+PIPELINE: localbite-v7.1
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+YEAR_RANGE: 2023-2026
+LANGUAGE_POOL_PRIMARY: fr
+LANGUAGE_POOL_SECONDARY: none
+SINGLE_LANGUAGE_CITY: YES
+
+OUTPUT_RAW: localbite-montpellier-france-raw.json
+OUTPUT_FINAL: localbite-montpellier-france-2023-2026.json
+OUTPUT_WORKING: localbite-montpellier-france-working.json
+OUTPUT_SEARCH_LOG: localbite-montpellier-france-search-log.txt
+OUTPUT_FETCH_LOG: localbite-montpellier-france-fetch-log.txt
+
+# =============================================================
+# DIRECT_FETCH_SOURCES
+# No named critic confirmed during pre-research for Montpellier.
+# Phase 1 discovery required.
+# =============================================================
+
+DIRECT_FETCH_SOURCES:
+  # NONE PRE-CONFIRMED
+  # Pre-research notes:
+  # - Midi Libre is the main regional newspaper for Montpellier and Hérault.
+  #   Ownership: Midi Libre Group — verify current ownership (possibly La Dépêche
+  #   du Midi group — DO NOT use both La Dépêche (Toulouse) and Midi Libre
+  #   (Montpellier) as independent sources if they share parent ownership.
+  #   Verify ownership before accepting both in the fleet.)
+  # - Phase 1 should find named food writers at Midi Libre and local blogs.
+
+# =============================================================
+# PUBLISHER_INDEPENDENCE_NOTES
+# =============================================================
+
+PUBLISHER_INDEPENDENCE_NOTES:
+  - IMPORTANT: Midi Libre (Montpellier) ownership must be verified.
+    If Midi Libre is owned by La Dépêche du Midi group (which covers Toulouse),
+    then within Montpellier they could still be used as a source (different city).
+    But within a SINGLE city pack, do not accept both Midi Libre and another
+    La Dépêche group paper as publisher-independent sources.
+  - Current understanding (unverified): Midi Libre and La Dépêche may share
+    parent ownership. Treat as SAME publisher group until confirmed otherwise.
+
+# =============================================================
+# KNOWN_COMMERCIAL_CONFLICTS
+# =============================================================
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  - publication: TheFork / LaFourchette
+    conflict: Reject entirely.
+
+# =============================================================
+# MICHELIN_STARRED_EXCLUSIONS
+# =============================================================
+
+MICHELIN_STARRED_EXCLUSIONS:
+  # 1-star (confirm all against Michelin Guide 2025)
+  - La Maison de Petit Pierre (check current status)
+  - Skab (chef Romain Valicon — check current status)
+  - Leclere (check current status)
+  # NOTE: Montpellier has a small but active food scene. Pipeline must
+  # cross-check all candidates against Michelin Guide 2025.
+
+# =============================================================
+# GEOGRAPHY
+# =============================================================
+
+GEOGRAPHY:
+  CITY_CENTRE_LAT: 43.6110
+  CITY_CENTRE_LNG: 3.8767
+  BOUNDING_BOX: 43.560 / 43.670 / 3.795 / 3.935
+
+  KNOWN_NEIGHBORHOODS:
+    - Écusson (historic centre)
+    - Antigone
+    - Beaux-Arts
+    - Gambetta
+    - Port Marianne
+    - Croix d'Argent
+    - Mosson
+    - Hôpitaux-Facultés
+    - Saint-Martin
+    - Richter
+
+  DISAMBIGUATION_NOTES:
+    - Montpellier France is unambiguous — no toponym collision.
+    - Note: The o and i in Montpellier are NOT accented.
+      "Montpellier" is already the correct non-accented form.
+    - Mediterranean and Languedoc cuisine: oysters, thyme, olive oil.
+      Phase 1 should use "Montpellier restaurant" — unambiguous.
+
+  ACCENTED_VARIANTS: none required
+
+# =============================================================
+# STRUCTURAL_NOTES
+# =============================================================
+
+STRUCTURAL_NOTES:
+  - Montpellier is SINGLE_LANGUAGE_CITY: YES (FR only)
+  - Expected structural gap: 0 CPs.
+  - Growing university town food scene — may produce 20-30R.
+  - If restaurant count is below 10 after pipeline, mark as coming_soon.

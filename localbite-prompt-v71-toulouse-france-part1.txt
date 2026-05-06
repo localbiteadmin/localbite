@@ -1,0 +1,101 @@
+CITY: Toulouse
+COUNTRY: France
+CITY_SLUG: toulouse-france
+PIPELINE: localbite-v7.1
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+YEAR_RANGE: 2023-2026
+LANGUAGE_POOL_PRIMARY: fr
+LANGUAGE_POOL_SECONDARY: none
+SINGLE_LANGUAGE_CITY: YES
+
+OUTPUT_RAW: localbite-toulouse-france-raw.json
+OUTPUT_FINAL: localbite-toulouse-france-2023-2026.json
+OUTPUT_WORKING: localbite-toulouse-france-working.json
+OUTPUT_SEARCH_LOG: localbite-toulouse-france-search-log.txt
+OUTPUT_FETCH_LOG: localbite-toulouse-france-fetch-log.txt
+
+# =============================================================
+# DIRECT_FETCH_SOURCES
+# No named critic confirmed during pre-research for Toulouse.
+# Phase 1 discovery required. See notes.
+# =============================================================
+
+DIRECT_FETCH_SOURCES:
+  # NONE PRE-CONFIRMED
+  # Pre-research notes: La Dépêche du Midi covers Toulouse food but no
+  # named food critic confirmed. Phase 1 should run discovery searches for:
+  # - Named food journalists at La Dépêche du Midi
+  # - Independent food bloggers covering Toulouse restaurants
+  # - Any regional food publications covering Toulouse
+  # Priority: find at least 2 named FR sources before proceeding.
+
+# =============================================================
+# KNOWN_COMMERCIAL_CONFLICTS
+# =============================================================
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  - publication: TheFork / LaFourchette
+    conflict: Restaurant reservations platform. Reject entirely.
+
+  - publication: TripAdvisor Toulouse
+    conflict: Review aggregator — not editorial. Reject.
+
+# =============================================================
+# MICHELIN_STARRED_EXCLUSIONS
+# =============================================================
+
+MICHELIN_STARRED_EXCLUSIONS:
+  # 1-star (Toulouse city, confirm current status against Michelin 2025)
+  - Py-r (chef Pierre Lambinon)
+  - Sept (chef Sylvain Joffre)
+  - Empreinte (check current status)
+  - En Plein Coeur (check current status)
+  # NOTE: Toulouse starred restaurants are few and may change.
+  # Pipeline must cross-check all candidates against Michelin Guide 2025.
+
+# =============================================================
+# GEOGRAPHY
+# =============================================================
+
+GEOGRAPHY:
+  CITY_CENTRE_LAT: 43.6047
+  CITY_CENTRE_LNG: 1.4442
+  BOUNDING_BOX: 43.530 / 43.680 / 1.330 / 1.515
+
+  KNOWN_NEIGHBORHOODS:
+    - Capitole / Centre (1er)
+    - Saint-Cyprien (2e)
+    - Carmes
+    - Saint-Aubin
+    - Arnaud-Bernard
+    - Les Chalets
+    - Saint-Georges
+    - Compans-Caffarelli
+    - Patte d'Oie
+    - Sept-Deniers
+    - Rangueil
+
+  DISAMBIGUATION_NOTES:
+    - Toulouse France is unambiguous — no toponym collision.
+    - "La ville rose" (the pink city) is a common nickname — may appear in queries.
+    - Cassoulet is the signature dish of the region — searches for cassoulet
+      restaurants in Toulouse are valid and relevant.
+    - NOTE on language: Toulouse is capital of Occitan language area. Some
+      older restaurant names may include Occitan terms. Pipeline should not
+      confuse Occitan text with a separate language pool.
+
+  ACCENTED_VARIANTS: none required
+
+# =============================================================
+# STRUCTURAL_NOTES
+# =============================================================
+
+STRUCTURAL_NOTES:
+  - Toulouse is SINGLE_LANGUAGE_CITY: YES (FR only)
+  - Consensus picks (both-pool) are NOT possible without an EN source.
+  - Expected structural gap: 0 CPs. This is acceptable — the city pack
+    will show FR-recommended restaurants only.
+  - If an EN source of sufficient quality is found during Phase 1,
+    pipeline may override SINGLE_LANGUAGE_CITY flag if warranted.
+    Document and flag for review.

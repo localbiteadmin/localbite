@@ -1,0 +1,134 @@
+CITY: Biarritz
+COUNTRY: France
+CITY_SLUG: biarritz-france
+PIPELINE: localbite-v7.1
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+YEAR_RANGE: 2023-2026
+LANGUAGE_POOL_PRIMARY: fr
+LANGUAGE_POOL_SECONDARY: none
+SINGLE_LANGUAGE_CITY: YES
+
+OUTPUT_RAW: localbite-biarritz-france-raw.json
+OUTPUT_FINAL: localbite-biarritz-france-2023-2026.json
+OUTPUT_WORKING: localbite-biarritz-france-working.json
+OUTPUT_SEARCH_LOG: localbite-biarritz-france-search-log.txt
+OUTPUT_FETCH_LOG: localbite-biarritz-france-fetch-log.txt
+
+# =============================================================
+# PACK_SCOPE
+# This pack covers the Biarritz-Anglet-Bayonne (BAB) agglomeration:
+# Biarritz (seaside resort, surf town), Anglet (between), and Bayonne
+# (historic Basque city, 5km inland). All three are part of the same
+# urban food scene and are treated as one city pack.
+# CITY name is "Biarritz" for simplicity and international recognition.
+# =============================================================
+
+PACK_SCOPE: Biarritz-Anglet-Bayonne agglomeration
+
+# =============================================================
+# DIRECT_FETCH_SOURCES
+# No named critic confirmed during pre-research.
+# Phase 1 discovery required.
+# =============================================================
+
+DIRECT_FETCH_SOURCES:
+  # NONE PRE-CONFIRMED
+  # Pre-research notes:
+  # - Sud Ouest covers Biarritz and Bayonne. PUBLISHER CONFLICT NOTE:
+  #   Sud Ouest ALSO covers Bordeaux. Do NOT accept Sud Ouest as an
+  #   independent source in BOTH the Bordeaux and Biarritz packs —
+  #   they are the SAME publisher. Within each pack, Sud Ouest is
+  #   acceptable as one source. The cross-city issue does not affect
+  #   consensus picks (CPs are per city). Document this constraint.
+  # - Basque country food blogs exist in French (and Basque language).
+  #   Phase 1 should search specifically for Pays Basque food writers.
+  # - The Infatuation does not appear to cover Biarritz/Bayonne.
+
+# =============================================================
+# KNOWN_COMMERCIAL_CONFLICTS
+# =============================================================
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  - publication: TheFork / LaFourchette
+    conflict: Reject entirely.
+
+# =============================================================
+# PUBLISHER_INDEPENDENCE_NOTES
+# =============================================================
+
+PUBLISHER_INDEPENDENCE_NOTES:
+  - IMPORTANT: Sud Ouest newspaper covers BOTH Bordeaux AND Biarritz/Bayonne.
+    This is NOT a conflict within the Biarritz pack (one source per city is fine).
+    But do NOT claim publisher independence between a Sud Ouest Bordeaux article
+    and a Sud Ouest Biarritz article — they are the same publisher.
+    Within the Biarritz pack: one Sud Ouest source is acceptable.
+
+# =============================================================
+# MICHELIN_STARRED_EXCLUSIONS
+# =============================================================
+
+MICHELIN_STARRED_EXCLUSIONS:
+  # 1-star (within Biarritz-Anglet-Bayonne, confirm against Michelin Guide 2025)
+  - L'Impertinent (chef Fabien Feldman, Biarritz)
+  - Auberge du Moulin de Bassilour (Bidart — check if within bounding box)
+  - Ithurria (Ainhoa — outside bounding box, village south of Bayonne)
+  - Les Prés d'Eugénie - Michel Guérard (Eugénie-les-Bains — NOT in bounding box, far outside)
+  # NOTE: The Basque Country surrounding area has many starred tables;
+  # most are outside the BAB bounding box. Cross-check carefully.
+
+# =============================================================
+# GEOGRAPHY
+# =============================================================
+
+GEOGRAPHY:
+  CITY_CENTRE_LAT: 43.4832
+  CITY_CENTRE_LNG: -1.5586
+  BOUNDING_BOX: 43.440 / 43.540 / -1.620 / -1.400
+
+  BOUNDING_BOX_NOTE: This box covers Biarritz, Anglet, and Bayonne.
+    Extends slightly inland to include central Bayonne (Petit Bayonne,
+    Grand Bayonne). Does NOT include San Sebastián/Donostia (Spain, 50km).
+
+  KNOWN_NEIGHBORHOODS:
+    # Biarritz
+    - Grande Plage (Biarritz centre)
+    - Côte des Basques
+    - Plateau de l'Atalaye
+    - Milady
+    # Bayonne
+    - Petit Bayonne
+    - Grand Bayonne
+    - Saint-Esprit
+    - Mazoyer
+    # Anglet
+    - Chambre d'Amour
+    - Les Cinq Cantons
+
+  DISAMBIGUATION_NOTES:
+    - Biarritz France is unambiguous for food searches.
+    - Include "Bayonne" and "Pays Basque français" in queries to
+      capture the full BAB agglomeration.
+    - DO NOT include restaurants from San Sebastián, Bilbao, or other
+      Spanish Basque cities — these are in a different country and will
+      be in separate packs.
+    - Basque food specialities: pintxos, jambon de Bayonne, chocolat de
+      Bayonne, gâteau Basque. Phase 1 should include cuisine-specific
+      queries for Basque cuisine.
+    - Note: "Biarritz restaurant" and "Bayonne restaurant" should both
+      be used in Phase 1 searches.
+
+  ACCENTED_VARIANTS: none required
+
+# =============================================================
+# STRUCTURAL_NOTES
+# =============================================================
+
+STRUCTURAL_NOTES:
+  - Biarritz is SINGLE_LANGUAGE_CITY: YES (FR only)
+  - Expected structural gap: 0 CPs.
+  - Smaller city pack — expect 20-35R if sources are found.
+  - If restaurant count below 10, mark as coming_soon.
+  - Basque language (Euskara) exists in the region but FR is the primary
+    food media language for the French Basque Country. Do not treat
+    Basque-language content as a second language pool.

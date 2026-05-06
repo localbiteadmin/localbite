@@ -1,0 +1,92 @@
+CITY: Bordeaux
+COUNTRY: France
+CITY_SLUG: bordeaux-france
+PIPELINE: localbite-v7.1
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+YEAR_RANGE: 2023-2026
+LANGUAGE_POOL_PRIMARY: fr
+LANGUAGE_POOL_SECONDARY: en
+SINGLE_LANGUAGE_CITY: NO
+
+OUTPUT_RAW: localbite-bordeaux-france-raw.json
+OUTPUT_FINAL: localbite-bordeaux-france-2023-2026.json
+OUTPUT_WORKING: localbite-bordeaux-france-working.json
+OUTPUT_SEARCH_LOG: localbite-bordeaux-france-search-log.txt
+OUTPUT_FETCH_LOG: localbite-bordeaux-france-fetch-log.txt
+
+# =============================================================
+# DIRECT_FETCH_SOURCES — confirmed named authors, active 2024-2025
+# =============================================================
+
+DIRECT_FETCH_SOURCES:
+  - url: https://www.papillesetpupilles.fr/pays/restaurants-a-bordeaux/
+    writer: Anne Lataillade
+    publication: Papilles & Pupilles
+    language: fr
+    notes: FR independent food and recipe blog founded 2005 by Bordeaux resident Anne Lataillade. ~200,000 visitors/day. Has a dedicated Bordeaux restaurant section. Active through 2025 (confirmed reviews Nov 2024, March 2025). Single-author site — all content by Anne Lataillade (confirmed from About page and copyright notice). Fully independent publication. Top-5 food site in France.
+
+# =============================================================
+# KNOWN_COMMERCIAL_CONFLICTS
+# =============================================================
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  - publication: Sud Ouest (newspaper)
+    conflict: None (regional newspaper — no food industry COI). PUBLISHER CONFLICT NOTE:
+      Sud Ouest covers Bordeaux AND the Biarritz/Bayonne region. If the same
+      Sud Ouest food writer is used in both Bordeaux and Biarritz city packs,
+      they cannot form a consensus pick across packs (different cities, different
+      packs — this is fine). Within a single city (Bordeaux), multiple Sud Ouest
+      articles from the same writer count as one source. Acceptable source for Bordeaux.
+
+  - publication: La Cité du Vin / Bordeaux tourist board
+    conflict: Any source produced by or closely affiliated with La Cité du Vin
+      or the Bordeaux wine tourism board. Reject — potential undisclosed commercial
+      relationship with wine-and-dine establishments.
+
+# =============================================================
+# MICHELIN_STARRED_EXCLUSIONS
+# =============================================================
+
+MICHELIN_STARRED_EXCLUSIONS:
+  # 2-star
+  - L'Observatoire du Gabriel (Place de la Bourse — recently promoted 2025)
+  - Maison Nouvelle (Philippe Etchebest, Chartrons — 2★ awarded late 2025)
+  # 1-star
+  - Le Quatrième Mur (Philippe Etchebest)
+  - Soléna (Victor Ostronzec)
+  - Racines (Tanguy Laviale — also Michelin Green Star)
+  - La Table du Lavoir
+  # NOTE: Bordeaux has ~6 starred restaurants total. Pipeline should cross-check
+  # all candidates against Michelin Guide 2025.
+
+# =============================================================
+# GEOGRAPHY
+# =============================================================
+
+GEOGRAPHY:
+  CITY_CENTRE_LAT: 44.8378
+  CITY_CENTRE_LNG: -0.5792
+  BOUNDING_BOX: 44.795 / 44.930 / -0.640 / -0.510
+
+  KNOWN_NEIGHBORHOODS:
+    - Centre-ville (Triangle d'Or)
+    - Chartrons
+    - Saint-Pierre / Place du Parlement
+    - Capucins / Sainte-Croix
+    - Saint-Michel
+    - Bacalan
+    - Bordeaux Maritime
+    - Mériadeck
+    - Saint-Seurin / Fondaudège
+    - Caudéran (western district)
+
+  DISAMBIGUATION_NOTES:
+    - Bordeaux France is unambiguous — no toponym collision.
+    - Wine coverage: Bordeaux wine region is much larger than the city.
+      Restrict to restaurants within the city of Bordeaux. Do not include
+      châteaux dining or wine estate restaurants in the Médoc, Saint-Émilion,
+      or other AOC zones outside the city limits.
+    - "restaurant Bordeaux" queries are unambiguous.
+
+  ACCENTED_VARIANTS: none required

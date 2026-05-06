@@ -1,0 +1,89 @@
+CITY: Nice
+COUNTRY: France
+CITY_SLUG: nice-france
+PIPELINE: localbite-v7.1
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+YEAR_RANGE: 2023-2026
+LANGUAGE_POOL_PRIMARY: fr
+LANGUAGE_POOL_SECONDARY: en
+SINGLE_LANGUAGE_CITY: NO
+
+OUTPUT_RAW: localbite-nice-france-raw.json
+OUTPUT_FINAL: localbite-nice-france-2023-2026.json
+OUTPUT_WORKING: localbite-nice-france-working.json
+OUTPUT_SEARCH_LOG: localbite-nice-france-search-log.txt
+OUTPUT_FETCH_LOG: localbite-nice-france-fetch-log.txt
+
+# =============================================================
+# DIRECT_FETCH_SOURCES — confirmed named authors, active 2024-2025
+# =============================================================
+
+DIRECT_FETCH_SOURCES:
+  - url: https://nicepresse.com/category/table-libre/
+    writer: Jacques Gantié
+    publication: Table Libre / Nice-Presse
+    language: fr
+    notes: FR food journalism. Jacques Gantié is the named food critic — spent his full career at Nice-Matin building the food coverage, then moved to Nice-Presse where he runs "Table Libre" (his own column/blog within the publication). Based in Nice. Active through 2024-2025. Single-author column. Nice-Presse is an independent publication.
+    notes_secondary: If "Table Libre" category URL does not return adequate content, try https://nicepresse.com and search for Gantié bylines.
+
+# =============================================================
+# KNOWN_COMMERCIAL_CONFLICTS
+# =============================================================
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  - publication: French Riviera tourism board / Côte d'Azur Tourisme
+    conflict: Tourist board — potential promotional content. Reject.
+
+# =============================================================
+# MICHELIN_STARRED_EXCLUSIONS
+# Nice: no 3-star; several 1-star restaurants
+# (Mirazur in Menton is NOT in Nice — outside bounding box)
+# =============================================================
+
+MICHELIN_STARRED_EXCLUSIONS:
+  # 1-star (within Nice city limits)
+  - Les Agitateurs (chefs Virginie and David Faure)
+  - Jan (chef Jan Hendrik van der Westhuizen)
+  - L'Aromate (chef Mickaël Gracieux)
+  - Flaveur (chefs Gaël and Mickael Tourteaux)
+  - Racine (check current status)
+  # Note: Mirazur (Menton, 3★) and La Vague d'Or (Saint-Tropez, 3★) are
+  # NOT in Nice — outside bounding box. No action needed.
+  # Pipeline must cross-check all Nice candidates against Michelin Guide 2025.
+
+# =============================================================
+# GEOGRAPHY
+# =============================================================
+
+GEOGRAPHY:
+  CITY_CENTRE_LAT: 43.7102
+  CITY_CENTRE_LNG: 7.2620
+  BOUNDING_BOX: 43.640 / 43.760 / 7.185 / 7.325
+
+  KNOWN_NEIGHBORHOODS:
+    - Vieux-Nice (Old Town)
+    - Promenade des Anglais
+    - Libération (Rue de France area)
+    - Cimiez
+    - Musiciens
+    - Madeleine
+    - Carré d'Or
+    - Port Lympia
+    - Saint-Roch
+    - Pasteur
+    - La Californie
+    - Riquier
+
+  DISAMBIGUATION_NOTES:
+    - CRITICAL: "Nice" is a common English adjective. Search queries MUST
+      include "Nice France", "Nice Alpes-Maritimes", or "Nice restaurant France"
+      to avoid results about unrelated topics.
+    - All Phase 1 search queries must include "Nice France" or equivalent
+      disambiguation. This is a hard requirement.
+    - Niçois cuisine is distinct: socca, pissaladière, salade niçoise, stockfish.
+      Pipeline may find specific Niçois cuisine queries useful.
+    - Menton (east) and Cannes (west) are separate cities outside the bounding
+      box. Do not include restaurants from Côte d'Azur more broadly.
+
+  ACCENTED_VARIANTS: none required (Nice has no accent)

@@ -1,0 +1,104 @@
+CITY: Marseille
+COUNTRY: France
+CITY_SLUG: marseille-france
+PIPELINE: localbite-v7.1
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+YEAR_RANGE: 2023-2026
+LANGUAGE_POOL_PRIMARY: fr
+LANGUAGE_POOL_SECONDARY: en
+SINGLE_LANGUAGE_CITY: NO
+
+OUTPUT_RAW: localbite-marseille-france-raw.json
+OUTPUT_FINAL: localbite-marseille-france-2023-2026.json
+OUTPUT_WORKING: localbite-marseille-france-working.json
+OUTPUT_SEARCH_LOG: localbite-marseille-france-search-log.txt
+OUTPUT_FETCH_LOG: localbite-marseille-france-fetch-log.txt
+
+# =============================================================
+# DIRECT_FETCH_SOURCES — confirmed named authors, active 2024-2025
+# =============================================================
+
+DIRECT_FETCH_SOURCES:
+  - url: https://www.le-grand-pastis.com
+    writer: Pierre Psaltis
+    publication: Le Grand Pastis
+    language: fr
+    notes: FR independent food blog founded April 2014 by Pierre Psaltis. Based in Marseille. Psaltis was the restaurant critic for La Provence newspaper for 20 years before going independent. Also covers Provence broadly but Marseille is primary beat. Active 2024-2025 (confirmed Michelin 2024 and 2025 Provence reviews). Single-author site — all content by Psaltis (confirmed from About page). La Provence itself is owned by CMA-CGM (shipping company) — no food industry COI for the publication or for Psaltis's independent blog.
+
+  - url: https://culinarybackstreets.com/cities-category/marseille/
+    writer: CB Marseille team
+    publication: Culinary Backstreets
+    language: en
+    notes: EN food journalism network with Marseille coverage. Vérane Frédiani (Marseille-born filmmaker/journalist) contributed articles. JS-only site (SPA) — automated fetch returns shell. article_url required from direct visit only.
+    fetch_limitation: JS-only SPA — automated fetch will return shell. article_url from direct visit only.
+
+# =============================================================
+# KNOWN_COMMERCIAL_CONFLICTS
+# =============================================================
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  - publication: Culinary Backstreets
+    conflict: Operates food tours in covered cities. COI mandatory flag. Accept but count toward secondary cap.
+
+  - publication: Office de Tourisme Marseille / Provence Tourisme
+    conflict: Tourist board publications — potential undisclosed promotional content. Reject.
+
+# =============================================================
+# MICHELIN_STARRED_EXCLUSIONS
+# Marseille has two 3-star restaurants — most prominent in France
+# =============================================================
+
+MICHELIN_STARRED_EXCLUSIONS:
+  # 3-star
+  - AM par Alexandre Mazzia (chef Alexandre Mazzia)
+  - Le Petit Nice-Passédat (chef Gérald Passédat)
+  # 1-star
+  - Une table, au Sud (chef Ludovic Turac)
+  - Belle de Mars (chefs Michel Marini and Kim-Mai Bui — 1★ from 2025)
+  # Former 1-star (verify current status):
+  - Alcyone (Intercontinental Hôtel-Dieu — lost star after chef departure 2024)
+  - Saisons (check current status — listed as losing star 2025)
+  - Signature — Coline Faulquier (check current status — listed as losing star 2025)
+  - l'Épuisette (check current status)
+  # NOTE: Pipeline must cross-check all candidates against Michelin Guide 2025.
+  # Marseille starred landscape changes frequently — verify current stars.
+
+# =============================================================
+# GEOGRAPHY
+# =============================================================
+
+GEOGRAPHY:
+  CITY_CENTRE_LAT: 43.2965
+  CITY_CENTRE_LNG: 5.3698
+  BOUNDING_BOX: 43.200 / 43.410 / 5.280 / 5.565
+
+  KNOWN_NEIGHBORHOODS:
+    - Vieux-Port (1er, 7e)
+    - Le Panier (2e)
+    - Noailles (1er)
+    - Belsunce (1er)
+    - Cours Julien (6e)
+    - Notre-Dame-du-Mont (6e)
+    - Castellane (6e)
+    - Prado (8e)
+    - Endoume (7e)
+    - Les Goudes (8e)
+    - L'Estaque (16e)
+    - La Joliette (2e)
+    - Belle de Mai (3e)
+    - Saint-Victor (7e)
+    - Corniche Kennedy (7e, 8e)
+
+  DISAMBIGUATION_NOTES:
+    - Note English spelling: "Marseilles" (with an s) is the English form.
+      French address data uses "Marseille" without the s.
+      Pipeline should accept both spellings in search queries.
+    - Marseille arrondissements run 1e–16e. All within bounding box.
+    - "Marseille" is unambiguous — no toponym collision.
+    - Mediterranean cuisine focus: Marseille specialises in seafood and
+      North African-influenced dishes. Bouillabaisse is the signature.
+      Pipeline may find many bouillabaisse restaurant mentions — these are
+      valid if they are local editorial recommendations, not tourist listings.
+
+  ACCENTED_VARIANTS: none required

@@ -1,0 +1,99 @@
+CITY: Lyon
+COUNTRY: France
+CITY_SLUG: lyon-france
+PIPELINE: localbite-v7.1
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+YEAR_RANGE: 2023-2026
+LANGUAGE_POOL_PRIMARY: fr
+LANGUAGE_POOL_SECONDARY: en
+SINGLE_LANGUAGE_CITY: NO
+
+OUTPUT_RAW: localbite-lyon-france-raw.json
+OUTPUT_FINAL: localbite-lyon-france-2023-2026.json
+OUTPUT_WORKING: localbite-lyon-france-working.json
+OUTPUT_SEARCH_LOG: localbite-lyon-france-search-log.txt
+OUTPUT_FETCH_LOG: localbite-lyon-france-fetch-log.txt
+
+# =============================================================
+# DIRECT_FETCH_SOURCES — confirmed named authors, active 2024-2025
+# =============================================================
+
+DIRECT_FETCH_SOURCES:
+  - url: https://tribunedelyon.fr/restaurants-gastronomie/
+    writer: François Mailhes
+    publication: Tribune de Lyon
+    language: fr
+    notes: FR independent Lyon weekly newspaper. Mailhes is the named gastronomic critic — 20+ years covering Lyon restaurants, bylined on all reviews (confirmed from multiple 2024-2025 articles). Tribune de Lyon is owned by Rosebud SAS (principalement détenue par ses salariés — employee-owned). Fully independent. This is an exceptional local source.
+
+  - url: https://culinarybackstreets.com/cities-category/marseille/
+    writer: CB Lyon team
+    publication: Culinary Backstreets
+    language: en
+    notes: EN food journalism network. CB has Lyon and Marseille coverage. JS-only site (SPA) — automated fetch returns shell. Include article_url only if confirmed from direct visit. Known COI: CB operates food tours — flag if present.
+    fetch_limitation: JS-only SPA — automated fetch will return shell. article_url required from direct visit only.
+
+# =============================================================
+# KNOWN_COMMERCIAL_CONFLICTS
+# =============================================================
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  - publication: Culinary Backstreets
+    conflict: Operates food tours in covered cities. COI mandatory flag. Accept but count toward secondary cap.
+
+  - publication: TheFork / LaFourchette
+    conflict: Restaurant reservations platform. Reject entirely — directory format, not editorial, and severe COI.
+
+# =============================================================
+# MICHELIN_STARRED_EXCLUSIONS
+# Lyon (note: Paul Bocuse is in Collonges-au-Mont-d'Or, ~10km north,
+# outside the bounding box — but flag for pipeline awareness)
+# =============================================================
+
+MICHELIN_STARRED_EXCLUSIONS:
+  # 2-star (within Lyon city limits)
+  - La Mère Brazier (chef Mathieu Viannay)
+  - Le Neuvième Art (chef Christophe Roure)
+  - Takao Takano
+  # Note: Paul Bocuse / Auberge du Pont de Collonges is in Collonges-au-Mont-d'Or
+  # (~10km north of Lyon, outside bounding box). Likely excluded by geocoder
+  # but pipeline should reject if it appears.
+  # 1-star
+  - L'Atelier des Augustins
+  - Burgundy by Matthieu (Matthieu Girardon)
+  - La Mutinerie
+  - Les Terrasses de Lyon (check current status — may have lost star 2025)
+  - Prairial (Gaëtan Gentil)
+  - Ombellule (Tabata et Ludovic Mey — probable 2025 star, verify)
+
+# =============================================================
+# GEOGRAPHY
+# =============================================================
+
+GEOGRAPHY:
+  CITY_CENTRE_LAT: 45.7640
+  CITY_CENTRE_LNG: 4.8357
+  BOUNDING_BOX: 45.700 / 45.830 / 4.790 / 4.940
+
+  KNOWN_NEIGHBORHOODS:
+    - Presqu'île (1er, 2e)
+    - Vieux-Lyon (5e)
+    - Croix-Rousse (1er, 4e)
+    - Part-Dieu (3e)
+    - Guillotière (7e)
+    - Confluence (2e)
+    - Gerland (7e)
+    - Brotteaux (6e)
+    - Monplaisir (8e)
+    - Villeurbanne (adjacent commune, within bounding box)
+    - Vaise (9e)
+
+  DISAMBIGUATION_NOTES:
+    - Lyon France is unambiguous — no toponym collision.
+    - Queries: use "Lyon" or "Lyon France" — no disambiguation suffix needed.
+    - Villeurbanne is a separate commune but culinarily part of the Lyon scene.
+      Include restaurants in Villeurbanne within the bounding box.
+    - "bouchon" is the key Lyon restaurant type — ensure Phase 1 searches
+      include bouchon-specific queries.
+
+  ACCENTED_VARIANTS: none required (Lyon has no accent)

@@ -1,0 +1,98 @@
+CITY: Nantes
+COUNTRY: France
+CITY_SLUG: nantes-france
+PIPELINE: localbite-v7.1
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+YEAR_RANGE: 2023-2026
+LANGUAGE_POOL_PRIMARY: fr
+LANGUAGE_POOL_SECONDARY: none
+SINGLE_LANGUAGE_CITY: YES
+
+OUTPUT_RAW: localbite-nantes-france-raw.json
+OUTPUT_FINAL: localbite-nantes-france-2023-2026.json
+OUTPUT_WORKING: localbite-nantes-france-working.json
+OUTPUT_SEARCH_LOG: localbite-nantes-france-search-log.txt
+OUTPUT_FETCH_LOG: localbite-nantes-france-fetch-log.txt
+
+# =============================================================
+# DIRECT_FETCH_SOURCES
+# No named critic confirmed during pre-research for Nantes.
+# Phase 1 discovery required.
+# =============================================================
+
+DIRECT_FETCH_SOURCES:
+  # NONE PRE-CONFIRMED
+  # Pre-research notes:
+  # - Presse Océan is the main Nantes regional newspaper, owned by Groupe
+  #   Ouest-France. Check for named food writer.
+  # - François-Régis Gaudry (national food journalist, France Inter) mentioned
+  #   Nantes as having a growing food scene with young engaged chefs.
+  #   He is Paris-based — does NOT qualify under writer locality rule.
+  # - Phase 1 should prioritise: local Nantes food bloggers,
+  #   Presse Océan or Ouest-France Nantes edition food sections.
+
+# =============================================================
+# KNOWN_COMMERCIAL_CONFLICTS
+# =============================================================
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  - publication: Presse Océan (Nantes) — same parent group (Ouest-France) as
+    Ouest-France national edition. Within a single city (Nantes), these are
+    the same publisher — count as ONE source if both used.
+  - publication: TheFork / LaFourchette
+    conflict: Reject entirely.
+
+# =============================================================
+# MICHELIN_STARRED_EXCLUSIONS
+# =============================================================
+
+MICHELIN_STARRED_EXCLUSIONS:
+  # 1-star (confirm all against Michelin Guide 2025)
+  - l'U.ni (chef Stéphane Jambert)
+  - Lulu Rouget (check current status)
+  - La Marine (Noirmoutier — NOT in Nantes, outside bounding box)
+  # NOTE: Pipeline must cross-check all candidates. Nantes has a small
+  # but growing starred scene.
+
+# =============================================================
+# GEOGRAPHY
+# =============================================================
+
+GEOGRAPHY:
+  CITY_CENTRE_LAT: 47.2184
+  CITY_CENTRE_LNG: -1.5536
+  BOUNDING_BOX: 47.175 / 47.305 / -1.625 / -1.475
+
+  KNOWN_NEIGHBORHOODS:
+    - Centre-ville (île Feydeau, Place du Commerce)
+    - Bouffay (old town)
+    - Île de Nantes
+    - Zola
+    - Doulon
+    - Hauts Pavés / Saint-Félix
+    - Malakoff
+    - Dervallières
+    - Chantenay
+    - Breil
+
+  DISAMBIGUATION_NOTES:
+    - Nantes France is unambiguous — no toponym collision.
+    - Atlantic / Loire estuary location: seafood and Loire wines are central
+      to the Nantes food scene. Phase 1 should include seafood and Loire
+      wine-pairing restaurant queries.
+    - Atlantic cuisine note: Nantes is known for muscadet, beurre blanc sauce,
+      and fresh Atlantic fish. Include cuisine-specific queries.
+
+  ACCENTED_VARIANTS: none required
+
+# =============================================================
+# STRUCTURAL_NOTES
+# =============================================================
+
+STRUCTURAL_NOTES:
+  - Nantes is SINGLE_LANGUAGE_CITY: YES (FR only)
+  - Expected structural gap: 0 CPs.
+  - Nantes food scene is growing — François-Régis Gaudry called it "une belle
+    dynamique" in early 2025. Source discovery may yield fewer confirmed sources
+    than Paris/Lyon. Pipeline may produce <20R — review before committing to index.

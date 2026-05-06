@@ -1,0 +1,147 @@
+CITY: Paris
+COUNTRY: France
+CITY_SLUG: paris-france
+PIPELINE: localbite-v7.1
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+YEAR_RANGE: 2023-2026
+LANGUAGE_POOL_PRIMARY: fr
+LANGUAGE_POOL_SECONDARY: en
+SINGLE_LANGUAGE_CITY: NO
+
+OUTPUT_RAW: localbite-paris-france-raw.json
+OUTPUT_FINAL: localbite-paris-france-2023-2026.json
+OUTPUT_WORKING: localbite-paris-france-working.json
+OUTPUT_SEARCH_LOG: localbite-paris-france-search-log.txt
+OUTPUT_FETCH_LOG: localbite-paris-france-fetch-log.txt
+
+# =============================================================
+# DIRECT_FETCH_SOURCES — confirmed named authors, active 2024-2025
+# =============================================================
+
+DIRECT_FETCH_SOURCES:
+  - url: https://parisbymouth.com/restaurants/
+    writer: Meg Zimbeck
+    publication: Paris by Mouth
+    language: en
+    notes: EN food guide, anonymous reviews, Zimbeck founder and editor-in-chief. Active through 2025 (closed restaurants still noted with dates). Single-author site — confirm from About page.
+
+  - url: https://simonsays.fr
+    writer: François Simon
+    publication: SimonSays
+    language: fr
+    notes: FR independent food blog. Formerly food critic at Le Figaro (co-creator of Figaroscope). Now fully independent. Active 2024-2025. Single-author site. Famously anonymous reviews, named author confirmed from site header.
+
+  - url: https://www.davidlebovitz.com/paris/
+    writer: David Lebovitz
+    publication: davidlebovitz.com
+    language: en
+    notes: EN food blog by American resident in Paris since 1999. Covers Paris restaurants extensively. Active through 2025. Single-author site.
+
+  - url: https://www.lefigaro.fr/gastronomie
+    writer: Stéphane Durand-Souffland
+    publication: Le Figaro
+    language: fr
+    notes: FR national daily. Durand-Souffland is the named food critic — court journalist turned restaurant reviewer, active 2024-2025. Check that individual articles have his byline. Le Figaro is a major independent publication (owned by Groupe Figaro / Dassault family — no food industry COI).
+
+  - url: https://www.telerama.fr/gastronomie/
+    writer: Esterelle Payany
+    publication: Télérama
+    language: fr
+    notes: FR cultural weekly. Payany is the named food critic for restaurant reviews. Active 2024-2025. Télérama owned by Le Monde Groupe — no food industry COI.
+
+  - url: https://www.parisupdate.com/restaurants/
+    writer: TBD
+    publication: Paris Update
+    language: en
+    notes: EN Paris restaurant review site. Active through 2025. Named authors — check bylines on individual articles (confirmed plural authors from site structure). Fetch to confirm author names. Independent publication.
+
+# =============================================================
+# KNOWN_COMMERCIAL_CONFLICTS
+# =============================================================
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  - publication: Time Out Paris
+    conflict: Time Out operates Time Out Market — food hall / commercial dining operator. COI mandatory flag. Accept but count toward secondary cap.
+
+  - publication: The Infatuation Paris
+    conflict: The Infatuation is a restaurant marketing and reservations business. COI mandatory flag. Also note JS-only site (SPA) — will return shell via automated fetch; article_url required from direct visit.
+
+# =============================================================
+# MICHELIN_STARRED_EXCLUSIONS
+# Paris has 100+ starred restaurants. All must be excluded.
+# 3-star and 2-star listed explicitly; 1-star restaurants also excluded
+# — instruct pipeline to cross-check against Michelin guide.
+# =============================================================
+
+MICHELIN_STARRED_EXCLUSIONS:
+  # 3-star
+  - Guy Savoy
+  - L'Ambroisie
+  - Plénitude (Cheval Blanc)
+  - L'Arpège
+  - Épicure (Le Bristol)
+  - Kei
+  - Pierre Gagnaire
+  - Le Pré Catelan
+  - Alléno Paris au Pavillon Ledoyen
+  - La Table de l'Espadon (Le Ritz)
+  # 2-star
+  - Taillevent
+  - Le Grand Véfour
+  - Alliance
+  - Le Clarence
+  - Le Cinq (Four Seasons George V)
+  - Le Meurice (Alain Ducasse au Meurice)
+  - Maison Rostang
+  - Granite
+  - Nakatani
+  - Neso
+  - Pages
+  - Saturne
+  - Frenchie
+  # NOTE: Many 1-star restaurants exist. Pipeline must cross-check all
+  # candidates against the Michelin Guide France 2025 before including.
+  # Instruct: if in doubt, exclude. Michelin list changes annually.
+
+# =============================================================
+# GEOGRAPHY
+# =============================================================
+
+GEOGRAPHY:
+  CITY_CENTRE_LAT: 48.8566
+  CITY_CENTRE_LNG: 2.3522
+  BOUNDING_BOX: 48.815 / 49.005 / 2.225 / 2.465
+
+  KNOWN_NEIGHBORHOODS:
+    - Le Marais (3e, 4e)
+    - Saint-Germain-des-Prés (6e)
+    - Montparnasse (14e, 15e)
+    - Pigalle / South Pigalle (9e, 18e)
+    - Oberkampf / République (11e)
+    - Belleville (19e, 20e)
+    - Batignolles (17e)
+    - Montmartre (18e)
+    - Canal Saint-Martin (10e)
+    - Châtelet-Les Halles (1e)
+    - Palais-Royal (1e)
+    - Bastille (11e, 12e)
+    - Nation (11e, 12e)
+    - Opéra (2e, 9e)
+    - Alma-Madeleine (8e)
+    - Passy / Trocadéro (16e)
+    - Invalides (7e)
+    - Latin Quarter (5e)
+    - Chinatown (13e)
+    - Butte-aux-Cailles (13e)
+    - Vaugirard (15e)
+    - Madeleine (8e)
+
+  DISAMBIGUATION_NOTES:
+    - Paris France is unambiguous. No toponym collision.
+    - "Paris restaurant" queries are unambiguous in English and French.
+    - Suburbs (Vincennes, Boulogne-Billancourt, Neuilly) are outside the
+      bounding box and will be excluded by geocoder.
+    - Arrondissements 1–20 are all within bounding box.
+
+  ACCENTED_VARIANTS: none required (Paris has no accent)

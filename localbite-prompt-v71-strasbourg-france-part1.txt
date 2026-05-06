@@ -1,0 +1,114 @@
+CITY: Strasbourg
+COUNTRY: France
+CITY_SLUG: strasbourg-france
+PIPELINE: localbite-v7.1
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+YEAR_RANGE: 2023-2026
+LANGUAGE_POOL_PRIMARY: fr
+LANGUAGE_POOL_SECONDARY: none
+SINGLE_LANGUAGE_CITY: YES
+
+OUTPUT_RAW: localbite-strasbourg-france-raw.json
+OUTPUT_FINAL: localbite-strasbourg-france-2023-2026.json
+OUTPUT_WORKING: localbite-strasbourg-france-working.json
+OUTPUT_SEARCH_LOG: localbite-strasbourg-france-search-log.txt
+OUTPUT_FETCH_LOG: localbite-strasbourg-france-fetch-log.txt
+
+# =============================================================
+# DIRECT_FETCH_SOURCES
+# No named critic confirmed during pre-research for Strasbourg.
+# Phase 1 discovery required. See notes.
+# =============================================================
+
+DIRECT_FETCH_SOURCES:
+  # NONE PRE-CONFIRMED
+  # Pre-research notes: DNA (Dernières Nouvelles d'Alsace) is the main
+  # regional newspaper for Strasbourg — check for named food critic.
+  # DNA is owned by EBRA (Crédit Mutuel banking group) — no food industry COI.
+  # Alsatian food blogs exist — Phase 1 should prioritise finding named authors.
+  # Note: Gilles Pudlowski (Paris-based national critic) covers Strasbourg
+  # but does NOT qualify under writer locality rule.
+
+# =============================================================
+# KNOWN_COMMERCIAL_CONFLICTS
+# =============================================================
+
+KNOWN_COMMERCIAL_CONFLICTS:
+  - publication: TheFork / LaFourchette
+    conflict: Restaurant reservations platform. Reject entirely.
+
+# =============================================================
+# PUBLISHER_INDEPENDENCE_NOTES
+# =============================================================
+
+PUBLISHER_INDEPENDENCE_NOTES:
+  - DNA (Dernières Nouvelles d'Alsace) is owned by EBRA (Crédit Mutuel group).
+    Le Progrès (Lyon) is also owned by EBRA.
+    HOWEVER: These are separate newspapers covering separate cities — this is
+    NOT a conflict within Strasbourg. Each EBRA paper has an independent editorial
+    team. DNA as a Strasbourg source is acceptable.
+  - Within Strasbourg, do NOT use DNA and L'Alsace (Mulhouse) as two sources
+    claiming publisher independence — they share EBRA ownership.
+
+# =============================================================
+# MICHELIN_STARRED_EXCLUSIONS
+# Strasbourg: several starred tables; uncertain status noted in trade press 2025
+# =============================================================
+
+MICHELIN_STARRED_EXCLUSIONS:
+  # 1-star (confirm all against Michelin Guide 2025 — Strasbourg has volatility)
+  - Umami (chef René Fieger)
+  - La Table de Christophe (check status)
+  - Buerehiesel (check status — note: may be in Parc de l'Orangerie suburb)
+  - Au Crocodile (check status — historic Strasbourg institution)
+  # Note: Bouillantes trade press mentioned "3 tables étoilées de Strasbourg
+  # plongées dans l'incertitude" in 2026 — several may have lost stars.
+  # Cross-check carefully. When in doubt, exclude.
+  # Note: Auberge de l'Ill (Illhaeusern, 3★) is NOT in Strasbourg city —
+  # outside bounding box. No action needed.
+
+# =============================================================
+# GEOGRAPHY
+# =============================================================
+
+GEOGRAPHY:
+  CITY_CENTRE_LAT: 48.5734
+  CITY_CENTRE_LNG: 7.7521
+  BOUNDING_BOX: 48.510 / 48.630 / 7.670 / 7.840
+
+  KNOWN_NEIGHBORHOODS:
+    - Grande Île (UNESCO World Heritage)
+    - Petite France
+    - Krutenau
+    - Neudorf
+    - Robertsau
+    - Cronenbourg
+    - Hautepierre
+    - Elsau
+    - Meinau
+    - Parc de l'Orangerie
+    - Koenigshoffen
+
+  DISAMBIGUATION_NOTES:
+    - Strasbourg is unambiguous — no toponym collision.
+    - Alsatian cuisine is distinctive: tarte flambée (flammekueche),
+      choucroute garnie, baeckeoffe, kugelhopf. Phase 1 should include
+      Alsatian cuisine-specific queries.
+    - Winstub is the Alsatian equivalent of a traditional bistro/brasserie.
+      Include winstub-specific queries in Phase 1.
+    - Note German influence: some restaurant names and dishes will have
+      German-language components. This is normal for Alsace — do not treat
+      German text as a separate language pool.
+
+  ACCENTED_VARIANTS: none required
+
+# =============================================================
+# STRUCTURAL_NOTES
+# =============================================================
+
+STRUCTURAL_NOTES:
+  - Strasbourg is SINGLE_LANGUAGE_CITY: YES (FR only)
+  - Consensus picks (both-pool) not possible without EN source.
+  - Expected structural gap: 0 CPs.
+  - Alsatian food scene is well-documented in French — expect solid FR source pool.
