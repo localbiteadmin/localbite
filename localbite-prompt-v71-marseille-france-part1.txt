@@ -16,6 +16,39 @@ OUTPUT_SEARCH_LOG: localbite-marseille-france-search-log.txt
 OUTPUT_FETCH_LOG: localbite-marseille-france-fetch-log.txt
 
 # =============================================================
+# PRE-RESEARCH ADDENDUM (2026-05-06)
+# =============================================================
+# Re-research under expanded template surfaced no qualifying new EN candidate.
+# Existing CB entry stands as the only EN source. Marseille EN coverage is
+# structurally limited.
+#
+# CANDIDATE VERIFIED AND REJECTED:
+# - Vérane Frédiani — Marseille-born/native filmmaker and journalist. Author
+#   of "Marseille cuisine le monde" book. Verified London-based since 2016+
+#   (IMDB residence, Beyond Words Festival bio, Twitter bio "Angleterre,
+#   Royaume-Uni", 7detable.com profile). No personal blog or Substack. CB
+#   articles already covered by existing CB entry. Marseille Gourmande
+#   tourism guide excluded under Office de Tourisme COI. NPR one-off
+#   contribution (single article, not body of work). Reject: writer locality
+#   fail (London-based).
+# - Camille Potts — comic book writer/illustrator. Lonely Planet "best day
+#   in Marseille" is a single article. Not a food writer. Reject.
+#
+# REGIONAL PRESS: La Provence is owned by CMA-CGM (shipping company) — no
+# food industry COI for the publication. Psaltis (already in DIRECT_FETCH_
+# SOURCES) was La Provence restaurant critic for 20 years before going
+# independent in 2014. La Provence's current named food critic was not
+# clearly identified in template searches — Psaltis's independent blog
+# remains the best primary FR source for Marseille coverage.
+#
+# AGGREGATOR BYLINE: Time Out Marseille not screened in this addendum cycle
+# (lower priority given strong Psaltis primary and limited fetch-time budget).
+# Flag for future cycle: direct-fetch Time Out Marseille article to verify
+# byline matches the "local writer" boilerplate.
+#
+# EXPECTED CP RANGE: 6-12 (existing estimate stands — no upgrade).
+
+# =============================================================
 # DIRECT_FETCH_SOURCES — confirmed named authors, active 2024-2025
 # =============================================================
 
@@ -102,3 +135,78 @@ GEOGRAPHY:
       valid if they are local editorial recommendations, not tourist listings.
 
   ACCENTED_VARIANTS: none required
+
+---
+PHASE 3 AUDIT — 2026-05-06
+---
+
+SOURCES CONFIRMED (5 total):
+  PRIMARY FR:
+    - Pierre Psaltis (Le Grand Pastis) — multiple articles 2024-2026
+    - Chloé Roques (Les Marseillaises) — 2024-02-20
+  PRIMARY EN:
+    - Ian Trueger (Pigspigspigs Substack) — 2025-01-17
+  SECONDARY EN:
+    - Alexis Steinman (Culinary Backstreets) — 3 articles 2024-2026
+  SECONDARY FR:
+    - Fanny Liaux Gasquerel (The Good Life) — 2023-05-18
+
+SOURCES REJECTED:
+  - culinarybackstreets.com/essentials (Jul 18 2025): team byline, no named author
+  - culinarybackstreets.com/chez-etienne-3 (Jun 14 2022): outside YEAR_RANGE
+  - culinarybackstreets.com/bouillon (Oct 5 2022): outside YEAR_RANGE
+  - le-grand-pastis.com/a-moro (Oct 17 2022): outside YEAR_RANGE
+  - le-grand-pastis.com/chateau-dif (Apr 21 2026): outside geographic bounding box
+  - countryandtownhouse.com (Ellie Smith): would exceed secondary source cap (3rd)
+  - The Infatuation (Sophie Friedman): would exceed secondary source cap (3rd)
+  - fromparistoprovence.com (April Nicole): would exceed secondary source cap (3rd)
+  - newtable.com: 403 Forbidden
+  - pigspigspigs.substack.com/chez-jeannot: "food is fine" — Tier C (no specific food detail)
+  - pigspigspigs.substack.com/la-baie-des-singes: "food is fine" — Tier C
+
+BOTH-POOL ENTRIES (Tier A): 1
+  - Pizzeria Chez Etienne (psaltis + trueger)
+
+WORKING JSON: 44 entries → after dedup: 43 unique → after Tier C drops: 41
+
+CONCENTRATION CAP DROPS (converged at cap=9/30=30%):
+
+  PSALTIS drops (13 → 9, -4):
+    - La Mûrisserie: owner price-point quote, no editorial food description
+    - Pizzeria la Bonne Mère: translated quote from FR original
+    - Prémices: generic "rapport qualité-prix" quote
+    - El Barrio Marsella: strong entry sacrificed to meet cap
+
+  TRUEGER drops (16 → 9, -7):
+    - La Boîte à Sardine: less distinctive vs retained entries
+    - Les Danaïdes: generic French classics
+    - L'eau à la Bouche: Malmousque pizza, thin description
+    - Paupiette Lodi: thin quote, no specific dishes
+    - La Mercerie: over cap, otherwise valid
+    - Atelier Rennata: supper club, no address
+    - Limmat: wine bar, marginal food detail
+
+FINAL POOL: 30 entries
+  Tier A: 1 (both-pool)
+  Tier B: 29
+  Psaltis: 9/30 = 30.0% ✓
+  Trueger: 9/30 = 30.0% ✓
+  Steinman: 3/30 = 10.0% ✓
+  Roques: 7/30 = 23.3% ✓
+  Liaux: 1/30 = 3.3% ✓
+
+NEIGHBOURHOOD COVERAGE (of 30 final entries):
+  Le Panier: 3 (Chez Etienne, Le Plongeon, Tetro, À Moro) → 4
+  Noailles: 6 (Mèo Midnight, Rotisserie Joyau, Pâtisserie Orientale, Sur Le Pouce, Chez Yassine, L'Original)
+  Cours Julien: 6 (Ouréa, Lottie, Y'a un resto, Station Uvale, Chez Gilda, Luna Piena)
+  Notre-Dame-du-Mont: 8 (Mijoba, Ferments, Restanque, Provisions, Razzia, La Nena, LABC, Bazarette)
+  Saint-Victor: 1 (Ekume)
+  Endoume: 2 (La Chapelle, Chez Michel)
+  Vieux-Port: 3 (Le Plongeon, Treizenvie, La Cantinetta)
+  La Joliette: 1 (Forest)
+  Corniche Kennedy: 0 — all qualifying entries dropped (Tier C or cap)
+  Les Goudes: 0 — La Baie des Singes dropped (Tier C)
+  Belle de Mai, Belsunce, Castellane, Prado, L'Estaque: 0 — no qualifying sources found
+
+NOTE: Thin source pool is a structural characteristic of Marseille.
+Despite 50+ searches, only 5 qualifying named-author sources found.

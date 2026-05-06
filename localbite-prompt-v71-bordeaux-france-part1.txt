@@ -16,6 +16,44 @@ OUTPUT_SEARCH_LOG: localbite-bordeaux-france-search-log.txt
 OUTPUT_FETCH_LOG: localbite-bordeaux-france-fetch-log.txt
 
 # =============================================================
+# PRE-RESEARCH ADDENDUM (2026-05-06)
+# =============================================================
+# Re-research under expanded template confirms structural EN gap for
+# Bordeaux. No qualifying EN food writer surfaced. This is a documented
+# finding, not unfinished research. Bordeaux belongs in the same structural
+# category as Toulouse / Strasbourg / Nantes — FR-only viable coverage.
+#
+# CANDIDATES VERIFIED AND REJECTED:
+# - Lost in Bordeaux / Ira — runs foodie tours. Reject: tour operator COI.
+# - SIP Wine Blog / Nicolle Croft — runs Sip Wine Tours, 40+ years in
+#   Bordeaux but tour COI. Reject: tour operator COI.
+# - Aquitaine Travel Guide / Anne Jordan — runs food tours, based in Bazas
+#   not Bordeaux. Reject: tour operator COI + writer locality fail.
+# - The Wine Chef / Cindy Rynning, Grape Experiences, My Fab Fifties Life,
+#   Passionate Baker, Bonvivant365 (5-month wine school stay) — all visitor-
+#   based, not Bordeaux-resident. Reject: writer locality fail.
+# - Time Out Bordeaux ("The best restaurants in Bordeaux for 2025", 21 July
+#   2025) — direct-fetch byline check: edited by Antoine Besse, "Responsable
+#   des rubriques restaurants et bars" (Time Out France national restaurants
+#   section editor, Paris-based). Translated to EN by Megan Carnegie. The
+#   "all our travel guides written by local writers" boilerplate does NOT
+#   match the actual byline. Reject: writer locality fail (national section
+#   editor, not Bordeaux-resident writer).
+#
+# REGIONAL PRESS: Sud Ouest is the dominant Gironde regional newspaper,
+# owned by Groupe Sud Ouest (independent). No specifically-named editorial
+# food critic with byline-driven restaurant reviews surfaced in template
+# searches. Consistent with the regional-newspaper-gap pattern observed
+# in Italian regional dailies. Sud Ouest articles may still surface in
+# Phase 1 search results — pipeline should treat them as collective
+# (publication-attributed) sources, not named-critic primary sources.
+#
+# EXPECTED CP RANGE: 0-6 (revised down from 6-12 given confirmed FR-only
+# structural source landscape, with Lataillade as sole DIRECT_FETCH_SOURCE).
+# R count expected to remain solid given Lataillade's Bordeaux section
+# is comprehensive and her ~200k-visitor/day audience.
+
+# =============================================================
 # DIRECT_FETCH_SOURCES — confirmed named authors, active 2024-2025
 # =============================================================
 
@@ -43,6 +81,17 @@ KNOWN_COMMERCIAL_CONFLICTS:
     conflict: Any source produced by or closely affiliated with La Cité du Vin
       or the Bordeaux wine tourism board. Reject — potential undisclosed commercial
       relationship with wine-and-dine establishments.
+
+  - publication: Time Out Bordeaux
+    conflict: NOT a COI per se — informational note for pipeline. Verified
+      2026-05-06 that the Time Out Bordeaux restaurants article is edited by
+      Antoine Besse (Time Out France national restaurants section editor,
+      Paris-based) and translated by Megan Carnegie. Does NOT qualify as a
+      city-based EN food writer despite the "local writers" boilerplate on
+      the page. Pipeline should NOT treat Time Out Bordeaux as a primary
+      EN source. May appear in search results — accept as a collective
+      publication source if useful for Phase 1 disambiguation, but do not
+      promote to primary status.
 
 # =============================================================
 # MICHELIN_STARRED_EXCLUSIONS

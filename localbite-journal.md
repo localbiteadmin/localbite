@@ -9327,3 +9327,553 @@ All changes implemented via targeted patch scripts with dry-run-first pattern an
 
 *Fleet: 41 cities, 1,288R, 233BP (18.1%), index.html 2,348 lines*
 
+## Session — 2026-05-05/06 (Fleet overhaul, France prep complete, Paris v7.1 live)
+
+### Overview
+
+Long session spanning two calendar days. Three major city rebuilds (Rome, Barcelona, Madrid), full France preparation for 10 cities, Paris v7.1 pipeline (3 attempts), multiple viewer improvements, engineering fix 3b, and a complete fleet diagnostic. Fleet grew from 41 to 42 cities. First French city live.
+
+---
+
+### Fleet Diagnostic
+
+Fleet script run at session start confirmed post-rebuild state:
+- 41 cities, 1,224R, 238 CPs (19%), 68% geocoded
+- 0 errors, 41 expected warnings
+- Highlighted issues: 4 zero-CP cities (Chefchaouen structural, Palermo editorial gap, Seville CosasDeCome exclusion, Toronto paywall), 9 thin cities (<15R)
+
+---
+
+### Rome v7.1 Rebuild
+
+**Before:** 63R, 8 CPs, 4 sources
+**After:** 79R, 18 CPs, 6 sources (commit 71715d6)
+
+New source added: Veronica Guerrini / Puntarella Rossa (IT) — confirmed fetchable, Oct 2024, Grappolo d'Oro. Previously confirmed ready 2026-05-04. Added to Part 1 as DIRECT_FETCH_SOURCE.
+
+L'Elementare false positive nulled manually (matched wrong location). 4 others auto-nulled by geocode.js. 14 centroids approved. both_pool synced: 11 restaurants fixed.
+
+Result: +16R, +10 CPs — strongest rebuild result of the session.
+
+---
+
+### Barcelona v7.1 Rebuild
+
+**Before:** 110R, 15 CPs, 9 sources
+**After:** 58R, 14 CPs, 11 sources (commit 4c884f4)
+
+New source added: Marcos Regol / Observación Gastronómica — confirmed fetchable, named critic, active 2024-2025.
+
+ElNacional.cat (Jordi Tubella) confirmed permanent 451. Add as fetch-limitation to Barcelona Part 1 for future rebuilds.
+
+Lourdes López + Jordi Tubella writer profiles fixed (pipeline contamination). Regol article_url nulled (homepage only). both_pool synced: 2 restaurants fixed.
+
+Restaurant count drop (110→58) reflects stricter quality gates and ElNacional.cat loss. Barcelona CP rate improved (14% → 24%).
+
+---
+
+### Madrid v7.1 Rebuild
+
+**Before:** 116R, 19 CPs, 9 sources
+**After:** 89R, 15 CPs, 11 sources (commit 4b2e21e)
+
+New sources added: Ignacio Medina Maribona / ABC Salsa de Chiles, Santiago Agüero / Complicidad Gastronómica, José Carlos Capel / Gastroactitud.
+
+Dropped: Lauren Aloise / Spanish Sabores — secondary cap and site changes. Investigate at next Madrid rebuild.
+
+Agüero article_url nulled (category page). 6 false positives nulled (school match, wrong coordinates). Agüero link visible in viewer due to service worker cache — user cleared Safari website data.
+
+Add Capel / Gastroactitud to Madrid Part 1 DIRECT_FETCH_SOURCES for future rebuilds.
+
+---
+
+### Engineering: Fix 3b
+
+Added `/^Via (della|del|di|d')/i` and `/^Largo /i` to geocode.js NON_RESTAURANT_PATTERNS (commit dbe1ae4). Verified against 49-restaurant test suite. Fleet-safe. Addresses subset of Fix 3 (full false positive detection for Italian cities) — full Fix 3 still pending.
+
+---
+
+### Viewer Improvements (commits d8a56f6, f10e9ac, 3100c64, 7e54ec3, 399b496)
+
+**H1 — Header:** Now shows `N restaurants · N sources · N consensus picks`. CP count hidden if 0. Pipeline version and date range removed.
+
+**F1 — Footer:** Removed entirely. Methodology note moved to Sources panel bottom.
+
+**Sources panel copy:** "Every recommendation comes from a named food writer covering this city." Credits-methodology CSS and paragraph removed.
+
+**Sources panel behaviour:** `body.sources-open #filters-bar, body.sources-open #main { display: none !important }` when panel open. Both closeCredits() and loadCity() remove the class. Scroll-into-view replaced with window.scrollTo(0,0).
+
+**Scroll fix 1:** `block: 'start'` in scrollIntoView.
+**Scroll fix 2:** `requestAnimationFrame(function() { window.scrollTo(0, 0); })` for iOS Safari compatibility.
+
+**Sticky scrolling deferred:** Sticky filters-bar and sticky credits-title both analysed and deferred to Next.js migration. Product is not dysfunctional without them. Risk-to-reward ratio poor for vanilla JS implementation.
+
+---
+
+### localbite-sync-bothpool.py
+
+Made generic (accepts filename argument). Confirmed as standard post-pipeline step — run after approve-centroids, before git add. Committed 2cb93d9.
+
+---
+
+### File Cleanup
+
+localbite-madrid-working.json and localbite-madrid-raw.json untracked. Madrid audit/failed-sources/search-plan committed. .gitignore updated with localbite-madrid-*.py pattern. Commit 6cb0d8d.
+
+---
+
+### France Preparation (commits ca298c0, 8617a13)
+
+Full preparation for 10 France cities completed.
+
+**Research completed:**
+- Named food writers confirmed by city (Paris: Zimbeck, Simon, Lebovitz, Durand-Souffland, Payany, Ellison; Lyon: Mailhes/Tribune de Lyon; Bordeaux: Lataillade/Papilles & Pupilles; Marseille: Psaltis/Le Grand Pastis; Nice: Gantié/Table Libre at Nice-Presse)
+- French media ownership map established (EBRA, Sud Ouest, La Dépêche, Nice-Matin, Ouest-France, La Provence, national press)
+- France paywall structural gap confirmed: Le Figaro, Télérama, Le Parisien, Le Monde all permanently inaccessible
+
+**Files produced:**
+- 10 Part 1 files (all cities)
+- localbite-geocode-add-france.py — patch script for geocode.js
+- localbite-postrun-add-fr.py — determined unnecessary (postrun handles FR correctly via publisher-diversity logic, no code change needed)
+- combine-france-prompts.py — France equivalent of combine-italy-prompts.py
+- localbite-france-prep-notes.md — media ownership + named writer research
+- localbite-france-batch-strategy.md — batch assignments and pre-batch fix list
+- localbite-index-add-france.py — adds 10 France cities as coming_soon to index.json
+
+**Infrastructure applied:**
+- geocode.js CITY_BOXES: 10 France cities added (commit ca298c0)
+- localbite-index.json: all 10 France cities added as coming_soon (commit 8617a13)
+- .gitignore: France city patterns + localbite-*-france-full.txt added
+- Full prompts generated locally: all 10 cities (58k chars each)
+
+**Batch strategy confirmed:**
+- Batch A: Paris (solo — volume, complexity, 100+ Michelin exclusions)
+- Batch B: Lyon + Marseille + Bordeaux (confirmed sources, bilingual)
+- Batch C: Nice + Toulouse + Strasbourg
+- Batch D: Nantes + Montpellier + Biarritz
+
+**Key finding:** postrun.js publisher-diversity logic is language-agnostic — handles French correctly without any code change. French viewer labels (poolLabel='French', langLabel='FR') were already present in index.html. No viewer fixes needed for France.
+
+---
+
+### Paris v7.1 — Run 1 (failed)
+
+Pipeline ran unattended. Results: 31R, 5 sources, 3 CPs.
+
+**Problems identified:**
+1. Paris by Mouth rejected as multi-author — pipeline blocked entire domain. Individual contributor URLs (Emily Monaco, Clotilde Dusoulier, etc.) never fetched.
+2. Lebovitz concentration cap (30%) removed 21 quality restaurants from a 33-entry living guide.
+3. COI sources dominated at 55%: HiP Paris (Rachel Naismith, 6R) and My Parisian Life (Yanique Francis, 12R) are food tour operators — stronger COI than Time Out. Both excluded from Part 1 v2.
+4. FR sources catastrophically thin: only Morisse (1 restaurant) and Pudlowski (1 restaurant — Casimir, later nulled as street false positive).
+
+**Key COI discovery:** Paris by Mouth is a food tour operator at both publication and contributor level. Emily Monaco, Clotilde Dusoulier, Jennifer Greco, Diane Ruengsorn all lead food tours. The entire Paris by Mouth ecosystem is excluded. Exception: Aaron Ayscough (natural wine book, no tours mentioned) — research for future rebuild.
+
+---
+
+### Paris v7.1 — Run 2
+
+Part 1 updated (v2): Paris by Mouth removed; 4 individual author URLs added (but all ultimately COI); HiP Paris and My Parisian Life explicitly excluded; Pudlowski and Morisse given publication-first archive URLs; Lebovitz cap override noted; SimonSays, Le Figaro, Télérama, Paris Update all added to EXCLUDED_SOURCES.
+
+Results: 40R, 4 sources, 2 CPs. Zero COI entries.
+
+Sources confirmed: David Lebovitz (EN, living guide), Heidi Ellison / Paris Update (EN — Phase 0 discovered individual article URL argile-restaurant/), Gilles Pudlowski (FR, full archive), Arnaud Morisse (FR, full archive).
+
+**Paris Update finding:** Paris Update had no bylines on section page (rejected in Run 1). Pipeline found specific article by Heidi Ellison with byline — accepted in Run 2. Publication-first methodology.
+
+**Concentration cap:** Pipeline still applied 30% cap despite Part 1 override instruction. Cap is hardcoded — Part 1 instruction not parsed. 12 Lebovitz restaurants removed.
+
+**Modified Path B:** Rather than a 3rd pipeline run, reinstated 11 Lebovitz cap-removed restaurants from working.json via patch script (localbite-paris-reinstate-lebovitz.py). Le Relais de l'Entrecôte excluded (formula chain). Result: 51R.
+
+---
+
+### Paris v7.1 — Postrun and Geocode Fixes
+
+Multiple postrun runs required (standard for new cities with outlier false positives).
+
+**False positives identified and nulled:**
+- Casimir → "Rue Casimir Périer" (street)
+- Monaco → "Ambassade de Monaco" (embassy, medium confidence)
+- Grande Brasserie → "Brasserie Naï" (wrong restaurant name)
+- Chez Paul → wrong Chez Paul in 18e (Oberkampf restaurant is 11e — high confidence but wrong location)
+- Candide → "New Hotel Candide" (hotel not restaurant)
+- Occasion → "Marché du Livre ancien et d'occasion" (book market, high confidence — demonstrates high confidence does not override common sense)
+- Atelier Mala → [48.868, 2.390] coordinates in 20e but arrondissement listed as 9e — inconsistent, nulled
+- La Contre-Allée → [48.876, 2.288] in 17e but should be 14e Montparnasse — nulled
+
+**CITY_CENTRES corrected:** postrun set [48.9100, 2.3450] (bbox midpoint) — corrected to [48.8566, 2.3522] (actual Paris centre).
+
+**HIGH SPREAD centroids:** All 4 flagged centroids accepted after outlier removal. In Paris-scale neighbourhoods (covering full arrondissements), HIGH SPREAD is expected. Investigate outliers first, then accept remaining HIGH SPREAD.
+
+**Chinatown centroid:** Nominatim returned [48.842, 2.303] — points to 15e (Rue Cambronne, Quartier Saint-Lambert). Paris Chinatown (13e) is [48.828, 2.360]. Wrong. Only Monaco (geo_skip) uses this centroid — accepted as low impact. Fix at next rebuild.
+
+**Final state:** 51R, 4 sources, 2 CPs, 76% geocoded (39/51). 12 restaurants on geo_skip. CITY_CENTRES corrected. Smoke test passed.
+
+**Commits:** 11e01c5 (Paris v7.1 data), c951247 (Paris Part 1 v2)
+
+---
+
+### Top 100 European Cities Analysis
+
+User uploaded "Top 100 European Cities Ranked by Food Culture" (Claude-generated Pages document). List compared to user's own list of 100 cities.
+
+27 cities in user's list NOT in attachment: UK (London, Birmingham, Bristol, Belfast, Oxford), Germany (Frankfurt, Düsseldorf, Leipzig), France (Lille, Reims, Dijon), Italy (Parma, Lucca, Siena), Netherlands (Rotterdam, Utrecht, The Hague), Austria (Salzburg, Innsbruck), Denmark (Aarhus, Odense), Spain (Marbella, Cádiz), Switzerland (Basel), Sweden (Gothenburg), Norway (Stavanger), Czech Republic (Brno).
+
+The attachment had different cities in those slots including: Sarajevo, Tbilisi, Valletta, Bucharest, Sofia, Belgrade, Bratislava, Bern, Nicosia, Skopje, Tirana, Gdańsk, Bergen, Pamplona, Biarritz/Bayonne, Pécs, Plovdiv, Heraklion, Lecce, Novi Sad, Matera, Trento, Funchal.
+
+---
+
+### Key Decisions
+
+1. Food tour operator COI rule expanded: excludes publication AND individual contributors who lead tours. Paris by Mouth entirely excluded. Aaron Ayscough may qualify individually.
+2. Concentration cap override for living guides: 50% cap acceptable for continuously-updated multi-year sources. Document in Part 1. Pipeline hardcoded cap requires working.json reinstatement if override not respected.
+3. working.json reinstatement pattern confirmed: valid repair path when cap incorrectly applied.
+4. Sticky scrolling deferred to Next.js: not dysfunctional as-is.
+5. HIGH SPREAD centroids in large cities: acceptable after outlier removal — don't flag large-city spread as problematic.
+6. High confidence geocodes can still be false positives: null embassies, book markets, hotels even at high confidence.
+7. CITY_CENTRES requires manual verification: postrun bbox midpoint may be significantly off.
+8. Paris paywall structural gap: permanent. FR source pool limited to Pudlowski + Morisse.
+
+---
+
+### Files Produced or Updated
+
+**Committed (17 commits):**
+- 37532b7: data: Modena CiboToday fix
+- 71715d6: data: Rome v7.1 — 79R/18CP/6src
+- 4c884f4: data: Barcelona v7.1 — 58R/14CP/11src
+- 2cb93d9: chore: untrack files, add sync-bothpool, gitignore
+- dbe1ae4: fix: geocode.js Via-preposition + Largo (fix3b)
+- d8a56f6: feat: header CP count, remove footer, methodology to Sources
+- f10e9ac: feat: Sources panel local writer copy
+- 3100c64: feat: Sources panel hide filters+cards when open
+- 7e54ec3: fix: scroll to top fix 1
+- 399b496: fix: scroll requestAnimationFrame iOS
+- 4b2e21e: data: Madrid v7.1 — 89R/15CP/11src
+- 6cb0d8d: chore: Madrid file cleanup
+- ca298c0: chore: France prep — 10 Part 1 files, geocode boxes, batch strategy
+- 8617a13: chore: France index entries (coming_soon), gitignore patterns
+- 11e01c5: data: Paris v7.1 — 51 restaurants, 4 sources, 2 consensus picks
+- c951247: chore: Paris Part 1 v2 — excluded sources, Lebovitz cap override notes
+
+**Scripts produced (not committed — covered by .gitignore):**
+- localbite-geocode-add-france.py
+- localbite-postrun-add-fr.py (determined unnecessary)
+- combine-france-prompts.py
+- localbite-index-add-france.py
+- localbite-paris-reinstate-lebovitz.py
+- localbite-paris-fixes.py
+- localbite-paris-fixes-2.py
+- localbite-paris-null-contrealle.py
+- localbite-paris-peek-working.py
+- localbite-paris-peek-final.py
+- check-working.py, check-final.py
+- localbite-fleet-stats.py
+- localbite-update-gitignore-madrid.py
+
+---
+
+### Outstanding Items
+
+**Engineering P0 (before next pipeline batch):**
+- Fix 2: postrun.js sources list→dict auto-repair
+- Fix 3: geocode.js full false positive detection (Italian cities)
+- Pre-research template: Add Search 8 and Search 9
+
+**France — next batch:**
+- Batch B: Lyon + Marseille + Bordeaux
+  - Confirmed sources: Mailhes/Tribune de Lyon (Lyon), Psaltis/Le Grand Pastis (Marseille), Lataillade/Papilles & Pupilles (Bordeaux)
+  - Run Fix 2 and Fix 3 first
+  - 20-minute stagger between launches
+
+**Paris rebuild (future):**
+- Research Aaron Ayscough's own blog/site (no food tour COI — natural wine book author)
+- Chinatown centroid correction [48.842→48.828, 2.303→2.360]
+- 12 geo_skip restaurants — cannot be re-geocoded without address data
+- Consider Lebovitz cap override more explicit in prompt template
+
+**Part 1 updates:**
+- Madrid: add Capel / Gastroactitud as DIRECT_FETCH_SOURCE
+- Barcelona: add ElNacional.cat / Tubella as fetch-limitation (451)
+- Venice: add The Infatuation (McGuire/EN)
+- Trieste: add Scatti di Gusto (Scoccimarro/IT)
+- Turin: add ilGolosario.it (Massobrio/IT)
+- Málaga: add Bellver/Sur (fetch-limitation)
+- A Coruña + Vigo: add Campos/La Voz (paywall risk)
+- Palermo: editorial rebuild — Cronache di Gusto + Giornale di Sicilia
+
+**Viewer:**
+- Sources panel UX gap: needs "recommended by [N] editorially independent sources from different publishers" copy
+
+*Fleet: 42 cities, ~1,275R, ~240 CPs (~18.8%), index.html ~2,370 lines*
+
+## Session — 2026-05-06 (France Batch B: drift discovery, production rollback, three-city park)
+
+### Overview
+
+France Batch B (Lyon + Marseille + Bordeaux) launched with 20-min stagger after pre-launch research strengthening. Lyon completed and pushed to production, immediately broke the viewer ("loading city packs..." persisted indefinitely). Production rolled back via `git revert` of commit 3b18a73 (now reverted by 73c7dcc). Diagnosis revealed Lyon and Marseille both produced JSON with fundamental schema divergence from the standard pack format — postrun's auto-repair caught some but nowhere near all of the drift. Bordeaux's pipeline finished with what looks like a clean output but has not yet been schema-checked. All three city packs parked in `_drift-recovery/` for tomorrow's engineering work.
+
+The disciplined call: stop, write the engineering spec, end the day. We do not commit any of today's France work in its current state.
+
+---
+
+### Pre-launch Research
+
+User pushed back on the prior pattern of ad-hoc per-session pre-research. Strengthened pre-research methodology proposed for tomorrow (~12-15 search slots, typed dossier output) — pending implementation as a template addendum.
+
+Three Part 1 files updated with pre-research addenda before launch:
+
+**Lyon** — Added Anna Richards (Time Out Lyon, expat since Sept 2021, multi-byline; Time Out food markets COI flagged) and Signe Meirane (signeture.living, Lyon 6th arr. resident, single-author site). Rejected Jill Colonna (Paris-based, Saint-Germain-en-Laye), Chloé/Roads Best Travelled (multi-city travel blogger). Fixed Culinary Backstreets URL bug (was pointing to Marseille).
+
+**Marseille** — No qualifying new EN source. Vérane Frédiani London-based since 2016+. Camille Potts comic book writer, single article. Pre-research addendum documents the structural EN gap finding.
+
+**Bordeaux** — Structural EN gap confirmed. All Bordeaux EN candidates are tour operators (Lost in Bordeaux, SIP Wine, Aquitaine Travel Guide) or visitors (The Good Life France). Time Out Bordeaux byline = Antoine Besse (Time Out France national restaurants section editor, Paris-based) — rejected, not a city-based writer. Pre-research addendum documents Sud Ouest gap (no clear named food critic) and Time Out byline rejection.
+
+---
+
+### Engineering Status Verification (Process Failure)
+
+Stale docs claimed Fix 2 and Fix 3 were P0 pending. Direct read of postrun.js and geocode.js confirmed BOTH ARE COMMITTED:
+- **Fix 2** (postrun.js sources list→dict auto-repair): present at lines 233-249, Step 1.5
+- **Fix 3** (geocode.js NON_RESTAURANT_PATTERNS): present at lines 206-301, with Italian/French/Spanish patterns
+
+Process problem flagged. Global instructions need correction — claiming pending work that's already done is worse than just being out of date.
+
+---
+
+### Lyon Pipeline + Postrun
+
+Pipeline result: 43R, 4 sources, 4 CPs (9.3% — below 10-15 estimate due to FR-pool single-source structural gap).
+
+Sources confirmed:
+- Tribune de Lyon / François Mailhes (FR primary, 11 articles)
+- Time Out / Anna Richards (EN secondary)
+- Signeture Living / Signe Meirane (EN primary)
+- The Infatuation / Anna Richards (EN secondary, found by pipeline Phase 1B — wasn't in our Part 1)
+
+Anna Richards's dual-outlet legitimately counts as cross-publisher CPs under the publisher-independence rule. 7 concentration-cap excluded entries from The Infatuation (40%→30.2%) — different from Paris/Lebovitz pattern, no reinstatement needed.
+
+Pipeline was compacted+resumed.
+
+**T6 postrun went sideways.** Procedural failures:
+1. Jumped to summary commands (tail metrics, cat stats, sync-bothpool) before output review
+2. Attempted Italian-style `hood-check.py` + custom `fix-hood-from-coords.py` scripts that produced wrong neighbourhood assignments (only 3 centroids in JSON; 14 hood-null restaurants got assigned to Gerland/Part-Dieu when most were actually Presqu'île)
+3. User correctly pushed back: "we shouldn't need reversion or patches at city 43"
+4. Recovery path: restore from `localbite-lyon-france-2023-2026-geocoded-backup.json` (pre-postrun state), re-run postrun, patch 3 nulls (Le Petit Abuluzi wrong match, Daniel et Denise arrondissement mismatch, Majorelle Villeurbanne mismatch), re-run postrun, approve-centroids, sync-bothpool
+5. **CITY_CENTRES corrected** from bbox midpoint [45.7650, 4.8650] to Place des Jacobins [45.7640, 4.8357]
+6. Committed and pushed as 3b18a73
+
+Paris session's T6 precedent should have been: postrun.js → output review → audit cat → null false positives → CITY_CENTRES check → approve-centroids → smoke test → commit. NO hood-check, NO custom hood-repair scripts.
+
+---
+
+### Production Break + Revert
+
+After push, https://localbiteadmin.github.io/localbite/ on private windows (mobile + desktop) showed "loading city packs..." indefinitely. Curl confirmed deployment succeeded — index.json valid JSON, Lyon JSON HTTP 200 at 55,308 bytes. The break was content-side, not deployment-side.
+
+Rollback path:
+```
+git stash push -m "marseille-postrun-wip"   # protect Marseille's in-progress T6 work
+git revert --no-edit 3b18a73                 # creates 73c7dcc reverting Lyon
+git push                                     # production restored within ~45s
+```
+
+Verified post-rollback: Lyon JSON HTTP 404 (no longer deployed), Lyon back to `coming_soon` in index.json. Production loaded again.
+
+Stash pop hit conflicts in `index.html` and `localbite-run-metrics.log` (stash diff anchored against pre-revert tree, doesn't line up after revert). Conflicts resolved via `localbite-marseille-resolve-conflicts.py`: dropped Lyon entries, kept Marseille entries, also corrected Marseille CITY_CENTRES from bbox midpoint [43.3050, 5.4225] to Vieux-Port [43.2965, 5.3698] at the same time.
+
+---
+
+### Marseille Pipeline + Schema Drift
+
+Marseille pipeline produced final JSON with INVENTED schema field names at TOP LEVEL: `entries` instead of `restaurants`, `slug` instead of `city_slug`, plus extra fields `language` / `price_currency` / `run_date`. Postrun's auto-repair couldn't run (its `Array.isArray(data.restaurants)` guard fails before Step 1.5 fires).
+
+Repaired top-level via `/tmp/repair-marseille.py`: renamed `entries`→`restaurants`, `slug`→`city_slug`. Then postrun ran, geocoded 25/30 (83%), auto-repaired 40 fields.
+
+Postrun output revealed many bad geocodes — full list parked for tomorrow:
+- La Chapelle (Endoume) → 43.378 too far north
+- Sur Le Pouce (Noailles) → 43.34/5.44 way off
+- Treiz'envie (Vieux-Port) → 43.26 too far south
+- L'Original (Noailles) → 43.230 too far south
+- Forest (La Joliette) → 43.230/5.537 way off, matched "Cassis Forest"
+- Luna Piena → matched "La Luna Verda" (different restaurant)
+- Rotisserie Joyau → matched "Rotisserie Snack" (different)
+- Several more medium-confidence borderline matches
+
+5 not-found → centroid fallback (Le Plongeon, Lottie, Mijoba, Station Uvale du Palais, LABC). 3 neighbourhood centroids HIGH SPREAD (Le Panier, Cours Julien, Notre-Dame-du-Mont) — likely because of bad geocodes pulling the average.
+
+Marseille discovered 3 additional sources beyond Part 1: Pierre Psaltis (Le Grand Pastis, expected), Culinary Backstreets / Alexis Steinman, **The Good Life / Fanny Liaux Gasquerel** (NEW — not researched in Part 1), plus 2 more. 1 CP. Pipeline ran 50 searches, 38 tool uses, 841s.
+
+Marseille was also compacted+resumed. Same drift class as Lyon, different specific patterns.
+
+---
+
+### Bordeaux Pipeline (Completed Cleanly)
+
+Bordeaux completed without compaction-reconstruction artifacts visible in workflow. Result: 17R, 3 sources, 2 CPs. Did NOT compact-and-resume (notably).
+
+Sources confirmed:
+- Anne Lataillade / Papilles & Pupilles (FR primary, 11 restaurants)
+- Gilles Pudlowski / Les Pieds dans le Plat (FR secondary, 6 restaurants)
+- Alicia Dorey / Yonder.fr (FR secondary, 4 restaurants)
+
+EN structural gap confirmed (per Part 1 addendum). Alexander Lobrano / France Today surfaced via Phase 1B but excluded due to secondary cap (1 restaurant only).
+
+**Le Cent 33 Michelin issue:** Le Cent 33 received Michelin 1★ in 2026 (after coverage period). Per blanket Michelin exclusion rule (2026-04-25 fixed definition: "Michelin exclusion is a blanket rule. All Michelin-starred restaurants are excluded from city packs regardless of article date"), Le Cent 33 must be excluded from the final pack regardless of source article dates. Pipeline noted the issue and asked the user — but the rule is settled. Exclude before postrun.
+
+Pipeline excluded 7 of 12 Dorey entries via concentration cap. Total of 28 raw extractions → 17 final after caps + Le Bouscat geographic exclusion + Mama Dumpling AI-translated quote rejection.
+
+**Bordeaux still needs:**
+1. Drift diagnostic (same as Lyon/Marseille — verify schema before postrun)
+2. Le Cent 33 exclusion patch (drop from sources + restaurants)
+3. Postrun → approve-centroids → sync-bothpool → smoke test → commit
+
+Parked for tomorrow with the others.
+
+---
+
+### Schema Drift Diagnosis
+
+Diagnostic comparing Lyon `.broken` JSON vs Marseille JSON vs Paris (known-good France reference):
+
+**Lyon top-level:**
+- Lyon-only: `run_date`, `run_metrics`, `geo_centre`, `geo_bbox` (pipeline-internal noise)
+- Missing: `sources_confirmed`, `final_entries`, `both_pool`, `tier_a/b/c`, `date_generated`
+- `sources`: Lyon=list, Paris=dict
+
+**Lyon restaurant:**
+- Extra: `geo_lat`, `geo_lng`, `writers` (plural), `article_urls` (plural), `tdl_rating`, `tdl_article_date`, `notable_dishes`, `address`, `postcode`, `country`, `cuisine`, `flag`, `open_status_check`, `neighbourhood_hint`, `city`
+- Missing: `article_url` (singular), `writer` (singular), `publisher`, `dishes`, `quote_en`, `arrondissement`, `year`, `price_range`, `open_status`
+
+**Marseille top-level:**
+- Marseille-only: `centroids_proposed` (postrun normal), `extraction_date` (drift)
+- Missing: `sources_confirmed`, `final_entries`, `both_pool`, `tier_a/b/c`, `date_generated`, `centroids` (will populate after approve)
+- `sources`: Marseille=list, Paris=dict
+
+**Marseille restaurant:**
+- Extra: `geo` (nested object), `cuisine`, `open_status_check`, `confidence`, `address`, `description`
+- Missing: `open_status`, `year`, `both_pool`, `article_url`, `publisher`, `id`, `writer`, `quote_en`, `arrondissement`, `dishes`
+
+**The drift class:** Compaction-reconstruction during Phase 3 final write produces field names that diverge from the v7.1 schema spec. Postrun.js Step 1.5 auto-repair catches a known set of patterns (description→quote, source_id→id, url→article_url, etc.) but misses many of today's variants:
+- `geo_lat`/`geo_lng` flat → `lat`/`lng` flat (not handled)
+- `geo: {lat, lng}` nested → flat `lat`/`lng` (not handled)
+- `writers` (list) → `writer` (str, first) (not handled)
+- `article_urls` (list) → `article_url` (str, first) (not handled)
+- Top-level `extraction_date`/`run_date` → `date_generated` (not handled)
+- Top-level pipeline noise (`run_metrics`, `geo_centre`, `geo_bbox`) (not stripped)
+- Top-level missing metadata (`sources_confirmed`, `final_entries`, `both_pool`, `tier_a/b/c`) (not derived)
+- Pipeline-internal restaurant noise (`tdl_rating`, `address`, `postcode`, `country`, `cuisine`, `flag`, `neighbourhood_hint`) (not stripped)
+
+Postrun also has no hard-fail on residual schema divergence — it reports "Auto-repaired N field(s)" then proceeds, even if the JSON still doesn't conform.
+
+Why `description→quote` didn't fire for Marseille: the rename guard is `if ('description' in r && !('quote' in r))`. Marseille's restaurants had BOTH fields — postrun left `description` alone because `quote` already existed. Logic is correct (don't overwrite existing) but leaves `description` as orphan field. Functionally harmless, but the field-set diagnostic flagged it as drift.
+
+---
+
+### Files Moved to `_drift-recovery/`
+
+```
+_drift-recovery/
+├── localbite-marseille-france-2023-2026.json
+├── localbite-marseille-france-2023-2026-geocoded-backup.json
+├── localbite-marseille-france-2023-2026-geocoding-stats.json
+└── localbite-lyon-france-2023-2026.json.broken
+```
+
+These files preserve today's pipeline output for tomorrow's recovery via the Fix 8 normalization. Do not delete. Bordeaux's output remains in working tree (untracked) — schema check required before any commit.
+
+Working tree reset:
+```
+git restore --staged localbite-index.json index.html localbite-run-metrics.log
+git checkout -- localbite-index.json index.html localbite-run-metrics.log
+```
+
+State after reset: production at 73c7dcc (Lyon revert). Local index.json/index.html/run-metrics.log match HEAD. Marseille files in _drift-recovery/. Bordeaux files untracked. Part 1 prompt updates + journal updates remain staged.
+
+---
+
+### Key Decisions
+
+1. **Compaction-reconstruction schema drift is now classified as a recurring pipeline failure mode** — not a one-off. Two of three pipelines today produced unusable schema. Lyon and Marseille both compacted+resumed. Bordeaux did not compact and produced cleaner output (pending verification).
+
+2. **Drift recovery via migration, not re-run.** Working.json + final.json + geocoded-backup contain all the data we need. Re-running pipelines is expensive and may produce the same drift. Tomorrow's path is to fix postrun.js (Fix 8) and re-postrun the parked artifacts.
+
+3. **`_drift-recovery/` folder convention** for parked drift packs awaiting recovery. Allows time-boxed engineering response without losing data.
+
+4. **Stop-rule discipline.** User invoked the hour-4 hard stop after Lyon production break. Continued past it for the rollback + Marseille drift diagnosis but stopped before attempting migration. The right call.
+
+5. **Bordeaux Le Cent 33 must be excluded** per blanket Michelin rule, regardless of article-date predating the star. Pipeline asked the user — not a question, settled fixed definition.
+
+6. **CITY_CENTRES regression continues.** Lyon and Marseille both had bbox-midpoint CITY_CENTRES from postrun. Both required manual correction. Same Paris pattern (May 6 morning). Postrun's bbox-midpoint default is wrong for asymmetric bounding boxes; this is the third confirmed instance and warrants its own fix in postrun.js.
+
+7. **Process failure on engineering status.** Docs claimed Fix 2/Fix 3 P0 pending; both already committed. Docs need correction. Tomorrow's update.
+
+8. **Strengthened pre-research template is overdue.** Today's ad-hoc Anna Richards / Signe Meirane / Time Out Bordeaux byline check should have been a templated step. Will draft tomorrow.
+
+---
+
+### Files Produced or Updated
+
+**Updated (staged, not committed):**
+- localbite-prompt-v71-lyon-france-part1.txt — Anna Richards + Signe Meirane added; CB URL fixed; pre-research addendum
+- localbite-prompt-v71-marseille-france-part1.txt — pre-research addendum (Frédiani London-based finding)
+- localbite-prompt-v71-bordeaux-france-part1.txt — pre-research addendum (structural EN gap, Time Out Bordeaux byline rejection, Sud Ouest gap)
+- localbite-journal.md — in-progress updates
+
+**Pipeline outputs parked in `_drift-recovery/`:**
+- localbite-lyon-france-2023-2026.json.broken (43R, 4 sources, 4 CPs)
+- localbite-marseille-france-2023-2026.json (30R, 5 sources, 1 CP)
+- localbite-marseille-france-2023-2026-geocoded-backup.json
+- localbite-marseille-france-2023-2026-geocoding-stats.json
+
+**Pipeline outputs untracked in working tree (Bordeaux — pending drift check):**
+- localbite-bordeaux-france-2023-2026.json (17R, 3 sources, 2 CPs)
+- localbite-bordeaux-france-working.json
+- localbite-bordeaux-france-raw.json
+- localbite-bordeaux-france-audit.txt
+- localbite-bordeaux-france-search-log.txt
+- localbite-bordeaux-france-search-plan.txt
+- localbite-bordeaux-france-fetch-log.txt
+
+**Diagnostic / repair scripts (gitignored, in repo dir):**
+- localbite-lyon-debug.py — schema diff against Paris reference
+- localbite-marseille-debug.py — schema diff against Paris reference
+- localbite-marseille-resolve-conflicts.py — stash-pop conflict resolver
+
+**Repository commits:**
+- 3b18a73: data: Lyon v7.1 — 43 restaurants, 4 sources, 4 consensus picks (REVERTED)
+- 73c7dcc: Revert "data: Lyon v7.1" — production restored
+
+---
+
+### Outstanding Items
+
+**Engineering P0 (must complete before resuming any France pipelines):**
+- **Fix 8** — comprehensive schema normalization in postrun.js (NEW — see engineering spec). Estimated 3-4 hours including testing against Lyon/Marseille drift cases.
+- **Fix 9** (if not folded into Fix 8) — postrun.js bbox-midpoint CITY_CENTRES warning + manual correction prompt. Three confirmed instances (Paris, Lyon, Marseille). Blocks every France/large-city run.
+
+**Drift recovery (after Fix 8 ships):**
+- Re-postrun Lyon from `_drift-recovery/localbite-lyon-france-2023-2026.json.broken` → smoke test → commit
+- Re-postrun Marseille from `_drift-recovery/localbite-marseille-france-2023-2026.json` → null bad geocodes → CITY_CENTRES check (already corrected to Vieux-Port [43.2965, 5.3698] in resolution) → smoke test → commit
+- Bordeaux: drift diagnostic → exclude Le Cent 33 → postrun → approve-centroids → sync-bothpool → smoke test → commit
+
+**Pre-research template:**
+- Add structured slots for: expat/independent-platform discovery, author-locality verification, Time Out direct-fetch byline check, regional newspaper named-critic search, tour operator screening, output as confidence-assessment dossier per source category.
+
+**Global instructions doc correction:**
+- Mark Fix 2 and Fix 3 as completed (process failure noted)
+- Add `_drift-recovery/` folder convention
+- Add compaction-reconstruction drift classification + recovery pattern
+- Update fleet state: Lyon/Marseille/Bordeaux parked
+- Update viewer/data outstanding items
+
+**France batches still ahead:**
+- Batch C: Nice + Toulouse + Strasbourg (after Batch B concluded)
+- Batch D: Nantes + Montpellier + Biarritz
+
+**Carry-over from previous session (still relevant):**
+- Pre-research template Search 8/9 additions
+- Italian/French city Part 1 additions (Madrid Capel, Barcelona ElNacional.cat, Venice Infatuation, Trieste Scatti di Gusto, Turin ilGolosario.it, Málaga Bellver, A Coruña+Vigo Campos, Palermo Cronache di Gusto)
+- Sources panel UX gap: needs "recommended by [N] editorially independent sources from different publishers" copy
+
+*Fleet: 42 v7.1 cities live, ~1,275R, ~240 CPs (~18.8%). No new cities live this session — Lyon push reverted, Marseille and Bordeaux parked. Production at commit 73c7dcc.*
+

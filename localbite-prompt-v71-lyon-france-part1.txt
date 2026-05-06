@@ -16,6 +16,28 @@ OUTPUT_SEARCH_LOG: localbite-lyon-france-search-log.txt
 OUTPUT_FETCH_LOG: localbite-lyon-france-fetch-log.txt
 
 # =============================================================
+# PRE-RESEARCH ADDENDUM (2026-05-06)
+# =============================================================
+# Original prep surfaced only Culinary Backstreets as EN candidate. Re-research
+# under expanded template (expat / independent-platform / author-locality
+# verification) added two qualifying EN writers below: Anna Richards and
+# Signe Meirane. Both verified Lyon-resident, named, active 2023-2026, no
+# tour COI. EN coverage upgraded from "weak" to "moderate-strong".
+#
+# CANDIDATES VERIFIED AND REJECTED:
+# - Jill Colonna (Mad About Macarons) — Paris-based (Saint-Germain-en-Laye /
+#   Le Pecq). Primary beat is Paris pâtisserie. Reject: writer locality fail.
+#   Note as candidate for future Paris rebuild.
+# - Chloé / The Roads Best Travelled — travel blogger covering many cities
+#   (Lyon, Paris, Montréal, NYC, Kyoto). Tourist itineraries, not Lyon-resident.
+#   Reject: writer locality fail.
+#
+# REGIONAL PRESS: Tribune de Lyon (Mailhes) is the qualifying named critic
+# for Lyon. Le Progrès (EBRA-owned regional daily) was screened — no
+# distinctive named food critic with editorial review prose surfaced.
+# Consistent with regional-newspaper-gap pattern.
+
+# =============================================================
 # DIRECT_FETCH_SOURCES — confirmed named authors, active 2024-2025
 # =============================================================
 
@@ -26,12 +48,25 @@ DIRECT_FETCH_SOURCES:
     language: fr
     notes: FR independent Lyon weekly newspaper. Mailhes is the named gastronomic critic — 20+ years covering Lyon restaurants, bylined on all reviews (confirmed from multiple 2024-2025 articles). Tribune de Lyon is owned by Rosebud SAS (principalement détenue par ses salariés — employee-owned). Fully independent. This is an exceptional local source.
 
-  - url: https://culinarybackstreets.com/cities-category/marseille/
+  - url: https://culinarybackstreets.com/cities-category/lyon/
     writer: CB Lyon team
     publication: Culinary Backstreets
     language: en
-    notes: EN food journalism network. CB has Lyon and Marseille coverage. JS-only site (SPA) — automated fetch returns shell. Include article_url only if confirmed from direct visit. Known COI: CB operates food tours — flag if present.
+    notes: EN food journalism network with Lyon coverage. JS-only site (SPA) — automated fetch returns shell. Include article_url only if confirmed from direct visit. Known COI: CB operates food tours — flag if present.
     fetch_limitation: JS-only SPA — automated fetch will return shell. article_url required from direct visit only.
+
+  - url: https://www.timeout.com/france/best-restaurants-in-lyon
+    writer: Anna Richards
+    publication: Time Out (Lyon byline)
+    language: en
+    notes: EN food writer based in Lyon since September 2021 (relocated UK→Lyon). Lyon-resident, multi-award-winning. Bylines at Time Out, The Infatuation, Lonely Planet, BBC, National Geographic, Independent, i Paper, Telegraph (Corsica specialist), Outside, Fodors, Hidden Compass. Author of Paddling France (Bradt Guides) and Mini Rough Guide to Lyon. Personal portfolio: annahrichards.com. Explicitly declines press trips. Time Out Lyon "Best Restaurants" guide bylined "Anna Richards is a writer based in Lyon" (verified). Active 2024-2025. Single-author byline at this URL.
+    coi_flag: Time Out food markets exist in other cities (Boston, NYC, Lisbon etc.) — soft COI flag. No food market in Lyon. Accept with flag.
+
+  - url: https://signeture.living/travle-lyon
+    writer: Signe Meirane
+    publication: Signeture Living (signeture.living)
+    language: en
+    notes: EN lifestyle/food blog by Latvian expat Signe Meirane, Lyon resident (6th arrondissement, confirmed from her own posts: "the 6th arrondissement in Lyon", "the day I moved to Lyon"). Single-author site. Substantive Lyon food posts: "Lyon. THE restaurant list" (July 2024, 13+ named restaurants with descriptions), "Lyonnaise salad" (April 2024), "Lyon. Pastries and bread" (older but Lyon-specific). Site is broader lifestyle (cosmetics, products, recipes) but has dedicated Lyon travel/food section. Has cookbook e-commerce on site but no food-tour or restaurant-promotional COI. Active through 2024-2025. Fetchable HTML (not SPA).
 
 # =============================================================
 # KNOWN_COMMERCIAL_CONFLICTS

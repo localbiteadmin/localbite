@@ -89,3 +89,6 @@ localbite-nantes-*.py
 localbite-montpellier-*.py
 localbite-biarritz-*.py
 localbite-*-france-full.txt
+
+# Parked drift packs awaiting Fix 8 recovery (2026-05-06)
+_drift-recovery/
