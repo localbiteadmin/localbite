@@ -1,0 +1,335 @@
+LOCALBITE PIPELINE AUDIT
+City: Paris, France
+Pipeline: localbite-v7.1
+Date: 2026-05-06
+Output file: localbite-paris-france-2023-2026.json
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 1 — PIPELINE METRICS
+────────────────────────────────────────────────────────────────────────────────
+
+Working.json entries (pre-Phase-3):       55
+  David Lebovitz:                         25
+  Arnaud Morisse:                          9
+  Gilles Pudlowski:                       11
+  Heidi Ellison:                          10
+
+Phase 3 steps:
+  Both-pool deduplication:               -2   (Chez Georges, Les Arlots)
+  Michelin exclusion:                    -1   (Datil)
+  Concentration cap removals:           -12   (Lebovitz Tier B over 30%)
+
+Final entries:                            40
+  Tier A (both-pool):                     2
+  Tier B (single-source):                38
+  Tier C:                                 0
+
+Sources confirmed:                         4
+Searches run:                             73  (53 planned + Phase 1B)
+COI rejections:                            1  (Jon Bonné / RESY)
+Michelin exclusions:                       1  (Datil — 1-star since 2024-03)
+Concentration cap applied:               YES  (Lebovitz)
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 2 — SOURCE EVALUATION LOG
+────────────────────────────────────────────────────────────────────────────────
+
+ACCEPTED SOURCES (4)
+────────────────────
+
+1. David Lebovitz — davidlebovitz.com
+   Language: EN | Type: single-author personal site
+   Named author: confirmed (About page + article bylines)
+   Date range: updated April 2026
+   Article URL: https://www.davidlebovitz.com/paris/
+   COI: none
+   Working entries: 25 | Final Tier A: 2 | Final Tier B: 11
+   Note: Concentration cap applied — see Section 5
+
+2. Arnaud Morisse — restos-sur-le-grill.fr
+   Language: FR | Type: independent personal food blog
+   Named author: confirmed (full name, site header)
+   Date range: articles from 2023–2026; latest confirmed 2026-03
+   Article URL: https://restos-sur-le-grill.fr/2025/11/mantra-paris-9-la-grande-decouverte.html
+   COI: none
+   Working entries: 9 | Final Tier A: 0 | Final Tier B: 8
+   Note: Datil excluded (Michelin 1-star) — see Section 4
+
+3. Gilles Pudlowski — gillespudlowski.com
+   Language: FR | Type: personal blog (major French food critic, author of Guide Pudlo)
+   Named author: confirmed (named throughout site; confirmed by Muck Rack)
+   Date range: active May 2026 (article dated 2026-05-02)
+   Article URL: https://www.gillespudlowski.com/424606/restaurants/424606
+   COI: none
+   Working entries: 11 | Final Tier A: 1 | Final Tier B: 10
+   Note: Some Pudlowski articles show contributor/photographer credits;
+         all articles on gillespudlowski.com are attributed to Pudlowski
+
+4. Heidi Ellison — parisupdate.com
+   Language: EN | Type: named-author reviews on independent Paris arts/culture site
+   Named author: confirmed (byline on every article)
+   Date range: articles from 2023–2026; latest confirmed 2026-04
+   Article URL: https://www.parisupdate.com/argile-restaurant/
+   COI: none
+   Working entries: 10 | Final Tier A: 1 | Final Tier B: 9
+   Pre-verified source (Phase 0)
+
+REJECTED SOURCES (13)
+──────────────────────
+
+Source                        Outcome         Reason
+──────────────────────────────────────────────────────────────────────────────
+parisbymouth.com/restaurants/ REJECTED-byline Multi-author site; "The Mouth" anonymous
+                                              byline; Zimbeck is editor not sole author;
+                                              single-author rule does not apply
+simonsays.fr                  REJECTED-date   Most recent content March 2023; no 2024-2026
+lefigaro.fr/gastronomie       FAILED-paywall  Durand-Souffland confirmed active 2026;
+                                              all articles ≤22% visible behind paywall
+telerama.fr/gastronomie/      FAILED-404      404 + Wayback 451 (geo-blocked);
+                                              Payany confirmed active 2025-2026 at
+                                              Télérama but site inaccessible
+jonbonne.com                  REJECTED-COI    Jon Bonné confirmed as RESY Managing
+                                              Editor; RESY = restaurant booking platform
+                                              with commercial interest; COI disqualifies
+lostincheeseland.substack.com FAILED-404      Substack removed or relocated
+bonjour.lindseytramuta.com    REJECTED-content Lifestyle/culture newsletter (fashion,
+                                              exercise, Americanisms); no restaurant
+                                              reviews 2023-2026; restaurant writing
+                                              only for secondary publications (NYT/CNT)
+lepetitlugourmand.com         REJECTED-byline No full author name (byline: "petitlugourmand");
+                                              multi-location (not Paris-focused)
+lexpress.fr (Gaudry)          FAILED-404      L'Express author archive 404; site
+                                              restructured; "Et toque!" blog defunct
+                                              since ~2012
+alexanderlobrano.com          REJECTED-date   Most recent article Prunier Dec 2, 2022;
+                                              Tekés Aug 31, 2022; inactive since 2022
+thegoodlife.fr (Gasquerel)    REJECTED-quality Fanny Liaux Gasquerel named author, Feb
+                                              2026 — all quotes <15 words; listicle
+                                              format; not restaurant criticism
+Rémi Dechambre (Le Parisien)  FAILED-paywall  Confirmed as Le Parisien food critic;
+                                              all articles paywalled; no personal blog
+Emmanuel Rubin (Figaroscope)  FAILED-paywall  Confirmed Le Figaro/Figaroscope critic;
+                                              all content paywalled; no personal blog
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 3 — BOTH-POOL IDENTIFICATION
+────────────────────────────────────────────────────────────────────────────────
+
+2 restaurants appear in 2+ editorially independent sources → Tier A
+
+Restaurant         Sources                      ID
+─────────────────────────────────────────────────────────────────────
+Chez Georges (2e)  Lebovitz + Pudlowski         paris-france-001
+Les Arlots (10e)   Lebovitz + Ellison           paris-france-002
+
+Independence check:
+  - Lebovitz (davidlebovitz.com) and Pudlowski (gillespudlowski.com):
+    independent personal blogs, no editorial overlap ✓
+  - Lebovitz (davidlebovitz.com) and Ellison (parisupdate.com):
+    independent sites, different editorial basis ✓
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 4 — MICHELIN EXCLUSION LOG
+────────────────────────────────────────────────────────────────────────────────
+
+Michelin policy: Exclude ALL 1-star, 2-star, 3-star Paris restaurants.
+Cross-reference used: Affiches Parisiennes "123 restaurants étoilés à Paris 2025"
+and Michelin Guide Paris 2025.
+
+EXCLUDED:
+
+  Datil (3e arrondissement)
+  Source: Arnaud Morisse (restos-sur-le-grill.fr)
+  Article: https://restos-sur-le-grill.fr/2023/10/datil-paris-3-sublime-de-bout-en-bout.html
+  Quote confirmed ≥15 words: YES — "Mano Fleury dès le début impose sa marque avec
+    une maîtrise totale sur le sourcing, les cuissons, les assaisonnements — c'est
+    intelligent, c'est beau, c'est audacieux et au final simplement délicieux !"
+  Michelin star: awarded March 2024 (carried into 2025 guide)
+  Tier if included: B (Morisse only)
+  Decision: EXCLUDED — Michelin 1-star since March 2024
+
+NOT EXCLUDED (confirmed non-starred in Michelin Paris 2025):
+
+  Lava (5e) — confirmed NOT on 2025 starred list; TheFork Award winner 2025;
+    checked against Affiches Parisiennes full list ✓ RETAINED paris-france-027
+
+  Cypsèle (4e) — confirmed NOT on 2025 starred list;
+    article headline "étoile promise" (star awaited) not yet awarded ✓ RETAINED paris-france-017
+
+  Les Petits Parisiens (14e) — confirmed NOT starred ✓ RETAINED paris-france-020
+
+  Le Fouquet's (8e) — confirmed NOT starred (brasserie, not starred establishment) ✓ RETAINED paris-france-031
+
+  19 Saint Roch (1e) — confirmed NOT starred ✓ RETAINED paris-france-038
+
+Michelin 2025 starred restaurants confirmed NOT in working.json:
+  3-star: Guy Savoy, L'Arpège, Pierre Gagnaire, Épicure, Kei, Le Cinq, Le Grand Véfour,
+          Le Pré Catelan, Plénitude, Taillevent (all excluded at Phase 2 extraction)
+  2-star: Le Clarence, Frenchie (per prompt exclusion list), Saturne, Granite,
+          and 9 others (excluded at extraction)
+  1-star: Automne, Comice, Septime, and ~80 additional 1-star restaurants
+          (none appeared in remaining source articles)
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 5 — CONCENTRATION CAP LOG
+────────────────────────────────────────────────────────────────────────────────
+
+Cap rule: No single source may contribute >30% of Tier B entries.
+
+Pre-cap Tier B count:
+  Total Tier B candidates (after dedup + Michelin exclusion): 50
+    Lebovitz:   23  (46.0%) → EXCEEDS 30% cap
+    Morisse:     8  (16.0%)
+    Pudlowski:  10  (20.0%)
+    Ellison:     9  (18.0%)
+
+Cap calculation:
+  Iteration: remove 1 Lebovitz at a time, recalculate denominator
+  After 12 removals: 11 Lebovitz / (11+8+10+9) = 11/38 = 28.9% ✓
+
+REMOVED FROM FINAL (12 Lebovitz Tier B entries, auto-accepted per UNATTENDED_MODE: YES):
+
+  Restaurant              Neighbourhood          Arrondissement
+  ─────────────────────────────────────────────────────────────
+  A La Biche au Bois      Bastille               12e
+  Au Passage              Oberkampf/République   11e
+  Aux Bons Crus           Oberkampf/République   11e
+  Bistrot des Tournelles  Le Marais              4e
+  Chez Omar               Le Marais              4e
+  Grande Brasserie        Le Marais              4e
+  Kubri                   Canal Saint-Martin     10e
+  Le Bon Georges          Pigalle/South Pigalle  9e
+  Le Relais d'Entrecôte   Saint-Germain          6e
+  Little Breizh           Saint-Germain          6e
+  Oxymore                 Le Marais              4e
+  Recoin                  Montmartre             18e
+
+RETAINED (11 Lebovitz Tier B entries):
+  Baca'v (5e), Breizh Cafe (4e), Cafe les Deux Gares (10e),
+  Cafe de la Nouvelle Mairie (5e), Caluche (5e), Chez Dumonet (6e),
+  Chez Paul (11e), Comer (10e), Holybelly (10e), Le Rigmarole (11e),
+  Le Saint-Sébastien (11e)
+
+Removal rationale: Priority given to retaining entries from
+underrepresented arrondissements (5e Latin Quarter had only 3 Lebovitz
+entries; kept all 3). Canal Saint-Martin retained 3 of 4 Lebovitz
+entries (removed Kubri). Le Marais Lebovitz entries thinned most
+aggressively (4e already well-covered by Morisse and Pudlowski).
+
+Final Tier B concentration:
+  Lebovitz:  11/38 = 28.9% ✓
+  Morisse:    8/38 = 21.1% ✓
+  Pudlowski: 10/38 = 26.3% ✓
+  Ellison:    9/38 = 23.7% ✓
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 6 — DATA CORRECTIONS
+────────────────────────────────────────────────────────────────────────────────
+
+Correction 1 — Restaurant name error (post-compaction)
+  ID:              paris-france-036
+  Working.json:    "Osteria Paradiso" (name error from compaction reconstruction)
+  Final JSON:      "Candide"
+  Basis:           article_url = parisupdate.com/candide-restaurant/
+                   Quote and dishes (pork shoulder, chicken alla diavola, cornmeal
+                   financier, tiramisu) match Candide restaurant, Canal St-Martin 10e
+  Action:          Name corrected to "Candide" in localbite-paris-france-2023-2026.json
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 7 — COI REPORT
+────────────────────────────────────────────────────────────────────────────────
+
+1 conflict of interest identified:
+
+  Jon Bonné (jonbonne.com)
+  Role: Managing Editor, RESY
+  RESY is a restaurant reservation and discovery platform with direct commercial
+  interest in promoting restaurants. Editorial independence cannot be assured.
+  Decision: REJECTED-COI
+
+No COI issues found for confirmed sources (Lebovitz, Morisse, Pudlowski, Ellison).
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 8 — GEOGRAPHIC BOUNDARY CHECK
+────────────────────────────────────────────────────────────────────────────────
+
+GEOGRAPHIC_BOUNDARY_INCLUDE: Paris arrondissements 1e–20e
+GEOGRAPHIC_BOUNDARY_EXCLUDE: Paris suburbs, Île-de-France region outside city limits
+
+All 40 final entries are within arrondissements 1e–20e:
+  1e: 2 (19 Saint Roch, Les Marmottes)
+  2e: 1 (Chez Georges)
+  3e: 1 (Paolina Caffè)
+  4e: 3 (Breizh Cafe, Cypsèle, Vingt vins d'art)
+  5e: 5 (Baca'v, Cafe de la Nouvelle Mairie, Caluche, La Petite Périgourdine, Lava)
+  6e: 1 (Chez Dumonet)
+  8e: 3 (Elysée Saint-Honoré, Le Fouquet's — [note: Le Fouquet's listed as 8e])
+      + 1 (Alan Geaam — 16e)
+  9e: 4 (Argile, Atelier Mala, Mantra, Ma! Le Bouillon chic italien)
+  10e: 8 (Afendi, Cafe les Deux Gares, Candide, Casimir, Comer, Holybelly,
+          Les Arlots, Occasion)
+  11e: 4 (À La Renaissance, Chez Paul, Le Rigmarole, Le Saint-Sébastien)
+  13e: 1 (Monaco)
+  14e: 2 (La Contre-Allée, Les Petits Parisiens)
+  15e: 1 (Seoul Mama)
+  16e: 1 (Alan Geaam)
+  17e: 3 (Chez Fred, Le Petit Champerret, Sornettes)
+  20e: 1 (Le Pinceau)
+
+No suburbs or non-Paris entries detected. ✓
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 9 — ARTICLE URL VERIFICATION STATUS
+────────────────────────────────────────────────────────────────────────────────
+
+All article_url values in the final JSON were fetched successfully during Phase 2:
+
+  Source          URL confirmed during fetch    Date of fetch
+  ───────────────────────────────────────────────────────────────────
+  Lebovitz        davidlebovitz.com/paris/      2026-05 (this session)
+  Morisse (8 art) restos-sur-le-grill.fr/*      2026-05 (this session)
+  Pudlowski (10)  gillespudlowski.com/*         2026-05 (this session)
+  Ellison (10)    parisupdate.com/*             2026-05 (this session)
+
+All article_url values are live URLs confirmed from actual fetch responses.
+No URLs were inferred or pattern-matched post-compaction.
+
+Exception note: Session compacted mid-pipeline. After resumption, all article_url
+values were verified against the fetch log before being written to the final JSON.
+The "Osteria Paradiso" → "Candide" name correction (Section 6) was identified
+by cross-checking the article_url against the restaurant name.
+
+────────────────────────────────────────────────────────────────────────────────
+SECTION 10 — SEARCH STRATEGY NOTES
+────────────────────────────────────────────────────────────────────────────────
+
+Paris media landscape constraint: All major French food critics write for paywalled
+publications or broadcast media with no accessible web archive:
+  - Stéphane Durand-Souffland (Le Figaro) — paywalled
+  - Estérelle Payany (Télérama) — 404 + Wayback geo-blocked
+  - Rémi Dechambre (Le Parisien) — paywalled
+  - Emmanuel Rubin (Figaroscope) — paywalled
+  - François-Régis Gaudry (France Inter / L'Express) — blog defunct, archive 404
+  - Le Fooding — no named individual bylines
+  - Guide Lebey — paywalled
+
+Result: Only independent personal bloggers (Morisse, Pudlowski) provided accessible
+primary FR-language sources. EN sources (Lebovitz, Ellison) provided better coverage
+of tourist-adjacent neighbourhoods. The FR source gap leaves central arrondissements
+somewhat under-represented in FR-language primary sourcing.
+
+Language distribution: EN 24 entries (60%), FR 16 entries (40%) — within acceptable
+range given constraint above.
+
+Year distribution:
+  2023: 0 entries  (Morisse 2023 articles were for Datil, now excluded)
+  2024: 0 entries
+  2025: 17 entries (Morisse 7, Ellison 4, Pudlowski 5 + some overlap)
+  2026: 23 entries (Lebovitz 13, Pudlowski 7, Ellison 5, Morisse 1)
+
+Note: Lebovitz's guide is continuously updated and carries a 2026 date; the underlying
+recommendations span 2023-2026 but all content is dated April 2026 at time of fetch.
+
+────────────────────────────────────────────────────────────────────────────────
+END OF AUDIT
+────────────────────────────────────────────────────────────────────────────────

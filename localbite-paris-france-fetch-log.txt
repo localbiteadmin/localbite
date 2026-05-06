@@ -1,0 +1,22 @@
+[p0] "parisbymouth.com/restaurants/" → 200 | 12500ch | REJECTED-byline — multi-author site confirmed via About page; anonymous "The Mouth" byline; Zimbeck is editor not sole author; single-author rule does not apply
+[p0] "simonsays.fr" → 200-nginx | 285ch | FAILED — nginx default welcome page returned, not blog content
+[p0] "www.simonsays.fr" → 200 | 45000ch | REJECTED-date — most recent article dated 09/03/2023; no content from 2024-2026
+[p0-wayback] "web.archive.org/web/2026/simonsays.fr" → 451 | —ch | FAILED — geo-blocked in Wayback Archive
+[p0] "davidlebovitz.com/paris/" → 200 | 95000ch | ACCEPTED — David Lebovitz named author confirmed; guide substantially updated April 2026
+[p0] "lefigaro.fr/gastronomie" → 200 | 185000ch | PARTIAL — Durand-Souffland byline confirmed via Muck Rack; all accessible articles paywalled (≤22% content visible); paywall risk logged for Phase 2
+[p0] "telerama.fr/gastronomie/" → 404 | 38500ch | FAILED — 404 error page; Wayback also 451; Estérelle Payany confirmed active at Télérama 2025-2026; individual article URLs not found
+[p0-wayback] "web.archive.org/web/2026/telerama.fr/gastronomie/" → 451 | —ch | FAILED — geo-blocked in Wayback Archive
+[p0] "parisupdate.com/restaurants/" → 200 | 5847ch | PARTIAL — listing page only; no bylines; individual article fetched
+[p0] "parisupdate.com/argile-restaurant/" → 200 | 3200ch | ACCEPTED — Heidi Ellison named author confirmed; article dated January 30, 2025; content accessible
+[p1] "gillespudlowski.com" → 200 | ~8000ch | CANDIDATE — Gilles Pudlowski named author confirmed; Paris reviews active May 2026; specific article URLs identified
+[p1] "gillespudlowski.com/424606/restaurants/424606" → 200 | ~4000ch | ACCEPTED — Gilles Pudlowski; "Paris 16e: le voyage Paris-Beyrouth d'Alan Geaam"; May 2, 2026; specific dishes and critical quotes (15+ words FR) confirmed
+[p1] "jonbonne.com" → 200 | ~3500ch | REJECTED-COI — Jon Bonné confirmed as RESY Managing Editor; RESY is restaurant booking platform with commercial interest; COI disqualifies
+[p1] "lostincheeseland.substack.com" → 404 | —ch | FAILED — Substack publication removed or relocated
+[p1] "lostincheeseland.substack.com/archive" → 404 | —ch | FAILED — archive page not accessible
+[p1] "bonjour.lindseytramuta.com" → 200 | ~6000ch | REJECTED — "The New Paris Dispatch" Substack; articles are lifestyle/culture essays (fashion, exercise, Americanisms); no restaurant reviews from 2023-2026
+[p1] "enlargeyourparis.fr/artdevivre/on-a-demande-ses-bonnes-adresses-a-la-critique-culinaire-de-telerama-sortir" → 200 | ~3200ch | REJECTED — interview with Payany; author of article unstated; Payany quotes all <15 words; not Payany's own writing; unusable as source
+[p1] "enlargeyourparis.fr/artdevivre/les-bonnes-tables-a-tester-absolument-dans-le-grand-paris-en-2025" → 200 | ~4000ch | REJECTED — editorial team byline; Payany quoted but not author; quote <15 words; not a usable primary source
+[p1] "lepetitlugourmand.com" → 200 | ~7000ch | REJECTED — author name "petitlugourmand" only; no full name; multi-location site (not Paris-focused); fails named author requirement
+[p1] "lexpress.fr/culture/gastronomie/author/gaudry-francois-regis/" → 404 | —ch | FAILED — author archive page does not exist; L'Express restructured site
+[p1] "alexanderlobrano.com/restaurant-reviews/" → 200 | ~6000ch | REJECTED-date — single-author EN site confirmed; most recent article "Prunier" Dec 2, 2022; "Tekés" Aug 31, 2022; no content from 2023-2026; inactive site
+[p1] "thegoodlife.fr/nouveaux-restaurants-paris-avis-honnete/" → 200 | ~5000ch | REJECTED-quality — Fanny Liaux Gasquerel byline, Feb 28 2026; 13 restaurants listed; all quotes <15 words; listicle format not restaurant criticism

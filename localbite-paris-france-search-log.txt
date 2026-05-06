@@ -1,0 +1,73 @@
+[phase-0] "parisbymouth.com/restaurants/" → multi-author site; anonymous "The Mouth" byline; About page confirms multiple contributors; source REJECTED
+[phase-0] "simonsays.fr" + "www.simonsays.fr" → site inactive 2024-2026; most recent Paris content from March 2023; Wayback 451; source FAILED
+[phase-0] "davidlebovitz.com/paris/" → David Lebovitz named author confirmed; guide actively updated April 2026; 95k chars accessible; source ACCEPTED as pre-verified
+[phase-0] "lefigaro.fr/gastronomie" → Stéphane Durand-Souffland confirmed via Muck Rack as Le Figaro food critic 2026; all article content paywalled; will attempt individual articles in Phase 2
+[phase-0] "telerama.fr/gastronomie/" → 404 + Wayback 451; Estérelle Payany confirmed via Muck Rack as active Télérama food critic 2025-2026; section URL inaccessible; individual URLs to be found Phase 1
+[phase-0] "parisupdate.com/argile-restaurant/" → Heidi Ellison byline confirmed; article dated January 30, 2025; 3200 chars accessible; source ACCEPTED as pre-verified
+[neighbourhood-Le Marais] "meilleurs restaurants Marais Paris 2024 critique gastronomique" → lefooding.com, pariseater.com, timeout.fr, outgomag.com — Le Fooding and Paris Eater flagged as candidates
+[neighbourhood-Le Marais] "best restaurants Le Marais Paris 2025 food writer review" → pariseater.com, thetourguy.com, hipparis.com — Paris Eater repeated; tourist guides dominate
+[neighbourhood-Saint-Germain] "restaurants Saint-Germain-des-Prés Paris 2023 recommandation culinaire" → parisselectbook.com (2023 article), mademoisellebonplan.fr (2023) — personal blogs with named authors possible
+[neighbourhood-Saint-Germain] "eating in Saint-Germain Paris 2024 restaurant recommendations food guide" → hipparis.com, parisbymouth.substack.com (PbM Substack—individual named authors possible), bonjourparis.com — HiP Paris and Substack flagged
+[neighbourhood-Montmartre] "bonnes tables Montmartre Paris 2025 adresses critique" → lefooding.com, pariszigzag.fr, enlargeyourparis.fr, mademoisellebonplan.fr — Paris Zigzag and Enlarge Your Paris flagged as candidates
+[neighbourhood-Montmartre] "Montmartre Paris restaurants local favorites food writer" → myparisianlife.com (Sep 2024, longtime local resident), pariseater.com, hipparis.com — My Parisian Life flagged
+[neighbourhood-Châtelet] "restaurants Châtelet Les Halles Paris 2024 guide gastronomique" → sortiraparis.com, yonder.fr — no strong named-author sources
+[neighbourhood-Châtelet] "Châtelet-Les Halles Paris dining guide 2025 restaurant reviews" → myparisianlife.com (Dec 2025!), sortiraparis.com — My Parisian Life prominent again
+[neighbourhood-Latin Quarter] "restaurants Quartier Latin Paris 2023 critique gastronomique" → booking platforms dominate; no strong named-author sources
+[neighbourhood-Latin Quarter] "Latin Quarter Paris restaurant guide 2024 2025 recommendations" → parisbymouth.substack.com (Latin Quarter), rue-mouffetard.com — PbM Substack repeated candidate
+[neighbourhood-Oberkampf] "restaurants Oberkampf République Paris 2024 adresses" → timeout.fr, sortiraparis.com — no strong named-author individual sources
+[neighbourhood-Oberkampf] "Oberkampf Paris restaurants 2025 food writer guide" → eatlikethefrench.com ("Chef-Approved Critics & Tips"), roadbook.com — eatlikethefrench.com flagged
+[neighbourhood-Canal St-Martin] "adresses Canal Saint-Martin Paris 2023 restaurant" → lefooding.com, pariszigzag.fr, lebonbon.fr, parissecret.com — Le Fooding repeated; Paris Zigzag, Le Bonbon flagged
+[neighbourhood-Canal St-Martin] "Canal Saint-Martin Paris best restaurants 2024" → pariseater.com, lefooding.com, timeout.com — Paris Eater repeated (now 4 appearances)
+[neighbourhood-Montparnasse] "restaurants Montparnasse Paris 2024 recommandation culinaire" → sortiraparis.com, TheFork, lesbellesvignes.com — no strong named-author sources
+[neighbourhood-Montparnasse] "Montparnasse Paris dining 2025 local guide restaurant" → pariseater.com, eatlikethefrench.com — both repeated
+[neighbourhood-Pigalle] "restaurants Pigalle South Pigalle Paris 2023 bistronomique" → TheFork, crumpetsandcroissants.com — no strong named individual food writers
+[neighbourhood-Pigalle] "South Pigalle Paris restaurants 2024 food review critic" → theinfatuation.com, crumpetsandcroissants.com — Infatuation is COI flagged
+[neighbourhood-Belleville] "restaurants Belleville Paris 2024 guide adresses" → pariseater.com, seasonedtraveller.com, roadbook.com — seasonedtraveller.com flagged
+[neighbourhood-Belleville] "Belleville Paris dining 2023 restaurant recommendations" → caitlingunther.substack.com (Belleville article 2023), pariseater.com — Caitlin Gunther Substack flagged
+[neighbourhood-Batignolles] "restaurants Batignolles Paris 2025 bonnes tables" → lefooding.com (Le Fooding repeated — 5th appearance), luckymiam.com — Le Fooding now priority candidate
+[neighbourhood-Batignolles] "Batignolles Paris restaurant guide 2024 food writer" → lefooding.com, sortiraparis.com "Best Of 2024" — Le Fooding confirmed priority; Sortiraparis Best Of flagged
+[neighbourhood-Bastille] "restaurants Bastille Paris 2024 critique culinaire" → lefooding.com, pariseater.com, sortiraparis.com — Le Fooding confirmed no named authors (editorial team); rejected
+[neighbourhood-Bastille] "Bastille Paris best restaurants 2025 food writer" → pariseater.com, eatlikethefrench.com — note: "Deb Perelman" mentioned as food writer noting Kubri restaurant
+[neighbourhood-Nation] "restaurants Nation Paris 2023 recommandation culinaire" → booking platforms, no strong named-author sources
+[neighbourhood-Nation] "Nation area Paris restaurants 2024 review guide" → parisbymouth.substack.com "50 Favorites for Spring 2024 by Meg Zimbeck" — NAMED AUTHOR on Substack! Flagged for verification; also frenchwomendontgetfat.com (summer 2024 update), 52martinis.com
+[neighbourhood-Opéra] "restaurants Opéra Paris 2024 adresses gastronomiques" → sortiraparis.com, yonder.fr, timeout.fr — no strong named-author individual sources
+[neighbourhood-Chinatown] "Chinatown Paris 13ème arrondissement restaurants 2025 food guide" → sortiraparis.com, 716lavie.com (personal blog flagged), finedininglovers.fr — 716lavie.com flagged
+[neighbourhood-Butte-aux-Cailles] "restaurants Butte aux Cailles Paris 2024 adresses" → pariszigzag.fr (Butte-aux-Cailles article), sortiraparis.com, timeout.fr — Paris Zigzag repeated
+[neighbourhood-Butte-aux-Cailles] "Butte-aux-Cailles Paris restaurants 2025 guide" → booking platforms dominate; no strong named-author sources
+[neighbourhood-Palais-Royal] "restaurants Palais-Royal Paris gastronomie adresses" → Tripadvisor, sortiraparis.com — no strong named-author sources
+[neighbourhood-Invalides] "restaurants Invalides 7ème Paris 2023 bonnes tables" → lebey.com (Guide Lebey!) flagged for investigation — major French restaurant guide
+[neighbourhood-Madeleine] "restaurants Madeleine Paris 2023 2024 critique gastronomique" → booking platforms; no strong named-author sources
+[neighbourhood-Passy-Trocadero] "restaurants Passy Trocadéro Paris 2025 recommandations" → booking platforms; no strong named-author sources
+[cross-1] "best Paris restaurants 2025 food writer guide local favorites" → storeboughtisfineblog.com, eatlikethefrench.com, wetasteparis.com, pariseater.com — wetasteparis.com flagged
+[cross-2a] "meilleurs restaurants Paris 2024 critique gastronomique indépendant" → restos-sur-le-grill.fr (INDEPENDENT Paris critique blog — 2nd appearance!), pariszigzag.fr, lefooding.com — Restos sur le Grill elevated to priority
+[neighbourhood-Alma-Madeleine] "restaurants Alma Madeleine 8ème Paris 2024 adresses" → booking platforms; no strong named-author sources
+[cross-2b] "adresses restaurants Paris 2025 journaliste culinaire recommandation" → infrarouge.fr, numero.com, My Little Paris (Amandine Péchiodat) — all flagged; Vaisseau/Baratin/Septime mentioned as recognized Paris restaurants
+[phase-1b-candidate] restos-sur-le-grill.fr — Arnaud Morisse confirmed as named food critic, independent blog, article March 4 2026; STRONG PRIMARY CANDIDATE
+[phase-1b-candidate] pariszigzag.fr — Axelle Carlier confirmed as named author; Paris Zigzag multi-author site; gastronomique article includes Michelin-starred restaurants; need non-gastronomique article
+[cross-3a] "food writer Paris restaurant recommendations 2024 blog personal" → David Lebovitz repeated; journeyofdoing.com (travel blog); lesfrenchiestravel.com — no new primary named-author food critics
+[cross-5a] "nouveaux restaurants Paris 2025 2026 ouvertures critique gastronomique" → thegoodlife.fr (named authors?), leshardis.com, infrarouge.fr — all flagged for verification
+[cross-7b] "bistronomie Paris 2024 chef cuisine adresses recommandation" → slate.fr "Bistronomie: neuf adresses parisiennes" — Slate France flagged; sortiraparis.com Best Of 2024
+[cross-2c] "guide restaurants Paris 2023 food writer critique culinaire" → katieparla.com (Katie Parla Paris guide), Lindsey Tramuta (Paris-based food journalist for NYT/CNT etc.) — Lindsey Tramuta flagged as strong candidate
+[cross-3b] "critique culinaire Paris restaurant 2025 blog indépendant" → restos-sur-le-grill.fr (confirmed again), gillespudlowski.com (Gilles Pudlowski blog — MAJOR French food critic), leblogdelili.fr — Pudlowski flagged as priority
+[cross-8a] "magazine gastronomique français restaurant Paris 2024 critique indépendante" → gillespudlowski.com, Marie Aline (Le Monde food critic since 2018 — MAJOR find), Emmanuel Rubin — Marie Aline and Pudlowski elevated to priority
+[cross-2c] "Marie Aline Le Monde restaurant Paris critique 2024 2025 article" → search did not find accessible Le Monde articles; Marie Aline confirmed as Le Monde food critic since 2018
+[cross-3b] "Lindsey Tramuta Paris restaurants 2024 2025 guide recommendations" → bonjour.lindseytramuta.com (Substack), Eater Guide to Paris 2024 — Tramuta confirmed as Paris-based food journalist since 2006; Substack flagged
+[cross-8b] "supplément gastronomie journal français restaurants Paris 2025" → Rémi Dechambre (Le Parisien Week-end gastronomy pages — FULL NAME!), Alice Bosio (Figaroscope) — Dechambre elevated to priority
+[stopping-rule] Checked: no 8 consecutive queries with no new sources; stopping rule not triggered
+[cross-4a] "Paris restaurant award best new 2025 prix gastronomique" → TheFork Awards 2025 (LAVA winner), Michelin 2025 (Amâlia, Vaisseau, Aldehyde), Time Out Paris (Hakuba) — no new named food writer sources
+[cross-candidate] restos-sur-le-grill.fr — Arnaud Morisse confirmed; specific article URLs found (March 2026, Nov 2025, Dec 2025); ACCEPTED as primary FR source
+[cross-candidate] bonjour.lindseytramuta.com — Lindsey Tramuta confirmed; Feb 2024 article; 3200 chars; quotes thin — need richer article
+[cross-candidate] Rémi Dechambre — confirmed as Le Parisien food critic; specific article URLs not yet found
+[cross-candidate] Gilles Pudlowski (gillespudlowski.com) — major FR food critic; site active May 2, 2026; article "Paris 16e : le voyage Paris-Beyrouth d'Alan Geaam" confirmed; ACCEPTED as primary FR source
+[phase-1-reject] Jon Bonné (jonbonne.com) — RESY Managing Editor; RESY is a restaurant reservation platform; clear COI; REJECTED
+[phase-1-reject] Lindsey Tramuta — bonjour.lindseytramuta.com Substack is lifestyle/culture newsletter, no restaurant reviews 2023-2026; lostincheeseland.substack.com is 404; restaurant writing all for secondary publications (NYT, CNT, Eater); REJECTED
+[phase-1-reject] Rémi Dechambre — Le Parisien articles paywalled; no accessible individual article URL found; FAILED
+[phase-1-reject] Le Petit Lu Gourmand (lepetitlugourmand.com) — no full author name (byline "petitlugourmand"); multi-location (not Paris-focused); REJECTED
+[phase-1-reject] François-Régis Gaudry — primarily radio (France Inter) and TV (Paris Première) personality; "Et toque!" blog references date to 2012 (defunct); L'Express author page 404; no accessible personal blog; FAILED
+[phase-1-reject] Emmanuel Rubin — Le Figaro/Figaroscope critic; all content paywalled; no personal blog found; FAILED
+[phase-1b] "Septime Paris restaurant critique gastronomique 2024 2025 review food writer" → TripAdvisor, Michelin, World's 50 Best, Paris by Mouth (already rejected), Alexander Lobrano flagged
+[phase-1b] "Frenchie restaurant Paris Gregory Marchand food critic review 2023 2024 2025" → Paris by Mouth, Alexander Lobrano (alexanderlobrano.com) flagged as candidate
+[phase-1b] "nouveaux restaurants Paris 2025 2026 recommandation blogger critique indépendant" → thegoodlife.fr (Fanny Liaux Gasquerel named author), restos-sur-le-grill.fr (confirmed again)
+[phase-1b-candidate] Alexander Lobrano (alexanderlobrano.com) — single-author EN site, full name confirmed; most recent article Prunier Dec 2, 2022; Tekés Aug 31, 2022; INACTIVE since 2022; REJECTED-date
+[phase-1b-candidate] thegoodlife.fr — Fanny Liaux Gasquerel (full name confirmed); Feb 28, 2026; quotes all <15 words; listicle format not review; REJECTED-quality
+[phase-1b-complete] Phase 1B done; no additional sources qualified; stopping
