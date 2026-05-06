@@ -78,3 +78,14 @@ localbite-phase0-prepipeline-template.txt
 apply-*.py
 localbite-global-instructions-2026-*.md
 journal-entry-*.md
+localbite-paris-*.py
+localbite-lyon-*.py
+localbite-bordeaux-*.py
+localbite-marseille-*.py
+localbite-nice-*.py
+localbite-toulouse-*.py
+localbite-strasbourg-*.py
+localbite-nantes-*.py
+localbite-montpellier-*.py
+localbite-biarritz-*.py
+localbite-*-france-full.txt
