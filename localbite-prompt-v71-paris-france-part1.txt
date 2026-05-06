@@ -16,45 +16,134 @@ OUTPUT_SEARCH_LOG: localbite-paris-france-search-log.txt
 OUTPUT_FETCH_LOG: localbite-paris-france-fetch-log.txt
 
 # =============================================================
-# DIRECT_FETCH_SOURCES — confirmed named authors, active 2024-2025
+# DIRECT_FETCH_SOURCES — confirmed named authors, active 2023-2026
+# REBUILD v2 — 2026-05-05
+# Changes from v1:
+#   - Paris by Mouth now listed as 4 individual named contributors
+#     (pipeline run 1 confirmed multi-author; each contributor qualifies separately)
+#   - SimonSays removed (domain down, no Paris content in YEAR_RANGE)
+#   - Le Figaro / Durand-Souffland removed (confirmed paywalled — permanent)
+#   - Télérama / Payany removed (confirmed paywalled — permanent)
+#   - Paris Update removed (no bylines anywhere on site)
+#   - Pudlowski and Morisse given full publication-first URLs not single articles
+#   - HiP Paris and My Parisian Life explicitly excluded (see EXCLUDED_SOURCES)
+#   - Lebovitz concentration cap override added
 # =============================================================
 
 DIRECT_FETCH_SOURCES:
-  - url: https://parisbymouth.com/restaurants/
+
+  # ── Paris by Mouth contributors — each qualifies as a separate named source ──
+  # Paris by Mouth confirmed multi-author in Phase 0 run 1.
+  # Each named contributor is an independent Paris-based food writer.
+  # Fetch each contributor's author archive page individually.
+  # Publication: Paris by Mouth (parisbymouth.com) — independent, no COI.
+
+  - url: https://parisbymouth.com/author/emily-monaco/
+    writer: Emily Monaco
+    publication: Paris by Mouth
+    language: en
+    notes: EN named food writer, Paris-based American. Active contributor to Paris by Mouth through 2025. Individual bylines confirmed on all articles. Fetch her author archive page for full article list. If author URL returns 404, try parisbymouth.com/?author=emily-monaco or search parisbymouth.com for her bylined articles directly.
+
+  - url: https://parisbymouth.com/author/clotilde-dusoulier/
+    writer: Clotilde Dusoulier
+    publication: Paris by Mouth
+    language: en
+    notes: EN/FR Paris-based food writer and author of Chocolate & Zucchini blog. Established Paris food writer. Active contributor to Paris by Mouth. Also maintains chocolateandzucchini.com — try that site if Paris by Mouth author page is thin. Fetch whichever yields more 2023-2026 Paris restaurant content.
+
+  - url: https://parisbymouth.com/author/meg-zimbeck/
     writer: Meg Zimbeck
     publication: Paris by Mouth
     language: en
-    notes: EN food guide, anonymous reviews, Zimbeck founder and editor-in-chief. Active through 2025 (closed restaurants still noted with dates). Single-author site — confirm from About page.
+    notes: EN Paris by Mouth founder and editor-in-chief. Her own bylined articles qualify separately from the publication. Active in Paris. Fetch author archive for her individually bylined reviews (distinct from editorial aggregation).
 
-  - url: https://simonsays.fr
-    writer: François Simon
-    publication: SimonSays
-    language: fr
-    notes: FR independent food blog. Formerly food critic at Le Figaro (co-creator of Figaroscope). Now fully independent. Active 2024-2025. Single-author site. Famously anonymous reviews, named author confirmed from site header.
+  - url: https://parisbymouth.com/author/sara-kavelin/
+    writer: Sara Kavelin
+    publication: Paris by Mouth
+    language: en
+    notes: EN named contributor at Paris by Mouth. Fetch author archive page. If URL returns 404 or thin content (fewer than 3 articles in YEAR_RANGE), skip and document in fetch log. Verify Paris base from article content.
 
+  # ── David Lebovitz ──
   - url: https://www.davidlebovitz.com/paris/
     writer: David Lebovitz
     publication: davidlebovitz.com
     language: en
-    notes: EN food blog by American resident in Paris since 1999. Covers Paris restaurants extensively. Active through 2025. Single-author site.
+    notes: EN food blog by American resident in Paris since 1999. Single-author confirmed. Living guide updated to April 2026. CONCENTRATION CAP OVERRIDE — apply 50% cap, not 30%. See CONCENTRATION_CAP_OVERRIDE below.
 
-  - url: https://www.lefigaro.fr/gastronomie
+  # CONCENTRATION CAP OVERRIDE — David Lebovitz:
+  # Lebovitz is a 25-year Paris resident. His Paris restaurant guide is a
+  # living document updated continuously (last update April 2026 confirmed).
+  # This is not a one-off article — it is the definitive English-language
+  # independent Paris dining guide. Apply contextual exception to the 30% cap:
+  # allow up to 50% of single-source Tier B entries from Lebovitz.
+  # Document this exception in the audit. This mirrors the Katie Parla/Rome
+  # structural exception (64% accepted 2026-04-27).
+  CONCENTRATION_CAP_OVERRIDE:
+    source: davidlebovitz.com
+    cap: 50%
+    reason: Living guide, 25-year Paris resident, definitive EN source, structural exception
+
+  # ── French-language sources ──
+  - url: https://www.gillespudlowski.com/category/restaurants/
+    writer: Gilles Pudlowski
+    publication: gillespudlowski.com
+    language: fr
+    notes: FR Paris-based food critic. Active April 2026 (confirmed Casimir review 2026-04-15). Paris is his primary base. Qualifies under writer locality rule. PUBLICATION-FIRST FETCH — fetch his restaurant category page and extract ALL Paris restaurant reviews dated 2023-2026. Run 1 fetched only one article (Casimir) — this was insufficient. If category URL returns 404, try gillespudlowski.com/?cat=restaurants or search his site for Paris reviews systematically.
+
+  - url: https://restos-sur-le-grill.fr/category/paris/
+    writer: Arnaud Morisse
+    publication: Restos sur le Grill
+    language: fr
+    notes: FR independent Paris-based food blog. Active November 2025 (confirmed Mantra review). PUBLICATION-FIRST FETCH — fetch his full Paris category archive, not just one article. Run 1 fetched only Mantra (1 restaurant). His Paris archive likely has 15-30 reviews in YEAR_RANGE. If category URL returns 404, try restos-sur-le-grill.fr/?cat=paris or restos-sur-le-grill.fr/paris/
+
+# =============================================================
+# EXCLUDED_SOURCES — do not fetch, do not accept
+# =============================================================
+
+EXCLUDED_SOURCES:
+  - publication: HiP Paris (hipparis.com)
+    writer: Rachel Naismith
+    reason: Food tour operator — direct commercial conflict of interest. Recommendations drive paid tour bookings. Excluded permanently from Paris pack. Do NOT include any hipparis.com content even if found during Phase 1.
+
+  - publication: My Parisian Life (myparisianlife.com)
+    writer: Yanique Francis
+    reason: Food tour operator — same commercial conflict as HiP Paris. Excluded permanently from Paris pack. Do NOT include any myparisianlife.com content even if found during Phase 1.
+
+  - publication: SimonSays (simonsays.fr)
+    writer: François Simon
+    reason: Domain effectively down. No Paris content in YEAR_RANGE. 451 on Wayback. Confirmed failed in run 1. Do NOT retry.
+
+  - publication: Le Figaro / Figaroscope
     writer: Stéphane Durand-Souffland
-    publication: Le Figaro
-    language: fr
-    notes: FR national daily. Durand-Souffland is the named food critic — court journalist turned restaurant reviewer, active 2024-2025. Check that individual articles have his byline. Le Figaro is a major independent publication (owned by Groupe Figaro / Dassault family — no food industry COI).
+    reason: Confirmed paywalled. Permanent access barrier. Do NOT retry.
 
-  - url: https://www.telerama.fr/gastronomie/
+  - publication: Télérama
     writer: Esterelle Payany
-    publication: Télérama
-    language: fr
-    notes: FR cultural weekly. Payany is the named food critic for restaurant reviews. Active 2024-2025. Télérama owned by Le Monde Groupe — no food industry COI.
+    reason: Confirmed paywalled. Permanent access barrier. Do NOT retry.
 
-  - url: https://www.parisupdate.com/restaurants/
-    writer: TBD
-    publication: Paris Update
-    language: en
-    notes: EN Paris restaurant review site. Active through 2025. Named authors — check bylines on individual articles (confirmed plural authors from site structure). Fetch to confirm author names. Independent publication.
+  - publication: Paris Update (parisupdate.com)
+    reason: No individual author attribution anywhere on site. Fails named-author requirement. Do NOT retry.
+
+  - publication: Le Monde
+    writer: Marie Aline
+    reason: Confirmed paywalled. Permanent access barrier. Do NOT retry.
+
+  - publication: Le Parisien Weekend
+    writer: Rémi Dechambre
+    reason: Confirmed paywalled. Permanent access barrier. Do NOT retry.
+
+  - publication: Le Fooding (lefooding.com)
+    reason: Now owned by Michelin Group. Severe COI. Reject entirely.
+
+  - publication: Gault & Millau (gaultmillau.com)
+    reason: Anonymous inspectors. Fails named-author requirement.
+
+# =============================================================
+# PAYWALL STRUCTURAL GAP — DOCUMENTED
+# All major FR press sources in Paris are paywalled.
+# FR source pool limited to independent blogs (Pudlowski, Morisse).
+# Phase 1 FR queries: focus on independent blogs only.
+# Do not retry known paywalled sources.
+# =============================================================
 
 # =============================================================
 # KNOWN_COMMERCIAL_CONFLICTS
@@ -62,16 +151,13 @@ DIRECT_FETCH_SOURCES:
 
 KNOWN_COMMERCIAL_CONFLICTS:
   - publication: Time Out Paris
-    conflict: Time Out operates Time Out Market — food hall / commercial dining operator. COI mandatory flag. Accept but count toward secondary cap.
+    conflict: Time Out operates Time Out Market. COI mandatory flag. Accept but count toward secondary cap.
 
   - publication: The Infatuation Paris
-    conflict: The Infatuation is a restaurant marketing and reservations business. COI mandatory flag. Also note JS-only site (SPA) — will return shell via automated fetch; article_url required from direct visit.
+    conflict: Restaurant marketing and reservations business. COI mandatory flag. JS-only site — article_url from direct visit only.
 
 # =============================================================
 # MICHELIN_STARRED_EXCLUSIONS
-# Paris has 100+ starred restaurants. All must be excluded.
-# 3-star and 2-star listed explicitly; 1-star restaurants also excluded
-# — instruct pipeline to cross-check against Michelin guide.
 # =============================================================
 
 MICHELIN_STARRED_EXCLUSIONS:
@@ -100,9 +186,12 @@ MICHELIN_STARRED_EXCLUSIONS:
   - Pages
   - Saturne
   - Frenchie
-  # NOTE: Many 1-star restaurants exist. Pipeline must cross-check all
-  # candidates against the Michelin Guide France 2025 before including.
-  # Instruct: if in doubt, exclude. Michelin list changes annually.
+  # 1-star confirmed from run 1
+  - Automne
+  - Comice
+  - Septime
+  # NOTE: ~80 additional 1-star restaurants in Paris. Cross-check all
+  # candidates against Michelin Guide France 2025. If in doubt, exclude.
 
 # =============================================================
 # GEOGRAPHY
@@ -139,9 +228,7 @@ GEOGRAPHY:
 
   DISAMBIGUATION_NOTES:
     - Paris France is unambiguous. No toponym collision.
-    - "Paris restaurant" queries are unambiguous in English and French.
-    - Suburbs (Vincennes, Boulogne-Billancourt, Neuilly) are outside the
-      bounding box and will be excluded by geocoder.
-    - Arrondissements 1–20 are all within bounding box.
+    - Suburbs outside bounding box — excluded by geocoder.
+    - Arrondissements 1-20 all within bounding box.
 
-  ACCENTED_VARIANTS: none required (Paris has no accent)
+  ACCENTED_VARIANTS: none required
