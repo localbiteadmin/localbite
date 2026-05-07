@@ -220,7 +220,7 @@ function formatCoords(coords) {
           const escaped = nb.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');
           const keyPattern = new RegExp(`'${escaped}'\\s*:`);
           if (keyPattern.test(centroidsBlock)) { htmlAlreadyPresent++; continue; }
-          insertions += `  '${nb}': [${coords[0]}, ${coords[1]}],\n`;
+          insertions += `  "${nb}": [${coords[0]}, ${coords[1]}],\n`;
           htmlAdded++;
         }
 
