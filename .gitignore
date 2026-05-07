@@ -52,6 +52,8 @@ localbite-fleet-diagnostic-*.txt
 
 # Backup files
 *.bak
+*.pre-*-backup
+run-tests-*.py
 
 # Temporary text outputs
 recompute-dryrun.txt
