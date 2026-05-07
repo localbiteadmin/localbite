@@ -882,6 +882,10 @@ BEFORE applying any removals. Raw preserves the full extraction for audit.
 ⚠ DO NOT run any git commands (git add, git commit, git push).
 Committing is handled by localbite-postrun.js after geocoding and validation.
 Running git commands in the pipeline creates a wrong commit with missing data.
+⚠ DO NOT run node localbite-postrun.js or node localbite-geocode.js.
+Geocoding and schema validation are performed manually in the terminal after
+the pipeline exits. Running them inside the pipeline bypasses the required
+geocode review step and may commit bad coordinates without human verification.
 
 Apply user removals (or auto-accept if UNATTENDED_MODE: YES).
 Write FILE 2 (final) to OUTPUT_FINAL.
