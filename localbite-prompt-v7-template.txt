@@ -890,6 +890,16 @@ Write FILE 2 (final) to OUTPUT_FINAL.
 JSON STRUCTURE — CRITICAL REQUIREMENTS
 ════════════════════════════════════════
 
+CRITICAL SCHEMA COMPLIANCE — use EXACTLY these field names regardless of
+context or compaction. Top-level: `restaurants` (never `entries`),
+`city_slug` (never `slug`), `date_generated` (never `run_date` or
+`extraction_date`). Per-restaurant coordinates: `lat` and `lng` (never
+`geo_lat`, `geo_lng`, or a nested `geo` object). Per-restaurant
+attribution: `writer` (never `writers`), `article_url` (never
+`article_urls`). Do not add pipeline-internal fields: no `run_metrics`,
+`geo_centre`, `geo_bbox`, `cuisine`, `address`, `postcode`, `tdl_rating`,
+`flag`, `neighbourhood_hint`.
+
 FIELD NAME CONTRACT — exact names required, no substitutions allowed.
 These names are read directly by the viewer. Using any variant
 (e.g. "author_name" instead of "writer", "publisher" instead of
