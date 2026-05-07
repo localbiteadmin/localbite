@@ -364,6 +364,10 @@ function isThinProfile(profile) {
   ['run_metrics', 'geo_centre', 'geo_bbox', 'raw_extractions', 'language', 'price_currency']
     .forEach(function(f) { if (f in data) { delete data[f]; autoRepaired++; } });
 
+  // Fix 8e: Map to collect article_urls from per-restaurant source objects.
+  // Populated during Fix 8c loop; used after loop to recover null source article_urls.
+  const _sourceArticleUrlMap = {};
+
   // ── Fix 8c: Per-restaurant field renames and reshapes ──
   // NOTE: Always delete the noise/plural field unconditionally (Issues 1-3).
   // Only copy to the canonical field if it is not already present.
@@ -415,6 +419,29 @@ function isThinProfile(profile) {
     if ('description' in r && 'quote' in r && r.quote) {
       delete r.description; autoRepaired++;
     }
+    // Fix 8e: Normalize per-restaurant sources objects → ID strings.
+    // Collect article_urls from source objects before discarding them.
+    // Only fires when sources array contains objects (not already-normalised strings).
+    if (Array.isArray(r.sources) && r.sources.length > 0 &&
+        typeof r.sources[0] === 'object' && r.sources[0] !== null) {
+      const ids = [];
+      for (const s of r.sources) {
+        const sid = s.source_id || s.id;
+        if (!sid) continue;
+        ids.push(sid);
+        const url = s.article_url;
+        const date = (s.article_date && s.article_date !== 'undated')
+          ? s.article_date : '0000-00-00';
+        if (url && typeof url === 'string' && url.startsWith('https://')) {
+          if (!_sourceArticleUrlMap[sid] || date > _sourceArticleUrlMap[sid].date) {
+            _sourceArticleUrlMap[sid] = { url, date };
+          }
+        }
+      }
+      r.sources = ids;
+      autoRepaired++;
+    }
+
     // NOTE: open_status_check intentionally not touched.
     // postrun.js line 615 reads r.open_status_check to compute openStatusCount.
   }
@@ -444,6 +471,17 @@ function isThinProfile(profile) {
     // Delete noise fields
     for (const f of _fix8NoiseFields) {
       if (f in r) { delete r[f]; autoRepaired++; }
+    }
+  }
+
+  // Fix 8e: Populate null source article_urls from collected per-restaurant data.
+  // Runs after all restaurants processed so every article_url has been seen.
+  for (const src of sourcesArray) {
+    const sid = src.id || src.source_id;
+    if (sid && !src.article_url && _sourceArticleUrlMap[sid]) {
+      src.article_url = _sourceArticleUrlMap[sid].url;
+      autoRepaired++;
+      console.log(`  ✓ article_url recovered: ${src.publication || sid} / ${src.writer || '?'} → ${src.article_url}`);
     }
   }
 
