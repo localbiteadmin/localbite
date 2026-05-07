@@ -361,7 +361,7 @@ function isThinProfile(profile) {
 
   // ── Fix 8b: Top-level pipeline-internal noise removal ──
   // These fields are pipeline working-state, never committed pack data.
-  ['run_metrics', 'geo_centre', 'geo_bbox', 'raw_extractions', 'language', 'price_currency']
+  ['run_metrics', 'geo_centre', 'geo_bbox', 'raw_extractions', 'language', 'price_currency', 'generated_date']
     .forEach(function(f) { if (f in data) { delete data[f]; autoRepaired++; } });
 
   // Fix 8e: Map to collect article_urls from per-restaurant source objects.
@@ -460,7 +460,8 @@ function isThinProfile(profile) {
   }
   const _fix8NoiseFields = [
     'tdl_rating', 'address', 'postcode', 'country', 'city', 'cuisine',
-    'flag', 'neighbourhood_hint', 'dishes_mentioned', 'raw_text', 'extraction_notes'
+    'flag', 'neighbourhood_hint', 'dishes_mentioned', 'raw_text', 'extraction_notes',
+    'chef', 'michelin_note', 'note'
   ];
   for (const r of data.restaurants) {
     // Extract arrondissement from postcode if not already set (reads postcode before deletion)
@@ -481,7 +482,7 @@ function isThinProfile(profile) {
     if (sid && !src.article_url && _sourceArticleUrlMap[sid]) {
       src.article_url = _sourceArticleUrlMap[sid].url;
       autoRepaired++;
-      console.log(`  ✓ article_url recovered: ${src.publication || sid} / ${src.writer || '?'} → ${src.article_url}`);
+      console.log('  [Fix 8e] article_url recovered: ' + (src.publication || sid) + ' / ' + (src.writer || '?') + ' -> ' + src.article_url);
     }
   }
 
