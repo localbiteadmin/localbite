@@ -78,32 +78,8 @@
       "open_status_check": false,
       "quote": "Ce n'est pas parce que l'adresse est mini qu'on l'aime, c'est pour ses plats épatants de sincérité, le goût du jour, la fraîcheur.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2025-03-07",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/nice-mediterranee-simplicite-complicite-marmar-de-claudio-et-jacopo-cest-extra/",
-          "quote": "Ce n'est pas parce que l'adresse est mini qu'on l'aime, c'est pour ses plats épatants de sincérité, le goût du jour, la fraîcheur.",
-          "dishes": [
-            "artichokes steamed then fried with lemon vinaigrette and carrot ketchup",
-            "organic egg with topinambour purée, parmesan sauce and mushrooms",
-            "meagre fillet with potato purée and fish soup",
-            "scallop risotto with black truffle",
-            "blood orange baba"
-          ]
-        },
-        {
-          "source_id": "src-plgourmand-leoty",
-          "article_date": "2025-05-26",
-          "article_url": "https://lepetitlugourmand.com/2025/05/26/marmar-subjugant-et-epatant-duo-au-port-de-nice/",
-          "quote": "Une table vivante, contemporaine et délicieusement épanouie, avec des tarifs plus que justes.",
-          "dishes": [
-            "lasagnes de joue de bœuf et asperges avec béchamel siphonnée",
-            "maquereau mariné, endives à la moutarde et bonite séchée",
-            "risotto aux petits pois, crème de parmesan au safran et wasabi",
-            "millefeuille tiramisu au ganache chocolat",
-            "bougatsa (feuilles de filo, crème pâtissière et fruits rouges)"
-          ]
-        }
+        "src-tableribre-gantie",
+        "src-plgourmand-leoty"
       ],
       "lat": 43.6993474,
       "lng": 7.2846681,
@@ -131,32 +107,8 @@
       "open_status_check": false,
       "quote": "Le chef signe une cuisine sensuelle, précise, généreuse, qui sublime magnifiquement le produit.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2026-02-22",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/nice-epicentre-selim-mnasri-sur-la-route-des-epices-e-comme-emotion-e-comme-enchantement-e-comme-etoile/",
-          "quote": "Le chef signe une cuisine sensuelle, précise, généreuse, qui sublime magnifiquement le produit.",
-          "dishes": [
-            "aile de raie, laitue de mer et sésame wasabi",
-            "chou-fleur, citron noir et kalamanssi, œufs de truite marinés",
-            "truite des gorges du Cian au cardamome, jus de coquillages",
-            "volaille au tonka, truffe noire et céleri d'hiver",
-            "dessert mandarine, céleri branche et poivre tchuli"
-          ]
-        },
-        {
-          "source_id": "src-plgourmand-leoty",
-          "article_date": "2025-05-03",
-          "article_url": "https://lepetitlugourmand.com/2025/05/03/epicentre-nice-la-table-de-selim-mnasri-qui-fait-trembler-les-gourmets-avec-passion/",
-          "quote": "Cuisine aux saveurs précises et bien développées, où les épices jouent un rôle central, travaillées avec subtilité et intelligence.",
-          "dishes": [
-            "mouchoirs aux algues crispy, fromage blanc fumé et caviar de hareng",
-            "ventrèche de mulet de ligne en brandade, velours de brocoli et baies de Sancho",
-            "coquille Saint-Jacques sashimi, condiment mûre et poivre Timut",
-            "rouget de roche grillé, sauce daube aux arêtes et genièvre",
-            "langoustine au fenouil, bouillon d'argan et citron beldi"
-          ]
-        }
+        "src-tableribre-gantie",
+        "src-plgourmand-leoty"
       ],
       "lat": 43.6990647,
       "lng": 7.2857191,
@@ -184,32 +136,8 @@
       "open_status_check": true,
       "quote": "Une adresse gourmande de quartier, avec des tarifs plus que parfaits, qu'il est bon d'avoir près de chez soi.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2023-12-06",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/nice-le-socle-bons-plats-et-ligne-claire/",
-          "quote": "Une gastronomie savoureuse, directe, lisible — nul besoin d'avoir fait Polytechnique pour apprécier ces bons plats.",
-          "dishes": [
-            "cuisses de grenouilles et persillade façon chimichurri sous laitue grillée",
-            "pigeon royal exceptionnellement tendre",
-            "maigre avec beurre noisette et sauce vierge",
-            "pommes dauphine croustillantes",
-            "baba au rhum et agrumes"
-          ]
-        },
-        {
-          "source_id": "src-plgourmand-leoty",
-          "article_date": "2024-04-03",
-          "article_url": "https://lepetitlugourmand.com/2024/04/03/le-socle-nice-une-table-de-quartier-differente/",
-          "quote": "Une adresse gourmande de quartier, avec des tarifs plus que parfaits, qu'il est bon d'avoir près de chez soi.",
-          "dishes": [
-            "tortilla et soubressade, street food impertinent",
-            "pigeon royal",
-            "magret d'agneau",
-            "crème chaude chocolat et pécan",
-            "nougat glacé et céréales"
-          ]
-        }
+        "src-tableribre-gantie",
+        "src-plgourmand-leoty"
       ],
       "lat": 43.7019254,
       "lng": 7.2830173,
@@ -237,29 +165,8 @@
       "open_status_check": false,
       "quote": "Lieu intimiste, gastronomie délicate, notes voyageuses — coup de cœur pour la nouvelle table de Juliette et Samuel.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2023-12-01",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/nice-cest-chouette-pirouette-lieu-intimiste-gastronomie-delicate-notes-voyageuses-coup-de-coeur-pour-la-nouvelle-table-de-juliette-et-samuel-signe-les-agitateurs/",
-          "quote": "Lieu intimiste, gastronomie délicate, notes voyageuses — coup de cœur pour la nouvelle table de Juliette et Samuel.",
-          "dishes": [
-            "huître avec saucisse de Morteau et vinaigrette thaïe",
-            "tuna rouge cru à la tahitienne, lait de coco, gingembre et citron kumbawa",
-            "carpaccio de Saint-Jacques, navet, oseille, yuzu et citron de Carqueiranne",
-            "ravioli hanoi de porc, shiitake, moules et bouillon lemongrass-gingembre",
-            "vacherin citrus, meringue croustillante et sorbet aux herbes"
-          ]
-        },
-        {
-          "source_id": "src-timeout-braithwaite",
-          "article_date": "2025-06-17",
-          "article_url": "https://www.timeout.com/france/restaurants/best-restaurants-in-nice",
-          "quote": "The menu isn't afraid to get weird — in a good way.",
-          "dishes": [
-            "cheese naan sobrasada",
-            "lamb and taco salad"
-          ]
-        }
+        "src-tableribre-gantie",
+        "src-timeout-braithwaite"
       ],
       "lat": 43.7004822,
       "lng": 7.2849602,
@@ -287,34 +194,8 @@
       "open_status_check": false,
       "quote": "L'important n'était pas tant de multiplier les créations que de polir son ouvrage quotidien et d'accomplir le geste parfait.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2023-05-17",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/vieux-nice-talent-terroir-tradition-la-merenda-est-peut-etre-eternelle/",
-          "quote": "L'important n'était pas tant de multiplier les créations que de polir son ouvrage quotidien et d'accomplir le geste parfait.",
-          "dishes": [
-            "pissaladière servie à la bonne chaleur",
-            "tarte de Menton sans anchois",
-            "beignets de fleurs de courgette",
-            "petits farcis avec mesclun",
-            "ragoût de stockfish",
-            "tripes et panisse",
-            "tourte de blette aux pignons et raisins",
-            "pasta au pistou, maison Barale"
-          ]
-        },
-        {
-          "source_id": "src-timeout-braithwaite",
-          "article_date": "2025-06-17",
-          "article_url": "https://www.timeout.com/france/restaurants/best-restaurants-in-nice",
-          "quote": "Mad Men fans will love the decor, and everyone will love the food.",
-          "dishes": [
-            "Menton pie",
-            "gorgonzola polenta",
-            "veal tripe",
-            "daube de boeuf à la Provençale"
-          ]
-        }
+        "src-tableribre-gantie",
+        "src-timeout-braithwaite"
       ],
       "lat": 43.6964898,
       "lng": 7.2731012,
@@ -342,29 +223,8 @@
       "open_status_check": false,
       "quote": "There's an open kitchen brimming with activity which I like a lot — it infuses the setting with creative energy.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2025-03-01",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/nice-ardent-fusionnel-latin-voyageur-et-simplement-bon-cest-colita-signe-armand-crespo/",
-          "quote": "Une cuisine hybride, ni entièrement colombienne ni entièrement italienne, puisant dans les deux cultures avec une belle générosité.",
-          "dishes": [
-            "ceviche péruvien: poisson blanc, oignons rouges, maïs croustillant et patate douce",
-            "ceviche méditerranéen: lait de coco infusé lemongrass et noix de cajou",
-            "poulpe grillé avec purée de rutabaga",
-            "Saint-Jacques avec risotto mandarine et crumble cacao",
-            "pluma de porc avec tentacules de calmar, menthe et pommes de terre"
-          ]
-        },
-        {
-          "source_id": "src-niceandbeyond-vanheel",
-          "article_date": "2026-01-29",
-          "article_url": "https://niceandbeyond.com/where-to-eat-in-nice-restaurants/",
-          "quote": "There's an open kitchen brimming with activity which I like a lot — it infuses the setting with creative energy.",
-          "dishes": [
-            "pork pluma",
-            "grilled turbot"
-          ]
-        }
+        "src-tableribre-gantie",
+        "src-niceandbeyond-vanheel"
       ],
       "lat": 43.698988,
       "lng": 7.2816993,
@@ -392,27 +252,8 @@
       "open_status_check": false,
       "quote": "This place has been a hotspot for years and that's in part thanks to its amazing boho-chic rooftop.",
       "sources": [
-        {
-          "source_id": "src-timeout-braithwaite",
-          "article_date": "2025-06-17",
-          "article_url": "https://www.timeout.com/france/restaurants/best-restaurants-in-nice",
-          "quote": "With one of the largest rosé menus in the south of France, Bocca is a summer vibe.",
-          "dishes": [
-            "paellas"
-          ]
-        },
-        {
-          "source_id": "src-niceandbeyond-vanheel",
-          "article_date": "2026-01-29",
-          "article_url": "https://niceandbeyond.com/where-to-eat-in-nice-restaurants/",
-          "quote": "This place has been a hotspot for years and that's in part thanks to its amazing boho-chic rooftop.",
-          "dishes": [
-            "Iberian ham croquetas",
-            "duck breast",
-            "grilled cauliflower",
-            "barbajuans"
-          ]
-        }
+        "src-timeout-braithwaite",
+        "src-niceandbeyond-vanheel"
       ],
       "lat": 43.695841,
       "lng": 7.2731754,
@@ -440,25 +281,8 @@
       "open_status_check": false,
       "quote": "It's a bistro-style eatery with a very casual vibe and simple yet delicious seafood.",
       "sources": [
-        {
-          "source_id": "src-timeout-braithwaite",
-          "article_date": "2025-06-17",
-          "article_url": "https://www.timeout.com/france/restaurants/best-restaurants-in-nice",
-          "quote": "Trendy and modern seafood small plates — a dreamy spot to meet.",
-          "dishes": [
-            "ceviche"
-          ]
-        },
-        {
-          "source_id": "src-niceandbeyond-vanheel",
-          "article_date": "2026-01-29",
-          "article_url": "https://niceandbeyond.com/where-to-eat-in-nice-restaurants/",
-          "quote": "It's a bistro-style eatery with a very casual vibe and simple yet delicious seafood.",
-          "dishes": [
-            "octopus chili",
-            "butternut purée with bergamot and maple syrup caramel"
-          ]
-        }
+        "src-timeout-braithwaite",
+        "src-niceandbeyond-vanheel"
       ],
       "lat": 43.7007353,
       "lng": 7.2818093,
@@ -486,19 +310,7 @@
       "open_status_check": false,
       "quote": "Bienvenue dans un monde illustré qui a le bon goût de ne pas trop en faire.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2025-12-04",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/vieux-nice-comptoir-du-marche-bistronomie-convivialite-esprit-famille-cest-le-label-helene/",
-          "quote": "Bienvenue dans un monde illustré qui a le bon goût de ne pas trop en faire.",
-          "dishes": [
-            "calamars à la plancha, artichaut et sauce à l'orange",
-            "pizzettes de champignons, porchetta, oignons rouges confits et roquette",
-            "quasi de veau, gnocchis, crème de sauge et butternut",
-            "lieu jaune à l'aïoli, safran, orange et légumes",
-            "tiramisu marrons, cassis et myrtilles"
-          ]
-        }
+        "src-tableribre-gantie"
       ],
       "lat": 43.6974968,
       "lng": 7.2750103,
@@ -526,19 +338,7 @@
       "open_status_check": false,
       "quote": "Un bistrot chaleureux et intelligemment stylé, voguant toutes voiles dehors vers une cuisine franco-sud-africaine qui ne manque ni d'audace ni de gourmandise.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2025-03-12",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/nice-gourmand-elegant-charmeur-festif-theatral-le-bistrot-de-jan-est-fort-en-style-et-en-saveurs-signe-jan/",
-          "quote": "Un bistrot chaleureux et intelligemment stylé, voguant toutes voiles dehors vers une cuisine franco-sud-africaine qui ne manque ni d'audace ni de gourmandise.",
-          "dishes": [
-            "feuilleté de poulet croustillant à la truffe",
-            "tournedos Rossini tricolore",
-            "blanquette de veau, riz pilaf, amasi (lait entier fermenté) et Comté",
-            "bobotie: gratin de lentilles aux épices, diversité culturelle en assiette",
-            "malva pudding avec glace vanille maison"
-          ]
-        }
+        "src-tableribre-gantie"
       ],
       "lat": 43.6998169,
       "lng": 7.2848909,
@@ -566,19 +366,7 @@
       "open_status_check": false,
       "quote": "Bonne cuisine, sincérité, fraîcheur, naturel — une cuisine du pays entre mer et montagne pour ses douze ans.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2025-03-27",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/nice-olive-artichaut-bonne-cuisine-sincerite-fraicheur-naturel-un-douze-ans-dage-signe-thomas-hubert/",
-          "quote": "Bonne cuisine, sincérité, fraîcheur, naturel — une cuisine du pays entre mer et montagne pour ses douze ans.",
-          "dishes": [
-            "pissaladière fine aux anchois marinés, copeaux d'olives et poudre de romarin",
-            "encornet farci à la saucisse corse et citron, mayo fumet et roquette",
-            "dorade rôtie à la plancha, barigoule d'artichaut, germes de coriandre et olives niçoises",
-            "médaillon de veau rôti à la sauge, crème de céleri et poireaux brûlés",
-            "trofiette en risotto avec coppa corse et noisettes du Piémont"
-          ]
-        }
+        "src-tableribre-gantie"
       ],
       "lat": 43.6964992,
       "lng": 7.2759971,
@@ -606,20 +394,7 @@
       "open_status_check": false,
       "quote": "Une passionnante immersion au cœur de la cuisine nippone — la simple transmission d'un savoir millénaire, la haute valeur du geste artisanal.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2026-04-14",
-          "article_url": "https://www.jacquesgantie.com/table-en-ville/nice-onakase-dalexis-luong-une-passionnante-immersion-au-coeur-de-la-cuisine-nippone/",
-          "quote": "Une passionnante immersion au cœur de la cuisine nippone — la simple transmission d'un savoir millénaire, la haute valeur du geste artisanal.",
-          "dishes": [
-            "sashimi d'amberjack maturé 15 jours, myōga et sauce mandarine-shiso",
-            "tempura d'huître légère, tosazu et kombu d'Hokkaïdo",
-            "chutoro au charbon japonais, kizami nori et karashi miso au wasabi",
-            "chirashi: ikura mariné, crabe frais, oursins de Galice, caviar Baeri, wasabi et fleurs de shiso",
-            "nigiris: pagre, encornet, Saint-Jacques, gambero rosso, beryx, thon rouge (dakami, chutoro, otoro), anguille",
-            "glace au riz, riz soufflé et caramel d'Okinawa"
-          ]
-        }
+        "src-tableribre-gantie"
       ],
       "lat": null,
       "lng": null,
@@ -646,20 +421,7 @@
       "open_status_check": true,
       "quote": "On n'y est pas au sommet ni au spectacle mais dans un restaurant séduisant qui préfère durer que briller.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2024-08-16",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/nice-cuisine-decor-atmosphere-esprit-de-famille-sejour-cafe-ouvre-une-nouvelle-page-avec-julie-et-robin-la-signature-geille-demeure/",
-          "quote": "On n'y est pas au sommet ni au spectacle mais dans un restaurant séduisant qui préfère durer que briller.",
-          "dishes": [
-            "poêlée de cèpes et polenta corsée",
-            "tartare de dorade, courgettes niçoises et stracciatella",
-            "risotto aux truffes d'été",
-            "filet de charolais aux girolles",
-            "linguine au homard breton",
-            "nuage pêche-verveine"
-          ]
-        }
+        "src-tableribre-gantie"
       ],
       "lat": 43.6989337,
       "lng": 7.2649109,
@@ -687,20 +449,7 @@
       "open_status_check": false,
       "quote": "La mamma c'est lui ! Une atmosphère travail, famille, copains dans une vraie trattoria de quartier.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2025-02-12",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/nice-cuisine-soleil-pizzas-extra-tonus-et-piments-cibo-la-trattoria-de-gael-passigli-et-romain-vandini-a-reussi-son-entree/",
-          "quote": "La mamma c'est lui ! Une atmosphère travail, famille, copains dans une vraie trattoria de quartier.",
-          "dishes": [
-            "artichauts alla romana, légumes braisés et condiments au vinaigre de Barolo",
-            "escalope milanaise panko et parmesan",
-            "fritto misto de calamars et poissons",
-            "risotto aux truffes et champignons",
-            "linguini alle vongole",
-            "pizza aubergine parmigiana mozzarella"
-          ]
-        }
+        "src-tableribre-gantie"
       ],
       "lat": 43.7018875,
       "lng": 7.2775405,
@@ -728,19 +477,7 @@
       "open_status_check": true,
       "quote": "Une cuisine simple, savoureuse et généreuse. Facile à dire, plus difficile à tenir car la promesse s'évapore souvent.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2024-12-17",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/nice-coup-de-coeur-pour-salette-bistrot-gourmand-et-genereux-alias-la-table-demilien-jolie-brise-de-nice/",
-          "quote": "Une cuisine simple, savoureuse et généreuse. Facile à dire, plus difficile à tenir car la promesse s'évapore souvent.",
-          "dishes": [
-            "panisses au parmesan et sauce daube — souples, dorées, légèrement croustillantes",
-            "foie gras de canard mi-cuit aux épices, chutney d'ananas et pain brioché",
-            "Saint-Jacques rôties, mousseline de panais et sauce champagne",
-            "côte de Duroc confit aux épices, jus braisé et baies marinées",
-            "risotto d'épeautre au fromage affiné d'Aveyron et citrons confits"
-          ]
-        }
+        "src-tableribre-gantie"
       ],
       "lat": 43.7006679,
       "lng": 7.2846364,
@@ -768,19 +505,7 @@
       "open_status_check": true,
       "quote": "Plats gourmands, vins vivants et toujours bon pied bon œil — quinze ans d'artisan cuisinier en résistance.",
       "sources": [
-        {
-          "source_id": "src-tableribre-gantie",
-          "article_date": "2024-10-16",
-          "article_url": "https://www.jacquesgantie.com/restaurants/bonne-table/nice-les-quinze-ans-de-latelier-de-stephane-chenneveau-plats-gourmands-vins-vivants-et-toujours-bon-pied-bon-oeil/",
-          "quote": "Plats gourmands, vins vivants et toujours bon pied bon œil — quinze ans d'artisan cuisinier en résistance.",
-          "dishes": [
-            "soccas variantes: bresaola-mozzarella di bufala; tartare de thon artichaut-agrumes",
-            "ravioli de pousses de brocoli, praline sésame et bottarga râpée",
-            "magret de canard grillé, chanterelles sautées et ravioli de panais",
-            "filet de lapin farci oignons confits et anchois, purée et crème de pissalat",
-            "entrecôte Hereford, frites épaisses et béarnaise"
-          ]
-        }
+        "src-tableribre-gantie"
       ],
       "lat": 43.7016199,
       "lng": 7.2762919,
@@ -808,20 +533,7 @@
       "open_status_check": true,
       "quote": "Les délices du maquis en compagnie de Jean-Charles Cesari, dans l'un des ruelles les plus typiques du Vieux-Nice.",
       "sources": [
-        {
-          "source_id": "src-plgourmand-leoty",
-          "article_date": "2024-02-12",
-          "article_url": "https://lepetitlugourmand.com/2024/02/12/le-maquis-une-gourmande-bergerie-corse-au-coeur-du-vieux-nice/",
-          "quote": "Les délices du maquis en compagnie de Jean-Charles Cesari, dans l'un des ruelles les plus typiques du Vieux-Nice.",
-          "dishes": [
-            "terrine de foie gras, réduction de Porto et tuile de pain",
-            "ravioli de crevettes et émulsion de crustacés",
-            "polenta crémeuse et citronnée, lardons croustillants, champignons et jus de veau",
-            "lapin façon Gairaut, polenta gratinée et sauce tomate",
-            "risotto au figatellu et mascarpone",
-            "mille-feuille crème vanille, noisettes et caramel beurre salé"
-          ]
-        }
+        "src-plgourmand-leoty"
       ],
       "lat": 43.6967062,
       "lng": 7.2755302,
@@ -849,16 +561,7 @@
       "open_status_check": false,
       "quote": "Sharing plates, natural wines, and a location right in the heart of Nice's old town.",
       "sources": [
-        {
-          "source_id": "src-timeout-braithwaite",
-          "article_date": "2025-06-17",
-          "article_url": "https://www.timeout.com/france/restaurants/best-restaurants-in-nice",
-          "quote": "Sharing plates, natural wines, and a location right in the heart of Nice's old town.",
-          "dishes": [
-            "crispy panisse",
-            "pork ribs with spicy ketchup"
-          ]
-        }
+        "src-timeout-braithwaite"
       ],
       "lat": 43.6975472,
       "lng": 7.2761753,
@@ -886,16 +589,7 @@
       "open_status_check": false,
       "quote": "Relish in fresh seafood dishes, from seabass fillet with champagne sauce to a refreshing ceviche.",
       "sources": [
-        {
-          "source_id": "src-niceandbeyond-vanheel",
-          "article_date": "2026-01-29",
-          "article_url": "https://niceandbeyond.com/where-to-eat-in-nice-restaurants/",
-          "quote": "Relish in fresh seafood dishes, from seabass fillet with champagne sauce to a refreshing ceviche.",
-          "dishes": [
-            "seabass fillet with champagne sauce",
-            "ceviche with citrus"
-          ]
-        }
+        "src-niceandbeyond-vanheel"
       ],
       "lat": null,
       "lng": null,
@@ -922,17 +616,7 @@
       "open_status_check": false,
       "quote": "Everything was delicious and fresh. The comfort food was a blessing after being out and about.",
       "sources": [
-        {
-          "source_id": "src-niceandbeyond-vanheel",
-          "article_date": "2026-01-29",
-          "article_url": "https://niceandbeyond.com/where-to-eat-in-nice-restaurants/",
-          "quote": "Everything was delicious and fresh. The comfort food was a blessing after being out and about.",
-          "dishes": [
-            "Italian meatballs",
-            "smashed potatoes",
-            "buffalo burratina"
-          ]
-        }
+        "src-niceandbeyond-vanheel"
       ],
       "lat": null,
       "lng": null,
