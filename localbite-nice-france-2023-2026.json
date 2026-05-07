@@ -30,7 +30,7 @@
       "publication": "Le Petit Lu Gourmand",
       "writer": "Lionel Leoty",
       "url": "https://www.lepetitlugourmand.com/",
-      "article_url": null,
+      "article_url": "https://lepetitlugourmand.com/2025/05/26/marmar-subjugant-et-epatant-duo-au-port-de-nice/",
       "type": "primary",
       "language": "fr",
       "confirmed": true,
@@ -656,5 +656,50 @@
       43.6977,
       7.2773
     ]
+  },
+  "centroids_proposed": {
+    "Carré d'Or": {
+      "coords": [
+        43.7003,
+        7.2706
+      ],
+      "source": "averaged",
+      "restaurant_count": 2,
+      "high_spread": true,
+      "lat_spread": 0.0027,
+      "lng_spread": 0.0114,
+      "requires_verification": true,
+      "null_coord_restaurants": [
+        "Onakase"
+      ]
+    },
+    "Promenade des Anglais": {
+      "coords": [
+        43.686,
+        7.2375
+      ],
+      "source": "nominatim",
+      "nominatim_query": "Promenade des Anglais, Nice, France",
+      "nominatim_display": "Promenade des Anglais, Fabron, Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur, France métropolitaine, 06200, France",
+      "requires_verification": true,
+      "null_coord_restaurants": [
+        "Les Bains du Castel"
+      ]
+    },
+    "Vieux Nice": {
+      "coords": [
+        43.6977,
+        7.2773
+      ],
+      "source": "averaged",
+      "restaurant_count": 8,
+      "high_spread": true,
+      "lat_spread": 0.0048,
+      "lng_spread": 0.0119,
+      "requires_verification": true,
+      "null_coord_restaurants": [
+        "Café Mademoiselle"
+      ]
+    }
   }
 }
