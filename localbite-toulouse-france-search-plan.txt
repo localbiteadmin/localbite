@@ -1,0 +1,89 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+CITY: Toulouse | COUNTRY: France | PIPELINE: localbite-v7.1
+YEAR_RANGE: 2023-2026 | SINGLE_LANGUAGE_CITY: YES | PRIMARY_LANGUAGE: French (FR)
+SECONDARY_LANGUAGE: (none)
+
+TIER ASSIGNMENT (inferred from KNOWN_NEIGHBORHOODS):
+  TIER_1: Capitole / Centre (1er), Saint-Cyprien (2e), Carmes, Saint-Aubin
+  TIER_2: Arnaud-Bernard, Les Chalets, Saint-Georges, Compans-Caffarelli
+  TIER_3: Patte d'Oie, Sept-Deniers, Rangueil
+
+MICHELIN_STARRED_EXCLUSIONS (do not include in output):
+  Py-r, Sept, Empreinte, En Plein Coeur
+
+QUERY CEILING: soft 45 / hard 55
+PLANNED QUERIES: 25
+
+═══════════════════════════════════════════
+PART A — NEIGHBOURHOOD QUERIES (11 queries)
+═══════════════════════════════════════════
+Note: SINGLE_LANGUAGE_CITY — 1 FR query per Tier 1 and Tier 2 area;
+1 FR query per Tier 3 area.
+
+TIER 1:
+Q01  "restaurants Capitole Toulouse critique gastronomique guide 2024"
+Q02  "meilleures adresses Saint-Cyprien Toulouse restaurants 2023 2024"
+Q03  "restaurants quartier Carmes Toulouse recommandation journaliste 2024 2025"
+Q04  "restaurant Saint-Aubin Toulouse guide gastronomique 2023"
+
+TIER 2:
+Q05  "restaurant Arnaud-Bernard Toulouse critique recommandation 2024"
+Q06  "adresses restaurant Les Chalets Toulouse 2023 2024"
+Q07  "restaurants quartier Saint-Georges Toulouse guide 2024 2025"
+Q08  "restaurant Compans-Caffarelli Toulouse recommandation 2023"
+
+TIER 3:
+Q09  "restaurant Patte d'Oie Toulouse 2024"
+Q10  "restaurant Sept-Deniers Toulouse 2023 2024"
+Q11  "restaurant Rangueil Toulouse guide 2024"
+
+═══════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES (14 queries)
+═══════════════════════════════════════════
+Cross-1: SKIP — no secondary language (SINGLE_LANGUAGE_CITY: YES)
+Cross-6: SKIP — LOCAL_FOOD_VOCABULARY blank
+
+Cross-2 (city-wide FR, 3 varied registers):
+Q12  "critique gastronomique Toulouse meilleures tables article presse 2025"
+Q13  "restaurant quartier Toulouse où manger habitant conseil 2023 2024"
+Q14  "guide gastronomique Toulouse journaliste presse 2024 sélection"
+
+Cross-3 (generic writer-first, 2 queries in FR — no specific writers named):
+Q15  "journaliste gastronomie Toulouse restaurant recommandé blog 2024"
+Q16  "critique culinaire Toulouse chronique restaurant 2023"
+
+Cross-4 (named awards — NAMED_AWARDS blank → generic: Michelin, Bib Gourmand, Gault Millau):
+Q17  "Michelin Toulouse 2025 sélection étoiles restaurant"
+Q18  "Bib Gourmand Toulouse 2024 2025 restaurant guide Michelin"
+Q19  "Gault Millau Toulouse restaurant classement critique 2023 2024"
+
+Cross-5 (recent openings, 2 queries in FR):
+Q20  "nouveaux restaurants ouverts Toulouse 2024 2025 tendance"
+Q21  "ouverture restaurant Toulouse 2023 sélection"
+
+Cross-7 (cuisine and community, 2 queries):
+Q22  "cassoulet Toulouse restaurant authentique critique 2024"
+Q23  "cuisine du terroir occitan Toulouse restaurant recommandé 2023 2024"
+
+Cross-8 (publication-category, 2 queries):
+Q24  "magazine gastronomique indépendant Toulouse restaurant critique 2024"
+Q25  "supplément gastronomie quotidien Toulouse restaurant sélection 2024"
+
+═══════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+═══════════════════════════════════════════
+Earlier years ref (2023 / early range): Q2, Q4, Q6, Q8, Q10, Q13, Q16, Q19, Q21, Q23 = 10 queries
+Recent years ref (2024-2025): Q1, Q3, Q5, Q7, Q9, Q11, Q12, Q14, Q15, Q17, Q18, Q20, Q22, Q24, Q25 = 15 queries
+No year term: 0
+
+[year-distribution-check] PASSED — 10 queries reference earlier years, 15 reference recent years, 0 have no year term.
+
+═══════════════════════════════════════════
+DIVERSITY GATE TARGET (single-language city)
+═══════════════════════════════════════════
+✓ At least 2 legacy/institutional sources
+✓ At least 1 independent/freelance source
+✓ No more than 2 secondary sources
+
+STOPPING RULE: if last 8 consecutive queries all return known candidates or nothing new, stop and proceed to Phase 1B.

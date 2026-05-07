@@ -1,0 +1,32 @@
+[neighbourhood-Capitole] "restaurants Capitole Toulouse critique gastronomique guide 2024" → Results include toulouseforyou.com, espace-toulouse.com (Michelin 2024), Le Bibent, Les Jardins de l'Opéra; no clearly named non-commercial editorial source.
+[neighbourhood-Saint-Cyprien] "meilleures adresses Saint-Cyprien Toulouse restaurants 2023 2024" → toulousegourmettours.com (COI tour company), vacanceole.com, boudu-toulouse.com appeared; Chez Loustic (Bib Gourmand) mentioned.
+[neighbourhood-Carmes] "restaurants quartier Carmes Toulouse recommandation journaliste 2024 2025" → lejournaltoulousain.fr, toulousesecret.com, boudu-toulouse.com, francebleu.fr; Les Fines Gueules, Solides mentioned.
+[neighbourhood-Saint-Aubin] "restaurant Saint-Aubin Toulouse guide gastronomique 2023" → lejournaltoulousain.fr Top 10 article discovered; Gram's, Agapes, Cartouches mentioned.
+[neighbourhood-Arnaud-Bernard] "restaurant Arnaud-Bernard Toulouse critique recommandation 2024" → pagesjaunes.fr, tripadvisor only; no named editorial source.
+[neighbourhood-Les-Chalets] "adresses restaurant Les Chalets Toulouse 2023 2024" → No editorial source; restaurant listings only.
+[neighbourhood-Saint-Georges] "restaurants quartier Saint-Georges Toulouse guide 2024 2025" → grizette.com appeared; Émile, Prima Fabbrica, Ma Biche sur le Toit mentioned.
+[neighbourhood-Compans-Caffarelli] "restaurant Compans-Caffarelli Toulouse recommandation 2023" → TheFork (KNOWN_COMMERCIAL_CONFLICT), tripadvisor; no editorial source.
+[neighbourhood-Patte-dOie] "restaurant Patte d'Oie Toulouse 2024" → Restaurant listings only; no editorial source.
+[neighbourhood-Sept-Deniers] "restaurant Sept-Deniers Toulouse 2023 2024" → restaurant-sept.fr (starred restaurant excluded); Au Pois Gourmand, La Brasserie du Stade Toulousain mentioned.
+[neighbourhood-Rangueil] "restaurant Rangueil Toulouse guide 2024" → No editorial source found; student/hospital area.
+[cross-2] "critique gastronomique Toulouse meilleures tables article presse 2025" → lebonbon.fr, lejournaltoulousain.fr, espace-toulouse.com; Au Pois Gourmand noted as top-rated. cocottefoodtour.com found.
+[cross-2] "restaurant quartier Toulouse où manger habitant conseil 2023 2024" → grizette.com "où manger pas cher" article; boudu-toulouse.com; lejournaltoulousain.fr "5 nouveaux restaurants".
+[cross-2] "guide gastronomique Toulouse journaliste presse 2024 sélection" → lejournaltoulousain.fr "nouvelle vague gastronomique", toulousesecret.com Michelin list, blog.culture31.com "florilège food" (April 2024) confirmed.
+[cross-3] "journaliste gastronomie Toulouse restaurant recommandé blog 2024" → blog.culture31.com, gillespudlowski.com Toulouse page, toulousesecret.com Bib Gourmand; Chez Loustic confirmed Bib Gourmand.
+[cross-3] "critique culinaire Toulouse chronique restaurant 2023" → lebonbon.fr Michelin 2023; lejournaltoulousain.fr Gault Millau; espace-toulouse.com Michelin 2023.
+[cross-4] "Michelin Toulouse 2025 sélection étoiles restaurant" → francebleu.fr, lebonbon.fr 2025 star news; Acte 2 new star confirmed; guide.michelin.com Toulouse page.
+[cross-4] "Bib Gourmand Toulouse 2024 2025 restaurant guide Michelin" → toulousesecret.com Bib Gourmand article found (Inès Azouz, March 2025); Chez Loustic, Cartouches, Une Table à Deux confirmed Bib Gourmand.
+[cross-4] "Gault Millau Toulouse restaurant classement critique 2023 2024" → lejournaltoulousain.fr Gault & Millau 2024 article (Bryan Faham); france3 regions; Hortùs, Les Agapes, Combustible mentioned.
+[cross-5] "nouveaux restaurants ouverts Toulouse 2024 2025 tendance" → lejournaltoulousain.fr "5 nouveaux restaurants" confirmed; blog.culture31.com new concepts article; Gaïa, Acte 2 openings confirmed.
+[cross-5] "ouverture restaurant Toulouse 2023 sélection" → toulousesecret.com "nouveaux restaurants" (Inès Azouz, Sept 2022 — outside range); lebonbon.fr halles Cartoucherie 2023; Acte 2, Jacques, Yomi openings confirmed.
+[cross-7] "cassoulet Toulouse restaurant authentique critique 2024" → grizette.com "cassoulet à Toulouse" (Marion Vidale, Jan 2024) confirmed; toulousesecret.com cassoulet (JS-blocked); Le Genty Magre, Chez Émile, Le Colombier listed.
+[cross-7] "cuisine du terroir occitan Toulouse restaurant recommandé 2023 2024" → lejournaltoulousain.fr terroir article; Terroir Club, Taulièr d'Occitania mentioned; no new named source.
+[cross-8] "magazine gastronomique indépendant Toulouse restaurant critique 2024" → lebonbon.fr "sélection du Bonbon" (no byline); lefooding.com (directory, no quotes); yonder.fr mentioned.
+[cross-8] "supplément gastronomie quotidien Toulouse restaurant sélection 2024" → lebonbon.fr again; espace-toulouse.com Michelin; no named food supplement found.
+[publisher-concentration-supplement-1] "restaurant Toulouse gastronomie magazine local indépendant critique 2024 auteur" → No new sources beyond LJT and Grizette; Le Fooding referenced; Grizette bistronomie URL discovered.
+[publisher-concentration-supplement-2] "guide restaurants Toulouse 2024 2025 blog personnel habitant bistronomie" → boudu-toulouse.com confirmed (but inaccessible); grizette.com bistronomie URL found; Grave restaurant (late 2024) mentioned.
+[publisher-concentration-supplement-3] "Au Pois Gourmand Toulouse critique restaurant avis journaliste 2023 2024" → Only user reviews/aggregators; no named journalist review found; restaurant highly rated (4.8/5).
+[stopping-rule] Not triggered — all 25 planned queries + 3 supplementary completed. Total: 28 queries.
+[phase-1b-crossval] "Chez Loustic Toulouse restaurant recommandation critique avis 2024" → Confirms Bib Gourmand status and wide coverage; no new editorial source beyond Toulouse Secret and LJT.
+[phase-1b-crossval] "Cartouches restaurant Toulouse recommandation critique bistronomie 2024" → Confirms Bib Gourmand + Gault & Millau 2 toques; lejournaltoulousain.fr older article found but pre-2023; no new phase-1 source.
+[phase-1b-crossval] "Le Genty Magre Toulouse cassoulet restaurant critique gastronomique" → Confirms World Cassoulet Championship 2023; no new editorial source beyond Grizette.

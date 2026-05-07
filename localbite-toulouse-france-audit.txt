@@ -1,0 +1,219 @@
+LOCALBITE PIPELINE AUDIT — Toulouse, France
+Pipeline: localbite-v7.1
+Run date: 2026-05-07
+UNATTENDED_MODE: YES
+
+════════════════════════════════════════════════════
+PHASE 0 — DIRECT FETCH
+════════════════════════════════════════════════════
+DIRECT_FETCH_SOURCES: none — Phase 0 skipped.
+
+════════════════════════════════════════════════════
+PHASE 1 — SOURCE DISCOVERY
+════════════════════════════════════════════════════
+
+CONFIRMED SOURCES (4):
+
+[src-grizette-vidale]
+  Writer: Marion Vidale
+  Publication: Grizette
+  Article: "Cassoulet à Toulouse : les meilleures tables pour déguster cette spécialité régionale"
+  Date: 2024-01-09
+  URL: https://www.grizette.com/cassoulet-a-toulouse-restaurants/
+  Fetch status: 200 OK (Jina + direct confirmed)
+  Author confirmation: Grizette /author/marion-vidale/ → 96 articles, regular Toulouse food writer
+  Source tier: A (independent/freelance local food writer)
+
+[src-ljt-thepaut]
+  Writer: Héloïse Thépaut
+  Publication: Le Journal Toulousain
+  Article: "Le top 10 des restaurants toulousains où se faire plaisir sans se ruiner"
+  Date: 2024-11-07
+  URL: https://www.lejournaltoulousain.fr/occitanie/haute-garonne/toulouse/top-10-restaurants-toulousains-faire-plaisir-sans-ruiner-289184/
+  Fetch status: 200 OK (18,500ch confirmed)
+  Author confirmation: byline in article header
+  Source tier: A (institutional — local newspaper)
+
+[src-ljt-carriere]
+  Writer: Kevin Carriere
+  Publication: Le Journal Toulousain
+  Article: "Toulouse : 5 nouveaux restaurants à découvrir absolument"
+  Date: 2024-05-11
+  URL: https://www.lejournaltoulousain.fr/occitanie/haute-garonne/toulouse/toulouse-5-nouveaux-restaurants-decouvrir-absolument-263963/
+  Fetch status: 200 OK (3,850ch confirmed)
+  Author confirmation: byline in article header
+  Source tier: A (institutional — local newspaper)
+
+[src-toulouse-secret-azouz]
+  Writer: Inès Azouz
+  Publication: Toulouse Secret
+  Article: Bib Gourmand Toulouse Guide Michelin 2025
+  Date: 2025-03-04
+  URL: null (JS-CHALLENGE blocked — no successful verbatim extraction)
+  Fetch status: partial (JS protection, 3,200ch partial via Jina, 0 verbatim quotes)
+  Author confirmation: Inès Azouz confirmed in partial content
+  Source tier: A (local digital media)
+  Note: 4 restaurant names visible in partial content (Chez Loustic, Cartouches,
+        Une Table à Deux + 1 other). No verbatim quotes extractable. Source used
+        for multi-source cross-validation only; article_url set to null.
+
+REJECTED SOURCES — BYLINE:
+  - blog.culture31.com (Apr 2024, "Florilège Food") — no named author found, navigation content only
+  - lebonbon.fr gastronomy selection — no named individual author, editorial team credit only
+  - hotel-albert1.com (Oct 2025, 10 restaurants) — "l'équipe de l'Albert" team credit, not individual
+
+REJECTED SOURCES — DATE:
+  - grizette.com/restaurants-bistronomie-toulouse/ — April 2018 (Marie Lebreton), outside 2023-2026
+  - grizette.com/restaurant-ou-manger-pas-cher-a-toulouse/ — September 2022, outside range
+  - lejournaltoulousain.fr nouvelle vague gastronomique — January 2018 (Alexandra Foissac), outside range
+  - toulousesecret.com/toulouse-nouveaux-restaurants/ — September 2022 (Inès Azouz), outside range
+  - onyvatravel.com guide Saint-Cyprien — November 2020, outside range
+
+REJECTED SOURCES — QUOTE (no qualifying verbatim quotes):
+  - lefooding.com/toulouse — directory listing only, no editorial quotes
+  - gillespudlowski.com — search results page OK but individual review pages all 404
+  - fr.gaultmillau.com "10 adresses qui font Toulouse" (Lydia Bacrie, Apr 2024) — mixed travel guide,
+    commercial conflict, only Hortùs qualifying (Hortùs excluded as Michelin starred)
+  - lejournaltoulousain.fr Gault Millau 2024 (Bryan Faham) — awards announcement only,
+    no verbatim descriptions meeting 15-word rule
+
+FAILED FETCHES:
+  - boudu-toulouse.com — HTTP 422 (repeated), TIMEOUT on direct fetch; abandoned
+  - gillespudlowski.com individual review pages — all 404
+  - grizette.com/restaurant-en-amoureux-toulouse/ — 404
+  - toulousesecret.com (all pages) — JS-CHALLENGE, max attempts exceeded
+
+PUBLISHER CONCENTRATION NOTE:
+  Le Journal Toulousain contributes 2 of 3 extractable sources. Publisher concentration
+  was documented as a structural characteristic of Toulouse's limited editorial food
+  journalism landscape. 28 total search queries run + 3 supplementary queries yielded
+  no viable alternative institutional sources. LJT concentration accepted as structural
+  exception per pipeline rules (no viable alternative identified after supplementary queries).
+
+════════════════════════════════════════════════════
+PHASE 2 — EXTRACTION EXCLUSIONS (pre-working-JSON)
+════════════════════════════════════════════════════
+
+[EXCLUDED — geographic bounding box]
+  Jacques (brasserie-pub)
+  Source: src-ljt-carriere / Kevin Carriere / LJT May 2024
+  Address: 32 rue Seveso, Fenouillet (43.695°N — above 43.680°N bounding box limit)
+  Quote confirmed: "brasserie-pub «Jacques» a ouvert un nouveau restaurant, le 11 décembre 2023,
+  du côté de Fenouillet, au nord de Toulouse"
+  Action: excluded at Phase 2; not written to working JSON
+
+[EXCLUDED — Michelin starred]
+  Acte 2
+  Source: src-ljt-carriere / Kevin Carriere / LJT May 2024
+  Chef: Yannick Delpech
+  Address: 1 rue Panebœuf, Toulouse (Côte Pavée)
+  Starred: 2025 Michelin Guide
+  Quote confirmed: "le chef Yannick Delpech a ouvert Acte 2, un nouveau restaurant gastronomique
+  à Toulouse, dans le quartier de la Côte Pavée"
+  Action: excluded at Phase 2; not written to working JSON
+
+════════════════════════════════════════════════════
+PHASE 3 — REMOVALS FROM WORKING JSON
+════════════════════════════════════════════════════
+
+[REMOVED — Michelin starred]
+  Agapes
+  Source: src-ljt-thepaut / Héloïse Thépaut / LJT Nov 2024
+  Address: 7 rue de l'Industrie, Saint-Aubin
+  Starred: 2026 Michelin Guide (received star after article date of Nov 2024)
+  Quote: "Ils vous proposent une carte courte avec des plats empreints de gourmandise
+  qui n'en font pas trop"
+  Action: removed; would have been Tier B
+
+[REMOVED — null neighbourhood, single source]
+  L'Os à Moëlle
+  Source: src-grizette-vidale
+  Address: 14 rue Roquelaine, Quartier Matabiau (not in canonical neighbourhood list)
+  Action: auto-removed (null neighbourhood + single source)
+
+[REMOVED — null neighbourhood, single source]
+  Les Copains d'Abord
+  Source: src-grizette-vidale
+  Address: 38 rue du Pont Guilhemery, Quartier Guilhemery (not canonical)
+  Action: auto-removed (null neighbourhood + single source)
+
+[REMOVED — null neighbourhood, single source]
+  Café Francis (Les Petits Mijotés de Francis)
+  Source: src-grizette-vidale
+  Address: 181 avenue des États-Unis, Quartier Barrière de Paris (not canonical)
+  Additional note: conserverie/food shop, not confirmed sit-down restaurant
+  Action: auto-removed (null neighbourhood + single source)
+
+[REMOVED — null neighbourhood, single source]
+  Les Sales Gosses
+  Source: src-ljt-thepaut
+  Address: 81 rue Riquet (neighbourhood not specified in article; not mapped to canonical)
+  Action: auto-removed (null neighbourhood + single source)
+
+[REMOVED — null neighbourhood, single source]
+  Hito
+  Source: src-ljt-thepaut
+  Address: 26 rue de la Fonderie (neighbourhood not specified in article as canonical)
+  Note: same street as Les Têtes d'Ail but article does not assign canonical neighbourhood
+  Action: auto-removed (null neighbourhood + single source)
+
+[REMOVED — publisher concentration cap]
+  La Maison du Cassoulet
+  Source: src-grizette-vidale
+  Address: 3 boulevard de Strasbourg, Quartier Jean-Jaurès (Capitole/Centre)
+  Reason: Grizette source had 5 valid-neighbourhood entries (33.3% of pre-cap pool of 15).
+    Cap = 30%. Weakest entry removed to bring Grizette to 4/14 = 28.6%. La Maison du Cassoulet
+    selected for removal as a cassoulet specialty restaurant with weaker quote (16 words, no
+    chef name, no award detail) vs other Grizette entries.
+  Action: removed; would have been Tier B
+
+════════════════════════════════════════════════════
+PHASE 3 — FINAL POOL (14 entries)
+════════════════════════════════════════════════════
+
+TIER A — multi-source (3 entries):
+  Chez Loustic          Saint-Cyprien  LJT Thépaut + Toulouse Secret (Bib Gourmand)
+  Une Table à Deux      Carmes         LJT Thépaut + Toulouse Secret (Bib Gourmand)
+  Cartouches            Saint-Aubin    LJT Thépaut + Toulouse Secret (Bib Gourmand) + G&M 2 toques
+
+TIER B — single source (11 entries):
+  Le Genty Magre        Saint-Georges  Grizette / Marion Vidale
+  Chez Émile            Saint-Georges  Grizette / Marion Vidale
+  Le Point d'Ogre       Carmes         Grizette / Marion Vidale
+  Le Colombier          Saint-Cyprien  Grizette / Marion Vidale
+  Cécile                Carmes         LJT / Héloïse Thépaut
+  Gram's                Saint-Aubin    LJT / Héloïse Thépaut
+  Les Têtes d'Ail       Carmes         LJT / Héloïse Thépaut
+  Les Planeurs          null/retained  LJT / Héloïse Thépaut (Boulevard des Minimes, explicit)
+  Gaïa                  Carmes         LJT / Kevin Carriere
+  Yomi                  Carmes         LJT / Kevin Carriere
+  Les Fines Gueules     Carmes         LJT / Kevin Carriere
+
+NEIGHBOURHOOD DISTRIBUTION:
+  Carmes: 7 (50%) — Le Point d'Ogre, Cécile, Une Table à Deux, Les Têtes d'Ail, Gaïa, Yomi, Les Fines Gueules
+  Saint-Cyprien: 2 — Chez Loustic, Le Colombier
+  Saint-Aubin: 2 — Gram's, Cartouches
+  Saint-Georges: 2 — Le Genty Magre, Chez Émile
+  null (retained): 1 — Les Planeurs
+
+NOTE — Carmes concentration: 7/14 entries (50%) from Carmes reflects genuine density of
+the restaurant scene in that neighbourhood plus search query patterns. No pipeline rule
+limits neighbourhood concentration. Documented for transparency.
+
+NOTE — single-language city: no both_pool entries (SINGLE_LANGUAGE_CITY: YES, no EN source).
+
+════════════════════════════════════════════════════
+SUMMARY COUNTS
+════════════════════════════════════════════════════
+  Sources confirmed:       4
+  Sources extractable:     3 (1 partial — Toulouse Secret, 0 extractions)
+  Working JSON entries:   21
+  Phase 2 exclusions:      2 (Jacques, Acte 2)
+  Phase 3 removals:        7 (1 starred, 5 auto-remove, 1 concentration cap)
+  Final entries:          14
+  Tier A:                  3
+  Tier B:                 11
+  both_pool:               0
+  open_status_check:      14 (all entries — all sources pre-2025)
+  Year range:          2024 (all 3 sources: Jan 2024, May 2024, Nov 2024)
+                       [Toulouse Secret partial source: Mar 2025]

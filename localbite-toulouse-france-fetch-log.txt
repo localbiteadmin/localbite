@@ -1,0 +1,34 @@
+[p1] "https://r.jina.ai/https://blog.culture31.com/2024/04/10/florilege-food-a-toulouse/" → 200 | ~89,000ch | REJECTED-byline — navigation/index content only, no named author identified in extracted text
+[p1] "https://r.jina.ai/https://www.boudu-toulouse.com/blog/restaurant-toulouse/" → HTTP 422 | —ch | FAILED — 422 Unprocessable Entity error
+[p1] "https://r.jina.ai/https://www.gillespudlowski.com/recherche/Restaurants/0/France/Midi-Pyr%C3%A9n%C3%A9es/Toulouse/" → 200 | ~20,000ch | PARTIAL — search results listing only, individual review pages are 404
+[p1] "https://r.jina.ai/https://toulousesecret.com/cassoulet-les-meilleures-adresses-de-toulouse/" → JS-CHALLENGE | —ch | FAILED — Max challenge attempts exceeded, JavaScript protection
+[p1] "https://r.jina.ai/https://www.grizette.com/cassoulet-a-toulouse-restaurants/" → 200 | ~47,000ch | ACCEPTED — Marion Vidale, Jan 9 2024, named author confirmed, 8 cassoulet restaurants
+[p1] "https://r.jina.ai/https://lefooding.com/recherche/restaurant/place/toulouse-8288" → 200 | 47,500ch | REJECTED-quote — directory listing only, no editorial quotes or named critics
+[p1] "https://www.grizette.com/author/marion-vidale/" → 200 | — | ACCEPTED — confirms Marion Vidale as regular Toulouse food writer, 96 articles published
+[p1] "https://www.grizette.com/restaurant-ou-manger-pas-cher-a-toulouse/" → 200 | 11,850ch | SKIPPED — publication date September 2022, outside year range 2023-2026
+[p1] "https://www.grizette.com/cassoulet-a-toulouse-restaurants/" → 200 | ~47,000ch | ACCEPTED — Phase 1 verification, full article confirmed, quotes extracted
+[p1] "https://www.lejournaltoulousain.fr/occitanie/haute-garonne/toulouse/toulouse-5-nouveaux-restaurants-decouvrir-absolument-263963/" → 200 | 3,850ch | ACCEPTED — Kevin Carriere, May 11 2024, author confirmed, 5 restaurants
+[p1] "https://www.lebonbon.fr/toulouse/les-tops-food-et-drink/restaurant-gastronomique-a-toulouse-la-selection-du-bonbon/" → 200 | — | REJECTED-byline — no named individual author found, editorial team credit only
+[p1] "https://blog.culture31.com/2024/04/10/florilege-food-a-toulouse/" → 200 | — | REJECTED-byline — direct fetch also returned navigation content, no named author
+[p1] "https://www.boudu-toulouse.com/blog/restaurant-toulouse/" → TIMEOUT | —ch | FAILED — timeout on direct fetch
+[p1] "https://r.jina.ai/https://www.gillespudlowski.com/restaurant/au-pois-gourmand-toulouse/" → 404 | —ch | FAILED — page not found
+[p1] "https://r.jina.ai/https://onyvatravel.com/guide-gourmand-du-quartier-saint-cyprien-a-toulouse" → 200 | — | REJECTED-date — November 2020, outside year range 2023-2026
+[p1] "https://toulousesecret.com/toulouse-bib-gourmand-guide-michelin/" → JS-CHALLENGE | ~3,200ch | PARTIAL — Inès Azouz confirmed author, March 4 2025, 4 restaurants named, no verbatim quotes extractable
+[p1] "https://www.lebonbon.fr/toulouse/good-news/deux-restaurants-toulouse-premiere-etoile-michelin/" → 200 | — | PARTIAL — Camille Miranda author confirmed, March 2026, only starred restaurants featured
+[p1] "https://r.jina.ai/https://hotel-albert1.com/2025/10/28/dossier-ou-manger-a-toulouse-..." → 200 | — | REJECTED-byline — "l'équipe de l'Albert" team credit, no named individual author
+[p1] "https://www.grizette.com/restaurant-en-amoureux-toulouse/" → 404 | —ch | FAILED — page not found
+[p1] "https://r.jina.ai/https://www.gillespudlowski.com/restaurant/le-bibent-toulouse/" → 404 | —ch | FAILED — page not found
+[p1] "https://www.grizette.com/restaurants-bistronomie-toulouse/" → 200 | 47,892ch | REJECTED-date — April 2018, outside year range (different author: Marie Lebreton)
+[p1] "https://r.jina.ai/https://www.lejournaltoulousain.fr/lifestyle/toulouse-et-la-nouvelle-vague-gastronomique-1506/" → 200 | 23,847ch | REJECTED-date — Alexandra Foissac, January 2018, outside year range
+[p1] "https://r.jina.ai/https://www.boudu-toulouse.com/blog/restaurant-toulouse/" → HTTP 422 | —ch | FAILED — repeated 422 error
+[p1] "https://r.jina.ai/https://www.lejournaltoulousain.fr/occitanie/actualites-occitanie/gaultmillau-2024-voici-palmares-restaurants-occitanie-264363/" → 200 | — | REJECTED-quote — Bryan Faham, awards announcements only, no verbatim restaurant descriptions meeting 15-word rule
+[p1] "https://r.jina.ai/https://fr.gaultmillau.com/en/news/les-10-adresses-qui-font-toulouse" → 200 | — | REJECTED-quote — Lydia Bacrie, April 2024, mixed travel guide with only Hortùs qualifying, Michel Sarran excluded; commercial conflict
+[p1] "https://toulousesecret.com/toulouse-nouveaux-restaurants/" → 200 | — | REJECTED-date — Inès Azouz, September 2022, outside year range
+[p1] "https://r.jina.ai/https://www.gillespudlowski.com/restaurant/le-parisien-toulouse/" → 404 | —ch | FAILED — page not found
+[p1] "https://www.lejournaltoulousain.fr/occitanie/haute-garonne/toulouse/top-10-restaurants-toulousains-faire-plaisir-sans-ruiner-289184/" → 200 | 18,500ch | ACCEPTED — Héloïse Thépaut, November 7 2024, author confirmed, 10 restaurants
+[p1] "https://toulousesecret.com/toulouse-bib-gourmand-guide-michelin/" → JS-CHALLENGE | —ch | PARTIAL — direct fetch also blocked, Inès Azouz source confirmed but 0 qualifying quotes
+[p1] "https://www.boudu-toulouse.com/blog/restaurant-toulouse/bistronomie-traditionnel-toulouse/" → TIMEOUT | —ch | FAILED — timeout
+[p2] "https://www.grizette.com/cassoulet-a-toulouse-restaurants/" → 200 | ~47,000ch | ACCEPTED — Phase 2 full extraction, 8 restaurants, retries: 0, wayback: false
+[p2] "https://www.lejournaltoulousain.fr/occitanie/haute-garonne/toulouse/top-10-restaurants-toulousains-faire-plaisir-sans-ruiner-289184/" → 200 | 18,500ch | ACCEPTED — Phase 2 full extraction, 10 restaurants, retries: 0, wayback: false
+[p2] "https://www.lejournaltoulousain.fr/occitanie/haute-garonne/toulouse/toulouse-5-nouveaux-restaurants-decouvrir-absolument-263963/" → 200 | 3,850ch | ACCEPTED — Phase 2 extraction, 5 restaurants (3 qualifying), retries: 0, wayback: false
+[p2] "https://toulousesecret.com/toulouse-bib-gourmand-guide-michelin/" → JS-CHALLENGE | ~3,200ch | PARTIAL — Inès Azouz March 2025, source confirmed, 0 restaurants extracted (no verbatim quotes available), retries: 2, wayback: false
