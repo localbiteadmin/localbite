@@ -378,8 +378,8 @@ function isThinProfile(profile) {
       if (r.geo && typeof r.geo === 'object' && !Array.isArray(r.geo)) {
       if (!('lat' in r) && 'lat' in r.geo) { r.lat = r.geo.lat; autoRepaired++; }
       if (!('lng' in r) && 'lng' in r.geo) { r.lng = r.geo.lng; autoRepaired++; }
-      delete r.geo; autoRepaired++;
       }
+      delete r.geo; autoRepaired++;
     }
     // writers (list) → writer (str, first element; always delete writers)
     if (Array.isArray(r.writers)) {
