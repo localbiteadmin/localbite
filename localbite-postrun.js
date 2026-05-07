@@ -146,6 +146,15 @@ function isThinProfile(profile) {
     process.exit(1);
   }
 
+  // ── Fix 8a-0: entries → restaurants (top-level rename, compaction drift) ──
+  // Write immediately so STEP 1 geocode.js reads the corrected structure.
+  if (data.entries && Array.isArray(data.entries) && !Array.isArray(data.restaurants)) {
+    data.restaurants = data.entries;
+    delete data.entries;
+    fs.writeFileSync(file, JSON.stringify(data, null, 2));
+    console.log('Auto-repair (Step 1): entries renamed to restaurants (compaction variant)');
+  }
+
   if (!data.restaurants || !Array.isArray(data.restaurants)) {
     console.error(`Error: ${file} does not contain a valid "restaurants" array.`);
     process.exit(1);
@@ -333,6 +342,182 @@ function isThinProfile(profile) {
     }
     if (r.language_pool !== derived) { r.language_pool = derived; autoRepaired++; }
   }
+  // ────────────────────────────────────────────────────────────────
+  // Fix 8: Comprehensive schema normalization (2026-05-07)
+  // Handles compaction-reconstruction drift from Lyon and Marseille.
+  // Code reviewed: 6 issues identified and corrected before deployment.
+  // ────────────────────────────────────────────────────────────────
+
+  // ── Fix 8a: Top-level field renames ──
+  if ('extraction_date' in data && !('date_generated' in data)) {
+    data.date_generated = data.extraction_date; delete data.extraction_date; autoRepaired++;
+  }
+  if ('run_date' in data && !('date_generated' in data)) {
+    data.date_generated = data.run_date; delete data.run_date; autoRepaired++;
+  }
+  if ('slug' in data && !('city_slug' in data)) {
+    data.city_slug = data.slug; delete data.slug; autoRepaired++;
+  }
+
+  // ── Fix 8b: Top-level pipeline-internal noise removal ──
+  // These fields are pipeline working-state, never committed pack data.
+  ['run_metrics', 'geo_centre', 'geo_bbox', 'raw_extractions', 'language', 'price_currency']
+    .forEach(function(f) { if (f in data) { delete data[f]; autoRepaired++; } });
+
+  // ── Fix 8c: Per-restaurant field renames and reshapes ──
+  // NOTE: Always delete the noise/plural field unconditionally (Issues 1-3).
+  // Only copy to the canonical field if it is not already present.
+  // Reason: geocode.js (Step 1) may have already written lat/lng before Step 1.5 runs.
+  // open_status_check is intentionally NOT touched (Issue 4).
+  for (const r of data.restaurants) {
+    // geo_lat / geo_lng → lat / lng
+    if ('geo_lat' in r) { if (!('lat' in r)) r.lat = r.geo_lat; delete r.geo_lat; autoRepaired++; }
+    if ('geo_lng' in r) { if (!('lng' in r)) r.lng = r.geo_lng; delete r.geo_lng; autoRepaired++; }
+    // geo: { lat, lng } nested object → flat lat / lng (always delete geo)
+    if ('geo' in r) {
+      if (r.geo && typeof r.geo === 'object' && !Array.isArray(r.geo)) {
+      if (!('lat' in r) && 'lat' in r.geo) { r.lat = r.geo.lat; autoRepaired++; }
+      if (!('lng' in r) && 'lng' in r.geo) { r.lng = r.geo.lng; autoRepaired++; }
+      delete r.geo; autoRepaired++;
+      }
+    }
+    // writers (list) → writer (str, first element; always delete writers)
+    if (Array.isArray(r.writers)) {
+      if (!('writer' in r)) r.writer = r.writers[0] || null;
+      delete r.writers; autoRepaired++;
+    }
+    // article_urls (list) → article_url (str, first element; always delete article_urls)
+    if (Array.isArray(r.article_urls)) {
+      if (!('article_url' in r)) r.article_url = r.article_urls[0] || null;
+      delete r.article_urls; autoRepaired++;
+    }
+    // confidence → geo_confidence (always delete)
+    if ('confidence' in r) {
+      if (!('geo_confidence' in r)) r.geo_confidence = r.confidence;
+      delete r.confidence; autoRepaired++;
+    }
+    // notable_dishes → dishes (always delete)
+    if (Array.isArray(r.notable_dishes)) {
+      if (!('dishes' in r)) r.dishes = r.notable_dishes;
+      delete r.notable_dishes; autoRepaired++;
+    }
+    // dishes_mentioned → dishes (if dishes still missing after notable_dishes check)
+    if (Array.isArray(r.dishes_mentioned) && !('dishes' in r)) {
+      r.dishes = r.dishes_mentioned; delete r.dishes_mentioned; autoRepaired++;
+    }
+    // tdl_article_date → article_date (only if article_date missing; always delete)
+    if ('tdl_article_date' in r) {
+      if (!('article_date' in r)) r.article_date = r.tdl_article_date;
+      delete r.tdl_article_date; autoRepaired++;
+    }
+    // description: delete when quote is already present (belt-and-suspenders)
+    // The existing fix handles description→quote when quote is absent.
+    if ('description' in r && 'quote' in r && r.quote) {
+      delete r.description; autoRepaired++;
+    }
+    // NOTE: open_status_check intentionally not touched.
+    // postrun.js line 615 reads r.open_status_check to compute openStatusCount.
+  }
+
+  // ── Fix 8c (noise): Arrondissement extraction then pipeline noise removal ──
+  // Extract arrondissement from postcode BEFORE postcode is deleted.
+  function _fix8Arr(postcode, cityName) {
+    if (!postcode || typeof postcode !== 'string') return null;
+    const m = postcode.match(/^(75|69|13)0(\d{2})$/);
+    if (!m) return null;
+    const arr = parseInt(m[2], 10);
+    if (m[1] === '75' && arr >= 1 && arr <= 20) return arr; // Paris
+    if (m[1] === '69' && arr >= 1 && arr <= 9)  return arr; // Lyon
+    if (m[1] === '13' && arr >= 1 && arr <= 16) return arr; // Marseille
+    return null;
+  }
+  const _fix8NoiseFields = [
+    'tdl_rating', 'address', 'postcode', 'country', 'city', 'cuisine',
+    'flag', 'neighbourhood_hint', 'dishes_mentioned', 'raw_text', 'extraction_notes'
+  ];
+  for (const r of data.restaurants) {
+    // Extract arrondissement from postcode if not already set (reads postcode before deletion)
+    if (!('arrondissement' in r) || r.arrondissement === null) {
+      const arr = _fix8Arr(r.postcode, data.city);
+      if (arr !== null) { r.arrondissement = arr; autoRepaired++; }
+    }
+    // Delete noise fields
+    for (const f of _fix8NoiseFields) {
+      if (f in r) { delete r[f]; autoRepaired++; }
+    }
+  }
+
+  // ── Fix 8d: Per-restaurant field defaults ──
+  // Adds fields that the viewer expects if they are absent.
+  // These run AFTER geocode.js (Step 1) so geo_skip is already set for failed geocodes.
+  const _fix8Srcs = (data.sources && !Array.isArray(data.sources)) ? data.sources : {};
+  for (const r of data.restaurants) {
+    // id: slugify name for stable restaurant identity
+    if (!('id' in r) || !r.id) {
+      r.id = (r.name || '').toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      autoRepaired++;
+    }
+    if (!('quote_en' in r))      { r.quote_en = null;       autoRepaired++; }
+    if (!('price_range' in r))   { r.price_range = null;    autoRepaired++; }
+    if (!('open_status' in r))   { r.open_status = null;    autoRepaired++; }
+    if (!('arrondissement' in r)){ r.arrondissement = null; autoRepaired++; }
+    // geo_skip default: false (geocode.js already set true where geocoding failed)
+    if (!('geo_skip' in r))      { r.geo_skip = false;      autoRepaired++; }
+    if (!('dishes' in r))        { r.dishes = [];           autoRepaired++; }
+    if (!('signature_dish' in r)) {
+      r.signature_dish = (Array.isArray(r.dishes) && r.dishes.length > 0) ? r.dishes[0] : null;
+      autoRepaired++;
+    }
+    if (!('both_pool' in r)) { r.both_pool = (r.language_pool === 'both'); autoRepaired++; }
+    // writer: look up from first source if missing or null (Issue 6 fix: no inner field check)
+    if (!('writer' in r) || r.writer === null) {
+      const _ss = Array.isArray(r.sources) ? r.sources : [];
+      const _si = _ss.length > 0
+        ? (typeof _ss[0] === 'string' ? _ss[0] : (_ss[0].source_id || _ss[0].id))
+        : null;
+      const _sr = _si ? _fix8Srcs[_si] : null;
+      r.writer = (_sr && _sr.writer) ? _sr.writer : (r.writer || null);
+      autoRepaired++;
+    }
+    // publisher: look up from first source if missing
+    if (!('publisher' in r)) {
+      const _ss = Array.isArray(r.sources) ? r.sources : [];
+      const _si = _ss.length > 0
+        ? (typeof _ss[0] === 'string' ? _ss[0] : (_ss[0].source_id || _ss[0].id))
+        : null;
+      const _sr = _si ? _fix8Srcs[_si] : null;
+      r.publisher = (_sr && _sr.publication) ? _sr.publication : null;
+      autoRepaired++;
+    }
+    // year: parse from article_date or source article_date
+    if (!('year' in r) || r.year === null) {
+      const _ss = Array.isArray(r.sources) ? r.sources : [];
+      const _si = _ss.length > 0
+        ? (typeof _ss[0] === 'string' ? _ss[0] : (_ss[0].source_id || _ss[0].id))
+        : null;
+      const _sr = _si ? _fix8Srcs[_si] : null;
+      let _yr = null;
+      for (const _d of [r.article_date, _sr ? _sr.article_date : null]) {
+        if (typeof _d === 'string') {
+          const _m = _d.match(/^(\d{4})/);
+          if (_m) { _yr = parseInt(_m[1], 10); break; }
+        }
+      }
+      r.year = _yr; autoRepaired++;
+    }
+  }
+
+  // ── Fix 8e: Top-level derivations ──
+  if (!('final_entries' in data))    { data.final_entries = data.restaurants.length;                                                          autoRepaired++; }
+  if (!('sources_confirmed' in data)){ data.sources_confirmed = Object.keys(data.sources || {}).length;                                       autoRepaired++; }
+  if (!('both_pool' in data))        { data.both_pool = data.restaurants.filter(function(r) { return r.language_pool === 'both'; }).length;   autoRepaired++; }
+  if (!('tier_a' in data))           { data.tier_a = data.restaurants.filter(function(r) { return r.confidence_tier === 'A'; }).length;       autoRepaired++; }
+  if (!('tier_b' in data))           { data.tier_b = data.restaurants.filter(function(r) { return r.confidence_tier === 'B'; }).length;       autoRepaired++; }
+  if (!('tier_c' in data))           { data.tier_c = data.restaurants.filter(function(r) { return r.confidence_tier === 'C'; }).length;       autoRepaired++; }
+  if (!('date_generated' in data))   { data.date_generated = new Date().toISOString().slice(0, 10);                                           autoRepaired++; }
+
   if (autoRepaired > 0) {
     fs.writeFileSync(file, JSON.stringify(data, null, 2));
     console.log(`⚠  Auto-repaired ${autoRepaired} field(s) — compaction drift detected and corrected.`);
@@ -649,6 +834,33 @@ function isThinProfile(profile) {
     console.log(`✓  No centroids action required.`);
   }
 
+  // ── Fix 8 HARD-FAIL: Schema conformance check ──
+  // Runs BEFORE Step 4 so a drifted pack NEVER modifies index.html.
+  // Uses field-presence check only: null is valid (e.g. neighbourhood may be null).
+  // If this fires: park the pack in _drift-recovery/ and investigate.
+  {
+    const _hfReqTop  = ['city', 'country', 'city_slug', 'pipeline', 'sources', 'restaurants', 'date_generated'];
+    const _hfReqRest = ['name', 'neighbourhood', 'quote', 'sources', 'language_pool'];
+    const _hfTopErr  = _hfReqTop.filter(function(k) { return !(k in data); });
+    const _hfRestErr = [];
+    data.restaurants.forEach(function(r, i) {
+      _hfReqRest.forEach(function(f) {
+        if (!(f in r))  // presence only — null is valid
+          _hfRestErr.push('restaurant[' + i + '] (' + (r.name || '<unnamed>') + '): missing field ' + f);
+      });
+    });
+    if (_hfTopErr.length > 0 || _hfRestErr.length > 0) {
+      console.log('\n\u2717 HARD-FAIL \u2014 ' + (_hfTopErr.length + _hfRestErr.length) + ' schema error(s) remain after auto-repair:\n');
+      _hfTopErr.forEach(function(e) { console.log('  \u2022 top-level: missing ' + e); });
+      _hfRestErr.slice(0, 20).forEach(function(e) { console.log('  \u2022 ' + e); });
+      if (_hfRestErr.length > 20) console.log('  ... +' + (_hfRestErr.length - 20) + ' more');
+      console.log('\nThis pack will not be committed. Park in _drift-recovery/ and investigate.');
+      console.log('Run: python3 localbite-schema-diag.py ' + file);
+      process.exit(1);
+    }
+    console.log('  \u2713 Schema conformance check passed (' + data.restaurants.length + ' restaurants, ' + Object.keys(data.sources || {}).length + ' sources)');
+  }
+
   // ══ STEP 4 — CITY_CENTRES + CITY_BOUNDS auto-add ═══════════════════════════
   // Check if the new city has entries in index.html. If not, derive from
   // localbite-geocode.js bounding box and insert automatically.
@@ -694,6 +906,8 @@ function isThinProfile(profile) {
       indexChanged = true;
       console.log(`✓ CITY_CENTRES — added '${city}': [${centreLat}, ${centreLng}] (bbox midpoint)`);
       console.log(`  ⚠ Verify this looks like the right city centre on the live map.`);
+      console.log(`    Known-good centres: Paris [48.8566, 2.3522] | Lyon [45.7640, 4.8357] | Marseille [43.2965, 5.3698]`);
+      console.log(`    To override: sed -i '' "s/'${city}': \\[${centreLat}, ${centreLng}\\]/'${city}': [LAT, LNG]/" index.html`);
     } else {
       console.log(`✗ CITY_CENTRES — '${city}' missing and no bounding box found in localbite-geocode.js.`);
       console.log(`  Add manually: '${city}': [lat, lng], in the CITY_CENTRES block.`);
