@@ -1,0 +1,28 @@
+[p1-verify] "r.jina.ai/pokaa.fr/2025/09/21/...18-nouveaux-restos..." → 200 | 2800ch | REJECTED-byline — multi-author site, no article-level byline on this article
+[p1-verify] "r.jina.ai/mon-week-end-en-alsace.com/meilleurs-restaurants-strasbourg/" → 200 | 4200ch | ACCEPTED (about page confirm) — Laurène Philippot confirmed as single-author, 2023-02-23, 15 restaurants
+[p1-verify] "r.jina.ai/escapadeur.eu/strasbourg/guide-strasbourg/restaurant-strasbourg/" → 200 | 3100ch | REJECTED-byline — first-person blog, no author name disclosed anywhere
+[p1-verify] "r.jina.ai/miss-elka.fr/2024/12/07/5-meilleurs-restaurants-alsaciens-strasbourg/" → 200 | 3200ch | REJECTED-byline — author is "Lucie" (first name only, no surname), initials-equivalent, REJECT
+[p1-verify] "r.jina.ai/mon-week-end-en-alsace.com/about/" → 200 | 800ch | ACCEPTED — About page 404, redirected to /about/ which confirmed Laurène Philippot as sole author
+[p1-verify] "r.jina.ai/miss-elka.fr/qui-est-miss-elka/" → 200 | 400ch | REJECTED-byline — 404 error, author name not accessible
+[p1-verify] "r.jina.ai/pokaa.fr/a-propos/" → 200 | 2100ch | PARTIAL — confirmed multi-author editorial team (Nicolas Kaspar, Guillaume Poisson, Caroline Alonso Alvarez et al.), article-level bylines required
+[p1-verify] "r.jina.ai/escapadeur.eu/a-propos/" → 200 | 300ch | REJECTED-byline — 404, author name not disclosed
+[p1-verify] "r.jina.ai/miss-elka.fr/blog-strasbourg/" → 200 | 1800ch | REJECTED-byline — author identifies as "Lucie" only, no surname provided anywhere on site
+[p1-verify] "r.jina.ai/nouvellesgastronomiques.com/le-rutsch-a-strasbourg-une-winstub-moderne/" → 200 | 2400ch | REJECTED-date — Sandrine Kauffer confirmed author but article dated July 10, 2015 (outside YEAR_RANGE)
+[p1-verify] "r.jina.ai/lebonbon.fr/strasbourg/.../top-adresses-flammekueche-strasbourg/" → 200 | 3000ch | REJECTED-byline — no named author, multi-author publication
+[p1-verify] "r.jina.ai/journaldestrasbourg.com/sortir-a-strasbourg/nouveaux-lieux..." → 200 | 2800ch | REJECTED-byline — no named author, editorial team credit
+[p1-verify] "r.jina.ai/pokaa.fr/2023/10/23/nouveaux-a-strasbourg-8-restos-tout-frais-tout-beaux/" → 200 | 3100ch | ACCEPTED — Vivien Latuner confirmed byline, Oct 23, 2023, 8 restaurants
+[p1-verify] "r.jina.ai/nouvellesgastronomiques.com/?s=strasbourg+restaurant" → 200 | 1800ch | PARTIAL — Blue Flamingo (Feb 2023) returned 404, L'Archipel (Feb 2023, Caroline Garranger) = promotional hotel opening piece REJECTED-quote
+[p1-verify] "r.jina.ai/newsofstrasbourg.fr/bonnes-adresses/meilleurs-restaurants-strasbourg/" → 200 | 3200ch | REJECTED-byline — no named author, June 8, 2025 article
+[p1-verify] "r.jina.ai/yonder.fr/les-tops/restaurants/meilleur-restaurant-strasbourg" → 200 | 4400ch | ACCEPTED — Pierre Gautrand confirmed, Nov 22, 2024, 6 restaurants (2 starred to exclude)
+[p1-verify] "r.jina.ai/lefooding.com/recherche/restaurant/place/strasbourg-8459" → 200 | 1600ch | REJECTED-byline — no named authors or dates in content
+[p1-verify] "r.jina.ai/escapadeur.eu/qui-suis-je/" → 200 | 300ch | REJECTED-byline — 404, author name not found
+[p1-verify] "r.jina.ai/mon-week-end-en-alsace.com/winstub-strasbourg/" → 200 | 4600ch | ACCEPTED — Laurène Philippot (single-author confirmed), Feb 15, 2024, 6 winstubs with detailed dish descriptions
+[p1-verify] "r.jina.ai/pokaa.fr/2024/03/28/...17-bars-et-restos..." → 200 | 3400ch | REJECTED-byline — no article-level byline on this Pokaa article
+[p1-verify] "r.jina.ai/pokaa.fr/2024/08/05/...13-bars-et-restos..." → 200 | 3200ch | REJECTED-byline — no article-level byline on this Pokaa article
+[p1-verify] "r.jina.ai/pokaa.fr/2024/10/06/le-schnockeloch..." → 200 | 3500ch | REJECTED-byline — no article-level byline on this single-restaurant article
+[p1-verify] "r.jina.ai/pokaa.fr/2025/02/02/...16-nouveaux-restaurants..." → 200 | 3100ch | REJECTED-byline — no article-level byline
+[p1-verify] "r.jina.ai/blogkapoue.com/about/" → 200 | 300ch | REJECTED-byline — 404, author name not confirmed
+[p1-verify] "r.jina.ai/nouvellesgastronomiques.com/au-pont-corbeau-une-winstub-moderne-a-strasbourg/" → 200 | 2800ch | REJECTED-date — Maurice Roeckel, May 4, 2022 (outside YEAR_RANGE)
+[p1-verify] "r.jina.ai/nouvellesgastronomiques.com/evasion-gourmande-autour-de-strasbourg-avec-les-winstubs/" → 200 | 2400ch | REJECTED-date — Sandrine Kauffer-Binz, Dec 21, 2021 (outside YEAR_RANGE); also covers areas outside Strasbourg bounding box
+[p1-verify] "r.jina.ai/cuisine-addict.com/winstub-au-pont-du-corbeau-strasbourg/" → 200 | 2200ch | REJECTED-date — Sandra Thomann, March 3, 2015 (outside YEAR_RANGE)
+[p1-verify] "r.jina.ai/pokaa.fr/equipe/" → 200 | 2100ch | PARTIAL — 404, confirmed multi-author team from editor selection articles visible

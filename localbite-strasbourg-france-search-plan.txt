@@ -1,0 +1,129 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+CITY: Strasbourg, France
+CITY_SLUG: strasbourg-france
+PIPELINE: localbite-v7.1
+YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: French (FR)
+SECONDARY_LANGUAGE: none (SINGLE_LANGUAGE_CITY: YES)
+PHASE1_AUTO_PROCEED: YES
+UNATTENDED_MODE: YES
+
+INFERRED TIER STRUCTURE (from KNOWN_NEIGHBORHOODS):
+  Tier 1 (central/tourist): Grande Île, Petite France, Krutenau, Parc de l'Orangerie
+  Tier 2 (residential): Neudorf, Robertsau, Cronenbourg, Koenigshoffen
+  Tier 3 (emerging): Hautepierre, Elsau, Meinau
+
+GEOGRAPHIC_BOUNDARY_INCLUDE: Grande Île, Petite France, Krutenau, Neudorf, Robertsau,
+  Cronenbourg, Hautepierre, Elsau, Meinau, Parc de l'Orangerie, Koenigshoffen
+
+PRICE_CURRENCY: EUR
+CONCENTRATION_CAP: 30% (default)
+MICHELIN_EXCLUSIONS: Umami, La Table de Christophe, Buerehiesel, Au Crocodile (check status)
+REJECT: TheFork/LaFourchette (commercial conflict)
+
+NOTE: No secondary language — Tier 1/2 get 1 FR query each (not 2).
+NOTE: Cross-1 (secondary language) skipped — no secondary language.
+NOTE: Gilles Pudlowski EXCLUDED — Paris-based, does not meet writer locality rule.
+NOTE: DNA/L'Alsace cannot both be used — share EBRA ownership.
+
+═══════════════════════════════════════════════════
+PART A — NEIGHBOURHOOD QUERIES
+═══════════════════════════════════════════════════
+
+TIER 1 — 1 FR query per area (no secondary language):
+A1: "meilleurs restaurants Grande Île Strasbourg 2024 guide gastronomique"
+A2: "restaurants recommandés Petite France Strasbourg 2025"
+A3: "adresses incontournables Krutenau Strasbourg 2023 2024 cuisine"
+A4: "restaurants quartier Orangerie Strasbourg 2025 où manger"
+
+TIER 2 — 1 FR query per area:
+A5: "restaurants Neudorf Strasbourg gastronomie 2024 recommandation"
+A6: "bonnes tables Robertsau Strasbourg 2025"
+A7: "restaurants Cronenbourg Strasbourg 2023 avis gastronomie"
+A8: "où manger Koenigshoffen Strasbourg 2025 restaurant"
+
+TIER 3 — 1 FR query per area:
+A9:  "restaurants Hautepierre Strasbourg 2024"
+A10: "restaurants Elsau Strasbourg 2024"
+A11: "restaurants Meinau Strasbourg 2025"
+
+PART A TOTAL: 11 queries
+
+═══════════════════════════════════════════════════
+PART B — CROSS-CUTTING ANGLES
+═══════════════════════════════════════════════════
+
+Cross-1 (secondary language city-wide): SKIPPED — no secondary language
+
+Cross-2 — City-wide FR, 3 different registers:
+B1: "critique gastronomique Strasbourg 2024 journaliste restaurant"  [formal food criticism / earlier years]
+B2: "où manger Strasbourg 2025 conseil restaurant habitant"  [casual neighbourhood / recent]
+B3: "guide restaurants Strasbourg 2023 presse gastronomie sélection"  [food journalism press guide / earlier]
+
+Cross-3 — Generic writer-first, 2 queries in FR (no secondary):
+B4: "critique culinaire Strasbourg blog gastronomie 2025 auteur"
+B5: "chronique restaurant Strasbourg journaliste cuisine 2024"
+
+Cross-4 — Named awards (generic — NAMED_AWARDS blank): 3 queries
+B6: "restaurants Strasbourg Michelin 2025 bib gourmand recommandé"
+B7: "Gault Millau Strasbourg 2024 restaurants primés palmarès"
+B8: "meilleur restaurant Strasbourg prix guide 2023"
+
+Cross-5 — Recent openings: 2 queries
+B9:  "nouvelles ouvertures restaurants Strasbourg 2025 inauguration"
+B10: "nouveaux restaurants Strasbourg 2023 2024 ouverture"
+
+Cross-6 — Vocabulary-specific (winstub / Alsatian cuisine): 2 queries
+B11: "meilleures winstub Strasbourg 2025 traditionnelle authentique"
+B12: "tarte flambée choucroute baeckeoffe restaurant Strasbourg 2024"
+
+Cross-7 — Cuisine and community: 2 queries
+B13: "cuisine alsacienne Strasbourg restaurant terroir spécialités régionales"
+B14: "bistronomie brasserie Strasbourg 2024 adresse recommandée"
+
+Cross-8 — Publication category: 2 queries
+B15: "magazine gastronomie Alsace restaurants Strasbourg critique 2024"
+B16: "supplément gastronomique presse locale Strasbourg restaurant 2025"
+
+PART B TOTAL: 16 queries (Cross-1 skipped)
+
+═══════════════════════════════════════════════════
+YEAR DISTRIBUTION CHECK
+═══════════════════════════════════════════════════
+
+Earlier years (2023-2024): A1(2024), A3(2023/2024), A5(2024), A7(2023), A9(2024),
+  A10(2024), B1(2024), B3(2023), B5(2024), B7(2024), B8(2023), B10(2023/2024),
+  B12(2024), B14(2024), B15(2024) = 15 references
+
+Recent years (2025-2026): A2(2025), A4(2025), A6(2025), A8(2025), A11(2025),
+  B2(2025), B4(2025), B6(2025), B9(2025), B11(2025), B16(2025) = 11 references
+
+No year term: B13 = 1
+
+[year-distribution-check] PASSED — 15 queries reference earlier years (2023-2024),
+11 queries reference recent years (2025-2026), 1 query has no year term.
+
+GRAND TOTAL: 27 queries (soft ceiling: 45, hard ceiling: 55)
+
+═══════════════════════════════════════════════════
+PHASE 1B CROSS-VALIDATION (post-Phase 1, responsive)
+═══════════════════════════════════════════════════
+
+To be written after Phase 1 completes, based on most-mentioned restaurants
+across confirmed sources. Queries take the form:
+  "[restaurant name] Strasbourg critique recommandation"
+Number of queries scales to sources confirmed (3+ sources → 3 queries).
+
+═══════════════════════════════════════════════════
+OUTPUT FILES
+═══════════════════════════════════════════════════
+
+OUTPUT_SEARCH_PLAN:    localbite-strasbourg-france-search-plan.txt
+OUTPUT_SEARCH_LOG:     localbite-strasbourg-france-search-log.txt
+OUTPUT_FETCH_LOG:      localbite-strasbourg-france-fetch-log.txt
+OUTPUT_WORKING:        localbite-strasbourg-france-working.json
+OUTPUT_RAW:            localbite-strasbourg-france-raw.json
+OUTPUT_FINAL:          localbite-strasbourg-france-2023-2026.json
+OUTPUT_AUDIT:          localbite-strasbourg-france-audit.txt
+OUTPUT_FAILED_SOURCES: localbite-strasbourg-france-failed-sources.txt

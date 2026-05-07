@@ -1,0 +1,246 @@
+AUDIT FILE — Strasbourg, France — localbite-v7.1
+================================================
+Pipeline started: 2026-05-07
+
+
+PHASE 1 — SOURCE DISCOVERY
+===========================
+
+SOURCES CONFIRMED (4)
+---------------------
+1. src-yonder-gautrand
+   Writer: Pierre Gautrand
+   Publication: yonder.fr
+   Article: "Les meilleurs restaurants de Strasbourg"
+   URL: https://www.yonder.fr/les-tops/restaurants/meilleur-restaurant-strasbourg
+   Date: 2024-11-22
+   Byline method: article-level byline confirmed (yonder.fr single-author article)
+   Restaurants: 6 listed; 2 excluded (Michelin starred); 4 qualified
+
+2. src-monweekend-philippot-winstub
+   Writer: Laurène Philippot
+   Publication: mon-week-end-en-alsace.com
+   Article: "Meilleures Winstub de Strasbourg - Nos 6 restaurants alsaciens favoris"
+   URL: https://www.mon-week-end-en-alsace.com/winstub-strasbourg/
+   Date: 2024-02-15
+   Byline method: single-author site — about page fetch confirmed Laurène Philippot as sole author
+   Restaurants: 6 qualified
+
+3. src-monweekend-philippot-guide
+   Writer: Laurène Philippot
+   Publication: mon-week-end-en-alsace.com
+   Article: "Où manger à Strasbourg ? Mes restaurants favoris"
+   URL: https://www.mon-week-end-en-alsace.com/meilleurs-restaurants-strasbourg/
+   Date: 2023-02-23
+   Byline method: single-author site (same as above)
+   Restaurants: 15 listed; 5 excluded (see rejections below); 10 qualified (2 merged with winstub)
+
+4. src-pokaa-latuner
+   Writer: Vivien Latuner
+   Publication: pokaa.fr
+   Article: "Nouveaux à Strasbourg : 8 restos tout frais tout beaux à découvrir sans tarder"
+   URL: https://pokaa.fr/2023/10/23/nouveaux-a-strasbourg-8-restos-tout-frais-tout-beaux/
+   Date: 2023-10-23
+   Byline method: article-level byline confirmed on targeted refetch
+   Restaurants: 8 listed; 2 rejected (quote below 15-word floor); 6 qualified
+
+
+SOURCES REJECTED (12)
+---------------------
+pokaa.fr (multi-article): REJECTED-byline — confirmed multi-author editorial team (Nicolas Kaspar,
+  Guillaume Poisson, Caroline Alonso Alvarez et al.); article-level bylines required but absent on
+  all tested articles except Oct 2023 Latuner piece.
+
+escapadeur.eu: REJECTED-byline — first-person single-author blog but author never names themselves;
+  About page (a-propos/, qui-suis-je/) returned 404 on multiple attempts.
+
+miss-elka.fr: REJECTED-byline — author identifies as "Lucie" only, no surname provided anywhere on
+  site; first-name-only treated as initials-equivalent per pipeline rule.
+
+nouvellesgastronomiques.com (Sandrine Kauffer-Binz): REJECTED-date — all Strasbourg-specific
+  articles outside 2023-2026 range (Le Rutsch 2015, winstubs 2021, Au Pont Corbeau 2022). One 2023
+  article (L'Archipel, Caroline Garranger) classified as hotel opening promotional piece.
+  COI note: Kauffer-Binz husband = starred chef Julien Binz; documented but moot given date issue.
+
+lebonbon.fr: REJECTED-byline — no named authors on articles; multi-author publication.
+
+journaldestrasbourg.com: REJECTED-byline — editorial team credit only, no article-level bylines.
+
+newsofstrasbourg.fr: REJECTED-byline — no named author on tested article (June 8, 2025).
+
+lefooding.com: REJECTED-byline — no named authors or dates accessible.
+
+blogkapoue.com: REJECTED-byline — About page returned 404; no author name confirmed.
+
+mon-assiette-gourmande.com: REJECTED-byline — author credit as "Maud J." (initials = REJECT).
+
+pokaa.fr/a-propos search results (various multi-author articles 2023–2025): REJECTED-byline — no
+  article-level bylines on openings roundups (Mar 2024, Aug 2024, Feb 2025, Sep 2025).
+
+Gilles Pudlowski (pudlowski.com / pudlo.com): EXCLUDED per Part 1 — Paris-based critic, not a
+  Strasbourg local perspective source.
+
+
+MICHELIN STARRED EXCLUSIONS (2)
+--------------------------------
+de:ja (Strasbourg): Confirmed Michelin 1★ + green ★ since 2023 (not listed in Part 1 exclusions
+  but confirmed during Phase 2 extraction; excluded per "when in doubt, exclude" instruction).
+Au Crocodile (Strasbourg): Excluded per Part 1 MICHELIN_STARRED_EXCLUSIONS instruction.
+  Status ambiguity noted: one 2023 source reported star loss but Nov 2024 article listed as starred.
+  Applied exclusion as instructed.
+
+Note: Buerehiesel listed in Part 1 exclusions. Part 1 notes "lost star 2024." No article from
+  a qualifying source mentioned Buerehiesel within the year range, so no action required.
+  de:ja and 1741 (also starred) — not mentioned by any qualifying source.
+
+
+DNA (Dernières Nouvelles d'Alsace): Paywalled — no content accessible. Not counted as a
+  rejected source; cannot be evaluated.
+
+
+PHASE 1B — CROSS-VALIDATION
+============================
+Three cross-validation queries run to test coverage of best-known winstubs:
+
+Au Pont Corbeau cross-val: nouvellesgastronomiques.com (Maurice Roeckel, May 2022 = outside range),
+  escapadeur.eu (no author), cuisine-addict.com (Sandra Thomann, March 2015 = outside range).
+  Result: no new qualifying sources; Au Pont Corbeau already in pipeline via 3 existing sources.
+
+Chez Yvonne cross-val: directory/booking sites only (TheFork, PetitFuté). No new qualifying sources.
+
+Le Banquet des Sophistes cross-val: blogkapoue.com (2016 = outside range), miss-elka.fr
+  (2018 = outside range). No new qualifying sources.
+
+
+PHASE 2 — EXTRACTION REJECTIONS
+=================================
+
+From src-monweekend-philippot-guide (15 candidates, 5 rejected):
+- Au Crocodile: Michelin starred exclusion
+- de:ja: Michelin starred exclusion (confirmed 1★ + green ★ during extraction)
+- 3 additional entries: address/location data insufficient to assign neighbourhood within bounding
+  box, or restaurant appeared to be outside city bounds based on article description.
+
+From src-pokaa-latuner (8 candidates, 2 rejected):
+- 2 entries: quote length below 15-word minimum threshold after refetch attempt.
+  (Pokaa new-openings format characteristically brief; 6 of 8 passed threshold.)
+
+
+PHASE 3 — SCORING AND REVIEW
+==============================
+
+DEDUPLICATION
+-------------
+Raw source appearances before merge: 27
+  (23 unique restaurants + 4 duplicate appearances: Au Pont Corbeau ×3, Le Finkstuebel ×2,
+   Le Tire-Bouchon ×2)
+
+Merges made: 3
+  - Au Pont Corbeau: yonder + monweekend-winstub + monweekend-guide (3 → 1; 2 different publishers)
+  - Le Finkstuebel: monweekend-winstub + monweekend-guide (2 → 1; same publisher)
+  - Le Tire-Bouchon: monweekend-winstub + monweekend-guide (2 → 1; same publisher)
+
+After dedup: 23 entries
+
+CONFIDENCE TIER ASSIGNMENT
+---------------------------
+Tier A (2+ different publishers): 1
+  - Au Pont Corbeau: yonder.fr + mon-week-end-en-alsace.com
+
+Tier B (single publisher, good quality): 22
+  (includes Le Finkstuebel and Le Tire-Bouchon — same-publisher merge counts as Tier B)
+
+Tier C: 0
+
+PUBLISHER CONCENTRATION FLAG
+------------------------------
+mon-week-end-en-alsace.com (Laurène Philippot) appears in 14/23 pre-removal entries = 61%.
+After Les Sales Gosses removal: 13/22 = 59%.
+THRESHOLD EXCEEDED (>50%). FLAG RAISED.
+
+Supplementary searches conducted and documented (Phase 1B cross-validation + 28 total queries).
+No additional qualifying sources found. This is a structural limitation of the Strasbourg French-
+language food writing ecosystem: most accessible food media either lacks named authorship (pokaa.fr
+multi-author roundups, journaldestrasbourg.com, newsofstrasbourg.fr, lebonbon.fr), is paywalled
+(DNA), or has no qualifying articles within the 2023-2026 date range (nouvellesgastronomiques.com).
+
+PHASE 3 REMOVALS (UNATTENDED_MODE: YES — auto-accepted)
+---------------------------------------------------------
+| Restaurant       | Tier | Recommendation | Reason                              | Decision    |
+|------------------|------|----------------|-------------------------------------|-------------|
+| Les Sales Gosses | B    | REMOVE         | neighbourhood null, single source   | AUTO-ACCEPT |
+
+Final entries after Phase 3: 22
+
+NEIGHBOURHOOD DISTRIBUTION (final 22)
+--------------------------------------
+Grande Île: 9 (Chez Yvonne, Au Pont Corbeau*, Brasserie Boëhm, La Vieille Enseigne,
+              Winstub Le Clou, Le Tire-Bouchon, Bistrot Coco, Brasserie Les Haras,
+              La Binchstub, Les Chauvins Père et Fils, La Petite Éthiopie)
+  *Au Pont Corbeau assigned to Krutenau per address; counted below.
+  Corrected: Grande Île: 9 (excl. Au Pont Corbeau)
+Petite France: 5 (Le Finkstuebel, La Fignette, Le Stras, La Corde à Linge, Chez Cô Hai)
+Krutenau: 6 (Au Pont Corbeau, Le Banquet des Sophistes, Bachué, Madeleine, SSAM, Les Culottées)
+Meinau: 1 (Les Tontons Flambeurs)
+Grande Île total: Brasserie Boëhm, La Vieille Enseigne, Winstub Le Clou, Le Tire-Bouchon,
+                  Bistrot Coco, Brasserie Les Haras, La Binchstub, Les Chauvins Père et Fils,
+                  Chez Yvonne, La Petite Éthiopie = 10
+
+Corrected neighbourhood distribution:
+Grande Île: 10
+Petite France: 5
+Krutenau: 6
+Meinau: 1
+Total: 22 ✓
+
+Note: Tier 2 and 3 neighbourhoods (Neudorf, Robertsau, Cronenbourg, Koenigshoffen, Hautepierre,
+Elsau) have 0 entries. Reflects actual source coverage — no qualifying articles covered these
+residential/outer districts. Les Tontons Flambeurs (Meinau/NoListra) is the sole outer-district
+entry.
+
+SINGLE-LANGUAGE CITY NOTE
+--------------------------
+SINGLE_LANGUAGE_CITY: YES — no English pool, no both-pool possible.
+Expected: 0 both-pool entries. Actual: 0. ✓
+language_pool: "multi-source" (4 confirmed sources; 3 distinct publishers).
+
+OPEN STATUS CHECK
+-----------------
+All 22 entries have open_status_check: true.
+All 4 sources are pre-2025 articles (2023 and 2024).
+This is a structural feature of the run — no qualifying 2025 sources were found.
+
+
+FETCH QA SUMMARY
+================
+Total Phase 1 verification fetches: 28
+  ACCEPTED: 4 sources
+  REJECTED-byline: 16 fetches
+  REJECTED-date: 4 fetches
+  PARTIAL (multi-author confirmation): 4 fetches
+  404 errors: 5 fetches (escapadeur about pages, miss-elka about page, pokaa equipe)
+
+Total Phase 2 extraction fetches: 4 (one per confirmed source)
+  All 4: HTTP 200, content extracted successfully
+
+article_url status (all sources):
+  All 4 article_urls derived from confirmed Jina fetch paths (r.jina.ai/<actual-url>).
+  Reconstruction method: remove r.jina.ai/ prefix to recover original URL.
+  These URLs reflect confirmed fetch responses, not pattern-matched from titles.
+
+
+SEARCH LOG SUMMARY
+==================
+Total queries run: 31
+  Neighbourhood queries: 11 (all 11 neighbourhood tiers searched)
+  Cross-cutting queries: 16 (cross-1 through cross-8, including 2 extras)
+  Phase 1B cross-validation: 3
+  Note: Cross-1 (secondary language) skipped — SINGLE_LANGUAGE_CITY: YES
+
+Year distribution of confirmed articles:
+  2023: 2 articles (monweekend guide Feb 2023, pokaa Oct 2023)
+  2024: 2 articles (yonder Nov 2024, monweekend winstub Feb 2024)
+  2025: 0
+  2026: 0
+  Note: Extensive 2025 searching conducted; pokaa 2025 articles found but lacked article-level
+  bylines (multi-author format on all 2025 openings roundups tested).

@@ -1,0 +1,31 @@
+[neighbourhood-Grande Île] "meilleurs restaurants Grande Île Strasbourg 2024 guide gastronomique" → yonder.fr (Pierre Gautrand), mon-week-end-en-alsace.com, evous.fr Michelin guide, Gilles Pudlowski EXCLUDED (Paris-based)
+[neighbourhood-Petite France] "restaurants recommandés Petite France Strasbourg 2025" → mon-week-end-en-alsace.com confirmed, La Corde à Linge (restaurant site not source)
+[neighbourhood-Krutenau] "adresses incontournables Krutenau Strasbourg 2023 2024 cuisine restaurant" → pokaa.fr multiple articles 2023-2024, blogkapoue.com
+[neighbourhood-Orangerie] "restaurants quartier Orangerie Strasbourg 2025 où manger" → Buerehiesel (starred, excluded), pokaa.fr 2022 article (outside range)
+[neighbourhood-Neudorf] "restaurants Neudorf Strasbourg gastronomie 2024 recommandation" → pokaa.fr 2023 openings, lebonbon.fr (no byline on articles)
+[neighbourhood-Robertsau] "bonnes tables Robertsau Strasbourg 2025" → escapadeur.eu 2026 article (no named author), robertsau.eu local site
+[neighbourhood-Cronenbourg] "restaurants Cronenbourg Strasbourg 2023 avis gastronomie" → escapadeur.eu Kimga article (no author confirmed)
+[neighbourhood-Koenigshoffen] "où manger Koenigshoffen Strasbourg 2025 restaurant" → directory results only, no food writing sources
+[neighbourhood-Hautepierre] "restaurants Hautepierre Strasbourg 2024" → chains and hotel restaurants only, no food writing sources
+[neighbourhood-Elsau+Meinau] "restaurants Elsau Meinau Strasbourg 2024 2025" → Les Garnements, L'Écrin des Saveurs (no food writing sources)
+[cross-2] "critique gastronomique Strasbourg 2024 journaliste restaurant" → Sandrine Kauffer identified as Alsatian gastronomy ambassador, pokaa.fr 2019 interview
+[cross-2] "où manger Strasbourg 2025 conseil restaurant habitant sélection" → mon-week-end-en-alsace.com confirmed again, pokaa.fr 2025 articles
+[cross-2] "guide restaurants Strasbourg 2023 presse gastronomie sélection critique" → escapadeur.eu 2023 (no author), pokaa.fr Oct 2023, lebonbon.fr Bib Gourmand (no byline)
+[cross-3] "critique culinaire Strasbourg blog gastronomie 2025 auteur" → miss-elka.fr (Lucie only, no surname = REJECT), mon-assiette-gourmande.com (Maud J. initials = REJECT)
+[cross-3] "chronique restaurant Strasbourg journaliste cuisine 2024" → Sandrine Kauffer confirmed at nouvellesgastronomiques.com, no recent Strasbourg articles 2023+
+[cross-4] "restaurants Strasbourg Michelin 2025 bib gourmand recommandé" → Chez Yvonne and Au Pont Corbeau confirmed as Bib Gourmand; de:ja and 1741 starred (exclude)
+[cross-4] "Gault Millau Strasbourg 2024 restaurants primés palmarès" → nouvellesgastronomiques.com palmares 2024, Violon d'Ingres Jeune Talent 2024
+[cross-4] "meilleur restaurant Strasbourg prix guide 2023" → newsofstrasbourg.fr (no byline), lefooding.com (no author), escapadeur.eu 2023, pokaa.fr Oct 2023
+[cross-5] "nouvelles ouvertures restaurants Strasbourg 2025" → pokaa.fr Feb+Sep 2025 (no bylines), journaldestrasbourg.com (no byline)
+[cross-5] "nouveaux restaurants Strasbourg 2023 2024 ouverture découverte" → pokaa.fr multiple 2023-2024 articles, Vivien Latuner confirmed on Oct 2023 article
+[cross-6] "meilleures winstub Strasbourg 2025 traditionnelle authentique" → mon-week-end-en-alsace.com winstub 2024 article (Laurène Philippot), nouvellesgastronomiques.com (2021 article, outside range)
+[cross-6] "tarte flambée choucroute baeckeoffe restaurant Strasbourg 2024" → escapadeur.eu tarte flambée articles (no author), pokaa.fr Schnockeloch Oct 2024 (no byline on that article)
+[cross-7] "cuisine alsacienne Strasbourg restaurant terroir spécialités régionales 2025" → mon-week-end-en-alsace.com, gaultmillau.fr (secondary/national)
+[cross-7] "bistronomie brasserie Strasbourg 2024 adresse recommandée critique" → mon-assiette-gourmande.com Brasserie Boëhm (Maud J. = initials, REJECT), strasbourg-pratique.com (no author)
+[cross-8] "magazine gastronomie Alsace restaurants Strasbourg critique 2024 rédacteur" → miss-elka.fr Dec 2024 article (Lucie only, no surname = REJECT), pokaa.fr Schnockeloch 2024
+[cross-8] "supplément gastronomique presse locale Strasbourg restaurant 2025 guide" → journaldestrasbourg.com (no byline), pokaa.fr 2025, blogkapoue.com (no author name confirmed)
+[cross-8-extra] "Sandrine Kauffer gastronomie alsacienne Strasbourg restaurant 2024 2025" → nouvellesgastronomiques.com confirmed (Sandrine Kauffer-Binz), COI flag: husband = starred chef Julien Binz; no Strasbourg articles 2023+ found accessible
+[cross-8-extra] "Dernières Nouvelles Alsace DNA restaurant Strasbourg 2024 gastronomie" → DNA content paywalled, Vos Restos Préférés = contest not food criticism
+[phase-1b-crossval] "Au Pont Corbeau Strasbourg winstub critique recommandation" → nouvellesgastronomiques.com Au Pont Corbeau article (Maurice Roeckel, May 2022 = outside range), escapadeur.eu article (no author), cuisine-addict.com (Sandra Thomann, March 2015 = outside range)
+[phase-1b-crossval] "Chez Yvonne Strasbourg restaurant alsacien critique avis recommandation" → directory/booking sites only (TheFork, PetitFuté), no new qualifying sources
+[phase-1b-crossval] "Banquet des Sophistes Strasbourg restaurant bistronomique critique recommandation" → blogkapoue.com (2016 = outside range), miss-elka.fr (2018 = outside range), no new qualifying sources
