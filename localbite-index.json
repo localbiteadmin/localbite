@@ -595,14 +595,14 @@
       "country": "France",
       "city_slug": "bordeaux-france",
       "pipeline": "localbite-v7.1",
-      "built": "2026-05-05",
-      "restaurant_count": 0,
-      "both_pool_count": 0,
-      "source_count": 0,
+      "built": "2026-05-07",
+      "restaurant_count": 16,
+      "both_pool_count": 1,
+      "source_count": 3,
       "file": "localbite-bordeaux-france-2023-2026.json",
-      "status": "coming_soon",
-      "open_status_check_count": 0,
-      "notes": "France batch — pipeline pending"
+      "status": "complete",
+      "open_status_check_count": 16,
+      "notes": ""
     },
     {
       "city": "Lyon",
