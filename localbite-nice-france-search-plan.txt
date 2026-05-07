@@ -1,0 +1,108 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+CITY: Nice, France
+CITY_SLUG: nice-france
+YEAR_RANGE: 2023-2026
+PRIMARY_LANGUAGE: fr
+SECONDARY_LANGUAGE: en
+DISAMBIGUATION: All queries must include "Nice France" or "Nice Alpes-Maritimes" to avoid confusion with the English adjective.
+
+TIER ASSIGNMENT (derived from KNOWN_NEIGHBORHOODS in Part 1):
+TIER_1 (central/tourist): Vieux-Nice, Promenade des Anglais, Carré d'Or, Port Lympia
+TIER_2 (residential/mixed): Libération, Cimiez, Musiciens, Madeleine, Saint-Roch, Pasteur, La Californie, Riquier
+
+NOTE: Phase 0 source confirmed — Jacques Gantié / Table Libre (jacquesgantie.com). Single-author site confirmed. Multiple Nice articles 2024-2026.
+
+===========================
+PART A — NEIGHBOURHOOD COVERAGE
+===========================
+
+TIER_1 — 2 queries each (FR + EN):
+
+A1-FR: restaurants Vieux-Nice gastronomie critique 2024 2025
+A1-EN: best restaurants Old Town Nice France 2024 2025
+
+A2-FR: bonnes tables Promenade des Anglais Nice France 2024
+A2-EN: restaurants Promenade des Anglais Nice France 2023 2024
+
+A3-FR: restaurants Carré d'Or Nice France gastronomie 2025 2026
+A3-EN: best restaurants Carré d'Or Nice France guide 2025
+
+A4-FR: bonnes tables Port Lympia Nice France 2024 2025
+A4-EN: restaurants Port Nice France guide 2023 2024
+
+TIER_2 — 2 queries each (FR + EN):
+
+A5-FR: restaurants Libération Nice France critique gastronomique 2024 2025
+A5-EN: restaurants Liberation district Nice France 2024
+
+A6-FR: bonnes tables quartier Cimiez Nice France 2024 2025
+A6-EN: restaurants Cimiez Nice France food guide 2023 2024
+
+A7-FR: restaurants quartier Musiciens Nice France 2025 2026
+A7-EN: restaurants Musiciens neighbourhood Nice France 2024
+
+A8-FR: bonnes tables Madeleine Nice France 2024 2025
+A8-EN: restaurants Madeleine Nice France guide 2023
+
+A9-FR: restaurants Saint-Roch Nice France gastronomie 2024 2025
+A9-EN: restaurants Saint-Roch Nice France 2023 2024
+
+A10-FR: bonnes tables Pasteur Nice France critique 2024 2025
+A10-EN: restaurants Pasteur Nice France food 2023
+
+A11-FR: restaurants La Californie Nice France 2024 2025
+A11-EN: restaurants Californie district Nice France 2024
+
+A12-FR: bonnes tables Riquier Nice France 2024 2025
+A12-EN: restaurants Riquier Nice France guide 2023 2024
+
+Total Part A: 24 queries
+
+===========================
+PART B — CROSS-CUTTING ANGLES
+===========================
+
+Cross-1 — City-wide EN (2 queries):
+C1a: best restaurants Nice France 2024 2025 food guide
+C1b: where to eat Nice France honest recommendations local 2023 2024
+
+Cross-2 — City-wide FR (3 queries):
+C2a: guide gastronomique Nice France restaurants 2025 2026
+C2b: meilleures tables Nice France quartiers résidents 2024
+C2c: critique gastronomique Nice France bonnes adresses 2023 2024
+
+Cross-3 — Generic writer-first (2 queries):
+C3a: food writer journalist Nice France restaurant recommendations 2024 2025
+C3b: critique gastronomique journaliste Nice France restaurateurs 2024 2025
+
+Cross-4 — Named awards (3 queries):
+C4a: Bib Gourmand Nice France Michelin 2024 2025
+C4b: Gault & Millau Nice Alpes-Maritimes 2024 2025
+C4c: Toques de Nice restaurants récompensés 2024 2025
+
+Cross-5 — Recent openings (2 queries):
+C5a: nouveaux restaurants Nice France ouverture 2025 2026
+C5b: new restaurant openings Nice France 2024 2025
+
+Cross-6 — Local food vocabulary (2 queries):
+[LOCAL_FOOD_VOCABULARY not defined in Part 1 — using Niçois cuisine terms]
+C6a: socca pissaladière restaurants authentiques Vieux-Nice
+C6b: cuisine niçoise restaurants traditionnels Nice France 2024 2025
+
+Cross-7 — Cuisine and community (2 queries):
+C7a: restaurants italiens niçois Nice France authentiques 2024 2025
+C7b: cuisine méditerranéenne restaurants Nice France 2023 2024
+
+Cross-8 — Publication categories FR (2 queries):
+C8a: magazine gastronomique Côte d'Azur restaurants Nice 2024 2025
+C8b: supplément gastronomie journal Nice France restaurants 2024
+
+Total Part B: 18 queries
+Total planned: 24 + 18 = 42 queries (within soft ceiling 45)
+
+YEAR DISTRIBUTION CHECK:
+- Earlier years (2023, 2024): A2-EN, A4-EN, A6-EN, A8-EN, A9-EN, A10-EN, A12-EN, C1b, C2c, C3a, C3b, C6b (approx. 12 queries reference 2023 or 2024)
+- Recent years (2025, 2026): A1-both, A3-both, A4-FR, A5-FR, A7-FR, A9-FR, C1a, C2a, C4a, C4b, C5a, C5b (approx. 12 queries reference 2025 or 2026)
+- No year term: A11-EN, C4c, C6a
+[year-distribution-check] PASSED — ~12 queries reference earlier years (2023-2024), ~12 queries reference recent years (2025-2026), ~3 queries have no year term.

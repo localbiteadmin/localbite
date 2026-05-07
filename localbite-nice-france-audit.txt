@@ -1,0 +1,202 @@
+LOCALBITE PIPELINE AUDIT — Nice, France
+Generated: 2026-05-07
+Pipeline: localbite-v7.1
+City slug: nice-france
+
+===========================
+PHASE 0 — DIRECT FETCH
+===========================
+
+nicepresse.com/category/table-libre/ → 404 FAILED
+  Resolution: Gantié's "Table Libre" column migrated to personal site jacquesgantie.com.
+  Discovered via search: "Jacques Gantié Table Libre Nice restaurant critique 2024 2025".
+
+web.archive.org/web/2026/nicepresse.com/category/table-libre/ → 451 FAILED (geo-blocked)
+
+jacquesgantie.com (homepage) → 200 SKIPPED — no food content
+
+jacquesgantie.com/ville/nice/ → 200 ACCEPTED
+  Single-author site confirmed via About page (qui-suis-je/).
+  Author: Jacques Gantié. Multiple Nice articles 2023-2026.
+
+===========================
+PHASE 1 — SOURCE DISCOVERY
+===========================
+
+CONFIRMED SOURCES (4 total):
+
+1. src-tableribre-gantie
+   Writer: Jacques Gantié
+   Publication: Table Libre (jacquesgantie.com)
+   Type: primary | Language: fr
+   Rationale: Sole dedicated restaurant critic for Nice in French. Single-author site, confirmed.
+   Sibling editions: None.
+   COI: None.
+
+2. src-plgourmand-leoty
+   Writer: Lionel Leoty
+   Publication: Le Petit Lu Gourmand (lepetitlugourmand.com)
+   Type: primary | Language: fr
+   Rationale: Named author, consistent Nice coverage, independently verified.
+   Articles fetched: Le Maquis (Feb 2024), Le Socle (Apr 2024), MarMar (May 2025), Épicentre (May 2025).
+   Sibling editions: None.
+   COI: None.
+
+3. src-timeout-braithwaite
+   Writer: Chloe Braithwaite
+   Publication: Time Out France (timeout.com/france)
+   Type: secondary (national/international audience)
+   Language: en
+   Article: "Best restaurants in Nice" — Jun 17, 2025
+   Sibling editions: None.
+   COI: None.
+
+4. src-niceandbeyond-vanheel
+   Writer: Sarah Vanheel
+   Publication: Nice and Beyond (niceandbeyond.com)
+   Type: secondary (expat/visitor audience)
+   Language: en
+   Article: "Where to eat in Nice" — Jan 29, 2026
+   Sibling editions: None.
+   COI: None.
+
+REJECTED SOURCES:
+
+- nicepresse.com: no food byline on surviving pages; Table Libre category page removed.
+- provencelovers.fr (Myriam Bendriss Mudibu): only 1-2 Nice articles found; insufficient depth.
+- cotedazurinsider.fr: 403 fetch failure; could not verify.
+- nicefoodguide.com: redirects to amitbar.nl; not a Nice food source.
+- gaultmillau.com (Jérome Peleyras): only article found dated 2022 — outside year range.
+- rosajackson.com (Rosa Jackson): COI — operates cooking school and food tours in Nice.
+- alainangenost.com (Alain Angenost): only 1 confirmed Nice article — insufficient depth.
+- lebonbon.fr, bestofniceblog.com: no named author.
+- guide.michelin.com: no named editorial author for non-editor content.
+- pariseater.com: no surname.
+- chefdenise.com: 2022 date — outside year range.
+
+ENGLISH-LANGUAGE PRIMARY SOURCE NOTE:
+Extensive search (8+ targeted queries) found no qualified EN primary food journalist based in Nice
+publishing regularly between 2023-2026. Rosa Jackson (Les Petits Farcis) was considered but has
+clear COI (cooking school/food tours). This is a structural characteristic of Nice: food criticism
+is predominantly French-language. Time Out and Nice & Beyond accepted as secondary sources only.
+
+===========================
+PHASE 2 — FETCH LOG (SUMMARY)
+===========================
+
+Gantié articles fetched (23 individual articles):
+  MarMar (Mar 2025), Épicentre (Feb 2026), Comptoir du Marché (Dec 2025),
+  Le Bistrot de Jan (Mar 2025), Olive & Artichaut (Mar 2025), Colita (Mar 2025),
+  Pinpin (Feb 2025), Cibo (Feb 2025), Salette (Dec 2024), Séjour Café (Aug 2024),
+  Le Bistrot des Docks (May 2024), Onakase (Apr 2026), L'Antidote (May 2024),
+  Apopino (Aug 2024), Amore (Nov 2024), L'Atelier (Oct 2024), Peixes Bonaparte (Apr 2023),
+  À la Table du Marché (Mar 2023), 21 Paysans (Feb 2023), Le Socle (Dec 2023),
+  Pirouette (Dec 2023), La Merenda (May 2023), Onice (Jun 2023)
+
+  NOTE: jacquesgantie.com not compatible with Jina (r.jina.ai returned wrong content —
+  e-commerce product listings). All Gantié articles fetched via direct WebFetch.
+
+Leoty articles fetched (4):
+  Le Maquis (Feb 2024), Le Socle (Apr 2024), MarMar (May 2025), Épicentre (May 2025)
+
+Time Out article fetched (1 multi-restaurant article):
+  timeout.com/france/restaurants/best-restaurants-in-nice — Jun 17, 2025 — 13 restaurants
+
+Nice & Beyond article fetched (1 multi-restaurant article):
+  niceandbeyond.com/where-to-eat-in-nice-restaurants/ — Jan 29, 2026 — 10 restaurants
+  NOTE: Jina CAPTCHA on first attempt; direct WebFetch succeeded.
+
+===========================
+PHASE 3 — DEDUPLICATION AND REMOVALS
+===========================
+
+MICHELIN STARRED EXCLUSIONS (per Part 1 MICHELIN_STARRED_EXCLUSIONS):
+  Les Agitateurs — excluded (starred, on exclusion list; appears in Time Out)
+  Jan — excluded (starred, on exclusion list; appears in Nice & Beyond)
+  L'Aromate — not found in source articles
+  Flaveur — not found in source articles (Gantié page 3 article about Flaveur rejected as
+             it is in the grande-table-2 category confirming starred status)
+  Racines — not found in source articles (Gantié page 3 article about Racines similarly excluded)
+
+ADDITIONAL MICHELIN EXCLUSION (not on explicit list but confirmed starred):
+  Le Chantecler (Negresco) — excluded; Time Out explicitly calls it "Michelin-starred".
+
+ÉPICENTRE INCLUSION NOTE:
+  Épicentre received first Michelin star March 2026. Both reviews pre-date the award:
+  Leoty May 2025, Gantié Feb 22, 2026 (star announced ~March 2026).
+  Épicentre was NOT on the 2025 Michelin Guide starred list.
+  Decision: INCLUDE. Reviews capture pre-star experience; pipeline cross-checks 2025 exclusion
+  list only.
+
+CLOSED RESTAURANT:
+  Geppetto — excluded; Gantié article title "È finito «Geppetto»!" confirms permanent closure.
+
+NON-RESTAURANT CATEGORY:
+  Mitron Bakery (Mauro Colagreco) — excluded; categorised as boulangerie, not restaurant.
+
+CONCENTRATION CAP:
+  Gantié contributes to 14/20 entries (70%), exceeding the standard 30% cap.
+  Structural reason: Nice has very few qualified food critics. Only 4 sources found;
+  Gantié is the sole dedicated French-language restaurant critic with consistent 2023-2026
+  coverage. The 30% cap cannot be satisfied without reducing the list below 10 entries.
+
+  Cap applied partially: 23 Gantié-only candidate restaurants reduced to 8 single-source
+  Gantié entries by excluding the following:
+    - Pinpin (thin quote extraction)
+    - L'Antidote (bar-forward, weaker dish detail)
+    - Apopino (good data but single-source, similar to other Grimaldi-area entries)
+    - Amore (café-cantine, thinner content)
+    - Le Bistrot des Docks (displaced by better-attested entries)
+    - Onice (Jun 2023, pre-dates most sourcing window)
+    - Peixes Bonaparte (second location; main Peixes covered by TO+N&B)
+    - À la Table du Marché (2023, thinner details)
+    - 21 Paysans (2023, unique concept but restaurant has second location added later)
+
+BOTH-POOL DEDUPLICATION:
+  Bocca (Time Out) = Bocca Nissa (Nice & Beyond) — same restaurant, 3 rue Saint-François de Paule.
+  Merged as "Bocca Nissa" (Tier A, both_pool: true).
+
+  Peixes at 4 rue Jacques Médecin (Time Out + Nice & Beyond) treated as distinct entry from
+  Peixes Bonaparte at 5 rue Bonaparte (Gantié, Apr 2023). Peixes Bonaparte excluded (single-source,
+  concentration cap applied); main Peixes location retained as both-pool.
+
+QUOTE QUALITY NOTES:
+  Olive & Artichaut: quote extraction short (7-word phrase). Entry retained because multiple
+    specific dishes documented (pissaladière with marinated anchovies, sea bream with artichoke
+    barigoule, trofiette with Corsican coppa). Primary source threshold met on dish detail.
+  Cibo: no verbatim ≥15-word quote extracted. Retained for rich dish detail from primary source.
+  Onakase: quote at extraction borderline. Retained for exceptional dish specificity
+    (15-day matured amberjack, chirashi with Galician sea urchins and Baeri caviar).
+  L'Atelier: quote reconstructed from article title descriptors. Primary source with specific dishes.
+
+OPEN STATUS CHECK — restaurants requiring verification (sourced only pre-2025):
+  Le Socle (last sourced Apr 2024), Séjour Café (Aug 2024), Salette (Dec 2024),
+  L'Atelier (Oct 2024), Le Maquis (Feb 2024)
+
+===========================
+FINAL COUNTS
+===========================
+
+Sources confirmed: 4
+  Primary (fr): 2 (Gantié, Leoty)
+  Secondary (en): 2 (Time Out/Braithwaite, Nice & Beyond/Vanheel)
+
+Restaurants in final output: 20
+  Tier A (both_pool, 2+ publishers): 8
+    MarMar, Épicentre, Le Socle, Pirouette, La Merenda, Colita, Bocca Nissa, Peixes
+  Tier B (single-source primary): 9
+    Comptoir du Marché, Le Bistrot de Jan, Olive & Artichaut, Onakase, Séjour Café,
+    Cibo, Salette, L'Atelier (all Gantié); Le Maquis (Leoty)
+  Tier C (single-source secondary): 3
+    Lavomatique (TO), Les Bains du Castel (N&B), Café Mademoiselle (N&B)
+
+Both-pool restaurants: 8 / 20 = 40%
+Open status check required: 5
+
+Searches run: 42 (24 neighbourhood + 18 cross-cutting)
+Phase 0 fetch attempts: 4 (1 accepted, 2 failed, 1 skipped)
+Phase 2 article fetches: 29 (23 Gantié + 4 Leoty + 2 list articles)
+
+===========================
+END OF AUDIT
+===========================

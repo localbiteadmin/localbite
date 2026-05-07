@@ -1,0 +1,4 @@
+[p0] "nicepresse.com/category/table-libre/" → 404 | —ch | FAILED — category page removed
+[p0] "web.archive.org/web/2026/nicepresse.com/category/table-libre/" → 451 | —ch | FAILED — geo-blocked in Wayback
+[p0] "nicepresse.com" → 200 | ~3000ch | SKIPPED — no food content on homepage
+[p0] "jacquesgantie.com/ville/nice/" → 200 | good | ACCEPTED — Jacques Gantié single-author confirmed, multiple Nice articles 2023-2026

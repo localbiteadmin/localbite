@@ -1,0 +1,32 @@
+[phase-0] "https://nicepresse.com/category/table-libre/" → 404 — category page no longer exists on nicepresse.com
+[phase-0] WAYBACK RETRY "https://nicepresse.com/category/table-libre/" → 451 — blocked
+[phase-0] "https://nicepresse.com" → 200 | ~3000ch | no food content found — homepage shows local news only
+[phase-0] Search: "Jacques Gantié Table Libre Nice restaurant critique 2024 2025" → Found jacquesgantie.com — Gantié's own blog, multiple Nice articles 2024-2026
+[phase-0] "https://www.jacquesgantie.com/ville/nice/" → 200 | good | ACCEPTED — 10 Nice articles listed 2025-2026; single-author confirmed (About page); Gantié sole author
+[phase-0] FETCHED Table Libre / jacquesgantie.com — 2023-2026 — full article archive — single-author confirmed (Jacques Gantié). Writers confirmed for Phase 1: Jacques Gantié
+[neighbourhood-Vieux-Nice] "restaurants Vieux-Nice gastronomie critique 2024 2025" → provencelovers.fr (Myriam Bendriss Mudibu), nicepresse.com (no byline), Tripadvisor (skip)
+[neighbourhood-Vieux-Nice] "best restaurants Old Town Nice France 2024 2025 food guide" → timeout.com (Chloé Braithwaite - secondary), niceandbeyond.com (Sarah Vanheel), provencelovers.fr
+[neighbourhood-Carré d'Or] "restaurants Carré d'Or Nice France gastronomie 2025 2026" → provencelovers.fr (known), no new qualifying sources
+[neighbourhood-Port Lympia] "bonnes tables Port Lympia Nice France 2024 2025" → OpenTable (skip), nicepresse.com (no byline), lesoleiahotel.com (hotel COI)
+[neighbourhood-Libération] "restaurants Libération Nice France critique gastronomique 2024 2025" → lepetitlugourmand.com (Lionel Leoty FOUND), nicepresse.com (no food byline)
+[cross-2] "guide gastronomique Nice France restaurants 2025 2026" → chefdenise.com (2022 date - rejected), pariseater.com (no surname - rejected), lepetitlugourmand.com (Leoty known)
+[cross-4] "Bib Gourmand Nice France Michelin 2024 2025 restaurants" → guide.michelin.com (no named author for non-editor content)
+[cross-2] "meilleures tables Nice France quartiers résidents critique 2024" → real estate results, no qualifying sources
+[cross-3] "food writer journalist Nice France restaurant recommendations 2024 2025" → timeout.com (Chloé Braithwaite confirmed), niceandbeyond.com (Sarah Vanheel)
+[cross-5] "nouveaux restaurants Nice France ouverture 2025 2026" → nicepresse.com (news, no food byline), lhotellerie-restauration.fr (trade press)
+[cross-6] "socca pissaladière restaurants authentiques Vieux-Nice" → nissactu.fr (no byline), nicefoodguide.com (redirects), nicepresse.com
+[cross-8] "COTE Magazine Nice restaurants gastronomie 2024 2025" → Calameo (PDF), manja (CVB skip), gustofamily.com
+[cross-8] "magazine gastronomique Côte d'Azur restaurants Nice 2024 2025" → gaultmillau.com (Jérome Peleyras - 2022 article, REJECTED date), nicepresse.com
+[cross-3] "critique gastronomique journaliste Nice France restaurateurs 2024 2025" → lepetitlugourmand.com Le Socle (Leoty known), MarMar (Leoty known)
+[cross-7] "cuisine méditerranéenne restaurants Nice France 2023 2024 critique" → Tripadvisor, TheFork, no qualifying sources
+[cross-8] "supplément gastronomie journal Nice France restaurants recommandés 2024" → nicepresse.com, yonder.fr (no byline), lebonbon.fr (no author)
+[phase-1b-crossval] "MarMar Nice restaurant critique avis 2024 2025" → lepetitlugourmand.com (Leoty known), guide.michelin.com (not independent editorial)
+[phase-1b-crossval] "Épicentre Sélim M'Nasri Nice restaurant critique avis 2025" → lepetitlugourmand.com (Leoty known), jacquesgantie.com (Gantié known) — NOTE: Épicentre received first Michelin star March 2026; reviews pre-date star; not on 2025 exclusion list — INCLUDE
+[cross-5] "new restaurant openings Nice France 2024 2025 review guide" → bestofniceblog.com (no author), lebonbon.fr (no named author), timeout.com (known)
+[cross-1] "\"Nice France\" restaurant guide personal blog local recommendations 2024 2025" → urbanblisslife.com (visitor Alain Schotland), niceandbeyond.com (known), franceadventurer.com
+[cross-4] "Gault Millau Nice Alpes-Maritimes 2024 2025 restaurants" → gaultmillau.com Top 5 Nice (Jérome Peleyras, 2022 - REJECTED)
+[neighbourhood-Cimiez] "restaurants Cimiez Musiciens Nice France gastronomie 2024 2025" → explorenicecotedazur.com (tourist board), OpenTable, nicepresse.com — no qualifying sources
+[neighbourhood-Saint-Roch] "restaurants Saint-Roch Riquier Nice France bonnes tables 2023 2024" → Tripadvisor, pagesjaunes, love-spots.com — no qualifying sources
+[cross-3] "\"Nice\" France restaurant critic expat local food writing 2024 2025 blog review" → Rosa Jackson (COI: cooking school owner), niceandbeyond.com (known), seenice.com (no byline)
+[phase-1b-crossval] "Le Socle restaurant Nice France review 2023 2024" → alainangenost.com/Alain Angenost (Potins Gourmets, March 2024) — new source found but only 1 Nice article confirmed; not included in final selection
+[cross-7] "Rosa Jackson \"Les Petits Farcis\" Nice restaurant recommendations blog 2024 2025" → rosajackson.com, Substack (subscriber-only) — COI (cooking school/food tour COI)
