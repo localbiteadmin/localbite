@@ -433,7 +433,7 @@
     {
       "id": "les-planeurs",
       "name": "Les Planeurs",
-      "neighbourhood": null,
+      "neighbourhood": "Arnaud-Bernard",
       "name_variants": [],
       "opening_year": null,
       "price_level": 2,
