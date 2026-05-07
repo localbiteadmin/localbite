@@ -1,0 +1,22 @@
+[p0] "https://www.papillesetpupilles.fr/pays/restaurants-a-bordeaux/" → 200 | 127400ch | ACCEPTED — Anne Lataillade, single-author site confirmed, section hub with 40+ dated restaurant reviews 2023-2026
+[p2] "https://www.papillesetpupilles.fr/pays/restaurants-a-bordeaux/" → 200 | 89847ch | ACCEPTED — hub page, 40+ dated restaurant articles 2023-2026
+[p2] "https://www.yonder.fr/gastronomie/restaurants/les-meilleurs-restaurants-de-bordeaux-france" → 200 | 18500ch | ACCEPTED — Alicia Dorey, Oct 2023, 13 non-starred restaurants with specific dish quotes
+[p2] "https://www.gillespudlowski.com/recherche/0/0/France/Aquitaine/Bordeaux/" → 200 | 7850ch | ACCEPTED — listing page, 109 Bordeaux entries; individual articles fetched separately
+[p2] "https://www.papillesetpupilles.fr/2024/02/bistrot-maurice-bordeaux.html/" → 200 | 8200ch | ACCEPTED — Bistrot Maurice, Anne Lataillade, 2024-02-01
+[p2] "https://www.papillesetpupilles.fr/2023/10/restaurant-kedem-bordeaux.html/" → 200 | 8200ch | ACCEPTED — Kedem, Anne Lataillade, 2023-10-24
+[p2] "https://www.papillesetpupilles.fr/2024/11/restaurant-panaille-bordeaux.html/" → 200 | 8200ch | ACCEPTED — Panaille, Anne Lataillade, 2024-11-26
+[p2] "https://www.papillesetpupilles.fr/2023/01/le-cent-33-restaurant-gastronomique-a-bordeaux.html/" → 200 | 8200ch | ACCEPTED — Le Cent 33, Anne Lataillade, 2023-01-27
+[p2] "https://www.papillesetpupilles.fr/2024/02/son-restaurant-bordeaux-une-cuisine-creative-et-ludique.html/" → 200 | 8200ch | ACCEPTED — Son' restaurant, Anne Lataillade, 2024-02-19
+[p2] "https://www.papillesetpupilles.fr/2024/10/moelleuses-et-persillees-lexcellent-steakhouse-bordelais.html/" → 200 | 8200ch | ACCEPTED — Moelleuses et Persillées, Lataillade, 2024-10-11
+[p2] "https://www.papillesetpupilles.fr/2024/09/restaurant-lilhome-cuisine-creative-bordeaux.html/" → 200 | 18500ch | ACCEPTED — Lil'home, Lataillade, 2024-09-11
+[p2] "https://www.gillespudlowski.com/360361/restaurants/bordeaux-lexquis-bistrot-des-capucins" → 200 | 2800ch | ACCEPTED — Au Bistrot, Pudlowski, 2023-11-11
+[p2] "https://www.gillespudlowski.com/370264/restaurants/bordeaux-les-gourmandises-du-bistrot-maurice" → 200 | 7850ch | ACCEPTED — Bistrot Maurice, Pudlowski, 2024-04-03
+[p2] "https://www.gillespudlowski.com/370053/restaurants/bordeaux-ecolos-recoltants" → 200 | 2800ch | ACCEPTED — Les Récoltants, Pudlowski, 2024-03-31
+[p2] "https://www.gillespudlowski.com/370542/restaurants/bordeaux-la-brasserie-de-lucas" → 200 | 2800ch | ACCEPTED — Brasserie Maillard, Pudlowski, 2024-04-07
+[p2] "https://www.gillespudlowski.com/370088/restaurants/bordeaux-decouvrez-la-zoologie" → 200 | 2800ch | ACCEPTED — La Zoologie, Pudlowski, 2024-04-01 (hotel restaurant)
+[p2] "https://www.gillespudlowski.com/370377/restaurants/bordeaux-connaissez-vous-gina" → 200 | 2800ch | ACCEPTED — Gina/Hôtel Renaissance, Pudlowski, 2024-04-09 (hotel restaurant)
+[p2] "https://www.papillesetpupilles.fr/2024/01/rocha-le-restaurant-de-jean-luc-rocha-bordeaux.html/" → 200 | 8200ch | REJECTED-geo — address: 165 Av. d'Eysines, Le Bouscat (separate municipality, outside Bordeaux boundary)
+[p2] "https://www.papillesetpupilles.fr/2024/09/mama-dumpling-restaurant-chinois-bordeaux.html/" → 200 | 8200ch | REJECTED — concentration cap applied (Lataillade over 30%); AI-translated quote
+[p2] "https://www.papillesetpupilles.fr/2023/12/inima-bordeaux-le-restaurant-gastronomique-doxana-cretu.html/" → 403 | —ch | SKIPPED — CAPTCHA blocked
+[p2] "https://www.papillesetpupilles.fr/2025/03/restaurant-madame-b-hotel-burdigala-bordeaux.html/" → 403 | —ch | SKIPPED — CAPTCHA blocked (also hotel restaurant)
+[p2] "https://www.papillesetpupilles.fr/2024/02/zoologie-un-hotel-deux-restaurants-et-un-spa-a-bordeaux.html/" → 403 | —ch | SKIPPED — CAPTCHA blocked

@@ -1,0 +1,38 @@
+[phase-0] "https://www.papillesetpupilles.fr/pays/restaurants-a-bordeaux/" → Hub page, 127400 chars, Anne Lataillade confirmed Bordeaux-resident author, 40+ reviews dated 2023-2026. ACCEPTED as Phase 0 source.
+[neighbourhood-Triangle-d-Or] "meilleurs restaurants Triangle d'Or Bordeaux 2024 guide gastronomique" → Found petitfute.co.uk, aperobordelais.fr, les-escapades.fr; no new named-author primary source
+[neighbourhood-Triangle-d-Or] "best restaurants city centre Bordeaux France 2024 food guide" → Found luxeadventuretraveler.com, bontraveler.com; visitor-based, no qualifying named author
+[neighbourhood-Saint-Pierre] "restaurants Saint-Pierre Place du Parlement Bordeaux critique gastronomique 2023" → Found quoifaireabordeaux.com (no author), on-part-a-bordeaux.com (2021); no qualifying source
+[neighbourhood-Chartrons] "restaurants quartier Chartrons Bordeaux bonnes adresses 2025" → Found lebonbon.fr (no author), bordeauxsecret.com (CAPTCHA-blocked); no qualifying source confirmed
+[neighbourhood-Saint-Pierre] "where to eat Saint-Pierre Bordeaux 2024 recommendations" → Repeat of prior results; no new qualifying source
+[neighbourhood-Chartrons] "best restaurants Chartrons Bordeaux neighbourhood guide 2024" → Lost in Bordeaux (COI-rejected), bontraveler.com (visitor); no qualifying source
+[neighbourhood-Capucins-Sainte-Croix] "restaurants Capucins Sainte-Croix Bordeaux adresses locales 2024" → gillespudlowski.com Capucins article surfaced; candidate for verification
+[neighbourhood-Saint-Michel] "bonnes tables quartier Saint-Michel Bordeaux 2023 2024" → bordeauxsecret.com (CAPTCHA), lebonbon.fr (no author); no qualifying source confirmed
+[neighbourhood-Capucins-Sainte-Croix] "eating out Capucins Sainte-Croix Bordeaux local guide 2023" → thegoodlifefrance.com, lostinbordeaux.com (COI); no qualifying source
+[neighbourhood-Saint-Michel] "restaurants Saint-Michel Bordeaux guide 2024" → bordeauxsecret.com (CAPTCHA), lebonbon.fr (no author); no qualifying source confirmed
+[neighbourhood-Bacalan] "restaurants Bacalan Bordeaux quartier nouvelle cuisine 2025" → vertbordeaux.fr (COI-adjacent), cafemaritime.fr (venue website); no qualifying source
+[neighbourhood-Bordeaux-Maritime] "restaurants Bordeaux Maritime Darwin quartier 2024 2025" → lespavesbordelais.fr (AI-generated content, rejected); no qualifying source
+[neighbourhood-Bordeaux-Maritime] "eating Bordeaux Maritime neighbourhood restaurants 2023" → ediblereading.com (UK-based), thegoodlifefrance.com (UK-based visitor); no qualifying source
+[neighbourhood-Meriadeck] "restaurants Mériadeck Bordeaux bonnes adresses 2024" → quoifaireabordeaux.com (no author), sogirlyblog.com noted; no qualifying source confirmed
+[neighbourhood-Meriadeck] "Meriadeck Bordeaux restaurant recommendations 2023 2024" → bougerabordeaux.com (commercial, no named author); no qualifying source
+[neighbourhood-Saint-Seurin-Fondaudege] "restaurants Saint-Seurin Fondaudège Bordeaux critique 2024 2025" → quoifaireabordeaux.com (no author); no qualifying source
+[neighbourhood-Saint-Seurin-Fondaudege] "dining Saint-Seurin Bordeaux food guide 2024" → quoifaireabordeaux.com (no author); no qualifying source
+[neighbourhood-Cauderan] "restaurants Caudéran Bordeaux bonnes tables 2024" → quoifaireabordeaux.com (no author), bistromimi.fr noted; no qualifying source confirmed
+[cross-1] "best restaurants Bordeaux France 2025 local food guide" → kweezine.blog (no named author, rejected), timeout.com (rejected per Part 1 addendum)
+[cross-1] "where to eat in Bordeaux honest food recommendations 2023 2024" → frenchly.us (US-based visitor), thegoodlifefrance.com (UK-based); no qualifying source
+[cross-2] "meilleures tables Bordeaux 2025 chronique gastronomique" → yonder.fr Alicia Dorey Oct 2023 surfaced; candidate ACCEPTED as secondary
+[cross-2] "où manger à Bordeaux comme un local adresses de quartier 2024" → lisagermaneau.com (2017 article, outside range); voyage-en-francais.fr ("Alex" only); no qualifying source
+[cross-2] "restaurants Bordeaux 2023 sélection journaliste gastronomique" → camilleinbordeaux.fr (first name only, no surname); yonder.fr Alicia Dorey confirmed; gillespudlowski.com surfaced
+[cross-3] "food writer Bordeaux restaurant column guide 2024 2025" → gillespudlowski.com confirmed as candidate; eastendtastemagazine.com (UK visitor); no new qualifying source
+[cross-3] "critique gastronomique Bordeaux blog indépendant 2023 2025" → gillespudlowski.com ACCEPTED as secondary; kweezine.blog (no author); camilleinbordeaux.fr (no surname)
+[cross-4] "Gault Millau Bordeaux Gironde 2025 nouveaux bistrots restaurants" → gaultmillau.com (guide body itself); lebonbon.fr (no author); no new named-author source
+[cross-4] "Bib Gourmand Bordeaux Gironde 2024 2025 sélection Michelin" → Confirms Kedem, Madame B, Panaille as Bib Gourmand 2025; Racines by Daniel Gallacher Bib 2024; no new named-author source
+[cross-4] "50 Best restaurants Bordeaux France 2024 classement" → theworlds50best.com/discovery Bordeaux listings; no named author guide article
+[cross-5] "nouvelles ouvertures restaurants Bordeaux 2024 2025 adresses" → quoifaireabordeaux.com (no author), lespavesbordelais.fr (AI-generated); no qualifying source
+[cross-5] "new restaurant openings Bordeaux 2025 guide" → kweezine.blog (no author); lefooding.com Bordeaux search results; no new named-author source
+[cross-7] "cuisine bistronomique Bordeaux 2023 2024 nouvelles tables" → lespavesbordelais.fr (AI-generated); viticulture-oenologie-formation.fr (wine school SEO content); no qualifying source
+[cross-8] "magazine gastronomique Bordeaux Gironde critique restaurants 2024" → bulletinbordelais.eu (paywall, no author visible); bougerabordeaux.com (commercial, no named author); no qualifying source
+[cross-8] "supplément gastronomie journal régional Bordeaux 2024 restaurants" → lespavesbordelais.fr (AI-generated, 6 results); no qualifying source
+[stopping-rule] triggered — 35 queries completed, last 12 consecutive queries returned no qualifying new sources beyond already-identified candidates; proceeding to Step 3 verification
+[phase-1b-crossval] "Le Cent 33 Bordeaux recommandation critique gastronomique" → Confirms Pudlowski article at gillespudlowski.com/critiques/le-cent-33 AND Lataillade (papillesetpupilles.fr/2023/01) — cross-validated by 2 independent sources; NOTE: Le Cent 33 received Michelin 1★ in 2026 (post-coverage-period)
+[phase-1b-crossval] "Bistrot Maurice Bordeaux recommandation critique locale" → Confirms Pudlowski article at gillespudlowski.com/370264; francetoday.com Alexander Lobrano Apr 2024 surfaced; Lobrano excluded (secondary cap met, covers only 1 restaurant)
+[phase-1b-crossval] "Soif Bordeaux bar à vin recommandation critique 2024" → toutlevin.com article found; no named author in quick check; Soif appears in Dorey/Yonder article; confirmed cross-source

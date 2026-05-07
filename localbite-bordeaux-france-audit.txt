@@ -1,0 +1,184 @@
+PIPELINE AUDIT — Bordeaux, France
+Pipeline: localbite-v7.1
+Run date: 2026-05-06
+─────────────────────────────────────────────────────────────────────
+
+SECTION 1 — SOURCES CONFIRMED (3 of 3 named-author; 0 EN structural gap)
+
+  src-1: Anne Lataillade — papillesetpupilles.fr (PRIMARY)
+    Hub page: https://www.papillesetpupilles.fr/pays/restaurants-a-bordeaux/
+    Phase 0 direct fetch: 127,400 chars | Hub re-fetched Phase 2: 89,847 chars
+    Individual articles fetched: 7 accepted + 1 cap-excluded (Mama Dumpling) + 1 geo-excluded (Ro'Cha)
+    Note: Single-author site; Anne Lataillade confirmed as Bordeaux-resident author via About page
+    CAPTCHA blocks: Inima (403), Madame B (403), Zoologie blog post (403) — skipped, no data extracted
+
+  src-2: Gilles Pudlowski — gillespudlowski.com (SECONDARY)
+    Hub: https://www.gillespudlowski.com/recherche/0/0/France/Aquitaine/Bordeaux/
+    Fetch: 7,850 chars | 109 Bordeaux entries in database
+    Individual articles fetched: 6 accepted (gp-01 through gp-06)
+    Found via: Phase 1 cross-cutting search [cross-3]
+
+  src-3: Alicia Dorey — yonder.fr (SECONDARY)
+    Article: https://www.yonder.fr/gastronomie/restaurants/les-meilleurs-restaurants-de-bordeaux-france
+    Fetch: 18,500 chars | Oct 2023 | 13 restaurants covered
+    5 accepted after concentration cap; 7 excluded (cap)
+    Found via: Phase 1 cross-cutting search [cross-2]
+
+  Secondary cap: 2 of 2 slots used (Pudlowski + Dorey). No further secondary sources eligible.
+
+  EN structural gap: confirmed pre-research finding. All EN candidates rejected:
+    — Lost in Bordeaux: commercial conflict of interest (hotel/tour partnerships)
+    — SIP Wine Blog: COI (wine tour operator)
+    — Aquitaine Travel Guide: COI
+    — kweezine.blog: no named author
+    — France Today / Alexander Lobrano: secondary cap already met
+    — thegoodlifefrance.com / bontraveler.com: visitor-based, no named local author
+
+─────────────────────────────────────────────────────────────────────
+
+SECTION 2 — GEOGRAPHIC EXCLUSIONS
+
+  Ro'Cha (Lataillade, 2024-01)
+    Address: 165 Av. d'Eysines, 33110 Le Bouscat
+    Reason: Le Bouscat is a separate municipality (postal code 33110, not in GEOGRAPHIC_BOUNDARY_INCLUDE).
+    Despite physical adjacency to Bordeaux proper, Le Bouscat is outside the pipeline boundary.
+    Chef: Jean-Luc Rocha
+    Working file entry: ppp-09 (excluded: true)
+
+─────────────────────────────────────────────────────────────────────
+
+SECTION 3 — CONCENTRATION CAP DECISIONS
+
+  Cap applied: 30% of total Tier A+B entries may be single-source from one writer.
+  Total restaurants (post-cap): 17
+  Cap ceiling per writer: 17 × 0.30 = 5.1 → max 5 single-source entries per writer
+
+  Lataillade:
+    Both-pool contributions: 1 (Bistrot Maurice, also covered by Pudlowski)
+    Both-pool contributions: 1 (Le Cent 33, also covered by Dorey)
+    Single-source candidates: Kedem, Panaille, Son', Moelleuses et Persillées, Lil'home, Mama Dumpling
+    Accepted single-source: 5 (Kedem, Panaille, Son', Moelleuses et Persillées, Lil'home)
+    Cap-excluded: 1 (Mama Dumpling — also had AI-translated quote at extraction time)
+    Net Lataillade contribution: 7 total (2 both-pool + 5 single-source) — within cap
+
+  Pudlowski:
+    Both-pool contributions: 1 (Bistrot Maurice, also covered by Lataillade)
+    Single-source candidates: Au Bistrot, Les Récoltants, Brasserie Maillard, La Zoologie, Gina
+    Accepted single-source: 5 (all 5 accepted)
+    Cap-excluded: 0
+    Net Pudlowski contribution: 6 total (1 both-pool + 5 single-source) — within cap
+
+  Dorey:
+    Both-pool contributions: 1 (Le Cent 33, also covered by Lataillade)
+    Single-source candidates: Mazal, Symbiose, Bibi, Soif, Café Eriu, Baston, Chiocchio, Primi, Echo, Gaùta, Tn'BAR, Samos
+    Accepted single-source: 5 (Mazal, Symbiose, Bibi, Soif, Café Eriu)
+    Cap-excluded: 7 (Baston, Chiocchio, Primi, Echo, Gaùta, Tn'BAR, Samos)
+    Note: Selection priority given to restaurants with most specific quotes and neighbourhood diversity.
+    Net Dorey contribution: 6 total (1 both-pool + 5 single-source) — within cap
+
+─────────────────────────────────────────────────────────────────────
+
+SECTION 4 — EXTRACTION-TIME REJECTIONS
+
+  Mama Dumpling (Lataillade, 2024-09)
+    URL: https://www.papillesetpupilles.fr/2024/09/mama-dumpling-restaurant-chinois-bordeaux.html/
+    Primary reason: concentration cap (Lataillade single-source slots full)
+    Secondary reason: quote was AI-translated from French to English at extraction time (tool artefact)
+    Working file entry: ppp-08 (excluded: true)
+
+  Inima (Lataillade, date unknown) — CAPTCHA 403, no data extracted
+    URL: https://www.papillesetpupilles.fr/2023/12/inima-bordeaux-le-restaurant-gastronomique-doxana-cretu.html/
+    Also: hotel restaurant flag would have applied
+
+  Madame B / Hôtel Burdigala (Lataillade, 2025-03) — CAPTCHA 403, no data extracted
+    URL: https://www.papillesetpupilles.fr/2025/03/restaurant-madame-b-hotel-burdigala-bordeaux.html/
+    Also: hotel restaurant — would have required RIAD_RULE assessment (SKIP for Bordeaux)
+
+  La Zoologie blog post (Lataillade, date unknown) — CAPTCHA 403, no data extracted
+    URL: https://www.papillesetpupilles.fr/2024/02/zoologie-un-hotel-deux-restaurants-et-un-spa-a-bordeaux.html/
+    Note: La Zoologie restaurant accepted via Pudlowski article (gp-05)
+
+─────────────────────────────────────────────────────────────────────
+
+SECTION 5 — SOURCE REJECTION LOG (Phase 1 search)
+
+  lespavesbordelais.fr — REJECTED: AI-generated content; byline "gcope"/Pierre François
+    (sociologist/economist, not food critic); suspicious statistics; AI writing patterns
+
+  bordeauxsecret.com — CAPTCHA blocked on all fetch attempts; no data extracted
+
+  lebonbon.fr — REJECTED: no named author on restaurant coverage
+
+  Lost in Bordeaux — REJECTED: commercial conflict of interest (tour/hotel partner relationships)
+
+  kweezine.blog — REJECTED: no named author
+
+  France Today / Alexander Lobrano — EXCLUDED: secondary source cap already met (Pudlowski + Dorey)
+    Note: Lobrano covered only 1 Bordeaux restaurant (Bistrot Maurice Apr 2024) and would have
+    added no new restaurants to the pool
+
+  thegoodlifefrance.com — REJECTED: UK-based visitor perspective, not locally-based author
+
+  timeout.com — REJECTED: excluded per Part 1 addendum
+
+  camilleinbordeaux.fr — REJECTED: first name only (Camille), no surname found; fails
+    named-author requirement
+
+─────────────────────────────────────────────────────────────────────
+
+SECTION 6 — MICHELIN NOTES
+
+  Michelin-excluded restaurants (from Part 1 exclusion list):
+    L'Observatoire du Gabriel (2★), Maison Nouvelle (2★),
+    Le Quatrième Mur (1★), Soléna (1★), Racines (1★), La Table du Lavoir (1★)
+  None of these appeared in qualifying source articles during extraction.
+
+  Le Cent 33 — 1★ awarded in 2026 (post-coverage period):
+    Articles covering Le Cent 33 are from Jan 2023 (Lataillade) and Oct 2023 (Dorey).
+    At time of coverage, Le Cent 33 was not Michelin-starred. Included in pipeline.
+    The 2026 star is noted in the description field. Post-pipeline reviewer may choose to exclude.
+
+  Kedem — Michelin Bib Gourmand 2025:
+    Not Michelin-starred (Bib Gourmand ≠ star). Included. Noted in description.
+
+  Panaille — Michelin Bib Gourmand 2025:
+    Not Michelin-starred. Included. Noted in description.
+
+─────────────────────────────────────────────────────────────────────
+
+SECTION 7 — BOTH-POOL RESTAURANTS
+
+  Bistrot Maurice
+    Source 1: Anne Lataillade — papillesetpupilles.fr (2024-02-01)
+    Source 2: Gilles Pudlowski — gillespudlowski.com (2024-04-03)
+    Publishers: independent primary blog + independent secondary critic
+    Both-pool confirmed: YES (2 independent publishers)
+
+  Le Cent 33
+    Source 1: Anne Lataillade — papillesetpupilles.fr (2023-01-27)
+    Source 2: Alicia Dorey — yonder.fr (2023-10-15)
+    Publishers: independent primary blog + independent secondary guide
+    Both-pool confirmed: YES (2 independent publishers)
+
+─────────────────────────────────────────────────────────────────────
+
+SECTION 8 — OPEN STATUS CHECK
+
+  All 17 restaurants have open_status_check: true.
+  All articles are from 2023 or 2024, making open status verification advisable before deployment.
+  Recommended check: Google Maps / website for each restaurant, prioritising
+  those with 2023 article dates (Lataillade Le Cent 33, Kedem; all 5 Dorey restaurants).
+
+─────────────────────────────────────────────────────────────────────
+
+SECTION 9 — TRACEABILITY
+
+  All 17 accepted restaurants trace to at least one confirmed fetch (HTTP 200 + chars logged).
+  No restaurant was derived from a CAPTCHA-blocked or 403 source alone.
+  No article_url values were inferred or pattern-matched post-compaction.
+  Hub page URLs (Lataillade hub, Pudlowski listing) used as source-level article_url;
+  individual article URLs stored per raw_extraction entry in working file.
+
+─────────────────────────────────────────────────────────────────────
+
+END OF AUDIT

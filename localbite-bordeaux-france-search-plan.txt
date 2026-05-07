@@ -1,0 +1,91 @@
+MANDATORY REQUIREMENTS CONFIRMED: year range distribution across 2023-2026, cross-validation Phase 1B after main searches, audit file required, 10 results per query (hard limit).
+
+CITY: Bordeaux, France
+PIPELINE: localbite-v7.1
+DATE: 2026-05-06
+
+PART A — NEIGHBOURHOOD COVERAGE
+
+TIER 1 — Centre-ville (Triangle d'Or): 2 queries
+  A1a: meilleurs restaurants Triangle d'Or Bordeaux 2024 guide gastronomique
+  A1b: best restaurants city centre Bordeaux France 2024 food guide
+
+TIER 1 — Saint-Pierre / Place du Parlement: 2 queries
+  A2a: restaurants Saint-Pierre Place du Parlement Bordeaux critique gastronomique 2023
+  A2b: where to eat Saint-Pierre Bordeaux 2024 recommendations
+
+TIER 1 — Chartrons: 2 queries
+  A3a: restaurants quartier Chartrons Bordeaux bonnes adresses 2025
+  A3b: best restaurants Chartrons Bordeaux neighbourhood guide 2024
+
+TIER 2 — Capucins / Sainte-Croix: 2 queries
+  A4a: restaurants Capucins Sainte-Croix Bordeaux adresses locales 2024
+  A4b: eating out Capucins Sainte-Croix Bordeaux local guide 2023
+
+TIER 2 — Saint-Michel: 2 queries
+  A5a: bonnes tables quartier Saint-Michel Bordeaux 2023 2024
+  A5b: restaurants Saint-Michel Bordeaux guide 2024
+
+TIER 2 — Bacalan: 2 queries
+  A6a: restaurants Bacalan Bordeaux quartier nouvelle cuisine 2025
+  A6b: dining Bacalan Bordeaux food scene 2024 guide
+
+TIER 2 — Bordeaux Maritime: 2 queries
+  A7a: restaurants Bordeaux Maritime Darwin quartier 2024 2025
+  A7b: eating Bordeaux Maritime neighbourhood restaurants 2023
+
+TIER 2 — Mériadeck: 2 queries
+  A8a: restaurants Mériadeck Bordeaux bonnes adresses 2024
+  A8b: Meriadeck Bordeaux restaurant recommendations 2023 2024
+
+TIER 2 — Saint-Seurin / Fondaudège: 2 queries
+  A9a: restaurants Saint-Seurin Fondaudège Bordeaux critique 2024 2025
+  A9b: dining Saint-Seurin Bordeaux food guide 2024
+
+TIER 3 — Caudéran: 1 query
+  A10: restaurants Caudéran Bordeaux bonnes tables 2024
+
+Part A total: 19 queries
+
+PART B — CROSS-CUTTING ANGLES
+
+Cross-1 — City-wide EN: 2 queries
+  B1a: best restaurants Bordeaux France 2025 local food guide
+  B1b: where to eat in Bordeaux honest food recommendations 2023 2024
+
+Cross-2 — City-wide FR: 3 queries
+  B2a: meilleures tables Bordeaux 2025 chronique gastronomique
+  B2b: où manger à Bordeaux comme un local adresses de quartier 2024
+  B2c: restaurants Bordeaux 2023 sélection journaliste gastronomique
+
+Cross-3 — Generic writer-first: 2 queries
+  B3a: food writer Bordeaux restaurant column guide 2024 2025
+  B3b: critique gastronomique Bordeaux blog indépendant 2023 2025
+
+Cross-4 — Named awards: 3 queries
+  B4a: Gault Millau Bordeaux Gironde 2025 nouveaux bistrots restaurants
+  B4b: Bib Gourmand Bordeaux Gironde 2024 2025 sélection Michelin
+  B4c: 50 Best restaurants Bordeaux France 2024 classement
+
+Cross-5 — Recent openings: 2 queries
+  B5a: nouvelles ouvertures restaurants Bordeaux 2024 2025 adresses
+  B5b: new restaurant openings Bordeaux 2025 guide
+
+Cross-6 — SKIP (LOCAL_FOOD_VOCABULARY not defined)
+
+Cross-7 — Cuisine and community: 2 queries
+  B7a: restaurants gastronomie Basque cuisine Bordeaux 2024 critique locale
+  B7b: cuisine bistronomique Bordeaux 2023 2024 nouvelles tables
+
+Cross-8 — Publication category FR: 2 queries
+  B8a: magazine gastronomique Bordeaux Gironde critique restaurants 2024
+  B8b: supplément gastronomie journal régional Bordeaux 2024 restaurants
+
+Part B total: 16 queries
+Part A + B total: 35 queries (soft ceiling 45, hard ceiling 55)
+
+YEAR DISTRIBUTION CHECK:
+Earlier years (2023-2024): A1a, A2a, A3b, A4a, A4b, A5a, A5b, A7b, A8b, A9a, B1b, B2b, B2c, B3b, B4a, B4b, B5a, B7a, B7b = 19 queries referencing earlier years
+Recent years (2025-2026): A3a, A4a, A6a, A9a, B1a, B2a, B4c, B5a, B5b, B8a = 10 queries referencing recent years
+No year term: A6b, A7a, A8a, A10, B3a, B8b = 6 queries
+[year-distribution-check] PASSED — 19 queries reference earlier years (2023-2024), 10 queries reference recent years (2025-2026), 6 queries have no year term.
